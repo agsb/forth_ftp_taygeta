@@ -1,0 +1,286 @@
+
+ Minutes of the guest RT Conference on 
+ the GEnie Forth RoundTable with guests
+ Steve Roberts,John Bumgarner,and Terry
+ Holmes.
+     
+ The topic: Steve's high-tech bike, the
+ laptop that operates it and the tForth
+ token threaded Forth operating system.
+
+ Date: 06/08/89   Time: 22:22EDT
+
+Attendees:
+[[Steve(Wordy)] PRESS2]
+[[Gary] GARY-S]
+[[John&Terry] PRESS3]
+[[jax@well] FIGCHAPTERS]
+[[rick] R.MUSE3]
+[D.WRIGHT14]
+[[Dave] DHWEINSTEIN]
+[[BOB] R.SCHEMMEL1]
+[M.CHRISTOPH2]
+[S.R.MCINTOSH]
+[K.MERTZENICH]
+[S.K.ORR]
+[[Lee] L.BROTZMAN]
+
+Minutes:
+<[Steve(Wordy)] PRESS2> Been looking at the New Micros parts again...
+<[Steve(Wordy)] PRESS2> might use them for satellite processors
+<[Steve(Wordy)] PRESS2> have you used them?
+<[Gary] GARY-S> I can tell you who has - Ken Butterfield in Los Almos and Jon 
+Bryan in Albuquerque - I can give you Jon's phone #
+<[Gary] GARY-S> I can also tell you Randy Dumse (NMI) does SUPPORT his customers
+<[Gary] GARY-S> brb
+<[Steve(Wordy)] PRESS2> OK...  (I've spoken to Randy before... he sent me a 
+chip 2 years ago)
+<[Gary] GARY-S> I've got Ken's ARPANET address if you have access to 
+Usenet/Arpanet/Compunet/Bitnet
+<[Steve(Wordy)] PRESS2> Are you on a Cat?
+<[John&Terry] PRESS3> yup, we are on a Cat
+<[Gary] GARY-S> When will the laptop be available ?
+<[John&Terry] PRESS3> 1q90
+<[Gary] GARY-S> what the hell is a 1q90
+<[John&Terry] PRESS3> first quarter 1990
+<[Gary] GARY-S> gotcha
+<FIGCHAPTERS> is here.
+<R.MUSE3> is wordy here?
+<[Gary] GARY-S> yes
+<[Steve(Wordy)] PRESS2> I am!  Hi there!
+<[jax@well] FIGCHAPTERS> need a board with Forth on it?
+<[Steve(Wordy)] PRESS2> Wellll... I have at least one coming <grin>
+<[jax@well] FIGCHAPTERS> we have *two* coming.
+<[Steve(Wordy)] PRESS2> Considering the NMI 68HC11s for satellites
+<[jax@well] FIGCHAPTERS> .. :-)
+<[Steve(Wordy)] PRESS2> Jax... you are making boards???
+<[jax@well] FIGCHAPTERS> yep, Vesta Technology in Colorado.
+<[jax@well] FIGCHAPTERS> makers of fine SBC's with resident ROM Forth.
+<[Steve(Wordy)] PRESS2> Sounds interesting.  What's the processor?
+<[jax@well] FIGCHAPTERS> 8088 V20 80188 and next 68008/68000
+<[jax@well] FIGCHAPTERS> ( 68008 will be ~$200 and 68000 ~$400 )
+<[jax@well] FIGCHAPTERS> oops ~$300!
+<[Steve(Wordy)] PRESS2> Which FORTH?
+<[jax@well] FIGCHAPTERS> 32-bit L&P lookalike, but direct-threaded with 
+rommable autoboot applications.
+<[John&Terry] PRESS3> sure
+<[jax@well] FIGCHAPTERS> Host disking via AMiga or IBM PC/XT/AT
+<[rick] R.MUSE3> steve will this rtable be available for download later?
+<[Steve(Wordy)] PRESS2> Power requirements?
+<[jax@well] FIGCHAPTERS> +5
+<[Steve(Wordy)] PRESS2> current?
+<[Steve(Wordy)] PRESS2> Rick... probably... Gary?  Will it?
+<[jax@well] FIGCHAPTERS> not sure, can find out tomorrow.
+<[jax@well] FIGCHAPTERS> light.
+<[jax@well] FIGCHAPTERS> .
+<[Steve(Wordy)] PRESS2> Rick... I'm trying to remember what you do... we've 
+corresponded, but I don't recall yer biz.
+<[jax@well] FIGCHAPTERS> uP + DUART + 128 ROM 64 RAM + edge connector + 
+watchdog on 68008
+<[jax@well] FIGCHAPTERS> same but 128 RAM on 68000.
+<[rick] R.MUSE3> I'm a  a programmer for Levi"s
+<[Steve(Wordy)] PRESS2> Jax... sounds like an interesting product.  For 
+embedded control and the like?  How are you marketing?
+<[jax@well] FIGCHAPTERS> mail VESTA here on GEnie w/name,address for info 
+packet on current line.
+<D.WRIGHT14> is here.
+<[Steve(Wordy)] PRESS2> Rick... ah.  Designer genes?  Molecular Biology?
+<[jax@well] FIGCHAPTERS> 68k's built and Forthed but not yet productized.
+<[jax@well] FIGCHAPTERS> Am programming them now in custom projects.
+<[Steve(Wordy)] PRESS2> Hi Dave!
+<[jax@well] FIGCHAPTERS> .
+<[rick] R.MUSE3> ahhhhhhhhh yes .. gotta go.. good luck
+<D.WRIGHT14> Hi
+<[Gary] GARY-S> Yes Steve - the file should be posted tomorrow - Winnebik.TXT 
+and Winnebik.ARC
+<[Steve(Wordy)] PRESS2> Dave... meet jax -- he's doing FORTH controller boards. 
+ And John and Terry are here, live from IA.
+<[Steve(Wordy)] PRESS2> Everyone, meet Dave Wright.  Tekwiz.
+<[Gary] GARY-S> welcome to the Forth RT
+<[Gary] GARY-S> LETS do it gang
+<D.WRIGHT14> Hi folks, upcoming FORTH projects, need advice !
+<[Steve(Wordy)] PRESS2> Gary... no more people expected???
+<[jax@well] FIGCHAPTERS> They drift in.
+<[jax@well] FIGCHAPTERS> some show up at closing.
+<[Gary] GARY-S> Steve - we just have to go and let the stragglers straggle
+<[Gary] GARY-S> anyway - lets get started
+<[Steve(Wordy)] PRESS2> ok
+<[Gary] GARY-S> Before we begin tonight's conference I need to remind ...
+<[Gary] GARY-S> everyone this is a formal conference. .. .. ..
+<[Gary] GARY-S> That means NO interlacing. Request a turn to speak by typing ...
+<[Gary] GARY-S>  !! <CR> or /RAI <CR>. I will keep a list and call on whoever ..
+<[Gary] GARY-S> is next. PLEASE follow these simple rules : ...
+<[Gary] GARY-S> PLEASE make your first response ok <CR> (so we know YOU know). .
+<[Gary] GARY-S> Then, keep your lines short, ending incomplete thoughts ...
+<[Gary] GARY-S> with three dots (...) and ending your question/statement with 
+                ga <CR>.
+<[Gary] GARY-S>                        thank you.
+<[Gary] GARY-S>  The GEnie Forth RoundTable is very pleased to welcome...
+<[Gary] GARY-S> Steve Roberts, a high-tech nomad and freelance writer...
+<[Gary] GARY-S> who sold his surburban Ohio home in 1983 and began touring 
+America...
+<[Gary] GARY-S> on a computerized recumbant bicycle with a handlebar keyboard, .
+<[Gary] GARY-S> solar powered on-board computers and on-line net-working. The 
+laptop...
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> (soon commercially available) is the work of Information 
+Appliance Inc..
+<[Gary] GARY-S> which John Bumgarner co-founded. John has a degree in Astronomy 
+and has...
+<M.CHRISTOPH2> is here.
+<[Gary] GARY-S> been an engineer/programme 30 years, 10 n Foth inclding a stint.
+..
+<[Gary] GARY-S> at Forth,Inc with Charles Moore. He also chaired Forth 
+Standards. ...
+<[Gary] GARY-S> The computer is programmed in tForth, a token threaded...
+<[Gary] GARY-S> Forth. The author is Terry Holmes. tForth is a 32 bit Forth and.
+..
+<[Gary] GARY-S> is the heart of the Cannon Cat (ask about the Cat/tForth assm 
+deal). tForth...
+<[Gary] GARY-S> uses the 'TO' and 'INTEGER' solutions. .. ..  Steve, John, 
+Terry welcome ...
+<[Gary] GARY-S> and thanks for comming this evening. .. .. .. .. ga Steve
+<[Steve(Wordy)] PRESS2> Thanks Gary....
+<[Steve(Wordy)] PRESS2> And hi all.
+<[John&Terry] PRESS3> hi also from us
+<[Steve(Wordy)] PRESS2> You probably already know about the Winnebiko...
+<[Steve(Wordy)] PRESS2> So I won't go into much detail on the general stuff...
+<[Steve(Wordy)] PRESS2> lifestyle, solar, etc.  The emphasis here is on the 
+control...
+<[Steve(Wordy)] PRESS2> system, and I'm delighted to have with me 
+(electronically)...
+<[Steve(Wordy)] PRESS2> John and Terry...
+<[Steve(Wordy)] PRESS2> who can answer the substantial questions about the new 
+FORTH..
+<[Steve(Wordy)] PRESS2> laptop and the details of its implementation...
+<[Steve(Wordy)] PRESS2> Essentially, I am using this machine...
+<[Steve(Wordy)] PRESS2> as the hub of a real-time control environment in the 
+new bike...
+<[Steve(Wordy)] PRESS2> in charge of a large "resource bus" that carries all 
+audio,...
+<[Steve(Wordy)] PRESS2> serial, and digital infor int he bike.
+<[Steve(Wordy)] PRESS2> Questions so far?
+<[Steve(Wordy)] PRESS2> ga
+<R.SCHEMMEL1> is here.
+<[Dave] DHWEINSTEIN> When will you start needing software for the Winnebiko? (i.
+e. Request for Qizards)
+<[Steve(Wordy)] PRESS2> Soon...
+<[Steve(Wordy)] PRESS2> as soon as the machine is running.  Actually, I have ...
+<[Steve(Wordy)] PRESS2> the older desktop model of similar machine, but am 
+happiest...
+<[Steve(Wordy)] PRESS2> developing on  the actual machine that will be used.  I 
+haven't...
+<[Steve(Wordy)] PRESS2> forgotten your offer!   :-)  GA
+<[Gary] GARY-S> John mentioned a deal for the Cat and unattached software ..
+<[Gary] GARY-S> details please
+<[John&Terry] PRESS3> well ...
+<[John&Terry] PRESS3> the cat used to be ...
+<[John&Terry] PRESS3> on sale a service merchandise
+<[John&Terry] PRESS3> but ...
+<[John&Terry] PRESS3> they sold out!!!
+<[Steve(Wordy)] PRESS2> <grin>  John, have you folks looked further into ...
+<[Steve(Wordy)] PRESS2> the idea of markeing the Swyft laptop into the embedded 
+control market? 
+<[John&Terry] PRESS3> no we are doing the laptop...
+<[John&Terry] PRESS3> and it takes all we have
+<[John&Terry] PRESS3> just to do this
+<R.SCHEMMEL1> What is the bike for, cross country travel?
+<[Steve(Wordy)] PRESS2> Yes... I've done about 16,000 miles so far...
+<[Steve(Wordy)] PRESS2> the machine is a computerized recumbent with solar 
+panels, handlebar...
+<[Steve(Wordy)] PRESS2> keyboard, ham station, etc...
+<[Steve(Wordy)] PRESS2> Been living on it, writing to pay my way, since 1983....
+<R.SCHEMMEL1> And the satelite is your nav system?
+<[Steve(Wordy)] PRESS2> and there are more and more applications for real-time 
+processing...
+<[Steve(Wordy)] PRESS2> including airflow modeling (well, effective frontal 
+area, anyway),
+<[Steve(Wordy)] PRESS2> transmission control, solar charge and batt mgmt, 
+keyboard processing,
+<[Steve(Wordy)] PRESS2> and control of the whole on-board network (which 
+includes...
+<[Steve(Wordy)] PRESS2> RF links to the backpack and a gateway out thru 
+celphone and ham
+<[Steve(Wordy)] PRESS2> datalinks. 
+<[jax@well] FIGCHAPTERS> sounds like ...
+<[jax@well] FIGCHAPTERS> you guys are believers ...
+<[jax@well] FIGCHAPTERS> in advice attributed to Chuck Moore ...
+<[jax@well] FIGCHAPTERS> that each new project deserves its own new Forth 
+system!
+<[Steve(Wordy)] PRESS2> <grin>
+<[jax@well] FIGCHAPTERS> How big are teams in your projects ...
+<[jax@well] FIGCHAPTERS> and how are you doing with passing maintance chores ...
+<[jax@well] FIGCHAPTERS> on to new team members?
+<S.R.MCINTOSH> is here.
+<[Steve(Wordy)] PRESS2> Gee... you make it sound like this is formal... I'm...
+<[Steve(Wordy)] PRESS2> just a poor cyclist trying to get my bike ready for the 
+road.  ...
+<[Steve(Wordy)] PRESS2> Actually, I am gettingother people involved...
+<[Steve(Wordy)] PRESS2> in a classic repudiation of the old adage that adding 
+people...
+<[Steve(Wordy)] PRESS2> increases the project length.  ...
+<[Steve(Wordy)] PRESS2> The bike itself is my own project...
+<[Steve(Wordy)] PRESS2> with help from a few friends (like D.WRIGHT here)....
+<[Steve(Wordy)] PRESS2> the FORTH laptop project, however, is Information 
+Appliance. 
+<[Dave] DHWEINSTEIN> Not quite Jax. Each new Forth toy requires a programmer to 
+develop a use for it. You have it backwards. :-)
+<[Gary] GARY-S> that was it dave ?
+<[Dave] DHWEINSTEIN> Yep. I just wasn't in an interleaving mood. :-)
+<[Gary] GARY-S> John - you were instrumental in F-83 - have you abandoned 
+standards
+<[John&Terry] PRESS3> yes, if they don't apply
+<[John&Terry] PRESS3> our forth was designed for ...
+<[John&Terry] PRESS3> a 32 bit processor and ...
+<[John&Terry] PRESS3> address space ...
+<[John&Terry] PRESS3> also to make very compact code
+<[Gary] GARY-S> You did learn from Chuck Moore :-)
+<[John&Terry] PRESS3> John did 
+<[Gary] GARY-S> The laptop will be commercially available ?
+<[John&Terry] PRESS3> yes ...
+<[John&Terry] PRESS3> about $<700 and 1st q 90
+<K.MERTZENICH> is here.
+<M.CHRISTOPH2> what 32bit processor?
+<[John&Terry] PRESS3> 68000
+<[Gary] GARY-S> plain 68K
+<[John&Terry] PRESS3> yes ...
+<M.CHRISTOPH2> ive been working with  the 386 and i love all the room!
+<[John&Terry] PRESS3> 8 mhz 256 kb rom 128 kb ram 640X200 display
+<[Steve(Wordy)] PRESS2> 386 == power-hungry!  This is a laptop
+<[Dave] DHWEINSTEIN> Come on Steve. Everyone needs a 486 clustered with three 
+or four i860s and a color 2048x2048 display! :-)
+<M.CHRISTOPH2> is this the bike i saw in the 4th dim mag?
+<[Steve(Wordy)] PRESS2> !!! You did?
+<[Steve(Wordy)] PRESS2> Hard to say.. I don't know about the story.
+<[jax@well] FIGCHAPTERS> Yes ...
+<M.CHRISTOPH2> maybe it wasn't there but i saw it metioned in an article or 
+maybe on tv somewhere
+<[Steve(Wordy)] PRESS2> I wsas thinking a Sparcstation
+<[Steve(Wordy)] PRESS2> Probably... recumbent with solar panels and a control 
+console. 
+<[jax@well] FIGCHAPTERS> why dork around with INTEGER and VALUE or whatever? 
+Whats wrong with @ and !?
+<[Gary] GARY-S> What about the INTEGER and TO solutions ?
+<[Steve(Wordy)] PRESS2> Q for John & Terry
+<[John&Terry] PRESS3> we have @ and !, can't ...
+<[John&Terry] PRESS3> do without them ...
+<[John&Terry] PRESS3> but ...
+<[John&Terry] PRESS3> variables and constants ...
+<[jax@well] FIGCHAPTERS> !!
+<[Gary] GARY-S> Do these follow the versions outlined in FD ?
+<[John&Terry] PRESS3> well I don't know ... but ...
+<[John&Terry] PRESS3> here is an example ...
+<[John&Terry] PRESS3> 123 integer qwe
+<[John&Terry] PRESS3> 5 integer asd
+<[John&Terry] PRESS3> asd . 5
+<[John&Terry] PRESS3> asd qwe + asd to
+<[John&Terry] PRESS3> asd . 128
+<[John&Terry] PRESS3> did all ...
+<[John&Terry] PRESS3> the arithmetic come through?
+<[jax@well] FIGCHAPTERS> So ...
+<[jax@well] FIGCHAPTERS> Are you saying you use INTEGER for the syntactic sugar 
+...
+<[jax@well] FIGCHAPTERS> or have you tuned your compiler to offer an execution 
+speed advantage for such ...
+<[jax@well] FIGCHAPTERS> ( keeping in mind that optimizing JSR Forths for 68k ..
+

@@ -1,0 +1,31 @@
+
+        Here are some elementary directions for the use of .4TH files with
+your F83 system.
+       Many files in the directories of the ECFB contain the extension-.4TH.
+These are text files containing Forth code.  They may or may not be com-
+pilable by your F83, depending upon whether or not your dictionary contains
+all of the words used.  In any event here is a technique which you may use
+to convert these 4TH files to BLK files:
+      Some of these files contain a lot of blank lines, which will extend
+the length of your BLK file unnecessarily.  TRIM.COM can be used to remove
+all the blank lines from a text file.  CHOP1.BAT has been designed for this
+purpose. The syntax is CHOP1 <filename> with no extension given.  However
+the file changed must have the extension .4TH.
+      The 4TH files may also have screen headings, which may begin with
+FILE:.  These lines would suspend the loading of any source code.  Put the
+file in an editor and make a global replacement of FILE: with \ FIL.  While
+it's in the editor be sure there are 16 lines prior to any source code and
+that there are enough blank lines at the end so that the last part of the
+source code won't be truncated. (F83 truncates any lines beyond the multiple
+of 16.)
+     The most important step in the process is to invoke the elegant
+little utility called SCREENS-.COM.  It will convert the text file to a
+Forth block file.
+     At this point if the text file was written in the F83 vocabularies,
+you're home free.  If not, attempting to load it will show you which words
+you need to look for.  The load instruction may also need to be changed
+slightly to fit the number of screens that you came up with.
+     One very fine program you can convert with this technique is LINDLY.4TH.
+     Enjoy.
+
+

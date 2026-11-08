@@ -1,0 +1,281 @@
+
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 08/09/90   Time: 22:30EDT
+
+Attendees:
+[GARY-S]
+[[Dave] OLORIN]
+[[Robert] R.BERKEY]
+[[Brian] B.SUTTON1]
+[[Dennis] D.RUFFER]
+[C.TING]
+  
+Items discussed include: GEnie Forth RT August promotions (free access areas,
+    Bill Ragsdale and Glen Haydon conferences, Hacker's test, survey), C. H.
+    Ting and Bill Muench crafted bootstrap eForth, Forth vs C.
+
+Minutes:
+<OLORIN> is here.
+<D.RUFFER> is here.
+<GARY-S> Dennis - quick - what are the freebies for HAN ?
+<[Dennis] D.RUFFER> the survey, hacker's test and the BB are free
+<[Dennis] D.RUFFER> I had wanted the library free also, but they couldn't do it 
+:-(
+<GARY-S> this week - right ?
+<[Dennis] D.RUFFER> starting tonight, and running through Sunday night
+<C.TING> is here.
+<B.SUTTON1> is here.
+<GARY-S> Nothing free next week to coincide with Ragsdale's conf, though ? 
+Right ?
+<[Dennis] D.RUFFER> no, I didn't want to kill all of our revenue, and I 
+couldn't make the RTC's free anyway
+<GARY-S> got it ! thanks for the update
+<GARY-S> Getting some calls on the net for your eForth ! The minimalists are 
+rising to the call !!! :-)
+<[Dennis] D.RUFFER> well, I haven't seen any of you guys take the Hacker's test 
+yet.
+<[Dennis] D.RUFFER> What, you afraid you'll fail it? <BIG grin>
+<C.TING> Just logged in the check on eForth.
+<GARY-S> stay around a bit, Dr. Ting.
+<[Brian] B.SUTTON1> I'll be trying it as soon as I get my wits about me, Dennis.
+<GARY-S> Dr. Ting, I was just saying there have been requests for eForth on 
+ForthNet.
+<C.TING> Please drop the dr.
+<[Dennis] D.RUFFER> When I checked last night, EFORTH was even more popular 
+than BASIS
+<C.TING> We have great expections on eForth,
+<C.TING> in that we hope it will replace figForth.
+<[Dennis] D.RUFFER> do we just call you Ting then? <just wondering>
+<C.TING> Ting is find and much preferred.
+<GARY-S> as what ? a bootstrap implementation ?
+<[Dennis] D.RUFFER> thanks, is there work inprogress on other cpus for EFORTH?
+<C.TING> It should serve as a minimal model to be ported to other interesting...
+<C.TING> CPU's.
+<C.TING> We hope to move it to 680x0, sc32, rtx's, transputer, 8051, etc.
+<C.TING> Many people received the implementation kits,...
+<C.TING> and I told them to finish an implementation in 4 weeks.
+<GARY-S> During this burst of silence let me remind everyone of some events...
+<GARY-S> from now thru Sunday time in the Forth BB is free...
+<GARY-S> so is the survey and hacker's test...
+<GARY-S> then next Thursday we have Bill Ragsdale as guest and...
+<GARY-S> Glen Haydon the following week
+<[Dennis] D.RUFFER> also, tomorrow night we are sponsoring a COMPUTRIVIA where 
+the prizes will be:
+<[Dennis] D.RUFFER> 1st prize - 1 month free in the Forth RT
+<[Dennis] D.RUFFER> 2nd prize- 1 week free
+<[Dennis] D.RUFFER> 3rd- prize one weekend free
+<[Dennis] D.RUFFER> the game starts ar 9pm Eastern time
+<[Dennis] D.RUFFER> at 10:00, I will be the guest speaker in a Chat RTC
+<[Dennis] D.RUFFER> type CHAT to access this area
+<[Dennis] D.RUFFER> the game will be held in room 38 (I think)
+<[Dennis] D.RUFFER> but I don't know the room number yet for the RTC
+<[Dennis] D.RUFFER> sorry Gary, the plans are still being finalized
+<[Dennis] D.RUFFER> I just added the prizes last night :-)
+<C.TING> If eForth is really to be successful, we need at least 10 
+implementations.
+<[Dennis] D.RUFFER> sorry Ting, have you had anyone submit any plans yet?
+<GARY-S> Ting - you mention the transputer, you are the ONLY person I have 
+heard that ever ported any Forth to it - are there others  that you know
+of ?
+<C.TING> Rick vanNorman told me he finished a 32 bit eForth on the 80x8x,
+<C.TING> and the basic model works quite well.
+<C.TING> Gary, the list is a wish list.  I am expecting other people to do them.
+<[Brian] B.SUTTON1> I've been out of circulation lately -- can someone give me 
+a nutshell description of eForth?
+<GARY-S> I'd like to see Rick's 32 bit ported to the Library here as soon as 
+possible, can you help influenec this ?
+<C.TING> Gary, Rick will release it soon, possibly with another 68000 
+implementation...
+<C.TING> for AtariST.
+<C.TING> Brian, eForth is a small Forth model on PC, in assembly code.
+<[Brian] B.SUTTON1> All the basics, without bells, whistles, etc?
+<C.TING> It is intended to be ported easily to other CPU's, using PC as a 
+development platform.
+<C.TING> No blocks, but hooks to files through RS232 link.
+<[Dennis] D.RUFFER> how are those hooks used Ting?
+<C.TING> Dennis, simply turning off the echo and issue a pacing character at 
+the...
+<C.TING> end of each line.
+<[Dennis] D.RUFFER> ok, then it works just like a fast keyboard?
+<C.TING> Bill Muench is the principal author of the model.  I did the dirty 
+work...
+<C.TING> to have it running on PC.
+<C.TING> Bill cleaned up the code and the source listing...
+<GARY-S> Is this the same Bill Muench that is doing a system for Steve Roberts ?
+<C.TING> and the listing appears to be a piece of art.
+<C.TING> Bill did bForth on a variety of machines.
+<[Dennis] D.RUFFER> Is that WORDY Roberts of "Computing Across America" fame?
+<GARY-S> yes
+<C.TING> I don't know if he worked with Steve Roberts.
+<GARY-S> He and Raskin and Bumgarner are all near neighbors - interesting 
+neighborhood
+<C.TING> The e was what's left of a pig, but it could stand for easy, 
+execellent...
+<C.TING> and embedded.
+<[Dennis] D.RUFFER> it still has the tail Ting :-)
+<C.TING> Ya.
+<[Brian] B.SUTTON1> Seems like a good idea; similar to what was attempted with 
+FIG Forth?
+<C.TING> Yes.  I think figForth attracted lot's of people who have no prior...
+<C.TING> knowledge of Forth.
+<C.TING> F83 and FPC limitede themselves to Forth programmers by using 
+metacompilation.
+<[Brian] B.SUTTON1> how is that?
+<C.TING> We probably lost a lot of potential users because of the...
+<C.TING> complexity in metacompilation.
+<GARY-S> I prefer the smaller kernel anyway, so I'm on your side !
+<C.TING> Implementing eForth in assembly will allow more people to make....
+<C.TING> use of Forth, and learn about forth...
+<C.TING> by lowering the threshold.
+<[Brian] B.SUTTON1> By threshold, do you mean the amount they have to learn to 
+function?
+<C.TING> Yes.  It is impossible to read the source code of F83 and FPC...
+<C.TING> unless you got a black belt in Forth already.
+<[Brian] B.SUTTON1> I can agree with you there...
+<[Brian] B.SUTTON1> I've looked through the F83 metacompiler, and if it works, 
+it's magic to me!
+<C.TING> Any programmer with some knowledge in 8086 assembler will be able...
+<C.TING> to understand eForth and modify it to suit his purpose.
+<[Dennis] D.RUFFER> meta/target compiling should be reserved for advanced Forth 
+users, your assembler approach might be a lot better for novices to st
+art with.
+<[Brian] B.SUTTON1> Unfortunately in my case, the only thing I know about 
+assembler is that the CODE word has something to do with it.
+<C.TING> The user base of Forth is not growing as fast as we hoped.
+<C.TING> May be eForth is the answer to attract more young people to try it.
+<[Dennis] D.RUFFER> it is going to need some extensions if it is going to 
+compete Ting...
+<[Dennis] D.RUFFER> Is anyone working on writting some more stuff for it?
+<C.TING> figForth was a big success.  Can it be repeated?
+<[Brian] B.SUTTON1> "C" seems to be gaining lots of popularity instead of Forth.
+  Any reasons why?
+<[Dennis] D.RUFFER> figForth was a big success because there was nothing else
+<C.TING> eForth is only a foundation.  We can certainly build castles on it.
+<[Dennis] D.RUFFER> C has the momentum of AT&T and Unix behind it
+<[Dennis] D.RUFFER> not to mention IBM, Microsoft, Apple, etc.
+<GARY-S> and libraries out the kazoo
+<[Brian] B.SUTTON1> But Forth is so much fun!
+<[Dennis] D.RUFFER> YES, that is its strength!
+<[Dennis] D.RUFFER> It's weakness, is that it is also a lot of work
+<[Dennis] D.RUFFER> the programmer must do a lot more work in Forth than he 
+does in other lnaguages where he has canned libraries to use
+<GARY-S> Neat packages like eForth to build upon may be just exactly what our 
+world needed ! Thanks Ting
+<C.TING> Like Phil Koopman said, we have to make Forth to be perceived as...
+<C.TING> the 'Language of Choice for Embedded Systems'....
+<GARY-S> It will also always remain the pathfinder
+<C.TING> eForth, I hope, will be useful as the first step to harness a new CPU.
+<[Brian] B.SUTTON1> By "canned libraries", do you mean pre-programmed 
+sub-routines?
+<GARY-S> yes
+<[Brian] B.SUTTON1> What about TOOL blocks, built on a standard Forth system?
+<[Dennis] D.RUFFER> with C you can buy "libraries" to do just about anything 
+you need
+<[Dennis] D.RUFFER> In Forth, you need to do it in source code...
+<[Dennis] D.RUFFER> but that requires standards, which we are working on.
+<[Brian] B.SUTTON1> Of course when in source, it's easy to change slightly to 
+suit your needs as necessary!
+<GARY-S> The reason you can is MOST C systems are built on a standard model -
+<C.TING> eForth will track ANS-Forth.
+<GARY-S> I saw you already have tracked through BASIS11 - nice piece of work
+<[Dennis] D.RUFFER> Ting, how are you doing on bringing it up to BASIS12?
+<C.TING> I will let Bill worry about BASIS12.
+<[Dennis] D.RUFFER> it has lots of new features to worry about :-)
+<R.BERKEY> is here.
+<[Dennis] D.RUFFER> speaking of standards...good evening Robert :-)
+<GARY-S> with a 15104 byte kernel, written in asm, modification should be 
+relatively easy
+<[Robert] R.BERKEY> Sounds like EFORTH.
+<C.TING> My plan is to revise eForth next year to track the standard at that 
+time.
+<[Dave ("Guru"] OLORIN> That test takes forever...
+<[Dennis] D.RUFFER> did you get a guru on the Hacker's test Dave :-)
+<[Dave (Guru)] OLORIN> I noticed significant slowdowns after each 'No' answer.
+<[Dennis] D.RUFFER> Yes Dave, the forms software is pretty slow when it does a 
+<GOTO> :-(
+<[Robert] R.BERKEY> I tried to bring up EFORTH,
+<[Robert] R.BERKEY> but I've got to modify the metacompiler some more
+<[Robert] R.BERKEY> to get it going.
+<GARY-S> It came right up on my 286, ROBERT
+<[Robert] R.BERKEY> Since I'm not an ASM programmer, it doesn't come up so 
+easily...
+<[Robert] R.BERKEY> meaning using Forth.
+<C.TING> ASM is not the best environment, but we only have to do it once.
+<[Dennis] D.RUFFER> Robert, do you mean that the COM file doesn't run for you?
+<[Robert] R.BERKEY> Just once?
+<[Robert] R.BERKEY> I guess I haven't tried to run the COM file.
+<[Robert] R.BERKEY> If you want to modify the kernel, what other way is there 
+than ASM?
+<[Dennis] D.RUFFER> how are you trying to run it then Robert?
+<[Robert] R.BERKEY> I wan't to make some modifications to the kernel,
+<C.TING> Robert, the bulk of high level words should not be changed.  Only...
+<[Robert] R.BERKEY> so I tried metacompiling it.
+<C.TING> the machine code words have to be recoded for another CPU.
+<[Dennis] D.RUFFER> oh, you need to do it with MASM or one of the other 
+assemblers
+<[Dennis] D.RUFFER> there ar quite a few of them over in the IBM RT if you 
+don't have MASM
+<[Robert] R.BERKEY> Ok, that's what I thought...
+<GARY-S> get that A86 macroassmbler - even I understand it :-)
+<[Robert] R.BERKEY> but once I can get it metacompiled, then I don't need to
+<[Robert] R.BERKEY> bother with an ASM.
+<[Dennis] D.RUFFER> there's even a D86 diassembler to go along with that one :-)
+<C.TING> Robert, if you succeed in metacompiling eForth, will you release the 
+code?
+<GARY-S> That A86 is nice !
+<[Robert] R.BERKEY> I was using my segment threaded metacompiler.
+<[Robert] R.BERKEY> Maybe I'll try F-PC's instead.
+<[Robert] R.BERKEY> That might be releasable.
+<[Dennis] D.RUFFER> Now that would be a real coup, use TCOM to make EFORTH 
+<grin>
+<C.TING> Thanks.  Need to cover the die-hard Forthians, too.
+<[Robert] R.BERKEY> I want my own metacompiler because I can easily debug a
+<[Robert] R.BERKEY> non-working kernel.
+<[Robert] R.BERKEY> F-PC's must boot from DOS.
+<C.TING> I conviced myself that eForth model was ok by first compiling the...
+<C.TING> high level words in FPC.
+<[Robert] R.BERKEY> Ah, maybe that's the right approach.
+<C.TING> I realy hope that you gentlemen will help promoting eForth by ...
+<C.TING> implementing it on your CPU of choice and building up the base.
+<[Dennis] D.RUFFER> will do Ting! but you already did my cpu of choice :-)
+<C.TING> Oh, forget the darn 80x8x junk.  Get on some real CPU's!
+<[Robert] R.BERKEY> Has anyone talked about writing an Eforth metacompiler in
+Eforth?
+<[Dennis] D.RUFFER> we were just talking about why metacompiling is bad before
+you got here Robert :-)
+<C.TING> I think metacompiler will do more harm to eForth than good.
+<[Dennis] D.RUFFER> Ting, I want to try doing a Windows version on the PC
+<[Robert] R.BERKEY> I've done it the ASM way before.
+<[Robert] R.BERKEY> I don't see any advantages--it's a very cryptic Forth
+language.
+<[Dennis] D.RUFFER> would you consider making the imlementation guide
+available electronically?
+<C.TING> Yes. I will upload it after editing it once more.
+<[Robert] R.BERKEY> Last time I worked with an ASM'ed kernel, I spent a week
+just
+<[Robert] R.BERKEY> trying to learn the ASM.
+<[Dennis] D.RUFFER> great, that will also promote people's work on it
+<[Robert] R.BERKEY> I never did figure out how to move the headers out of the
+basic 64k
+<[Robert] R.BERKEY> address space.
+<C.TING> I actually had to go out and buy a copy of MASM to figure out how
+to....
+<C.TING> build the heads correctly.
+<[Dennis] D.RUFFER> Yes, the MASM manual is very informative.  I recommend it
+highly.
+<C.TING> To move the heads out to another segment, you have to use another...
+<C.TING> segment pointer like ES.  It is straightforward, but still much extra
+work.
+<C.TING> Sorry to occupy all your time on eForth.  Any other topic?
+<[Dennis] D.RUFFER> no problem Ting, we enjoyed it very much
+<[Dennis] D.RUFFER> enjoy the free features of the Hot summer Nights
+<[Robert] R.BERKEY> I need to see what those features are.
+<[Dennis] D.RUFFER> the survey, the Hacker's Test, and the BB are all free
+Robert
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,104 @@
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 10/17/91   Time: 22:09EDT
+
+ Items discussed include finding a case sensitive bug, Forth contact from
+ ROC, F83 vs Forth-83, where is Forth's niche
+
+Attendees:
+[GARY-S]
+[[Wil] W.BADEN1]
+  
+Minutes:
+<[Wil] W.BADEN1> is here.
+<GARY-S> Hey Wil - welcome
+<[Wil] W.BADEN1> Hi gary.
+<GARY-S> I just picked up mail from some Forthers in Taiwan
+<[Wil] W.BADEN1> Name?
+<[Wil] W.BADEN1> Are they in ROC FIG?
+<GARY-S> I was wondering if you might recognize a couple of them...
+<[Wil] W.BADEN1> Roll them.
+<GARY-S> the mailer was Cy Chou...
+<[Wil] W.BADEN1> No.
+<GARY-S> he was speaking on behalf of a group that incldes Dr. Borlong-Lin
+<GARY-S> other names not listed
+<[Wil] W.BADEN1> Still no.
+<[Wil] W.BADEN1> All Taiwan got Forth from Ting, but it has spread.
+<GARY-S> I'll post the message and my reply to 'Distant drums' tomorrow
+<GARY-S> This group has discovered ForthNet
+<[Wil] W.BADEN1> How
+<GARY-S> via a Usenet feed and/or Fido (level 6)
+<[Wil] W.BADEN1> Gee, before I logged in I was in my manic phase.
+<[Wil] W.BADEN1> I'm working on my papers for FORML.
+<GARY-S> How goes it ?
+<[Wil] W.BADEN1> It looks good.
+<GARY-S> What was the unbalanced C bug you had (is it 3 weeks ago ?)
+<[Wil] W.BADEN1> If SCCS "Source Code Control System" is pronounced "Sucks", 
+then FCCS Forth Code control System is pronounced how?
+<GARY-S> F C C S - Eff See See Ess
+<[Wil] W.BADEN1> It was Forth -- all control flow words were upper case BEGIN 
+IF THEN, etc.
+<[Wil] W.BADEN1> Except there was an extraneous lower case "begin".
+<GARY-S> ARRRRGGGGGGHHHHHHH !!!!!
+<[Wil] W.BADEN1> which I couldn't see because my mind set was for upper case.
+<[Wil] W.BADEN1> This is one of many reasons why I'm for case sensitivity.
+<[Wil] W.BADEN1> I should have turned case insensitivity off.
+<GARY-S> The TC doesn't seem too concerned about it
+<[Wil] W.BADEN1> Then it would have choked on "begin" not "THEN".
+<GARY-S> SCCS shows your SysV bias <smile> does FCCS show your F-83 bias ?
+<[Wil] W.BADEN1> Case forgiveness is nice when you're typing interactively.
+<[Wil] W.BADEN1> Why SysV?  I use SunOS.
+<[Wil] W.BADEN1> I like(d) F-83; I've never liked Forth-83.
+<GARY-S> Doesn't SunOS support Revision Control AND SCCS ?
+<[Wil] W.BADEN1> SCCS comes with it; I've not got ahold of RCS.
+<GARY-S> hmmmm - I obviously do not have a Sun platform
+<[Wil] W.BADEN1> There is RCS for it; I just don't have it.
+<GARY-S> back to Forth. I used the term F-83, not Forth-83
+<GARY-S> I know a lot of people equate the two
+<[Wil] W.BADEN1> Good, as I said I like(d) it.
+<GARY-S> why the past tense
+<[Wil] W.BADEN1> The best thing that happened to Forth was F-83; the worst was 
+Forth-83.
+<[Wil] W.BADEN1> I haven't used it since 1986, when I switched to Zen.
+<GARY-S> got any specifics to add to a rather blanket statement
+<[Wil] W.BADEN1> F83 was an outstanding implementation that took Forth out of 
+the bit-banging stage.
+<[Wil] W.BADEN1> Forth-83 was soggy: half baked and all wet.
+<GARY-S> I have tried to get Martin to appear as a RTC guest, but so far 
+without success
+<[Wil] W.BADEN1> Their ideas on DO loops and quotients and canonical true 
+gratuitously cost Forth millions of dollars, and \
+<[Wil] W.BADEN1> overextended the standardization effort.
+<[Wil] W.BADEN1> Of course, some F-83 ideas were sophomoric, too.
+<GARY-S> I think we are both disheartened by the current process, and I know 
+the participants are trying to do the best they can - and I frankly, coul
+d do a Hell-of-a-lot worse
+<[Wil] W.BADEN1> I thought ?DO was a great idea -- it made Forth loops work 
+like the rest of the the languages.
+<[Wil] W.BADEN1> Yes.  The Draft Proposal is very good.
+<GARY-S> I just wonder if interest will be regenerated in the effort when dpAns 
+is actually released ?
+<[Wil] W.BADEN1> In what effort?
+<GARY-S> X3J14
+<[Wil] W.BADEN1> Well, that's what we hope.
+<GARY-S> The test bed Dennis established in the RT is getting mostly ignored
+<[Wil] W.BADEN1> Dennis comments were very good; I'l have to look at them again.
+<GARY-S> Have you been watching the mail from Charles Small, EDN editor ?
+<[Wil] W.BADEN1> Yes.  He's right.
+<[Wil] W.BADEN1> Forth's edge is "dedicated applications  with restricted 
+resources".
+<GARY-S> I offered to send him the set of files we built Grapevine from, but he 
+wanted me to hand pick and sort them first. No way.
+<[Wil] W.BADEN1> Good for you.
+<GARY-S> Hell - he's the BBS SysOp, and expects me to determine his wants ???!!!
+<[Wil] W.BADEN1> He's just trying to build circulation.
+<[Wil] W.BADEN1> (without working for it)
+<GARY-S> \Wil - we aren't going to have company tonight  - want to call it a 
+night ?
+<[Wil] W.BADEN1> Yeah, my wife wants to go out.
+<GARY-S> Then take the lady out. ;-)
+<[Wil] W.BADEN1> 10 and counting.
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,169 @@
+
+                
+                   Best of GEnie..... February 1991
+          News from the GEnie Forth RoundTable by Gary Smith
+
+   We have spent two issues catching up on recaps of GEnie Forth RoundTable
+Real Time guest conferences. This will close out the current series of these
+visits with our always interesting and informative guests with a promise I
+will not delay so long before the next series.
+
+   Guest conferences reviewed will include Frank Sergeant, "Why Pygmy", George
+Nicol, "SBC 32", Bill Ragsdale, "Targeted Applications for Forth", Glen Haydon,
+"Forth Common Usage", and Dick Miller, "To DOS or not to DOS". 
+   
+   If you are following these guest conference recaps for the first time, what
+ you will read are the guests' opening remarks, and occassionally a few extra
+ comments if they add clarity or depth to the opening remarks.
+
+   June 21, 1990 Frank Sergeant, independent consultant and creator of Pygmy,
+a minimal Forth kernel based initially on Chuck Moore's cmForth joined us to
+discuss his reasons for creating Pygmy and some of his Forth philosophy.
+
+[Frank]  Today, I wrote Pygmy Forth for 3 reasons:
+                  1. I was unhappy with certain aspects of L&P's F83:
+                             a. The slow & awkward editor
+                             b. The size & complexity
+                                (then what must I think of F-PC?)
+                  2. Certain ideas from cmFORTH appealed to me very strongly:
+                             a. PUSH POP (instead of >R R>)
+                             b. FOR NEXT
+                             c. no IMMEDIATE word
+                                (but it does have immediate words)
+                             d. simple Meta-Compilation
+                  3. I wanted my Forth to be under my complete control.
+ 
+          Tomorrow, I may have written it for other reasons.
+                  
+               Clarifications:
+                  1. 'Pygmy' is short for 'Pygmy Forth'.  It is NOT
+                      a new language.  It is Forth (as I see it) all
+                      the way.
+                  2.  Pygmy is NOT Public Domain.  It is shareware.
+                      The fee is reasonable  (from a minimum of ZERO to
+                      a maximum of all you have - your choice).
+                  3. Is Pygmy perfect?  Of course not.
+
+
+   July 19, 1990 George Nicol, president of Silicon Composers. Dr. Nicol 
+ discussed his company's SBC32 single board computer based on the 32 bit 
+ Forth engine created at Johns-Hopkins Advanced Physics Lab.
+
+[george]  Silicon Composers, in business since 1986, specializes in hardware
+          and software using Forth chips such as the 16-bit Harris RTX 2000,
+          the 32-bit SC32 Forth Chip, and the NC4016.  We make single-board
+          computers for stand alone use and for use in PCs as plug-in co-
+          processors.
+         
+          We also do custom board and software work.  Our newest product is 
+          the SC/FOX SBC32, a stand alone single board computer for the SC32
+          Forth Chip.  The SBC32 is a small Eurocard size (100x160mm) board 
+          with up to 512K bytes of SRAM, 128K bytes of EPROM, a 56K baud serial
+          port, and two fifty pin user application connectors.  It also comes
+          with SC/Forth32, an interactive Forth based on the Forth83 Standard, 
+          in EPROM. (See the July/Aug '90 issue of Forth Dimensions, inside
+          cover for additional details). If you have any questions about 
+          Silicon Composers or our products please feel free to ask. 
+     
+
+   August 16, 1990 Bill Ragsdale, president of Dorado Systems. Bill discussed
+ his company's approach to 'Targeted Applications in Forth'. Also discussed
+ was various Forth models and what Bill sees as a major failure by the X3J14
+ ANS Technical Committee as they construct the new standard.
+
+<[Bill R]  Hi, All Im glad to be here thru the magic of Genie.
+           We need commercially viable Forth applications that are motivating
+           to the buyer (company) and seller (Forth programmer). This is 
+           needed for Forth to be rewarding to all and viable in the long term.
+           I propose "tailored applications".
+
+           These are standard and custom software in a product form.
+                     The features are  - quick turnaround.
+                                       - done in a field the programmer 
+                                         knows well...
+                                       - have customers under a time pressure
+
+           I would look for applications written from an application shell 
+           which the Forth programmer customizes. The prices would be $500 to
+           $1,000 in 1 - 2 hours, or $5,000 to 10,000 when it requires 1 - 2
+           days.
+
+           We do such products at Dorado Systems, in this price range.
+
+
+   August 23, 1990 Dr. Glen Haydon, author of the newly revised "All About 
+ Forth" and co-founder of WISC Technology. Glen takes issue with standard-
+ ization as he discusses how Forth should be defined by practice, not by
+ committee. Glen's Topic: "Forth Common Usage".
+
+ [Glen]  No natural language has ever been standardized. CHM created Forth to
+         overcome the liabilities of an operating system. Using any other 
+         operating system is an albatross.
+
+         No two hardware systems are the same.
+    
+         Use Forth to exploit your hardware. Don't cripple your hardware with
+         Forth. Level 0 Forth has about 70 functions. Even these will vary 
+         with hardware.
+
+         Program for people. Let the computer find and compile what it needs.
+         If you cannot say it in English, don't muddy your thoughts further 
+         with muddy code.
+
+         In programming each function include:
+                  1. A clear English functional statement.
+                  2. A precise functional implementation.
+                  3. A set of test vectors.
+                  4. Comments on where you stole the algorithm.
+
+          ALL ABOUT FORTH, 3rd. Edition, 1990 is a concordance of about 500
+          functions in common usage. Included are functional definitions and
+          implementations from fig-FORTH, 79-Standard, 83-Standard, MVPFORTH,
+          F83, F-PC, and original sources where available.
+          Appendices include the complete text from the fig-Installation 
+          Manual, the 79-Standard and the 83-Standard.
+
+          Understand your application and your tools. Programming the solution
+          is only 10% of the job.
+
+
+   September 20, 1990 Dick Miller who is a partner in Miller Microcomputer
+ Services, a cottage industry whose work-at-home programmers develop state
+ of the art microcomputer software at all levels. Dick discusses whether to
+ run Forth on DOS ... or NOT. 
+
+[Dick Miller] Hi friends...... This is my first conference via keyboard so be 
+           kind and thanks for your patience.
+
+           The topic for tonight's convefence, to DOS or not to DOS, echoes
+           some of the Forth philosophy we've been using at MMS since we
+           released the first version of MMSFORTH way back in Sprinring 1979
+           in parallel with the early FigForth efforts.... And, while we were 
+           waiting six months for an answer to our letter, in the FIG mailbox,
+           we rolled our own. Then and since, some of the MMSFORTH programmers
+           are:   Tom Dowling, Jim Gerow, Dave Lindbergh, John Rible, Bent 
+           Schmidt-nielsen, and of course myself and Jill Miller.
+
+           In addition to MMSFORTH, we offer FORTHWRITE, DATAHANDLER-PLUS, 
+           FORTHCOM, EXPERT-2, GENERAL LEDGER, 8087 and vector graphics
+           support, plus a wide variety of other utilities and games. Also
+           custom Forth programming and standard and special hardware to users
+           worldwide.  Sorry for the commercial, but I hope this wilill open
+           up some interesting question areas. I have listed some areas of
+           interest, but since we still offer a nonDOS version I thought that
+           might be a subject of some general interest. 
+            
+   
+   The full transcript for each of these conferences is available in the GEnie
+ Forth RoundTable Software Library 1. If you have not participated in one of
+ our guest conferences, the list of upcoming dates and guests is posted in
+ advance in the Bulletin Board area, Category 1, Topic 6. The guests who have
+ participted in the past are a virtual 'Who's Who ?' of Forth luminaries, and
+ those who have graciously accepted invitations for future conferences promise
+ to be every bit as insightful and interesting. You are cordially invited to
+ join in one of these discussions as well as our informal meetings. I usually
+ host the open FIGGY BAR held each Thursday where no Forth related subject is
+ taboo. Co-SysOp Leonard Morgenstern is usually host of the Sunday gathering
+ dedicated to learning and technical questions from Forth users.
+
+

@@ -1,0 +1,304 @@
+
+                
+                     Best of GEnie..... March 1990
+          News from the GEnie Forth RoundTable by Gary Smith
+      
+  Object Oriented Programming is a hot topic once again. This is not only 
+true in the computer world as a whole, but also in the community of Forth
+users.
+  Object Oriented Programming or OOP first entered into computer parlance
+with the creation of Smalltalk at Palo Alto Research Center (PARC), though
+at the time few people really understood object-based languages. In essence
+an object-based language organizes knowledge by groups, or objects. In more
+traditional languages these would be records or perhaps lists. Objects can
+exchange data, which is referred to as 'sending messages', on which methods
+(ie: proceedures) can be performed. Objects are permitted to share methods.
+   If OOP and OOF are still a mystery to you it is clear you have not been 
+following the Object Oriented Forth message topic on the GEnie Forth Round-
+Table. The following excerpts should make you wish you were participating.
+I can promise your comments on this and dozens of other interesting topics
+are more than welcome.
+
+ ************
+Topic 41        Fri Nov 03, 1989
+OLORIN [Dave]                at 20:09 EST
+Sub: Object Oriented Forth                  
+
+(For the discussion of object oriented Forth systems, including the extension
+to F-PC in the FORTH RT library)
+ ************
+ ------------
+H.SABBAGH [hadil] 
+ 
+Dave: Downloaded and looked over your Object-Oriented Forth extensions
+yesterday.  I am very impressed: it is some of the _best_ Forth code I have
+read in a _long_ time. I am trying to implement this stuff on HS/FORTH.  I
+don't quite understand the definitions found in the INTERNALS.SEQ file, since
+I don't own F-PC.  Clearly, forward: and define: are used for some kind of
+deferred word.  Could you shed some light on this? I am not a rank beginner,
+so I'm really after data on the  functionality of these words; I am sure that
+I'll have to  completely reimplement them for HS/FORTH, since the vocabulary
+em is _much_ different. Extensions that I would like to work on:
+ * Port to HS/FORTH.
+ * Add variable-length objects.  The class is defined to support
+   variable length objects; instantiating a class requires a count
+   of the number of cells needed.  This is available in Smalltalk
+   also, but non-trivial to build.
+ * Add dynamic allocation.  Since objects are referred to by their
+   address, then this shouldn't be too hard to integrate with the
+   rest of the code.  It will also add the ability to use local
+   variables, arrays and stuff like that.  I would use a C++ like
+   memory model, where objects clean up after themselves, although
+   there are theoretical advantages to garbage collection.
+ * Experiment with persistent object, i.e., object-oriented databases.
+   One can slightly modify your code to add an extra level of in-
+   direction, i.e., object-pointers are not memory addresses, but
+   indexes in some _big_ table.  This table would not be in memory 
+   at the same time, so I'm talking about some kind of virtual
+   memory system.  This idea cannot be implemented as nicely in
+   any other language; in Smalltalk, you need heuristics to discrim-
+   inate which objects should be handled this way, and in C++ you
+   can't expose object internals easily.  With this idea, you write
+   systems code in Forth and your database using the OO extensions;
+   the system takes care of the persistence issues transparently.
+
+I hope that you will be able to give me advice, etc..  Perhaps we can work on
+this like Dennis' TELECOM project?  I intend to share all source code; I hope
+it will be as good as yours.
+
+Hadil
+ ------------
+OLORIN [Dave] 
+ 
+Thanks for the comments (they've done my ego no end of good :-) ).
+
+Creating dynamic objects isn't that hard...an object structure is a pointer to
+its class, followed by a block of memory the same size as the size of the
+object (for the instance variables). With that information it shouldn't be
+hard to use it with your memory manager (whatever kind you choose to use).
+
+What forward: and define: do is allow forward referencing. The word forward:
+creates all of a colon definition, but doesn't have any code in it at all. The
+define: stage allows the code written then to be plugged into the previous
+define. This is what makes the forward definition as efficient as a regular
+colon definition.
+
+The internals module needs to be reimplemented for each Forth the package is
+ported to (BTW: 2.1 is on its way, with a few more words for dealing with
+classes). The internals module is essentially the abstracted out dictionary
+structure words... later on tonight I'll sit down with the code and write out
+a detailed description of what each word in that module is supposed to do (you
+*will* need to dig deeply into the dictionary structure and threading
+mechanism of your Forth to port the code across).
+
+Dynamically sized objects: What you might consider doing is having an instance
+variable called body^ (a pointer to the dynamically sized portion). By using
+the ability to define initialization methods (which are executed when an
+object is created), you can allocate this space at creation time, set the
+instance variables, and have the rest of the methods work off of the pointer.
+
+(Oh..BTW: any dynamic object creation *does* need to initialize the object)
+
+--Dave
+ ------------
+H.SABBAGH [hadil]
+ 
+Dave: Thanks.  I just finished porting the MODULES.SEQ to HS/FORTH; only the
+word "module" needed to be changed.  I will upload this weekend. The
+dictionary structure is _much_ different than that of most PD Forths (except a
+little like BBL).  I will have to take some time just to figure out how it
+works. There has been some mention of creating a separate category. I'm game,
+but I won't be able to spend more than 4-5 hours/week on this project.  If you
+all can bear with me, I'll be happy to post my code changes, etc.  I am also
+concerned about HS/FORTH vs. other Forths. Let me know what you think.  I will
+try to post a "to-do" list next week. -hgs
+ ------------
+ DOJUN YOSHIKAMI 
+ Subj: Smalltalk?  C++?  
+
+ The big difference is Forth was originally made for fast real-time
+ applications where time and space are of essence.  Forth is very small,
+ the address intrpreter can fit in 1k, a reasonable EXTENSIBLE forth
+ system can be put in 8K of ROM (ROM mind you).  Forth also has control
+ over binding times.  From what I have read, OOP languages tend to bind
+ late (Smalltalk is a late binder, apparently) where as most languages
+ such as Ada, C, or FORTRAN bind early at compile time.  Forth has
+ control over bindings through various mechanisms (i.e. bind whenever you
+ like) with CREATE DOES> or deferred words.  I've even heard of some guys
+ who wrote a cross compiler in forth for the ibm pc because Forth was the
+ only language small and fast enough.  Forth is its own operatign system,
+ poly forth for the vax comes on 10 (?) floppies.  (Micro-vms I think is
+ about the same size, but that's only the base system, not including
+ utilities, assemblers, and the like)  The only problem is, forth is so
+ unlike anyhing else, it's not well known, and since it is for real-time
+ programming, useful datasturcturs such as heaps have to be coded
+ yourself.  (Heap mangament take up heap big time!)
+
+ Pardon the Pun.  D. Yoshikami
+ ------------
+ From: keith@curry.uchicago.edu (Keith Waclena)
+
+ >       It seems to me that by the characteristics of forth, it should be
+ >       a suitable language for implementing interpreters for languages
+ >       that are difficult to compile without restricting their
+ >       operativeness.
+ >       The languages I'm thinking of are Prolog, Lisp or fully operative
+ >       object-oriented languages. 
+ >                                But the literature doesn't mention 
+ >       such possibility, so I wonder if I'm wrong. Could anybody tell me 
+ >       if any work has been done in this field?
+ >
+
+ There has been a lot of this sort of thing in the Forth literature
+ (though it doesn't seem to make it very far into the general CS
+ literature).  Here are some citations; these citations aren't
+ necessarily recommendations unless explicitly indicated.
+
+ %A L. L. Odette
+ %D 1987
+ %T Compiling Prolog to Forth
+ %J Journal of Forth Application and Research
+ %V 4
+ %N 4
+ %P 487-533
+
+ %A Dick Pountain
+ %D 1986
+ %T Object Oriented Extensions to Forth
+ %J The Journal of Forth Application and Research
+ %V 3
+ %N 3
+ %P 51-73
+ %X Includes source code.
+ %X Describes a true object-oriented extension to Forth (including
+ subclass inheritence). [KDW]
+
+ %A Dick Pountain
+ %D 1987
+ %T Object-Oriented Forth: Implementation of Data Structures
+ %I Academic Press
+ %C London
+ %X A more tutorial version of Pountain 1986.  Quite good. [KDW]
+
+ %A Christopher J. Matheus
+ %D 1986
+ %T The Internals of FORPS: A FORth-based Production System
+ %J The Journal of Forth Application and Research
+ %V 4
+ %N 1
+ %P 7-27
+ %X Describes an OPS5-like production system for Forth. [KDW]
+
+ While I don't have the reference handy, there has been at least one
+ article in the FORML proceedings in the last few years on Lisp in
+ Forth. 
+
+ These are just a few examples.  The two major places to look for
+ articles of this type are the *Journal of Forth Application and
+ Research* and the proceedings of the FORML conferences.  Both are
+ refereed.  *Forth Dimensions*, the journal of the Forth Interest
+ Group, is another source, although I don't think it's refereed.
+
+ >
+ >       Just one more question. Could anybody tell me where I can get
+ >       a PD forth implementation for the 80x86 family ?
+ >
+
+ By mail from the Forth Interest Group (at cost), or by anonymous FTP
+ from wsmr-simtel20.army.mil (cd to pd1:<msdos.forth>, set tenex mode,
+ and get either f-pc (a full-featured dtc implemetation) or f83 (a
+ simpler itc implementation, excellent for learning purposes).
+
+                                                 Keith
+ --
+ GENE LEFAVE   
+ Subj: POLYFORTH OBJECTS 
+
+ I've uploaded the file polyobj.zip.  It contains the basic wordset
+ from Dick Pountains book "Object Oriented Forth".  It will run
+ only under polyFORTH/386.  However, I believe it will also work
+ under the 8086 version too.  I used CELLS and +CELLS whenever
+ it was appropriate.
+    It's not particularly efficient but it does work.  I'm 
+ rewriting my database words to take advantage of objects
+ and then I plan on working on execution speed.
+     Gene
+ ------------
+D.RUFFER [Dennis]  
+ 
+Gene, I've been doing a little bit of playing with you POLYOBJ file. It has a
+couple of problems with working on 8086 PolyForth.  I've tried to make the
+changes, but now the system isn't working anymore. It might be easier if you
+make a few changes and re-post it, since you know what makes it tick and how
+to check it.  I'm just getting to lost in it to trust my changes anymore.
+
+First, it is not recommended to change the function of existing words.  You
+change to the nucleus is ok, but I would call it another name instead of using
+an existing name.  I changed your definition of -FIND to -FINDS and left the
+original -FIND alone.
+
+Next, in quite a few places, you used 4 or 4+ where you should have used 1
+CELL and CELL+.  I made the changes, but I'm not sure I hit them all.  Most of
+your stuff was ok, but blocks 1 and 2 were the worst cases.  It is particulary
+difficult to know what to do with user variables, but the best bet is to use 1
+CELLS instead of a literal number.
+
+On the user variables, a relatively standard way to start them off is with the
+following statement:
+
+STATE STATUS -  CELL+  ( last  user offset from block 198)
+
+Then, at the end of the block you can use the following to let you know how
+many have been used:
+
+CR .( Last USER =) .
+
+You appear to have added the definition CELLS+ that is not standard. I've just
+returned that to CELLS + as it should have been.
+
+The definition L@ uses a thing called -LINKS to remove some of the bits of the
+link field.  That is only needed on the 386 version.  I believe that L@ can be
+defined as AKA @ L@ for the 8086.
+
+The definition SEAL is just too large and I get an "out of range" error on the
+/LOOP.  I tried to refactor it, but I think that is where I messed up.  Try
+your hand at seeing if you can keep the DO and the /LOOP a little closer
+together.  I think I can see what you are doing there, but you can do a better
+job a factoring it than I can and you know how to test it.
+
+That's as far as I got, but now the dictionary links are messed up after I
+load block 7.  I believe the END> is the one that is doing it, which uses my
+butchered SEAL, but finding the problem is more than I want to deal with right
+now.
+
+Thanks.   DaR
+ ------------
+ From: GENE LEFAVE 
+
+ Sorry Dennis, I didn't realize just how incompatible with 8086 pF
+ it was.  I just got back from vacation so give me a few days to
+ look it over.
+ .
+ Just for starters the 17 CELLS used through out is wrong. This 
+ should be CURRENT  CONTEXT -  assuming that  context preceeds
+ the threads and current follows.  The 17 is from 16 threads plus
+ CONTEXT
+ .
+ What I think would be a better solution is a whole new version
+ of -FIND that takes an address of a single dictionary
+ thread and searches fig style.  This would save a lot of trouble.
+ .
+ The problem with SEAL is probably related to the 17 CELLS.  I don't
+ off hand recall what is after CURRENT but I'm sure setting it to 0
+ will cause a lot a problems.  SEAL scans down all the threads
+ and creates a little mini dictionary for the object.
+ .
+ I'll try to post a new version shortly.
+ .
+ Gene
+ ------------
+ 
+Object Oriented Forth has also been the subject of some regular Thursday
+night (9:30pm Eastern) open FIGGY BAR conferences.
+
+

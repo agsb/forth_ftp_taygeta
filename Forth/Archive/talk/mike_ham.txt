@@ -1,0 +1,336 @@
+
+
+
+
+ Minutes of the Special GEnie Forth RT Conference with Michael Ham,
+ noted Forth author and instructor. Michael discusses "Teaching Forth
+ as a First Language"
+
+ Entire contents of this transcript copyright (c)
+ 1991 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+    
+ Attendees:
+[[Host SysOp] GARY-S] <-- Moderator/Host SysOp
+[[Michael] FIGGUEST> <--- Invited guest speaker, Michael Ham
+[[Rick] LRARK]
+[[Len] NMORGENSTERN]
+[[Fred] F.TEMPLE]
+[[Elizabeth R.] E.RATHER]
+[[Dennis] D.RUFFER]
+[D.DRAKE5]
+[[Kevin] APPERT]
+[A.ABOUSTEIT1]
+[M.GARDNER1]
+    
+Minutes:
+<[Host SysOp] GARY-S> Does the notice on the door meet with your approval ?
+<[Michael] FIGGUEST> Yes indeed; looks very good.
+** <LRARK> is here.
+<[Michael] FIGGUEST> Hi, Rick.
+<[Rick] LRARK> Hi Michael, or is it Michael Hi? (forth humor)
+<[Host SysOp] GARY-S> We are informal right now so chat away - Rick is one of
+the Unix SysOps, Mike is our guest tonight
+<[Host SysOp] GARY-S> Rick, Mike _ Mike, Rick
+<[Michael] FIGGUEST> Pleased to meet you..
+<[Michael] FIGGUEST> You've seen the bumper sticker:   Forth (heart) IF HONK
+THEN
+<[Rick] LRARK> I thought I would see how a great administrator ran a conference.
+** <NMORGENSTERN> is here.
+<[Host SysOp] GARY-S> Know where I can get a 101 keyboard with a 'K' that
+doesn't stick <arrrrgggghhh>
+<[Rick] LRARK> Put some oil on it?
+<[Michael] FIGGUEST> WD-40 cures everything
+<[Host SysOp] GARY-S> yeah! right!
+<[Rick] LRARK> Best in the west.
+<[Rick] LRARK> No Michael, I guess I haven't seen that bumper sticker. Gary, do
+you have one?
+<[Host SysOp] GARY-S> Hi Len - Len is one of the Forth co-SysOps. Len, Rick is
+visiting from the Unix RT (co-SysOp there)
+<[Len] NMORGENSTERN> Hi all
+<[Michael] FIGGUEST> Hello, Len.
+<[Host SysOp] GARY-S> Do we have one what ?
+** <F.TEMPLE> is here.
+<[Rick] LRARK> Bumper sticker..
+<[Host SysOp] GARY-S> For what ??????
+<[Rick] LRARK> Tell him again Michael
+<[Len] NMORGENSTERN> Hi F. Temple
+<[Host SysOp] GARY-S> Ho F. Temple - type /nam first name
+<[Michael] FIGGUEST> Bumper sticker:   FORTH <heart> IF HONK THEN
+<[Host SysOp] GARY-S> cute
+** <[Fred] F.TEMPLE> was <F.TEMPLE>.
+<[Host SysOp] GARY-S> Thanks Fred
+<[Host SysOp] GARY-S> Is it snowing in Plattsburgh, Fred ?
+<[Fred] F.TEMPLE> Don't know, in Clovis NM now.
+<[Host SysOp] GARY-S> Are you kidding - I was born there
+<[Len] NMORGENSTERN> Is it snowing in Clovis?
+<[Fred] F.TEMPLE> Not today, this weekend maybe.
+<[Michael] FIGGUEST> I'm here in Baltimore--beautiful warm sunny day.
+<[Host SysOp] GARY-S> 1 minute to conference
+<[Len] NMORGENSTERN> They predict rain here this weekend.
+<[Len] NMORGENSTERN> No snow (I have seen snow here 4 times in 35 years)
+Message sent to Job 2
+** <[Michael] FIGGUEST> (Sent by 2) Ready.  ga
+** <E.RATHER> is here.
+
+<[Host SysOp] GARY-S> Let's go formal folks
+
+                   The GEnie Forth RoundTable is pleased to welcome as 
+                  tonight's guest, Michael Ham, who currently resides in
+                  Santa Cruz, CA and is the product manager for a PC-based
+                  library automation system, the Columbia Library System. His
+                  first computer experience was with the 1410, and then he did
+                  a _LOT_ of assembly programming on the 1401. He has written 
+                  several large applications in Forth, and recently his book,
+                  'Programming fov the Utter Beginner', an introduction to
+                  programming that uses Forth as the language, was published 
+                  by Laboratry Microsystems, Inc. in Los Angeles.
+                  
+                  Michael continues to believe that Forth has many 
+                  characteristics that make it a good language for a 
+                  programming beginner.
+       
+                  Tonight's topic is "Teaching Forth as a First Language".
+                       Please welcome our special guest, Michael Ham.
+       
+<[Michael] FIGGUEST> Thanks, Gary.  Forth is for the beginner (as well as   
+                     the more experienced programmer) because the beginner   
+                     needs interactivity, for the immediate feedback  
+                     and the beginner naturally accepts the  
+                     idea of extensibility as a natural shorthand.     
+                     Comprehending an idea, giving it a name, and then     
+                     using it in bigger sentences.  OTOH, Forth has its 
+                     notorious way of crashing.
+                     However, I don't see this as an argument against using 
+                     it for the beginner.  The crash is feedback,
+                     clear, immediate, and able to be worked around in time.
+                     Another help to the beginner is the way the language
+                     naturally falls into very short phrases, which the
+                     beginner can easily comprehend.
+                     This is the basis for my claim, and I look forward to
+                     your thoughts and questions regarding this. 
+                     The main virtue, perhaps is the lack of the compiler, the
+                     linker, the load-go-crash-rundebugger kind of thing.
+** <D.RUFFER> is here.
+** <D.DRAKE5> is here.
+<[Host SysOp] GARY-S> Mike as a general question - I know you use LMI, but
+                      brand preference aside do you prefer a minimal or maxi
+                      kernel for teaching.
+<[Michael] FIGGUEST> I first used Dick Miller's MMS Forth, then polyForth's
+                     beginner PC Forth (don't recall the name), then LMI Forth.
+                     Generally I don't think the beginner needs a lot--too much
+                     stuff to learn at first can be daunting. A reasonably good
+                     editor, and later on it is nice in the PC world to have 
+                     hooks to DOS.  But they seem to enjoy defining simple 
+                     functions, particularly those who have not programmed
+                     before.  The experienced programmers tend to want a new
+                     language to have all the features and structure of the 
+                     language they already know:  the usual sort of thing--"I 
+                     want it new, but don't make it different."
+<[Elizabeth R.] E.RATHER> I've also had a lot of experience teaching raw
+                     beginners, especially maintenance techs & operators.  I 
+                     find that altho one needn't know another computer language
+                     some basic concepts such as "byte" or "address" have to 
+                     be there as a base for communication.
+                     Do you agree?  How would you characterize the minimum?
+<[Michael] FIGGUEST> I think that the problem is not so much the physical
+                     configuration of the computer and the words that refer to
+                     it (e.g., to RAM and how things are organized in it). This
+                     is vocabulary, and if it is introduced a little at a time,
+                     not so bad.  They can do a lot without thinking about how
+                     it's organized inside the machine (for a while).  The real
+                     problem is when they have to learn something that doesn't
+                     provide an immediate reward.  Example:  they love to make
+                     the screen a different color, or to sound the bell..
+                     The reward is right there, as soon as they learn the 
+                     instruction.  But then when you want to teach a CASE 
+                     statement, or the like, if the reward is long after the 
+                     struggle to learn the knowledge, you lose them especially
+                     adults, who really need immediate gratification.
+<[Elizabeth R.] E.RATHER> For example, it's hard to explain VARIABLES, @, !...
+                     w/o the concept of an address.
+<[Michael] FIGGUEST> Oh, right--I recall the struggles of one beginner in
+                     particular.  She really couldn't quite get it, partly
+                     because I made the mistake of trying to define VARIABLE
+                     too early.
+                     I should have just told her that VARIABLE named something,
+                     and that ! was like an assignment, and @ was like reading
+                     the assignment, or some such.  I too quickly got into the
+                     memory structure, and it just about wiped her out.  I
+                     would like to try that again, without letting them know 
+                     the mechanism so early.
+<[Len] NMORGENSTERN> I have heard from several Forth programmers that they can
+                     teach Forth farily easily to a person with no programming
+                     background, but it is harder to teach it to someone who
+                     is even acquainted with BASIC.
+                     Is that your experience?
+<[Michael] FIGGUEST> Yes, the person who has knowledge of a computer language
+                     and most particularly the person who knows >>one<< other
+                     computer language really wants Forth to be like the 
+                     language they know. They get frustrated and spend lots of 
+                     time asking things like, "Where's PRINT?" and such things.
+                     Someone who knows two different languages like, say Prolog
+                     and COBOL or some such, is more ready to accept that 
+                     languages can be different and is more willing just to 
+                     look at what Forth offers.
+<[Host SysOp] GARY-S> What is your preferred order of instruction - just an
+                     overview please.
+<[Michael] FIGGUEST> I first try to give them a general understanding of the
+                     environment a >little bit< about the computer and the 
+                     machine and the operating system.
+                     example:  I cut apart a diskette and let them handle it
+                     and take it apart.
+                     I hand around a chip, I take the cover off the computer,
+                     and in general I try to remove as much mystery as 
+                     possible.  Then we get into Forth and I right away make
+                     them able to make the computer do things (the screen 
+                     color, the bell, and so on), so that they feel that they
+                     are in control of the computer, not the reverse..
+                     Of course, the first thing I teach is how to get into
+                     Forth, how to get back to DOS, and I crash the system so
+                     that they can see what it is like and that it's harmless.
+** <APPERT> is here.
+<[Host SysOp] GARY-S> Do you use a text ?
+<[Michael] FIGGUEST> I have used Leo Brodie's Starting Forth with good success,
+                     especially the second edition.  I based my own book on the
+                     way I taught and it gets into some of the structures 
+                     earlier because I needed the structure to do interesting
+                     things..
+                     i.e., IF ELSE THEN, DO LOOP, and the like.
+<[Elizabeth R.] E.RATHER> Having introduced the students to the computer,    
+                      what's the order of Forth topics?
+<[Michael] FIGGUEST> I try to build an application,and I take the topics  
+                     as they work toward the goal.  That is, my goal is  
+                     really, with beginners, to teach >programming< rather than
+                     >Forth< In the book, we very early began to write a menu 
+                     that they could scroll the highlight over the options and
+                     choose one.
+                     Well, first we just wrote a title screen, because that is
+                     easy, and the logical way to begin the program.  But then,
+                     they have seen menus and they are interested in how they
+                     work.  So that gets one into DO LOOP and IF ELSE THEN 
+                     pretty early, but naturally because it is part of what 
+                     they need for their goal.  And we work through the
+                     application, learning what we have to learn to get it off
+                     the ground.
+                     This is all part of making the information have immediate
+                     application and reward.
+<[Host SysOp] GARY-S> Since you mentioned your book - how is it available?
+                     cost? address? with/without a kernel?
+<[Michael] FIGGUEST> Yes, I think Ray Duncan is either supplying it with his
+                     UR/FORTH or sells it separately.  I do know that he had 
+                     to reprint, but the first print run was not terribly 
+                     large.  We are looking at doing a slightly different 
+                     version with a trimmed-back UR/FORTH that might be called
+                     soemthing like FIRST/FORTH.  Laboratory Microsystems is 
+                     in Los Angeles.
+<[Host SysOp] GARY-S> Marina Del Ray isn't it ?
+<[Michael] FIGGUEST> It used to be, but he's now in LA.  213/306-7412.
+                     BTW, I do have a slightly contentious statement.  I have
+                     seen beginners introduced to programming with languages
+                     such as BASIC and such as C, and they seem to me to be bad
+                     choices in different ways.
+<[Host SysOp] GARY-S> Elaborate a bit please.
+<[Michael] FIGGUEST> BASIC until recently had little structure, and it
+                     encouraged the beginner to build longer and longer 
+                     strings.  This can happen in Forth as well, of course,
+                     but the screen format works against it.
+                     C has the difficulties of the compiler and the library -
+                     - much more complexity that must be dealt with early, at
+                     the time when beginners are feeling uncertain and out of
+                     control.
+                     BTW, the nice thing about Forth is the ease with which one
+                     can make changes and refine the early attempts, so that in
+                     teaching them you can go back to the earlier programs and
+                     easily make them better and better, again reinforcing the
+                     beginner.
+<[Len] NMORGENSTERN> Although this is not really your topic, can you say a few
+                     words about your experience with teaching Forth to 
+                     students with some (maybe a good deal) of computer 
+                     experience?
+<[Michael] FIGGUEST> I think that programmers with much experience start out
+                     with some disdain (often), but quickly become amazed at
+                     what they can do, and how fast they can do it.  Some get
+                     irritated that they don't have their old familiar tools, 
+                     but many of those get over it.  I'm not sure but there may
+                     be some personality difference -- 
+                     e.g., like the difference between those who LOVE Windows
+                     and those who HATE it.
+                     I wonder if most Forthers would fall into one or the other
+                     camp.  Probably the "hate" camp.
+<[Fred] F.TEMPLE> You mentioned about forth screens.
+                     Do you introduce your students to full screen editors
+                     (text editors) like in F-PC?
+<[Michael] FIGGUEST> I avoid the text-file editors for beginners.  The screen
+                     editor has the advantage of focussing attention on just a
+                     bit of code  and also enforcing short definitions.  Also,
+                     the screen editors are relatively easy to learn.  OTOH, I
+                     have used the full-screen screen editor unlike the 
+                     polyFORTH line editor, for quite a while, and I think it 
+                     is easier for the user to use.  Moving the cursor up and
+                     down is very natural.
+<[Dennis] D.RUFFER> The editor question you just answered was my first choice,
+                     does LMI have a line editor then?... and then also, when
+                     is your next class?
+<[Michael] FIGGUEST> Nah, I misunderstood the question at first--I thought it
+                     was about using text files vs. using screen files; then I
+                     realized it was just about the kind of editor used for
+                     screen files.  LMI has only a full-screen screen-file 
+                     editor--a very nice one, I think--it's had quite a bit of
+                     polish.  I have no plans for classes in the near term--
+                     mostly I tried to put everything in the book so that the
+                     autodidact could use it easily.
+<[Host SysOp] GARY-S> Have you spent any time with the Kelly/Spies book ?
+                     comments
+<[Michael] FIGGUEST> I looked at it, and it is formidably complete.  However,
+                     it has the fault (for the beginner) of trying to address 
+                     multiple Forths so the poor beginner has to deal with 
+                     statements on "this works with X Forth, but not with Y,
+                     so try this ..etc. etc.."
+                     The kind of exceptions that drive beginners up the wall.
+                     I deliberately tailored my book to one single Forth so 
+                     that I could tell the beginner exactly what to expect. In
+                     fact, our plan is eventually to provide the book with a
+                     particular version:  the FIRST/FORTH referred to earlier.
+<[Host SysOp] GARY-S> Just a comment to concur - when our FIG chapter attempted
+                     to teach with multiple hardware and kernal platforms it 
+                     was a TOTAL nightmare.
+** <A.ABOUSTEIT1> is here.
+** <M.GARDNER1> is here.
+<[Len] NMORGENSTERN> This is really a comment not a queston.
+                     Mahlon Kelley says that he gets students started with
+                     Forth by demonstrating how to code short words in 
+                     assembler. (An example is testing the DAA instruction). 
+                     Of course, these are college level, some being computer
+                     science majors.
+<[Host SysOp] GARY-S> Your response, Mike.
+<[Michael] FIGGUEST> I avoid assembler because it is too much for the total
+                     beginner, IMHO.
+                     I wanted to get them to doing reasonably ambitious things
+                     early (reinforcement) like creating a database of
+                     addresses & phone numbers and assembler would have been 
+                     too much delay of gratification.  Very difficult with 
+                     adults.  Books on adrogyny emphasize that while children 
+                     will obediently study along for some future utility,
+                     adults want their studies to pay off NOW.
+<[Host SysOp] GARY-S> Are there any further comments or questions ?
+                      Your closing remarks then....
+<[Michael] FIGGUEST> I want to thank FIG for asking me to this, and I want.
+                     to state a hope that Forth will find a new niche in the
+                     teaching of computer beginners.  It offers great power,
+                     ease of use, and is quickly learned at an elementary 
+                     level.  I will be happy when I see Forth in more colleges
+                     as a >tool< language, like.
+<[Host SysOp] GARY-S> I am particularly grateful to Mr. Ham for tonights
+                     appearance. He is typing from a motel room in Baltimore
+                     after a day of conferencing.
+                     Michael, Thank you for an interesting look at education,
+                     Forth Style.
+<[Michael] FIGGUEST> Thanks, Gary, and I am pleased you all could join us.
+<[Len] NMORGENSTERN> Thanks for an interesting discussion, Mike!
+<[Host SysOp] GARY-S> All may stay and chat if they wish.
+                     This conference is officially closed.
+============= END ============
+
+

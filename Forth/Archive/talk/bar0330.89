@@ -1,0 +1,379 @@
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 03/30/89   Time: 22:35EST
+
+Attendees:
+[[Gary] GARY-S]
+[[len] NMORGENSTERN]
+[[Kevin] APPERT]
+[[jax is back] FIGCHAPTERS]
+[[milt] M.FABERT]
+[C.TING]
+[D.BAKAS]
+ 
+  Items discussed: learning script languages, UNIX, e-mailing for MM20 help,
+                   stack operators NIP,TUCK,SWOOP,SLIP,SLIDE.., LOCALS,
+                   Fred Olson's comparison of F-83 to BASIS7, RTX as a DMA
+                   controller, fun at NASA, new book in works (?), fast
+                   matrix multipliers on standard chips, bit banging on
+                   Ethernet, why FIG-Forth won't die
+ 
+Minutes:
+<[len] NMORGENSTERN> Hi, Gary
+<[Gary] GARY-S> hey len - welcome
+<[len] NMORGENSTERN> I learned 3 languages over the weekend!...
+<[len] NMORGENSTERN> Actually 2 were updates of old ones.
+<[Gary] GARY-S> spanish,spanish, and forth
+<[len] NMORGENSTERN> No. 1 was a new linked hypertext editor. One was the 
+outliner..
+<[len] NMORGENSTERN> maxthink, and the third was a new version of ACTA for the 
+mac...
+<[len] NMORGENSTERN> also an outliner.
+<[len] NMORGENSTERN> My mind is going in circles!
+<[Gary] GARY-S> I learned there is a vast difference in different 
+implementations of UNIX
+<APPERT> is here.
+<[len] NMORGENSTERN> Hi Kevin.
+<[Kevin] APPERT> hi len, gary
+<[Gary] GARY-S> kev
+<[len] NMORGENSTERN> ga Gary you were talking about Unix.
+<[Kevin] APPERT> barf
+<[Gary] GARY-S> len - I have been meaning to thank you for participating in 
+Thursday FIGGY's...
+<[Gary] GARY-S> I certainly don't reciprocate on Sunday...
+<[len] NMORGENSTERN> That's ok. I do what I can.
+<[Gary] GARY-S> I hope you don't mind the obvious disparity
+<[len] NMORGENSTERN> I answer few letters, I don't do much about files.
+<[Gary] GARY-S> I was honest going in - I can't be here Sundays
+<[Gary] GARY-S> Kev - what did you ask ?
+<[len] NMORGENSTERN> Why don't you like UNIX, Kevin? I have never used it
+<[Kevin] APPERT> i was just barfing in response to the word EUNIX
+<[len] NMORGENSTERN> A eunuch is a man who was cut out to be a bachelor.
+<[Gary] GARY-S> I understand - either you accept it or you don't
+<[Kevin] APPERT> It's a pile of little black boxes into which you cannot see.
+<[jax is back] FIGCHAPTERS> hi
+<[Kevin] APPERT> hi Jax
+<[Gary] GARY-S> jaxon
+<M.FABERT> is here.
+<[jax is back] FIGCHAPTERS> got my car
+<[Gary] GARY-S> and it is....
+<[len] NMORGENSTERN> Aren't all languages black boxes, except Forth & assembler?
+<[jax is back] FIGCHAPTERS> cheap! mazda 323, but brand new. Nice.
+<[Kevin] APPERT> if you cannot hold it in your hand and understand it with your 
+mind you cannot trust it and you dare not use it
+<[Kevin] APPERT> congratulations, Jax. you deserve it
+<[Gary] GARY-S> That leaves out a lot of ladies
+<[jax is back] FIGCHAPTERS> brb ... baby  ... thanx, Kev.
+<[len] NMORGENSTERN> :-) :-) :-) :-)
+<[Kevin] APPERT> :) it's not considered apropriate to use other people and 
+espicially ladies these days.
+<[Gary] GARY-S> Len is this the comm prog you kept dumping macros with ?
+<[len] NMORGENSTERN> Kevin, your comment reminds me of the "Dog's comment on 
+life"
+<[Kevin] APPERT> yes?
+<[Gary] GARY-S> I was refering to understanding the ladies
+<[len] NMORGENSTERN> If you can't eat it, and you can't [vulgar word for have 
+intercourse with]
+<[len] NMORGENSTERN> it, then piss on it!
+<[Kevin] APPERT> I never have understood ladies.  I don't think it's a criteria.
+<[Gary] GARY-S> milt - hows the NASA troops
+<[len] NMORGENSTERN> Jax, Gary's notice was about "fancy" stack words...
+<[milt] M.FABERT> Moving along I was at nasa HQ yesterday - what a zoo!
+<C.TING> is here.
+<[Gary] GARY-S> did you feed the animals ?
+<[Kevin] APPERT> Ting!  hi
+<[Gary] GARY-S> Dr. Ting ! nice surprise
+<C.TING> hi, gary and kevin
+<[milt] M.FABERT> yea.  software souflee(sp?)
+<[Gary] GARY-S> for all unsuspecting - Thursday (non-guest Thursdays) is 
+free-for-all ...
+<[Gary] GARY-S> just jump in with comments
+<[jax is back] FIGCHAPTERS> " a food fight of ideas"
+<[Gary] GARY-S> my words (EXACTLY)
+<[jax is back] FIGCHAPTERS> Happy New Year, Dr. T.
+<[Gary] GARY-S> Jax - favor time
+<C.TING> thanks, jax
+<[Gary] GARY-S> Got a request
+<[jax is back] FIGCHAPTERS> ..?
+<[Gary] GARY-S> Next e-mail to Australia - ask Lance for some docs for MM20/MX20
+<[jax is back] FIGCHAPTERS> is what an MM20?
+<[Gary] GARY-S> MM20 = block f83 for CP/M, aussie style, MX = TEXT (F-PC like)
+<[jax is back] FIGCHAPTERS> ok, leave me a note in mail.
+<[Kevin] APPERT> assault rifles are being banned in some commutities in CA
+<[Gary] GARY-S> I will be totally out of pocket for a couple of weeks and..
+<[Gary] GARY-S> thought if you had fig chapter mailings..
+<[Gary] GARY-S> you might ask.
+<[len] NMORGENSTERN> Jax, Gary's notice was about "fancy" stack words...
+<[jax is back] FIGCHAPTERS> next mailing is second week april, jaxthinx
+<[len] NMORGENSTERN> since you advocated a set, why don't you defend the idea.
+<[jax is back] FIGCHAPTERS> ok
+<[jax is back] FIGCHAPTERS> I just noted ...
+<[jax is back] FIGCHAPTERS> that we have certain shallow stack operations named 
+in Forth ....
+<[jax is back] FIGCHAPTERS> whereas complementary operations, somewhat less 
+common but no more complex ...
+<[jax is back] FIGCHAPTERS> are omitted, such as: ...
+<[jax is back] FIGCHAPTERS> SWOOP ( n1 n2 --- n2 n1 n1 ) ...
+<[jax is back] FIGCHAPTERS> SLIP ( n1 n2 --- n2 n2 n1) ...
+<[jax is back] FIGCHAPTERS> SLIDE ( or UNDERDUP) ( n1 n2 --- n1 n1 n2) ...
+<[jax is back] FIGCHAPTERS> and a coupla others. I use all these. SWOOP more 
+common than others. ...
+<[jax is back] FIGCHAPTERS> but for completeness sake, why not? But 
+disregarding my "cutsie" names for them ...
+<[jax is back] FIGCHAPTERS> BADEN advocated same, with more rational naming 
+scheme ...
+<[jax is back] FIGCHAPTERS> rejected in three minutes by TC, he says!
+<[len] NMORGENSTERN> You have expressed on several occasions worry about 
+keeping Forth simple.
+<[len] NMORGENSTERN> Are you being inconsistent?
+<[milt] M.FABERT> how about replacing all of the above with Locals?
+<[jax is back] FIGCHAPTERS> Well ...
+<[jax is back] FIGCHAPTERS> What ARE locals, after all, but stack items!!!!
+<[jax is back] FIGCHAPTERS> Len ...
+<[jax is back] FIGCHAPTERS> You may be right. But it seems like if you are 
+going to stick weird things into Forth, which the TC seems to be intent on
+doing ...
+<C.TING> No more stack words.  I still cannot remember how ROT rotates.
+<[jax is back] FIGCHAPTERS> you might as well complete the mathematical set of 
+shallow stack operators ...
+<[jax is back] FIGCHAPTERS> the selection we have chosen is arbitrary, and 
+frankly ...
+<[Gary] GARY-S> I don't like all the stuff being moved out of 'standard' into 
+reference. To what end ?
+<[milt] M.FABERT> But locals are easier to write and to read, jax.
+<[Kevin] APPERT> I always try ROT myself to be sure it is still doing what I 
+think it should, Ting
+<[jax is back] FIGCHAPTERS> DX POP AX POP DX PUSH AX PUSH 1PUSH C; is faster 
+that : SWOOP SWAP DUP ;
+<[Gary] GARY-S> Has everyone read Fred Olson's comparison of F83 and BASIS 7 ?
+<[len] NMORGENSTERN> Milt, give an example
+<[jax is back] FIGCHAPTERS> But I tend to agree ...
+<[Kevin] APPERT> is it in the BB, or files, Gary?
+<[jax is back] FIGCHAPTERS> that FORTH should be left SIMPLE ...
+<[Gary] GARY-S> both
+<[jax is back] FIGCHAPTERS> IF they voted a standard that said ....
+<[jax is back] FIGCHAPTERS> that the only standard word was FORTH ...
+<[jax is back] FIGCHAPTERS> I would vote for it.
+<[len] NMORGENSTERN> You can fight fire with fire
+<[len] NMORGENSTERN> but you can't fight complexity with complexity.
+<C.TING> Where is Olson's comparison? Gary?  Send me a copy!
+<[milt] M.FABERT> : sum_of_squares ( a b --- a^2+b^2)
+<[milt] M.FABERT> locals| b a |
+<[milt] M.FABERT> a a *
+<[milt] M.FABERT> b b *
+<[Kevin] APPERT> that's almost as silly as this nonsense about ones compliment, 
+Jax
+<[milt] M.FABERT> +
+<[milt] M.FABERT> ;
+<[jax is back] FIGCHAPTERS> JForth has locals, Milt.
+<[len] NMORGENSTERN> Thanx, Milt
+<[jax is back] FIGCHAPTERS> Kevin, silly is as silly does.
+<[jax is back] FIGCHAPTERS> I think that the standard is off track ...
+<[Kevin] APPERT> I agree
+<[jax is back] FIGCHAPTERS> for lack of technopeasant input.
+<[milt] M.FABERT> What we need is for locals to be in a standard ...
+<[milt] M.FABERT> multiforth has a great implementation ...
+<[milt] M.FABERT> but I need then for the RTX2000.
+<[len] NMORGENSTERN> I don't like the use of the term "local" for what you
+<[len] NMORGENSTERN> have done, although it is on its way to acceptance.
+<[len] NMORGENSTERN> I always think of locals as in Pascal & other languages
+<[len] NMORGENSTERN> They can by anything: constants, variables, colon defs
+<[len] NMORGENSTERN> which have a temporary name. When released, the original 
+name
+<[len] NMORGENSTERN> is restored.
+<[milt] M.FABERT> a horse by any other name is fine by me.
+<[len] NMORGENSTERN> I proposed a system at Austin last month.
+<[len] NMORGENSTERN> A horse & a zebra are related but different.
+<[milt] M.FABERT> don't let either NIP you!
+<[jax is back] FIGCHAPTERS> What is new in the publishing biz, Dr. T?
+<C.TING> May be we should see how RISC's do its windows.  It takes care of lots 
+of locals.
+<C.TING> F-PC is selling like hot cakes.
+<[len] NMORGENSTERN> At the W. Coast Computer Faire, we were selling them
+<[jax is back] FIGCHAPTERS> That's because it's cheaper to buy than to download!
+<[jax is back] FIGCHAPTERS> ... :-)
+<[len] NMORGENSTERN> so fast, we couldn't copy the disks fast enough.
+<[Gary] GARY-S> Those interested in Fred Olson's comparison of F-83 to the 
+current BASIS please read either Cat 14, Topic 2, Messages 35 through 43 -O
+R- File 1638 in the library.
+<[jax is back] FIGCHAPTERS> Do you ever publish books by other authors, Dr. T?
+<[Gary] GARY-S> Did everyone get that ?
+<[Kevin] APPERT>
+<C.TING> The Indelko RTX kit is now very available.
+<[Kevin] APPERT> a/sen 6 I missed your reply if you sent one, know anybody with 
+f83 in rom for 8086 with source available?
+<C.TING> Yes, I got the numbers .  Thanks, Gary.
+<[Kevin] APPERT> ack, I got it, thanks Gary
+<[milt] M.FABERT> dr. T, Have you done any more on parallel processors?
+<[Gary] GARY-S> since your private send went public let's all here if the ROM 
+F83 is available
+<C.TING> Jax, Yes. I do like to publish other people's books.  If they allow me.
+<[jax is back] FIGCHAPTERS> I had an idea for a monograph.
+<C.TING> Milt, I am still in love with SIMD parallel structures. But no real 
+activity.
+<[jax is back] FIGCHAPTERS> It would be the sort of thing more interesting to 
+Forthers than the general public.
+<C.TING> Jax, I am interested.  I can do printing and selling.
+<[Kevin] APPERT> what topic, Jax
+<[jax is back] FIGCHAPTERS> Let me work on it. I am sure you will find it 
+amusing at least ...
+<[jax is back] FIGCHAPTERS> In the 1920's ...
+<[jax is back] FIGCHAPTERS> Richard Reti wrote the definitive monograph ...
+<[jax is back] FIGCHAPTERS> defining the place of Chess in the intellectual 
+sphere ...
+<[jax is back] FIGCHAPTERS> called "Modern Ideas In Chess" ...
+<[jax is back] FIGCHAPTERS> Programming is a field intellectually intensive ...
+<[jax is back] FIGCHAPTERS> but frequently viewed as culturally void ...
+<D.BAKAS> is here.
+<[jax is back] FIGCHAPTERS> I have not found it to be so void as the general 
+public thinks ...
+<[jax is back] FIGCHAPTERS> and I would like to try to assert ..
+<[jax is back] FIGCHAPTERS> the place of Forth in the realm of creative 
+endavour of humankind.
+<C.TING> Milt, some friends are talking about a very fast matrix multiplier 
+machine
+<C.TING> are you interested?
+<[milt] M.FABERT> sure.  Is it VHSIC based?
+<C.TING> Jax, sounds great.  How many pages?
+<[jax is back] FIGCHAPTERS> I envision about 120 to 150 laser set.
+<C.TING> Milt, no.  Simple multiplier chips and memory.
+<[milt] M.FABERT> What application do they have in mind?
+<C.TING> Jax.  No problem.  Let me know when you have a draft.
+<[jax is back] FIGCHAPTERS> Thanx, will do.
+<C.TING> Milt, all scientific and engineering problems are cast in matrices.
+<C.TING> Milt, a fast matrix multiplier will help solve most of these problems.
+<[milt] M.FABERT> I know, I was just curious as whether it was customized for
+<[milt] M.FABERT> a particular project.
+<[milt] M.FABERT> It may be of some interest to the Global Change instruments ..
+<[milt] M.FABERT> some of which have data rates on the order of a Giga bit/sec.
+<C.TING> Jax, not yet.  Do it fast and sent 2 copies to the Copyright office in 
+Library of congress.
+<[jax is back] FIGCHAPTERS> Ok!
+<[Kevin] APPERT> TRW has some interesting chips these days in the DSP area 
+these days , FFT, convolvers, matrix mult., rect. -> polar coord transrer.
+<C.TING> Kevin, these are things we caqn use a fast matrix multiplier for.
+<[Kevin] APPERT> they were talking about putting a counter into the 
+polar<->rect (biderectional) and using it to generate digital quadrature!  
+seems l
+ike there should be a simpler way!
+<C.TING> The major problem is to get data in and out of this structure...
+<C.TING> the classic von Neumann bottle neck.
+<[Kevin] APPERT> you may very well wind up building it from TRW parts.
+<C.TING> Kevin, I need to be in Lockheed to use TRW parts.
+<[Kevin] APPERT> or get a govt grant.
+<[Kevin] APPERT> if Lockheed can get Govt money, the criteria may not be all 
+that strict!
+<[Kevin] APPERT> :)
+<C.TING> For experimental purposes, RTX is quite ok.
+<[Kevin] APPERT> yes, I agree
+<[Gary] GARY-S> Do they still operate the skunk works ?
+<[milt] M.FABERT> Electronic Design had a good article on using the ...
+<[Kevin] APPERT> the Kelly Johnson center for never mind is still in buisnesss
+<[len] NMORGENSTERN> What's the skunk works?
+<C.TING> No.  They are operating paper mills.
+<[milt] M.FABERT> RTX as a DMA controller.  I adapted it to a design ...
+<[milt] M.FABERT> I'm working on at Langley.
+<[Kevin] APPERT> the closed door operation, Len, which produced the U2, the 
+SR71, and other things
+<[Kevin] APPERT> run by this fellow Johnson who actually got things done
+<[len] NMORGENSTERN> Thanx
+<[Gary] GARY-S> That should make for a pretty optimal DMA controller Milt !
+<[Kevin] APPERT> the customer trusted him and he would not put up with 
+unnescessary fiddle faddle, QA, paperwork, or delays from the customer or from
+his own people
+<[milt] M.FABERT> 20 mbytes/sec with no stack limitation!
+<[Gary] GARY-S> What sort of bit rate can you absorb ?
+<[Gary] GARY-S> thanks
+<[Gary] GARY-S> Put that in your streamer and...
+<[Gary] GARY-S> zooooooooooooooom
+<C.TING> Yes.  You can use RTX to push lots of data around real fast.
+<[len] NMORGENSTERN> Milt, you mean Mbytes! mbytes are millibytes.
+<[milt] M.FABERT> ok ok
+<[milt] M.FABERT> I get payed uDollars for doing it!
+<[Gary] GARY-S> Sounds like a neat idea for maxtor, ... ????
+<[Kevin] APPERT> maxtor isn't intersted in neat ideas
+<[len] NMORGENSTERN> Femtodollars are even smaller
+<[Gary] GARY-S> on board DMA ?
+<[milt] M.FABERT> VME, inc. used it for the SCSI controller.
+<[Gary] GARY-S> God - I hate their BUS
+<[milt] M.FABERT> beats the microchannel.
+<[Gary] GARY-S> true
+<C.TING> The Forth Mafia in Matrox tried to sell the idea, but didn't get very 
+far.
+<[Kevin] APPERT> you could probably bit-bang an ethernet cable if there was 
+anything usefull on an ethernet cable, ever
+<[Gary] GARY-S> If all the collission detection didn't get in the way
+<[milt] M.FABERT> Oh, come now I send circuit netlists to HHB's simulator
+<[milt] M.FABERT> on a SUn using the ethernet.
+<[Kevin] APPERT> protocol takes the $%&# thing from megahertz to kilohertz,it's 
+not a solution to anything
+<[Gary] GARY-S> How many other nodes - that's the criteria
+<[milt] M.FABERT> 10 Mbits down to 1Mbit is more like it.
+<[milt] M.FABERT> local clustering helps.
+<[Gary] GARY-S> Then you get back to a bottle neck getting out of the local
+<[Kevin] APPERT> I have seen a dec set-up transfer files at a wopping 10kbaud!  
+bad implementatiion
+<C.TING> By the way, I am updating the Sytems Guide to figForth.  Any body's 
+interested?
+<[Kevin] APPERT> I
+<[len] NMORGENSTERN> Is FigForth still popular?
+<[Gary] GARY-S> Used in a lot of labs still...
+<[Kevin] APPERT> Charles Curley likes it (so do I! :)
+<[Gary] GARY-S> heck Kitts peak like implementations are still in use
+<C.TING> It simply refuses to die.  MVP keeps odering them and I have run out 
+many times.
+<[milt] M.FABERT> We're using FigForth on an HP1000 to control testing ...
+<[len] NMORGENSTERN> That's very interesting. I thought it was kind of moribund.
+<[Kevin] APPERT> Anybody else have the Kitt Peak Vax Forth (not an old-time 
+implementation)
+<[milt] M.FABERT> of an atmospheric monitoring instrument.
+<[Gary] GARY-S> Why rewrite your code that has been running monitors for 
+decades with no prob ?
+<[Kevin] APPERT> I learned Forth from the Kitt Peak Primer  those were the days
+<[Kevin] APPERT> I understand they ripped out a forth-based telescope 
+something-or-other at Kitt Peak which had been working for these many years, to
+replace it with degraded functionality
+<C.TING> It looks like that figForth is still be best model if you have to put 
+it on a uP all by your self.
+<[Kevin] APPERT> or ROM it
+<[len] NMORGENSTERN> What's up, Ting?
+<[len] NMORGENSTERN> (I got it Microprocessor)
+<C.TING> Well, I am transfering the Systems Guide to a Mac for laser printing.
+<[Gary] GARY-S> There aren't a lot of ASCII keyboards with mu on them leonard :
+-)
+<[len] NMORGENSTERN> There are lots, but you can't transmit them by wire!
+<[Kevin] APPERT> do you have it on IBMPC disks, or LSI11?
+<C.TING> On Mac disks now.
+<[Kevin] APPERT> ok, thought you might like to transfer  from decland.  let me 
+know if ever you so wish
+<[Kevin] APPERT> I think I got the last box of RX02 floppies from stationary 
+stores :)
+<[Gary] GARY-S> Jax - if you e-mail Australia - the problem with the lack of 
+Docs is there seems to be no editor |-/
+<C.TING> Thanks, Kevin.  I can always find help in your direction.
+<[len] NMORGENSTERN> I have  Mac SE, Ting. Let me know if I can help.
+<[jax is back] FIGCHAPTERS> ok, be sure to send me detailed email what you want,
+ so i can forward it.
+<[milt] M.FABERT> Sorry I didn't look you up while I was in Boulder, Jax ...
+<C.TING> I was given a Mac IIx at the place I now work.  Very convenient.
+<[milt] M.FABERT> but I couldn't resist skiing during my free time there.
+<[len] NMORGENSTERN> Wow! wish I had one!
+<[Gary] GARY-S> look at the messages on BB at Cat 1 Topic 5 messages 1,2,3 jax
+<[Kevin] APPERT> how's the protien macro-assembler coming , Ting?
+<[jax is back] FIGCHAPTERS> make it easy for me and I'll remember to do it, 
+gars!
+<[Kevin] APPERT> well fellow software samurai, I must be off to dinner.  fare 
+you all well and good night.
+<[len] NMORGENSTERN> Sorry, fellows, I have to leave. Very good conference!
+<C.TING> I always have problem with commumication over RS232, with polyForth as 
+always.
+<[Kevin] APPERT> has left.
+<[Gary] GARY-S> It's past last call on the FIGGY anyway - thanks for a 
+stimulating evening folks - see you in about three weeks
+<C.TING> thank you Gary.  It is a lively conference.
+<C.TING> has left.
+<[Gary] GARY-S> stay on and chat if you wish, but FIGGY is closed.
+=== End of Steno notes. ===
+
+

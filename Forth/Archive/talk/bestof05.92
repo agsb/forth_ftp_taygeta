@@ -1,0 +1,890 @@
+
+                
+                       Best of GEnie..... May 1992
+          News from the GEnie Forth RoundTable by Gary Smith
+
+  The ANSI Technical Committee is still laboring over what will be "The
+Forth" for some time to come and already the question of add-ons has
+been raised. There is a difference, and a clever one, this time. Rather
+than the helter-skelter dash of this, sprinkle of that we have come to
+know and love from our Forth brothers and sister, fellow GEnie FIG SysOp
+Elliott Chapin has suggested creating a uniform library of tools; and
+created Category 18 for this purpose:
+     Category 18 Possible Future Standardization Directions
+
+  As this column is being assembeled in May there are only three Topics
+assigned to the Category, an Introductory one and two active construction
+zones:
+     1 Oraganization of this category
+     2 Graphics, GUIs, and Events
+     3 Structures and Arrays
+
+  Topic 3, Structures and Arrays, was begun the 4th of May by Brian Dunn
+and has already attracted considerable interest. Read with me the lively
+discussion it has stirred in the ensuing two weeks on the GEnie Forth
+RoundTable and from the ForthNet.
+
+  If you find yourself wanting to contribute to the exchange, w would love
+to have you log onto the Forth RoundTable and do so. If you have been waiting
+for an invitation to join the fun, this is it. Please do join us.
+
+
+Category 18 Possible Future Standardization Directions
+ ************
+Topic 3         Mon May 04, 1992
+B.DUNN5 [Brian]              at 00:35 EDT
+Sub: Structures and Arrays                  
+
+Discussion about a possible structure and array standard.
+ ************
+ ------------
+Category 18,  Topic 3
+Message 1         Mon May 04, 1992
+B.DUNN5 [Brian]              at 00:36 EDT
+ 
+ A possible mini-standard for structures and arrays:
+
+ Both structures and arrays are mentioned together because they interact when
+you have arrays of structures and structures containing arrays.  Both are easy
+to define in simpler forms with high level code.
+
+ Creative Solutions Forth systems have had structures for years.  The file
+HLFE.ARC on GEnie shows one way to make simple structures and multidimensional
+arrays using high level code.  The syntax used in many cases is similar to the
+following, using my own naming standard:  'variable  ..field  )'array_var
+
+ structure planet_struct        \ planet_struct will return the total size
+   cell: ..pl_mass              \ a one cell entry
+   cell: ..pl_diameter
+   9 1  moon_struct  struct_array: )..moon    \ a 1D 9 entry array of structs
+ end_structure
+
+ create 'earth   planet_struct allot
+ 'earth ..pl_mass @      \ returns the mass of earth
+ 'earth ..pl_diameter @  \ returns the diameter of earth
+ 'earth  0 )..moon       \ the address where earth's 0th moon structure is
+ 'earth  0 )..moon ..mo_mass @  \ the mass of earth's 0th moon
+
+ 10 20 2  planet_struct  struct_array  ))'planet
+   \ a 2 dimensional array of size 10X20 of planet structures
+ 3 5 ))'planet ..pl_mass @   \ returns the mass of planet 3,5
+
+ Other useful additions are arrays and structure entries for tasks and windows
+and the like.  Structures and arrays may be read and written to disk and
+allocated from memory as units.
+
+ If we are going to pseudo-standardize these, let's start with summaries of
+other peoples' implementations and uses for structures and arrays, some of
+which are probably also available on GEnie or published in past issues of FD. 
+Any ideas?
+
+ ------------
+Category 18,  Topic 3
+Message 2         Mon May 04, 1992
+D.RUFFER [Dennis]            at 21:55 EDT
+ 
+Brian, we do quite a bit of this at Forth, Inc. in our custom applications,
+but typically, we've used our file definition operators to create the fields. 
+The normal ones we have are:
+
+ 1BYTE          creates a single byte field
+ BYTES ( n - )  creates a multiple byte array
+ NUMERIC        creates a single celled field
+ DOUBLE         creates a double field.
+ FILLER ( n - ) reserves space in a structure
+
+Each operator increments a compile time offset which could be used to set the
+size of the structure.  I've modified the pF DBMS package many times to handle
+RAM based "files" and we are working on a Class Based Database system that has
+RAM files built into its capabilities.  If I can remember to I'll try to dig
+up some more information on how it defines things.
+
+My first impression of your example was that it was too cryptic, but I think
+it is mostly your use of lower case and your choice of names that gave me this
+impression.  Once I got over that, I came up with the following "suggestions":
+;)
+
+1) Why wouldn't use of the name that structure creates create an instance of
+that structure and do the ALLOT automatically?  I can see the need for knowing
+the size of the structure, but I'd think that information would be the
+minority case and might be more readable if handled by a seperate operator.
+
+2) Specifying the instance of the structure with every field occurance is not
+really necessary if there is a pointer that "remembers" what instance was
+executed last.  Saving the information might also increase performance if
+there are a lot of references to structure fields vs. structures themselves.
+
+3) I'm confused on how struct_array works and what parameters it takes.  I
+guess this is a case where a structure size is being used. If that is the
+case, then I count 4 input parameters and a name. Perhaps it is trying to do
+too much by allowing n dimensional arrays.  Perhaps another layer that defines
+2 dimensional "normal" arrays and 1 dimensional vectors is needed here.
+
+Other than that, it looks like a good start.  I do prefer that database
+operators mirror the structure operators because I tend to use them the same
+way.  If I have a lot of memory, the structures go there because they operator
+faster.  If I'm short on memory, the structures go to disk.  The other case is
+initialization and backup where I would have a memory resident image for
+speed, mirrored by a disk based image for record keeping.  Combine all those
+features into one standard interface and IMHO we've gone a long way toward
+eliminating one of my pet peves about Forth.
+
+   {B-{)>   DaR
+ ------------
+Category 18,  Topic 3
+Message 3         Tue May 05, 1992
+B.DUNN5 [Brian]              at 04:11 EDT
+ 
+ I just now tried making a syntax for allowing access of fields of a structure
+without renaming the instance again and again.  Problems included what to do
+if you are dealing with two instances at a time, what if there are nested
+structures, and especially what if you are using two different structures at
+the same time.  Perhaps those cases can revert to explicitly naming instances
+all the time.  A first try solution for simpler cases:
+ myplanet  ( an address )   INSTANCE
+   planet_mass @      \ get the mass of the planet
+   planet_diameter @  \ get the diameter of the planet
+   3 planet_moon  INSTANCE   \ 3rd moon of the planet, a struct inside planet
+     moon_mass @      \ the mass of the 3rd moon
+     moon_diameter @  \ diameter of the 3rd moon
+   END-INSTANCE
+ END-INSTANCE
+ someotherplanet planet_mass @    \ no instance was active
+ These may occur inside a : definition.
+
+
+The general solution for arrays, allowing any number of dimensions and any
+entry size, is fairly cheap.  If there are 1d, 2d, and 3d words you are
+essentially moving one of the parameters into the name and increasing the
+total number of words in the system.
+
+
+As Dennis mentioned, it'd be great to merge database type of operations with
+structures.  How about:
+
+ \ Define some types.  These are not instances.
+ structure mystruct   blah blah blah   end-structure  \ a structure
+ 10 1         sizeof mystruct  array  myarray   \ an array of mystruct
+ 10000 200 2  sizeof mystruct  array  myarray2  \ a huge array of mystruct
+ 10 1         1 cells          array  myarray3  \ an array of cells
+
+ \ Define some instances of the above types:
+ rom    \ all following structures & arrays are preallocated in dictionary
+ mystruct myname
+ myarray  myname2
+
+ ram    \ all following structures & arrays are dynamically allocated
+ mystruct myname3
+ myarray  myname4
+
+ disk   \ all following structures & arrays are mostly on disk, with a memory
+        \ copy of the current access element, which will be written back if
+        \ UPDATE has been used and SAVE-BUFFERS is called...
+ myarray2 myname5
+
+ sizeof myarray    \ the size of an instance of type MYARRAY
+
+
+For display and edit of a structure, how about:
+
+ structure planet
+
+   cell: mass
+   " Mass in kg"       title_field
+   ['] edit_number     edits_field
+   ['] display_number  displays_field
+
+   cell: diameter
+   " Diameter in km"   title_field
+   ['] edit_number     edits_field
+   ['] display_number  displays_field
+
+   number: orbit   \ number: is a user defined word which does cell: then
+                   \ sets its edits_field and display_field appropriatly.
+   " Orbit in km"  title_field
+
+ end-structure
+
+Each field in a structure would remember the offset inside the structure where
+the data is stored, as usual, and would also remember the small integer number
+of which field# this is in the structure ( used for editing and displaying a
+field per line, perhaps ), the title for the field, the xtoken to use for
+editing, and the xtoken for displaying.  There could be DISPLAY-STRUCTURE and
+EDIT-STRUCTURE for simple editing of the structure, and if UPDATE and SAVE-
+BUFFERS or some similar named words are used, each element of the structure is
+written to disk for you as it is changed.  And yet if you just don't use the
+title_field and such, you end up with generic structure defining words which
+merely takes a little more dictionary space for the unused fields in the
+definition of the structure.  The problem with this kind of idea is that some
+people might want more information for each field, so you might have some user
+definable field creation words, leading to more chaos...  This is starting to
+look like Leo Brodie's multi-buttoned object boxes which he warns everyone
+against.
+
+I notice I have been mixing word-words and word_words again.  Why'd ANS decide
+on -'s anyhow?
+
+ ------------
+Category 18,  Topic 3
+Message 4         Wed May 06, 1992
+D.RUFFER [Dennis]            at 02:05 EDT
+ 
+Brian, although I certainly agree that we need display and edit behaviours, I
+would suggest putting them into a different word set (man/machine interface
+for example).  The problem here is that they open up a can of worms about
+display/input capabilities.  Let's keep this simple and deal with the I/O
+problems in another topic.  If this word set can just set up things that can
+be accessed by the standard memory operators it will be enough.  Then, a MMI
+word set can deal with the generic issue of I/O.
+
+   {B-{)>   DaR
+ ------------
+Category 18,  Topic 3
+Message 5         Thu May 07, 1992
+M.HORE [Mike]                at 09:23 EDT
+ 
+ 
+ Brian, maybe I should throw in here a word about OO languages such as Yerk,
+Mops and JForth+ODE, which handle structures and arrays fairly naturally as
+objects.  But I do think it's a good idea to have a mini-standard for
+structures and arrays as such, since going to full OO is a big step which
+probably most wouldn't want or need to take.
+
+Anyway, I think the Mops equivalent for your example would be as follows (and
+Yerk and JForth with ODE would be almost the same):
+
+ :class  moon  super{ object }
+      var   mass              \ a 4-byte instance variable
+   :m mass: get: mass   ;m    \ This is a method which gets the mass
+ ;class
+
+ ( Here it needs some way to construct a MOON_ARRAY out of class MOON )
+
+ :class  planet  super{ object }
+      var           mass
+      var           diameter
+    9 moon_array    moons
+
+   :m mass:       ( -- mass )     get: mass   ;m
+   :m diameter:   ( -- diam )     get: diameter   ;m
+   :m moon_mass:  ( n -- mass )   select: moons   mass: moons   ;m
+
+ ;class
+
+ planet  earth
+
+ mass: earth            \ returns the mass of earth
+ diameter: earth        \ returns the diameter of earth
+ 0  moon_mass: earth    \ returns the mass of earth's 0th moon
+
+To me it's very readable and clear.  But of course there's quite a bit of
+mechanism involved in the underlying OO stuff.  I'm giving some thought to a
+general way to construct a class which is an array of some existing class,
+which we'd need for MOON_ARRAY above. It's easy enough in an ad-hoc way, but
+it would be good to have a general mechanism, and I think it can be done in
+Mops using multiple-inheritance (in the example, inheriting both from the MOON
+class and an "array constructor" class).
+
+-- Mike.
+
+ -----------
+ Mike Hore          Internet:    mikeh@kralizec.zeta.org.au
+ ------------
+Category 18,  Topic 3
+Message 6         Thu May 07, 1992
+GARY-S                       at 21:09 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: schmidtg@iccgcc.decnet.ab.com
+ Subject: OOD as a "dangerous philosophy"
+ Message-ID: <1992May6.095445.7955@iccgcc.decnet.ab.com>
+ Date: 6 May 92 14:54:45 GMT
+ References: <3464.UUL1.3#5129@willett.pgh.pa.us>
+
+ In article <3464.UUL1.3#5129@willett.pgh.pa.us>,
+ ForthNet@willett.pgh.pa.us (ForthNet articles from GEnie) Brian Dunn writes:
+
+ > people might want more information for each field, so you might have some
+ > user definable field creation words, leading to more chaos...  This is
+     starting to
+ > look like Leo Brodie's multi-buttoned object boxes which he warns everyone
+ > against.
+
+ In his book "Thinking Forth" (pp 89-91), Brodie characterizes object oriented
+ design as a "dangerous philosophy".  He points out the following problems:
+
+ * The object must contain a complicated decision structure to determine
+   which function that it should perform.
+ * The complex decision structure mentioned above increases object size
+   and decreases performance.
+ * The object is stand alone and can't take advantage of tools provided
+   by supporting components thereby encouraging duplication of code.
+ * Some objects may need to parse text to interpret their parameters
+   wasting both time and energy.
+ * Since the object is made to recognize a limited set of possibilities,
+   it is difficult to add new functions to an existing object.
+
+ Judging by the amount of positive press "object oriented Forth" has recieved
+ I find it difficult to believe that Brodie's opinion on this subject is
+ widely held within the Forth community.  Are these valid criticisms, and if
+ so are they outweighed by the advantages provided by this approach?
+
+
+ -- Greg
+
+ -- 
+ +==========================================================================+
+ | Greg Schmidt ---> schmidtg@iccgcc.decnet.ab.com                          |
+ +--------------------------------------------------------------------------+
+ |"People with nothing to hide have nothing to fear from O.B.I.T"           |
+ |       -- Peter Lomax                                                     |
+ +--------------------------------------------------------------------------+
+ | Disclaimer: None of my statements can absolutely be proven to be correct.|
+ +==========================================================================+
+
+ ------------
+Category 18,  Topic 3
+Message 7         Thu May 07, 1992
+GARY-S                       at 21:10 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: sasdtm@stthomas.unx.sas.com (Donald T. Major)
+ Subject: Re: OOD as a "dangerous philosophy"
+ Message-ID: <1992May6.170628.2785@unx.sas.com>
+ Date: 6 May 92 17:06:28 GMT
+ References: <3464.UUL1.3#5129@willett.pgh.pa.us> 
+     <1992May6.095445.7955@iccgcc.decnet.ab.com>
+ Sender: news@unx.sas.com (Noter of Newsworthy Events)
+ Organization: SAS Institute Inc.
+ Nntp-Posting-Host: stthomas.unx.sas.com
+ Originator: sasdtm@stthomas.unx.sas.com
+
+ In article <1992May6.095445.7955@iccgcc.decnet.ab.com>,
+                       schmidtg@iccgcc.decnet.ab.com writes:
+ [stuff deleted]
+ |> In his book "Thinking Forth" (pp 89-91), Brodie characterizes object
+ |> oriented design as a "dangerous philosophy".  He points out the following
+    problems:
+ [stuff deleted]
+ |> Judging by the amount of positive press "object oriented Forth" has
+    recieved,
+ |> I find it difficult to believe that Brodie's opinion on this subject is
+ |> widely held within the Forth community.  Are these valid criticisms, and
+ |> if so are they outweighed by the advantages provided by this approach?
+
+ Brodie's comments on object-oriented design assume no inheritance
+ mechanism; it's possible to create an object-oriented design which
+ doesn't use it (i.e., ALL the code for a given object's behavior is in
+ the "object" which uses it, and doesn't come from any ancestor or
+ descendant "classes").  This is in fact the pitfall of carrying the
+ older paradigm of encapsulation and access code to far:  you can wind
+ up sacrificing code reusability.  Object-oriented design should also
+ require the reuse of code--inheritance.  All the OO-FORTHs permit this,
+ and so aren't what Brodie's describing (all the code ISN'T just in the
+ one object or class--and adding new functionality or fixing old is a
+ matter of editting the local or non-local code).
+
+  ----
+ Donald Major       SAS Institute Inc.  "Cicely, let's fling something!"
+ sasdtm@unx.sas.com SAS Campus Drive                 - Northern Exposure
+ (919) 677-8000     Cary, NC 27513-2414
+
+ ------------
+Category 18,  Topic 3
+Message 8         Fri May 08, 1992
+E.RATHER [Elizabeth]         at 00:25 EDT
+ 
+Re Brodie's failure to embrase OOD:  having done quite a bit of work with
+objects over the last view years (and some previously), I must note that it's
+also true that for many problems it's not the best approach.  Some problems
+are fundamentally sequential/procedural in nature, and are best approached
+with procedural techniques.  Also, for many small problems the machinery
+associated with OOPS is overkill (which I believe was Leo's main concern). 
+OOPS really shine with very large complex problems in which there's lots of
+inherant duplication/similarity in the things (in our case, process control
+applications, lots of  widgets such as motors, conveyors, lifts, tanks,
+valves, etc.) that share needs, behaviors, etc.
+ ------------
+Category 18,  Topic 3
+Message 9         Fri May 08, 1992
+B.DUNN5 [Brian]              at 00:57 EDT
+ 
+The latest issue of Forth Dimensions ( May/June 92 ) shows a nifty example of
+structures in JForth where a word S@ knows the type of field and does the
+fetch and sign extension etc. for you.  No more  fieldname c@  or was it
+supposed to be  fieldname w@?????
+
+Perhaps a JForther will drop by and lets us in on the details.
+
+The idea behind including a title, index, and space for edit and display
+tokens was to provide information for a user interface to do with what it
+wishes, rather than to define the user interface itself.  But I agree this
+looks like it is trying to do too many things at once.
+
+A nice system could have:
+ simple field creation
+ S@ and S! as in JForth
+ ROM ( allot ), RAM ( dynamic ), DISK ( similar to BLOCK but for structs )
+ some straightforward commands for dynamic allocation and file access
+ ------------
+Category 18,  Topic 3
+Message 10        Fri May 08, 1992
+GARY-S                       at 19:18 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: grh@ee.latrobe.edu.au (Graeme Hedley)
+ Subject: Re: Structures and Arrays
+ Message-ID: <1992May7.030537.13256@luga.latrobe.edu.au>
+ Date: 7 May 92 03:05:37 GMT
+ References: <3479.UUL1.3#5129@willett.pgh.pa.us>
+ Sender: Graeme Hedley
+ Organization: Department of Electronic Engineering, La Trobe University
+       ^^^^ Split for ForthNet port - part a
+
+ Some years ago we had a need to interface forth with an existing graphics
+ system on a VLSI workstation.  All the libraries were written in C and
+ distributed only as executables.  Kevin Pye and I wrote some forth words
+ which were able to understand the include files (you know the ones - 
+  #include <graphics.h> type stuff) because to edit these into some other
+ form was too much work to contemplate.  Our forth structure words called
+ cdatatypes are the result and allow an almost mechanical translation of
+ the C include files.They were written for our own 32 bit variant of Figforth
+ so they won't load directly onto F83 (or in fact generic 16 bit Figforth).
+ Some changes are needed to the include files:
+
+ 1. One structure element definition per line
+
+ int bill
+ int fred
+
+ NOT
+ int fred, bill;
+
+ 2. No ; at the end of each definition (see above)
+
+ 3. Only pointers to structures are handled.
+
+ struct name {
+  int member1
+  int member2
+ }
+
+ then in the code
+
+    assuming name -> member1
+
+ returns the address in memory of the int member1. The assuming word says to
+ assume that the number on the top of the stack is a pointer to a structure
+ of type name, thus accessing the member dictionary for that structure type
+ to get the correct offsets. Member names in a structure definition are local
+ unlike those in some earlier version of C.
+
+ F32 had some other C-like things that are scattered throughout the example 
+ which follows.
+
+ Sizeof returns the size in bytes of the following structure
+ or member type, so on a 32 bit machine sizeof int probably returns 4.
+
+ base@ and base! prevented the user (sometimes student hackers) from setting
+ the base to an embarrasing number like 0 or 1.
+
+ char long etc are fundamental types
+
+ ptr++ and ptr-- increment or decrement adresses by the size of a cell
+
+ s! and s@ are memory access words which address shorts
+
+ exclude removes the top vocabulary form the search list (there is no
+ context or current vocabulary - just a linked search list)
+
+ from was out very of the. I like the better but our syntax was
+  from vocab_name word
+ which caused the search for word to restricted to vocab_name
+
+ It handles arrays, but cannot define an array within a struct
+
+ ------------
+Category 18,  Topic 3
+Message 11        Fri May 08, 1992
+GARY-S                       at 19:20 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: grh@ee.latrobe.edu.au (Graeme Hedley)
+ Subject: Re: Structures and Arrays
+ Message-ID: <1992May7.030537.13256@luga.latrobe.edu.au>
+ Date: 7 May 92 03:05:37 GMT
+ References: <3479.UUL1.3#5129@willett.pgh.pa.us>
+ Sender: Graeme Hedley
+ Organization: Department of Electronic Engineering, La Trobe University
+       ^^^^ Split for ForthNet port - part b
+
+ **************************************************************************
+                            NOTE     NOTE       NOTE
+ **************************************************************************
+
+ THIS CODE WILL NOT RUN ON ANY FORTH SYSTEM YOU HAVE
+
+ IT NEEDS TO BE PORTED TO ANS FORTH TO BE REALLY USEFUL
+
+ I MAY GET AROUND TO IT, I MAY NOT
+
+ THIS IS NOT FOR THE FAINT HEARTED FORTH NOVICE!
+
+ For those who disbelieve me, locate the words with nested builds-does
+ stuff in them and see if you understand it. I'm not sure I do anymore!
+
+ I can mail the code if I don't get inundated with requests. If I do, I will
+ mail it to Doug Philips instead and he can put it in his archive.  If you
+ use it, please acknowledge the source.
+
+ This may not be the total answer to the problems of interfacing forth with
+ a C environment and library, but it did what we wanted. 
+
+ An example follows, which is meaningless, I just edited bits out of some
+ files here.  The following code does nothing - your mileage may vary.
+
+ curses
+
+ : bool char ; immediate
+ : chtype long ; immediate
+
+ 1 constant TRUE
+ 0 constant FALSE
+ -1 constant ERR
+ 0 constant OK
+
+ base@ octal
+ 01 constant _SUBWIN
+ 02 constant _ENDLINE
+ 04 constant _FULLWIN
+ 010 constant _SCROLLWIN
+ 020 constant _FLUSH
+ 040 constant _ISPAD
+ 0200 constant _STANDOUT
+ -1 constant _NOCHANGE
+
+ struct _win_st {
+  short _cury
+  short _curx
+  short _maxy
+  short _maxx
+  short _begy
+  short _begx
+  short _flags
+  chtype _attrs
+  bool _clear
+  bool _leave
+  bool _scroll
+  bool _use_idl
+  bool _use_keypad ( 0=no, 1=yes, 2=yes/timeout )
+  bool _use_meta ( T=use the meta key )
+  bool _nodelay ( T=don't wait for tty input )
+  pointer _y
+  pointer _firstch
+  pointer _lastch
+  short _tmarg
+  short _bmarg
+ }
+
+ ------------
+Category 18,  Topic 3
+Message 12        Fri May 08, 1992
+GARY-S                       at 19:21 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: grh@ee.latrobe.edu.au (Graeme Hedley)
+ Subject: Re: Structures and Arrays
+ Message-ID: <1992May7.030537.13256@luga.latrobe.edu.au>
+ Date: 7 May 92 03:05:37 GMT
+ References: <3479.UUL1.3#5129@willett.pgh.pa.us>
+ Sender: Graeme Hedley
+ Organization: Department of Electronic Engineering, La Trobe University
+       ^^^^ Split for ForthNet port - part c
+
+
+ ( : getyx(win,y,x)(   y = win->_cury, x = win->_curx
+
+ : getyx  dup rot swap ( win, y, win, x )
+    assuming _win_st -> _cury s!
+    assuming _win_st -> _curx s!
+    ;
+
+ ( : winch(win)(   (win->_y[win->_cury][win->_curx])
+
+ : winch  dup dup  ( win, win, win )
+    assuming _win_st -> _cury s@
+       4 * swap ( win, cury*4, win)
+    assuming _win_st -> _y
+       + @ swap ( win, line_ptr )
+    assuming _win_st -> _curx +
+    c@
+    ;
+
+ 20 constant _NFILE
+
+ 1024 constant BUFSIZ
+
+ ( buffer size for multi-character output to unbuffered files )
+
+ 8 constant _SBFSIZ
+
+ struct FILE {
+  int _cnt
+  pointer _ptr
+  pointer _base
+  char _flag
+  char _file
+  short _dummy
+ }
+
+ 0 constant NULL
+ -1 constant EOF
+
+ : stdin _iob ;
+ : stdout _iob [compile] sizeof FILE + ;
+ : stderr _iob [compile] sizeof FILE 2 * + ;
+
+ : _bufend
+    assuming FILE -> _file c@ [compile] sizeof pointer *
+    _bufendtab +
+ ;
+
+ : putc
+    over
+    assuming FILE -> _cnt -1 over +! @ 0<
+    if
+       _flsbuf
+    else
+       swap
+       assuming FILE -> _ptr swap over c! 1 swap +!
+    endif
+ ;
+
+ Graeme Hedley            _--_|\     | La Trobe University
+ Intl +61 3 479-2178     /      \    | Dept. of Electronic Engineering
+ Fax  +61 3 471-0524     \_.--.x/    | Plenty Road, Bundoora 3083
+ grh@ee.latrobe.edu.au         v     | VICTORIA AUSTRALIA
+
+ ------------
+Category 18,  Topic 3
+Message 13        Fri May 08, 1992
+GARY-S                       at 19:23 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: rfl@oddjob.uchicago.edu (Bob Loewenstein)
+ Subject: Re: OOD as a "dangerous philosophy"
+ Message-ID: <1992May7.152443.15403@midway.uchicago.edu>
+ Date: 7 May 92 15:24:43 GMT
+ Sender: news@uchinews.uchicago.edu (News System)
+ Organization: U. of Chicago, Astronomy and Astrophysics
+
+ \ In his book "Thinking Forth" (pp 89-91), Brodie characterizes object
+   oriented
+ \ design as a "dangerous philosophy".  He points out the following problems:
+ \ 
+ \ * The object must contain a complicated decision structure to determine
+ \   which function that it should perform.
+ \ * The complex decision structure mentioned above increases object size
+ \   and decreases performance.
+ \ * The object is stand alone and can't take advantage of tools provided
+ \   by supporting components thereby encouraging duplication of code.
+ \ * Some objects may need to parse text to interpret their parameters
+ \   wasting both time and energy.
+ \ * Since the object is made to recognize a limited set of possibilities,
+ \   it is difficult to add new functions to an existing object.
+
+ Now wait....
+
+ Point one:  not so. The object doesn't contain the decision structure, the
+              OO environment does. The programmer doesn't worry about it.
+
+ Point two:  This is probably true, but applies to those machines that have
+               memory or speed limits, which are not as important
+               limiting factors as in the past 
+
+ Point three: ????
+
+ Point four: This could be true for any code...not just objects. If many
+               different objects needed parsing, one could always write
+               a parser class.
+
+ Point five: What about inheritance? This feature allows the addition of
+               new functions (at compile time, not run time, although
+               there are ways to dynamically change the inheritance chain
+               of an object during run time...and of course there can
+               be multiple inheritance).
+
+ ------------
+Category 18,  Topic 3
+Message 14        Sat May 09, 1992
+GARY-S                       at 21:01 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: esj@harvee.UUCP (Eric S Johansson)
+ Subject: Re: OOD as a "dangerous philosophy"
+ Summary: inheritance considered harmfull
+ Message-ID: <3021018@harvee.UUCP>
+ Date: 7 May 92 17:50:20 GMT
+ References: <3464.UUL1.3#5129@willett.pgh.pa.us>
+<1992May6.170628.2785@unx.sas.com>
+ Organization: gators 'r us
+
+ In article <1992May6.170628.2785@unx.sas.com> sasdtm@stthomas.unx.sas.com
+ (Donald T. Major) writes:
+ > In article <1992May6.095445.7955@iccgcc.decnet.ab.com>,
+                             schmidtg@iccgcc.decnet.ab.com writes:
+ > [stuff deleted]
+ > |> In his book "Thinking Forth" (pp 89-91), Brodie characterizes object
+      oriented
+ > |> design as a "dangerous philosophy".  He points out the following
+      problems:
+ > [stuff deleted]
+ [ more stuff deleted on are brodie's comments valid?]
+ > 
+ [ descriptions of how inheritance and encapsulation hides things]
+ > Object-oriented design should also
+ > require the reuse of code--inheritance. 
+
+ In my experiences with OOA/OOD/OOI, inheritance is vastly overated. 
+ I found that many mistakes and design ratholes were created by trying to
+ use inheritance where it didn't belong.  I am comming to the belief that
+ the OPPers have merged a couple of concepts together when they implemented
+ the idea called objects.  I think a better future lies in the direction
+ of type systems and functional notations.  don't ask me to explain more for
+ a few more months :-) perhaps some of our european friends can elaborate.
+
+ --- eric
+ --
+ UUCP ...!uunet!wang!harvee!esj esj@harvee.uucp  HAM  ka1eec
+ WORK AT&T (617) 577-4068 (w)   johansson@athena.polaroid.com
+ source of the public's fear of the unknown since 1956
+
+ ------------
+Category 18,  Topic 3
+Message 15        Sun May 10, 1992
+GARY-S                       at 13:28 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: gmribeir@david.wheaton.edu (Glauber)
+ Subject: Re: OOD as a "dangerous philosophy"
+ Message-ID: <1992May9.024233.4771@wheaton.wheaton.edu>
+ Date: 9 May 92 02:42:33 GMT
+ Sender: news@wheaton.wheaton.edu (USENET News System)
+ Organization: (n.) Body of persons united for a specific purpose.
+
+ This is strange. It has always seemed to me that Forth is an extreme
+ implementation of OOP philosophy, since it's all based in threading, and
+ making new words combining pre-existing words. The way i see it, Forth is
+ the only high-performance language that is true to the OOP philosophy.
+
+        Glauber.
+ -- 
+ Glauber Ribeiro - Wheaton College, IL  (USA)
+                   gmribeir@david.wheaton.edu
+
+ ------------
+Category 18,  Topic 3
+Message 16        Wed May 13, 1992
+GARY-S                       at 18:31 EDT
+ 
+  
+  PORTED FROM UseNet =>
+              ------
+
+ From: mikeh@starnine.com (Mike Haas)
+ Subject: Re: Structures and Arrays
+ Message-ID: <Bo4Fon.3yF@starnine.com>
+ Date: 12 May 92 04:41:09 GMT
+ References: <3501.UUL1.3#5129@willett.pgh.pa.us>
+ Sender: mikeh@starnine.com (Mike Haas)
+ Organization: StarNine Technologies, Inc.
+
+ In article <3501.UUL1.3#5129@willett.pgh.pa.us>
+          ForthNet@willett.pgh.pa.us (ForthNet articles from GEnie) writes:
+ |Category 18,  Topic 3
+ |Message 9         Fri May 08, 1992
+ |B.DUNN5 [Brian]              at 00:57 EDT
+ | 
+ |The latest issue of Forth Dimensions ( May/June 92 ) shows a nifty example
+ |structures in JForth where a word S@ knows the type of field and does the
+ |fetch and sign extension etc. for you.  No more  fieldname c@  or was it
+ |supposed to be  fieldname w@?????
+ |
+ |Perhaps a JForther will drop by and lets us in on the details.
+
+ Be glad to.  JForth provides the ability to define STRUCTs as follows:
+
+    :STRUCT myStructure
+       BYTE  myField1
+       SHORT myField2
+       LONG  myField3
+       APTR  myPointer
+    ;STRUCT
+
+    myStructure theFields
+
+ Having created an instance of "MyData" called "theFields", we can
+ read any data in the fields like this...
+
+    theFields s@ myField1     ( -- byte-data )  \ sign-extended to cell
+    theFields s@ myField2     ( -- word-data )  \ sign-extended to cell
+    theFields s@ myField3     ( -- cell-data )
+    theFields s@ myPointer    ( -- address )
+
+ The structure defining words BYTE, SHORT and LONG save the length of
+ the created fields, so s@ will know how much to fetch and sign-extend.
+ (There are also UBYTE and USHORT to create unsigned members).
+
+ The APTR directive would probably be identical to LONG on most systems,
+ but is available to automatically perform relocations for systems that
+ need it.
+
+ To store a 37 into 'myField2' of this instance, use:
+
+    37 theFields s! myField2
+
+ This system has proven extrememely flexible...JForth uses it
+ to provide the .J equivalent "header" files for the Amiga system
+ that C would define as .H files.  JForth even provides a utility
+ to automatically convert .H files to .J files.
+ (It does almost ALL the work, anyway).
+
+ ------------
+Category 18,  Topic 3
+Message 17        Thu May 14, 1992
+B.DUNN5 [Brian]              at 04:00 EDT
+ 
+Typical structure packages tend to use the syntax:
+  earth mass @
+ whereas JForth seems to use:
+  earth s@ mass
+
+Which is the better syntax?
+
+ ------------
+
+

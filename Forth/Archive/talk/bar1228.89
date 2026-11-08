@@ -1,0 +1,420 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+   Open FIGGY BAR of 28 Dec 1989. Items discussed include: CSI dropping Amiga
+   support, February SIGForth ACM Dallas bash, E. Rather in conf 18 Jan, RTX
+   contest kits go out, parallel desk-top Forth for <$800 !, Tiles, cf83 
+   upgrade, X3/J14 in San Diego, MIMD, SIMD, Parallel Distributed Processing.
+
+Date: 12/28/89   Time: 22:32EST
+Attendees:
+[[Gary] GARY-S]
+[[Dave] OLORIN]
+[[Irving] I.MONTANEZ]
+[[Wil] W.BADEN1]
+[[Len] NMORGENSTERN]
+[[Parallel Jax] FIGCHAPTERS]
+[[Kevin] APPERT]
+[[Dennis] D.RUFFER]
+
+Minutes:
+<OLORIN> is here.
+<I.MONTANEZ> is here.
+<I.MONTANEZ> WHATS NEW?
+<[Gary] GARY-S> What are you running on - a PC ?
+<I.MONTANEZ> NO I AM USING AN AMIGA MODEL 1000
+<[Dave] OLORIN> Where's Jax when we need him. (sigh)
+<[Gary] GARY-S> what Forth do you have on it ?
+<I.MONTANEZ> I USE JFORTH AND MULTIFORTH
+<[Gary] GARY-S> Jax would love you ! He preaches j-forth
+<[Wil] W.BADEN1> is here.
+<I.MONTANEZ> I I UNDERSTAND THAT MULTIFORTH FOR THE AMIGA WILL NOT BE 
+SUSURPORTED BY CREATIVE SOLUTIONS.
+<[Gary] GARY-S> REALLLY ??? I hadn't heard that ! What is the reason ?
+<I.MONTANEZ> I BELIEVE THEY WANT TO USE THER RESOURCES FOR THE MAC.
+<NMORGENSTERN> is here.
+<[Dave] OLORIN> So who'all will be at this February's SIGForth Conference?
+<[Len] NMORGENSTERN> I am making reservations now
+<[Len] NMORGENSTERN> <magic. I come in & all is silence!>
+<[Dave] OLORIN> (Needs to write a paper in the next two days)
+<[Len] NMORGENSTERN> What topic?
+<[Dave] OLORIN> (Sigh) (Procrastination -- makes life *Hell*)
+<[Dave] OLORIN> I'm doing a detailed paper on the OO4th package.
+<[Dave] OLORIN> Design and implementation.
+<[Len] NMORGENSTERN> I'm going to quit proctastinating, starting tomorrow.
+<[Len] NMORGENSTERN> What is 004th package?
+<[Dave] OLORIN> The Object Oriented Forth I wrote.
+<[Gary] GARY-S> no topic tonite - start one if you're mean enuff
+<[Wil] W.BADEN1> I'v just checked CSI Fall catalog and only Mac products listed.
+<[Len] NMORGENSTERN> Aah
+<FIGCHAPTERS> is here.
+<[Dave] OLORIN> Topic seems to be MultiForth and the Amiga.
+<[Parallel Jax] FIGCHAPTERS> << JForth
+<[Gary] GARY-S> Montanez - ask jax , he should know if your rumour is fact
+<[Parallel Jax] FIGCHAPTERS> well said, wil!
+<[Parallel Jax] FIGCHAPTERS> Hi I.Montanez! MultiForth?
+<[Parallel Jax] FIGCHAPTERS> <<< Honk If You Love Parallel Desktop Computers 
+for $800.
+<[Parallel Jax] FIGCHAPTERS> What Rumour, I.M.?
+<[Gary] GARY-S> CSI dropping multiforth support ??? is that true
+<[Parallel Jax] FIGCHAPTERS> I heard *something* don't recall if that was it.
+<I.MONTANEZ> The rumour was that creative solution was dropping surport for 
+the amiga.
+<[Parallel Jax] FIGCHAPTERS> They certainly aren't doing much to prop it up.
+<[Parallel Jax] FIGCHAPTERS> JForth works better.
+<[Dave] OLORIN> Remember: RTX Contest Kits should be going out next week!
+<[Parallel Jax] FIGCHAPTERS> It's hard to compete with JForth in a market which 
+doesn't buy much Amiga Forth.
+<[Dave] OLORIN> (has a project all ready and can't wait for an RTX up and going)
+<[Gary] GARY-S> Dojun was asking about them on BCFB last nite
+<[Parallel Jax] FIGCHAPTERS> <<< wasn't kidding about desktop parallel.
+<I.MONTANEZ> I know , I prefer jforth . Its an excellent environment.
+<[Parallel Jax] FIGCHAPTERS> It's real FOrthy and real Amiga-y at the same time.
+<I.MONTANEZ> Thats right
+<[Len] NMORGENSTERN> Can you talk about your project, Dave?
+<[Parallel Jax] FIGCHAPTERS> MultiForth is klunky by comparison.
+<[Dave] OLORIN> Uhh.... after I get Harris to approve it and send me the 
+freebie board.
+<I.MONTANEZ> Thats a fact.
+<[Gary] GARY-S> jax - have you seen Mitch's upgrade of cforth83 for *nix ?
+<[Parallel Jax] FIGCHAPTERS> Are any of your files uploaded here, I.M.?
+<[Parallel Jax] FIGCHAPTERS> No, Gars, make sure I have a copy!
+<[Parallel Jax] FIGCHAPTERS> SO I can install on WELL.
+<I.MONTANEZ> no not yet!
+<[Dave] OLORIN> Tile forth looks damned impressive from what (limited playing 
+time) I've seen!
+<[Len] NMORGENSTERN> PMI, what is *nix??
+<[Gary] GARY-S> drop e-mail to mitch
+<[Parallel Jax] FIGCHAPTERS> Dave, I can't get it to compile!
+<[Dave] OLORIN> Local variables, modules, all sorts of hooks, docs, etc etc etc.
+<[Gary] GARY-S> Unix without trademark disclaimers
+<[Dave] OLORIN> Compiled in one fell make on a Sun.
+<[Parallel Jax] FIGCHAPTERS> YOU SAID THE U WORD!
+<[Parallel Jax] FIGCHAPTERS>  :-)
+<[Parallel Jax] FIGCHAPTERS> Yeah, on the *SUN* ... what about under BSD? But 
+N-o-o-o-o ....
+<[Len] NMORGENSTERN> <figured it out> :-}
+<[Gary] GARY-S> UNIX is a trademark of AT&T - this conversation not affiliated 
+with AT&T
+<[Dave] OLORIN> Sun's *are* BSD.
+<[Gary] GARY-S> cforth83 actually prefers BSD
+<[Wil] W.BADEN1> (No, jax. He didn't say it, he referenced it.)
+<[Dave] OLORIN> (or rather, BSD descended)
+<[Parallel Jax] FIGCHAPTERS> "IF AT&T Marketing Division owned Kentucky Fried ..
+<[Dave] OLORIN> "Hot Dead Fowl"
+<[Gary] GARY-S> hot dead chicken
+<[Parallel Jax] FIGCHAPTERS> The sign outside would say 'Hot, Dead Birds"
+<[Parallel Jax] FIGCHAPTERS> old net joke.
+<[Kevin] APPERT> is here.
+<I.MONTANEZ> I am not quite sure on the proceure for participaating in these 
+conferences. How do I terminate my answers
+<[Dave] OLORIN> Or Grease Dipped Poultry
+<[Gary] GARY-S> Think of Sun os as BSD 4.4
+<[Dave] OLORIN> Applause!
+<[Len] NMORGENSTERN> :-}}}}}} = Santa Claus
+<[Parallel Jax] FIGCHAPTERS> Subtly, I.M. Subtly.
+<[Gary] GARY-S> hahaha
+<[Parallel Jax] FIGCHAPTERS> ( ... at end of line . on line by itself to end)
+<[Kevin] APPERT> are you sure you are not sureal, Jax?
+<[Dave] OLORIN> I.M.: With a small caliber gun.
+<[Parallel Jax] FIGCHAPTERS> A tonka toy, Kevin, a brightly-coloured tonka toy.
+<I.MONTANEZ> you guys will have to bear with me as I go through the learing 
+process.
+<[Parallel Jax] FIGCHAPTERS> well, watch that leering!  :-)
+<[Gary] GARY-S> The interlacing is what you have to adjust to
+<[Parallel Jax] FIGCHAPTERS>  You know Mr. Smiley, right, and his Cousins?
+<[Wil] W.BADEN1> (I.M., I quite sympathise with you.  It's exhausting at first.)
+<[Parallel Jax] FIGCHAPTERS>  :-) :-/ ==:-\ :-} etc etc etc
+<[Dave] OLORIN> Nothing like a nice reflex learning curve.
+<[Parallel Jax] FIGCHAPTERS> The smiley face is half of telecom.
+<I.MONTANEZ> I hope that I will have a command of the mechanics of this type of 
+conversing in the not to distant future/irving
+<[Dave] OLORIN> Heah. Emacs macros. Bind IMHO, BTW, (grin), :-), etc to keys.
+<[Parallel Jax] FIGCHAPTERS> The occupational hazard of this sort of thing is 
+repetetive motion syndrome in the fingers!
+<[Kevin] APPERT> Forth anyone?
+<[Kevin] APPERT> I.M., do you use Forth?
+<[Dave] OLORIN> (Has never had hand/finger/typing problems -- other than the 
+occasional broken finger)
+<[Kevin] APPERT> that's what you get for using strongly typed languages, dave
+<[Len] NMORGENSTERN> ouch!
+<[Dave] OLORIN> When have I used a strongly typed language by choice?
+<[Gary] GARY-S> oh no kev
+<[Irving] I.MONTANEZ> yes I have been working with jforth for about a year.  I 
+have also used f83 for the pc
+<[Dave] OLORIN> (Strong Typed Languages are for Programmers with Weak Minds)
+<[Parallel Jax] FIGCHAPTERS>  :-) ...
+<[Parallel Jax] FIGCHAPTERS> just testing my key bindings, ignore me.
+<[Dave] OLORIN> alt.sex.bondage.keys.emacs?
+<[Wil] W.BADEN1> Len, are you going to ANSI San Diego?
+<[Dave] OLORIN> Alt-Meta-Whips-And-Chains?
+<[Len] NMORGENSTERN> No, Wil, can't make it.
+<[Dave] OLORIN> (Key bondage)
+<[Gary] GARY-S> REMINDER - Thursday January 18, Elizabeth Rather will be our 
+special conference guest
+<[Parallel Jax] FIGCHAPTERS> Is she into key bindings, too?
+<[Len] NMORGENSTERN> Ski bindings?
+<[Gary] GARY-S> ask the lady yourself
+<[Irving] I.MONTANEZ> What is key binding?
+<[Kevin] APPERT> give me you address, and I'll send you a copy of FPC for the 
+PC.  Descendant of F*# with seperated heads and FILES instead of BLOCKS
+(F*#=F83 for those who have not had to deal with it)
+<[Parallel Jax] FIGCHAPTERS> Many programs allow you to associate single keys 
+with multiple keystrokes ...
+<[Gary] GARY-S> kev - have you tried BBL ?
+<[Gary] GARY-S> amazzzzzzzing
+<[Parallel Jax] FIGCHAPTERS> Foof.
+<[Wil] W.BADEN1> Well, Jax, are YOU going to X3j14?
+<[Parallel Jax] FIGCHAPTERS> Foof.
+<[Parallel Jax] FIGCHAPTERS> it's a key binding.
+<[Parallel Jax] FIGCHAPTERS> Will ...
+<[Dave] OLORIN> Emacs allows you to equate multiple keys with multiple 
+keystrokes. (grin) Emacas feels like playing chords.
+<[Parallel Jax] FIGCHAPTERS> I am trying to set it up
+<[Parallel Jax] FIGCHAPTERS> I gotta rig up funding ...
+<[Parallel Jax] FIGCHAPTERS> So trying to sell book for advance.
+<[Parallel Jax] FIGCHAPTERS> My intention currently is to attend.
+<[Parallel Jax] FIGCHAPTERS> that is, to start attending regularly.
+<[Parallel Jax] FIGCHAPTERS> But to pull that off jax is going to have to 
+become Jax Enterprises, as it were
+<[Wil] W.BADEN1> You'll enjoy it.
+<[Parallel Jax] FIGCHAPTERS> Guess I will, Wil.
+<[Dave] OLORIN> Jax Inc.?
+<[Irving] I.MONTANEZ> Is anyone attending the Real Time Forth Apllications 
+Workshop in Dallas, Tx on Feb 16-18, 1990?
+<[Parallel Jax] FIGCHAPTERS> It's nice to know one has a voice in one's own 
+career!
+<[Dave] OLORIN> Yes!
+<[Dave] OLORIN> That's the SIGForth Conference. Haven't missed one yet. (grin)
+<[Gary] GARY-S> you better not !
+<[Dave] OLORIN> Although it was easier to get to last year.... (grin)
+<[Irving] I.MONTANEZ> I look forward to meeting you there.
+<[Gary] GARY-S> If you get SIGForth newsletter look for Dave in the 
+credits/officers list
+<[Dave] OLORIN> Besides... maybe I can find out what exactly it is that a Local 
+Chapter Coordinator does... (grin)
+<[Parallel Jax] FIGCHAPTERS> Depends on the Chap COord.
+<[Parallel Jax] FIGCHAPTERS> Here in Denver we are really getting into the 
+swing of regular meetings.
+<[Parallel Jax] FIGCHAPTERS> January 8 ...
+<[Dave] OLORIN> No. I mean Coordinator of all of the local sigs.
+<[Parallel Jax] FIGCHAPTERS> We will have Joe Gradecki demonstrating ...
+<[Parallel Jax] FIGCHAPTERS> his desktop parallel Forth machine! 16 processors 
+in a cube ...
+<[Dave] OLORIN> Oooooooh. What kind of processor?
+<[Parallel Jax] FIGCHAPTERS> and he plans to sell it in PCB kits for $800 
+including Forth op system! ...
+<[Dave] OLORIN> Parts all included?
+<[Parallel Jax] FIGCHAPTERS> Think he used something like an 8502
+<[Wil] W.BADEN1> Congratulations, Jax.  You finally have our undivided interest.
+  Go.
+<[Gary] GARY-S> how about sending out a few demo units - I'll volunteer :-)
+<[Parallel Jax] FIGCHAPTERS> Not sure.
+<[Parallel Jax] FIGCHAPTERS> I wrote an article in 1988 for MicroTimes ...
+<[Parallel Jax] FIGCHAPTERS> in which I predicted desktop parallel by 1996 ...
+<[Parallel Jax] FIGCHAPTERS> here it comes. ...
+<[Parallel Jax] FIGCHAPTERS> will tell you more after jax *sees* the damn thing!
+ He's bringing it along to the meeting. ...
+<[Parallel Jax] FIGCHAPTERS> me too, gars!
+<[Irving] I.MONTANEZ> I only have the 1st issure of Sigforth newsleletter, and 
+I don' seed Daves name there.
+<[Dave] OLORIN> Tell him I'll trade him a used Iris for one if he pays shipping.
+ As-Is.
+<[Dave] OLORIN> Inside front cover.
+<[Dave] OLORIN> (No monitor. No devices. Ethernet card and graphics board 
+though) (grin)
+<[Gary] GARY-S> The name you're looking for is Weinstein - not olorin
+<[Parallel Jax] FIGCHAPTERS> Why not drive up for the meeting? We're only 12 
+hours away, Dave!  :-)
+<[Dave] OLORIN> Me and what mode of transportation, Jax? There's a reason I 
+live walking distance from work.
+<[Parallel Jax] FIGCHAPTERS> Well, if you are going to walk you had better 
+start soon, the meetings only a week and a half away.
+<[Irving] I.MONTANEZ> O.K I see it.  I sent you some electronic 
+mail a few weeks ago about the regulations for starting a local sigforth
+ on Long Island.
+<[Parallel Jax] FIGCHAPTERS> Did you all hear the Ancient Greek joke?
+<[Irving] I.MONTANEZ> Has anyone received the 2nd issure of the Sigforth 
+newsletter
+<[Gary] GARY-S> yes
+<[Kevin] APPERT> yup
+<[Dave] OLORIN> Didn't you get a reply?
+<[Dave] OLORIN> My employer did. I didn't. I read it there.
+<[Parallel Jax] FIGCHAPTERS> Guy walks into an Athens tailor shop. Hands tailor 
+a pair of pants. Tailor examines them, looks up, "Euripides?" "Yeah, E
+umenides?" :-)
+<[Dave] OLORIN> Eugodabekidding
+<[Gary] GARY-S> arrrgh
+<[Irving] I.MONTANEZ> Yes I did.  and we have formed a groupas under the 
+umbrella of the local acm sig.
+<[Dave] OLORIN> Good. As far as I know, you have the distinction of being the 
+first local SIG.
+<[Parallel Jax] FIGCHAPTERS> This meeting of Denver FIG I will take good notes 
+and post a full report. This is going to be the hot meeting of the year
+!
+<[Parallel Jax] FIGCHAPTERS> Maybe pictures for a magazine article.
+<[Irving] I.MONTANEZ> How do I keep track of what I am typing my sentences seem 
+to come out wrong?
+<[Gary] GARY-S> ignore the garbage on your screen
+<[Kevin] APPERT> you need a comm package with a split screen, I.M.
+<[Irving] I.MONTANEZ> o.k
+<[Kevin] APPERT> so you can keep the prattle straight from your pearls.
+<[Parallel Jax] FIGCHAPTERS> Don't worry, typos are a major stimulus to the 
+conversation here.
+<D.RUFFER> is here.
+<[Irving] I.MONTANEZ> I am presently using a packgae called Diga.
+<[Parallel Jax] FIGCHAPTERS> Hi Dennis.
+<[Wil] W.BADEN1> Before I got split screen I used to close my eyes when typing.
+<[Kevin] APPERT> what kinda computer, I.M.?
+<[Gary] GARY-S> yeah - what do you care if some poor sysop has to glue the 
+edges togethjer
+<[Parallel Jax] FIGCHAPTERS> Irving, Access! has split screen
+<[Irving] I.MONTANEZ> I am using an Amiga 1000.
+<[Kevin] APPERT> or write one!!!!!!!!!!!!!!!!
+<[Gary] GARY-S> Dennis - big visit of the year ?
+<[Parallel Jax] FIGCHAPTERS> Desktop parallel for $800 U-Build-It from Kit, 
+FORTH operating system!
+<[Parallel Jax] FIGCHAPTERS> How about them appletrons, Dennis?
+<[Irving] I.MONTANEZ> I going to look into the Access, thanks.
+<[Dave] OLORIN> Hullo Dennis, you Alladin user you.
+<[Dennis] D.RUFFER> big visit?  just home on time for once
+<[Gary] GARY-S> You better be here in three weeks Druffer !!! :-)
+<[Parallel Jax] FIGCHAPTERS> That's shareware, Irving.
+<[Parallel Jax] FIGCHAPTERS> Also that other one, what's it called?
+<[Irving] I.MONTANEZ> Is it on Genie>
+<[Wil] W.BADEN1> Dennis, are you at home?
+<[Irving] I.MONTANEZ> or compuserve
+<[Gary] GARY-S> yes - m616 to the IBMPC library
+<[Dennis] D.RUFFER> actually, I'll be hand holding at work for your guest
+<[Dennis] D.RUFFER> yes I'm at home Wil...Why?
+<[Gary] GARY-S> really - I didn't know management was that personal at FInc
+<[Parallel Jax] FIGCHAPTERS> JRComm is the other one, Irving.
+<[Wil] W.BADEN1> I want to call you after this RTC.
+<[Dennis] D.RUFFER> :-)  I'll have to figure out how to get two lines out so I 
+can talk also
+<[Parallel Jax] FIGCHAPTERS> I think both are on page 556 here on GEnie.
+<[Parallel Jax] FIGCHAPTERS> Irv, do you post to page 670?
+<[Dennis] D.RUFFER> ok Wil, I'll be home
+<[Irving] I.MONTANEZ> no. Whats on page 670?
+<[Parallel Jax] FIGCHAPTERS> That's the Amiga Programmers page.
+<[Parallel Jax] FIGCHAPTERS> CATegory 9 has several Forth topics.
+<[Parallel Jax] FIGCHAPTERS> Y'all here, Gars, others, should occasionally MOVE 
+670;1 and go to category 9 for the Forth topics.
+<[Len] NMORGENSTERN> Jax, did you give details on the parallel computer while I 
+was gone?
+<[Parallel Jax] FIGCHAPTERS> A little.
+<[Irving] I.MONTANEZ> I just beginning to explore the benefits of Genie.  I 
+will spend sometime in these areas as I become more familiar with the system.
+<[Parallel Jax] FIGCHAPTERS> Here's the scoop.
+<[Gary] GARY-S> how about moving some of the forth files to page 711 ?
+<[Parallel Jax] FIGCHAPTERS> There is a grad student Joseph Gradecki ...
+<[Parallel Jax] FIGCHAPTERS> He has built a 16-proc parallel desktop he runs 
+off his IBM ...
+<[Parallel Jax] FIGCHAPTERS> He is going to bring it and speak about it to the 
+next Denver FIG meeting  ...
+<[Kevin] APPERT> does it cost anything to answer YES when they say   you are 
+not a member WANNA JOIN?
+<[Parallel Jax] FIGCHAPTERS> He says he is laying out PCB's  ...
+<[Dennis] D.RUFFER> that's just a formality kevin
+<[Parallel Jax] FIGCHAPTERS> and will sell same as Kit including Forth 
+operating system for ~~$800  ...
+<[Parallel Jax] FIGCHAPTERS> he calls it  ...
+<[Dennis] D.RUFFER> except in the cases where the rt is closed..of course
+<[Parallel Jax] FIGCHAPTERS> PPD ( Personal Parallel Desktop )
+<[Kevin] APPERT> what kinda processor * 16, Jax?
+<[Parallel Jax] FIGCHAPTERS> I thinks it's 8502 or something like that.
+<[Kevin] APPERT> 16 times nothing is still nothing
+<[Parallel Jax] FIGCHAPTERS> Wrong, kemosabe.
+<[Len] NMORGENSTERN> With parallel, as I understand it, you don't need much.
+<[Parallel Jax] FIGCHAPTERS> You don't need BCD instructions if you've got a 
+16-proc Hypercube.
+<[Wil] W.BADEN1> MIMD or SIMD?
+<[Len] NMORGENSTERN> Explain, Wil
+<[Parallel Jax] FIGCHAPTERS> IDN
+<[Parallel Jax] FIGCHAPTERS> ( I DuNno.)
+<[Gary] GARY-S> why IDN ?
+<[Parallel Jax] FIGCHAPTERS> supra.
+<[Wil] W.BADEN1> Multi Instruction Singular Data.
+<[Parallel Jax] FIGCHAPTERS> All I know is that this guy is on the right path.
+<[Wil] W.BADEN1> Single Instr, Multiple Data.
+<[Len] NMORGENSTERN> Thanx
+<[Parallel Jax] FIGCHAPTERS> Remember, the NASA MPP was 16,384 ONE BIT 
+PROCESSORS.
+<[Parallel Jax] FIGCHAPTERS> So you really don't need much individual proc 
+power to do Neat Things.
+<[Gary] GARY-S> Jax - do you remeber when the FIGGY was that you, Ting and I 
+were discussing MIMD SIMD ? (actually more you and Ting) approx date ?
+<[Wil] W.BADEN1> The JPL hypercube is MIMD, and is very difficult to program.
+<[Parallel Jax] FIGCHAPTERS> At least a year ago. I'd say August 88.
+<[Gary] GARY-S> Len - I think I used MIMD and SIMD in the keywords - try 
+searching on both in library 1
+<[Wil] W.BADEN1> Goddard is SIMD.
+<[Len] NMORGENSTERN> Will do, Gary
+<[Gary] GARY-S> Ting maintains MIMD is wasted architecture
+<[Parallel Jax] FIGCHAPTERS> RIght. Also, distributed is pretty neet too.
+<[Parallel Jax] FIGCHAPTERS> I build distributed realtime systems using a 
+multidrop serial net.
+<[Parallel Jax] FIGCHAPTERS> The SEQUENT BALANCE computer allows up to 8 ( 16?) 
+NSC32000's per machine ...
+<[Wil] W.BADEN1> Interesting problem of how to handle conditionals in SIMD.
+<[Parallel Jax] FIGCHAPTERS> runs Unix, the task queue just deals out new jobs 
+like a Vegas stud game.
+<[Gary] GARY-S> GREAT BOOK (two actually) 'Parallel Distributed Processing' 
+by McClelland, Rumelhart - MIT Press
+<[Kevin] APPERT> you can genrally have a flag mask telling which processors to 
+trip, Wil.
+<[Parallel Jax] FIGCHAPTERS> What's the name of the purple one from MIT? I have 
+it in the basement.
+<[Parallel Jax] FIGCHAPTERS> ( the book, not the flag! :-) )
+<[Gary] GARY-S> Excellent insight into cognitive and perception modeling
+<[Wil] W.BADEN1> That's how Goddard does it.  A false leg executes as all NOP's.
+<[Irving] I.MONTANEZ> Gary have you read the Parallel FORTH article in The 
+Journal off Forth Applicatons and REsearch in vol. 5 num. 4.  It was a inte
+resting paper.
+<[Gary] GARY-S> yes - super
+<[Parallel Jax] FIGCHAPTERS> In some ways I see parallel as being easier than 
+serial. It is inherently more complex, but at the same time the fact tha
+t it makes more sense in a real-world picture than serial computing, which is 
+so one-dimensional.
+<[Parallel Jax] FIGCHAPTERS>  oops, hanging subordinate clause, should end 
+"should make it in the long run easier to deal with."
+<[Gary] GARY-S> Jax - you really need to read the two set volume I just 
+mentioned
+<[Parallel Jax] FIGCHAPTERS> I think I have one.
+<[Parallel Jax] FIGCHAPTERS> It's purple, I forget the name, read it two years 
+ago.
+<[Parallel Jax] FIGCHAPTERS> I want the two-volume Parallel Prolog Papers.
+<[Parallel Jax] FIGCHAPTERS> Anyway, WIl, I did call Heidi and she sent me the 
+goodies.
+<[Parallel Jax] FIGCHAPTERS> So i'm set to go if I can swing it.
+<[Wil] W.BADEN1> Good.
+<[Parallel Jax] FIGCHAPTERS> Someone asked me for a book ...
+<[Parallel Jax] FIGCHAPTERS> so I will see if they (established publisher in 
+SFCA) mean it for real :-)
+<[Parallel Jax] FIGCHAPTERS> as in, pay my expenses up front.
+<[Wil] W.BADEN1> Better.
+<[Gary] GARY-S> LAST CALL for last shots gentlemen
+<[Dennis] D.RUFFER> Happy New Year folks!
+<[Parallel Jax] FIGCHAPTERS> "The dreams of reason bring FORTH monsters" Goya, 
+as quoted by CP Snow, quoted on USENET.
+<[Gary] GARY-S> Feliz Ano Nuevo
+<[Irving] I.MONTANEZ> It was nice talking with all of you.
+<[Len] NMORGENSTERN> Thank you all for a good conference. Sorry I had to miss 
+part of it.
+<[Kevin] APPERT> and to all a good night
+<[Gary] GARY-S> please make this your home Irving
+<[Len] NMORGENSTERN> Buenos snowshoes.
+<[Parallel Jax] FIGCHAPTERS> Gary you mean "Feliz An~o Nuevo.
+<[Wil] W.BADEN1> Gratuitous, Jax.
+<[Irving] I.MONTANEZ> I certainly will return
+<[Gary] GARY-S> tnx - didn't know how to tilda the enya
+<[Parallel Jax] FIGCHAPTERS> Headline in SF Chronicle.
+<[Parallel Jax] FIGCHAPTERS> It's happened to the best.
+<[Dennis] D.RUFFER> good night everyone
+<[Dennis] D.RUFFER> ......................poof
+<[Gary] GARY-S> g'nite all:***** zap***
+=== End of Steno notes. ===
+
+

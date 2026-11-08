@@ -1,0 +1,142 @@
+
+CALENDAR PROGRAM IN FORTH               3/25/84 ( 2:52:19.9) Page 1
+
+
+Block 133:
+
+ 0 ( CALENDAR    STRING OPERATIONS )               ( AS 03/24/84 )
+ 1
+ 2 ARRAYS   STRINGS   DBL-PREC   RANDOM   GRAPHICS
+ 3 : PAST :
+ 4 2VARIABLE YEAR       VARIABLE K
+ 5 23 $VARIABLE WEEK    $"  S  M Tu  W Th  F  S   "   WEEK $!
+ 6 3 12 $ARRAY MON
+ 7 $" Jan "  1 MON $!   $" Feb "  2 MON $!   $" Mar "  3 MON $!
+ 8 $" Apr "  4 MON $!   $" May "  5 MON $!   $" Jun "  6 MON $!
+ 9 $" Jul "  7 MON $!   $" Aug "  8 MON $!   $" Sep "  9 MON $!
+10 $" Oct " 10 MON $!   $" Nov " 11 MON $!   $" Dec " 12 MON $!
+11 : PRNTYR   15 SPACES  YEAR 2@ D.  CR CR ;
+12 : 9SP   9 SPACES ;      : 20SP   20 SPACES ;
+13 : PR3M   1 K +!  9SP  K @ MON $.   1 K +!  20SP  K @ MON $.
+14          1 K +!  20SP  K @ MON $.  CR ;
+15 : PR3W   3 0 DO  WEEK $.  LOOP ;                         -->
+
+
+Block 134:
+
+ 0 ( CALENDAR    MATH ROUTINES )                   ( AS 03/24/84 )
+ 1
+ 2 VARIABLE STRTDAY     VARIABLE LPFLG
+ 3 : STDAYS    YEAR 2@  365. D*  1 M+ ;
+ 4 : LEAPYRS   YEAR 2@  1. D-  4. D/ ;
+ 5 : FUDGE     YEAR 2@  1. D-  100. D/  1 M+  3.  D*  4.  D/  ;
+ 6 : TOTDAYS    STDAYS LEAPYRS D+  FUDGE D- ;
+ 7 : STARTDAY   2DUP  7. D/  -7.  D*  D+  1 M/  DUP  NOT
+ 8              IF DROP 7 THEN  1-  STRTDAY  ! ;
+ 9 : CHKLPYR   YEAR 2@  4 M/MOD  DROP  0=
+10             IF 1 LPFLG !  ELSE 0 LPFLG !   THEN ;
+11 : INYEAR   PAGE  ." WHAT YEAR DO YOU WANT THE CALENDAR FOR"
+12            D#IN  YEAR 2! ;
+13 : DOMATH   INYEAR  TOTDAYS  STARDAY   CHKLPYR ;
+14
+15
+
+
+Block 135:
+
+ 0 ( CALENDAR    FILL ARRAY ROUTINE )              ( AS 03/24/84 )
+ 1
+ 2 127 ARRAY 3MON   VARIABLE CNT   VARIABLE LASTDAY   VARIABLE MN
+ 3 CREATE  DAYSINMON 0 C,  31 C, 28 C, 31 C, 30 C, 31 C, 30 C,
+ 4                         31 C, 31 C, 30 C, 31 C, 30 C, 31 C,
+ 5 : NXTMON   1 CNT +!  CNT @ DAYSINMON +  C@ DUP 28 =  LPFLG @
+ 6            AND  IF 1+ THEN  LASTDAY ! ;
+ 7 : LASTWK   43  LASTDAY @  -   STRTDAY @  - ;
+ 8 : STRTMON   7 LASTWK DUP 7 >  IF 7 - THEN  1- -  STRTDAY ! ;
+ 9 : FILL1   STRTDAY @  DUP 7 <  IF 1+ 1 DO  0  I  MN @ +
+11 : FILL2  LASTDAY @ 1+ 1 DO I STRTDAY @ I + MN @ +3MON ! LOOP ;
+12 : FILL3  LASTWK 1 DO  0  I  LASTDAY @  +
+13          STRTDAY @  +  MN @  +  3MON !  LOOP   STRTMON ;
+14 : 1MONFILL   NXTMON   FILL1 FILL2 FILL3  42 MN +! ;
+15 : 3MONFILL   1MONFILL 1MONFILL 1MONFILL  0 MN ! ;           -->
+
+
+Block 136:
+
+ 0 ( CALENDAR    PRINT ROUTINES )                  ( AS 03/24/84 )
+ 1
+ 2 VARIABLE FLG      VARIABLE C
+ 3 : CHK0   DUP 0=  IF DROP  SPACE SPACE SPACE  1 FLG ! THEN ;
+ 4 : CHK<10   DUP 10 <  IF SPACE THEN ;
+ 5 : PRNTNUM   CHK0  FLG @  0>  IF 0 FLG !  ELSE CHK<10 .  THEN ;
+ 6 : PRNTWK   8 1 DO  I C @ +  3MON @  PRNTNUM LOOP  SPACE SPACE ;
+ 7 : PRNT3WK   3 0 DO  PRNTWK  42 C +!  LOOP  CR ;
+ 8 : PRNT3MON   3MONFILL  6 0 DO  PRNT3WK  -119 C +! LOOP  0 C ! ;
+ 9 : EXPD   127 EMIT 27 EMIT 83 EMIT ;
+10 : CEXP   127 EMIT 27 EMIT 84 EMIT ;
+11 : PRINT3MON   PR3M PR3W  CR  PRNT3MON  CR ;
+12 : PRINTYEAR   CR  9 MARGIN !  EXPD  PRNTYR  CEXP
+13               CR  4 0 DO PRINT3MON LOOP
+14               0 K !  0 CNT !  0 LASTDAY !  0 MN !  0 C !
+15               CR CR CR ;                                     -->
+
+
+Block 137:
+
+ 0 ( CALENDAR    PATTERN ROUTINE )                  ( AS 03/24/84 )
+ 1
+ 2 RANDOMIZE
+ 3 VARIABLE X  VARIABLE Y
+ 4 :  INIT   1 X !  47 RND Y ! ;
+ 5 :  ?LIMIT   Y @ 1 <  IF 1 Y ! THEN    Y @ 47 >  IF 47 Y ! THEN
+ 6             X @ 127 >  IF 1 X ! THEN ;
+ 7 : PLOT    Y @ X @ ESET          Y @ 127 X @ - ESET ;
+ 8           47 Y @ - X @ ESET     47 Y @ - 127 X @ - ESET ;
+ 9 : X+1    1 X +! ;    : Y+1   1 Y +! ;    : Y-1   Y @ 1 - Y ! ;
+10 : Y+2    Y @ 2 + Y ! ;     : Y-2   Y @ 2 - Y ! ;
+11 : TRACE   5 RND  NCASE 1 2 3 4 5 " X+1 Y+1 Y-1 Y+2 Y-2 CASEND ;
+12 : PATLOOP   200 RND  500 + 0 DO  TRACE  ?LIMIT  PLOT  LOOP ;
+13 : PATTERN   PAGE  INIT  PATLOOP ;
+14
+15                                                              -->
+
+
+Block 138:
+
+ 0 ( CALENDAR    PRINT SCREEN ROUTINE )             ( AS 03/24/84 )
+ 1 ( FOR USE ON EPSON MX-80 PRINTERS, WITH EPSON DRIVER, BLK 29 )
+ 2
+ 3 : SIDES  149 EMIT 70 SPACES 170 EMIT CR ;
+ 4 : TOPLINE   151 EMIT 70 0 DO 131 EMIT LOOP 171 EMIT CR SIDES ;
+ 6 : PRINTLINE   OVER +  SWAP  DO  I C@  EMIT  LOOP ;
+ 7 : RSET   127 EMIT 27 EMIT 64 EMIT ;
+ 8 : TRS   27 EMIT 58 EMIT ;
+ 9 : CTRS   27 EMIT 59 EMIT ;
+10 : EMPH   27 EMIT 69 EMIT ;  : CEMP   127 EMIT 27 EMIT 70 EMIT ;
+11 : PRNTSCRN   6 MARGIN !  PRINT  RSET  TRS  EMPH  CR CR TOPLINE
+12       15360   16 0 DO  149 EMIT 3 SPACES
+13       DUP 64 PRINTLINE  3 SPACES 170 EMIT  CR
+14       64 + LOOP  DROP  BOTLINE CR  127 EMIT  CTRS ;
+15                                                           -->
+
+
+Block 139:
+
+ 0 ( CALENDAR    MAIN PROGRAM )                    ( AS 03/24/84 )
+ 1
+ 2 : INSTRU  PAGE 12 SPACES ." ***  CALENDAR PROGRAM   *** " CR CR
+ 3  ." THIS PROGRAM WILL FIRST ASK YOU FOR THE YEAR YOU WANT " CR
+ 4  ." THE CALENDAR. IT WILL THEN GENERATE RANDOM PATTERNS " CR
+ 5  ." ON THE SCREEN. IF YOU PRESS THE <SPACE> BAR THE " CR
+ 6  ." PATTERN WILL CHANGE.  IF YOU PRESS THE <P> KEY THE " CR
+ 7  ." SCREEN WILL BE PRINTED ON THE PRINTER AND THE REST " CR
+ 8  ." OF THE CALENDAR WILL ALSO BE PRINTED.  AT THE END OF " CR
+ 9  ." THE PRINTOUT, YOU WILL BE ASKED IF YOU WANT ANOTHER " CR
+10  ." CALENDAR. " CR CR ." TO CONTINUE PRESS > " ENTER ;
+11 : SCRPRT?   BEGIN PATTERN   BEGIN ?KEY ?DUP UNTIL   DUP 80 =
+12   IF DROP PRNTSCRN PRINTYEAR CEMPF 1 ELSE 32 = NOT THEN UNTIL ;
+13 : START  INSTRU  BEGIN DOMATH SCRPRT? CRT PAGE ." DO YOU WANT "
+14  ." ANOTHER CALENDAR " Y/N  UNTIL ;     START     5 MARGIN !
+15            FORGET PAST    PAGE
+
+

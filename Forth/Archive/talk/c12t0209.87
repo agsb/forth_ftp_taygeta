@@ -1,0 +1,217 @@
+
+**********
+Topic 2         Sat Sep 05, 1987
+W.STRICKLAND                 at 11:15 CDT
+Sub: Versions Best Versions of Forth for  ? 
+
+A discussion and recommendations for which version of Forth to use on a
+particular computer.
+
+12 message(s) total
+**********
+----------
+Category 12,  Topic 2
+Message 1         Sat Sep 05, 1987
+W.STRICKLAND                 at 11:23 CDT
+          
+I have a Macintosh and am looking for the best Forth to use.  I have read
+Starting Forth by Leo Brody and am reading Thinking Forth by the same author
+author.  I recommend these books Highly and am interested in using a version
+version of Forth which is closely compatable with the books.  Thanks..Willie
+----------
+Category 12,  Topic 2
+Message 2         Sat Sep 05, 1987
+D.RUFFER                     at 15:52 EDT
+          
+Willy, as a sysop on this board, I will not tell you which Forth is best.  I
+just don't want to get into a squable over different products.  I will
+however, direct you to Waymen Askey's descriptions in Category 4, topic 5,
+where he describes products from Creative Solutions and the Palo Alto Shipping
+company.  I hope this helps, but I don't want to take sides.
+
+The books from Brodie that you mentioned, "Starting Forth" and "Thinking
+Forth", are excellent introductions to Forth.  I also highly recommend them.
+----------
+Category 12,  Topic 2
+Message 3         Sat Sep 05, 1987
+W.ASKEY                      at 13:23 PDT
+          
+Willie -- The definition of a "best Forth" is a little tricky, but given your
+guidelines (most similar to "STARTING FORTH" and "THINKING FORTH"), I suppose
+I'd suggest MasterFORTH by Micromotion (1-213-821-4340). I've never used
+MasterFORTH, but it is supposed to be "exactly" FORTH-83 standard and thus
+should be very similar (on a high- language level) to Brodie's books (I'm
+assuming that you are using the second edition of "STARTING FORTH," the one
+which uses FORTH-83).  However (now for some editorializing), if you plan on
+using Forth on the Macintosh then I think you should consider going to a 32-
+bit  Forth such as MACH2 or MacFORTH Plus.  Of these two products, MACH2 would
+be closest to Brodie's books (MACH2 is nearly FORTH-83 standard, except that
+it uses 32-bit wide stacks, variables, and operators). MACH2 also has a
+product support roundtable on GEnie, so maybe you can browse there for some
+question and answers (you can go to the MACH RT with a "MOVE 450").  Also, see
+my quick "review" of MacFORTH Plus and MACH2 in Category 4. -- Waymen P.S. I
+agree with Dennis' comments about debating "best" products, I  suggest that
+you investigate each product and make a decision based upon what YOU like
+best.
+----------
+Category 12,  Topic 2
+Message 4         Sat Sep 05, 1987
+LMORGENSTERN                 at 16:08 PDT
+          
+ I have MicroMotion Forth. Its kernel is almost the same as F83. It has a lot
+of important enhancements (some are extra cost):
+ More powerful disk access, using DOS handles.
+ Access to Ascii text files
+ A neat editor
+ Headerless code without recompiling
+ Transient/resident (to get rid of words used only during 
+  compilation--including the assembler)
+ Overlays
+ Floating point and 8087 support.
+ Etc. Several important points need to be made. While you are learning Forth
+stick with F83. It is very powerful, and has a lot of really amazing
+----------
+Category 12,  Topic 2
+Message 5         Sat Sep 05, 1987
+LMORGENSTERN                 at 16:11 PDT
+          
+continued features, multitasking and trace debugging being only two. Its only
+real weaknesses result from the desire of the authors (Laxen and Perry) to
+make the system compatible with both CP/M and DOS. When you start to write
+applications, you will need something more, and MicroMotion is a good step. I
+don't know how it compares with other commercial Forths. If you get into
+professional work, a good programming environment is essential, and you should
+investigate carefully before you buy.
+----------
+Category 12,  Topic 2
+Message 6         Tue Sep 08, 1987
+P.COOPER                     at 20:19 PDT
+          
+Willie, while I agree with Waymen's comments about taking sides with respect
+to MACH2 and MacFORTH, one main concern when programming the Mac is the
+toolbox interface.  MACH2 implements all calls EXACTLY as described in Inside
+Macintosh (essential reading), whereas MacFORTH has its own high level
+routines which don't always use the same parameters.  MACH2's approach makes
+it easy to translate routines from other languages into FORTH (many are
+published in MacTutor, an excellent mag), and many of the books on the Mac
+will probably make more sense as most other languages on the Mac follow the IM
+interfaces too.  MACH2's assembler is also more like a standard 68000
+assembler.  Hope this makes your decision easier--or you could buy both!
+                                       Peter
+----------
+Category 12,  Topic 2
+Message 7         Tue Sep 08, 1987
+W.ASKEY                      at 22:03 PDT
+          
+John -- I think you would agree that MacFORTH Plus is really not FORTH-79 or 
+FORTH-83. I believe, however, that someone just beginning to learn Forth would
+find more FORTH-79 gotcha's than he or she might like. The list of words in
+MacFORTH Plus which are FORTH-79-like (and  different in FORTH-83) is fairly
+significant, some which come to  mind are -- PICK, ROLL, FIND, WORD, LEAVE,
+.", ' (TICK), and the round to zero rather than round to negative infinity. 
+It's   true that MacFORTH has elements of FORTH-83 within it, but the 
+"dangerous" words are the ones which changed function between the   FORTH-79
+and FORTH-83 standards.  Please do not take this as a criticism of MacFORTH,
+MacFORTH is a real "power" language which  has many, many useful extensions. 
+However, if someone asked me  to categorize MacFORTH, I think I would be
+conservative (safe) by saying that it is FORTH-79 with many additions (some of
+which are from the FORTH-83 standard).
+
+Also (from a previous message), for newcomers it should be made clear that F83
+is NOT the same as the FORTH-83 standard.
+
+I've downloaded the F83 source, deARC'd it (successfully), and fixed  some
+problems with the format of the source text (line formating lost   -- no CR's -
+- and control characters in the source text -- WORDSTAR?). Now I have two
+questions for F83 users, has anyone ported F83 to the Macintosh, and is that
+port available in the public domain?      -- Waymen
+
+P.S. I wrote a program to reformat and zap control characters from the RT
+library source for F83, I'll upload that application for Macintosh  users who
+may have had similar problems with other RT downloads.
+----------
+Category 12,  Topic 2
+Message 8         Wed Sep 09, 1987
+S.W.SQUIRES [scott]          at 04:02 EDT
+          
+( MacForth vs Mach2 ) Choosing a Forth is dependent upon what you want out of
+it.  Both MacForth and Mach2 are good Forths for the Macintosh ( better than
+the Forths I've seen on most machines ).  Each has its own approach, good and
+bad depending on what you want.
+  Mach2  advantages-
+     speed
+     same names as Mac Toolbox ( easier to port other Mac programs )
+     standard 68000 assembler
+     almost Forth-83
+
+  MacForth advantages-
+     more complete and powerful development system
+     complete libraries  ( higher level starting point )
+     source code for all extensions
+     no need to have to learn 68000 assembler
+     no need to have a copy of Inside Macintosh next to you at all times
+
+All in all both are good packages.  You'll have to decide which is best for
+your needs.  I've chosen MacForth so I can develop faster but if I needed to
+port from other Mac languages I'd choose Mach2.
+  There are a couple of reviews in the file directory but these are somewhat
+dated.      -scott
+
+( With each new version both seem to add ideas from the other so some of the
+differences are becoming less. )
+----------
+Category 12,  Topic 2
+Message 9         Wed Sep 09, 1987
+J.W.BAXTER                   at 18:25 PDT
+          
+Waymen:  I agree completely that MacForth is somewhere between 79 and 83. I
+quibble over your inclusion of LEAVE in the 79ness side...MacForth Plus was
+given the 83 DO LOOP and LEAVE so far as I know.
+  Don was violently against the "no-state-smartness" idea in the 83  standards
+meetings, only giving in (so I understand...this is all several levels removed
+from Don) when it became clear that without the state-smartness elimination,
+there would be no standard (it was a "religious" matter).
+  Since a 32-bit Forth by definition isn't either 79 OR 83 Standard, it
+appears Don decided not to get rid of state-smartness.  I, for one, am glad.
+  Note that I can't speak to the relative merits of MacForth and Mach2 (and
+haven't).  I've never used Mach2.
+  --John
+----------
+Category 12,  Topic 2
+Message 10        Wed Sep 09, 1987
+W.ASKEY                      at 19:31 PDT
+          
+I should clarify an earlier statement of mine -- F83 versus the FORTH-83
+standard.  What I should have said is that F83 is not the same THING as the
+FORTH-83 standard.  While F83 follows the FORTH-83 standard, F83 should not be
+confused with THE standard  itself. -- Waymen  
+----------
+Category 12,  Topic 2
+Message 11        Wed Sep 09, 1987
+W.ASKEY                      at 21:23 PDT
+          
+John -- Ouch, I should be sentenced to two days of programming in BASIC.  I
+ran a LEAVE test in MacFORTH Plus and it DOES use the FORTH-83 LEAVE, my
+"problem" was that I originally referenced the MacFORTH Plus glossary which
+describes the 79 LEAVE.  I hadn't talked about the MacFORTH LOOP's before,
+they are like the 83  standard except that they completely skip the loop body
+if the  initial index and limit equal one another (they thus act like a ?DO, I
+really prefer MacFORTH's handling of that one).  So, with all "those"   issues
+resolved, I'm going to retire myself from the product debate -- satisfied that
+we Macintosh users have two very good Forth products in MacFORTH Plus and
+MACH2. -- Waymen 
+----------
+Category 12,  Topic 2
+Message 12        Thu Sep 10, 1987
+J.W.BAXTER                   at 19:57 PDT
+          
+Waymen,
+  Thanks, I had forgotten that Don skips the loop body on 1 1 DO ... LOOP 
+    That was by "popular demand" of the test group, as I recall.  In the 32-
+bit environment, "once around" takes a LOT longer than it does in the 16-bit
+world.  I, too, will retire, with the suggestion that either or both MacForth
+Plus and Mach2 will be a good purchase.
+  --John
+----------
+
+

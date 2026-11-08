@@ -1,0 +1,404 @@
+
+   
+ Minutes of the FIGGY BAR RT Conference.
+     
+ Date: 12/29/88   Time: 22:34EST
+Attendees:
+[[Dave] DHWEINSTEIN]
+[[Gary] GARY-S]
+[[jax] FIGCHAPTERS]
+[[Ken] K.BUTTERFIEL]
+[[milton] M.FABERT]
+ Items discussed: acquiring a CP/M closet heater or Clone, COMPILE [COMPILE] 
+                  not in ans required wordset, Unix, remote sensors ( as in
+                  real remote on the shuttles ), more nuclear sensors, more 
+                  ACM, starting a FIG chapter, staying intouch via e-mail
+         
+Minutes:
+<[Gary] GARY-S> Hey Dave - I did request time off for Austin vbash
+<FIGCHAPTERS> is here.
+<[Dave] DHWEINSTEIN> Oh there you are Jax
+<[Dave] DHWEINSTEIN> Great!
+<[Gary] GARY-S> no promises
+<[Jax] FIGCHAPTERS> how did you get here before me!
+<[Dave] DHWEINSTEIN> I typed /cha 2
+<[Jax] FIGCHAPTERS> hmm, never noticed that command
+<[Jax] FIGCHAPTERS> has left.
+<[Jax] FIGCHAPTERS> is here.
+<[Jax] FIGCHAPTERS> hm, that works pretty good.
+<[Jax] FIGCHAPTERS> I feel like Superman, switching rooms that fast!
+<[Dave] DHWEINSTEIN> Yeah...doesn't it though.
+<[Dave] DHWEINSTEIN> Sigh. Well...it looks like I'll end up buying an el-cheapo 
+CP/M closet warmer. I need a bigger computer than this laptop...and I
+don't have the cash for a modern machine.
+<[Jax] FIGCHAPTERS> Why buy garbage.
+<[Gary] GARY-S> CP/M does just fine.
+<[Dave] DHWEINSTEIN> I'd really like an Amiga...but I just don't have any money.
+<[Jax] FIGCHAPTERS> Why mess with that stuff? It's impossible to keep up with.
+<[Dave] DHWEINSTEIN> CP/M...I cut my teeth on CP/M.
+<[Jax] FIGCHAPTERS> CP/M is like collecting old Coca Cola bottles. It's fun, 
+but why?
+<[Jax] FIGCHAPTERS> Why not just get a dos clone.
+<K.BUTTERFIEL> is here.
+<[Dave] DHWEINSTEIN> Because I need something with a full screen that'll run 
+Modula for a course, and Forth for me. Because I can get a CP/M machine (
+possibly with Hard drive) for under $200.
+<[Gary] GARY-S> 9 quadzillion free programs and where the hell do you think 
+ms-dos developed from ?
+<[Dave] DHWEINSTEIN> Actually the reason is that it is cjeap as hell.
+<[Jax] FIGCHAPTERS> CP/M is more trouble than it is worth at this point.
+<[Jax] FIGCHAPTERS> I'll sell you a dos 2.1 machine for 300
+<[Jax] FIGCHAPTERS> 2 floppies.
+<[Jax] FIGCHAPTERS> you pay shipping.
+<[Dave] DHWEINSTEIN> Monitor?
+<[Jax] FIGCHAPTERS> keyboard included.
+<[Jax] FIGCHAPTERS> no monitor.
+<[Dave] DHWEINSTEIN> What memory?
+<[Gary] GARY-S> how much memory
+<[Jax] FIGCHAPTERS> 128k
+<[Gary] GARY-S> 8088 ?
+<[Jax] FIGCHAPTERS> yes
+<[Dave] DHWEINSTEIN> Nothing written for MS-DOS runs in 128k, but everything 
+for CP/M runs in its 64k.
+<[Dave] DHWEINSTEIN> And with memory prices the way they are...
+<[Jax] FIGCHAPTERS> We use it at work. We program in Forth on it.
+<[Gary] GARY-S> jump right in anytime you feel brave Ken
+<[Jax] FIGCHAPTERS> I think the boss wants to sell one of the three we have.
+<[Jax] FIGCHAPTERS> Hi ken!
+<[Jax] FIGCHAPTERS> Possible all three.
+<[Jax] FIGCHAPTERS> Want one? ( Columbia, a *very* close PC Clone.)
+<[Gary] GARY-S> Keep me posted on this Jax
+<K.BUTTERFIEL> Does anyone want an old Commodore PET?
+<[Jax] FIGCHAPTERS> Ask when you have the $$$ ( $300 + shipping, have to ask 
+boss, but pretty sure it's ok)
+<[Gary] GARY-S> are you kidding ! Geeze
+<[Dave] DHWEINSTEIN> How much...I have a fond spot for orhpans..?
+<[Dave] DHWEINSTEIN> I'll give 20 or 30 bucks for one. It runs Forth.
+<M.FABERT> is here.
+<[Jax] FIGCHAPTERS> hmmm
+<[Gary] GARY-S> You have to convert everything from-to PETASCII, Dave
+<[Jax] FIGCHAPTERS> maybe one of these guys wants to buy the brand-new color 
+composite monitor for $85.
+<K.BUTTERFIEL> I was kidding, but i know of one that just lost it's home in 
+Colorado
+<[Dave] DHWEINSTEIN> Sad News. An austin software house that has programs or 
+programmed exclusively in the CONVERS Dialect of Forth is switching to C.
+<[Jax] FIGCHAPTERS> Let's go burn it down! :-)
+<[Dave] DHWEINSTEIN> No...they are friends.
+<[Jax] FIGCHAPTERS> Ok, we'll flood it then!
+<[Gary] GARY-S> jax - there are a couple here that might be interested in one 
+or more of the PC boxes
+<[Dave] DHWEINSTEIN> But their market requires mac like user friendly, and they 
+don't have the time to write it themselves, and there are C libraries
+which do that for them.
+<[Gary] GARY-S> is any of the above negotiable ?
+<[Jax] FIGCHAPTERS> I'm not really trying to push Columbias ...
+<[Jax] FIGCHAPTERS> but we have three and I think we would sell one for $300 + 
+shipping.
+<[Jax] FIGCHAPTERS> Anyway, let's talk Forth.
+<[Dave] DHWEINSTEIN> I think I am going to end up with an aging CP/M 
+house-heater.
+<[Jax] FIGCHAPTERS> The problem with what Dave is suggesting ...
+<[Jax] FIGCHAPTERS> is that it deprives him of the chance of sampling ...
+<[Dave] DHWEINSTEIN> (hmmnn...considers picking up an orphaned S-100)
+<[Jax] FIGCHAPTERS> genuinely modern FORTH environments.
+<[Jax] FIGCHAPTERS> The most modern Forth environments ....
+<[Jax] FIGCHAPTERS> are all on the 32 bit machines ( at least in the micro 
+world ) ...
+<[Dave] DHWEINSTEIN> I want an Amiga Jax....but I don't have the cash. 
+Otherwise I'd have an Amiga and J-Forth v2
+<[Jax] FIGCHAPTERS> among them are HS-Forth, URForth, and of course, JForth.
+<K.BUTTERFIEL> Is there any news from ansi std. com. on losing COMPILE 
+[COMPILE],ECT???
+<[Dave] DHWEINSTEIN> losing COMPILE and [COMPILE]????????
+<[Dave] DHWEINSTEIN> WHAT!!!!!***!!!****!!!!!
+<K.BUTTERFIEL> This was hinted at at FORMAL.
+<[Dave] DHWEINSTEIN> Nope. Nossir. Noway. Nope. Notta chance. *I WON'T USE IT 
+IF IT DOESN'T HAVE THEM*.
+<[Gary] GARY-S> not in the latest BASIS, Ken, but George Shaw also aluded to 
+this in a personal chat.
+<[Jax] FIGCHAPTERS> are you sure that was in reference to the standard? Moore 
+did something like that in cmForth. But that's just experimentation.
+<[Gary] GARY-S> Why - to maintain transportability, which everyone has been 
+bitching about lack of
+<[Dave] DHWEINSTEIN> How do [COMPILE] and COMPILE hurt transportability.
+<[Gary] GARY-S> word/cell boundaries
+<K.BUTTERFIEL> My question exactly!!!
+<[Jax] FIGCHAPTERS> huh???
+<[Dave] DHWEINSTEIN> As was raised earlier....transportability does no good if 
+the language is crippled.
+<[Jax] FIGCHAPTERS> what does [compile] have to do with w/cell.
+<[Gary] GARY-S> 8 bits, 16 bits a dollar
+<[Gary] GARY-S> I did NOT get a detailed explanation and for that I apologize
+<[Jax] FIGCHAPTERS> But you know, just because something isn't in the standard 
+doesn't mean it is forbidden.
+<[Jax] FIGCHAPTERS> It could find its way ...
+<[Jax] FIGCHAPTERS> into the controlled reference set.
+<[Dave] DHWEINSTEIN> ...into my dictionary
+<[Jax] FIGCHAPTERS> Better a smaller standard ...
+<[Jax] FIGCHAPTERS> than an oppresively large one.
+<K.BUTTERFIEL> I thought standards were to sanction features in common usage.
+<[Gary] GARY-S> COMPILE and [COMPILE] will be moved to the controlled reference
+ set
+<[Jax] FIGCHAPTERS> Yes but the bigger the standard ...
+<[Jax] FIGCHAPTERS> the more you have to comply with!
+<[Gary] GARY-S> They just will not be in the required set
+<[Jax] FIGCHAPTERS> I would be comfortable with a one-word standard: FORTH-88
+<[Jax] FIGCHAPTERS> Besides ...
+<[Dave] DHWEINSTEIN> FORTH-89 Jax
+<[Jax] FIGCHAPTERS> FORTH-87 actually.
+<[Jax] FIGCHAPTERS> that is what was derailed in favor of ANSI.
+<[Jax] FIGCHAPTERS> anyway ...
+<[Jax] FIGCHAPTERS> besides that ...
+<[Jax] FIGCHAPTERS> compiler vendors will trip over each other ...
+<[Jax] FIGCHAPTERS> adding features.
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> I really recommend you each get the most current BASIS - for $5
+<[Gary] GARY-S> Call Heidi at FORTH Inc
+<[Jax] FIGCHAPTERS> I still don't understand how a roomful of computer 
+professionals ...
+<[Jax] FIGCHAPTERS> can be incapable of producing a machine-readable BASIS 
+document. It makes me wonder if they are qualified for their position.
+<[Jax] FIGCHAPTERS> .
+<M.FABERT> Hi folks.  Do you think some sort of standard library ...
+<M.FABERT> will be specifyed by the standards group ...
+<M.FABERT> a la the C standard lib?
+<[Dave] DHWEINSTEIN> I doubt it.
+<[Gary] GARY-S> Jax - ANSI requires a lineout through killed and/or changed 
+items and a lineout is not ASCII producable - TRUTH
+<[Dave] DHWEINSTEIN> After all...the equivalent of fread () does little good 
+when you are dealing with a controller.
+<[Jax] FIGCHAPTERS> Forth up to know has been
+<[Jax] FIGCHAPTERS> rather word-of-mouth.
+<[Dave] DHWEINSTEIN> You have to remember that C is used primarily on 
+conventional computers....that is not necessarily true of Forth.
+<[Jax] FIGCHAPTERS> THe point of the ANSI standard, M>FABERT ...
+<[Jax] FIGCHAPTERS> is to allow just the sort of thing you suggest!
+<[Gary] GARY-S> Have you seen any of the BASIS ? There are a lot of lineouts
+<[Jax] FIGCHAPTERS> Good Idea.
+<[Jax] FIGCHAPTERS> Gary ...
+<[Jax] FIGCHAPTERS> Lineout is machine producable.
+<M.FABERT> Yes but a stadard is not much good ...
+<[Jax] FIGCHAPTERS> it looks like this:
+<[Gary] GARY-S> how the hell do you post it on here ?
+<M.FABERT> if each vender is tripping over the other or just ...
+<[Jax] FIGCHAPTERS> t^H-h^H-i^H-s^H-
+<[Jax] FIGCHAPTERS> that is how you do it
+<[Jax] FIGCHAPTERS> THAT IS ANSI STANDARD GRAPHICS!
+<[Jax] FIGCHAPTERS> foo.
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> I see a lot of CNTRL H's
+<[Jax] FIGCHAPTERS> I was showing you, i wasn't doing it.
+<[Jax] FIGCHAPTERS> I can't do it for real in an RT conf.
+<[Gary] GARY-S> Take it up with Greg in Cat 10
+<[Jax] FIGCHAPTERS> The GEnie input buffer takes ^H as a backspace delet.
+<[Jax] FIGCHAPTERS> .
+<[Jax] FIGCHAPTERS> I'll do that.
+<[Jax] FIGCHAPTERS> brb
+<[Jax] FIGCHAPTERS> has left.
+<M.FABERT> tripping trying to outfeature??Z?????/nam milton
+<[Gary] GARY-S> I hate downloading what you just described - I did in the ELM 
+mail manual. garbaged the heck out of my d/l
+<[Gary] GARY-S> That's a first - running Jax off
+<[Dave] DHWEINSTEIN> Applause is premature...he may return.
+<[milton] M.FABERT> Did he leave in a huf?
+<[Dave] DHWEINSTEIN> (grin)
+<[Gary] GARY-S> Ken - did you look into arpa mail ?
+<K.BUTTERFIEL> I tried last Thursday, but failed to get on our mail vax. ...
+<[Gary] GARY-S> Milton - what do you use Forth on in Grafton ?
+<[milton] M.FABERT> I program remote sensors for NASA.
+<K.BUTTERFIEL> I'll try again after the holidays and with my system manager....
+<K.BUTTERFIEL> I really don't work with the c-div machines very often.
+<[Gary] GARY-S> Well, it's not a hot priority, Ken; but it would be nice to 
+establish a mail link
+<[Gary] GARY-S> I get NASA Tech Briefs - how cum no articles on Forth use ?
+<K.BUTTERFIEL> I'll bet your sensors are a little more remote than mine Milton.
+<[milton] M.FABERT> Maybe some will be coming as soon as I write some.
+<[Gary] GARY-S> Great !
+<[Gary] GARY-S> Do you and Nesmith work together ?
+<[milton] M.FABERT> Sorry, I don't know the fellow? What base is he at?
+<[Gary] GARY-S> I really don't know for sure, but I think Goddard
+<[milton] M.FABERT> Ah, I think I may have heard about him ...
+<[milton] M.FABERT> does he do work on the MPP?
+<[Gary] GARY-S> yes
+<FIGCHAPTERS> is here.
+<K.BUTTERFIEL> Gary how do I change my name again?
+<[Dave] DHWEINSTEIN> re Jax
+<[Gary] GARY-S>   type /nam name
+<[Samuel Pepys] FIGCHAPTERS> Ok, it's posted
+<[Samuel Pepys] FIGCHAPTERS> 10/2/143
+<[Dave] DHWEINSTEIN> 10.2 Is up to 143!!
+<[Gary] GARY-S> What took you so long to react ?
+<[jax] FIGCHAPTERS> right.
+<[jax] FIGCHAPTERS> huh?
+<[jax] FIGCHAPTERS> me?
+<[Gary] GARY-S> who are you huh? me? at jax
+<[Ken] K.BUTTERFIEL> Sorry I asked.
+<[jax] FIGCHAPTERS> "what took so long to react?"
+<[Dave] DHWEINSTEIN> Ain't chaos wonderful.
+<[jax] FIGCHAPTERS> was that to me?
+<[jax] FIGCHAPTERS> chaos is a SCIENCE ... we are all scientists here.
+<[Dave] DHWEINSTEIN> I think "Object Oriented Forth" is back in Print. I've 
+seen it a lot around austin.
+<[milton] M.FABERT> Please don't insult me!
+<[Gary] GARY-S> Sure - I figure you took a whole 15 seconds to log-off and post 
+that message to Greg.
+<[jax] FIGCHAPTERS> Right.
+<[Ken] K.BUTTERFIEL> We have a center for nonlinear studies that would question 
+THAT.
+<[jax] FIGCHAPTERS> I shoot from the lip, not the hip.
+<[Dave] DHWEINSTEIN> I have a desk that is therefore a tribute to SCIENCE!
+<[Gary] GARY-S> Truth in advertising if I EVER read it !!!
+<[Gary] GARY-S> Milton, you and Ken will want to compare sensor notes
+<[milton] M.FABERT> What has he sensed lately (heh heh)
+<[Gary] GARY-S> Milton - Ken, Ken, Milton
+<[milton] M.FABERT> yes gary gary?
+<[jax] FIGCHAPTERS> I sense this is driftin ...
+<[Dave] DHWEINSTEIN> What kind of work...???
+<[jax] FIGCHAPTERS> .
+<[Dave] DHWEINSTEIN> Jax...you know we never stay on track
+<[Gary] GARY-S> At least this should drift back to Forth
+<[milton] M.FABERT> hear hear!
+<[Gary] GARY-S> Ken does nuc sensors at los Alamos
+<[jax] FIGCHAPTERS> I think it would be *easy* to sense a nuke ...
+<[Dave] DHWEINSTEIN> What kind of work with sensors and forth are we talking it 
+about? (thinks of being able to work Forth into work)
+<[jax] FIGCHAPTERS> BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMMMMMMMMM
+MMMMMMMMMMMMMM!!!!!!!!!!!!!!!!
+<[milton] M.FABERT> Ah so.  I do atmospheric gas sensing, Gary.
+<[milton] M.FABERT> Forth is used to control the Satellite sensors.
+<[Gary] GARY-S> Do you roll your own or use canned products like NMI boards
+<[Dave] DHWEINSTEIN> Oh....no...work is on earth...
+<[Ken] K.BUTTERFIEL> Gamma, x-ray, and neutron particle detectors with 68hc11 
+processors...
+<[Dave] DHWEINSTEIN> Ohh...the New Micros systems!
+<[milton] M.FABERT> roll our own, or space qual from firms like SCI.
+<[Ken] K.BUTTERFIEL> Based on NMI CHIP, we design own board.
+<[Gary] GARY-S> Do you have any word on the 32 yet
+<[milton] M.FABERT> 32 bit?
+<[Dave] DHWEINSTEIN> The JHAPL chip.
+<[Gary] GARY-S> Sure SC32
+<[Ken] K.BUTTERFIEL> Milton, do your systems fly, or are they ground based?
+<[milton] M.FABERT> Both.
+<[Gary] GARY-S>  I figure you guys must be on the first-run Beta list for sure
+<[milton] M.FABERT> I haven't put forth in space yet but am currently working 
+on ....
+<[milton] M.FABERT> a project that is.
+<[Ken] K.BUTTERFIEL> Will you have to wait for the shuttle??
+<[milton] M.FABERT> All the projects I've worked on have gone up in the shuttle 
+...
+<[milton] M.FABERT> or will.
+<[Gary] GARY-S> Jax - I can't believe you haven't said anything about e-mail
+<[jax] FIGCHAPTERS> what about it? It's great.
+<[milton] M.FABERT> A couple of projects that were to go up that used ...
+<[Gary] GARY-S> or do you have someone there on your list
+<[milton] M.FABERT> forth were delayed due to the shuttle disaster.
+<[Ken] K.BUTTERFIEL> 30 seconds of tribute.
+<[jax] FIGCHAPTERS> Well, it's interesting to be able to chat with soldiers on 
+the front lines of FORTH.
+<[jax] FIGCHAPTERS> Yeah, the shuttle disaster was awesome ...
+<[jax] FIGCHAPTERS> it is almost like it was ...
+<[jax] FIGCHAPTERS> a personal tragedy ...
+<[jax] FIGCHAPTERS> combined with America's surrender of space to the Soviet 
+Union ...
+<[jax] FIGCHAPTERS> rolled into one.
+<[Ken] K.BUTTERFIEL> I still don't like to remember.
+<[jax] FIGCHAPTERS> Milton, are you a FIG Chapter member?
+<[Ken] K.BUTTERFIEL> But it is good to see it back in space.
+<[milton] M.FABERT> yes jax.
+<[jax] FIGCHAPTERS> Do you want to be on the FIG Chapter EMailing List?
+<[Ken] K.BUTTERFIEL> I would be interested to hear what projects are using FORTH
+<[milton] M.FABERT> There are many new exciting things coming up at NASA ...
+<[milton] M.FABERT> The global change project for instance...
+<[Dave] DHWEINSTEIN> February 1989 - ACM SigFORTH  Conference
+<[Ken] K.BUTTERFIEL> Ozone and CO2 sensing??
+<[milton] M.FABERT> Some of these will make use of FORTH.
+<[jax] FIGCHAPTERS> Ken, are you a local chapter member?
+<[Dave] DHWEINSTEIN> Can you get to the conference to discuss these things?
+<[jax] FIGCHAPTERS> I have an international list that I mail to once a month 
+now.
+<[jax] FIGCHAPTERS> I would like to have one rep in each chapter.
+<[jax] FIGCHAPTERS> to receive email on behalf of the chapter.
+<[jax] FIGCHAPTERS> Milton, Ken?
+<[Ken] K.BUTTERFIEL> I am not a local chapter member, the nearest chapter is 2 
+hours away...
+<[milton] M.FABERT> Sure, jax.
+<[jax] FIGCHAPTERS> Start one!
+<[jax] FIGCHAPTERS> Ok, Milton, ...
+<[Dave] DHWEINSTEIN> One Member Chaptrs
+<[jax] FIGCHAPTERS> is GEnie best, or do you have an ARPA address?
+<[milton] M.FABERT> Genie is best for now, I'll get an ARPA soon.
+<[Ken] K.BUTTERFIEL> There should be a chapter in Los Alamos, but I don't know 
+if we...
+<[Gary] GARY-S> Dave - you'd be amazed at the Forthers that come out for that 
+first meeting !
+<[jax] FIGCHAPTERS> ok, on my multitasking Amiga ...
+<[Ken] K.BUTTERFIEL> have enough interest.
+<[jax] FIGCHAPTERS> I'm adding you as we speak!
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN> I don't suppose anyone out there needs freelance 
+FORTH/C/Unix work done remotely?
+<[Dave] DHWEINSTEIN> (plugs for extra money)
+<[Gary] GARY-S> Ken - announce a chapter formation meeting and see what sort of 
+response you get
+<[Ken] K.BUTTERFIEL> Isn't there a way to get lists of local Fig members?
+<[Gary] GARY-S> Is anyone out there ? My screen just quit scrolling
+<[jax] FIGCHAPTERS> hello ... hello ... gary?
+<[Dave] DHWEINSTEIN> Yeah...I'm out here.
+<[jax] FIGCHAPTERS> earth to gary ...
+<[Gary] GARY-S> Sure there is - from FIG in California, but an announcement 
+will bring out a lot of non-FIG member Forthers
+<[jax] FIGCHAPTERS> Also posting to a local series of BBSes helps!
+<[jax] FIGCHAPTERS> That has added to Denver FIG's membership, in just two 
+months.
+<[Gary] GARY-S> I had two names on my Little Rock list, yet about 15 people 
+showed up for the first meeting...
+<[Gary] GARY-S> of those about 8 remained to form a nucleus...
+<[Dave] DHWEINSTEIN> (Guess Not)
+<[Gary] GARY-S> not too shabby for Little Rock, AR
+<[Ken] K.BUTTERFIEL> I'm not much of an organizer, and I'll bet ...
+<[Dave] DHWEINSTEIN> (Sigh)
+<[Ken] K.BUTTERFIEL> the organizer gets to keep the ball rolling for at least 
+the first year.
+<[Ken] K.BUTTERFIEL> I guess I'll look inot it though
+<[Gary] GARY-S> You can pass a hat - no one complains
+<[Gary] GARY-S> We started with scheduled meetings but do better with called 
+eyeballs
+<[milton] M.FABERT> Dave, can you EMAIL me your resume?
+<[Dave - Broke] DHWEINSTEIN> Sure.
+<[Dave - Broke] DHWEINSTEIN> The only drawback is that I have to remain in 
+Austin.
+<[Dave - Broke] DHWEINSTEIN> But I can work remotely.
+<[milton] M.FABERT> If you have any GEM experience, that might be helpful.
+<[Dave - Broke] DHWEINSTEIN> Not. GEM. FORTH/C/Unix (lots of the last two)
+<[Gary] GARY-S> Dave - if you were to recommend one (1) Unix refernec only what 
+would it be
+<[Dave - Broke] DHWEINSTEIN> For a C programmer, or a User.
+<[Gary] GARY-S> User - me
+<[milton] M.FABERT> A Unix user == abusee!
+<[Dave - Broke] DHWEINSTEIN> The only reference of that type that works is a 
+Guru helping you out for about 1 month (maybe two, or 1 week if you don't
+ sleep). That's basically how I got started. Now I get to answer all of the 
+questions.
+<[jax] FIGCHAPTERS> Try _The UNIX Programming Environment_ by Kernighan & Pike
+<[Dave - Broke] DHWEINSTEIN> Yeah...that isn't bad but it is Sys 5
+<[jax] FIGCHAPTERS> No.
+<[Gary] GARY-S> any last shots before we call it a conference ?
+<[jax] FIGCHAPTERS> Not specifically.
+<[jax] FIGCHAPTERS> More Version 7.
+<[Dave - Broke] DHWEINSTEIN> Come to the Austin ACM SigFORTH COnference this 
+February
+<[milton] M.FABERT> Wish I could.
+<[Gary] GARY-S> any others ?
+<[Ken] K.BUTTERFIEL> Los Alamos Chaper formation meeting 3rd week in Jan
+<[jax] FIGCHAPTERS> Happy New Year! It will be my Fourth as a professional 
+FORTH programmer!
+<[milton] M.FABERT> Congrats!
+<[Gary] GARY-S> Sounds good ! don't forget we have a guest conference here 
+January 12
+<[milton] M.FABERT> Who?
+<[Gary] GARY-S> g'nite folks
+<[jax] FIGCHAPTERS> To celebrate, we had our Fourth child this summer :-)
+=== End of Steno notes. ===
+
+

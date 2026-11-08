@@ -1,0 +1,13 @@
+00Index                     This list
+forthmacs.arc               Forthmacs V3.00
+forthmacs.msg               Forthmacs info file
+timbre.zip                  Rob Chapman's TIMBRE system and docs
+until22.txt                Readme file for Norman Smith's Forth-like UNTIL
+until22.zip                Norman Smith's Forth-like UNTIL source and docs
+win32for.txt                Tom Zimmer & Andrew McKewan's Forth for Windows (Win32S)
+                              info file 
+win32for.zip                Tom Zimmer & Andrew McKewan's Forth for Windows
+                              executables, source and docs
+win32in.bat                 Install batch file for Tom Zimmer & Andrew McKewan's
+			      Forth for Windows
+wpforth.zip                 Albert Chan's WPFORTH system and docs

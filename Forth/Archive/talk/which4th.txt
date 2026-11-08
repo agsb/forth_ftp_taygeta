@@ -1,0 +1,30 @@
+
+
+			  FORTH Standards
+										
+			   Gerald Shifrin
+										
+		     Satellite Business Systems
+										
+
+
+There are currently three widely implemented standards of the FORTH 
+language. Most users would perceive only minor differences among 
+these. There are many more significant differences in the internals 
+of the implementations of these standards.
+
+1. fig-FORTH - the first widely implemented version of the language. 
+   Source code for fig-FORTH was put in the public domain for most 
+   popular microcomputers by the Forth Interest Group. The S/370 
+   version was modelled on a public domain version for the PDP-11.
+
+2. FORTH-79 - the first version widely implemented by commercial 
+   software vendors. Numerous functions were added, and several changes 
+   were made to improve the consistency of the language.
+
+3. FORTH-83 - the current standard for the language. The consistency 
+   of the language was improved. Many internal components were 
+   separated out and made system dependant. Improved the 
+   transportability of applications.
+
+

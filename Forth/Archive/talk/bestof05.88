@@ -1,0 +1,263 @@
+
+           
+                
+                      Best of GEnie..... May 1988
+        News from the GEnie Forth RoundTable by Gary Smith
+             
+  There is little about this column that is objective. Obviously, what you
+are getting is my ( highly subjective ) opinion of what some of the 'good 
+stuff' is. Since it is not unusual to see 10K or more of new messages on a
+given day, and this column is limited in size, you are also getting only a 
+peek.
+  The peek this time will be in the very lively standards category (Category 10).
+Some may still not realize the X3/J14 Technical Committee has made the GEnie 
+Forth RoundTable their home service. X3/J14 has the task of drafting a ANS 
+standard Forth. Here, the very future of our language is being debated with a 
+grand mix of knowledge, wisdom, and humor.
+  This excerpt features a discussion centered around a proposal by Lee
+Brotzman. I hope it will encourage YOU to get involved.
+----------
+Category 10,  Topic 23
+Message 76        Wed Mar 23, 1988
+S.W.SQUIRES [scott]          at 03:12 EST
+      
+ Lee, I have some of the same suggestions that Leonard does for your file
+words.   How about- 
+            
+   OPEN ( addr -- file# ) File# could be a number or a handle or pointer or 
+fcb or whatever would be in keeping with the specific computer/Forth system 
+as long as it is consistant on that system.  On a one file limited system  it
+would just leave the same number.  Multiple files have been the norm for  some
+time even in the simple Forth systems I've used.  Typical case is  reading in
+one file, manipulating it and writing it back out to another  file.  
+            
+  CLOSE ( file# -- )
+          
+  READ ( addr n1 file# -- n2 )
+             
+  WRITE ( addr n1 file# -- n2 )
+           
+  SEEK and FILEPOS would require a file# as well.  Would it be more beneficial
+to provide pointers with the READ and WRITE commands? i.e. READ  ( addr n1
+file-offset file# -- n2 )  The more primitive the words the more flexible they
+could be.  Same thing with flags- would it just be more straight forward to
+leave a flag after every disk operation?
+           
+How about a create file function?  You'd probably need to provide a size
+parameter as well as ad addr of the naming convetion to allow for systems with
+un-expandable file sizes.  
+             
+How about a request for the file size? This would allow a program to set 
+aside the correct buffer size and to use the size for any calculations.
+  -scott
+----------
+Category 10,  Topic 23
+Message 77        Thu Mar 24, 1988
+L.BROTZMAN                   at 01:17 EST
+            
+Leonard and Scott, 
+   Jerry Shifrin voiced the same concerns as yours when I uploaded my 
+proposal to the East Coast Forth Board.  I'll just reproduce my answer to him 
+here.
+        
+ ========================================================================
+ Date: 03-23-88 (11:57)              Number: 276    
+   To: SYSOP                         Refer#: 273     
+ From: LEE BROTZMAN                    Read: YES
+ Subj: HOST FILE ACCESS PROPOSAL     Status: PUBLIC MESSAGE
+         
+    Yes, Jerry, I purposely avoided the subject of multiple files since I
+ think that trying to pass file handles, of reference numbers, or
+ whatever is so system specific that it becomes very difficult to
+ standardize.  This proposal is hard enough to get adopted as is, adding
+ system-specific file handles would kill it for sure.
+    I don't agree that this proposal precludes multiple file handling
+ however, and let me explain why.  I'll use Uniforth for my example,
+ because that's what I know.
+    In Uniforth there is a user variable called FCB.  FCB points to the
+ file handle (file control block, reference buffer, whatever the OS in
+ question uses) of the current open file.  The value of FCB is changed by
+ a set of words called:  CHANA , CHANB , etc.  To open two files
+ simultaneously, for example, one would do the following:
+         
+    CHANA OPEN file1.fth 
+    CHANB OPEN file2.fth
+           
+ A word that copies a line of text from one file to another would be
+ something like this:
+          
+    : COPY-LINE  ( copy a line of text from CHANA to CHANB)
+        CHANA pad 80 RDLINE     ( length --- )
+        CHANB pad swap WRLINE drop ;
+            
+ Where I have used the Uniforth words RDLINE and WRLINE instead of my
+ proposed words READ and WRITE.  The code would be the same in either
+ case.
+    If the proposal were changed to include file handles, I would
+ anticipate changes like the following:
+             
+    OPEN   ( --- fcb ...open a file and return the file handle)
+    CLOSE  ( fcb --- ...close the file pointed to by the file handle)
+    READ   ( fcb adr len1 --- len2 ...as before except with file handle)
+    WRITE  ( fcb adr len1 --- len2 ...as before except with file handle)
+             
+ SEEK , FILEPOS , and WREOF would be changed similarly.  Frankly, I don't
+ see much difference in the ultimate use of these words.  Returning the
+ file handles means they must be saved somewhere in a variable.  So the
+ COPY-LINE above would become:
+             
+    : COPY-LINE
+        FCB1 @ pad 80 READ
+        FCB2 @ pad swap WRITE drop ;
+              
+    (In fact the definition of CHANA is something like: "FCB1 @ FCB !"
+ and CHANB is "FCB2 @ FCB !" for most, but not all operating system
+ interfaces implemented.)
+    So you see, it isn't difficult to handle multiple files using the
+ proposed word set.  Perhaps I should say that in the proposal in order
+ to make clear what I already thought would be understood implicitly.  I
+ keep forgetting that other systems handle things in very different ways.
+ Do you think I should also propose some standard means of file
+ switching?  It should be as generic as possible, because the
+ manipulation of file control blocks is different for every operating
+ system, while, in Uniforth at least, the ultimate top-level file
+ operators like those above are uniform.
+ ========================================================================
+                
+   To continue, I would like to say that I prefer "file-switching" words like 
+CHANA and CHANB to explicit references to file handles because the explicit 
+method is unnecessary and less self-documenting, and it follows the principle 
+of "hiding data" ala Brodie's Thinking Forth.
+   Leonard, thanks for pointing out the deficiencies in language in my 
+proposal.  I see that it must be more carefully written to avoid 
+misinterpretation.  When I say CLOSE will "close the file currently open", I 
+should say "...close the file on the current file I/O channel" -- after I 
+define what a file I/O channel is of course.  :-)
+   The definition of READ should say reading will stop "when n1 bytes of data 
+have been read, an end-of-file mark is encountered, or in the case of a 
+variable ... " 
+   Finally as I said above, my proposal isn't incompatible with "handles"  it
+just assumed they are handled elsewhere (pun intended).
+   Scott, about file creation: much more than size and name go into file 
+creation, like access method, logical record length, blocking factor, data 
+type (binary, character, executable, etc.), protection, and on and on.  
+That's a pretty big can of worms.
+   A request for file size is a good idea, and something I use a lot.  I'll 
+add it to the list.
+          
+-- Lee
+----------
+Category 10,  Topic 23
+Message 78        Thu Mar 24, 1988
+L.BROTZMAN                   at 01:20 EST
+               
+Greg,
+           
+   Thanks for the tip on the proposal.  I will try to amend the draft in 
+light of the responses above and get it in the mail ASAP.  While we're 
+talking about proposals, I asked Martin Tracy whether discussion on my DO 
+LOOP proposal could be postponed until the November TC meeting at Goddard 
+Space Flight Center since I plan to attend that meeting and would then be 
+available to explain and answer questions.  He said I should ask you, so I'm 
+asking.  (Actually, if there is a move afoot to go back to Forth-79 DO-LOOPs
+my proposal is obsolete, which is fine with me -- I have no problems with the 
+earlier DO structure).
+   Sorry about sounding irate re BLOCK in this topic.  I really have nothing 
+against BLOCK in host file operations, it has its place.  I just don't think 
+that it is a panecea.
+   My earlier postings about BLOCK in this topic have been (as far as I can 
+recall without digging back into my log files) in an effort to make it more 
+compatible with the hosted environment, e.g. "undefined" block length, and 
+releasing restrictions on buffer sizes.  These are issues of little 
+importance for standalone systems, but they could make life with BLOCK under 
+an operating system a whole lot easier.
+   I don't think I ever said BLOCK wasn't suitable to access a database, just 
+that it isn't the ONLY suitable way.  I expressed this explicitly in my last 
+two messages, and I tried to be accomodating about saying that there are 
+indeed times when BLOCK is the way to go -- at least that's what I wanted to 
+say.  (damn electronic communications ... bad E-mail, bad!)
+   Off the top of my head, the theoretical limit on throughput of a CD ROM 
+drive is roughly 150 Kilobits/sec.  I have not analysed our system as to 
+actual throughput (we have to make the disk first!), but if you have friends 
+at JPL, the guy to ask there is Mike Martin, of the Planetary Data Systems 
+Group.  He has produced two CD ROMs of astronomical images and  character-
+table data, and written software to support it on IBM PC/AT/XT  clones under
+MS-DOS.  He's told me that his throughput on the PC rivals that  of an
+unloaded VAX reading from a hard disk, but VMS is such a dog that I  won't
+venture to interpret that statement.
+   The FITS files will be random access on the CD ROM.  I would much prefer
+heavily indexed, flat text files but FITS has been foisted on me by NASA.  Our
+first disk is simply a test of the CD ROM as storage and distribution medium,
+and FITS as a disk-based interchange format (currently FITS is primarily for
+tapes not disks, although several observatories have done some good work with
+disk-FITS already).  The production schedule for this disk is too tight to
+allow more than minimal indexing for a few files (there will be about 30
+catalogs, totalling more than 50 files and 400 Mbytes; final selection isn't
+set until mid-May).  Subsequent disks, assuming that funding is continued,
+will include index files into the FITS formatted data, and more sophisticated
+data base software.  By that time I hope to have the Forth software advanced
+enough to stave off the higher-ups that think it should be in C. 
+   Your right that the slow seek times are a real pain in the butt.  Users 
+are more than willing to put up with it, however, to get up to 600 Mbytes of
+direct access storage on their PCs all in one place at a relatively low  cost.
+Drives are running about $700, and most CD ROM application disks are  about
+$100-200 -- ours will be distributed for cost of media only, of course, $40-50
+at most.  There are now a few vendors of drives that claim to cut the seek
+time by quite a bit, but I haven't seen the spec sheets yet. 
+             
+-- Lee
+           
+P.S.  Touche`, JAX.  A full-blown Forth-based workstation environment 
+couldn't end up any weirder or more esoteric than Unix, and THAT'S pretty
+popular nowadays.  Keep on trucking. 
+----------
+Category 10,  Topic 23
+Message 79        Thu Mar 24, 1988
+S.W.SQUIRES [scott]          at 03:14 EST
+           
+Lee, I'd still prefer an explicit means of selecting a file.  This would 
+allow a variable (or better yet a TO type variable) with a descriptive name 
+for that particular program.  (i.e.  SOURCE, DESTINATION, ACCOUNTS, etc.)  The
+potential problem with using the CHANA / CHANB is that the FCB is set  until
+it is changed again.  By looking at the source code for a program  that did
+file access you'd have to look back and determine what set it the  last time
+if you didn't do it in the actual word doing the file access.   Likewise
+debugging could be confusing if FCB was set by a stray word.  By  passing the
+FCB (or file#) explicitly then the program can actually become  more readable.
+Also the usage is up to the programmer and he can use  arrays or other
+structures if he desires.  -Scott 
+----------
+Category 10,  Topic 23
+Message 80        Fri Mar 25, 1988
+J.SHIFRIN                    at 20:48 EST
+             
+Lee, I know I'll get confused trying to respond here and on the ECFB, but I
+still don't think your files proposal is very solid. Nothing against UniForth,
+but I think the CHANA/CHANB approach is both a kludge and a bit bizarre. Also,
+I believe it falls apart in a multitasking enviroment. I don't care what's
+passed as a file identifier, but I think it should be a single stack item --
+an address or id number which uniquely refers to something (FCB, HCB, DCB,
+filename), implementation dependent, to describe the file being operated on.
+[Sorry about the awkward prose - I HATE the GEnie editor and didn't want to
+get into it for clean-up. Should've composed this offline!]
+----------
+Category 10,  Topic 23
+Message 81        Sat Mar 26, 1988
+G.BAILEY1 [ATHENA]           at 13:26 PST
+              
+Lee, your proposal (known as TP88-038) is in the pile for consideration at the
+May TC meeting, and I will state your request to postpone its consideration as
+a motion to commit it to the group that is working on control structure and
+looping issues.  We will probably convene that group at least once in
+Rochester and it is probable that this group will not have concrete
+recommendations for some time.  Unfortunately, it is difficult to indicate
+your willingness to accept the FORTH-79 definition in our audit trail and
+unless SOMEONE generates a proposal to that effect there is no way it can even
+be considered.  If you consider the FORTH-79 loop behavior to be equally
+desirable, there is absolutely nothing wrong with submitting a separate
+proposal to that effect.  There are plentiful cases where a submitter finds
+two mutually exclusive changes equally acceptable, and in such a case two
+proposals are easier to work with than would be a single proposal outlining
+two possibilities.  Cheers - Greg.
+
+

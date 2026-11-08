@@ -1,0 +1,298 @@
+
+
+
+ Minutes of a special GEnie Forth RoundTable Conference with 
+ Jan Shepherd, President of Association Development Center, Inc.
+ Jan discusses the promotion of Forth and the Forth Interest Group,
+ and responds to questions about the image of both.
+
+ Entire contents of this transcript copyright (c)
+ 1991 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 08/15/91   Time: 22:29EDT
+
+Attendees:
+[GARY-S]
+[[Jan] FIG]
+[M.BAKER33]
+[[Lou]L.KONIECZKA]
+[[Tom] T.WATERS10]
+[[Jon] J.ROY18]
+[[Elizabeth]E.RATHER]
+[[Diane]D.STRAUSS5]
+[E.BEATTY1]
+[[John] JDHALL]
+[[Dennis] D.RUFFER]
+[[Torquemada] JAX]
+[AUNTIE]
+[[Len] NMORGENSTERN]
+[[martin] M.ROWLAND1]
+[[Keith] A.HOELL]
+
+Minutes:
+<FIG> is here.
+<M.BAKER33> is here.
+<GARY-S> not to worry - remember I do edit for clarity
+<[Jan] FIG> Want a beer?
+<M.BAKER33> When does the con start?
+<GARY-S> in about 12 minutes
+<D.RUFFER> is here.
+<M.BAKER33> I'll return shortly.
+<GARY-S> If you want to do something for a few min utes and come back that
+ will work
+<[Jan] FIG> well i still contend that there is life after birth
+<[Dennis] D.RUFFER> who's birth Jan?
+<GARY-S> the keyboard, though either is probably a fair assesment
+<[Dennis] D.RUFFER> is GEnie as slow as I think it is tonight?
+<GARY-S> For Mom or for baby is there life as we know it ?
+<[Jan] FIG> anyway we heard this week that Boeing is writing functional test 
+software for assembly line processors in Forth..
+<GARY-S> You've got a slow port - I logged off, and when I logged back on I got 
+a faster port
+<[Jan] FIG> 68030,80386,68332 and 80960
+<[Jan] FIG> interesting eh!
+<[Dennis] D.RUFFER> maybe Gary...Jan, do you know whos Forth Boeing is using?
+<GARY-S> Do they need a technician ??????
+<[Jan] FIG> hmmm
+<T.WATERS10> is here.
+<[Jan] FIG> the guy didn't say but he wanted a vendors list and order form
+<[Jan] FIG> he's from Seattle
+<[Jan] FIG> name's Herb Hart
+<[Dennis] D.RUFFER> howya doing tom....what ya know?
+<GARY-S> 5 minutes to conference time
+<[Tom] T.WATERS10> Just check out RT conf...first time on
+<[Jan] FIG> eeeeek
+<J.ROY18> is here.
+<[Dennis] D.RUFFER> sokay...we'll be talking about the Forth language is a few 
+minutes
+<[Tom] T.WATERS10> My location is West Columbia SC
+<[Dennis] D.RUFFER> hiya Jon...whatch know?
+<GARY-S> Hmmm - my wife's sister lives in Anderson (just down the road from 
+Clemson), Tom
+<[Jon] J.ROY18> (^= Just dropping in on the free RTC's tonight...
+<L.KONIECZKA> is here.
+<GARY-S> We'll get going in a few minutes Jon, so chat it up for now
+<[Dennis] D.RUFFER> well, sokay Jon, but we are going to be talking Forth here 
+in a sec
+<[Jon] J.ROY18> (^= That's why I'm here! Can't pass up free RTC time!
+<[Jon] J.ROY18> Dennis, that's ok.. I'm a Comp. Prog. major..
+<[Dennis] D.RUFFER> as long as you obey the "rules" for formal conferences, you 
+are most certainly welcome
+<[Jon] J.ROY18> Been to many a formal conference..
+<[Tom] T.WATERS10> With fear of being kicked out of room....what is "Forth 
+Lanuage
+<[Dennis] D.RUFFER> hiya L.K. ...what's ya name?
+<GARY-S> We won't be getting technical tonight - tonight we are going to see if 
+we can't discover why we aren't attracting Jon and Tom and L.Kon... to
+ Forth
+<[Jon] J.ROY18> (^= I'm a C man myself...
+<[Dennis] D.RUFFER> Tom, Forth is a language mostly used for machine control 
+type applications
+<JAX> is here.
+<[Dennis] D.RUFFER> who...boo hiss Jon...grin
+<[Jon] J.ROY18> (hehehe)
+<GARY-S> It is similar to C in that it is a macro language, but much easier to 
+implement, and totally extensible so you literally roll your own application
+language
+<[Jon] J.ROY18> Yep, I'll be taking Forth soon... Haven't had experiance with 
+it yet..
+<JAX> Hi Dennis ... better watch out, I chatted w/ yer boss lady today!
+<JAX>  :-)
+<[Jon] J.ROY18> Is it possible to do any decent AI/ANN programming in Forth?
+<GARY-S> you bet - one of the earlier frames was in Forth
+<JAX> Jon, that Diesel thing from GE was written in Forth (after LISP didn't 
+perform to spec).
+<[Jon] J.ROY18> Hmm.. (^= That's where all my interests lie... ANN and Genetic 
+Algs...
+<[Dennis] D.RUFFER> Jon, I've done several AI type things in Forth
+<NMORGENSTERN> is here.
+<L.KONIECZKA> Hi my name is Lou
+<E.RATHER> is here.
+<D.STRAUSS5> is here.
+<[Jon] J.ROY18> Dennis, I'm taking it in a few months so we'll see what happens.
+.. I'm taking ProLog this semester....
+<[Dennis] D.RUFFER> ProLog is certainly worth learning (wish I had:)
+<JDHALL> is here.
+<GARY-S> ready jan ???
+<GARY-S> SHOWTIME - cut the chatter
+<GARY-S>
+<GARY-S>     The GEnie Forth RoundTable is pleased to welcome as
+           tonight's guest, Jan Shepherd, of ADC, the public 
+           relations consultants responsible for FIG's public image.
+         Jan Shepherd has served as Administrator of the Forth Interest 
+         Group since 1984. She is President of the Association Development
+         Center, Inc. since 1977. ADC also works with two other non-profit 
+         associations, one is a group of independent consultants, many of
+         whom work in the computer industry. The other group is the Video
+         Electronics Standards Association (VESA), whose purpose is to
+         develop standards for the graphics industry. 
+         Jan meets with the FIG business group once a month. The group has
+         been concentrating on development of public relations activities.
+         for the past three months. During this forum Jan seeks to share 
+         some of their thoughts on the subject and to get some of yours.
+          Please welcome tonight's special guest, Jan Shepherd.
+<GARY-S>    .. .. .. .. .. ..     ga Jan
+<E.BEATTY1> is here.
+<GARY-S>
+<[Jan] FIG> thank you Gary
+<[Jan] FIG> so...Webster's New World Dictionary defines promote as: 
+                  to further the growth, establishment, sales etc of...
+            Promoting Forth and FIG.  Forth is not FIG's middle name, but its 
+            first name. The only reason FIG exists is to promote Forth...
+   
+            How ?  By publishing Forth Dimensions magazine, maintaining a 
+            library of Forth books and software and distributing these 
+            materials through the mail order service, by providing a forum for
+            communications here on GEnie, by holding an annual technical 
+            conference, FORML, where new Forth ideas are aired and shared
+            and publishing the conference proceedings each year, by producing
+            a directory of Forth vendors and recently, thanks to John Hall, an
+            index of articles from Forth Dimensions and the FORML proceedings
+            FIG> going back to when they were first published.
+            In the past, FIG held an annual convention with exhibits and 
+            conference sessions.  This was discontinued a couple of years ago
+            because it was losing money, though the content was good.
+            Fig promotes all these things through Forth Dimensions, paid 
+            advertising in other publications, through this forum on GEnie,
+            through flyers about FIG which are being distributed by Forth 
+            vendors with their product material and through some of the
+            activities of chapters, such as the trade show booth organized by
+            the Silicon Valley chapter for West Coast Computer Faire each year.
+            FIG is an organization of Forth users.  It does not hold any 
+            interest in any Forth products or services other than Forth itself.
+            It exists because Forth users wanted to have a central place which
+            would provide a repository for Forth information, both current and
+            historical, and distribute this Forth information as requestested.
+             ...
+            So this is a little bit about FIG and what it does to promote 
+            Forth.
+<M.ROWLAND1> is here.
+<AUNTIE> is here.
+<[Elizabeth] E.RATHER> Jan, many of the activities you mention are directed 
+            toward people who are already interested in Forth.  My main 
+            interest is in outreach efforts to those who thing "everyone does
+            it in C."...
+            What magazines do you advertise in?  And do you do other outreach
+            things such as press releases?  For example, last year there were
+            several Forth projects on the Space Shuttle.
+            There are many Forth success stories that need publicizing.
+<[Jan] FIG> There is no doubt that there are many successful Forth projects 
+            which need publicizing and we, as FIG could do more in that regard.
+            We do have a limited budget.
+            As far as paid advertising we have placed our most recent ads in 
+            Embedded Systems and the Computer Journal.
+            FIG recently conducted a survey of our membership to find out what
+            magazines they read.  There are over 150 magazines listed.  It is 
+            difficult to know where to place ads.  The better approach we feel 
+            is to try to get more articles about Forth published and to 
+            encourage our members who are already writing articles to mention
+            FIG.
+            We have noticed a slight upturn in interest from new Forth users 
+            lately. I am not sure why this is, but it may have something to do
+            with the efficiency of Forth and the current trends toward 
+            efficiency.
+            Recently we have heard of new Forth projects at IBM and Boeing
+            beacuse people involved in those projects have called the office.
+<GARY-S> Bess has a follow-up comment, then the floor is to Jax...
+<[Elizabeth] E.RATHER> Press releases are lots cheaper than ads, reach all 150 
+            mags, and are more credible.
+<[Torquemada] JAX> Jan, Gary described you as the person responsible for 
+            the public image of FIG. If I am not mistaken, the public image
+            of FIG is that of a moribund organization out of touch with its 
+            members, skirting the edges of bankruptcy.
+            To what extent do you wish to claim responsibility for this? :-)
+<GARY-S> why NOT more press releases and  respond to Jax' pointed issues
+<[Jan] FIG> alright already, in the first place I am not the sole person 
+            responsible for the public image of FIG.  And further, the image
+            you describe is not as widely known or accepted as you seem to 
+            imply.
+            FIG's image is closely tied to the image of Forth.  At some point 
+            in the history Forth lost credibility, probably because there were
+            many places where Forth was used and the individual programmer 
+            left with little trail as to how to maintain the Forth programs.
+            FIG is a reflection of its membership and activities, not of me!!!
+<[Gandhi] JAX> Peace jan ...
+            as you know, (since you are in the office) my company VESTA is
+           doing as much as any compnay to further the image that FIG is
+           indeed the organization we all want it to be, encouraging our
+           customers to view FIG and use FIG as a front-line resource in the 
+           battle to acquire Forth pedagogy for their programmers.
+           (i believe your Boeing boys are our customers, for instance) ...
+           I wish to point out though that whether it is FIG, the front 
+           office, or the Forth community as a whole which has dropped the ball
+           the ball has indeed been dropped, and FIG has a long climb up to 
+           touch bottom.
+<[Jan] FIG> Well we still have 1550 members..and for the first time in a long 
+            time this is more than last year at this time.
+            What needs to be done, and what will it cost?... and who will pay 
+            for it? These are some of the questions we ask in or discussions
+            at the business group, we are focusing improving our ad copy, and
+            trying to determine how to get articles about Forth published,
+            such as the success stories that Elizabeth mentioned and other 
+            success stories we all know exist.
+            From our point of view Forth and FIG are on an upswing, slow though 
+            it may be at this point.
+<[John] JDHALL> As a correction, the public image of FIG is the responsibility
+            of the Board of Directors.   Jan's office and the FIG business 
+            group carry out the directions of the Board as best they are able.
+<GARY-S> care to comment Jan
+            John speaks the truth.  We can only do our best to implement the 
+            directions set by the Board and business group.
+            At the bottom line is Forth itself..  we see it gaining credibility
+            at this point.
+<GARY-S> The question of press releases begs a response.
+<[Jan] FIG> so...advertising is expensive and does not lend toward credibility
+            because we are blowing our own horns, more press it a good idea
+            to get it we need to create a conduit for the "success" stories to 
+            reach FIG in a more timely manner if we are to publicize the 
+            individual efforts of the members.
+            I talk with many people who consult and who hold high positions in 
+            major companies.  In recent conversations, I find that Forth is 
+            spoken of in a "kindly" or accepting manner, it is not a joke to 
+            them and many people seem to be taking a second look at it and
+            finding it worthy.
+<[martin] M.ROWLAND1> how can fig justify charging 10 dollars for forth 
+            dimensions when something like Computer journal is 3.50 ?
+<[Jan] FIG> The cost is directly related to the number of subscribers.
+            Whether we publish 10 copies or 10,000 copies, the editor and 
+            production fees remain the same.
+<[Len] NMORGENSTERN> I know of several instances in which Forth enthusiasts
+            became interested in the language because they found Brodie's 
+            Starting Forth in a library. I have submitted this book to our
+            local library. Any branch in the county system can accept a 
+            copy without further formality.
+            I suggest this as an inexpensive way to promote the language.
+<[Jan] FIG> Good thought Len.  We need to get more Forth books out there.
+            We have been disappointed in the number of books which have
+            recently gone out of print.
+            Perhaps a special fund should be established for that purpose
+            and FIG could provide the books at our cost plus handling.
+<GARY-S> Our FIG chapter presented 'Starting Forth' , 'Forth: A Text and 
+            Reference' to both the college and municipal libraries here and
+            the college response was much greater ! Just for future reference.
+<GARY-S> Dennis , you have the honor of the closing question
+<[Dennis] D.RUFFER> Jan, has anything further happened in regard to getting
+            the rights to the out of print books?
+            I did some talking with Leo about Thinking Forth. Have you heard
+            anything more?
+<[Jan] FIG> Nothing further has been done.  Stragely, Thinking seems to have 
+            been recently made available by the publisher again.
+<[Dennis] D.RUFFER> are we getting copies?
+<[Jan] FIG> We have copies on order.  I don't think they have arrived yet, but 
+            the publisher has promised them... we shall see.
+<GARY-S> Jan - please make your closing comments
+<[Jan] FIG> as far as tonight, I can always think of things I didn't cover and 
+            my typing looked terrible, sorry.  But the bottom line is
+            acceptance of Forth seems to be increasing and obviously more press
+            releases are desired. 
+            Thank you all for having me.
+<GARY-S> Jan - this has been an interesting exchange. I think almost as many 
+            questions were raised as were answered. The stuff of growth. 
+            Thanks for a stimulating conference on behalf of the GEnie Forth
+            RoundTable.
+<GARY-S> This conferenmce is officially ended.
+=== End of Steno notes. ===
+
+

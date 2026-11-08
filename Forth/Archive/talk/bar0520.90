@@ -1,0 +1,927 @@
+
+052090
+IMAGE PROCESSING,CONFERENCES,FIGGY
+Sunday Figgy for May 20, 1990. Forth for prototyping page
+composition on an ElectroPress image processor that must handle
+4000 different fonts on a 20"x17" 300 DPI image. Teaching Forth
+to cobol programmers. Dayton Ohio, a hotbed of Forth! Forth as
+the orignal language for WordPerfect. PolyForth for the 386.
+Forth vs C.
+
+Figgy Bar May 20 1990
+
+
+
+Item    5813841                 90/05/21        10:03
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 05/20/90   Time: 21:59EDT Attendees: [[Len] NMORGENSTERN]
+[[mdc] M.CHRISTOPH2] [GARY-S] [[Dean] D.MARTINDAL1] [[Larry]
+LDAWSON]
+
+Minutes:
+
+<M.CHRISTOPH2> is here.
+
+<[mdc] M.CHRISTOPH2> What's up?
+
+<[Len] NMORGENSTERN> Nothing. We two only.
+
+<[mdc] M.CHRISTOPH2> I have been forth ing all day
+
+<[Len] NMORGENSTERN> Doing what with Forth?
+
+<[mdc] M.CHRISTOPH2> Well I am making a "proofer"
+
+<[Len] NMORGENSTERN> pmi (Pardon my ignorance) but what is a
+	proofer?
+
+<[mdc] M.CHRISTOPH2> a proofer f
+
+<[mdc] M.CHRISTOPH2> a proofer "proof" a page composition on a
+	laserjett
+
+<[Len] NMORGENSTERN> Thanx
+
+<[mdc] M.CHRISTOPH2> ooops It is a neat graphics exercise, the
+	image plane is 6 MEGABYTES
+
+<[Len] NMORGENSTERN> I have only done a few very primitive
+	things in graphics.
+
+<[Len] NMORGENSTERN> Some years ago I programmed a log chart
+	printout
+
+<[mdc] M.CHRISTOPH2> There is alot of stuff
+
+<[Len] NMORGENSTERN> but it took 15 minutes to print a blank
+	chart so
+
+<[Len] NMORGENSTERN> I gave up.
+
+<[Len] NMORGENSTERN> ga
+
+<[mdc] M.CHRISTOPH2> for graphics
+
+<[mdc] M.CHRISTOPH2> on this board
+
+<[Len] NMORGENSTERN> Yes there is. Have you tried any?
+
+<[mdc] M.CHRISTOPH2> Have you ever heard of a raster image
+	processor?
+
+<[mdc] M.CHRISTOPH2> yea I sure have. NICE!
+
+<[Len] NMORGENSTERN> I think so. Raster is like TV screen
+	processing
+
+<[mdc] M.CHRISTOPH2> Effectively it is an expensive character
+	generator!
+
+<[mdc] M.CHRISTOPH2> laser printers use them to render the bits
+	for a character in a spec'd font
+
+<[Len] NMORGENSTERN> If you could give some specific comments on
+especially
+	useful
+
+<[Len] NMORGENSTERN> files, it would make this more valuable
+	when it is posted
+
+<[Len] NMORGENSTERN> .
+
+<[Len] NMORGENSTERN>
+
+<[mdc] M.CHRISTOPH2> I have used the files by mike Sperl. He
+	updates it frequently
+
+<[mdc] M.CHRISTOPH2> I use these words to make a viewport on the
+	6 meg image
+
+<[mdc] M.CHRISTOPH2> have you seen Tom Zimmers TCOM
+
+<[Len] NMORGENSTERN> Yes, very nice, but you have to do certain
+	things exactly right.
+
+<[Len] NMORGENSTERN> The biggest lack is CREATE ... DOES>
+
+<[mdc] M.CHRISTOPH2> yea, it's sorta tough to catch on to
+
+<[Len] NMORGENSTERN> Very finicky. I have, however, written
+
+<[Len] NMORGENSTERN> several file filters with it, and they come
+	out 4k bytes or so.
+
+<[mdc] M.CHRISTOPH2> isn't there a similar thing th
+
+<[mdc] M.CHRISTOPH2> tho called :does>
+
+<[Len] NMORGENSTERN> Let me look it up
+
+<[Len] NMORGENSTERN> Sorry, don't have it. We are painting the
+	house & it is
+
+<[Len] NMORGENSTERN> in a box somewhere.
+
+<[mdc] M.CHRISTOPH2> fun! I hate house projects... Until they
+	are done!
+
+<[Len] NMORGENSTERN> The way TCOM works is that defining words
+	are in the "library"
+
+<[Len] NMORGENSTERN> If you know how, you can add them there.
+
+<[mdc] M.CHRISTOPH2> it should be faster too
+
+<[mdc] M.CHRISTOPH2> that FPC that is
+
+<[Len] NMORGENSTERN> But you can get along without them, even if
+	a bit clumsy.
+
+<[Len] NMORGENSTERN> Yes, F-PC is fast, but it is a memory hog!
+
+<[mdc] M.CHRISTOPH2> Pretty neat concept thj
+
+<[mdc] M.CHRISTOPH2> tho
+
+<[Len] NMORGENSTERN> Very, considering that about 80% or more is
+	one guy's work!
+
+<[mdc] M.CHRISTOPH2> I love fpc. who cares about memory? I wish
+	we have FPC#*^
+
+<[mdc] M.CHRISTOPH2> wish we had fpc386
+
+<[Len] NMORGENSTERN> Tom will write it next week!
+
+<[Len] NMORGENSTERN> (A joke. When he was developing it, it was
+	literally true
+
+<[Len] NMORGENSTERN> that if you had last week's version, you
+might already be out of date.)
+
+<[mdc] M.CHRISTOPH2> i think fpthat FPC386 would be GREAT
+
+<[Len] NMORGENSTERN> C. H. Ting practically twisted Tom's arm &
+	made him forego updates
+
+<[Len] NMORGENSTERN> for 1 year.
+
+<[mdc] M.CHRISTOPH2> that is a prob form me because i must
+	change nucleus in my app. It's hard
+
+<[mdc] M.CHRISTOPH2> to follow updates
+
+<[Len] NMORGENSTERN> Join the club. I am a hobbyist so I have
+	little problem,
+
+<[Len] NMORGENSTERN> but that is the complaint all around from
+	professionals.
+
+<[Len] NMORGENSTERN> By the way, better tracking of versions
+	should be an advantage
+
+<[Len] NMORGENSTERN> if you buy a commercial Forth.
+
+<[mdc] M.CHRISTOPH2> I use it professionally, but still feel
+	like an amatrer
+
+<[mdc] M.CHRISTOPH2>  even after 6 years
+
+<[Len] NMORGENSTERN> There were a number of changes between 2.25
+	and 3.5 that were not
+
+<[Len] NMORGENSTERN> as well documented as they should have
+	been.
+
+<[mdc] M.CHRISTOPH2> I went from 2.25 directly to 3.5
+
+<[Len] NMORGENSTERN> Those are the only ones that were
+	"officially" released.
+
+<D.RUFFER> is here.
+
+<[mdc] M.CHRISTOPH2> myhi
+
+<[Len] NMORGENSTERN> Some people have some what you might call
+	"inter-beta" versions
+
+<[Len] NMORGENSTERN> Hi Dennis.
+
+<D.RUFFER> Hello Len, mdc
+
+<[mdc] M.CHRISTOPH2> hi
+
+<[Len] NMORGENSTERN> Mdc is talking about F-PC
+
+<D.RUFFER> yea? so what's up?
+
+<[mdc] M.CHRISTOPH2> I find that tthe segmentation of the PC
+	which is a curse in many ways
+
+<[Len] NMORGENSTERN> ga
+
+<[mdc] M.CHRISTOPH2> can keep the forth creed of KISS (keep it
+	small stupid!) because cr
+
+<[mdc] M.CHRISTOPH2> bebecause cramming everything into 640
+	keeps you on your toes
+
+<[mdc] M.CHRISTOPH2> I have been training more customers in
+	forth!
+
+<[Len] NMORGENSTERN> These customers are what? Engineers?
+
+<[mdc] M.CHRISTOPH2> Well.... Most are cobol types. the last was
+	a SMART mainframe OPERATOR!
+
+<[Len] NMORGENSTERN> What are their reactions?
+
+<[mdc] M.CHRISTOPH2> the application language will let them do
+	a lot without going to forth. All immediately
+
+<[mdc] M.CHRISTOPH2> want to use it tho. NO printing task has
+	been unable to be written.
+
+<[mdc] M.CHRISTOPH2> The reaction to forth has been very
+	favorable!
+
+<[Len] NMORGENSTERN> That confirms what many say. Those that
+	come to Forth without too many
+
+<[Len] NMORGENSTERN> prejudices learn it easily and like it.
+
+<[mdc] M.CHRISTOPH2> I think
+
+<D.RUFFER> a cobol programmer doesn't have prejudices?
+
+<[mdc] M.CHRISTOPH2> that is exactly true especially if they
+	dont have to use it. It allows
+
+<[mdc] M.CHRISTOPH2> them to use the system for a while and
+	learn forth in bits & pieces
+
+<[Len] NMORGENSTERN> Dennis, I think they have little
+	snobbishness
+
+<[Len] NMORGENSTERN> C and Pascal programmers think of
+	themselves as "professionals"
+
+<[Len] NMORGENSTERN> and look down at anything unfamiliar as
+	inferior
+
+<[Len] NMORGENSTERN> "If I don't know about it, how can it be
+	good?"
+
+<[Len] NMORGENSTERN> .
+
+<[mdc] M.CHRISTOPH2> I have embarked on a mission to replace 1.5
+	million $ worth of
+
+<[mdc] M.CHRISTOPH2> hardware with a simulation on a 386/33mhz
+	pc!
+
+<[Len] NMORGENSTERN> (eagerly awaiting details) Tell us more!!!
+
+<D.RUFFER> sounds like fun!
+
+<[mdc] M.CHRISTOPH2> Well the ElectroPress is very pricy to run.
+	We need to test "jobs" offline
+
+<[mdc] M.CHRISTOPH2> with a RIP simulator.  It must handle 4000
+	different fonts
+
+<[mdc] M.CHRISTOPH2> and do basic graphics
+
+<[mdc] M.CHRISTOPH2> on a 20"x17" 300 DPI image
+
+<D.RUFFER> yes, it sounds like a simulator is essential
+
+<[Len] NMORGENSTERN> Sounds like something that is perfect for
+	Forth.
+
+<[mdc] M.CHRISTOPH2> my boss has decided that it should be done
+	in FORTH.  The last project sold him
+
+<[mdc] M.CHRISTOPH2> Even C addicts agree that FORTH was perfect
+	"for this project"
+
+<D.RUFFER> best simulation language around
+
+<[mdc] M.CHRISTOPH2> I have 3 versions already. 1 for the press,
+	one to send the raw data to the
+
+<[mdc] M.CHRISTOPH2> screen and one to "decode" it back into
+	english. Now i must do the actual rasterized
+
+<[mdc] M.CHRISTOPH2> version
+
+<[Len] NMORGENSTERN>
+
+<[Len] NMORGENSTERN> meet your needs.Programming in Forth is
+	unlike any other language. It is more like writing a computer
+	language that will meet your needs.
+
+<D.RUFFER> so what's the problem with F-PC?
+
+<D.MARTINDAL1> is here.
+
+<[mdc] M.CHRISTOPH2> I won't use anything else. No problem with
+	getting work here in forth
+
+<D.RUFFER> hi dean
+
+<[Dean] D.MARTINDAL1> hi all
+
+<[Len] NMORGENSTERN> Hi Dean
+
+<[mdc] M.CHRISTOPH2> 'lo
+
+<[Dean] D.MARTINDAL1> no problem getting work WHERE in forth?
+
+<[mdc] M.CHRISTOPH2> I have no problem with f-pc . I realy like
+	it
+
+<[Len] NMORGENSTERN> Are there any other Forthers in Dayton
+
+<[mdc] M.CHRISTOPH2> here in dayton ohio
+
+<[mdc] M.CHRISTOPH2> lots. the Air force base uses it and
+	several companies here are alive because of it
+
+<[Len] NMORGENSTERN> Can you give some specifics?
+
+<[Dean] D.MARTINDAL1> seems like no one but me has heard of it
+	in utah
+
+<[mdc] M.CHRISTOPH2> dayton'sspecific how
+
+<[mdc] M.CHRISTOPH2> specific how?
+
+<[Len] NMORGENSTERN> University of Utah and BYU both have strong
+	CS departments
+
+<[Len] NMORGENSTERN> I'll bet that if you put up notices on
+	their bulletin boards
+
+<[Len] NMORGENSTERN> you could get enough together to organize a
+	FIG chapter!
+
+<[mdc] M.CHRISTOPH2> dayton's pretty nice. the cost of living is
+	very low
+
+<[Dean] D.MARTINDAL1> There used to be a chapter in Orem UT (40
+	miles south) but it died right about when I got into forth
+
+<[Dean] D.MARTINDAL1> it was listed in forth dimensions one
+	month, then disappeared the next
+
+<[Len] NMORGENSTERN> Orem is where WordPerfect is. I believe
+	that the early versions
+
+<[Len] NMORGENSTERN> were written in Forth.
+
+<[Dennis] D.RUFFER> are there enough Forther's around to get it
+	beck going Dean?
+
+<[Dean] D.MARTINDAL1> really? didn't know that
+
+<[mdc] M.CHRISTOPH2> What platforms do you all use
+
+<[Dennis] D.RUFFER> Oh yea, I even have SSI Forth
+
+<[Dean] D.MARTINDAL1> Well so far I've found me, and.... that's
+	all
+
+<[Dennis] D.RUFFER> WordPerfect Corp, used to be Satelite
+	Software International
+
+<[Dennis] D.RUFFER> The produced a Forth for a time
+
+<[Len] NMORGENSTERN> My interest is teaching Forth, and I want a
+	good learner's language
+
+<[Len] NMORGENSTERN> I like F83, except for its kludgey editor.
+	FPC is too big
+
+<[Len] NMORGENSTERN> although I like it for personal use.
+
+<[Dennis] D.RUFFER> and WordPerfect WAS originally written in
+	Forth
+
+<[mdc] M.CHRISTOPH2> why'd they change?
+
+<[Dean] D.MARTINDAL1> New ammunition for my Forth debate down at
+	work
+
+<[Dennis] D.RUFFER> change what, then name or the language
+
+<[Dean] D.MARTINDAL1> So why did they quit using forth?
+
+<[mdc] M.CHRISTOPH2> the lang
+
+<[Dennis] D.RUFFER> because they wanted to port it to other
+	platforms
+
+<[Dean] D.MARTINDAL1> I thought the party line was, Forth ports
+	to everything
+
+<[Dennis] D.RUFFER> pretty tought to write something for Unix in
+	native Forth
+
+<[mdc] M.CHRISTOPH2> i have often written po
+
+<[Dennis] D.RUFFER> Forth is portable, but you usually have to
+	write it yourself to do it
+
+<[mdc] M.CHRISTOPH2> 'test' platforms in forth as a demo and
+	ended up finishing it before we finished the spec
+
+<[Len] NMORGENSTERN> Forth is very good for new stuff.
+
+<[mdc] M.CHRISTOPH2> B.it is the vary fastest development
+	platform, bar none
+
+<[Len] NMORGENSTERN> Managers often don't like it because they
+	believe that
+
+<[Len] NMORGENSTERN> it is hard to maintiain.
+
+<[Dennis] D.RUFFER> Almost everyone agrees on Forth's prototype
+	abilities
+
+<[mdc] M.CHRISTOPH2> it is only hard to maintain because good
+	forthers are hard to find
+
+<[Dennis] D.RUFFER> but maintainability and portability still
+	goes to C
+
+<[Dennis] D.RUFFER> and C programmers are a dime a dozen
+
+<[mdc] M.CHRISTOPH2> hiss! hiss!
+
+<[Dennis] D.RUFFER> the same for C compilers
+
+<[Len] NMORGENSTERN> That's sometimes all they are worth Dennis,
+	but if
+
+<[Len] NMORGENSTERN> they are adequate for the job, then they
+	get hired.
+
+<[Len] NMORGENSTERN> You are right, though. Managers fear that
+	they won't be
+
+<[Dennis] D.RUFFER> you don't have to be very good if the
+	compiler does all the optimization for you
+
+<[Len] NMORGENSTERN> able to get someone to maintain their
+	program, and will
+
+<[mdc] M.CHRISTOPH2> I have been involved in several C ports and
+	it is less than simple in some cases!
+
+<[Len] NMORGENSTERN> decide to rewrite them in C, sometimes at
+	great expense.
+
+<[Len] NMORGENSTERN> and years of time.
+
+<[Dennis] D.RUFFER> exactly Mike, but the fact that the compiler
+	are there "confuses" some people
+
+<[mdc] M.CHRISTOPH2> I have often stepped in to save a project
+	mired in C
+
+<[mdc] M.CHRISTOPH2> to finish it in weeks where they had worked
+	for month and in one case years!
+
+<[Dennis] D.RUFFER> that can be said for any language Mike
+
+<[mdc] M.CHRISTOPH2> I agree but it has happened alot to be an
+	accident
+
+<[Dennis] D.RUFFER> at Forth, Inc., we have even done that when
+	it was written in Forth (by incompetant programmers of course
+	:-)
+
+<[Dennis] D.RUFFER> often the problem is not the language, but
+	the design
+
+<[mdc] M.CHRISTOPH2> dennis tell me about FORTH inc's 386
+	system, please>
+
+<[Dennis] D.RUFFER> 386 pF is a protected mode, flat model Forth
+
+<[Dennis] D.RUFFER> it switches back to real mode to call DOS
+
+<[mdc] M.CHRISTOPH2> with access to DOS if needed ?
+
+<[Dennis] D.RUFFER> anything you want
+
+<[mdc] M.CHRISTOPH2> is it based on G. bailey's work
+
+<[Dennis] D.RUFFER> ah, I'm not sure who did it first
+
+<LDAWSON> is here.
+
+<[Len] NMORGENSTERN> Dennis, pmi (pardon my ignorance) but what
+	is a "flat model" Forth?
+
+<[Dennis] D.RUFFER> but Greg uses a lot of pF stuff
+
+<[Len] NMORGENSTERN> Ho, Larry
+
+<[Dennis] D.RUFFER> flat model means that the dictionary
+	pointers are a full 32 bits
+
+<[mdc] M.CHRISTOPH2> i means that you have up to 4 gig of
+	memory, no segmentation
+
+<[Len] NMORGENSTERN> Thanx
+
+<[Dennis] D.RUFFER> not any of this segmented stuff like F-PC
+	uses
+
+<[Dennis] D.RUFFER> well not really 4 gig Mike
+
+<[mdc] M.CHRISTOPH2> why?
+
+<[Dennis] D.RUFFER> there is a problem with standards over 1 Meg
+
+<[Dennis] D.RUFFER> in fact, on a IBM machine, you have a
+	problem after 640K
+
+<[Dennis] D.RUFFER> because that is where they put the video and
+	other drivers
+
+<[mdc] M.CHRISTOPH2> bailey's native didnt't have that prob.
+
+<[Dennis] D.RUFFER> yes it does, but he probably just skips the
+	dictionary over it
+
+<[mdc] M.CHRISTOPH2> true, he HOP's over the mess!
+
+<[Dennis] D.RUFFER> there is no way to remove that section of
+	memory between 640 and 1 Meg
+
+<[Dean] D.MARTINDAL1> Doesn't hopping over get messy at the
+	seam?
+
+<[Dennis] D.RUFFER> then, every program has a different method
+	to deal with what's above 1 Meg
+
+<[mdc] M.CHRISTOPH2> My app delivers the compiler and
+	interpreter to the customer. Pretty pricey to do that wth poly
+
+<[Dennis] D.RUFFER> yes, that would require a lisence or
+	something
+
+<[mdc] M.CHRISTOPH2> yea for several 1000$
+
+<[Dennis] D.RUFFER> but you could probably talk a deal
+
+<[Dennis] D.RUFFER> as long as you don't give your customers
+	access to the nucleus
+
+<[mdc] M.CHRISTOPH2> the up front cost is no big deal but the
+	recurring costs are a bear to sell
+
+<[mdc] M.CHRISTOPH2> to the boss
+
+<[Dennis] D.RUFFER> have you talked with Forth, Inc. marketing
+	yet?
+
+<[Len] NMORGENSTERN> brb
+
+<[mdc] M.CHRISTOPH2> well i have done it in fpc I planned to
+	jump ship if i ran out of steam but
+
+<[mdc] M.CHRISTOPH2> i was able to finish it
+
+<[Dennis] D.RUFFER> do you ship the meta compiler with your
+	system?
+
+<[mdc] M.CHRISTOPH2> the proofer uses massive amounts of memory
+	tho. flat would be nice
+
+<[mdc] M.CHRISTOPH2> yes but it's not a requirement
+
+<[Dennis] D.RUFFER> you should talk to us, and see what it might
+	cost
+
+<[mdc] M.CHRISTOPH2> i'll do that
+
+<[Dennis] D.RUFFER> I can't quote prices, but it seems that
+
+<[Dennis] D.RUFFER> if you get rid of the nucleus and target
+	compiler
+
+<[Len] NMORGENSTERN> <back>
+
+<[Dennis] D.RUFFER> you shouldn't have to pay for each copy
+	shipped
+
+<[mdc] M.CHRISTOPH2> hmm
+
+<[Dennis] D.RUFFER> but then, I'm not in marketing
+
+<[Dennis] D.RUFFER> they make those decisions
+
+<[mdc] M.CHRISTOPH2> i get so sick of segments!
+
+<[Dennis] D.RUFFER> well, give them a call
+
+<[mdc] M.CHRISTOPH2> i have been sending a token payment to Tom
+	Z when i ship a system
+
+<[mdc] M.CHRISTOPH2> to encourage him
+
+<[Dennis] D.RUFFER> I've got to leave now
+
+<[mdc] M.CHRISTOPH2> bye
+
+<[Len] NMORGENSTERN> Bye Dennis
+
+<[Dennis] D.RUFFER> my son needs a solder job
+
+<[Dennis] D.RUFFER> see ya later
+
+<[Dennis] D.RUFFER> has left.
+
+<[Len] NMORGENSTERN> I have to leave in about 5 minutes
+
+<[mdc] M.CHRISTOPH2> where is pear.l city
+
+<[Larry] LDAWSON> PC is about 145 miles w of chicago, 15 miles
+	s. of Wisconsin
+
+<[Len] NMORGENSTERN> What kind of work do you do?
+
+<[Larry] LDAWSON> Librarian
+
+<[mdc] M.CHRISTOPH2>
+
+<[Len] NMORGENSTERN> Public?
+
+<[Larry] LDAWSON> Engineering
+
+<[mdc] M.CHRISTOPH2> i see starting forth back on the shelfs
+
+<[Len] NMORGENSTERN> Ah!
+
+<[mdc] M.CHRISTOPH2> i could enjoy reading all day!
+
+<[mdc] M.CHRISTOPH2> ha ha
+
+<GARY-S> is here.
+
+<[Len] NMORGENSTERN> Don't recommend first edition. Too
+	idiosyncratic.
+
+<[Larry] LDAWSON> I wish I could, can't, too busy
+
+<[Len] NMORGENSTERN> Secnod is much better
+
+<[Len] NMORGENSTERN> Pygmy, avalilable on this board, has a set
+	of
+
+<[Len] NMORGENSTERN> words that make it compatible with Starting
+	Forth, and
+
+<[mdc] M.CHRISTOPH2> i wish Leo B would write Being Forth
+
+<[Len] NMORGENSTERN> it should be very good for beginners.
+
+<[Len] NMORGENSTERN> Have you read his Thinking Forth?
+
+<[mdc] M.CHRISTOPH2> 20 times
+
+<[Larry] LDAWSON> Forth for Beginners, by Lampton is very
+	elementary
+
+<GARY-S> no longer in publication
+
+<[mdc] M.CHRISTOPH2> great book
+
+<[mdc] M.CHRISTOPH2> i want more!
+
+<[Len] NMORGENSTERN> A book I like is Kelly and Spies. Not
+	quite so good for beginners
+
+<[Len] NMORGENSTERN> as Brody, but takes you a bit further, and
+	is therefore
+
+<[Len] NMORGENSTERN> more generally interesting.
+
+<[Len] NMORGENSTERN> ga
+
+<GARY-S> Kelly and Spies
+
+<[Larry] LDAWSON> Burnap's FORTH, the 4th generation lang. has
+	some interesting features.
+
+<[Len] NMORGENSTERN> A lot of these books are available from
+	Forth Interest Group.
+
+<[mdc] M.CHRISTOPH2> I think I have read every forth book there
+	is, but mighta missed a few
+
+<[Len] NMORGENSTERN> ga Larry.
+
+<[Larry] LDAWSON> Are we in FORMAL?
+
+<[Len] NMORGENSTERN> Brody is the only book that is consistently
+	to be found
+
+<[Len] NMORGENSTERN> in bookstores.
+
+<[mdc] M.CHRISTOPH2> we have a great bookstaore here in dayton.
+	One of the best in the country i am told
+
+<[Len] NMORGENSTERN> No we aren't formal, but I like to end with
+	ga
+
+<[Len] NMORGENSTERN> so people know I am thruoug.
+
+<[Len] NMORGENSTERN> <through>
+
+<[mdc] M.CHRISTOPH2> sorry, ga
+
+<[Len] NMORGENSTERN> ga
+
+<GARY-S> A book a lot of people overlook which is 'EXCELLENT'
+	for Forth usres on a pc is "Library of Forth Routines and
+	Utilities" by James Terry
+
+<[Len] NMORGENSTERN> Do you like it? I find it hard to make out.
+
+<[Len] NMORGENSTERN> .
+
+<[mdc] M.CHRISTOPH2> Some good ideas
+
+<[mdc] M.CHRISTOPH2> in it
+
+<GARY-S> I like it a lot - especially if I get stuck on some
+	silly routine - I also like Feierbach's bookk for the same
+	reason
+
+<[Len] NMORGENSTERN> I will have to study it more.
+
+<[mdc] M.CHRISTOPH2> thinking forth is one of the best computer
+	books i have every read on any
+
+<[mdc] M.CHRISTOPH2> language
+
+<[Len] NMORGENSTERN> Gentlemen: I have to leave. Why don't I
+	give time for
+
+<[Len] NMORGENSTERN> any final comments.
+
+<[Len] NMORGENSTERN> ga
+
+<[mdc] M.CHRISTOPH2> ga
+
+<GARY-S> You guys want to chat a bit (wee bit ) longer, Len has
+	to go
+
+<[mdc] M.CHRISTOPH2> ga 
+
+<[Larry] LDAWSON> ga
+
+<[Len] NMORGENSTERN> Bye all
+
+[ Gary takes over as leader ]
+
+<GARY-S> Worked like a charm - any thing you want to discuss for
+a few more moments ?
+
+<NMORGENSTERN> is here.
+
+<GARY-S> It worked len - go away !
+
+<NMORGENSTERN> My curiosity made me come back & see what happened
+
+<NMORGENSTERN> has left.
+
+<GARY-S> What were you doing - besides book reviews ?
+
+<GARY-S> This is NOT formal - go somebody
+
+<[mdc] M.CHRISTOPH2> we were discussing TCOM earlier
+
+<[mdc] M.CHRISTOPH2> by T Zimmer
+
+<GARY-S> I'm not a big F-PC fan
+
+<[mdc] M.CHRISTOPH2> too big?
+
+<[Larry] LDAWSON> Well, I gotta go too, Night all.
+
+<[Larry] LDAWSON> has left.
+
+<GARY-S> too verbose - and tends to bury the Forth underbelly
+
+<[mdc] M.CHRISTOPH2> i love all the goodies. Plus having the
+	source is a pre req to me!
+
+<GARY-S> Having said that - I do like BBL, but I don't keep the
+	Abundance stuff
+
+<GARY-S> No arguments from me - I was just noting a preference.
+
+<[Dean] D.MARTINDAL1> what's Abundance like, as compared to othe
+	database languages?
+
+<[mdc] M.CHRISTOPH2> i cant use typical "pro" systems.
+
+<GARY-S> I especialluy agree that source is a MUST
+
+<[mdc] M.CHRISTOPH2> no source is included
+
+<GARY-S> Roedy wrote Abun to be a do-all for a small to medium
+	large business.
+
+<GARY-S> Hence the name. The resources are VERY ABUNDANT
+
+<GARY-S> and surprisingly fast.
+
+<[Dean] D.MARTINDAL1> So it's not really a generic database
+	language like dBase or something?
+
+<GARY-S> no - it is a total MIS management package
+
+<GARY-S> You can do payroll, supplies, form letters, and the
+	marquis in front of the store with Abundance
+
+<[mdc] M.CHRISTOPH2> sounds neat, I'll take a look
+
+<[Dean] D.MARTINDAL1> The marquis? Serious?
+
+<[mdc] M.CHRISTOPH2> what do you think of the TCOM compiler
+
+<GARY-S> It also just happens to be able to do a dBase type
+	thingee too, and comes with two very slick assemblers
+
+<[mdc] M.CHRISTOPH2> It's very
+
+<[mdc] M.CHRISTOPH2> unusual
+
+<GARY-S> It wouldn't be fair for me to comment on TCOM - I lack
+	the hands on to properly express an opinion
+
+<[mdc] M.CHRISTOPH2> A C guy suggested that forth needed
+	something like it, then Tom Intro'd it!
+
+<GARY-S> I use Unix and I cringe at all this 'make Forth more C
+	like talk"
+
+<GARY-S> They are distnctly different vehicles
+
+<[mdc] M.CHRISTOPH2> You use forth on UNIX?
+
+<GARY-S> I know they both meta - after that the roads are
+	considerably different
+
+<[mdc] M.CHRISTOPH2> In some ways C is getting more like FORTH,
+	witness the new Instant C stuff
+
+<GARY-S> The only Forth's currently available on Unix are not
+	true in some respects, but yes, I have Mitch Bradley's CForth
+	and Mike Patel's TILES up on Unix
+
+<[mdc] M.CHRISTOPH2> So you write in c alot?
+
+<GARY-S> I didn't say that. I don't claim to be a wizzard at
+	anything but spelling Smith :-)
+
+<GARY-S> I do SysOp on here and also the GEnie Unix RT
+
+<[mdc] M.CHRISTOPH2> I have a ?.  I am a fig member, how do i
+	get access here to fig lib?
+
+<GARY-S> leave e-mail to D.Ruffer
+
+<[mdc] M.CHRISTOPH2> thx
+
+<GARY-S> no prob - anything else before we lock the gate ?
+
+<[mdc] M.CHRISTOPH2> nope.
+
+<[Dean] D.MARTINDAL1> no
+
+<[mdc] M.CHRISTOPH2> has left.
+
+<GARY-S> I do need to go to. You guys can stay and chat -
+	whatever
+
+<GARY-S> g'nite === End of Steno notes. ===
+
+=END=
+
+

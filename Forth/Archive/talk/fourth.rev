@@ -1,0 +1,178 @@
+
+
+
+
+
+                      forth: THE FOURTH-GENERATION LANGUAGE
+
+                                       BY
+
+                                  sTEVE bURNAP
+
+                                (tab books inc.)
+
+                                   ( $18.95 )
+
+                      -------------------------------------
+
+
+
+        sTEVE bURNAP IS A PROGRAMMER WHO IS EXPERIENCED IN pascal, basic
+
+        AND forth. iT APPEARS THAT THE STRUCTURED DISCIPLINE TAUGHT IN
+
+        pascal HAD AN INFLUENCE ON THE WAY HE PRESENTED THE MATERIAL
+
+        FOUND IN THIS BOOK.
+
+
+
+        tHOSE NEW TO THE forth LANGUAGE ARE CONFRONTED WITH A NUMBER OF
+
+        OBSTACLES. oNE OF THE BIGGEST OF THESE IS APPLYING forth TO
+
+        REALISTIC APPLICATIONS. "forth: THE FOURTH-GENERATION LANGUAGE"
+
+        DOES AN EXCELLENT JOB AT HELPING NEW forth PROGRAMMERS TO APPLY
+
+        forth IN THE REAL WORLD. mR. bURNAP DOESN'T JUST RANDOMLY CHOOSE
+
+        CODING EXAMPLES TO SHOW HOW TO WRITE A forth PROGRAM. mANY OF THE
+
+        SAMPLE PROGRAMS ARE REALLY BITS AND PIECES OF A DATABASE PROGRAM
+
+        THAT IS FOUND IN aPPENDIX a.
+
+
+
+        tHE BOOK ASSUMES THAT THE USER HAS SOME FAMILIARITY WITH
+
+        COMPUTING AND COMPUTER LANGUAGES. eARLY IN THE BOOK COMPARABLE
+
+        EXAMPLES ARE GIVEN IN pascal, basic AND forth. tHIS ACTUALLY
+
+        HELPS SOMEONE INEXPERIENCED WITH forth TO SEE HOW THE LANGUAGE
+
+        WORKS. tHE PROGRAM EXAMPLES USED THROUGHOUT ARE IN THE '83
+
+        STANDARD. hOWEVER, CONVERSION TO OTHER VERSIONS OF forth SHOULD
+
+        NOT BE DIFFICULT.
+
+
+
+        tHE BOOK PRESENTS THE BASIC ELEMENTS OF forth IN A LOGICAL AND
+
+        SYSTEMATIC ORDER. tHE FOLLOWING IS A LIST OF THE DIFFERENT
+
+        SUBJECTS DISCUSSED IN THIS BOOK (IN ORDER OF CHAPTERS):
+
+
+
+            1. tHE forth pROGRAMMING lANGUAGE
+
+            2. tHE sTACK
+
+            3. dEFINING nEW wORDS
+
+            4. tHE fILE sYSTEM
+
+            5. cONTROL sTRUCTURES
+
+            6. sTRINGS
+
+            7. dATA sTRUCTURES
+
+            8. rECURSION
+
+            9. iNTRODUCTION TO sORTING
+
+           10. qUICKSORT
+
+           11. sEARCHING
+
+           12. sAVING dATA
+
+           13. cONVERTING nUMBERS TO sTRINGS
+
+           14. cREATING uSER-FRIENDLY pROGRAMS
+
+           15. tEXT fORMATTING
+
+           16. tEXT gRAPHICS
+
+           17. mULTIDIMENSIONAL aRRAYS
+
+           18. cOMPILER cOMMANDS
+
+
+
+        tHE PROGRAM EXAMPLES USED IN THIS BOOK ARE REASONABLY ACCURATE.
+
+        hOWEVER, i RECOMMEND THAT YOU TRY OUT THE EXAMPLES GIVEN
+
+        YOURSELF. yOU MAY OCCASIONAL NEED TO MODIFY YOUR CODE TO GET IT
+
+        TO WORK CORRECTLY. tHIS WILL ONLY HELP YOU TO ENHANCE YOUR GRASP
+
+        OF THE LANGUAGE. oN A COUPLE OF OCCASIONS i HAVE SPOTTED SOME
+
+        MINOR DISCREPANCIES IN THE FIGURES AND EXAMPLES GIVEN:
+
+           * tHE WORD doit IN fIG. 1-2 SHOULD
+
+             HAVE BEEN WRITTEN AS-
+
+                : doit
+
+                     50 0
+
+                     do
+
+                        i
+
+                        double
+
+                        .
+
+                     loop ;
+
+
+
+           * tHE OUTPUT THAT IS PRODUCED FROM PROGRAMS
+
+             1-2 AND 1-3 WILL NOT BE THE SAME UNLESS
+
+             ONE OF THEM ARE MODIFIED. tHESE TWO
+
+             (1-2 AND 1-3) ARE SUPPOSED TO BE THE SAME
+
+             PROGRAM WRITTEN IN basic AND forth RESPECTIVELY.
+
+
+
+        oTHER THAN THAT, THIS BOOK WILL PROVE TO BE AN INVALUABLE
+
+        REFERENCE.
+
+
+
+
+
+
+
+        iF YOU WANT TO LEARN forth, THERE ARE MANY BOOKS OUT THERE THAT
+
+        CAN AID YOU. "sTARTING forth" BY lEO bRODIE, IS EXCELLENT IN
+
+        HELPING THE INEXPERIENCED COMPUTER HOBBYISTS TO BECOME ACQUAINTED
+
+        WITH forth. "the complete forth" BY aLAN wINFIELD, IS CONCISE AND
+
+        EASY TO FOLLOW. hOWEVER, i PREFER "forth: THE FOURTH-GENERATION
+
+        LANGUAGE" AS AN INTRODUCTORY BOOK TO THE WORLD OF forth. iF YOU
+
+        DECIDE TO TRY IT, i THINK YOU MIGHT AGREE WITH ME.
+
+

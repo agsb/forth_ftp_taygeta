@@ -1,0 +1,128 @@
+
+
+  Software Review
+
+               * LABORATORY MICROSYSTEMS Z-80 FORTH 3.0 for CP/M *
+
+                              by Richard C. Secrist
+
+
+            Editor's Note:  Since the publication of this issue  over
+            a   year  ago,  LMI  has  updated  their  product  making
+            extensive changes to the documentation which now puts  it
+            into  the  superlative class...  as of 1/8/85 the current
+            release was Version 3.10.
+
+
+  < OVERVIEW >
+
+  Laboratory Microsystems Inc.  (LMI) Z-80 FORTH version 3.0 is an  83-Standard
+  Forth  development system optimized for the Z-80 uP that runs as a task under
+  CP/M.  The disk and console interface make use of the host  operating  system
+  and provide high level compatability with other LMI Forth implementations for
+  various microprocessors.  Z-80 Forth uses standard CP/M  random  access  data
+  files  for  screen storage, so its programs and data coexist on the disk with
+  other applications and may be manipulated with standard system utilities.
+
+  < UTILITIES >
+
+  Z-80 Forth includes full screen and line editors, an  assembler,  decompiler,
+  and extensive file I/O facilities.
+
+  The full-screen editor uses Wordstar-like command sequences and is  adaptable
+  to   sundry   video  terminals  through  the  video  attributes  installation
+  procedure.  If you are either new to Forth or lazy the manual offers  you  an
+  easy  way  out  of  configuring  Z-80 Forth to your terminal by hand.  Simply
+  photocopy the cursor and attribute control section out of your terminal  book
+  and  send  it  to them with your distribution diskette.  Then LMI will return
+  your disk via express mail with your terminal listed as one of the choices on
+  the installation menu.  This saves you the grief of having to do it yourself,
+  and helps LMI out because their Forth now supports the XYZZY  type  terminal.
+  This  also  configures  your  copy  of Forth to take advantage of the various
+  video-support words made available in Z-80 Forth (e.g.   CLEARSCREEN,  BLINK,
+  UNDERLINE).
+
+  The assembler uses standard Zilog mnemonics in the traditional Forth  postfix
+  style.   Other assorted utilities include a decompiler, notable benchmarks, a
+  non-destructive stack print routine, and even memory dumps in  byte  or  word
+  format.   Software  floating point and AMD 9511 chip support are available at
+  extra cost.
+
+  < EXTENSIVE FILE I/O SUPPORT >
+
+  One of the most outstanding features of the LMI product is superior file  I/O
+  support.  From within FORTH the programmer is given access to a very powerful
+  complement of disk file and record  interface  routines.   The  routines  are
+  sufficiently powerful to allow you to get yourself into a lot of trouble, and
+  LMI sprinkles the documentation with  numerous  cautions  regarding  what  to
+  watch out for.
+
+  For openers, LMI includes a file access function word called FDOS that  gives
+  you  direct  access  to 36 file operation primatives.  There are also another
+  set of  extensions  that  "give  you  total  control"  for  record-level  I/O
+  bypassing  the  FORTH  internal  disk  drivers  and virtual memory management
+  features of the LMI FORTH altogether.
+
+  LMI also supports binary overlays to link things like  the  editor  into  the
+  dictionary as a one-shot.  This is described in the documentation.
+
+  < COST-FREE TURNKEY APPLICATIONS >
+
+  LMI provides several boot-up literals to  create  custom  pre-compiled  FORTH
+  applications  using  this product.  No license fee is required as long as you
+  seal-off the LMI F83 itself.  They would of course appreciate some credit and
+  a phone call to make sure you sealed everything up correctly.
+
+  < SIMPLE MULTI-TASKING >
+
+  Z-80 FORTH includes simple multi-tasking support  for  up  to  10  background
+  tasks.  LMI allocates CPU to these tasks on a round-robin basis.  In general,
+  however, these tasks should not access the  disk  or  keyboard  and  must  of
+  course leave the stack clean upon exit.
+
+  < EXCELLENT DOCUMENTATION >
+
+  The documentation is of excellent technical quality and content  -  something
+  growing  rarer in these torrid days of user-friendly coloring books.  The LMI
+  documentation has MEAT.  From the internals section describing the formats of
+  the  dictionary  formats  of  things like colon and "CODE" definitions, right
+  down to a real index, I am very pleased with the manual.
+
+  Although I am not trying to scare away beginners, the documentation  and  the
+  generous  extensions make this an excellent "hacker" FORTH.  I do not mean to
+  suggest that the newcomer to FORTH is neglected in the LMI  manual,  however.
+  In  fact,  the  manual  contains  an instructive and interesting "overview of
+  FORTH" that is one of the most concise yet useful readings on  FORTH  I  have
+  seen  anywhere.   It  does not make for light reading mind you, but ounce for
+  ounce it may be some of the most useful text you may ever scan  in  terms  of
+  putting the language as a whole into a nutshell.  The text would be extremely
+  useful to the professional programmer who is just getting into FORTH.
+
+  The documention also  includes  several  useful  appendicies  including:   1)
+  "Coping  with the F83 Standard", 2) "Restrictions on an 83-standard program",
+  3) "Checklist for Program  Conversion  to  Z-80  FORTH  3.0",  and  "Adapting
+  STARTING FORTH to Z-80 FORTH 3.0".
+
+  < USER SUPPORT >
+
+  A word about support.  Once I called them for support and got handed off to a
+  knowledgeable  analyst  promptly,  who  did  a  very  good job of fielding my
+  questions.
+
+  Another nice thing happened in my dealings with LMI  to  date:   I  purchased
+  this product because I wanted a real FORTH for the Z80 and I noticed in their
+  ad in FORTH DIMENSIONS a few months ago that it was still only $50.  Well,  I
+  ordered it assuming (ass-u-me) that the ad price was right, and didn't verify
+  this with the person who took my order (entirely my  stupidity).   Well,  the
+  next  day my new issue of COMPUTER LANGUAGE came in the MAIL and the ad there
+  pegged the LMI Z80 FORTH at $100.  Confused, I called LMI back  to  ask  them
+  about it, and it turns out I did fubar it.
+
+  LMI gave me a partial refund "to take some of the  sting  out  of  it".   Now
+  THAT'S service !  Not to mention the fact that the product is quite worthy of
+  it's $100 price tag.  Overall, I highly recommend the LMI  product  and  will
+  consider  their version first when shopping for a FORTH for other processors.
+  [rcs]
+
+
+

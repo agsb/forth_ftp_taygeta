@@ -1,0 +1,63 @@
+
+
+                        *** FORTH PUBLICATIONS ***
+
+  
+      This is only a partial list of book summaries.  
+  
+STARTING FORTH  by Leo Brodie
+    Prentice-Hall  1981
+        This is probably the best book for beginners. 
+        It starts with the simplest examples and then continues to 
+    cover fixed point vs floating pt, how forth works, and extending
+    the compiler with CREATE  DOES>.  Includes tips and plenty of
+    examples.
+        Unfortunately the examples sometime contain words that don't
+    adhere to one of the standards but these are usually pointed out.
+    Also, some people don't care for the cartoon examples.
+
+
+THINKING FORTH  A Language and Philosophy for Solving Problems
+     by Leo Brodie      Prentice-Hall  1984
+          Demonstrates how to write better Forth.  Full of examples.
+    Interviews with several experienced Forth programmers show how
+    they use it for real life problems and how they differ in their 
+    approach.    Highly recommended to those beyond the beginner stage.
+
+
+FORTH TOOLS AND APPLICATIONS
+    by Gary Feierbach and Paul Thomas
+    Reston Publishing Company, Inc.  (A Prentice-Hall Company)  1985
+        Forth words, utilities, and programs useful for 
+    debugging, searching, sorting, etc.  Also steps through their
+    approach and how they create these utilities.
+        Good addition to any Forth library. 
+    Examples are in 79-Standard dialect
+
+   
+ BYTE Reprints
+    ( Avail. from FIG and probably Mountain View ) 
+    11 articles from past issues of BYTE magazine.  Most of these are from
+    the August 1980 issue.  Includes introductions to Forth, explanations,
+    history, and examples.  Also, 'breakout' game written in Forth. 
+     FIG also has back issues of DR. DOBB'S magazine.  
+    ( Every September DR. DOBB'S has a Forth issue ) 
+
+
+    You can buy or order these books at a large book store,
+  the Forth Interest Group (FIG) or Mountain View Press.
+
+
+Magazines
+    FORTH DIMENSIONS
+    THE JOURNAL OF FORTH APPLICATIONS AND RESEARCH
+    DR. DOBB'S   ( Sept. )
+
+Proceedings
+    FORML CONFERENCE PROCEEDINGS
+    ROCHESTER FORTH APPLICATIONS CONFERENCE PROCEEDINGS
+
+    ( See file on Forth organizations for more info )
+
+
+

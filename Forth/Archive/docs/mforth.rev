@@ -1,0 +1,74 @@
+
+     MULTI-FORTH Creative Solutions Inc. 4701 Randolph Road Rockville, MD 20852
+(301) 984-0262 $149
+     MACH2 FORTH Palo Alto Shipping Co. P.O.  Box 7430 Menlo Park, CA 94026
+(800) 44FORTH $59.95
+     Reviewed by Sol Guber
+     Forth is a strange combination of computer language and religion.
+     You gotta believe in Forth before you can program it.
+     Mach2 Forth and Multi-Forth are both are written by believers.  This comes
+through on every page of both manuals. Both versions are good, solid
+implementations that anyone would be proud of.  However, each of the Forths has
+drawbacks that become evident when you see how the other version does the same
+thing.
+     Forth is a language that you define as you go along. You don't write
+programs, but rather you make tools that finally let the computer perform an
+action.  It's very fast and makes compact code.  Unlike C, Pascal, or Modula-2,
+no linking or compiling programs are involved in making your final program.  All
+Forth needs is an editor and an assembler.
+     MultiForth supplies EMACS, the standard editor found in other programs.  It
+doesn't use the mouse or support GEM. You type in the name of the file to be
+edited and away it goes.  EMACS uses the cursor controls and cryptic commands,
+and it supports multiple windows.  MultiForth even has another editor to support
+the 1028 block structure initially designed for Forth.
+     The Mach2 editor is window-based and supports GEM and the typical menu bar.
+ You just move to a spot you want with the cursor.  It doesn't have as many
+control codes as EMACS, but it has a number of common commands controlled by the
+function keys, such as saving a file or moving to the next page.  Of the two, I
+prefer the Mach2 editor, but I'd have been satisfied with EMACS if a better
+editor weren't available.
+     The two assemblers are similar.  The MultiForth assembler has a slight edge
+overall and uses high-level control structures like BEGIN, IF, LOOP and reverse
+Polish syntax.
+     Forth prides itself on being a language that runs at blinding speed.  Mach2
+gives the sieve speed-test program on the disk and I rewrote it for MultiForth.
+Each Forth completed 10 run-throughs of the test in just over 5 1/2 seconds --
+or approximately one-half (.55) of a second apiece.  Mach2 may have be slightly
+quicker, but it is a only a matter of milliseconds.
+     The next area of difference is support of GEM and AES. The ST is known for
+ease of use, and thus the programmer must spend much time and effort to make it
+easy with menus and icons and all the mouse controls.  This requires BIOS,
+XBIOS, GEMDOS, AES and VDI functions -- which are supported by both Forths.
+     Mach2 provides a 10-page listing of all functions supported, with
+additional information on the disk files. MultiForth does not explicitly give a
+listing of AES or VDI. There are generalized BIOS and XBIOS words and a listing
+of the kernel words at the end of the manual.  The majority of the functions do
+seem to be present, but if you don't know the exact name used by MultiForth for
+a function, it's hard to find.  However, the explanations for these functions is
+better in MultiForth.
+     A major problem with all versions of Forth is that there are so many words
+that have been defined to perform actions. These two Forths are no exception.
+MultiForth wins the points for the most words, with short complete definitions
+for each.  Mach2, despite fewer predefined words, gives good examples of how to
+use them.
+     Mach2 supports multitasking of operations for the ST. Multiforth has stated
+that multitasking will be supported in the next revision.  Mach2 has floating
+point numbers supported with words already present.  Multiforth does not mention
+them.  (This is a major schism in the Forth religion).
+     MultiForth comes with a nice loose-leaf binder containing many chapters
+separated by yellow sheets.  The pages are not numbered consecutively, and there
+is no index. Mach2 has a nice softcover book with an index and an end sheet with
+many kernel words.  They have lots of details for the beginner, lots of details
+for the advanced programmer who needs to know how this Forth is different than
+other packages.  However, there's no middle ground for the weekend programmer
+who has read several books on Forth but needs to know how to write useful
+programs.
+     To get around this, Mach2 has about 35 demo and utility programs while
+MultiForth has about 55.  Studying the examples helps make up for the
+incompleteness of the manuals.
+     Which is better?  That's hard to say.  Both are very good.  Neither would
+make you unhappy.  Each could be better, but not by much.  Mach2 is considerably
+less expensive.  What should a programmer do?  Flip a coin and learn to love the
+one you bought!
+
+

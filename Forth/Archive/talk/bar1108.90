@@ -1,0 +1,167 @@
+
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 11/08/90   Time: 22:42EST
+        Items discussed include: The effect of Star*Services on computer
+        RT's, Aladdin, GUI's and icons, Team-Atari Forth, Higher Order
+        Languages from a Forth platform (Lisp, Pascal,...)
+Attendees:
+[[gars] GARY-S]
+[[Bill] B.MARCUM]
+[[Bill] W.WOOD17]
+[V.STAMPS]
+
+Minutes:
+<[/Gary] GARY-S> note on the door reads .. What's bothering you (regarding 
+Forth) these days ? Big gripe or minor peeve - share your favorite aggrivat
+ion as you enter the room tonight.
+<B.MARCUM> is here.
+<B.MARCUM> I just logged on and happened to notice
+<B.MARCUM> that the RTC was scheduled for tonight
+<[gars] GARY-S> This is the first time for no-shows in a long time.
+<[gars] GARY-S> Next week at this time Alan Furman will be here in a guest 
+conference
+<[gars] GARY-S> We can sure talk about Forth if you'd like - that's what I'm 
+here for <grin>
+<B.MARCUM> Has Star*Service had much effect on the attendance in RTC?
+<[gars] GARY-S> yes - mostly negative. It has also affected the BB here and in 
+some other computer RT's
+<B.MARCUM> I know I spend hours in areas that I never visited before S*S, like 
+the SFRT.
+<[gars] GARY-S> thanks - yeah, but if you have a need or desire to explore a 
+favorite computer language or architecture, that's hard to get in SFRT or
+ CHAT
+<[gars] GARY-S> Aladdin is another *HOT* RT
+<[Bill] B.MARCUM> That's true.
+<[gars] GARY-S> Do you use it yourself ?
+<[Bill] B.MARCUM> I can't use Aladdin with my computer.
+<[gars] GARY-S> I don't on mine either - a 3b1
+<[Bill] B.MARCUM> That's an AT&T Unix computer, right?
+<[gars] GARY-S> yes - the 3b1 is an AT&T (Convergent Technologies, actually) 
+Unix box
+<[gars] GARY-S> Everything in computerdom is moving toward scripts and GUI's - 
+user interfaces are the wave
+<[gars] GARY-S> Jef Raskin, a guy that had a lot to do with the current use of 
+icons (having originated the MAC) had some pointed things to say about
+them when he was our last guest
+<[Bill] B.MARCUM> What did Jef Raskin say?
+<[gars] GARY-S> He said that the icons end up cluttering the screen and don't 
+really do the job as intended - the transcript is in the library (RASKIN
+.TXT or RASKIN.ARC)...
+<[gars] GARY-S> although at the time they were the right approach.
+<[gars] GARY-S> He thinks the Canon CAT did a much better job of the 
+man/machine interface but Canon had no idea what they had and mis-marketed it
+<[gars] GARY-S> Te CAT ran Forth
+<[gars] GARY-S> What do you do - job wise and Forth-wise
+<[Bill] B.MARCUM> Job wise, I'd rather not say (minimum wage).
+<[gars] GARY-S> It beats the unemployment line - there's a lot of that these 
+days
+<[Bill] B.MARCUM> Forth wise, I've read a couple of books (Starting Forth and 
+Thinking Forth) and played around
+<[gars] GARY-S> What computer ?
+<[Bill] B.MARCUM> with a PD version of Forth on my Atari 800xl
+<[gars] GARY-S> ahh , one of the best introductory Forth columns I ever 
+followed was Atari oriented - the older 8-bits
+<[gars] GARY-S> 'Ask Mr. Forth' based on the PD Team-Atari Forth
+<[Bill] B.MARCUM> That's the one I have.  I've been thinking about updating it 
+to Forth-83, and supporting the newer 8-bit machines
+<[gars] GARY-S> Team-Atari had a Forth-79 flavor if I remeber correctly. Good 
+Forth. I still have a copy somewhere, and no machine to run it on
+<W.WOOD17> is here.
+<[gars] GARY-S> There were actually 16 W.Wood's before you ? Interesting
+<[gars] GARY-S> We are just chatting so join in at will
+<W.WOOD17> *sigh* Guess I'm new kid on the block here, eh? -o
+<[gars] GARY-S> Bet it's cold in Crystal, Minn !
+<W.WOOD17> A little brisk tonight - 33 F;  This is the first time I've been to
+<W.WOOD17> one of these; what's the topic(s) -o
+<[gars] GARY-S> anything you want it to be - Forth oriented
+<[gars] GARY-S> what DO YOU DO IN FORTH
+<[gars] GARY-S> Didn't mean to shout <grin>
+<[Bill] W.WOOD17> Actally, I'm returning to it after a few yrs. absence.  Right 
+now I'm
+<[Bill] W.WOOD17> interested in compiling HOLs into Forth.  What're y'all 
+involved with? -o
+<[Bill] B.MARCUM> What are HOLs?
+<[gars] GARY-S> I work for a company that's a neighbor (sort of) of yours - 
+DataCard
+<[Bill] W.WOOD17> Sorry, jargon.  HOLs are Higher Order Languages, like Lisp, 
+Prolog, Pascal. -o
+<[gars] GARY-S> There's a couple of files in our library that may interest you 
+then - a couple of Object oriented Forth projects and a Pascal routines
+ in Forth, I know of
+<[gars] GARY-S> Also some stuff on neural nets
+<[Bill] W.WOOD17> Right now I'm consulting on a project to compile a BASIC-like 
+language
+<[gars] GARY-S> what on ? what architecture ?
+<[Bill] W.WOOD17> tailoerd for embedded control into Forth for the run-time.  
+The choice of
+<[Bill] W.WOOD17> source language was *not* mine. -o
+<[gars] GARY-S> It isn't that hard to call Forth with BASIC. One of my Sinclair 
+kernels did just that - on a 2068
+<[gars] GARY-S> Took about 16 lines total, the rest was all Forth
+<[Bill] W.WOOD17> The customer wants to use V33(?) or a Japanese 286 like 
+processor.  The
+<[Bill] W.WOOD17> bus and other interface architecture is Honeywell's.
+<[Bill] W.WOOD17> What we're doing is using an optimizing compiler to compile 
+the pseudo-BASIC
+<[Bill] W.WOOD17> into P-Code; I suggested using Forth instead of a home-grown 
+P-Code engine
+<[gars] GARY-S> You sure seem to be going about this the hard way - or is there 
+a compelling reason to build from compiled pseudo-BASIC (whatever that
+ is)
+<[Bill] W.WOOD17> since Forth was more efficient. So we'll change code 
+generation to put out
+<[Bill] W.WOOD17> Forth.  Well, the customer specified the BASIC before hand; 
+that's fixed.
+<[Bill] W.WOOD17> The home-grown P-Code engine ran like a rock, and the 
+customer has fairly
+<[Bill] W.WOOD17> tight performance reqs.  So-o, it seemd (and still seems) 
+easiest to change
+<[gars] GARY-S> I'm still curious if there's a real reason why the customer 
+wants it that way  - oh familiarity
+<[Bill] W.WOOD17> the target language and use a good Forth run-time.  Also, the 
+customer is
+<[Bill] W.WOOD17> enchanted with the idea of putting a Harris chip in and 
+improving
+<[Bill] W.WOOD17> performance more. -o
+<[Bill] W.WOOD17> yeah, I think you're right about the familiarity thing. -o
+<[gars] GARY-S> I presume the code is proprietary and coveted ? If not share 
+some of the learned wealth in the library - uploads are free (except for
+your time)
+<[Bill] W.WOOD17> Well, I may  be able to show some early prototype code. :-) -o
+<[gars] GARY-S> That'd be great - text files about why I wouldn't do this again 
+are also valuable :-)
+<[gars] GARY-S> Before I close things down tonight - what are you two's pet 
+peeves with things Forth - this can be this board, the ANS committee, or 
+some code quirk
+<[Bill] W.WOOD17> re your query -- I'm somewhat skeptical about this 
+standardization thing;
+<[Bill] W.WOOD17> I'm not at all convinced this will be a good thing for Forth. 
+ Casting into
+<[Bill] W.WOOD17> concrete hasn't been all that good for lisp, IMHO. -o
+<[gars] GARY-S> Bill Marcum - you are just getting started in Forth - what 
+really bugs you so far ?
+<[gars] GARY-S> The _real_ bottom line is some vendors need a ANS or IEEE 
+standard language to bid on government jobs - nuff said ?
+<[Bill] B.MARCUM> My pet peeves would mostly pertain to the antiquated version 
+of Forth I'm using
+<V.STAMPS> is here.
+<[gars] GARY-S> That's where your experience is - what is it about team Forth 
+that hacks you off ?
+<[Bill] W.WOOD17> ??? What's team Forth? -o
+<[Bill] B.MARCUM> It doesn't let me read files on other disks, and I can't use 
+my moem with it (Team Forth is an old PD Forth for 8-bit Ataris)
+<[gars] GARY-S> You can all continue to visit, but I have to close the steno 
+and go.
+<[gars] GARY-S> Thanks for showing Bill, Bill and V.Stamp
+<[Bill] W.WOOD17> Too bad, I enjoyed the chat.  Next time.  -o+o
+<[Bill] B.MARCUM> has left.
+<[gars] GARY-S> Bill Wood - I really would appreciate a chance to see some of 
+your prototype stuff
+<[gars] GARY-S> to leave type /exi
+=== End of Steno notes. ===
+
+

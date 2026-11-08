@@ -1,0 +1,224 @@
+
+-------------------------
+Newsgroup comp.lang.forth
+-------------------------
+
+Article 333 of 340, Sat 19:13.
+ Subject: Re: Can I get a witness?
+Path: ..!sugar!peter (Peter da Silva @ Sugar Land UNIX - Houston, TX)
+Newsgroups: comp.lang.forth,comp.sys.amiga
+(43 lines) More? [ynq] 
+Speaking as an Amiga owner who has done a LOT of work in both FORTH and 'C'
+(including a couple of compilers in 'C' and a couple in Forth) I'd like to
+say one thing...
+
+The best language for doing stuff on the Amiga in is 'C'.
+
+Mainly because everything in the system is documented in terms of 'C', and
+just about everyone's code is written in 'C'.
+
+But also because all the Forth interpreters for the Amiga that I've seen
+use 16-bit operators. On a 68000? Get real.
+
+Now then, the best way to use Forth on the Amiga would be to use it as an
+extension language (or a macro language) for a 'C' program. To do this the
+best bet would probably be to get the Mountain View press generic 68000
+Forth (don't tell me there isn't one... I might cry) and hook it into your
+'C' framework.
+
+I'm in the early planning stages for a beast like this... but it's super-low
+priority.
+
+Now then, back to your question. The way to get proficient in a new language
+is to write code in it. First of all, don't worry about doing Amigastuff in
+Forth until you're proficient in it. Just take some generic and simple program
+like Breakout and write it in Forth, using a RAW: window, plain text images,
+and keyboard commands:
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][]   BREAKFORTH   [][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+
+
+
+                               o
+                              /
+                             /
+
+
+                        IIIII
+-- 
+-- Peter da Silva  `-_-'  ...!hoptoad!academ!uhnix1!sugar!peter
+-- Disclaimer: These U aren't mere opinions... these are *values*.
+
+ 
+Article 334 of 340, Sun 09:37.
+ Subject: Re: Can I get a witness?
+Path: ..!vivaldi!pmy (Pete Yadlowsky @ University of Virginia, Charlottesville)
+
+Newsgroups: comp.lang.forth,comp.sys.amiga
+(53 lines) More? [ynq] 
+In article <1523@sugar.UUCP> peter@sugar.UUCP (Peter da Silva) writes:
+>The best language for doing stuff on the Amiga in is 'C'.
+
+Well, as I'm finding, yes 'n no. See below.
+
+>Mainly because everything in the system is documented in terms of 'C', and
+>just about everyone's code is written in 'C'.
+
+Yes, but...
+
+>But also because all the Forth interpreters for the Amiga that I've seen
+>use 16-bit operators. On a 68000? Get real.
+
+ah, nope. Check out JForth. This is a forth written expressly for the
+Amiga, by C hacks no less. Full 32 bits all the way 'round. I suspect
+that Multi-Forth (also for Amiga) is similar. JForth provides emulation for 
+C-like structure syntax and the full set of (forth-ized) system #include
+files. It also provides hooks to all .libraries through the function
+declaration (.fd) mechanism. In short, this forth gives you the entire
+machine, just as C does. You might want to have a look at it. As a
+weathered C hack m'self, I'm fairly impressed.
+
+When I'm batting ideas around, I like to use Forth because of the
+incremental, interactive, immediate (lotsa 'i's in there) environment
+it provides. When something crystalizes, I reach for the C compiler.
+I think perhaps the only reason I use C at all is because forth does not
+provide for any sort of object or library generation. Even the smallest
+programs/routines must remain attached to the entire system. Rumor has
+it, though, that JForth is gonna have a target compiler...RSN.
+
+>Now then, the best way to use Forth on the Amiga would be to use it as an
+>extension language (or a macro language) for a 'C' program.
+
+Hmmmm...sounds interesting. Can you elaborate?
+
+>Now then, back to your question. The way to get proficient in a new language
+>is to write code in it. First of all, don't worry about doing Amigastuff in
+>Forth until you're proficient in it.
+
+Yep. That's what I'm doing. Writing. MIDI stuff, in particular. Actually,
+I'm already fairly proficient with forth (I wrote one for a homebrew
+68K box a few years back), and JForth provides some very useful hooks
+for doing Amigastuff. Fun! It's just taking me some time and practice
+to get comfortable with the stack mindset. Thanks for writing.
+
+
+        - Pete
+
+Peter M. Yadlowsky
+Academic Computing Center
+University of Virginia
+pmy@vivaldi.acc.virginia.EDU
+
+
+ 
+Article 335 of 340, Sun 20:41.
+ Subject: Re: Can I get a witness?
+Path: ..!utah-cs!thomson (Richard A Thomson @ University of Utah CS Dept)
+Newsgroups: comp.lang.forth,comp.sys.amiga
+(23 lines) More? [ynq] 
+In article <1523@sugar.UUCP> peter@sugar.UUCP (Peter da Silva) writes:
+>The best language for doing stuff on the Amiga in is 'C'.
+>Mainly because everything in the system is documented in terms of 'C', and
+>just about everyone's code is written in 'C'.
+
+Well, the best development language may be C, since its so easy to incorporate
+other's code, digest examples, etc., but the statement that language X is
+"the best" development language for the Amiga is a religious statement at
+best.
+
+>But also because all the Forth interpreters for the Amiga that I've seen
+>use 16-bit operators. On a 68000? Get real.
+
+Multi-Forth is a full 32-bit based Forth, there is nothing 16-bit about it.
+
+>Now then, the best way to use Forth on the Amiga would be to use it as an
+>extension language (or a macro language) for a 'C' program.
+
+Huh?  Sounds like you're trying to make the APL of the C world.
+
+>-- Peter da Silva
+
+
+                                                Rich Thomson
+Article 337 of 340, Sun 22:05.
+ Subject: Re: Amiga Forth Programming  (was: Can I get a witness?)
+Path: ..!crash!billk (Bill Kelly @ DevWare, Inc.)
+Newsgroups: comp.lang.forth,comp.sys.amiga
+
+In article <1532@sugar.UUCP> peter@sugar.UUCP (Peter da Silva) writes:
+
+>Speaking as an Amiga owner who has done a LOT of work in both FORTH and 'C'
+>(including a couple of compilers in 'C' and a couple in Forth) I'd like to
+>say one thing...
+>
+>The best language for doing stuff on the Amiga in is 'C'.
+
+It has been my experience that this is only true if you are a 'C' programmer.
+
+>Mainly because everything in the system is documented in terms of 'C', and
+>just about everyone's code is written in 'C'.
+
+True. (Although I've always found 'C' pretty easy to translate to Forth.)
+
+>But also because all the Forth interpreters for the Amiga that I've seen
+>use 16-bit operators. On a 68000? Get real.
+
+It would appear, then, that the only Amiga Forth you've actually seen is 
+MVP-Forth.  (Which was indeed a 16-bit version, and was released into the
+Public Domain.)  
+
+The two-most-popular Forths for the Amiga are JForth and Multi-Forth.
+(not necessarialy listed in order of popularity)
+
+These two Forths are both full 32-bit implementataions.  They also both provide
+complete *interactive* access to ALL Amiga library and device function calls.
+
+>Now then, back to your question. The way to get proficient in a new language
+>is to write code in it. First of all, don't worry about doing Amigastuff in
+>Forth until you're proficient in it. Just take some generic and simple program
+>like Breakout and write it in Forth, using a RAW: window, plain text images,
+>and keyboard commands:
+>
+>[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+>[][][][][][][][][][][][][][][][]   BREAKFORTH   [][][][][][][][][][][][][][][]
+>[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+>
+>
+>
+>
+>                              o
+>                             /
+>                            /
+>
+>
+>                       IIIII
+
+Sounds reasonable... However, for any Forth programmers new to the Amiga
+who are interested in getting right down to Amiga-specific programming,
+(i.e. Intuition, DOS, Exec, Graphics, etc. library functions, the Console,
+Serial, Audio, etc. devices, KeyMaps, Menus, Windows, Screens, Gadgets,
+Requesters, etc. etc.) and would like to see some JForth and/or Multi-Forth
+Forth code to demonstrate some of these routines, I've probably written it and
+would be more than happy to send it to you.  
+I bought both Multi-Forth and JForth, am fluent in both, use both, and can
+quickly convert Amiga-specific code that I've written in one Forth to the
+other, so if anyone wants examples, mail me your requests/questions, and I'll
+be happy to lend a hand.
+                                                        Bill Kelly
+
+>-- 
+>-- Peter da Silva  `-_-'  ...!hoptoad!academ!uhnix1!sugar!peter
+>-- Disclaimer: These U aren't mere opinions... these are *values*.
+
+
+
+-- 
+--
+Bill Kelly,     {ihnp4, hplabs!hp-sdd, sdcsvax}!crash!billk
+DevWare, Inc.
+                    "We sell no disk before its time." 
+
+

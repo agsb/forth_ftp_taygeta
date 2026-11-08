@@ -1,0 +1,333 @@
+
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 10/19/89   Time: 21:50EDT
+Attendees:
+[[Gary] GARY-S]
+[[Kevin] APPERT]
+[[Hadil] H.SABBAGH]
+[D.GOLDING]
+[[JaxQuake] FIGCHAPTERS]
+[DANMILLER]
+[S.GORMISH]
+[[Dave] OLORIN]
+
+Notice on door: Open FIGGY BAR in room 2. Tonight's question:Now that you've
+seen Bob Berkey's and Bob Smith's arguments for floored division do you
+support floored,truncated,both ?
+  
+ This question elicited ho-hums and strong anti-standards sentiment. The rest
+ of the FIGGY was largely occupied with discussion of the Santa Cruz/San
+ Francisco quake. Forth discussion included Don Golding teaching Forth to
+ sixth graders, the question of EXPECT and counted strings, more on why
+ standards won't work, a whisper about RTX-2000. 
+    
+ Personal note: I am indebted to Kevin Appert for forwarding log notes after
+                bad weather in Little Rock (snow and wind) knocked me off-line.
+
+Minutes:
+<[Kevin] APPERT> is here.
+<H.SABBAGH> is here.
+<D.GOLDING> is here.
+<[Hadil] H.SABBAGH> Gary. I have a suggestion for an RT guest.
+<[Hadil] H.SABBAGH> How about Mitch Bradley?
+<[Gary] GARY-S> It snowed in Little Rock, Arkansas today !
+<D.GOLDING> is there a topic for tonight?.. Hi all...
+<[Gary] GARY-S> Mitch has been on Hadil
+<[Hadil] H.SABBAGH> Oh. That excludes him?
+<[Hadil] H.SABBAGH> You'll run out soon :-)
+<[Kevin] APPERT> get 'em back!  if you can find him
+<[Hadil] H.SABBAGH> Hi Kevin.  I see you survived.
+<[Gary] GARY-S> D. Golding - It's open topic tonite - the question is a rehash 
+since the first pass ticked a few people off.
+<[Kevin] APPERT> he may (rumor) have left silly-cone valley and gone back to AR,
+ or some other god-forsaken place
+<D.GOLDING> what was that?
+<[Hadil] H.SABBAGH> What is "the question"?
+<[Kevin] APPERT> who was ticked off?
+<[Gary] GARY-S> If Mitch is back here I'll hear soon enough
+<[Gary] GARY-S> He is from Arkansas, and his wife from east-central texas
+<[Kevin] APPERT> how about Allan Furman?
+<[Kevin] APPERT> as a guest of honor at one of these weinie roastson the figgy 
+bar?
+<[Gary] GARY-S> I have asked Allan, at the time he deferred - good reminder, 
+thanks
+<[Kevin] APPERT> tell him it's for the greater glory (gory) of forth, and I 
+think he may have a little more free time now.
+<[Kevin] APPERT> have you had any luck reaching Charles Curley
+<[Kevin] APPERT>  ?
+<[Gary] GARY-S> Tonites question : Since Bob Berkey and Bob Smith have both 
+recently presented cases in support of floored division do you think the n
+ew ANS Forth should support Floored, Truncated, Both ?
+<[Gary] GARY-S> answer up guys and we can move on or discuss
+<[Kevin] APPERT> I hope the floor had good support to stand up to the earth 
+quake, or the whole building may have been truncated around here
+<[Hadil] H.SABBAGH> Yuk. Standards.
+<D.GOLDING> The standards committtee's primary job is not to break pre-existing 
+code!
+<[Kevin] APPERT> I think that we should have truncated only for floating point 
+one's complement operation on mondays, wednesdays and fridays.
+<[Hadil] H.SABBAGH> And only when the moon is full...
+<[Gary] GARY-S> Do you do that at Lockheed ? geeze what a response
+<[Kevin] APPERT> the last time I pointed out that the charter for the standards 
+group ...
+<[Kevin] APPERT> do what at lockheed?
+<[Hadil] H.SABBAGH> I feel that a Forth Standard is completely meaningless...
+<D.GOLDING> I here from Wil Baden about what is going on and it makes me grit 
+my teeth!
+<[Hadil] H.SABBAGH> since noone will follow it anyway.
+<[Hadil] H.SABBAGH> It seems that almost every application written in Forth
+<[Kevin] APPERT> was to codify "existing practice" (whatever that is), somebody 
+said he wasn't going to "fall into that trap".  I'm still not sure wha
+t that ment.
+<[Hadil] H.SABBAGH> was implemented on a system that the programmers
+<[Hadil] H.SABBAGH> implemented themselves.
+<[Gary] GARY-S> Anyway - Kev, Charles is a strong maybe for November, John Hall 
+for December, and Elizabeth Rather has already accepted for January - the
+week before the ANS TC meeting
+<FIGCHAPTERS> is here.
+<[Kevin] APPERT> great.
+<[JaxQuake] FIGCHAPTERS> howdy howdy
+<[Gary] GARY-S> jaxon - how are you ?
+<[JaxQuake] FIGCHAPTERS> just fine.
+<[JaxQuake] FIGCHAPTERS> and yerself?
+<[Gary] GARY-S> so far no one we know got hurt in the calif shake
+<[Kevin] APPERT> you guys are probably suffering more from the media about this 
+quake than anybody around here is suffering from the actual quake
+<[Hadil] H.SABBAGH> Kevin. I don't think that's true.
+<[Hadil] H.SABBAGH> Based on the reports I got from my friends in the area.
+<[Kevin] APPERT> it was certainly a disaster, but one gets saturated after a 
+while
+<[Kevin] APPERT> Mexico City was certainly a lot worse, but didnt
+<[Kevin] APPERT> didn't have 1/2 the media coverage
+<[Hadil] H.SABBAGH> That's because they aren't Murkins.
+<[Hadil] H.SABBAGH> :-|
+<D.GOLDING> I heard China lost over 250,000 in their quake...
+<[Gary] GARY-S> Where did you hear the figure ?
+<[Hadil] H.SABBAGH> You mean the one they just had?
+<[Kevin] APPERT> they arn't North Americans, Hadil?
+<[Hadil] H.SABBAGH> I am being cynical here...
+<D.GOLDING> I'm still waiting for our 8.3 down here in L.A.
+<[Kevin] APPERT> yup, I was pulling your leg a bit.
+<D.GOLDING> probably on the "acurate" news!
+<[Kevin] APPERT> sarcasam, here?  ... Me? .... NAAAAAAAAAAAAAAA!
+<[JaxQuake] FIGCHAPTERS> I haven't been able to reach anyone at ESP yet, hope 
+they're ok!
+<[Kevin] APPERT> ESP?
+<D.GOLDING> Dianetics?
+<[JaxQuake] FIGCHAPTERS> no Embedded Systems Programming magazine.
+<[Hadil] H.SABBAGH> Maybe they're embedded themselves...
+<D.GOLDING> That's a good mag.
+<[Kevin] APPERT> the phones are a little tied up still, what with people 
+calling their aunt sadise to tell her about the quake
+<[Hadil] H.SABBAGH> :->
+<[Gary] GARY-S> Geologists say that the New Madrid fault will go this decade 
+and wipe out Memphis and points downstream
+<[Hadil] H.SABBAGH> I got thru using the autodial technique
+<[Kevin] APPERT> the fun is when all these "I'm all right" calls kill people 
+just after the quake when people can't get an ambulance or fire truck bec
+ause the phones are all tied up.
+<[Gary] GARY-S> anything 'Forth' on anyone's mind ?
+<D.GOLDING> hey, I didn't even call the that daY!
+<D.GOLDING> that's the WELL.
+<[Hadil] H.SABBAGH> Yeah.  I wore my asbestos suit and everything.
+<[Kevin] APPERT> good for you!  you did the right thing!
+<[Hadil] H.SABBAGH> I didn't call that day either.
+<D.GOLDING> I have a topic..
+<[Gary] GARY-S> go
+<DANMILLER> is here.
+<[Kevin] APPERT> asbestos suit?  huh?
+<[Hadil] H.SABBAGH> I.e., I'm ready to discuss forth.  (Flames, man, flames)
+<[Gary] GARY-S> hit it golding
+<D.GOLDING> I am teaching some people Forth.  How can you or I justify Expect 
+not returning  a counted string?
+<[Kevin] APPERT> tell 'em if they want it some other way, implement it, tell me 
+about it, if I like it, I'll do it that way too!
+<[Kevin] APPERT> that will make two of us.
+<D.GOLDING> I have myself, it is very easy...but for continuity this is a 
+problem when
+<D.GOLDING> teaching...
+<DANMILLER> i'm going to show forth to some 6th graders next month 
+for a demo. how should I begin?
+<[Kevin] APPERT> yes, I understand.  Getting people to step outside the bounds
+of a problem or a computer language is a hard thing.  They should learn
+sometime that if they don't like something in forth they should either accept
+it or change it...
+<[JaxQuake] FIGCHAPTERS> Why should EXPECT return a counted string? 
+You have
+WORD for that.
+<[Hadil] H.SABBAGH> Mr. (Dr?) Golding. I know what you mean.
+<[Hadil] H.SABBAGH> I taught C for a couple of semesters.  Really 
+difficult.
+<[JaxQuake] FIGCHAPTERS> 0D WORD returns a counted string.
+<[Kevin] APPERT> there are plenty of languages though, that only give you the
+former option!  
+<D.GOLDING> Word is a totally different function.
+<[Hadil] H.SABBAGH> I explained these anomalies by comparing a computer
+	language...
+<[Hadil] H.SABBAGH> to a human language; i.e., there is Forth "colloquialism" ..
+<[Hadil] H.SABBAGH> This is present in many languages designed by individuals
+<[Hadil] H.SABBAGH> or small groups. E.g., many of C's features are better
+understood
+<D.GOLDING> Understand, I am dead set against changing the function of these
+words.
+<[Kevin] APPERT> you can use EXPECT to build a thing which delivers a counted
+string, if you don't like WORD.  This demonstrates using the pieces to build
+what you want to wind  up with.
+<GARY-S> is here.
+<[Hadil] H.SABBAGH> if you know about the PDP 11 architecture.
+<[JaxQuake] FIGCHAPTERS> Not really, DG. : GET-INPUT ( --- ct-addr) 
+QUERY 0D
+WORD ; does what you want.
+<[Gary] GARY-S> DID ANYONE HAVE THEIR LOG GOING DURING MY CUT-OFF ?
+<[Kevin] APPERT> I did
+<[Gary] GARY-S> can you please e-mail it ?
+<[Kevin] APPERT> I'll upload it and mail it to you
+<[Gary] GARY-S> thanks
+<[Hadil] H.SABBAGH> For the same reason, some Forth words seem to be anomalous
+<[Hadil] H.SABBAGH> For example, the "COUNT TYPE" idiom.
+<[Kevin] APPERT> that's factoring, though.  both COUNT and TYPE are used in
+each other's absense
+<[Hadil] H.SABBAGH> Yeah. I just thought about that.
+<[Hadil] H.SABBAGH> I think that the use of counted strings was almost an
+afterthought though.
+<DANMILLER> is abbundance a flat file database?
+<[Kevin] APPERT> I think the biggest example of fitting in with the machine...
+<D.GOLDING> I like counted strings better than ASCIIZ.  I is easier for the
+<D.GOLDING> computer to process.
+<[Kevin] APPERT> is truncated division, ala PDP-11 and so many other machines
+of the day when those pre-83 Forths were being implemented
+<[Hadil] H.SABBAGH> I agree. I am just musing about its historical development.
+<D.GOLDING> Are all of you tired of talking about the ANSI Standard?
+<[JaxQuake] FIGCHAPTERS> I'm writing a new forth in another window.
+<[Hadil] H.SABBAGH> YES! I am sick of standards.
+<D.GOLDING> Yeh, but what if all those IMPROVEMENTS pass?
+<[Gary] GARY-S> What is your objection - overkill ?
+<[Kevin] APPERT> Bob Smith seems to think that the standard will be important
+to us in our present work.  I am dubious of this.
+<D.GOLDING> You will really be sick when your code doesn't run anymore...
+<[Hadil] H.SABBAGH> Not just that. I don't think that Forth can/should be
+standardized.
+<[Kevin] APPERT> what do you mean by IMPROVEMENTS ?
+<[Hadil] H.SABBAGH> The number of PD Forths implies that 
+<[Hadil] H.SABBAGH> it is relatively easy to implement a Forth kernel.
+<[Hadil] H.SABBAGH> Serious applications will use an in-house kernel anyway.
+<D.GOLDING> I think it should, BUT donot break any existing code!!!!!
+<[Hadil] H.SABBAGH> Forth isn't portable, not matter what.
+<[Gary] GARY-S> Do you not agree with the strongest argument for it. 'that it
+will legitimize Forth to the CS, Professional element that now shuns it'?
+<[Hadil] H.SABBAGH> No, it won't. 
+<[Kevin] APPERT> nothing will change the minds of the language bigots
+<D.GOLDING> Has anyone played with Nuero Nets?
+<[Gary] GARY-S> You 'have' heard the argument ?
+<[Hadil] H.SABBAGH> Not in that form, no.  Its not an issue of language
+bigotry either.
+<[Hadil] H.SABBAGH> If I were managing a large project, I wouldn't want to be
+using Forth.
+<[Gary] GARY-S> We have been having a blast with Roedy Green's BBL and it sure
+as hell isn't standard anything
+<[Kevin] APPERT> why not, Hadil?
+<[Hadil] H.SABBAGH> It is best for (1) small project teams;
+<[Hadil] H.SABBAGH> (2) non-CS people who want to USE computers;
+<[Hadil] H.SABBAGH> Forth is a great tool for individuals, bad for groups.
+<D.GOLDING> Forth, Inc. does it all the time.
+<[Hadil] H.SABBAGH> Difference between scuplting and building.
+<[Kevin] APPERT> the phrase "Forth is best for..."  always reminds me of ...
+<S.GORMISH> is here.
+<[Kevin] APPERT> the story of the first two major forth shops...
+<[Kevin] APPERT> one was using forth for real time control...
+<[Kevin] APPERT> the other for data reduction, number crunching...
+<D.GOLDING> Who were they, Forth Inc. and?
+<[Gary] GARY-S> mms ?
+<[Kevin] APPERT> the one shop said "forth is great for real-time control, but
+it really sucks for number crunching..."
+<[Kevin] APPERT> pre-FORTH Inc.
+<D.GOLDING> that is funny.
+<[Hadil] H.SABBAGH> OK.OK. I told you I was waering my asbestos suit :^)
+<[Hadil] H.SABBAGH> But I wonder:
+<[Kevin] APPERT> the other shop said "forth is wonderfull for number crunching,
+but really sucks for real time control" ( this was the number crunching shop)
+<[Hadil] H.SABBAGH> how many of you are able to port GENIE Forth code from one
+<D.GOLDING> 1000 degrees... and climbing...
+<[Hadil] H.SABBAGH> implementation of Forth (e.g., F-PC) to another (e.g.,
+Fig-FOrth)?
+<[Hadil] H.SABBAGH> I think the the CONCEPTS are more useful than the CODE.
+<D.GOLDING> you have a point...for Standards maybe!
+<[Gary] GARY-S> have you not used Martin Tracy's prelude code hadil ?
+<[Hadil] H.SABBAGH> I have used it.  I am taking an informal poll here.
+<[Kevin] APPERT> The moral of the is that most everything has been succesfully
+tried in Forth, and if it fails, the results (to my self serving definition)
+are your own fault, because everything in Forth is YOUR RESPONSIBILITY. 
+ It's a heavy burden .
+<[Hadil] H.SABBAGH> Keep in mind that I am a Forther alone in the wilderness
+<[Hadil] H.SABBAGH> here in the Bronx.
+<[Gary] GARY-S> sometimes the failed code is more instructive than that which
+plugs and goes. What's the point
+<[Kevin] APPERT> there isn't a FIG chapter near you?
+<[Kevin] APPERT> Fort Apache FIG?
+<[Hadil] H.SABBAGH> I saw a listing for one in MudHatten.
+<[Hadil] H.SABBAGH> I believe the leader's name is Garcia (???)
+<[Gary] GARY-S> IRT still runs ?
+<[Hadil] H.SABBAGH> Yes. I take it every day.
+<[Hadil] H.SABBAGH> But I am telling you this to point out that
+<[Gary] GARY-S> You'd almost have to if you were taking the subway, 
+wouldn't you
+<[Hadil] H.SABBAGH> most of what i know about forth I learned from books,
+<[JaxQuake] FIGCHAPTERS> gnite all. may this house be safe from tygers.
+<[Hadil] H.SABBAGH> and experimenting.
+<[Hadil] H.SABBAGH> Gary: no; there's the IND and the BMT.
+<[Gary] GARY-S> You'll get busted for experimenting !
+<OLORIN> is here.
+<[Hadil] H.SABBAGH> No, I practice safe computing :-).
+<[Gary] GARY-S> hahahaha
+<[Dave] OLORIN> (flop)
+<[Kevin] APPERT> monitor-sized floppy-lactics?
+<D.GOLDING> how does one add his first name? blush...
+<[Gary] GARY-S> Have you called the Manhatten FIG chapter ?
+<[Dave] OLORIN> Type /nam <name>
+<[Don] D.GOLDING> was <D.GOLDING>.
+<[Hadil] H.SABBAGH> No haven't yet.
+<[Gary] GARY-S> They don't have cable, might welcome a call
+<[Dave] OLORIN> Does anyone know exactly how much a half cord of wood weighs?
+<[Gary] GARY-S> half what a whole cord does
+<[Dave] OLORIN> *fwap*
+<[Hadil] H.SABBAGH> yuk yuk yuk
+<[Dave] OLORIN> (why oh why do I give him straight lines like that :-) )
+<[Hadil] H.SABBAGH> If I do that, some one might find out what little I know.
+<[Don] D.GOLDING> anyone play with a RTX2000 yet?
+<[Dave] OLORIN> Dan Miller (DANMILLER) has one I believe.
+<[Gary] GARY-S> a half cord (seriously) will do serious damage to a set of
+springs, but cord is NOT a weight - it is a cubic measure
+<[Kevin] APPERT> it' not a unit of weight,
+<[Don] D.GOLDING> I have one also, would like to add a SCIS hard drive.
+<[Kevin] APPERT> 128 cu ft
+<[Gary] GARY-S> for a cord, Kev - 64 for a half cord, Dave
+<[Dave] OLORIN> I know...I was just wondering approximately (it was dry
+oak...and it had to go *up* the steps and into the back outside closet)
+<[Dave] OLORIN> Heh. Just a wee bit more than a dollar per cubic foot.
+<[Dave] OLORIN> (in half cord lots)
+<[Kevin] APPERT> density of wood < than water, the rest is left as an exercise
+for the student!
+<[Dave] OLORIN> You've been reading those textbooks again, haven't you Kevin?
+<[Gary] GARY-S> not for ebony, or ironwood or teak
+<[Kevin] APPERT> dry oak, he said
+<[Dave] OLORIN> That little line as almost as bad as "it is obvious from <y>
+that <x> is true".
+<[Dave] OLORIN> <-- Doesn't plan on turning on the electric heat all winter.
+<[Dave] OLORIN> And we have freeze warnings in Austin tonight!
+<[Dave] OLORIN> (Love that fireplace)
+<[Gary] GARY-S> anymore Forth stuff ???
+<[Dave] OLORIN> Uhhmmm...only YAVPAOOFP
+<[Dave] OLORIN> Yet Another Vaporware Pronouncement About Object 
+Oriented Forth Package
+<[Dave] OLORIN> (translate: I'm still adding features and it isn't stable yet)
+<[Gary] GARY-S> Kevin - thanks again for the log for my absentee period
+<[Kevin] APPERT> no problem Gary.  Is there some editorial discretion, 
+or do you save ALL this stuff?
+<[Kevin] APPERT> this hasn't exactly been earth-shaking stuff here tonight!
+=== End of Steno notes. ===
+
+

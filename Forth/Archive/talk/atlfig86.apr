@@ -1,0 +1,56 @@
+
+
+                A T L A N T A   F I G   C H A P T E R
+
+                            April 15, 1986
+ 
+
+
+NEXT MEETING
+
+    The next meeting is the third Tuesday of the month, May 20 at 7:00 p.m.
+    The location is the Western Sizzlin restaurant at Northeast Plaza about
+    four miles inside 285.
+    
+
+DISCUSSIONS
+
+       We prepared a list of all the Forths used by those in attendance.  
+    Not surprisingly just about every Forth on the market is used by one or 
+    another of our members. If you have questions about Forth this is the 
+    place to be!  
+
+       Several members brought manuals for the Forths they use. We then 
+    discussed the relative merits, advantages, and disadvantages of each 
+    product.  
+
+       The discussion then began to center around the relative speed of 
+    Forth versus other languages. Speed can be considered in terms of 
+    program development time, compiling or loading time, and program 
+    execution. It was generally agreed that Forth has a faster development 
+    time because of its interactive nature and easier debugging due to the 
+    modularity of Forth words. As for loading screens it was noted that 
+    Polyforth loads almost instantaneously and uses this to its advantage in 
+    order to conserve dictionary space. When an application is needed the 
+    screens can be loaded, the application executed, and the words 
+    forgotten. Apparently the key is a more sophisticated dictionary 
+    hashing/threading scheme. Most Forths however appear slow when loading 
+    all the screens of an application. Program execution time is fairly good 
+    but not as fast some compiled languages. Several members felt that Forth 
+    needs to be faster. Speed is most often used as a benchmark for 
+    comparing languages even though there are many other factors that should 
+    be considered.  
+
+       Another area that came up was the infamous 64k barrier. Many people 
+    felt that this is an artificial limitation left over from earlier 
+    microprocessors and architectures. Newer Forths for the latest machines 
+    often eliminate this problem. Along these same lines the various 
+    techniques for creating code overlays were discussed.  
+
+       Next was a discussion of the principals of deferred words and 
+    vectored execution. A definition of DEFER was written and the reasons 
+    for using these words were discussed. Also a definition for IS was 
+    written to show how deferred words can be revectored. Most felt that 
+    deferred words are a good of example of Forths many advantages.  
+
+

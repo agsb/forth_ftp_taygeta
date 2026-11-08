@@ -1,0 +1,61 @@
+
+              Geoffrey Bogeaus' Review of Wil Baden's F83X
+
+
+Hdiscs.arc is the compiled version of F83X designed for use with systems
+having one or more hard disks.  F83X.com is for use with systems having
+only floppy disks, and can be found in the file, Pong330x.arc.  Both
+files contain the kernel, together with meta86, cpu8086, extend 86 and
+utilities, as revised and compiled. 
+
+Both files also contain compiled versions of several blocks, specially
+written for this system, including the following: eds, exile, menu,
+quickkey, stretch, stuff and swords (s-words).  These blocks are also in
+the Pong330.arc file.  They may be selectively compiled using
+F83base.com, which is in the file Pang330.arc.  
+
+Pang also contains the source code for cpu086, the extend block and the
+utility block, which must be on your system if you are going to get the
+view system to work (whereas the source tells you what is in the word -
+view tells you what it does), as is true for any of the blocks. The
+Exile block has been compiled into the fully compiled version with the
+intent to make the system fully compatible with the original L&P F83
+Forth.  However, the mark and resolve words did not seem to get
+included, which makes F83x incompatible with many of my old files.  The
+situation is easily remedied by compiling screen 5 from the exile block.
+
+Pong also contains a block (which must be compiled to be used) Old.blk,
+which re-ups the old f83 definitions which Baden changed to make the new
+system. 
+
+The editing facilities in F83x are immense.  The line editor is
+structured so that it is on whenever you "list" - but you can go right
+through it to the Forth commands - of which there are hundreds.... 
+There is also a vast screen editor with upwards of 50 commands, which,
+although comprehensive, take time to learn.  The Ved23-86 editor is much
+smaller and easier to learn, and if you prefer it, you can just compile
+it, or recompile it, into the system. 
+
+Ping330.arc contains the kernel, compiled alone, and in source form.
+Calif330.arc contains a 190K glossary, together with a number of files
+reflecting Baden's cogitations on Forth, and his explanations of how
+some of his incredible stuff works. 
+
+I have had the temerity to add to F83x some of the nifty tools from the
+Tools.blk, which were not expressly included, together with my own set
+of tools, Opsys, to create what I call Forth83x.com.  If anybody
+expresses an interest, I will upload it.  As far as I know, it is fully
+compatible with F83. 
+
+Anyone interested enough to read this really should download this mutha'
+and fire it up.  It really is an experence - if for no other reason than
+to watch the system "hunt" (locate any word across vocabulary
+boundaries), "ref" (locate words into which the given words is compiled)
+and "sword" (list all of the words in the system in alphabetical order).
+
+Like the father, F83, the son, F83x, is quite an achievement. 
+
+ -- Geoffrey Bogeaus
+
+
+

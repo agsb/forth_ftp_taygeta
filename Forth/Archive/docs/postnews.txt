@@ -1,0 +1,195 @@
+
+>From cwjcc!abvax!tut.cis.ohio-state.edu!cica!iuvax!purdue!spaf Sat Nov 11 20:22:20 EST 1989
+Article 189 of news.announce.newusers:
+Path: cwjcc!abvax!tut.cis.ohio-state.edu!cica!iuvax!purdue!spaf
+>From: spaf@cs.purdue.EDU (Gene Spafford)
+Newsgroups: news.announce.newusers
+ Subject: Emily Postnews Answers Your Questions on Netiquette (Updated: 6  Nov 1989)
+Message-ID: <8546@medusa.cs.purdue.edu>
+Date: 7 Nov 89 00:41:05 GMT
+Expires: 5 Feb 90 00:41:04 GMT
+Organization: Dept. of Computer Sciences, Purdue Univ.
+Lines: 346
+Approved: spaf@cs.purdue.EDU
+Supersedes: <8309@medusa.cs.purdue.edu>
+
+Original-from: looking!brad (Brad Templeton)
+[Most recent change: 6  Nov 1989 by spaf@cs.purdue.edu (Gene Spafford)]
+
+
+**NOTE: this is intended to be satirical.  If you do not recognize
+  it as such, consult a doctor or professional comedian.  The
+  recommendations in this article should recognized for what
+  they are -- admonitions about what NOT to do.
+
+                        "Dear Emily Postnews"
+
+        Emily Postnews, foremost authority on proper net behaviour,
+        gives her advice on how to act on the net.
+
+============================================================================
+Dear Miss Postnews: How long should my signature be? -- verbose@somesite
+
+A: Dear Verbose: Please try and make your signature as long as you can.
+It's much more important than your article, of course, so try and have
+more lines of signature than actual text.
+
+Try and include a large graphic made of ASCII characters, plus lots of
+cute quotes and slogans.  People will never tire of reading these pearls
+of wisdom again and again, and you will soon become personally associated
+with the joy each reader feels at seeing yet another delightful repeat of
+your signature.
+
+Be sure as well to include a complete map of USENET with each signature,
+to show how anybody can get mail to you from any site in the world.  Be
+sure to include ARPA gateways as well.  Also tell people on your own site
+how to mail to you.  Give indpendent addresses for Internet, UUCP, BITNET,
+Arpanet and CSNET, even if they're all the same.
+
+Aside from your reply address, include your full name, company and
+organization.  It's just common courtesy -- after all, in some newsreaders
+people have to type an *entire* keystroke to go back to the top of your
+article to see this information in the header.
+
+By all means include your phone number and street address in every single
+article.  People are always responding to usenet articles with phone calls
+and letters.  It would be silly to go to the extra trouble of including
+this information only in articles that need a response by conventional
+channels!
+                                ------
+
+Dear Emily: Today I posted an article and forgot to include my signature.
+What should I do?  -- forgetful@myvax
+
+A: Dear Forgetful: Rush to your terminal right away and post an article
+that says, "Oops, I forgot to post my signature with that last article.
+Here it is."
+
+Since most people will have forgotten your earlier article, (particularly
+since it dared to be so boring as to not have a nice, juicy signature)
+this will remind them of it.  Besides, people care much more about the
+signature anyway.  See the previous letter for more important details.
+
+Also, be sure to include your signature TWICE in each article.  That way
+you're sure people will read it.
+
+                                ------ 
+
+Q: I saw a long article that I wish to rebut carefully, what should I do?
+
+A: Include the entire text with your article, and include your comments
+between the lines.  Be sure to post, and not mail, even though your
+article looks like a reply to the original.  Everybody *loves* to read
+those long point-by-point debates, especially when they evolve into
+name-calling and lots of "Is too!" -- "Is not!" -- "Is too, twizot!"
+exchanges.
+
+                                ------ 
+
+Q: I cant spell worth a dam.  I hope your going too tell me what to do?
+
+A: Don't worry about how your articles look.  Remember it's the message
+that counts, not the way it's presented.  Ignore the fact that sloppy
+spelling in a purely written forum sends out the same silent messages that
+soiled clothing would when addressing an audience.
+
+                                ------ 
+
+Q: How should I pick a subject for my articles?
+
+A: Keep it short and meaningless.  That way people will be forced to
+actually read your article to find out what's in it.  This means a bigger
+audience for you, and we all know that's what the net is for.  If you do a
+followup, be sure and keep the same subject, even if it's totally
+meaningless and not part of the same discussion.  If you don't, you won't
+catch all the people who are looking for stuff on the original topic, and
+that means less audience for you.
+
+                                ------ 
+
+Q: What sort of tone should I take in my article?
+
+A: Be as outrageous as possible.  If you don't say outlandish things, and
+fill your article with libelous insults of net people, you may not stick
+out enough in the flood of articles to get a response.  The more insane
+your posting looks, the more likely it is that you'll get lots of
+followups.  The net is here, after all, so that you can get lots of
+attention.
+
+If your article is polite, reasoned and to the point, you may only get
+mailed replies.  Yuck!
+
+                                ------ 
+
+Q: What computer should I buy?  An Atari ST or an Amiga?
+
+A: Cross post that question to the Atari and Amiga groups.  It's an
+interesting and novel question that I am sure they would love to
+investigate in those groups.
+
+                                ------ 
+
+Q: What about other important questions?  How should I know when to post?
+
+A: Always post them.  It would be a big waste of your time to find a
+knowledgeable user in one of the groups and ask through private mail if
+the topic has already come up.  Much easier to bother thousands of people
+with the same question.
+
+                                ------ 
+
+Q: What is the measure of a worthwhile group?
+
+A: Why, it's Volume, Volume, Volume.  Any group that has lots of noise in
+it must be good.  Remember, the higher the volume of material in a group,
+the higher percentage of useful, factual and insightful articles you will
+find.  In fact, if a group can't demonstrate a high enough volume, it
+should be deleted from the net.
+
+                                ------ 
+
+Q: Emily, I'm having a serious disagreement with somebody on the net. I
+tried complaints to his sysadmin, organizing mail campaigns, called for
+his removal from the net and phoning his employer to get him fired.
+Everybody laughed at me.  What can I do?
+
+A: Go to the daily papers.  Most modern reporters are top-notch computer
+experts who will understand the net, and your problems, perfectly.  They
+will print careful, reasoned stories without any errors at all, and surely
+represent the situation properly to the public.  The public will also all
+act wisely, as they are also fully cognizant of the subtle nature of net
+society.
+
+Papers never sensationalize or distort, so be sure to point out things
+like racism and sexism wherever they might exist.  Be sure as well
+that they understand that all things on the net, particularly insults,
+are meant literally.  Link what transpires on the net to the causes of
+racism, sexism, mass-murder, current political candidates, the origin
+of the species, and the death of Elvis, if possible.  If regular
+papers won't take the story, go to a tabloid paper -- they are always
+interested in good stories.
+
+By arranging all this free publicity for the net, you'll become very well
+known.  People on the net will wait in eager anticipation for your every
+posting, and refer to you constantly.  You'll get more mail than you ever
+dreamed possible -- the ultimate in net success.
+
+                                ------ 
+
+Q: What does foobar stand for?
+
+A: It stands for you, dear.
+
+-- 
+Gene Spafford
+NSF/Purdue/U of Florida  Software Engineering Research Center,
+Dept. of Computer Sciences, Purdue University, W. Lafayette IN 47907-2004
+Internet:  spaf@cs.purdue.edu   uucp:   
+...!{decwrl,gatech,ucbvax}!purdue!spaf
+
+marina:/usr/homes/davisp/ecmp337> 
+
+-- 
+                              Palmer T. Davis
+
+

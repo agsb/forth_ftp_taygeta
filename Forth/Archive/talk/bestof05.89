@@ -1,0 +1,158 @@
+
+
+                
+                      Best of GEnie..... May 1989
+          News from the GEnie Forth RoundTable by Gary Smith
+
+  As promised in this column last issue I will continue the speakers' synopsis
+with conferences featuring George Shaw, Mike Perry, Randy Dumse and Wil Baden. 
+As in previous installments, I will feature the guests' remarks for their 
+respective conferences. 
+   These remarks are intended to set the tone and direction of the conference, 
+and they serve that purpose well. I hope most readers will note they also
+serve to acquaint the attendees of the conference, and now the readers of 
+this column, with the guests' personal philosophies. This is no accident.
+   When I have approached a prospective guest I have always asked what they
+wish to talk about. What is their personal point of wisdom they wish to
+share ? Without exception, those who have accepted the invitation have also
+accepted the opportunity to share their personal point of view - as opposed
+to some general subject. It is clear we all benefit from this unselfishness.
+I again wish to thank all these gracious people for sharing, as they have,
+their insight. 
+  Now, on to the recaps.
+  
+George Shaw 
+Owner, Shaw Laboratories
+Topic : 'SigForth ACM'
+December 1988
+
+<[George] PRESS20> We, (myself and others) started the ACM SIG to bring Forth 
+into the professional computing arena.  ACM is very visable in the universities
+and colleges and is very well respected around the world. We felt that having 
+a SIG would give Forth a large boost in image as a language for serious use by 
+professionals. 
+   Thanks to Alan Furman for starting the whole thing and analyzing the 
+situation to give us direction and goals.  I have a list of our initial 
+projects : 
+
+   Education: Moving Forth into the universities and
+   colleges to create an awareness of Forth and a
+   better supply of Forth programmers.
+  
+   "Forthics": Research to create a basic set of Forth
+   programming ethics as well as management metrics to
+   increase the success of Forth projects.
+  
+   Market: a study of the job requirements and the
+   Forth programming skills available to determine
+   trends in the Forth job marketplace and skills
+   required for the future.
+  
+   Successes/Failures: a study of the historical
+   applications of Forth to create an awareness of
+   Forth's wide spread use and to determine what the
+   characteristics and causes are for successes and
+   failures.
+  
+   ANS Forth:  participate through your SIGForth
+   representative in the ANSForth committee to
+   produce an American National Standard for Forth
+   that everyone can use.
+  
+   State of the Industry:  SIGForth periodically
+   compiles surveys of the Forth industry to evaluate
+   the status of the Forth product market, job market,
+   workplace, education availability, job requirements
+   etc.  Participate in these surveys and be one of
+   the first to reap their benefits through their
+   publication in the SIGForth newsletter.
+       
+Mike Perry 
+Owner of Even-Odd Designs       
+Topic: 'Public Domain Forth and Open Systems'
+January 1989
+
+<[mike] PRESS4> I have benefitted enormously from the work of many other 
+people. I have come to believe strongly in the value of open systems. I want,
+and even need, to have complete control over my tools. Sharing code and 
+avoiding secrets are essential for productivity.
+   I am convinced that Forth will continue to be interesting  because so many
+ new techniques and ideas are explored here  and that is possible in large 
+part because we share our code and ideas. 
+   Remember, we will only lose control of our machines if we give it away.
+
+Randy Dumse
+Owner of New Micros Inc.
+Topic: 'Forth as a Standalone O/S'
+February 1989
+
+  <[DUMSE] PRESS5> Being  somewhat  isolated  here  in  Texas has its
+disadvantages.  The availability of other informed people to "bounce ideas
+off  of"  is  limited,  so most  of  my  opportunities  for  such interaction
+occurs  at  most  twice  a  year:  at   FORLM   or Rochester. 
+   On the other hand, not having any one to give guided  direction  to  your  
+thinking  can allow  original  thought  to take some interesting directions.
+How useful these thought  are  often can  not be determined by the originator.
+It's a little like the male complex where no baby is ever pretty - until it's 
+his own!  So it is with ideas.
+   They are much like the only child a male can  bare - and therefore look 
+pretty darn cute to dada.  It can  be  a  bit hard to be objective when there
+is that feeling of self investment in  the  thoughts. There  isn't  even a 
+mother on which to blame half the genes.
+
+ So with those thoughts, I begin:
+
+             Forth as a Stand Alone Operating System
+
+   Both the R65F11 and F68HC11 single chip  computers have   been   designed 
+as  stand  alone  computer systems.    They  use  Forth  as  their  operating
+system.    In  this  regard  they  follow  in  the tradition of micros like 
+the KIM-1,  SYM-1 and the AIM-65.    Each  of these had a buit in monitor to
+allow   user   interaction   with   the    system. Similarly, other systems 
+used BASIC as their power on  operating  system,  such  as the (if my memory
+serves) OSI, TRS-80 and Apple. ...
+   Something  to  keep  in  mind,  "operating system" hasn't always meant 
+"disk operating  system".  ...
+   As most of us have heard,  Forth is nearly its own operating system.  In 
+fact it is often stated that Forth is difficult to install  under an existing
+operating system because it is not well behaved. These  comments  really  have
+nothing  to do with Forth as a general language,  but come out of  the
+difficulty of doing blocks under another OS.
+
+Wil Baden
+Owner, Paleotaurus, Inc.
+Topic : 'Must Forth be Write-Only ?'
+March 1989
+
+<[Wil] PRESS19> Let's stop kidding ourselves. Forth deserves its reputation 
+as a "write-only: language. 99 percent of Forth programs published prove this.
+Until Forth improves its reputation, it will be SCORNED.
+   Tonight I want to investigate the evil forces that cause this and discuss 
+six necessary but insufficient rules for more readable programs. ...
+
+   1. The stack state must be given for every line.
+  
+   2. Formatting must show logical structure. ..
+  
+   3. Use short definitions, short lines, short phrases. 
+  
+   4. Don't mumble -- your program should pass your spelling checker.
+  
+   5. Mix upper and lower case -- all lower case is just as bad as all upper.
+  
+   6. Write comments in the English language.
+ 
+ Are there better rules? What else must be done? 
+  
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   If you are grinding your teeth and wishing you had participated in one of
+these terrific guest conferences, all is not lost. The immediacey is lost
+forever, but the words remain for you to capture and study at your leisure.
+They are posted in the GEnie Forth RoundTable Library, Library 1.
+  
+   If you would like to suggest an interesting guest, please leave me e-mail
+( posted to GARY-S ) on GEnie, ( gars on Wetware and the Well ,) or send me a
+note via U. S. mail. I also encourage anyone who feels he/she has a message to
+share to contact me via the above or FIG offices.
+
+

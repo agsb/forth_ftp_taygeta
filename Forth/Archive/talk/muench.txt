@@ -1,0 +1,190 @@
+
+
+
+ Minutes of the Special GEnie Forth RT Conference with Bill Muench,
+ president of Ontologic, and coauthor of eForth. Bill discussed eForth,
+ the .asm Forth kernel for the 90's.
+
+ Entire contents of this transcript copyright (c)
+ 1990 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 12/13/90   Time: 22:22EST
+
+Attendees:
+[[Bee] FIGGUEST]
+[[Dennis] D.RUFFER]
+[[Len] NMORGENSTERN]
+[GARY-S]
+[F.TEMPLE]
+[A.SQUASSABIA]
+
+Minutes:
+<GARY-S>   The GEnie Forth RoundTable is pleased to welcome this ...
+<GARY-S> evening's special guest, Bill Muench. Bill advises he was born ...
+<GARY-S> into a career as an ontologist early in 1948. He has few ...
+<GARY-S> other interests: hiking, bicycling, swimming, zen, tai chi, ..
+<GARY-S> acoustics of bats, birds and dolphins has taken him to ...
+<GARY-S> remote tropical islands and Alaska, dreams, time dialation, ..
+<GARY-S> the concept of chaos, what is memory and how forgetting and ...
+<GARY-S> mistakes help creativity, etc. Bill needed an extension of  ...
+<GARY-S> his perceptions. Forth and computers have allowed him to better ...
+<GARY-S> inteface with the world, more and more clues in pursuit of ...
+<GARY-S> ontology. He works as a consultant and builds custom Forth ...
+<GARY-S> systems. His company is called Ontologic. Tonight Bill is ...
+<GARY-S> here to discuss the .asm based Forth kernel of the 90's, ...
+<GARY-S> eForth, co-authored with Dr. C. H. Ting.
+<GARY-S>  .. .. .. .. .. ga Bill
+<GARY-S>
+
+<[Bee] FIGGUEST> hello
+<[Bee] FIGGUEST> eFORTH is derived from my commercial version bFORTH. Both are
+<[Bee] FIGGUEST> ANS FORTH standard subsets. I designed eFORTH for ease of
+<[Bee] FIGGUEST> implementing new systems, to easily fit in 8k bytes, to have a
+<[Bee] FIGGUEST> minimum of machine code and some debugging tools. My debug 
+<[Bee] FIGGUEST> tools are TX!, the transmit primitive, .S, DUMP and WORDS. I
+<[Bee] FIGGUEST> use a simple meta compiler rather than MASM, which means I 
+<[Bee] FIGGUEST> first write an assembler. That is how I 'get to know' the 
+<[Bee] FIGGUEST> processor. After the new system is running, I optimize it. 
+<[Bee] FIGGUEST> First loading the assembler, then new code words.
+<[Bee] FIGGUEST> When working, they are added to the kernel, repeat til done.
+<[Bee] FIGGUEST> I use my host file server, bHOST, to upload source text files
+<[Bee] FIGGUEST> to the target system. MASM was chosen by Ting as a vehicle to
+<[Bee] FIGGUEST> communicate eFORTH. It is commonly available, and on a widely 
+<[Bee] FIGGUEST> used platform, the PC. But, any assembler will do. Possible 
+<[Bee] FIGGUEST> alternatives are spreadsheets or wordprocessors with macros.
+<[Bee] FIGGUEST>
+<[Len] NMORGENSTERN> You have certainly succeded in your goals!...
+<[Len] NMORGENSTERN> Do you know how many CPU's that eForth has...
+<[Len] NMORGENSTERN> been programmed for?
+<[Bee] FIGGUEST> I know of only 3 at this time
+<[Bee] FIGGUEST> 8086 8051 and 68000 ga
+<[Frank] F.SERGEANT> how about an address (& phone#?) where you can be reached? 
+<[Bee] FIGGUEST> while I was thinking , also the 1802 has been done on eFORTH
+<[Bee] FIGGUEST> my address
+<[Bee] FIGGUEST> 3901 Branciforte Drive
+<[Bee] FIGGUEST> Santa Cruz, CA 95065
+<[Bee] FIGGUEST> phone
+<[Bee] FIGGUEST> 408 425 8740
+<[Bee] FIGGUEST>
+<[Len] NMORGENSTERN> Has eForth failed or presented any unexpected problems...
+<[Len] NMORGENSTERN> on any CPU on which it has been tried?
+<[Bee] FIGGUEST> there have been difficulties
+<[Bee] FIGGUEST> 24 bit 56000 and some problems with the 68000
+<[Bee] FIGGUEST> its clearing the concepts ga
+<[Frank] F.SERGEANT> I really like your UM+ and how you do all the math in it ..
+<[Frank] F.SERGEANT> I don't have much more about eforth, but I'm curious about 
+<[Frank] F.SERGEANT> your thoughts about the RTX & Harris's plans & VME's plans,
+                     etc?
+<[Bee] FIGGUEST> one step back to Len the real problem is been MASM not eFORTH
+<[Bee] FIGGUEST>
+<[Bee] FIGGUEST> the UM+ will be
+<[Bee] FIGGUEST> a machine instruction in a processor that John Rible is
+<[Bee] FIGGUEST> now desigining looks promicing
+<[Bee] FIGGUEST> what about Harris and VME Frank ??
+<GARY-S> frank - care to follow ?
+<[Frank] F.SERGEANT> any encouraging news? 
+<[Bee] FIGGUEST> At this time no bad news
+<[Bee] FIGGUEST> a local paper or maybe it is not so local
+<[Bee] FIGGUEST> EE Times printed a correction about the
+<[Bee] FIGGUEST> death of the RTX ga
+<GARY-S> Jack Woehr has announced availability of the eForth 8051 on the RCFB,..
+<GARY-S> where are the others to be found and why not consolidate...
+<GARY-S> the pool of ports to some place in common (like GEnie)
+<[Bee] FIGGUEST> Richard Haskell just finished the 68000 version
+<[Bee] FIGGUEST> and presented a paper at FORML
+<[Bee] FIGGUEST> I think it is just slow at happening but will be on GEnie
+<[Len] NMORGENSTERN> Have 31 kernel words been enough in every case...
+<[Len] NMORGENSTERN> that has been tried? Will it be enough for the future?
+<[Bee] FIGGUEST> that is enough for eFORTH but that is a very
+<[Bee] FIGGUEST> primitive system  what more is needed ga
+<GARY-S> Are you attempting to maintain some control...
+<GARY-S> over what gets called eForth, and by what means ?
+<[Bee] FIGGUEST> yes Ting and I hope to go over
+<[Bee] FIGGUEST> each new implementation before
+<[Bee] FIGGUEST> uploading or publishing them ga
+<GARY-S> please elaborate a bit
+<[Bee] FIGGUEST> I would like to make sure the colon definitions
+<[Bee] FIGGUEST> are not changed and the core of code words keeps the same
+<[Bee] FIGGUEST> I would like to see versions built on other
+<[Bee] FIGGUEST> assemblers and even some 'C' versions
+<[Bee] FIGGUEST> Gary S told me of a version compiled on word star not eFORTH
+<[Bee] FIGGUEST> but another forth
+<[Bee] FIGGUEST> Richard Haskell may be doing this now
+<[Bee] FIGGUEST> I would like almost exact copies ga
+<[Len] NMORGENSTERN> I am curious about a "Word Star" version. Can you ...
+<[Len] NMORGENSTERN> say more?
+<F.TEMPLE> is here.
+<[Bee] FIGGUEST> Gary maybe you should but
+<[Bee] FIGGUEST> I think the editor can replace sequences and create
+<[Bee] FIGGUEST> the forth tokens. Gary what did you see ?
+<GARY-S> one of the Timex Forths produced by HawgWild was..
+<GARY-S> written entirely in WordStar non-document with macros and then 
+<GARY-S> compiled you can do the same thing with any similar text editor, 
+<GARY-S> Word perfect, MS Word...
+<GARY-S> It's been a while, but I can assure you it wasn't that tough.
+<[Len] NMORGENSTERN> (interjection) That's amazing!
+<[Dennis] D.RUFFER> Have you had anyone looking into porting it to 
+<[Dennis] D.RUFFER> Windows or OS/2? 
+<[Bee] FIGGUEST> It seems to run quite well on windows
+<[Bee] FIGGUEST> I was just at John Rible's and it ran quite fast on the 386
+<[Dennis] D.RUFFER> John has it running?  Glad to hear it!...
+<[Dennis] D.RUFFER> Is he running it as a WIN app, or a DOS app?
+<[Bee] FIGGUEST> I do not know enough about windows to answer.
+<[Bee] FIGGUEST> he is planning to use it to test the designs of his new chip
+<[Len] NMORGENSTERN> My previous question was really academic...
+<[Len] NMORGENSTERN> I was interested in the 31 commands as a kind of...
+<[Len] NMORGENSTERN> "abstract data type" Has there been any other work...
+<[Len] NMORGENSTERN> on defining an absolute theoretical minimum word set?
+<[Bee] FIGGUEST> some others have had
+<[Bee] FIGGUEST> a smaller code word set
+<[Bee] FIGGUEST> they built AND OR XOR  all around NAND but this
+<[Bee] FIGGUEST> does not seem too useful
+<[Bee] FIGGUEST> and makes the colon defintions of those other
+<[Bee] FIGGUEST> words more difficult
+<[Bee] FIGGUEST> than the code versions ga
+<GARY-S> I maintain the reason figForth and F83 enjoyed their great success...
+<GARY-S> had a lot to do with portability of code across platforms..
+<GARY-S> I'm gald to see you trying to maintain the core kernel integrity..
+<GARY-S> is that the reason ?
+<[Bee] FIGGUEST> reason?
+<[Bee] FIGGUEST> it Is simplicity
+<A.SQUASSABIA> is here.
+<GARY-S> what do you ultimately see as eForth's ...
+<GARY-S> real mission, as a teaching tool, or as a programming tool ...
+<GARY-S> or ????...
+<[Bee] FIGGUEST> most definitely a teaching or learnimg tool
+<[Bee] FIGGUEST> it is too slow
+<[Bee] FIGGUEST> as a real programming tool I use it to bring up a new system
+<[Bee] FIGGUEST> the optimize. I have given it to perple who say
+<[Bee] FIGGUEST> it is the first time they understood the guts of forth
+<[Dennis] D.RUFFER> do you have any other tools that can load on top 
+<[Dennis] D.RUFFER> of generic eForth?
+<[Bee] FIGGUEST> yes
+<[Bee] FIGGUEST> I have assemblers I use my host program to upload
+<[Bee] FIGGUEST> anything . I have bench marks case statement
+<[Bee] FIGGUEST> block tools and even a 260 byte long
+<[Bee] FIGGUEST> full screen block editor ga
+<GARY-S> can these be made available here in the library ?
+<[Bee] FIGGUEST> possibly
+<[Bee] FIGGUEST> when we get some more systems
+<[Bee] FIGGUEST> I suspect the tools will be also sent
+<[Bee] FIGGUEST> I hope some one does the word processor version of eFORTH
+<GARY-S> closing comments please bill
+<[Bee] FIGGUEST> thank you
+<[Bee] FIGGUEST> I hope any one using or reading eFORTH will post
+<[Bee] FIGGUEST> comments There is a lot to learn
+<[Bee] FIGGUEST> about a minimal processor
+<[Bee] FIGGUEST> thank You again
+<GARY-S> Category 1, Topic 36 is set up...
+<GARY-S> specifically for discussion of eForth..
+<GARY-S> Bill, on behalf of the GEnie Forth ...
+<GARY-S> RoundTable, Thank you for an interesting evening.
+<GARY-S>
+<GARY-S> This conference is officially closed.
+<[Len] NMORGENSTERN> Thank you Bill. Congratulations on eForth...
+<[Len] NMORGENSTERN> It is a real tour-de-force.
+=== End of Steno notes. ===
+
+

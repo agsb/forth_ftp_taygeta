@@ -1,0 +1,253 @@
+
+
+
+The Minutes of the FIGGY BAR RT Conference
+  THursday 26 April 1990   10:42pm
+  
+  The question of the night: "What "ONE" feature would you want to be certain
+  the ANS committee includes in the standard ?". Most agreed (trans)portable
+  high level code MUST be included. There are insundry side discussions,
+  including locals, control structures, memory allocation, NOT (again)...
+
+Attendees:
+[GARY-S]
+[[Robert] R.BERKEY]
+[[Kevin] APPERT]
+[[Doug] D.PHILIPS3]
+[[Wil] W.BADEN1]
+[[jax@well] FIGCHAPTERS]
+
+Minutes:
+<R.BERKEY> is here.
+<GARY-S> did you see the notice ?
+<[Robert] R.BERKEY> Just ONE feature? <grin>
+<GARY-S> Just one
+<GARY-S> Make it a VERY GOOD one
+<D.PHILIPS3> is here.
+<[Robert] R.BERKEY> Well, there's usefulness, portability, and correctness.
+<GARY-S> That is NOT just "ONE"
+<APPERT> is here.
+<GARY-S> Doug, Kevin - did you both read the notice ?
+<[Doug] D.PHILIPS3> Affirmative
+<GARY-S> Well.......
+<[Doug] D.PHILIPS3> I don't know.  I haven't gotten the time to read BASIS11 
+yet (blush).
+<[Kevin] APPERT> nope, scrolled right past.  what did it say?
+<GARY-S> Tonight's question is " What one (only one) feature do you want the 
+ANS Forth committee to be certain is part of the standard ?"
+<GARY-S> Doug - the question has zero to do with the BASIS
+<GARY-S> and yet everything
+<[Doug] D.PHILIPS3> I thought you might get metaphysical on me.
+<GARY-S> I took my Ghandi pill
+<GARY-S> with a Jung chaser
+<[Doug] D.PHILIPS3> It would have to be something important and primitive.  
+Either Wil's
+<[Doug] D.PHILIPS3> control stuff, or maybe, if I understood it well enough, 
+something to do
+<[Doug] D.PHILIPS3> with dictionaries/vocabularies.
+<GARY-S> I'll get this rolling - I want transportability across architecture 
+and implementation
+<[Wil] W.BADEN1> is here.
+<[Doug] D.PHILIPS3> Transportability of what?
+<GARY-S> If I write foo-bar in my implementation on my machine you should be 
+able to port it, unaltered to yours. That's what.
+<GARY-S> As long as it is written in high level
+<GARY-S> No prelude code, etc
+<[Doug] D.PHILIPS3> and if foo-bar uses some external resources?  File names, 
+for example, will not be transportable.  Not what you mean tho, right?
+<GARY-S> Thoughts Wil, on the question ???
+<[Wil] W.BADEN1> Thinking about it.
+<[Wil] W.BADEN1> Ok.  I *do* want the classical control structures to be 
+recognized.
+<[Doug] D.PHILIPS3> Gary, your answer seems to be avoiding the question.  What 
+"one thing" is transportability?
+<GARY-S> As things now stand several implementations claiming to be 83-Standard 
+will not accept each others high-level code. That sux Elephants
+<[Wil] W.BADEN1> There are some things that I don't what included.  E.g. locals.
+<[Doug] D.PHILIPS3> Anything can claim to be 83-standard.  Is the standard too 
+loose?
+<[Doug] D.PHILIPS3> Ah, a better question:  What wart would you like to see 
+excluded from the standard!?!? :-)
+<GARY-S> have I lost kevin and Robert ?
+<[Robert] R.BERKEY> Lost in thought.
+<[Kevin] APPERT> still here, nothing cognent to say
+<GARY-S> Wil said no locals
+<GARY-S> Why no locals, Wil ?
+<[Wil] W.BADEN1> Locals make Forth almost as powerful as integer C.
+<GARY-S> tongue in cheek, no doubt
+<[Doug] D.PHILIPS3> Also standard should concentrate on portable core.  Level 
+extensions out or at least in the extended part.
+<[Wil] W.BADEN1> powerful --> expressive.
+<[Doug] D.PHILIPS3> Level -> leave.
+<[Robert] R.BERKEY> A wart I'd like to see out is variables of all flavors.
+<[Wil] W.BADEN1> Forth words with locals give a very small part of the 
+expressiveness of integer C.
+<GARY-S> There are an awful lot of 'implementation dependent' comments 
+appearing in the BASIS as it nears some degree of maturity. That smacks of 
+Babble
+<[Doug] D.PHILIPS3> In 5 years (give take) we'll know better what extensions 
+are appropriate and coherent.
+<[Doug] D.PHILIPS3> Why is Nov. 1990 chosen as target date?  Shouldn't target 
+be "when its done?"
+<[Wil] W.BADEN1> Forth is better than any other language for certain 
+applications.
+<GARY-S> Robert and Wil are you both advocating a Pascal like rigidity ?
+<[Kevin] APPERT> there comes a time when you must shoot the engineers and begin 
+production
+<[Wil] W.BADEN1> One of the reasons that it is better in
+<[Wil] W.BADEN1> those areas is its economy.
+<[Robert] R.BERKEY> Part of that is motivational hype to get something done...
+<[Robert] R.BERKEY> It's been said that it was six months away since about the 
+first meeting.
+<[Doug] D.PHILIPS3> Gotcha.
+<[Robert] R.BERKEY> But there's also the exhaustion factor.
+<[Kevin] APPERT> projects without deadlines take forever
+<[Robert] R.BERKEY> Many of the world's compromises occur after the 
+participants get tired.
+<[Wil] W.BADEN1> A big lack in Forth (to many) is data structures.
+<[Wil] W.BADEN1> In those applications where Forth has been successful,
+<[Wil] W.BADEN1> the data structures were minimal (what can you do with 256 
+bytes of RAM?),
+<[Wil] W.BADEN1> or they were specially tailored.
+<[Doug] D.PHILIPS3> How do deadlines fit into ANSI's consensus requirements?
+<[Doug] D.PHILIPS3> Robert, I agree, but "getting tired" doesn't happen on 
+deadlines!
+<GARY-S> ANSI says there must be review and all comments must be addressed
+<[Robert] R.BERKEY> ANSI's position is "until it gets done".
+<[Robert] R.BERKEY> That's actually one of the major differences between X3.J14 
+and FST.
+<[Doug] D.PHILIPS3> Wil, do you see data structures and "memory management/alloc
+ators" as related or independant?
+<GARY-S> malloc in Forth, Doug ?
+<[Doug] D.PHILIPS3> Well, pardon my "C", but I don't see how dynamic memory 
+allocation fits in with
+<[Wil] W.BADEN1> No.  Not unless an industry-wide standard comes.
+<[Doug] D.PHILIPS3> HERE and ALLOT.  No way to do heap management that way, and 
+heap management seems useful.
+<[Wil] W.BADEN1> Where Forth will always be important is where there is not 
+much memory available.
+<[Doug] D.PHILIPS3> That is, HERE and ALLOT are great for playing with 
+dictionaries, not so great for general purpose (reusable/tunable, whatever) 
+memory allocation mechanisms.
+<[Doug] D.PHILIPS3> Wil, that means that Forth will always be important in 
+systems where significant state processing is unimportant.
+<[Doug] D.PHILIPS3> Or have I missed something?
+<[Wil] W.BADEN1> You may be right.
+<[Wil] W.BADEN1> The Forth engines will be important for certain computational 
+applications.
+<[Doug] D.PHILIPS3> I would like to use Forth, but don't have applications in 
+that domain, Wil.
+<[Robert] R.BERKEY> As I see it a major advantage of Forth is access to the 
+compiler.
+<[Doug] D.PHILIPS3> Robert, that does seem a win.
+<[Robert] R.BERKEY> What other language has that?
+<[Wil] W.BADEN1> But unless you have a Forth engine, you will pay a time 
+penalty for *any* kind of threaded or tagged code.
+<[Doug] D.PHILIPS3> Maybe neural nets/orrery's would also be good app.
+<[Robert] R.BERKEY> In my target application I can tell you which words were...
+<[Wil] W.BADEN1> Orrery?  You mean the astronomy tool?
+<[Doug] D.PHILIPS3> Wil with ever increasing clock speeds there will be ever 
+increasing demands
+<[Doug] D.PHILIPS3> Yeah.
+<[Robert] R.BERKEY> created but never used thereafter.
+<[Doug] D.PHILIPS3> Electronic version.
+<GARY-S> There have been sevral attempts at a viable Forth neural net, but so 
+far I don't see any break-through creations
+<[Wil] W.BADEN1> Forth machine language is a lousy language for implementing 
+profane languages.
+<[Doug] D.PHILIPS3> I don't see how Forth/C/XYZ would make any difference.  
+Just seems a good place for a small fast CPU with not much memory.
+<[Doug] D.PHILIPS3> A forth engine with some memory, maybe a harris board?  
+Details not important.
+<[Wil] W.BADEN1> Forth does not have the primitive operations to implement
+<[Wil] W.BADEN1> the data structures implicit in C or Pascal.
+<GARY-S> Real neural nets (distributed parallel type) take a lot of busy memory 
+from what I've seen
+<[Wil] W.BADEN1> You want something like double indexed single instruction 
+words.
+<[Doug] D.PHILIPS3> Gary, getting back to your original point, to get good 
+portability you need high level words defined in terms of low level words,
+not in terms of low level machine details, right?  A layered approach?
+<GARY-S> true
+<[Wil] W.BADEN1> The SUN SPARC really moves along, but Mitch was not able to 
+take advantage of it.
+<[Wil] W.BADEN1> Harris's C crawled in comparison with Forth ...
+<[Doug] D.PHILIPS3> Gary, I agree.  It is very very very important to get the 
+lower levels right or the brain damage will seep up through to the higher
+levels.
+<[Wil] W.BADEN1> because of Forth's poor platform for implementing C.
+<GARY-S> C doesn't do so good with Forth, either
+<[Wil] W.BADEN1> Quite so.
+<GARY-S> Interestingly, for a while Mitch seemed determined to implement a 
+Scheme approach in Forth
+<[Doug] D.PHILIPS3> Wil, and you don't expect Lisp/Scheme to fly as fast on 
+conventional hardware as on tagged architectures, nor C the other way around,
+right?
+<[Wil] W.BADEN1> Right.
+<[Wil] W.BADEN1> This means "Forth is Forever".
+<[Doug] D.PHILIPS3> BUT, given the relative levels of complexities of
+<[Doug] D.PHILIPS3> the various virtuals machines, which languages are easier 
+to provide some level
+<[Doug] D.PHILIPS3> of support for?
+<[Doug] D.PHILIPS3> Forth is simplicity.  Even if it doesn't fly, it has to be 
+easier to do Forth on top of C than the other way around, right?
+<[Robert] R.BERKEY> True.
+<GARY-S> This may harken back to your observation, Wil, that Forth was the 
+path-finder, never the homesteader
+<[Robert] R.BERKEY> But is it then Forth?
+<[Robert] R.BERKEY> (If it is limited by the underlying C?)
+<[Doug] D.PHILIPS3> And what other language is better at integrating assembly 
+code, which is what you must have for speed critical things?
+<[Wil] W.BADEN1> Simplicity is NOT a virtue.  It is a begetter of virtues.
+<[Wil] W.BADEN1> I think that last week's formal RT was right on the button.
+<GARY-S> I was sure glad to see that take the turns it did
+<[Doug] D.PHILIPS3> Wil, which is the greater good, that which is good in 
+itself, or that which is good in itself and which is also good for other 
+purposes?
+(Plato/Socrates vs. Aristotle?)
+<[Robert] R.BERKEY> Yes, when it comes to custom hardware environments, what 
+else but Forth?
+<GARY-S> Don't give advice. Socrates did, and they poisoned him !
+<[Wil] W.BADEN1> Plato's reality is divorced from reality; Aristotle is a party 
+hack.
+<[Robert] R.BERKEY> Forth excels at prototyping new hardware.
+<[Wil] W.BADEN1> Not prototyping --- testing.
+<[Doug] D.PHILIPS3> So, what is the driving force behind the standard, do forth 
+right for embedded/small/realtime systems, or make it a generally accessible
+language? (Or some other alternative?)
+<[Wil] W.BADEN1> Portability.
+<GARY-S> I agree, Wil. Portability is a necessity... nearly lost
+<GARY-S> You may have hit on a succinct problem. There seems to be some 
+seperation of agendas.
+<[Robert] R.BERKEY> Ok, Wil, your point is that Tittsler was using Forth for 
+testing hardware.
+<[Doug] D.PHILIPS3> Should there be "layers" to the standard or not?
+<[Robert] R.BERKEY> The prototyping I'm thinking of concerns the software.  
+Same track?
+<[Wil] W.BADEN1> Forth's Big Time was when coputers were small and skinny.
+<[Doug] D.PHILIPS3> Forth0 - only words for 3K byte single chip systems, Forth1 
+- for 64K machines with disk drives, Forth2 -... Forth<n> - runs on hosted
+operating sytems using simulated blocks with access to tons-o-memory and 
+real-file systems?
+<[Wil] W.BADEN1> Sure, Robert.  Forth allows you to tweak the hardware.
+<[Doug] D.PHILIPS3> (Pick your favorite dividing lines, these are just for 
+illustration).
+<[Wil] W.BADEN1> You can find out empirically just what it does.
+<GARY-S> Beating on ports is something Forth does excell at
+<GARY-S> There is limited demand for this though - in the marketplace
+<[Wil] W.BADEN1> Forth will not be appropriate for Forth<n> machinges.
+<[Doug] D.PHILIPS3> So Forth's premiere market (small machines) precludes 
+adding in stuff for general accessibility?
+<GARY-S> The simple truth is, Forth is often the first language mounted on new 
+hardware
+<GARY-S> That does not mean it rolls out the door with the final product
+<[Wil] W.BADEN1> There are limits to comprehension. "The magical number 7, 
+plus/minus 2."
+<[Doug] D.PHILIPS3> Gary, so what, how does that relate to the standard?  Any 
+threaded Forth like language could/would be first anyway?  No way is some
+standard for Forth going to stop that kind of thing!
+<[Wil] W.BADEN1> Bigger systems can only be understood by dividing and 
+conquering by packaging.
+<[Robert] R.BERKEY> Ok, there are limits to comprehension. ...
+<[Doug] D.PHILIPS3> But not layering :-) (same thing in my opinion, but oh well)
+

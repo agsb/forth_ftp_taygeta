@@ -1,0 +1,141 @@
+                    /=============================\
+                    |                             |
+                    | W P F O R T H   Version 1.0 |
+                    |                             |
+                    \=============================/
+
+                 Author    : Albert Chan
+                 E-mail    : ar713@freenet.carleton.ca
+                 Copyright : January 1994
+
+========================================================================
+
+                        I n t r o d u c t i o n
+
+WPFORTH Version 1.0 is a prototype of Typographical Programming System
+built around WordPerfect Version 5.x and Mr. Frank C. Sergeant's Pygmy
+Forth Version 1.4.  WPFORTH is a public domain product, but it is
+copyrighted.  That means you can freely distribute WPFORTH to others
+provided that NO modification to WPFORTH is made, NO file is missing,
+and NO charge is involved.
+
+However, Pygmy Forth is not in public domain, it is a shareware.  If you
+want to build WPFORTH yourself from the included source code, you'll
+need a copy of Pygmy FORTH Version 1.4.  You are required to register
+your Pygmy FORTH copy with Mr. Sergeant if you want to use it on a
+regular basis.  For more details about Pygmy Forth, contact Mr. Sergeant
+at the following address:
+
+                  Frank C. Sergeant 
+                  809 W. San Antonio St. 
+                  San Marcos, Texas 78666
+
+He can also be reached via bitnet as fs07675@swtexas.
+
+========================================================================
+
+                   F i l e s   D e s c r i p t i o n
+
+The archive contains several files, they are:
+
+        WPFORTH.DBL - Definitions of double number operations
+        WPFORTH.DEF - Definitions of defining words
+        WPFORTH.EXE - Executable file
+        WPFORTH.F   - Main WPFORTH routine
+        WPFORTH.FIL - Definitions of file operations
+        WPFORTH.FON - Definitions to handle fonts
+        WPFORTH.LOD - Definitions to load files
+        WPFORTH.PFX - Definitions to handle WordPerfect prefix
+        WPFORTH.SAV - Definitions of save operations
+        WPFORTH.UTL - Definitions of some utility words
+        WPFORTH.VAR - Definitions of all variables and constants used
+        WPFORTH.WPF - Definitions to handle WordPerfect functions
+
+========================================================================
+
+              I n s t a l l a t i o n   a n d   U s a g e
+
+========================================================================
+
+Notes : in this section, <ENTER> means to press the <ENTER> or <RETURN>
+        Key, not to type the word "<ENTER>"
+
+To use WPFORTH, you need an IBM PC or compatible with at least 256K
+bytes of memory after DOS and all TSR's are loaded.  The operating
+system must be MSDOS/PCDOS Version 2.0 or above.
+
+To install WPFORTH, you just have to create a directory and copy all the
+files into that directory.
+
+To run WPFORTH, change to the WPFORTH directory and at the DOS prompt,
+enter the following command:
+
+        C:\WPFORTH>WPFORTH <ENTER>
+
+To create WPFORTH from the source, you need a copy of Pygmy Forth
+installed in the same directory, at Pygmy's ok prompt, enter the
+following commands:
+
+        ok INCLUDE WPFORTH.F <ENTER>
+        ok SAVE WPFORTH.EXE <ENTER>
+        ok BYE <ENTER>
+
+Note that Pygmy FORTH is case sensitive, so you must enter the above
+commands as shown.
+
+For information on how to install Pygmy Forth, refer to the
+documentation that comes with Pygmy.
+
+========================================================================
+
+                    I f   Y o u   N e e d   H e l p
+
+Basically, no technical support will be provided.  The source code is
+included in the system so please feel free to modify it for your OWN use
+(You cannot distribute modified WPFORTH without prior written consent
+from the author).  However, if you really need help, the author can be
+reached through the following internal address:
+
+        ar713@freenet.carleton.ca
+
+========================================================================
+
+                          D I S C L A I M E R
+
+NO WARRANTIES.  THE AUTHOR DOES NOT WARRANT THAT THE SYSTEM IS ERROR
+FREE.  I DISCLAIM ALL WARRANTIES WITH RESPECT TO THE SOFTWARE, EITHER
+EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+THIRD PARTY RIGHTS.
+
+NO LIABILITY FOR CONSEQUENTIAL DAMAGES.  IN NO EVENT SHALL THE AUTHOR BE
+LIABLE FOR CONSEQUENTIAL, INCIDENTAL OR INDIRECT DAMAGES OF ANY KIND
+ARISING OUT OF THE DELIVERY, PERFORMANCE OR USE OF THE SOFTWARE, EVEN IF
+THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  IN NO
+EVENT WILL THE AUTHOR'S LIABILITY FOR ANY CLAIM, WHETHER IN CONTRACT,
+TORT OR ANY OTHER THEORY OF LIABILITY, EXCEED THE LICENSE FEE PAID TO
+THE AUTHOR (i.e. $0.00).
+
+========================================================================
+
+                     A C K N O W L E D G E M E N T
+
+I must first thank my supervisor, Dr. N. Solntseff at McMaster
+University, Hamilton, Ontario.  He gave me great assistance in learning
+FORTH and providing opinions about this project.  I also have to thank
+Mr. Sergeant to let me use his Pygmy FORTH as the base of WPFORTH.
+Finally, thanks go to WordPerfect Corporation which provide me the
+necessary information about the internal structure of a WordPerfect 5.x
+document.
+
+========================================================================
+
+             C O P Y R I G H T   &   T R A D E   M A R K S
+
+IBM PC is a registered trademark of IBM Corporation.
+MSDOS is a registered trademark of Microsoft Corporation.
+PCDOS is a registered trademark of IBM Corporation.
+Pygmy Forth is a shareware copyrighted by Mr. Frank C. Sergeant.
+WordPerfect is a registered trademark of WordPerfect Corporation.
+
+============================= END OF FILE ==============================

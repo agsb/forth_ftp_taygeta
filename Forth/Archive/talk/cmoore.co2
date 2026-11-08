@@ -1,0 +1,409 @@
+
+TRANSCRIPT OF CSI FORTH FORUM CONFERENCE 
+WITH CHARLES MOORE -- 1/16/86
+(Moderated by Don Colburn, CSI)
+(edited for readability only)
+
+(Don Colburn) Good Evening, and welcome to the CSI Forth
+Net.  I'm Don Colburn, and I'll be your moderator. We
+come to you tonight live from the hills above Silicon
+Valley, south of San Francisco, California.
+
+    Tonight, I am very pleased to welcome Charles Moore,
+the inventor of FORTH, as our guest.  Topics for this
+evening include general questions drawing on Chuck's
+unique perspective on the relationship between men and
+computers, as well as specific questions about the new
+native Forth microprocessor that he has designed for
+NOVIX.     
+
+    Before we get started, I'd like to review how this 
+conference will be conducted.  As Moderator, I'll begin
+by  asking for questions from the audience. If you have a
+question, type a question mark followed by a carrige
+return on your terminal.  When you enter the question
+mark on your terminal, I'll see it, along with your name,
+here on my screen. I'll note your name, from the question
+marks that were received here.  By jotting down your
+question before asking it, you can help the conference
+run a lot more smoothly.   If this is your first
+conference on Compuserve, relax, and watch the traffic
+for a few minutes. After you've seen a couple of
+questions and answers go by, you'll get the hang of it.
+
+    Let's get started.  Does anyone have a question for
+Chuck? 
+
+(Scott S.) Any comments on the Delta board from Software
+Composers ( I understand you won't be making the Gamma
+board) and any comments on  CMForth that is on the Delta
+board?  ( CMforth is Charles Moore forth) 
+
+(Chuck Moore) Delta board is a bargain.  Made in Taiwan for
+a price no one can beat. 10 times the speed of any PC.
+
+(Scott S.) Heard that the CMforth was very interesting
+and that you had simplified the Novix compiler. It was
+recommended reading to everyone whether they bought a
+Novix or not  ( Last Silicon Valley Fig )
+
+(Chuck) cmFORTH is the absolute simplest system I can
+conceive. On the other hand, I have a much simpler system
+in the wings. It does well illustrate the NOVIX chip.
+
+(Dave Sibley) For those of us who are ignorant, what's a
+delta board?
+
+(Chuck) A 4"x6" PC board with the NOVIX chip and 10K
+words of memory.  Fully stuffed and tested (?) it sells
+for ~$900. It talks to a host computer over a serial line
+and runs FORTH fast.
+
+(Dave Sibley) Sounds like it's meant as a controller
+board.  Is that a reasonable assumption?
+
+(Chuck) The key feature is that it can re-compile itself.
+Thus it is a complete development system for NOVIX
+applications.
+
+(Scott S.) I can upload a text file with the specs that
+they hand out.  I think they had it running directly off
+of a terminal.  
+
+(Dave Sibley) I think we'd like to have that, Scott.
+Actually, that was not the original question I had in
+mind (obviously).  But maybe we should give others a
+chance.  
+
+(Chuck) A little more on the Delta Board.  Parts count is
+minimal, 8 memory chips, 4MHz oscillator and 74138. I
+apologize for the 138, it won't be needed soon. Novix
+chip accesses 64 bits of memory every cycle (at best).
+Selected chips can run at 10MHz (?). 4 busses are taken
+off board for expansion.   20 MHz video output takes 4
+chips, input 2 more. 
+
+(George Morison) What is your opinion of 'fast' forths
+with for instance, 16 threads that have the feel of
+packaged languages as opposed to simpler Fig-types?
+
+(Chuck) The chip is so fast that compile is
+instantaneous. It recompiles itself over a 9600-baud line
+in 30 sec (30 blocks). This with 2 threads. But, to
+answer question, compile time is important - The style of
+FORTH code depends upon reaction time. Slow compiles lead
+to vastly different attitudes. 
+
+(David Butler) Back to software implementations of Forth
+... Is it time for a new standard?  Current standards
+(79, 83) don't know 32 bit, no files, primitive I/O, etc. 
+What's the future for Forth?  Are we ready for the
+mainstream?  
+
+(Chuck) Standards are a red flag.  If I had the slightest
+concern for them, FORTH nor chip could not be.  Standards
+are for communication among humans, not computers. Files,
+I/O are horribly hardware dependent. Blocks are
+universal. Chip I/O is strongly application dependent.
+For every problem are many solutions. Why choose one? 
+
+(David Butler) But we all seem to re-invent the wheel,
+number input, for  example.  Maybe just a standard user
+interface of some kind.  
+
+(Chuck) The wheel has been re-invented many times. It
+will be. To keep it simple, the overhead must be brutally
+pruned. I do this constantly, and I regret the
+inefficiency. But the most standard language must be Ada,
+and its efficiency is zero. 
+
+(David Butler) Is it important for Forth to become more
+popular, or will it always be an "elitist" (best
+possible light) language for power-programmers? 
+
+(Chuck) I've said I don't object to FORTH being elitist.
+The widest possible acceptance would be nice, but not at
+a compromise of principle. 
+
+(John Baxter) Chuck, as a reasonably long-time Forth user
+(1979) let me say "Thanks for the language!!!"  By the
+way, if Ada ever truly is "The Standard Language", I'm
+going sailing! 
+
+(Don Colburn) Save me a berth!   
+
+( Kiyoshi Yoneda ) I'm facing a problem of implementing a
+three stack threaded language of my own to a fast
+hardware, either Novix or Metaforth NF16LP. The language
+is for discrete event simulation and floating point
+number crunching. I have difficulty choosing between
+Novix and Meta; both are fast enough. What would you
+consider to be a decisive factor? 
+
+(Chuck) NOVIX exists!  A third stack is easy to emulate
+with NOVIX. Floating point should involve a co-processor
+(in both cases).
+
+(Kiyoshi Yoneda) Metaforth has floating.  Maybe not HW.
+
+(Chuck) They have board, to date.  Chip implementation of
+floating-point is not cost-effective. But being FORTH,
+they are interesting alternative. What is interest in
+FORTH in Japan?
+
+(Kiyoshi Yoneda) Not very popular. But I've seen a FORTH
+coprocessor to work with 68000 made in Kyoto. Several
+books exist to teach how to program in FORTH.
+
+(Chuck) Interesting. 
+
+(Scott S.) When will Novix make the next batch of the
+current chip, when will the 'next' generation chip be,
+how are the interrupt problems coming?
+
+(Chuck) I heard today that 59 are in test. 441 will
+follow shortly.  How can we sell them?
+
+(Scott S.) I think the Delta board is a good fist step. 
+Would like to see an  I/O type system with interupts.
+
+(Chuck) Interrupts are usable, if you expect them. ie, as
+sychronizing signals. Next chip is under consideration.
+Many changes are possible, but desirable? Say 6 months.
+Buy current chip!
+
+(Scott S.) OK I will!  Just one more quick question. 
+Heard that a company was connecting the Weitek math chips
+and can you tell us what some companies are planning to
+do with the chips themselves.
+
+(Chuck) Attractive for telecommunications, digital audio,
+process control. Attaching math chips, or any chips, very
+easy. So easy that on-chip capability questionable. But
+no names at present.
+
+(Jim Murphy) Concerning popularity, why not invade
+acadamia a la Pascal?
+
+(Chuck) Would love to.  But, historically, universities
+haven't had the right hardware.  Now we can provide
+(give) computers and situation might change.  More
+achedemics are discovering Forth.
+
+(Jim Murphy) Good. We need to convince them of Forth's
+special capabilities
+
+(Kiyoshi Yoneda) What is the reason for not making FORTH
+syntax completely postfix?
+
+(Chuck) Clarify.  Forth is postfix, expect for : which is
+necessary.
+
+(Kiyoshi Yoneda) What about 'word' , 'forget' ,... ?
+
+(Chuck) I think strings must have prefix to avoid
+confusion.  But I welcome suggestions.
+
+(Kiyoshi Yoneda) STOIC employs a single quote before
+strings.
+
+(Chuck) This leads to lots of useless quotes.
+
+(Kiyoshi Yoneda) But the analyzer becomes simpler, it
+seems.
+
+(Chuck) No. The simple convention that strings are
+postfix saves lots of effort. Actually I'm not a purist. 
+Use what works. I do equate simplicity with minimum
+character count.
+
+(Kiyoshi Yoneda) I see.  But uniformity leads to less
+confusion on user's part.  Thank you.
+
+(Chuck) Confusion exists once, upon learing. Cost exists
+forever.
+
+(Ward) Do you expect to see a Novix development board
+more within the  price range of the hobbyist, and will
+there be support for that sector? $900 is a bit steep for
+the average hacker. (that would buy quite a few 65F12's
+for example).
+
+(Chuck) Sweet words. I wish my colleagues could hear
+them.  The Gamma board was priced at $400 as a kit. That
+is not profitable. It may be available in some form, from
+some one. The problem is support.   No one can affort
+Heath-Kit type documentation at that price. But a board,
+chip and proms could be available, if demand.
+
+(Ward) That would be welcomed by many, I think.  On
+another topic, what is your opinion of highly
+machine-dependent Forths (like MacForth), which add many
+useful extensions, at the expense(?) of portability?
+
+(Chuck) I don't value portability. I've seen very few
+examples of applications being ported when they couldn't
+have been edited. Give me the central idea of the
+application and I'll embed it in my own code.
+
+(Kiyoshi Yoneda) Contact address or telex for Delta?
+
+(Don Colburn)  Software Composers (Delta Card) Phone #
+(415)327-6891.
+
+(Michael Brady) Speaking of code - are you still writing
+one to two line words?
+
+(Chuck) More than ever. The factoring of an application
+leads to the development of a language. The language is
+more important than the application and rarely receives
+the appreciation it deserves. A concept that cannot be
+expressed tersely is a badly understood concept.
+
+(Michael Brady) Words to the wise (who will listen) -
+thank you.
+
+(Dave Sibley) As an academic, I'm interested in FORTH
+becoming more popular at universities.  But I wonder why
+you think free hardware would help?  We get more free
+stuff than we know what to do with, from tax write-offs.
+
+(Chuck) Free is not sufficient, but necessary. 
+Universities, in my experience, have no money to spend
+for hardware or software.  But they have graduate
+students. To expect a graduate student to construct a
+Forth system is asking a lot. To ask him to assemble a
+kit, one or two days, may be reasonable,  if he gets
+something he couldn't buy.  I wish he would be motivated
+to try Forth without  encouragement, but he hasn't been.
+
+(Dave Sibley) I think graduate students DO try FORTH --
+and everything else, too.  But that won't make it
+popular.  The language taught to undergrads, where the
+big numbers are, is Pascal, because of its "save the
+programmer from himself" philosophy, which makes teaching
+easier. Comments?
+
+(Chuck) Wow!  Pascal, in the world I encounter, is a joke.
+FORTRAN is the language of choice. Not choice, necessity.
+This shocks me to the bone. I thought Fortran was passe'. 
+The programmer needs protection or rather, the system
+needs protection on a multi-programmed computer, but that
+situation no longer obtains.  The joy of crashing the
+system must be experienced to be  appreciated. Forth
+should be taught to junior high school students before
+they learn algegra.
+
+(Dave Sibley) Yes, engineering students still get FORTRAN
+instead of Pascal.  But here all Comp Sci students get
+Pascal.  Used to be PL/C until recently.
+
+(Scott S.) A group is putting PASCAL on the Novix.  I've
+heard that there is also a group putting C on the Novix. 
+Do you know about this?
+
+(Chuck) I know of C, NOVIX is involved. Other languages
+(LIST, COBOL, BASIC) are being addressed. I question the
+value. The latest insight into the chip's architecture
+leads me to think that Forth is quintesentially right.
+The other languages can't come within an order of
+magnitude of its performance - for intrisic reasons. 
+
+(Scott S.) Would be worth it just to see their
+expression! ha.  Especially since  some Forths on Unix
+machines are written in C.  Any thoughts on Artificial
+Intelligence?
+
+(Chuck) AI is well suited to Forth. Not popularly. I'd
+like to see AI solve a problem. (Locomotives not
+counted.) I think I can recognize connected speech with
+the chip, without AI.
+
+(John Baxter) Before I found Forth, I was already using
+HP-25, etc.  So...I was prepared for stack/postfix..
+Wonder how HP vs TI experience corelates with acceptance
+vs rejection of Forth upon trial. [I STILL can't use a TI
+calculator effectively!  !]
+
+(Chuck) We have interest from both TI and HP.  My son
+can't use TI either.
+
+(David Butler) One problem is people are getting
+unsupported Forths for free, then being disappointed by
+the lack of support! (Or just bewildered by how strange
+Forth looks without a manual). This initial "bad"
+encounter with Forth may have done much  to hamper
+Forth's growth.
+
+(Chuck) That's the problem with ground-swell growth.  If
+I sell a Gamma-board, it will be without support. Not
+because I don't appreciate the need for support, but
+because I can't provide it. Is an unsupported product
+better than nothing? Even if I direct it at a
+knowledgable audience? Even if no choice?  You may be
+right, but what are the alternatives?
+
+(David Butler) Thats the issue.  Forth seeks knowledgable
+audience, but some need initial hand holding before they
+see the light.
+
+(Kiyoshi Yoneda) Japan is potentially a big FORTH market,
+because our grammer is exactly postfix.
+
+(Chuck) Funny how great minds think alike. Your comment
+concisely summarized our local discussion here. I see
+Japan as a great competitor. I don't wish to aid her. But
+she would be well advised to pay attention to Forth.
+Prolog will fail. If 5th generation depends on Prolog, it
+will fail. Is that good?
+
+(Kiyoshi Yoneda) I agree.  Prolog will fail. The 5th is
+falling apart. As for the aid, I think you've already
+helped us a lot.
+
+(Don Colburn) Perhaps we would trade Lawyers for Forth,
+but you would have to take both.
+
+(Michael Brady) do you think the 5th generation could be
+done using 4th ?
+
+(Chuck) Oy!  I think Forth is the only possiblity.  Even
+stronger, Forth is the only SDI possibility. The chance
+of convincing them of that is zero. So pray for
+disarmament.
+
+(Michael Brady) how many delta boards did you say you had
+- build a prototype!
+
+(Chuck) Delta boards are similar to Gamma boards. Gamma
+boards nest. That is, they plug into each other. Sure,
+could construct anything, but who would notice?
+
+(Michael Brady) A working prototype could be sold (or
+traded for lawyers) to the Japanese?
+
+(Chuck) Good point, and an interesting closing thought.
+Oops, go ahead JM, you are the last.
+
+(Jim Murphy) I suggest that the best way to convince the
+newcomer of Forth's power is to hold some kind of
+contest. Lock several programers in a closet with a
+problem  and see who solves it first.  I think that Forth
+programmer would win by a landslide. Comments?
+
+
+(Don Colburn) An even more provocative thought. Sounds
+like a good thread in the special topics section of the
+Net. Lets hear suggestions of an appropriate problem, and
+an appropriate reward.
+
+   Ok Time to go.  Thanks,  Chuck,  and thanks to
+everyone for attending this evening.
+
+     If you would like to do this again sometime, or have
+an idea for a another conference, please leave a message
+to any of the sysops. We would love to hear from you.
+
+Good night.
+
+

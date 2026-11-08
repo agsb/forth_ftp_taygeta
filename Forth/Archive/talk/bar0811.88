@@ -1,0 +1,359 @@
+
+           
+           
+ Minutes of the FIGGY BAR 
+Date: 08/11/88   Time: 22:23EDT
+             
+Attendees:
+[[Gary] GARY-S]
+[[Rock] R.FRANZEN]
+[[Jax Only] VESTA]
+[[Dave] DHWEINSTEIN]
+              
+Items discussed : Mitch Bradley conference, ACM Forth bash, self-fetching
+                  variables, multiple cfa's, re-writes at Vesta
+Minutes:
+<[Dave] DHWEINSTEIN> Yeah...but I sent Mitch a letter this afternoon, when I 
+got your letter.
+<[Gary] GARY-S> No he didn't Dave - did you notice the date for Mitch's 
+conference ?
+<[Dave] DHWEINSTEIN> The 25th
+<[Gary] GARY-S> Is that ok with you, since you set this up ?
+<[Dave] DHWEINSTEIN> I t's fine by me
+<[Dave] DHWEINSTEIN> It's odd though...because I wrote him to say that time was 
+short, this afternoon.
+<[Gary] GARY-S> GREAT - I couldn't remember for sure and wanted to be sure you 
+could make it
+<[Dave] DHWEINSTEIN> Sigh. I'll send him a "see you on the 25th" letter after 
+this.
+<[Gary] GARY-S> Blame it on me - I didn't check the Well this week
+<[Dave] DHWEINSTEIN> Oho...so he did send it to the well.
+<R.FRANZEN> is here.
+<[Gary] GARY-S> yeah - apparently
+<[Dave] DHWEINSTEIN> Heh
+<[Dave] DHWEINSTEIN> Hey rock
+<[Rock] R.FRANZEN> hi
+<[Gary] GARY-S> I sure wish I could locate an easier to get to gateway
+<[Dave] DHWEINSTEIN> Welll...if austin were PCPable it'd be easy.
+<[Gary] GARY-S> BUT Austin ain't
+<[Dave] DHWEINSTEIN> So ask for it to be added to PCP..
+<[Gary] GARY-S> They can't get on some cities they added 6 months ago
+<[Gary] GARY-S> Anyway - back to Forth on GEnie - what's cooking Dave/Rock ?
+<[Rock] R.FRANZEN> Not much here.  Messing with Multi-FORTH for Amiga at home.
+<[Dave] DHWEINSTEIN> The conf. is comin' along.
+<[Gary] GARY-S> Interesting comment on the BBS, Rock, glad to see it posted. 
+Thanks
+<[Gary] GARY-S> Don't forget to post updates as they occur, Dave
+<[Rock] R.FRANZEN> BBS comment concerning Harris?
+<[Gary] GARY-S> Right, Rock
+<[Dave] DHWEINSTEIN> That's Dan's job (*somebody elses business*) :-)
+<[Dave] DHWEINSTEIN> Still hotel hunting.
+<[Gary] GARY-S> That smacks of 'I can't be bothered ' ?
+<[Dave] DHWEINSTEIN> Does it now?
+<[Dave] DHWEINSTEIN> :-)
+<[Gary] GARY-S> Do the hotel hide in Austin ? :-)
+<[Rock] R.FRANZEN> Are either of you associated with FIG?
+<[Dave] DHWEINSTEIN> The hotel am in Austin
+<[Dave] DHWEINSTEIN> (all o' dem)
+<[Gary] GARY-S> Only as a volunteer on here, Rock, why ???
+<[Rock] R.FRANZEN> I let my membership slip a year ago, and I don't know what...
+<[Rock] R.FRANZEN> they've been up to.
+<[Gary] GARY-S> Leave e-mail to FIG, copy JANNY
+<[Dave] DHWEINSTEIN> Heh. I only joined ACM 'cause I was on the conf. committee.
+..and thought it might be a good idea to be a member. :-)
+<[Dave] DHWEINSTEIN> <- not much for joining organizations
+<[Gary] GARY-S> Most Forthens aren't big on joining things Dave
+<[Gary] GARY-S> Does anyone know who the foundry is that is going to punch out 
+the J-H APL chips ?
+<[Dave] DHWEINSTEIN> ($5/hr pauses are not golden)
+<[Dave] DHWEINSTEIN> No...but I want samples...
+<[Gary] GARY-S> You and bunches of others
+<[Rock] R.FRANZEN> We seem to be an exciting bunch tonight!
+<[Dave] DHWEINSTEIN> brb
+<[Gary] GARY-S> Hey - I can't sit here and talk to myself - join in - raise 
+issues... stuff
+<[Rock] R.FRANZEN> How will the apl chips compare to Harris RTX?  speed, etc.
+<[Gary] GARY-S> You really need to look at the conference we had with 
+John-Hopkins Rock.
+<[Dave] DHWEINSTEIN> back -- aaahhhh refreshing
+<[Gary] GARY-S> It is a impressice piece of silicon
+<[Rock] R.FRANZEN> which library?
+<[Gary] GARY-S> On here ! Library 1
+<[Rock] R.FRANZEN> I'm just getting used to GEnie, and don't navigate well yet.
+<[Gary] GARY-S> Browse for APL or Johns-Hopkins
+<[Rock] R.FRANZEN> thanks, that's what I needed.
+<[Dave] DHWEINSTEIN> So....what should we discuss?
+<[Gary] GARY-S> From the main prompt go to the library (3)
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> Hey Jax
+<[Gary] GARY-S> then select (3) Search
+<VESTA> Foobar!
+<[Dave] DHWEINSTEIN> You ought to be ashamed of yourself for what you posted to 
+comp.lang.forth!
+<[Gary] GARY-S> How are the ladies at Jax domicile
+<[Actually Jax] VESTA> Say wha?
+<[Actually Jax] VESTA> Ladies are asleep, that's why I can telecom
+<[Gary] GARY-S> which wha?
+<[Dave] DHWEINSTEIN> 10000 0 do read-ting :-) loop
+<[Dave] DHWEINSTEIN> That is awful
+<[Dave] DHWEINSTEIN> Factor ! Factor ! Factor !
+<[Actually Jax] VESTA> I never cease to learn from his stuff.
+<[Dave] DHWEINSTEIN> 10000 0 do ting read :-) loop
+<[Dave] DHWEINSTEIN> verb noun
+<[Dave] DHWEINSTEIN> Factor Factor Factor
+<[Gary] GARY-S> nice, Dave
+<[Actually Jax] VESTA>
+<[Dave] DHWEINSTEIN> shame shame shame
+<[Rock] R.FRANZEN> Dave, I don't follow do loop.  Joke? what?
+<[Actually Jax] VESTA> Lame joke.
+<[Actually Jax] VESTA> C programmer-lame joke
+<[Dave] DHWEINSTEIN> read-ting is a poorly factored word
+<[Gary] GARY-S> from addeled minds come small thoughts
+<[Actually Jax] VESTA> like create-file ?
+<[Dave] DHWEINSTEIN> It is C or Pascal 'esque
+<[Actually Jax] VESTA> or read-block?
+<[Dave] DHWEINSTEIN> In Forth you should seperate nouns and verbs
+<[Actually Jax] VESTA> or write-block?
+<[Dave] DHWEINSTEIN> Only hyphenate when there is no other chance
+<[Actually Jax] VESTA> Interesting point!
+<[Dave] DHWEINSTEIN> -chance +choice
+<[Dave] DHWEINSTEIN> (Thinking FORTH addresses this)
+<[Actually Jax] VESTA> Actually very often I findmyself thinking that 
+theoretically as I write another hyphenated word.
+<[Actually Jax] VESTA> But there you go. "Forth isn't the whole answer, either" 
+_C. Moore.
+<[Gary] GARY-S> Any messages showing up on the Forth-net ?
+<[Actually Jax] VESTA> The kind of verbs one uses in a natural language
+<[Actually Jax] VESTA> are actually ...
+<[Rock] R.FRANZEN> hyphenation-cure 3-char+lngth-header =
+<[Actually Jax] VESTA> Multiple code-field objects.
+<[Actually Jax] VESTA> ( to R.F) TRUE
+<[Actually Jax] VESTA> but a TRUE that = 1, not -1 :-) )
+<[Dave] DHWEINSTEIN> This is very apt. But multiple CFA is a really nice idea.
+<[Actually Jax] VESTA> Gary, left you email about that.
+<[Gary] GARY-S> on here or Well ?
+<[Actually Jax] VESTA> Well. Need to "seed" your garden to make it grow.
+<[Actually Jax] VESTA> The WELL tends to be ...
+<[Actually Jax] VESTA> a self-contained universe, like so many little "worlds" 
+of Californians!
+<[Gary] GARY-S> Hard to access via PCP when you are knocking down 16 hour days
+<[Actually Jax] VESTA> You have to help them grasp the conpt ...
+<[Dave] DHWEINSTEIN> Really...I like systems that are '...'
+<[Actually Jax] VESTA> that there are more ...
+<[Actually Jax] VESTA> than 4 Forth programmers in the world!
+<[Actually Jax] VESTA> Yeah, and PCPursuit gets worse all the time.
+<[Gary] GARY-S> AMEN
+<[Actually Jax] VESTA> The only reason they are able to continue to run uch a 
+lame
+<[Actually Jax] VESTA> "service" ( gasp)
+<[Actually Jax] VESTA> is that
+<[Actually Jax] VESTA> They have no competition.
+<[Actually Jax] VESTA> .
+<[Gary] GARY-S> Well - anyway that's why - so now you know
+<[Rock] R.FRANZEN> never used 'pursuit.  CompuServe is my "other" service.
+<[Dave] DHWEINSTEIN> Have we any multiple-cfa implementations in the library?
+<[Gary] GARY-S> feed the kitties for me - I'll be back shortly OK
+<[Actually Jax] VESTA> hurry back ... hope everything comes out all right.
+<[Actually Jax] VESTA> ... :_)
+<[Rock] R.FRANZEN> Dave, what would select which code field to use?
+<[Dave] DHWEINSTEIN> The object.
+<[Actually Jax] VESTA> So I have caught a couple DWeinsteinian postings on NET.
+<[Dave] DHWEINSTEIN> Multiple CFAs are essentially operator overtyping for 
+FORTH.
+<[Actually Jax] VESTA> Some sort of index into ,ble.
+<[Rock] R.FRANZEN> The object works as an offset into the field of code fields?
+<[Actually Jax] VESTA> argh! that's not what I typed!
+<[Dave] DHWEINSTEIN> Oh....have you caught my anti-orr flame about Novix?
+<[Dave] DHWEINSTEIN> Sure its not.
+<[Actually Jax] VESTA> Some sort of offset into the object from the stack ...
+<[Actually Jax] VESTA> or the setting of a variable somewhere.
+<[Dave] DHWEINSTEIN> Plenty of ways to implement it. It involves rewriting most 
+of FORTH
+<[Actually Jax] VESTA> Orr is interesting. He is a lot more intelligent that a 
+lot of the people he argues with, but he's still wrong about some thing
+s.
+<[Dave] DHWEINSTEIN> Yes.
+<[Gary] GARY-S> Early in the kernel, too
+<[Dave] DHWEINSTEIN> It is essentially an overtyping FORTH
+<[Dave] DHWEINSTEIN> It makes FORTH a strongly typed language, though.
+<[Actually Jax] VESTA> Strongly typed language == one in which you have to do a 
+lot of typing.
+<[Rock] R.FRANZEN> don't have to go deep into kernel...
+<[Dave] DHWEINSTEIN> Sure you do.
+<[Gary] GARY-S> Rock - get a copy of BBL to see some strange CFA manipulation - 
+Roedy Greene did a strange there
+<[Actually Jax] VESTA> you can create this kind of thng with CREATE
+<[Rock] R.FRANZEN> header cfa(identify.as.multiple.cfa) cfa1 cfa2 cfa3 pfa
+<[Dave] DHWEINSTEIN> Remember that when an integer is typed at the "ok" prompt, 
+in a multi-CFA Forth you can't just put the value on the stac.
+<[Dave] DHWEINSTEIN> You have to put an identifier somewhere.
+<[Actually Jax] VESTA> I have created some odd objects in my time.
+<[Gary] GARY-S> You can also vector, but if you want it to cook you have to 
+re-write
+<[Dave] DHWEINSTEIN> 'scuse me whilst I freshen my drink
+<[Actually Jax] VESTA> You know, I have seen those articles about self-fetching 
+vars etc ...
+<[Gary] GARY-S> kool- aid
+<[Actually Jax] VESTA> I have done stuff like that ...
+<[Actually Jax] VESTA> but always in the context of utilities, never with the 
+idea ...
+<[Actually Jax] VESTA> that that sort of thing would really add to the Forth 
+kernel itself.
+<[Actually Jax] VESTA> .
+<[Dave] DHWEINSTEIN> back
+<[Gary] GARY-S> I have no reason to do something like that, really
+<[Actually Jax] VESTA> now I'm thirsty.
+<[Dave] DHWEINSTEIN> This is not for thirst.
+<[Gary] GARY-S> another kool-aid commin' up
+<[Dave] DHWEINSTEIN> Irish is not kool-aid
+<[Actually Jax] VESTA> Colorado Kool-Aid ... Killians Ale.
+<[Gary] GARY-S> Naw, jax - Coors
+<[Dave] DHWEINSTEIN> (L.A. Law theme here)
+<[Actually Jax] VESTA> Killians IS Coors.
+<[Dave] DHWEINSTEIN> I'll pass on the coors. I'll have somethin' stronger. Like 
+tea.
+<[Rock] R.FRANZEN> Concerning "self-fetching" variables...
+<[Gary] GARY-S> Jax/Rock catch the post that Mitch Bradley will be conf guest 
+on the 25th ?
+<[Dave] DHWEINSTEIN> (bows)
+<[Gary] GARY-S> Jax - pass the word, please
+<[Actually Jax] VESTA> Good, tell him to bring his Forth with him! :-)
+<[Rock] R.FRANZEN> they seem to be catching-on in the Amiga forth world.
+<[Actually Jax] VESTA> How so Rock.
+<[Dave] DHWEINSTEIN> Self fetching vars are easy to implement.
+<[Gary] GARY-S> go on
+<[Rock] R.FRANZEN> MultiFORTH and JFORTH both have them embedded deep in kernel.
+..
+<[Rock] R.FRANZEN> lots of programming examples given showing them being used.
+<[Rock] R.FRANZEN> ga
+<[Dave] DHWEINSTEIN> Like all tools....they have their place. The beauty of 
+FORTH is that it lets you customize your tools to do exactly what they mus
+t.
+<[Rock] R.FRANZEN> right.
+<[Actually Jax] VESTA> Speaking of which
+<[VESTA Rules] VESTA> We have been remodelling our Vesta Forth!
+<[VESTA Rules] VESTA> It is pretty interesting.
+<[VESTA Rules] VESTA> Vesta boards are designed so that ...
+<[VESTA Rules] VESTA> You don't need anything but the board itself to develop 
+for the Board ...
+<[VESTA Rules] VESTA> Except a dumb terminal!
+<[VESTA Rules] VESTA> That was the original idea.
+<[VESTA Rules] VESTA> And it still holds ...
+<[VESTA Rules] VESTA> but we are modernizing to give a nicely featured F83.
+<[Rock] R.FRANZEN> battery backed up ram?
+<[VESTA Rules] VESTA> Several of our boards have always been able to use a disk 
+drive ...
+<[VESTA Rules] VESTA> now the rommed, romable F83 that we provide ...
+<[VESTA Rules] VESTA> will be able to handle HOSTED mode ...
+<[VESTA Rules] VESTA> that is, you will be able to use a program we provide on 
+a PC/XT/AT ...
+<[VESTA Rules] VESTA> and the board will "know" how to demand hosted disk 
+service from the PC host,
+<[VESTA Rules] VESTA> including the ability to save the current dictionary into 
+a ROMable disk file ...
+<[VESTA Rules] VESTA> that when burned into a ROM will auto-self-restore and 
+auto-start!
+<[VESTA Rules] VESTA> All that ...
+<[VESTA Rules] VESTA> and a neat but economical Full Screen Editor for ANSI 
+terminals, too!
+<[Dave] DHWEINSTEIN> And it cooks too
+<[VESTA Rules] VESTA> Rock ...
+<[VESTA Rules] VESTA> we sometimes use battery backed ram.
+<[VESTA Rules] VESTA> But not always. But all our boards use SRAM.
+<[VESTA Rules] VESTA> .
+<[VESTA Rules] VESTA> Almost forgot!
+<[Dave] DHWEINSTEIN> SRAM is so much nicer to design for.
+<[VESTA Rules] VESTA> FLOATING POINT!
+<[Dave] DHWEINSTEIN> IEEE standard?
+<[Rock] R.FRANZEN> What drives VESTA board? (cpu)
+<[VESTA Rules] VESTA> Pretty much.
+<[Dave] DHWEINSTEIN> What cpu?
+<[VESTA Rules] VESTA> VESTA BOARDS: SBC88 ( 8088) TINY188 ( 80188) OEM188 ( 
+80188) MICRO88 ( 8088)
+<[Dave] DHWEINSTEIN> Ych
+<[VESTA Rules] VESTA> They are crowd pleasers.
+<[Gary] GARY-S> Did I hear a 68000 Ych ?
+<[Dave] DHWEINSTEIN> Intel??? Please
+<[Dave] DHWEINSTEIN> !!
+<[VESTA Rules] VESTA> We offer FORTH, BASIC and C.
+<[Dave] DHWEINSTEIN> 68k, 32k....much better
+<[Rock] R.FRANZEN> Main function of boards is embedded controller?
+<[VESTA Rules] VESTA> They are CHEEP compared to a lot of controller 
+development environments.
+<[Dave] DHWEINSTEIN> 80188 as a controller??????
+<[VESTA Rules] VESTA> Yes, Rock. They are designed so that you can develop your 
+app ..
+<[Gary] GARY-S> Jax - you guys need to get into ESP
+<[Gary] GARY-S> The new CLM rag
+<[VESTA Rules] VESTA> with a minimum of bullshit so that you can start making 
+money, possibly moving up to a custom board.
+<[VESTA Rules] VESTA> Yes, GAR, am already on their BBS to negociate a deal!
+<[Gary] GARY-S> good move
+<[VESTA Rules] VESTA> Anyway, the MICRO88 is designed especially ...
+<[Gary] GARY-S> That COULD be a hell of a neat magazine - I sure hope so !
+<[VESTA Rules] VESTA> to that i/o will occur via a second experimental board of 
+the customer's or VESTA's design ...
+<[VESTA Rules] VESTA> WHich then can later be redesigned into a unitary board 
+based on the MICRO88
+<[VESTA Rules] VESTA> be specialize in custom board design and custom FORTH 
+software.
+<[VESTA Rules] VESTA> our board BIOS is DOS 2.1 compatible.
+<[VESTA Rules] VESTA> So that you can run vanilla DOS programs on thos e of our 
+boards which use ..
+<[VESTA Rules] VESTA> disk drives.
+<[Rock] R.FRANZEN> How 'bout true 16-bit bus?
+<[Dave] DHWEINSTEIN> Not on a 188 system
+<[Dave] DHWEINSTEIN> Its an 8 bit bus version of the 186
+<[Rock] R.FRANZEN> ok
+<[Gary] GARY-S> backward too
+<[VESTA Rules] VESTA> Ever put your finger on one of those 188's? They run HOT .
+..!
+<[Dave] DHWEINSTEIN> WHy oh why do people use Intel chips?
+<[VESTA Rules] VESTA> Because they are CHEEP >>>
+<[VESTA Rules] VESTA> and everyone knows intel assembly language.
+<[Gary] GARY-S> and they work
+<[Rock] R.FRANZEN> Our application is used to working in 16-bit dma world.
+<[VESTA Rules] VESTA> and there are TONS of peripheral chips available for all 
+sorts of custom projects.
+<[Dave] DHWEINSTEIN> You can buy a 68000 for 5 or 6 bucks. And they are much 
+easier to program in assembly.
+<[VESTA Rules] VESTA> And much more expensive to design around.
+<[Dave] DHWEINSTEIN> Still a better chip
+<[Jax Only] VESTA> My preference would be for Novix, Super8 and Z320 ( 
+32-banger)
+<[Jax Only] VESTA> If you want to pay for a custom design, it's yours!
+<[Dave] DHWEINSTEIN> I want an RTX 2000.
+<[Jax Only] VESTA> [ARock, do you need a board?
+<[Dave] DHWEINSTEIN> And a JH-APL.
+<[Gary] GARY-S> i want j-h apl
+<[Dave] DHWEINSTEIN> An a Cray.
+<[Jax Only] VESTA> me too. Order a dozen.
+<[Rock] R.FRANZEN> We may be redesigning away from Q-bus to intel bus.  as you 
+say...
+<[Rock] R.FRANZEN> cheep!
+<[Gary] GARY-S> a dozen cray, rtx or jh ?
+<[Dave] DHWEINSTEIN> yes
+<[Jax Only] VESTA> RIght it's the peripherals and their availablility that make 
+the diff.
+<[Jax Only] VESTA> Why not check out our boards? They really are qutie flexible 
+...
+<[Jax Only] VESTA> and we can design custom rather inexpensively compared to a 
+lot of shops.
+<[Jax Only] VESTA> >> lo overhead <<< ( jax works cheap! :-)
+<[Dave] DHWEINSTEIN> You get what you pay for. :-)
+<[Jax Only] VESTA> Cost of Living in Colorado is low compared to California, 
+where I used to live.
+<[Rock] R.FRANZEN> I'll send you Email asking for info.
+<[Jax Only] VESTA> I had a studio in san fran for 500
+<[Rock] R.FRANZEN> (wait!  I just did!)
+<[Jax Only] VESTA> will do, rock. Email JAX or VESTA or S.WHEELER.
+<[Jax Only] VESTA> now i have a fourplex for 475 in Colo.
+<[Jax Only] VESTA> 1/2mile from Coors. What could be better? :-)
+<[Dave] DHWEINSTEIN> Bye y'all.
+<[Jax Only] VESTA> nite!
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> g'nite
+<[Jax Only] VESTA> ROCK email yr mail addr.
+=== End of Steno notes. ===
+
+

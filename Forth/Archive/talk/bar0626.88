@@ -1,0 +1,147 @@
+
+
+           
+               
+ Minutes of the FIGGY BAR Conference of June 26,1988
+           
+ ITEMS DISCUSSED: More C on Unix, more movie review, Forth controllers as hot 
+      movers, ski and program in Forth (heck-of-a-deal), Austin & Atlanta FIG
+            
+Attendees:
+[GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Actually Jax] VESTA]
+[[Larry] L.DANIEL1]
+       
+Minutes:
+<[Dave] DHWEINSTEIN> No...a stenographer!!! Arrggghhhhhh!
+<GARY-S> Well - gang here's how it is -
+<[Dave] DHWEINSTEIN> Time to switch into <Make Gary Edit> mode....
+<GARY-S> I ain't supposed to be covering Sundays
+<[Actually Jax] VESTA> ,Don't do windows either, I suppose.
+<GARY-S> Anyway - what's hoppening ?
+<[Dave] DHWEINSTEIN> Lifes hard when yur GEnie time is free, eh.
+<[Actually Jax] VESTA> Now, now, be nice Dave.
+<[Dave] DHWEINSTEIN> Mitch is interested in doing an RTC. More reports as they 
+happen.
+<GARY-S> no flack from Mr free UUCP
+<[Dave] DHWEINSTEIN> I pay for my UUCP usage... :-) Just not very much.
+<[Actually Jax] VESTA> df0$3 a year?
+<GARY-S> He IS interested ?
+<[Dave] DHWEINSTEIN> $5
+<[Dave] DHWEINSTEIN> Thank you very much.
+<[Actually Jax] VESTA> I pay thru nose.
+<GARY-S> details
+<[Dave] DHWEINSTEIN> Yes...I sent him answers to some of his questions about 
+GEnie yesterday. Should have an answer tomorrow sometime.
+<GARY-S> all RIGHT !
+<GARY-S> you did good
+<[Dave] DHWEINSTEIN> Yes...but you have one of those rare and hard to get jobs 
+programming in FORTH.
+<[Dave] DHWEINSTEIN> Nothing final yet...but looks good.
+<[Dave] DHWEINSTEIN> Mail me info on how guest accounts are given out.
+<GARY-S> I got your note on the WELL - did you get my reply ?
+<[Dave] DHWEINSTEIN> Not yet. I can't remember where I sent it from.
+<[Larry] L.DANIEL1> Where can I get news of Rochester Forth Conference??
+<GARY-S> Guest accounts are arranged (by me) after we set up a conference
+<[Actually Jax] VESTA> Larry ... hang loose, we will answer that.
+<[Dave] DHWEINSTEIN> I put out a request on Usenet for inof this morning....
+tell me how long it takes to propogate down to you?
+<GARY-S> Larrry - should be getting posted here shortly
+<[Larry] L.DANIEL1> thanks
+<[Actually Jax] VESTA> There should be some showing up here soon.
+<GARY-S> Dennis has been a bit busy but will be posing
+<GARY-S> posting !
+<[Actually Jax] VESTA> Also GEnie-mail Danmiller, who attended
+<[Dave] DHWEINSTEIN> What is the backbone connection to the well?
+<GARY-S> Say Larry - what happened to those uploads you promised ?
+<[Actually Jax] VESTA> via lll-crg
+<[Dave] DHWEINSTEIN> Gee, Jax, move to Austin and you too can get cheap 
+UUCP/Usenet access....
+<[Larry] L.DANIEL1> Hang loose as they say. Got to clear it with Georgia Tech 
+Big Guys.
+<[Dave] DHWEINSTEIN> All is not clear for me...my UUCP connection is a SysV 
+system.
+<GARY-S> No prob - I'm just excited - git a great report on your demos at the 
+Atlanta chapter
+<[Actually Jax] VESTA> DAVE ... i have PCP tell me how to get it and I will try 
+to clik via PCP.
+<[Dave] DHWEINSTEIN> PCP?
+<GARY-S> PC Pursuit
+<[Actually Jax] VESTA> Another drug, equally dangerous!
+<[Dave] DHWEINSTEIN> Austin is not *yet* on PCP, I don't tjink
+<GARY-S> Aren't you curious who I got that report from, Larry
+<[Larry] L.DANIEL1> Yes, but probably Nick?
+<[Dave] DHWEINSTEIN> If it is...I will be glad to vouch for you. If you are a 
+student (or can bribe someone to claim you are a student), rates are $5,
+ otherwise they are $15 per annum.
+<[Actually Jax] VESTA> Houston and Dallas are.
+<GARY-S> Penz
+<[Dave] DHWEINSTEIN> Yeas...but I don't think Austin is yet.
+<[Larry] L.DANIEL1> Ah Ha!
+<GARY-S> Austin is NOT
+<[Dave] DHWEINSTEIN> Life is a [I'm being *nice* Gary].
+<GARY-S> I have spys EVERYWHERE - so be a good little Forther
+<[Actually Jax] VESTA> not Monitoring.
+<[Actually Jax] VESTA> not Monitoring.
+<[Dave] DHWEINSTEIN> I have friends doing Tomohawk missile design...be a good 
+little Forther.
+<GARY-S> Wanna talk about the goodies in the hills near Albuquerque
+<[Dave] DHWEINSTEIN> Ohhh...
+<GARY-S> We also got the good ole Nerve gas here in Arkansas, but it's SAFE now 
+(SURE IT IS)
+<[Larry] L.DANIEL1> DAVE- Where is Fort Valley, I'm in Marietta.
+<[Dave] DHWEINSTEIN> Yes...and isn't it nice to send ANthrax, Denengue Fever, 
+Q-Fever, and friends (live) by US Mail.
+<GARY-S> Ask Jimmy Hoffa
+<[Dave] DHWEINSTEIN> It is in Central georgia, just south of Macon, I am in 
+Central Texas, just west of the University of Texas Campus in down town Au
+stin.
+<[Larry] L.DANIEL1> Oh.
+<GARY-S> Jax - WHERE is the Forth discussion on the WELL
+<[Actually Jax] VESTA> conca
+<[Dave] DHWEINSTEIN> comp.lang.forth?
+<[Actually Jax] VESTA> NO silly.
+<GARY-S> I get on and see the same 49 messages with nothing new
+<[Actually Jax] VESTA> try     g forth
+<[Actually Jax] VESTA> Post some messages if you are bored.
+<GARY-S> read my last
+<[Actually Jax] VESTA> It gets read a lot.
+<GARY-S> I did
+<[Actually Jax] VESTA> Not always answered.
+<[Actually Jax] VESTA> It can get pretty hot sometimes.
+<[Actually Jax] VESTA> Tell them something new.
+<GARY-S> If you say so
+<[Actually Jax] VESTA> The problem is ...
+<[Actually Jax] VESTA> THere aren't loudly trumpeted ...
+<[Actually Jax] VESTA> new products in FORTH from AT&T, IBM OSI etc. every day.
+<[Actually Jax] VESTA> So sometimes the gossip ...
+<[Actually Jax] VESTA> gets slow.
+<GARY-S> I stuck my neck out there and on ECFB - wanna bet where I'll find the 
+traffic?
+<[Actually Jax] VESTA> Start a fight with the C programmers.
+<[Actually Jax] VESTA> I'm on ECFB too.
+<GARY-S> I hate fighting with WIMPS
+<[Actually Jax] VESTA> They think I'm a nut.
+<[Actually Jax] VESTA> They're not far from right.
+<[Dave] DHWEINSTEIN> Excuuuuuuuse me.
+<GARY-S> You ARE a nut - so what ?
+<[Actually Jax] VESTA> WHo asked you, dave?
+<[Actually Jax] VESTA> :-)
+<GARY-S> I thought it was a requirement
+<[Dave] DHWEINSTEIN> Admittedly....but C has its uses. Try UNIX system 
+development without it.
+<[Actually Jax] VESTA> I have.
+<[Actually Jax] VESTA> I program on UNIX in f77.
+<[Dave] DHWEINSTEIN> You've rewritten the UNIX kernel in FORTH?
+<GARY-S> Gat a conference coming up on the 7th of July guys - mark your calendar
+<[Dave] DHWEINSTEIN> And that's supposed to be an improvement?
+<[Dave] DHWEINSTEIN> *SYSTEM* work Jax.
+<[Actually Jax] VESTA> No, it's just less (*&(*&^(*^%^&*^% curly braces.
+<[Actually Jax] VESTA> C is a language that only an academic could love.
+<[Dave] DHWEINSTEIN> I *like* $%$^#%#^(*(* {}, they beat the living hell out of 
+BEGIN and END, or ENDIF, or FI
+<[Actually Jax] VESTA> Everyone with any balls programs in FORTH or ASSEMBLER.
+<GARY-S> Mahlon Kelly will be guest in a formal conference on 7/7/88
+<[Dave] DHWEINSTEIN> I *like* C, certainly better than Pascal, Fortran, Prolog..
+

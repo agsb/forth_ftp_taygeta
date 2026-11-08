@@ -1,0 +1,460 @@
+
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 03/01/90   Time: 22:29EST
+
+ The question on the door: "FOR...NEXT is accepted and DO...LOOP is not going
+ away - is Forth well served by having two constructs that serve essentially
+ the same purpose ?". Other items discussed include: QUANS, TO concept,F-PC,
+ BBL,X3J14 cost,three stacks (?),applications shops,systems houses. 
+
+Attendees:
+[[Doug] D.PHILIPS3]
+[GARY-S]
+[[Kevin] APPERT]
+[[Wil] W.BADEN1]
+[[Speaking!] FIGCHAPTERS]
+[M.HAWLEY]
+
+Minutes:
+<D.PHILIPS3> is here.
+<GARY-S> not Monitoring.
+<APPERT> is here.
+<[Doug] D.PHILIPS3> Hi All!
+<[Doug] D.PHILIPS3> Is Forth really hurt by the duplication?
+<GARY-S> Did FOR..NEXT accomplish anything worthy of duplication ?
+<[Doug] D.PHILIPS3> Did DO LOOP?
+<[Doug] D.PHILIPS3> If you can do either in terms of the other, how do you 
+decide which is best?
+<GARY-S> I am a minimalist, Doug...redundundundancy is waste
+<[Kevin] APPERT> if one has to provide all this stuf, (both these things?)  it 
+becomes harder and harder to fit it into 8K.  That is still a goal, regardless 
+of modern misconceptions to the contrary
+<[Doug] D.PHILIPS3> Yes, and DO LOOP is ill specified.  FOR NEXT is simpler.
+<GARY-S> Personally I prefer the FOR..NEXT construct, but am not even remotely 
+interested in trashing DO...LOOP code
+<[Doug] D.PHILIPS3> So, provide FOR NEXT in the base and have optionally 
+LOADable DO NEXT!?!?
+<GARY-S> Regardless of your megs of RAM performance is STILL best served by 
+effeciency
+<[Wil] W.BADEN1> is here.
+<[Doug] D.PHILIPS3> Where there's a Wil there's a Way!
+<[Wil] W.BADEN1> In answer to the official question: No.
+<GARY-S> Doug - I told you not to hang out with that Appert boy !
+<[Doug] D.PHILIPS3> (Actually Jax is a worse influence, but whose keepin' track!
+)
+<FIGCHAPTERS> is here.
+<[Doug] D.PHILIPS3> Wil, which do you think is the "better" construct?
+<[Kevin] APPERT> speak of the Jax
+<GARY-S> So - what is your opinion on what the determinate path for these 
+constructs should be
+<[Wil] W.BADEN1> The questions is 21 years too late.
+<GARY-S> woof
+<[Speaking!] FIGCHAPTERS> Amen, wil!
+<[Wil] W.BADEN1> Hi Jax.
+<[Speaking!] FIGCHAPTERS> Hi Professor!
+<[Doug] D.PHILIPS3> Ah, the destiny argument.
+<GARY-S> It is quite pregnant now if you read the net traffic
+<[Speaking!] FIGCHAPTERS> The COMMON PRACTICE argument, Doug.
+<[Speaking!] FIGCHAPTERS> You want ANSI to rewrite the language for you?
+<[Speaking!] FIGCHAPTERS> That's not what I'm hearing!
+<[Doug] D.PHILIPS3> Whose talkin' ANSI here, that wasn't part of the notice on 
+the door was it?
+<[Wil] W.BADEN1> What I would have had liked would have been +R!@
+<GARY-S> do what ?!?
+<[Speaking!] FIGCHAPTERS> Is there any other topic if you're talking changing 
+Forth. ANS Forth will be the most significant change of the decade 1984-
+1994.
+<[Speaking!] FIGCHAPTERS> In Forth, that is! :-)
+<[Wil] W.BADEN1> Add to value at top of return, and put it on data stack.
+<[Doug] D.PHILIPS3> But we've already established that ANS will only be doing 
+Standard Practice brouhaha.  That doesn't make standard practice "good"/
+"right"/etc.
+<GARY-S> Will it grant respectability to Forth in c/s society ? NO it will not.
+<[Wil] W.BADEN1> count >R BEGIN ... incr +R!@ 9 > UNTIL
+<GARY-S> Wil, I'm always hesitant to muck with the return stack - what about an 
+aux stack
+<[Speaking!] FIGCHAPTERS> It will grant PORTABILITY to Forth, Gary. As the 
+Buddha said, "I came not to answer doubtful disputations, I came to cut the
+ knot of human suffering."
+<[Wil] W.BADEN1> What you're suffering is the lack of accumulators.
+<[Speaking!] FIGCHAPTERS> The Buddha didn't address that, Wil :-)
+<[Doug] D.PHILIPS3> Accumulators don't get your recursion.
+<[Doug] D.PHILIPS3> The Two and Only Two stacks philosophy is what you're 
+suffering.
+<[Speaking!] FIGCHAPTERS> ANS will have three.
+<GARY-S> Matter of fact, I prefer not to live on the parameter stack
+<[Wil] W.BADEN1> Huh?
+<[Speaking!] FIGCHAPTERS> Huh Who?
+<[Wil] W.BADEN1> You, Jax.
+<[Doug] D.PHILIPS3> Ok Gary, where/how do you do without.
+<[Speaking!] FIGCHAPTERS> FP stack.
+<[Wil] W.BADEN1> Ah yes.
+<[Speaking!] FIGCHAPTERS> Good place to store your left-over pizza, the Float 
+Stack.
+<[Wil] W.BADEN1> (Real programmers don't use floating point.)
+<GARY-S> I didn't say do without, just don't beat the damn things to death. 
+Numbers get lost doing everything on the stack(s)
+<[Doug] D.PHILIPS3> (Real Programmers don't even exist)
+<[Speaking!] FIGCHAPTERS> I think so too, but you'd be amazed how many boards 
+we sell to false programmers!
+<[Doug] D.PHILIPS3> Do you use variables, local variables, arrays, user stacks, 
+or just some secret factoring methodology?
+<GARY-S> Real inventory will never be run on Floating Point
+<GARY-S> Quans are good
+<[Wil] W.BADEN1> I once had a gig counting rain drops: We use 8-bit floating 
+point numbers.
+<[Speaking!] FIGCHAPTERS> Real inventory MOVES OUT THE DOOR with Floating Point 
+at Vesta.
+<[Doug] D.PHILIPS3> (Floating Point is a precision illusion)
+<[Doug] D.PHILIPS3> (My last question was directed at Gary)
+<[Kevin] APPERT> is it real inventory 'cause of the real numbers?
+<GARY-S> I answered - Quans are good - I never said don't use the stack - just 
+don't use it exclusively
+<[Doug] D.PHILIPS3> Ok, didn't understand the answer.  What are 'Quans'?
+<[Speaking!] FIGCHAPTERS> Self-fetching vars.
+<GARY-S> thanks
+<[Doug] D.PHILIPS3> Ah, TO variables!
+<GARY-S> I was going to say vectored variables, but that is double-speak at its 
+worst
+<[Doug] D.PHILIPS3> (Or perhaps modifiable constants?)
+<[Wil] W.BADEN1> Parameters.
+<GARY-S> The TO construct - if you know that, yes
+<[Doug] D.PHILIPS3> Ok.
+<[Wil] W.BADEN1> Remember the high school definition of parameter: "variable 
+constant"?
+<[Doug] D.PHILIPS3> (The TO construct doesn't seem to work well with arrays, or 
+have I missed something?)
+<[Speaking!] FIGCHAPTERS> There's talk of putting QUAN's in ANS Forth. 
+Syntactic Sugar of the Third Kind, but if it makes the Zimmerites join the part
+y, what the hey ... :-)
+<[Kevin] APPERT> Tom Zimmer likes QUANs?
+<[Speaking!] FIGCHAPTERS> I dunno, but they are hot among the FPC-ers.
+<[Doug] D.PHILIPS3> (Read Plauger's column in the Feb/Mar issues of Computer 
+Language about the purpose/goal/mechanism of ANSI standards committees)
+<GARY-S> I can't choose sides (like hell), but  how does QUANS fall into the 
+F-PC domain
+<[Kevin] APPERT> I didn't know they even IN FPC!
+<[Speaking!] FIGCHAPTERS> They run fast under FPC, faster than FOO @
+<[Kevin] APPERT> everything else is, why not that
+<[Speaking!] FIGCHAPTERS> Zimmer's a genius.
+<[Speaking!] FIGCHAPTERS> He's written more Forths than most of us have written 
+applications.
+<[Wil] W.BADEN1> Once again, confusion of language and its implementation.
+<[Doug] D.PHILIPS3> Is FPC faster than BBL?  (Green's a genius)
+<[Kevin] APPERT> and productive to boot
+<GARY-S> no
+<[Speaking!] FIGCHAPTERS> Yes, Wil, but  it sells in Peoria, ya know! :-)
+<[Kevin] APPERT> we boot him regularly
+<GARY-S> BBL is the speed king
+<[Doug] D.PHILIPS3> And sometimes resort to Pepto if booting doesn't establish 
+regularity.
+<[Speaking!] FIGCHAPTERS> When he ports to OS/2 we'll have to have a bronze 
+statue of him.
+<[Kevin] APPERT> why would ANYONE want to do that
+<[Speaking!] FIGCHAPTERS> Zimmer has written an extremely POPULAR Forth.
+<[Doug] D.PHILIPS3> Yes, it seems to be popular because it is big, but not too 
+big
+<GARY-S> Why would ANYONE want OS/2
+<[Speaking!] FIGCHAPTERS> For those of us who whine weekly how lame the world 
+is for ignoring Forth, this shouldmake us sit up and take notice.
+<[Kevin] APPERT> I think IBM and Apple are in compitition to produce the 
+costliest, clumsiest computer
+<[Speaking!] FIGCHAPTERS> Gary, they will want OS/2 because it makes a PC act 
+like an Amiga.
+<[Kevin] APPERT> not enough like an amiga, amigo
+<[Wil] W.BADEN1> Every time I get a new Zimmer Forth I pass it on the Orange 
+County FIG Chapter.
+<[Doug] D.PHILIPS3> So, FOR NEXT is the right way to go, but it just was 
+'discovered' too late?
+<[Speaking!] FIGCHAPTERS> Actually, Kevin, quite good is OS/2.
+<GARY-S> There is a twenty year old solution written in portable (not hand 
+assembled) code
+<[Wil] W.BADEN1> I can't get any one there to try.
+<[Speaking!] FIGCHAPTERS> Wil, that was a very ambiguous statement back there! 
+How did you mean that?
+<[Wil] W.BADEN1> I can't get anyone in OCFIG to try Z-Forth.
+<[Speaking!] FIGCHAPTERS> Oh, you said you "pass it on" the Orange County 
+chapter. Didn't quite sound like a mark of approval ... :-)
+<[Speaking!] FIGCHAPTERS> The xCFB people are gaga about FPC.
+<[Wil] W.BADEN1> I tried to try it, but it's awkward with just two floppy 
+drives.
+<[Speaking!] FIGCHAPTERS> It's Turbo Forth minus Phillipe Kahn.
+<[Speaking!] FIGCHAPTERS> Which makes it all the better.
+<GARY-S> It's FAT as a pig
+<[Speaking!] FIGCHAPTERS> If FPC had come out in 1982, Forth would rule the PC 
+world.
+<[Speaking!] FIGCHAPTERS> It's FAT if you LOAD ALL THE OPTIONS.
+<[Doug] D.PHILIPS3> Gary, you seem to be the BBL expert here, why isn't it the 
+Forth of Choice, is FPC somehow really better, or just better known?
+<[Speaking!] FIGCHAPTERS> That's what G-d and Chuck Moore made target compilers 
+for.
+<[Speaking!] FIGCHAPTERS> I don't USE FPC Forth AT ALL.
+<[Speaking!] FIGCHAPTERS> I have it, have examined internals, etc. offer it on 
+BBS.
+<GARY-S> Is this stuff comming out of the keyboard of a J-Forth/embedded F-83 
+Forther ?!?>???????
+<[Kevin] APPERT> can't we say God, Jax?
+<[Speaking!] FIGCHAPTERS> But jax knows a popular success when he sees one.
+<GARY-S> Popular does not necissarily translate to better
+<[Wil] W.BADEN1> Some one at FORML said that using FPC is like playing an 
+adventure game.
+<[Kevin] APPERT> just look at C, Gary
+<[Speaking!] FIGCHAPTERS> No but Popular translates to Popular.
+<[Speaking!] FIGCHAPTERS> Chuck Moore wants Forth to be his private language. 
+Do you? Or do you want Forth to be popular?
+<GARY-S> CM never wanted Forth to be a private language !
+<[Speaking!] FIGCHAPTERS> I'm exaggerating.
+<GARY-S> Geeze I guess so
+<[Speaking!] FIGCHAPTERS> But the point is valid. Like I said ...
+<[Speaking!] FIGCHAPTERS> we come here an moan each week ....
+<[Speaking!] FIGCHAPTERS> how the world doesn't recognize our wonderful Forth ..
+<[Speaking!] FIGCHAPTERS> Now Zimmer has learned the lesson and put tailfins on 
+Forth and big fuzzy dice hanging from the rear view mirror ...
+<[Kevin] APPERT> popular may mean a large number of people using forth who are 
+not skilled in it's use.  forth can be very intolerant of that.
+<[Wil] W.BADEN1> Forth is a vampire. It bites you and you and it become one.
+<[Kevin] APPERT> it has been said that Forth is a programmer amplifier.  it can 
+take a good...
+<[Speaking!] FIGCHAPTERS> I say, more power to himm.
+<[Wil] W.BADEN1> I don't see how you can become one with Z-Forth.
+<[Doug] D.PHILIPS3> But properly done Forth App's are usable/extensible by end 
+users!
+<[Kevin] APPERT> programmer and make a very good programmer of him...
+<[Wil] W.BADEN1> Yes.  "With Forth systems, when you've seen one, you've seen 
+one."
+<[Kevin] APPERT> but it can take a bad programmer and make a VERY VERY BAD MESS
+<GARY-S> Forth IS superior in certain applications (process control) and my 
+only complaint was that it was losing ground to vastly inferior languages.
+<[Speaking!] FIGCHAPTERS> For my own Forth, I can be as ideological as I desire.
+<[Kevin] APPERT> that's good Wil.  May I quote you?  :)
+<[Doug] D.PHILIPS3> Instead of asking "Do you want Forth to be popular" how 
+about first answering "Is it [coherent|sensible|desirable] for Forth to be
+ popular?"
+<GARY-S> Emulating those inferior languages is NOT progress
+<GARY-S> Recruiting young talent is
+<[Speaking!] FIGCHAPTERS> But what I want for OTHER PEOPLE'S FORTH is that they 
+LIKE IT. So I HAVE A JOB IN TEN YEARS.
+<[Speaking!] FIGCHAPTERS> FPC is   N*O*T   an inferior Forth.
+<GARY-S> I did not target FPC in my statement, Jax !!
+<[Kevin] APPERT> those inferior languages searve a purpose.  they keep people 
+away from Forth.
+<[Speaking!] FIGCHAPTERS> It is in my view the  BEST   IBM PC implementation of 
+Forth for the masses.
+<[Kevin] APPERT> to my mind that is a desireable goal...
+<[Doug] D.PHILIPS3> Kevin, your language is silly.  Other languages were not 
+invented for that purpose, but what you describe is an 'effect'.
+<[Speaking!] FIGCHAPTERS> Oh, Gary, like I said, I don't use it, I could care 
+less what happens to IBM PCs for my part ...
+<[Speaking!] FIGCHAPTERS> But since there are so many PC users out there, I toe 
+to the slogan of the Sixties ...
+<[Kevin] APPERT> Forth is not a language for the use of those who use the 
+trendy language of the week.
+<[Speaking!] FIGCHAPTERS> "Give the People What They Want"
+<[Wil] W.BADEN1> A part of Forth's appeal is that you yourself can implement 
+the latest buzz ploy.
+<[Speaking!] FIGCHAPTERS> FPC is what a lot of people have said they want in 
+Forth ....
+<[Wil] W.BADEN1> And doing so, understand it.
+<[Speaking!] FIGCHAPTERS> USER INTERFACE.
+<[Kevin] APPERT> I never said they were invented for the purpose, mearly that 
+they serve it!
+<[Speaking!] FIGCHAPTERS> These are not, the Moores, the Tings, the Badens of 
+Forth ....
+<[Speaking!] FIGCHAPTERS> These are the Forth hobbyists we are talking about.
+<[Speaking!] FIGCHAPTERS> Zimmer knows what they want and has given it to them.
+<[Speaking!] FIGCHAPTERS> HOORAY ZIMMER! LONG LIVE FPC FORTH!
+<GARY-S> Wil, I don't recall seeing APL proceedures coded in Forth - have you ?
+<[Doug] D.PHILIPS3> Is it not axiomatic that as Forth becomes more popular, it 
+will be diluted by the larger and larger mass of less and less competen
+t programmers?
+<[Kevin] APPERT> Ting, and Moore are sort of professional hobbyists, though, Jax
+<[Speaking!] FIGCHAPTERS> Not my Forth, I write it myself. FPC isn't written 
+for me.
+<[Speaking!] FIGCHAPTERS> (that was to Doug)
+<[Wil] W.BADEN1> Five years ago I used Forth professionally.  Now I'm a 
+hobbyist.
+<[Speaking!] FIGCHAPTERS> Kevin, that's true, but they earn a living.
+<[Doug] D.PHILIPS3> Jax, True, but that kind of attitude won't get you even an 
+ANSI standard.
+<[Speaking!] FIGCHAPTERS> Wil, Max Euwe the Chess world champion 1935-1937 
+never took a cent for chess, lifelong amateur and one of the best chess pla
+yers  who ever lived.
+<[Kevin] APPERT> not nescessarrily axiom, Doug.  What I think will happen is a 
+lot of bozos will try forth, fail, and thus prove forth is a dangerous,
+ non-productive , bad,  sh*&^ language.
+<[Wil] W.BADEN1> APL can be implemented in Forth by reading the input line, and 
+parsing right to left.
+<[Speaking!] FIGCHAPTERS> Doug, FPC doesn't point to the ANS Forth or point 
+away from it either.
+<[Doug] D.PHILIPS3> If Forth is to break out of its "rampant individualism" it 
+must accomodate portability, at least.
+<[Speaking!] FIGCHAPTERS> You could do ANS Forth easier in FPC than in 
+Laxen&Perry.
+<[Speaking!] FIGCHAPTERS> Zimmer segments the dictionary.
+<[Speaking!] FIGCHAPTERS> that will *almost* be mandatory in ANS Forth.
+<[Kevin] APPERT> 'cause it won't fit in one 64k segment, Jax?
+<[Speaking!] FIGCHAPTERS> No.
+<[Kevin] APPERT> :) just kidding
+<[Speaking!] FIGCHAPTERS> Because DICTIONARY and DATA will be CONCEPTUALLY 
+SEPARATE.
+<[Wil] W.BADEN1> Yay.
+<[Speaking!] FIGCHAPTERS> You try and keep data in the dictionary and keep that 
+Data Pointer pointing to the right place.
+<[Kevin] APPERT> sounds like a LOT of existing practice to me ;)
+<[Speaking!] FIGCHAPTERS> It will be in separate spaces physically in 90% of 
+the implementations, you bet.
+<[Doug] D.PHILIPS3> Kevin, it only matters if said bozos are people like 
+Pournelle who don't know sh*t about some things, but will pontificate on their
+faults and shortcomings none the less.
+<[Speaking!] FIGCHAPTERS> No, sounds like PORTABILITY of APPLICATIONS.
+<[Speaking!] FIGCHAPTERS> Kevin, an ANS Application program WILL COMPILE IN A 
+TARGET COMPILER WITHOUT CHANGES FROM THE SOURCE WHICH COMPILED IN AN INT
+ERPRETIVE FORTH.
+<[Kevin] APPERT> stopped reading Pournelle a couple of years back.  has he said 
+anything about Forth lately?
+<GARY-S> Who cares
+<[Doug] D.PHILIPS3> Don't know.  He's just my tip-of-the-tongue example.
+<[Speaking!] FIGCHAPTERS> Let me tell you, us embedded systems hacks can TAKE 
+THAT TO THE BANK>
+<M.HAWLEY> is here.
+<[Speaking!] FIGCHAPTERS> Oh my heavens, do we want that environment!
+<[Kevin] APPERT> yes, but existing practice is just as much a part of the ANS 
+charter as Portability, Jax.
+<[Speaking!] FIGCHAPTERS> Yes, and it will get as much attention as it can.
+<[Speaking!] FIGCHAPTERS> It will filter out the more absurd proposals.
+<[Doug] D.PHILIPS3> They really aren't different things.
+<[Speaking!] FIGCHAPTERS> But the portability problem is systemic.
+<[Kevin] APPERT> are we talking about the ANS !Forth! standard, Jax ?  :)
+<[Speaking!] FIGCHAPTERS> The definition of the language, at least in the 
+internals , MUST change.
+<[Speaking!] FIGCHAPTERS> Like I said, I am NOT going to throw away my Forth 
+systems once ANS is approved.
+<[Speaking!] FIGCHAPTERS> But PROFESSIONALLY it will be MANNA FROM HEAVEN for 
+professional Forthers.
+<[Speaking!] FIGCHAPTERS> .
+<[Doug] D.PHILIPS3> Maybe even become popular enough to support a 'comp.sources.
+forth' group!
+<[Speaking!] FIGCHAPTERS> (Tell me I'm not the only full-time Forther in the 
+room?)
+<[Wil] W.BADEN1> Rosemount-Uniloc sells 10,000 Forth systems a year.
+<[Doug] D.PHILIPS3> (or such type thing)
+<[Speaking!] FIGCHAPTERS> Right on, Doug!
+<[Kevin] APPERT> Who, Wil?
+<[Speaking!] FIGCHAPTERS> Wil, what is name of product?
+<GARY-S> What's it going to cost system houses like LMI, HS and FInc ? F-83 
+cost plenty and it was a drop in the bucket comparatively speaking if BASI
+S is any clue
+<[Speaking!] FIGCHAPTERS> Lots, but they will pay it to get PORTABILITY.
+<[Wil] W.BADEN1> They have a number of products, written in Forth.
+<[Doug] D.PHILIPS3> Forth seems to be at the level of conceptual portability.  
+Code portability is yet to be realized.  This *must* serve the purpose
+of keeping the Forth community divided and unable to take coherent group action.
+<[Kevin] APPERT> Sun will be selling lots of Forth sysems which nobody will 
+ever see.  FInc?  tee-hee
+<[Wil] W.BADEN1> They're chemical measuring systems.
+<GARY-S> Process control aps could care less about standards
+<[Doug] D.PHILIPS3> Has X3J14 decided on a 'disagreeable' policy yet?
+<[Speaking!] FIGCHAPTERS> We sold mid six figures in Forth last year at Vesta, 
+Wil.
+<[Speaking!] FIGCHAPTERS> Doug?
+<[Doug] D.PHILIPS3> So why the hell would control aps people be in on X3J14?
+<[Speaking!] FIGCHAPTERS> Are you kidding?
+<[Speaking!] FIGCHAPTERS> Forth is the best language in the world for control 
+apps!
+<[Doug] D.PHILIPS3> Jax, is that one question or two?
+<[Kevin] APPERT> not necess., Gary.  you have to get your boss to tell you do 
+it in Forth.  A standard may be helpfull for that purpose.
+<[Wil] W.BADEN1> I'm not surprised.  I think that they're a lot of such Forth 
+systems.
+<[Speaking!] FIGCHAPTERS> Jeez, you sit there turning lights on and off 
+interpretively ....
+<[Speaking!] FIGCHAPTERS> BASIC was, at one time THE language for control 
+programming.
+<[Doug] D.PHILIPS3> If the control apps people don't give a squat about 
+portability, why would they waste their time in X3J14?
+<[Speaking!] FIGCHAPTERS> ( among HLL's that is )
+<[Speaking!] FIGCHAPTERS> YES we care about portability.
+<[Doug] D.PHILIPS3> Gary?
+<[Speaking!] FIGCHAPTERS> HEVVINS we care about portability.
+<[Doug] D.PHILIPS3> Gary was the one to assert otherwise (and its his answer 
+I'm trying to elict!)
+<[Speaking!] FIGCHAPTERS> We want CODE LIBRARIES to spring up like mushrooms 
+after the rain.
+<GARY-S> Probably to maintain continuity, Doug. Just a guess.
+<M.HAWLEY> has left.
+<[Kevin] APPERT> doing almost what we want, almost as fast as we want, Jax?
+<[Speaking!] FIGCHAPTERS> We want MAINTAINABLE systems so our customers can 
+hire drudges to maintain ourbrilliant applications without bothering us! (
+Just like C! :-) )
+<[Doug] D.PHILIPS3> Sorry, picking a language, like all the other "fixes" and 
+"wonder solutions" throughout the years, won't solve that problem.
+<[Speaking!] FIGCHAPTERS> We want a STAMP on the BOX that says "ANSI APPROVED".
+<[Kevin] APPERT> can you do that, Jax?  I'll buy a pound of that stuff!  sounds 
+great
+<GARY-S> I don't see KK & R 'C' being thrown away, and neither will F-83
+<[Speaking!] FIGCHAPTERS> Nobody suggested it.
+<[Kevin] APPERT> drudges and Forth don't get along well.  it has been 
+demonstrated.
+<[Speaking!] FIGCHAPTERS> But Vesta will have ANS Forth the day the Standard is 
+approved.
+<[Doug] D.PHILIPS3> If X3J14 can even get BASIS11 out the door!!!!
+<[Wil] W.BADEN1> Actually, six months before.
+<[Doug] D.PHILIPS3> Does the BASIS exist as the final act of the meeting, or 
+does it exist later?
+<[Speaking!] FIGCHAPTERS> Wil, you bet.
+<GARY-S> For new products, you won't retro or perform continuation engineering 
+on mature products - neither will anyone else
+<[Doug] D.PHILIPS3> Gary:    Yes!
+<[Speaking!] FIGCHAPTERS> Gary, it would be hard to make our current Forth ANS.
+<[Speaking!] FIGCHAPTERS> There will be a new product.
+<GARY-S> Oh, I definitely agree
+<[Doug] D.PHILIPS3> T'was an article recently about how C++ is not worth 
+hill'o'beans for upgrading existing C apps.  Paradigm stress is too great.
+<[Kevin] APPERT> Paradigm stress can be verrrry painfull.
+<[Speaking!] FIGCHAPTERS> I'm reading "Expert Systems in C++"
+<[Speaking!] FIGCHAPTERS> He illustrates expert systems with examples like 
+DELTA by General Electric.
+<[Speaking!] FIGCHAPTERS> Written in Forth!!!!
+<GARY-S> It was
+<[Doug] D.PHILIPS3> So, does BASIS11 exist yet, or does it only exist in the 
+minds of the attendee's who each think they know what it will say?
+<[Speaking!] FIGCHAPTERS> Yes, exists.
+<[Speaking!] FIGCHAPTERS> No, not typed.
+<[Kevin] APPERT> most injuries in the home are from the use of ad-hoc ladders 
+or stressed paradigms.
+<[Speaking!] FIGCHAPTERS> Out in a month or so.
+<[Doug] D.PHILIPS3> So, they've found a new sec'y?
+<GARY-S> I stressed mine bending over to pick up a parser
+<[Speaking!] FIGCHAPTERS> Kevin, you get a nickle, I'll get a paira dimes, 
+we'll get together, have a real fine time, oh, White Port a and Lemon Juice
+ ... :-)
+<[Doug] D.PHILIPS3> Aye Mate's Swab that Parse Tree!
+<[Wil] W.BADEN1> (Chair of Documentation Committee.)
+<[Speaking!] FIGCHAPTERS> Doug, Gary Betts of Universal SYnergetics new Doc Sec,
+ I belive.
+<[Speaking!] FIGCHAPTERS> Gary Betts == IBM CAD.
+<GARY-S> Just like that - the whole damn conference went into the toilet
+<[Doug] D.PHILIPS3> (Doesn't matter too much to me who it is, so long as there 
+is one who'll get the job done!)
+<[Speaking!] FIGCHAPTERS> gary?
+<[Doug] D.PHILIPS3> (KerFluuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuush!)
+<[Doug] D.PHILIPS3> (Right on schedule too!)
+<[Speaking!] FIGCHAPTERS> huh?
+<[Kevin] APPERT> CAD? Jax?
+<[Speaking!] FIGCHAPTERS> foof?
+<[Doug] D.PHILIPS3> IBM CAD == IBM C? A? D?
+<GARY-S> let's close shop
+<[Speaking!] FIGCHAPTERS> what's the proiblem, gar?
+<[Speaking!] FIGCHAPTERS> Is it my breath? :-)
+<[Doug] D.PHILIPS3> Flip Flop Close Shop SWAP DROP!
+<[Kevin] APPERT> 'night jenni
+<GARY-S> this conversation
+<[Speaking!] FIGCHAPTERS> Foof! Gnite.
+<[Speaking!] FIGCHAPTERS> has left.
+=== End of Steno notes. ===
+
+

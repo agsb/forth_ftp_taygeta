@@ -1,0 +1,58 @@
+This letter from FIG's incoming president will appear in the
+January issue of Forth Dimensions.  - Brad Rodriguez
+------------------------------------------------------------------------
+
+Letter from the President
+Everett (Skip) Carter
+
+It is a great honor for me to be writing this letter to you as the new
+president of the Forth Interest Group.  I extend my thanks to all of you
+for electing me to the Board of Directors, and to the Board of Directors
+for choosing me as the president.
+
+As I have stated in the past, FIG is member supported.  As such, I will
+rely heavily upon your constructive contributions to help FIG grow and
+to improve the services that it provides.  I know that each of you has
+ideas on what you expect of FIG.  And so I am issuing a general "call
+for volunteers" to lend a hand.  If you can make the time to volunteer
+to support FIG activities, contact us and let us know what type of
+things you can do.  If you want to start a specific project that you
+think that FIG should be doing (like reviving a defunct local chapter),
+let us know.
+
+The new Board of Directors is geographically diverse (but still North
+American this time around) and will heavily rely upon electronic
+communications between ourselves.  Happily, this provides for a means
+for our geographically diverse membership (globally diverse, we have no
+off-planet members yet!) to communicate with us. Providing all goes
+well, by the time you read this in Forth Dimensions you will be able to
+contact FIG directly on the Internet at the following addresses,
+
+board@forth.org      all FIG Board of Directors
+editor@forth.org     Marlin Ouverson  Forth Dimensions Editor
+office@forth.org     John Hall        FIG business office
+pres@forth.org       Skip Carter      FIG President
+sec@forth.org        Mike Elola       FIG Secretary
+treas@forth.org      Andrew McKewan   FIG Treasurer
+vp@forth.org         Jeff Fox         FIG Vice President
+
+The address board@forth.org is a "broadcast" mailbox, mail sent there
+is automatically forwarded to all members of the Board of Directors
+(Skip Carter, Jeff Fox, Mike Elola, Andrew McKewan, John Hall, Al
+Mitchell, Brad Rodriguez, Elizabeth Rather, and Nicholas Solntseff).  If
+you have Forth Dimensions subscription questions, these should be
+directed to office@forth.org, not editor@forth.org.
+
+The FIG Web page will move off of taygeta to
+<http://www.forth.org/fig.html> (actually this is still on the system
+taygeta which will now service the forth.org domain).
+
+Based upon the returns of a recent survey of FIG members only 25% of
+you can access the Internet. You can always reach us by regular mail,
+phone or FAX at the FIG office. If you would like to contact me
+directly, you can send a FAX to my business office at (408) 626-3735.
+
+However you do it, talk to us. As I used to say to my students, I can't
+be assured that I am providing for your needs if I don't get any
+feedback.
+

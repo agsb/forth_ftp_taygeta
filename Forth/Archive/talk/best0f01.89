@@ -1,0 +1,353 @@
+
+
+                
+                      Best of GEnie..... January 1989
+          News from the GEnie Forth RoundTable by Gary Smith
+
+  Among the many things Forth is ideally suited to, real time control has
+to rank as its strongest suit. Included in this ever expanding category 
+is the control of robots. Since the subject of robotics is near and dear
+to many Forth enthusiasts it would probably be fair to assume there would
+be discussion of such on the GEnie Forth RoundTable. 
+  In fact, Category 6, Topic 9 is devoted to robotics; and in the column
+this issue we will sample the knowledge in robotics that is there for the
+asking. 
+ ************
+Topic 9         Mon Sep 07, 1987
+ATFURMAN [Alan Furman]       at 20:57 PDT
+Sub: Autonomous mobile & hobby robotics     
+
+This topic also includes legged locomotion.
+ ************
+ ------------
+Category 6,  Topic 9
+Message 2         Mon Sep 07, 1987
+ATFURMAN [Alan Furman]       at 23:23 PDT
+ 
+Radio-Electronics magazine has been publishing a series of articles on
+building a mobile robot programmed in Forth (actually a robot control wordset
+called RCL for "Robot Control Language") since December 1986. A kit of
+mechanical parts is offered by mail order.  The robot has a one-degree-of-
+freedom "arm" (gripper on a vertical positioning slide). It has two powered
+wheels and a control board with an Intel 80186. The board is one of several
+SBCs sold bundled with Forth made by Vesta Technology, Wheatridge, Colorado
+(which just happens to be run by the author, Steven E. Sarns).  Thanx to
+George Shaw for alerting me to this one.
+
+I have not been following the series, so I do not know how sophisticated the
+software has gotten.  This does seem like a great opportunity to blow the
+field away with some AI extensions to the Forth system.  In fact, one of the
+niftiest AI hacks in Forth was created precisely for an autonomous mobile
+robot (at Oak Ridge Nat'l Lab).  Reference: "The Internals of FORPS: a FORth-
+based Production System" by Christopher Matheus, J. Forth App. & Research, Vol
+4 #1, p 7-27 (1986).  The  inference engine and rule compiler take about ONE
+PAGE of source, and originally ran on a Z80.  Now imagine running this on a
+Forth engine.
+ ------------
+Category 6,  Topic 9
+Message 3         Tue Sep 08, 1987
+S.W.SQUIRES [scott]          at 03:11 EDT
+ 
+   Versions of FORPS are available in the file directory for a few different
+computers.  Search for FORPS.
+ ------------
+Category 6,  Topic 9
+Message 4         Tue Sep 08, 1987
+S.W.SQUIRES [scott]          at 03:15 EDT
+ 
+   I may be involved with a mobile cart for a future project.  Since the
+wheels may be rubber there will be some slipage.  Does anyone know of good
+single axis measurement sensing system?   Objective-
+   The cart will be portable and will be in different environments with a
+minimal amount of setup time.
+   Distance traveled will be a few feet to 50 feet.
+   Position resolution must be 1/100 of an inch or better.
+   Update at a speed of 60 to 100 times per second.
+   The technology must be practical with little maintenance. Possible ideas
+we've started to examine:
+   Ultrasonics   Disadvantage- resolution and distance limited.
+   Laser         Disadvantage- complexity.
+   Magnetic field   Disadvantage- not practical given amount of metal and
+                    other factors.
+   Visible focus ( similar to Autofocus cameras )  Disadvantage- complexity
+                 and limited resolution.
+   Grid on ground   Disadvantage- not practical in environment.
+   Tape on ground   Bar code style markings would be printed on the tape.
+                    This looks the most promising so far. Although this is for
+a single axis I'd be curious to know about 3 dimensional measurements given
+the same criteria.      -scott 
+
+ ------------
+Category 6,  Topic 9
+Message 5         Tue Sep 08, 1987
+ATFURMAN [Alan F.]           at 00:38 PDT
+ 
+David Jaffe of the Palo Alto, CA Veterans Administration Hospital
+rehabilitation research group (and soon to be on GEnie [harrumph!]) is
+connected with people doing mobile robot research at Stanford University.  In
+particular, Larry Leifer of the Mechanical Engineering faculty.
+ ------------
+Category 6,  Topic 9
+Message 6         Tue Sep 08, 1987
+ATFURMAN [Alan F.]           at 23:53 PDT
+ 
+Scott:  Is this robotic cart connected with ILM?  What is it for??
+ ------------
+Category 6,  Topic 9
+Message 7         Wed Sep 09, 1987
+S.W.SQUIRES [scott]          at 03:52 EDT
+ 
+This would be a live action dolly system that would have the same requirements
+as a normal dolly but be repeatable.  This is just in an idea stage so it
+might not become a reality. -scott
+ ------------
+Category 6,  Topic 9
+Message 8         Thu Sep 10, 1987
+ATFURMAN [Alan F.]           at 20:15 PDT
+ 
+All right.  You guys want 0.25 mm resolution over a 1.5-15 m range of
+movement.  I guess you are already aware of the avalanche of papers in the
+robotics literature on two subjects: navigation for mobile robots  (obviously)
+and 3D sensors (for mobile robots and also for workpiece inspection and
+robotic bin picking).  SPIE, SME, and IEEE run conferences annually that
+address these topic with voluminous proceedings.  Here are a few thoughts: 
+
+Putting a target on the dolly and determining its position by triangulation
+requires a resolution of 4 seconds of arc.  Theodolites are made that resolve
+0.01 seconds, so it is potentially feasible.
+
+A company called Digital Optronics is gearing up to commercialize very-high-
+resolution laser rangefinders.  Rather than using time of flight (which
+performs poorly with attainable time resolution), these gadgets apparently
+chirp the (long-pulse) beam and heterodyne it with the return. Distance
+variations translate into FREQUENCY variations in the beat note. Clever, what?
+Of course, using it would still entail gimbal mounts and angular tracking of
+the dolly as it moves.
+
+Coded tape is a contender, given the assumption that dolly motion is planned
+in advance, rather than arbitrary.  More in our next episode...
+ ------------
+Category 6,  Topic 9
+Message 9         Thu Sep 10, 1987
+ATFURMAN [Alan F.]           at 20:18 PDT
+ 
+Coded tape for repeat path sensing, continued from previous posting. Consider,
+if you will, the pattern below printed on, say, mylar tape:
+
+   ____________________________________________________________
+  /                                                           /
+  \   |         |         |         |         |         |     \
+  /---+---------+---------+---------+---------+---------+-----/
+  \   |         |         |         |         |         |     \
+  /                                                           /
+  \        || | ||||                                          \
+  /                                                           /
+  \___________________________________________________________\
+
+       (barcodes every 10 cm)       |<- 1cm ->|
+
+A CCD camera aboard the dolly looks directly downward at this tape, which is
+stuck onto the floor.  A simple image processing algorithm locates a line
+crossing in the pattern, and compares its position in the image to the
+position seen during the lead-through programming run.  Ambiguities as to
+which crossmark it is are resolved by taking a cut (in software) through one
+of the bar codes (which label the scale every 10th of a meter).
+
+Using one of the 512x512 sensors available now, and with optics imaging one
+0.25 mm resolution element per pixel, the camera will cover a field of 12.8 x
+12.8 cm.  For more coverage, sub-pixel resolution can be used.  One approach
+to the latter is to use a fancier target pattern--
+
+       \ /       \ /
+ -------X---------X---
+       / \       / \
+
+for example.  Here at least two lines not parallel to the grid axes of the
+sensor are guaranteed.  The software can then fit line equations to the
+diagonal pixel patterns (which smooths out the spatial sampling errors) and
+calculate their intersection.  The software will also have to be smart enough
+to deal with wrinkles and overlapping ends of tape strips.
+
+Cheers, Alan
+ ------------
+Category 6,  Topic 9
+Message 10        Fri Sep 11, 1987
+S.W.SQUIRES [scott]          at 02:56 EDT
+ 
+  Thanks for all the feedback Alan.  Sounds like you're quite involved with
+these areas.
+   I have looked at some of the optical and laser techniques when I was at the
+SPIE show this year.  Would rather keep it a bit simpler.
+   Your thoughts on tape are good.  We were looking at a bit lower tech. The
+tape would have two or more parallel patterns each being read with a separate
+simple photodetector.  This would allow some fault tolerance.  The tape would
+probably be out of plastic and mounted to channel on the track to avoid being
+stepped on.  Mounting the tape on the side or upside down might also be done. 
+Relative marks would probably be fine but if not we might use something
+similar to the SMPTE code.  A single 'channel' of data should suffice if done
+correctly.      -scott
+
+ ------------
+Category 6,  Topic 9
+Message 11        Sun Sep 20, 1987
+ATFURMAN [Alan F.]           at 15:24 PDT
+ 
+Since getting on GEnie, I have learned of the existence of the Macbot
+autonomous mobile robot project: a loosely-defined, public-domain, hacker-
+community effort that seems to be drifting toward adopting Forth as the main
+programming language.  References: several files in the Forth Applications DL,
+and postings under Category 12 in the "Mac developers" RT.
+
+The Macbot group figures that the spinoffs (usable designs in servo control,
+AI, etc.) alone would pay for the effort, but practical applications like aids
+to the handicapped have been mentioned.  The only fixed quantity seems to be
+the Macintosh as central controller. Actually, the best controller choice
+would be the 32-bit Forth virtual machine, whether implemented on a Mac, Atari
+ST, Amiga, or 386 PC bus system (the last two choices would make interfacing
+easier).
+
+Macbot activity on GEnie stalled this summer; I do not know what is going on
+with the project itself (it appears to live mainly on Compuserve).  The leader
+of the project, B.W. Lightsey, is on GEnie; B.W.LIGHTSEY is his address.
+ ------------
+Category 6,  Topic 9
+Message 12        Sat Nov 14, 1987
+H.SIMMONS                    at 22:31 PST
+ 
+  Lacking practical experience, this suggestion may not have merit, but it
+would seem that the use of a fifth wheel would provide sufficient accuracy to
+allow for only occasional calibration my moving the dolly to a known location.
+If the dolly is to have two dimensional travel, a larger than handheld "mouse"
+with larger ball should do the job.
+
+  For calibration, perhaps laser diodes attached to the ceiling at strategic
+positions which could fire in response to an ultra- sonic signal from the
+dolly?
+
+  Is there any possibility of placing ultrasonic targets/"cali- bration tape"
+on the ceiling to get regular positional information?
+
+         -Horace
+ ------------
+Category 6,  Topic 9
+Message 13        Mon Nov 16, 1987
+S.W.SQUIRES [scott]          at 04:07 EST
+ 
+Good suggestions but the travelling wheel would probably have some accuracy 
+problems over long runs.  The ceiling for most applications might be 40+  feet
+up and differ from a regular ceiling or it may be 'outside' in some  projects
+with no ceiling.  Not much is happening with this project  currently so I'm on
+to other projects.  -scott 
+ ------------
+Category 6,  Topic 9
+Message 14        Sun Oct 02, 1988
+S.W.SQUIRES [scott]          at 03:36 EDT
+ 
+Those interested in Robotics and AI may want to check the October issue of 
+OMNI magazine.  There is a article on the insect robots designed by Rodney 
+Brooks at MIT's Artificial Intelligence Laboratory.  The potential 
+applications and approaches are discussed.  The article includes step by  step
+instructions on how to modify a cheap toy car from Radio Shack and add 
+electonics to simulate some of the responses of an insect.  ($50-75 total) 
+All the logic is actually photocells, Op Amps and TTL logic but a person 
+should be able to replace that logic with a small Forth board that does  that
+and much more.  As I recall Scientific American had a Computer Recreations
+article a couple of years ago describing similar photocell controlled
+vehicles.   -scott
+ ------------
+Category 6,  Topic 9
+Message 15        Sat Dec 03, 1988
+R.SCHEMMEL1 [JEPEDO]         at 20:34 PST
+ 
+Gentlemen, allow me to be of assistance. Robotics is my main objective and I
+would be glad to participate in a group project. I can provide technical
+reference information in Electronics to almost any degree of detail as far as
+circuitry goes. However as I am sure you are aware, the sheer magnitude of new
+technology is staggering and although I have a nice assortment of very recent
+engineering books on robotics  rrelated subjects it nevertheless is relatively
+equivilent to having a few fish out of the ocean , compared to what you don't
+have , you don't have anything, but it's still enough to feed you at the
+time...
+ Also, my forte is prototyping circuitry and fabrication of an electronic
+nature , to wit , building circuits, equipment, etc. in- cluding motor
+control, (steppers, feedback servo's are of course the only way to get real
+precision but are incredibly more involved both design wise and prototyping
+and testing. A good feedback servo motor controller is a real thing of beauty-
+it flies through the air with tthe greatest of ease and stops close enough to
+a dime standing on its edge to knock it over with the air pressure and still
+not touch it- the precision standard four years ago was 1/1000 of and inch but
+these days they have stuff that can thread a needle literally with plenty of
+clearance-if you have enough money. Anyway, if you need something prototyped
+and you have the design but need an Engineering tech. to build it I might be
+able to help you. I am hoping that I'll eventually learn enough about forth to
+program the hardware I build but at the moment I couldn't program my way out
+of a paper bag. -----------GENIE ADDRESS:R.SCHEMMEL1---------------------------
+---- -----------HOME ANSW. MACH.: ( 818 ) 702-9847---------------------- ------
+------------------------------------------------------------- -----------
+Personnally, I'll take a FORTH ENGINE over any thing else for a main cpu or
+controll processor anyday. I just wish I could  afford one! 
+ ------------
+Category 6,  Topic 9
+Message 16        Sun Dec 04, 1988
+R.SCHEMMEL1 [JEPEDO]         at 17:11 PST
+ 
+Scott, for your information the RE-ROBOT uses an 80188,not 80186 as you
+mentioned. Also , for those interested the RR-BBS phone number is ( 516 ) 293-
+2283. It was busy every time I called but they have a section for "RE-
+ROBOTEERS" so to speak.
+ Also, on the subject of rubber wheel slippage I would suggest that you
+"FORGET" that word "slippage" because all you REALLY care about is not how
+much you've slipped, but where you are when all the slipping is over. That is,
+concentrate on getting your "BEARINGS" using something like the Poloroid Infra-
+red range sensor for "course" measurements and a doppler type ultra- sonic
+sensor for a complimentary input. You'll need something photo active for
+"fine" distance measurements and I would re- commend a high-powered infra-red
+led mounted on a one access sorry , that word should have been "axis" mount or
+a disk such that it can change the angle which it shines at the path in front
+or the wall and have a strip of infra-red optical transistors running along
+the base strip all the way around so the transmitter scans back and forth
+sending a pulsed beam at a preset frequency which the transistors recieve and
+multi-plex the transistor detectors for a signal and then test the signal
+found for the correct frequency to eliminate all light not sent by the
+transmitter. It would look something like this:
+
+
+   c- - - - - - - - - )
+                      )
+                      )
+                      )
+   t -----------------)
+   r -----------------)  ) = object or wall reflecting light.
+                         t = transmitter  r = reciever
+  Adimittedly this is a crude method but the key to making it work
+ is using linear transistors and sensing amplitude of return signal rather
+than switching type in an on/off setup. By varying the current to your
+scanning transmitter led and sensing linearly varying light pulses returning
+you have the ability to make either "short range" or "long range" sensor scans
+and by using the amplitude of the return light signal to vary the frequency of
+of a voltage to frequency con- verter IC (there are many available) you can
+then measure the frequency of the signal you have generated and put that on
+the "BUSS" when  you wish to know the distance. The cart sensor navigation
+system is calibrated by driving it through an obstacle course and recording
+all sensor readings in a form of "learn" mode. The measurements are used to
+establish equivilent parameter specs such that data value "xxxx" equals ten
+feet, or six feet or one foot etc.The readings of course are never the same
+for different areas so given a large memory capacity for   READ-ONLY data (cd
+rom would be ideal but a large hard disk would do ) you can record all the
+readings for points along the path and store them once as READ-ONLY data-this
+is of course your data "map" which has no value to any-one except the robot
+that has generated it for to "it" these readings represent "real" places that
+it has been once. It there fore can do a string search or approximation
+comparison of real-time readings with READ-ONLY stored map data and determine
+that it is about three feet from the drinking fountain in front of the
+elevator door on the second floor near the EAST wing at about 4:00 pm when the
+sun  coming through the window is at its lowest. As you can see "place" is
+only part of the problem , the "time" must be recorded when the "map" is
+generated. That is the data header for the sensor readings must always contain
+a date-stamp or the readings will lose much of their value. As a matter of
+general practice ALL SENSOR READINGS OF ANY NATURE should contain a date stamp
+as this information will be invaluable later.
+ "JEPEDO  is the name  and  ROBOTS  are my game." [R.SCHEMMEL1] 
+ ------------
+
+

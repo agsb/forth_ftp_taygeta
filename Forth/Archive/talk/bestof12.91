@@ -1,0 +1,190 @@
+
+                
+                   Best of GEnie..... December 1991
+          News from the GEnie Forth RoundTable by Gary Smith
+
+   Once again this column will breifly review recent guest conferences held
+once per month in the GEnie RoundTable Real Time Conference area. These
+always involve guests who have helped shape our chosen programming language
+or impacted events within the Forth community.
+
+   Should you be interested in attending one of these and posing your own
+questions or comments with our guests they are held at 9:30 pm Eastern time
+on the third Thursday of each month except during the last quarter of each
+year when they are held on the second Thursday to avoid conflicts with the
+many holidays that occur during October, November and December. The guest
+schedule is always posted in advance in the GEnie Forth RoundTable in Topic
+6 of Category 1, "Real Time Conferences". It may be your only opportunity to
+chat with the likes of a Sergei Baranoff or Bob Loewenstein. It is always a
+pleasure.
+  
+   Guest conferences reviewed will include Brad Rodriguez, "ANSI: Ask Not for
+Standards Improvement"; Sergei Baranoff, "Computing in the Soviet Union";
+Marlin Ouverson, "Beyond 'Forth Dimensions'"; Jan Shepherd, "PR: Promoting
+Forth and the Forth Interest Group"; and Bob Loewenstein, "Exploring Yerk".
+As has been my formula for these recaps, I will include only each guests'
+opening remarks. If they whet your appitite for more, the transcripts await
+your retrieval in the GEnie Forth RoundTable Software Library 1.
+  
+   May 16, 1991 Bradford J. Rodriguez, independent hardware and software 
+   consultant discussed the Ans Forth Standards effort from an opposing view.
+   His topic, "ANSI: Ask Not for Standards Improvement", made it plain that
+   the 'loyal opposition' had some things to say about X3J14, the ANS Forth
+   standards effort.  
+      THIS CONFERENCE IS A 'MUST READ' FOR ALL X3J14 WATCHERS !
+
+<[Brad] FIGGUEST> I was once a supporter of X3J14.  Now I'm a critic. 
+                  I contend that the X3J14 Technical Committee has 
+                  exceeded its mandate.  At the risk of sounding like
+                  the Declaration of Independence, here's why: 
+
+                  They have created a standard which disagrees more
+                  radically than ever before with all previous Forth 
+                  standards.  They have ignored or discarded previous
+                  standard usages and widely-accepted common usages. 
+                  
+                  They have added features to the standard for no
+                  demonstrated market need.  They have refused to add 
+                  features that, by their own logic, are essential in 
+                  the standard.
+                 
+                  They have refused to adopt any objective or 
+                  verifiable criteria for the adoption of proposals. 
+                  They have failed to conform to their own stated 
+                  criteria and scope of work.
+                 
+                  They have been unduly influenced by special interests.
+                  They have defended their excesses because they must 
+                  be standardized "now or never", and their omissions
+                  because they can be corrected "in a future standard."
+                  
+                  So...let's talk about X3J14, the ANSI Forth to be.
+
+   June 20, 1991 our guest was Dr. Sergei Baranoff of the Leningrad Institute
+   for Informatics.  Dr. Baranoff discusses Forth and computing in the Soviet
+   Union and related issues. His topic, "Computing in the Soviet Union".
+
+<[Sergei] FIGGUEST> The most characteristic features of the current state of 
+                    art in computer programming in the USSR is
+                    1) Solid math background of many of the programmers;
+                    2) Limited hardware resources;
+                    3) Relativly small salaries for doing new research
+                    4) Constant interest in doing this sort of work.
+
+                    Now Forth becomes more and more popular, as PC become more
+                    available. Thanks to the International Forth community
+                    we receive a great moral support in our activities.
+                    I'm glad to report that in April 1991 the 1st Forth 
+                    conference was held in Leningrad with over 120 attendees
+                    from 26 cities and the Soviet JFAR came into being.
+
+                    Now 2 students from Leningrad Univ are in Rochester and 
+                    then would go to Dallas, TX to learn practical Forth 
+                    programming in New Micros, Inc.
+
+                    We expect a return visit this year.      
+
+   July 18, 1991 our conference was with Marlin Ouverson, editor of 'Forth
+   Dimensions'. Marlin exchanged views with attendees, offered his thoughts
+   about Forth (past, present and future) and presented his 'wish list' for
+   article submissions and reader input.
+   
+        There was also a brief overview of the upcoming Boulder X3J14 TC
+        meeting by Jack Woehr. This meeting should create dpANS Forth.
+
+        <MARLIN.O> Eight years...time flies, whether you are dodging
+                   deadlines or having fun, or both!
+                 
+                   I want to point out here that I do not speak for
+                   the Forth Interest Group. I have never been on
+                   FIG's Board of Directors (though they patiently
+                   listen to my I/O). Since I'm a paid, independent
+                   contractor, that's how it should be.
+               
+                   And I disavow any Forth expertise of my own, because
+                   the real Forth experts--you who are here tonight,
+                   the readers of Forth Dimensions, the FORML crowd,
+                   Forth vendors, etc.--can speak for themselves and
+                   form their own technical opinions/conclusions.
+                   I just try to publish an honest representation of
+                   all your voices, and to meet as many of your needs
+                   as my limited time and FIG's limited budget allow.
+               
+                   FD authors know that I respect their work, that I do
+                   not shoot down their ideas, but try to expose them to
+                   our readers in their best possible light. And FD
+                   readers know I am their ally--far from censoring or
+                   propagandizing, I welcome diversity and innovation.
+               
+                   What we need in our pages now is more people willing
+                   to take the time to reveal their insights, question
+                   convention, pose questions, and share experiences--
+                   programmers interested enough in their work to write
+                   about it, and/or interested enough in the next Forth
+                   generation to teach it what they have learned.
+
+   August 15, 19915 Jan Shepherd, President of Association Development 
+   Center, Inc. joined us. Jan discussed the promotion of Forth and the Forth
+   Interest Group, and responded to questions about the image of both.
+
+    <[Jan] FIG> so...Webster's New World Dictionary defines promote as: 
+                  to further the growth, establishment, sales etc of...
+            Promoting Forth and FIG.  Forth is not FIG's middle name, but its 
+            first name. The only reason FIG exists is to promote Forth...
+   
+            How ?  By publishing Forth Dimensions magazine, maintaining a 
+            library of Forth books and software and distributing these 
+            materials through the mail order service, by providing a forum for
+            communications here on GEnie, by holding an annual technical 
+            conference, FORML, where new Forth ideas are aired and shared
+            and publishing the conference proceedings each year, by producing
+            a directory of Forth vendors and recently, thanks to John Hall, an
+            index of articles from Forth Dimensions and the FORML proceedings
+            FIG> going back to when they were first published.
+            In the past, FIG held an annual convention with exhibits and 
+            conference sessions.  This was discontinued a couple of years ago
+            because it was losing money, though the content was good.
+            Fig promotes all these things through Forth Dimensions, paid 
+            advertising in other publications, through this forum on GEnie,
+            through flyers about FIG which are being distributed by Forth 
+            vendors with their product material and through some of the
+            activities of chapters, such as the trade show booth organized by
+            the Silicon Valley chapter for West Coast Computer Faire each year.
+            FIG is an organization of Forth users.  It does not hold any 
+            interest in any Forth products or services other than Forth itself.
+            It exists because Forth users wanted to have a central place which
+            would provide a repository for Forth information, both current and
+            historical, and distribute this Forth information as requestested.
+             ...
+            So this is a little bit about FIG and what it does to promote 
+            Forth.
+
+   September 19, 1991 Dr. Bob Loewenstein of Yerkes Observatory was our guest.
+   Bob has acquired non-commercial rights to the Mac based Object Oriented 
+   Forth by Kriya and Charles Duff called Neon, hes enhanced it and renamed it
+   YERK. Dr. Loewenstein joined us to discuss YERK.
+
+<[Bob] FIGGUEST> Let me begin by saying that I am not a computer
+                 'expert.' I need to use computers and software in
+                 my line of research and as a consequence have had
+                 to create a lot of hardware and software to 'get
+                 the data.' Yerk is an object oriented variant of
+                 Forth. It allows a programmer to take advantage of
+                 Object Oriented constructs and techniques, which
+                 makes for a more intuitive program structure and a
+                 more maintainable code, as well as fast
+                 development time. I was a beta tester for Chuck
+                 Duff, Neon's primary author, while he was
+                 developing it in mid-to-late 1984. After Neon's demise
+                 I continued to refine and update Yerk because I felt
+                 it was the best Forth-like Object Oriented language out
+                 there.  I don't really hold the rights to Neon/Yerk
+                 Kriya allowed me to release the sources for educational
+                 purposes, but they retain the commercial rights to Neon.
+                 One of the conditions I had to agree to for releasing it
+                 was to change the name since there is some dispute as to
+                 the ownership of the word 'Neon' as applied to software
+                  
+                 So, with that said, I'm ready for questions.
+
+

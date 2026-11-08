@@ -1,0 +1,601 @@
+
+CONTROL FLOW WORDS FROM BASIS9
+ 
+WARNING:
+ 
+THIS EXTRACT IS UNOFFICIAL AND SUBJECT TO CHANGE.
+ 
+IT AIN'T OVER TILL IT'S OVER.
+ 
+Discussion:
+ 
+Languages that can define new functions and procedures are extensible
+in a weak sense.  Forth is extensible in a strong sense because it can
+define new syntax.
+ 
+In Forth, discretely defined control flow words are associated with each
+other to implement the logic for flow of control.  What control flow
+words do must be made clear so that they can be used as components of
+other words.
+ 
+Forth control flow words must be defined independently of each other.
+Programmers can use standard control flow words to define archac or
+novel control flow words like:
+ 
+: END     [COMPILE] UNTIL ; IMMEDIATE
+ 
+: ENDIF   [COMPILE] THEN ; IMMEDIATE
+ 
+: UNLESS  COMPILE 0=  [COMPILE] IF ; IMMEDIATE
+ 
+: OF  COMPILE OVER   COMPILE =   [COMPILE] IF   COMPILE
+DROP ; IMMEDIATE
+ 
+: THENS ( n) 0 DO (  ) [COMPILE] THEN   LOOP; IMMEDIATE
+ 
+Because of ForthUs method of compiling it does not have syntactic
+structures like almost all other languages.  A user can extend ForthUs
+syntax, i.e.,Jwhat patterns the compiler accepts.  Syntactic paradigms are
+not possible; instead typical use must be given.
+ 
+The intent here is to say everything that has to be said and no more.
+This has been done by providing pedantic descriptions of compile-time
+and run-time behavior accompanied by annotated patterns of typical use.
+Horrible example of what the Standard must allow:
+
+   -1 OF ." True " ELSE UNLESS ." False " ELSE ." Whatever " [ 2 ]
+THENS
+
+Reasonable example of what the Standard must allow:
+
+: CRAPS ( n -- )
+    2 OF ." You lose. " ELSE
+    3 OF ." You lose. " ELSE
+    7 OF ." You win. " ELSE
+    11 OF ." You win. " ELSE
+    12 OF ." You lose. " ELSE
+    ( Otherwise:) . ." is your point. "
+    [ 5 ] THENS ;
+
+
+5.3.9    Control Flow
+ 
+Forth does not have control structures in the same way that other
+languages do.  In Forth, discretely defined control flow words are
+associated with each other to implement the logic for flow control inside
+colon definitions.
+ 
+The requirement that control flow words must be properly balanced
+with other flow control words make it reasonable that at compile-time an
+implementation-defined stack will be used, but there is no prescription as
+to how that stack is to be implemented, e.g., parameter stack, linked list,
+special array.  This stack is called the control flow stack.  The control
+flow stack is meaningful only at compile-time.  Although only one stack is
+necessary an implementation may use more than one provided that the
+effective program logic is equivalent to that described here.
+ 
+The control flow stack supports two kinds of elements: origins,
+specifying locations of references to be resolved, and destinations,
+specifying referents to resolve references.  These are locations in the
+dictionary.  One kind of element must be matched by the other.  The
+nature and number of components in an element is unspecified and may
+vary in an implementation.  Other information may also be maintained.
+ 
+Balanced matching ensures that a resulting control structure can be
+completely contained within another, but cannot overlap.
+ 
+The compile-time behavior implicitly does whatever is necessary to
+implement the explicit run-time behavior.  When explicit compile-time
+behavior must be prescribed it is given as "Compilation semantics."  The
+stack effect for the control flow stack is given and identified by
+"(compiling)".
+ 
+The standard gives just the operation of a control flow word and not its
+purpose.  Typical use shows the purpose.  The flow graphs [NOT
+SHOWN IN BASIS] belong to the rationale and are not part of the
+standard.
+
+7.0140    +LOOP
+ 
+"plus-loop"    I, C    CORE
+ 
+( n -- )
+ 
+( dest -- )    (compiling)
+ 
+Compilation semantics:
+ 
+Resolve the destination of all unresolved occurrences of LEAVE
+between the location given by the top element of the control flow stack
+and the next location in the dictionary.  The top element of the control
+flow stack must have been a referent to resolve a transfer of control.
+The loop control parameters must have been available.
+ 
+Execution semantics:
+ 
+Add n to the loop index.  If the loop index was not incremented across
+the boundary between the loop limit minus one and the loop limit then
+continue execution at the location given by the top element of the control
+flow stack.  However, if the loop was incremented across the boundary
+between the loop limit minus one and the loop limit then discard the
+current loop control parameters.
+ 
+See also: 7.1240 DO; 7.1680 I; 7.1760 LEAVE
+ 
+7.0620    ?DO    "question-do"    I, C    EXT CORE
+          ( n1 n2 -- )
+          ( -- orig dest )        (compiling)
+ 
+Compilation semantics:
+ 
+The location of the new unresolved reference and the next location in
+the dictionary go onto the control flow stack.
+ 
+Execution semantics:
+ 
+If n1 is not greater than n2 continue execution at a location given later
+by a word that consumes orig.  Otherwise set up loop control parameters
+with index n2 and limit n1.  Anything already on the return stack
+becomes unavailable until the loop control parameters are discarded.
+ 
+ Typical use:
+ 
+ limit initial
+ ?DO ( Set up loop control parameters.)
+     word-sequence
+ LOOP ( Increment loop index & check for termination.)
+
+See also: 5.3.9 Control Structures; 7.1680 I; 7.1760 LEAVE 7.2380
+UNLOOP
+ 
+[*** The following commentary was abrogated at October 1989 meeting.
+***] ?DO behaves significantly different than DO during compilation.
+Consequently, LOOP and +LOOP cannot resolve both structures without
+being 'smart.'  The Technical Committee considered adding a new word
+?LOOP that would resolve ?DO, but decided that adding a new word was
+inappropriate in this case since ?LOOP is trivially defined as : ?LOOP
+LOOP THEN ; IMMEDIATE.  TD/319
+ 
+7.0760    BEGIN
+	I, C    CORE
+ 
+( -- )
+ 
+( -- dest )    (compiling)
+ 
+Compilation semantics:
+ 
+The next location in the dictionary goes onto the flow control stack.
+ 
+Execution semantics:
+ 
+Do nothing.
+ 
+Typical use:
+
+BEGIN ( Do nothing.)
+    word-sequenceJflag UNTIL ( If flag is false continue execution after
+BEGIN.)
+
+BEGIN ( Do nothing.)
+    word-sequenceJflag WHILE ( If flag is false continue execution after
+REPEAT.)
+    another-word-sequence REPEAT ( Continue execution after BEGIN.)
+
+See also: 5.3.9 Control Structures; 7.2140 REPEAT; 7.2390 UNTIL; 7.2430
+WHILE
+ 
+7.1240    DO    I, C    CORE
+          ( n1 n2 -- )
+          ( dest -- )    (compiling)
+ 
+Compilation semantics:
+ 
+The next location in the dictionary goes onto the control flow stack.
+ 
+Execution semantics:
+ 
+Set up loop control parameters with index n2 and limit n1.  Anything
+already on the return stack becomes unavailable until the loop control
+parameters are discarded.
+ 
+Typical use:
+
+ limit initial
+ DO ( Set up loop control parameters.)
+     word-sequence
+ LOOP ( Increment loop index & check for termination.)
+
+ limit initial
+ DO ( Set up loop control parameters.)
+     word-sequence  incr
+ +LOOP  ( Increment loop index & check for termination.)
+
+See also: 5.3.9 Control Structures
+ 
+7.1310    ELSE    I, C    CORE
+          ( -- )
+          ( orig1 -- orig2 )    (compiling)
+ 
+Compilation semantics:
+ 
+The next location in the dictionary resolves the reference given by the
+top element of the control flow stack.  The location of the new
+unresolved reference replaces the top stack element of the control flow
+stack.  The former top element of the control flow stack must have been
+the location in the dictionary of an unresolved reference.
+ 
+Execution semantics:
+ 
+Continue execution at a location given later by a word that consumes
+orig2.
+ 
+See also: 7.1700 IF; 7.2270 THEN
+ 
+7.1570    FOR    I, C    EXT CORE
+          ( u -- )
+          ( -- sys )    (compiling)
+ 
+Syntax:
+	FOR ... NEXT ...
+ 
+Set up loop control parameters with index u.  Execute the words
+between FOR and NEXT.
+ 
+Above - semantics for FOR by itself; below - semantics for for-next
+loops.
+ 
+Begin a loop which terminates based on control parameters.  The loop
+index begins at u, and terminates based on the limit 0.  See NEXT for
+details on loop termination.
+ 
+sys is balanced by the corresponding NEXT.
+ 
+An exception exists if insufficient space is available for at least three
+nesting levels.
+ 
+Typical use:
+
+ limit initial
+ FOR ( Set up loop control parameter.)
+     word-sequence
+ NEXT   ( Decrement loop parameter & check for termination.)
+
+See also: 5.3.9 Control Flow
+ 
+7.1700    IF    I, C    CORE
+          ( flag -- )
+          ( -- orig )    (compiling)
+ 
+Compilation semantics:
+ 
+The location of the new unresolved reference goes onto the control flow
+stack.
+ 
+Execution semantics:
+ 
+If flag is false continue execution at a location given later by a consumer
+of orig.
+ 
+Typical use:
+
+Jflag JIF ( If flag is false continue execution after ELSE.)
+     word-sequence JELSE ( Continue execution after THEN.)
+     another-word-sequence JTHEN ( Do nothing.)
+
+Jflag JIF ( If flag is false continue execution after THEN.)
+     word-sequence JTHEN ( Do nothing.)
+
+See also: 5.3.9 Control Structures; 7.1310 ELSE; 7.2270 THEN
+ 
+7.1760    LEAVE    I, C    CORE
+          ( -- )
+          ( -- )    (compiling)
+ 
+Compilation semantics:
+ 
+The loop control parameters must have been available.
+ 
+Execution semantics:
+ 
+Discard the current loop control parameters.  Continue execution at a
+location later given later.
+ 
+See also: 5.3.3 Return Stack; 7.0140 +LOOP; 7.1800JLOOP
+ 
+7.1800    LOOP    I, C    CORE
+          ( -- )
+          ( dest -- )    (compiling)
+ 
+Compilation semantics:
+ 
+The next location in the dictionary resolves the destination of all
+unresolved occurrences of LEAVE between the location given by the top
+element of the control flow stack and the next location in the dictionary.
+The top element of the control flow stack must have been a referent to
+resolve a transfer of control.  The loop control parameters must have
+been available.
+ 
+Execution semantics:
+ 
+Add one to the loop index.  If the loop index is then unequal to the loop
+limit continue execution at the location given by the top element of the
+control flow stack.  However if the loop index is equal to the loop limit
+discard the loop control parameters.
+ 
+See also: 7.1240 DO; 7.1680 I; 7.1760 LEAVE
+ 
+7.1920    NEXT    I, C    EXT CORE
+          ( -- )
+          ( sys -- )    (compiling)
+ 
+Syntax:
+	FOR ... NEXT ...
+ 
+If the current (innermost) loop index is zero, discard the loop control
+parameters and execute the words following NEXT.  Otherwise,
+decrement the index and execute the words between FOR and NEXT.
+ 
+sys is balanced by the corresponding FOR.
+ 
+7.2140    REPEAT    I, C    CORE
+          ( -- )
+          ( orig dest -- )    (compiling)
+ 
+Compilation semantics:
+ 
+The next location in the dictionary resolves the reference given by the
+next-to-top element of the control flow stack.  The top element of the
+control flow stack must have been a referent to resolve a transfer of
+control.  The next-to-top element of the control flow stack must have
+been the location in the dictionary of an unresolved reference.
+ 
+Execution semantics:
+ 
+Continue execution at the location given by the top element of the
+control flow stack.
+ 
+See also: 7.0760 BEGIN; 7.2430 WHILE
+ 
+7.2270    THEN    I, C    CORE
+          ( -- )
+          ( orig -- )    (compiling)
+ 
+Compilation semantics:
+ 
+The next location in the dictionary resolves the reference given by the
+top element of the control flow stack.  The top element of the control
+flow stack must have been the location in the dictionary of an unresolved
+reference.
+ 
+Execution semantics:
+ 
+Do nothing.
+ 
+See also: 7.1310 ELSE; 7.1700 IF
+ 
+7.2380    UNLOOP    CORE
+          ( -- )
+ 
+Discard the loop control parameters.  The loop control parameters must
+have been available.
+ 
+Typically followed by EXIT to exit the loop and the word definition.
+ 
+UNLOOP to restore loop control parameters, and R> and 2R> to remove
+return stack values, can be used repeatedly provided they are used in the
+reverse order of how values were put onto the return stack and loop
+control parameters were preserved.
+ 
+See also: 5.3.3 Return Stack
+ 
+UNLOOP as a function has been called UNDO.  UNLOOP is more
+indicative of the action; nothing gets undone -- we simply stop doing it.
+ 
+7.2390    UNTIL    I, C    CORE
+          ( flag -- )
+          ( dest -- orig dest )    (compiling)
+ 
+Compilation semantics:
+ 
+The top element of the control flow stack must be a referent to resolve a
+transfer of control.
+ 
+Execution semantics:
+ 
+If flag is false, continue execution at the location given by the top
+element of the control flag stack.
+ 
+See: 7.0760 BEGIN
+ 
+7.2430    WHILE    I, C    CORE
+          ( flag -- )
+          ( dest -- orig dest )    (compiling)
+ 
+Compilation semantics:
+ 
+The next location in the dictionary resolves the reference given by the
+next-to-top element of the control flow stack.  The top element of the
+control flow stack must have been a referent to resolve a flow of control.
+The next-to-top element of the control flow stack must have been the
+location in the dictionary of an unresolved reference.
+ 
+Execution semantics:
+ 
+Continue execution at a location given later by a word that consumes
+dest.
+ 
+Rationale
+ 
+The normal use of control flow words is to implement the basic control
+structures, as shown in the patterns of typical use.
+
+ 
+ANS Forth acknowledges the benefits of adopting the simplest and most
+efficient implementation of WHILE.  This is not an innovation but the
+recognition of what has been long accepted practice in a major portion of
+the Forth community.  It provides a solution for well-known problems
+with strictly structured programming.
+ 
+WHILEJJwas not originally in Forth.  IF was used both for the selection
+of an alternative and the termination of a BEGIN-loop.  It was soon
+realized that this was a cause of confusion and that the intended use
+should be made clear.  Some implementers introduced WHILE as a
+synonym for IF.
+ 
+: WHILE   [COMPILE] IF ; IMMEDIATE
+ 
+: REPEAT   SWOP  [COMPILE] AGAIN   [COMPILE] THEN ;
+IMMEDIATE
+ 
+Other implementers put SWOPJin WHILE rather than REPEAT.
+   
+: WHILE   [COMPILE] IF   SWOP ; IMMEDIATE
+ 
+: REPEAT  [COMPILE] AGAIN   [COMPILE] THEN ; IMMEDIATE
+ 
+The British spelling SWOP is used here to stand for SWAP or 2SWAP,
+whatever would be appropriate for the implementation.
+ 
+Although you would expect the effect to be the same for the two
+methods, and the cost is the same, the latter method provides greater
+capabilities.   The basic control structures can be supplemented by
+allowing an additional WHILE in BEGIN I UNTIL and BEGIN I
+WHILE I REPEAT structures.  For each additional WHILE there must
+be a THEN at the end of the structure.  This will check that the syntax is
+valid as well as indicating where to continue execution when the WHILE
+transfers control.  The use of more than one additional WHILE is
+possible but rare.
+
+BEGIN        BEGIN
+
+WHILE        WHILE
+
+WHILE        UNTIL
+             THEN REPEAT	J THEN
+
+Additional actions may be done after the control flow word that precedes
+the THEN matching the additional WHILE.
+
+BEGIN        BEGIN
+
+WHILE        WHILE
+
+WHILE        UNTIL
+
+REPEAT       THEN
+
+THEN
+
+The additional WHILE is the most efficient way to terminate a loop early
+and then continue execution in a word definition.  Different actions may
+be required after normal termination and early termination.  The
+alternative actions are separated by the ordinary Forth ELSE.  The
+actions to be done after the loop are all specified after the body of the
+loop.
+
+BEGIN        BEGIN
+
+WHILE        WHILE
+
+WHILE        UNTIL
+
+REPEAT       ELSE
+
+ELSE         THEN
+
+THEN
+
+WHILE can also be used with DO.   If WHILE is used with DO then
+ELSE and UNLOOP are required to discard the loop control parameters.
+The loop index is available between ELSE and UNLOOP.
+
+DO        DO
+
+WHILE     WHILE
+
+LOOP      +LOOP
+
+ELSE      ELSE
+
+UNLOOP    UNLOOP
+
+THEN      THEN
+
+This additional use of WHILE is not a new idea, and not an extension, but
+recognition of what is already accepted practice in an important part of
+the Forth community.  The cost of implementation is zero.  It may not be
+required often, but when it is, it is available at no charge.
+ 
+It is needed in order to take full advantage of the architecture of some
+Forth engines.
+ 
+The usage is strictly balanced.  A word cannot be used alone.  Every
+word must be matched before and/or after with a member of a restricted
+set of words.  This can provide a way to check syntax and detect
+incomplete clauses.
+ 
+More and more, LEAVE is recognized as a bad way to do things.  This
+implementation of WHILE gives a way to avoid LEAVE.  It also provides
+early termination of a BEGIN loop.  It does not prevent EXIT for early
+termination.  But there is often cleaning up to do and an additional
+WHILE does it easily and efficiently.
+ 
+It preserves the isomorphism of Forth control flow words with the
+nodes of structured flowgraphs.  All associated flowgraphs are clean
+with no crossing lines.
+
+The following is a lean and but powerful model implementation of the
+control flow words.  It has compiler security using single-value elements
+for the control flow stack.  Compiler security is done by checking that
+the use of the control flow words is reasonable.  It has additional
+IMMEDIATE words not in ANS Forth that provide everything needed to
+design and implement control structures.
+   
+: BEGIN   HERE ; IMMEDIATE
+ 
+: THEN  DEPTH 0= ABORT" How?"   DUP @ ABORT"  How?"
+   HERE ( OVER - ) SWAP ! ; IMMEDIATE
+ 
+: FORWARD ( -- origin) HERE 0 , ;
+ 
+: BACK ( target -- ) DEPTH 0= ABORT" How?"   DUP @ 0= ABORT"
+How?"
+   ( HERE - ) , ;
+ 
+: BUT   DEPTH 2 < ABORT" How?"   SWAP ; IMMEDIATE
+ 
+: YET   DEPTH 0= ABORT" How?"   DUP @ 0= ABORT" How?"
+   DUP ; IMMEDIATE
+ 
+: IF   COMPILE ?branch FORWARD ; IMMEDIATE
+ 
+: UNTIL   COMPILE ?branch BACK ; IMMEDIATE
+ 
+: AGAIN   COMPILE branch BACK ; IMMEDIATE
+ 
+: ELSE   COMPILE branch FORWARD
+   [COMPILE] BUT   [COMPILE] THEN ; IMMEDIATE
+ 
+: WHILE   [COMPILE] IF   [COMPILE] BUT ; IMMEDIATE
+ 
+: REPEAT   [COMPILE] AGAIN   [COMPILE] THEN ; IMMEDIATE
+ 
+: DO   COMPILE (do) [COMPILE] BEGIN ; IMMEDIATE
+ 
+: LOOP   COMPILE (loop)  RAKE ; IMMEDIATE
+ 
+: +LOOP   COMPILE (+loop)  RAKE ; IMMEDIATE
+ 
+VARIABLE LEAVINGS ( Set to 0 in ":", checked in ";".)
+ 
+: LEAVE   COMPILE UNDO   COMPILE BRANCH FORWARD
+   HERE LEAVINGS @ , LEAVINGS ! ; IMMEDIATE
+ 
+: RAKE ( target -- )
+   [COMPILE] YET BACK   LEAVINGS @ ( target leave)
+   BEGIN   2DUP U<
+   WHILE   DUP @ SWAP HERE ( OVER -) SWAP !   REPEAT
+   LEAVINGS ! DROP ;
+
+

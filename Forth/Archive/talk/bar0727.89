@@ -1,0 +1,241 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+
+Date: 07/27/89   Time: 22:21EDT
+Attendees:
+[[Gary] GARY-S]
+[[Mike] M.MELLEN1]
+[[Dave] DHWEINSTEIN]
+   
+ Items discussed: The Computer Journal, Harris RTX, Harris BBS, Austin Druma 
+                  Forth BBS, possible conf guest Koopman ?
+
+Minutes:
+<M.MELLEN1> is here.
+<[Gary] GARY-S> Welcome
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Hullo
+<[Gary] GARY-S> Dave what is
+<[Dave] DHWEINSTEIN> Well...the OO code is going to be...
+<[Dave] DHWEINSTEIN> ...too big to fit in the magazine...
+<[Dave] DHWEINSTEIN> ...so it will be released in a few weeks.
+<[Gary] GARY-S> how come no column last issue ?
+<[Dave] DHWEINSTEIN> We postponed it into a double issue for next one.
+<[Dave] DHWEINSTEIN> (The first column was weak)
+<[Gary] GARY-S> Kilber didn't even have any Forth goodies
+<[Gary] GARY-S> Hi mike
+<[mike] M.MELLEN1> howdy
+<[Gary] GARY-S> how's fla ?
+<[mike] M.MELLEN1> hot and humid! (and busy)
+<[Gary] GARY-S> These Thursday FIGGY's are open cesspool - just jump in like on 
+an old party-line telephone
+<[mike] M.MELLEN1> This is my first time here, so I'll probably listen for 
+awhile
+<[Gary] GARY-S> Dave - anything in the Austin wantads ?
+<[Gary] GARY-S> On guest nights we keep things neat, mike, but on FIGGY nights 
+we permit interlacing (overtyping) ..
+<[Gary] GARY-S> it can be confusing but you get more bang for your buck that way
+<[Dave] DHWEINSTEIN> BTW One mistake in the intor to Forth that I caught though 
+(shamefaced look). Since I already called Art with *one* set of correcti
+ons...
+<[Dave] DHWEINSTEIN> I am going to try and call him again.
+<[Dave] DHWEINSTEIN> I made the mistake of describing a construct from my all 
+to fallible memory.
+<[Gary] GARY-S> at least you get to preview
+<[Gary] GARY-S> I have yet to see a galley on any magazine I ever wrote for
+<[Dave] DHWEINSTEIN> What preview. I found one mistake, and I just now found 
+another. (Sad look). I had stated that Bin a BEGIN...WHILE...REPEAT loop,
+ the BEGIN..WHILE section was only exectued once.
+<[Gary] GARY-S> short damn loop
+<[Dave] DHWEINSTEIN> I have not gotten galley proofs. Just looking back over 
+the disk in preperation for the next column.
+<[Dave] DHWEINSTEIN> No. That the BEGIN...WHILE would execute once, and the 
+WHILE...REPEAT would repeat while the flag was true.
+<[Dave] DHWEINSTEIN> When of course BEGIN...WHILE always executes once, and the 
+whole thing executes so long as the flag is true.
+<[Gary] GARY-S> writing your own constructs now ?
+<[Dave] DHWEINSTEIN> (Goes off to make phone call). I'll be back later on if I 
+can.
+<[Dave] DHWEINSTEIN> disconnected.
+<[Gary] GARY-S> I can't wait to see what you do with <CREATE DOESN'T>
+<[Gary] GARY-S> just us mike - so waht do you do ?
+<[mike] M.MELLEN1> me heap (no pun intended) programmer at Harris Semi - RTX 
+2000
+<[Gary] GARY-S> Are you sure this is your first time here ?
+<[mike] M.MELLEN1> When I'm not out hyping the part to customers
+<[mike] M.MELLEN1> In this life at least. (this life? I've been listening to my 
+wife too much)
+<[Gary] GARY-S> We had another Harris RTX troop on then
+<[Gary] GARY-S> I'd like to see some RTX non-proprietary goodies posted to the 
+library
+<[mike] M.MELLEN1> Come to think of it, I was on briefly a coupla months back
+<[Gary] GARY-S> Uploads are free , and you would be hyping to a target audience
+<[mike] M.MELLEN1> Sorry, I missed the first part of the sentence..
+<[Gary] GARY-S> ok - try to upload some RTX info and non-proprietary code to 
+our library...
+<[Gary] GARY-S> uploads are free time and...
+<[Gary] GARY-S> you would be hyping a prime, target audience
+<[mike] M.MELLEN1> We have an RTX BBS, and my boss is after me to get some code 
+on that first.
+<[mike] M.MELLEN1> Then I can transfer some to a wider audience
+<[Gary] GARY-S> talk to him - this is an opportunity Harris should not forgoe, 
+especially since...
+<[Gary] GARY-S> the library here and text gets respawned a couple of times 
+through the...
+<[Gary] GARY-S> ForthNet.
+<[Gary] GARY-S> we also would like to see about getting your BBS into the net
+<[Gary] GARY-S> interesting ?
+<[mike] M.MELLEN1> The trouble i
+<[mike] M.MELLEN1> sorry, I missed the first part again.
+<[Gary] GARY-S> stay with me a minute...
+<[Gary] GARY-S> The code and stuff loaded into our...
+<[Gary] GARY-S> library is replicated through the ForthNet..
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> therefore you reach a much larger audience than GEnie...
+<[Dave] DHWEINSTEIN> (Satisfied look) Caught Art in time to get the correction 
+in.
+<[Gary] GARY-S> you also get the ECFB, NCFB, RCFB and part of metroLink
+<[Gary] GARY-S> ..
+<[Gary] GARY-S> we also want to get Harris' BBS into the loop if possible
+<[mike] M.MELLEN1> most of the non-proprietary stuff is benchmark andd simple 
+application, probably not
+<[mike] M.MELLEN1> much interest to Forth community at large.
+<[Gary] GARY-S> there is an audience for that - you are wrong,wrong,wrong !
+<[Gary] GARY-S> tell him dave
+<[Gary] GARY-S> RTX stuff
+<[Dave] DHWEINSTEIN> Mike: We are a small enough community that *everything* is 
+of interest.
+<[Dave] DHWEINSTEIN> And RTX stuff especially.
+<[Gary] GARY-S> and forthnet
+<[Dave] DHWEINSTEIN> (Especially to those of use who cannot afford them) :-)
+<[mike] M.MELLEN1> okay, hopefully our users will be uploading some good stuff 
+too
+<[Gary] GARY-S> I can promise Chuck's buffalo chip and SC's SC32 will be 
+getting posted to the library...
+<[mike] M.MELLEN1> what kind of stuff would you like to see?
+<[Gary] GARY-S> does Harris really want NOT to ?
+<[mike] M.MELLEN1> not to what?
+<[Gary] GARY-S> get the same audience
+<[Dave] DHWEINSTEIN> Well...aside from the offers of free systems (1/2 :-) ), 
+examples of uses, extensions, tricks, and such that are being used.
+<[Dave] DHWEINSTEIN> It is important in a commmunity this small...
+<[Dave] DHWEINSTEIN> ...that we keep each other up to date with what...
+<[Dave] DHWEINSTEIN> ...is being done...
+<[Dave] DHWEINSTEIN> ...can be done...
+<[Dave] DHWEINSTEIN> ,...and should be done. This way we have more ammunition 
+to use Forth in non-Forth shops.
+<[mike] M.MELLEN1> (backing into a corner) okay, okay I get the message
+<[Gary] GARY-S> Dave - you missed my shot - I said I couldn't wait (based on 
+your BEGIN WHILE REPEAT... to see your <CREATE...DOESN'T> :-)
+<[Dave] DHWEINSTEIN> You think I'm a hard sell. Wait until Jax gets here... :-)
+<[Dave] DHWEINSTEIN> Not to mention the DO..ME-A-FAVOR loop (an infinite 
+construct).
+<[Gary] GARY-S> Jax and Vesta are a prime shop for your RTX 2000
+<[mike] M.MELLEN1> <CREATE...DOESN'T>? you've been reading the spec for our 
+32-bit processor
+<[Dave] DHWEINSTEIN> Anyway...it should be corrected by the time it gets to 
+press.
+<[Dave] DHWEINSTEIN> No. But we'd like to. :-)
+<[Dave] DHWEINSTEIN> (grin)
+<[Gary] GARY-S> Is that an infinite lop
+<[Dave] DHWEINSTEIN> No. A lop is a kind of bunny.
+<[Dave] DHWEINSTEIN> (Although considering the way they breed they could be 
+considered infinite)
+<[Gary] GARY-S> mike - who is the SysOp of your BBS ?
+<[mike] M.MELLEN1> Beta site: It can be arranged
+<[mike] M.MELLEN1> At the moment I'm SysOp, until we hire a slave to take it 
+and other unpleasant tasks over
+<[Gary] GARY-S> What are you running for a board ?
+<[mike] M.MELLEN1> RBBS-PC on a Compaq. Single phone line at the moment. Better 
+equipment if we
+<[mike] M.MELLEN1> get enough usage
+<[Gary] GARY-S> any chance you might go PC-BOARD ?
+<[mike] M.MELLEN1> There's always a chance for change. why PC-BOARD (other than 
+it's very popular)
+<[Gary] GARY-S> Because ECFB, NCFB, RCFB are all connected via PC-BOARD, that's 
+why
+<[mike] M.MELLEN1> good reason. At the moment, our board is in the 'set it up 
+and see if anybody usees it' stage
+<[Dave] DHWEINSTEIN> What is the phone number?
+<[mike] M.MELLEN1> 407-729-4949
+<[Dave] DHWEINSTEIN> Thanks.
+<[Gary] GARY-S> If Harris will spring for the call why don't you log onto...
+<[mike] M.MELLEN1> 24 hours a day, except when our summer intern accidentally 
+takes it off-line to use the printer
+<[mike] M.MELLEN1> (can't train these software people!)
+<[Gary] GARY-S> ECFB at 703-442-8695 and check it out
+<[mike] M.MELLEN1> I have. Good selection of stuff.
+<[Gary] GARY-S> You would see how that would put you in the loop
+<[Gary] GARY-S> You will notice GEnie and ECFB pretty much echo each other
+<[Dave] DHWEINSTEIN> I've been prodding at Druma to link into the network (they 
+are already running PC-BOARD, and it would give Austin a local node).
+<[Gary] GARY-S> SCFB ?
+<[Dave] DHWEINSTEIN> I don't know what they would want to call it.
+<[mike] M.MELLEN1> We've probably had enough u use to convince my management to 
+spend some bucks on a real system.
+<[Gary] GARY-S> I will have starlink soon - what's the number ?
+<[Dave] DHWEINSTEIN> Druma Forth BBS: (512) 323-2402. Almost no activity 
+whatsoever.
+<[Dave] DHWEINSTEIN> (Seriously...it is deader than a door nail. If plugged 
+into the xCFBs though...)
+<[Gary] GARY-S> clear it so I don't have to do the confirmation/validation 
+dance, can you ?
+<[Dave] DHWEINSTEIN> I don't remember there being much of a confirmation/validat
+ion dance.
+<[Gary] GARY-S> ok - there is on some boards
+<[Gary] GARY-S> what about yours mike ?
+<[mike] M.MELLEN1> no problem getting on. I check it every morning and validate 
+most new users on the spot.
+<[Dave] DHWEINSTEIN> Yeah. I've gotten around that in Austin through "second 
+hand validation". I send sysops mail on a board we have in common to tell
+ them that the person applying really is me.
+<[Gary] GARY-S> tell you what mike - soon as I get a little time I'll log on...
+<[Dave] DHWEINSTEIN> I'll give it a call tonight.
+<[Gary] GARY-S> see if you can get a couple of short (70-80 line files) and I 
+will post them on the BBS here
+<[mike] M.MELLEN1> okay, but there's not a lot  on it right now
+<[Gary] GARY-S> just when you get time...
+<[Dave] DHWEINSTEIN> So. What *is* the latest news about the RTX family?
+<[Gary] GARY-S> after I get on and validated -
+<[Gary] GARY-S> post them to my e-mail ASCII
+<[mike] M.MELLEN1> wok
+<[Gary] GARY-S> is the RTX 32 bit ready
+<[mike] M.MELLEN1> the RT?
+<[Gary] GARY-S> that's it ????
+<[mike] M.MELLEN1> could you repeat the question re: 32 bit
+<[Gary] GARY-S> just what is the status
+<[mike] M.MELLEN1> rtx4002 (or 4001, I forget) will have prototype silicon by 
+December, available
+<[mike] M.MELLEN1> to real world around May/June. RTX4000 (floating point ALU) 
+available next
+<[mike] M.MELLEN1> summer sometime
+<[Gary] GARY-S> what libraries (ASIC) can marry ?
+<[mike] M.MELLEN1> I'm not a silicon person. Sorry. I don't know the answer
+<[Gary] GARY-S> hanks heaps ;-)
+<[mike] M.MELLEN1> if you call me during working hours at 407-729-4189, I can 
+direct you to
+<[mike] M.MELLEN1> one of our ASIC experts who can answer you
+<[Gary] GARY-S> think anyone out there would like to appear as a conference 
+guest ?
+<[mike] M.MELLEN1> Phil Koopman (Mr WISC aka RTX4000) is now a Harris employee, 
+and might
+<[mike] M.MELLEN1> be interested in talking about some of his architectural 
+ideas
+<[Gary] GARY-S> he'd be good - ask Phil
+<[Dave] DHWEINSTEIN> He'd be very good!
+<[mike] M.MELLEN1> I'll see him tomorrow.
+<[Gary] GARY-S> any last shots, folks ?
+<[mike] M.MELLEN1> none from this part of the twilight zone
+<[Dave] DHWEINSTEIN> Nope. I'm off and back to work.
+<[Dave] DHWEINSTEIN> See you around the net...
+<[Gary] GARY-S> take care and thanks for comming tonite
+<[Dave] DHWEINSTEIN> has left.
+<[mike] M.MELLEN1> adios
+<[mike] M.MELLEN1> has left.
+<[Gary] GARY-S> g'nite
+=== End of Steno notes. ===
+
+

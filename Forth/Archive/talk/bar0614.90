@@ -1,0 +1,279 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 06/14/90   Time: 22:39EDT
+       The question of the night: Do you use Pygmy ? Like ? What don't you
+       like ?
+
+       Items discussed included the highly subjective 'what makes a good
+            Forth ?' with emphasis on Guy Kelly's PCFORTH and Frank Sergeant's
+            PYGMY. Metacompiling for fun and... . and a lengthy discussion 
+            of direct BLOCK access.
+Attendees:
+[[gars] GARY-S]
+[[Kevin] APPERT]
+[[Robert] R.BERKEY]
+[[Suburbi-JAX] JAX]
+[[Len] NMORGENSTERN]
+
+Minutes:
+<[Robert] R.BERKEY> I saw the copyright notice and never looked at it again.
+<GARY-S> The copyright is really more a copyleft
+<GARY-S> Frank's just covering himself, you can use it however you wish
+<[Robert] R.BERKEY> So just how much it's "public domain" is not clear.
+<[Robert] R.BERKEY> On those same lines, I've never reviewed Zen because it has 
+<[Robert] R.BERKEY> a copyright notice.
+<[Robert] R.BERKEY> I'm puzzled by Wil's recent comments describing it as 
+shareware.
+<[Robert] R.BERKEY> This is new to me.
+<GARY-S> One of the things Frank hopes will come from the conference is 
+complaints - tell him you were put off by the copyright
+<[Robert] R.BERKEY> We exchanged a message on the topic, so he's not unaware.
+<GARY-S> So - make it public
+<[Robert] R.BERKEY> But PYGMY for me is more spare time interest.
+<[Robert] R.BERKEY> I use Guy Kelly's Forth.
+<GARY-S> Why is that ?
+<[Kevin] APPERT> what is that?
+<[Robert] R.BERKEY> Well, I'd expect he'll see this figgy (!)
+<GARY-S> Why Pygmy spare time, GK real time
+<[Robert] R.BERKEY> Because it's, in my opinion, "quintessential" Forth.
+<[Robert] R.BERKEY> Forth-83 Standard to the tee.
+<[Robert] R.BERKEY> Full access to hardware.
+<[Kevin] APPERT> what kind of implementation is GK?  does it havea brand name>
+<GARY-S> It's in the library
+<[Kevin] APPERT> PD or shareware?,   Files or blocks?  What kind of editor, 
+threading, ...
+<[Robert] R.BERKEY> Those are the two things I use most--
+<[Robert] R.BERKEY> 1) it has a mode that tells you if you are using a 
+non-standard word.
+<[Robert] R.BERKEY> 2) it can do direct block reads.
+<[Robert] R.BERKEY> 3) (make that three) it has a block editor.
+<[Robert] R.BERKEY> Name: earlier known as PCFORTH
+<GARY-S> Search on keyword Kelly
+<[Robert] R.BERKEY> Or, PC83.  It's been posted in it's update as KFORTH
+<[Robert] R.BERKEY> PD indirect  all blocks.
+<[Kevin] APPERT> based on L&P F*# ? (f83 in upper case :-) )
+<[Robert] R.BERKEY> The editor FED is what I use.
+<[Robert] R.BERKEY> Which is a commercial product, but it's been posted here.
+<[Robert] R.BERKEY> I think he said most recently that he just wanted money for 
+the source.
+<[Kevin] APPERT> the source for the editor?
+<[Robert] R.BERKEY> No, it's not L&P.  They were developed at the same time.
+<[Robert] R.BERKEY> There was some interchange of ideas.
+<[Robert] R.BERKEY> It's metacompiler is simpler.
+<[Robert] R.BERKEY> He wrote his own assembler, etc.
+<[Robert] R.BERKEY> Yes, the source for the editor.  PC83 is pure PD.
+<[Robert] R.BERKEY> No money implied or requested.
+<[Kevin] APPERT> sounds neat
+<GARY-S> Guy's version hasn't enjoyed the press or notoriety of some other 
+versions, so I'm glad it got some mention tonight.
+<[Kevin] APPERT> Forth is the only language around these days with the meta (or 
+equiv) source available at a low (near-free) price
+<GARY-S> That's true Kevin - the question is, is that good or bad ?
+<[Kevin] APPERT> it is neither good nor bad, it just is
+<GARY-S> Does it discourage more vendor activity ?
+<[Kevin] APPERT> I once knew a fellow who, when he wanted to change his 
+application, would re-meta his whole system
+<[Robert] R.BERKEY> (Due to ignorance?)
+<GARY-S> He should be better than most at meta-compiling
+<[Kevin] APPERT> there will always be people who use finc-forth for the support.
+  they should be making money on their classes
+<[Kevin] APPERT> yes, ignorance
+<[Robert] R.BERKEY> Similar thing here at Tau-Tron...
+<[Robert] R.BERKEY> When I arrived, the target could only be compiled.
+<[Robert] R.BERKEY> That took twenty minutes, and another twenty to download to
+<[Robert] R.BERKEY> an in-circuit emulator.
+<[Robert] R.BERKEY> They were based on a commercial product, so "support" alone 
+doesn't
+<[Kevin] APPERT> ggaaaaaaaaaaaa.  all the inconvenience of all the disadvantages
+<[Robert] R.BERKEY> make for a usable Forth.
+<[Kevin] APPERT> compiled in C?
+<[Robert] R.BERKEY> Yes, ggaaaaaaaaaaaa.
+<[Robert] R.BERKEY> Heh, heh, no it wasn't that bad!
+<GARY-S> what are you prototyping in ice ?
+<[Robert] R.BERKEY> It's an application with 20 man-years of Forth in it.
+<GARY-S> and it's still emulated ?
+<NMORGENSTERN> is here.
+<[Robert] R.BERKEY> I'm not recognizing "emulated".
+<GARY-S> That's like 370 shops running 1403 emulation !
+<[Kevin] APPERT> do they have an interactive target now?
+<[Robert] R.BERKEY> Oh, the ICE was to allow some minimal debugging.
+<[Kevin] APPERT> or do they still compile and download (20 min?)
+<[Robert] R.BERKEY> The object ends up in proms.
+<GARY-S> that makes more sense
+<GARY-S> not much more, but more
+<[Robert] R.BERKEY> What's there now is that the target can be simulated on the
+<[Kevin] APPERT> there's nothing like debugging with a prom in the loop
+<[Robert] R.BERKEY> host PC.  Two minutes to compile,
+<[Robert] R.BERKEY> and there's an interpreter, F-PC-like single-stepper, 
+decompiler, etc.
+<GARY-S> put your proms in a tanning booth for a real fun experience
+<[Len] NMORGENSTERN> I thought UV erased them, or is that the point, Gary?
+<[Kevin] APPERT> by the time you edit a change, make the prom, and test  you 
+have forgotten what it was you were supposed to be fixing
+<GARY-S> That's the point, len
+<[Robert] R.BERKEY> Groan.
+<[Robert] R.BERKEY> Feedback is crucial to systems.
+<[Robert] R.BERKEY> So, GARS, have you used PYGMY?
+<[Len] NMORGENSTERN> Yes, a little
+<GARY-S> yes - not a lot - but I've used it
+<[Robert] R.BERKEY> (and Len, etc.)
+<GARY-S> I like it
+<[Len] NMORGENSTERN> I like it, so far. The file system takes a little getting 
+used to
+<GARY-S> It's lean and pretty pure forth
+<GARY-S> kernel, editor, assembler, help file all in less than 75K
+<[Len] NMORGENSTERN> It harks back to the old "the disk is one giant file"
+<[Len] NMORGENSTERN> of the old days.
+<[Robert] R.BERKEY> Yep, that's an issue, but that sure simplifies some things.
+<[Len] NMORGENSTERN> I don't think it's an issue, Bob, it's more a nuisance
+<[Len] NMORGENSTERN> until you get used to it, then it seems natural.
+<[Robert] R.BERKEY> How is it a nuisance?
+<[Len] NMORGENSTERN> I guess that's the wrong word.
+<[Len] NMORGENSTERN> Any significant difference requires adjustment.
+<[Len] NMORGENSTERN> By the way, how do you exit from the editor without
+<[Len] NMORGENSTERN> making any changes?
+<[Len] NMORGENSTERN> (cancel your changes, that is)
+<[Robert] R.BERKEY> PC83 and Dysan's Forth took the approach that there are 
+three block
+<[Robert] R.BERKEY> channels.  Input, output, and control.
+<GARY-S> Have you used Dysan's ? Who is their author ?
+<[Robert] R.BERKEY> However, the "one large disk" can span disks without 
+redesign.
+<[Kevin] APPERT> Dysan a person or Dysan the floppy media maker?
+<[Robert] R.BERKEY> (Dysan Forth was a 1983 project that never saw the light of 
+day)
+<[Len] NMORGENSTERN> Actually in many Forths, including f83, BLOCK is deferred
+<[Len] NMORGENSTERN> so you can redefine it as you wish. So yhou can make
+<[Len] NMORGENSTERN> one system of blocks reference many files.
+<[Len] NMORGENSTERN> I worked out a variant of EVAL where the string to be 
+evaluated
+<[Len] NMORGENSTERN> was in a block numbered 30000
+<[Len] NMORGENSTERN> (too kludgey for practical use, but it worked)
+<[Robert] R.BERKEY> F83 lost my interest when they didn't "bother" to include
+<[Robert] R.BERKEY> direct block access.
+<[Robert] R.BERKEY> I felt that that wasn't Forth.
+<[Len] NMORGENSTERN> What do you mean?
+<[Len] NMORGENSTERN> "Direct block access"
+<[Robert] R.BERKEY> Perry had had experience with CPM users who got confused 
+with both
+<[Robert] R.BERKEY> CPM opsys format disks and raw Forth disks.
+<[Robert] R.BERKEY> Direct block access meaning getting to the storage without 
+going through
+<[Robert] R.BERKEY> the operating system with it's file names, etc.
+<[Len] NMORGENSTERN> I see. But, being deferred, you could write your own.
+<[Len] NMORGENSTERN> And going through the OS has a lot of advantages.
+<[Robert] R.BERKEY> BLOCK doesn't defer well.  There's an underlying point that 
+needs to
+<[Len] NMORGENSTERN> You could not do both via file and direct at the same time!
+<[Robert] R.BERKEY> also be deferred.
+<[Robert] R.BERKEY> It's not that going through the opsys doesn't have 
+advantages, both
+<[Robert] R.BERKEY> the dumb and smart tools are needed.(!)
+<[Len] NMORGENSTERN> Agree.
+<[Len] NMORGENSTERN> (Incidentally, which do you call smart and which dumb?)
+<[Robert] R.BERKEY> Well, Len, both file and direct at the same time is 
+something PC83
+<[Robert] R.BERKEY> can do.
+<[Robert] R.BERKEY> Dumb would be the direct block access, that takes more user 
+smarts.
+<[Len] NMORGENSTERN> How does it avoid conflict?
+<[Robert] R.BERKEY> Open the source on direct blocks, the output on files, and
+<[Robert] R.BERKEY> you can do a block copy.
+<[Len] NMORGENSTERN> But not on the same disk, I would guess.
+<[Robert] R.BERKEY> Sure same disk, the dumb one doesn't know or care.
+<[Robert] R.BERKEY> And the operating system won't interfere when you're going 
+through BIOS.
+<[Robert] R.BERKEY> Forth, inc. goes another step further by ignoring the BIOS.
+<[Kevin] APPERT> nothing to stop the direct access from stomping all over some 
+file?
+<[Len] NMORGENSTERN> I'll have to ponder this.
+<[Robert] R.BERKEY> RIght, Kevin.
+<[Kevin] APPERT> those were the good old days
+<[Robert] R.BERKEY> But, stomping over the boot block or files directories is 
+exactly the
+<[Robert] R.BERKEY> most useful thing some times.
+<[Robert] R.BERKEY> I used the Disk DOctor and it made the disk worse.  PC83 
+could do
+<[Kevin] APPERT> you have to know just what disk controller you have to ignore 
+the BIOS, though
+<[Robert] R.BERKEY> what Disk Doctor, etc. were too smart to allow.
+<[Robert] R.BERKEY> Right, that caused Forth, Inc. a problem.
+<[Robert] R.BERKEY> (Norton Utilities)
+<[Robert] R.BERKEY> So, I'm sold on having direct block access as an option.
+<[Kevin] APPERT> that version was guaranteed only on gen-u-ine IBM pc's (unless 
+you paid them to bring it up on some clone)
+<[Robert] R.BERKEY> But day to day, I find blocks limit my ability to express 
+myself.
+<[Robert] R.BERKEY> Especially with a large application.
+<[Robert] R.BERKEY> Makes more sense with a small application.
+<[Robert] R.BERKEY> I'm worried that the ANS file access is a kludge, though.
+<[Len] NMORGENSTERN> Int 13H gives you direct access to the disk, sector by 
+sector
+<[Kevin] APPERT> but they are very portable.  the time it takes to port the 
+block concept is zero compared with making one guy's file i/o look like another
+<[Len] NMORGENSTERN> And you could certainly control that from Forth.
+<[Robert] R.BERKEY> It won't allow conventional usage of blocks to be moved to 
+a stream file.
+<[Robert] R.BERKEY> Kelly's system goes through the BIOS.
+<[Robert] R.BERKEY> BIOS seems to do good work here.  Forth, Inc. might note 
+that
+<[Robert] R.BERKEY> they can always write faster access by rolling their 
+own--for example,
+<[Robert] R.BERKEY> by having 1k sectors.
+<GARY-S> Robert - log into the UNIX RT tomorrow and get faces.txt (it has ALL 
+the smiley icons I ever heard of, then some) - page 161
+<GARY-S> NEXT WEEK - Frank Sergeant , bring your Pygmy questions
+<[Kevin] APPERT> you have to read about an inch and a half of manual to learn 
+how to open a file in some operating systems.  I already know how to use
+ blocks (direct or indirect)
+<[Robert] R.BERKEY> Yes, and I advocate stream files on blocks.
+<[Len] NMORGENSTERN> (INT 13h is for floppies only, I see)
+<[Robert] R.BERKEY> That's the tyranny of operating systems, when they don't 
+let you
+<[Robert] R.BERKEY> use the resources available.
+<[Kevin] APPERT> and some 'systems programmers' idea of timely response to a 
+request for a disk block is annoying to say the least.
+<[Kevin] APPERT> dinner calls.  night all
+<[Len] NMORGENSTERN> Eat well, Kevin
+<[Robert] R.BERKEY> Len, maybe not, I can read the hard disk with Kelly's 
+system.
+<[Robert] R.BERKEY> Or, maybe it's another BIOS call.
+<[Len] NMORGENSTERN> I am scanning the manual very quickly, and maybe
+<[Len] NMORGENSTERN> I am missing something.
+<[Kevin] APPERT> has left.
+<[Robert] R.BERKEY> Len, you've used CPM direct block access Forth's, right?
+<GARY-S> Kevin Appert co-authored the one Microcornucopia sold
+<[Len] NMORGENSTERN> Yes, I once had Timmins Forth. It ran CP/M and direct 
+block access
+<[Robert] R.BERKEY> How'd you like it?
+<[Len] NMORGENSTERN> at the same time on one disk, it was claimed, but I was 
+scared to try it
+<[Len] NMORGENSTERN> I loaded from CP/M and then ran the direct access on 
+another disk.
+<GARY-S> What is Mitch Timmins doing these days ? Still in San Diego ?
+<[Len] NMORGENSTERN> It was the old FigForth & I didn't care for it, but it was 
+FAST, on the
+<[Robert] R.BERKEY> Having used direct block access only at times on hard disks,
+ it
+<[Len] NMORGENSTERN> old North Star system.
+<[Robert] R.BERKEY> doesn't seem so strange to me to mix the two.
+<[Len] NMORGENSTERN> If you know how, I suppose you could gimmick the FAT
+<[Robert] R.BERKEY> But, usually you wouldn't want to.
+<[Len] NMORGENSTERN> so there is a large contiguous area, and then reference 
+that
+<[Len] NMORGENSTERN> rather directly.
+<[Robert] R.BERKEY> You can also partition the disk, so DOS won't use a part of 
+it.
+<GARY-S> I'm going to pack the steno and go home - last words for posterity...
+<[Len] NMORGENSTERN> Same idea, different technique.
+<[Robert] R.BERKEY> "posterity".
+<[Len] NMORGENSTERN> I have to leave soon, too. Good talking to you.
+<[Len] NMORGENSTERN> See you next week.
+<[Robert] R.BERKEY> See you all later.
+<GARY-S> thanks guys
+====END of Steno notes====
+
+

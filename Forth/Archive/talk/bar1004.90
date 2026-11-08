@@ -1,0 +1,224 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 10/04/90   Time: 22:28EDT
+
+Attendees:
+[[Len] NMORGENSTERN]
+[GARY-S]
+[[Wil] W.BADEN1]
+  
+There was not a lot of Forth discussed in this FIGGY, but there was some 
+good discussion of computer architecture and systems level programming.
+Concurrency, Interpreters and pipelines don't mix, parsing Forth's QUIT,
+quantitative design, distributed parallel processing.
+
+Minutes:
+<[Wil] W.BADEN1> is here.
+<[Wil] W.BADEN1> Hi Gary.
+<[Wil] W.BADEN1> Welcome back.
+<[Wil] W.BADEN1> Who's in room3
+<GARY-S> thanks
+<GARY-S> len
+<GARY-S> what is happening these days with Mr. Apple ?
+<[Wil] W.BADEN1> Evry one is waiting for Oct 15 announcements.
+<GARY-S> which is ?
+<[Wil] W.BADEN1> 3 new, lower priced, models.
+<[Wil] W.BADEN1> The Mac RT here sez that audio digitizing will be built in.
+<GARY-S> doesn't that coincide all too nicely with Raskin's conference here on 
+the 17th ?
+<NMORGENSTERN> is here.
+<[Wil] W.BADEN1> Yeeaah.  He shud hav sumthin to say about that.
+<GARY-S> have you had an opportunity to run A/UX ?
+<[Wil] W.BADEN1> No, I'm sorry to say.
+<GARY-S> If you do I would welcome your comments
+<[Wil] W.BADEN1> MPW is a version of unix that has been around for 4 years.
+<[Wil] W.BADEN1> Mac Prog'rs Workshop.
+<[Wil] W.BADEN1> It is much better than unix.
+<GARY-S> It is closer akin to version 7 than more modern Unix platforms though
+<[Wil] W.BADEN1> Yes, it is restricted.
+<[Wil] W.BADEN1> A/UX 2. shd be even better.
+<GARY-S> MPW was a near-clone of the PW run on vaxen
+<[Wil] W.BADEN1> Cud u scroll back, select text, and execute it, with stdout 
+appearing where u are?
+<GARY-S> Can't really say with certainty wil
+<GARY-S> Stuff Forth, anything break or happen in my brief absence ?
+<[Len] NMORGENSTERN> Nothing special, Gary, as far as I know.
+<GARY-S> len , were you able to finish your discussion on Sunday or does it 
+merit rvival ?
+<[Len] NMORGENSTERN> Sunday's disc can be taken up next Sun.
+<[Wil] W.BADEN1> I hav bought two great books in the last 2 weeks.
+<GARY-S> which are ?
+<[Wil] W.BADEN1> Interpreters and concurrent processor execution.
+<[Wil] W.BADEN1> This was mentioned the week after I bought it in a message by 
+Spackman.
+<GARY-S> titles/authors/underbelly used
+<[Wil] W.BADEN1> I'll hav to get the book from the car.
+<GARY-S> save it for next week
+<[Wil] W.BADEN1> Forth and Modula are considered languages of similar nature.
+<[Wil] W.BADEN1> The price, not known in the message, is $30.
+<[Len] NMORGENSTERN> (is surprised) ==(:-)   (his hair is standing on end)
+<[Len] NMORGENSTERN> How are Modula and Forth similar?
+<[Wil] W.BADEN1> The other is Hennessey&Patterson, reviewed by Ray Duncan in 
+DDJ.
+<GARY-S> Wil, Modula 2 I have seen seems to devour mysterious chunks of memory 
+- how is that similar to Forth ?
+<[Wil] W.BADEN1> "conservative syntactic content"
+<[Wil] W.BADEN1> Anyhow, it treats Forth seriously and sympathetically.
+<[Wil] W.BADEN1> What was the discussion?  I logged on at 6:15 & there was no 
+one there.
+<GARY-S> Concurrency - to what degree and by what method ?
+<[Wil] W.BADEN1> Separate programs, or instructions in a single program?
+<[Len] NMORGENSTERN> Jax was on with a brief report on the Embedded systems 
+conference
+<[Len] NMORGENSTERN> Then I was on with Mike Christoff. We ended about 6:20 
+because
+<[Len] NMORGENSTERN> I had to leave slightly early.
+<[Len] NMORGENSTERN> and there were only the 2 of us
+<[Len] NMORGENSTERN> Jax thinkx that Forth got some good "press" at the Emb sys 
+conf
+<GARY-S> It takes a sophisticated interrupt manager to properly handle 
+concurrency, does it not. Can this be done with an interpretive process ?
+<[Wil] W.BADEN1> Yes, but interpretive processes defeat the purpose for 
+pipelined instruction execution.
+<GARY-S> If you use a CISC processor you almost have to pipeline
+<GARY-S> and cache
+<GARY-S> what is the alternative according to your author(s) ?
+<[Wil] W.BADEN1> I wonder if you cud write a compiler for Forth that wud rename 
+registers instead of DUP and SWAP.
+<[Len] NMORGENSTERN> The key word is "compiler"
+<GARY-S> why not - but entire registers ?
+<[Len] NMORGENSTERN> Forth's compiler is , (comma)
+<[Wil] W.BADEN1> Alternativ to what?  Pipelining is state-of-the-art for the 
+90's.
+<[Len] NMORGENSTERN> If you were willing to add a parsing step in the quit
+<[Len] NMORGENSTERN> loop, you would have a true compiler & you could do what 
+you wanted
+<GARY-S> I was responding to your comment that interpreters defeat pipelining
+<[Wil] W.BADEN1> It wud hav to recognize stack-growing operation sequences and 
+turn this off.
+<GARY-S> That would require an additional pointer
+<[Wil] W.BADEN1> The purpose of pipelining is to increase the instructin 
+thru-put.
+<GARY-S> Not that big a thing reALLY
+<[Wil] W.BADEN1> This means unrolling many functions.
+<GARY-S> I understand that - your original premise was Interpreters and 
+Concurrency unless I misunderstood
+<[Wil] W.BADEN1> It also shud re-order sequence of operations, which is 
+fundamentally opposed to Forth style programming.
+<[Wil] W.BADEN1> Let me get the book.  afk.
+<[Len] NMORGENSTERN> What does afk mean, Gary
+<GARY-S> I don't know, but I still think my question was reasonable, or did I 
+miss something ?
+<GARY-S> The whole point of pipelining and caching is to predetermine 
+instruction fetches
+<[Len] NMORGENSTERN> My expertise in these things is about 3 on a scale
+<[Len] NMORGENSTERN> of 100, and I just don't know, Gary
+<[Len] NMORGENSTERN> I have been thinking about the idea of incorporating
+<[Len] NMORGENSTERN> a parsing step in QUIT It definitely would change
+<[Len] NMORGENSTERN> the nature of Forth!
+<GARY-S> For what purpose ? Is this like the step routines I have seen in FD ?
+<[Len] NMORGENSTERN> We do a lot of things in Forth becaue the input
+<[Len] NMORGENSTERN> is interpreted one word at a time. If we parsed
+<[Len] NMORGENSTERN> it woould give more flexibility
+<[Len] NMORGENSTERN> (some would say chaos)
+<GARY-S> You would also corrupt the stack, right ?
+<[Len] NMORGENSTERN> Not unless you made a mistake. Example:
+<GARY-S> We're safe - never make mistakes, do we ??? :-)
+<[Len] NMORGENSTERN> an adventure game. If we make North South etc constants,
+<[Len] NMORGENSTERN> then we could say North Go But this is clumsy
+<[Len] NMORGENSTERN> We want to use English like syntax. Programming
+<[Len] NMORGENSTERN> Go North is fairly complex. If we parsed, we could
+<[Len] NMORGENSTERN> analyze the input, locat the verb, and relate the otthe
+<[Len] NMORGENSTERN> sutff to it, and execute.
+<[Wil] W.BADEN1> bak. Back at keyboard.
+<[Wil] W.BADEN1> Afk is away from keyboard, (but still recording -- I haven't 
+missed anything).
+<[Len] NMORGENSTERN> Thanx
+<[Wil] W.BADEN1> One book is Interpretation and Instruction Path Coprossing, by 
+Debaere and Campenhout.
+<GARY-S> What do you gain - I see a slowdown
+<[Len] NMORGENSTERN> (Sound like folks from Arcturus)
+<[Len] NMORGENSTERN> Was that for me Gary?
+<[Wil] W.BADEN1> The second book is Computer Architecture -- a Quantitative 
+Approach.
+<[Len] NMORGENSTERN> If so, adding exta steps always slows things down. In this 
+case
+<[Len] NMORGENSTERN> it would only be during keyboard interpretation or 
+compilation
+<[Len] NMORGENSTERN> and would not be a significant penalty.
+<[Len] NMORGENSTERN> (Might be hard to prgram, though.
+<GARY-S> The purpose for adding these to your library Wil ? That might get my 
+head in tune with yours.
+<[Wil] W.BADEN1> Keeping up with the craft.
+<GARY-S> Software engineering at the System level ?
+<[Wil] W.BADEN1> BTW, "state of the art" means "ordinary".
+<[Wil] W.BADEN1> Yes.
+<[Len] NMORGENSTERN> The cutting edge is where you bleed!
+<GARY-S> ok - I still find the premise of the first book at odds with current 
+CISC design
+<[Wil] W.BADEN1> Check out the message.  The writer of the message reviewed the 
+book in SIGPLan.
+<GARY-S> 'and this is the original point where we became talking heads earlier
+<[Wil] W.BADEN1> Thatz wher I found out about it.  I call Chicago 555-1212 in 
+hope to get his
+<[Wil] W.BADEN1> phone number, but it was unlisted.  I was going to call him 
+and ask him to
+<[Wil] W.BADEN1> upload his review here.
+<[Wil] W.BADEN1> A week later he posted his message.
+<[Wil] W.BADEN1> He has, like me, mixed feelings about the book.
+<GARY-S> That would be interesting
+<[Wil] W.BADEN1> Spackman is the name of the messager.
+<[Wil] W.BADEN1> Computer Architecture is a landmark book for the 90's. $55 and 
+worth it.
+<GARY-S> Have you ever read the 2 volume "Parallel Distributed processing"
+<[Wil] W.BADEN1> No. By whom?
+<GARY-S> Rumelhart,McClelland et al at MIT
+<GARY-S> dry and difficult read but full of good insight
+<[Wil] W.BADEN1> Did u know that Kogge, who wrote that great article on Forth's 
+architectural trail, published a book on pipelining in 1981?
+<GARY-S> no
+<[Wil] W.BADEN1> No, I'll keep my eyes peeled.
+<[Len] NMORGENSTERN> Which article is that, Wil?
+<GARY-S> That predates actual incorporation - in Nova's anyway
+<[Wil] W.BADEN1> "An architetural trail to threaded-code systems," IEEE 
+Computer, March 1982.
+<[Wil] W.BADEN1> disconnected.
+<[Len] NMORGENSTERN> Thanx Wil
+<GARY-S> For the information or for the logoff ? :-)))
+<[Len] NMORGENSTERN> I read an article in Sci. Am on parallel processing
+<[Len] NMORGENSTERN> The authors claimed that the radix sort is one of the 
+fastest
+<[Len] NMORGENSTERN> with a parallel processor because you can start processing 
+a
+<[Len] NMORGENSTERN> heap as soon as it is started insted of waiting until it 
+is finished!
+<GARY-S> Parallel Processing throws a curve into a lot of preconcieved notions 
+simply because of the vector factor you just referred to
+<[Len] NMORGENSTERN> This has been interesting, GAry. I am always interested
+<[Len] NMORGENSTERN> in things I have never even known ABOUT much less known!
+<GARY-S> It wasn't exactly Forthish, but maybe someone will find the transcript 
+a keeper.
+<GARY-S> Thanks for covering for me Len
+<[Len] NMORGENSTERN> Right. No problem.
+<GARY-S> I presume you read my e-mail
+<[Len] NMORGENSTERN> I am usually free. How is Dennis doing? He sounds depressed
+<[Len] NMORGENSTERN> but hopeful.
+<GARY-S> You know as much as I do
+<[Len] NMORGENSTERN> I hope things go well for you, Gary.
+<GARY-S> It isn't me , but thanks
+<[Len] NMORGENSTERN> True, but it is not easy.
+<GARY-S> Think we should roll the sidewalk up - don't you
+<[Len] NMORGENSTERN> Yes, it is that time. See you next week Will you be able to
+<[Len] NMORGENSTERN> take Thursday?
+<GARY-S> All I can tell you is if you notice a vacuum you might want to check 
+up on me.
+<GARY-S> You can tell if the ports stop fairly easily
+<[Len] NMORGENSTERN> I will plan to be here about 15 minutes early & get on
+<[Len] NMORGENSTERN> If you show up we will transfer, as we did today.
+<GARY-S> Youre a class act Leonard Morgenstern, and I appreciate you
+<GARY-S> g'nite
+=== End of Steno notes. ===
+
+

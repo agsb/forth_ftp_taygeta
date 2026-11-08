@@ -1,0 +1,213 @@
+
+
+
+ Minutes of a special GEnie Forth RoundTable Conference with 
+ Dr. Bob Loewenstein of Yerkes Observatory. Bob has acquired
+ non-commercial rights to the Mac based Object Oriented Forth
+ by Kriya and Charles Duff called Neon, hes enhanced it and
+ renamed it YERK. Dr. Loewenstein joins us to discuss YERK.
+  
+ Entire contents of this transcript copyright (c)
+ 1991 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 09/19/91   Time: 22:28EDT
+
+Attendees:
+[[bob] FIGGUEST] <-- Invited special guest
+[[LEN] NMORGENSTERN]
+[J.T.SAVIDGE]
+[GARY-S] <---------- Moderator SysOp
+[[MIKE] M.KELLY36]
+[[Wil] W.BADEN1]
+[D.RUFFER]
+[S.WHEELER]
+
+Minutes:
+<FIGGUEST> It's going to be in the 30's tonight (I'm Texan, too)
+<J.T.SAVIDGE> Is looking at stars enough to keep you up there?
+<FIGGUEST> sure...Actually, it's the weather. I like snow and
+<FIGGUEST> Texas didn't have much
+<FIGGUEST> James, did you get my letter?
+<J.T.SAVIDGE> It is finally getting cool here & I dred it.
+<FIGGUEST> yes, I mailed my response Monday. Apparently you haven't got it yet.
+<J.T.SAVIDGE> I look forward to it.
+<FIGGUEST> Basically I don't have an answer for you...you'll have to talk
+<FIGGUEST> to Kriya since they retain commercial rights, whatever that means.
+<GARY-S> Bob, set your name, kill echo and run status please - then let me know 
+if you'va any questions
+<GARY-S> Sorry JT - you two can resume chatting in a secc
+<[Bob] FIGGUEST> Ok, gary, I've done those things...My hard disk crashed this 
+morning...
+<[Bob] FIGGUEST> and I lost the files from the other day.
+<NMORGENSTERN> is here.
+<GARY-S> will you be able to wing your opening remarks ?
+<M.KELLY36> is here.
+<[Wil] W.BADEN1> is here.
+<D.RUFFER> is here.
+<GARY-S> Who besides wil is a Mac user in the peanut galley ?
+<[Len] NMORGENSTERN> I
+<J.T.SAVIDGE> I am.
+<GARY-S> SHOWTIME
+<[MIKE] M.KELLY36> peut-etre
+<GARY-S> Let's get formal folks
+
+
+<GARY-S>     The GEnie Forth RoundTable is pleased to welcome as      
+           tonight's guest, Dr. Bob Loewenstein of Yerkes Observatory
+          Bob holds a Ph.D. in Space Physics and Astronomy from Rice
+          University. He is a Senior Research Associate in the Dept. 
+          of Astronomy and Astrophysics, University of Chicago and 
+          Director of Computing and Communications for the Center
+          for Astrophysical Research in Antarctica. He is an infrared
+          astronomer, observing at both ground-based and airborne 
+          observatories. He has been programming since 1968. In his 
+          last software project he developed was a remote controlled 
+          3.5m telescope. Bob has acquired rights to the Neon Object
+          Oriented Forth (OOF) system for MACs, enhanced it and 
+          renamed it Yerk.
+          Please welcome tonight's guest, Bob Loewenstein.
+<[Bob] FIGGUEST> Let me begin by saying that I am not a computer
+                 'expert.' I need to use computers and software in
+                 my line of research and as a consequence have had
+                 to create a lot of hardware and software to 'get
+                 the data.' Yerk is an object oriented variant of
+                 Forth. It allows a programmer to take advantage of
+                 Object Oriented constructs and techniques, which
+                 makes for a more intuitive program structure and a
+                 more maintainable code, as well as fast
+                 development time. I was a beta tester for Chuck
+                 Duff, Neon's primary author, while he was
+                 developing it in mid-to-late 1984. After Neon's demise
+                 I continued to refine and update Yerk because I felt
+                 it was the best Forth-like Object Oriented language out
+                 there.  I don't really hold the rights to Neon/Yerk
+                 Kriya allowed me to release the sources for educational
+                 purposes, but they retain the commercial rights to Neon.
+                 One of the conditions I had to agree to for releasing it
+                 was to change the name since there is some dispute as to
+                 the ownership of the word 'Neon' as applied to software
+                  
+                 So, with that said, I'm ready for questions.
+<[MIKE] M.KELLY36> Why " Yerk " ?
+<[Bob] FIGGUEST> Ok, I've gotten grief over that. I wanted a name that no one
+                 would sue me for.
+                 Yerk fit the bill. However, some have suggestion FOOPLE,
+                 FORTH++
+<[Wil] W.BADEN1> I thought the name made sense...
+                 It is an abbreviation of Yerkes, and is only four letters 
+                 so it can replace Neon without increasing line length.
+<[Bob] FIGGUEST> Right..If I didn't mention it, I reside at Yerkes Observatory 
+                 in Wisconsin. I figured it was a safer name than any noble
+                 gas.
+<[Len] NMORGENSTERN> How is Yerk for neophytes. In particular, how does it
+                 compare in complexity with other Forths that are popular
+                 with beginners, such as F83?
+<[Bob] FIGGUEST> Well, I think almost any Forth is good for beginners
+                 Yerk particularly so. It's free, has a good manual with a 
+                 tutorial and is written on a fairly "standard" fig kernel. 
+                 However at the present time it runs only on a macintosh.
+<S.WHEELER> is here.
+<GARY-S> The Objects/classes etc - are they pretty much lineal descendants of 
+                 PARC research ?
+<[Bob] FIGGUEST> Somewhat. Yerk isn't a "true" OOL, in that not everything is 
+                 an object. Many of the classes are patterned on Smalltalk 
+                 classes.
+                 The syntax is 'selector  object' rather than the reverse
+                 This, to me, is more readable. Typically a method is a verb 
+                 and the object a noun, so verb noun reads better
+                 than noun, verb.  I forget how many classes are in
+                 the standard Yerk application, ..about 50 or so. 
+<[MIKE] M.KELLY36> What affect ( if any ) will the ANS standardization process 
+                 have on Yerk ?
+<[Bob] FIGGUEST> Probably very little. For one thing, Yerk is loosely used by
+                 those people who have picked it up. There is no organization 
+                 yet I am mainly interested in keeping it working on all 
+                 Macintosh platforms for my own work. If a user's group starts
+                 up, with a clamor for standardization, that is another thing.
+                 But for now, I'm happy that it works on all Macs. And if you
+                 program using object oriented structure, the ANS probably
+                 wouldn't apply as it would to other real Forths.
+<J.T.SAVIDGE> How is Yerk used in your work and are there any problems with
+                 System 7?
+<[Bob] FIGGUEST> I've been using Yerk (Neon) since 1984. We had a mac since 
+                 they came out, but couldn't program it since nothing really
+                 was available then. We looked at MacForth, but heard about 
+                 Neon (not called that then). We wanted to use the mac as a 
+                 data acquisition and display fronted..also as an instrument 
+                 control computer.
+                 I first programed up a data acq and display for our research 
+                 done at Mauna Kea observatories and on the Kuiper Airborne 
+                 Observatory.
+                 Then, as things began to role, we wrote quite a bit for lab 
+                 use and eventually wrote a controller for one of the Yerkes 
+                 telescopes.
+                 We made that remote controlled, and I have just finished 
+                 version 1 of a remote control interface to a 3.5 meter remote
+                 control telescope in New Mexico. This involves some image 
+                 processing.
+<GARY-S> Charles Duff left Kriya to develop Actor - does he still invlove 
+                 himself with YERK ?
+<[Bob] FIGGUEST> Not really. I see him every so often since we are friends. He 
+                 visited me last year. He's too involved in Actor now.
+<GARY-S> Are you involved with the VLA in New mexico
+<[Bob] FIGGUEST> No, but one of the programmers there used to work here at 
+                 Yerkes on our 3.5m project. I have not been to the VLA since
+                 I'm not a radio astronomer.
+  (editor note: VLA is the Very Large Array of ganged radio telescopes in
+   South Eastern New Mexico)
+<[MIKE] M.KELLY36> Being an OO neophyte, what advantages does an OOF have over 
+                 a ( your words ) " real Forth " ?
+<[Bob] FIGGUEST> Well, I've been programming in Forth for about ten years. 
+                 Forth is fun, and all that, but it always was confusing to me
+                 to try to read other people's code. If Forth isn't written 
+                 well, it is a bear to figure out. The control system for the 
+                 Multiple Mirror Telscope was written in Forth, but it was so 
+                 un-maintainable that I've heard they've rewritten it in C. 
+                 OO imposes a structure that Forth doesn't require. It 
+                 provides an intuitive framework for program design. This makes
+                 the program more easily maintained.
+                 Objects are chosen as intuitive constructs and are easily 
+                 remembered. The late binding provides a powerful tool that
+                 frees you from using CASE statement-like structures. 
+                 Particularly for Instrument control, OOL is good since 
+                 Instruments are objects..and you send messages to them.
+<[MIKE] M.KELLY36> Understood, but are there not tradeoffs for the " intuitive
+                 framework " ?
+<[bob] FIGGUEST> I would say there are differences...you might call them...
+                 tradeoffs. One tradeoff might be OO takes up more memory
+                 I forgot to mention inheritance for a major benefit of OO 
+                 over Forth.
+<[MIKE] M.KELLY36> But for embedded applications ... too big ( as a rule ) ?
+<[bob] FIGGUEST> I don't think so. A typical application on the Mac is about 
+                 120K.
+                 The basic Yerk with floating point is about 60K. ga
+<[Wil] W.BADEN1> Kurt Schmucker, in "Obj Ori Prog for Mac" sez that Neon is 
+                 the fastest performing implementation of SmallTalk. 
+                 Would you comment? 
+<[bob] FIGGUEST> I remember reading that way back. Neon isn't an implementation
+                 of smalltalk, but it is an OOL implementation. It is fast, but
+                 not as fast as a compiled language. Typically about 2-3 times
+                 slower than, say, a compiled C program...But like any 
+                 Forthlike language, 90% of the time is spent in 10% of the 
+                 code. You can still optimize that part. (Maybe it was 80/20).
+                 I am really not familiar with other OO implementations except
+                 for MacApp.
+
+<GARY-S> Closing remarks please Bob
+ 
+<[bob] FIGGUEST> Well, I hope people have a chance to get a copy of Yerk if
+                 they don't already have it. It is transportable to other 
+                 machines and several people have written to say they are 
+                 attempting to port it to PC, Sun, etc. If anyone has any
+                 questions about Yerk, feel free to get in contact with me. I
+                 think it is a powerful language, and it is free.
+
+<GARY-S> We didn't get a chance to discuss the application issues of YERK,
+                 but this has been an interesting conference.
+                 Thanks for taking the time to chat with us Bob.
+                 This conference is officially closed.
+=== End of Steno notes. ===
+
+

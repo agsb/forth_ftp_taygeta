@@ -1,0 +1,26 @@
+	What follows is a 32-bit forth. In general, it is based on the FIG
+model, but it deviates where necessity or religion demanded. It will
+run on a VAX running 4.2, and tends to use the UNIX system calls in only
+the most generic of ways (read: should move to 4.1 without problems).
+It uses subroutine threading and in-line code generation to "up" the
+speed; this is explained in the accompanying documentation.
+
+	It has been used to implement a 3D viewing system, which runs
+rather nicely; if you're interested in such a thing, send me mail;
+if I get enough queries, I'll post it to net.sources--otherwise, I'll
+send it direct.
+
+	Thanks much to Prentiss Riddle for posting this to me! Please
+direct all questions to me, not him! We can't post to notes from here,
+but net mail works fine.
+
+
+					Andy Valencia
+					...!fortune!hpda!vandys
+					...!ucbvax!hpda!vandys
+
+Heavy legal lines:
+	The software which follows is put into the public domain for
+private use only; using or distributing this software for a profit is
+forbidden. This software comes with no support offered or implied--
+you're on your own!

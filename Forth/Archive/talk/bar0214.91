@@ -1,0 +1,318 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+Date: 02/14/91   Time: 22:36EST
+     
+  Items discussed include dpANS Forth, decimal point, rational numbers,
+  indefinite precision, continued fractions, lunations, lunar and solar
+  holidays, John Hall-new FIG president, JFAR, Forth Dimensions, Forth
+  vs C (again)
+
+Attendees:
+[[Len] NMORGENSTERN]
+[GILES]
+[[DOUG] D.GARRETT]
+[GARY-S]
+[[Wil] W.BADEN1]
+[[john] JDHALL]
+
+Minutes:
+<[Len] NMORGENSTERN> testing!!!!!
+<GILES> is here.
+<[Len] NMORGENSTERN> I have a macro that goes bonk bonk bonk when
+<GILES> Good to c u back.
+<[Len] NMORGENSTERN> somebody comes on, so I can read a detective story
+<[Len] NMORGENSTERN> while waiting.
+<GILES> Hehehe
+<GILES> Say...I never COULD find BATCHER.ARC.
+<[Len] NMORGENSTERN> Isn't it file 12?
+<D.GARRETT> is here.
+<GILES> File 12...which lib?
+<[Len] NMORGENSTERN> Don't remember!
+<[DOUG] D.GARRETT> HELLO, Giles and Len
+<GILES> Oh...ok.  I'll check em ALL. (grin)
+<[Len] NMORGENSTERN> Try a search on the word SORT in all libraries &^
+<[Len] NMORGENSTERN> see what happens.
+<GILES> Ok.
+<[Len] NMORGENSTERN> I will upload it again if it has disappeared, but
+<[Len] NMORGENSTERN> I just checked last week.
+<[DOUG] D.GARRETT> Is there a "guest" speaker, tonite?
+<[Len] NMORGENSTERN> No That is next week.
+<GILES> Who?
+<[Len] NMORGENSTERN> Dean Sanderson talked at Asilomar in November
+<[DOUG] D.GARRETT> No, Who's on First
+<GILES> Cn u get Chuck?? (grin)
+<[Len] NMORGENSTERN> He was very good, and it should be
+<[Len] NMORGENSTERN> an excellent conferences.
+<[Len] NMORGENSTERN> Moore has been on, and Gary does not
+<[Len] NMORGENSTERN> want to duplicate if he can avoid it.
+<GILES> How bout Rather?
+<[Len] NMORGENSTERN> I am almost certain she has been on.
+<GILES> Or even Brodie.
+<[Len] NMORGENSTERN> Yes definitely.
+<[Len] NMORGENSTERN> Brodie would be good. I don't know if he is aavailable
+<[Len] NMORGENSTERN> He is not primarily a programmer, but a writer.
+<GILES> Well, if u could get wunna those 3 EVERY wk...*I'D* b satisfied! (grin)
+<[Len] NMORGENSTERN> Amen.
+<[Len] NMORGENSTERN> I have been composing an article on case statements
+<GILES> Yah?  Does it agree w/ Wil?
+<[Len] NMORGENSTERN> for submission to Forth Dimensions. It was
+<[Len] NMORGENSTERN> stimulated by his remarks, and quotes him.
+<[Len] NMORGENSTERN> I don't agree with him totally.
+<GILES> Me neither...
+<GILES> but I like a string case.
+<[Len] NMORGENSTERN> What do you mean "string case?"
+<GILES> Finds a substring in a superstring...& returns a #.
+<[Len] NMORGENSTERN> Hi Gary. Glad you can make it.
+<GARY-S> hi guys - rudden, rudden.... just call me road gypsy
+<GILES> "rudden"?
+<[DOUG] D.GARRETT> where did you rudden?
+<GARY-S> motor noises
+<GILES> Ohhhh! hehehe
+<GARY-S> Has everyone been following X3J14 ?
+<[Len] NMORGENSTERN> No, Gary
+<[Len] NMORGENSTERN> What news?
+<GARY-S> The last basis will become dpANS Forth review standard (beta)
+<[DOUG] D.GARRETT> err, ummm, no...
+<GILES> What is th "dp" for?
+<GARY-S> That means unless there are convincing arguments things like 
+CATCH/THROW, FOR/NEXT, etc are the ANS standard Forth
+<GARY-S> data processing ANSI Forth Standard
+<GARY-S> This is the review period
+<GILES> Ahso.  Thx.
+<GILES> Data Processing as versus what?
+<GARY-S> ANSI also applies their seal to many other standards
+<[DOUG] D.GARRETT> Do you have an estimated date
+<[DOUG] D.GARRETT> when this all gets the final seal of approval
+<[Len] NMORGENSTERN> It will be at least a year, and maybe two or more before
+<[DOUG] D.GARRETT> end of 1991 ?
+<[Len] NMORGENSTERN> it can go through the mill.
+<[DOUG] D.GARRETT> ooh, past end of 1991
+<GARY-S> The BASIS is submitted as soon as it gets committed to hard copy, then 
+we must be notified of its existance for the review to start legally
+<GARY-S> Then, as long as there are valid (operative word) objections, the 
+review standard can not be finalized
+<[DOUG] D.GARRETT> how do the various hardware vendors feel about the present 
+proposed standard?
+<[DOUG] D.GARRETT> are they generally in agreement?
+<[Len] NMORGENSTERN> Hardware???? A lot of software vendors have
+<[Len] NMORGENSTERN> been active on the committee.
+<GARY-S> Forth is NOT a hardware standard, it is a software standard
+<[Len] NMORGENSTERN> The standard does not specify hardware
+<GARY-S> If you mean, do chip makers care - no
+<[DOUG] D.GARRETT> as opposed    let me put this another way
+<[Len] NMORGENSTERN> (The Forth 83 standard DID specify 16 bit data, however.
+<[DOUG] D.GARRETT> oh, the chip makers don't care...now I understand
+<[Len] NMORGENSTERN> The new standard has deliberately avoided that kind of 
+thing)
+<GARY-S> Although some compromises were reached to make the stack operations 
+more palatible to stack engine manufacturers
+<[Len] NMORGENSTERN> You can have a standard Forth on any chip that will
+<[Len] NMORGENSTERN> suppport it.
+<[DOUG] D.GARRETT> whatever that "standard" may be...  I see.
+<GARY-S> Then one of the major foundaries dropped support for their engine 
+<sigh>
+<GILES> Has anyone here worked on rational representation of numbers?
+<[Len] NMORGENSTERN> I should have said, "You can have THE standard Forth " etc.
+<[Len] NMORGENSTERN> How do you mean, "rational"
+<GILES> As versus FP.
+<GARY-S> do you mean as opposed to irrational (-1) ?
+<GILES> In other words, fractional rep.
+<GARY-S> scalars :-)
+<[Len] NMORGENSTERN> I think not. In any case, what would be the advantage of
+<[Len] NMORGENSTERN> a standard for that?
+<[Wil] W.BADEN1> is here.
+<GILES> Denominator/numerator pairs.
+<[Len] NMORGENSTERN> Giles, Ask Wil your question. He is very adept
+<[Len] NMORGENSTERN> at number representations.
+<GARY-S> and numeric flow
+<GILES> Was askin about interest in rational representation of numbers, Wil.
+<[Wil] W.BADEN1> To what precision?
+<GILES> Numerator/denominator pairs.
+<GILES> Any precision.
+<GILES> Tho it would have to b specified...
+<[Wil] W.BADEN1> How much hav u done so far?
+<GILES> for stack handling.
+<GILES> Nothing very formal.
+<GILES> Jus seems th best way to handle #s...
+<[Wil] W.BADEN1> I'd first set up a storage array allocator.
+<GILES> becuase u avoid all th unseen imprecision...
+<GILES> of FP.
+<[Wil] W.BADEN1> IF u want indefinit precision.
+<GILES> Or DEFINITE precision. (grin)
+<GILES> FP is always an approximation, when...
+<[Wil] W.BADEN1> Th fun o Forth is doin it yurself.
+<[Len] NMORGENSTERN> Alfred Tang showed a way to use continued
+<[Len] NMORGENSTERN> fractions to allow indefinite precision.
+<GILES> u don't kno what #s r involved.
+<GILES> Rite! (grin)
+<[Len] NMORGENSTERN> (I don't know how practical it is)
+<[Wil] W.BADEN1> No, Len, not indefinit precision.  Yes, it is very practical.
+<GILES> Yes, Len.  Fractions are a way...
+<GILES> to ALWAYS have control of ur precision.
+<GILES> I was curious how much th guys here had done...
+<GILES> w/ fractional representation...& any tricks developed.
+<[Wil] W.BADEN1> Th rational approx of pi in Starting Forth is very good.
+<GILES> 113355?
+<[Len] NMORGENSTERN> It is based on continued fractions, by the way.
+<GILES> 355/113?
+<GILES> Oh.  Ok.
+<[Len] NMORGENSTERN> Even 21/7 is surprisingly good!!
+<[Len] NMORGENSTERN> 22/7 that is
+<GILES> For some things.
+<[Wil] W.BADEN1> I used continued fractions to get average lunation: 25101/850.
+<[Wil] W.BADEN1> ... for phases of the moon in 16 bit arithmetic.
+<GILES> Really?  I'm interested in that...
+<[Wil] W.BADEN1> 29.530588.
+<GILES> it varies tho, no?
+<GARY-S> did you ever finish your calendar program with all the lunar and solar 
+holidays ?
+<[Wil] W.BADEN1> Not the average, but the average can vary by 2 days one way or 
+the other.
+<[Len] NMORGENSTERN> Error of about 1/4%
+<GILES> Oh, rite...u DID say "average".
+<[Wil] W.BADEN1> Gary, I hav done Easter, Rosh Hashshanah, and  Passover, and 
+Ramadan.
+<[DOUG] D.GARRETT> on a semi-related topic: I have need for a word to calculate
+<[DOUG] D.GARRETT> natural logarithms
+<[Wil] W.BADEN1> The Islamic calendar is the easiest.
+<[DOUG] D.GARRETT> I've been put off at the thought of
+<GARY-S> That does leave a few unaccounted for :-)
+<[DOUG] D.GARRETT> having to load a floating point library just to
+<[DOUG] D.GARRETT> get that one function.  Any suggestions?
+<GILES> I believe u cn use a Taylor series for that, Doug.
+<[Wil] W.BADEN1> The average can vary +- 2 days from the actual lunation.
+<[DOUG] D.GARRETT> I'll look it up in my old math texts
+<GARY-S> YES - get Martin Tracy's ZENFLOAT out of the library
+<[Len] NMORGENSTERN> It exists. I was looking for it last week...
+<[Len] NMORGENSTERN> but could not find it!
+<GILES> Ok...but it isn't so terribly to calculate it, is it?
+<[Len] NMORGENSTERN> Not floating, Gary, but rational fractions
+<[Len] NMORGENSTERN> Floating is part of every decent FP implementation.
+<[DOUG] D.GARRETT> I found an algorithm in another language, which
+<[DOUG] D.GARRETT> used decimal.  It involved a very large
+<GILES> Ah...someone else that agrees w/ me on rational vs FP.
+<GARY-S> Doug had commented on floating point - hence my suggestion
+<[DOUG] D.GARRETT> number  maybe > 20 billion, as
+<[DOUG] D.GARRETT> one of the factors
+<[Wil] W.BADEN1> I'v mentioned ABC language before. I defined "factorial", put 
+1/(factorial 1000)
+<[Len] NMORGENSTERN> I did a log function on the IBM 1401 which is a DECIMAL
+<[Len] NMORGENSTERN> machine, using shift and add. Doesn't work well on
+<[Len] NMORGENSTERN> bytes which are essentially hex.
+<[Wil] W.BADEN1> in x, printed 1/x and got the save value as factorial 1000 
+with all digits correct.
+<GARY-S> You can mask and shift, though
+<[Wil] W.BADEN1> save=same
+<GILES> Got it.
+<[Wil] W.BADEN1> ABC uses rational numbers of arbitrary precision.
+<GILES> A 4th xtension?
+<[Wil] W.BADEN1> No, but shud be of interest to certain Forth types.
+<GILES> Hehehe
+<GARY-S> Incidently, Giles, Vol 6 Number 1 (1990) of JFAR has a study of 
+complex numbers in Forth byJ.V.Noble
+<[DOUG] D.GARRETT> hmm...you say there are some files in the library about ABC?
+<[Wil] W.BADEN1> Public domain for unix, amiga, pc's and Max.
+<GILES> Any source available?
+<[Wil] W.BADEN1> The Mac version is here.
+<GARY-S> The C source is in the Unix RT, page 161
+<GILES> Thx!
+<[Wil] W.BADEN1> I use Mac and Unix versions.
+<GARY-S> Have you read "Life with Unix" by Libes/Ressler ?
+<[Wil] W.BADEN1> No, what's the tenor?
+<GILES> I'll look 4 it.  "JFAR", I'm not sure if I've heard that one b4.
+<GARY-S> Interesting stuff - like why the semicoln for ;login:
+<[Len] NMORGENSTERN> Journal of forth Applications and Research
+<GILES> Ahso...Thx, Len.
+<GARY-S> TT33 escape character, however all video terminals see it
+<GILES> I should subscribe...to 4th D.  & JFAR. Is there a file on them?
+<[Len] NMORGENSTERN> Forth Dimensions is free if you join FIG
+<GARY-S> JFAR, 70 Elmwood Ave, Rochester,NY  14611
+<GARY-S> FD you can subscribe to "on-line" in the BBS
+<GILES> Thx, Gair.  Where should I send my dues, Len?
+<JDHALL> is here.
+<[Len] NMORGENSTERN> POBOX 8231 SAN JOSE CA 95115
+<GARY-S> Send $30 now or $40 in 6 weeks to P. O. B. 8231, San Jose, CA  95155
+<[Wil] W.BADEN1> (Hail to the Big Fig.)
+<[Len] NMORGENSTERN> Sorry 95155
+<GILES> Thx, Gar, Len!
+<[Len] NMORGENSTERN> (John Hall has been on the FIG Board since the year zero)
+<GARY-S> Janny has consented to being our mid-year conference guest, John. Get 
+ready for her to be asking leading questions :-)
+<[Wil] W.BADEN1> And is now the Big Fig.
+<GILES> <-- (Newbie) (chuckle)
+<JDHALL> Well not quite zero!
+<[Len] NMORGENSTERN> Our Fearless Leader!
+<GILES> Good to meet u, John. (grin)
+<JDHALL> Jan will be fun to talk to on line.
+<GILES> What is Jan's background?
+<[john] JDHALL> Sorry to be late, but this is my normal time to get home.
+<GARY-S> I should like to humbly suggest a increased on-line presence by FIG 
+itself, Mr. Hall
+<[john] JDHALL> I guess the conf is almost ended?
+<GILES> Nah...
+<[DOUG] D.GARRETT> Bartender...another round for the house!
+<GILES> we was FULL o Qs. (grin)
+<GARY-S> If I want it too - got something to promote, "go for it"
+<GARY-S> Well - that sure got a burst of silence
+<GILES> Hehehe
+<[john] JDHALL> Gary, I will try to be here more ofter, but then I always try...
+<[john] JDHALL> and the result is what you see of me.  Sorry,  I will try.
+<GILES> (Gesturin hypnotically...to LOAD John w/ GUILT) (grin)
+<[Len] NMORGENSTERN> A while back Wil challenged me
+<GARY-S> no prob, not being perjorative, but any presence would be more than 
+there has been except for Dennis
+<[Len] NMORGENSTERN> to find the last 3 times
+<[Len] NMORGENSTERN> I used CASE. I could find only two
+<[Len] NMORGENSTERN>  in my files covering the last 2 years, and I
+<[Len] NMORGENSTERN>  remember another one that I couldn't find!
+<[Len] NMORGENSTERN>
+<[DOUG] D.GARRETT> I'm fairly new to this group...pardon my ignorance: do YOU 
+make a living in the FORTH world?, mr JDHALL
+<[john] JDHALL> Yes, I work for Lockheed in Palo Alto, Ca as a Forth Programmer.
+..
+<[DOUG] D.GARRETT> thank you
+<[Wil] W.BADEN1> Len, will you post the ones you'v found?
+<[Len] NMORGENSTERN> Ok, Wil
+<[john] JDHALL> I have told them that when I run out of Forth work...
+<GILES> U run out?
+<[john] JDHALL> I will leave and find another job.  It is that important to me!
+<GILES> (grin)
+<GILES> Is it true wahat they say...
+<GILES> about us.  That we are CULTISTS??
+<GARY-S> We are near curtain fgall - any pertinent discussions - NOW is last 
+call
+<[Wil] W.BADEN1> Not any more.  Forth is now a language for professionals.
+<GILES> PROFESSIONAL cultists? (chuckle)
+<GARY-S> Especially embedded applications
+<[Len] NMORGENSTERN> Of course, we are cultists.
+<[DOUG] D.GARRETT> I've been a programmer in ANS Standard MUMPS for 8 years....
+kinda out in left field
+<[Len] NMORGENSTERN> The difference between us and C programmers
+<[Len] NMORGENSTERN> is that we admit it.
+<GILES> Hehehe...Not bad, Len.
+<GILES> Maybe we r so bad that we HAVE to admit it! (grin)
+<[Wil] W.BADEN1> C is no longer a cult.
+<GARY-S> The big ball is dropping
+<[DOUG] D.GARRETT> They wear ties
+<GILES> NO!
+<[Len] NMORGENSTERN> Ha!
+<[Wil] W.BADEN1> No, they don't.
+<GARY-S> tickk
+<GARY-S> tick
+<GILES> THAT couldn happen to US ....COULD it??
+<[DOUG] D.GARRETT> What happens when the ball drops?
+<[Wil] W.BADEN1> Please don't confuse C and Cobol.
+<GILES> Hahaha!
+<GARY-S> I close the steno notes
+<[Len] NMORGENSTERN> Post World War I equivalent of Hippies
+<[DOUG] D.GARRETT> thank you
+<GILES> Thas NASTY, Wil!
+<[Len] NMORGENSTERN> wore very formal dress, morning suits, etc.
+<GILES> U missed a GOOD joke, Gair. (grin)
+<[Len] NMORGENSTERN> (German, that is) Remarque, the author of
+<[Len] NMORGENSTERN> "All Quiet on the Western Front" was one.
+<GARY-S> This FIGGY is closed - stay and chat, but I'm wrapping the notes.
+=== End of Steno notes. ===
+
+

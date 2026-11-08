@@ -1,0 +1,124 @@
+
+   This file deals with preliminary considerations for basic string
+manipulation in Forth.  It draws from my experience with the UNIFORTH
+Professional Forth System, and my own opinions on what is necessary
+groundwork for working toward a full Standard strings package.
+   I think that George Hawkins' messages #1982 and #1983 are a good
+start in getting a handle on the use of "run-time" parsing words.  (I
+don't know if "run-time" is the correct term, but the concept I'm
+shooting for is a set of words that work on strings compiled into
+colon words or arbitrary memory locations instead of from the input
+stream.)  George has given us a naming convention -- the "^".  But,
+George, you weren't actually suggesting that we replace the
+semantically pleasing word "FIND" with "[']^" were you?  :-)
+   I'm not sure that separating all the parsing words into "input
+stream" and "memory address" regimes is strictly a standards issue.
+Any reasonable Forth system could add the "memory address" words in a
+consistent and obvious way.  The Standard should at least address the
+naming convention and the syntax, though.
+   Before we can talk about the words that act on compiled strings,
+the Standard must address the mechanism for compiling and retrieving
+the strings.  WORD is far from sufficient since it does not "compile"
+a string, it merely grabs one from the input stream and returns a
+pointer.  What is needed for compilation is a string form of LITERAL.
+The function of placing a string at an arbitrary address is another
+problem requiring another word.  I will discuss these two in turn.
+   Many systems already provide a mechanism for compiling strings.
+Usually the word is " (double-quote).  The compile-time action is
+to compile a run-time primitive, pull the string into the dictionary
+(delimited by another "), and ALLOT the necessary space for both.
+The run-time routine pushes the address of the compiled string onto
+the stack and bumps the IP past the string.  This is analogous to the
+action of LITERAL.  The only problem is that the delimiter is fixed
+and Forth programmers hate that which they can not change.
+   For the sake of argument, I will refer to this new string LITERAL
+as $LITERAL.  UNIFORTH has adopted the Basic convention of using the
+dollar sign to denote string operations, except that we have quite
+Forthily placed the $ at the beginning of the words instead of
+the end.
+   Compiling a string with an arbitrary delimiter is thorny.  I
+personally do not like to resort to changing the compilation state
+with [ and ].  I just don't like to change my "mental compilation
+state" while reading the code.  But if we use $LITERAL inside a
+colon word like so:
+   
+   34 ( ascii " ) $LITERAL String"
+   
+the resulting compilation will be:
+   
+   | LIT | 34 | $LIT | counted string "String" |
+   
+where the vertical bars denote cell (or cfa) boundaries and LIT and
+$LIT are the runtime routines of LITERAL and $LITERAL, respectively.
+At run-time this will leave 34 and the address of "String" on the
+stack instead of just the address.  One answer to this problem is ugly
+and system dependent but transparent, I believe, to the user.
+$LITERAL must "back up" the dictionary pointer, retrieve the
+delimiter, compile $LIT where LIT is, and then compile the string.
+Perhaps it would be simpler to use the ." and .( way of doing things
+and just have two words LITERAL" and LITERAL( but that's a matter we
+should all talk about.  After all, that's what this conference is for.
+   Anyway, to "dynamically" create the word DYNAMIC one could do the
+following:
+   
+   : DYN_CREATE  34 $LITERAL DYNAMIC" CREATE^ ;
+   
+using George's naming convention for the run-time version of CREATE.
+   It is at this point (after the adoption of a string compiling
+syntax) that the standards committee must decide whether or not there
+should be a separate string stack.  The presence or absence of a
+string stack effects how the run-time words that use strings will
+operate.  Either they will expect a pointer to the string on the data
+stack, or they will simply use the string on the top of the string
+stack.
+   This will be a difficult issue to present for the next (ANSI)
+Standard.  The required word set for dealing with strings should be
+kept at a minimum.  Yet a string stack allows for very useful "string
+arithmetic" operators like concatenation, substrings, searching,
+modifying, etc.  These operators would be much more difficult to
+implement using the data stack alone.  It should be possible to define
+string manipulation as an additional "layer" to the standard.  This is
+basically the method UNIFORTH uses.  The string package - string stack
+manipulation words and all - is loaded on top of the basic system.
+There is no intrinsic string stack implemented in the kernel.
+   Without a string stack, $LITERAL is practically useless in
+execution mode.  Since the string most probably would be placed at
+HERE to make compilation easier, the outer interpreter would destroy
+it when dealing with the next word in the input stream.  With a string
+stack, $LITERAL would put the string directly onto the stack, and out
+of harm's way, in execution mode, and compile it in compile mode.
+Once again this is analogous to LITERAL.
+   I suppose the string could be pushed, in toto, onto the data stack
+but that's one programming nightmare I would just as soon forget
+about.  I would like to hear from the other members of the board
+before going any further about string stacks.  Just let it be known
+that I favor their use.
+   To compile a string to an arbitrary memory location, the case is
+much simpler.  Mahlon has already mentioned it in message #1985.
+The word is TEXT and its usage is thus:
+   
+   TEXT   char addr ---
+   
+   Move the string immediately following TEXT and delimited by the
+   character char to the address addr.
+   
+   For example,
+   
+         34 BUFFER TEXT String"
+   
+would put the string "String" at the memory location named "BUFFER".
+The only real question is whether the string should be a counted
+string, a null terminated string, or a "straight" string.  My vote
+would be a counted string.
+   Have I neglected anything?  Probably.  Have I confused anyone?
+Ditto.  Is this something that should be standardized?  Absolutely.
+The beauty of standardizing string manipulation is that since no
+previous Standard has addressed the problem, we can't step on
+anybody's toes.  Or, more precisely, we step on everybody's toes
+equally, since NONE of us have ever used Standard Forth words on
+strings.  I encourage, in fact I am begging for, constructive
+criticism of what I have said here.  I am not proposing anything for
+the Standard (yet!), but I feel that this is an issue that should be
+discussed thoroughly.
+
+

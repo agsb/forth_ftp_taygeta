@@ -1,0 +1,233 @@
+         High Frequency FM Radio FAX Using DSP
+                By Dwight K Elvey
+
+Project Purpose:
+  Use DSP to improve the quality of reception of radio FAX signals. Taking 
+advantage of hardware that exist in my PC. Using the DSP that is in the modem 
+board.
+
+Project Background:
+  FM ( Frequence Modulated ) radio FAX is used for transmission of graphical 
+information. Most of current use is for weather maps and satalite images. The 
+signal is usually composed of a span of signals in frequency that represent 
+variing levels of brightness. The image is scanned at a constant scan rate 
+similar to a TV image. By placing successive scan results next to each other a 
+reproduction of the original scanned image can be created. The system 
+requires that the trasmitting end has an optical intensity to electronic
+converter. This electronic signal is then used to modulate a carrier to produce 
+the FM signal. The FM signal is transmitted through high frequency radio waves 
+to a receiver. The receiver used for radio FAX is usually a HAM type radio. In 
+order to recover FAX image it is necessary to demodulate the FM signal. This 
+can be done in one of several ways. The most familiar is to use an FM 
+receiver. The FM receiver usually puts the signal through what is called a 
+descriminator that has an output voltage that is propotional to the frequency 
+of the FM signal. This signal could then be used to control the intensity of a 
+spot on a rotating drum having photo sensitive paper. Another method of 
+demodulation is by measuring the frequency in a digital form and then use the 
+digital signal to recreate the image on a computer screen. The image could 
+then be save or plotted for later use. Since measuring the frequency needs to 
+be done before the descriminator, a FM receiver would not be appropriate for 
+digial use.
+ The HAM receiver has one feature that makes it useful for this purpose. The 
+Ham receiver has a thing called a BFO ( Beat Frequency Oscillator ). The BFO 
+is used to take a carrier only signal ( no AM modulation ) and recreate it as 
+an audio tone. This tone will have the same frequency deviation as the 
+original FM signal so long as it is offset from 0 Hz so there is no folding of 
+the signal. Since the bandwidth required for these FAX signals is quiet narrow 
+( about 1-1.5KHz ). In Group1 FAX a swing of 800 Hz is full black to full 
+white. The HAM reciever has more then enough bandwidth. The problem is that 
+the bandwidth may be more then is desired, creating distortion caused by 
+adjacent signals such as TTY, Voice and CW. This introduces the possibility of 
+using DSP to filter and clean the signal for reproduction. 
+
+System Analysis:
+ The system that I currently have is represented by diagram #1. It is 
+composed of a HAM receiver with BFO, a zero cross detector and a PC. Once the 
+signal is feed through the zero cross detector, there is little chance of 
+removing noise caused by adjacent signals. This means that the noise filtering 
+needs to be placed before the zero cross detector. Diagram #2 shows such a 
+system. This system can be realized by replacing the Analog filter with a DSP 
+system such as diagram #3.
+  Since I would like take advantage of a DSP system that is already 
+constructed for another purpose ( phone modem ), I will be using the modified 
+system described by diagram #4. It will be noticed that the D/C bock has been 
+removed since the zero crossing function can be done by the DSP, eliminating 
+the D/C function and the analog zero cross detector. The modem front end can 
+be more completely described by looking at diagram #5. The phone hybred 
+circuit is used minimize the response of the A/D to the transmitted signal 
+from the D/A of the modem. Since the D/A is not to be used the Hybred can be 
+assumed to cause only some filtering and attinuation of the incoming signal. 
+ The A/D function uses what is called a sigma-delta converter. This converter 
+samples the input at a very high rate of 1.728 Mhz. This is accomplished by 
+using a one bit analog sampler. Only the difference between the previous level 
+and the current level are digitized as either 1 for a positive change and -1 
+for a negative change. This one bit sampling has some advantages and 
+disavantages. From a practical standpoint it limits the slew rate of the 
+incoming signal to 1 LSB/579e-9 sec. Any signal with a higher slew rate will 
+cause clipping and distortion. This slew rate limit and the desire to 
+eliminate aliasing from sampling determines the anti-aliasing filter 
+requirements. Since the signal of interrest is in the range of 500 to 2500 Hz 
+the anti-aliasing filter can be quite simple. The manufacture recommends a 
+simple first-order filter with a 3 dB point at 20KHz. Any roll-off caused by 
+this anti-aliasing and any caused by sampling are well outside of the 
+frequencies of interrest as is shown in diagram #6. The receiver output is 
+band limited to about 4Khz by the audio amplifier. 
+ The A/D also has several decimation and filtering stages incorporated in the 
+A/D before it reaches the DSP. The first stage converts the single bit to 16 
+bits then decimates the sample rate to a selectable rate of 28.8KHz, 32.0KHz 
+or 38.8KHz. It also filters out any signals above one half the sample rates 
+selected. At this point there is one other optional stage of /4 decimation and 
+one other optional stage of high-pass filtering.
+ Because of the requirements of the signal filtering I intend to use the 
+signal at the first stage of decimation at the rate of 38.8Khz. I do this even 
+though I will decimate the signal further to get a good filter responce and 
+then interpolate back to 38.8K. This is done this way in order to help 
+maintain timing information that is generated by the A/D at 38.8Khz. This 
+timing would be reduced to 9.6Khz if I took the information at the lower 
+frequency and then would have to be regenerated to 38.8KHz. At a sample rate 
+of 9.6Khz I can make a filter of good quality with a band pass of 1 to 2.5Khz 
+to remove any spurious noise. The signal with the sample rate of 9.6KHz sample 
+rate would not be good to send to the zero cross detector directly since the 
+resolution of the zero cross timing would be T=1/Fs. This about 100 uSecs. The 
+resolution of the PC program on is about 1 part in 16 for a span of 1 to 1.8 
+KHz. This means that they must be measuring the signal with a resolution of 
+about 15 usec or better. Since I have no accurate control of the PC's sampling 
+counter I have to assume that I will have to produce a signal with at least 
+15 uSec or better. 
+ This can be achieved by taking the 9.6Khz signal and up-sampling it through 
+an 4* Interpolation cycle. This create a signal with about 26 uSec 
+resolution. Further improvement can be made by taking the 
+levels of the signal before and after the digital signal cross then using a 
+linier interpolation to create a delay time as demonstrated by diagram #7. At 
+38.8Khz sample rate a 2 Khz signal would be sampled at the rate of 0.32 
+radians per sample. Any error would be smaller then 1-Sin(.32)/.32=.02 or 2 
+percent. Remember that this is 2 percent of the .32 radians or 
+(.32/2*pi)*.02=.001 of a cycle at 2Khz. Other errors would be introduced by 
+the time increment resolution of the delay timer. If the maximum time that the 
+timer would have to delay is one sample period of 38.8Khz and the timer is a 
+16 bit timer the resolution of the timer could be as small as 400 pico 
+seconds. Since the timer on the ADSP2115 has a maximum resolution of about 60 
+nano seconds this is the limiting factor of the DSP. The error of the sample 
+zero-crossing detector is at least 515 nano seconds so this shouldn't be a 
+significant factor. In order to resyncronize the delay to zero-cross it will 
+be started after the next sample causing a constant delay. This is why I chose 
+to feed the DSP at the 38.4Khz rate.
+ The output and input of the system are all through serial connections. The 
+input serial rate is controlled by the sample rate of the A/D. For this 
+particular A/D there are 2 16 bit data words sent for each 16 bit sample. One 
+word is a dummie A/D register address word that can be ignored since I will 
+not be using any other A/D functions. The clock rate of these 2 data words is 
+1.728Mhz. This means that the address-data cycle will take 16*2/1.728e6 Sec or 
+about 20 uSec. The time delay between the first and the second value will be 
+about 10 uSec. This means that any other interrupt will have to be faster then 
+the time to read the first value and the second value to avoid data loss. The 
+serial output is used to send serial data to the computer through a port that 
+emulates a standard 8250 type serial port. The emulation of the port also has 
+a register that has the serial port status control. The one control signal of 
+most interrest is the DSR signal. This is the one used by the original zero-
+cross/serial port combination. Since the serial output rate can be set to some 
+arbitrary high rate, the time to transmit the DSR signal should not be a 
+problem. 
+ Since this is an asyncronous port that sends only when it is written to the 
+status of the DSR bit can be controlled in a more or less random fashion, with 
+only a slight delay. It is only necessary that the rate be fast enough so that 
+there is no overlap between zero-cross detection and the time it takes to send 
+one serial output. This is guarrenteed by chosing a baud rate that has a 
+higher data rate than the zero-crossing detection rate. 
+ Diagram #8 shows the flow of the DSP program. The main system limitations are 
+that all of the filtering actions be completed within one A/D cycle. The worst 
+case time is when the band pass filter is being used. It is possible to spread 
+the calculations of this filter over 4 sample periods but I think it can be 
+done within the capabilities of the system as shown below.
+ The computation time of various types of filters are listed in the manual for 
+the 2100 family parts. Several biquad IIR stages can be implemented at the 
+time price of (8*N/2)+5 clock cycles for a Nth order filter ( with N even ). 
+Since each clock cycle is 1/16.6MHz=60.24 nSec and the sample period is about 
+25 uSec, 415 cycles are available. A 4th order filter cost 37 cycles. At least 
+10 4th order filters can be implemented with some time to spare. Since the 
+processor is optimized to do FIR filters a 31 tap FIR filter can be 
+implemented in the same 37 cycles. The FIR filter takes N + 6 cycles. The 
+first low pass filter and the interpolation filter can use the same 
+coefficients. This makes only two filters to design. Since I have more then 
+enough time to run the filters I will use 35 tap FIR filters for best effect. 
+ The filters will be generated by a program for DSP design called PC-DSP. With 
+this program all I have to do is specify the filter shape and the program will 
+create the filter coefficients. I can then load these coefficients with my DSP 
+program.
+ The phone modem that I will be using in this project is what is called a 
+SoftModem. This is to mean that the DSP program is loaded into RAM on the 
+modem card from the PC. This means that I can generate the code needed and 
+then down load it to the DSP. Along with the project code I can also load a 
+simple monitor that I can use to help debug the code. Once the code is 
+debugged I can remove the monitor and allows it to run stand alone.
+ To generate DSP machine code I will use an assembler that I wrote. The 
+assembler that is normally used for this DSP ( ADSP2115 ) has a syntax that 
+looks like "C" code. I am more familiar with normal assembler code. Also the 
+assembler cost about $300 and mine only cost my time. Code that is generated 
+will be put into a file that can be down loaded into the RAM on the DSP.
+
+IMPLEMENTATION
+ Using PCDSP I created two filter coefficient files. The first file was for 
+the low pass filter to be used for filtering before decimating the signal and 
+then used again as the interpolation filter. The filter was selected with a 
+farely slow cut off since aliasing of the signal above the Nyquist after 
+decimating can be allowed some. The high end of the spectrum of interest is at 
+about 2 KHz. The new Nyquist frequency after normaization will be .5/4=.125. 
+The high end of the frequency desired will be 2/38.4=.052 after normlizing.  
+.125+(.125-.052)=.198 This means that some signal up to .198 is ok. using this 
+as the criteria I was able to make a filter with 35 coefficients that was more 
+then adiquit. Amplitude at .052 is virtually unity and at .198 it is about 40 
+db down.
+ The band pass filter has a pass from 1 KHz to 2 KHz. This was done after 
+the signal was decimated by 4. 38.4/4=9.6 The edges of the filter are at 
+1/9.6=.104 and 2/9.6=.208 Trying different filter sizes it was found that a 
+filter of length 45 was especially good. Since I have more then enough clock 
+cycles I desided to go with this filter. The filter has some peaking near the 
+edges but overall it is a good filter.
+ The filters are taken from the PCDSP as floating point numbers. Since I need 
+a 16 bit number in 1.15 format I first multiplied the coefficients by 32768. 
+Then I exported them as an ASCII file. I then edited the files and hand 
+rounded them to integer values. I then imported them back into PCDSP to see if 
+any significant quality was lost. Using the DTFT ( descreate time fouier 
+transform ) function, I compared the normalize with the quantitize responses 
+and found them to be similar in all of the important levels. The filters where 
+then edited to include the loading functions needed by the assembler. 
+ It will be noticed in the code that I only calulate the output of the input 
+low pass filter when it is needed for the band pass filter or every fourth 
+input value. If one was short on time one could split the low pass calculation 
+on one A/D interrupt and save the output, then on the next A/D interrupt run 
+this value through the band pass filter. This would cause a delay of one more 
+A/D interrupt but would cause no problems. Since it appears that I have more 
+then enough cycles, I just did them inline.
+ In calculating the delay value to use I will use a linear approximation as 
+described earlier. With the DSP clock of 16.66MHz I will have time increments 
+of about 60 nSec for each timer tick. At the sample rate of 38.4KHz I will 
+have about 26 uSec between each sample. This gives about 434 timer ticks per 
+sample period. When a zero cross is detected I can calculate the time to delay 
+with the equation ABS[ 434 * PrevValue / (NewValue - PrevValue) ]. Since this 
+is only calculated when there is a zero cross I am guarenteed not to divide by 
+zero. This save not having to do a safety check. Since I don't want to 
+overflow I will need to do the division first. The normal divide on this DSP 
+is 1.31 / 1.15 to 1.15. I will the use the multiply by 434 as though it where a 
+1.15. This will put a integer value into MR1 that is the value to write to the 
+timer counter, TCOUNT.
+
+Conclusions:
+
+ More and more paripherals in PC will have DSP's to do specific functions. 
+When one can gain access to programming of these DSP's it is possible to use 
+them for functions not originally thought of by the original manufacture. In 
+the future even Micro Soft is talking about having a DSP in the systems as a 
+Co-Processor. They are working now on ways to try to standardize formats for 
+down loading the code.
+ There are a number of things that could be done to improve the performance 
+of this project. The one that comes to mind is to replace the code that I now 
+have that runs on the PC to display the FAX image with improved code. It 
+would then be possible to do the frequency convertion on the DSP. This would 
+also allow greater precision. One could also inprove tha algorithym to 
+determine the signal by using a software PLL. This would allow more 
+consistent operation over variing levels of input signal. I'm sure that as I 
+am a tinker, I will try these changes and more. The DSP field is just 
+begining to blossom. The knowledge that I have gain from this project will 
+find use in the future.
+

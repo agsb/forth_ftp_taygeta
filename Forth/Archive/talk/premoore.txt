@@ -1,0 +1,50 @@
+
+
+ Chuck Moore, the creator of Forth, is the special guest in conference
+ on the GEnie Forth RoundTable for 24 August 1989. The topic of Chuck's
+ conference is 'The future of Forth...' . 
+ The following is a brief prelude to the conference designed to set the
+ tone and stimulate discussion. Chuck uploaded it prior to his conference.
+ Gary Smith, host SysOp
+      
+ Prelude:
+ The 'Future of ...' is a catchall for everything having to do with
+ Forth.  Its current place in the world is impossible to determine -
+ and largely irrelevant.  Forth is a valuable tool - and will remain
+ so - regardless of the number using it.
+ 
+ Recently I was obliged to use conventional CAD software.  I am
+ dismayed that it hasn't evolved from the 60's.  Forth is the only
+ hope for improved software, ignoring the ever-hopeful AI and
+ neural nets.
+ 
+ Computers are getting ever more complicated, in violation of the
+ first principle of human activity: KEEP IT SIMPLE .  In respect for
+ this unique forum - 25 words or less - I offer the following
+ statements to challange/guide question/comment.
+ 
+ 1- I like classic Forth.
+ 2- This includes BLOCKs - simpler, faster, better than files.
+ 3- VOCABULARY has been mis-used by FIG-Forth.  It is a poor
+    substitute for fast compile.
+ 4- Forth must evolve.  Standards are very dangerous.
+ 5- ANSI committee deserves thanks for 'above and beyond call of duty'.
+    Theirs is the impossible dream.
+ 6- Marvelous opportunity for non-ANSI Forths.
+ 7- Forth architecture is superb for micro (macro) computers.
+    Many variants should be explored.
+ 8- Three keys are necessary and sufficient.  QWERTY is a joke.
+ 9- Marvelous opportunity for non-IBM PCs.
+ 10- Work smart, not hard - Forthought.
+ 11- A program that can do everything (ie, SPICE) can do nothing
+     well, fast, easily.
+ 12- PUSH and POP are better names for >R and R>.
+ 13- Multiply is a much over-used arithmetic operation.
+     Ie, FFT can be replaced by Walsh-Hadamard.
+ 14- Floating-point is a bad joke.
+ 15- Withold source code only when you're ashamed of it.
+    
+ Over to you, Gary
+    Chuck
+
+

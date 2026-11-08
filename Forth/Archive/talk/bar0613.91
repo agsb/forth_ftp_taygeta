@@ -1,0 +1,285 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 06/13/91   Time: 22:27EDT
+    
+   Items discussed include some interesting riddles, search for an ANS
+   Forth referee for 'Forth Dimensions', Intel 80196, and the Sergei
+   Baranoff conference on 20 June which lead to an exchange on Soviet
+   history.
+
+Attendees:
+[GARY-S]
+[[Len] NMORGENSTERN]
+[[ANSI-jax] JAX]
+[[Cliff] C.MORAVETZ1]
+
+Minutes:
+<NMORGENSTERN> is here.
+<GARY-S> Hi Len - you just missed Sergei
+<[Len] NMORGENSTERN> Too bad. Were you giving him
+<[Len] NMORGENSTERN> a practice round?
+<GARY-S> yes - with Brad R. as local guide it was easy
+<[Len] NMORGENSTERN> BTW I just came from the Word Perfect round table
+<[Len] NMORGENSTERN> The sysop and I were the only ones, then another showed up
+<[Len] NMORGENSTERN> but I had to leave!
+<GARY-S> This is summer - that is quite the norm I'm afraid
+<[Len] NMORGENSTERN> Spring fever! Soon to be summer fever.
+<GARY-S> It already is here !!!
+<[Len] NMORGENSTERN> Not till Jun 21, officially.
+<GARY-S> I sent Sergei's bio in case I am absent next Thursday
+<[Len] NMORGENSTERN> I will be available, d. v. if you can't make it.
+<[Len] NMORGENSTERN> Riddle: Who said "Men may come and men may go,
+<[Len] NMORGENSTERN> but I go on forever."
+<GARY-S> I would just be guessing - shall I ?
+<GARY-S> Catherine the Great
+<[Len] NMORGENSTERN> Not bad. My answer was Elizabeth Taylor
+<[Len] NMORGENSTERN> (Actually Tennyson: The Brook)
+<GARY-S> Hmm - excellent
+<[Len] NMORGENSTERN> What weighs more, a pound of gold, or a pound of feathers?
+<GARY-S> both weigh 16 ounces
+<GARY-S> Did you see my feedback to Marlin ?
+<[Len] NMORGENSTERN> Downloaded but not yet read.
+<[Len] NMORGENSTERN> Wrong. A pound of gold weighs only 12 ounces (troy system)
+<GARY-S> ARRRRGH
+<[Len] NMORGENSTERN> You see why we should go metric?
+<GARY-S> There aren't Troy grams, are there ?
+<[Len] NMORGENSTERN> There are troy ounces, and strangely, a
+<[Len] NMORGENSTERN> an ounce of gold weighs (slightly) more than an ounce of 
+feathers!
+<GARY-S> I would really miss some of the more outrageous English units ...
+<GARY-S> I love to ask people to convert miles per hour..
+<GARY-S> to something useful like ----- furlongs per fortnight
+<[Len] NMORGENSTERN> Not to be confused with the citric system.
+<[Len] NMORGENSTERN> where things are described as the size of a lemon, orange
+<[Len] NMORGENSTERN> or whatever.
+<[Len] NMORGENSTERN> To a computer nerd, halloween = Christmas
+<GARY-S> explain
+<[Len] NMORGENSTERN> because 25 DEC = 31 OCT
+<GARY-S> That is too clever !
+<[Len] NMORGENSTERN> (per Alan Furman)
+<GARY-S> I like it !
+<[Len] NMORGENSTERN> Thirty days hath Septober, April June and No Wonder.
+<GARY-S> Sanity break - Marlin is looking for an unbiased (if possible) Ans 
+Forth referee to preview ANS articles for FD
+<[Len] NMORGENSTERN> Hard.
+<[Len] NMORGENSTERN> A Forth programmer without preconceived ideas is probably
+<[Len] NMORGENSTERN> a contradiction in terms.
+<GARY-S> Scan those I suggested and see if you can come up with another one or 
+two...
+<GARY-S> using perhaps a different criteria..
+<GARY-S> I based my suggestions on those I knew had created a working kernel 
+or two
+<JAX> is here.
+<GARY-S> Jax - how are you ?
+<[ANSI-jax] JAX> Hi gars!
+<GARY-S> Think you will make next weeks conference ?
+<[ANSI-jax] JAX> Probably not.
+<GARY-S> It'll be Sergei
+<[ANSI-jax] JAX> The only reason I'm here tonight is I can't go to chess since 
+I hurt my back.
+<[Len] NMORGENSTERN> Questions 1. How did it happen
+<[Len] NMORGENSTERN> 2. Why does it prevent you from playing chess?
+<GARY-S> You don't think a guest like Sergei warrants one chess absence?
+<[ANSI-jax] JAX> 1. I shovelled 1/2 ton of dirt into a garden ... pulled my 
+back with the first shovelfull, but didn't want to quit.
+<[ANSI-jax] JAX> 2. It's a pain in the tail to drive over to the chess club, 
+feeling like this.
+<[Len] NMORGENSTERN> I see
+<[ANSI-jax] JAX> As for Sergei, well, I'd like to chat with him, let's see what 
+happens. Telecom is not really an overwhelming personal contact medium
+, let's face it :-)
+<GARY-S> Ahhh - but the transcript becomes a historical archive
+<[ANSI-jax] JAX> You'd probably get pissed off at me, I'd switch to typing in 
+Russian with him, and no one else but maybe Wil Baden would be able to r
+ead our conversation!
+<GARY-S> You have Cyrilic keys and comm software to match and GEnie can accept 
+them  ?
+<[Len] NMORGENSTERN> I just purchased a road map of Russia and looked up
+<[Len] NMORGENSTERN> the area where my mother was born.
+<[Len] NMORGENSTERN> It was near Proskurov, which I had trouble finding
+<[Len] NMORGENSTERN> because they have changed the name to Chmelnicky
+<[ANSI-jax] JAX> Well, the amiga has fonts, my son created a Russian one ... 
+but that's not what I mean ... you can write russian correctly in Roman l
+etters, there is a system of one-to-one transliteration.
+<GARY-S> I see Leningrad will once again become St. Petersburg
+<[Len] NMORGENSTERN> Peter the great was too modest to name the city after 
+himself
+<[ANSI-jax] JAX> How ridiculous. Neither St. Peter nor Lenin ever did a damn 
+thing for Russia :-)
+<[Len] NMORGENSTERN> so he named it after his patron saint.
+<[ANSI-jax] JAX> Besides, before the Rev. it was "Petrograd", "Sankt Peterburg" 
+was outmoded centuries ago.
+<[Len] NMORGENSTERN> I disagree about Peter. He brought Russia out of
+<[Len] NMORGENSTERN> its isolation into the Western world, drove out the turks
+<GARY-S> Peter Jennings hasn't read that, apparently
+<[Len] NMORGENSTERN> and did other things.
+<[Len] NMORGENSTERN> Much harm also.
+<GARY-S> He was a typical tyrant, also
+<[ANSI-jax] JAX> Well, I disagree about Lenin, he actually was a great 
+individual. His tragedy was that of Augustus Caesar, of whom it was written, "H
+e never should have been born, but having been born, he should never have died."
+<GARY-S> How can you say that knowing well the atrocities and slave camps of 
+Lenin ?
+<[Len] NMORGENSTERN> Lenin changed the course of history, all right,
+<[ANSI-jax] JAX> Lenin didn't open the slave camps. Stalin did. Lenin died in 
+1924.
+<[ANSI-jax] JAX> That's the problem. typical of russian history. The leader 
+dies, and no worthy successor appears.
+<GARY-S> Lenin was hardly dirt-free
+<[Len] NMORGENSTERN> Yes Stalin's takeover after Lenin died was a tragedy not
+<GARY-S> What of Trotsky
+<[Len] NMORGENSTERN> only for Russian history, but probably for the world.
+<[ANSI-jax] JAX> In America, the political leaders are typically unworthy of 
+the people. In Russia, the people continually have proven themselves unwo
+rthy of their leaders.
+<[Len] NMORGENSTERN> Trotsky would not have been as bad.
+<[ANSI-jax] JAX> Trotsky would have been a disaster of a different kind.,
+<[Len] NMORGENSTERN> Stalin was a typical paranoid. A psychiatrist who diagnosed
+<[Len] NMORGENSTERN> him as that was poisoned.
+<[ANSI-jax] JAX> Trotsky believed that world war II was coming, and that it 
+would be fought (dig this) on horseback, by cavalry.
+<GARY-S> It was in Poland - briefly
+<GARY-S> Needless to say, the luftwaffe made short damn work of horse drawn 
+canon
+<[ANSI-jax] JAX> So it was damned if you do, damned if you don't.
+<[ANSI-jax] JAX> If you want to understand Trotsky and Stalin, read Deutscher's 
+trilogy onTrotsky, and his single volume "Stalin".
+<[ANSI-jax] JAX> But if Lenin had lived, I believe that Russian history would 
+have been quite different.
+<[ANSI-jax] JAX> The russian intellectuals nowadays hold that Leninism led 
+directly to Stalinism ...
+<[ANSI-jax] JAX> But there was not a cult of leninism until stalin instituted 
+it after lenin's death.
+<C.MORAVETZ1> is here.
+<[ANSI-jax] JAX> Anyway, all things considered, I am *quite* happy that my 
+grandparents left Russia in the previous century!!
+<GARY-S> Why are you using Russian interchangably for Soviet ?
+<[Cliff] C.MORAVETZ1> Howdy, All.
+<[ANSI-jax] JAX> Huh?
+<[ANSI-jax] JAX> Hi Cliff.
+<GARY-S> Russia is but one republic (though the largest) in the USSR - why did 
+you refer to Russian intellectuals ?
+<[Cliff] C.MORAVETZ1> What's the ANSI for, Jax?
+<GARY-S> Hi Cliff
+<[ANSI-jax] JAX> Oh, because I am quoting russian intellectuals. I have no idea 
+what the Georgians believe, for instance, though they still hold Stali
+n up as a hero in some parts of Georgia.
+<[ANSI-jax] JAX> Cliff, there was a little chat about ANSI as I entered, you 
+know how I like to change my handle every week!
+<GARY-S> He _was_ from Georgia
+<[Cliff] C.MORAVETZ1> Hmmm... It is hard to get a handle on Jax. :)
+<[ANSI-jax] JAX> Right. Son of a drunken cobbler.
+<[ANSI-jax] JAX> Cliff -- :-)
+<[Cliff] C.MORAVETZ1> Looks like an interesting conversation here.
+<GARY-S> How'd you likke to walk a kilometer in those shoes <grin>
+<[ANSI-jax] JAX> Serge Baranoff next week ... we're debating Russian history.
+<GARY-S> Mostly because of next week's guest and this week's ancestry
+<[ANSI-jax] JAX> We're trying to decide who the greatest SOB in Russian history 
+was ... any nominations :-)
+<[Cliff] C.MORAVETZ1> There's plenty to debate. I understand Russion history 
+keeps changing.
+<GARY-S> Both Jax and Len are decendants of Russian emigrants
+<[ANSI-jax] JAX> Well, Jews from the Pale.
+<[Cliff] C.MORAVETZ1> I think Karl Marx is the biggest SOB.
+<[ANSI-jax] JAX> My anscestors actually are from Poland and Lithuania and 
+Germany.
+<GARY-S> Close enough
+<[ANSI-jax] JAX> Len's are from the Ukraine.
+<[ANSI-jax] JAX> The big joke is that the city they came from was renamed 
+"Chmielnicky" as Len said ...
+<GARY-S> I have f riends in Lithuania and Estonia - be glad you aren't there now
+<[ANSI-jax] JAX> Chmielnicky was a murderer of Jews, the greatest in European 
+history before Hitler.
+<[Cliff] C.MORAVETZ1> Are you Jewish, Jax?
+<[ANSI-jax] JAX> 7/16.
+<[ANSI-jax] JAX> or is it 3/8?
+<[ANSI-jax] JAX> But I speak the languages.
+<[ANSI-jax] JAX> .
+<GARY-S> only  you could have ever come up with such an a bsurd response
+<[Cliff] C.MORAVETZ1> A little under half, or can't decide?
+<[ANSI-jax] JAX> No, it's the truth.
+<[Cliff] C.MORAVETZ1> I thought it was chosen for you at birth...
+<[Cliff] C.MORAVETZ1> about 8 days after.
+<[ANSI-jax] JAX> My mother is Jewish, but her grandmother was a half-jewish 
+child who was abandoned at a jewish settlement.
+<[ANSI-jax] JAX> so I am 7/16 jewish.
+<[ANSI-jax] JAX> By choice, I am a born-again hippie pagan, 60's style.
+<GARY-S> Anything computerish or Forthish to discuss before this evening's 
+notes are histroy ?
+<[ANSI-jax] JAX> But you can never escape the ethnic stuff.
+<[ANSI-jax] JAX> It's like oobleck. It sticks to you when you try to shake it 
+off :-)
+<[Cliff] C.MORAVETZ1> So that's why you're such a wild eyed Forth fanatic.
+<[ANSI-jax] JAX> Yes, my ANS Forth for the Amiga will be out in July or August, 
+jaxthinx.
+<GARY-S> will you   makke it public or shareware ?
+<[Cliff] C.MORAVETZ1> :)
+<[ANSI-jax] JAX> Shareware, I think. I already have a customer, so I can't 
+release it PD.
+<GARY-S> I presume you will post it here, then ?
+<[ANSI-jax] JAX> But of *course*, M'sieu ...
+<[Cliff] C.MORAVETZ1> If you can get money for it, don't give away for free, eh?
+<[ANSI-jax] JAX> Well, I meant to just release it Cliff, but a friend of mine 
+needed it for an emergency, and I will have to sign a contract about dis
+tribution.
+<GARY-S> Some do well using 'user supported software' as their marketing device 
+- Chuck Forsberg, for one
+<[ANSI-jax] JAX> Well, my customer is for industrial control
+<[Cliff] C.MORAVETZ1> What, you mean you can't give it away...
+<[Cliff] C.MORAVETZ1> if you sell it to the customer?
+<[ANSI-jax] JAX> So I can't just give it away to the public, or he would be 
+paying for what his competitors can have for free.
+<[Cliff] C.MORAVETZ1> OIC!!
+<[ANSI-jax] JAX> So I will give away the kernel binary ... but no source. 
+Utilities, upgrades, manual: Send money.
+<[ANSI-jax] JAX> I am considering developing a commerical version on another OS.
+<[Cliff] C.MORAVETZ1> Why not get money for it? I cost you your time, right?
+<[ANSI-jax] JAX> I have been importuned to become a developer for another OS.
+<[ANSI-jax] JAX> Yes, I have been working on this since October, 1989.
+<[ANSI-jax] JAX> And I tell ya what.
+<GARY-S> That is Mitch Bradley's method - manual and source for $50.00
+<[ANSI-jax] JAX> I will likely never write a Forth in straight assembler again!
+<[ANSI-jax] JAX> Sheesh!!!!
+<[ANSI-jax] JAX> about 4,500 lines of ASM.
+<[ANSI-jax] JAX> foof.
+<[Cliff] C.MORAVETZ1> Why not? I thought that was THE WAY!
+<[ANSI-jax] JAX> Well, it was fun, but it's a lot of work!
+<GARY-S> That's a bit much ! how much of that is avoidance with the Amiga User 
+Interface ?
+<[ANSI-jax] JAX> Starting *after* I started JAX4TH, and finishing *completely* 
+long *before* I am done JAX4TH, I have written an entire 80196 Forth, w
+riting the metacompiler from scratch.
+<[ANSI-jax] JAX> I have had no problem with the Amiga OS. That part was 
+simplicity itself.
+<[ANSI-jax] JAX> It's debugging, it's tough under any multitasking os.
+<[Cliff] C.MORAVETZ1> How do you like your Amiga?
+<[ANSI-jax] JAX> Also, this has been in my spare time.
+<GARY-S> Do you prefer Intel or Motorola architecture ?
+<[ANSI-jax] JAX> Love my Amiga.
+<[ANSI-jax] JAX> MOtorola architecture, no doubt about it.
+<[ANSI-jax] JAX> Much more rational, though the 80196 ain't bad.
+<[Cliff] C.MORAVETZ1> I'm sick and tired of this Intel barf chip on my PC.
+<GARY-S> don't care for flipped addresses ? <grin>
+<[ANSI-jax] JAX> Gotta run, my little girl wants to play!
+<[ANSI-jax] JAX> Gnite all!
+<[Cliff] C.MORAVETZ1> ABSOLUTELY!!!!
+<[ANSI-jax] JAX> has left.
+<GARY-S> g'nite Jax
+<GARY-S> Cliff - any last shots ?
+<[Cliff] C.MORAVETZ1> What is the 80196?
+<[Cliff] C.MORAVETZ1> Haven't heard about it.
+<GARY-S> Intel chip - very powerful in embedded applications
+<[Cliff] C.MORAVETZ1> How much RAM/ROM does it have?
+<GARY-S> Been a few articles in ESP
+<[Cliff] C.MORAVETZ1> Is similar to the 80x86 chips?
+<GARY-S> Think the last issue answered some of those specifics
+<GARY-S> Only in that it is Intel
+<[Cliff] C.MORAVETZ1> If it came from Intel, I bet it has band aids and 
+squirrel cages inside.
+<[Cliff] C.MORAVETZ1> MAybe even a few sparking relays.
+<GARY-S> hahahaha  - at least it doesn't have segmented addressing
+=== End of Steno notes. ===
+
+

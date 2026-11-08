@@ -1,0 +1,474 @@
+
+                      
+ PORTED FROM UseNet =>
+             ------
+           
+From: FNIA@willett.pgh.pa.us (ForthNet Information Account)
+ Subject: Answers to Frequently Asked Questions (version 1.0)
+Message-ID: <2480.UUL1.3#5129@willett.pgh.pa.us>
+Date: 10 Mar 91 15:27:55 GMT
+Organization: (n.) to be organized.  But that's not important right now.
+Lines: 251
+        
+    If you have any questions about this message, or any information to
+    add/delete or correct, please contact either Doug Philips or Gary
+    Smith (preferably both, but one is OK) via the following addresses:
+      
+      o   Internet: dwp@willett.pgh.pa.us
+	      -or-  ddi1!lrark!gars@uunet.uu.net
+    
+      o   Usenet:   ...!uunet!ddi1!lrark!gars
+	      -or-  ...!uunet!willett.pgh.pa.us!dwp
+    
+      o   GEnie:    GARY-S or D.PHILIPS3
+ 
+      o   ForthNet: Grapevine, Gary Smith -
+	  leave mail in Main Conference (0)
+  
+  
+QUESTION:	Where can I find a Forth for the 8051/8031?
+   
+ANSWER:
+> From: jax@well.sf.ca.us (Jack J. Woehr)
+> Newsgroups: comp.lang.forth
+> Subject: Re: Finding a Forth for the 8051/8031
+> Message-ID: <22384@well.sf.ca.us>
+> Date: 2 Jan 91 06:23:19 GMT
+> 
+> pwh@bradley.bradley.edu (Pete Hartman) writes:
+> 
+> 	... <stuff> ...
+> >using the 8051 for such, since (as I understand it) it is quite flexible,
+> 	... <stuff> ...
+> >I'm a forth novice, but a native forth version of this chip would help
+> 
+> In reply, I repost:
+> 
+>         In the years that I have been discussing Forth on USENET, one
+>         of the most frequently-asked questions I have received is:
+> 
+>                 "Where is a PD Forth for the 8051?"
+> 
+>         Dr. C.H. Ting's October 1990 newsletter for his "Offete
+>         Enterprises" samizdat house (garage, actually) contains
+>         the following two items:
+> 
+>         2104. eForth Model and 8086 Implementation, Bill Muench and
+>         C.H. Ting -- $25.00
+> 
+> >>>>>   2105. 8051 eForth, C. H. Ting -- $25.00  <<<<<
+>         "A small ROM based Forth system ... Source code is in MASM (!! -jax)
+>         ... IBM 5.25 disk ... With 8051 eForth Implementation Note."
+> 
+>         The address & phone is:
+> 
+>                 Offete Enterprises, Inc.
+>                 1306 South "B" Street
+>                 San Mateo, CA 94402
+>                 (415) 574-8250
+> 
+> 	Alternatively, EFORTH51.ZIP may be downloaded free of charge
+> from the RealTime Control and Forth Board (RCFB), ( telephone number
+> in the .signature below), or from the GEnie Forth Interest Group
+> RoundTable (page 711).
+> -- 
+>  <jax@well.{UUCP,sf.ca.us} ><  Member, >        /// ///\\\    \\\  ///
+>  <well!jax@lll-winken.arpa >< X3J14 TC >       /// ///  \\\    \\\/// 
+>  <JAX on GEnie             >< for ANS  > \\\  /// ///====\\\   ///\\\ 
+>  <SYSOP RCFB (303) 278-0364><  Forth   >  \\\/// ///      \\\ ///  \\\
+
+QUESTION:  What if I want to find a PD/ShareWare Forth for the BrouHaHa-7245?
+
+ANSWER:
+The following is an incomplete and non-judgemental list of PD/Shareware
+forths....  This list was compiled by Gary Smith.  Unfortunately we do
+NOT have comprehensive info on how to actually find most of these files.
+If you do, please, TELL US!
+
+ File Name                Bytes   Description
+ ------------------------ ------- ---------------------------------------
+
+ FORTH11.ARC               49140  rom based fig-FORTH for the 68hc11
+ BOTFORTH.TXT              60480  BotForth for the 68K
+ PYG13FIX.ZIP               1260  3 quick fixes for Pygmy Forth 1.3
+ PYGMY13.ZIP               70560  Frank Sergeant's Fast,small Forth for PC
+ BBLX.ARC                  26460  Roedy Green's BBL as executible
+ BETA.ARC                  98280  Sergei Baranoff's minimal Forth
+ EFORTH.ZIP (see ** below) 56700  A small portable assembler based Forth
+ FPC353-5.ZIP             400680  Tom Zimmer's FPC Version 3.53 disk 5 of 5
+ FPC353-4.ZIP              16380  FPC Version 3.53 disk 4 of 5
+ FPC353-3.ZIP             335160  FPC Version 3.53 disk 3 of 5
+ FPC353-2.ZIP             316260  FPC Version 3.53 disk 2 of 5
+ FPC353-1.ZIP             318780  FPC Version 3.53 disk 1 of 5
+ TILE20.ARC               167580  Mikael Patel's TILE (Forth in C) ver. 2.0
+ ZENMASM1.ARC             157500  MASM based version of ZEN Forth
+ RFF2.ZIP                 333900  16-Bit Forth for 32-Bit host
+ FED.ARC                  206640  Forth Editor by Guy Kelly
+ CFORTHU.ARC               64260  Marc de Groot's Forth written in C w/fixes
+ 4TH_86.ZIP               351540  MSDOS-EGA based Forth from Hong Kong
+ FORTHOS2.ZIP              23940  OS/2 version of Forth
+ 68KASM.ARC                10080  68K Assembler for F83
+ KDOC.ARC                 132300  Documentation for Guy Kelly's KForth
+ KMISC.ARC                 78120  Extensions to Guy Kelly's KForth
+ KFORTH.ARC               258300  Guy Kelly's KForth version 1.11
+ PASM386C.ZIP              69300  386 Assembler for F-PC 3.5
+ BOTFTH68.ARC              32760  botForth ported to MC68k chips
+ PSFORTH.02.90             18900  Forth seed kernel in PostScript
+ F-PC35-4.ZIP             269640  Tom Zimmer's F-PC 3.5 disk 4 of 4
+ F-PC35-3.ZIP             336420  Tom Zimmer's F-PC 3.5 disk 3 of 4
+ F-PC35-2.ZIP             304920  Tom Zimmer's F-PC 3.5 disk 2 of 4
+ F-PC35-1.ZIP             299880  Tom Zimmer's F-PC 3.5 disk 1 of 4
+ A4TH1.5DIVBUG.TXT          2520  Bug fix for A4TH1.5 /MOD
+ TILE.REL                   3780  part 9 of 9 parts - tile c forth 83
+ TILE7                     64260  part 8 of 9 parts - tile c forth 83
+ TILE6                     42840  part 7 of 9 parts - tile c forth 83
+ TILE5                     30240  part 6 of 9 parts - tile c forth 83
+ TILE4                     59220  part 5 of 9 parts - tile c forth 83
+ TILE3                     56700  part 4 of 9 parts - tile c forth 83
+ TILE2                     63000  part 3 of 9 parts - tile c forth 83
+ TILE1                     68040  part 2 of 9 parts - tile cforth83
+ TILE0                      3780  part 1 of 9 parts - tile cforth83
+ OBK3501.ZIP              171360  Updated OBESE kernel for F-PC 3.5
+ PURPLE.FORTH.BQY          32760  FIG-FORTH for the APPLE II
+ RAVENFORTH.SHK           120960  A FIG FORTH compiler for the IIgs
+ MINI4T41.ARC              34020  Minimal Forth version 4.1
+ QF25.ARC                 379260  Gary Bergstrom's Forth for PC's
+ FFPC225S.ARC             134820  Run FPC 2.25 from a floppy - disk 3
+ FFPC225H.ARC              86940  Run FPC 2.25 from a floppy - disk 2
+ FFPC225A.ARC             137340  Run FPC 2.25 from a floppy - disk 1
+ ASTRO4TH.ARC             122220  Russian AstroFORTH source
+ PFO-001.SEQ               28980  Prefix Parameter Stack Frame Operato
+ MM30ODDS.ARC              46620  UTILITIES/STUFF FOR MM30 FORTH
+ MM30.ARC                 128520  Lance Collins' MM FORTH FOR 8086
+ MX86.ARC                  76860  8086 CROSS COMPILER FOR mm30
+ MMDOCS.ARC                88200  DOCS FOR MM20,MM30
+ BEZIERKIT.SIT             27720  Bezier Curves for PocketForth
+ POCKETDOC.SIT             60480  Manual for PocketForth Vers. 4
+ POCKET4.SIT               63000  PocketForth Ver.4 for Macintosh
+ FIFTH_SW.ARC             224280  SHAREWARE FIFTH Version 2.7
+ SFORTH FOR THE 6809       45360  Subroutine threaded FIG Forth.
+ SONZEN3.ARC               78120  Gradgent's Son of Zen SONZEN Rev 3.0 
+ MX20.ARC                  93240  Lance Collins' Text based Forth for CP/M
+ MVP10305.ARC              44100  Glen Haydon's MVP Forth
+ MM20.ARC                  63000  Lance Collins' CP/M 80 MM Forth 020
+ GSFDOCS.BQY               70560  DOCS for Apple GS Forth Demo Package
+ GSFORTH.BQY               44100  Apple GS Forth Demo Package
+ PF3SRC.SIT                55440  Source for Pocket Forth - rel.3
+ POCKET3.SIT              105840  Pocket Forth and DA - release 3
+ VOLKS4TH.ARC             181440  Schleisiesk's F83 derivative from Germany
+ TIL874TH.ARC             262080  32 Bit Forth-83 for TI/IBM computers
+ TASK4TH.ARC              133560  TaskForth Special Edition
+ STFORTH.ARC               42840  FORTH-83 for the Atari 520 ST
+ TSRFORTH.ARC              52920  Van Norman's terminate & stay resident F83
+ MINI4TH.ARC               20160  A VERY minimum version of FORTH
+ GKFRTH2A.ARC             136080  Guy Kelly's full Forth-83++
+ FORTHLIB.ARC              23940  Glen Haydon's CP/M Forth with screen file
+ FORTH9.BIN                15120  OS/9 FORTH09 v 01.00.00
+ FIGTUTOR.SHR              66780  ATARI FIG FORTH TUTORIAL
+ FIGFORTH.SHR              66780  ATARI FIG FORTH PROGRAM
+ FIGFORTH.ATR               2520  ATARI FIG FORTH DOCUMENTATION
+ FF9FORTH.ARC              15120  Forth-83 for 6809 - Cross Compilable
+ F83X.UTI                  71820  Wil Baden's F83X for Apple - Utility
+ F83X.SOU                  70560  Wil Baden's F83X for Apple - Source
+ F83S6.ARC                338940  Update of W. Baden's F83X
+ D854TH.ARC               224280  A Forth-83 Compatible Environment
+ 6805-4TH.ARC              18900  RAFOS FORTH for the 6805 CPU
+ AMIGAF83.ARC             143640  Appleman's Forth for Amigas
+ A4THINC.ARC               65520  Include files for A4TH.
+ A4THDOC.ARC               51660  Documentation for A4TH.
+ A4THSYS.ARC              158760  Forth for Amiga's V1.5
+ URDEMO.ARC                35280  UR/FORTH Demonstration program
+ UNIFTH68.ARC             107100  UNIFORTH SAMPLER for DSI-020
+ LEARN4TH.ARC             225540  Learn forth on your own (F83 version)
+ F83ST.ARC                132300  Forth-83 for the Atari ST
+ F838080.ARC              161280  L & P F83 for CP/M
+ F83XBOOT.ARC             161280  F83 for the MC68000
+ FF-EXPCT.ARC               6300  new-expect, bugg, etc. for ff.exe
+ FF-COLOR.ARC              18900  pop-up screen,color for ff.exe
+ BROWSE88.ARC              35280  f88 color, browse, by M. Sperl
+ SUNFORTH.TXT              12600  Msgs and info about Sun Forth
+ FS100.ARC                 40320  TRS-80 MODEL 100 FORTH
+ AMIGAFORTH.ARC           139860  F83 for Amiga's.
+ CMFLOAT.ARC                7560  cmforth floating point pkg.
+ MVPFORTH.ARC              44100  MVPFORTH with Assembler source
+ FORTH.ARC                 56700  Seattle Forth
+ MVPFRTHA.ARC              45360  Glen Haydon's MVPFORTH for MS DOS
+ S4TH68K.ARC               23940  Sub Threaded Forth for the 68k.
+ PX83-102.ARC              26460  F83 for the Epson Geneva PX-8
+ AMIGAKERNEL.ARC          110880  Forth kernel for Amiga in assembler
+ M100-PT2.SRC              17640  Source Listing for M100 Forth Pt 2
+ M100-PT1.SRC              20160  Source Listing for M100 Forth Pt 1
+ M100-4TH.DOC               7560  Documentation for M100 Forth
+ M100-4TH.4TH              13860  Forth for Tandy M-100 w/Chipmunk
+ F68KST11.ARC             243180  32-bit Atari ST Forth
+ UNIFORTH2.BQY             57960  PD FORTH for Apple II ( Part 2)
+ UNIFORTH.BQY              75600  Public domain FORTH for Apple II
+ APPUFTH.WRD               85680  Glossary for Apple // UniForth
+ APPUFTH.FTH               12600  Support blocks for Apple UniForth
+ APPUFTH.DOC               76860  Documentation for APPUFTH.SYS
+ APPUFTH.SYS               28980  Uniforth Sampler for Apple II
+ UNI4TH80.ARC             118440  Z80 CP/M Uniforth
+ CMFORTH.ARC               20160  Chuck Moore Forth
+ CMFORTHX.ARC               8820  cmFORTH modified to run in RAM
+ NEC4TH.ARC                50400  FORTH for the NEC S/150 (Astra)
+ APPUFTH.ARC              103320  Uniforth Sampler for Apple //e,c
+ ATRFORTH.ARC             109620  FIG Forth forth ATARI DOS 2.5
+ PCFIG4TH.ARC             205380  J.E. Smith's Fig Forth for MS DOS
+ NOVICE3.ARC               23940  Stand alone editor for novices
+ UFORTHV2.ARC             114660  THE 8086 UNIFORTH SAMPLER
+ HDISKS.ARC                41580  Wil Baden's FORTH-83 EXTENDED 5of5
+ CALIF330.ARC              94500  Wil Baden's FORTH-83 EXTENDED 4of5
+ PONG330.ARC              124740  Wil Baden's FORTH-83 EXTENDED 3of5
+ PANG330.ARC              103320  Wil Baden's FORTH-83 EXTENDED 2of5
+ PING330.ARC               85680  Wil Baden's FORTH-83 EXTENDED 1of5
+ JPF83213.ARC             192780  The Basics & Files for F83 2.1.1
+ GKFORTH.ARC              144900  Guy Kelly's PCForth and Tutorial
+ FORPSIBM.ARC              31500  F83 and FORPS for the IBM PC
+ JPF83.ARC                175140  John Peters' F83 Environment
+ CMFORTH.SHD               21420  cmFORTH shadow blocks
+ F83AIDES.ARC             209160  MS-DOS F-83 WORDS AIDES
+ F83.ARC                  186480  Laxen & Perry's F83
+ F83-68K.ARC              123480  F83 version 2.1.0 for 68000
+ Z8000.ARC                 13860  Assembler source Z8000 Forth
+ VXFTH.ARC                170100  VAX-11 fig-Forth Version 2.0
+ OS9FORTH.ARC              10080  Forth for OS9
+ FTH100.ARC                26460  Fig Forth for TRS Model 100
+ LP4THBLK.ARC              65520  L&P 68K Forth
+ LP4TH.ARC                 65520  L&P Forth for the ATARI ST
+ FORTHMAC.ARC             190260  Forthmacs version 1.1 for ATARI ST
+ MVP4TH.ARC                90720  MVP Forth for the AMIGA
+ BFORTH.ARC                22680  Ballentine's Blazin' Forth for C64
+ BFDOCS.ARC                60480  Blazin' Forth Docs
+ GKFORTH2.ARC             259560  Guy Kelly's full Forth-83 + extras
+ ZENMISC.ARC                1260  WORDS for ZEN.DOS
+ ZENDOS.ARC                 5040  Simple clear forth - DOS level
+ ZEN.ARC                   12600  Martin Tracy's ZenForth
+
+ ** eForth is a public domain Forth kernel co-authored by C.H.Ting and Bill
+           Muench. It is written in assembler, as opposed to being meta-
+           compiled to facilitate porting to as many platforms as possible.
+           It is the hope of the authors that eForth will be to ANS Forth
+           what figForth was to Forth-78. That is a generic, easily trans-
+           ported kernel that will make portable code possible, and ease the
+           learning curve for new students of Forth. eForth tracks X3/J14
+           and is constantly being ported to new architectures. Please be 
+           VERY specific in describing your architecture/platform if you 
+           request information or source for eForth. This will often require
+           an enquirey on our part to the authors, so you will also need to
+           be patient.
+           
+From: FNIA@willett.pgh.pa.us (ForthNet Information Account)
+   
+ Subject: Forth OnLine Resource/Technical Help Letter (version 1.0)
+Message-ID: <2481.UUL1.3#5129@willett.pgh.pa.us>
+Date: 10 Mar 91 15:28:02 GMT
+Organization: (n.) to be organized.  But that's not important right now.
+Lines: 210
+  
+ F O R T H   O N - L I N E   R E S O U R C E  /  T E C H N I C A L   H E L P
+                               L E T T E R
+
+                    Last updated on 09 March 1991.
+
+        If you have corrections, clarifications, comments or updates,
+        please send them to one or more of the addresses at the end of
+        this note.
+
+
+Hello,
+
+        This post is to introduce you to the resources available to
+those who read comp.lang.forth and can also send UseNet/Internet mail
+or do anonynmous FTP.
+
+    This message answers the questions:
+            What is ForthNet?
+            Where do I find Forth Libraries on-line?
+ 
+    Answers to other frequently asked questions, such as "Where do
+I find a PD/Shareware/any Forth for the FrobNitz-103?" are in a separate
+article which is regularly posted to comp.lang.forth.
+
+
+
+
+FORTHNET
+--------
+
+    ForthNet is a virtual Forth network that links designated message
+bases of several Bulletin Boards and Information Services in an
+attempt to provide greater distribution of Forth related information.
+
+    ForthNet is provided courtesy of the SysOps of its various links
+who shunt appropriate messages in a manual or semi-manual manner.  The
+current branches of ForthNet include: UseNet's comp.lang.forth,
+BitNet's FIGI-L, the BBoard systems RCFB, ACFB, LMI BBS, Grapevine,
+and FIG's RoundTable on GEnie.  (Info on modem-accessible systems is
+included below).
+
+    The various branches of ForthNet do not have the same rules of
+appropriate postings or ettiquette.  Many BBoard posts are very chatty
+and contain some personal information, and some also contain blatant
+commercial advertising.  Most comp.lang.forth posts are not like that.
+ForthNet messages that are ported into comp.lang.forth from the rest
+of the ForthNet all originate on GEnie, which is a kind of defacto
+ForthNet message hub.  All such messages are ported into
+comp.lang.forth with a from line of the form:
+                From:  ForthNet@willett.pgh.pa.us ...
+Most messages ported to comp.lang.forth also contain some trailer
+information as to where they actually originated, if it was not on
+GEnie.
+
+                           **** NOTE: ****
+            There is NO email link between the various
+            branches of ForthNet.  If you need to get a
+            message through to someone on another branch,
+            please either make your message general enough
+            to be of interest to the whole net, or contact
+            said person by phone, USMail, or some other
+            means.  Thoughtful message authors place *a few*
+            lines at the end of their messages describing
+            how to contact them (electronicly or otherwise).
+
+
+  Phone information for the dial-in services mentioned above:
+
+    RCFB (Real-Time Control Forth Board)        303-278-0364
+        SysOp:          Jack Woehr
+        Location:       Denver, Colorado -USA-
+
+    ACFB (Australia Connection Forth Board)     03-809-1787 in Australia
+                                                61-3-809-1787 International
+        SysOp:          Lance Collins
+        Location:       Melbourne, Victoria -AUSTRALIA-
+
+    LMI BBS (Laboratory Microsystems, Inc.)     213-306-3530
+        SysOp:          Ray Duncan
+        Location:       Marina del Ray, California -USA-
+
+    Grapevine (Grapevine RIME hub)              501-753-8121 to register
+                                                501-753-6859 thereafter
+        SysOp:          Jim Wenzel
+        Location:       Little Rock, Arkansas -USA-
+
+    GEnie                                       800-638-9636 for information
+    (General Electric Network for Information Service)
+        SysOps:         Dennis Ruffer(D.RUFFER)
+                        Leonard Morgenstern(NMORGENSTER)
+                        Gary Smith(GARY-S)
+        Location:       Forth RoundTable - type M710 or FORTH
+
+
+
+
+
+FORTH LIBRARIES
+---------------
+
+    There are several repositories of Forth programs, sources,
+executables, and so on.  These various repositories are NOT indentical
+copies of the same things.  Material is available on an AS-IS basis
+due to the charity of the people involved in maintaining the
+libraries.  There are several ways to access Forth Libraries:
+
+
+                                FTP
+                                ---
+
+                           **** NOTE: ****
+            You can only use FTP if you are on an Internet
+            site which supports FTP (some sites may restrict
+            certain classes of users).  If you have any
+            questions about this, contact your system
+            administrator for information.  Your system
+            administrator should always be your first line
+            of resort if you have any difficulties or
+            questions about using FTP.
+
+
+    For MSDOS related files there are currently two sites from which
+you can anonymously FTP Forth related materials:
+            WSMR-SIMTEL20.ARMY.MIL      (Simtel20 for short)
+            WUARCHIVE.WUSTL.EDU         (Wuarchive for short)
+Wuarchive maintains a "mirror" of the material available on Simtel20.
+Simtel20 has a limited amount of material, most of it binaries for
+MSDOS computers.  The Forth files on Simtel20 are in directory
+'PD1:<MSDOS.FORTH>'.  The Forth files on Wuarchive are in directory
+'/mirror/msdos/forth'.  For detailed information on how use FTP and
+the Simtel20 archive see the text files in:  (it is too much to include here)
+            PD1:<MSDOS.STARTER>SIMTEL20.INF     or
+            /mirrors/starter/simtel20.inf
+
+
+
+                                MODEM
+                                -----
+
+    For those desiring (or stuck with?) to use modems, the dial-in
+systems listed above also have Forth libraries.
+
+                           **** NOTE: ****
+            GEnie is the repository of the Forth Interest
+            Group's official Forth Library.
+
+                           **** NOTE: ****
+            If you are unable to access SIMTEL20 via
+            Internet FTP or through one of the BITNET/EARN
+            file servers, most SIMTEL20 MSDOS files,
+            including the PC-Blue collection, are available
+            for downloading on the Detroit Download Central
+            network at 313-885-3956.  DDC has multiple lines
+            which support 300/1200/2400/9600/14400 bps
+            (HST/V.32/V.42/V.42bis/MNP5).  This is a
+            subscription system with an average hourly cost
+            of 17 cents.  It is also accessable on Telenet
+            via PC Pursuit and on Tymnet via StarLink
+            outdial.  New files uploaded to SIMTEL20 are
+            usually available on DDC within 24 hours.
+
+            Information provided by:
+                Keith Petersen Maintainer of SIMTEL20's MSDOS,
+                    MISC & CP/M archives [IP address 26.2.0.74]
+                Internet: w8sdz@WSMR-SIMTEL20.Army.Mil or
+                          w8sdz@vela.acs.oakland.edu
+                Uucp: uunet!wsmr-simtel20.army.mil!w8sdz
+                BITNET: w8sdz@OAKLAND
+
+
+
+
+                                EMAIL
+                                -----
+
+    For those with email only access there is not much.  For now,
+posts from ForthNet ported into comp.lang.forth sometimes advertise
+files being available on GEnie.  Those messages also contain
+information on how to get UUencoded EMail copies of the same files.
+There is an automated email service being developed.  When it is
+functional an article will be posted to comp.lang.forth with details
+on who/what/how, etc. and this paragraph will be replaced by the
+appropriate instructions.  As many of you who have written me (Doug
+Philips) know, this is nearly finished.  Expect word soon!
+
+
+
+
+
+If you have any questions about ForthNet/comp.lang.forth or any
+information to add/delete or correct in this message or any
+suggestions on formatting or presentation, please contact either Doug
+Philips or Gary Smith (preferably both, but one is OK) via the
+following addresses:
+
+  o   Internet: dwp@willett.pgh.pa.us
+          -or-  ddi1!lrark!gars@uunet.uu.net
+
+  o   Usenet:   ...!uunet!ddi1!lrark!gars
+          -or-  ...!uunet!willett.pgh.pa.us!dwp
+
+  o   GEnie:    GARY-S or D.PHILIPS3
+
+  o   ForthNet: Grapevine, Gary Smith - leave mail in Main Conference (0)
+   
+
+

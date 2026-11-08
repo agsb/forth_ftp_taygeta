@@ -1,0 +1,42 @@
+
+Date: 12-16-86 (17:30)               Number: 4711   (Deleted)
+  To: SYSOP                          Refer#: NONE
+From: RJ BROWN                         Read: YES
+Subj: TMS-320 EMULATOR               Status: PUBLIC MESSAGE
+
+jerry:  do you have or know where I can get the code for "R. Wyckoff's 
+'A Forth Simulator for the TMS-320 IC' Roch. Forth conf. 1983"  I also 
+need a copy of the article.  I am contemplating getting the sky computer 
+board that puts a tms-32010 into my at-clone.  I am doing artificial 
+neural network experiments (see my hopefully soon to be published 
+article in april '87 ddj) and i want to speed the bugger up.  my program 
+in C currently takes from 2 to 6 hours on a 10MHz AT-clone w/10MHz 
+80287.  I have estimated that this chip could speed things up to 30 
+second to 5 minute runs!
+TNX&73s,Rj
+                                      
+
+Date: 12-18-86 (01:40)               Number: 4724   (Deleted)
+  To: RJ BROWN                       Refer#: 4711
+From: SYSOP                            Read: YES
+Subj: TMS-320 EMULATOR               Status: PUBLIC MESSAGE
+
+RJ, I don't have the code for the TMS320 simulator, but could send you a 
+copy of the paper (from the 83 Roch proceedings). I'd suggest you try to 
+contact Richard Wyckoff at U. of Rochester directly - it's worth a shot. 
+If he's no longer there, you might try Larry Forsley and see if he can 
+help you out. Leave me your address if you need a copy of the paper.
+Good luck -- Jerry
+  
+
+Date: 12-19-86 (03:11)               Number: 4739   (Deleted)
+  To: RJ BROWN                       Refer#: 4711
+From: DANIEL MILLER                    Read: YES
+Subj: TMS-320 EMULATOR               Status: PUBLIC MESSAGE
+
+Call Martin Tracy at Forth Inc.  He has a digital signal processing
+Forth extension for the TMS-320.  He demonstrated a real time 
+fft with nice screen graphics at FIG convention in November at Sanat
+a Clara.   He was using a board from, I think, Britain.  Might
+be interesting to compare prices and notes.
+

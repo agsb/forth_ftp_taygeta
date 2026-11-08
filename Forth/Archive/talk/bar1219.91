@@ -1,0 +1,202 @@
+
+
+Notice on door: Welcome to the last Thursday FIGGY of 1991. Any thoughts on the
+past year or predictions for 1992? Speak now!
+
+
+** <S.WISE7> is here.
+<GARY-S> Hi - welcome - you're it so far ;-)
+<GARY-S> The regural FIGGY's are open - you don't have to request the floor
+<S.WISE7> Sorry , I am using IMP on CPM machine. .
+<GARY-S> Did you do that - or did something VERY strange just happen?
+<S.WISE7> Change to "e" local echo so I could capture what I type > oops!!!
+<GARY-S> I got my message to you echoed about 50 times in a variety of chopped
+segments
+<GARY-S> I use IMP and MEX on a CP/M machine occassionally and I don't believe
+IMP was the culprit
+<S.WISE7> This is the first time I have loged on to the RT.
+<S.WISE7> I have not used FORTH YET, Iam learning Pascal first, then
+some Modula-2.  Then I want to see how FORTH works.
+<GARY-S> what is your name ?
+<S.WISE7> Stan .
+<GARY-S> ok - type /nam Stan (the leading slash is important
+** <[Stan] S.WISE7> was <S.WISE7>.
+<GARY-S> great - have you even played with Forth, Stan ?
+<[Stan] S.WISE7> No, not yet. I want to try a PD compiler soon, But want to get
+going good with Pascal first.
+<GARY-S> If you want to get a good PD kernel get the F-83 for CP/M in our
+library...
+<GARY-S> and also get Bill Kilber's tutorial - written in Forth
+<GARY-S> What CP/M machine are you using ?
+<[Stan] S.WISE7> A tutorial would be very helpfull. One thing I am interested
+in doing with forth is writing a cross compiler.
+<GARY-S> The F-83 comes with a very powerful metacompiler
+** <NMORGENSTERN> is here.
+** <[Len] NMORGENSTERN> was <NMORGENSTERN>.
+<[Len] NMORGENSTERN> Hi all!
+<[Stan] S.WISE7> I am useing a Morrow MD-3 (cpm2.2) and mdt70 terminal,
+withfour ds QD drives (792K data).
+<GARY-S> Len - who just logged on - runs the Sunday FIGGY's that are made to
+order for first time users of Forth
+<GARY-S> Your Morrow will run the CP/M version of F-83 great!
+<[Stan] S.WISE7> What is the Sunday FIGGY's?
+<[Len] NMORGENSTERN> Free for all. If there are
+<GARY-S> Hi Len - Stan is looking us over for the first time ever
+<[Len] NMORGENSTERN> any beginners I give them priority.
+<[Len] NMORGENSTERN> Also, if you have specific quesitions,
+<GARY-S> This is a FIGGY - an open free-for-all Forth Interest Group (FIG)
+conference ...
+<[Len] NMORGENSTERN> send me EMail and I will try to answer them
+<[Len] NMORGENSTERN> either as E-mail, or if of general interest
+<[Len] NMORGENSTERN> as a topic on the Figgy.
+<GARY-S> The Thursday ones are generally more rambunctious while the Sunday
+ones are dedicated more to learning techniques
+<[Stan] S.WISE7> I mentioned awriting a cross compiler,. An article inTCJ said
+FORTH was the best language to do it in.
+<GARY-S> As I said, Stan F-83 comes with a powerful metacompiler just made for
+that sort of workk
+<[Len] NMORGENSTERN> Forth spans the range from assembler to high(est) level
+<[Len] NMORGENSTERN> better than any language.
+<[Len] NMORGENSTERN> (any other language I should have said)
+<[Len] NMORGENSTERN> Do you have the book "Starting Forth"
+<[Stan] S.WISE7> Yes , I underrstand itisespecially good for its string
+handling. The extensibility is also a very interesting prospect.
+<[Stan] S.WISE7> No. I havent gotten any books on FORTH.
+<[Len] NMORGENSTERN> Starting Forth is one of the best. Two problems:
+<[Len] NMORGENSTERN> 1. It is tied to a certain version of Forth, and
+<[Len] NMORGENSTERN> does not always match what you will see in F83
+<[Len] NMORGENSTERN> 2) It describes an old type of editor. F83 and
+<[Len] NMORGENSTERN> almost every other Forth now in existence has a more
+<[Len] NMORGENSTERN> powerful editor.
+<[Len] NMORGENSTERN> You can buy it from the Forth Interest Groupl
+<[Len] NMORGENSTERN> Do you have their address?
+<[Len] NMORGENSTERN> (As I say, if you get stuck, EMail me a message)
+<[Stan] S.WISE7> Do you know of any Forth compilers for the Z280 (or any thing
+else).
+<[Len] NMORGENSTERN> Not off hand. Try the library here.
+<[Stan] S.WISE7> I am not shure I do.
+<GARY-S> We have source for the Super 8 - and I think there is a eForth for the
+280, but I can't promise
+<[Len] NMORGENSTERN> Hey-- F83 can write 8080 assembler which is compatible
+<[Len] NMORGENSTERN> with the Z80, although it does not access all of its
+commands.
+<GARY-S> The F-83 for CP/M is written for the 8080, rather than the Z80! That's
+right.
+<[Stan] S.WISE7> After I build a couple of projects with Z80 I want to use the
+Z280 with its "unlimited" memory and 16 bits.
+<[Len] NMORGENSTERN> The Forth Interest Group
+<[Len] NMORGENSTERN> P.O.Box 8231 San Jose CA 95115
+<[Len] NMORGENSTERN> Starting Forth by Leo Brodie 2nd ed. $29
+<GARY-S> The address for the Forth Interest Group = P.O.Box 8231, San Jose, CA
+95155
+<[Stan] S.WISE7> Thanks, I will get them.
+<[Len] NMORGENSTERN> You can study the compiler in F83 for the 8080 and
+<[Len] NMORGENSTERN> adapt the principles to the Z80 if there are
+incompatibilities.
+<[Len] NMORGENSTERN> And then to the Z280! Tomorrow the world!
+<[Len] NMORGENSTERN> The same basic principle is used for 80x86 assembler in
+F-PC.
+<[Len] NMORGENSTERN> Bits are OR'd to assemble a complete instruction.
+<[Stan] S.WISE7> One thing that sounds so good about Forth is adapling it , and
+adding , is much more feasable than with other lanuages.
+<GARY-S> If you have been reading TCJ, you are going to recognize many of the
+names in the library as authors in TCJ
+<[Len] NMORGENSTERN> "You don't write programs in Forth
+<[Len] NMORGENSTERN> You program Forth to be a language specifically
+<[Len] NMORGENSTERN> written to do what you want it to do"
+<[Stan] S.WISE7> I ave been subscribing to TCJ for almost two years,; and got
+almost alll of the back issues. Its great!!
+<GARY-S> I think that's the key point that is hardest for traditional
+programmers to accept. Forth is ONLY a start to _your_ application specific
+language module
+<[Stan] S.WISE7> Especially if oneis using Z-system.
+<[Len] NMORGENSTERN> Gary, they might accept it if they understood it.
+<[Len] NMORGENSTERN> When you try to make that point to them
+<[Len] NMORGENSTERN> they just give you a blank look.
+<GARY-S> It's so simple - now - in retrospect
+<[Stan] S.WISE7> Yes, in almost every thing getting started is the hard part.
+<[Stan] S.WISE7> Every thig is simple once you understand it.
+<[Len] NMORGENSTERN> Forth is not hard to learn. But there is not the depth that
+
+<[Len] NMORGENSTERN> you have in (say) C, where there are several dozen
+textbooks.
+<[Len] NMORGENSTERN> Forth has only one or two.
+<GARY-S> Stan - you will hear this a bazillion times, so let me be first. When
+you start learning Forth PLEASE forget everything you know about
+heierarchial,proceedural languages....
+<GARY-S> BUT remeber all you know about computers themselves
+<[Len] NMORGENSTERN> Good point Gary. BASIC, C, Pascal, Fortran etc
+<[Len] NMORGENSTERN> are dialects of one language, but Forth REALLY is different
+
+<[Stan] S.WISE7> IC is very very popular, but I am not in any hurry to start
+with it .  Modula-2 can do every thing that C can do ; easier and atleast as
+well.
+<GARY-S> All the languages you mentioned are lineal descendants of Algol-60
+<[Stan] S.WISE7> That it is so diferrent i(and how ) is what is most
+interredting.
+<GARY-S> Forth is NOT even similar in concept or syntax
+<[Stan] S.WISE7> I have very little to forget about procedural languages.
+<[Len] NMORGENSTERN> Lucky you!
+<GARY-S> Do you speak Spanish, Latin or French?
+<[Stan] S.WISE7> No, just English.
+<[Len] NMORGENSTERN> Why do you ask, Gary?
+<GARY-S> Have you ever used a HP calculator?
+<[Stan] S.WISE7> How much does forth model the OOP paradgim?
+<[Len] NMORGENSTERN> Many current Forths do (or try to) add OOP features
+<GARY-S> The order of modifiers in those languages is more akin to Forth than
+the English syntax
+<[Stan] S.WISE7> No. I have neverr used RPN.
+<[Len] NMORGENSTERN> It is tricky, but not extremely difficult.
+<[Len] NMORGENSTERN> It is not a "native" part of Forth, as it is in SmallTalk
+<[Len] NMORGENSTERN> or C++
+<[Stan] S.WISE7> Do you mean noun - modifier ?
+<GARY-S> yes
+<GARY-S> That was reaching for a moot point
+<[Len] NMORGENSTERN> Except that "noun" does not apply to this particular
+action of
+<[Len] NMORGENSTERN> Forth. Forth words add items to the stack or consume them
+<[Stan] S.WISE7> How many of the RT participants use CPM /IBM /Mac?
+<[Len] NMORGENSTERN> although many have "side effects" without stack effects.
+<[Len] NMORGENSTERN> A survey a while ago showed that 16% of the respodents
+<[Len] NMORGENSTERN> usd CP/M Forths!!!!!!
+<GARY-S> Thanks Len - I didn't remember
+<[Len] NMORGENSTERN> That was about 4 years ago. I wonder of it is still true.
+<GARY-S> We have actually had a slight increase in CP/Mers since then thankks
+to the TCJ articles
+<[Stan] S.WISE7> I belong to the CIUG clu in Des Moines. Out of 90+ member ther
+are only a couple of us still using CP?M.
+<[Len] NMORGENSTERN> The PC machines are by far the majority, but
+<[Len] NMORGENSTERN> there is a fair number of Mac users.
+<[Len] NMORGENSTERN> btw, the next ACM SIGFORTH meeting is in Kansas City
+<GARY-S> Certainly some of the people I respect use Macs - Len, Wil...
+<[Len] NMORGENSTERN> march 5-7 I believe.
+<[Stan] S.WISE7> That was what I guessed.
+<[Len] NMORGENSTERN> Wil Baden.
+<GARY-S> sure
+<[Len] NMORGENSTERN> Mitch Bradley, who did a lot of the firmware for the Sun
+<GARY-S> Wil also uses Unix these days
+<[Len] NMORGENSTERN> computers sells a Mac Forth, as does Creative Solutions.
+<[Len] NMORGENSTERN> Theirs is actually called "MacForth"
+<GARY-S> I'm going to close the log - any comments for posterity ?
+<GARY-S> There will be no FIGGY next Thursday
+<[Stan] S.WISE7> Eventually I will hve a 386 system, but for now this CP?M
+machine is amost as good or much better hor what I want to learn.
+<[Len] NMORGENSTERN> How about the one after that? It is very close to the
+holiday
+<GARY-S> I haven't decided yet, Len. Sorry
+<[Len] NMORGENSTERN> Stan, F83 runs on the 386. But there is a Forth
+<[Len] NMORGENSTERN> f-pc based on F83 that has a lot more power, which you
+<[Len] NMORGENSTERN> will probably want to use once you have learned F83.
+<[Len] NMORGENSTERN> F-PC will not run on CP/M as far as I know.
+<GARY-S> I maintain it is better to learn on a more minimal kernel <<- opinion
+<[Len] NMORGENSTERN> Absolutely agree, Gary. Crawl before you walk.
+<[Len] NMORGENSTERN> I think you can get farther in Forth in a short time than
+<GARY-S> I still find the minimal approach more conducive to hardware
+prottyping,too
+<[Len] NMORGENSTERN> any other language. I always say...
+<[Len] NMORGENSTERN> there are no beginners in Forth. Within 4 months they are
+<[Stan] S.WISE7> I abolutlly agee. The IBM doe some marveluslthigns, but for an
+intro to computers it is to bloated and complex to understandd i.
+<[Len] NMORGENSTERN> trying to write a new version of Forth.
+
+

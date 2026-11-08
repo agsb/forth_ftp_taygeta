@@ -1,0 +1,62 @@
+
+A quick reference card for Laxen / Perry F83 forth.            
+It is designed for the KayPro2 key board but good for all.      
+
+                    FORTH F-83 MODEL                                      
+                                                                          
+                                                                          
+------------------------------------------------------------------------  
+FORTH F-83                                                                
+  LOCATE <word>   LIST n screen   DONE editing   IND    n n INDEX         
+                                                                          
+                   L     n --         List the current SCR or use n       
+                  ED       --         Enter the editor                    
+                EDIT     n --         Enter the Editor                    
+                 VED       --         Visual EDitor                       
+               VEDIT     n --         Visual ED CTRL commands on screen 14
+                   T     n --         To line n                           
+                 NEW     n --         Type a new line. Two (cr)s to exit. 
+                   F     text         FIND text below current cursor      
+                   R     text         REPLACE found text with text        
+                   U     text         Put text UNDER current line         
+                   W       --         Write to the disk using SAVE-BUFFERS
+                   J     text         Justify by pulling <text> to left bo
+                   X       --         Xout and extract                    
+                WIPE       --         Wipe the current editor screen      
+              N or B       --         NEXT or BACK one screen             
+                 E-B       --         Empty-Buffers                       
+------------------------------------------------------------------------- 
+   VIEW <word>   DOC <word>   OPEN <file.nam>  BYE   SEE <word>           
+  <Voc-name> WORDS   VOCS   ORDER   DISCARD <ed changes>   SEE <word>     
+                                                                          
+         CREATE-FILE         ( n -- )  Even-number n= 6, 12,18, etc.      
+                MORE         Add n more blocks to current file.           
+                  B:         Change to drive B:   ( A: )                  
+                COPY         ( from-scr to-scr -- )                       
+              SEARCH         ( n -- ) for text from current SCR to n.     
+               BRING         ( screen-# from-line thru-line -- )          
+                   G         ( screen-# line-# ) Get a line               
+                OPEN         Target file                               Use
+                FROM         Source file                           these 3
+                  TO         from thru TO target-screen CONVEY    together
+                  KT         KeepTill <text>                              
+                   A         Alternate screen (documentation)             
+---------------------------          C         Move cursor n spaces       
+                           )    Don't over look the important words under 
+   Cut to fit around       )    The dashed lines above. (Harmless).       
+    the KayPro keys.       )                                              
+                           ) _____________________________________________
+                                                                          
+Tape this side to the right of the first section and place it on          
+the KayPro above the keys.  Perfict Writer cards available.               
+Pass it on with credit to: John A. Peters (415) 239-5393                  
+                                                                          
+I asume you booted from F.COM not F83.COM on a ADM-3A terminal.           
+Extentions are requested for the F.I.G. Library.                          
+                                                                          
+Model and to Joel Witenberg for VED                                       
+Revised June 13, 1984 John A. Peters                                      
+                                                                          
+To Print a copy type:  TYPE CARDF83.TXT ^P (cr)                           
+
+

@@ -1,0 +1,55 @@
+
+This file was downloaded as a long message from the bulletin board.
+ 
+Category 6,  Topic 15
+Message 21        Sun Mar 06, 1988
+DANMILLER                    at 14:16 CST
+ 
+The address of silicon composers is 210 California Ave, Suite K, Palo Alto,
+CA 94306 tel (415) 322 8763. The addres of Logdical Devices is Logical
+Devices Board Level Products Group, 1321 NW 65th pl., Ft. Lauderdale, FL
+33309 tel (305) 974 0967.
+
+The Silicon composer's board is a full lenght AT with static memory on card
+to 128K bytes using LSI memory module carriers.  Memory is shared with the at
+and the message passing area and command area can be configured to be
+anywhere in the AT 16megabyte address space. This is handy cause page C gets
+real full on an AT with a few specialty boards in place.  They have a target
+compiler that runs on the at and downloads to the harris chip. There is not a
+forth interpreter that they source to run on the chip yet.   The target
+compiler seems solid and has libraries  for i/o with the at, at-graphics is
+an add on library, has double math support, no floating point, also has a
+memory maagemet  library.  The compiler includes a program
+decompiler/debugger. Asci files are used for source and a block to ascii
+utility is included for program conversion.  The language supports C language
+convention for strings and files.  Apparently works like a regular compiler
+and can handle forware referencing of colon definitions.
+
+Ray Duncan at LMI also has a target compiler for the Harris machine.
+
+Logical devices' board is stand alone. The picture only shows one lsi chip
+carrier so either it uses a prototype asic, the picture is wrong, or it
+doesn't have the stack controllers, multiplier or interrupt controller the
+silicon composer's board has.   But then again it might be much cheaper for
+those who just want to get their hands on something.  It comes with an LMI
+target compiler that runs on a pc and presumable downloads code over a serial
+line. There are two prom packages shown on the picture.  2 i/o ports,
+multitasking and 2 hardware stacks 2k by 16 are icluded., speed is 4 mhz. 
+Hmmm. claims 7 interrupts.  Ram 32k by 16 bits max 8k  installed as usually
+delivered.  No Forth interactive interpreter listed.  (Hey guys get busy !)
+Has a uart and 2 i/o ports, and leds. Oh, I see a bunch of hardware expansion
+options.  Ahh, heres the multiplier , fiber optic communications interace!!!,
+Custom A/d,d/a card, 16 bit eprom programer, local keypad/display for
+standalone operation, , memory  memory expansion and  8 mhz processor
+option!!, ARINC communication (anyone know what this is?), and gpib-
+488,rs422.232 plug in card. Also mil spec versions and STEEL enclosure. 
+Sounds like these  guys are serious.  heavy duty.    
+
+I've seen the silicon composers board and it looks well built. I've played
+with the compiler a bit and it seems to do what it says. I have not seen the
+logical devices stuff. The above info is off their data sheet.  
+
+Will post more data as I can digest it.  <dan> Oh, could someone download
+this message and post it on the bbs as a file.  thanks. <dan>
+
+

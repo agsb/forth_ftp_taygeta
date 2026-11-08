@@ -1,0 +1,49 @@
+
+"Designing and Programming Personal Expert Systems", by Carl Townsend
+and Dennis Feucht, TAB Books, Blue Ridge Summit, PA, 1986.  
+
+Price: $19.00 plus applicable taxes and shipping from LMI.
+
+This new book is divided into two parts:
+
+The first part is a general introduction to "Artificial Intelligence"
+and Knowledge Systems (the author's term for rule-based expert systems), 
+two topics which have only marginal overlap in my opinion.
+
+The second part is example code for a simple rule-based system, all
+implemented in Forth.
+
+Both the text and the Forth code are readable and well presented.
+
+Table of Contents:
+
+Part I: EXPERT AND KNOWLEDGE SYSTEMS
+
+Chapter 1.      Introduction to Artificial Intelligence.
+Chapter 2.      Introduction to Knowledge Systems.
+Chapter 3.      The Components of a Knowledge System.
+Chapter 4.      Representing Knowledge.
+Chapter 5.      Introduction to Knowledge Engineering.
+
+Part II: BUILDING KNOWLEDGE SYSTEMS
+
+Chapter 6.      Forth: A Versatile Expert Systems Language
+Chapter 7.      Introduction to List Processing
+Chapter 8.      Programming Techniques
+Chapter 9.      A Prolog Knowledge System
+Chapter 10.     Advanced Concepts.
+Chapter 11.     Learning and Pattern Recognition.
+
+Appendix A.     Source Listing (for Mini-Prolog in Forth)
+Appendix B.     The Diagnosis Routines (for Appendix A) 
+Appendix C.     Forth Vocabulary
+Appendix D.     Expert Systems Tools [list of software vendors]
+Appendix E.     Expert Systems [list of working & published systems]
+
+Glossary [of AI terms]
+
+Resources [Bibliography of useful Expert System articles and books]
+
+Index
+
+

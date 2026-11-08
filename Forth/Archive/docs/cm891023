@@ -1,0 +1,315 @@
+
+>From the X3J14 mailing of 89-02-21.
+
+Doc.no.: X3J14/89-002
+         Draft, Feb. 10, 1989
+
+[pages 1-8 are the Draft Minutes of X3J14 Meeting #7]
+ -------------------------------------------------------------------
+
+                               APPENDIX A
+                        CHUCK MOORE'S ADDRESS
+
+[The following is an edited excerpt of the principal points of Chuck
+Moore's address to the committee:]
+
+I am here to regale you.  I apologize for walking out a few meetings ago.
+I got calls from some of you, but I have concluded that I am incompatible
+with the standard's process.  FST, which I was a member of, and I had the
+same reaction.  It seemed to be working this time.  The first meetings were
+pleasant, because there was nothing of substance.  But the principle I
+cannot subscribe to is that matters of fact or truth or beauty can be voted
+on.  The facts speak for themselves.  That's my gut reaction.  I'm vitally
+concerned you produce a good standard, but I cannot vote.
+
+For example, MOVE .  MOVE is a simple concept, which can be made complex,
+but needn't be.  MOVE must be a part of the standard, at least for
+historical continuity.  But we originally designed MOVE on the NOVIX to
+slurp 256 things and spit them out, then deal with the remainders.  I hated
+it.  The supporting code took too much space, and was never used.  I
+replaced it with a FOR ... NEXT move, which took 8 times as long in 1/4 of
+the code, but it wasn't used anyway.  One of my criticisms is that, as a
+committee, you tend to complexify things.
+
+I have the most to gain from a successful standard, even though I cannot
+participate in it, except in review or critique.  I think the process is
+cumbersome, and I'm offended, even if its CBEMA's way.  But the ends
+justify the means.  I suggest at each meeting, you have someone spend an
+hour reviewing, like me, who is not involved in the committee.  Find some
+objective outsiders.  I think you are too introverted.  Too enmeshed in the
+process.  The problem with MOVE is hairsplitting.  It must not dominate the
+process of the standard.
+
+I suggest Flesch's book.  [The book was passed around.]  The BASIS can be
+improved.  I have marked up a copy of BASIS6.  It is a beautiful document.
+I appreciate how much work went into it, and that you are agonizing over
+phrasing and words.
+
+Consider page 1, "Purpose."  I feel this has not been adequately expressed.
+I think an ANSI standard is relevant now, so that you can have a program
+written on one personal computer and run it on another, or mix them with
+mainframe programs.  Eliminate references to word size.  This isn't
+mentioned in the purpose.  There should be a section indicating to whom
+this document is addressed, implementors, users...  Who should spend the
+money to buy the standard?  Focus on the audience.  For BASIS6, this is us.
+It is not self-explanatory.  Do you want to reach a wide audience?
+
+Page 1: preface "Forth" with "ANS Forth."  It is impossible for one version
+of Forth to subsume all possible opportunities.  Forth is larger than the
+standard.  I think ANS Forth will become the dominant dialect.  Computer
+Cowboys will not follow it.  Shboom will likely be F-PC.  cmFORTH is likely
+to be peculiar.  In coding recently, it is clear to me I'm writing Forth,
+but it does not resemble historical Forth.  Don't take away the word Forth.
+
+Page 2: I love the rationales, the double-boxes.  Single boxes might even
+include comments from outsiders.  I suggest you publish the naked glossary
+as part of the standard, and publish the unexpurgated version in an
+appendix.  CBEMA would prefer a bulky document.
+
+Regarding substitution of ISO for ASCII, I think it's a bad idea.  It
+strikes me as jargon.  How about a footnote which says "when we say ASCII
+we really mean ISO ..."  It's not good for PR.
+
+ X3J14/89-023, Draft Minutes, X3J14 Meeting #7, January 23-28, 1989, Page 9
+
+
+The Concepts section sort of went away.  What is Forth?  To pretend that
+there is a necessary and sufficient definition of Forth is not helpful to
+someone interested in Forth, who needs a concept section.
+
+"Definition of terms, branch specification."  Defining is not helpful.  The
+concept is not classic, nor is it in all systems.  You have to presume a
+level of understanding of your audience.
+
+"Byte":  it might not be a good move to use this word in an unusual sense.
+
+"Cell pair," top of stack is at the lower address.  Can you standardize
+this?  Does it matter?  Is requiring this going too far?  Doesn't it depend
+on hardware?
+
+"Compilation vocabulary."  Do you mean compiler vocabulary?  The more
+syllables, the more you should question the word.
+
+"Input stream."  I think this is obsolete.  Memories are getting large--you
+don't need to fragment source into blocks.  Do you really need to specify
+it?  A standard program shouldn't muck around with it.
+
+[Mr. Braithwaite: is this a compiler writer's guide or technical user's
+guide?]
+You want a standard program to run on all standard systems.
+
+Consistency?  FROT .  This is obscure, with low probability of use.  No
+historical record.  FOR...NEXT is in the category of words you can't use.
+These categories are arbitrary and require better reasons for inclusion or
+exclusion.
+
+Defining word: "when executed."  "External format."
+
+"statically determinable"  These words should be replaced with a
+circumlocution.
+
+Division: "inexact".  Do you mean "commensurate"?
+
+"Execution token"  Is this the result of great debates?  I'm not familiar
+with it.
+
+"Floating-point stack"  Shboom will do this on the data stack.  The standard
+shouldn't fiat this.
+
+[Mr. Bailey:  separate stacks can tackle this problem asynchronously.]
+
+Exactly, but what are you being transportable amongst?  Just how many
+different machines can you transport to?  An added stack is an expensive
+thing.  You need the whole suite of words:  FDUP  FDROP  etc.  Consequences
+have a habit of multiplying.
+
+[Much discussion of the separate floating point stack.  Mr. Baden pointed
+out that it is currently limited to four numbers.]
+
+Page 9: "layer."  This is not a useful distinction.  Look at floating point,
+for example.  Nothing is in the nucleus about this.
+
+"Parameter field."  What this is is elusive to me when I try to be precise
+about it.
+
+[Mr. Dickens: everybody knows what a parameter field is, although it's tough
+to get this knowledge into a paragraph.]
+
+"Programming language processor"  Something written in Forth is not a
+program in the sense it is in C.  It is a vocabulary.  The words that might
+describe it have been preempted to describe something else.  I would like
+to make this distinction.  I would like to contrast Forth with C.  Someone
+ought to show that there are substantial differences.  In _Gravitation_, by
+Kip Thorne, there are three ways of viewing
+
+
+ X3J14/89-023, Draft Minutes, X3J14 Meeting #7, January 23-28, 1989, Page 10
+
+
+
+gravity: tensor, vector, perception.  Forth and C are tensor and vector.
+Forth uses MOVE where C would use subscripts.  C expands upon all the words
+we tend to vary.  You see more conditionals and loops.
+
+"Rounding and truncation" doesn't tell me anything.
+
+Page 12: "finite time."  Numbers are accepted "unsigned or negatively
+signed."  You should say they can't be positively signed.
+
+"Implementation options," page 14, needs to be expanded on as a word.
+
+"Operator's terminal facilities" has too many syllables.
+
+"Minimum maximum" is marvelous.
+
+Page 15: too many uses of "standard" in the same sentence with different
+meanings.
+
+Page 16: ...CREATE is redundant.
+
+You are not allowed to DUMP since it accesses memory you haven't created.
+
+[Ms Rather: DUMP is in the Reserved Word Set.]
+
+One of Forth's virtues is that it can access any memory.
+
+[Ms Rather: What about memory traps?]
+The memory-mapped PDP-11 is old-fashioned hardware.
+
+[Mr. Colburn: a human can look anywhere, but not a portable program.]
+Say that explicitly, then.
+
+Numbers, page 18, with "all bits set."  I don't find this helpful.
+
+"Control structures cannot overlap"  Why not?  Mine do, by using  [ OVER ]
+etc.
+
+Error conditions: ignore, execute a particular word.  All of the others also
+mean to execute a particular word.
+
+"Compliance and Labeling," page 22.  Standard Program runs in a Standard
+System, and all these variations of it are pedantic.  This is too
+repetitious.
+
+"Compactness" is an ugly word.
+
+The presumption is that all Forth words are in upper case.
+
+"Stack parameters."  My attitude is that you should leave them out
+altogether.  They are so elaborate, they obscure what they mean in the first
+place.  Given that you reject that, at least be consistent.  "False" is
+spelled out, but not "addr" and "char".
+
+Particularly be careful what you do when you describe the input stream and
+the return stack.
+
+6.8.2.2 <name> p. 24, why not just "name"?
+
+Glossary.  Each word has been given two names.  For example, "number" can be
+7.0020, "...see also 7.0020 number."  I would not look them up by number,
+but rather by ASCII order.  Particularly in the glossary.
+
+"Number-sign" should be called "number."
+
+"Slash" not "divide."  Be sure you get the common pronunciation.
+
+ X3J14/89-023, Draft Minutes, X3J14 Meeting #7, January 23-28, 1989, Page 11
+
+
+
+Look at !  "Store w at addr" is not sufficient.
+
+.(  "Parse and display characters" is a trivial use of a complex word.
+
+Is 0<> really in wide use?
+
+I object to 2ROT .
+
+Why is EXIT called that instead of RETURN ?
+
+7.0590 page 42 "set interpret state"  Interpreting is a large concept, as is
+] .  They should be discussed somewhere.
+
+Page 48  CLOSE-FILE .  Why bother?
+
+"A Standard Program cannot use CODE ."  There aren't any Standard Programs.
+
+CONVERT .  I haven't seen one like this before.  My stack effect is
+different.
+
+DNEGATE  "radix-complement of d1."  How about "0 minus d1"?
+[Mr. Dickens: this language was taken from the IEEE dictionary.]
+
+END-CODE  You can't use it, but you're trying to define it.
+
+EVALUATE  I like it better than EVAL .
+
+You did call F/ "f-slash".
+
+Page 61, in  IF  " ...sys is balanced by the corresponding  ELSE  or  THEN
+."  This is much too cryptic.
+
+Why did INTERPRET go away?
+
+OCTAL is in the Controlled Reference Wordset, but HEX is not.
+
+[Both are "controlled".]
+
+QUERY has a precise statement.  This is not appropriate.
+
+RECURSE .  I would be willing to suggest you reverse the convention so that a
+word is recursive unless otherwise indicated.
+
+RENAME-FILE  why not use the OS to do this?
+
+[Mr. Bailey: why should an application program have to hire a person to sit
+down and go through DOS to do this?]
+
+BLOCK extension wordset.  COPY is prevalent, but doesn't occur in the
+standard.
+
+SPAN and STATE I don't like.  I want them to go away.
+
+WRITE-CR .  I'm appalled.  I don't understand files.
+
+I'm done.
+
+[Mr. Bailey:  Chuck, would you consider rejoining us when the BASIS is ready
+for final wording?]
+
+I will quibble on the spelling of many words.  The form is at least as
+important.
+
+
+ X3J14/89-023, Draft Minutes, X3J14 Meeting #7, January 23-28, 1989, Page 12
+
+
+
+[Mr. Colburn:  Chuck, what do you see as the purpose of the standard?
+Portability or political acceptance?]
+
+I think we're here because we think a standard would be good for Forth.
+I've heard C programs are not especially portable.
+
+[Much discussion on the portability of C programs.  Mr. Rash had good
+results and Mr. Forsley had bad results.]
+
+The standard as a documentation and communication language is a laudable
+goal...a useful tool that we've never had.
+
+[Ms Rather: But you've run into massive FORTRAN programs that have been
+around for 20 years, and everyone runs them on everything.  That's a
+testimony to the fact that portability does occur, and people often complain
+that none of these kinds of programs exist in Forth.  Hence Mr. Tracy's work
+on the Model Library.]
+
+You could describe a class of programs that don't transport.  C is mostly
+preoccupied with ASCII files of text.  All the examples are this way.  We
+don't do this in Forth.  I do mostly arithmetic, etc.  Porting into C would
+take a major effort for me.
+
+
+
+ X3J14/89-023, Draft Minutes, X3J14 Meeting #7, January 23-28, 1989, Page 13
+
+

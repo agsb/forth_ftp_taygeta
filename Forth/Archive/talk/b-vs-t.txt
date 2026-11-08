@@ -1,0 +1,266 @@
+
+     Will attempt responding to message 733 to, hopefully, lay
+to rest the "block files vs text files" issue and explain more
+fully where I'm coming from.
+
+     What do I find confining about block files?  Fair question.
+The answer is probably more of an aesthetic one than a technical
+one but here goes:
+
+     First of all, let me say what I most like most about block
+files so that I don't give the impression that I think block
+files are all bad.
+
+     I like their elegant simplicity and I like their "implicit"
+enforcement of 16x64 boundaries.  The flip side of this is that
+the simplistic approach only works up to a certain level of
+complexity and that - after I've gained an appreciation for
+Forth's chunking ability - I find implicit enforcement more of a
+bother than an aid.  Let me explain:
+
+     How do you standardize an idea, a concept?  Are all concepts
+of exactly the same size and complexity?
+
+     When I write Forth code I like to keep things simple and
+factor, factor, factor.  This not only helps me better understand
+the problem I'm solving but helps, as well, to make me a better
+problem solver (i.e., I think this mental paradigm of problem
+solving has benefit in other programming languages as well, or
+perhaps it's just a good way to analyze problems - period).
+
+     The near incredible plasticity and fluidity of the Forth
+language (i.e., its *minimal* syntactical constraints and
+_therefore_ its inherent extensibility) make this possible.  I
+try to apply the same approach (when I can) in writing other
+languages as well, but often the "remapping" is onerous.  That
+is, most other languages use a block structured and/or structured
+programming approach.  This means building little Russian dolls
+within bigger dolls within bigger dolls, etc.  This also means
+that my non-Forth programs take on an explicit "structure" as
+defined by the syntax of the particular language I'm working
+with.  This explicit structure is often difficult to factor -
+easy to modify/maintain yes, but difficult to factor.  The
+reasons are multiple.
+
+     First of all, the block/structured programming approach
+encourages you to adopt the Russian doll approach, so I wind up
+with too many dolls in a single module.  Next, because of the
+richness of the structured programming constructs as well as the
+variability within each of the constructs, I wind up with lots of
+dolls that are slightly different at different levels (and even
+the same level).  Finally, parameter passing is a hassle.  The
+parameters, their type, their calling order, etc., etc., etc.
+tend to vary quite a bit.
+
+     The net result of all of this is that by the time I
+recognize a "pattern" or "theme" within my program modules, it's
+often bothersome (or worse) to go back and factor things.  I
+realize that if I had perfect foresight (i.e., if I knew the
+quintessential algorithmic approach instantly and initially for
+all classes of problems that I could ever solve), then I could
+always force myself to design the algorithm appropriately "top
+down".  Unfortunately, my brain doesn't work this way (when it
+works at all, that is).  Bottom line is that the "top down" style
+of block structured languages, often makes "bottom up" redesign/
+factoring difficult (at least for me).
+
+     Now when I write Forth code, this doesn't happen.  Why?
+
+     First of all, Forth is just too simple minded to allow this
+to happen (and I think that's good!).  Because Forth provides
+only the basic essentials (i.e., a set of highly precise
+tools/words and an implicit stack for parameter passing), it
+becomes near impossible to write complex Forth words.  The moment
+Forth words become too big, it seems to me, they "announce" this
+fact.  They look awkward or ugly and/or you find yourself in a
+stack thrashing situation.  The natural tendency is to say "whoa
+boy" - how do I factor the problem?
+
+     Even if your Forth words are too large, then they are almost
+never too large to factor without minimal effort.  That is, the
+"themes" or "patterns" at worst tend to consist of a small set
+of words which can be nicely encapsulated into a separate word
+and whose input/output functionality can be nicely pushed/popped
+onto the data stack transparently to any words at a higher level.
+The "Russian doll syndrome" simply doesn't occur.
+
+     That, to me, is an essential part of the power and the
+beauty of the Forth "language".
+
+     A key point, however, is that the Forth block file structure
+has absolutely nothing to do with this intrinsic factorability.
+
+     I very seldom need a Forth word that exceeds a block (with
+the exception of assembly level Forth).  When I do, it's
+generally due to one of the following reasons:
+
+     A)   I'm purposely trying to code a single word/function
+          "tight".  I realize that I'm violating the principles
+          of good Forth design, but I'm willing to do it for
+          speed/performance considerations.
+
+     B)   I have an intractable control construct that belongs
+          at a single level logically.  The prime example here
+          would be an inherently complex conditional (e.g.,
+          multiple option IF...ELSE...THEN and/or CASE).  I
+          realize I could invent some artifices here and force
+          factoring, but I don't think the code would be as
+          readable/maintainable.
+
+     C)   I like to keep my Forth words "open/airy" and provide
+          documentation.  Often stylistic conventions (e.g.,
+          appropriate indentation) and the need for meaningful
+          comments just don't fit into the 16x64 boundary.
+
+          This situation is almost ironic.  That is, it seems
+          that one of the primary purposes of the 16x64 format is
+          to "sort of" enforce modularity/simplicity.  By
+          following an appropriate and consistent indentation/
+          grouping format and by adding comments, I've done
+          nothing to add to the code complexity (i.e., the
+          "action" words are still the same).  Yet Forth wants to
+          penalize me because it thinks my code is too complex.
+
+     D)   B) and C) above can often compound each other in their
+          effects as well.
+
+     No matter *what* the blocking size is, it's not right!  By
+that I mean that not all Forth words can be expected to be of
+exactly the same size and complexity.  The vast majority, true,
+are small and fit well within (for example) a 16x64 boundary.
+But not all are.
+
+     I guess I'm back to my original point of:
+
+          "How do you standardize an idea, a concept?
+          Are all concepts of exactly the same size and
+          complexity?"
+
+     Forth words are ideas/concepts, and they're not all
+identical.  I realize that I could "continue" Forth words beyond
+block boundaries (using "-->" or whatever), but I don't like
+doing this.  It just seems "ugly".
+
+     To me, programs (and ideas) ought to be "free form" not
+regimented.  I'd hate to count the hours I've spent "regrouping"
+Forth code so that it fits pleasantly into block boundaries, but
+it's been a few at least.  I'm *not* talking here about Forth
+factoring. I'm talking just about taking an already completed
+Forth program and rearranging/regrouping it so that the code is
+as readable, understandable, stylistically consistent, and well
+documented as possible.
+
+     ZDDDDDDDDDDDDDDDDDDDDDDDDDDBDDDDDDDDDDDDDDDDDDDDDDDDDDDD?
+     3 To me, at least, a progr 3 am is very much an art, an 3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 d/or an art form, and no 3  matter how you decide to  3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 "block" a program (or an 3  idea) - it's going to be  3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 the wrong size.  I'd pre 3 fer simply not having to w 3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 orry about these artific 3 ial constraints.  I'd, rat 3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 her, like to focus on th 3 e essence of what I'm tryi 3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 ng to say, and not to ha 3 ve to worry about seeing h 3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 ow well the shoe fits. A 3 t any rate, that's the mai 3
+     CDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD4
+     3 n point I'm trying to co 3 nvey here!                 3
+     @DDDDDDDDDDDDDDDDDDDDDDDDDDADDDDDDDDDDDDDDDDDDDDDDDDDDDDY
+
+
+     Nor can I buy the argument that the instant load/reference
+capability provided by block files justify their existence.
+
+     It's nice, I admit, to be able to "point" to a selected
+portion of a file (via LOAD or THRU).  And if I follow the
+traditional methods (e.g., first block is always comment, second
+block is always load block, etc.), then I can get all of this to
+work with fairly minimal effort.
+
+     The problem, tho, is that these references are (in
+themselves) meaningless (i.e., what distinguishes block 19 from
+block 24?) and that they are absolute (i.e., block 19 is *not*
+block 24).  Now I can get around this by making sure that I
+comment all LOAD/THRU instructions and I can even gain a certain
+degree of plasticity by making loads "relative" (i.e., block "n"
+loads blocks relative to itself, since it can determine where it
+is).  To be honest, it seems to me that most of these "work-
+arounds" are just that.
+
+     Since Forth doesn't have a standard "assign file"
+capability, then - by definition - you have to work with what
+you've got (i.e., a single, all encompassing, nameless, virtual
+file that is "known" only by number - "now serving number 33",
+kinda like Baskin-Robbins, I guess).
+
+     How do I go about building modular/reusable code under this
+scenario?  What if I want parts of library a, b, c, and d and all
+of library m, n, o, and p in applications w, x, y, and z?  You
+can do all of this by replicating source code and/or using non-
+standard extensions, but it seems extremism in defense of an
+already lost cause.
+
+     Bottom line - the concept seems to work well for the simple
+case, but falls apart rapidly as complexity increases.
+
+
+     I'm sure I haven't said anything here that you don't already
+know and/or haven't experienced yourself, but I'm trying (as
+usual) to be as explicit (and probably verbose) as possible.
+
+     O.K. - how about we bury Caesar and get on with the issue of
+where we go from here?
+
+     I really like your idea of a Partitioned Data Set (PDS) - or
+at least as close to a PDS as I ever got on (ex) Univac machines.
+
+     The basic idea of the PDS was that of a "universal" file
+that contained complete information in regard to programming.
+
+     Let's image that we have a "new" kind of Forth word which we
+can call a PDS word, or a library word, or a directory word, or a
+module word.  (I'll use the term "directory" word since I
+associate the concept most strongly with the idea of
+hierarchical/directory structures.)
+
+     The internal workings of this word are, of course, system
+defined - but what it provides, in effect, is the full definition
+of a Forth library/module.  In other words, it makes immediately
+available a bunch of other Forth words and/or directories.  These
+other Forth words/directories are defined in terms of where the
+source code is, where the reloadable modules are, etc.).  It also
+adds this directory, implicitly, in the search order (i.e., it
+becomes "visible").  The directory's words/subdirectories can be
+either "visible" or "hidden".  If they are visible then they can
+be seen by all higher level words/directories.  If they are
+invisible, then they can be seen only if the directory is
+currently "active".  This is much like the idea of Forth
+vocabularies except that it is automatically hierarchical and the
+search order is automatically specified via tree traversal.
+
+     The idea behind the directory word is that it immediately
+defines a new search order (which is hierarchical) to be
+"inserted" into whatever directory is currently active.  What you
+are doing, in effect, is dynamically building a search tree.  The
+idea behind the "hidden" directories/words is just that of module
+visibility at the appropriate level - much the same as what is
+currently done in Modula-2/Ada explicitly.  If you were, for
+example, to type "WORDS" then you'd be shown all of the visible
+words/directories for the currently active directory (much like
+the DOS DIR command).  You could, of course, traverse Forth
+directories just like you could traverse hierarchical files
+structures, making a given directory "active".  The major
+difference though is that you're not actually traversing files,
+you're traversing the search order of your program (which you can
+modify at will).  You would also probably want to devise some
+sort of "locking" constraints on certain library modules since
+you wouldn't want anybody to be able to "activate" a given
+library and suddenly make all of its components visible, delete
+others, etc.
+
+     Well anyhow, that's a start at it.
+
+

@@ -1,0 +1,698 @@
+
+File:  SPAGETTI.ARC; 02-19-87;
+       East Coast Forth Board
+       Fifth Conference
+
+
+Viva la Spaghetti! 
+
+A Critique of Programming Methodoligies
+
+
+Copyright (c) 1986 
+All Rights Reserved Worldwide
+R. J. Brown 
+Elijah Laboratories International
+5150 W. Copans Rd. 
+Suite 1135
+Margate FL 33063
+(305) 979-1567
+
+This text may be freely distributed so long as the
+copyright notice remains, the text is unaltered, 
+and no charge is made for it.
+
+Author's Note:  This text was originally prepared as
+an article for Dr. Dobb's Journal, but since they
+have decided not to publish it, I thought the members
+of the East Coast Forth Board Fifth Conference might
+enjoy the perspective it provides.
+
+
+
+   I first conceived of this subject several days ago
+during a lunch with a software design team and the customer.
+Everyone was having cheeseburgers, fish sandwiches, club
+sandwiches, etc; nice, well structured, layered food.  But
+the primary software design engineer on the project was a
+renegade:  he was having spaghetti!  I remarked to the
+customer "You know you are in trouble when your chief
+software designer likes spaghetti."  Needless to say, we 
+all had a good laugh.
+
+   But the concept got me to thinking.  We have all tried to
+eliminate the spaghetti-code from our designs, thinking that
+this will result in better systems.  But software costs have
+still risen steadily over the years as a percentage of total
+system cost.  It is time we faced the facts;  Claude Shannon
+was wrong:  information is not made out of bits, it is made
+out of spaghetti!  The truth is that software structure is
+not improved by eliminating the spaghetti, but by hiding it.
+This is just an extension of the information hiding
+methodology of Parnas and others.  The revelation is that
+the information is in the spaghetti!
+
+   Modularization ala Modula, C, Ada, etc.  causes the
+structure of a program to APPEAR simple when viewed from the
+top, but this is just relegating the spaghetti to the
+linker, making noodle pudding out of it and saving it for
+desert.  The top down modular design methodology is a
+hierarchical approach.  The tree structure of a hierarchy
+mirrors the structure of an organization:  its purpose is to
+permit the view from the top to be a comprehensible
+representation of the situation, even if it is
+oversimplified to the point of incorrectness.
+
+   In reality, this structure is only simple from the top
+until about half way down, after which any given individual
+is likely to be performing several distinct job functions.
+For instance, lets say that the person who answers the phone
+is also the person that keeps the coffee supplies in stock.
+If an answering service is hired (since they can page
+important people on beepers, or for some other good reason),
+and the switchboard operator is subsequently let go, then
+the office will run out of coffee.  You wouldn't normally
+expect an improvement in the telephone service to result in
+a degradation of the coffee service.  The functions should
+have been totaly unrelated.  The hiercical tree structured
+organizational chart becomes a tangled mass of spaghetti at
+the lower levels.
+
+   This same kind of situation may be found in programming:
+a low level module is used in many different places in the
+same program.  When a maintenance programmer examines the
+XYZ module to perform a bug-fix or enhancement, he may find
+that the best place to make the change is in the ABC module
+that XYZ calls.  So he edits ABC to modify it for the
+desired function, compiles, links, and tests his change.  It
+works beautifully, so he releases the code to the customer.
+But the ABC module was also called by the QRP module, whose
+existence the maintenance programmer was not even aware of.
+His change that worked so well for the XYZ module totally
+destroyed the function of the QRP module.
+
+   This problem occurs in other engineering disciplines
+also.  A mechanical designer friend of mine explained to me
+that only 10 percent of drafting is drawing; the other 90
+percent is bookkeeping, organizing, and checking.  When a
+drawing is modified, the parts used in the drawing may
+change.  The change to fix a problem with a part may be to
+switch from a split ring lockwasher to a interior star
+lockwasher.  Now the designer is faced with the same problem
+that the programmer was faced with:  whether to create a new
+drawing for the interior star lockwasher, or to edit the
+drawing for the split ring lockwasher to change it into an
+interior star lockwasher.  This is not a trivial problem!
+To create a new drawing means to increase the number of
+parts that must be inventoried and tracked, but to edit the
+old drawing requires him to make sure that all the other
+uses of the split ring lockwasher can be met equally well by
+the interior star lockwasher.  Maybe the other uses will be
+improved by the new washer; maybe they won't work at all.
+
+   The familiar indented bill of materials found in other
+engineering disciplines is just an outline representation of
+a tree structure.  We are back to the old hierarchy view
+again.  The bill of materials only shows what parts are used
+to build each sub-assembly, not what other sub-assemblies
+those same parts are used in, much less what top level
+assemblies those sub-assemblies are used in.  The problem is
+compounded when several different jobs draw from the same
+inventory, just like when many programs link from the same
+set of libraries, and when library routines call other
+library routines.  It is improtant to understand that each
+instance of a part in the bill of materials represents a
+separate and distinct object.  Even if two occurances have
+the same part number, they represent separate
+representatives of this type of part in different places in
+the product.
+
+   In programming, we are in an even worse situation,
+because the same exact piece of code can be used in several
+different modules.  Unlike the mechanical assembly, it's as
+though in software you only have one lockwasher, and that
+same instance of a lockwasher is in all those different
+places at the same time.  If you change the lockwasher for
+one use, you must either change it for all the other uses,
+or you must use twice as many parts to build your programs'
+lockwasher inventory.  Thus you must have two different
+instances of a lockwasher where you used to have only one.
+Now you must decide for each place where the old lockwasher
+was used whether you should still be using the old version,
+or the new design.
+
+   Many programmers would make a copy of the split ring
+lockwasher source file, edit it into an interior star
+lockwasher source file, compile it, and add it to the object
+library.  This approach, while frequently rationalized as
+getting the job done quickest, is doomed to long term
+disaster.  If a bug is later discovered in the split ring
+lockwasher routine, it probably exists in the interior star
+lockwasher routine as well, since they came from the same
+blood line, so to speak.  Nonetheless, the bug will probably
+be fixed in the split ring routine, but be discovered later
+in the interior star routine.  If the programmer who fixed
+the first bug is not the programmer looking into the second
+one, the new guy will have to debug the same problem all
+over again.  This is an expensive waste of a programmer's
+time and talents.
+
+   If you are a truly fastidious programmer, you will
+examine the old version and the new version, and will factor
+out the stuff that is common between the two, and make a
+proto-lockwasher out of that.  Then you will make two
+different "shells" to implement the "visible" lockwashers.
+Each of these shells will have a little bit of interface
+code and then call the proto-lockwasher to perform the bulk
+of the operation.  In this way, if a bug is later discovered
+in the common, proto-lockwasher code, it gets fixed in one
+place for once and for all.  Incidently, anything I say
+about fixing bugs applies equally well to adding
+enhancements, upgrading to a new operating system, or new
+hardware, etc.  All of these operations effect a change in
+the implementation.
+
+   Factoring causes changes to appear in a single place,
+rather than being distributed out all over the place.  It's
+just like in high school algebra.  Remember the distributive
+law?  ax+bx=(a+b)x  This segragates x in one place, so if we
+choose to substitute (that is, change) (3z+17)=x, then we
+can write (a+b)(3z+17) instead of a(3z+17)+b(3z+17).  The
+worst implementation of all would be a3z+a17+b3z+b17.  Given
+this last expression, how long would it take you to arive at
+the simpler, factored one?  Now complicate the issue by
+commuting some of the additions and multiplications to
+produce 17a+3az+17b+3bz.  That's even harder to factor, even
+though it is in what is generally called "simple" form.  In
+algebra we factor to get at the roots of an equation.
+Factoring also gets at the roots of the software design 
+problem.
+
+   The operation that Forth programmers call factoring is
+performed using the unification algorithm that was described
+in the BRIE article in the April 1986 DDJ.  A programmer,
+however, must factor across equivalence classes that are
+determined by the nature of the operations being performed.
+Consider the Forth code:
+
+   : Word1 X Y * Z + ;   ( and )   : Word2 Z Y X * + ;
+
+   Word1 and Word2 are equivalent operations when X, Y,
+and Z are integers.  The inference rules of modulation and
+demodulation can transform one of these members of an
+equivalence class into the other, if it is given rules for
+commutativity, associativity, etc., but to apply these kinds
+of transformations to all the expressions in a large program
+could choke a Cray until the start of the next Ice Age!
+
+   The general problem of factoring, whether it be of large
+numbers into primes, or of polynomials into products of
+sums, or of programs into fundamental invariant units, is
+extremely difficult:  it is demonstrably NP-complete.  The
+factoring of large integers is of great interest in
+cryptography; codes are hard to break because factoring is
+hard.  The excellent symbolic mathematics packages muMATH
+(developed by Dr. Albert Rich of the Soft Warehouse for the
+IBM-PC) and its big brother MACSYMA (developed by Dr. Joel
+Moses and others at MIT for Symbolics and other Lisp
+machines) only perform factoring of mathematical expressions
+within certain limits, or under human guidance.  This is
+because a general algorithm to factor an arbitrary
+expression can potentially lead to a recursive black hole,
+the AI version of the endless loop.  The general problem of
+applying resolution to prove theorems, as in the execution
+of a Prolog program, has been demonstrated to be generally
+intractable for the same reasons.
+
+   Compiler optimization schemes are based on the ability to
+factor out expressions that are invariant at run time and
+pre-compute them at compile time, or expressions that are
+invariant inside of a loop and pre-compute them before entry
+to the loop.  The reason so much emphasis is placed on
+factoring in Forth is because Forth definitions are
+generally small; therefore, they are easily factored to find
+sub-parts that are common with other definitions.  Most
+desirably, they are built from these factors in the first
+place, so that no factoring is needed when modification is
+performed.  The success of Forth in the factoring problem is
+that not only is the distinction between code and data
+hidden, but the distinction between what happens at compile
+time and run time is also hidden.  A word that was a
+compiling or defining word can be rewritten to be an
+interpreting word, or vice versa.
+
+   George Eberhardt of Computer Innovations tells me that he
+has run his new optimizing C86 compiler in a mode where the
+compile time optimization was so extensive that it was able
+to compile the seive benchmark with the entire contents of
+the seive pre-computed at compile time!  This is possible
+because all the terms that go into computing the seive are
+known at compile time, so the entire computation is
+predetermined.  Simple (in principle!) factoring out of loop
+invariant expressions recursively reduces the problem to an
+array that is initialized statically.  This produces a seive
+bench mark that runs in zero time.  George said, "I think
+we've finally put the seive to rest!"
+
+   However, this kind of stunt is not always desirable.  For
+one, the compile time must have been horrendous.  Another
+consideration is that the compiler has no way of adjusting
+its optimizing efforts to allow for a situation such as
+occurs when a C program accesses a status flag in a memory
+mapped I/O controller, such as a hard disk drive has.  If
+the program tests the flag in a loop, and the compiler
+determines that the program does not modify the flag, it
+would factor the flag test outside of the loop, since the
+compiler does not know that this particular memory location
+has the peculiar ability to change its value independent of
+the program's operation.
+
+   Similar problems occur in a multitasking situation.  I
+have used an earlier version of C86 together with Hunter &
+Ready's VRTX multitasking executive on a four CPU real-time
+vehicular control system where the fancy optimization
+maneouvers of the new compiler would have rendered my
+program inoperable.  For these reasons, George is not
+delivering the optimizer configured to carry things quite
+this far.
+
+   Lisp is a language that has the ability to control the
+compiler, by virtue of macros, as does assembler.  C permits
+a very limited capability of this sort with #define, but the
+facilities provided are really quite paltry.  C++ is
+supposed to help in this regard, but I don't see how the
+flexibility found in Forth or Lisp can ever be attained with
+such a rigid syntax.  The generics of Ada, together with
+packages, are a step in the right direction, but the syntax
+is too complex, and the granularity is way too large to be
+tractable at the human level for effective factoring to be
+achieved.  In Forth, the programmer is expected to extend
+the language by additions and alterations to the compiler.
+Not to do so ignores much of the power of the language.
+
+   Another major distinction between Forth and Lisp is that 
+even the module interconnect, or linkage, or calling sequence, 
+or parameter passing, or whatever you want to call it, is also
+hidden.  This may sound a bit scary, and it is at first, but
+if the definitions are kept suitably small, a single
+component's flow of control can be held in the human mind as
+one chunk.  Furthermore, the black-box function of a word
+can be held in the feeble human mind without recourse to how
+it performs that function.  The object oriented programming
+extensions to Forth that allow the implementation of Ada
+like packages and the hiding of private definitions are a
+help, but they also prevent a level of sharing of code that
+could otherwise help keep program size down.  With the
+decrease in memory prices and the increase in programmer's
+salaries, the trade-off is in favor of the packaged object
+oriented approach.
+
+   The obvious next step is classes and inheritance, after
+the manner of Smalltalk, LOOPS, Flavors, Units, Actors,
+Methods, and XLisp.  With a good inheritance network object
+browser, programming becomes almost a graphic art, or even a
+video game.  But here, the inheritance network is the
+spaghetti!  Each class or instance is small and concise,
+easily understood, but the inheritance network and the
+message passing protocols take up more and more of the
+programmer's time and attention as the size of the program
+grows.
+
+   In most object oriented languages, assignment is legal to
+just about anything in the symbol table.  Here is an
+interesting and paradoxical problem, represented in AML/X, an
+object oriented language for robot control developed at the 
+IBM T. J. Watson Research Center, but it could have been 
+written in Lisp or a dialect of Forth that supports forward 
+referencing (such as the LMI Metacompiler or UR/Forth) just 
+as well:
+
+foo : new SUBR(n)	/* define a factorial function */
+	RETURN( IF n EQ 0 THEN 1
+		ELSE n*foo(n-1) );
+      END;
+
+foo(3)	/* try it out */
+6	/* it works   */
+
+bar : new foo;  	/* assign a copy of foo to bar */
+
+bar(3)	/* try it out    */
+6	/* it works too  */
+
+foo : new SUBR(n)	/* a new definition for foo */
+	RETURN( n+1 );
+      END;
+
+foo(3)	/* try it out	 */
+4	/* it works fine */
+
+bar(3)	/* try bar again */
+9	/* @#$%*%! argh! */
+
+bar(4)	/* try another   */
+16	/* Moby Foo !!!  */
+
+   Why did the operation of bar change?  My instinct tells
+me that it should have remained a factorial function; after
+all, I never did anything to bar since it last worked.
+Certainly this is not the kind of desirable and expected
+side effect that promoters of object oriented programming
+systems desire!  The definition of foo, being self-
+referential, goes through the symbol table to make the
+recursive call.  When bar is assigned the definition of foo,
+somewhat akin to a MOVD in muLISP, everything works as
+expected, but later on, when the definition  of the original
+foo is changed, bar sees the change in its recursive call,
+which still goes to the current dynamic binding of foo,
+resulting in the effect of RETURNing in the ELSE clause a
+value of n*foo(n-1), but foo(z) is just z+1, so we return
+n*((n-1)+1), or n*n.  What is needed is a means of making
+the foo that appears in the recursive call inside the SUBR
+definition of foo refer not to the symbol foo's run time
+binding,  but rather to the binding in effect at the time
+the copying assignment was performed.  The resultant
+expression should be self referential without passing
+through the dynamic binding of any symbol.  Here the
+spaghetti is distributed in the time dimension rather than
+the data or program space dimension, but it's spaghetti
+nevertheless!
+
+   This same situation can also occur in Lisp, but due to
+the unity between the representation of code and data, we
+have the option of manipulating the list structure that
+represents the function definition so that the self
+reference through the symbol table, or OBLIST as it is
+called in Lisp, is implemented by a circularly linked list,
+thereby bypassing the OBLIST in the self reference.  We can
+write a function that takes the S-expression for a function
+that has already been defined and performs a REPLCA on it to
+make it circular without going through the symbol table, but
+there has got to be a more elegant (and readable) way.  The
+situation becomes even more convoluted when compound
+recursion is involved, such as in the unification algorithm,
+where A calls B and B calls A.  How could we ever display
+such a circular beast in human readable form on the screen?
+The listing would repeat forever as the pretty printer
+traversed the circular structure.  It is also conceivable
+that in some cases a reference actually should pass through
+the symbol table so that it really could be modified later
+on.
+
+   Conventional Forths do not suffer from this dificulty
+since they permit references only to words that are already 
+defined, and they permit redefinition while keeping the old
+early binding of previously defined words.  Likewise, the 
+Scheme dialect of Lisp solves the problem by implementing 
+closures to retain early bindings.  Late binding languages,
+such as conventional Lisp, AML/X, or forward referencing
+Forths suffer when unintentional redefinition occurs.  It
+should be possible to specify, in a language such as Forth,
+whether early or late binding is desired for any words being
+compiled into the definition of another word.  Currently, the 
+choice must be made uniform across all definitions in a program,
+and that choice is exercised by choosing the dialect of Forth
+one is working with: either it is an early binding implementation,
+such as conventional Forth, or it is a late binding one that 
+supports forward referencing.  See my earlier thoughts on a
+forward referencing, late binding, extension to a conventional
+Forth environment (LMI PC/Forth) in the file DEAR-RAY.TXT.
+
+   The similar problem of QUOTEing and unQUOTEing has been
+elegantly  solved in Lisp by the macros ' for quote and `
+for back-quote, or un-quote.  Perhaps a similar convention
+could be devised for the elimination of symbolic references
+to other functions in an object oriented environment.  With
+it, one could define an object like "foo" above and assign
+it to other objects, confident in the knowledge that
+subsequent assignments to sub-functions used in its original
+definition would not alter the behavior of objects assigned
+to before the sub-function modification.  This is
+effectively a packaging of the functional object, so that it
+is not affected by revisions to its component parts
+performed after that object has already been fabricated.
+The idea is to keep a finished pile of spaghetti in a box so
+it won't spill all over the place.
+
+   In the Forth language, the words [ and ] are used to
+control whether words will be compiled into the dictionary,
+or interpreted immediately.  This is the same concept as
+quote and unquote in Lisp.  The RECURSE word is usually
+compiled as:
+
+                  : RECURSE LAST , ;
+
+This compiles an absolute address, but if RECURSE were
+implemented as a relatively addressed call rather than a
+conventional absolutely addressed call, then copying the
+function definition would make the new copy's recursive call
+refer to itself rather than the old word.  This would
+require a new CODE word definition to effect a relatively
+addressed call to a word, but with this implementation,
+RECURSE would answer the need of a copyable and assignable
+self-referential defination.  This makes a nice box to keep
+the spaghetti in!
+
+   In Ray Duncan's LMI Metacompiler for Forth, an additional
+problem arises:  there are two machines involved, the Host
+and the Target.  Definitions may need to exist on the
+target, especially if a Forth interpreter is being ported to
+a new CPU, but some definitions also need to exist on the
+host, especially defining and compiling words.  If the
+target is a stand-alone embedded system, as it frequently is
+in metacompiler applications, some definitions may be needed
+only on the target for interpretation, some only on the host
+to generate the target system image, and some may be needed
+on both.  The spaghetti is now being served on two plates!
+
+   Ray has solved this problem in a restricted way by
+providing a metacompiler prepass, but doubly deferred
+defining words will not interpret correctly at metacompile
+time.  One solution would be to perform multiple pre-passes,
+but the pre-pass idea still places the defining word
+definitions that are only used to build the target image
+into the target's dictionary as well as the host's.  They
+are actually needed only in the host.  A dictionary switching
+set of words, such as HOST, TARGET, and BOTH, could be 
+implemented to select which dictionary a definition should 
+be compiled into, but how far should this sort of thing be 
+allowed to go?  It is beginning to look like a view down 
+the hall of mirrors at the carnival!
+
+   A simple problem with referents is solved in Lotus 123.
+When a cell is copied, the interpretation of cell references
+in the copy is normally relative to the new location of the
+expression.  The $ character is used to specify that a row
+or column number is absolute rather than relative.  A dollar
+only before the row means row absolute but column relative.
+A dollar before the column means column absolute but row
+relative.  A dollar before both means that the reference is
+"absolutely absolute".  The circular definition problem is
+solved in an approximate manner by specifying the number of
+times to perform a recalculate cycle to allow the values to
+converge and settle down.  The spaghetti runs verticaly and
+horizontaly, like the threads in a tapestry.  The spaghetti
+is now orthogonal!
+
+   Object oriented programming is a young discipline, and 
+much experimentation needs to be done about these topics.  
+One thing is seems clear, however:  if a deductive inference
+capability forms the "mind" of an AI  program, then an
+object modelling capability forms its "body"  and its
+"world".  In a robotic system, the vision and tactile
+sensors together with servo systems and the mechanical
+manipulators are really only I/O devices:  for the robot to
+interact effectively with its environment, it must have a
+mental picture of what is going on.  This is the object
+oriented representation.  To be truly autonomous, it must be
+able to plan and reason.  This is the job of the inference
+engine.
+
+   The use of database systems has revolutionized many areas
+of applications programming.  The hierarchical database has
+given way to the full network database as in the CODASYL
+standard.  Programs to access and manipulate the data in
+these databases can be simple and easily understood, but the
+spaghetti is in the data!
+
+   Relational databases are even nicer in many theoretical
+respects, and they lead the way to logic programming and
+Prolog.  What could be nicer than a Prolog program with very
+little depth of nesting in the source code, short concise
+predicate definitions, the ability to freely interchange
+code and data, and no pointers or side effects, or any of
+that bad stuff?  The whole program runs by matching
+patterns.  Well, if you were to draw a diagram of what
+patterns matched with what, you would end up with one big
+pile of spaghetti.  The spaghetti is in the relations!
+
+   The Lisp advocates are not immune either; in fact they
+are probably the worst of the lot.  They consider themselves
+very high-brow and academic by calling the spaghetti
+"property lists", or "augmented transition networks" or
+whatever, but Fetticini Alfredo Verde is just spaghetti,
+only dressed up!
+
+   Forth programmers like to brag about how neat and modular
+everything is in Forth, but they blush and hide their faces
+with shame when asked to explain something like this:
+
+    : Stack-Fiddle 	   ( his stack -- my stack )
+        ROT TOTE DUP SWOOP SWAP DROP FLOP PLOP ! ;
+
+There are usually several gyrations like this somewhere in
+any Forth application.  A good Forth programmer will bury
+this stuff at the bottom-most levels of his code, but the
+novice to Forth will have these perversions all through his
+source.  The top portion of the stack writhes and twists
+like the serpents on the head of Medusa.  The spaghetti is
+on the stack!
+
+   The very nature of threaded interpretive code implies
+something even worse than spaghetti.  The colon definition
+of a Forth word is really the same thing as a CDR-coded Lisp
+function definition, such as in Zeta-Lisp on a Lisp machine,
+or in the D-code of muLISP on a PC.  If you were to try
+drawing a diagram of all those threads, you would see a
+veritable cobweb of interconnections, but we don't even mind
+this.  Indeed, we glory in it, because it is hidden from our
+sight by our normal way of thinking about these programs.
+
+   W.  D.  Hillis describes his Connection Machine as a
+device with active data structures, where the information is
+in the connections between the processing nodes.  In his
+unique architecture, one of the primary computing devices is
+the "router", which controls the connections between the
+processors.  These connections can change as a result of the
+execution of the program, and the machine takes its name
+from this fact.  In this case the spaghetti is alive!  What
+we have is a veritable can of worms!  Nonetheless, the
+Xector extensions to the Lisp programming language that he
+proposes for dealing with this kind of parallelism are
+extremely enlightening.  The reason is that the spaghetti is
+hidden inside of an elegant programming metaphor, and whole
+gobs of the stuff can be manipulated with a single
+expression, and in very few machine cycles on this fine
+grained parallel architecture.
+
+   When parallelism is desired, it is usually necessary to
+explicitly specify which things can occur in parallel.  In
+these cases, the parameter list mechanism of Lisp is
+probably preferable to the stack oriented parameter passing
+mechanism of Forth, since several sets of parameters may be
+in the process of being passed between several concurrently
+executing operations at the same time.  The idea of streams
+and dataflow graphs is useful in these cases, since they
+provide a multidimensional analog to the one dimensional
+stack structure found in Forth.  What is really needed is
+a cabling system to connect individual software functions,
+much like the cables on the back of a component stereo system.
+
+   Board level systems integrators are constantly confronted
+with the problem of interconnecting circuit boards and
+sensors of differing manufacture.  Cables and connectors are
+the highest cost and most failure prone items in electronic
+systems today.  Even with ribbon cable and stake-on
+connectors, confusion abounds.  You can always stake the
+connector on upside down, and two like sexed connectors
+don't produce the same pin-out as differently sexed ones
+do.
+
+   I remember a friend of mine who was faced with the
+problem of making a ribbon cable extender for testing the
+circuit boards in the water resistant computer chassis of a
+robot submarine.  He figured circuit board edge connectors
+could be used to join two female ribbon cable connectors
+together, so he drew up the artwork for a simple printed
+circuit board that simply tied two board edge connectors
+together with straight traces.  The idea was to extend the
+original cable by attaching it to another short cable with
+the little circuit board.  The only trouble was that the
+ribbon cables together with the edge connectors interchanged
+the odd and even conductors of the cable.  The spaghetti was
+in the stake-on connectors!
+
+   Another ribbon cable confusion arises from the fact that
+the cable vendors number the wire one way, the connector
+vendors number the connectors another way, and the board
+vendors use all sorts of diverse contact numbering schemes.
+The conversion of a board edge connector pin number to a
+cable wire number to a cable connector pin number would turn
+an Einstein into a blithering idiot.  The spaghetti is in
+the module interconnections in hardware as well as in
+software.
+
+   Anyone who has worked with prototype hardware has seen
+circuit bread-boards.  If these boards are the only
+specimens of their kind in the known physical universe, they
+are probably constructed from standard off the shelf
+integrated circuits, but the interconnections between them
+are hand wired with a wire-wrap gun.  That's the spaghetti,
+the stuff that makes those boards different from other
+boards that use the same integrated circuits.  When the
+boards go into mass production, the interconnections will be
+made by copper foil traces on a printed circuit board, thus
+hiding the spaghetti.  The CAD tools that are used in a
+modern printed circuit board design shop to produce the
+circuit board artwork masters are fancy sophisticated
+interactive graphics systems.  All this horsepower is needed
+because large amounts of spaghetti are hard to handle.
+
+   We as programmers also need to have high powered tools to
+deal with the complexities of the interconnections in our
+software.  If you have ever used a big-time Lisp machine,
+or DigiTalk's SmallTalk for the IBM-PC, which provides
+a similar sort of picture with the Tree display (but this
+does not properly handle sharing of low-level structure),
+you have seen the wonderful graphic displays that show the
+interconnections between the structures of a large
+artificial intelligence application.  Expert systems shells
+such as KEE, from Intellicorp, generate fabulous graphic
+pointer diagrams that may be explored using the mouse,
+moving around and zooming in on detail, or backing out to
+see the big picture.  It is immediately obvious who uses
+what, and what depends on this, or what components are
+invoked by that, etc.  Artificial intelligence researchers
+and knowledge engineers developing complicated expert
+systems depend on this ability to "see" the data structures
+in order to keep a larger view of the system in their heads
+at once.
+
+   With the increasing memory, speed, and graphic
+capabilities of desk-top software development workstations,
+there should be a market for tools that perform similar
+functions for these machines.  Some of the outline
+processors, such as Think Tank, from Living Videotext, are a
+step in the right direction, but they still do not permit
+you to share the same sub-outline between several higher
+level paragraphs.  The disk browser XTREE from Executive
+systems is another example of a tree structured visual aid,
+this time using limited character graphics.  When coupled
+with a mouse, this program gives an incling of the feel for
+what realy powerful graphic structure browsers can do.
+
+   Graphic displays are mandatory to properly show the kind
+of sharing of structure that occurs in the spaghetti tangles
+that occur in real programs.  The graphic presentation
+displays the relationships in an immediately understood
+form.  Seeing realy is believing.  The added ability to edit
+the graph itself, using the mouse, allows the programmer to
+re-wire the interconnections in a comfortable visual
+setting.  We are gradually getting back to the old plug
+board patch panels of the ancient punch card tabulators.
+Now that was real spaghetti!
+
+   Given that the spaghetti is here to stay, that it is the
+very stuff of which information is made, pass the Parmesan
+cheese, please; I've got to hide this stuff under something
+else.  After all, I really am a good programmer; I wouldn't
+want anyone to thing that I actualy liked spaghetti!
+
+
+Note: Please comments, etc. about this viewpoint on the
+East Coast Forth Board, Fifth Conference (J 4): (703) 442-8695
+
+<EOF>
+
+
+

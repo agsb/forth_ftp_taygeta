@@ -1,0 +1,145 @@
+
+P R E S S   R E L E A S E                   For Additional Information For
+ Immediate Release                      Dr. George Nicol 4l5-322-8763
+
+                     Silicon Composers Announces the
+                    30 MIPS PC-RISC SYSTEM FOR IBM PCs
+
+           " P C   M I N I - S U P E R C O M P U T E R   K I T "
+
+Palo Alto, California--May 4, 1987--Silicon Composers announces the
+PC-RISC System for PCs, a new addition to its recently released PC4000 family
+of ultra-fast coprocessor boards for the IBM PC, XT and AT computers and 100%
+compatibles.  The heart of the PC-RISC System is the PC4000 coprocessor board
+which delivers speeds in the range of 4 to 6 MIPS (millions of instructions
+per second), more than twice the speed of a VAX 11/780 or an HP 9000. By using
+multiple PC4000 parallel processors, a three megabyte PC-RISC System which
+delivers 30 MIPS of speed in a concurrent parallel processing environment can
+be configured in the comfort of your PC.   The PC-RISC System software, PCX,
+provides a convenient environment for developing and running software as well
+as communicating between the PC and the PC4000s.  The host PC/XT or AT is used
+primarily as an I/O server to the PC-RISC System although it too can be used
+concurrently.  Each PC4000 coprocessor is a compact 3/4 length board with a
+half megabyte of memory of which 16K bytes is shared with the PC for data
+transfer and communications. All software is up-loaded from the PC.
+More (Y),N,NS? 
+      The high speed of the PC4000 is possible using the Novix NC4016 RISC
+Engine which is, according to Novix Inc., "the world's fastest 16 bit
+microprocessor."  The NC4016 is the first microprocessor to use gate-array
+technology in a 4000-gate, 3-micron HCMOS package. The NC4016 gains remarkable
+speed by using a RISC-like parallel architecture.  Most high level language
+instructions execute in a single clock cycle and up to five instructions can
+be combined and executed in parallel in a single clock cycle--unlike
+traditional CISC (Complex Instruction Set Computer) oriented chips.  With the
+new PC-RISC System from Silicon Composers, application programs coded in the
+high-level languages C or Forth run faster than their counterparts written in
+assembler language on any of the popular micros.  The PC4000 is the only PC
+board level product available using the NC4016 RISC microprocessor.
+      According to George Nicol, PhD, President of Silicon Composers: "A six-
+board PC4000 PC-RISC System embedded in an PC can provide the speed of a mini-
+supercomputer to give the user the greatest cost/ performance bargain
+available -- $300 per MIP.  An $8970 six board 30 MIP PC-RISC System can be
+used to support a single application, or each board can run a separate
+application.  One of our customers is now using a three board PC-RISC System
+to support a commercial color graphics application.  Users can start with a
+single PC4000 board PC-RISC System and add incrementally as many PC4000
+concurrent coprocessors as needed for their application."
+
+                 PC-RISC SYSTEM
+More (Y),N,NS? 
+          "PC MINI-SUPERCOMPUTER KIT"       Introductory Price
+           1 Coprocessor  --  4 MIPS              $1,295
+           1 Coprocessor  --  5 MIPS              $1,495
+           3 Coprocessors -- 15 MIPS              $4,250
+           6 Coprocessors -- 30 MIPS              $8,250
+             OEM pricing available.
+
+                THE PC-RISC SYSTEM PC4000 BOARD FEATURES:
+
+      * Multiple PC4000s (up to six) can plug into the PC.
+      * Use PC as I/O server -- load/store programs and data from PC,
+        no on board PROM, PC4000 has direct memory access to PC disks,
+        I/O, or memory-to-memory transfers.
+      * Read/write to any PC memory location.  Move data from any
+        PC4000 coprocessor to any other.
+      * PC4000 shares bus and a minimum of 16K bytes of memory
+        with the PC for communications and data transport.
+      * PCX concurrent multi-PC4000 board software includes
+        development system and a fast full-featured screen editor.
+      * Direct PCX-editor/PC4000 switching for convenient fast
+        software development turnaround with 512k RAM disk.
+      * 512K bytes on-board 256Kx18 bit, parity checked DRAM.
+      * PC4000 memory can be used for expanding PC memory
+More (Y),N,NS? 
+        space by either 128K, 384K, or 512K bytes.
+      * Four 112K byte banks of PC4000 memory selectable using
+        the NC4016 X2 and X3 lines.
+      * 512 byte stacks on each PC4000 coprocessor.
+      * PC4000 can generate interrupts to the PC using any of
+        6 jumper selectable PC interrupts.
+      * READY line on PC4000 suspends PC when NC4016 and PC access
+        same memory simultaneously -- when coprocessor is idle, PC
+        runs at full speed.
+      * Microprocessor resets at startup and begins operation
+        within one clock cycle under control of the PC.
+      * 40-pin user port includes: 16-bit B-port, 5-bit X-port,
+        WEB, +/-5 volts, +/- 12 volts, 5 grounds, BR/W, D0-D4,
+        NC4016 interrupt, clock and reset.
+      * CPU LIF socket for NC5000 upgrades.
+      * Includes PCX communications software for multiple or single
+        PC4000 board operation.
+      * Includes an interactive public domain Forth development
+        system with optimizing compiler, editor, and utilities.
+
+                       NC4016 RISC ENGINE FEATURES:
+      * 16-bit high speed (200/250 nanosecond cycles), HCMOS single-chip
+        microprocessor with simultaneous access of return stack, data stack,
+More (Y),N,NS? 
+        main memory and I/O bus, concurrent with operation of
+        ALU and shifters.
+      * Fully static operation permits very low power consumption for
+        battery powered applications.
+      * Direct execution of most FORTH primitives in a single machine cycle --
+        no internal microcode -- multiple instruction single
+        cycle execution.
+      * One-cycle subroutine call with mostly zero-cycle returns, one cycle
+        structured IF, ELSE, NEXT instructions, one cycle fetch and store from
+        local memory, and one cycle generation of a logical true (hex FFFF).
+      * Multiplication, division, and square-root step instructions.
+      * TIMES instruction allows any instruction, including auto-
+        increment/decrement memory access, to repeat once per cycle.
+      * Supports 64K 16 bit word memory with X-port for memory paging.
+      * 257- element 16-bit hardware return stack with the top element in an
+        on-chip register and 258-element 16-bit hardware data stack with top
+        two elements in on-chip registers.
+      * Two versatile I/O ports, one 16 bits wide and one 5 bits wide, both
+        bi-directional, maskable, auto-comparable, and programmable for either
+        latched or tri-state output.
+
+     SOFTWARE: Available software for the PC4000 includes SCForth, Delta-C,
+cmForth, and PCX.  SCForth, based on the popular Forth 83-Standard, is an
+More (Y),N,NS? 
+easy-to-learn development language for building applications.  Delta-C is an
+extended Small-C language for compiling C code into NC4016 executable code.
+cmForth is a non-standard, compact, public domain Forth language used by many
+NC4016 programmers.  PCX, provided with the PC-RISC System, is an MSDOS based
+software system used for systems communication and data transport and software
+development.  PCX can be used for single or multiboard operation.
+
+     BENCHMARKS: The Sieve of Eratosthenes is a popular and often quoted
+benchmark which measures the execution time of a program that calculates the
+first 1899 primes.  The IBM PC using Forth takes 7.0 seconds to execute the
+Sieve.  The Silicon Composers' PC4000 runs the Sieve in an incredible 0.07
+seconds, 10,000% faster than on the PC, over 20,000% times faster than Turbo
+Pascal on the PC, and over 200,000% times faster than PC-BASIC. Delta-C
+completes the Sieve benchmark on the PC4000 in 0.32 seconds, 3200% faster than
+C on the IBM PC.  The PC-RISC system can produce a 100-loop CGA Mandelbrot
+screen image in under 35 seconds.
+
+      DELIVERY:  Each Silicon Composers' PC-RISC System comes fully tested and
+assembled, ready to install, with User Manual and 90 day warranty. Each system
+is bundled with PCX and Silicon Composers provides a 24 hour bulletin board
+for customer support.  Delivery is 2 weeks ARO from stock.  OEM pricing is
+available.
+
+

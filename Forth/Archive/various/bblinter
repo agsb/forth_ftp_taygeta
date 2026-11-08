@@ -1,0 +1,1696 @@
+
+	SUBTTL	DOC	documentation on BBL internals
+	%OUT	DOC	documentation on BBL internals
+	PAGE	+
+;==================================
+COMMENT |
+ 
+Purpose
+=======
+ 
+The purpose of this document is to tell you everything of
+importance about how the BBL Forth compiler works internally.
+It was not written in MS-Word form to make it easier to
+reference while you are perusing assembler source code with a
+split screen text editor such as the Norton Editor.
+ 
+UNUSUAL FEATURES
+================
+ 
+BBL Forth is true 32 bit.  All stack items are 32 bits long.
+You can address a full megabyte and write programs that fill a
+megabyte with high level code.
+ 
+BBL is twice as fast as Laboratory Microsystems PC Forth Plus,
+the best of the commercial 32 bit forths.  It runs neck and neck
+with Harvard Forth, the fastest of the 16 bit Forths.
+ 
+BBL Forth keeps the top of stack in a register pair rather than
+in ram as traditional.
+ 
+BBL Forth is a direct threaded incremental compiler.  There are
+no CFAs in the usual sense.  The assembler code starts right at
+the cfa.  In traditional Forth, the cfa contains a pointer to
+the assembler code.
+ 
+The cfas, pfas, and nfas are kept in three totally separate
+sections of RAM.  In traditional Forths, all three are side by
+side.
+ 
+The dictionary is mulithread for fast compilation.
+ 
+The programmer works directly with absolute segment:offset
+addresses.
+ 
+BBL supports various DOS functions and uses the standard DOS
+file interface.  One file called the Cache file contains the
+familiar 1024 byte blocks manipulated with BLOCK and UPDATE.
+The variable SWEEP can be set to -1 0 or +1.  This will optimize
+the BLOCK function.  If you are reading the blocks sequentially
+1,2,3,4 in ascending order, set SWEEP to +1.  If you are reading
+blocks 4,3,2,1 in descending order then set SWEEP to -1.  If you
+are reading all over the place, set SWEEP to 0.  If SWEEP is not
+set correctly everything will still work, but not as quickly as
+it could.
+ 
+The variable LOGO can be set to -1 if you wish to handle the
+problem of recompiling the way LOGO does.  If you set it to 0
+(the default) recompilations are handled in the usual FORTH way.
+In LOGO mode if you recompile a word, the old word is patched
+with a jump to the new word which effectively causes all users
+of the old version to automatically start using the new version
+-- without recompiling the old users.  In Forth mode, the users
+of the old version continue to use to old version until they are
+recompiled.  This can save a lot of time when you are debugging.
+You need only recompile the definition that changed, not all the
+definitions that either or indirectly used the old definition.
+ 
+For example:
+  : X	1 . ;
+  : Y	X   ;
+  : X	2 . ;
+  Y
+ 
+Forth mode would display 1.  Logo mode would display 2.
+ 
+The NED editor has a Find-another-of-what-I-am-pointing-at
+feature that makes browsing and maintaining much much easier.
+ 
+ 
+MEMORY MAP
+==========
+ 
+There is nothing very sacred about this memory map.  You could
+completely change it by reordering the SEGS in SEGS.ASM.
+Abundance would not like it if you did however.
+ 
+The word .MAP will show you the location of all interesting
+places in your particular configuration.
+ 
+Here is the typical output of .MAP
+ 
+	     Start    Current	Biggest    Used   Free Words Threads
+HEREC cfas 37CF:0000 37CF:8F09 37CF:B2EE  36617   9189
+HEREB word	     37CF:205F
+HERE  pfas 42FE:0000 5733:0050 68DA:0000  82848  72224
+PAD		     5733:0150
+HEREV nfas 68DB:0000 68DB:314F 68DB:75BE  12623  17519	1079	   1 FORTH
+HEREV nfas 7037:0000 7037:00C8 7037:0169    200    161	  16	   1 ONLY
+HEREV nfas 704E:0000 704E:4D7B 704E:520F  19835   1172	1314	2048 HIDDEN
+HEREV nfas 756F:0000 756F:09D5 756F:0C7F   2517    682	 232	 256 ASSEMBLER
+HEREV nfas 7637:0000 7637:0D51 7637:0F9F   3409    590	 222	 256 EDITOR
+HERER vsrs 68DA:0000 7731:0000 778E:0000  58736   1488
+D stack SP 778F:0408 778F:0408 778F:0008  grow down from S0@ to BIGGEST-SP@
+R stack RP 778F:0818 778F:0814 778F:0418  grow down from R0@ to BIGGEST-RP@
+Cache bufs 778F:0820	       778F:282F
+Outback    778F:2830 778F:FFFE 9FFF:000E  55246 100112
+	    OUTBACK BLACK-STUMP   MARS
+ 
+BIRDS EYE VIEW
+==============
+ 
+Overview of entire address space:
+ 
+0000:0000	Interrupt Vectors
+0040:0000	Rom Bios work area
+0050:0000	Dos work area
+		Dos
+		Device Drivers ANSI.SYS RamDrive.SYS
+		Terminate and Stay Resident programs such as:
+		Btrieve
+		Superkey
+		Lightning
+		Sidekick
+		Ready
+3725:0000	Environment region SET= (actual addr varies)
+3735:0000	PSP - program segment prefix
+3745:0000	Your Program BBL/Abundance/Application	<<<
+		free RAM
+		The OUTBACK -- first word of free RAM
+		free RAM
+		BLACK-STUMP -- last word covered by SS:
+		Free Ram
+		Transient part of Command.Com
+9000:FFFE	MARS -- last word of free RAM
+B000:0000	Monochrome REGEN buffer
+B800:0000	Colour Graphics adapter REGEN buffer
+C800:0000	ROM to for Hard disk controller
+E000:0000	Rom Bios
+F000:FFFF	Last byte of ROM
+ 
+ 
+DOG'S EYE VIEW
+==============
+ 
+Now Lets Zoom in on What RAM looks like within your
+BBL/Abundance application:
+ 
+3725:0000	Environment region SET=
+3735:0000	PSP - program segment prefix
+3745:0000	ORIGIN - FIRST BYTE OF YOUR PROGRAM
+  CS:0000	relative address 0
+  CS:		CFAs : HEREC free space for more CFAs ( <64K )
+  DS: or ES:	PFAs : HERE  free space for more PFAs ( >64K )
+  ES:		FORTH  NFAs : HEREV free space for more ( <64K )
+  ES:		ONLY   NFAs : HEREV free space for more ( <64K )
+  ES:		HIDDEN NFAs : HEREV free space for more ( <64K )
+		etc
+  ES:		HERER Free space for more vocs ( >64K )
+  SS:		data stack growing down
+  SS:		return stack growing down
+  SS:		disk buffers for CACHE file 1K each
+		LAST BYTE OF YOUR PROGRAM
+  SS:		The OUTBACK  -- used by Abundance for the J-stack
+		grows down from the BLACK-STUMP,
+		but the OUTBACK is free for any purpose by pure BBL
+		progs.
+		the BLACK-STUMP - last word of OUTBACK covered by SS
+		Free Ram
+		transient part of Command.Com etc
+		MARS - last word of RAM
+		ROMS etc.
+ 
+FLEA'S EYE VIEW
+===============
+ 
+Now lets zoom in yet again and see more detail of what is going
+on in each of the segments.
+ 
+ 
+		CFA_SEG SEGMENT
+		===============
+CS:0000
+		Cfas and assembler code
+HEREC		spare cfa space
+		( no more than 64k worth)
+BIGGEST-HEREC
+ 
+		PFA_SEG SEGMENTS
+		================
+DS:		pfas and the tokens that make up high level definitions
+		variables and arrays
+HERE		( spare pfa space )
+		( might be 300K or so )
+BIGGEST-HERE
+ 
+		FORTH_SEG NFA SEGMENT
+		=====================
+ES:		FORTH vocabulary region
+		vocabulary control variables
+		hash tables
+		-----------
+		nfa's for words in FORTH vocabulary
+HEREV		( spare nfa space for FORTH words )
+		( no more than 64K worth)
+BIGGEST-HEREV
+ 
+		ONLY_SEG NFA SEGMENT
+		=====================
+ES:		ONLY vocabulary region
+		vocabulary control variables
+		hash tables
+		-----------
+		nfa's for words in ONLY vocabulary
+HEREV		( spare nfa space for ONLY words )
+		( no more than 64K worth)
+BIGGEST-HEREV
+		----------
+		ditto for other vocabularies
+ 
+		VOCS_SEG NFA SEGMENTS
+HERER		( spare space for more vocabularies )
+BIGGEST-HERER	( may be larger than 64k)
+ 
+		STACK SEGMENTS
+		==============
+SS:		stacks and buffers
+		no more than 64K worth
+BIGGEST-SP@	Full Forth Data-Stack
+		space space for D-stack
+SP@		current top of D-stack
+S0@		bottom of Forth Data stack -- grows down
+		-------------------
+BIGGEST-RP@	Forth Return-Stack
+		space space for R-stack
+SP@		current top of R-stack
+S0@		bottom of Forth Return stack -- grows down
+		-------------------
+FIRST		first disk buffer
+		disk buffers
+		------------------
+OUTBACK
+		used by abundance for J-stack
+BLACK-STUMP	------------------
+		transient command.com (trashable)
+		------------------
+MARS
+ 
+ 
+<<<REGISTER USAGE>>>
+ 
+The following registers must be set before calling NEXT
+ 
+DS:SI  - Forth IP -- points to next word-token to interpret
+	 Sometimes temporarily used as source in string instructions.
+ 
+CS:AX  - Forth W - cfa of token being interpreted now.
+	 AX need not be preserved.
+ 
+SS:BP  - return stack pointer
+ 
+SS:SP  - data stack pointer
+	 You may be interrupted at any time, and the interrupt
+	 process will temporarily put things on your stack.
+	 So make sure you always use PUSH/POP or decrement the
+	 stack pointer to cover the data before you move it to
+	 the stack otherwise it could get clobbered by an interrupt.
+ 
+CS:	 code segment -- CS: always points to first byte of your
+	 program -- the ORIGIN -- NOT THE PSP!!!!!
+	 ALL assembler code resides in lowest 64K and is thus
+	 covered by CS:.  CS: never changes.  All cfas also
+	 reside in the first 64K.
+ 
+CX:BX  - top of stack 32-bit quantity. Not pointer to TOS (top
+	of stack), the actual value.  CX has high order part.  CX is
+	often used internally in looping constructs, but it is restored
+	to the TOS value prior to NEXT.  Sometimes ES:BX is used to
+	address memory, but BX is restored to the TOS value prior to
+	NEXT.  Because the top of stack is stored in registers rather
+	than in RAM with the rest of the stack as is traditional,
+	we can save a lot of pushing and popping.
+ 
+DX:AX  - scratch registers.
+	 DX:AX are trashable.
+	 When used as a pair, DX is usually the high order part.
+	 DX:AX often set to point to the pfa of the word we are
+	 executing now, but don't count on it.  In contrast
+	 DS:SI points to the token we are about to interpret
+	 after we finish this one.
+ 
+ES:DI  - used as destination in string instructions. ES: is trashable.
+	 DI MUST BE RESTORED TO 0 before NEXT.	Moving DI to a
+	 register or memory is the fastest way to clear it.
+ 
+flag direction register is always 0 -- ie. increment mode.
+	 Some string code change it with STD, but they must set it back
+	 back with CLD before NEXT
+ 
+BEFORE CALLING NEXT MAKE SURE:
+	 DI=0  CX:BX=Top stack element	DS:SI = IP
+	 SS:BP = Rstack ptr  SS:SP = Dstack ptr
+ 
+In memory all numbers are stored LSB/LSW first.
+ 
+Addresses are stored as seg:offset with offset stored first.
+Note that all addresses are ABSOLUTE machine addresses.  We use
+machine addresses, not CS: relative addresses.	This causes
+complications with relocatability, but it more than makes up for
+it with increased speed.
+ 
+Canonical addresses are arranged so the offset portion is
+[0..15].  This means an address can "cover" the most territory
+by simple addition to the offset.
+ 
+However, if the address lies in the code CFA_SEG segment in the
+first 64K of the program, the cleanest form, called a tick-style
+address, has the segment equal to CS: and the offset is any
+value.	Note that addresses in the first 64K, but not in the
+code segment are not considered as tick-style.	Addresses in
+vocabulary storage regions always have the segment pointing to
+the first word of the vocabulary storage region.
+ 
+Relative addresses are signed 32 bit integers -- not Seg:offset.
+They are bytes relative to the ORIGIN
+ 
+Quantities in memory may be 1,2,4,8 bytes long.
+ 
+Quantities on the stack are always in multiples of 32-bits (4
+bytes)
+ 
+On the data stack for 32-bit quantities, the high order 16-bits
+are most accessible on the top of the stack (in lower memory as
+the stack grows down).	However each 16-bit group is stored LSB
+in lower memory.  For 64 bit quantities the highest 16-bits are
+most accessible on the top of the stack, the next highest
+16-bits is under that etc.  Thus 32-bit addresses on the stack
+are stored with the segment on the top of the stack, ie. in
+lower memory.
+ 
+The memory convention is compatible with standard 8086
+conventions and MS-DOS.  The stack convention is compatible with
+the usual Forth double precision conventions.
+ 
+==================================
+ 
+<<<THE DATA STACK>>>
+ 
+The data stack grows down.  It is always covered with the SS:
+segment register.  The top element of the stack is stored in
+CX:BX where CX is the high order part.
+ 
+When then stack is empty SS:SP is S0@, and CX:BX=0.
+ 
+When the stack has one element in it, SS:SP is S0@-4.  and CX:BX
+has the value of the TOS. The dummy 32-bit 0 is pushed onto the
+stack in S0@-4 .. S0@-1.
+ 
+When there are two elements SP points to S0@-8.  The TOS is in
+CX:BX and the element 1 deep is stored at S0@-8 .. S0@-5.  A
+dummy 0 is stored at S0@-4 .. S0@-1.
+ 
+SP@ returns SS:SP prior to the call.  PICK is the proper way to
+get at elements deep on the stack, but some programers like to
+cheat.	Many common tricks using @ directly to get at elements
+deep in the stack will not work.  To make them work, push some
+value onto the stack eg. via DUP. This will cause the top
+element to be pushed from CX:BX to the Ram part of the stack.
+SP@ returns the address of element one deep in the logical stack
+-- ie.	physical address of top of stack.  In older Forth
+implementations usually SP@ returns address of logical top of
+stack.
+ 
+Note that nothing of value is ever stored in S0@-4 .. S0@.  SP@
+S0@ - 4 MOD is always 0.  For further information see SP@, SP!,
+S0, S0@, DEPTH, BIGGEST-SP@
+ 
+If you cheat and try to access the stack via @ operators (to
+write your own version of .S the stack dump for example), you
+will have to be very careful if you do not use PICK.  The
+techniques used in ordinary Forths will not work in BBL!!
+ 
+To get the top element of the stack you would have to do the
+following:
+ 
+	DUP ( to push top element out of CX:BX into RAM stack )
+	SP@ ( address of 2nd from top )
+	@   ( get value )
+	W>< ( swap high and low words - Forth Stack conventions different )
+	    ( from standard Intel RAM byte order ).
+ 
+If you want to get at the bottom element of the stack via @, you
+need this code:
+ 
+	DUP  ( to ensure top element is pushed from CX:BX to RAM
+	     ( based stack.  Not really necessary in this case.)
+	S0@  ( initial value of SS:SP )
+	8 -  ( where bottom element starts )
+	@
+	W><  ( swap words because stack stores MSW in lower Ram )
+ 
+ 
+==================================
+ 
+<<<THE RETURN STACK>>>
+ 
+The return stack is covered by the SS: segment register.  The
+Top of stack is pointed to by SS:BP.  When the stack is empty,
+SS:BP is R0@.  In a way, the FORTH IP DS:SI acts for the Rstack
+much as CX:BX acts as top of stack for the Dstack.  When the R
+stack has one element in it, SS:BP is R0@-4 and the value is
+stored at R0@-4 .. R0@-1.  Nothing of value is ever stored at
+R0@.  RP@ R0@ - 4 MOD is always 0.  For further information see
+RP@, RP!, R0, R0@ and BIGGEST-RP@
+ 
+==================================
+ 
+<<<THE INNER INTERPRETER>>>
+ 
+The inner interpreter, sometimes called NEXT, is that crucial
+tiny piece of code that after one primitive Forth word completes
+executing does the housekeeping to start up the next one.  This
+code gets executed so frequently that its design is the major
+factor in determining execution speed.
+ 
+In contrast, the outer interpreter is the suite of words such as
+ABORT, QUIT, INTERPRET, BEAVER, WORD, ENCLOSE, QUERY, EXPECT and
+FIND that control the parsing of keyboard input looking for
+commands to execute or definitions to compile.	Its design
+primarily controls compilation speed, but has little effect on
+execution speed.
+ 
+BBL is a direct threaded incremental Forth compliler.  High
+level code consists of 2 byte tokens.  The token consists of the
+16-bit relative-addresses of the CFA's of the words.  All code
+words lie in the first 64k.  All high level definitions have a
+tiny piece of assembler code in low memory to get them started.
+Thus all CFAs are in the first 64K.  This scheme allows directly
+addressing a full megabyte with a quick simple inner
+interpreter.
+ 
+		; CLD guaranteed here. DI guaranteed 0.
+		; DS:SI is FORTH IP. Points to token to interpret next.
+NEXT:	LODSW	; ( 12 cycles 1 byte )
+		; DS:SI is new FORTH IP.
+		; now points at token after the one we are about to
+		; interpret
+		; AX has the token.  Token is the relative address
+		; of some assembler code at the cfa.  The assembler code
+		; starts right at the cfa.  In most other Forth's there
+		; is a pointer at the cfa to the actual
+		; assembler code.
+	JMP  AX ; ( 11 cycles 2 bytes )
+		; CS:AX is Forth W -- points to CFA of word
+		; we are about to interpret in low 64K.
+		; jumps to assembler code at the cfa of the
+		; word we're about to interpret.
+		; NOTE WE DO NOT DO MOV BX,AX JMP [BX]!!
+		; That would take 12 extra cycles.
+ 
+This inner interpreter takes 3 bytes and 23 cycles.
+ 
+Because the inner interpreter is so short we can expand it
+inline to save the JMP NEXT for a saving of 15 cycles.
+ 
+This inner interpreter was chosen over about ten other
+possibilities.	This one was the fastest overall even though it
+makes dictionary structure a bit wild and makes the words >BODY
+BODY> >NAME etc. almost impossible.
+ 
+This interpreter is faster than segment tokens, mixed length
+tokens, full seg:offset tokens and indirect offset tokens to
+name a few.
+ 
+It is even faster than using pure assembler FAR CALL/RET
+instructions to implement high level code.  It is faster because
+the return address is kept in a register and with CALL/RET it
+gets pushed to and popped from the the Ram-Based stack.  The
+NEXT equivalent would be FAR-CALL FAR-RET plus two XCHG SP,BP's
+to get at the stack.  This is 28+23+8 = 59 cycles versus my 23
+cycles.  However CALL/RET fares better when a COLON definition
+is calling another COLON definition.  FAR CALL/RET is even
+faster at 51 cycles because the XCHGs are not needed. My Q: - ;S
+combination takes a ponderous 61+36 = 97 cycles. The slower : -
+;S compination takes 78+36 = 114 cycles.
+ 
+Presume you ran your system for a few hours and counted p, the
+number of NEXTs (excluding those part of DOCOL and ;S) and q,
+the number of DOCOLs executed.	My system is faster than FAR
+CALLS when 23p + 97q < 59p + 51q.  I.e. when p/q > 1.28.  Even
+Charles Moore (the creator of Forth who is famous for advocating
+short colon definitions) would have a p/q ratio exceeding 3.
+The only way you could ever get p/q < 1.28 is to have colon
+definitions with only one word in them.
+ 
+In a way then, we can say the BBL Forth compiler generates code
+that is faster than the equivalent modular code written in
+assembler!  As well as being faster, my method uses far less RAM
+-- 2-bytes per token verses a 5 byte far call.	This speed
+justifies the term "incremental compiler", rather than
+"interpreter."
+ 
+Another advantage of this scheme is that traditional
+breakpoint/trace debugging techniques can be used.  You can
+insert a breakpoint at the cfa of the word in question.
+ 
+Low level words can easily use high level words with a simple
+JMP XXX_Cfa.
+ 
+Because the cfas, pfas, and nfas are widely separated, it is
+very easy for words like ;CODE and DOES to totally recreate the
+code at the Cfa orginally placed there by CREATE.  It is easy to
+patch a short routine with a longer or shorter one.  In most
+other Forths, there is no room for the patch.
+ 
+ 
+<<<DICTIONARY STRUCTURE>>>
+ 
+Before reading this, make sure you are familiar with the
+overview of dictionary structure in \AB1\BBLDOC\BBL.DOC.
+ 
+The dictionary structure uses separate headers, and a hash
+table to speed searching.  All assembler code lies in the first
+64K.  High level words can fill the whole megabyte address
+space.
+ 
+A high level colon definition is made of 3 parts:
+ 1.  a small piece of assembler code in low 64K at the cfa.
+ 2.  a set of 16 bit tokens defining what the definition does
+     in high memory. (pfa)
+ 3.  the name of the definition (nfa) and links to other
+     definitions in the same vocabulary (lfa) -- the headers are
+     stored in a separate vocabulary region.  This region can
+     be thrown away after compilation.	It is usually in very high
+     memory.
+ 
+ 
+=================================
+How CODE Definitions are compiled
+=================================
+ 
+e.g.  CODE XXX	( n -- n n : example that does same thing as DUP )
+	BX PUSH 	( SPASM postfix user assembler code )
+	CX PUSH
+	NEXT
+	END-CODE
+ 
+compiles as:
+CFA_SEG SEGMENT
+XXX_cfa:
+	PUSH	BX		; user written code
+	PUSH	CX		; goes in low 64K
+	LODSW			; Next
+	JMP	AX
+CFA_SEG ENDS
+There is no pfa. If >BODY is used, you will get 0.
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+===========================================
+How Q: Quick Colon definitions are compiled
+===========================================
+ 
+There are two types of COLON definition,  Quick colon ( Q: )
+uses an inline cfa, whereas standard colon ( : ) uses a JMP
+DOCOL style.  All the high level definitions such as INTERPRET
+and EXPECT that are part of the compiler itself are implemented
+as Q: definitions rather than colon definitions.
+ 
+e.g.  : XXX  DUP . ;
+ 
+CFA_SEG SEGMENT
+XXX_Cfa:				; in low 64K
+	XCHG	SP,BP			; ( 4 cycles 2 bytes )
+					; Save FORTH IP=DS:SI
+					; on Rstack DS:SI points
+					; to token after the one we are
+					; about to interpret
+	PUSH	SI			; ( 10 cycles 1 byte )
+	PUSH	DS			; ( 10 cycles 1 byte )
+	XCHG	BP,SP			; ( 4 cycles 2 bytes )
+					; Get IP=DS:SI to point to
+					; pfa where first token
+					; of this definition is
+	MOV	DX, SEG XXX_Pfa 	; ( 4 cycles 3 bytes )
+					; seg at cfa+7
+					; we cant set DS: directly
+	MOV	SI, OFFSET XXX_Pfa	; ( 4 cycles 3 bytes )
+					; offset at cfa+10
+	MOV	DS,DX			; ( 2 cycles 2 bytes )
+	LODSW				; ( 12 cycles 1 byte )
+					; NEXT - jump to cfa of
+					; first token
+	JMP  AX 			; ( 11 cycles 2 bytes )
+					; Total 61 cycles 17 bytes
+CFA_SEG ENDS
+ 
+>BODY can find the pfa of a colon definition from its cfa by
+disassembling the codes for XCHG SP,BP then extracting the seg
+and offset from the code.
+ 
+actual definition in high mem above 64K
+PFA_SEG SEGMENT
+XXX_Pfa 	OFFSET DUP_cfa		; Token1-DUP (always an even address)
+		OFFSET DOT_cfa		; Token2-.
+		OFFSET SEMIS_cfa	; Token3-;S
+PFA_SEG ENDS
+ 
+name field in very high memory in the vocab region
+ 
+FORTH_SEG	SEGMENT
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+The code for ;S is NOT repeated inline for each cfa, just the token.
+The code for ;S looks like this:
+ 
+CFA_SEG SEGMENT
+SEMIS_Cfa:				; in low 64K - only 1 copy
+	XCHG	SP,BP			; ( 4 cycles )
+					; restore FORTH IP=DS:SI
+					; from Rstack so DS:SI points
+					; to token one we are
+					; about to interpret
+	POP	DS			; ( 8 cycles )
+					; strangely POP is
+					; faster than PUSH on 8086
+	POP	SI			; ( 8 cycles )
+	XCHG	BP,SP			; ( 4 cycles )
+	LODSW				; ( 12 cycles )
+					; NEXT - jump to cfa of
+					; first token
+	JMP	AX			; ( 11 cycles )
+					; ( 36 cycles total )
+CFA_SEG ENDS
+ 
+ 
+===========================================
+How Standard Colon definitions are compiled
+===========================================
+ 
+There are two types of COLON defintion,  Q: uses an inline cfa,
+whereas standard colon ( : ) uses a JMP DOCOL style.
+ 
+e.g.  : XXX  DUP . ;
+ 
+CFA_SEG SEGMENT
+DOCOL_cfa:				; only 1 copy
+					; 55 cycles total
+					; at this point DX:AX is
+					; expected to point to
+					; the pfa
+	XCHG	SP,BP			; ( 4 cycles 2 bytes )
+					; Save FORTH IP=DS:SI
+					; on Rstack DS:SI points
+					; to token after the one we are
+					; about to interpret
+	PUSH	SI			; ( 10 cycles 1 byte )
+	PUSH	DS			; ( 10 cycles 1 byte )
+	XCHG	BP,SP			; ( 4 cycles 2 bytes )
+					; Get IP=DS:SI to point to
+					; pfa where first token
+					; of this definition is
+	MOV	DS,DX			; ( 2 cycles 2 bytes )
+	MOV	SI,AX			; ( 2 cycles 2 bytes )
+	LODSW				; ( 12 cycles 1 byte )
+					; NEXT - jump to cfa of
+					; first token
+	JMP	AX			; ( 11 cycles 2 bytes )
+CFA_SEG ENDS
+ 
+e.g.  : XXX DUP . ;
+ 
+Compiles to:
+ 
+CFA_SEG SEGMENT
+XXX_Cfa:				; in low 64K ( 9 bytes )
+	MOV	DX, SEG XXX_Pfa 	; 3-bytes, seg at cfa+1
+	MOV	AX, OFFSET XXX_Pfa	; 3-bytes, offset at cfa+4
+					; points to Token-Create
+	JMP	DOCOL_cfa		; 3-bytes
+CFA_SEG ENDS
+ 
+This implementation takes 17 extra cycles, but saves 8 bytes per
+definition over the Q: implementation.
+ 
+actual definition in high mem above 64K
+PFA_SEG SEGMENT
+XXX_Pfa 	LABEL	WORD
+		OFFSET	DUP_cfa 	; Token1-DUP (always an even address)
+		OFFSET	DOT_cfa 	; Token2-.
+		OFFSET	SEMIS_cfa	; Token3-;S
+PFA_SEG ENDS
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+The code for ;S is NOT repeated inline for each cfa, just the token.
+ 
+ 
+==========================
+How Constants are compiled
+==========================
+ 
+e.g.   12 CONSTANT XXX	 ' YYY  ADCON XXX   12 QCONSTANT XXX
+ 
+Constants are generated as though they were primitives.
+Constants don't have a pfa.  The inline code is generated to
+push them to the stack.  This code is always in low memory under
+64K.  If >BODY were used on them, you would get 0.  This
+technique is much faster than the traditional way with the value
+of the constant stored at the PFA, and a cfa of JMP DOCON.  The
+only disadvantage of this technique is that 888 ['] XXX >BODY !
+will not work to change the value of a constant.  There is a new
+word  888 ['] XXX CONSTANT! that pulls off this trick.  It
+patches the assembler code.  It only works on CONSTANTS -- not
+ADCONs or QCONSTANTs.
+ 
+CONSTANT, ADCON and QCONSTANT are equivalent, except that
+different optimizations of the generated code are done.
+CONSTANT is the general non-optimized case where the value may
+or may not be a relocatable address.  ADCONs are used for
+relocatable addresses and QCONSTANTS are used for values that
+are not relocatable addresses.
+ 
+CFA_SEG SEGMENT
+XXX_cfa:		; in low 64k ( 11 bytes, 51 cycles )
+	PUSH	BX	; ( 10 cycles 1 byte )
+	PUSH	CX
+	MOV	BX,0012 ; low order part of constant
+			; low order at cfa+3
+	MOV	CX,0000 ; high order part of constant
+			; high order part at cfa+6
+	LODSW		; next
+	JMP	AX
+CFA_SEG ENDS
+ 
+The code generator for QCONSTANT makes the following optimizations:
+	If BX = 0, generates MOV BX,DI instead
+	If CX = 0, generates MOV CX,DI instead
+	If CX = BX, generates MOV CX,BX instead.
+ 
+The code generator for ADCON makes the following optimizations:
+	If BX = 0, generates MOV BX,DI instead
+	If CX = 0, generates MOV CX,DI instead
+	If CX = CS, generates MOV CX,CS
+ 
+The code generator for CONSTANT makes no optimizations:
+	This way relocation can have no effect on the code generated.
+	CONSTANT! can be used to change the value of the constant.
+	CONSTANT! presumes no optimizations have been done.
+ 
+Note there is NO pfa.  >BODY can detect that constants have no
+pfa because when it disassembles the code at the cfa it notices
+the low order BX register is set up before the high order CX.
+For other words the high order CX is set up first.
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+==========================
+How VARIABLEs are compiled
+==========================
+ 
+e.g.   VARIABLE  XXX   or   CREATE XXX 4 ALLOT
+ 
+CFA_SEG SEGMENT
+XXX_cfa:				; in low 64k ( 51 cycles 11 bytes )
+	PUSH	BX			; ( 10 cycles 1 byte )
+	PUSH	CX			; ( 10 cycles 1 byte )
+	MOV	CX, SEG XXX_Pfa 	; ( 4 cycles 3 bytes )
+					; seg at cfa+3
+	MOV	BX, OFFSET XXX_Pfa	; ( 4 cycles 3 bytes )
+					; offset at cfa+5
+	LODSW				; ( 12 cycles 1 byte )
+	JMP	AX			; ( 11 cycles 2 bytes )
+CFA_SEG ENDS
+ 
+This inline method is 19 cycles faster than doing a JMP DOVAR,
+though it takes 2 more bytes.
+ 
+>BODY can find the pfa of a variable from its cfa by
+disassembling the codes for PUSH BX PUSH CX and MOV CX then
+extracting the seg and offset from the code.
+ 
+PFA_SEG SEGMENT
+XXX_pfa 	DW			; reserve 4 bytes in high memory
+		DW			; usually above 64K ;
+					; always at an even address
+					; LSW stored first
+PFA_SEG ENDS
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+===========================
+How QVARIABLES are compiled
+===========================
+ 
+QVARIABLES are very similar to variables except that the pfa
+is kept in low memory right after the cfa:  This allows code
+words to access their pfas using a CS: override.  The SEG
+portion of the address is in a register CS: giving a little
+extra speed.
+ 
+e.g.	QVARIABLE  XXX
+	( all the system variables e.g. STATE DPL etc are
+	QVARIABLES )
+ 
+CFA_SEG SEGMENT
+XXX_cfa:				; in low 64k ( 49 cycles 10 bytes )
+	PUSH	BX			; ( 10 cycles 1 byte )
+	PUSH	CX			; ( 10 cycles 1 byte )
+	MOV	CX,CS			; ( 2 cycles 2 bytes )
+	MOV	BX, OFFSET XXX_Pfa	; ( 4 cycles 3 bytes )
+					; offset at cfa+5
+	LODSW				; ( 12 cycles 1 byte )
+	JMP	AX			; ( 11 cycles 2 bytes )
+ 
+>BODY can find the pfa of a QVARIABLE from its cfa by noting
+the codes for PUSH BX PUSH CX and MOV CX,CS then extracting the
+offset from the code and the SEG from CS:.
+ 
+		EVEN
+XXX_pfa 	LABEL	WORD
+		DW			; reserve 4 bytes in low memory
+		DW			;
+					; always at an even address
+					; LSW stored first
+					; Total space for a QVARIABLE
+					; is 10+4=14 and sometimes 15
+					; if we had to pad to an
+					; word boundary.
+CFA_SEG ENDS
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+============================
+How ;CODE words are compiled
+============================
+ 
+e.g.  : KIND  CREATE , ;CODE
+	( KIND is a slow version of constant )
+	( on entry DX:AX points to pfa of XXX )
+	BX PUSH 			( example user code )
+	CX PUSH 			( in PostFix asm )
+	DX ES MOV
+	AX BX MOV			( ES:BX points to pfa )
+	ES: 2 [BX] CX MOV
+	ES: [BX] BX MOV 		( CX:BX has value of the )
+					( constant )
+					( stored at  the pfa )
+	NEXT END-CODE
+ 
+12  KIND XXX
+ 
+Compiles to:
+ 
+CFA_SEG SEGMENT
+KIND_Cfa:  ( KIND )			; in low 64K ( 9 bytes )
+	MOV	DX, SEG KIND_Pf 	; 3-bytes, seg at cfa+1
+	MOV	AX, OFFSET KIND_Pfa	; 3-bytes, offset at cfa+4
+					; points to Token-Create
+	JMP	DOCOL_cfa		; 3-bytes
+					; This shows the short form
+					; of Colon. It could
+					; just as easily be the inline form
+ 
+>BODY can find the pfa of a variable from its cfa by
+disassemling the codes for PUSH BX PUSH CX and MOV CX then
+extracting the seg and offset from the code.
+ 
+KIND_Code:				; this code will always find the
+					; pfa of XXX in DX:AX because
+					; ;CODE patched XXX_Cfa to put
+					; it there.
+	PUSH	BX			; EXAMPLE OF USER CODE
+	PUSH	CX			; assembled by SPASM from
+	MOV	ES,DX			; the post-fix assembler source
+	MOV	BX AX			; after ;CODE
+	MOV	CX,ES:[BX+2]
+	MOV	BX,ES:[BX]
+	LODSW
+	JMP	AX
+ 
+XXX_Cfa:				; starts out looking
+					; like this but soon gets patched by
+					; (;CODE)
+					; in low 64k ( 11 bytes, 51 cycles )
+	PUSH	BX			; ( 10 cycles 1 byte )
+	PUSH	CX			; ( 10 cycles 1 byte )
+	MOV	CX, SEG XXX_Pfa 	; ( 4 cycles 3 bytes )
+					; seg at cfa+3
+	MOV	BX, OFFSET XXX_Pfa	; ( 4 cycles 3 bytes )
+					; offset at cfa+5
+	LODSW				; ( 12 cycles 1 byte )
+	JMP	AX			; ( 11 cycles 2 bytes )
+ 
+XXX_Cfa:				; gets patched by (;CODE)
+					; ( 9 bytes, 23 cycles )
+	MOV	DX, SEG XXX_Pfa 	; 3-bytes, seg at cfa+1
+	MOV	AX, OFFSET XXX_Pfa	; 3-bytes, offset at cfa+4
+					; points to Pfa of XXX
+	JMP	KIND_Code
+CFA_SEG ENDS
+ 
+>BODY can find the pfa of a ;CODE word from its cfa by noting
+the codes for MOV AX MOV DX then extracting the seg and offset
+from the code.	This is the same way >BODY gets pfas for COLON
+definitions
+ 
+actual definition in high mem above 64K
+PFA_SEG SEGMENT
+KIND_Pfa	LABEL WORD
+	DW	OFFSET CREATE_Cfa	; Token-Create
+	DW	OFFSET COMMA_Cfa	; Token-, (always an even address)
+	DW	OFFSET ISEMICODE_cfa	; Token-(;CODE)
+					; built by ;CODE
+	DW	OFFSET KIND_Code	; built by ;CODE
+					; NOT EXECUTED after (;CODE)
+					; because (;CODE) has built in EXIT
+					; Immediate data for (;CODE)
+					; to point to HEREC at the
+					; time ;CODE is executed
+XXX_Pfa LABEL	WORD
+	DW
+	DW
+PFA_SEG ENDS
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset KIND_cfa in low mem relative to CS:
+KIND_Nfa:	header byte
+		the letters "KIND" forming the name
+KIND_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+KIND_Trail:	1 byte total length of Nfa+Lfa
+ 
+name field in very high memory in the vocab region
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+Here is the code for (;CODE) itself which occurs only once.
+ 
+: (;CODE)
+	(  -- : makes CFA of LATEST word point to asm code pointed to
+	by token after (;CODE) )
+\  compiled by ;CODE
+\ (;CODE) is quite unlike the usual FORTH (;CODE) that
+\ redirects LATEST to the code following (;CODE).  There is
+\ no code following (;CODE).  The code is in an entirely
+\ different segment.  Thus (;CODE) is followed by a 16-bit
+\ token that points to the code. This token was built by
+\ ;CODE. Note ;CODE executes when the defining word is
+\ defined.  (;CODE) executes later when the defined word is defined.
+\ The actual code is executed still later when the defined word is used.
+\ If you understand this, you are lucky.  This is the most
+\ complicated thing in all of Forth.
+\ NOTE THIS CODE IS ALSO GENERATED BY DOES>
+	R>
+		\ NOT R@, - effectively does 2EXIT later
+		\ seg:offset of token pointer code is after (;CODE)
+	TOKEN@ ( addr asm code i.e. Kind_Code )
+		\ HEREC now points to XXX_cfa
+		\ HERE usually points past XXX_pfa
+		\ patch the XXX_cfa to say
+		\ MOV DX, SEG XXX_pfa
+		\ MOV AX, OFFSET XXX_pfa
+		\ JMP Kind_Code
+	LATEST NAME> >BODY ( Kind_Code XXX_pfa )
+	UNCREATE ( unALLOT existing XXX_cfa )
+	( Kind_Code XXX_pfa ) BUILD-JMP
+		\ earlier pop Rstack - acts like 2EXIT
+		\ returns back to INTERPRET
+	( note unbalanced R> )
+	EXIT ;
+ 
+Here is the code for ;CODE itself.  It appears only once.
+ 
+ 
+===================================
+How CREATE DOES> words are compiled
+===================================
+ 
+e.g.  : KIND   CREATE , DOES> ( pfa of XXX on stack ) @ ;
+	( KIND is a slow version of CONSTANT )
+       12  KIND XXX
+ 
+ 
+Compiles to:
+ 
+CFA_SEG SEGMENT
+KIND_Cfa:				; in low 64K ( 9 bytes )
+	MOV	DX, SEG KIND_Pfa	; 3-bytes, seg at cfa+1
+	MOV	AX, OFFSET KIND_Pfa	; 3-bytes, offset at cfa+4
+					; points to Token-Create
+	JMP	DOCOL_cfa		; 3-bytes
+ 
+KIND_Code:				; patched into place by DOES>
+					; AFTER the JMP DOCOL_cfa
+					; NOT ON TOP OF IT
+	PUSH	BX			;
+	PUSH	CX			; 23 bytes, 77 cycles
+	MOV	CX,DX			; DX:AX = XXX_pfa
+	MOV	BX,AX			; TOS = XXX_pfa
+	XCHG	SP,BP			; like DOCOL
+	PUSH	SI
+	PUSH	DS			; push old Forth IP
+	XCHG	BP,SP
+	MOV	DX, SEG KIND_Does
+	MOV	SI, OFFSET KIND_Does
+	MOV	DS,DX			; DS:SI now points to KIND_Does
+	LODS				; next
+	JMP	AX
+ 
+ 
+XXX_Cfa:				; starts out looking
+					; like this but soon gets patched by
+					; (;CODE)
+					; in low 64k ( 11 bytes, 51 cycles )
+	PUSH	BX			; ( 10 cycles 1 byte )
+	PUSH	CX			; ( 10 cycles 1 byte )
+	MOV	CX, SEG XXX_Pfa 	; ( 4 cycles 3 bytes )
+					; seg at cfa+3
+	MOV	BX, OFFSET XXX_Pfa	; ( 4 cycles 3 bytes )
+					; offset at cfa+5
+	LODSW				; ( 12 cycles 1 byte )
+	JMP	AX			; ( 11 cycles 2 bytes )
+ 
+XXX_Cfa:				; as patched by (;CODE)
+					; ( 9 bytes, 23 cycles )
+	MOV	DX, SEG XXX_Pfa 	; 3-bytes, seg at cfa+1
+	MOV	AX, OFFSET XXX_Pfa	; 3-bytes, offset at cfa+4
+					; points to Pfa of XXX
+	JMP	KIND_Code
+CFA_SEG ENDS
+ 
+>BODY can find the pfa of a DOES> word from its cfa by noting
+the codes for MOV AX MOV DX then extracting the seg and offset
+from the code.	This is the same way >BODY gets pfas for COLON
+definitions
+ 
+actual definition in high mem above 64K
+ 
+PFA_SEG SEGMENT
+KIND_Pfa	LABEL WORD
+	DW	OFFSET Create_Cfa	; Token-CREATE
+	DW	OFFSET Comma_Cfa	; Token-, (always an even address)
+	DW	OFFSET ISEMICODE_Cfa; Token-(;CODE)
+					; built by DOES>
+	DW	OFFSET Kind_Code	; built by DOES>
+					; to point to HEREC at time
+					; Kind_Code is generated
+					; Not executed directly.  Acts
+					; as data for (;CODE) that does
+					; a built-in EXIT.
+KIND_Does:
+	DW	OFFSET @_cfa		; Token-@
+	DW	OFFSET SEMIS_cfa	; Token-;S
+ 
+XXX_Pfa LABEL WORD
+	DW				; built by comma
+	DW
+PFA_SEG ENDS
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset KIND_cfa in low mem relative to CS:
+KIND_Nfa:	header byte
+		the letters "KIND" forming the name
+KIND_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+KIND_Trail:	1 byte total length of Nfa+Lfa
+ 
+name field in very high memory in the vocab region
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+============================
+HOW VOCABULARYs are Compiled
+============================
+ 
+eg. VOCABULARY	XXX
+ 
+CFA_SEG SEGMENT
+DOVOC_cfa:				; one copy handles all vocabularies
+	MOV	ES,DX
+	MOV	DI,AX			; DX:AX point to pfa
+	MOV	AX,ES:[DI]
+	MOV	DX,ES:[DI+2]		; DX:AX points to voc region
+	MOV	CS:CONTEXT_PFA,AX	; make this vocabulary
+	MOV	CS:CONTEXT_PFA+2,DX	; the one to search by stuffing
+					; its voc storage region in CONTEXT
+	XOR	DI,DI
+	LODSW				; Next
+	JMP	AX
+ 
+XXX_Cfa:
+	MOV	DX,SEG XXX_Pfa
+	MOV	AX,OFFSET XXX_Pfa
+	JMP	DOVOC_cfa
+CFA_SEG ENDS
+ 
+PFA_SEG SEGMENT
+XXX_Pfa LABEL WORD		; the pfa usually above the first 64K
+	DW	OFFSET XXX_Reg	; always 0
+	DW	SEG XXX_Reg	; high memory where word headers in
+				; vocab are kept
+				; Note that the nfa for XXX itself is
+				; NOT there in the vocab storage region
+				; The first 32 bits of vocab storage region
+				; this points to latest nfa to be added
+ 
+Vocabulary storage regions always start on Paragraph boundaries
+in high memory we can presume the Offset part of this address is
+always 0.  If the headers have been thrown away, the segment
+part too will be 0.  At present the code for completely throwing
+headers away has not been written.  Some changes may have to be
+made to various words so that they will not choke on
+vocabularies without there headers.
+ 
+There is a separate vocabulary storage region for each
+vocabulary ie. a separate one for Forth and for HIDDEN --
+usually allocated in high memory somewhere where it can be
+thrown away later after compilation is finished.  The vocabulary
+storage region starts on a paragraph boundary.
+ 
+	DW	OFFSET Prev-Voc-Link
+			; address of the previous
+			; vocabulary on the VOC-LINK chain.
+			; points to the pointer -- not the pfa.
+ 
+	DW	SEG Prev-Voc-Link
+PFA_SEG ENDS
+ 
+ 
+name field in very high memory usually in the FORTH or ONLY vocab region
+FORTH_SEG	SEGMENT
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:	header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+ 
+This new vocabulary has its own Vocabulary storage region in
+high memory, past the FORTH vocabulary storage region.	All
+offsets in this region are relative to the start of the region.
+ 
+VOC_SEG SEGMENT
+XXX_Reg:
+	ALIGN on paragraph boundary
+ 
+XXX_LATEST	DW ?
+		; at offset 0
+		; 16-bit offset of nfa of latest word
+		; added to this vocab.	offset relative to start
+		; of XXX_Reg vocabulary storage region
+		; 0 means no words in vocab yet
+ 
+		DW ?
+		; seg portion of LATEST - always points to XXX_Reg
+		; unless there are no words in the vocabulary yet
+		; in which case it is 0.
+ 
+XXX_NAME	DW ?
+		; at offset 4
+		; offset part of the nfa of the vocabulary itself
+		; it will be in some other vocabulary storage
+		; region.  ORDER VOCS .MAP etc. can thus display
+		; the names of vocabularies.
+		DW ?
+		; segment part of the nfa of the vocabulary itself
+		; Because vocabularies are FAMOUS this pointer is
+		; repeated at PFA-4 as well.  This is like having
+		; a belt and suspenders.  FAMOUS words were invented
+		; long after the VSR structure was laid down.
+		; Removing this not totally necessary
+		; pointer would have meant changing a lot of code
+		; with hard coded offsets and would likely have
+		; introduced bugs.
+ 
+XXX_DPV 	DW ?
+		; at offset 8
+		; 16-bit offset of next free location to add
+		; words (like DP) offset relative to start of
+		; XXX_Reg vocabulary storage region.
+ 
+		DW ?
+		; seg portion of DPV - always points to XXX_Reg
+ 
+ 
+XXX_SMALLEST DW OFFSET XXX_Trail+1
+		; at offset 12
+		; 16-bit offset of first allowed location in
+		; this region for nfas.  offset
+		; relative to start of XXX_Reg vocabulary
+		; storage region.
+		; It is the intial value for HEREV
+		; It points one past the dummy trail byte
+		; following the hash thread table.
+ 
+		DW ?
+		; seg portion of BIGGEST_HEREV - always points to XXX_Reg
+ 
+XXX_BIGGEST DW 0FF00h
+		; at offset 16
+		; 16-bit offset of last allowed location in
+		; this region used to prevent overflow.  offset
+		; relative to start of XXX_Reg vocabulary
+		; storage region
+ 
+		; This is determined at the time the vocabulary
+		; is created by examining the system variable
+		; VOC-SIZE.  BIGGEST-HEREV accesses XXX_BIGGEST
+		; in the CURRENT vocabulary to compute its result.
+		; BIGGEST-HEREV is effectively XXX_BIGGEST @
+ 
+		DW ?
+		; seg portion of BIGGEST-HEREV - always points to XXX_Reg
+ 
+XXX_HashThreads DW ?
+		; at offset 20
+		; Use UW@ not @
+		; count of how many hashing threads used in THIS
+		; voc.
+		; do not confuse with variable VOC-THREADS used to
+		; control how many threads newly created will
+		; vocabularies have.
+ 
+XXX_HashMask	DW 1FFEh
+		; at offset 22
+		; Use UW@ not @
+		; 16-bit hashing mask
+ 
+		; 0000h allows	   1 thread
+		; 0002h allows	   2 threads
+		; 0006h allows	   4 threads
+		; 000Eh allows	   8 threads
+		; 001Eh allows	  16 threads
+		; 003Eh allows	  32 threads
+		; 007Eh allows	  64 threads
+		; 00FEh allows	 128 threads
+		; 01FEh allows	 256 threads
+		; 03FEh allows	 512 threads
+		; 07FEh allows	1024 threads
+		; 0FFEh allows	2048 threads
+		; 1FFEh allows	4096 threads
+		; 3FFEh allows	8192 threads
+		; 7FFEh allows 16384 threads
+		;
+		; There us no point in having more threads than
+		; this.
+ 
+		; The value for XXX-HashMask is determined at the
+		; time the vocabulary is declared by examining
+		; the system variable VOC-THREADS -- a power of
+		; 2 number between 1 and 16384.
+ 
+		; Because the IBM Macro assembler is not very
+		; bright, the nucleus FORTH Vocabulary is built
+		; with only one thread. Later BBL can rebuild it with
+		; multi-threads.
+ 
+Then follows a table of 16-bit entries, one for each thread:
+ 
+XXX_HashTable	DW ?
+		; table starts at offset 24
+		; 16-bit offset of NFA of most recently added
+		; word hashing to this thread.
+		DW ?
+		etc one for each hashing thread
+		; ...
+ 
+XXX_DummyTrail	DB ?
+		; one byte 0,  Used by PREV-NFA to note that
+		; there are no earlier nfas in the vsr.
+ 
+Following that are the entries for each word in the vocabulary,
+a token, nfa, optional lfa, and trail byte for each definition.
+ 
+How to determine which thread a name belongs on.
+------------------------------------------------
+ 
+The usual hashing algorithms require a division by a prime.  The
+remainder becomes the thread number.  On the 8088 division is
+very slow.  We have devised a hashing algorithm that provides
+excellent scattering/distribution over all threads, even if
+words are short or similarly named.  We XOR all the bytes of the
+name (including the length byte) together, but after each XOR we
+rotate left one bit.
+ 
+The rotate ensures that words that are anagrams of each other
+(eg. >R and R>) hash to different keys.
+ 
+We rotate rather than shift so that long words with identical
+endings do not hash to the same key.  After this is complete, we
+have a 16-bit random key.  Typically we need an 8,9,10,or 11 bit
+key.  To avoid wasting the high bits we then XOR the high byte
+onto the lower byte. Again this prevents words with identical
+endings from randomizing to the same key.  We then mask off some
+of the high bits and the low bit which gives us an even number
+which is 2* the thread number.	The word HASH accomplishes this.
+ 
+Then comes a dummy 0 byte.  It acts as a dummy Trail byte to
+mark the end of the reverse chain through all the words threaded
+via a trailing length byte.
+ 
+This there are two separate threading systems to find the
+predecessor nfa.  The optional 2-byte lfa points to a
+predecessor on the same hash thread.  This is of interest to
+words like FIND.  The 1-byte trailing length byte also acts as a
+sort of lfa.  If you know the nfa of a word, it is pretty easy
+to find the trailing length byte of the predecessor word -- just
+subtract 3 to bypass the cfa token just in front of the nfa.
+>From that you can find the predecessor's nfa -- even if the
+predecessor is on a different hash thread simply by subtracting
+the trail length.  This type of predecessor is of interest to
+words like FORGET, WORDS and PREV-NFA.
+ 
+You can also think of the trail byte as a sort of mini-lfa part
+of the successor word.
+ 
+The two high order bits of the trail byte are used as the FAME
+and a reserved bit for future use.
+ 
+If the FAME bit is on, there exists a pointer to the NFA at
+PFA-4.	This can be used by Q>NAME and QBODY>NAME.  This pointer
+must be maintained if ever the nfa is moved.
+ 
+ 
+Then come the headers for the words in that vocabulary -- one
+for each word.
+ 
+NFA - CFA TOKEN
+===============
+ 
+NNN_CfaPtr	DW	OFFSET NNN_Cfa
+			; 16-bit token (offset of
+			; corresponding CFA relative to CS:)
+NFA HEADER BYTE
+===============
+ 
+NNN_Nfa 	DB	the name field address header byte
+ 
+ 
+  8 bit header byte sometimes called the length byte (This is the NFA).
+  bit 7 = 1 link field is present
+	Note that is most Forths this bit is always 1.
+  bit 6 = 1 word is immediate -- precedence bit
+  bit 5 = 1 word is smudged -- i.e. invisible to FIND
+  bits 4..0 = length in characters of the name
+ 
+NFA NAME
+========
+ 
+  1..31 bytes -- name -- 8 bit chars to allow full 256-char set.
+	e.g. the letters NNN
+	Use of unprintable characters in not recommended however.
+	NOTE - Names are NOT converted to upper case.  Thus you must
+	get the case exactly right when you use a definition.
+	E.g. XXX and xxx are two totally different definitions.
+	This was done because Abundance uses nfas in generating
+	prompt messages.  Converting to upper case would make
+	the prompts look ugly.	The alternative of having FIND doing a
+	case insensitive match would slow down compilation.  BBL's
+	case sensitivity is a nuisance at first, but you soon get
+	used to it.  Note that careful naming conventions takes
+	90% of the pain out.
+ 
+LFA - LINK FIELD ADDRESS
+========================
+ 
+NNN_Lfa 	DW	OFFSET MMM_Nfa
+			; 16-bit link field (optional) -- points
+			; to NFA of earlier word in this vocab
+			; that hashed to the same number.  if
+			; bit 7 of length word is 0, this word
+			; is not present and we have no more
+			; words to search.  First word to hash
+			; to a number will have no link field.
+			; If all is well we get no collisions,
+			; but if we do subsequent words point
+			; back to previous word with same hash
+			; number.  NOTE The NFA is considered to
+			; point to the length byte -- NOT the
+			; token.  This gives greater
+			; compatibility with older Forth
+			; implementations.
+NFA TRAIL BYTE
+==============
+ 
+NNN_Trail	 DB	THIS BYTE - NNN_Nfa
+			; 1 byte total length of headerbyte+name+Lfa
+			; (does not include length of CFA token)
+			; used so that you can find the nfa
+			; of the this (previous) word regardless of
+			; which thread it is on.  This is used
+			; by FORGET and WORDS to scan the vocabulary
+			; from most recent to oldest dictionary entry.
+			; When you find a 0 trail byte, you know you have
+			; found the beginning of the dictionary.
+			; In some future implementation the high order
+			; bit of the trail byte will be used for
+			; dead code detection.	It will be set on
+			; whenever this word is actually used.
+			; Only the low order 6 bits are used for
+			; the length.  The high order bit 7 is used as the
+			; FAME bit to indicate a pointer to the NFA
+			; exists at the PFA-4.	Bit 6 is reserved for
+			; some future use.
+VOCS_SEG	ENDS
+ 
+=======================
+HOW CONTEXT is compiled
+=======================
+ 
+CONTEXT is an array.  The first 32 bit item holds the vocab
+storage region of the transient vocab to search first.	It is
+stored offset first.  Following that are 4 addresses giving the
+vocab storage regions of 4 additional resident vocabularies to
+search also.  Following that is one sticky resident vocabulary
+to search also.  The sticky vocabulary is usually ONLY.
+ 
+If an entry is 0, that resident vocabulary is bypassed.  FIND
+first looks in CONTEXT @ then it looks in CONTEXT 4 + then
+CONTEXT 8 +, CONTEXT 12 + then CONTEXT 16 + then CONTEXT 20 +.
+ 
+The offset portion will always be 0.
+ 
+CFA_SEG SEGMENT
+CONTEXT_cfa:				; in low 64k ( 9 bytes, 49 cycles )
+	PUSH	BX			; ( 10 cycles 1 byte )
+	PUSH	CX			; ( 10 cycles 1 byte )
+	MOV	BX, OFFSET CONTEXT_Pfa	; ( 4 cycles 3 bytes )
+					; offset at cfa+3
+	MOV	CX,CS			; ( 2 cycles 2 bytes )
+	LODSW				; ( 12 cycles 1 byte )
+	JMP	AX			; ( 11 cycles 2 bytes )
+ 
+; The Pfa is always in low memory so CODE words can get at it easily.
+ 
+CONTEXT_pfa	LABEL	WORD
+		DW	OFFSET FORTH_Reg
+					; transient voc to search first
+		DW	SEGMENT FORTH_Reg
+ 
+		DW	OFFSET XXX_Reg	; 1st resident vocab to search next
+		DW	SEGMENT XXX_Reg ;
+ 
+		DW	OFFSET YYY_Reg	; 2nd resident vocab to search next
+		DW	SEGMENT YYY_Reg ;
+ 
+		DW	0		; 3rd resident vocab to search next
+		DW	0		; 0 marks no more vocs
+ 
+		DW	0		; 4th resident vocab to search next
+		DW	0		;
+ 
+		DW	OFFSET ONLY_Reg
+					; 5th sticky resident vocab
+		DW	SEGMENT ONLY_Reg
+					; usuall set to ONLY
+CFA_SEG ENDS
+ 
+name field in very high memory in the vocab region
+FORTH_SEG	SEGMENT
+		offset of XXX_cfa in low mem relative to CS:
+XXX_Nfa:			header byte
+		the letters "XXX" forming the name
+XXX_Lfa:	2 byte link field offset relative to start of vocab region
+		(optional) pointing to previous name hashing
+		to same thread.
+XXX_Trail:	1 byte total length of Nfa+Lfa
+FORTH_SEG	ENDS
+ 
+========================
+How VOC-LINK is compiled
+========================
+ 
+VOC-LINK is simply a system variable that holds the address of
+the Prev_Voc_Link of the most recently created vocabulary. It
+points directly to the pointer -- not to the pfa.
+ 
+=============
+DP HERE ALLOT
+=============
+ 
+Keeping track of free space is much more complex than in
+FIG Forth.  In Fig Forth you had DP HERE and ALLOT to keep track
+of the next free location in the dictionary.  In BBL, you need
+multiple DPs to keep track of space in the various regions:
+ 
+DPC HEREC ALLOTC BIGGEST-HEREC
+		in low 64K -- where we can put the next
+		cfa or piece of assembler code.
+		HEREC is seg:offset with seg: always = CS:
+ 
+HEREB		in low 64K -- a simple 257 byte buffer
+		where WORD leaves its results.	In traditional
+		Forths, WORD leaves its results at HERE or
+		the equivalent of HEREV.  HEREB is used in error
+		messages to get at the string most recently parsed.
+		Because HEREB is in a fixed location and overflow
+		is theoretically impossible, there is no
+		need for words like DPB ALLOTB or BIGGEST-HEREB
+ 
+DP HERE ALLOT BIGGEST-HERE
+		in high memory.  -- where we can put the
+		next Pfa, Variables, arrays, high level
+		definitions.
+		HERE  will be the
+		paragraph below the most recent CREATE -- ie.
+		a canonical SEG as of the last create.
+ 
+DPV HEREV BIGGEST-HEREV
+		within a vocabulary storage region.  There is
+		one such region for each Vocabulary.  The
+		CURRENT vocabulary is always presumed.
+		HERE is seg:offset with SEG always pointing to
+		the start of the vocabulary storage region.
+ 
+HERER ALLOTR BIGGEST-HERER
+		vocabulary storage regions must be carved out
+		of high memory as new vocabularies are invented.
+		This keeps track of where next region can be built.
+		HERE is Seg:offset.  The offset will always be 0
+		because vocbulary storage regions always start
+		on paragraph boundaries and always are an even
+		number of paragraphs long.
+ 
+Note that , W, C, all work on the PFA_SEG segment.  There are a
+separate set of words called ,C  W,C  C,C that work on the
+CFA_SEG Assembler writers watch out!
+ 
+Protected Mode
+==============
+ 
+The 80286 chip in the IBM AT may some day run in protected mode
+under a multi-tasking operating system e.g. OS/2.  Someone may
+then want this compiler to run in protected mode.  It will not
+be too difficult a job to convert this compiler.  The main
+difference will be in the canonization procedures >REL REL>
+>REL>.
+ 
+In real mode 0000:0010 and 0001:0000 are just two different ways
+of getting at the same byte in memory.	In protected mode, these
+are totally separate areas of memory.
+ 
+Every different value for a segment register accesses its own
+private region of up to 64K of RAM.  If you set up the
+descriptor tables so that all segments are 64K long, low and
+behold you will have 32 bit linear addresses.  Then the address
+following 0000:FFFF is 0001:0000 the way I would have designed
+the segment registers in the first place.  In contrast, in real
+mode the address following 0000:FFFF can be expressed in a
+myriad ways: e.g. 1000:0000 or 0FFF:0010 or 0001:FFF0, but it
+can NOT be expressed as 0001:0000 as this address is FFF0 too
+small.
+ 
+The word >REL may do nothing at all if your DOS always loads
+your program at virtual address 0.  Even if it doesn't but
+always loads at a fixed virtual address, you might as well have
+>REL do nothing.
+ 
+However you will have a bit of tidying to do as well.  When
+registers are tight, I use ES: to temporarily hold values that
+have nothing at all to do with segments.  You will have to find
+these uses (marked in the code) and use the stack instead.  I
+presumed that because converting to protected mode would require
+lots of other considerations as well, and because we may have
+Forth co-processing engines soon and will never use protected
+mode, I cheated to gain extra speed.
+ 
+In protected mode setting a segment register to a value is a BIG
+DEAL.  It causes all sorts of things to happen behind the scenes
+to load hidden registers and ensure the segment is actually in
+RAM and if not load it in off disk.  However if the segment is
+"cool" it takes only 14 cycles to do all this stuff, verses 2
+cycles on the 8088.  This is equivalent to 2 jump instructions
+or 3 MOV AX,[BX,DI]s. To get decent speed, you may have to
+redesign the code so that it avoids changing segment registers.
+For example it may prove more efficient to use CS: segment
+overrides than to change DS to match CS to avoid overrides.  If
+you set a segment register it may prove more efficient to look
+at its current value.  If it is already the way you want it, you
+don't re-set it.  The hardware may do this for you
+automatically, but the only way to find out for sure is to
+perform some benchmarks.
+ 
+The 80286 chip designers wishfully assumed segment register
+changes would be rare events comprising at most 1% of
+instructions.  I don't know where they got this strange idea --
+especially considering pixel and numerical matrix processing
+applications with gigabyte address spaces.  This definitely does
+not apply to the BBL compiler which sets a segment register
+about once per word e.g.  @ !.
+ 
+If you are curious about protected mode read Ed Strauss's book
+"Inside the 80286", a Brady book published by Prentice Hall.  It
+is one of the few books that purport to be about the 80286 that
+is not a just rehash of the 8086.  It concentrates instead on
+the peculiar features of the 80286.  For those of you with no
+mainframe experience, it gives a fair bit of general information
+about the sorts of things multi-tasking operating systems have
+to do to keep tasks out of each other's hair.  It is also a good
+book to get a general understanding of how the 8087/80287
+numerical co-processors work.
+ 
+The 80386 running in native mode has 32 bit register.  To fully
+exploit this machine, the BBL forth compiler could be greatly
+simplified.  The end result would look like a simple 16 bit
+compiler.  For example to ADD now we must add the low order 16
+bits then add the high order 16 bits with carry.  The 80386
+could handle this with a single instruction on two 32 bit
+registers.
+ 
+Perhaps even more likely is porting BBL to the Novix chips and
+thus getting astounding increases in speed.  The Novix chips are
+brilliantly designed 16 bit Forth engines with segment registers
+to expand the addressability -- much like the 8086.  They run as
+co-processors in AT class machines.  The main thing stopping me
+now is lack of time and sufficient RAM on the Novix PC
+accelerator boards to support full Abundance.  One very well
+known major company has been pestering me to accept a contract
+to write a proprietary 32 bit Forth compiler for the Novix 6016.
+I really would not want to do it unless the result could be
+public domain.
+ 
+| ; end of gigantic comment
+
+

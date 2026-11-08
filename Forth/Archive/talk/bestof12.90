@@ -1,0 +1,200 @@
+
+                
+                   Best of GEnie..... December 1990
+          News from the GEnie Forth RoundTable by Gary Smith
+
+   Last issue we recapped guest conferences with Robert Smith, "Floored 
+Division and Floating Point", Phil Koopman, "Stack Machines", Charles Curley,
+"A Minimalist View of Forth", and John D. Hall, "The Business of FIG".
+
+   This issue we will continue our romp through guest conference memory 
+lane by checking back on visits with Elizabeth Rather, "X3J14 Chair Discusses
+the ANS Forth Effort", Steve Sarns and Steve Wheeler, "Vesta Technologies and
+Embedded Forth", Dr. John Wavrik, "Teaching Forth", Jim Tittsler and Allan
+Pratt of Atari product Development, "Hardware Prototyping with Forth", and Tom
+Almy from Tektronix, Inc. Engineering, "User Interface for non-Forth Users".
+  
+   January 1990 Elizabeth D. Rather, President of FORTH, Inc, and chair of the
+X3J14 ANS Forth Technical Committee joined us to discuss the ANS Forth 
+standards effort.
+
+   <[Bess]>  In the fall of 1986, about a dozen people met at FORTH, Inc. to 
+start an effort to produce an ANSI standard for Forth.  They included three 
+major vendors (competitors!), users from large companies (IBM, MCI, etc.), and 
+individual consultants/experts (including Chuck Moore).  All of us agreed that 
+an ANSI standard would improve acceptance of the language, improve our ability 
+to hire programmers or get jobs (depending on which side of the fence you're 
+on!), and make it easier to move programs from one Forth to another.
+   
+   The ANSI process operates under very explicit, detailed rules designed to 
+ensure broad participation in the development and review of any standard.  
+Anyone can be a member of the TC who has the time and money (mostly for travel;
+the fees are minor in comparison), and you don't need to be a member to submit
+proposals or review our work.   When we think we're done, our draft standard 
+will be published for a 4-mo. public review period.  We're required to respond
+in writing to all comments, and if we make changes as a result there will be 
+an additional 2-mo. review.  This cycle will repeat as many times as necessary.
+At the end our governing body will review both our standard and the process - 
+not only must the standard be clear (etc.), but the process must be proven to 
+be open and fair.
+
+   We welcome proposals from anyone.  The most useful are specific proposals 
+to make explicit changes to BASIS.  Less specific comments are also welcome 
+and will be taken under advisement, but are harder to act on and thus less
+effective.
+ 
+   A standard should not try to innovate, improve, or extend a technology.  
+Insofar as possible, we try to identify "common practice" and articulate it.  
+Some compromise is inevitable, particularly when there are conflicts in common
+practice.
+  
+   
+   Our guests in February 1990 were Steve Sarns and Steve Wheeler of Vesta 
+Technology,Inc. Vesta ranks as a frontrunner in embedded Forth systems, the
+one area where Forth remains dominant.
+
+   <[Steven Sarns]> Five years ago I founded vesta in my living room.  I was 
+the only employee.  I built the prototype of the product we now vend as the 
+SBC88.  The unit used Forth and had a Forth in ROM.  I typed it in from the 
+FIG listings, but made it romable and at the same time was debugging the 
+wirewrap board .
+ 
+   Radio Electronics published an article in March 1984 that featured the board
+controlling "smart Homes".  That three month series basically launched Vesta 
+Technology.  In fact, we still get product inquiries  based on those articles! 
+
+   Nowadays about 1/2 our business is custom engineering, and we sell five 
+off-the-shelf Single Board Computers with a variety of ROM language support.
+Some have C, some have BASIC, but all have FORTH since that is our in-house 
+development langauge for custom projects.
+
+   <[Wheels]> We have applications running all the way from the SBC88 and 
+monitoring a couple of digital input bits to networked boards monitoring 
+several analog  and digital inputs in real-time while communicating with the 
+user via LCD and keypad on one board, with all boards using a multidrop RS485
+network to talk to each other.  The typical application anymore seems to be 
+one board with a few analog inputs a number of digital inputs and outputs, an
+LCD and keypad for user interface, and talking RS232 to some kind of logging 
+station.  
+   Please contact us if you want information or if you want to discuss the 
+possibilities for an embedded system. 
+
+
+   Our visit in March 1990 was with Dr. John Wavrik, UC San Diego Math Dept.
+Dr. Wavrik's Topic: 'Teaching Forth' quickly centered on how an effective 
+standard can improve the ability to teach Forth and make the language more 
+credible.
+
+ + Whether you agree or disagree with some of the points and conclusions
+   made, this transcript should be required reading for anyone involved 
+   in teaching or standardizing Forth.  Gary
+
+   <[John W]> My assigned topic is "Teaching Forth" and, personally, I'd like 
+to talk about why Forth is a very good language for work in Mathematics -- and
+discuss how to teach it. Having a language taught is essential for its spread.
+It also has desirable side effects like establishing notational conventions 
+and writing styles (so that users of the language can understand each others' 
+programs).
+ 
+   Forth is a very good language to teach. It can be understood in terms of
+how it works -- this is a powerful handle for learning anything. The only
+people who really have problems with it are those who think that a language 
+must be defined by a BNF. Forth is very different from other languages -- but
+not hard to learn if approached on its own terms.
+    
+   Forth is also a good language to use in teaching since so much can be made
+visible which other languages hide. It can be used to help students gain 
+insight into how computers represent data structures and implement algorithms. 
+It can even provide understanding of how conventional languages work.
+
+   I would be remiss, however, if I failed to mention that having Forth taught
+depends a great deal on whether the Forth community makes it teachable. A 
+language cannot be taught if it is made unteachable.
+    
+                  Here is how to make a language unteachable:
+                       1. Have no university level texts
+                       2. Make it impossible for anyone to write a university 
+                          level text (see 3&4)
+                       3. Make the language unstable  e.g.
+                          a. Change the languages Standards every few years
+                          b. Split the language into multiple dialects
+                       4. Make the language non-portable
+                       5. Have no pool of (portable) basic application packages
+                       6. Make it impossible for such a pool to be produced
+                          (see 3&4)
+                       7. Fail to provide support to education
+
+
+   Allan Pratt and Jim Tittsler,of Atari Product Design joined us in April 1990.
+Jim's and Allan's Topic: 'Hardware Prototyping with Forth', using Forth to help
+bring a hardware project up quickly. Why it is good for some things and not so 
+special for others.
+
+   <[Jim] JTITTSLER> Here at Atari, we have been using Forth to "bring-up" and
+debug new computer and peripheral hardware for many years.  It has a few 
+significant advantages over other methodologies:
+                  -- the interactive, incremental nature of Forth allows
+                     the user to explore new hardware quickly and at the
+                     same time build on already known components
+                  -- basic Forth literacy can be achieved quickly by hard-
+                     ware engineers whose goal is hardware verification,
+                     not software development
+                  -- the amount of hardware that has to be correctly
+                     functioning to support a "significant" development
+                     and test environment is quite limited
+ 
+   I consider Forth a reasonable TOOL for a large class of problems... but it 
+is just one tool of many I may choose to use.
+                  
+<[Allan] APRATT> I have a little less to say -- I take over when Jim's brought 
+up the hardware.  I don't use FORTH any more, but I guess I'm (in)famous for 
+CFORTH, a small, portable FORTH interpreter with the kernel written in C, not 
+assembly. If you're using CFORTH, you should probably stop. Get a real FORTH 
+for your machine from the nice folks at Fig or someplace (like this library),
+because CFORTH is so wierd it'll warp you for life.  On the other hand, it CAN
+help you grok the very low-level stuff in a FORTH interpreter, if you under-
+stand C and not assembly.
+  
+
+   Concluding this series of guest visits will be our May 1990 conference 
+featuring Tom Almy, Electrical Engineer at Tektronix, Inc.
+   Tom's Topic: 'User Interface for non-Forth Users'
+
+   <[Tom Almy]> I have a deep concern with keeping Forth so that the "average"
+person (one who is not computer literate) can make use of the PRIDE CAD program 
+without going nuts! or having to get ahold of me for each little problem. I
+also have taught forth classes to over 100 people, and have seen where they 
+have difficulties.  Major changes in my system, some of which are being 
+adopted..
+                    > No Screen files..
+                    > Better number formats..
+                    > "To" variables..
+                    > All words, control strucgtures work in interpret state  
+                      so that one doen't need to be concdred about being in  
+                      a colon definition..
+                    > Graceful aborts on errors..
+                    > Easy access to host os.
+
+   The net result is that these mainly scientists with little background with
+programming are able to write simple forth programs and issue commands without 
+problems.
+
+   The result is that these users have no fear of using Forth.  Managers of 
+course still do, but they are happy with the results.  Namely the designers 
+are able to create masks for IC's, hybrids, whatever their job in short times
+using a program that runs on a relatively inexpensive system with little 
+training.
+  
+  
+   I have to believe the insights offered in these guest conferences are the
+"stuff" that can make a signifigant difference in the way Forth is perceived
+and used. I will grant that interactive conferences can be trying, because
+they lack the intimacy one-on-one conversations provide. On the other hand,
+when was the last opportunity you had to talk to a Steve Sarns about an
+embedded Forth application or to gain an instructor's keen perspective from
+Mahlon Kelly or John Wavrik ? I suspect your only such opportunities are via
+the GEnie Forth RoundTable guest conferences, and if you failed to participate
+in these your chance is probably forever lost.  Won't you join us in one of
+our forthcoming ones and discover for yourself what you have missed ?
+
+

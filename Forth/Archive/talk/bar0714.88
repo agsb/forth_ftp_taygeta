@@ -1,0 +1,227 @@
+
+      
+      
+ Minutes of the FIGGY BAR of 14 July 1988
+                
+Items discussed: X3/J14 BASIS document, FORML tapes, possible guests for
+                 conferences, documenting the Harris Forth library
+            
+Attendees:
+[[Gary] GARY-S]
+[[Dennis] D.RUFFER]
+[[Leonard] NMORGENSTERN]
+[[Dave] DHWEINSTEIN]
+[[Larry] L.DANIEL1]
+      
+Minutes:
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> welcome Leonard
+<[Leonard] NMORGENSTERN> Have you seen my one-timer?
+<[Gary] GARY-S> No - when did you put it up ?
+<[Leonard] NMORGENSTERN> About an hour ago.
+<[Gary] GARY-S> What f ?
+<[Leonard] NMORGENSTERN> f10.710
+<[Gary] GARY-S> did you then go set it for ALL ?
+<[Leonard] NMORGENSTERN> No. Oops!
+<[Gary] GARY-S> That's why I didn't see it
+<[Leonard] NMORGENSTERN> Will do so after the conference.
+<[Gary] GARY-S> So far we're it
+<[Gary] GARY-S> Want some general Forth news
+<[Leonard] NMORGENSTERN> Yes
+<[Gary] GARY-S> 1- Jax is now co-sysop on the WELL comp.lang.forth
+<D.RUFFER> is here.
+<[Leonard] NMORGENSTERN> He's here, th
+<[Dennis] D.RUFFER> just us sysops?
+<[Leonard] NMORGENSTERN> He's there, he's everywhere...
+<[Gary] GARY-S> 2 - I ordered a copy of the X3/J14 BASIS - If you want one 
+write FORTH, Inc ATTN: Heidi Banner
+<[Leonard] NMORGENSTERN> That damned elusive Pimpernel.
+<[Gary] GARY-S> The cost is $5.00
+<[Gary] GARY-S> H'lo Dennis
+<[Dennis] D.RUFFER> what's happening guys?
+<[Leonard] NMORGENSTERN> I am now editor of north bay Fig newsletter.
+<[Gary] GARY-S> I'm trying to scare up some TI files - not much luck yet
+<[Leonard] NMORGENSTERN> I will be putting some things up on Genie.
+<[Gary] GARY-S> Don't forget to post a copy here, Leonard
+<[Leonard] NMORGENSTERN> Exactly!
+<[Dennis] D.RUFFER> I'll be getting around to Jerry's disks soon also
+<[Leonard] NMORGENSTERN> George Shaw gave a marvellous tutorial on multitasking.
+<[Gary] GARY-S> Dennis - do you ever talk to John Hall ?
+<[Dennis] D.RUFFER> talk to him? or just send Email?
+<[Gary] GARY-S> either - I was just wondering...
+<[Gary] GARY-S> whatever happened to the VCR's Donald was supposed to...
+<[Gary] GARY-S> edit lo those many months ago ?
+<[Dennis] D.RUFFER> ok
+<DHWEINSTEIN> is here.
+<[Dennis] D.RUFFER> you have to remember the volunteer nature
+<[Dennis] D.RUFFER> you'd better give him a reminder in other words
+<[Dennis] D.RUFFER> welcome dave
+<[Dave] DHWEINSTEIN> Hello
+<[Leonard] NMORGENSTERN> Hi, Dave
+<[Dave] DHWEINSTEIN> Waz de topic
+<[Dennis] D.RUFFER> I've got his phone number if you need it gary
+<[Dennis] D.RUFFER> topic, whos got the topic again?
+<[Gary] GARY-S> Dennis - if you do leave a msg to JD ask him to throw them in a 
+box, we can worry about script later
+<[Dennis] D.RUFFER> will do!
+<[Gary] GARY-S> Dave - get real - when did Thursdays have a theme
+<[Gary] GARY-S> Let's do this one - the ACM in Austin - you're up Dave
+<[Dave] DHWEINSTEIN> Ever since they got bought out by Disney
+<[Dave] DHWEINSTEIN> ACM in Austin. I dunno...my paperwork hasn't gotten back 
+yet with my number.
+<[Dave] DHWEINSTEIN> Or do you mean the conference?
+<[Gary] GARY-S> yeah - the Forth conference
+<[Dave] DHWEINSTEIN> I haven't heard from Dan recently...so its still up in the 
+air.
+<[Gary] GARY-S> keep us posted - ok ?
+<[Dave] DHWEINSTEIN> Hokay.
+<[Gary] GARY-S> I ordered a copy of the BASIS today
+<[Dave] DHWEINSTEIN> Is the BASIS in the libr'y yet?
+<[Gary] GARY-S> $5.00 if you're interested
+<[Dave] DHWEINSTEIN> (guess not)
+<[Dave] DHWEINSTEIN> I'll prob'ly order one...but I don't *really* feel like 
+typing it in and UUCPing it. I might though.
+<[Gary] GARY-S> That's the way it's being distributed now -
+<[Gary] GARY-S> Dennis any chance Martin can send you or me a disk of the BASIS 
+for library posting ?
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> the last I heard....
+<[Dave] DHWEINSTEIN> I'll download it and and Usenet the puppy out...
+<[Dennis] D.RUFFER> they did not want to distribute it electronically...
+<[Dave] DHWEINSTEIN> Why not?
+<[Dennis] D.RUFFER> they make money from the ssales
+<[Dave] DHWEINSTEIN> Does this mean I shouldn't UUCP it out?
+<[Dennis] D.RUFFER> exactly!
+<[Dave] DHWEINSTEIN> Ok...ok...ok...
+<[Gary] GARY-S> At $5.00 a pop - that ain't a hell-of-a-lot of money !!!!!
+<[Dennis] D.RUFFER> besides, it might be confused as being accepted
+<[Dave] DHWEINSTEIN> I'm a gonna buy one.
+<L.DANIEL1> is here.
+<[Dennis] D.RUFFER> good idea dave
+<[Gary] GARY-S> Welcome Larry - where are the library uploads ?
+<[Dennis] D.RUFFER> although as greg said, it is obsolete as soon as it's 
+printed
+<[Larry] L.DANIEL1> Working on them.
+<[Gary] GARY-S> great - thanks
+<[Larry] L.DANIEL1> What's the topic?
+<[Gary] GARY-S> talk to Dave
+<[Dennis] D.RUFFER> another person who wants a topic?
+<[Dennis] D.RUFFER> START ONE!
+<[Gary] GARY-S> Dave - wot's the topic ?
+<[Dave] DHWEINSTEIN> The topic is...free GEnie access for everyone in this 
+conference.
+<[Dennis] D.RUFFER> but... but... gee
+<[Dave] DHWEINSTEIN> No...GE N Ie
+<[Dennis] D.RUFFER> there is soon going to be...
+<[Larry] L.DANIEL1> Great Idea!! We can then use the time for talking about ... 
+topics.
+<[Dennis] D.RUFFER> the CB area will offer a flat monthly rate
+<[Dave] DHWEINSTEIN> Big deal.
+<[Gary] GARY-S> I do have a question (TOPIC) who would you like to see...
+<[Gary] GARY-S> next in a guest conference ??
+<[Dave] DHWEINSTEIN> Chuck Moore.
+<[Dave] DHWEINSTEIN> Next silly question?
+<[Gary] GARY-S> REally
+<[Larry] L.DANIEL1> He doesn't have a keyboard!
+<[Leonard] NMORGENSTERN>
+<[Dave] DHWEINSTEIN> So send him one.
+<[Dennis] D.RUFFER> sure he does, but no modem on his Novix
+<[Gary] GARY-S> It was strange when he was a guest on CIS (washing mouth out)...
+<[Leonard] NMORGENSTERN> With his 3-key delio, I suspect that he thinks he 
+doesn't need one!
+<[Gary] GARY-S> They kludged the modem and it kept unplugging...
+<[Gary] GARY-S> very weird conference
+<[Dave] DHWEINSTEIN> He can borrow a system...or rent one...or something.
+<[Dennis] D.RUFFER> actually, last I talked with him he had averything he 
+needed...
+<[Dennis] D.RUFFER> connected to his PC...
+<[Dennis] D.RUFFER> but as usually with us Forthnicks...
+<[Dennis] D.RUFFER> I guess he just doesn't have time
+<[Gary] GARY-S> anyone else ?
+<[Larry] L.DANIEL1> Well.. Monday I get an RTX 2000 development system. ( new 
+topic)
+<[Dennis] D.RUFFER> give him a try gary!
+<[Gary] GARY-S> Nick Spies, Larry forsley
+<[Leonard] NMORGENSTERN> How about Scott Squires on Lucas Film?
+<[Dennis] D.RUFFER> be back in a moment, calling larry
+<[Dennis] D.RUFFER> has left.
+<[Dave] DHWEINSTEIN> How much does Lucas Film use FORTHers (I know they use 
+Alliants a lot).
+<[Gary] GARY-S> Scott on Magic Light would be great
+<[Leonard] NMORGENSTERN> Do you get Egghead Software Magazine?
+<[Leonard] NMORGENSTERN> Nice writeup on Scott there.
+<[Larry] L.DANIEL1> Which issue?
+<[Leonard] NMORGENSTERN> I just got it last week.
+<[Dave] DHWEINSTEIN> Gotta run.
+<[Dave] DHWEINSTEIN> has left.
+<[Leonard] NMORGENSTERN> He is setting up a bunch of Mac II's using Unix and 
+Mac Forth.
+<[Gary] GARY-S> Larry - what's going on in GA ?
+<[Larry] L.DANIEL1> RAIN and democrats
+<[Gary] GARY-S> Send the rain - keep the poloticians
+<[Larry] L.DANIEL1> I get the HARRIS forth chip development system on Monday. 
+I'm excited.
+<[Leonard] NMORGENSTERN> Must'nt talk about politics, religion, or women.
+<[Leonard] NMORGENSTERN> Therefore I have nothing to say.
+<D.RUFFER> is here.
+<[Gary] GARY-S> Why are you getting the set ?
+<[Dennis] D.RUFFER> no one home :-(
+<[Larry] L.DANIEL1> My company is HARRIS's second customer for the chips.
+<[Larry] L.DANIEL1> We plan on build systems around the chip.
+<[Gary] GARY-S> are you beta testing or rolling something REAL ?
+<[Leonard] NMORGENSTERN> How do you mean second? In time, or volume?
+<[Larry] L.DANIEL1> Time, we only ordered about 7 chips.
+<[Larry] L.DANIEL1> This is not beta stuff. We (Gerogia Tech) will upgrade our 
+novix designs.
+<[Gary] GARY-S> That should squeeze down the size of your controllers quite a 
+bit, Larry
+<[Larry] L.DANIEL1> Yep, now our!Nubus cards will fit in MAC II.
+<[Gary] GARY-S> do you also Hypercard ?
+<[Leonard] NMORGENSTERN> What is Nubus?
+<[Larry] L.DANIEL1> Only for documentation-- NUBUS is bus in MAC II.
+<[Gary] GARY-S> like a VME bus, Len
+<[Leonard] NMORGENSTERN> Thanks
+<[Larry] L.DANIEL1> NUBUS is a magnitude simpler than VME in hardware.
+<[Gary] GARY-S> it was a RUFF comparison - but I figured he could relate quickly
+<[Larry] L.DANIEL1> I'll have more info on harris stuff next week.
+<[Gary] GARY-S> You know what I think would be great ? keep a running log 
+(non-proprietary) of the development
+<[Larry] L.DANIEL1> BTW, Dr. William Dress appears in Popular Science. He uses 
+Forth&Novix.
+<[Gary] GARY-S> A lot of systems people would profit from your experiance
+<[Larry] L.DANIEL1> Ok about LOG. We document the $#%^ out of our stuff.
+<[Gary] GARY-S> Bill Dress is a verrrry interesting person, but he flat refuses 
+to get on GEnie !
+<[Leonard] NMORGENSTERN> I think what Gary means is to write a history...
+<[Larry] L.DANIEL1> I visted Him at Oakridge a few months ago.
+<[Leonard] NMORGENSTERN> of the development at some future time.
+<[Larry] L.DANIEL1> I keep a development diary (required at work) that would 
+suffice.
+<[Gary] GARY-S> Did you get a demo of his RealOps while there ?
+<[Larry] L.DANIEL1> RealOps is Laird William's mostly. I saw him too but didn't 
+obtain the stuff.
+<[Gary] GARY-S> The development library would be interesting Larry - thanks
+<[Larry] L.DANIEL1> When I stop working 90+ hours, Ill download things.
+<[Gary] GARY-S> Lazy - worthless...... :-)
+<[Larry] L.DANIEL1> I'm just not motivated I guess.
+<[Larry] L.DANIEL1> Forth si so dull sometimes :)
+<[Leonard] NMORGENSTERN> When you quit working so hard, you can start...
+<[Leonard] NMORGENSTERN> thinking about motivation.
+<[Gary] GARY-S> Yeah - and rain is an overated commodity
+<[Gary] GARY-S> Leonard lapses into philosophy on occassion - he assumes we all 
+think
+<[Larry] L.DANIEL1> I need to go now.. Nice talkin... bye
+<[Larry] L.DANIEL1> has left.
+<[Gary] GARY-S> bye Larry
+<[Leonard] NMORGENSTERN> What were you going to say about philosphy???
+<[Gary] GARY-S> You lapse into it on the assumption the rest of us think
+<[Gary] GARY-S> Just three sysops - wanna continue ?
+<[Leonard] NMORGENSTERN> Not unless the rest of you do.
+<[Dennis] D.RUFFER> would be nice to get a good nites sleep :-)
+<[Leonard] NMORGENSTERN> Ok. Bye
+<[Gary] GARY-S> bye
+<[Leonard] NMORGENSTERN> has left.
+<[Dennis] D.RUFFER> bye bye
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,58 @@
+
+       Over the past two years I have completed four systems based on the
+New Micros 100 squared boards. 
+
+1.   Injection molding machine stripper plate velocity monitor  :
+       read stripper velocity from linear encoder & plot velocity profile
+       report via RS-232
+
+2.   Aluminum rolling mill speed & pass display board : 
+       monitor mill tachometer & convert to feet per minute 
+       recieve remote operator input of entry & exit thickness
+       drive large 7 segment displays
+
+3.   Weapons testing gun & camera sequencer :
+       recieve & display 8 independent start & stop time settings to 0.1 mS
+       activate outputs at selected delays from common start signal
+
+4.   Two axis servo controller :
+       drive quadrature feedback servomotors to position via RS-232 command
+
+
+       These systems have all involved either the NMIX-0011 or NMIX-0012 and a
+custom interface board. So far about 15 of the New Micros' boards have been
+employed in these applications with excellent results.  The software was written
+on a Commodore 64 running the Superforth-64 language as a file server.  Super
+-forth 64 words were written to download screens from the Commodore to the 
+100-Squared boards via RS-232,  then the compiled binary was DUMPed back to
+the  '64  and burned into EPROM with a Jason-Ranheim Promenade.  I have found
+the 100-Squared boards to be a versitile base for small data acquisition and 
+control systems.  They have been performing very reliably in some quite severe
+environments.  The documentation supplied with the boards has been generally
+adequate.  Randy Dumse of New Micros Inc. was directly involved in the creation
+of the Rockwell FORTH and has been very helpful in these applications.
+
+       I have recently purchased Randy's 68HC11 version of the 100-Squared.
+This board has a full 64K address space and an 8 input 8 bit A/D converter.
+NMI has produced MAX-FORTH and had Motorola mask it into the 68HC11 ROM space.
+MAX-FORTH on the 100-Squared looks very promising.
+
+For more info on the 100-Squared boards contact :
+
+               New Micros Inc.
+               808 Dalworth
+               Grand Prairie, Texas 75050
+               214-642-5494
+
+For more about the applications call or write :
+
+               Phil Smith
+               Servant Electronic Design
+               1811 Old Hanover Rd. 
+               Sandston, VA  23150
+               804-737-5043
+
+                   or 
+               message via this board
+
+

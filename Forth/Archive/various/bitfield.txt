@@ -1,0 +1,404 @@
+
+
+
+              "Structured Data with Bit Fields"
+                     "Mitch Bradley"
+                        Abstract
+
+
+
+
+     A structured data item  is  a  data  item  composed  of
+several   subfields  of  various  types,  analogous  to  the
+`struct' declaration of C or the `RECORD'  types  of  Pascal
+and Modula-2.
+
+     Structured data types are trivial to implement in Forth
+if each subfield is constrained to occupy an integral number
+of machine bytes.  The problem becomes more  interesting  if
+subfields  may include groups of bits within a byte or word,
+as in C `bit fields' or Modula-2 `BITSET's.  Such bit fields
+arise frequently when dealing with hardware registers, which
+often contain  groups  of  bits  which  control  independent
+hardware functions.
+
+     This paper presents a set  of  words  for  conveniently
+defining  and  accessing  structured data, which may contain
+bit fields.  Their utility is shown with a real  example  --
+manipulation of a disk controller.
+
+INTRODUCTION
+
+     A number of proposals for data structuring  words  have
+recently appeared in the literature [WALK][BASI][JOOS].  The
+scheme that I present is simpler than  most  of  these,  and
+probably  not  as  powerful.  My particular emphasis in this
+paper is not on data structures  in  general,  but  on  data
+structures with imbedded bit fields.
+
+     Structures  or  records  are  usually  used  to   group
+together  related  data  items.  As an example, consider the
+following fragment of C  [KERN]  code.   
+struct  controller-registers {
+       unsigned short   data;
+       unsigned short   command;
+       unsigned long    dma-base;
+       unsigned  short    dma-count;   };   
+This structure declares that there is a structure type called 
+`controller- registers'.  This structure contains four fields, 
+three of them short unsigned integers (2 bytes each), and one 
+of the a long unsigned integer (4 bytes)[1].  
+
+     The structure  could  later  be  used  by  declaring  a
+pointer to that structure, as in:
+
+        struct controller-registers *ptr;
+
+
+ ________________________
+   [1] Those of you familiar with C will no  doubt  note
+that  dma-base should probably be a (char *) instead of
+an (unsigned long).  However, it is easier  to  explain
+as it stands.
+
+
+     To access the dma-count register, one could then use
+
+        ptr->dma-count
+
+
+     From a code generation standpoint, this is not hard  to
+implement.   All  the compiler has to do is to remember what
+type of object is represented by `dma-count' and its  offset
+from the start of the structure.
+
+     When Forth programmers are faced with accessing a  data
+structure  like  this  one, the tendency is to use numerical
+offsets into the data structure.  The offset calcualation is
+usually done explicitly when the object is referenced, using
+perhaps `8 +'.  Explicitly calculating offsets  is  markedly
+inferior  to  having  it done automatically for you, though.
+Explicit offsets buried in code make the code hard to under-
+stand and especially hard to modify.
+
+     A structure capability  that  automatically  calculates
+offsets  is extremely easy to implement in Forth.  
+: field ( offset size --- ofset+size )
+  create over , +
+  does> ( fd pfa --- fd+offset )
+         @ + ; 
+
+: struct 0 ; 
+
+This may  be  used  as  follows:
+struct ( controller-registers )
+    2 field   data
+    2 field   command
+    4 field   dma-base
+    2 field   dma-count 
+constant   controller-registers-size
+
+The word `field' just keeps a running account of the current
+offset at compile time, and creates a new  word  which  when
+executed  will  add  its  offset to the number on the stack.
+The word `struct' simply initializes the current  offset  to
+0.   After  the structure definition is finished, it is con-
+venient to remember the  total  size  of  the  structure  by
+defining  a  constant, using the size that is already on the
+stack.
+
+     Later the fields may be used as  follows,  assuming  we
+have  a  variable  `ptr'  which  contains  the address of an
+instance of this structure.
+
+          ptr @ data @    ( fetches the contents of the data field )
+
+100000.   ptr @ dma-base 2! ( sets the dma-base field to 100000. )
+
+
+BITFIELDS
+
+     So far this has been pretty trivial, and  hardly  worth
+writing  a  paper  about.  So lets make the problem a little
+more interesting.  Suppose  that  we  want  to  define  some
+fields  which  do  not  occupy  an integral number of bytes.
+
+This situation can arise when there are data items that  are
+very short, say 1 bit, and you don't want to waste an entire
+byte just to store 1 bit.   The  situation  also  frequently
+arises  when  dealing  with  hardware registers, which often
+pack several barely-related bits within  a  single  byte  or
+word.   Coping with single bits isn't too bad, because it is
+easy to operate on the bit with a mask and a boolean  opera-
+tor,  setting or clearing the bit as desired.  The real pain
+comes when there  is  something  like  a  3-bit  field  that
+represents a number, and that field is somewhere in the mid-
+dle of a byte.  Then the problem involves a lot  of  masking
+and shifting, which is annoying to write and hard to read.
+
+     C copes with this problem  by  providing  a  `bitfield'
+definition  capability  within  structures.  Bitfields allow
+the programmer to give a symbolic name to a  group  of  bits
+within a word or byte, and then to access that group of bits
+as though it were a small  integer,  without  having  to  do
+explicit  chifting and masking.  I have attempted to provide
+this capability within Forth, and  have  succeeded  to  some
+extent.   Here's  how  it works, described by example.  This
+segment of code comes from a driver for a Xylogics Model 450
+disk controller controller board[2].  
+_____________________________________
+  [2] The funny byte numbering (1 first, then 0)  is  a
+result  of  the fact that the controller manual numbers
+the bytes in `little endian' order, with the least sig-
+nificant  byte of a word at the lowest address, whereas
+the code is written for a 68000 machine, which is  `big
+endian',  with  the  most significant byte of a word at
+the lowest address.  This problem is well-known to any-
+body  who  has  ever  tried to write `portable' code to
+deal with real I/O devices.  It ranks as a  major  nui-
+sance.
+
+
+struct (  xyiopb  )  ( Byte 1 )
+  1 resbits
+  1 bits  intrall ( interrupt on all iopbs (450)
+  1 bits  intrerr ( interrupt on error )
+  1 bits  reserve ( reserve dual port drive (450)
+  1 bits  recal   ( recalibrate on seek errors (450)
+  1 bits  enabext ( enable extensions (450)
+  2 bits  eccmode ( ECC actions ) ( Byte 0 )
+  1 bits  autoup  ( auto update of IOPB )
+  1 bits  reloc   ( use relocation )
+  1 bits  chain   ( command chaining )
+  1 bits  ie      ( interrupt enable )
+  4 bits  cmd     ( command ) ( Byte 3 )
+  1 field errno   ( error number ) ( Byte 2 )
+  1 bits  iserr   ( error indicator )
+  2 resbits
+  3 bits  ctype   ( controller type )
+  1 resbits
+  1 bits  complete ( completion code valid (450) ( Byte 5 )
+  2 bits  drive   ( drive type )
+  4 resbits
+  2 bits  unit    ( unit number ) ( Byte 4 )
+  1 bits  bytebus ( use byte transfers )
+  4 bits  intrlv  ( interleave - 1 (450)
+  3 bits  throttle ( throttle control ) 
+( remaining are  not bit fields )
+  1 field sector  ( 7: sector number )
+  1 field head    ( 6: head number )
+  2 field cylinder ( 9,8: cylinder number )
+  0 field nsect   ( b,a: sector count )
+  2 field status  ( low byte is status )
+  2 field bufoff  ( d,c: buffer offset )
+  2 field bufrel  ( f,e: buffer offset )
+  1 +  ( 11: reserved byte )
+  1 field bhead   ( 10: base head (450)
+  2 field nxtoff  ( 13,12: next iopb offset )
+  2 field eccpatt ( 15,14: ECC pattern )
+  2 field eccaddr ( 17,16: ECC address ) 
+constant xyiopbsize
+
+     Take a look at `Byte 1'.  The 8 bits of this byte  con-
+trol 6 different functions.  The most-significant-bit is not
+used (1 resbits).  The next 5 bits control 5 separate modes,
+and  the final 2 bits are encoded to select one of four pos-
+sible ecc modes.  Other bytes have different  configurations
+of  bits.   The  code  to control this disk controller could
+obviously get quite contorted if the programmer  had  to  do
+explicit  shifting  and  masking  in order to manipulate all
+these little pieces of bytes.
+
+     Here is a section  of  the  code  which  accesses  this
+structure.   Note how the use of the bitfield names has made
+the function of the code obvious.  
+
+: setiopb ( buf. cnt  sec head cyl cmd -- )
+  iopb xyiopbsize    0 fill
+  ( ... cmd ) iopb cmd      bit!
+  ( ... cyl ) iopb cylinder !
+  ( ... head) iopb head     c!
+  ( ... sec ) iopb sector   c!
+  ( ... cnt ) iopb nsect    !
+  ( ... bufhi ) 15 and   12  shift
+                iopb bufrel !
+  ( ... buflo ) iopb bufoff !
+
+  drivetype  @ iopb drive    bit!
+  unitno     @ iopb unit     bit!
+  xythrottle @ iopb throttle bit!
+
+  1 iopb autoup  bit!
+  1 iopb reloc   bit!  ( specific to the 450 -- not  on  the 440 )
+  1 iopb enabext bit!
+  basehead @ iopb bhead  c!
+  2 iopb eccmode bit!  ;
+
+     The rabid Forth programmer will no doubt complain  that
+this  definition  is  too long.  This is a valid point.  The
+excuse is that this bit of code was translated almost verba-
+tim  from a known-working C program, and I had no motivation
+whatsoever to do a stylistic transformation strictly for the
+sake of `purity'.  If it isn't broken, don't fix it.
+
+
+IMPLEMENTATION
+
+     The code to implement bit field defining, fetching, and
+storing  follows.   It  is  deceptively  simple, but its use
+represents a  major  improvement  in  the  writeability  and
+understandability  of  programs  that need to deal with such
+structures.  Both high-level  and  68000  assembly  language
+versions  are given.  It was actually easier to write `bit!'
+in assembly language than in high-level, because  the  stack
+manipulations were complicated.
+
+     This package specifically does not allow bit fields  to
+cross byte boundaries.  It would not be hard to extend it to
+allow bit fields to be anywhere within a word.  This partic-
+ular  application  benefited from the byte-only restriction,
+because the disk controller hardware had  some  funny  byte-
+only  registers.   Undesireable  side  effects resulted from
+using a word operation which accessed 2 of them at once.
+
+     I suspect that allowing  bit  fields  to  cross  n-byte
+boundaries,  where  n is the number of bytes in the machines
+hardware data paths, would make the code a lot more  compli-
+cated.
+
+
+ACKNOWLEDGEMENT
+
+     The syntax  for  defining  fields,  where  the  current
+offset  is  kept on the stack at compile time, was suggested
+at a FIG meeting by (I believe) Glenn Tenney.
+
+References
+
+[BASI] Basile, James, Implementing Datastructures  in  FORTH
+Jour. FORTH Appl. Res. 1, 2, December, 1983.  pp.5-16.
+
+[JOOS] Joosten, Rieks, and  Nieuwenhuysen,  Hans,  Vectoring
+Arrays  of  Structures Jour. FORTH Appl. Res. 1, 2, December
+1983. pp.35-54
+
+[KERN] Kernighan, B., and Ritchie, D.,  The C Programming Language
+ Prentice-Hall, 1978.
+
+[WALK] Walker, Bruce W., PL/1 Data Structures  FORTH Dimensions
+  5,  6,  March/April  1984,  pp.8-12.   
+
+( Forth 83 )
+( structures with bit fields )
+variable bitoffset
+
+: bitalign ( offset size -- offset' size )
+( moves to next byte boundary if the bit offset is nonzero )
+  bitoffset @ if
+    0 bitoffset !   swap 1+ swap
+  then
+;
+
+: struct 0 bitoffset ! 0 ;
+: field ( offset size -- newoffset )
+    create bitalign over , +
+    does> ( structure-base -- structure-member-address )
+          @ +
+;
+( reserves an n-bits field )
+: resbits ( offset #bits -- newoffset )
+  bitoffset @ +   8 /mod  ( offset bitoffset_mod_8 bitoffset/8 )
+  swap bitoffset !  +
+;  
+( bits are allocated from left-right, or from msb to lsb. )
+( however, they are numbered from lsb=0 to msb=7 )
+( left-right generates the correct bit number )
+: left-right-bit# ( #bits -- #bits bit# )
+  bitoffset @ over +  8 swap -
+  dup 0< abort" Bit fields can't cross byte boundaries"
+;
+
+( structure describing the layout of information in the parameter field )
+( of a word created by "bits" )
+
+struct ( bit-record )
+  2 field bit-offset
+  2 field bit#
+  2 field #bits
+constant bit-record-size
+
+( defines an n-bit field )
+: bits ( offset #bits --namex newoffset )
+  create  over , left-right-bit# , dup ,  ( offset #bits )
+  resbits
+  does> ( struct_addr pfa -- byte_addr bit# #bits )
+     >r
+     r@ bit-offset @ +  ( byte_addr )
+     r@ bit#       @    ( byte_addr bit# )
+     r> #bits      @    ( byte_addr bit# #bits )
+;
+
+hex
+create masks
+  0 c, 1 c, 3 c, 7 c, 0f c, 1f c, 3f c, 7f c, ff c,
+decimal
+
+: bitmask ( n -- mask ) masks + c@ ;
+
+: bit@ ( byte_addr bit# #bits -- n )
+  rot c@           ( bit# #bits byte )
+  rot negate shift ( #bits shifted-byte )
+  swap bitmask and
+;
+: bit! ( n byte_addr bit# #bits -- )
+  bitmask         ( n byte_addr bit# mask )
+  rot >r          ( n bit# mask )
+  rot over and    ( bit# mask masked-n )
+  2 pick shift    ( bit# mask shifted-masked-n )
+  -rot            ( shifted-masked-n bit# mask )
+  swap shift      ( shifted-masked-n shifted-mask )
+  not             ( shifted-masked-n shifted-inverted-mask )
+  r@              ( shifted-masked-n shifted-inverted-mask byte_addr )
+  c@ and          ( shifted-masked-n masked-old-value )
+  or              ( new-value )
+  r>  c!
+;
+
+\ 68000 assembly language version of bit@ and bit!
+
+\ code bit@ ( byte_addr bit# #bits -- n )
+\   word
+\   sp )+ d0 move  ( d0 is #bits )
+\   masks # d7 move   d7 a0 lmove  ( relocated address of mask table )
+\   byte
+\   0  d0  a0  di)  d0 move        ( mask to d0 )
+\   word
+\   sp )+ d1 move  ( d1 is bit# )
+\   sp )+ d7 move   d7 a0 lmove   ( relocate 16 bit address to 32 bits )
+\   long d2 clr
+\   byte a0 ) d2 move
+\   d1 d2 lsr
+\   d0 d2 andw
+\   word d2 sp -) move
+\ c;
+
+\ code bit! ( n byte_addr bit# #bits -- )
+\   word
+\   sp )+ d0 move  ( d0 is #bits )
+\   masks # d7 move   d7 a0 lmove  ( relocated address of mask table )
+\   byte
+\   0  d0  a0  di)  d0 move        ( mask to d0 )
+\   word
+\   sp )+ d1 move  ( d1 is bit# )
+\   sp )+ d7 move   d7 a0 lmove   ( relocate 16 bit address to 32 bits )
+\   sp )+ d2 move  ( d2 is n )
+\   d0 d2 andw
+\   d1 d2 lsl ( masked, shifted, n in d2 )
+\   d1 d0 lsl ( shifted mask in d0 )
+\   d0 notw ( inverted mask in d0 )
+\   byte d0 a0 ) andw
+\        d2 a0 ) orw
+\   word
+\ c;
+
+

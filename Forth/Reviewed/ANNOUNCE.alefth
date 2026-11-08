@@ -1,0 +1,66 @@
+
+This is a old code of a forth i'm had written, perhaps it is of any interest.
+	  ===
+
+The old announcement
+
+Ale forth features:
+
+o    386/486 32 Bit Forth 
+o    387/487 supported
+o    Operating systems:
+	SCO UNIX ( easy to port to other i386 Unixes )
+	or MSDOS ( GNU DJGPP GO32 required )
+o    Subroutine threading (optional)
+o    Native code generation
+o    Primitives inline expansion
+o    Wordset of BASIS17
+	CORE + EXT
+	BLOCK + EXT
+	DOUBLE + EXT
+	FLOAT + EXT
+	ERROR
+	FACILITY
+	FILE + EXT
+	SEARCH + EXT
+	STRING
+	MEMORY
+	TOOLKIT ( No code, ... )
+     +  many own extensions
+o    Metacompiler with assembler output ( GNU AS [34]86 format )
+
+o    Extensible interpreter/compiler
+
+Benchmarks:
+  Sieve:
+	  1000 times all primes from 1 to 16384
+	  ( Timed on: i486/33 Mhz w cache, SCO Unix Multiuser )
+	  ( Timed on: i386/33 Mhz w cache, MSDOS DJGPP go32 )
+
+    GNU C compiler 1.40 WITH all optimizations on:
+	  i486: 10 Seconds i386: 26 Seconds
+    Ale Forth 2.03 with processor stack = parameter stack:
+	  i486: 16 Seconds i386: 46 Seconds
+    Microsoft C compiler WITH all optimizations on:
+	  i486: 18 Seconds i386: not available
+    Ale Forth 2.03 with processor stack = return stack:
+	  i486: 25 Seconds i386: 64 Seconds
+
+  Fibonacci:
+	  Fibonacci of 35 (Recursive calculated)
+
+    GNU C compiler 1.40 WITH all optimizations on:
+	  i486: 23 Seconds
+    Ale Forth 2.03 with processor stack = parameter stack:
+	  i486: 25 Seconds
+    Microsoft C compiler WITH all optimizations on:
+	  i486: 27 Seconds
+    Ale Forth 2.03 with processor stack = return stack:
+	  i486: 37 Seconds
+
+If you are interested in testing this send me an e-mail to request the sources.
+
+					Johns	(Lutz Sammer)
+johns@majestix.av.rwth-aachen.de
+or
+johns@tron.gun.de

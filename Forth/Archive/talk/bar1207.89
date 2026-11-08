@@ -1,0 +1,570 @@
+
+
+Minutes of FIGGY BAR RT Conference.
+
+Date: 12/07/89   Time: 22:29EST
+
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[Dave] OLORIN]
+[[Kevin] APPERT]
+[[Hadil] H.SABBAGH]
+[[VIRGIL] V.STAMPS]
+[[Robert] R.BERKEY]
+[[JaXXaJ] FIGCHAPTERS]
+[[Wil] W.BADEN1]
+ 
+ 7 December 1989 open FIGGY BAR. The question for the night: With all the
+ arguments over 'Which Architecture' have we given up on the concept of
+ Forth as a virtual machine ? Good/Bad/Don't care ?
+ Other items discussed included various O/S's, block vs text,Harris contest,
+ SigForth ACM newsletter and late FORML ad, John Hall guest conference on
+ December 14, and a LOT of bad puns.
+
+Minutes:
+<NMORGENSTERN> is here.
+<OLORIN> is here.
+<[Len] NMORGENSTERN> Gary isn't answering. He is probably getting drunk
+<[Gary] GARY-S> Hi - I was posting the notice etc
+<[Len] NMORGENSTERN> <bad joke>
+<[Dave] OLORIN> Len's been maligning your character in your absence.
+<[Gary] GARY-S> I should after wrecking a new car
+<[Len] NMORGENSTERN> Gary & Dave, i found my problem in uploading
+<[Len] NMORGENSTERN> It is in my serial port on my PC. The mac works fine, 
+modem also, line also
+<[Gary] GARY-S> excessive head gap ? misadjusted nut - the one using the 
+computer ?
+<[Len] NMORGENSTERN> Nope, not this time
+<[Dave] OLORIN> I must say I admire your self control. I haven't heard one word 
+about the Cotton Bowl yet... (grin)
+<[Len] NMORGENSTERN> (It would take me half an hour to upload a mod. file
+<[Gary] GARY-S> I have a killer bet with my boss in Murfreesboro, TN - that's 
+enough
+<[Gary] GARY-S> on the cotton bowl
+<[Len] NMORGENSTERN> The bet, that is
+<[Len] NMORGENSTERN> Ah
+<[Dave] OLORIN> The outcome of the Cotton Bowl: Arkansas vs Tennessee.
+<[Gary] GARY-S> Arkansas/Tennessee
+<[Gary] GARY-S> You have to live here to appreciate the gravity of the bet...
+<[Dave] OLORIN> Football: It's not just a game, it's a way of life.
+<[Gary] GARY-S> whoever has the losing team has to wear the baseball cap of the 
+winner in public for two weeks
+<[Len] NMORGENSTERN> <Wife just handed me a surprisingly good low-sugar dessert
+<[Len] NMORGENSTERN> Sweet potato & walnuts!>
+<[Len] NMORGENSTERN> Gary thereally difficult bet would be if you bet against 
+Arkansas!
+<[Len] NMORGENSTERN> Did you????????
+<[Dave] OLORIN> Owwwwwwww! That is a *nasty* bet.
+<[Gary] GARY-S> wash your mouth with carbolic acid
+<H.SABBAGH> is here.
+<[Hadil] H.SABBAGH> How 'bout them Arizona Wildcats?
+<[Dave] OLORIN> I'm pulling for Arkansas! I want to make sure that Texas is the 
+only team to beat them this year.
+<[Dave] OLORIN> (grin)
+<[Gary] GARY-S> groan
+<[Dave] OLORIN> Watch out for the running Horns (surefire bet to make the Final 
+Four) (he said putting his neck waaayyyyyyy out) (grin)
+<[Gary] GARY-S> The horns will not even win the conference this year <period>
+<[Hadil] H.SABBAGH> Neither will the fins
+<[Hadil] H.SABBAGH> :^)
+<[Hadil] H.SABBAGH> Cats -> Final four for sure!
+<[Gary] GARY-S> Forth time - well - what about the question ?
+<[Dave] OLORIN> Forth *is* a virtual machine. But to do a lot of the really 
+nice extensions you need to dig a little deeper.
+<[Hadil] H.SABBAGH> What question?
+<[Len] NMORGENSTERN> I have all the answers, but I don't know the questions. 
+What will it be, Gary
+<[Hadil] H.SABBAGH> :-)
+<[Dave] OLORIN> I gave my answer a while back. For *most* code, you use the 
+virtual machine. Fore some of the extensions, it is important to know the
+underlying architecture. Those cases should be carefully abstracted as far away 
+from the code doing the work as possible.
+<[Len] NMORGENSTERN> Dave, what do you mean, abstracting..
+<[Dave] OLORIN> Gary: Care for a bet? (Loser has to use the winner's team as a 
+NAMe for two weeks) (grin)
+<[Gary] GARY-S> The question is - with all the talk about 'which architecture' 
+does this mean we have forsaken the concept of Forth as a virtual machi
+ne ? Good/Bad/Don't care ?
+<[Len] NMORGENSTERN> the code far away from the code, that is
+<[Hadil] H.SABBAGH> I disagree. A language, by its definition, IS a virtual 
+machine.
+<[Dave] OLORIN> Figure out *why* you need to know the architecture. Then make 
+words which handle that task. Those are the *only* words which should ch
+ange dependent on the architecture. The rest of the code, which uses those 
+words, should work fine on any architecture. (e.g. INTERNALS.SEQ is suppose
+d to model this case)
+<[Len] NMORGENSTERN> Thanks
+<[Gary] GARY-S> There you prove my point by espousing a F-PC only concept
+<V.STAMPS> is here.
+<[Hadil] H.SABBAGH> Look, when you write a program in a language, you are 
+forced...
+<[Dave] OLORIN> Gary: No. The more efficient the underlying machine, the less 
+"dirty" tricks we need to use to speed things up. If the implementation
+of the virtual machine is good, we shouldn't need to take advantage of it as 
+much as if it is bad (i.e. we won't need assembly code which takes advant
+age of the model because the model should be fast)
+<[Hadil] H.SABBAGH> to use that langauge's "virtual machine".
+<[Hadil] H.SABBAGH> Implementing Forth on different architectures
+<[Len] NMORGENSTERN> I guess we need you two to define your terms...
+<[Len] NMORGENSTERN> What exactly is a virtual machine?
+<[Hadil] H.SABBAGH> is an _overlay_ of the Forth virtual machine on top of
+<[Hadil] H.SABBAGH> the architecture.
+<[Dave] OLORIN> Gary: No. The whole point of the idea of abstraction is that I 
+should be able to move the code from F-PC to another Forth, and *only*
+have to change two files, PRELUDE.SEQ (which contains the cell size information)
+, and INTERNALS.SEQ (which contains the threading and dictionary forma
+t specific information). The specific tasks which need to manipulate those 
+things use a set of words whose function does not change from implementatio
+n to implementation.
+<[Gary] GARY-S> I was speaking in more narrow terms than Hadil, obviously. I 
+was refering to the environment of the native Forth
+<[Hadil] H.SABBAGH> I don't understand Gary's remark?
+<[Gary] GARY-S> Which one ?
+<[Hadil] H.SABBAGH> "...the environment of the native Forth"
+<FIGCHAPTERS> is here.
+<[Dave] OLORIN> Gary, let me give an example. The word THREAD, was written to 
+place in the dictionary the threading information such that HERE EXECUTE
+ would execute the Forth code typed in afterwards (essentially a headerless 
+Forth word). I can use THREAD, freely, because I know its function. How it
+ works varies from implementation to implementation, but what it does does not.
+<[Gary] GARY-S> MMS is the only commercial product I am personally aware of 
+that still runs as native forth - ie: not via Dos or some other bios
+<[Len] NMORGENSTERN>   No. File Name             Type Address      YYMMDD Bytes 
+  Access Lib DLA
+<[JaXXaJ] FIGCHAPTERS> Assalam, Hadil
+<[Dave] OLORIN> (Jax, the Forth communities very own palindrome) (grin)
+<[Hadil] H.SABBAGH> Aleikum assalam.
+<V.STAMPS> 1ST TIME HERE
+<[Dave] OLORIN> Welcome to the fray.
+<[JaXXaJ] FIGCHAPTERS> Hi, V! What's yer name?
+<V.STAMPS> VIRGIL
+<[Hadil] H.SABBAGH> Look Gary, do you want _everybody_ in the world
+<[Gary] GARY-S> type /nam virgil
+<[Dave] OLORIN> Typing /nam Virgil will set your name.
+<[Len] NMORGENSTERN> Must be at start of a line
+<[Hadil] H.SABBAGH> who wants to use Forth to give up their multitaskin **IX
+<[JaXXaJ] FIGCHAPTERS> Virgil, are you a Vesta customer? Name sounds familiar.
+<[Gary] GARY-S> No, Hadil, I do not - it was just tonight's point-to-ponder
+<[Hadil] H.SABBAGH> and use a 16-bit machine with 1K blocks?
+<[VIRGIL] V.STAMPS> NO I AM A LONG TIME USER OF POLY FORTH
+<[Gary] GARY-S> did you copy Hadil ?
+<[JaXXaJ] FIGCHAPTERS> Aha! Guess you like it. What's best about pF?
+<W.BADEN1> is here.
+<[Hadil] H.SABBAGH> Yes. I did.
+<[JaXXaJ] FIGCHAPTERS> Dave, hearing nice things about your OOPS (which I have 
+not unarced yet)
+<[VIRGIL] V.STAMPS> I'm familiar with how it works
+<[Hadil] H.SABBAGH> Unfortunately, I am not a Forth "purist" like most of you.
+<[JaXXaJ] FIGCHAPTERS> Hi Wil.
+<[JaXXaJ] FIGCHAPTERS> That *is* a big plus, we'll admit, Virgil!
+<[Gary] GARY-S> You have to **KNOW** I am not going to suggest trashing **IX
+<[Dave] OLORIN> Jax, thanks. Have you got the second one (OO4TH21.ARC)?
+<[Len] NMORGENSTERN> Who's a purist?
+<[Hadil] H.SABBAGH> I believe in using Forth on machines I can get my hands on
+<[JaXXaJ] FIGCHAPTERS> Hadil, UNIX uses 1k blocks, what's wrong with Forth 
+doing same?
+<[Gary] GARY-S> Wil - welcome back - no bored meeting tonite ?
+<[Wil] W.BADEN1> 2nd Thursday of the month.
+<APPERT> is here.
+<[Dave] OLORIN> "I'm not a purist but I play one on the net" (grin)
+<[Hadil] H.SABBAGH> instead of having customers buy the latest Forth chip
+<[Hadil] H.SABBAGH> and change their whole way of life.
+<[Dave] OLORIN> Speaking of which, that Harris promotion looks too good to be 
+true!
+<[Hadil] H.SABBAGH> Jax: You're right. When was the last time you
+<[Gary] GARY-S> Isn't that a BIG promotion ?
+<[Kevin] APPERT> what Harris promo? Tell us about it
+<[Hadil] H.SABBAGH> _thought_ about that while using vi?
+<[JaXXaJ] FIGCHAPTERS> It is too good to be true. They were a little stuffy 
+when I called today. Wasn't suppposed to be announced till 10 December.
+<[Dave] OLORIN> Yeah. Big and nice!
+<[Dave] OLORIN> Yeah, didn't you see the follow up message. Wait till Sunday.
+<[Gary] GARY-S> The second message from Phil said as much. Jax
+<[JaXXaJ] FIGCHAPTERS> Hadil ... I have said many times, right here in this 
+forum, that Forth programmers are lazy sots ... we should have written text
+editors using BLOCK transparently *DECADES* ago.
+<[JaXXaJ] FIGCHAPTERS> Yes, Gary, I knew that when I called. Jax is Bad Boy.
+<[Dave] OLORIN> They are having a contest ($10,000 grand prize) for designs 
+using the RTX-2001A. The nice thing is, you send an initial description, i
+f it isn't a joke or a ludicrous idea, they *give* you a development system to 
+design it on.
+<[Gary] GARY-S> acid in a wound, did you say
+<[Hadil] H.SABBAGH> Wouldn't that kill the sacred cow of "words in blocks"?
+<[JaXXaJ] FIGCHAPTERS> Right, that's the part I like.
+<[JaXXaJ] FIGCHAPTERS> Hadil, I write about , oh, 40 -100 blocks a week.
+<[Len] NMORGENSTERN> They must be scared of the ShBoom!
+<[JaXXaJ] FIGCHAPTERS> Blocks *are* nice thought-formatters!
+<[Dave] OLORIN> I'm still trying to find out if multiple entries and/or 
+software only designs are legitimate. (One way or another I'm getting one of t
+hose development systems... (grin))
+<[JaXXaJ] FIGCHAPTERS> But I can use text files, too, No biggy.
+<[Len] NMORGENSTERN> <Len has used both blocks and text files since year 1 & 
+still prefers blocks>
+<[Kevin] APPERT> who did they tell about this?
+<[JaXXaJ] FIGCHAPTERS> I'm just saying, BLOCK is mistaken for the Forth editor, 
+when in reality ...
+<[JaXXaJ] FIGCHAPTERS> BLOCK is Forth's VM interface.
+<[Hadil] H.SABBAGH> <Why does Len talk in this way?>
+<[Gary] GARY-S> It's in Cat 6, Top 15 Kev
+<[Dave] OLORIN> Phil Koopman sent out a message on comp.lang.forth. It will be 
+officially announced next week.
+<[Len] NMORGENSTERN> <Len likes to taalk in 3rd person making parenthetical 
+comments>
+<[JaXXaJ] FIGCHAPTERS> <<<< jax and len use the third person and arrows to make 
+asides.
+<[Dave] OLORIN> <---- Deep down, dyed in the wool, despiser of BLOCKs
+<[JaXXaJ] FIGCHAPTERS> <<< sort of conventional on GEnie.
+<[Dave] OLORIN> And you *can* write VM code for Forth using streams, in fact, 
+its easier.
+<[Len] NMORGENSTERN> Don't confuse blocks for source & blocks for virtual memory
+<[JaXXaJ] FIGCHAPTERS> OLORIN is C programmer in sheeps's clothing.
+<[JaXXaJ] FIGCHAPTERS> ..:-)
+<[JaXXaJ] FIGCHAPTERS> Yes, Dave, yer right.
+<[Dave] OLORIN> Down here in Texas we call them Fightin' Words!
+<[Dave] OLORIN> (grin)
+<[Len] NMORGENSTERN> It would be hard to beat Forth's v.m. system
+<[Hadil] H.SABBAGH> Look, F-PC has the right idea.
+<[JaXXaJ] FIGCHAPTERS> Really, the VM interface only matters in that BLOCK is 
+easier to use IF YOU DON"T HAVE A HOST OS.
+<[Dave] OLORIN> Although I will cheerfully admit that C does do a very nice job 
+of paying the rent.
+<[Hadil] H.SABBAGH> BLOCK = Forth VM, but you can open any file.
+<[JaXXaJ] FIGCHAPTERS> People forget Forth == C + Unix, I mean, Forth is an OS.
+<[Dave] OLORIN> That I will grant you.
+<[JaXXaJ] FIGCHAPTERS> It's host op systems that make the dichotomy apparent.
+<[Hadil] H.SABBAGH> Just like in C, you can handle record-oriented files.
+<[JaXXaJ] FIGCHAPTERS> At work ...
+<[Dave] OLORIN> Jax, so is TRSDOS, that doesn't mean I use it that way.
+<[JaXXaJ] FIGCHAPTERS> One of the features I have developed ...
+<[Len] NMORGENSTERN> Well, a good caching system would probably do the same, 
+but you could not compute addresses for things like CMOVE, etc.
+<[JaXXaJ] FIGCHAPTERS> is launching programs, C, ASM, from our on-board FORTH.
+<[JaXXaJ] FIGCHAPTERS> <<< Dave, TRSDOS is an OS, but it isn't programmable. 
+Forth is.
+<[Dave] OLORIN> One of these days Real Soon Now (maybe for the article which is 
+almost but not quite past its deadline) I'm going to put some of the F
+-PC features into a library of objects.
+<[Hadil] H.SABBAGH> That would be real cool Dave.
+<[Dave] OLORIN> Jax: I've used it. It isn't an OS, it's a nightmare. (grin).
+<[JaXXaJ] FIGCHAPTERS> Me too. Have a Model 4 in basement.
+<[Dave] OLORIN> Right now it's either that or do an article on Huffman encoding 
+using Forth.
+<[JaXXaJ] FIGCHAPTERS> Used it as terminal for Novix!!!
+<[Hadil] H.SABBAGH> I am still working on persistent objects.
+<[Gary] GARY-S> Geeze - Hadil and Dave go into the Obese Forth pile.
+<[Hadil] H.SABBAGH> Things are pretty busy at work though.
+<[JaXXaJ] FIGCHAPTERS> Not bad. TRSDOS beat the Apple II Os easy.
+<[JaXXaJ] FIGCHAPTERS> Hadil, I forget ... what kind of work you do?
+<[Dave] OLORIN> We prefer the term "Pleasingly Plump"
+<[Hadil] H.SABBAGH> Also Dave: I have some ideas for improving multiple 
+inheritance.
+<[Len] NMORGENSTERN> Tom Zimmer announced a new target compiler at Asilomar &
+<[Hadil] H.SABBAGH> Not _real_ work; I'm finishing my Ph.D. in C.S.
+<[Len] NMORGENSTERN> distributed source. It can write a program as
+<[Len] NMORGENSTERN> small as 1K!!!!
+<[Dave] OLORIN> Hadil: Great! What do you have in mind?
+<[Gary] GARY-S> Am I the only person supporting minimal Forth on this RTC ?
+<[Dave] OLORIN> Len: When will you be uploading it to the library?
+<[Dave] OLORIN> Gary: It's a tough job... (grin)
+<[Gary] GARY-S> Good question , Len
+<[Len] NMORGENSTERN> Gary, what do you mean by minimal? Minimal number of Forth 
+words, or
+<[JaXXaJ] FIGCHAPTERS> I agree with ya gary.
+<[Len] NMORGENSTERN> minimal size of running program?
+<[JaXXaJ] FIGCHAPTERS> the problem wit fat forths ...
+<[Hadil] H.SABBAGH> I am still working on it.  I'll upload a coherent reply in 
+a little while.
+<[JaXXaJ] FIGCHAPTERS> is that ya start to be an expert in your forth, instead 
+of Forth.
+<[Wil] W.BADEN1> Forth's greatest virtue is its economy, whence all the other 
+virtues come.
+<[Hadil] H.SABBAGH> Jax: If OO extensions are in FORTH-83, whats the problem?
+<[JaXXaJ] FIGCHAPTERS> Forth programmers, the "true beliveers" came to Forth 
+because they didn't want to be servants of their compilers. ...
+<[Hadil] H.SABBAGH> Its just an add-on to your 1-instruction Forths.
+<[Gary] GARY-S> Unencumbered Forth, Len. F-PC is bigger than a lot of PC's
+<[JaXXaJ] FIGCHAPTERS> But Hadil, I have one of the largest Forths in the world 
+on my machine: JForth
+<[JaXXaJ] FIGCHAPTERS> So I play both sides of the fence (JForth has OO, it's 
+called ODE).
+<[Len] NMORGENSTERN> I agree that F-PC is <way> too big, but
+<[Hadil] H.SABBAGH> So why are you giving me such a hard time? :-)
+<[Dave] OLORIN> Hadil: I chose the method I did for two reasons... (1) It 
+meshes nicely with the vocabulary structure and (2) I could come up with a t
+heoretical sounding reason to rationalize away my implementation decision (grin)
+<[JaXXaJ] FIGCHAPTERS> I just mean that Forth per se ...
+<[Len] NMORGENSTERN> that does not mean we should all go the opposite extreme
+<[JaXXaJ] FIGCHAPTERS> is easier to deal with when small.
+<[JaXXaJ] FIGCHAPTERS> JForth has HUNDREDS of loadable options ...
+<[Hadil] H.SABBAGH> Dave: I understand.  I am trying to work out a way to
+<[JaXXaJ] FIGCHAPTERS> you can go crazy trying to learn them all!
+<[Dave] OLORIN> Jax: I ain't no steeenkin' servant. It just takes a little 
+longer to understand the innards of the bigger Forths.
+<[Hadil] H.SABBAGH> implement the equivalent of C++ "virtual classes".
+<[JaXXaJ] FIGCHAPTERS> The INNARDS are EASY in JForth. It's the OUTARDS.
+<[JaXXaJ] FIGCHAPTERS> .. :-)
+<[Hadil] H.SABBAGH> This allows a class to inherit from two different classes
+<[Len] NMORGENSTERN> <ha ha, Jax>
+<[Hadil] H.SABBAGH> with a common ancestor.
+<[Gary] GARY-S> I have to tell you, though, I am really impressed with Roedy 
+green's bbl
+<[JaXXaJ] FIGCHAPTERS> You C >> Forth guys are used to huge compilers.
+<[Dave] OLORIN> Hadil. I thought of a few possiblities to explore to do that, 
+but all of them started looking like more trouble than they were worth.
+<[JaXXaJ] FIGCHAPTERS> Forth programmers agree with Ritchie ...
+<[JaXXaJ] FIGCHAPTERS> and Thompson ...
+<[Dave] OLORIN> Jax: I was a Forth programmer before I was a C programmer.
+<[JaXXaJ] FIGCHAPTERS> "You can't trust any code you don't write yourself" ...
+<[Hadil] H.SABBAGH> Me too. I wrote a B-tree application for Apple ][
+<[JaXXaJ] FIGCHAPTERS> I'm speaking tongue in cheek here ...
+<[Hadil] H.SABBAGH> (They said it couldn't be done ... :^))
+<[Dave] OLORIN> Oh Bull, Jax. Forth programmers are, to use Ritchies words, 
+fond of "unwarranted chumminess with the implementation".
+<[JaXXaJ] FIGCHAPTERS> I just mean, Unix C can accustom one to a massive system.
+<[Len] NMORGENSTERN> You can't even trust if you DO write it yuourself!
+<[JaXXaJ] FIGCHAPTERS> It's a novelty to Forth programmers.
+<[Kevin] APPERT>
+<[JaXXaJ] FIGCHAPTERS> (most Forth programmers).
+<[Dave] OLORIN> *Just* because "Hello, World" is 43k long...
+<[Dave] OLORIN> (grin)
+<[Gary] GARY-S> Programmer's workbench, from whiich all modern Unix springs, 
+was NOT humongous
+<[JaXXaJ] FIGCHAPTERS> I know the advantages of Fat Forth, I have an Amiga. 
+JForth boots @ 165 K ( 3 k target applications)
+<[Hadil] H.SABBAGH> Jax: au contraire. *N*X was, at its time, the _smallest_
+<[Kevin] APPERT>
+<[Hadil] H.SABBAGH> multi-user OS available.  And the _only_ portable one!
+<[JaXXaJ] FIGCHAPTERS> The smallest Unix ever got was bigger than the biggest 
+pre-1980 Forth system.
+<[JaXXaJ] FIGCHAPTERS> And Forth *was* multiuser.
+<[Wil] W.BADEN1> "Hello world" on F-PC is 43K long. Forth's edge is sharing the 
+runtime package.
+<[JaXXaJ] FIGCHAPTERS> Some still are, right Virgil?
+<[Hadil] H.SABBAGH> So why didn't it catch on? Eh?
+<[JaXXaJ] FIGCHAPTERS> So there is no argument. FAT FORTHS are here in a big 
+way. Only way to deal with Mac, AmigaOS, Unix, OS/2 ...
+<[Kevin] APPERT> disconnected.
+<[VIRGIL] V.STAMPS> FORTH INC has a problem with the 64k barrier which giveme 
+grief.
+<[Gary] GARY-S>
+<[JaXXaJ] FIGCHAPTERS> ( it didn't catch on because AT&T wasnt' there pouring 
+umpteen millions into it)
+<[JaXXaJ] FIGCHAPTERS> <<< polyForht's problems are unique to polyForth + Intel 
+8088 >>>
+<[Hadil] H.SABBAGH> But AT&T _wasn't_ pouring $$$ into it until _much_ later
+<[Hadil] H.SABBAGH> Early to mid 80s. They lost a lot of $$$ because
+<[Hadil] H.SABBAGH> it was easily disseminated.
+<[JaXXaJ] FIGCHAPTERS> Look, they financed it, gave it to universities, etc., 
+every step of the way. They used it in house before that at own expense,
+ whiil chuck moore was living hand to mouth in consulting jobs.
+<[Gary] GARY-S> What's your point, jax
+<[Dave] OLORIN> It was written originally on a surplus, cast-off Dec PDP-7 and 
+only then because they needed a documentation machine.
+<[JaXXaJ] FIGCHAPTERS> Forth is as valid an approach as C + Unix. It can run in 
+protected memory, i.e., my still-unrelaeased 68070 system.
+<[Hadil] H.SABBAGH> Well, I've gotta go.  My asbestos suit is dirty again :-). 
+G'nite.
+<[VIRGIL] V.STAMPS> anybody use the hc11?
+<[JaXXaJ] FIGCHAPTERS> yes
+<[JaXXaJ] FIGCHAPTERS> Hadil, I'm agreeing with you.
+<[Hadil] H.SABBAGH> has left.
+<[JaXXaJ] FIGCHAPTERS> Just that fat forth feels strange to Forth programmers.
+<[JaXXaJ] FIGCHAPTERS> .
+<[Dave] OLORIN> But, Jax...you have such a confrontational way of agreeing with 
+people. (grin)
+<[JaXXaJ] FIGCHAPTERS> You bet!
+<[VIRGIL] V.STAMPS>
+<[JaXXaJ] FIGCHAPTERS> ga Virgil.
+<[Wil] W.BADEN1> Way to go, Jax.
+<[JaXXaJ] FIGCHAPTERS> (thanx Wil, if ya ain't teasing :-)
+<[Dave] OLORIN> That's ok... Forth programmers feel strange to just about 
+everyone else (grin)
+<[Wil] W.BADEN1> (I never joke.)
+<[Len] NMORGENSTERN> "If you can't say something good about someone, come and 
+sit by me and tell me all about it"
+<[VIRGIL] V.STAMPS> What happened? I seem to be alone??
+<[JaXXaJ] FIGCHAPTERS> Who turned out the lights :-)
+<[Wil] W.BADEN1> Speak, Virgil.
+<APPERT> is here.
+<[JaXXaJ] FIGCHAPTERS> Appert Appeart!
+<[Gary] GARY-S> <-still here
+<[Len] NMORGENSTERN> STA says Virgil is still here!
+<[VIRGIL] V.STAMPS>
+<[VIRGIL] V.STAMPS>
+<[Kevin] APPERT> STA says Jax is NORMAL!
+<[JaXXaJ] FIGCHAPTERS> Virgil, check your parity settings.
+<[Len] NMORGENSTERN> Try /sta at beginning of line, Virgil
+<[Gary] GARY-S> we are just waiting for Virgil to start the new thread :-)
+<[Len] NMORGENSTERN> No it says he is GOLDEN!
+<[VIRGIL] V.STAMPS> bye yall
+<[JaXXaJ] FIGCHAPTERS> (( this happens to me all the time with parity settings. 
+I bump a keystroke macro and bye bye))
+<[VIRGIL] V.STAMPS> disconnected.
+<[Gary] GARY-S> adios virgil
+<[JaXXaJ] FIGCHAPTERS> Must be on his way to guide Dante ...
+<[Gary] GARY-S> cute
+<[Len] NMORGENSTERN> Getting down into hell is easy, getting back up is hard
+<[Len] NMORGENSTERN> Wil, who said that?
+<[Dave] OLORIN> He'd better bring the Tropicana.
+<[Len] NMORGENSTERN> I asked Wil, because the original was in Latin
+<[Wil] W.BADEN1> (I believe it's Roman First Century BC.)
+<[Gary] GARY-S> Everyone see the latest SIGForth ACM ? with the announcement 
+for FORML - three weeks past and dead announcement
+<V.STAMPS> is here.
+<[JaXXaJ] FIGCHAPTERS> Welcom back@!
+<[Dave] OLORIN> Nope. My copy isn't here yet (it might have gotten caught in 
+the membership renewal time slip).
+<[Gary] GARY-S> can you see clearly now virgil :-)
+<V.STAMPS> It just suddenly stopped working, and I hung up.
+<[Len] NMORGENSTERN> <On a clear disk you can seek forever>
+<[Dave] OLORIN> Who looks to be able to make it to this years Symposium?
+<[Gary] GARY-S> Now I ask you - why announce a past event !?!?!
+<[Len] NMORGENSTERN> Almost certainly
+<[Dave] OLORIN> Because you ran late to press???
+<[Len] NMORGENSTERN> (Assume you mean ACM SigForth
+<[Kevin] APPERT> Len, do you pay St. Silicone for the copyright?
+<[Gary] GARY-S> bad planning
+<[Len] NMORGENSTERN> No, we both got it from another source
+<[Dave] OLORIN> Kevin: Is that the patron saint of exotic dancers?
+<[Gary] GARY-S> explain to the masses
+<[Kevin] APPERT> oops, St. Silicon
+<[Dave] OLORIN> (heh)
+<[Len] NMORGENSTERN> Breast implants are made of silicone, not to be confused
+<[Len] NMORGENSTERN> with silicon.
+<[Kevin] APPERT> local comedian with a lot of computer jokes...
+<[JaXXaJ] FIGCHAPTERS> In San Francisco, once a year they celebrate St. 
+Stupid's Day.
+<[Len] NMORGENSTERN> A very funny man.
+<[Kevin] APPERT> author of the binary bible.
+<[Dave] OLORIN> Right. Brings a *whole* new meaning to the term... Silicone 
+Valley
+<[Wil] W.BADEN1> Len, ask Virgil if Virgil #1 wrote it.
+<[Kevin] APPERT> IS YOUR DATA SAVED?
+<[Len] NMORGENSTERN> Will check Roget. brb
+<[Dave] OLORIN> Nope. He's still running around in the land of bad syndicated 
+television? (ducking)
+<[Gary] GARY-S> Only len would check his thesaurus
+<[Virgil] V.STAMPS> If I'm a poet, I don't know it...
+<[Gary] GARY-S> Wil - I got back to you on that file, didn't I?
+<[Dave] OLORIN> Although this here verse, it sure does show it...
+<[Len] NMORGENSTERN> Indeed it was Virgil!
+<[Len] NMORGENSTERN> He also said, Love conquers all
+<[Gary] GARY-S> Effigy - isn't that just east of Dallas
+<[Len] NMORGENSTERN> and "Faithful Achates"
+<[Dave] OLORIN> I thought it was a little South Pacific island as pronounced by 
+Canadians.
+<[Len] NMORGENSTERN> among about 40 other quotes.
+<[Len] NMORGENSTERN> Testicles was the father of Pericles.
+<[Gary] GARY-S> hahahahahaha
+<[Kevin] APPERT> pair of what?
+<[JaXXaJ] FIGCHAPTERS>
+<[Dave] OLORIN> Well one would *certainly hope so*!
+<[JaXXaJ] FIGCHAPTERS> Did you know Omar Khayyam was a Forth programmer?
+<[Len] NMORGENSTERN> How so?
+<[Kevin] APPERT> howso Jax?
+<[JaXXaJ] FIGCHAPTERS> "So when that Angel of the darker Drink" ...
+<[JaXXaJ] FIGCHAPTERS> "At last shall find you at the River-brink" ...
+<[JaXXaJ] FIGCHAPTERS> And, offering his cup, invite your soul" ...
+<[Wil] W.BADEN1> Gary, I just figured it out. You mean the Dijkstra. Yes. I got 
+your message.
+<[JaXXaJ] FIGCHAPTERS> "Forth to your lips to quaff - you shall not shrink."
+<[Gary] GARY-S> <a-r-r-r-rg-h>
+<[Len] NMORGENSTERN> My next vacation will be on Noman
+<[Kevin] APPERT> "Forth programmers with thier colons think"  (Burma shave)
+<[Gary] GARY-S> Yes Wil - that file :-)
+<[Dave] OLORIN> Is that like the Reagan typewriter?
+<[JaXXaJ] FIGCHAPTERS> Len ... Noman is an Island, I've heard.
+<[Wil] W.BADEN1> Did you enjoy it?
+<[Dave] OLORIN> (no memory and no colon)
+<[Kevin] APPERT> no memory, no colon
+<[Len] NMORGENSTERN> Noman You got it, Jax
+<[Virgil] V.STAMPS> has left.
+<[Kevin] APPERT> couldn't take it
+<[Gary] GARY-S> Yes - it is apropro too
+<[JaXXaJ] FIGCHAPTERS> Some people can't take a joke.
+<[Len] NMORGENSTERN> The czarist police banned an archeological work about 
+Nebuchadnezzar
+<[Dave] OLORIN> What about the hot peppers from Forth Worth, Texas?
+<[JaXXaJ] FIGCHAPTERS> Wish he'd taken a few of these and left with them.
+<[Kevin] APPERT> why, Len?
+<[JaXXaJ] FIGCHAPTERS> Why, Len?
+<[Dave] OLORIN> No bucking the czar.
+<[Wil] W.BADEN1> Ne Bog i ne tsar.
+<[Len] NMORGENSTERN> because "Ne bog et ne tzar" means "No God and No King" in 
+Russian
+<[Len] NMORGENSTERN> (True story)
+<[JaXXaJ] FIGCHAPTERS> If you have a good idea, run with it!
+<[Gary] GARY-S> This last five minutes belongs on finky's Tell-a-Joke RT 
+instead of Forth
+<[Kevin] APPERT> is there one, Gary?
+<[Gary] GARY-S> Yes - there sure is, kev
+<[Gary] GARY-S> Type TeleJoke to get to it
+<[Dave] OLORIN> I had some friends in the SCA who went to a convention in 
+modern gear (i.e. semi-auto weapons, assault rifles, etc). They spent three
+days explaining to a backwoods sherriff (Who had heard about "them people in 
+that there Society for Creative Anarchy") and the FBI that *weapons with
+barrells fillerels filled with lead * don't shoot well.
+<[Dave] OLORIN> Uhmmm...plattitudes ok, gary?
+<[Len] NMORGENSTERN> An Australian mammal?
+<[Wil] W.BADEN1> Once again I regret not being here for our guest next week.
+<[Kevin] APPERT> with an attitude?
+<[Dave] OLORIN> Go Forth-Rightly into the world... Go Forth and conquer... Use 
+the Forth luke... March ever forthward into the fray...
+<[Dave] OLORIN> Forth-t in war, Forth-t in peace, Forth-t in the core of the 
+CPU?
+<[Dave] OLORIN> Forth score and seven years ago...
+<[JaXXaJ] FIGCHAPTERS> Len, I have a story just like that Russian story from 
+Roman history.
+<[Gary] GARY-S> Ohhh - thanks for the reminder... December 14 - in conference 
+on GEnie, John Hall to tell us where the money is going and what the boa
+rd is doing for FIG
+<[Gary] GARY-S> be here !!!
+<[Dave] OLORIN> "We'll send that one back to committee for Forth-er review... "
+<[Len] NMORGENSTERN> ga
+<[JaXXaJ] FIGCHAPTERS> When Nero was in the last year of his fitful reign ...
+<R.BERKEY> is here.
+<[Dave] OLORIN> We keep falling forth-er and forth-er behind.
+<[JaXXaJ] FIGCHAPTERS> Revolts sprung up against him in the provinces ...
+<[JaXXaJ] FIGCHAPTERS> Which within a year ended his reign and his life ...
+<[JaXXaJ] FIGCHAPTERS> the first was a revolt of Gaul led by Vindex ...
+<[Dave] OLORIN> ("Sire, the Peasants are revolting!", "Lad, I have always found 
+the Peasants to be revolting...")
+<[Gary] GARY-S> repeat - dec 14, John D. Hall - talks about FIG and FIG 
+directions
+<[JaXXaJ] FIGCHAPTERS> So haters of Nero among the aristocracy who lived near 
+the Palace ...
+<[Dave] OLORIN> (Inventor of blue cleaning fluid)
+<[JaXXaJ] FIGCHAPTERS> would get up late at night and pretend to be having 
+trouble with their slave, and prretend to be threatening the slave ...
+<[Dave] OLORIN> (the friends in the aristocracy lived near-o to the palace)
+<[JaXXaJ] FIGCHAPTERS> Yelling, "Vengeance is coming!" ("Venit Vindex")
+<[Len] NMORGENSTERN> The italians used VERDI for "Vittorio Emmanuele Rey de 
+Itialia"
+<[Gary] GARY-S> Kev just asked about Titsler and Appart - they deferred til 
+after Hanover, and will guest in Spring 1990
+<[Len] NMORGENSTERN> in their struggle to unify Italy against the Austrians
+<[Dave] OLORIN> Veni, Vidi, Vindex (I came, I saw, I did windows)
+<[Len] NMORGENSTERN> All Gaul is quartered into three halves.
+<[Dave] OLORIN> Socrates died from an overdose of wedlock.
+<[Kevin] APPERT> Atari will no longer register you as a developer unless you 
+have a product.  Somebody wanna try and explain that?
+<[Gary] GARY-S> Bob - no flmes lately - happy, tired or resting between killer 
+strikes :-)
+<[JaXXaJ] FIGCHAPTERS> Churchill agreed with Caesar, once, to the effect that 
+DeGaulle should be divided in three parts (true).
+<[Dave] OLORIN> Sir Francis Drake circumcised the world with a 100 foot clipper.
+<[Kevin] APPERT> just working for tips, was he?
+<[Robert] R.BERKEY> In mourning for the lost portability of Forth.
+<[JaXXaJ] FIGCHAPTERS> Shma Elizabeth!
+<[Len] NMORGENSTERN> PGeriatic gynecologist: Spreader of old wives' tails.
+<[Dave] OLORIN> Yep...I nearly was killed. He escaped by the skin of his... 
+<never mind>
+<[Kevin] APPERT> Forth, Dave?
+<[Gary] GARY-S> LAST CAL FOR "FORTH" COMMENTS
+<[Dave] OLORIN> Yeah, yeah, Forth. That was it, Forth.
+<[Len] NMORGENSTERN> No, we're having too much fun
+<[Kevin] APPERT> see this is all relevent
+=== End of Steno notes. ===
+
+

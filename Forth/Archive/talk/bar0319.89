@@ -1,0 +1,285 @@
+
+Item    4572890                 89/03/20        10:01
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 03/19/89   Time: 21:32EST
+Attendees:
+[[Len] NMORGENSTERN]
+
+Minutes:
+<APPERT> is here.
+<[Len] NMORGENSTERN> Hi Kevin
+<[Kevin] APPERT> hi Len. How's things
+<[Kevin] APPERT>    ?
+<[Len] NMORGENSTERN> Very good. I was at the West Coast Faire yesterday
+<[Len] NMORGENSTERN> Lots of action in the Forth booth.
+<[Len] NMORGENSTERN> Did you make it?
+<[Kevin] APPERT> it's not what it used to be and never was.
+<[Kevin] APPERT> nope , never have
+<[Len] NMORGENSTERN> No, it's declining every year, but still worth attending
+<[Kevin] APPERT> interest in forth?
+<[Len] NMORGENSTERN> I have a new comm program. Are ;you getting skipped lines?
+<[Kevin] APPERT> noooooooo
+<[Kevin] APPERT> what name comm program
+<[Len] NMORGENSTERN> Good. Then it's a local phenomenon.
+<[Len] NMORGENSTERN> Mirror III
+<[Kevin] APPERT>  I know mirror, crosstalk clone
+<[Kevin] APPERT> I use it to talk to my prom programmer
+<[Len] NMORGENSTERN> Upgraded from Mirror II.
+<[Kevin] APPERT> yup
+<[Len] NMORGENSTERN> How do you mean talk to your prom programmer?
+<[Len] NMORGENSTERN>
+<[Kevin] APPERT> because I won't waste time writing a vt100 emulator
+
+<[Len] NMORGENSTERN> Then you use it as a terminal.
+<[Kevin] APPERT> and it doesn't have a 'stupid' mode (the prom programmer)
+<[Len] NMORGENSTERN> Lots of action there
+<[Kevin] APPERT> it reports its status all over the place with cursor 
+	positioning...
+<[Len] NMORGENSTERN> Did you get the line that said "back to the booth"
+<[Kevin] APPERT> and automating it would nescitate ...
+<[Kevin] APPERT> no did not get line ...
+<[Len] NMORGENSTERN> I'm switching to normal mode
+<[Kevin] APPERT> decomutating all that stuff.
+<[Len] NMORGENSTERN> %Can't turn it off
+<[Kevin] APPERT> normal?  a forth programmer says normal?
+<[Len] NMORGENSTERN> What's normal is what I think is good for me.
+<[Kevin] APPERT> right
+<[Len] NMORGENSTERN> Egocentric but definable.
+<[Kevin] APPERT> you bet your ... you can't turn it off.
+<[Len] NMORGENSTERN> Most definitions of normal are untestable.
+<[Kevin] APPERT> chuckle
+<[Len] NMORGENSTERN> Shouldn't I be able to turn it off?
+<[Kevin] APPERT> no, it controls you!  you paid money for a black box...
+<[Kevin] APPERT> and in the box are deamons!
+<[Kevin] APPERT>  that'l teach you :)
+<[Len] NMORGENSTERN> No, it's a little man
+<[Len] NMORGENSTERN> Do you know Maelzel's chess player? About 100 years ago...
+<[Kevin] APPERT> dwarf?
+<[Len] NMORGENSTERN> this guy went all over Europe with a chess machine. It had
+<[Len] NMORGENSTERN> a full sized man in it who had lost both arms and legs...
+<[Len] NMORGENSTERN> in battle!
+<[Kevin] APPERT> now we have computer ...
+<[Kevin] APPERT> chess matches which ...
+<[Kevin] APPERT> exclude human players.
+<[Kevin] APPERT> have you watched 'tour of  duty; on the moronoscope?
+<[Len] NMORGENSTERN> ...
+<[Len] NMORGENSTERN> ...
+<[Len] NMORGENSTERN> Yep. F83 was hot hot hotat the Faire. Sold about 4-5 copies 	in the time I was there!
+<[Kevin] APPERT> FPC available?
+<[Len] NMORGENSTERN> Sorry I meant F-PC
+<[Kevin] APPERT> should give it away!
+<[Len] NMORGENSTERN> 4 disks for $20
+<[Len] NMORGENSTERN> Fig has to make a little, and
+<[Kevin] APPERT> I plan to do so for heads of EE dept.s at major universities
+<[Len] NMORGENSTERN> there's way over a megabyte of arc'ed files!
+<[Kevin] APPERT> good heads that is
+<[Kevin] APPERT> one 1.4 meg floppy!
+<[Kevin] APPERT> I'll repro them myself if I have to
+<[Len] NMORGENSTERN> ...
+<[Len] NMORGENSTERN> It's public domain. But $20 is reasonable when comparedto 
+the nuisance and expense of downloading.
+<[Kevin] APPERT>  this is true.
+<[Len] NMORGENSTERN> The manual is on disk, too.
+<[Kevin] APPERT> the one Ting is selling?
+<[Len] NMORGENSTERN> ...
+<[Len] NMORGENSTERN> One of them. The other is only in book form, I believe
+<[Len] NMORGENSTERN> .
+<[Len] NMORGENSTERN> ...
+<[Len] NMORGENSTERN> I have been trying it out. A few minor documentation 
+	errors but otherwise fine
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT>  there is a user's manual and a tech ref.  the user's mn is on 
+	disk I guess
+<[Len] NMORGENSTERN> I think so.
+<[Kevin] APPERT> the doc's probably matched...
+<[Kevin] APPERT> a previous incarnation...
+<[Len] NMORGENSTERN> Actually the technical manual is more accurate.
+<[Kevin] APPERT> I remember two months...\
+<[Kevin] APPERT> ago they said absolutely frozen! ...
+<[Kevin] APPERT> and last month zimmer showed up and said 'maintenance release' 
+<[Len] NMORGENSTERN> I think it is frozen, but there will have to be bug 
+	reports...
+<[Len] NMORGENSTERN> if not actual fixes.
+<[Kevin] APPERT> but he added paths and a few other things...
+<[Len] NMORGENSTERN> "Paths"?
+<[Kevin] APPERT> I don't object.  You can not freze Tom Zimmer
+<[Len] NMORGENSTERN> ...
+<[Kevin] APPERT> yes, when you look for a file, you look along a path
+<[Len] NMORGENSTERN> Ting was telling us his problems trying to hold to the 
+	freeze!
+<[Kevin] APPERT> when?
+
+<[Len] NMORGENSTERN> Just last week. But Tom had paths a long time ago
+<[Kevin] APPERT> no problem.  I long ago joined the Tom Z. 'forth of the month 
+	club'
+<[Len] NMORGENSTERN>
+<[Kevin] APPERT> if Tom can not walk on water, it must be a problem with the 
+	water ;)
+<[Len] NMORGENSTERN> Ting was twisting Tom's arm as recently as a couple of 
+months ago
+<[Len] NMORGENSTERN> Tom was insisting he wanted some more changes!
+<[Len] NMORGENSTERN> I wish I could write like that!
+<[Kevin] APPERT> when I use a Tom Z. forth for production work, I simply don't 
+	take the code...
+<[Kevin] APPERT> to his constant revisions....
+<[Kevin] APPERT> The product you  start a project with is the product you end 
+	with...
+<[Kevin] APPERT> and this seems to work for us.
+<[Kevin] APPERT> It gives me the shakes to think ...
+<[Kevin] APPERT> what some of the new chums will do with FPC...
+<[Kevin] APPERT> text files can promote run on definitions...
+<[Kevin] APPERT> and bad habits...
+<[Kevin] APPERT> that screens preclude...
+<[Kevin] APPERT> I predict some very un-forthlike code.
+<[Len] NMORGENSTERN> aybe sook for the individual programmer
+<[Kevin] APPERT> I personally like forths that run out of memory ...
+<[Kevin] APPERT> in addition.  I think it was Chuck that was quoted as saying...
+<[Kevin] APPERT> " if you can'
+<[Len] NMORGENSTERN> (start over)
+<[Kevin] APPERT> t do it in 64 k, you don't understand the problem"
+<[Len] NMORGENSTERN> ...
+<[Kevin] APPERT> from where?|
+<[Len] NMORGENSTERN> you have and you like
+<[Kevin] APPERT> ga
+<[Len] NMORGENSTERN> but a published language is something else. It needs to be
+<[Len] NMORGENSTERN> fixed for a time at least, say a few years.
+<[Len] NMORGENSTERN> Also, if merely changing from screens to seq. files will
+<[Kevin] APPERT> I can handle freezing the thing myself, as I said
+<[Len] NMORGENSTERN> make that much difference, Forth is more unstable than I 
+think
+<[Kevin] APPERT> it's not forth, it's the philosophy behind it!
+<[Kevin] APPERT> have you read Brodie's 'Thinking Forth' ?
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> My philosophy is pragmatic. If it works, It's good
+<[Len] NMORGENSTERN> I have Brodies's book
+<[Kevin] APPERT> but it's so easy to use Forth in a fashion which does not work!
+<[Kevin] APPERT> that's why forth has a bad rep in so many cases...
+<[Len] NMORGENSTERN> True, but people write bad English all the time
+<[Kevin] APPERT> C or pascal programmers...
+<[Len] NMORGENSTERN> and you can't criticize the language for that.
+<[Kevin] APPERT> who do not know the first thing about using the ...
+<[Kevin] APPERT> Forth environment object to it because...
+<[Kevin] APPERT> it's a loaded gun...
+<[Kevin] APPERT> with which they procede to shoot off their departments' feet...
+<[Kevin] APPERT> I do not criticize forth for that...
+<[Kevin] APPERT> I sometimes question our desire ...
+<[Kevin] APPERT> ( my own desire also) to destribute it...
+<[Kevin] APPERT> far and wide.
+<[Len] NMORGENSTERN> Do you remember Basic English?
+<[Len] NMORGENSTERN> It was an attempt to reduce the language to a few hundred 
+	(about 800)
+<[Len] NMORGENSTERN> words.
+<[Kevin] APPERT> brb
+<[Len] NMORGENSTERN> To me Pascal, C, etc. etc. are like Basic English
+<[Len] NMORGENSTERN> whereas Forth is the full unabridged.
+<[Kevin] APPERT> .
+<[Len] NMORGENSTERN> You could say anything you wanted in Basic English
+<[Len] NMORGENSTERN> but you had to be very clever, and it was
+<[Len] NMORGENSTERN> not very stylish.
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> I read an article somewhere...
+<[Kevin] APPERT> the other day in which...
+<[Kevin] APPERT> some radio journalist...
+<[Kevin] APPERT> used some 'stackware' ...
+<[Kevin] APPERT> to create a system ...
+<[Kevin] APPERT> for displaying election results...
+<[Kevin] APPERT> in a few evenings at home...
+<[Len] NMORGENSTERN> SF Chronicle
+<[Kevin] APPERT> yup
+<[Len] NMORGENSTERN> ga
+<[Kevin] APPERT> mercury in my case.
+<[Len] NMORGENSTERN> Was that in Forth?
+<[Kevin] APPERT> it may be hard to explain why...
+<[Len] NMORGENSTERN> (No it was Mac Hypercard!)
+<[Kevin] APPERT> that sort of trivial solution is not available to ...
+<[Kevin] APPERT> every problem in a few years...
+<[Kevin] APPERT> and that brings me to ...
+<[Kevin] APPERT> the greatest of the black boxes...
+<[Kevin] APPERT> neural nets...
+<[Kevin] APPERT> where the contents of the black box were not...
+<[Kevin] APPERT> even placed there by any thinking person!  I will not trust my.
+..
+<[Kevin] APPERT> life to those things...
+<[Kevin] APPERT> when they are starting to use them for...
+<[Kevin] APPERT> medical treatment or air traffic control...
+<[Kevin] APPERT> I will abstain!
+<[Len] NMORGENSTERN> I'm pragmatic. There will never be error-free...
+<[Len] NMORGENSTERN> Von Neumann type program written by a human, so the 	question is not, "Are neural net programs safe" 
+<[Len] NMORGENSTERN> but the question is, will they be better than a
+<[Len] NMORGENSTERN> Von Neumann type program written by a human?
+<[Kevin] APPERT> read any Heinlein?
+[Len] NMORGENSTERN> Yes, one of my favorites.
+<[Kevin] APPERT> in 'Friday' one of his characters...
+<[Kevin] APPERT> talks about a 'created being'...
+<[Kevin] APPERT> for piloting aircraft...
+<[Kevin] APPERT> and one reason...
+<[Kevin] APPERT> why he hopes they will never come to pass...
+<[Kevin] APPERT> remember?
+<[Len] NMORGENSTERN> It's been a long time since I read him!
+<[Kevin] APPERT> have you read 'Friday'?
+<[Len] NMORGENSTERN> I don't remember it.
+<[Kevin] APPERT> Would you like to?
+<[Len] NMORGENSTERN> Yes
+<[Kevin] APPERT> What is your address?
+<[Len] NMORGENSTERN> 304 Rheem Blvd. Moraga CA 94556
+<[Kevin] APPERT> it's on it's way.
+<[Len] NMORGENSTERN> Thanx
+<[Kevin] APPERT> have you read "To Sail Beyond The Sunset" ?
+<[Len] NMORGENSTERN> No, I don't think so.
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> I have read sci fi on and off for about 55 years now
+<[Len] NMORGENSTERN> and at some periods, I read almost nothing else.
+<[Kevin] APPERT> it's a foul rotten dirty shame that people like R.A.H. have to 
+die.
+<[Kevin] APPERT> I will miss him.
+<[Len] NMORGENSTERN> Regrettably, we all have to.
+<[Kevin] APPERT> ah well,
+<[Len] NMORGENSTERN> Do you get double transmission from me?
+<[Kevin] APPERT> no, looks fine, with type-ohs
+<[Kevin] APPERT> by the way, some people take offense at the label...
+<[Kevin] APPERT> 'sci-fi' applied to what they feel is serious literature.
+<[Len] NMORGENSTERN> Right. Actually, back in the 40's science fiction.
+<[Len] NMORGENSTERN> was the only genre that published serious magazine 
+literature!
+<[Len] NMORGENSTERN> !
+<[Kevin] APPERT> I once so a person belted square in the face for using that 
+term
+<[Kevin] APPERT> oops, saw
+<[Len] NMORGENSTERN> Asimov has a book on the history of science fiction
+<[Len] NMORGENSTERN> and he goes into the term sci-fi. I will send you that
+<[Kevin] APPERT>  well, I had a lot of fun tonight...
+<[Len] NMORGENSTERN> if you give me your address.
+<[Len] NMORGENSTERN> & I need it for the NB FIG mailing, in any case.
+<[Len] NMORGENSTERN> (Even trade)
+<[Kevin] APPERT> address deleted
+<[Len] NMORGENSTERN> Thanks
+<[Kevin] APPERT> no Jax or anything tonight?
+<[Len] NMORGENSTERN> Jax is on vacation.
+<[Len] NMORGENSTERN> Colorado is beautiful in the winter and in the summer
+<[Len] NMORGENSTERN> but not in the slush!
+<[Kevin] APPERT> Building 255 is the only place Lockheed owns with its own 
+stained glass cupola!
+<[Kevin] APPERT> we don't really own it, but just a long term rental.
+<[Len] NMORGENSTERN> I'll have to see it some time
+<[Len] NMORGENSTERN> Been good talking to you!
+<[Kevin] APPERT> once a month more or less, we have a seminar.  I will mail you 
+a flyer.
+<[Kevin] APPERT> same here.
+<[Len] NMORGENSTERN> Thanx, again
+<[Kevin] APPERT> fare you well.  good night
+<[Kevin] APPERT> has left.
+=== End of Steno notes. ===
+
+
+
+=END=
+
+

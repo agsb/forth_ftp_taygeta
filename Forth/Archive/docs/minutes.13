@@ -1,0 +1,311 @@
+     Doc. no:  X3J14/90-10
+           August 26, 1990
+
+
+
+                         Draft Minutes of X3J14 Meeting #13                         Draft Minutes of X3J14 Meeting #13                         Draft Minutes of X3J14 Meeting #13
+                            ANS Forth Technical Committee                            ANS Forth Technical Committee                            ANS Forth Technical Committee
+                    August 21-25, 1990, Burnaby, British Columbia                    August 21-25, 1990, Burnaby, British Columbia                    August 21-25, 1990, Burnaby, British Columbia
+
+
+
+     CALL TO ORDER and action item review     CALL TO ORDER and action item review     CALL TO ORDER and action item review
+
+     The chair extended thanks to Jack Brown for hosting this meeting.  The
+     president of the British Columbia Institute of Technology greeted the
+     committee.
+
+     The chair greeted the visitors from the Vancouver area.  Mr. Rible acted as
+     secretary until Mr. Tracy arrived.  The attendance list is document 90-011.
+
+     The minutes were approved unanimously.  The agenda was accepted.
+
+     Action Item review from Meeting #12:
+
+       1. No action was taken by vendors on implementing locals.
+
+       2. Dennis Ruffer has talked to several people about writing the
+          comparison to Forth-83.  Wil Baden is a possible candidate.
+
+       3. Mr. Zettel has mentioned to Mr. Spialter that we are using his
+          notation.
+
+       4. CBEMA doesn't care about style or format of standard.  Mr. Rash gets a
+          gold star for researching this issue.
+
+       5. Mr. Zettel talked with Mr. Tracy and Mr. Dickens.  He still wishes
+          some help mastering WORD 5.0
+
+       6. CBEMA's copyright notice was obtained and distributed.
+
+       7. Mr. Forsely's press release was written and revised, was lost and is
+          being reconstructed.
+
+       8. Mr. Forsely has paid Mr. Moore's bill.
+
+      10. BASIS 12 was posted on GENIE.
+
+      11. The chair wrote to Harris Semiconductors and thanked them for Mr.
+          Hand's help at the last meeting.
+
+      12. Mr. Bailey drafted the LOCAL                                 LOCAL                                 LOCALs proposal, which was sent out as a letter
+          ballot and passed.
+
+
+     DOCUMENTATION COMMITTEE REPORT     DOCUMENTATION COMMITTEE REPORT     DOCUMENTATION COMMITTEE REPORT
+
+     BASIS 12 was accepted unanimously, subject to comments below.
+
+
+
+
+
+      X3J14/90-010 Draft Minutes, X3J14 Meeting #13, August 21-25, 1990, Page 1     TP-450.2, TP-569.1, and TP-569.2 were entered into BASIS incorrectly, and
+     need to be backed out.   Meeting dates will be updated in BASIS and the
+     membership list will mark `                                                               `                                 current'                                        '                                          those who are current voting members.
+
+     The chair thanked Mr. Forsely for finding computer rental money for Mr.
+     Zettel.
+
+
+     LOGISTICS COMMITTEE REPORT     LOGISTICS COMMITTEE REPORT     LOGISTICS COMMITTEE REPORT
+
+     The Detroit meeting is November 7-10.  It was moved to begin the meeting
+     one day early, on November 6th.  Mr. Betts was asked to supply the 1991
+     schedule by the November meeting.
+
+
+     INTERNATIONAL COMMITTEE REPORT     INTERNATIONAL COMMITTEE REPORT     INTERNATIONAL COMMITTEE REPORT
+
+     Mr. Shaw declined to be the International representative.  The chair asked
+     for volunteers.
+
+
+     TECHNICAL COMMITTEE REPORT     TECHNICAL COMMITTEE REPORT     TECHNICAL COMMITTEE REPORT
+
+     There are 105 outstanding proposals, 79 of which were received on the first
+     day of the meeting.
+
+
+     OTHER BUSINESS     OTHER BUSINESS     OTHER BUSINESS
+
+     It was decided to restructure BASIS at this meeting, starting Friday.  Dave
+     Petty, representing Boston FIG, submitted a written motion to amend our
+     scope of work.  This motion was heavily debated, amended and passed.  The
+     chair will submit the revised document to X3 and distributed along with
+     BASIS13 to members and subscribers.
+
+     This time we posted BASIS, albeit late, on electronic bulletin boards.
+     Someone wanted to convert it to a .RTF                                       .RTF                                       .RTF file.  The copyright is in the
+     `           `       read me'              '                file associated with the document.  Mr. Brown suggested we
+     could add a notice asking people not to distribute in any other form.  It
+     was so moved.
+
+     Mr. Petty asked if vendors would be receiving a free copy of BASIS.  Ms.
+     Rather will only send to those on the ongoing mailing list, and only if
+     BASIS is available at least four weeks before the meeting so that people
+     have a reasonable opportunity to respond to the document.  Mr. Zettel led a
+     hurrah to the chair for taking intelligent action on this.
+
+     Several IEEE members noted that the joint membership arrangement appears
+     not to be working, as CBEMA is billing them for dues and disavows knowledge
+     of free membership for IEEE members.  Mr. Tracy agreed to investigate this
+     matter.
+
+     ACTION ON TECHNICAL PROPOSALS     ACTION ON TECHNICAL PROPOSALS     ACTION ON TECHNICAL PROPOSALS
+
+     TP-224ASCAN>            SCAN>            SCAN>                                 failed 0/9
+     TP-351 Omnibus Z                             failed 0/9
+     TP-354 ?DO            ?DO            ?DO                                   withdrawn
+     TP-454 Compile Token                         failed 2/7
+     TP-465 What is Truth?                        failed 0/9
+
+
+
+      X3J14/90-010 Draft Minutes, X3J14 Meeting #13, August 21-25, 1990, Page 2     TP-468ASyntax and Semantics                  passed 9/0
+     TP-475 Standard Words                        failed 0/8
+     TP-478 Control Flow                          failed 0/9
+     TP-515ABackslash                             passed 9/0
+     TP-529 FP Word Set                           failed 0/9
+     TP-539 LOCAL            LOCAL            LOCAL Variables                       failed 0/9
+     TP-540 Local Data Types                      failed 0/9  JB letter
+     TP-541 String Operations                     failed 0/9  JB letter
+     TP-544ACode Fragments                        passed 9/0
+     TP-549 Forth is Interactive                  passed 9/1
+     TP-604 Local Words                           failed 0/9  JH letter
+     TP-619 Only Implementation Defined           withdrawn
+     TP-620 Unified Stack Notation                withdrawn
+     TP-624 Size of Word Sets                     failed 0/8  AK letter
+     TP-625 Make all Extensions Removable         withdrawn
+     TP-637AClarify `                     `                      Semantics'                                '                                                  passed 10/0
+     TP-649 Char Manipulation                     withdrawn
+     TP-654 Rename RECURSE                   RECURSE                   RECURSE                        failed 0/9  JH letter
+     TP-659 Locals                                failed 0/9  JH letter
+     TP-663 Moving Words from the Core Word Set   failed 4/5
+     TP-665AFetch and Store IEEE                  passed 7/2
+     TP-668APacked Strings                        passed 9/0
+     TP-670 Move [']                 [']                 ['] and [CHAR]                         [CHAR]                         [CHAR] to Extended Core  withdrawn
+     TP-673ARemoval of Excess Words               passed 7/2
+     TP-675AChange `                    `                     Precision'                               '                                 to `                                                                         `                                      Cell'                                          '                                                  passed 10/0
+     TP-676 Put D+                D+                D+ etc with the Other Double...   passed 8/2
+     TP-678 A Portability Word Set                failed 0/9  AK letter
+     TP-682 Replace VAL                    VAL                    VAL Words with QUAN                                   QUAN                                   QUAN Words     failed 0/9  AK letter
+     TP-683 Locals                                withdrawn
+     TP-685 Generalize Section 3.5                withdrawn
+     TP-690ARevise Definition of 5.2.3, Minima    passed 9/0
+     TP-710 Delete FDEPTH                   FDEPTH                   FDEPTH                         failed 0/8
+     TP-717ASparse Edits                          post
+     TP-718AContent Determination                 passed 10/0
+     TP-729 FP Stack                              failed 1/8
+     TP-732APurpose of the Standard               passed 9/0
+     TP-735 Re-simplify DOES>                        DOES>                        DOES>                     passed again as post
+     TP-737 Define What, not How                  post
+     TP-738 Names for Signed Division Primitives  withdrawn
+     TP-739 Deprecate Forth-79 Division           withdrawn
+     TP-740 Unsigned Division                     withdrawn
+     TP-741 Positive Divisor Floored Division     withdrawn
+     TP-742ASigned Multiplication Primitive       passed 10/0
+     TP-743 Delete *                   *                   */                    /                    / and */MOD                          */MOD                          */MOD                   withdrawn
+     TP-752ACompliance with Accepted Practice     passed 0/7
+     TP-754 Data Structure                        failed 10/0 JH letter
+     TP-757 FP Number Notation                    failed 1/8  JB letter
+     TP-758 Shootout at the OK Corral             now a comment
+     TP-759AReorganize BASIS Section 7 ...        passed 10/0
+     TP-760 Organize Core Word Set                failed 2/7
+     TP-762 Negative Division                     passed 7/2
+     TP-763 Make >IN                 >IN                 >IN Consistent with #TIB                                     #TIB                                     #TIB         passed 10/0
+     TP-764 String words characters and AU's      post
+     TP-765ALEAVE            LEAVE            LEAVE is Broken                       passed 10/0
+     TP-767AOne's and Two's Complement ALU's      passed 9/0
+     TP-768 Floored/Symmetric                     now a comment
+     TP-769ARemoval of Words...                   passed 9/0  AK letter
+     TP-770 Removal of Words from the Core ...    failed 0/9  AK letter
+     TP-771 Removal of Words from the Core ...    failed 0/9  AK letter
+     TP-772 Removal of Words from the Core ...    failed 0/9  AK letter
+
+
+      X3J14/90-010 Draft Minutes, X3J14 Meeting #13, August 21-25, 1990, Page 3     TP-774 Clean Up Data Space Definition        failed 1/8
+     TP-775AClean Up Definition of Standard Word  passed 9/0
+     TP-776AClean Up Text String Definition       passed 9/0
+     TP-777ACharacter String                      passed 9/0
+     TP-778 Cleanup Code Space Definition         post
+     TP-779 Word Sets and Levels                  passed 9/0
+     TP-781AImprove Definition of Word Set        passed 9/0
+     TP-784 Unrelated Parts                       post
+     TP-785ABASIS 12 Section 4 Sweep              post
+     TP-788 Remove PERFORM                   PERFORM                   PERFORM                        passed 8/1
+     TP-790ANo Separate FP                        FP                        FP Stack                  withdrawn
+     TP-791 Remove LEX                   LEX                   LEX                            two-weeked
+     TP-792 Remove PARSE                   PARSE                   PARSE                          recommited
+     TP-793 Replace RECURSE                    RECURSE                    RECURSE with SELF                                 SELF                                 SELF             failed 0/9
+     TP-794 REM for Symmetric Division            failed 0/9
+     TP-797 Allow State-Smart Words               failed 0/9
+     TP-800AUse EXT                EXT                EXT as a Prefix...                post
+     TP-801 Eliminate ?DO                      ?DO                      ?DO                         withdrawn
+     TP-802 Eliminate EKEY                      EKEY                      EKEY and ?EKEY                               ?EKEY                               ?EKEY              withdrawn
+     TP-809ARemove FAR                   FAR                   FAR Memory Wordset             passed 7/2
+     TP-811 Eliminate FOR                      FOR                      FOR and NEXT                              NEXT                              NEXT                failed 0/9
+     TP-813 SM/MOD            SM/MOD            SM/MOD and FM/MOD                       FM/MOD                       FM/MOD                     passed 8/0
+     TP-814AImprove Division                      passed 7/1
+     TP-815AImprove Double Division               passed 7/1
+     TP-816AKeep FP Stack                         passed 7/1
+     TP-817 Get 641 In!                           post
+     TP-818 Fix Search Wordset                    post
+     TP-819 Fix BASIS12 CMOVE                        CMOVE                        CMOVE, CMOVE>                               CMOVE>                               CMOVE>             post
+     TP-820 Help LEX                              failed 0/9  JB letter
+     TP-821AAdd to Add                            passed 9/0
+     TP-823ALet's Get Tight 1                     post
+     TP-824ALet's Get Tight 2                     post
+     TP-825ALet's Get Tight 3                     post
+     TP-827ALet's Get Tight 5                     post
+     TP-828 Post                                  withdrawn
+     TP-830AImprove Some Words in BLOCK                                  BLOCK                                  BLOCK Word Set  post
+     TP-834 Restructure BASIS                     withdrawn
+     TP-835 Add Increment Operator to EXT CORE                                      EXT CORE                                      EXT CORE    post
+     TP-836 U/MODP            U/MODP            U/MODP                                failed 2/7
+     TP-840 46% of NOT                   NOT                   NOT                            withdrawn
+     TP-845 Name Consistency                      passed 9/0
+     TP-847ADelete M/MOD                   M/MOD                   M/MOD and M/                             M/                             M/                   passed 9/0
+     TP-848 Move Single-Length Signed Division... failed 2/7
+     TP-850 B12 Fixups Post 1                     post
+     TP-851 B12 Fixups Post 2                     post
+     TP-852 B12 Fixups Post 3                     post
+     TP-853A2/            2/            2/ and D2/                   D2/                   D2/ with Negative Numbers      passed 8/1
+     TP-854 Cleanup Stack Pictures                post
+
+
+     ACTION ITEMS     ACTION ITEMS     ACTION ITEMS
+
+       1. Mr. Tracy will call Mr. Forsely and Mr. Shaw to clarify the joint
+          status of IEEE on the ANS committee.  Mr. Zettel also suggested we
+          contact his friend Mr. Fred Bolling, who is on the board of ANSI.
+
+       2. Mr. Tracy will get Wil Baden's flowtree font to Dave Harralson, and
+          Wil's control flow rationale to Heidi for eventual inclusion in the
+          rationale section.
+
+
+
+      X3J14/90-010 Draft Minutes, X3J14 Meeting #13, August 21-25, 1990, Page 4       3. The chair will remind everyone that we will be meeting at 8 A.M. at
+          the next meeting, as Ford Motor Co., our host, requires that all
+          buildings close early.
+
+       4. The Logistics committee will supply the 1991 schedule by the next
+          meeting.
+
+       5. The chair will write a letter of thanks to the B.C.I.T. for their help
+          and excellent facilities at this meeting.
+
+       6. The chair will submit the revised Statement of Work to X3.
+
+
+     BURNING ISSUES     BURNING ISSUES     BURNING ISSUES
+
+       Count        Count        Count   Issue                Issue                Issue                           Magnet(s)                                               Magnet(s)                                               Magnet(s)
+
+        6      Cleanup/inconsistency           Everyone
+        4      Files (and BLOCK                          BLOCK                          BLOCK files)         JR
+        4      Rationales
+               Input stream                    MT
+               Wordlists                       ??
+        4      Input stream                    MT
+        3      Environment interrogation       MB
+        3      BCD and sign magnitude          MT
+        3      Appendices                      ER
+        3      Word name conflicts             DC GB ER
+        3      Relocatability                  DC
+        1      Forth-83 upwards compatibility  RB
+        1      Arithmetic                      RB
+
+     NEXT MEETING     NEXT MEETING     NEXT MEETING
+
+     The Detroit meeting is November 6-10 (it was agreed to begin one day
+     early).  Meetings will begin each day at 8 A.M.
+
+     It was recommended that people stay over Saturday night, as air fares will
+     be substantially reduced.  There is expected to be a tour of the robotics
+     center during Tuesday's lunch.
+
+     The chair noted that it was difficult to obtain a quorum at this meeting,
+     and urged all members to attend the next meeting.
+
+
+     ADJOURNMENT     ADJOURNMENT     ADJOURNMENT
+
+     There being no further business, the meeting was adjourned.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      X3J14/90-010 Draft Minutes, X3J14 Meeting #13, August 21-25, 1990, Page 5

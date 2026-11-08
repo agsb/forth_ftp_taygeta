@@ -1,0 +1,266 @@
+
+ Minutes of the Special GEnie Forth RT Conference with Dr. Glen Haydon,
+ author of the newly revised "All About Forth" and co-founder of WISC
+ Technology. Glen takes issue with standardization as he discusses how
+ Forth should be defined by practice, not by committee.
+ Glen's Topic: "Forth Common Usage".
+
+ Entire contents of this transcript copyright (c)
+ 1990 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 08/23/90   Time: 22:19EDT
+
+Attendees:
+[GARY-S]
+[[Glen] FIGGUEST]
+[[mike] M.CHRISTOPH2]
+[[Craig] W.TRELEAVEN]
+[[larry] L.DANIEL1]
+[R.FASCENDA]
+[[Len] NMORGENSTERN]
+[[TIO] APOLLO]
+[[Wil] W.BADEN1]
+[[mike] M.CHRISTOPH2]
+[[Jim] JTITTSLER]
+[S.GELLER]
+
+Minutes:
+<[Glen] FIGGUEST> is here.
+<W.TRELEAVEN> is here.
+<L.DANIEL1> is here.
+<R.FASCENDA> is here.
+<NMORGENSTERN> is here.
+<[Craig] W.TRELEAVEN> BTW, I thought this was free of connect charges?!
+<GARY-S> lets get formal folks
+<GARY-S>  Before we begin tonight's conference I need to remind ...
+<GARY-S>  everyone this is a formal conference. .. .. ..
+<GARY-S>  That means NO interlacing. Request a turn to speak by typing ...
+<GARY-S>   !! <CR> or /RAI <CR>. I will keep a list and call on whoever ...
+<GARY-S>  is next. PLEASE follow these simple rules : ...
+<GARY-S>  PLEASE make your first response ok <CR> (so we know YOU know). ...
+<GARY-S>  Then, keep your lines short, ending incomplete thoughts ...
+<GARY-S>  with three dots (...) and ending your question/statement with ga <CR>.
+<GARY-S>                        thank you.
+<GARY-S>    The GEnie Forth RoundTable is very pleased to welcome this ...
+<GARY-S>  evening's special guest, Dr. Glen Haydon, co-founder with Phil ...
+<GARY-S>  Koopman, of WISC Technology and author of 'All About Forth', now...
+<GARY-S>  available in its third (and greatly enhanced) edition. ...
+<GARY-S>  Dr. Haydon is a physicist turned pathologist gone astray. His...
+<GARY-S>  experience with optical and analytical instruments lead to ...
+
+<GARY-S>  his interest in Forth. Glen developed MVPFORTH, which has ...
+<GARY-S>  remained stable for 7+ years. (CHM spent 6 months at HAYDON ...
+<GARY-S>  ENTERPRISES developing a wire-wrapped hardware Forth.) ...
+<GARY-S>  With Phil Koopman, he co-developed WISC/16 and WISC/32, now ...
+<GARY-S>  in second generation silicon, and as noted is author of a ...
+<GARY-S>  completely revised 3rd edition of 'All About Forth', June 1990 ...
+<GARY-S>  Dr. Haydon's topic is "Forth Common Usage". ...
+<GARY-S>  Please make welcome this evening's guest, Glen Haydon.
+<GARY-S>
+<GARY-S>   .. .. .. .. .. ga Glen
+<[Glen] FIGGUEST> No natural language has ever been
+<[Glen] FIGGUEST> standardized.
+<[Glen] FIGGUEST>  CHM created Forth to overcome the
+<[Glen] FIGGUEST> liabilities of an operating system.
+<[Glen] FIGGUEST> Using any other operating system is
+<[Glen] FIGGUEST> an albatross.
+<[Glen] FIGGUEST>  No two hardware systems are the same.
+<[Glen] FIGGUEST> Use Forth to exploit your hardware.
+<[Glen] FIGGUEST> Don't cripple your hardware with Forth.
+<[Glen] FIGGUEST>  Level 0 Forth has about 70 functions.
+<[Glen] FIGGUEST> Even these will vary with hardware.
+<[Glen] FIGGUEST>  Program for people. Let the computer
+<[Glen] FIGGUEST> find and compile what it needs.
+<[Glen] FIGGUEST>  If you cannot say it in English, don't
+<[Glen] FIGGUEST> muddy your thoughts further with muddy
+<[Glen] FIGGUEST> code.
+<[Glen] FIGGUEST>  In programming each function include:
+<[Glen] FIGGUEST> 1. A clear English functional statement.
+<[Glen] FIGGUEST> 2. A precise functional implementation.
+<[Glen] FIGGUEST> 3. A set of test vectors.
+<[Glen] FIGGUEST> 4. Comments on where you stole the algorithm.
+<[Glen] FIGGUEST>  ALL ABOUT FORTH, 3rd. Edition, 1990 is a
+<[Glen] FIGGUEST> concordance of about 500 functions in
+<[Glen] FIGGUEST> common usage. Included are functional
+<[Glen] FIGGUEST> definitions and implementations from fig-FORTH,
+<[Glen] FIGGUEST> 79-Standard, 83-Standard, MVPFORTH, F83,
+<[Glen] FIGGUEST> F-PC, and original sources where available.
+<[Glen] FIGGUEST> Appendices include the complete text from
+<[Glen] FIGGUEST> the fig-Installation Manual, the 79-Standard
+<[Glen] FIGGUEST> and the 83-Standard.
+<[Glen] FIGGUEST>  Understand your application and your tools.
+<[Glen] FIGGUEST> Programming the solution is only 10% of the job.
+<[Glen] FIGGUEST>
+<[Glen] FIGGUEST>
+<GARY-S> Those are words of a man opposed to the standard effort and in favor 
+of minimal system approaches - is this a fair assesment, glen ?
+<[Glen] FIGGUEST> No, anyone can do what he wishes. Common ussage is the 
+                  standard!
+<APOLLO> is here.
+<[Wil] W.BADEN1> is here.
+<[Len] NMORGENSTERN> Where can one buy the book, Glen?
+<[Glen] FIGGUEST> From  me or from FIG.
+<[Glen] FIGGUEST> Box 429 Route 2 La Honda, CA 94020
+<[TIO] APPOLO> What is Forth all about?
+<[Craig] W.TRELEAVEN> So, I'm a little confused..
+<[Craig] W.TRELEAVEN> Are you saying that common usage is more..
+<[Craig] W.TRELEAVEN> important than portability? 
+<[Glen] FIGGUEST> Yes!
+<[Glen] FIGGUEST> Why cripple your hardware and applications with some sort of 
+                  required standard that does not fit..
+<[Glen] FIGGUEST> What is forth all about anyway?
+<[Len] NMORGENSTERN> Glen, you said, "No anyone can do what he wishes. Common 
+<[Len] NMORGENSTERN> ussage is the standard!" Are you contradicting yourself?
+<[Glen] FIGGUEST> No.No. In common usage as I include in my book..
+<[Glen] FIGGUEST> the same function name may actually function different...
+<[Glen] FIGGUEST> In that case you need to know what the possibilities are...
+<[Glen] FIGGUEST> not any one definition.
+<L.DANIEL1> Glen, are WISC chips available, Any samples?..
+<L.DANIEL1> I have already RTX and Novix systems. 
+<[Glen] FIGGUEST> Just today I discussed the arrangements to use with Harris...
+<[Glen] FIGGUEST> I have a dozen populated boards available for interested 
+<[Glen] FIGGUEST> and potential users of larger numbers. ...
+<[Glen] FIGGUEST> Write me at above address with a descripition of what..
+<[Glen] FIGGUEST> it is you want to try and by the time I get that ...
+<[Glen] FIGGUEST> I will know how we can make the arrangements. 
+<[Craig] W.TRELEAVEN> Sorry, can't buy the common usage idea.  Seems to me that 
+                      a standard is required or Forth is dead.  Common usage
+                      keeps going every which way!
+<[Glen] FIGGUEST> That is your choice and it is fine with me. ..
+<[Glen] FIGGUEST> I just see it different....
+<[Craig] W.TRELEAVEN> Thanks
+<GARY-S> glen - since MVP, like figForth became a defacto standard...
+<GARY-S> is this the direction you see for common usage..
+<GARY-S> a dominate implementation rising to the top ?
+<[Glen] FIGGUEST> No. I see that implementations will be tied to applications. 
+<[Wil] W.BADEN1> (Hi Glen.) The problem with "standard usage" is that there is 
+            no agreement.  Everyone says "my usage is more common than yours."
+<[Wil] W.BADEN1> Your definition of "common usage" is not mine. Do ...
+<[Wil] W.BADEN1> you wish dictate "common usage"?
+<[Glen] FIGGUEST> No way!  no way! I have gone through Forth Dimensions to
+                  select another 250 definitions not included in MVP Forth
+                  and to that I have included all of the different.
+<[Glen] FIGGUEST> functional definitions and 4 different implementations...
+<[Glen] FIGGUEST> That way when you read some code which is different from..
+<[Glen] FIGGUEST> yours you can at least get some idea of what you may ...
+<[Glen] FIGGUEST> be dealing with. With a single standard to which others ..
+<[Glen] FIGGUEST> don't agree you never are sure of what you are dealing with.
+<[Jim] JTITTSLER> is here.
+<[Wil] W.BADEN1> Forth's pre-eminent domain is: Dedicated applications with 
+                 limited resources.  This demands minimalism.  Applications
+                 don't want unnecessary vocabulary.
+<[Glen] FIGGUEST> So you only need to include what you need for your..
+<[Glen] FIGGUEST> application and don't have to make it standard anything.
+<[Len] NMORGENSTERN> What you have done, it seems to me, Glen
+<[Len] NMORGENSTERN> is to set up a translator. A VERY useful thing, but
+<[Len] NMORGENSTERN> not a standard, as I see the meaining of the term.
+<[Glen] FIGGUEST> Only in the same way that the Collegate '"Dictionary provides 
+<[Glen] FIGGUEST> an index to some sort of standard.
+<[Wil] W.BADEN1> So what you seem to be advocating is a common subroutine 
+                 library.  No arguments there. 
+<[Glen] FIGGUEST> Yes in a sense, but different hardware may handle the ..
+<[Glen] FIGGUEST> carry bit in different ways and so on. so that all will..
+<[Glen] FIGGUEST> not be standard even if the words are the same.
+<[Len] NMORGENSTERN> What I want is, if I see some source code in Forth 
+                     Dimensions that I can type it into my machine, with the 
+                     appropriate translation
+<[Len] NMORGENSTERN> and have it run. That is what I call "standard".
+<[Glen] FIGGUEST> I doubt that you will ever get there.  That has not been...
+<[Glen] FIGGUEST> the case up to now. Even with all of the standards as they ...
+<[Glen] FIGGUEST> now exist. I don't see how the current effeort will make it ..
+<[Glen] FIGGUEST> any different.  I want to see why it does not work.
+<GARY-S> Glen - I maintain transportability is the ONLY viable issue - you are 
+         saying not even that.
+<GARY-S> Comment please
+<[Glen] FIGGUEST> It is a viable issue if you want to make it that. But you 
+                  	will have to get everyone else to agree and that...
+<[Glen] FIGGUEST> will not happen in Forth. 
+<[Len] NMORGENSTERN> if there is a standard, then anything written to that
+<[Len] NMORGENSTERN> standard will be intelligible, and i can work out
+<[Len] NMORGENSTERN> how to change it for my Forth.
+<[Len] NMORGENSTERN> I agree with Gary that transportablility is the main issue.
+<[Len] NMORGENSTERN> actually "translatabiltiy" If we have a standard, then
+<[Len] NMORGENSTERN> we can use it to help us translate from one version
+<[Len] NMORGENSTERN> of Forth to another
+<[Glen] FIGGUEST> That would be something like p code then ? 
+<[Len] NMORGENSTERN> No, something like F83
+<[mike] M.CHRISTOPH2> I would like to thank our guest form comming
+<GARY-S> Glen - how has your book expanded from the original
+<[Glen] FIGGUEST> I hope it is not commercial.  Only less than half, of the ...
+<[Glen] FIGGUEST> words are from MVP Forth.  I have the implementations from 
+                  F83 and F-PC as well as Fig Forth and MVP. so that it really
+                  is for MVP Forth users and any others to expand on what
+                  they have. 
+<[Glen] FIGGUEST> Not all of F83 is in F-PC. and there are a number of other ...
+<[Glen] FIGGUEST> differences in implementation is some cases.
+<[Len] NMORGENSTERN> I forgot to ask, If I order the book from you,
+<[Len] NMORGENSTERN> how much is it?
+<[mike] M.CHRISTOPH2> Glen, we NEED forth books. I will support it.  I need 
+                      books for training forthers
+<[Glen] FIGGUEST> OK   -  $90.00 ppd.  It also includes all of the text ...
+<[Glen] FIGGUEST> from ithe installation Manual, the 79 Standard and the 83 
+                  Standard ...
+<[Glen] FIGGUEST> So that you can see what was acuually said and what the 
+                  requirements...
+<[Glen] FIGGUEST> are.  That is not a commercial frr MVP.  I really triesd to ..
+<[Glen] FIGGUEST> make it useful.
+<GARY-S> glen - can a novice (relatively) take your book and write a kernel
+<[Glen] FIGGUEST> It depends. One did from my first edition. But I think that...
+<[Glen] FIGGUEST> it would be alot for someone to do.  The best way would be...
+<[Glen] FIGGUEST> to start with a source listing in assembly code as fig-Forth .
+<[Glen] FIGGUEST> or my MVP forth and then go from there.  Oh - the book is 
+<[Glen] FIGGUEST> large over 600 pages all together ...
+<[mike] M.CHRISTOPH2> What's your favorite "thing" in/about forth?
+<[Glen] FIGGUEST> The access to the hardware that I have.  I started with ...
+<[Glen] FIGGUEST> scalers and counter on a spectrometer.  I was glad to ...
+<[Glen] FIGGUEST> get to them easily.   It is the same thing that Chuck was
+<[Glen] FIGGUEST> interested in. Namely getting the job done in as simple ...
+<[Glen] FIGGUEST> a  way as possible ....
+<[Len] NMORGENSTERN> In every Forth I know except one, TIB is the Address of
+<[Len] NMORGENSTERN> the terminal input buffer. In Pygmy, it is a variable that
+<[Len] NMORGENSTERN> contains the address. 
+                     That little bit of non-standardization cost me
+<[Len] NMORGENSTERN> half a day's work. This is an example of why standards
+<[Len] NMORGENSTERN> are necessary.
+<[Glen] FIGGUEST> So going to something that different is your choice. ...
+<[Glen] FIGGUEST> It certainly is not any of the previous attempts to get
+<[Glen] FIGGUEST> to a standard.  Yet another standard will not change that. 
+<GARY-S> glen - is MVP still available from Roy ?
+<[Glen] FIGGUEST> Yes.  Though not as busy as it once was MVP is still in ...
+<[Glen] FIGGUEST> business and my book can be purchased from them too.  The 
+                  source ..
+<[Glen] FIGGUEST> for MVP can be had from there.  I have a number of other ...
+<[Glen] FIGGUEST> versions from bullitin boards but each of them has been...
+<[Glen] FIGGUEST> modified in some way  -- often slight but different. ...
+<[Wil] W.BADEN1> Do you have a Loglan trainer like your Esperanto trainer?  Are 
+                 they in the book? 
+<[Glen] FIGGUEST> There is a Loglan trainer from the Loglan Institute whose...
+<[Glen] FIGGUEST> address I don't have on tab.  It is based on one I wrote 
+<[Glen] FIGGUEST> but modified by others.
+<[Len] NMORGENSTERN> I got a version of MVP from PC-SIG
+<[Len] NMORGENSTERN> Is that a complete version?
+<[Glen] FIGGUEST> Therir latest version is.  Thy did have an earlier one..
+<[Glen] FIGGUEST> and then one with a bad file.  If anyone has trouble get...
+<[Glen] FIGGUEST> in touch with me.
+<GARY-S> Closing comments please, glen
+<[Glen] FIGGUEST>  A free market requires a free society.
+<[Glen] FIGGUEST>  A free choice of products - vote with
+<[Glen] FIGGUEST> your dollars.
+<[Glen] FIGGUEST>  A free migration of labor - do what you
+<[Glen] FIGGUEST> wish where you wish.
+<[Glen] FIGGUEST>  A free movement of capital - invest in
+<[Glen] FIGGUEST> what you wish wherever it may be.
+<[Glen] FIGGUEST>  A dictated standard is contrary to a
+<[Glen] FIGGUEST> free society - Let a free society
+<[Glen] FIGGUEST> determine common usage.
+<[Glen] FIGGUEST> I tries a file from disk to
+<[Glen] FIGGUEST>
+<GARY-S>  Glen, on behalf of the GEnie Forth RoundTable, ...
+<GARY-S>  'Thank you' for an interesting evening. ...
+<GARY-S>
+<GARY-S>  All may stay and chat, but this conference has officially ended.
+=== End of Steno notes. ===
+
+

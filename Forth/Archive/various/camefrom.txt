@@ -1,0 +1,110 @@
+
+.CAME-FROM
+
+Years ago, when Structured Programming was still relatively
+"new hat", there was an article (Datamation I think) about "goto-
+less" programming, using the "came from" construct. Since it appeared
+in the April issue it made amusing reading and that was it.
+
+It is somewhat ironic then to be implementing a "came from" in
+what is possibly the most structured of all languages, FORTH. (The
+dialect used here is Laxen and Perry's F83.)
+
+I've been doing some neat stuff using table driven applications.
+For one of these the basic data structure is a list of addresses
+of other data structures, which in turn point to other lists of
+yet other addresses. Four levels of structures and address lists
+in total.
+
+The implementation uses something like user variables, with a base
+pointer for each of the four levels. The addresses in the list
+are the CFA's (Code Field Address) of words to initialize the
+base pointer.
+
+Problem was, during testing the program kept trying to EXECUTE
+variables for which the base pointer had not been properly
+initialized. Most of the CFA's executed were zero. That meant
+system reboot every time.
+
+Hence the following redefinition of EXECUTE to check that the CFA
+to be executed was at least reasonable, i.e. within the
+application, using EXEC? to check that the address has in the
+range ' EMPTY (or ' INTERPRET 2- as used here) to HERE.
+If not, ABORT. (See fig 1.)
+
+The next step was to show the Return stack and the Data stack
+just prior to ABORT, using .TRACE-BACK and .STACK.  The word .SR
+that is used to show the Return stack is a simple transliteration
+of .S which in F83 show the data stack. (See fig 2.)
+
+The return stack, of course contains the return addresse(s) in
+the calling word(s) and how we got to the point in the program
+where it failed. Somehow doing DUMPs for each address on that
+stack to look for the name of the calling word was not the way to
+go.
+
+.CAME-FROM does that (Fig 2.). We know that the Return address on
+the R stack points to the 2 bytes in the calling Colon definition
+following the 2 bytes whose content points to the CFA of the word
+currently executing, nested several levels where needed.
+
+Of course, there are occasionally values on the R stack that are
+not return addresses (e.g. after >R, loop control etc.). There
+are also words like ?BRANCH and LITERAL that adjust the return
+address to skip past some in-line parameter. But by and large, if
+the address on the stack is in a reasonable range, and the
+address it points to is as well, the latter probably points to a
+CFA.
+
+The word .CAME-FROM does a reasonableness test (?EXEC) on the 2
+adresses it uses and if they both look good uses >NAME .ID to go
+from CFA to NFA (Name Field Address) and the name.
+
+Note that .CAME-FROM outputs something like ...  2A64=INTERPRET
+That does not mean that INTERPRET is at 2A64. It does mean that
+the return stack contains 2A64, and that corresponds to INTERPRET
+being the word that called us (at 2A62 we found the address of
+the CFA of INTERPRET).
+
+
+
+
+Frans Van Duinen,
+Toronto, Ont
+3 March 1987.
+
+
+
+  VARIABLE (EXEC-FENCE)  ' interpret 2- (EXEC-FENCE) !  0 ,
+
+  : EXEC?
+      (EXEC-FENCE) @  HERE  >R OVER U> SWAP R> U> OR NOT  ;
+
+  : EXECUTE    (S  cfa  ->  )
+      DUP EXEC?  NOT
+      IF   TRACE-BACK  .STACK  TRUE  ABORT" EXEC error  "  THEN
+      EXECUTE  ;
+
+Figure 1  - Bullet profing  EXECUTE
+
+
+
+  : .CAME-FROM  DUP EXEC? SWAP 2- @  SWAP OVER
+        EXEC?  AND  IF  ." =" >NAME .ID  ELSE DROP  THEN  ;
+
+  : .SR   R>                  \ Hide own return address
+     RP0 @ RP@ - 2/           \ RDEPTH - # of entries
+     ?DUP  IF
+       0<  IF  ." Underflow "
+       ELSE   RP@  RP0 @  2-  \ RP0> Byte after return stack
+         DO  I @  DUP  5 U.R  .CAME-FROM  SPACE
+           KEY? ?LEAVE  -2 +LOOP
+       THEN
+     ELSE   ." Empty "   THEN   >R ;
+
+  : TRACE-BACK  ." R stack:" .SR  CR  ;
+
+  : .STACK      ." Stack:"  .S  CR  ;
+
+
+

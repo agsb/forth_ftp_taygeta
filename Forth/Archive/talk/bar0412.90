@@ -1,0 +1,377 @@
+
+041290
+CONFERENCES,FIGGY,STANDARDS,HYPERTEXT,BUGS
+A very informal Figgy held 4/12/90. Discussing bugs in general, an attendant's
+inability to make a program in TCOM work with color, real time programming,
+latest on vocabulaary standards, navigating hypertext, standards for division
+and other arithmetic operations.
+
+Figgy Bar April 12 1990
+
+  1 Little rock,AR      2   L [Gary] GARY-S
+  2 Moraga,CA           2   N [Len] NMORGENSTERN
+
+  1 Omaha,NE            2   N [mitch] TA
+  3 Golden,CO           2   N [Jax 2001A] FIGCHAPTERS
+  4 Pearl city,IL       2   N [LARRY] LDAWSON
+  5 Fremont,CA          2   N [Robert] R.BERKEY
+                              Jack Brown
+
+Hi <[Jax 2001A] FIGCHAPTERS> was <FalIGCHAPTERS>.
+<[Len] NMORGENSTERN> Hi all
+(Sysop stuff deleted here)
+<[Len] NMORGENSTERN> What is the answer to vertigo?
+ <[Gary] GARY-S> step down
+<[Len] NMORGENSTERN> They vent that-a-way.
+<[Jax 2001A] FIGCHAPTERS>  aha.
+<[Gary] GARY-S> I'm going to send the steno to lunch, and we'll just talk
+<[Gary] GARY-S> any objections ?
+<TA> is here.
+<[Len] NMORGENSTERN> Hi there!
+<TA> hello I thought I would find you here.
+<[Jax 2001A] FIGCHAPTERS> "TA" is?
+<[mitch] TA> was <TA>.
+<[Len] NMORGENSTERN> Mitch, could you uploadd the file that is giving you
+	trouble
+<[Len] NMORGENSTERN> to me. I'd like to try it. I have a machine with
+<GARY-S> is here.
+<[mitch] TA> I don't have it on hand at the moment but monday.
+<[Len] NMORGENSTERN> monochorme color monitor and it might accept the commands
+<[Len] NMORGENSTERN> I can't work on it till then anyway.
+<[mitch] TA> it was just a simple box&fill with  4 >fg ." ajlfjasf"
+<[Len] NMORGENSTERN> Yes, but I would like to try it out.
+<[Len] NMORGENSTERN> Does it work in F-PC?
+<GARY-S> len - re: delegate - go to mail command prompts (menu 9) and select
+	delegate - the rest is self-explanatory
+<[Len] NMORGENSTERN> Thanks, Gary
+<[mitch] TA> and verious combos.  Yes it works is f-pc.
+<[mitch] TA> I will get the file uploaded to you monday night.
+<[Len] NMORGENSTERN> That helps. We are having our local meeting on Apr 21,
+<[mitch] TA> is that a sunday?
+<[mitch] TA> never mind.
+<[Len] NMORGENSTERN> & I may want ot discuss it there. One of the topics is
+	TCOM
+
+<[Len] NMORGENSTERN> No it is Sat.
+<[mitch] TA> I was thinking of GE until I realized.
+<GARY-S> there are no minutes being taken tonight
+<[Len] NMORGENSTERN> Sometimes, little gnats are more of a problem than
+<[Len] NMORGENSTERN> giant bugs.
+<[mitch] TA> You got that right.
+<[Len] NMORGENSTERN> You tend to look harder at the big things, and solve them
+	first.
+<[mitch] TA> Smaller they are the harder they are to find.
+<GARY-S> If you solve the little ones, often there are no big ones
+<[Len] NMORGENSTERN> One place to look is at your test suite. It's easy to
+	miss something
+<[Len] NMORGENSTERN> there. The test is often so simple that you can't believe
+	that
+<[Len] NMORGENSTERN> it could have an error.
+<[mitch] TA> true.  But thats life all over again.
+<[mitch] TA> I am currently writting a program and I am just about done with..
+
+<[Len] NMORGENSTERN> I worked for several hours on my Mac. I somehow got a
+	corrupted system
+<[mitch] TA> .. it.  Then I can look a little closer at TCOM.
+<[mitch] TA> Do you use a Mac a lot?
+file, and I restored it from the factory disks. Instead of shutdown,
+<[Len] NMORGENSTERN> file, and I restored it from the factory disks. Instead
+	of shutdown,
+<[Len] NMORGENSTERN> I punched restart. That does not reboot, and the new
+	system didn't come up.
+<[Len] NMORGENSTERN> Very frustrating! and not well documented, although I was
+	later able
+<[Len] NMORGENSTERN> to find it in the manual.
+<[Len] NMORGENSTERN> I have a Mac and a PC, and use them about equally.
+<[mitch] TA> IF all else fails, read the manual.
+<[Len] NMORGENSTERN> Yep.
+<[mitch] TA> I only play with the mac once in a while (I use an emulator).
+<[mitch] TA> do you have forth for the mac and is it pd?
+<[Len] NMORGENSTERN> A very nice machine, but PC has some virutes.
+<[Len] NMORGENSTERN> I have MacForth, but have used it very little.
+<R.BERKEY> is here.
+<[Robert] R.BERKEY> was <R.BERKEY>.
+<[Len] NMORGENSTERN> Much of it deals with Mac stuff, like how to make a
+	pulldown menu etc etc.
+<[Len] NMORGENSTERN> Hi Bob.
+<[Robert] R.BERKEY> hi all
+<[mitch] TA> Is the meeting getting started or ending.  Hello robert.
+<[Jax 2001A] FIGCHAPTERS> Howdy Bob
+<[Robert] R.BERKEY> Jax, got any 2001a hardware yet?
+<[Jax 2001A] FIGCHAPTERS> YES! how did you guess? :-)
+<GARY-S> no minutes being taken tonight Robert so there will be no lawsuits
+	:-)
+/send 1 We were almost ready to quit, when several others showed up
+<[Jax 2001A] FIGCHAPTERS> Si.
+<[mitch] TA> is there one this sunday?
+/send 1 Yes, I will be on Sunday evening, d. v.
+<[Robert] R.BERKEY> What's there for a development environment?
+<[Jax 2001A] FIGCHAPTERS> Forth :-)
+<[Robert] R.BERKEY> a serial line?
+<[Jax 2001A] FIGCHAPTERS> Yes, it takes downloads of source at 19.2
+<[Robert] R.BERKEY> How about proms?
+<[mitch] TA> I am waiting for a phone call so How about if we meet on sunday?
+<[Jax 2001A] FIGCHAPTERS> My daughter is going to one next month. The dress
+	cost $200!
+<[Len] NMORGENSTERN> Sounds good, Mitch.
+<[mitch] TA> When?
+<GARY-S> since you are all in auto-pilot I'm going to go fix a file - have a
+pleasant holiday
+<GARY-S> has left.
+<[Len] NMORGENSTERN> Jax, tell us your Irish joke, and I will tell you one
+	about files.
+<[Robert] R.BERKEY> Jax, you've got some kind of a Forth in proms in the RTX.
+<[Jax 2001A] FIGCHAPTERS> Yes, it's called EBFORTH.
+<[Jax 2001A] FIGCHAPTERS> I'm a little reticent about describing the board ...
+<[Jax 2001A] FIGCHAPTERS> since this isn't recorded and everyone will ask me
+	again ...
+<[Jax 2001A] FIGCHAPTERS> Maybe I should come sunday and let len record.
+<[Len] NMORGENSTERN> I am capturing it, and can put it up later!
+<[Robert] R.BERKEY> I'm still wondering if I should try to get one.
+<[Len] NMORGENSTERN> (a little inconvenient, but it works)
+<[Jax 2001A] FIGCHAPTERS> They already have more applications than boards to
+	give away.
+<[Jax 2001A] FIGCHAPTERS> But i think they will be selling this board as a
+	sample in the future.
+<LDAWSON> is here.
+<[mitch] TA> ok.  Well time to go, wish I didn't have to.
+<[LARRY] LDAWSON> was <LDAWSON>.
+<[Robert] R.BERKEY> I got one of the original Chuck chips.
+<[Jax 2001A] FIGCHAPTERS> I had one too but gave it away.
+<[Robert] R.BERKEY> Only thing I ever did with it was run empty loops for
+	timing.
+<[Robert] R.BERKEY> Expensive toy <grin>.
+<[mitch] TA> bye
+<[Jax 2001A] FIGCHAPTERS> Bye mitch
+<[Robert] R.BERKEY> bye
+<[mitch] TA> up
+<[mitch] TA> up
+<[mitch] TA> and away
+<[mitch] TA> has left.
+<[Len] NMORGENSTERN> ga Bob & Jax.
+<[Jax 2001A] FIGCHAPTERS> ga 
+<[Robert] R.BERKEY> DId you find a use for it?
+<[Robert] R.BERKEY> Other than giving it away!
+<[Robert] R.BERKEY> JAX, what have I interrupted.
+<[Robert] R.BERKEY> You're rather quiet.
+<[Jax 2001A] FIGCHAPTERS> I explored the instruction set, wrote some support
+	software for Amiga. More encouraged by the harris incarnation of the
+	idea.
+<[Len] NMORGENSTERN> Unusual for Jax
+<[Jax 2001A] FIGCHAPTERS> Tired. Got promotion at work. Sigh.
+<[Len] NMORGENSTERN> Why tired? More administration and less programming?
+<[Jax 2001A] FIGCHAPTERS> More administration and more programming, rather.
+<[Len] NMORGENSTERN> Larry, you are lurking there. Have you any questions
+<[LARRY] LDAWSON> I'M HERE, just listening and (maybe?) learning.
+<[Len] NMORGENSTERN> Fine, just don't be bashful if you have anything to ask
+	or say
+<[Len] NMORGENSTERN> I'm tired too. My 4 year old granddaughter left the other
+	day
+<[Len] NMORGENSTERN> I am NOT as young as I used to be!
+<[Jax 2001A] FIGCHAPTERS> Cheer up! You're not as old as you are going to be,
+	either.
+<[LARRY] LDAWSON> Worse, not a young as I want to be!
+<[Robert] R.BERKEY> Well, how about CURRENT and CONTEXT .
+<[Len] NMORGENSTERN> Let's hope so!
+<[Robert] R.BERKEY> I don't know where Mitch is coming from.
+<[Len] NMORGENSTERN> What about them, Bob? Lousy names, but useful concepts
+<[Robert] R.BERKEY> That's the advantage of colon not messing with the
+	variables.
+<[Robert] R.BERKEY> That you can set the growing vocabulary...
+<[Robert] R.BERKEY> and use other vocabularies for the search order.
+<[Robert] R.BERKEY> (Mitch, wonders why we need CURRENT at all.)
+<[Len] NMORGENSTERN> I agree. It is a very big nuisance to have colon change
+	CONTEXT to CURRENT
+<[Robert] R.BERKEY> But why?
+<[Robert] R.BERKEY> (In your case?)
+<[Len] NMORGENSTERN> Why don't I like it, you mean?
+<[Robert] R.BERKEY> How is it a problem for you.
+<[Jax 2001A] FIGCHAPTERS> See you all SUnday, I hope
+<[Jax 2001A] FIGCHAPTERS> gnite
+<[Jax 2001A] FIGCHAPTERS> has left.
+<[Robert] R.BERKEY> nite
+<[Len] NMORGENSTERN> Suppose I set up ONLY FORTH DEFINITIONS ALSO SPECIAL
+	because I want the colon definition to look in SPECIAL before
+	it looks in FORTH, even though the definitions are going into
+	the FORTH vocab.
+<[Len] NMORGENSTERN> Ans: I have to execute [ SPECIAL ] in every word. Very
+	kludgey and it should not be necessary.
+<[Robert] R.BERKEY> I think I'd prefer that wordlists/vocabularies not set any
+	variables.
+<[Robert] R.BERKEY> Just leave a token on the stack.
+<[Robert] R.BERKEY> I'm not sure if I'd like it once I had to use it though.
+<[Len] NMORGENSTERN> That would be the most flexible way.
+<[LARRY] LDAWSON> Gotta go, nite all.
+<[Robert] R.BERKEY> nite
+<[LARRY] LDAWSON> has left.
+<[Robert] R.BERKEY> Len, been going to North Bay fig meetings?
+<[Len] NMORGENSTERN> The NB FIG has a new meeting place: BMUG offices 1/2
+	block
+<[Len] NMORGENSTERN> from the Berkeley BARt station!
+<[Len] NMORGENSTERN> Fixed date: Third Saturday. Hope to see you there
+<[Len] NMORGENSTERN> Are you on our mailing list?
+<[Robert] R.BERKEY> I don't think so.
+<[Robert] R.BERKEY> I've not even been getting to the SV meetings.
+<[Len] NMORGENSTERN> Let me ge the address:
+<[Robert] R.BERKEY> Mine?
+<J.BROWN11> is here.
+<[Robert] R.BERKEY> hi, j.brown11
+<[Len] NMORGENSTERN> Hell, I can't find it. I'm almost certain it is 2055
+	Center St. Berkeley ed note: It is!
+<[Len] NMORGENSTERN> Hi Jack.
+<J.BROWN11> HI  ITS been so lon
+<[Len] NMORGENSTERN> Bob, I will send you a letter with the correct address
+	Chuck Moore will speak.
+<[Len] NMORGENSTERN> Chuck Moore will speak.
+<[Robert] R.BERKEY> Need my address?
+<[Len] NMORGENSTERN> I'ts R.BERKEY on GEnie!
+<[Robert] R.BERKEY> oh, yeah...the easy way.
+<[Jack] J.BROWN11> was <J.BROWN11>.
+<[Len] NMORGENSTERN> Jack, I've been neglecting the hypertext of your lessons!
+It's about 90% complete, and I will send you a final version soon.
+<[Len] NMORGENSTERN> It's about 90% complete, and I will send you a final
+	version soon.
+<[Jack] J.BROWN11> oh...  I've been upgrading them to fpc 3.5
+<[Jack] J.BROWN11> I'm using them
+<[Jack] J.BROWN11> as notes in my course
+<[Len] NMORGENSTERN> Good. I may just start over from scratch, since I now
+	have
+<[Jack] J.BROWN11> so far I have converted as far as lesson four.
+<[Len] NMORGENSTERN> learned some of the things to do and not to do.
+<[Jack] J.BROWN11> go on.
+<[Len] NMORGENSTERN> It's mainly a matter of style. The Communications of the
+	ACM
+<[Len] NMORGENSTERN> a few months ago had a good article on hypertext. The
+	main complaint
+<[Len] NMORGENSTERN> that people have is "I often don't know where I am"
+<[Len] NMORGENSTERN> The authors gave a solution, using a map like layout that works on
+<[Len] NMORGENSTERN> the Mac, but might not be so easy on the PC.
+<[Len] NMORGENSTERN> I am still playing with that.
+<[Jack] J.BROWN11> what hyper text system are you using?
+<[Len] NMORGENSTERN> That is why I would like to write the hypertext program
+	in Forth
+<[Len] NMORGENSTERN> so I could add little things like: "highlight the map and
+	display it", etc.
+<[Len] NMORGENSTERN> I am using Neil Larson's program.
+<[Len] NMORGENSTERN> I don't like Tom's because it requires that you know both
+	ends of
+<[Len] NMORGENSTERN> a link before you build the bridge. With Neil's you can
+	make
+<[Len] NMORGENSTERN> a link to a non-existent file, and link it later.
+<[Len] NMORGENSTERN> "If the man says he can build a bridge to hell, I believe
+<[Len] NMORGENSTERN> him, but I am not certain about the abutment on the other
+	side" A. Lincoln
+<[Robert] R.BERKEY> Interpretation for hypertext files?
+<[Len] NMORGENSTERN> These are ASCII files, generally rather short.
+<[Jack] J.BROWN11> 
+<[Len] NMORGENSTERN> The link is simply the name of the file in angle brackets
+	example <file0001>
+<[Len] NMORGENSTERN> ga Jack
+<[Jack] J.BROWN11> Bob are you going to Florida ANSI meeting
+<[Len] NMORGENSTERN> brb
+<[Robert] R.BERKEY> I hope so, but don't have the plane fare yet.
+<[Robert] R.BERKEY> I've been working up some proposals.
+<[Jack] J.BROWN11> have you got hotel info yet
+<[Robert] R.BERKEY> If I do I've misplaced it.  Do you?
+<[Robert] R.BERKEY> And are you headed to Florida?
+<[Jack] J.BROWN11> no,  I've booked my flight but don't know where to stay.
+<[Jack] J.BROWN11> I guess I'll phone Tom Hand next week and find out what up.
+<[Robert] R.BERKEY> I've still got division names on my to do list.
+<[Len] NMORGENSTERN> is back
+<[Robert] R.BERKEY> Right now,
+<[Jack] J.BROWN11> I did the resolution proposal..
+<[Jack] J.BROWN11> on division that is.
+<[Robert] R.BERKEY>  M/0REM  or M/-REM  are considerations.
+<[Robert] R.BERKEY> I'm not sure what you mean by the resolution proposal.
+<[Jack] J.BROWN11> I used the suggested names,  names are easy to change.
+<[Robert] R.BERKEY> The FM/MOD and SM/MOD ?
+<[Jack] J.BROWN11> the one that passed 10 to 1 to create SM/MOD and FM/MOD
+<[Jack] J.BROWN11> opps  passed 16 to 1
+<[Robert] R.BERKEY> I haven't gotten into the details of the text for these
+	words.
+<[Robert] R.BERKEY> For flooring, I'm looking at M/_MOD
+<[Jack] J.BROWN11> I'm willing to consider better names but..
+<[Jack] J.BROWN11> who knows what the group will decide is a better name.
+<[Len] NMORGENSTERN> Gentlemen, I have to go in a few minutes. I will leave my
+	capture on so this can be recorded. 
+<[Robert] R.BERKEY> With a very small sample, there's about even opinion on
+<[Robert] R.BERKEY>  M/0REM  vs.  M/-REM
+<[Jack] J.BROWN11> why not just M/REM instead of SM/MOD
+<[Robert] R.BERKEY> The later with pronunciation m-slash-centered-rem
+<[Robert] R.BERKEY> M/REM  is attractive.
+<[Robert] R.BERKEY> The problem is that it doesn't solve the problem of what
+	to
+<[Robert] R.BERKEY> call a 79 / 
+<[Robert] R.BERKEY> In my 79 based system I'm still using  /  
+<[Jack] J.BROWN11> the old names / /MOD and MOD will be restricted to positive
+	arguments..
+<[Jack] J.BROWN11> the user program will implement is own versions of 
+flooring  / /MOD and MOD
+<[Jack] J.BROWN11> and like wise for  symmetric division or whatever you call
+	it.
+<[Jack] J.BROWN11> that was the  idea behind the resolution.
+<[Jack] J.BROWN11> i think that is why you were not too keen on it.
+<[Robert] R.BERKEY> I've got several problems with that approach. 
+<[Robert] R.BERKEY> Also, Elizabeth was not including / and */ in the positive
+	only group.
+<[Jack] J.BROWN11> well you must or they will have
+<D.PHILIPS3> is here.
+<[Jack] J.BROWN11> two interpretations
+<D.PHILIPS3> has left.
+<[Jack] J.BROWN11> any way there is now a proposal to debate.
+<[Jack] J.BROWN11> it should be interesting.
+	Hi Doug
+<[Len] NMORGENSTERN> Hi Doug
+<[Jack] J.BROWN11> but we have to  incorporate both types of division in the
+standard.
+<[Robert] R.BERKEY> I've still had essentially no success in finding useful
+<[Jack] J.BROWN11> Doug left already.
+<[Robert] R.BERKEY> cases of rounded-to-zero division.
+<[Jack] J.BROWN11> It doesn't matter the vendors and users are split 50 50 on
+	this so we
+<[Robert] R.BERKEY> I heard of FFT algorithms using such, but the person
+	involved
+<[Jack] J.BROWN11> must accomodate both
+<[Robert] R.BERKEY> couldn't provide more details.
+<[Robert] R.BERKEY> Another person I spoke with didn't see how it would be
+	useful.
+<[Robert] R.BERKEY> Sorry, I don't want to argue.
+<[Jack] J.BROWN11> No problem I understand your position...
+<[Jack] J.BROWN11> and would be quite happy with  flooring only...
+<[Jack] J.BROWN11> but it is never going to happen.
+<[Jack] J.BROWN11> Bob,  do you attent Fig business meetings?
+<[Robert] R.BERKEY> I've been at the last two--got there late at the last one.
+<[Robert] R.BERKEY> I was a regular for years.
+<[Jack] J.BROWN11> How many people normally attend, how many board members?
+<[Robert] R.BERKEY> I guess John Hall would be the only board member.
+<[Robert] R.BERKEY> I not sure who the other board members are, anyway.
+<[Jack] J.BROWN11> What is your overall impression of how business is handled.
+<[Robert] R.BERKEY> They list attendees in the minutes.
+<[Robert] R.BERKEY> Not sure how to answer that.
+<[Jack] J.BROWN11> Ok  
+<[Robert] R.BERKEY> There's work to be done, and here are people doing it.
+<[Jack] J.BROWN11> good...   much controversy..?
+<[Robert] R.BERKEY> No, the people with strong opinions..
+<[Robert] R.BERKEY> eventually have found other things to do.
+<[Jack] J.BROWN11> I would like to get at least 3-4  of the monthly...
+<[Jack] J.BROWN11> business meetings moved to a Saturday night so
+<[Jack] J.BROWN11> I could get down to see what is going on...
+<[Robert] R.BERKEY> Sounds good to me.
+<[Jack] J.BROWN11> Do you think people would want to change the meeting time?
+<[Jack] J.BROWN11> You probably can't answer that!
+<[Robert] R.BERKEY> Well, I can't speak for others.
+<[Robert] R.BERKEY> But for a good reason, why not.
+<[Jack] J.BROWN11> I'll have to bring it up at the next board meeting.
+<[Robert] R.BERKEY> Shepherd Associates would need to agree.
+<[Robert] R.BERKEY> Right now, they just stay late.
+<[Jack] J.BROWN11> Well I think I'll move along now...
+<[Robert] R.BERKEY> Yes, i'm with you on that.
+<[Jack] J.BROWN11> talk to you another time.
+<[Robert] R.BERKEY> Be seeing you.
+<[Robert] R.BERKEY> Bye, Len.
+<[Jack] J.BROWN11> has left.
+<[Robert] R.BERKEY> has left.
+/exit
+<[Len] NMORGENSTERN> has left.
+
+

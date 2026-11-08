@@ -1,0 +1,224 @@
+
+
+ November 21, 1991 Open FIGGY BAR 
+ The hot topic was conditionals, especilly CASE constructs.
+ 
+ATTENDEES:
+[GARY-S]
+[[Perry] P.MITCHELL9]
+[[Wil] W.BADEN1]
+[[Len] NMORGENSTERN]
+
+ Minutes:
+<[Perry] P.MITCHELL9> :)
+<[Perry] P.MITCHELL9> Where is everybody?
+<GARY-S> Hi Perry - Welcome , you're the first arrival tonite
+<GARY-S> FIGGY is scheduled for 9:30 Eastern
+<GARY-S> So - what's on your mind
+<[Perry] P.MITCHELL9> Hmm. I've just finished a re-write of a conditional of.
+<GARY-S> what sort of conditional ??
+<GARY-S> Hi Wil
+<[Perry] P.MITCHELL9> A conditional of, for use with a case statement.
+Something I've been using for a little over 3 years.
+<[Wil] W.BADEN1> What are we doing in room 1?
+<[Wil] W.BADEN1> Hi Gary.
+<[Perry] P.MITCHELL9> Of course, this version is incredibly more elegant and
+sophisticated. ;)
+<[Wil] W.BADEN1> Hi Len.
+<GARY-S> Try to go to another room
+<NMORGENSTERN> Hi all
+<[Wil] W.BADEN1> Glad to meet you, Perry.
+<[Perry] P.MITCHELL9> Thank you, sir. Likewise. :)
+<GARY-S> Is it propriatary ? If not, there's a lot of interest in portable code
+and CASE and conditionals head the list of "I want" s  for a lot of people
+<[Len] NMORGENSTERN> Yes
+<[Perry] P.MITCHELL9> This version allows as much stack manipulation as you
+want inside the of...endof.
+<GARY-S> I'd like to encourage you to post it in the library
+<[Perry] P.MITCHELL9> No problem. It's designed to work with JForth, tho. Don't
+know how portable it would be.
+<GARY-S> You do know Mike will be our guest in two weeks ?
+<GARY-S> make that 3 weeks
+<[Wil] W.BADEN1> Who?
+<GARY-S> Mike Haas, author of JForth
+<[Wil] W.BADEN1> Aah.  But it's SECOND Thursday -- I can't make it.
+<[Perry] P.MITCHELL9> Sounds great. I had heard that they were going to add a
+conditional of to the new version of JForth...
+<[Perry] P.MITCHELL9> so I thought I better improve mine by adding the stack
+manipulation. ;)
+<GARY-S> Tell the truth, I don't care if it is all that portable - we've been
+needing some Amiga Forth stuff
+<[Len] NMORGENSTERN> Didn't Mike win the "World's fastest programmer
+<[Len] NMORGENSTERN> award at Forth Day in Los Angeles a few years ago?
+<GARY-S> yep
+<[Len] NMORGENSTERN> I thought so!
+<GARY-S> He is going to be discussing JSR threading
+<GARY-S> Wil - we go back to 3rd thursday in January
+<[Wil] W.BADEN1> See you then.
+<GARY-S> Please do post your code Perry
+<[Wil] W.BADEN1> Yes, I'd like to see it.  I'm very interested because \
+<[Wil] W.BADEN1> I don't think that Forth should have a CASE statement.
+<[Perry] P.MITCHELL9> I'll upload when I leave. It does have one addition not
+normally seen - an "otherwise" statement.
+<GARY-S> IF THEN ELSE weren't sufficent ?
+<[Len] NMORGENSTERN> Wil and I had this argument some months ago
+<[Len] NMORGENSTERN> I agree that Forth does not NEED a CASE statement,
+<[Len] NMORGENSTERN> but it can be useful.
+<[Len] NMORGENSTERN> Example: You have parallel actions. To add or delete one
+<[Len] NMORGENSTERN> is much easier with a CASE statement than with other
+structures.
+<GARY-S> I would have never ported a Kaypro Forth ((MicroCornucopia's FIGForth)
+to a Bondwell without case statements I don't think
+<[Perry] P.MITCHELL9> The otherwise is a necessary part of the case structure.
+It equates to "2drop".
+<[Len] NMORGENSTERN> Perry, that depends on the implementation.
+<[Wil] W.BADEN1> When you have a parcel of parallel actions, the whole parcel
+should\
+<[Wil] W.BADEN1> be wrapped in a definition.
+<[Perry] P.MITCHELL9> Without it, it would be extremely difficult to implement
+the stack manipulation ability.
+<[Wil] W.BADEN1> In that "case" just EXIT.
+<[Len] NMORGENSTERN> How do you mean, Wil?
+<[Wil] W.BADEN1> In all the examples you gave me\
+<[Wil] W.BADEN1> the code (to me) was easier to read and more efficient
+<[Wil] W.BADEN1> without CASE.
+<GARY-S> I grant CASE may not be efficent, but it IS handy
+<[Len] NMORGENSTERN> My own CASE statement is just a way to conveniently
+<[Len] NMORGENSTERN> set up nested IF ... ELSE ... THEN statemtents
+<[Wil] W.BADEN1> In almost all instances of CASE in Forth the CASE is the
+nucleus of a dispatch routine.
+<[Perry] P.MITCHELL9> I think a CASE statement is much easier to read than so
+many IF-ELSE_THEN statements.
+<GARY-S> That is certainly true
+<[Wil] W.BADEN1> DON'T nest the IF statments -- EXIT.
+<[Wil] W.BADEN1> I'd be very interested in seeing some existing examples of
+code that\
+<[Len] NMORGENSTERN> Wil, to do that, you have to write a separate word to
+<[Wil] W.BADEN1> you think is improved by CASE.
+<[Len] NMORGENSTERN> incorporate the CASE, and I think
+<[Len] NMORGENSTERN> that that makes it less readable,
+<[Len] NMORGENSTERN> especially if the different branches consist of only 
+<[Len] NMORGENSTERN> one or two Forth words.
+<[Wil] W.BADEN1> But, Len, that's exactly what you did do in every example of
+CASE.
+<[Len] NMORGENSTERN> True, but...
+<[Wil] W.BADEN1> Not a separate word for each branch, but a single word for the
+enclosing dispatch routine.
+<[Len] NMORGENSTERN> I planned other actions. Ultimately there were to be
+<[Len] NMORGENSTERN> five or six (only two in the example)
+<[Wil] W.BADEN1> Rather than\
+<[Wil] W.BADEN1> : CharacterType ( c -- aType)
+<[Wil] W.BADEN1> CASE
+<[Wil] W.BADEN1> 1 OF Alpha ENDOF
+<[Wil] W.BADEN1> 2 OF Numeric ENDOF
+<[Wil] W.BADEN1> 3 OF Special ENDOF
+<[Wil] W.BADEN1>    (etc)
+<[Wil] W.BADEN1> ;
+<[Wil] W.BADEN1> (there shud be an ENDCASE back there.)
+<[Wil] W.BADEN1> Try:
+<[Wil] W.BADEN1> : CharacterType ( c -- aType)
+<[Wil] W.BADEN1> OF Alpha EXIT THEN
+<[Wil] W.BADEN1> (oops) 1 OF Alpha EXIT THEN
+<[Wil] W.BADEN1> 2 OF Numeric EXIT THEN
+<[Wil] W.BADEN1> 3 OF Specail EXIT THEN
+<[Wil] W.BADEN1>  (etc)
+<[Wil] W.BADEN1> ;
+<GARY-S> What have you actually gained ?
+<[Len] NMORGENSTERN> That would be embedded in a word such as : zoo KEY
+Character Type ;
+<[Len] NMORGENSTERN> You could not write, for example: : Key 1 OF    etc etc
+<[Len] NMORGENSTERN> To me that requirement makes the result less readable
+<[Wil] W.BADEN1> Your example must be incomplete, because you certainly can.
+<[Len] NMORGENSTERN> I was going to write an addendum to that effect
+<[Wil] W.BADEN1> And I reiterate, THAT IS how CASE IS used in Forth.
+<[Len] NMORGENSTERN> You would have to end the word with the CASE statement
+<[Len] NMORGENSTERN> You could not follow it with any other actions.
+<[Wil] W.BADEN1> Inefficient nominal high-level definition of OF
+<[Wil] W.BADEN1> : OF POSTPONE OVER POSTPONE = POSTPONE IF POSTPONE DROP ;
+IMMEDIATE
+<[Wil] W.BADEN1> And that one line above is a complete "CASE" package for Forth.
+
+<[Wil] W.BADEN1> It is more powerful than Eaker, and all others I have seen (so
+far).
+<[Wil] W.BADEN1> (I've haven't seen yours yet, Perry.)
+<[Len] NMORGENSTERN> I do not disupute that CASE is inefficient. I
+<[Len] NMORGENSTERN> merely claim that it is useful.
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> ga
+<[Wil] W.BADEN1> It is efficient, or can be.
+<[Len] NMORGENSTERN> To me CASE is just another control structure and it
+<[Len] NMORGENSTERN> is highly desirable that it be possible to embed
+<[Len] NMORGENSTERN> any case statement anywhere within any Forth word.
+<[Len] NMORGENSTERN> btw, I find FPC's EXEC undesirable for that reason,
+although I do
+<[Len] NMORGENSTERN> use it a lot.
+<[Wil] W.BADEN1> It is just superfluous and redundant.
+<[Wil] W.BADEN1> I don't know EXEC.
+<[Len] NMORGENSTERN> (I should have said "any control structure"
+<[Len] NMORGENSTERN> EXEC: is used like this
+<[Len] NMORGENSTERN> .... ..... EXEC: THIS THAT ANOTHER ;
+<[Len] NMORGENSTERN> If 0 is on the stack, then THIS is executed, etc.
+<[Wil] W.BADEN1> Wasn't that F83 CASE: ?
+<[Len] NMORGENSTERN> Not quite. in F83
+<[Len] NMORGENSTERN> CASE: is a defining word.
+<[Len] NMORGENSTERN> The word so defined can be used within another word, but
+<[Len] NMORGENSTERN> CASE: cannot be.
+<[Wil] W.BADEN1> This is getting very interesting, but as I told Gary earlier,
+I have to go.
+<[Wil] W.BADEN1> I've seen it under another.
+<[Len] NMORGENSTERN> See you next week in Asilomar!
+<[Wil] W.BADEN1> 10 and counting.
+<GARY-S> Bad timing
+<GARY-S> Wil was right - the conversation was interesting
+<[Len] NMORGENSTERN> An analagous example is ROLL
+<GARY-S> I don't usually disagree with Wil, but I find case quite handy
+<[Len] NMORGENSTERN> I have never used it, but it's nice to know that it's
+<[Len] NMORGENSTERN> there if you ever need it.
+<GARY-S> PICK covers it
+<[Len] NMORGENSTERN> Does it?
+<[Len] NMORGENSTERN> PICK duplicates the nth item to the top of the stack
+<[Len] NMORGENSTERN> but ROLL moves it to the top. Very slow!
+<GARY-S> Conditionals are still a hot topic in ANS too - I wonder if it will
+ever be reslolved
+<[Perry] P.MITCHELL9> Probably not. :)
+<GARY-S> Do you make use of NIP and TUCK ?
+<[Len] NMORGENSTERN> A lot!
+<[Perry] P.MITCHELL9> Not I.
+<[Len] NMORGENSTERN> TUCK not so much.
+<GARY-S> Surprisingly handy and so obvious
+<GARY-S> That's one of those "Why didn't I think of that?" thingees
+<[Len] NMORGENSTERN> A useful word would be n INCREMENT-STACK where it
+<[Len] NMORGENSTERN> adds 1 to the nth item. Thus 0 INCREMETN-STACK is the
+<[Len] NMORGENSTERN> same as 1+
+<[Len] NMORGENSTERN> This would be useful as a counter.
+<GARY-S> Have you presented it to the TC ? What would you call it ? CLICK,
+NUDGE ??????
+<[Len] NMORGENSTERN> I suspect that it cannot be implemented in all Forths.
+<[Len] NMORGENSTERN> I see a problem with some of the Forth machines. But
+<[Len] NMORGENSTERN> I don't know enough about all the aspects.
+<GARY-S> Why not ? Can't it be determined with DEPTH
+<[Perry] P.MITCHELL9> I think I'm gonna head out.
+<[Len] NMORGENSTERN> DEPTH gives you the depth of the stack, but does not
+<[Len] NMORGENSTERN> neceessarily
+<[Len] NMORGENSTERN> Bye!
+<GARY-S> Thanks for dropping by Perry - I'll be looking for your code
+<[Len] NMORGENSTERN> tell you the address. My word would work only if the
+<[Len] NMORGENSTERN> stack is kept in addressable RAM.
+<[Perry] P.MITCHELL9> Ok. I just have to choose a good name for the file. :)
+<GARY-S> cond_of  would work
+<[Perry] P.MITCHELL9> Say, it's only 1306 bytes... should I leave it in ASCII
+format?
+<GARY-S> Yes please
+<[Len] NMORGENSTERN> If the stack is kept in CPU registers or whatever,
+<[Len] NMORGENSTERN> there would be a problem.
+<[Perry] P.MITCHELL9> Bye!
+<GARY-S> I didn't see that when I first asked - DEPTH seemed so obvious, but
+now I see why it isn't. Well, I tried.
+<[Len] NMORGENSTERN> I always heard the slogan "Think before you speak"
+<[Len] NMORGENSTERN> Actually, I never obey it because I get a new point of
+<[Len] NMORGENSTERN> view on something the intant I say it or write it down!
+<[Len] NMORGENSTERN> (instant)
+<[Len] NMORGENSTERN> So, I am always trying out things and then revising it.
+==== END ====
+
+

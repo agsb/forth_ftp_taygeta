@@ -1,0 +1,291 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 10/11/90   Time: 22:32EDT
+
+Attendees:
+[[Len] NMORGENSTERN]
+[[Gary] GARY-S]
+[[Bill] B.CLARK10]
+[[Robert] R.BERKEY]
+
+  Items discussed include Jef Raskin, ECFB shutdown, Forth embedded in 
+  appliances, autos, tape controllers, SPARC, Forth jobs in England,
+  FORML/EuroFORML,Standardizing Forth(??).
+
+Minutes:
+<GARY-S> BUSY !!!!!!
+<NMORGENSTERN> That's good if you are making money, otherwise, not
+<GARY-S> Then it ain't worth squat
+<GARY-S> I really regret you will miss Raskin's conference next Wednesday
+<GARY-S> He's a very interesting man
+<NMORGENSTERN> Yes. I have heard him speak, and he is fascinating.
+<NMORGENSTERN> A real idea man!
+<GARY-S> good sense of humor, too
+<NMORGENSTERN> When I heard him in Anaheim at the last Forth National
+<NMORGENSTERN> a couple of years ago, it was earth-shaking!
+<NMORGENSTERN> (there was an earthquake while he was speaking)
+<B.CLARK10> is here.
+<NMORGENSTERN> A very mild one, fortunately.
+<GARY-S> He uses a comm program he wrote in Forth that has a reply window and 
+recieve window, so he can compose while logging, nice
+<B.CLARK10> hello Im new to this dso i'll just listen for now..
+<NMORGENSTERN> We like to be informal. Can you set your first name?
+<[Gary] GARY-S> Mine is so redundant I seldom bother
+<NMORGENSTERN> Type /nam Bill at the start of a line.
+<[Gary] GARY-S> Bill use a slash command to - you got it
+<R.BERKEY> is here.
+<NMORGENSTERN> Great! How much Forth experience have you had, Bill?
+<[bill] B.CLARK10> what does the N in Nmorgenstern stand for ???
+<[Gary] GARY-S> nee-bob
+<NMORGENSTERN> Nathan Leonard. I have used my middle name
+<NMORGENSTERN> since the age of 2
+<NMORGENSTERN> (I had 2 cousins named Nathan)
+<[Gary] GARY-S> Robert, you have been unusually quiet in the Bulletin Board of 
+late. Give up ? Busy ? Regrouping ?
+<[Robert] R.BERKEY> Partly waiting for the next ANS mailing.
+<[Robert] R.BERKEY> Haven't even gotten the passed proposals from the last 
+meeting, yet.
+<[Gary] GARY-S> Should be a short wait
+<[bill] B.CLARK10> I first heard of FORTH back in 1980 or there abouts and have 
+written a 68000 version/rewrite of fig-forth to run on a home brew vme
+ computer but haven't managed to convince my boss to use forth at work!!!
+<[Robert] R.BERKEY> I don't know what happens next with ANS.
+<[Len] NMORGENSTERN> The story of Forth!
+<[Len] NMORGENSTERN> Where do you work?
+<[Gary] GARY-S> In case anyone has noticed the xCFB messages have stopped, 
+Jerry shut ECFB down, and the new central hub goes into operation next week
+<[bill] B.CLARK10> MegaTape Corp, Duarte, CA   we make tape drives for backup
+<[Gary] GARY-S> Does your boss know Maxtor likes Forth ?
+<[Len] NMORGENSTERN> Maxtor uses Forth.
+<[Len] NMORGENSTERN> Where did Ting work? They make drives, too.
+<[Gary] GARY-S> Maxtor
+<[Len] NMORGENSTERN> Sun uses Forth a lot!
+<[bill] B.CLARK10> I know   but the problem is no-one else here understands 
+FORTH so I have to bow to popular opinion and use asm/c
+<[Gary] GARY-S> When Ting had his conference here that's where I called him
+<[Gary] GARY-S> All the widgets in SPARC stations are Forth
+<[bill] B.CLARK10> Does MAXTOR use FORTH in there drives ???
+<[Gary] GARY-S> In the controller chips
+<[Len] NMORGENSTERN> You should get in touch with the Orange County chapter
+<[Len] NMORGENSTERN> Noshir Jessung 714 842 3032
+<[Gary] GARY-S> But so does the brain under the hood of many (most) cars, and 
+now refridgerators
+<[Len] NMORGENSTERN> Or Los angeles, Phjil Wasson
+<[Robert] R.BERKEY> Forth in refrigerators?
+<[Len] NMORGENSTERN> 213 649-1428
+<[Len] NMORGENSTERN> Phil, that is
+<[Gary] GARY-S> Yep - for the frost free cycles, etc
+<[Robert] R.BERKEY> huh.
+<[Gary] GARY-S> Uses Super 8, just like Gary Feierbach does
+<[bill] B.CLARK10> I been to the Mercury savings and loan in OC, interesting 
+people but I havent had much time recently.
+<[Len] NMORGENSTERN> A high percentage of embedded controllers are written in 
+Forth
+<[Len] NMORGENSTERN> Autos, refrigerators, sewing machines, etc.
+<[bill] B.CLARK10> Auto's ???
+<[Gary] GARY-S> In case you didn't know it, The zilog super 8 has a small Forth 
+kernel in it
+<[Len] NMORGENSTERN> Yes. Most modern autos have several controllers:
+<[Len] NMORGENSTERN> automatic transmission, gas intake, brakes, etc.
+<[Len] NMORGENSTERN> Not to speak of lights, windows, etc.
+<[Gary] GARY-S> Spark advance timing is strictly micro controlled now
+<[Gary] GARY-S> The emission check is too
+<[Len] NMORGENSTERN> Microwave ovens!
+<[Gary] GARY-S> you bet !
+<[bill] B.CLARK10> perhaps I'm making something clear    the tape 
+controllers/drive I design/programme have to have sub millisecond response time
+AND keep a running total of bytes going by AND keep a cmd trace AND...
+<[bill] B.CLARK10> or not..
+<[Gary] GARY-S> Robert - Very interesting guest this Wednesday ( NOT Thursday) 
+in Jef Raskin
+<[Len] NMORGENSTERN> Sounds like a job for Forth!
+<[Robert] R.BERKEY> they can do this with C, Bill?
+<[bill] B.CLARK10> no
+<[Gary] GARY-S> I would think C would be too slow, asm maybe
+<[Robert] R.BERKEY> so that leaves multitasking asm?
+<[bill] B.CLARK10> yes, my prototypes have a multitasking asm kernel written 
+8088 code !!!
+<[Gary] GARY-S> That makes more sense
+<[Robert] R.BERKEY> prototypes in asm, sigh (!)
+<[Robert] R.BERKEY> would you consider leaving to take a similar job using 
+Forth?
+<[Robert] R.BERKEY> (not that I know of any)
+<[Gary] GARY-S> You might also tell your boss that smart shops like Atari 
+prototype hardware and softyware in Forth
+<[bill] B.CLARK10> but I chickened out in the production version and went 
+non-multitasking since the task became simpler after ...
+<[Len] NMORGENSTERN> Wish Jax were here. custom-made embedded controllers
+<[Gary] GARY-S> I sure don't envy you, microcoding in asm
+<[Len] NMORGENSTERN> is just about all he does.
+<[bill] B.CLARK10> seeing i didn't need so many jobs running..... yes I would 
+consider a FORTH job but where??? and are there any in England??? I'm mo
+ving soon
+<[Len] NMORGENSTERN> Yes there is a Forth Interest Group in London
+<[Robert] R.BERKEY> oh, sure, England had Forth early on.
+<[Len] NMORGENSTERN> D. J. Neale.
+<[Len] NMORGENSTERN> 58 Woodland Way
+<[Robert] R.BERKEY> get MPE's catalogue, they are in Southampton.
+<[Len] NMORGENSTERN> Morden, Surry SM4 4DS
+<[Gary] GARY-S> As soon as you get to England call the folks up at MPE 
+( MicroProcessor Engineering, LTD )
+<[Robert] R.BERKEY> It's only a dollar or two to call from the West coast.
+<[Gary] GARY-S> Telephone + 44 703 631441
+<[bill] B.CLARK10> ASM aint so bad but I must admit I wish I could have done 
+some of it .. the top layer in forth ....... mmmm ! lots of good info tha
+nks.
+<[Robert] R.BERKEY> I recommend their catalogue, interesting things they have 
+done.
+<[Gary] GARY-S> Did you get that phone number Bill
+<[Robert] R.BERKEY> Quite advanced Forth.
+<[bill] B.CLARK10> I took a snapshot with procomm
+<[Robert] R.BERKEY> at MPE.
+<[Robert] R.BERKEY> they also have a contact in Rochester, Boris Naschanchik 
+(sp?).
+<[Len] NMORGENSTERN> Rochester N. Y. that is
+<[bill] B.CLARK10> do you have an address book in your head  or  are you 
+looking this up?
+<[Len] NMORGENSTERN> I have a listing of all active Forth Interest groups here.
+<[Gary] GARY-S> You're on the west coast - call after midnight some night
+<[Gary] GARY-S> You'll reach London (Southampton) at tea time
+<[bill] B.CLARK10> I'll do that
+<[Robert] R.BERKEY> why England?
+<[bill] B.CLARK10> What controller do Maxtor use?
+<[Robert] R.BERKEY> to bad GEnie isn't in there, yet.
+<[Robert] R.BERKEY> at least Germany is now connected.
+<[bill] B.CLARK10> I'm English born and bred and I miss the wet and wind...
+<[Len] NMORGENSTERN> Give me sunny California, but I admit L. A. county
+<[bill] B.CLARK10> could be expensive, oh well maybe there an equivelent 
+service in UK
+<[Len] NMORGENSTERN> can be pretty extreme!
+<[Len] NMORGENSTERN> Have you thought of Vancouver, BC. Lots of Forth there.
+<[Robert] R.BERKEY> I don't recall having seen much on GEnie from folks in 
+England.
+<[bill] B.CLARK10> interesting
+<[Gary] GARY-S> They don't even get on Usenet very often
+<[Len] NMORGENSTERN> Jack Brown JBROWN12 on GEnie is a professor of Math
+<[Len] NMORGENSTERN> very active in Forth circles.
+<[Robert] R.BERKEY> no, even with Tommy Rolf's connection.
+<[Gary] GARY-S> May be going on sabatical (sic) though
+<[bill] B.CLARK10> when I left England 9 years ago they didn't even have hayes 
+modems or anything similar but now?????
+<[Robert] R.BERKEY> oh, well, MPE has some kind of online connection.
+<[bill] B.CLARK10> What does MPE do ???
+<[Len] NMORGENSTERN> Nothing like being a little behind to make you run very 
+hard
+<[Robert] R.BERKEY> our company is expanding in Europe and mentioned that 
+England hosted
+<[Robert] R.BERKEY> many of the international standards meetings.
+<[Len] NMORGENSTERN> to catch up. British and French computer science is 
+advancing
+<[Len] NMORGENSTERN> by leaps and bounds, I hear.
+<[Gary] GARY-S> I wish we had France's minitel
+<[Robert] R.BERKEY> MPE has a modular Forth for the PC, and they also sell 
+books, processor
+<[bill] B.CLARK10> or even england's prestel !!
+<[Robert] R.BERKEY> boards, consulting, training, the list seems to go on and 
+on.
+<[Gary] GARY-S> MPE is also very involved in Forth education
+<[Robert] R.BERKEY> I haven't seen their software in action, but I was sure 
+impressed by
+<[Robert] R.BERKEY> their catalogue.
+<[Gary] GARY-S> MPE does board development, right up your alley, Bill
+<[Robert] R.BERKEY> Now, what's "prestel", Bill?
+<[bill] B.CLARK10> my brother in UK tells me very little hardware is designed  
+in the UK, mostly software and support for US stuff.
+<[Robert] R.BERKEY> what does that mean for your career?
+<[bill] B.CLARK10> Oh prestel is/was a GENIE like service that used a special 
+dumb terminal of 24x40 chars that  you could any kind of info on except
+that it used an FSK modem with 1200 baud from host to user and 75 baud from 
+user>host ,  no PC software to down load...
+<[bill] B.CLARK10> eiter
+<[bill] B.CLARK10> either
+<[Robert] R.BERKEY> ah, thanks.
+<[Len] NMORGENSTERN> Sounds like PRODIGY !
+<[bill] B.CLARK10> TV guide ... weather...   yes prodigy is a close relative..
+<[Len] NMORGENSTERN> No serious user will ever be happy unless
+<[Len] NMORGENSTERN> he/she can record the messages as they come over the wire.
+<[bill] B.CLARK10> since it uses a video text format except in UK it's text 
+only , no fancy NAPLPS graphics
+<[bill] B.CLARK10> mmm I don't think Procomm+ would work with Prestel
+<[Len] NMORGENSTERN> Prodigy is based on the idea that there must be a
+<[Len] NMORGENSTERN> lot of people who like to stare at a screen & watch the
+<[Len] NMORGENSTERN> messages go by!
+<[bill] B.CLARK10> v e r y    s l o w l y
+<[Len] NMORGENSTERN> It gets tiresome real quick!
+<[Gary] GARY-S> Prodigy is sure filling my mailbox with come on ads. Anyone 
+else ?
+<[Len] NMORGENSTERN> I got an almost free trial offer & tried it. Net cost $10
+<[Robert] R.BERKEY> well, what's Jef Raskin up to, Gary?
+<[Len] NMORGENSTERN> I'm glad I did, because I can now tell friends to avoid it.
+<[Bill] B.CLARK10> you had to pay??
+<[Robert] R.BERKEY> hehe!
+<[Len] NMORGENSTERN> Yes. They sent me a package with disks & a manual, etc. so
+<[Gary] GARY-S> He's gonna raise a little fun about market chutzpah (spell it 
+correctly Leonard)
+<[Len] NMORGENSTERN> and I got a lot of free hours. They didn't make anything 
+on it!
+<[Len] NMORGENSTERN> spelling is correct.
+<[Gary] GARY-S> The man is a delight to talk to, and types faster than I talk 
+so it could be a VERY good conference. HE DOES KNOW FORTH
+<[Len] NMORGENSTERN> Sorry I have to miss it!
+<[Bill] B.CLARK10> When does Jef come online???
+<[Gary] GARY-S> You have to wonder how a musician becomes a computer wunderkind,
+ maybe he'll tell us
+<[Gary] GARY-S> next Wednesday
+<[Gary] GARY-S> by the way, There will be no FIGGY next Thursday
+<[Len] NMORGENSTERN> Mathematical and musical ability are highly correlated!
+<[Gary] GARY-S> He is also a gifted math whiz
+<[Len] NMORGENSTERN> When I was three years, I could already play on the 
+linoleum.
+<[Len] NMORGENSTERN> But now I just fiddle with my whiskers.
+<[Robert] R.BERKEY> <chuckle!>
+<[Gary] GARY-S> I don't know his iq, but I am pretty sure genius is not too 
+strong a word
+<[Robert] R.BERKEY> (just remembered something I was trying to think of, the 
+first FORML
+<[Robert] R.BERKEY> conference was in England)
+<[Gary] GARY-S> It never ceases to amaze me, the bigger the mover and shaker of 
+computerdom, the nicer the person seems to be to chat with
+<[Gary] GARY-S> 1980 was at Asilomar, was there one (more) before that ?
+<[Robert] R.BERKEY> that would have been when it was.
+<[Len] NMORGENSTERN> There is a EUROFORML every year, isn't there?
+<[Robert] R.BERKEY> As I recall, Kim Harris and Dave Boulton were there.
+<[Len] NMORGENSTERN> Usually in Germany.
+<[Bill] B.CLARK10> I DO BELIEVE I MET THEM IN THE UK now that you mention it, 
+at the time they were trying to give us copies of 6502 fig-forth for the
+ apple][ in 2716 eproms except no-one could get any at the time.. 1980
+<[Robert] R.BERKEY> no apples, or no eproms?
+<[Bill] B.CLARK10> 2716's
+<[Bill] B.CLARK10> new technology !!!!!
+<[Len] NMORGENSTERN> The cutting edge is where you bleed!
+<[Robert] R.BERKEY> hmmm, small world time.
+<[Gary] GARY-S> Will FORML rise from the ashes like the Phoenix ?
+<[Len] NMORGENSTERN> FORML isn't dead, so it doesn't have to be resurrected, 
+Gary
+<[Len] NMORGENSTERN> Its vigor might not be all that is desired, however.
+<[Gary] GARY-S> The fastest programmer conference was a different ball of wax 
+than previous FORML's, will it revert to ideas in Forth or has SigFORTH
+stolen that thunder
+<[Len] NMORGENSTERN> That wasn't FORML, that was FIG National Meeting!
+<[Len] NMORGENSTERN> FORML is at Asilomar every November.
+<[Gary] GARY-S> Thank you, you're right and I stand corrected
+<[Bill] B.CLARK10> I got the impression from reading C.M. that FORTH was 
+invented to allow the programmer some individuallity NOT to conform to some s
+tandard???
+<[Gary] GARY-S> CM still maintains that !
+<[Gary] GARY-S> CM isn't trying to sell a 'standardized' system to the DoD
+<[Len] NMORGENSTERN> It has been said that "Forth's power is so great
+<[Len] NMORGENSTERN> that it doesn't impose a style, and that is Forth's
+<[Len] NMORGENSTERN> greatest problem"
+<[Robert] R.BERKEY> I hadn't heard it described in those terms, more like he 
+wanted
+<[Robert] R.BERKEY> to write more than 40 programs in his life, and objected to
+<[Len] NMORGENSTERN> I believe that, and that is why we NEEED a standard.
+<[Robert] R.BERKEY> 19 different languages, including editor's and operating 
+systems, needed
+<[Robert] R.BERKEY> to write programs.
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,66 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 05/24/90   Time: 22:00EDT
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[Kevin] APPERT]
+
+   ITEM DISCUSSED: Suggestions for the x3/j14 Tech Committee meeting at the
+                   time of this FIGGY. The suggestions were forwarded that
+                   same evening to Dennis Ruffer who was participating in
+                   the meeting. 
+Minutes:
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> any shots for the TC ?
+<[Len] NMORGENSTERN> No, I was working on an error trap, but I didn't
+<[Len] NMORGENSTERN> get it reaady in time for George Shaw to review.
+<[Len] NMORGENSTERN> I am mainly concerned that no other proposal gets adopted
+<[Len] NMORGENSTERN> because I think mine is better than any other
+<[Len] NMORGENSTERN> I have seen. But I have to admit
+<[Len] NMORGENSTERN> that I am not sure that mine is ready to be adopted as a 
+standard.
+<APPERT> is here.
+<[Gary] GARY-S> Error trapping is one of their hot issues this time.
+<[Len] NMORGENSTERN> I dislike cattch-throw for a number of reasons.
+<[Kevin] APPERT> your what Len?
+<[Len] NMORGENSTERN> My error-trap. It's called NETS
+<[Len] NMORGENSTERN> I presented it at Austin in 88, but have improved it.
+<[Len] NMORGENSTERN> It now will handle coroutines and recursion.
+<[Len] NMORGENSTERN> (Much better than catch-throw) but then it's my baby.
+<[Gary] GARY-S> What all do you trap on ? underflow, overflow, incomplete 
+constructs ?
+<[Len] NMORGENSTERN> It's up to the programmer to decide when he/she wants
+<[Len] NMORGENSTERN> to fall into a net & back out.
+<[Kevin] APPERT> it's hard to believe ANYBODY considers any error trapping 
+common practice.  Are they making up a new language as they go along.  they
+ should call it something other than Forth
+<[Len] NMORGENSTERN> I concede that. I was commenting to Gary that I would not
+<[Len] NMORGENSTERN> want to see any other proposal adopted, because mine is 
+better,
+<[Len] NMORGENSTERN> but I am not sure that mine is ready for standardization.
+<[Len] NMORGENSTERN> I am planning to write it up in Forth Dimensions, and
+<[Len] NMORGENSTERN> then we will see what the comments are.
+<[Gary] GARY-S> Kev may have a good point - is this one of those extra bells 
+Forth does not really want to shackle it's bell cow with ?
+<[Len] NMORGENSTERN> I have to agree that nothing is worse than a premature 
+standard.
+<[Len] NMORGENSTERN> One advantage of crystallizing practice is that
+<[Len] NMORGENSTERN> you know it works if a lot of people use it.
+<[Gary] GARY-S> an overladen one might not be so good either
+<[Len] NMORGENSTERN> On the other hand, if you wait until everybody uses, say,
+<[Len] NMORGENSTERN> error trapping, then there are so many kinds around
+<[Len] NMORGENSTERN> that it's chaos.
+<[Gary] GARY-S> Kev - any comments to forward to the TC ?
+<[Kevin] APPERT> they seem to ignore the part of the ANSI charter which 
+encourages them to codify existing practice and not experimental proposals.  t
+his is a lot of what is objectional about the 83 standard.  to much stuff which 
+hadn't seen much use...
+<[Kevin] APPERT> let alone popularity.  I have been assured I don't understand 
+the "highly technical reasons why everything the comm. does is correct.
+..
+<[Kevin] APPERT> but I still would think that a standard produced by the rules..
+

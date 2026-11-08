@@ -1,0 +1,661 @@
+
+To readers: The first part of the steno notes were lost because of a
+blip by GEnie. They have been reconstructed from my capture file.
+Leonard Morgenstern
+Room 3,the Guest Speaker room.
+Type /EXIT to leave, or ? for HELP.
+<NMORGENSTERN> is here.
+/nam Len
+<[Len] NMORGENSTERN> was <NMORGENSTERN>.
+Name is now [Len] NMORGENSTERN.
+/bml
+You are now Meeting Leader.
+Notice on door: Sunday Night Figgy. Topic is Forth bit by
+bit: bit arrays, or whatever your heart's desire!
+/ste
+<Jennifer Marlowe> The Stenographer is here.
+Jennifer Marlowe has come from the steno pool.
+<H.SABBAGH> is here.
+<[Len] NMORGENSTERN> Hi
+<H.SABBAGH> Hi Len.
+How did the examps<H.SAB BAGH> Is there a Figgy tonite?s go?
+<[Len] NMORGENSTERN> How did the examps go?
+<[Len] NMORGENSTERN> exams that is
+<[Len] NMORGENSTERN> 
+<H.SABBAGH> Not yet. They're on Thursday. 
+<H.SABBhAGH> I'm taking a ostudy break.
+<[Len] NMORGENSTERN> Good luck, and hope you don't get ulcers!
+<H.SABBAGH> Thanx.  How goes the  OOP project?
+<[Len] NMORGENSTERN> brb. I have to fix something, Yes ther is a Fi
+<[Len] NMORGENSTERN> ggy
+<[Len] NMORGENSTERN> %ok, back
+<H.SABBAGH> 
+<[Len] NMORGENSTERN> I'm not doing much with oop, just trying.
+<H.SABBAGH> \nam Hadil
+<[Len] NMORGENSTERN> have you done much with it?
+<H.SABBAGH> A little.  I have used Smalltalk/v.
+<[Hadil] H.SABBAGH> was <H.SABBAGH>.
+<[Hadil] H.SABBAGH> It is way too slow on a PC (which I have).
+<[Hadil] H.SABBAGH> It has its own interesting features.
+<[Len] NMORGENSTERN> Good to have your comments. ga
+<[Hadil] H.SABBAGH> I would liek to see a real OOP extension to Forth.
+<[Len] NMORGENSTERN> There are several. What do you mean by "real"?
+<[Hadil] H.SABBAGH> I mean that you can write an entire program in it.
+<[Len] NMORGENSTERN> I heard a comment yesterday that some
+        programmers think that
+<[Hadil] H.SABBAGH> I found Pountain's work to be more like Ada pkgs.
+<[Hadil] H.SABBAGH> ga
+<[Len] NMORGENSTERN> multiple code fields are the same as oop
+<[Hadil] H.SABBAGH> I agree completely.  Some syntax problems, though.
+<[Len] NMORGENSTERN> I don't know if the available schemes
+        ;in Forht support inheritance, etc.
+<[Len] NMORGENSTERN> ga
+
+Room 3, the Guest Speaker room.
+Stenographer is Jennifer Marlowe
+Job     City         Room Sta Mail-Address
+  1 Moraga,CA           3   L [Len] NMORGENSTERN
+  2 Bronx,NY            3   N [Hadil] H.SABBAGH
+Today is Sunday September 10, 1989
+<[Hadil] H.SABBAGH> I like MCFs a lot.  Syntax problems
+        with things like arrays.
+<[Hadil] H.SABBAGH> Also fields in records.
+<[Len] NMORGENSTERN> pmi (pardon my ignorance) what is MCF
+<[Hadil] H.SABBAGH> Multiple Code Field.
+<[Len] NMORGENSTERN> Multiple code fields are easy to implement.
+<[Len] NMORGENSTERN> Thanks
+<[Len] NMORGENSTERN> Error. I meant fields in records are
+        easy to implement. Multiple code
+<[Hadil] H.SABBAGH> Agreed.  HS/FORTH has them, but arrays look funny:
+<[Len] NMORGENSTERN> fields are somewhat more difficult.
+<[Hadil] H.SABBAGH> Really? I have a problem that requires multiple
+<[Hadil] H.SABBAGH> definitions of the same word.
+<[Len] NMORGENSTERN> ga
+<[Hadil] H.SABBAGH> For example I want to have an EMPLOYEE record with
+<[Hadil] H.SABBAGH> a NAME field and a SALES record with a NAME field.
+<[Hadil] H.SABBAGH> I.e., NAME means two different things.
+<[Hadil] H.SABBAGH> Have any ideas?
+<[Len] NMORGENSTERN> If you use syntax like sales. name.
+        and employee.name, and apply
+<[Len] NMORGENSTERN> oop so that sales. and name. act as
+        selectors you can probably
+<[Len] NMORGENSTERN> get around it. Whether smoothly or not, I cannot say.
+<[Hadil] H.SABBAGH> This means I have to build an OOP system.
+<[Len] NMORGENSTERN> Sorry, that should be employee. name (note space)
+<[Hadil] H.SABBAGH> Oh well, CM would say I haven't factored
+<[Hadil] H.SABBAGH> the problem well :-).
+<[Len] NMORGENSTERN> You might be able to do it more simply
+        by incorporating BL WORD in
+<[Len] NMORGENSTERN> sales. and employee. and pick up the
+        following word, us xxxx
+<[Len] NMORGENSTERN> better idea
+<[Hadil] H.SABBAGH> A good idea.
+<[Len] NMORGENSTERN> Have sales. and employee. either be
+        or invoke a vocabulary
+<[Hadil] H.SABBAGH> But it means that I xxxx
+<[Len] NMORGENSTERN> Then us ' (tic) to pick up next word
+        and compile or execute it.
+<[Hadil] H.SABBAGH> That's better.  That way they can
+<[Len] NMORGENSTERN> .
+<[Hadil] H.SABBAGH> be used w/o a modifier like sales.
+<[Hadil] H.SABBAGH> So tonite's topic is bit arrays?
+<[Len] NMORGENSTERN> Right. Vocabularies can substitute for oop if
+<[Len] NMORGENSTERN> your needs are not stringent.
+<[Len] NMORGENSTERN> .
+<[Len] NMORGENSTERN> Are you interested? The stuff is quite elementary.
+<[Len] NMORGENSTERN> I presented it yesterday at our local FIG chapter.
+<[Len] NMORGENSTERN> .
+<[Hadil] H.SABBAGH> Sure. What do you have in mind?
+<[Len] NMORGENSTERN> One thing is a tryout of a facility
+        for uploading in conferences
+<[Len] NMORGENSTERN> If you don't mind being a guinea pig,
+        I can see how well it works.
+<[Len] NMORGENSTERN> .
+<[Hadil] H.SABBAGH> OK. Try me.
+<[Len] NMORGENSTERN> Here goes
+<[Len] NMORGENSTERN>      TRUE AND FALSE: It surprised me
+        that the Forth words TRUE
+<[Len] NMORGENSTERN> and FALSE are not standard. In many
+        Forths, FALSE is a constant
+<[Len] NMORGENSTERN> with the value 0, and TRUE is a constant
+        with the value NOT TRUE.
+<[Len] NMORGENSTERN> Interrupt if you have any questions
+        or if I am going too fast.
+<[Hadil] H.SABBAGH> No problem, except you mean NOT FALSE.
+<[Len] NMORGENSTERN> Right. apologize for the typo!
+<[Len] NMORGENSTERN> I think of these as "canonical" values.
+        In my opinion, any Forth
+<[Len] NMORGENSTERN> word that returns a Boolean flag, for
+        example comparisons, should
+<[Len] NMORGENSTERN> always return a canonical value, and they do in F83.
+<[Len] NMORGENSTERN>      Branching words will accept non-canonical
+        values. IF and
+<[Len] NMORGENSTERN> WHILE tolerate any non-zero value as
+        "true," but require 0 as
+<[Len] NMORGENSTERN> "false," Therefore, it is permissible
+        to use the result of an
+<[Len] NMORGENSTERN> arithmetic operation to select an action.Be
+        careful!  Remember
+<[Len] NMORGENSTERN> that 3 4 AND yields 0; in other words,
+        two "true" arithmetic
+<[Len] NMORGENSTERN> quantities can AND to "false."
+<[Wil] W.BADEN1> is here.
+<[Hadil] H.SABBAGH> Hi Wil.
+<[Len] NMORGENSTERN> Hi Wil, I am uploading my yesterday's
+        talk at North Bay Fig
+<[Len] NMORGENSTERN> as a tutorial here. It is rather elementary.
+<[Wil] W.BADEN1> Hi Len, Assalaamu aleikum, ya Hadil.
+<[Len] NMORGENSTERN>    :  ZX  ( n1  -- ) 3 -  NOT IF ." Equals 3" THEN ;
+<[Len] NMORGENSTERN>      :  ZY  ( n1  -- ) 3 <> NOT IF ." Equals 3" THEN ;
+<[Hadil] H.SABBAGH> Aleikum a saalam, ya Wil.  You have a good accent :-).
+<[Len] NMORGENSTERN> ZX
+<[Len] NMORGENSTERN> incorrectly applies the Boolean operator
+        NOT to the result of an
+<[Len] NMORGENSTERN> arithmetic operation, and will print
+        "Equals 3" when the input is
+<[Len] NMORGENSTERN> 4. The zero-comparison operators, especially
+        0<>, will convert
+<[Len] NMORGENSTERN> arithmetic quantities to canonical Boolean flags.
+<[Len] NMORGENSTERN> So, ZY is correct
+<[Len] NMORGENSTERN> Now we go on to bit arrays
+<[Len] NMORGENSTERN> A BIT ARRAY: In Forth, an array returns
+        an address, given an
+<[Len] NMORGENSTERN> index. This is also true of bit arrays,
+        but remember that (unless
+<[Len] NMORGENSTERN> you are working with an unusual CPU)
+        it takes two words to
+<[Len] NMORGENSTERN> pinpoint a bit: a mask and an address.
+        As a result, a bit array
+<[Len] NMORGENSTERN> has the stack diagram (i -- m a). 
+        First, create a set of masks,
+<[Len] NMORGENSTERN> then define arrays.
+<[Len] NMORGENSTERN> CREATE MASKS  128 C, 64 C, 32 C, 16
+        C, 8 C, 4 C, 2 C, 1 C, : BIT-
+<[Len] NMORGENSTERN> ARRAY ( len -- ) ( i -- m a) CREATE  ALLOT
+<[Len] NMORGENSTERN> DOES>  SWAP 8 /MOD MASKS + C@ -ROT + ;
+<[Len] NMORGENSTERN> BIT-ARRAY ( len -- ) ( i -- m a) CREATE  ALLOT
+<[Len] NMORGENSTERN> DOES>  SWAP 8 /MOD MASKS + C@ -ROT + ;
+<[Len] NMORGENSTERN>      Once a mask and address are found,
+        CSET CRESET and CTOGGLE
+<[Len] NMORGENSTERN> will perform the indicated action.
+        We also need words that store
+<[Len] NMORGENSTERN> a Boolean flag on the stack as an element
+        of a bit array and the
+<[Len] NMORGENSTERN> reverse. (Do not confuse .! and CSET.)
+<[Len] NMORGENSTERN> : .@ ( m a -- f )  C@ AND 0<> ;
+<[Len] NMORGENSTERN> : .! ( f m a -- ) ROT IF CSET ELSE CRESET THEN ;
+<[Len] NMORGENSTERN>  
+<[Len] NMORGENSTERN> END OF TUTORIAL.
+<[Len] NMORGENSTERN> .
+<[Hadil] H.SABBAGH> Very nice.  I like this uploading.
+Switching to Backup Processor..
+(Here is where GENIE knocked us out!)
+P 710?
+GEnie                       Page 710;2
+  FIG Software Real Time Conference   
+            Version 2.01
+Room   Users
+   3        1
+Address of <NMORGENSTERN> will be used.
+What ROOM (1-3), or <Q>uit?
+Room 3,the Guest Speaker room.
+Type /EXIT to leave, or ? for HELP.
+<NMORGENSTERN> is here.
+<[Hadil] H.SABBAGH> was <H.SABBAGH>.
+<[Hadil] H.SABBAGH> What happened?
+Room 3, the Guest Speaker room.
+Job     City         Room Sta Mail-Address
+  1 Bronx,NY            3   N [Hadil] H.SABBAGH
+  2 Moraga,CA           3   N NMORGENSTERN
+<NMORGENSTERN> Genie is having trouble
+<NMORGENSTERN> brb need to fix things
+You are now Meeting Leader.
+<Jennifer Marlowe> The Stenographer is here.
+Jennifer Marlowe has come from the steno pool.
+
+<NMORGENSTERN> I may have lost the transcript. We will see. Meanwhile I have
+<NMORGENSTERN> my own copy.
+<[Hadil] H.SABBAGH> I was saying that we should suggest
+<[Hadil] H.SABBAGH> to guest speakers that they upload their
+<[Hadil] H.SABBAGH> opening remarks.  Is it easy to do?
+<NMORGENSTERN> Some do. It depends on your comm program
+<NMORGENSTERN> Some of them upload so fast that it is unreadable.
+<[Hadil] H.SABBAGH> Is it just ASCII upload?
+<NMORGENSTERN> As a result, we have discouraged it. But my system here
+<NMORGENSTERN> seems to be ok.  What I do is break the text into small pieces
+<NMORGENSTERN> and then TYPE it, which displays it on the screen
+<NMORGENSTERN> I can then point to the desired line, press cr
+<[Hadil] H.SABBAGH> I see. You are using a comm program in FORTH.
+<NMORGENSTERN> and voila, it is transmitted.
+<NMORGENSTERN> No it is not in Forth, it is MIRROR, a commercial program.
+<[Hadil] H.SABBAGH> Ah.
+<NMORGENSTERN> There may be  a Forth comm program that does
+        the same, I don't know.
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> I use Procomm+ myself.  You could probably slow
+<[Hadil] H.SABBAGH> output down by including a lot of NULL characters
+<[Hadil] H.SABBAGH> at the end of a line.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> What I use is called "chat" mode. Half the screen is my typing
+<NMORGENSTERN> and the other half is feedback from Genie
+<[Hadil] H.SABBAGH> Very clever. Like Unix "talk"?
+<NMORGENSTERN> TYPE displays the stuff in my half, and I
+        can transmit as I indicated
+<NMORGENSTERN> Probably.
+<NMORGENSTERN> By the way, the important thing in my tutorial is:
+<NMORGENSTERN> You can use arithmetic quantities as input to
+<NMORGENSTERN> branching operators, like IF and WHILE
+<NMORGENSTERN> but be careful!!!
+<[Hadil] H.SABBAGH> Yah. I learned that from C, but if they change
+<[Hadil] H.SABBAGH> the standard, then you're in trouble! 
+<NMORGENSTERN> Agree.
+<[Hadil] H.SABBAGH> They did that from FORTH-79 -> FORTH-83.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> Yes, F79 and FigForth used 1 as true and 0 as false.
+<NMORGENSTERN> It was very clumsy, and -1 is better but
+<[Hadil] H.SABBAGH> So, what do you use Forth for?
+<NMORGENSTERN> it broke a lot of code, as they say.
+<NMORGENSTERN> I am strictly a hobbyist. I am trying to write a serious
+<NMORGENSTERN> application, a small specialized data base thing
+<NMORGENSTERN> that may hve commercial possibilities, but it is very slow.
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> What the development, or the code?
+<NMORGENSTERN> I am a retired pathologist.
+<[Hadil] H.SABBAGH> Really!
+<NMORGENSTERN> I don't want to talk about it [my application]
+        in detail. It will be <NMORGENSTERN> for personal use by anybody, and may possibly be
+<NMORGENSTERN> useful to businesses.
+<NMORGENSTERN> .
+<NMORGENSTERN> There are lots of specialized data base programs around,
+<FIGCHAPTERS> is here.
+<NMORGENSTERN> genealogy, libraries, calendars, etc.
+<NMORGENSTERN> Hi Jax
+<[Jax] FIGCHAPTERS> was <FIGCHAPTERS>.
+<[Jax] FIGCHAPTERS> hi
+<[Hadil] H.SABBAGH> Hi Jax.
+<[Jax] FIGCHAPTERS> hi Hadil
+<[Hadil] H.SABBAGH> Yes, I am working on a specialized database in FORTH...
+<NMORGENSTERN> ga Hadil
+<[Hadil] H.SABBAGH> It is a system for managing patient's medical records.
+<[Hadil] H.SABBAGH> for a surgical practice.
+<[Hadil] H.SABBAGH> Strictly part-time, and a LOT of work.
+<[Hadil] H.SABBAGH> ga
+<NMORGENSTERN> David Trumpler of Trigon systems in Berkeley
+        has a medical system
+<NMORGENSTERN> for physicians
+<[Jax] FIGCHAPTERS> brb
+<[Jax] FIGCHAPTERS> has left.
+<NMORGENSTERN> for physicians' offices that he sells commercially
+<NMORGENSTERN> Multi user, etc.
+<[Hadil] H.SABBAGH> Yes, there are a lot of them.  
+<NMORGENSTERN> He and his cousin wrote a new Forth (about 10 years ago) that
+<NMORGENSTERN> they called Pyramid. It was never commercially offered. Then
+<NMORGENSTERN> another cousin, a physician, needed help with his "state of
+<NMORGENSTERN> the art" office accounting system that he
+        had just bought & paid a lot of money for. David realized
+	that he could rewrite it 
+<NMORGENSTERN> with Pyramid more easily than he could fix the old one
+<FIGCHAPTERS> is here.
+<NMORGENSTERN> That is how he got into the business.
+<[jaxbak!] FIGCHAPTERS> was <FIGCHAPTERS>.
+<NMORGENSTERN> Pyramid has a lot of novel features.
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> That's very interesting.  I too am aiming
+        to make the thing commercial.
+[Hadil] H.SABBAGH> For when I finish my degree.
+<[Hadil] H.SABBAGH> I am more interested in clinical data processing.
+<[Hadil] H.SABBAGH> Although I will eventually add the accounting feature.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> Trumpler's system is both accounting and clinical records, with
+<NMORGENSTERN> emphasis on the former.
+<[jaxbak!] FIGCHAPTERS> Did you hear about the guy who walks up to the pearly
+gates and St. Peter comes out to meet him? The guy is astounded! "This is
+heaven?" "Yes." Says st. Peter ... "That's absurb," says the man, "I'm a
+lawyer ... lawyers don't go to heaven." "I wanted to see you says St. Pete ...
+<[jaxbak!] FIGCHAPTERS> " Why?" "I wanted to meet a lawyer who is 147 years
+old" ...
+<[jaxbak!] FIGCHAPTERS> "I was only 42 when the truck ran me over!" ... " I
+added up your billable hours".
+<[jaxbak!] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> Funny.
+<[Hadil] H.SABBAGH> Funny!
+<NMORGENSTERN> Hadil, Have you used MUMPS?
+<[Hadil] H.SABBAGH> I've read about it. I broke out in hives :-).
+<NMORGENSTERN> (No comment, Jax)
+<NMORGENSTERN> It was designed as Mass General as a data base for
+<NMORGENSTERN> patient records. Very widely used, and has been
+<[Hadil] H.SABBAGH> Seriously, it seems to have the same
+        features as Forth +
+<[jaxbak!] FIGCHAPTERS> I've been VAX/VWSing lately.
+<NMORGENSTERN> ported to many computers
+<[Hadil] H.SABBAGH> persistent data managment.
+<[jaxbak!] FIGCHAPTERS> oops VMS.
+<NMORGENSTERN> ga Jax
+<[jaxbak!] FIGCHAPTERS> done
+<[Hadil] H.SABBAGH> I know.  Also COSTART is available in PD for about $200.
+<[Hadil] H.SABBAGH> Sorry, COSTAR.
+<NMORGENSTERN> What is COSTAR?
+<[Hadil] H.SABBAGH> However, needs $10,000+ for installation!
+<[Hadil] H.SABBAGH> COSTAR is a system developed in Mass also in MUMPS.
+<NMORGENSTERN> Aah
+<[Hadil] H.SABBAGH> It is the canonical AAMRS
+<[Hadil] H.SABBAGH> (Automated Ambulatory Medical Record System).
+<[jaxbak!] FIGCHAPTERS> Looks like you have found a man
+        after yer own heart, Len!
+<[Hadil] H.SABBAGH> I think that, if you add the data base features
+<[jaxbak!] FIGCHAPTERS> ( med records )
+<[jaxbak!] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> to Forth, you get a language equivalent to MUMPS.
+<[Hadil] H.SABBAGH> (Perhaps better).
+<[Hadil] H.SABBAGH> .
+<[Hadil] H.SABBAGH> brb
+<[jaxbak!] FIGCHAPTERS> It's been done ... 
+<[Hadil] H.SABBAGH> back
+<[jaxbak!] FIGCHAPTERS> what's the name of that McDonnell-Douglas
+        med rec system based on Forth?
+<[jaxbak!] FIGCHAPTERS> Runs on vaxen
+<NMORGENSTERN> Jax, you like Quayle quotes. This is from
+        Parade, which is the
+<NMORGENSTERN> magazine section of many papers.
+<NMORGENSTERN> Bush may have chosen Quayle because he believed
+<NMORGENSTERN> that a man of Quayle's youth, experience,
+<NMORGENSTERN> there was little likelihood
+<NMORGENSTERN> that a man of Quayle's youth, experience,
+<NMORGENSTERN> and intelligence woule upstage him.
+<[jaxbak!] FIGCHAPTERS> jeez, i know two guys who worked
+        on it, now I forget the name ... CYBOS, that's it!
+<NMORGENSTERN> . (apologize for duplicate line)
+<NMORGENSTERN> ga
+<[jaxbak!] FIGCHAPTERS> Quayle is dumb, real dumb. He makes
+        Agnew look like intellectual giant.
+<[jaxbak!] FIGCHAPTERS> Why do the Republicans always give
+        us criminals or morons for high elective office?
+<[jaxbak!] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> Why, Johnny?
+<[jaxbak!] FIGCHAPTERS> Because ...
+<NMORGENSTERN> Paul Simon's wife said that her husband had written 6 books,
+<NMORGENSTERN> probably more than Ronald Reagan had ever read.
+<[jaxbak!] FIGCHAPTERS> The Repubs run things from the boardrooms
+        and the Prexy (if Repub) is just a stooge for them.
+<[jaxbak!] FIGCHAPTERS> They WANT morons in the W.House.
+<[jaxbak!] FIGCHAPTERS> Three worst presidents this century:
+        Harding, Nixon, Reagan. Republicans.
+<[jaxbak!] FIGCHAPTERS> Two worst from 1865-1900: Harrison,
+        Grant. Republicans.
+<NMORGENSTERN> Jax could you mention the name of that data base program
+<NMORGENSTERN> Hadil wasn't here when you put it up.
+<[Hadil] H.SABBAGH> Yes, it was CYBOS, I believe.
+<[jaxbak!] FIGCHAPTERS> CYBOS ... medical record system (now owned by
+McDonnell Douglas) in Forth for Vaxen
+<NMORGENSTERN> Do you know it, Hadil,
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> No, no, I just read Jax's message. Where
+        can I get info on it?
+<[Hadil] H.SABBAGH> ga
+<[jaxbak!] FIGCHAPTERS> McDonnell Douglas, I guess.
+<[jaxbak!] FIGCHAPTERS> It is *old*.
+<[jaxbak!] FIGCHAPTERS> But still available.
+<[jaxbak!] FIGCHAPTERS> ( ca. 1975)
+<[jaxbak!] FIGCHAPTERS> .
+<NMORGENSTERN> REAL old
+<[jaxbak!] FIGCHAPTERS> Now don't get funny, Len! :-)
+<[Hadil] H.SABBAGH> Thanx.  I am also interested in that Berkeley system.
+<NMORGENSTERN> MUMPS is that old, but has been through revisions
+<[jaxbak!] FIGCHAPTERS> Four years is old for software.
+<NMORGENSTERN> and has active users groups and bulletin boards.
+<[jaxbak!] FIGCHAPTERS> MUMPS is here on GEnie.
+<[Hadil] H.SABBAGH> I am still going to write my own, though.
+<[Hadil] H.SABBAGH> Maybe I can do things a little differently.
+<NMORGENSTERN> Don't let us discourage you, Hadil. The value of
+<NMORGENSTERN> a system lies less in the cleverness of its programming
+<NMORGENSTERN> than on its suitablity to the needs of the users.
+<[Hadil] H.SABBAGH> MUMPS on GEnie? No wonder they have it quarantined :-)
+<[Hadil] H.SABBAGH> Len: Au contraire.  Talking about this stuff here
+<[jaxbak!] FIGCHAPTERS> Type MUMPS from any main page prompt.
+<NMORGENSTERN> ga Hadil
+<[Hadil] H.SABBAGH> gives me renewed confidence to do this,
+        espcially in a <[Hadil] H.SABBAGH> non-Forth world.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> Forth permits multitasking, etc. which is very useful
+<[jaxbak!] FIGCHAPTERS> Dinner calleth, Gentlemens. Ich fohr.
+<[Hadil] H.SABBAGH> gnite
+<NMORGENSTERN> in an office situation. Muliuser etc. not hard to implement.
+<[jaxbak!] FIGCHAPTERS> has left.
+<NMORGENSTERN> Bye Jax.
+<NMORGENSTERN> It also calleth me, Hadil. Why don't we sign off?
+<[Hadil] H.SABBAGH> Ok. Talk to you later.
+<[Hadil] H.SABBAGH> 
+<NMORGENSTERN> Good talking to you. Next Thur is Koopeman
+Steno mailed and cleared.
+<[Hadil] H.SABBAGH> I won't be able to make it, unfortunately.
+<NMORGENSTERN> Bye now
+<[Hadil] H.SABBAGH> bye
+<[Hadil] H.SABBAGH> has left.
+<NMORGENSTERN> has left.
+Room now has no leader.
+Steno notes automatically mailed.
+Jennifer Marlowe is returned to the pool.
+
+Item    6553408                 89/09/11        10:01
+From:   STENO.POOL                      RTC Stenographer Pool
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+Sub: Minutes of your RT Conference.
+>From Steno: Jennifer Marlowe
+Date: 09/10/89   Time: 21:21EDT
+Attendees:
+[[Hadil] H.SABBAGH]
+[NMORGENSTERN]
+Minutes:
+<NMORGENSTERN> I may have lost the transcript. We will see. Meanwhile I have
+<NMORGENSTERN> my own copy.
+<[Hadil] H.SABBAGH> I was saying that we should suggest
+<[Hadil] H.SABBAGH> to guest speakers that they upload their
+<[Hadil] H.SABBAGH> opening remarks.  Is it easy to do?
+<NMORGENSTERN> Some do. It depends on your comm program
+<NMORGENSTERN> Some of them upload so fast that it is unreadable.
+<[Hadil] H.SABBAGH> Is it just ASCII upload?
+<NMORGENSTERN> As a result, we have discouraged it. But my system here
+<NMORGENSTERN> seems to be ok.  What I do is break the text into small pieces
+<NMORGENSTERN> and then TYPE it, which displays it on the screen
+<NMORGENSTERN> I can then point to the desired line, press cr
+<[Hadil] H.SABBAGH> I see. You are using a comm program in FORTH.
+<NMORGENSTERN> and voila, it is transmitted.
+<NMORGENSTERN> No it is not in Forth, it is MIRROR, a commercial program.
+<[Hadil] H.SABBAGH> Ah.
+<NMORGENSTERN> There may be  a Forth comm program that does the same, I don't 
+know.
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> I use Procomm+ myself.  You could probably slow
+<[Hadil] H.SABBAGH> output down by including a lot of NULL characters
+<[Hadil] H.SABBAGH> at the end of a line.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> What I use is called "chat" mode. Half the screen is my typing
+<NMORGENSTERN> and the other half is feedback from Genie
+<[Hadil] H.SABBAGH> Very clever. Like Unix "talk"?
+<NMORGENSTERN> TYPE displays the stuff in my half, and I can transmit as I 
+indicated
+<NMORGENSTERN> Probably.
+<NMORGENSTERN> By the way, the important thing in my tutorial is:
+<NMORGENSTERN> You can use arithmetic quantities as input to
+<NMORGENSTERN> branching operators, like IF and WHILE
+<NMORGENSTERN> but be careful!!!
+<[Hadil] H.SABBAGH> Yah. I learned that from C, but if they change
+<[Hadil] H.SABBAGH> the standard, then you're in trouble!
+<NMORGENSTERN> Agree.
+<[Hadil] H.SABBAGH> They did that from FORTH-79 -> FORTH-83.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> Yes, F79 and FigForth used 1 as true and 0 as false.
+<NMORGENSTERN> It was very clumsy, and -1 is better but
+<[Hadil] H.SABBAGH> So, what do you use Forth for?
+<NMORGENSTERN> it broke a lot of code, as they say.
+<NMORGENSTERN> I am strictly a hobbyist. I am trying to write a serious
+<NMORGENSTERN> application, a small specialized data base thing
+<NMORGENSTERN> that may hve commercial possibilities, but it is very slow.
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> What the development, or the code?
+<NMORGENSTERN> I am a retired pathologist.
+<[Hadil] H.SABBAGH> Really!
+<NMORGENSTERN> I don't want to talk about it in detail. It will be
+<NMORGENSTERN> for personal use by anybody, and may possibly be
+<NMORGENSTERN> useful to businesses.
+<NMORGENSTERN> .
+<NMORGENSTERN> There are lots of specialized data base programs around,
+<FIGCHAPTERS> is here.
+<NMORGENSTERN> genealogy, libraries, calendars, etc.
+<NMORGENSTERN> Hi Jax
+<[Jax] FIGCHAPTERS> hi
+<[Hadil] H.SABBAGH> Hi Jax.
+<[Jax] FIGCHAPTERS> hi Hadil
+<[Hadil] H.SABBAGH> Yes, I am working on a specialized database in FORTH...
+<NMORGENSTERN> ga Hadil
+<[Hadil] H.SABBAGH> It is a system for managing patient's medical records.
+<[Hadil] H.SABBAGH> for a surgical practice.
+<[Hadil] H.SABBAGH> Strictly part-time, and a LOT of work.
+<[Hadil] H.SABBAGH> ga
+<NMORGENSTERN> David Trumpler of Trigon systems in Berkeley has a medical system
+<NMORGENSTERN> for physiciamn
+<[Jax] FIGCHAPTERS> brb
+<[Jax] FIGCHAPTERS> has left.
+<NMORGENSTERN> for physicians' offices that he sells commercially
+<NMORGENSTERN> Multi user, etc.
+<[Hadil] H.SABBAGH> Yes, there are a lot of them.
+<NMORGENSTERN> He and his cousin wrote a new Forth (about 10 years ago) that
+<NMORGENSTERN> they called Pyramid. It was never commercially offered. Then
+<NMORGENSTERN> another cousin, a physician, needed help with his "state of
+<NMORGENSTERN> the art" office accounting system that he had just bought & paid
+<NMORGENSTERN> with Pyramid more easily than he could fix the old one
+<FIGCHAPTERS> is here.
+<NMORGENSTERN> That is how he got into the business.
+<NMORGENSTERN> Pyramid has a lot of novel features.
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> That's very interesting.  I too am aiming for something 
+commercial.
+<[Hadil] H.SABBAGH> For when I finish my degreen
+<[Hadil] H.SABBAGH> I am more interested in clinical data processing.
+<[Hadil] H.SABBAGH> Although I will eventually add the accounting feature.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> Trumpler's system is both accounting and clinical records, with
+<NMORGENSTERN> emphasis on the former.
+<[jaxbak!] FIGCHAPTERS> Did you hear about the guy who walks up to the pearly 
+gates and St. Peter comes out to meet him? The guy is astounded! "This i
+s heaven?" "Yes." Says st. Peter ... "That's absurb," says the man, "I'm a 
+lawyer ... lawyers don't go to heaven." "I wanted to see you says St. Pete
+...
+<[jaxbak!] FIGCHAPTERS> " Why?" "I wanted to meet a lawyer who is 147 years 
+old" ...
+<[jaxbak!] FIGCHAPTERS> "I was only 42 when the truck ran me over!" ... " I 
+added up your billable hours".
+<[jaxbak!] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> Funny.
+<[Hadil] H.SABBAGH> Funny!
+<NMORGENSTERN> Hadil, Have you used MUMPS?
+<[Hadil] H.SABBAGH> I've read about it. I broke out in hives :-).
+<NMORGENSTERN> (No comment, Jax)
+<NMORGENSTERN> It was designed as Mass General as a data base for
+<NMORGENSTERN> patient records. Very widely used, and has been
+<[Hadil] H.SABBAGH> Seriously, it seems to have the same features as Forth +
+<[jaxbak!] FIGCHAPTERS> I've been VAX/VWSing lately.
+<NMORGENSTERN> ported to many computers
+<[Hadil] H.SABBAGH> persistent data managment.
+<[jaxbak!] FIGCHAPTERS> oops VMS.
+<NMORGENSTERN> ga Jax
+<[jaxbak!] FIGCHAPTERS> done
+<[Hadil] H.SABBAGH> I know.  Also COSTART is available in PD for about $200.
+<[Hadil] H.SABBAGH> Sorry, COSTAR.
+<NMORGENSTERN> What is COSTAR?
+<[Hadil] H.SABBAGH> However, needs $10,000+ for installation!
+<[Hadil] H.SABBAGH> COSTAR is a system developed in Mass also in MUMPS.
+<NMORGENSTERN> Aah
+<[Hadil] H.SABBAGH> It is the canonical AAMRS
+<[Hadil] H.SABBAGH> (Automated Ambulatory Medical Record System).
+<[jaxbak!] FIGCHAPTERS> Looks like you have found a man after yer own heart, 
+Len!
+<[Hadil] H.SABBAGH> I think that, if you add the data base features
+<[jaxbak!] FIGCHAPTERS> ( med records )
+<[jaxbak!] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> to Forth, you get a language equivalent to MUMPS.
+<[Hadil] H.SABBAGH> (Perhaps better).
+<[Hadil] H.SABBAGH> .
+<[Hadil] H.SABBAGH> brb
+<[jaxbak!] FIGCHAPTERS> It's been done ...
+<[Hadil] H.SABBAGH> back
+<[jaxbak!] FIGCHAPTERS> what's the name of that McDonnell-Douglas med rec 
+system based on Forth?
+<[jaxbak!] FIGCHAPTERS> Runs on vaxen
+<NMORGENSTERN> Jax, you like Quayle quotes. This is from Parade, which is the
+<NMORGENSTERN> magazine section of many papers.
+<NMORGENSTERN> Bush may have chosen Quayle because he believed
+<NMORGENSTERN> that a man of Quayle's youth, experience,
+<NMORGENSTERN> there was little likelihood
+<NMORGENSTERN> that a man of Quayle's youth, experience,
+<NMORGENSTERN> and intelligence woule upstage him.
+<[jaxbak!] FIGCHAPTERS> jeez, i know two guys who worked on it, now I forget 
+the name ... CYBOS, that's it!
+<NMORGENSTERN> . (apologize for duplicate line)
+<NMORGENSTERN> ga
+<[jaxbak!] FIGCHAPTERS> Quayle is dumb, real dumb. He makes Agnew look like 
+intellectual giant.
+<[jaxbak!] FIGCHAPTERS> Why do the Republicans always give us criminals or 
+morons for high elective office?
+<[jaxbak!] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> Why, Johnny?
+<[jaxbak!] FIGCHAPTERS> Because ...
+<NMORGENSTERN> Paul Simon's wife said that her husband had written 6 books,
+<NMORGENSTERN> probably more than Ronald Reagan had ever read.
+<[jaxbak!] FIGCHAPTERS> The Repubs run things from the boardrooms and the Prexy 
+(if Repub) is just a stooge for them.
+<[jaxbak!] FIGCHAPTERS> They WANT morons in the W.House.
+<[jaxbak!] FIGCHAPTERS> Three worst presidents this century: Harding, Nixon, 
+Reagan. Republicans.
+<[jaxbak!] FIGCHAPTERS> Two worst from 1865-1900: Harrison, Grant. Republicans.
+<NMORGENSTERN> Jax could you mention the name of that data base program
+<NMORGENSTERN> Hadil wasn't here when you put it up.
+<[Hadil] H.SABBAGH> Yes, it was CYBOS, I believe.
+<[jaxbak!] FIGCHAPTERS> CYBOS ... medical record system (now owned by McDonnell 
+Douglas) in Forth for Vaxen
+<NMORGENSTERN> Do you know it, Hadil,
+<NMORGENSTERN> .
+<[Hadil] H.SABBAGH> No, no, I just read Jax's message. Where can I get info on 
+it?
+<[Hadil] H.SABBAGH> ga
+<[jaxbak!] FIGCHAPTERS> McDonnell Douglas, I guess.
+<[jaxbak!] FIGCHAPTERS> It is *old*.
+<[jaxbak!] FIGCHAPTERS> But still available.
+<[jaxbak!] FIGCHAPTERS> ( ca. 1975)
+<[jaxbak!] FIGCHAPTERS> .
+<NMORGENSTERN> REAL old
+<[jaxbak!] FIGCHAPTERS> Now don't get funny, Len! :-)
+<[Hadil] H.SABBAGH> Thanx.  I am also interested in that Berkeley system.
+<NMORGENSTERN> MUMPS is that old, but has been through revisions
+<[jaxbak!] FIGCHAPTERS> Four years is old for software.
+<NMORGENSTERN> and has active users groups and bulletin boards.
+<[jaxbak!] FIGCHAPTERS> MUMPS is here on GEnie.
+<[Hadil] H.SABBAGH> I am still going to write my own, though.
+<[Hadil] H.SABBAGH> Maybe I can do things a little differently.
+<NMORGENSTERN> Don't let us discourage you, Hadil. The value of
+<NMORGENSTERN> a system lies less in the cleverness of its programming
+<NMORGENSTERN> than on its suitablity to the needs of the users.
+<[Hadil] H.SABBAGH> MUMPS on GEnie? No wonder they have it quarantined :-)
+<[Hadil] H.SABBAGH> Len: Au contraire.  Talking about this stuff here
+<[jaxbak!] FIGCHAPTERS> Type MUMPS from any main page prompt.
+<NMORGENSTERN> ga Hadil
+<[Hadil] H.SABBAGH> gives me renewed confidence to do this, espcially in a
+<[Hadil] H.SABBAGH> non-Forth world.
+<[Hadil] H.SABBAGH> .
+<NMORGENSTERN> Forth permits multitasking, etc. which is very useful
+<[jaxbak!] FIGCHAPTERS> Dinner calleth, Gentlemens. Ich fohr.
+<[Hadil] H.SABBAGH> gnite
+<NMORGENSTERN> in an office situation. Muliuser etc. not hard to implement.
+<[jaxbak!] FIGCHAPTERS> has left.
+<NMORGENSTERN> Bye Jax.
+<NMORGENSTERN> It also calleth me, Hadil. Why don't we sign off?
+<[Hadil] H.SABBAGH> Ok. Talk to you later.
+<[Hadil] H.SABBAGH>
+<NMORGENSTERN> Good talking to you. Next Thur is Koopeman
+<[Hadil] H.SABBAGH> I won't be able to make it, unfortunately.
+<NMORGENSTERN> Bye now
+<[Hadil] H.SABBAGH> bye
+<[Hadil] H.SABBAGH> has left.
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,234 @@
+
+Martin,
+
+    I will attempt to explain why I consider the threading technique
+independent of NEXT.
+
+    Couple of caveats first:
+
+    - My definitions of NEXT, NEST, and UNNEST were *generic* - i.e., it
+had *nothing* to do with Forth but -rather- to do with threaded languages
+in general;
+
+    - My definitions of NEST and UNNEST were *independent* of NEXT - i.e.,
+NEXT was a subset of UNNEST;
+
+    - My definition of threading techniques was also *generic* - i.e., the
+emphasis was on procedural invocation, NOT on leaving the pfa address on
+TOS, etc. a la Forth.
+
+    OK, given those caveats, I'll "invent" a virtual machine language.
+
+    I'll assume that the virtual machine addresses storage in increments
+of the address size.  That is if "ADDRESS" is the address of a word which
+is a pointer (i.e., a machine address), then "ADDRESS+1" contains the
+address of the next address.
+
+    - "IP" denotes a variable which is an address which contains the
+      address of the cfa.
+
+    - "[" and "]" will denote the value of an address.
+
+    - the operators "PUSH" and "POP" do what you expect they should do.
+
+    - a "label" is any string of characters followed by ":".
+
+    - the virtual machine unconditional jump operator is "JMP <address>",
+      where <address> my be a label, a register, a variable, or the
+      value/address of an address.
+
+    - the "$" operator my be used as part of an expression which denotes
+      self reference and any "offset" from $ is in terms of instructions.
+      Thus the expression "$+2" denotes the address of the second
+      instruction from the current instruction.
+
+    - the "<-" operator will denote replacement.
+
+    - "REG" will denote a general-purpose machine register.
+
+    - the "MACRO <name>" operator will define a macro whose code is
+      defined by all of the subsequent virtual machine instructions up to,
+      but not including, the END-MACRO operator.  Upon subsequently
+      referring to <name> the previously defined code will be substituted
+      for <name>.
+
+    - the "RES <expression>" operator will reserve and initialize a word
+      of storage to <expression>.
+
+    - Finally, a back slash "\" will introduce a comment field (to end of
+      line).
+
+    Here we go:
+
+--------------------------------------------------------------------------
+
+    INDIRECT THREADED CODE (ITC):
+
+    The basic idea behind ITC is compactness (at the expense of speed).
+
+    Here's a possible ITC implementation:
+
+
+    NEST:   \ ALL COLON DEFINITION CFA'S POINT HERE
+            PUSH IP         \ SAVE OLD/NEXT IP
+            REG <- IP - 1   \ GET CURRENT IP
+            REG <- [IP]     \ GET CFA ADDRESS
+            IP <- [IP + 1]  \ LOAD NEW IP
+                            \ NOTE: IP+1 CONTAINS PFA
+            \ FALL-THRU TO NEXT
+    NEXT:   \ INCREMENT IP AND JUMP TO IP
+            REG <- [IP]     \ GET CURRENT CFA ADDRESS
+            IP <- IP + 1    \ INCREMENT IP FOR NEXT CFA
+            JMP [REG]       \ INDIRECT JUMP TO CFA
+
+    UNNEST:
+            POP IP          \ RESTORE OLD IP
+            \ NEXT: -- UNNEST INCLUDES NEXT AS A SUBSET
+            REG <- [IP]     \ GET CURRENT CFA ADDRESS
+            IP <- IP + 1    \ INCREMENT IP FOR NEXT CFA
+            JMP [REG]       \ INDIRECT JUMP TO CFA
+            \ NOTE: COULD ALSO DO A:
+            \   JMP NEXT
+            \ INSTEAD OF THE PREVIOUS THREE INSTRUCTIONS
+            \ BUT IT HARDLY SEEMS WORTH THE EFFORT
+
+    Code word definitions would all be of the form:
+
+    CODE-WORD:
+            RES MACHINE-CODE    \ ADDRESS OF MACHINE CODE
+
+    MACHINE-CODE:
+            \ ANY ASSEMBLER CODE YOU LIKE HERE
+            JMP NEXT
+
+    Colon definitions would all be of the form:
+
+    COLON-DEFINITION:
+            RES NEST        \ ADDRESS OF NEST
+            RES PFA         \ ADDRESS OF PFA
+
+    PFA:
+            RES WORD1       \ ADDRESS OF ANY FORTH WORD
+            RES WORD2       \ CAN BE CODE WORD OR COLON DEFINITION
+            ...
+            RES UNNEST      \ ADDRESS OF UNNEST
+
+--------------------------------------------------------------------------
+
+    DIRECT THREADED CODE (DTC):
+
+    The basic idea behind DTC is more speed at the expense of compactness
+(i.e., one level of indirection has been removed from ITC).
+
+    Here's a possible DTC implementation:
+
+
+    NEST:   \ ALL COLON DEFINITIONS JUMP HERE
+            PUSH IP         \ SAVE OLD/NEXT IP
+            REG <- IP - 1   \ GET CURRENT IP
+            REG <- [IP]     \ GET CFA ADDRESS
+            IP <- [IP + 1]  \ LOAD NEW IP
+                            \ NOTE: IP+1 CONTAINS PFA
+                            \   THIS ASSUMES "JMP NEST" TAKES ONE
+                            \   WORD OF STORAGE
+            \ FALL-THRU TO NEXT
+    NEXT:   \ INCREMENT IP AND JUMP TO IP
+            REG <- [IP]     \ GET CURRENT CFA ADDRESS
+            IP <- IP + 1    \ INCREMENT IP FOR NEXT CFA
+            JMP REG         \ DIRECT *NOT INDIRECT* JUMP TO CFA
+
+    UNNEST:
+            POP IP          \ RESTORE OLD IP
+            \ NEXT: -- UNNEST INCLUDES NEXT AS A SUBSET
+            REG <- [IP]     \ GET CURRENT CFA ADDRESS
+            IP <- IP + 1    \ INCREMENT IP FOR NEXT CFA
+            JMP REG         \ DIRECT *NOT INDIRECT* JUMP TO CFA
+
+    Code word definitions would all be of the form:
+
+    CODE-WORD:
+            \ ANY ASSEMBLER CODE YOU LIKE HERE
+            JMP NEXT
+
+    Colon definitions would all be of the form:
+
+    COLON-DEFINITION:
+            JMP NEST        \ NOTE: ALL CFA'S CONTAIN CODE!
+            RES PFA         \ ADDRESS OF PFA
+
+    PFA:
+            RES WORD1       \ ADDRESS OF ANY FORTH WORD
+            RES WORD2       \ CAN BE CODE WORD OR COLON DEFINITION
+            ...
+            RES UNNEST      \ ADDRESS OF UNNEST
+
+--------------------------------------------------------------------------
+
+    SUBROUTINE THREADED CODE (STC):
+
+    The basic idea behind STC is all-out speed at the expense of compactness
+(i.e., all levels of indirection have been removed).
+
+    Here's a possible STC implementation:
+
+
+    MACRO NEXT  \ INCREMENT IP AND JUMP TO IP
+    \ NOTE: MACROS ONLY DEFINE CODE TO BE LATER GENERATED/ADDED
+            REG <- [IP]     \ GET CURRENT CFA ADDRESS
+            IP <- IP + 1    \ INCREMENT IP FOR NEXT CFA
+            JMP REG         \ DIRECT JUMP TO CFA
+    END-MACRO
+
+    MACRO NEST
+            PUSH IP         \ SAVE OLD/NEXT IP
+            IP <- $+4       \ PFA 4 INSTRUCTIONS DOWN
+                            \   I.E., PAST NEXT MACRO
+                            \ NOTE: YOU COULD ALSO BE SNEAKY HERE AND
+                            \   LOAD IP WITH THE *SECOND* PFA ADDRESS,
+                            \   LOAD REG WITH THE *FIRST* PFA ADDRESS,
+                            \   AND JMP REG
+            NEXT            \ MACROS CAN BE NESTED
+    END-MACRO
+
+    MACRO UNNEST
+            RES UP          \ ADDRESS OF "REAL" UNNEST
+    END-MACRO
+
+    UP: \ THIS IS THE "REAL" UNNEST!
+            POP IP          \ RESTORE OLD IP
+            NEXT            \ MACROS CAN BE NESTED
+
+
+    Code word definitions would all be of the form:
+
+    CODE-WORD:
+            \ ANY ASSEMBLER CODE YOU LIKE HERE
+            NEXT            \ INVOKE NEXT MACRO
+                            \ GENERATES IN-LINE CODE
+
+    Colon definitions would all be of the form:
+
+    COLON-DEFINITION:
+            NEST            \ INVOKE NEST MACRO
+                            \ GENERATES IN-LINE CODE
+            RES WORD1       \ ADDRESS OF ANY FORTH WORD
+            RES WORD2       \ CAN BE CODE WORD OR COLON DEFINITION
+            ...
+            UNNEST          \ ADDRESS OF UNNEST/UP
+
+--------------------------------------------------------------------------
+
+    Assuming that I haven't screwed something up here (which is *highly*
+unlikely!) - this stuff should work when translated to a real machine
+architecture and modified for the particular requirements of the Forth
+threaded machine environment.
+
+    At any rate, it should give an idea of what I meant when I previously
+used the terms NEXT, NEST, UNNEST, ITC, DTC, and STC.
+
+    Hope this helps to explain where I'm coming from.  If it don't - then
+sorry - but this is getting to be more work than I'd bargained for!
+
+    ( George)
+
+

@@ -1,0 +1,342 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 08/17/89   Time: 22:32EDT
+
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[Kevin] APPERT]
+[[Wil] W.BADEN1]
+
+   Items discussed include cost/value of JFAR,SigForth ACM N/L...,Moore conf
+   in August - Koopman in Sept, Usenet connection to ForthNet,CARRY/OVERFLOW,
+   F83/ANSI,Standards process,ANSI as 'clearing house' ONLY,Floored div
+
+Minutes:
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> hi len
+<[Len] NMORGENSTERN> Hi Gary. Sorry to hear about your mother.
+<[Gary] GARY-S> Thank you. I appreciate the concern.
+<[Len] NMORGENSTERN> My mother went into the hospital a week ago. She is going
+<[Len] NMORGENSTERN> back to the nursing home today, I think. I have to call my 
+sister.
+<[Gary] GARY-S> Good Luck. Piece of advice - get in all the love you can
+<[Len] NMORGENSTERN> Yes.
+<[Gary] GARY-S> Do you get JFAR , ACM SIGnews...
+<[Len] NMORGENSTERN> Yes to both
+<[Gary] GARY-S> Do you intend to maintain both subscriptions ?
+<[Len] NMORGENSTERN> Yes. 1. I like to support anything related to Forth
+<[Len] NMORGENSTERN> and 2. I find occasional useful stuff in all.
+<[Gary] GARY-S> I agree in the main, but I have to question percieved value 
+versus cost
+<[Len] NMORGENSTERN> I am not sure.They are expensive, to be sure
+<[Len] NMORGENSTERN> %Each one isn't too bad, but they add up.
+<[Len] NMORGENSTERN> (I am receiving echo of my own transmission now)
+<[Gary] GARY-S> You are also sending % signs
+<[Len] NMORGENSTERN> On all? When I start "chat" the program sends one
+<[Gary] GARY-S> Ahh - that's it
+<[Len] NMORGENSTERN> Otherwise, I don't see them.
+<[Kevin] APPERT> is here.
+<[Gary] GARY-S> Any thoughts on the Usenet connection(s)
+<[Kevin] APPERT> hi Gary, Len
+<[Len] NMORGENSTERN> Kevin -- ;you & I were alone here last Sunday
+<[Gary] GARY-S> hey kev
+<[Gary] GARY-S> Looks like Phil Koopman may be the September guest
+<[Kevin] APPERT> great
+<[Gary] GARY-S> Should get the engine buffs out
+<[Len] NMORGENSTERN> The only problem I have is that there is such
+<[Len] NMORGENSTERN> a huge amount of stuff, I don't have time to read it
+<[Len] NMORGENSTERN> I have as much as 200K of back stuff stored.
+<[Kevin] APPERT> I'm gonna be out of town for the 24th.  DRAT!
+<[Wil] W.BADEN1> is here.
+<[Gary] GARY-S> Geeze - of all the conference NOT to miss, Kev:
+<[Len] NMORGENSTERN> I should be here on 24th
+<[Wil] W.BADEN1> hi all.
+<[Wil] W.BADEN1> my answer to the questions is no, maybe.
+<[Gary] GARY-S> There apparently will not be discussion on the Buffalo Chip 
+next week
+<[Kevin] APPERT> I can always read any encyclicals later in the posted record, 
+but it just isn't the same as being there
+<[Gary] GARY-S> nope - and a lot of folks don't realize that
+<[Wil] W.BADEN1> A month ago in the comic strip Funky Winkerbean there was a 
+quote from I CHONG
+<[Gary] GARY-S> The big objection is the serial format on guest nights, but it 
+is essential in my view
+<[Gary] GARY-S> and the quote ?
+<[Len] NMORGENSTERN> Yes, it must be formal.
+<[Wil] W.BADEN1> The Master says: He who aspires to corner the buffalo chp 
+market ...
+<[Wil] W.BADEN1> is truly entremanure.
+<[Kevin] APPERT> gaaaaaaaaa
+<[Gary] GARY-S> that's great
+<[Len] NMORGENSTERN> Was he interred?
+<[Gary] GARY-S> shall we send copies to OKI ?
+<[Kevin] APPERT> Mr. Moore should love that
+<[Len] NMORGENSTERN> <pun>
+<[Len] NMORGENSTERN> <laugh please>
+<[Gary] GARY-S> punt is more like it, len
+<[Len] NMORGENSTERN> It was an offal pun.
+<[Kevin] APPERT> gaaaaaaaaa
+<[Gary] GARY-S> Wil - how is 1's compliment argument going ?
+<[Wil] W.BADEN1> Well, I think that it will be optional, if not denied.
+<[Kevin] APPERT> the dreaded ANSI standard.  I plan to vote with my 
+metacompiler!
+<[Gary] GARY-S> sure lead to some interesting responses
+<[Kevin] APPERT> at least they seem to have gotten a little smarter about 1's 
+compl.
+<[Len] NMORGENSTERN> Wil what is your assessment of the ANSI meeting a couple
+<[Wil] W.BADEN1> I have submitted an account of user experience, and it's 
+"inconveniteent.
+<[Len] NMORGENSTERN> of weeks ago?
+<[Wil] W.BADEN1> Mixed.
+<[Gary] GARY-S> are the usenet ports of interest to you and kev, wil ?
+<[Kevin] APPERT> Usenet?
+<[Wil] W.BADEN1> I got some good things.
+<[Len] NMORGENSTERN> How so, Wil?
+<[Gary] GARY-S> len has already voiced an overload viewpoint
+<[Wil] W.BADEN1> Control Flow is no longer an issue.
+<[Wil] W.BADEN1> I have submitted 8 new proposals since the meeting.
+<[Len] NMORGENSTERN> Subjects?
+<[Gary] GARY-S> I thought the comments on Chuck were particularly timely
+<[Wil] W.BADEN1> When I get the official minutes and copies, I will upload them.
+<[Kevin] APPERT> Usenet?  Comments on Chuck?
+<[Gary] GARY-S> good
+<[Wil] W.BADEN1> (I think the committee should see them first.)
+<[Len] NMORGENSTERN> Right.
+<[Gary] GARY-S> ok - Kev, I have been porting usenet messages onto GEnie and 
+ForthNet...
+<[Gary] GARY-S> for the ones on Chuck see Cat 1, Topic 12
+<[Wil] W.BADEN1> You DO have the first one on "Division is not portable."
+<[Kevin] APPERT> ok.  I have not being looking in the BBS areas for a long time.
+  I'll have a peak.  Thanks
+<[Gary] GARY-S> We will also be posting a ForthNet (edited) news item to comp.
+lang.forth per requests
+<[Gary] GARY-S> was that to me wil ?
+<[Wil] W.BADEN1> Public.
+<[Gary] GARY-S> yes - and one of the respondents, Koopman, will be a guest 
+(probably Sept)
+<[Gary] GARY-S> silence is deadly
+<[Kevin] APPERT> and expensive
+<[Gary] GARY-S> so start a thread
+<[Gary] GARY-S> this isn't 'GARY SPEAKS' !
+<[Wil] W.BADEN1> I'm having telephone problems.
+<[Gary] GARY-S> pay the bill
+<[Len] NMORGENSTERN> (When I have nothing to say, I say it)
+<[Wil] W.BADEN1> I tried  4 times to download a file, and aborted each time.
+<[Kevin] APPERT> anybody interested in adding CARRY to Forth arithm.
+<[Len] NMORGENSTERN> What do you mean, Kevin?
+<[Kevin] APPERT> using xmodem, Wil?
+<[Wil] W.BADEN1> Let's hear it.
+<[Gary] GARY-S> You might take this opportunity to tell the world what 
+subject(s) you plan to cover in Sunday's FIGGY, Len
+<[Gary] GARY-S> excuse me Kev - yes
+<[Wil] W.BADEN1> Kev, yes.
+<[Kevin] APPERT> Wil, did you get the # of the port you were on when you were 
+having problems.  GEnie likes to know if they have equipment problems.
+<[Gary] GARY-S> please do
+<[Kevin] APPERT> Carry, and Overflow have been a topic of some interest to me 
+for a time.  I have often wondered why they are not in Forth.
+<[Len] NMORGENSTERN> My guess is that they would be needed only for
+<[Len] NMORGENSTERN> specialized applications, & then you would write your own
+<[Kevin] APPERT> it makes it significantly easier to add multi-word precision 
+operations, which are fairly general though.
+<[Gary] GARY-S> Carry flag is commonly used in Real-time control, so that's a 
+good question
+<[Wil] W.BADEN1> uh,
+<[Wil] W.BADEN1> the trouble with carry is that *Forth has very little 
+environment.
+<[Wil] W.BADEN1> The state of a program is given by
+<[Wil] W.BADEN1> data stack depth, return stack depth, and
+<[Wil] W.BADEN1> i.p.
+<[Kevin] APPERT> perhaps a set of special operations which all leave 
+carry/borrow in a user
+<[Gary] GARY-S> carry , in machine control often indicates process complete
+<[Kevin] APPERT> variable, or in a flag on the stack?
+<[Wil] W.BADEN1> Forth unlike Novix chip has now hidden state variables to 
+maintain in a context switch.
+<[Wil] W.BADEN1> Also 0 SWAP 0 D+ gives you add with carry.
+<[Len] NMORGENSTERN> Great!
+<[Len] NMORGENSTERN> I will remember that.
+<[Wil] W.BADEN1> But yes, i wud hav liked Forth to hav had carry.
+<[Kevin] APPERT> I'm in favor of not screwing with the syntax or symantics of 
+words now defined.  I think one of the biggest mistakes in F83 is redifi
+ning /
+<[Len] NMORGENSTERN> In what way did F83 redefine /  ???
+<[Kevin] APPERT> from the previous standard.  Floored devision.  Remember?
+<[Kevin] APPERT> oops, division (sp)
+<[Len] NMORGENSTERN> No, that was about the time I got really serious about 
+Forth
+<[Wil] W.BADEN1> Len will bear me out that Forth 83 is not a standard
+<[Len] NMORGENSTERN> Disagree. It is a standard. You would be right to say
+<[Wil] W.BADEN1> Whenever it was called such I objected at ANSI, and I shall 
+continue to.
+<[Len] NMORGENSTERN> that it has not been as well accepted as some would like.
+<[Wil] W.BADEN1> At 1987 FIG convention,
+<[Wil] W.BADEN1> the framers of Forth 83 publically admitted ...
+<[Kevin] APPERT> oops,  f83 in this case is the 83 standard,  I should make 
+that clear!  I didn't intend (though it's what I typed) the f83 implementa
+tion by Laxen/Perry
+<[Wil] W.BADEN1> that  they did not try to standardize, but ...
+<[Wil] W.BADEN1> define what they thot Forth shud be.
+<[Wil] W.BADEN1> Yes, F83 made Forth 83.
+<[Len] NMORGENSTERN> I am surprised to hear that. They certainly acted as if 
+they
+<[Len] NMORGENSTERN> were trying to formulate a standard.
+<[Gary] GARY-S> With readings and oversite by Kim Harris
+<[Kevin] APPERT> except the ones who disagreed and thought it was a standard
+<[Wil] W.BADEN1> They did not try to standardize what Forth was, but decree 
+what they thoughjt
+<[Wil] W.BADEN1> it should be.
+<[Wil] W.BADEN1> Floored division has cost hundreds of thousands of dollars and 
+will cost even more.
+<[Len] NMORGENSTERN> What they are doing at ANSI is the same: they are trying
+<[Len] NMORGENSTERN> (sorry)tallize qhat
+<[Gary] GARY-S> How would you characterize your F83X in that context, wil ?
+<[Wil] W.BADEN1> I recognized that F83 was very good,
+<[Wil] W.BADEN1> and I accepted it as a standard.
+<[Len] NMORGENSTERN> What they are doing at ANSI is the same: they are trying
+<[Len] NMORGENSTERN> to standardize what is done, and what they think it should 
+be
+<[Len] NMORGENSTERN> sometimes switching from one to the other in one sentence.
+<[Wil] W.BADEN1> The X is for extended or experimental, I never deciedd.
+<[Wil] W.BADEN1> Say again, Len, u were scrampble.
+<[Len] NMORGENSTERN> The people at ANSI were doing two things at the same time
+<[Kevin] APPERT> even though they are charged with the task of codifing 
+existant practice, the ANSI folks seem to be wandering off into the bush.  I 
+think they are able to find somebody who has tried anything, but that doesn't 
+make it common practice.
+<[Len] NMORGENSTERN> 1: set forth what people are doing
+<[Len] NMORGENSTERN> 2: set up an ideal standard
+<[Len] NMORGENSTERN> The latter is "what Forth should be" and the former "what 
+it is"
+<[Gary] GARY-S> You do realize that ANSI (the organization itself) does not 
+actually set ANY standards ?
+<[Len] NMORGENSTERN> Sometimes, a speaker would switch from one to the other in 
+a few moments
+<[Len] NMORGENSTERN> Yes they do. When the committee reports to them and they 
+accept the report
+<[Len] NMORGENSTERN> it becomes standard.
+<[Kevin] APPERT> nooooooo, they just sell them!
+<[Gary] GARY-S> no len, THEY Definitely do NOT
+<[Gary] GARY-S> From ANSI's own draft - ANSI itself does not write standards, 
+but only acts as anational "clearing house". end quote
+<[Gary] GARY-S> as quoted in the 1989 Compliance Engineering Reference Guide
+<[Wil] W.BADEN1> IT DOES NOT BECOME STANDARD UNTIL THE WORLD ACCEPTS IT.
+<[Len] NMORGENSTERN> Webster "only" sells dictionaries. Don't tell me that 
+those aren't standard!
+<[Wil] W.BADEN1> Len, were you there when I told of the Fortran 77 experience?
+<[Len] NMORGENSTERN> Yes
+<[Wil] W.BADEN1> That could and should happen here.
+<[Len] NMORGENSTERN> Wil, how accepted does a proposed standard have to be to 
+be Standard?
+<[Wil] W.BADEN1> ANSI is objective about the standards they pubish.
+<[Len] NMORGENSTERN> Nothing will be accepted by everybody.
+<[Wil] W.BADEN1> All they want is something to sell.
+<[Wil] W.BADEN1> They don't care what we decide.
+<[Wil] W.BADEN1> Let me tell about Fortran 77 one more time ...
+<[Len] NMORGENSTERN> It won't sell if it is no good. If it is good, then it 
+will become an adhered-to
+<[Kevin] APPERT> didn't I say that?
+<[Gary] GARY-S> They do care about the manner in which it is decided
+<[Len] NMORGENSTERN> standard
+<[Len] NMORGENSTERN> ga Wil
+<[Wil] W.BADEN1> In 1975 we believed we were done, so we scheduled meetings in 
+1976 ...
+<[Wil] W.BADEN1> in different parts of the country ...
+<[Wil] W.BADEN1> to show off what we had done. ...
+<[Wil] W.BADEN1> Because of the time delay, we decided to call the standard ...
+<[Kevin] APPERT> FFortran tent meetings.
+<[Wil] W.BADEN1> Fortran 77, although we were done in 1976.
+<[Wil] W.BADEN1> The Fortran community did not like what we had done with IF ...
+<[Wil] W.BADEN1> And made us go back into meetings for another half year (6 
+meetings)
+<[Wil] W.BADEN1> The result is that Fortran 77 has an ANSI number of "78" for 
+1978.
+<[Wil] W.BADEN1> The same could happen.
+<[Wil] W.BADEN1> It should have happened to Forth 83.
+<[Len] NMORGENSTERN> (Probably Forth 89 will come out in the year 2000)
+<[Gary] GARY-S> Is it going to be titled ANSForth or Forth-xx
+<[Wil] W.BADEN1> ANS Forth
+<[Kevin] APPERT> the 83 team was not constrained to the outside input like ANS
+<[Gary] GARY-S> as in ANSI 'C' (funny way to spell turbo Pascal)
+<[Gary] GARY-S> Wil, what ever made you get involved in another standards 
+argument ?
+<[Wil] W.BADEN1> In 1983 I wrote a letter to Forth Dimensions, which FIG 
+declined to publish.
+<[Gary] GARY-S> that said....?
+<[Wil] W.BADEN1> Gary, I don't know how to answer that.
+<[Kevin] APPERT> There is a student who works for us during the summer.  A few 
+years ago he poo-pooed Forth and said Pascal would be the language in w
+hich everything is written.  Now he thinks the same is true, only he has 
+substituted C
+<[Kevin] APPERT> what did your letter to FD say, Wil?
+<[Wil] W.BADEN1> I said the same things we are saying today.  ...
+<[Kevin] APPERT> did they give any reason why they did not wish to publish it?
+<[Wil] W.BADEN1> I think it was censored because
+<[Wil] W.BADEN1>  of the influence of FIG members who were on FST.
+<[Gary] GARY-S> Of course, the forum (GEnie Forth RoundTable) now exists for 
+all arguments, and people decline to use it (interesting ?, sad?
+ apathetic ?.....)
+<[Wil] W.BADEN1> In truth it was abrasive.
+<[Gary] GARY-S> so what - did it have merit ?
+<[Wil] W.BADEN1> But six years later I still believe the same way.
+<[Kevin] APPERT> riddle : What kind of game has only one team and several 
+referees?  ans: Standardizing Forth
+<[Len] NMORGENSTERN> "I don't know what language engineers will use in the 90's,
+<[Len] NMORGENSTERN> but I know what it will be called." Anon
+<[Kevin] APPERT> but the'll call it
+<[Gary] GARY-S> last shots gentlemen
+<[Wil] W.BADEN1> What kind of game do the refereess do all the playing.
+<[Kevin] APPERT> Fortron.  (because they won't be able to spell by then... 
+lousy education)
+<[Gary] GARY-S> tron is in - sounds good
+<[Wil] W.BADEN1> It's not anon. It's Loren Meisner of LRL>
+<[Len] NMORGENSTERN> Thanx
+<[Wil] W.BADEN1> Meissner.
+<[Kevin] APPERT> let's do a new Forth-like language and call it ANON
+<[Len] NMORGENSTERN> Let's call it a night.
+<[Wil] W.BADEN1> It first appeared in Fortran committee material.
+<[Gary] GARY-S> was Fortran 77 an adaptation of Fortran IV or vs/versa
+<[Kevin] APPERT> we could hold a contest for names for Forth-like languages:
+<[Wil] W.BADEN1> FORTRAN iv was the BASIS>
+<[Gary] GARY-S> Bet REPTL will be entered
+<[Kevin] APPERT> Dead Lizzard
+<[Kevin] APPERT> Spent Sidearm
+<[Wil] W.BADEN1> "Forth 83 is soggy -- half baked and all wet"
+<[Kevin] APPERT> Why don't we call it..... FORTRAN   ?
+<[Gary] GARY-S> but floored division is now a part of the bagage
+<[Wil] W.BADEN1> "Like the curate's breakfast egg, parts of it are good."
+<[Wil] W.BADEN1> Gary, no.
+<[Kevin] APPERT> how about _/____      for floored div?
+<[Wil] W.BADEN1> There is 18 years of experience with truncating division, and
+<[Wil] W.BADEN1> 6 years with flooring.
+<[Kevin] APPERT> tile floored division?
+<[Gary] GARY-S> where do you throw away what ?
+<[Wil] W.BADEN1> Kev, say again.
+<[Len] NMORGENSTERN> Defer / & switch as desired.
+<[Gary] GARY-S> Thers a lot of floored division in six years compared to the 
+preceeding 18
+<[Kevin] APPERT> tile floored division?  ( it was a joke)
+<[Wil] W.BADEN1> Impractial
+<[Wil] W.BADEN1> Gary, are you sure?
+<[Gary] GARY-S> This is not a matter of preference, just being pragmatic
+<[Wil] W.BADEN1> I think that existing applications outnumber new ones
+<[Wil] W.BADEN1> using it.
+<[Gary] GARY-S> I still see a lot of shops using FIG and derivitives so you may 
+be right
+<[Kevin] APPERT> it's time.  dinner's ready.  night all.  good typing with you 
+all.
+<[Kevin] APPERT> has left.
+<[Gary] GARY-S> yeah - roll up the tent
+<[Wil] W.BADEN1> Dont forget MMS and polyForth.
+<[Len] NMORGENSTERN> Bye Kevin. I have to leave also. Very stimlating
+<[Len] NMORGENSTERN> has left.
+<[Gary] GARY-S> I hope you're right
+<[Gary] GARY-S> g'nite wil
+<[Gary] GARY-S> enjoyed
+<[Wil] W.BADEN1> G'nite .
+=== End of Steno notes. ===
+
+

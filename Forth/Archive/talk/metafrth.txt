@@ -1,0 +1,60 @@
+
+
+The Metaforth Computer
+
+I received a brochure today from the Metaforth people, who are building
+a high-end Forth machine in England and are now apparently ready to start
+shipping systems.  The Metaforth group is headed by Alan Winfield, the
+author of the book "The Complete Forth" and a widely respected engineer
+and Forth expert.  
+ 
+The Metaforth MF1600VME card (their first product) is a rather expensive
+Forth engine, built on a VME bus card, costing around $7000.  It runs
+at 20 mHz, has a 24-bit address bus and a 16-bit data bus.  Comes with
+sophisticated software including a multi-tasking multi-user kernel, 
+Forth system/application metacompiler, debugging tools, and an application
+profiler that will let you analyze an application and adjust the CPU's
+microcode to increase execution speed!  A C and Pascal compiler are also
+available, they generate high level Forth as their "intermediate code",
+which is then compiled directly to the CPU's machine code (which is a 
+fairly close mapping).  
+ 
+Benchmarks given in the brochure are (they are in a bar graph so I
+am estimating the numbers):
+
+Byte benchmark, 10 iterations ...
+Metaforth CPU    0.45 sec.
+CDC Cyber 760    0.75 sec.
+68020            1.4 sec.
+VAX 11/780       1.45 sec.
+Intel 286        3.8 sec.
+
+Some other timings given:  time to execute 1 million DO LOOPS, 0.40 sec. 
+(compare with 1.7 sec for 68020 and 12.6 sec for 80286); time for one
+subroutine call/return 800 nanosec (compare with 2.04 microsec for 68000).
+ 
+In summary this is a high-performance VME based computer which happens
+to support the Forth language directly.  It is not a microcontroller but
+a full-fledged development system with all necessary system tools.
+ 
+I have not seen one of these machines myself but our distributor in 
+Germany (Klaus Flesch) visited Winfield's group about a week ago and
+used one of the machines, ran some benchmarks, and tried out the FOrth
+and C compilers.  He was very impressed with it.  
+ 
+The Metaforth people can be contacted at:
+ 
+ Metaforth Computer Systems Ltd.
+ Newlands High Technology Centre
+ Inglemire Lane
+ Hull, ENGLAND HU6 7TQ
+ Phone: 0482 855927
+ 
+THIS MESSAGE IS NOT A REVIEW.  Neither I (Ray Duncan) or my company
+(Laboratory Microsystems Inc.) have any business affiliation with
+Metaforth Computer Systems.  THIS MESSAGE IS PROVIDED FOR INFORMATIONAL
+PURPOSES ONLY and more detailed and accurate information should be
+obtained by contacting Metaforth Computer Systems Ltd. directly.
+
+
+

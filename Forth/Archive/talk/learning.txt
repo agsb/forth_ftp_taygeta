@@ -1,0 +1,191 @@
+
+Lee,
+ 
+    Back in message #81 I said that I totally disagreed with your
+statement that: 
+ 
+   "The simple fact that Forth as it is now can be understood in its
+    entirety with only a little perseverance is a big win for the
+    language."
+
+    Rather than leave this dangling, I'd like to explain why I said that.
+ 
+    What follows is a "short story" on my own personal experience (to
+date) in learning Forth - which also explains why I disagree with your
+statement.
+ 
+    This is NOT meant as a rebuttal or argument against your statement -
+I'm simply showing you why, from my own personal experience, my view is
+the opposite of yours.
+ 
+    You (or anyone else) need not respond to this - it's just a short
+story - no more, no less.
+ 
+
+                   LEARNING FORTH: A SHORT STORY
+ 
+ 
+    Forth was the second hardest language I have ever tried to learn.
+ 
+    The hardest was FORTRAN.  Not because FORTRAN is difficult, but because
+it was the first language I learned and I also had to learn the concept of
+a programming language at the same time.
+ 
+    Forth was the second toughest nut to crack.
+ 
+    I don't think this was in any way due to the fact that I already knew
+a number of other languages at the time, but rather due to Forth's
+"visibility".  Let me explain that.
+ 
+    My first exposure to "Forth" was a number of years ago when I first
+learned of the concept of a threaded language and eagerly ordered
+Loeliger's book.  I didn't have a micro at the time and couldn't use a
+mainframe for my own exploits, so I merely read the parts of the Loeliger
+book that dealt with the theory of threaded interpretative languages - I
+thought it was great.  I also don't think I had any difficulty at all in
+understanding the concept and, in fact, worked out a semi-theoretical
+proof that the inner interpreter was as good as it could be (it's just a
+pre-order tree traversal).
+ 
+    Time passed - and I discovered the ECFB.
+ 
+    Then I decided to try and learn Forth.  By "learn Forth" I mean the
+ability to understand how the language works in its entirety and to be
+able to write reasonably complex programs in it.  I'll address both areas. 
+ 
+
+    UNDERSTANDING HOW THE LANGUAGE WORKS IN ITS ENTIRETY:
+ 
+    As I mentioned, I had no problem with the Loeliger book, but once I
+got hold of an actual Forth system (i.e., F83) - it wasn't so simple
+anymore.  Where was the inner interpreter, the outer interpreter, and the
+other pieces I'd read about?
+ 
+    Digging through the code/documentation of F83 was a harrowing
+experience.  It's all there but so poorly organized that I gave up on it.
+ 
+    So I bought a number of books (Mastering Forth, FATAR, Starting
+Forth).  None of them explained Forth fully.
+ 
+    Sure, they gave me a good "programming" feel for the language, and
+FATAR, in particular, went into a lot of detail (which I liked since I'm a
+bit fiddler).  But none of them gave me a complete, full understanding of
+the standard Forth language (I only later learned there wasn't one).
+ 
+    Let me explain that too.
+ 
+    I can pick up a reasonably good book on C and learn completely C. I
+can pick up a reasonably good book on Pascal and learn completely Pascal.
+I can even pick up a reasonably good book on Ada and learn completely Ada.
+That is, the book will contain the full syntax, the full semantics, and a
+number of programming examples.  That's all I need to know, and it fully
+defines the language because that's all I need to know about the language
+to use it (i.e., I don't need to know the mechanics of the compiler
+because it's functional specifications are completely defined by the
+syntax and semantics of the language - I know how a compiler works, but
+that's immaterial; point is, I don't need to know how a compiler works).
+ 
+    I don't know of any book on Forth that can do that (and I don't think
+any can be written yet).
+ 
+    The problem with Forth, for me, is it's not wysiwyg (what you see is
+what you get) - there's a lot going on beneath the covers that the books
+don't (or can't) tell you about.
+ 
+    So I bought MasterFORTH and eventually peeked under the covers - WOW!
+A "simple" word like SAVE-BUFFERS has so many underpinnings it's
+unbelievable (didn't really surprise me though).  There's also a lot you
+don't even know about at the top level in regard to the assumed
+"architecture" - i.e., ain't necessarily what you think it is/ought to be.
+ 
+    MasterFORTH I'm sure isn't unique.  UNIFORTH, HS/Forth, PC Forth (any
+rich Forth) I'd wager you could spend close to a lifetime "learning".
+ 
+    I think it's Forth's fault - it invites tinkering, and I love to
+tinker.  You get part of the compiler, but not all of it.  You get the
+ability the create structures, but you can't look inside them.  Damn
+frustrating.
+ 
+    So I'm lost when you tell me Forth can be understood in its entirety
+with only a little perseverance (speak for yourself - I'm slow) and that
+it's a big win for the language.  I'm STILL trying to understand it in its
+entirety - and I'm only getting there asymptotically (i.e., still gonna
+take a while).
+ 
+
+    WRITING REASONABLY COMPLEX PROGRAMS IN THE LANGUAGE:
+ 
+    I first tried to stick to the FORTH-83 Standard and refused to write
+anything that wasn't standard.  It didn't take me much more than 4-5 months
+(like I said - I'm slow) to learn that I'd never write any reasonably
+complex programs that way.
+ 
+    The reason I forced myself to stick to the standard is that that is
+supposed to be THE LANGUAGE.  If I write a C application, I can do 98% of
+everything I would ever reasonably want to do just with C. Same with Ada,
+Modula-2, FORTRAN, etc.  (I do admit though that I first pick the
+application and then THE LANGUAGE rather than the other way around.)
+ 
+    I could write programs in FORTH that could do some rather unique
+things, I'll admit; but none that I'd consider "production quality".
+ 
+    Particularly frustrating was the inability to "tailor" Forth the way
+I'd like using the standard.  A good example here is my vectored case
+statement which would be about 1000% faster and cleaner if written in
+assembler - same logic applies to FMOD.  This was frustrating since I like
+to tinker; Forth invites tinkering; yet THE LANGUAGE either doesn't
+provide a sufficiently rich word set to do so and/or penalizes you if you
+can.
+
+    Now this doesn't even consider all that's missing from THE LANGUAGE
+that's standard with any other (e.g., I/O, floating point, etc.)
+ 
+    I've given up using THE LANGUAGE - I'm now writing MasterFORTH rather
+than Forth.
+ 
+    I haven't yet written any reasonably complex programs (just a few
+moderately complex ones) - but I know that I could, and that's good
+enough.
+ 
+    Problem is: I'm writing MasterFORTH, others are writing UNIFORTH,
+others are writing PC Forth, ...
+ 
+    Nobody's writing Forth it seems.  Yet plenty of people are writing C,
+writing Ada, writing FORTRAN, ... This disturbs me.
+
+    What's even more disturbing is that those people writing C, writing
+Ada, writing FORTRAN can do (far as I know) anything anyone can do in
+Forth - yet the learning curve is (again, far as I know) dramatically less.
+
+    And yet, even with the dramatically reduced learning curve, they can
+do MORE (i.e., back to I/O, floating point, recursion, etc.)
+
+    Now maybe a big point here is that all these other languages are doing
+is giving you a loaded gun - and children shouldn't play with guns.  Forth
+seems to be a bit different in this regard.  You've got to learn how to do
+something right FIRST or you can't do it at all.
+
+    So maybe Forth isn't a language at all - maybe it's a course in
+continuing education.  If you flunk out of the first grade, you never make
+it to the second.  But, if you're good and/or persistent, you can go all
+the way to the post doctorate level - just takes a while to get your "PhD
+in Forth".  You can't get there by mailing away a match book cover - as you
+can in Pascal.
+ 
+    If this is true, then we've landed in a philosophical brier patch.
+Should a "language" presume to do this or not?  If it presumes to do this
+then clearly Forth will never be a mainstream language (more people, I
+feel, will always opt to mail away for a diploma than will opt to earn it
+through [Churchill's] blood, sweat, and tears). Still another point is
+that, once you've got your Forth PhD, it will be difficult to communicate
+with other Forth PhD's - unless their Forth PhD is also in UNIFORTH, or in
+PC Forth, or whatever.  Such is the nature of Forth PhD's I suppose.  Yet
+any C PhD can converse fluently with any other C PhD.  And, for example, a
+C PhD can converse fairly easily with a Pascal PhD (shades of the French/
+German problem!).
+
+    Well that's the end of the short story.  Hope I've explained why I
+find/consider Forth anything but simple and easy to learn in its entirety.
+
+
+

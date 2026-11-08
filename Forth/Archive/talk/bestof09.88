@@ -1,0 +1,289 @@
+
+                
+                    Best of GEnie..... September 1988
+          News from the GEnie Forth RoundTable by Gary Smith
+   
+  I am going to take a completely different tact this time in the column, and
+instead of displaying one of our better features I am going to discuss what
+can only be described as an experiment. This is an experiment that may yet end
+in failure. Our hope is that it will succeed beyond our dreams and result in
+eventual connection with any Forth resource in the world. You have to admit
+the extremes are certainly spread to the maximum. The dream is a virtual Forth
+network called ForthNet. 
+  I had the idea for it before we even got set up on GEnie, and with Jack 
+Whoer's ( JAX ), sysop on the WELL and regular on GEnie, help we began our 
+noble experiment to establish a virtual ForthNet by connecting GEnie and
+the WELL. We have since added the xCFB BBS's and hope to integrate much
+more of the Forth community in the near future.
+  The biggest problem now is connectivity exists only because I am willing
+to serve as a mule porting messages from each point in the loop. This obviously
+is not the way to succeed long term. We must begin letting the computers do
+the porting for us. GEnie does not currently provide any gateways, so we are
+immediately confronted with a stumbling block. The solution may well rest in
+the establishment of another link in Denver of the xCFB BBS's which will bring
+the WELL and the xCFB BBS's into a tighter loop which I can link to via
+PCPursuit, thereby limiting the problem of porting to one junction.
+  The following will give you a look at the problems and promises. I certainly
+invite your participation and suggestions.
+  
+ ************
+Topic 1         Fri Aug 19, 1988
+GARY-S [Gary]                at 22:41 EDT
+Sub: From the WELL :                        
+
+Messages posted here are ported from a public domain area of the comp.
+lang.forth on the WELL. Replies in this topic will be ported back to the WELL
+and the xCFB's.
+7 message(s) total
+ ************
+ ------------
+Category 14,  Topic 1
+Message 1         Fri Aug 19, 1988
+GARY-S [Gary]                at 22:42 EDT
+ 
+Topic  39:  ForthNet Gateway : If you enter a message here it is public
+domain. Read #1 By: Gary Smith (gars) on Sat, Jul 30, '88
+        9 responses so far 3 new of 9 responses total. Topic  39:  ForthNet
+Gateway : If you enter a message here it is public domain. Read #1 #  7: Ridu
+dum kiam vi povas, simiulo-knabo! (bandy)      Mon, Aug 15, '88  (13:34)     
+12 lines
+ Okay, I have a question for folks at large:
+
+ I have two applications written in MacForth+, which tends to
+ fall apart and make *giant* sized applications.  Let's not even
+ mention that it blows up regularly on the Mac2 and that the
+ Sibley Editor has two SERIOUS bugs in it.
+
+ So, am I stuck with using this piece of garbage or is there a
+ (semi-?) compatible language system that I can run on the
+ Mac+/SE/2?  I have about 160k of source code to work with and
+ I wouldn't mind putting in a man-week making conversions to
+ how it handled windows and events. Topic  39:  ForthNet Gateway : If you
+ enter a message here it is public domain. Read #1 #  8: Jack J. Woehr (jax)   
+ Thu, Aug 18, '88  (20:09)       5 lines
+        The mailman cometh; gars ( GARY-S) is on his way to waft
+ your question to the all-knowing MacForth gurus of GEnie! :-)
+
+        In the meantime, if the darn editor doesn't work, why don't
+ you fix it? Why don't *we* fix it here, all of us? Topic  39:  ForthNet
+ Gateway : If you enter a message here it is public domain. Read #1 #  9: Ridu
+ dum kiam vi povas, simiulo-knabo! (bandy)      Fri, Aug 19, '88  (10:11)      
+ 6 lines
+    
+  If
+        [a] I could figure out from the silly doco how to rebuild the system
+            and                                           
+        [b] I could find the part of the code for the editor that is
+            passing NIL instead of "" for the names of the scroll-bars... 
+
+ Sorry for the delay in picking up the mail. I have been VERY BUSY. I did 
+ post notice on the xCFB's and a Category will be set aside on GEnie. Bandy, 
+ You have the honor of breaking the ice on what could develop into a virtual
+ Network - and that's exactly what jax and I are hoping for. Look for a
+ response (hopefully quicker than the pick-up) in this same area, with messages
+ for WELL digestion from GEnie and the xCFB's. 7: Gary
+ ------------
+Category 14,  Topic 1
+Message 2         Sat Aug 20, 1988
+S.W.SQUIRES [scott]          at 03:07 EDT
+ 
+Response to MacForth+ questions-
+  What version is he running? Can he be more specific about the problems? 
+Since I haven't experienced 'two SERIOUS bugs' in the editor I'm not sure 
+what he's referring to.  Some older versions had minor problems but these 
+have been solved to my knowledge.  The source code is included so he can 
+review it and change it directly if needed.  
+  MacForth has been used to create applications running on 128K so the size 
+issue can certainly be dealt with.  The vocabularies and extensions can be 
+(and are recommended in the manual) to be trimmed down.  Memory space that  is
+allocated should use heap space instead of object space when possible.
+   If he really has a problem I suggest he contact Creative Solutions 
+directly and get his questions answered directly.  The only other real  Forth
+for the Mac is Mach2 from Palo Alto Shipping.  It has the advantage  of being
+closer to Forth-83 and being somewhat faster.  The disadvantage is  not having
+much in the way of true extensions.  (i.e.  doing it the same  way as all of
+the Mac langauges from the ground up.) This may have changed  since I haven't
+seen a recent version for a year or so.  Both Forths are  good, it just
+depends on the particular users needs.  Would suggest that he make sure the
+problem is with the system and not with his program or process of using it.   -
+scott
+ ------------
+Category 14,  Topic 1
+Message 3         Tue Aug 23, 1988
+GARY-S [Gary]                at 21:23 EDT
+ 
+> PORTED FROM THE WELL ==>
+              -------- 
+Topic  39:  ForthNet Gateway : If you enter a message here it is public domain.
+Read #1 # 14: 
+Ridu dum kiam vi povas, simiulo-knabo!(bandy)      
+Mon, Aug 22, '88  
+     17 lines                              
+ The telephone answer-man at Creative Solutions sounds like
+ he is on Thorazine.  The two bugs in the editor (they refuse
+ to belive it) are that when it is making the controls for 
+ the horizontal and vertical scroll bars, it passes NIL
+ as a StringPtr (for the control name) rather than ""
+ (a pointer to an empty string).  Macs no longer have a 0 at 0.
+
+ My current beef is that both of my applications blow up on the
+ Mac2.  Setting TMON to Strict discipline reveals that by the
+ time it calls the SlotManager from the GINIT routine the heap
+ is quite trashed.  This doesn't happen with the smaller TURNKEY
+ applications, such as the Engine Demo, but it's happening in my
+ program before any of my code gets executed!
+
+ So does Mach2 basically have no support for windows (ala Lightspeed
+ everything), menus, &c?  There aren't any weird little differences
+ with anything fundamental like ROLL? Topic  39:  ForthNet Gateway : If you
+ enter a message here it is public domain. Read #1 # 15: Ridu dum kiam vi
+ povas, simiulo-knabo! (bandy)      Mon, Aug 22, '88  (14:17)       2 lines
+ I did the obvious thing and looked up Palo Alto Shipping in the
+ Palo Alto phonebook and no number...  Number please?
+ ------------
+Category 14,  Topic 1
+Message 4         Wed Aug 24, 1988
+D.RUFFER [Dennis]            at 22:38 EDT
+ 
+Well, the Palo Alto Shipping company is accessable right here on GEnie. Type
+MACH2 to get to their RoundTable.  And for those who are not here yet, their
+address is:
+
+   Palo Alto Shipping Company
+   P.O. Box 7430
+   Menlo Park, CA 94026
+   1(800)44FORTH
+   GEnie address: PASC
+ ------------
+Category 14,  Topic 1
+Message 5         Mon Sep 05, 1988
+D.MILEY                      at 05:47 EDT
+ 
+  Dennis (D.RUFFER), thanks for posting the information about the MACH2 RT. 
+I'd like to add that the 1(800)44FORTH number is for orders only, our product
+support number is (415)363-1399.  Also, our GEnie address is D.MILEY (not
+PASC).
+  My first programming language on the Macintosh was MacFORTH (back in the
+128K Mac days).  However, about two years ago I began using MACH2 almost
+exclusively, and in Nov. of 87 I started working for Palo Alto Shipping (the
+parent company of MACH2).  Given my experience, I don't mind saying that CSI's
+MacFORTH is a fine Forth-language based development system (but, of course, I
+prefer MACH2).  
+  My opinion is that there would be a significant amout of work converting
+between MacFORTH and MACH2.  The Forth-language based differences aren't too
+severe, MACH2 conforms almost completely to the FORTH-83 Standard while
+MacFORTH is somewhere between FORTH-79 and FORTH-83.  The big differences come
+in the interface to the Macintosh toolbox.  MacFORTH supplies its own high-
+level interface to much of the Mac toolbox, while MACH2 uses a CALL "hook" to
+reference each toolbox/trap directly (almost, we still use "glue" to size each
+parameter and move values to/from the system stack or processor registers). 
+As an example, to draw an oval in the current grafPort you rely on the Mac ROM
+routine FrameOval.  The Pascal definition of FrameOval (as found in Inside
+Macintosh) is:
+
+  PROCEDURE FrameOval (r: Rect);
+
+>From MacFORTH you might draw an oval by saying:
+
+  50 100 100 200  FRAME OVAL
+
+Where 50, 100, 100, 200 specify the the pixel coordinates of the top-left and
+bottom-right corners of the bounding rectangle.  To draw an oval in MACH2 you
+might say:
+
+  MyRect  CALL FrameOval
+
+Where MyRect must return a pointer to a rectangle record (8 bytes).  Note that
+the MACH2 example closely parallels the Pascal interface.  Of course, in the
+MACH2 case (as in Pascal), you have to initialize the rectangle record before
+you use it.  This could be done as follows:
+
+  VARIABLE MyRect  4 VALLOT  ( declare an 8-byte, global-variable record)
+  MyRect 50 100 100 200  CALL SetRect  ( initialize the rectangle record)
+
+VALLOT is a "cousin" to ALLOT, VALLOT reserves bytes in the Macintosh global-
+variable space (NOT in the object-code space as ALLOT does).  SetRect is  
+another Macintosh ROM routine.  Its Pascal definition is:
+
+  PROCEDURE SetRect (VAR r: Rect; left,top,right,bottom: INTEGER);
+
+You should note the following from the above example.  When interfacing to the
+Macintosh ROM, MacFORTH tries to reduce the amount of "work" required of the
+programmer, while MACH2 tries to conform directly to Inside Macintosh (Apple's
+technical reference to the Macintosh computer family).  I personally find
+MACH2's CALL interface to be much more powerful and flexible, but others tend
+to appreciate MacFORTH's simplified interface to the Mac's toolbox.  However,
+in some situations MacFORTH's toolbox approach can cause significant
+difficulty (complexity).  If MacFORTH doesn't supply a high-level equivalent
+to a particular ROM routine, you may face some pretty ugly stack manipulations
+in order to interface directly to the ROM (or you may have to resort to
+assembly language).  This shouldn't happen in MACH2 because nearly all of the
+ROM routines are supported by the same CALL interface (there are nearly 900
+toolbox routines supported by CALL).
+
+Both MacFORTH and MACH2 offer a pre-written event loop.  That means that
+events are handled more or less automatically by both products.  Both products
+do multi-tasking, both allow interactive creation of windows, controls, menus,
+etc. Both provide assemblers, although the MACH2 assembler isn't RPN (MACH2
+uses a "standard" Motorola syntax assembler).  MacFORTH supplies source code
+to their editor, assembler, and extensions (MACH2 does not, a disadvantage to
+some). Byte-for-byte, MacFORTH will usually produce more compact code (smaller
+size); however, MACH2 will run about two to three times as fast as MacFORTH
+(this  difference in speed usually isn't meaningful unless you're doing heavy
+memory access, looping, or number crunching).  MACH2 is subroutine threaded,
+MacFORTH is token threaded. 
+
+Well, that's my not-too-brief summary.  MACH2 and MacFORTH do have significant
+differences, and I think that both are good products.  I was a bit surprised
+to see such a critical attack on MacFORTH.  Frankly (from my experience), I
+don't think that they deserve such treatment.
+  Waymen
+ ------------
+Category 14,  Topic 1
+Message 6         Mon Sep 05, 1988
+D.RUFFER [Dennis]            at 15:06 EDT
+ 
+Thanks Waymen for giving us the correct scoop on contacting Palo Alto, and for
+the excellent (although slanted) opinion of both Forths for the Mac.  Glad to
+see someone from there is monitoring over here.
+
+Now, maybe Ward will give us the "other" side of the story? <grin>   DaR
+ ------------
+Category 14,  Topic 1
+Message 7         Sat Sep 10, 1988
+GARY-S [Gary]                at 17:26 EDT
+ 
+            > PORTED FROM THE WELL ==>
+                 -----
+ (comment on new xCFB in Denver by Jax) Topic  39:  ForthNet Gateway : If you
+enter a message here it is public domain. Read #1 # 23: Jack J. Woehr (jax)   
+Thu, Sep  8, '88  (22:30)      10 lines
+        Looks like the name of the new board will be:
+
+                Realtime Control & Forth Board
+
+        - will be PCPursuitable
+        - will be free
+        - will be dedicated to discussions and files about 
+          embedded systems &| Forth
+
+        your Sysop, G. Who
+ ------------
+ ************
+Topic 2         Fri Aug 19, 1988
+GARY-S [Gary]                at 23:40 EDT
+Sub: From the xCFB's / ForthNet             
+
+This topic will be devoted to subjects raised and replies to ForthNet
+questions generated on the xCFB's.
+4 message(s) total
+ ************
+ ------------
+Category 14,  Topic 2
+Message 1         Fri Aug 19, 1988
+GARY-S [Gary]                at 23:41 EDT
+ 
+                    
+
+Date: 08-13-88 (19:38)              Number: 1520   
+  To: GARY SMITH                    Refer#: 1517     From: SYSOP              

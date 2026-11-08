@@ -1,0 +1,217 @@
+
+                
+                     Best of GEnie..... June 1991
+          News from the GEnie Forth RoundTable by Gary Smith
+
+   In the February column I promised not to delay so long between recaps of
+guest conferences. Before making good on that promise I want to call your 
+attention to the improved appearance of the GEnie Forth RoundTable. Topics
+and entire Categories are much cleaner. The rats nests of messages, many
+of which my Forthnet message ports created, are largely gone. All this can
+be attributed to our newest SysOp, Elliott Chapin. Elliott came on board
+knowing he would have to pick up after the likes of me, so he is either a
+heck-of-a good guy or a glutton for thankless jobs. I happen to believe
+the 'nice guy' theory will stand the test of time.
+
+    Here, in his own words, is Elliott's introduction:
+I was born in 1942 in New York City, just 5 days before my better known half 
+nephew Harry.  A couple of years later my father James Chapin, an established 
+artist, moved the family out to rural northwest New Jersey. Now I have a family
+of my own in Toronto.  I studied math at Princeton (starting my acquaintance 
+with computers there) and Columbia in the 60s. Since then I have found various
+kinds of work in the arts and education, but I also drive taxi when necessary.
+I am enjoying the learning opportunities available on the GEnie's Forth Round-
+Table, while doing "slash and stash" messagebase edits as the latest assistant
+SysOp. ( note: Elliott's e-mail address is ELLIOTT.C )
+    Welcome to the funhouse, Elliott.  
+
+    While it is true revisits with our guests in this column never capture 
+the intimacy of the Real Time Conference where you pose the question, usually
+sparked by another comment , but they do serve to remind attendees of poignant 
+exchanges or let non-participants know what they missed. The transcripts are 
+archived in GEnie Forth RoundTable software Library 1. Please make a note as
+you scan this column to capture ones you find of value. The conferences as 
+presented in this column, are reduced to the guests' opening remarks.
+
+   Guest conferences reviewed will include Jef Raskin, "What Happened to the
+Cat ?"; Alan Furman, "ACM SigForth Update"; Bill Muench, "Embedded with 
+eForth"; Guy Kelly, "Forth and Industry"; Dean Sanderson, "Addressing 
+Management Concerns (regarding use of Forth); Roy Martens and Glen Haydon,
+"MVP is Alive and, well...."; Charles Johnsen, "Mutable Instruction Set
+Computers".
+   
+   October 17, 1990 Jef Raskin, creator of the MAC and Canon Cat asked
+   "What happened to the Cat ?" in reference to the marketing failure of
+   the Canon Cat. This initial discussion rapidly gave way to a more thorough
+   look at what the interface between computer and man should be. Certainly,
+   an area that it can be safely argued Jef Raskin is one of the ranking
+   authorities of, if not 'the' authority.
+
+<[JEF] FIGGUEST> I am pleased to be here, and I think that it might be best
+                 to just start with questions.
+                 When I see the directions the questions take, I can make
+                 more extended comments. 
+<[Cool CAT] JAX> First I were a Programmer ...
+                 Now I am a Project Engineer ....
+                 Jef, how long do I have to wait before I start having 
+                 Ideas? :-)
+
+<[JEF] FIGGUEST> Thank you Mr. Cat.  My real interest these days is in 
+                 interfaces.  For example, windows are dumb, icons wrong, and
+                 mouses a nuisance.
+<[Dennis] D.RUFFER> sticking to that "heresy", let me ask....
+                    how/why did you start the Mac project?
+<[JEF] FIGGUEST>        I can't stand the usual hand-to-mouse existnce.  The 
+                 real question is why we have to bother with all those 
+                 "features" when we are trying to get something done.  I 
+                 started the Mac project in 1979.  I have learned something in
+                 the intervening decade.  In those days I was (correctly, I 
+                 think) inspired by the work at PARC
+                       But one mustn't confuse "better" with "good".  The Mac 
+                  was better, but one can go a lot better.
+<[Wil] W.BADEN1> Please tell us what you think happened to the CAT. 
+<[JEF] FIGGUEST>        It was, I have been told, a victim of interncine 
+                 warfare within Canon and a lack of marketing support.
+    
+                        I am sure of the second hypothesis.
+<[Gary] GARY-S> There was excitement here after John Bumgarner was in 
+                conference with Steve Roberts about the possibilty of a 
+                portable, personal Forth laptop then BINGO ! the CAT is on 
+                sale in Service Merchandise. That's a lot of smoke and mirrors.
+                 Any further comment ?
+<[JEF] FIGGUEST>        They are, by the way, still available.  A guy, David 
+                 Wing, in San Diego has kept track of them.  Canon did not 
+                 know what it had, and tried to sell it through its electronic
+                 typewriter division.
+                        This was a mistake.  Then they tried selling it for 
+                 twice the design price.  That was a mistake.
+      
+                        We did make some prototype portables,  I have one here 
+                 and it works (and runs FORTH) but our Vulture Capitalists had
+                 lost their stomachs (and minds.).
+
+   November 15, 1990  Dr. Alan Furman, independent software and electronics
+   consultant appeared. Alan presented an update on sister organization, 
+   SigForth ACM. As a principle of this group's genesis Dr. Furman was more
+   more than qualified.
+       
+<[Alan F.] FIGGUEST> I should begin by acknowledging the tremendous 
+                 contribution of George Shaw, who has been the driving force 
+                 in SIGforth from the beginning.  My main role was as a
+                 crusader, in late 1988, for some kind of organization that
+                 would specialize in professional issues and the commercial-
+                 ization of Forth.
+                     FIG's constituency is a mixture of professionals and
+                 hobbyists.  And many of those professionals didn't care who
+                 who admired Forth; they were in a position of having discre-
+                 tion over programming language.  Whenever you have a group
+                 of people together, you have to stick to things that they are
+                 all interested in at the  same time, which in FIG's case is
+                 Forth technology and sharing of ideas.
+
+                     I will close with some exciting news. The Forth community
+                 in Leningrad would like to put on a conference either fall 91
+                 or spring 92 which will be run in cooperation with SIGForth.
+
+   December 13, 1990 Bill Muench, president of Ontologic, and coauthor of 
+   eForth appeared. Bill discussed eForth, the .asm Forth kernel for the 90's.
+
+<[Bee] FIGGUEST> eFORTH is derived from my commercial version bFORTH. Both are
+                 ANS FORTH standard subsets. I designed eFORTH for ease of
+                 implementing new systems, to easily fit in 8k bytes, to have a
+                 minimum of machine code and some debugging tools. My debug 
+                 tools are TX!, the transmit primitive, .S, DUMP and WORDS. I
+                 use a simple meta compiler rather than MASM, which means I 
+                 first write an assembler. That is how I 'get to know' the 
+                 processor. After the new system is running, I optimize it. 
+                 First loading the assembler, then new code words.
+                 When working, they are added to the kernel, repeat til done.
+                 I use my host file server, bHOST, to upload source text files
+                 to the target system. MASM was chosen by Ting as a vehicle to
+                 communicate eFORTH. It is commonly available, and on a widely 
+                 used platform, the PC. But, any assembler will do. Possible 
+                 alternatives are spreadsheets or wordprocessors with macros.
+
+   January 17, 1991 Guy Kelly expanded on his November 1990 FORML theme,
+   "Forth in Industry." Guy has a vast array of Forth driven industrial
+   projects to his credit to support his views that Forth is an excellent
+   platform for such endeavors.
+
+<[Guy] FIGGUEST> Experiences as a Forth producer, user, and teacher
+                 convince me that it's almost impossible to get a
+                 professional programmer to use Forth and almost
+                 impossible to discourage a professional engineer
+                 from using Forth.
+                 
+                 Now that Laxen, Perry, and Zimmer have handled
+                 the "high end" and Dr. Ting is attacking the
+                 "low end", how about the "Forth as a hardware
+                 development tool" area?
+
+   February 21, 1991 Dean Sanderson, software engineer with FORTH Inc.
+   discussed "Addressing Management Concerns over use of Forth as an 
+   Applications Platform". 
+
+<[Dean] FIGGUEST> Because of the power that Forth has given us (to keep
+                  projects small and quick), we have been able to avoid
+                  learning what others have had to about software developmnt.
+                  Those that have grown up with Forth, do management by
+                  intuition. We have trouble communicating with those who've
+                  been successful using FORTRAN, C or Assembler. Its as if we
+                  speak different languages. As projects escalate, we find we
+                  have not killed the dragon, only maimed him. As we ready for
+                  battle we find our pride has left us with few new weapons.
+                  For Forth to survive as a respected language, it must
+                  prove its adaptability and change enough to support the
+                  concerns of management. These include: Integration,
+                  Maintenance, Documentation, Declining cost, Q.A., Config-
+                  uration and Scheduling. Though we've started late, we can
+                  survive by capitalizing on what others have learned.
+
+   March 24, 1991 conference invited co-guests were Roy Martens, president of
+   Mountain View Press with Glen Haydon, author of MVP Forth. Glen discussed
+   the fate of MVP in the 1990's market.
+
+<[glen] FIGGUEST>   Thank you for inviting Mountain View Press. We are alive
+                  but changes are in store. Roy has sold his home and is moving
+                  to San Francisco. He is taking an apartment April 1. We have
+                  agreed for me to take over Mountain View Press. As some of 
+                  you know, Phil Koopman, has taken a new job which requires 
+                  him to divest himself of WISC Technologies.
+                  Epsilon Lyra is my company. I am bringing WISC Technologies 
+                  in as a Division. Roy and I agree to doing the same with
+                  Mountain View Press.  I plan on carrying the public domain
+                  versions of Forth which I have included in my new Edition
+                  of All About Forth: Fig, MVPFORTH, F83 and F-PC. I will also
+                  carry available documentation.  
+                  We will also carry professional implementations from vendors
+                  who will make appropriate distributor's agreements.
+                  For the present we will keep the same mailing address and 
+                  phone numbers.  We look forward to continuing our support of
+                  Forth users. 
+
+   April 18, 1991 Charles Johnsen, President of MISC, Inc. (Mutable
+  Instruction Set Computer, formerly Minimum Instruction Set Computer was
+  our invited guest. Charles was joined by Dr. David Fox, MISC's Software
+  Engineer as the two discussed this new silicon engine.
+
+<[Charles] FIGGUEST> Thanks for the welcome.  I wanted to speak about the 
+                  Silicon Palimpsest this evening. That is the processor 
+                  without a fixed Instruction set. 
+
+<GARY-S> Please give us a littl;e background on MISC
+
+<[Charles] FIGGUEST> MISC originally stood for Minimum Instruction Set 
+                  Computer. It was a tiny company (and still is) set up to
+                  create a Forth stack engine.
+                  We wanted to do something different from Novix.
+                  We wanted a processor for embedded control, not desk top 
+                  computing. That guided our efforts and our business.
+                  Today we have changed our name to Mutable Instruction
+                  Set Computer, Inc., because we have an even better idea.
+                  By using FPGA (field programmable gate arrays) we believe 
+                  we can create a processor with a mutable instruction set.
+                  The advantage of a mutable instruction set is that custom
+                  instructions can be designed for improved performance.
+
+

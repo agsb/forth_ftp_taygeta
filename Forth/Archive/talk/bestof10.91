@@ -1,0 +1,1083 @@
+
+                
+                   Best of GEnie..... October 1991
+          News from the GEnie Forth RoundTable by Gary Smith
+   
+  Yes, there is a ANS Forth in the process of being drafted. Yes, the
+Technical Committee has labored long and hard in their collective
+attempt to meet the conflicting demands of Minimalist versus Maximist,
+Desk Top User versus Embedded System Implementer. Yes, many compromises
+have been arrived at and many ambiguities removed from the BASIS as it
+winds ever closer to becoming not only X3J14 BASIS.xxx, but the final
+draft proposal manifest we all look forward to. 
+  As was pointed out in my last column, via exchanges gleaned from GEnie 
+Forth RoundTable Category 10, Topic 25, several questions are still being
+debated. This issue we examine discussions in Category 10, Topic 12, 
+"X3J14 Holding Pattern" to discover the question, "What exactly is this
+language, Forth ?" is even subject to heated discussion. Maybe, when
+the dust has setteled we will discover the ultimate truth that Forth is
+an attitude, and has nothing to do with standardization. 
+  Read on ...
+
+ ------------
+Category 10,  Topic 12
+Message 108       Sun Aug 25, 1991
+GARY-S                       at 06:22 EDT
+ 
+                    
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp+@cs.cmu.edu (Doug Philips)
+ Subject: Re: Architecture and Implementation
+ Message-ID: <1991Aug23.203144.78731@cs.cmu.edu>
+ Date: 23 Aug 91 20:31:44 GMT
+ References: <9108191353.AA11665@ucbvax.berkeley.edu> <22789@sdcc6.ucsd.edu>
+ Organization: (n.) to be organized.  But that's not important right now.
+ Nntp-Posting-Host: vega.fac.cs.cmu.edu
+
+ In article <22789@sdcc6.ucsd.edu> 
+            ir230@sdcc6.ucsd.edu (john wavrik) writes:
+ >The ANSI Team has apparently not only invented a new language, but 
+ >also a new concept in computer science: a language that manipulates 
+ >data structures in a functional way, but does not allow us to know 
+ >what the data structures are. Sure doesn't sound like a good idea, 
+ >does it? Certainly isn't a tested idea, is it? 
+
+ Oh come on now, X3J14 didn't do this first, X3J11 did it, and they
+ probably weren't even the first!  How big is an integer(cell)?
+ Implementation defined, guaranteed to be at least n-bits.  How big is a
+ long (2cell)?  Implementation defined, guaranteed to be at least m-bits
+ and m >= n.  I will admit that one needs to know something about the
+ size of things (not structure!), so that, say,  ' foo bar !  will work
+ (or not).  Do I need to know anything about what a '-execution-token
+ really is?  no.  All I need to know is the set of operators that take
+ one (or more) as arguments and the set that can produce them.  I
+ believe the technical term is "abstract data type."  Can you do
+ arithmetic on a '-execution-token?  Yes, but it will not be portable.
+ As the standard is concerned with portability it will not allow such
+ action in a conforming program.
+
+ >If one is to limit the extensibility of Forth and rely upon vendor 
+ >supplied standard operators then a great number of them must be 
+ >supplied in the hopes of meeting as many needs as possible. Words 
+ >like COMPILE, and START: become extremely important as an attempt to 
+ >rescue some of the functionality of classical Forth. Even then one 
+ >typically finds that the supplied operators do not do exactly what is 
+ >needed. Sounds exactly like the trap that most conventional languages 
+ >have fallen in, doesn't it?  And Forth did have a viable solution, 
+ >didn't it?  And the ANSI Team is proposing an language that ignores 
+ >this solution, isn't it? 
+
+ Straw-argument.  If Forth had already had _viable_ and _portable_
+ solutions there would be no "hard work" to doing an ANSI standard.
+ (nor perhaps an need to do one at all.)
+
+ >Not only is it not easy to tell, without extensive testing, whether 
+ >sufficiently many operators have been added -- but there is the very 
+ >real problem of making sure that they have been specified clearly. 
+
+ This is very important, I will agree.
+
+ >I mention this word because it is one in which deviant implementations 
+ >have already appeared. There have been a host of messages in this 
+ >newsgroup pointing out that some of my examples using START: do not 
+ >work on other trial implementations. All I can say is that I consulted 
+ >the author before implementing mine. Incidentally, I don't think this 
+ >will be unusual -- I think that as more implementations of the 
+ >proposed ANSI Forth appear, more deviations will appear. It is an 
+ >almost an evitable consequence of trying to specify operators while 
+ >being fuzzy about what they operate on. 
+
+ Funny, I thought that was just the natural result of using English.
+ And of the fact that any group, having concentrated on something for
+ as long as any of the ANSI TC's do, will come to an understanding that
+ is not always transcribed in the first pass or two.  In fact, ANSI
+ takes into account that it may not get completely clarified until after
+ the standard is adopted.  At that point an official "request for
+ interpretation" can be submitted.  I'm not totally up on my procedure
+ here, but the answer is probably binding on the standard (could
+ someone from the TC spell this out in painstaking detail for me
+ please?)  Yes, it would be better if that never had to be done.
+ Better still is a plan to handle corrections.
+
+ >It's a bit like a car trip: if a wrong turn was taken somewhere 
+ >should we just say "It's history. We can't change it."? or do we do 
+ >what most sensible people do: get back on the right road.
+
+ >I think that it is a truly unwise strategy for the ANSI Team to 
+ >propose a new language and then use strong arm tactics to get its 
+ >acceptance rushed through. It will do a great deal of harm for the 
+ >survival of the Forth to accept a bad standard -- and I don't think 
+ >anyone should regard it as "fate" that we must do so. 
+
+ Indeed.  Make up your mind.  How can ANSI "get back on the right road"
+ if it is charged with codifying existing practice (wrong turns).  As
+ soon as it does, it takes a turn never before taken.  As far as
+ "rushing", they haven't even gotten to the first public review yet!
+ What we've seen so far is a rather open window into what has before
+ been a closed process.  (It is said that those who like sausages and
+ politics should not watch either being made.  The same could be said
+ for standards.)
+
+ -Doug
+ ------------
+Category 10,  Topic 12
+Message 109       Sun Aug 25, 1991
+GARY-S                       at 06:24 EDT
+ 
+                     
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Subject: Re: X3J14 Holding Pattern Here
+ Message-ID: <22817@sdcc6.ucsd.edu>
+ Date: 24 Aug 91 03:39:56 GMT
+ References: <3243.UUL1.3#5129@willett.pgh.pa.us>
+ Organization: University of California, San Diego
+
+ Greg Bailey writes,
+
+ >   With all due respect, I find myself disappointed with Dr. Wavrik's 
+ > posting of 19 Aug 91 entitled "General Response to E Rather and G 
+ > Bailey". As carefully as I read it, I do not see that it is germane 
+ > to most of the points in my posting of 16 Aug.
+
+   I hope that by now Mr. Bailey has had a chance to read the more 
+ specific response to his Aug 16 posting which I posted a few days ago.
+ It does take some time for messages to travel from USENET to GEnie --
+ and I think we'd all benefit by having a chance to read, think about, 
+ and make careful responses. Generally I find that it isn't a good idea 
+ for me to post an immediate response to a controversial topic -- it 
+ seems better to think things over and edit my first draft. I apologize 
+ for the delay of a day or two in responding. 
+
+ >   I was hoping that Dr. Wavrik would admit to the existence of 
+ > tradeoffs and to the fact that the work of X3J14 has economic 
+ > implications beyond the performance of Forth in popularity contests.  
+
+   Here, as in other places in his messages, Mr. Bailey has a tendency 
+ to put words in my mouth which I have never spoken (and correspond to 
+ thoughts I am not thinking). There is no "popularity contest" involved 
+ here -- just hard economic reality. My living for the past 10 years at 
+ least has been directly connected with my use of Forth as a tool. I 
+ intend to keep using Forth to make my living. My interest in a good 
+ Standard for Forth is very definitely connected with my livelihood. 
+ Acceptance of Forth in universities, colleges, and many parts of 
+ industry will depend on whether a good Standard, guaranteeing both 
+ power and portability, is produced. 
+
+ >  Therefore I ask again.  If some particular single one of Chuck's 
+ > implementations is "brilliance" and "genius", then what of all his 
+ > others that differed, most notably the Novix chip (Stacks not part of 
+ > addressable memory, memory cell addressed, "reducing architectural 
+ > features to the lowest common denominator" [Chuck has in my experience 
+ > always advocated assumption of only positive divisors in signed 
+ > division]) and so on.
+
+ I did answer comments along this like in my specific response to Mr. 
+ Bailey. In sum, Charles Moore is working in a special environment. His 
+ interest is in hardware applications, and his work does not require 
+ portability. He can assume only positive divisors in addition, for 
+ example, because that is all that occur in his work. Others of us work 
+ in environments in which portability is very important (and in which 
+ negative divisors do occur in division). 
+
+ > I submit that Chuck's particular genius has always lain in his 
+ > uniquely clear insights about the simplest solution to the most 
+ > challenging part of any problem.  I further submit that I've never 
+ > seen any evidence that a single architecture / implementation frozen 
+ > for all time was anywhere on Chuck's agenda.  Is this "dissonance" so 
+ > disturbing to Dr. Wavrik that he feels he must "correct" it by 
+ > attributing to Chuck the notion that the immutability of the 
+ > architecture is more important than the solution of problems? 
+
+ Here again, Mr Bailey seems intent on putting words in my mouth. I 
+ perceive no "dissonance", nor am I "correcting" Charles Moore. I agree 
+ with Greg Bailey that Chuck's gift is coming up with good simple 
+ solutions to problems. Given the nature of Chuck's work, he would want 
+ to experiment with very low level changes to his systems. Others of 
+ us are solving very different types of problems.
+
+ Suppose the problem is to produce a language that is tremendously 
+ powerful and flexible, yet will allow code to run correctly on many 
+ platforms. What would be the simplest possible solution to that 
+ problem?
+
+ I think if you will look back at all I have written, you will find 
+ that all I have done is (consistently for the past several years) made 
+ the following observation: It could well be that the simplest solution 
+ is to agree on the architecture of an abstract machine (perhaps, if 
+ necessary, making separate but overlapping standards for a few 
+ different types of architecture). 
+
+ > Dr. Wavrik, I ask that you re-read my earlier posting, compare it 
+ > with your reply, and see if you don't agree with me that your 
+ > posting has frustratingly little to do with the issues raised.
+
+ No, I think that the specific reply I gave you addresses the issues 
+ quite well. The reposting of the "Architecture vs Implementation" 
+ paper was only intended to eliminate some apparent confusion.
+
+ > Forth is not the result of slavish pursuit of "symmetry" and 
+ > portable power of the sort your paper seems to assert is essential.  
+
+ Again, words are being put in my mouth. I said nothing about 
+ "symmetry" -- although I do think that slavish pursuit of simplicity 
+ might be worth trying.
+
+ > Do you seriously propose that your definition of power (portable 
+ > hacking) be given absolute precedence over other definitions of 
+ > power (practical usefulness for demanding applications, for example) 
+ > that have characterized most of the dramatic successes of Forth that I 
+ > am aware of? 
+
+ Again, words are being put in my mouth. "Portable hacking" is not my 
+ definition of power. Power, for me, is the ability to accomplish 
+ difficult things without fighting the language. Forth is the only 
+ language I've ever used where I feel that I can conceive of what needs 
+ to be done, and Forth will allow me to do it. Most languages require 
+ me to fight them to shape their rigid features to match the problem 
+ (and sometimes they are so unsuitable that I can't realistically do 
+ the task). 
+
+ Power in Forth comes, in great measure, from the user's ability to 
+ understand how the system works -- and being able to harness that 
+ understanding.
+
+ We are both in agreement that power has something to do with practical 
+ usefulness for demanding applications --- my demanding applications as 
+ well as your demanding applications.
+
+ >   You may feel for example that performance is no longer relevant, 
+ > as you have posted. 
+
+ Again, words are being put in my mouth. What I said is that language 
+ performance is no longer measured entirely in terms of execution 
+ speed.
+
+ I regard Forth as a "high performance language" in my area because it 
+ facilitates the development and modification of programs. I can still 
+ get close to the speed of compiled code by heavy use of assembly 
+ language (which I do when a system has become stabilized) -- but, 
+ really, high level Forth running on a microcomputer is no match in 
+ speed for the output of a good 'C' compiler. It would be foolish to 
+ give up the attributes which make Forth a high performance language 
+ (in terms of ease of development, power, flexibility) to achieve 
+ marginal gains in execution speed.
+
+ Hang around a university for a while -- people don't talk about how to 
+ write clever tight code these days. The problem is writing and 
+ maintaining large programs that do powerful things and run correctly.
+
+                                              John J Wavrik 
+         jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                              Univ of Calif - San Diego 
+                                              La Jolla, CA  92093 
+ ------------
+Category 10,  Topic 12
+Message 110       Sun Aug 25, 1991
+E.RATHER [Elizabeth.R]       at 17:37 PDT
+ 
+ J. Wavrik writes:
+
+ >Both Greg Bailey's and Elizabeth Rather's comments 
+ >illustrate the fact that there are also people in the Forth 
+ >community for whom reusability of code is not important  --  
+ >and who alter their systems down to the lowest level for 
+ >each new application.
+
+ John, you're seriously distorting the point of Greg's and my 
+ remarks.  We are challenging your continuing assertion that 
+ there is such a thing as "traditional" Forth from which the 
+ world has been deviating and which ANS Forth is deprecating.  
+ Our discussion of deviations from the earliest days to the 
+ present is intended to point out that there has never been 
+ such a golden age, and that your nostalgia for it is 
+ therefore inappropriate.
+
+ Greg and I and the entire committee are extremely concerned 
+ with portability of application code, as well as "programmer 
+ portability" (the ability of programmers to move from one 
+ system to another preserving both sanity and competence 
+ without massive new learning curves).  Why else do you think 
+ we have invested so heavily in the standards effort?
+
+ We hope and believe that the steps we are taking will improve 
+ Forth in both these respects.
+
+ >   Production of code has become an extremely expensive 
+ >affair  --  I think it is more typical these days to find 
+ >people who can't afford to throw away the kind of time and 
+ >effort needed just for a marginal gain in execution speed -- 
+ >and I think you can find as many of them in industry as in 
+ >academia. 
+
+ Once again, you are mistaken if you think we disagree.  Our 
+ objective in describing Forth behaviorally rather than by 
+ constraining implementation choices is to permit implementors 
+ to provide an internally optimized (and hence fast) system 
+ whose surface, as presented to the application program, 
+ offers a very high degree of portability due to its 
+ conformance to rigorously defined behaviors.
+
+ >A major factor, however, is that people who do not need 
+ >portability also do not need a Standard.
+
+ How do reconcile this with your continuing assertions that 
+ the members of the TC don't care about portability?  Do you 
+ contend that these people have spent tens of thousands of 
+ dollars and a lot of their billable hours over a period of 
+ years to do something they don't need or want?
+
+ The disagreement between you and the committee is not "who 
+ wants portability" but HOW PORTABILITY IS ACHIEVED.  We 
+ believe it can most usefully be achieved by defining the 
+ behavior of Forth words, and you'd prefer to see their 
+ implementation standardized.  This is a simple disagreement, 
+ which is ok, but the discussion will be advanced most 
+ usefully if you direct your comments to that rather than 
+ spurious assertions about mythical traditions and the motives 
+ of the TC members.
+
+ >Simplicity, comprehensibility, being supplied with source 
+ >code, ability to reproduce the system are among the things I 
+ >lump under the heading "glass box". If anyone undertakes to 
+ >write a Standard for Forth, these are exactly the qualities 
+ >which need to be made portable.
+
+ Simplicity and comprehensibility sound great.  No argument.
+
+ Re "being supplied with source code" -- two comments:
+
+ (a)  FORTH, Inc. supplies complete source code under license 
+ with all polyFORTHs, along with the ability to reproduce the 
+ system, as we believe these are important entitlements to 
+ those of our customers who do want to optimize their 
+ applications in the knowledge that they will be fairly 
+ transportable across polyFORTHs on other platforms, but 
+ harder to port to other Forth.  Making this choice is their 
+ prerogative.
+
+ However, as you yourself point out, there are other people 
+ for whom the need for portability is paramount.  The 
+ standard, also as you point out, is for those people.  If the 
+ TC mandates that all conforming implementations not only 
+ follow a particular model but supply source and regeneration 
+ capability, the result will be *few* conforming 
+ implementations, and mediocre performance on those that do 
+ conform.  It's hard to see how this benefits anyone.
+
+ This is why the TC believe the better way to facilitate 
+ portability is by standardizing behavior.
+
+ (b)  The reality of the marketplace is that most of FORTH, 
+ Inc.'s competitors do *not* supply source and regeneration 
+ capability, and they are nonetheless successful in their 
+ respective markets.  This supports the conclusion that there 
+ are very many Forth programmers who don't find these things 
+ essential to their work.
+
+ In summary, I personally agree with you as to the value of 
+ source and regeneration capability, but emphatically do not 
+ agree that they should be mandated in a standard.
+
+ >Since when are the two previous Standards for Forth "some 
+ >particular model"?
+
+ Greg was only trying desperately to understand what on earth 
+ you do mean in invoking "traditional Forth" as you keep 
+ doing.
+
+ >I use "Forth" to refer to the language as described in the 
+ >books cited most often as references: ["Starting Forth" and 
+ >"Thinking Forth" by Leo Brodie and "Forth: A Text and 
+ >Reference"  by Kelly and Spies
+
+ At last, a workable definition!  However, these fine books all make
+ it very clear that, although they discuss such things as dictionary
+ structure for pedagogic purposes, implementations do vary.  Primarily,
+ they define Forth behaviorily, just as ANS Forth does.  I quote from
+ Kelly & Spies (p. 305-6):
+
+ "The Forth standards wisely make no attempt to define how the 
+ language works internally.  The point of the standards is to 
+ promote a functional compatibility of programs, not to stifle 
+ original ways of adapting Forth to new hardware."
+
+ Couldn't have said it better myself.
+
+ >Several of the languages I have used ...[list]... are 
+ >described as "functional" languages ....  Each of these 
+ >languages is described in terms of a set of operators. In 
+ >each case, however, the operators act on a specific data 
+ >type or types .... It is meaningless to have operators that 
+ >do not operate on anything!
+
+ >The ANSI Team has apparently not only invented a new 
+ >language, but also a new concept in computer science: a 
+ >language that manipulates data structures in a functional 
+ >way, but does not allow us to know what the data structures 
+ >are.  Sure doesn't sound like a good idea, does it? Certainly 
+ >isn't a tested idea, is it? 
+
+ Can't offhand think of *any* languages that describe how 
+ their data structures are arranged in memory, let along how 
+ their *code* is arranged in memory, which is what you seem to 
+ expect of Forth.  ANS Forth pays a great deal of attention to 
+ describing data types, at least as clearly as C etc.  It also 
+ explicitly describes (Section 5.4 in BASIS, 3.4 in dpANS-2) 
+ the regions of memory that are addressable by a Standard 
+ Program.  Most high-level languages don't let you address 
+ memory at all.  C sort of does, via "pointers," but pointers 
+ are still a lot more abstract than Forth's addresses.
+
+ >...an attempt to  rescue some of the functionality of 
+ >classical Forth....  And Forth did have a viable solution, 
+ >didn't it?  And the ANSI Team is proposing an language that 
+ >ignores this solution, isn't it?
+
+ We'd sure appreciate it if you'd share this "viable solution" 
+ with us, John.  And please be specific, rather than vaguely 
+ alluding to "classical Forth," so we can consider your proposed
+ language for incorporation.
+
+ We believe ANS Forth is extensible, and would very much like 
+ to know exactly what you feel is compromised.  As you seem to 
+ have a high regard for precise language, we'll be greatful if 
+ you'd offer us some as an example.
+
+ Your discussion of START: would be helpful, except that Mitch 
+ has already told you that we agreed there was a problem with 
+ BASIS15's definition and fixed it.  We'll look forward to 
+ seeing whether you agree that it is fixed in dpANS-2.  There 
+ are probably a lot more areas in which clarity can be 
+ improved, and appreciate people pointing out other specific 
+ instances.
+
+ >I think that it is a truly unwise strategy for the ANSI Team 
+ >to propose a new language and then use strong arm tactics to 
+ >get its acceptance rushed through.
+
+ We have no intention of doing so, and couldn't if we did.  
+ The public review process is deliberately lengthy, in order 
+ to ensure as much feedback as possible.
+
+ >It will do a great deal of harm for the survival of the 
+ >Forth to accept a bad standard -- and I don't think anyone 
+ >should regard it as "fate" that we must do so.
+
+ We heartily agree.  We look forward to hearing from lots of 
+ people in the public review process.
+ ------------
+Category 10,  Topic 12
+Message 111       Sun Aug 25, 1991
+S.GELLER [Steve Geller]      at 20:45 PDT
+ 
+I used to use FORTH, but got tired of my boss blaming all the software bugs on
+FORTH (he's a FORTRAN and BASIC enthusiast).  I now write most of my software
+in C  and assembler.
+
+The non-portability of FORTH has annoyed me, because I work on a variety of
+environments PC, Unix, VAX, MAC and some embedded stuff. The chief annoyance
+was when a word with the same name did different things depending on the
+implementation.  This is the main reason for standardization, in my view.
+
+I think much of the squabble I read here will fade away once a standard is
+clearly defined - and widely implemented.  I may well take another look at
+FORTH when ANS-FORTH appears.  I sure do like the consistency of C
+implementations; most of the problems I've hit were with small differences (or
+just plain bugs) in run-time library implementations.
+
+Some argument centers on whether ANS-FORTH should codify existing practice, or
+should define a better language.  The first idea seems rather reactionary. The
+present implementations are not going to disappear when ANS-FORTH appears;
+there will be a period of transition.  If the standard is well-defined, it
+will be accepted in the marketplace and everyone will be better for it. 
+Variant FORTH's will be around forever.  There are always "extensions" to any
+standard.  F83 was full of extensions to the '83 standard, and became a de-
+facto standard itself.
+
+The question is really whether the ANS standard will be an attractive
+proposition to users and implementers. I should think it might be, given the
+background and calibre of people working on the committee.  I am going to try
+to obtain a dpANS document whenever it becomes available to the general
+public.
+
+ ------------
+Category 10,  Topic 12
+Message 112       Mon Aug 26, 1991
+GARY-S                       at 06:10 EDT
+ 
+                   
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Subject: Traditional Forth (to E Rather)
+ Message-ID: <22819@sdcc6.ucsd.edu>
+ Date: 24 Aug 91 06:34:24 GMT
+ Organization: University of California, San Diego
+
+ Elizabeth Rather writes,
+
+ > >Traditional Forth, for example, allows the user to know and   >make 
+ > use of knowledge of what is "compiled" (or more  >accurately 
+ > assembled) -- and to exercise total control over  >the process. 
+ > 
+ >    Hogwash!  What on earth is this "traditional Forth", and  what 
+ > *did* it "compile or assemble"?  Did it assemble the  same thing on a 
+ > 6502 as it did on a PDP-11?  If so, how did  it run?  And if not, how 
+ > could the user "know and make use  of" that knowledge in a 
+ > transportable fashion? 
+
+ To describe what I call "Traditional Forth", perhaps it would be wise 
+ to repeat the major texts that I have used in teaching Forth (I am not 
+ going back to Kitt Peak Primer and the various manuals, Forth 
+ Dimensions articles, etc. I used to actually learn the language -- 
+ just the printed works that I feel describe what I am calling 
+ "traditional Forth"): 
+
+        1.  Starting Forth  by Leo Brodie  (published by Forth, Inc!!!)
+        2.  Thinking Forth  by Leo Brodie
+        3.  Forth: A Text and Reference by Kelly & Spies 
+
+ I should also list the systems that I have used over the years, all of 
+ which have been reasonably consistent with the description of Forth 
+ given in these books:
+
+       MMS-Forth for TRS-80 Model I  (two versions)
+       MMS-Forth for IBM-AT
+       MVP-Forth for DEC Rainbow
+       MVP-Forth for IBM-AT
+       MVP-Forth for Apple II
+       Kitt Peak VAX-Forth 
+       F83 for IBM-AT
+       Guy Kelly Forth for IBM-AT
+
+       I also use F-PC which is moderately consistent.
+
+ I should mention that I have found it not too difficult to 
+ interchange code between these systems -- so my own experience with 
+ Forth has been with Forth as a fairly portable language.
+
+ As for what these systems assembled, and how use is made of it:
+
+    In each of these systems (see also the texts) the body of a 
+ dictionary entry consists generally of a sequence of addresses of 
+ component words. Imbedded data is preceded by a "handler" word. 
+ Control flow is achieved by the inclusion of branching words (only a 
+ conditional "branch on zero" traditionally called ?BRANCH or 0BRANCH, 
+ and an unconditional BRANCH are needed) and special words to handle 
+ the DO .. LOOP construct.
+
+    This information constitutes the machine language for the abstract 
+ processor on which all these versions of Forth are built. As it turns 
+ out, knowledge of the exact addresses is not needed to exercise 
+ control. Only the fact that the components are of the form described 
+ above (together with a few extra details about how the processor acts 
+ when executing the code).
+
+    Let's examine how this knowledge is used to solve a simple (but 
+ somewhat amazing) problem: the introduction of a new data type into 
+ the Forth system. Forth is remarkable in that new data types can be 
+ introduced seamlessly. One aspect of this is the production of 
+ appropriate handlers for a new data type.
+
+    Traditional Forth comes with only one data type: the integer 
+ (possibly also with double precision integers). The handler imbedded 
+ in code for the integer data type is traditionally called LIT. When 
+ LIT executes, it puts on the stack the integer immediately following 
+ it in the dictionary body, and then it moves the instruction pointer 
+ past that integer. Here is the definition that works on all the 
+ systems mentioned above:
+
+               : LIT  R>  DUP CELL + >R  @ ;
+
+ (We are using here the fact that all of these systems increment the 
+ instruction pointer and store it on the return stack when a new word 
+ executes.)  We can easily imitate this guide to skip over imbedded 
+ data of any size, and put any information about it on the stack 
+ (perhaps just the starting address).
+
+ [I should mention that an important aspect of Forth in my work is the 
+ ability to seamlessly integrate into a Forth system new and unusual 
+ data types -- some systems have as many as 7 new types each with 
+ appropriate mechanisms for storage management, appropriate handlers, 
+ operators, etc.]
+
+    The basic control structures are defined in the same way in all of 
+ these systems. For example:
+
+      : IF   COMPILE  ?BRANCH  HERE 0 ,  ; IMMEDIATE
+      : THEN   HERE SWAP !               ; IMMEDIATE
+
+ (Compiler security has been ignored. I believe all the above systems 
+ use the absolute address rather than a displacement -- but the change
+ is not a major one.)
+
+ With this information, one can produce any conceivable control 
+ structure on any of these systems by laying down and resolving the 
+ appropriate branch instructions. (To be sure some such structures, 
+ like the Eaker Case Statement, can be synthesized using Standard 
+ control constructs -- although with reduced efficiency.)
+
+    In brief, the user has both knowledge of and control over what is 
+ assembled. The standard language provides words (like the control flow 
+ words) that introduce variants into the normal succession of addresses 
+ constituting the machine language of the abstract machine -- but the 
+ access is there for the user to do something different. In effect, the 
+ user has as much control over the process of translating a high level 
+ language to "object code" as does the writer of a compiler for a 
+ conventional language. The user has the tools to make a high level 
+ language look like anything he wishes -- because he has complete 
+ control over the process of compilation. And he can do it portably if 
+ he uses "traditional Forth". 
+
+    This is a remarkable and somewhat subversive idea: that a user 
+ should have power normally reserved to specialists. I wouldn't dismiss 
+ it as "hogwash" if I were you! 
+
+                                              John J Wavrik 
+         jjwavrik@u
+csd.edu                    Dept of Math  C-012 
+                                              Univ of Calif - San Diego 
+                                              La Jolla, CA  92093 
+ ------------
+Category 10,  Topic 12
+Message 113       Tue Aug 27, 1991
+GARY-S                       at 06:11 EDT
+ 
+                 
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Subject: Re: Disenfranchised
+ Message-ID: <22839@sdcc6.ucsd.edu>
+ Date: 25 Aug 91 15:57:07 GMT
+ References: <9108191400.AA11786@ucbvax.berkeley.edu>
+ Organization: University of California, San Diego
+
+ Mitch Bradley writes,
+
+ > Where Dr. Wavrik has been specific rather than philosophical (e.g.
+ > user-defined control structures), the committee has attempted to 
+ > deal with the issues.  It would have saved me a lot of time if the 
+ > specific issues had been presented in the form of proposals; then I 
+ > wouldn't have had to do the work of writing the proposals. 
+
+   In the interest of historical accuracy:  Mitch Bradley had a 
+ proposal he wanted to submit in this area. He consulted me and a few 
+ other people. I gave him my impression of his proposal, but he 
+ submitted it anyway.  I do not endorse, and never have endorsed, the 
+ approach that has been taken in this area by the ANSI team. I felt 
+ that in this case an attempt was made, pro forma, to consult me. I
+ thank Mitch Bradley for at least making an effort to hear different 
+ opinions before taking a course of action.
+
+                                              John J Wavrik 
+         jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                              Univ of Calif - San Diego 
+                                              La Jolla, CA  92093 
+ ------------
+Category 10,  Topic 12
+Message 114       Tue Aug 27, 1991
+G.BAILEY1                    at 14:14 PDT
+ 
+In reply to John Wavrik's recent postings regarding the discussion that has
+followed his "disenfranchised" posting:
+
+   First, I should like to apologize to Dr. Wavrik for having misunderstood
+his intentions in reposting his architecture article. It was dated 19 Aug,
+appeared on Genie 20 Aug, and given its wording ("this may be the best general
+response") it seemed to me that this was the totality of his response.  Since
+a more specific response appeared on Genie five days later I clearly
+misunderstood his intent.
+
+   Second, I should like to apologize to Dr. Wavrik if I have "put any words
+into his mouth."  On the other hand it is difficult to discuss the positions
+taken by another without restating them somewhere along the line, and since
+obviously such restatements are not in the other party's words it would seem
+that the same could be said of any rebuttal delivered by anyone.  However If
+my restatement of what John appears to be saying is grossly at conflict with
+his meaning I am glad to be shown what the meaning really *is*.  In fairness,
+however, one major reason for replying to John's postings is that he is
+articulate and seems to me to have put *many* words into the mouths of the TC.
+
+   For example, John has drawn the following erroneous interpretations of just
+several recently made points:
+
+   "GB's ... comments illustrate the fact that there are also people in the
+Forth community for whom reusability of code is not important..." "Forth has
+acquired an unfortunate reputation as being highly non- portable, and GB's
+comments serve to reinforce this impression." "throw away time and effort
+needed just for a marginal gain in execution speed..." "His [GB's] work does
+not require portability..." "No standard is needed for people who plan to
+ignore it anyhow.." " ... ER and GB's responses add unfortunate confirmation
+to the suspicion that the ANSI team is writing a new language which they plan
+to pass off as Forth." "The ANSI team is dominated by people who do not place
+much value on portability -- and Greg Bailey says as much."
+
+   These and many similar passages from recent postings of John's serve to
+create, by repitition, the erroneous impression that members of the TC
+including myself have little or no interest in portability or reusability of
+code and are doing grievous harm to what John sees as Forth.  In fact this is
+an erroneous interpretation of at least my position, and I presume that the
+root of the problem is that at least until the semantic issue I mentioned on
+16 August is clarified John will continue to misunderstand the motives and
+actions of the TC.
+
+   Simply stated, *again*, my understanding of John Wavrik's position is that
+to him Forth means (and I presume he believes it was *intended* to mean) a
+static, open implementation model.  For example, he considers that Forth
+includes a word spelled DOCOL that when executed returns a value that can be
+passed to Comma with specific and well defined meaning having to do with the
+creation of a body of executable code.  He also believes that Forth includes
+words spelled ?BRANCH and 0BRANCH that are, and I gather must be, used in
+implementing control flow words. He feels likewise about the existence, and
+likewise about a method of implementation that should be guaranteed to work,
+for LIT.  John, am I misstating your position here at all?  I don't think I
+misunderstand you. What I have heard you say before is that you don't really
+care what it is, but whatever it turns out to be you want it all (i.e. you
+really strongly desire a Standard that prescribes an implementation, whether
+you draw the "architectural" boundary there or not, at least completely enough
+that you *know* and *can manipulate* the executable text of a colon
+definition; that you *know* and *can manipulate* the structure of the
+dictionary; and so on.)  My understanding of your position is that a laudable
+standard could be formed by taking virtually ANY good implementation of Forth,
+documenting the whole thing, and saying that Standard Forth must be
+implemented in this way on all computers.
+
+   Before I reply in detail to your postings, I think it would be useful to
+refine with you the above paragraph as needed so that what we have is a
+concise but accurate statement of where you draw the line.
+
+   At the same time, so that we can all calibrate your sensitivity to the
+performance one may expect of an *application* written in Forth, I would like
+to know what you mean by "marginal gains in speed." For example, is a 10x
+performance improvement on a given CPU "marginal" to you?  Readers of these
+postings might erroneously conceive, for example, that the architecture
+independent definition of Forth we have tried to write in the dpANS was
+undertaken for no other reason than to permit implementations that shave a few
+percent of execution speed.  Nothing could be farther from the truth.
+
+   I still feel that we are debating semantics and would like, if possible, to
+partition the argument into two issues:  (1) the merits of architecture
+independence vs prescribed implementation methods, and (2) specific things you
+would like to do in a portable way but feel it is impossible to do in terms of
+the dpANS.  If possible, it would also help if items in this latter category
+were identified as to their portable feasibility in terms of FORTH-79 or FORTH-
+83.
+
+   As a final point for this posting, my several anecdotes about Chuck Moore
+were not intended to devalue portability or reusability of code. I was instead
+tossing them out because it seemed to me that John considered it selfevident
+that Forth was conceived to be what he wants it to be.  This struck me as
+curious since for as long as I have been participating (since the end of 1975)
+the inventor of Forth and those who have worked with him have *continually*
+been developing its architecture to increase the breadth of its applicability.
+Obviously this development could have been arrested at any point to produce a
+frozen model that I believe would have the properties John seeks. This does
+not mean that our applications lack *practical* portability or reusability. 
+It does however mean that to the extent that those applications exploited the
+processor or the characteristics of the implementation they would need
+attention when dusted off.
+   Cheers - Greg B.
+ ------------
+Category 10,  Topic 12
+Message 115       Tue Aug 27, 1991
+G.BAILEY1                    at 15:04 PDT
+ 
+John Wavrik writes on 25 Aug 91 that Mitch's account of events with user
+defined control structures failed to mention that John does not endorse, nor
+has he ever endorsed, the approach that has been taken in this area by the
+ANSI team.
+
+   It would be enlightening for John to amplify on this negative opinion by
+stating his reasons.  It would also be useful if John were to illustrate these
+reasons with some examples of things that can't be done portably in terms of
+the operators included in the dpANS.
+
+   Useful things that can't be done are valid demonstrations of weakness in
+the Standard and will always be interesting to the TC. However, the general
+methods documented in the dpANS (specifcally of postponing members of the
+basic control flow word set) were chosen because they *do* work on the
+majority of systems; indeed, the major differences between these systems had
+to do with manipulation of items on the compile time control flow stack, and
+these differences have been addressed with operators to manipulate them. 
+Conversely, "just using ?BRANCH and 0BRANCH" will *not* work on many systems
+because many systems lack these words.  Indeed, some, such as the Novix and
+Harris chips, and microcoded or native code implementations, have no place for
+those words.  On the other hand,  [COMPILE] IF  or  POSTPONE IF  does in fact
+cover the bases in such cases.  
+
+   The TC believes that the ability of a FORTH programmer to compose control
+structures in terms of the dpANS is vastly superior to that provided by either
+FORTH-79 or FORTH-83.  Please note that the xBRANCH words were not required
+and indeed were not particularly encouraged, nor were they anywhere near
+universally supported, and that there was no practically portable way for
+users to implement control structures without depending on intimate knowledge
+of the intermediate data base used by each system.  Anyone with evidence to
+contradict this belief is encouraged to demonstrate problems during the review
+period.
+
+   Cheers - Greg B.
+ ------------
+Category 10,  Topic 12
+Message 116       Tue Aug 27, 1991
+E.RATHER [Elizabeth.R]       at 19:11 PDT
+ 
+ To:  J. Wavrik
+
+ RE:  "Traditional Forth"
+
+ Thank you for your very clear discourse defining what you 
+ mean by that term.  I would like to urge you, however, to try 
+ to find a better adjective than "traditional", because that 
+ implies a heritage, ancestry, and universality that really 
+ isn t justified.  For example, the xBRANCH words you mention 
+ were introduced in FORTH 83 as an "experimental wordset" 
+ (from Kim Harris, I believe), and systems who maintained an 
+ allegiance to FORTH-79 would not have used them.  So you 
+ might say that "some" or even "many" implementations work 
+ that way, but prior to FORTH-83 *no* systems worked that way 
+ that I am aware of, and it was not by any means universally 
+ adopted afterwards.  You may feel that this is unnecessary 
+ quibbling over an adjective, but it is an adjective that has 
+ value judgements associated with it, too, and inappropriate 
+ use of it introduces heat into what should be a logical 
+ discussion.
+
+ Along the same lines, use of "assembling" to describe laying 
+ down material for the Forth engine to process obfuscates more 
+ than it enlightens, because it directs the reader's thoughts 
+ to machine code.  That was what I was "hogwash-ing" at.
+
+ Now, I'll leave it to Mitch to tell you how to write portable 
+ literals in ANS Forth, because he does that sort of thing so 
+ well, and concentrate on the principles.
+
+ The TC considered including the xBRANCH words, but left them 
+ out because those of us who were familiar with a lot of 
+ systems (Martin Tracy in particular) were able to show that 
+ in fact they had *not* been implemented widely, for some 
+ pretty good technical reasons.  Instead, we provided POSTPONE 
+ and liberalized the use of structure words, and finally 
+ introduced some lower-level words (SO, STILL, etc.) in the 
+ TOOLKIT wordset.  Wil Baden was the principal architect of 
+ our approach to handling this, and although we've fine-tuned 
+ his work somewhat, we think he did a great job.  The result 
+ is that you have a great deal more power and flexibility by 
+ using phrases such as POSTPONE ELSE (for an unconditional 
+ forward branch) than with the other words because it is 
+ required, and simple to implement , whereas the BRANCH tools 
+ were in violation of so many implementations that there is no 
+ general expectation that it can be there.
+
+ In fact, a number of us on the TC like to use such techniques 
+ as you describe, and believe that ANS Forth offers greatly 
+ improved power and flexibility in these areas, while 
+ additionally taking steps to improve portability of these 
+ techniques onto direct-compilation systems, Forth chips, and 
+ 32-bit systems.  I guarantee you that your strategies 
+ wouldn't have worked on any of these!  So the net result is 
+ not only more programmer power, but greater portability.
+ ------------
+Category 10,  Topic 12
+Message 117       Wed Aug 28, 1991
+L.ZETTEL                     at 21:50 EDT
+ 
+ Pardon me while I pick a few nits.   Now that we are agreeing for the time 
+ being that "traditional Forth" is the Forth described by Brodie and by Kelly 
+ & Spies, I though it would be enlightening to look LIT up in the indices of 
+ these books.  Very interesting.  Kelly & Spies (p 320) give the definition: 
+
+ :  LITERAL STATE @ IF COMPILE LIT , THEN ; IMMEDIATE
+
+ Brodie, second edition offers
+
+ : LITERAL ( n --- )  COMPILE (LITERAL) , ; IMMEDIATE
+
+ Significantly (to my mind) NEITHER offers a defninition of LIT or 
+ (LITERAL). 
+                                    -LenZ-
+ ------------
+Category 10,  Topic 12
+Message 119       Fri Aug 30, 1991
+GARY-S                       at 06:10 EDT
+ 
+                   
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Subject: Re: X3J14 Holding Pattern Here
+ Message-ID: <22927@sdcc6.ucsd.edu>
+ Date: 28 Aug 91 03:45:07 GMT
+ References: <3263.UUL1.3#5129@willett.pgh.pa.us>
+ Organization: University of California, San Diego
+
+ Elizabeth Rather writes,
+
+ > The disagreement between you and the committee is not "who 
+ > wants portability" but HOW PORTABILITY IS ACHIEVED.  We 
+ > believe it can most usefully be achieved by defining the 
+ > behavior of Forth words, and you'd prefer to see their 
+ > implementation standardized.
+
+ Actually, the disagreement hinges more on what Forth is capable of 
+ doing -- or how powerful and flexible the language should be.
+
+    This is probably the main source of disagreement. It might stem 
+ from a difference in view of what the Forth language is, has been, or 
+ could become. It might stem from a willingness to trade away 
+ capabilities of Forth to achieve harmony among vendors. It might stem 
+ from a disagreement about what it should be possible to do portably. 
+
+    My claim is that Forth has traditionally been a language which 
+ allows the user to build major language features. [There is a Forth 
+ literature discussing variant methods for doing local variables, 
+ exception handling, adding object-orientedness, etc.] Forth has been 
+ a toolkit for building application-oriented languages. 
+
+    The ANSI Team is heading in the direction of INCLUDING some 
+ important features (local variables, exception handling, etc.) but 
+ REMOVING the ability to build such things. 
+
+                                --------
+
+ There are several other points of disagreement -- most notably those 
+ having to do with clarity of definitions and simplicity of action. 
+ Words whose meanings can be interpreted differently by different 
+ implementers are useless for portable programming. The best tools 
+ available should be used to make the actions clear. Empty abstraction 
+ should be avoided -- the actions of words should be as simple as 
+ possible. There are important aspects of the character of Traditional 
+ Forth (simplicity, access, comprehensibility, etc) that should be 
+ preserved. 
+
+ THERE IS NO DISAGREEMENT AT ALL ABOUT DESCRIBING FORTH WORDS IN TERMS 
+ OF THEIR BEHAVIOR. This is how Forth words have always been described.
+ (On most systems the lowest level words have always been implemented 
+ in machine language, so it has never been possible to standardize 
+ their implementation.)
+
+    In this regard, I should mention that that clarity of a description 
+    of behavior is improved immensely if a glossary entry is 
+    accompanied by a sample definition. In the Golden Days of Forth, 
+    this was a way that we old-timers found it helpful to convey the 
+    intended behavior of a word. I realize that the young folk have 
+    extreme prejudices against doing sensible things like this, so I'll 
+    just keep my mouth shut and rock on the porch here, looking 
+    through my old copies of BYTE magazine and generally basking in 
+    nostalgia! 
+
+ >  Can't offhand think of *any* languages that describe how
+ >  their data structures are arranged in memory, let along how
+ >  their *code* is arranged in memory, which is what you seem to
+ >  expect of Forth.  ANS Forth pays a great deal of attention to
+ >  describing data types, at least as clearly as C etc.  It also
+ >  explicitly describes (Section 5.4 in BASIS, 3.4 in dpANS-2)
+ >  the regions of memory that are addressable by a Standard
+ >  Program.  Most high-level languages don't let you address
+ >  memory at all.  C sort of does, via "pointers," but pointers
+ >  are still a lot more abstract than Forth's addresses.
+
+ Conventional languages allow data structures only to be created by 
+ a limited set of mechanisms built in to the language -- and then 
+ impose further limitations on the status of these structures (how they 
+ can be passed to functions, how operators may act on them, etc.) This 
+ is one of the reasons for using Forth.
+
+ Obviously someone must decide how a data structure is arranged in 
+ memory, how it is accessed, etc. In conventional languages it is the 
+ designer of the language. In Forth it can be the user (who is, in a 
+ real sense, the designer of languages).
+
+ I really have never understood arguments which pick some limitations 
+ which make other languages inflexible and use that to suggest that 
+ Forth should be equally inflexible. 
+
+                                              John J Wavrik 
+         jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                              Univ of Calif - San Diego 
+                                              La Jolla, CA  92093 
+ ------------
+Category 10,  Topic 12
+Message 120       Fri Aug 30, 1991
+GARY-S                       at 06:11 EDT
+ 
+                    
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Subject: Nostalgia???!!???
+ Message-ID: <22935@sdcc6.ucsd.edu>
+ Date: 28 Aug 91 06:09:31 GMT
+ Organization: University of California, San Diego
+
+ Elizabeth Rather writes,
+
+ > Our discussion of deviations from the earliest days to the 
+ > present is intended to point out that there has never been 
+ > such a golden age, and that your nostalgia for it is 
+ > therefore inappropriate.
+
+ Somehow I feel like I am in the middle of the novel 1984, in which the 
+ establishment had newspapers rewritten to show that certain events 
+ never happened. Here is what I remember:
+
+ When I became involved with Forth, most computer magazines had regular 
+ articles on the language. BYTE Magazine devoted at least one full 
+ issue to Forth (perhaps more). Some magazines had a Forth column. My 
+ first course on Forth was taught (by request) to 30 faculty and staff 
+ members -- including representatives from the Computer Center who 
+ wanted to be able to support the hot new language. Forth was the 
+ official language of astronomy, and the Center for Astrophysics and 
+ Space Studies (CASS) was one of the main groups using it at UCSD. 
+ Several people at Scripps Institute of Oceanography also used the 
+ language. I regularly received requests about where to obtain an 
+ implementation of the language. Applications written for one platform 
+ seemed magically to run on others -- and there was a healthy exchange 
+ of applications and ideas. Magazine ads offered a variety of utilities 
+ (good editors, decompilers, etc). You didn't have to justify your 
+ choice of Forth. 
+
+ I am really trying to be a good citizen -- so I am trying to believe 
+ with all my might that this never happened (but if it didn't, then why 
+ do I have on the wall of my office a poster of the BYTE magazine cover 
+ featuring Forth?) 
+
+                                 -------
+
+ We are losing sight of the purpose of introducing this. The way that 
+ Forth is described in the most popular texts was quite common -- which 
+ is why the texts described it as they did. One must remember that if 
+ one is writing a general textbook for a language (rather than a manual 
+ for a particular dialect) it is best to stick to common practice. 
+
+ I have chosen the name "Traditional Forth" for this language because 
+ it is the form in which Forth was realized in a great many systems 
+ from the earliest times to the present. 
+
+ Please note that there is nothing in the previous paragraphs that 
+ says that there were no variant systems. There is nothing in the 
+ previous paragraphs that casts aspersions on the use of a non-standard 
+ system for certain applications. There is nothing in the previous 
+ paragraphs that says that everything that has been done in the past 
+ in an attempt to standardize Forth was done perfectly. 
+
+ I don't regard as "nostalgia" an effort to call attention to some 
+ extremely strong and positive things that were going on with the 
+ Forth language at that time. 
+
+                                              John J Wavrik 
+         jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                              Univ of Calif - San Diego 
+                                              La Jolla, CA  92093 
+ ------------
+
+

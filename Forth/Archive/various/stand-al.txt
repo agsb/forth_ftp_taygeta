@@ -1,0 +1,740 @@
+
+ Minutes of special GEnie Forth RT Guest Conference.
+ Special guest: Randy Dumse, owner of New Micros Inc.
+ Randy's Topic: 'Forth as a Standalone O/S'
+ 
+Date: 02/09/89   Time: 22:52EST
+Attendees:
+[[Len] NMORGENSTERN] 
+[GARY-S]
+[[DUMSE] PRESS5]
+[R.G.MCDONALD]
+[R.GILES]
+[JETHOMAS]
+[[jax@well] FIGCHAPTERS}
+[DANMILLER]
+[[Ken] K.BUTTERFIEL]
+[C.TING]
+[[Dave] DHWEINSTEIN]
+
+Minutes:
+
+<GARY-S> Dave - Dan Miller was asking me for a list of FIG members in Austin - 
+don't you have one ?
+<GARY-S> all slash commands must be from the start of the line
+<[Dave] DHWEINSTEIN> Nope. Just a P.O. Box laying about somewhere. I've never 
+seen hide nor hair of an active FIG here.
+<[DUMSE] PRESS5> I have
+<GARY-S> You can get a listing from Jan Shepherd, FIG office
+<[DUMSE] PRESS5> There was a fellow Matt Lawrence there in 84 who headded the 
+group...
+<[DUMSE] PRESS5> Last I knew he was still at it  ga
+<[Dave] DHWEINSTEIN> How recently?
+<GARY-S> Randy - I am number 2 this evening for /sen reference
+<[Dave] DHWEINSTEIN> I have his name, (as does dan), but I have never seen 
+anything done with FIG here.
+<FIGCHAPTERS> is here.
+<[DUMSE] PRESS5>
+<GARY-S> Randy - any last questions ? if not we're going live
+<[DUMSE] PRESS5> Other than cold feet and foot in mouth desease ...
+<DANMILLER> is here.
+<[DUMSE] PRESS5> I'm fine
+<K.BUTTERFIEL> is here.
+<DANMILLER> muchos gracias senior jax
+<GARY-S> Hold your chatter - we're official
+<[jax@well] FIGCHAPTERS> officious, more like!
+<GARY-S>  The GEnie Forth RoundTable is very pleased to welcome...
+<GARY-S>  as this evening's special guest, Randy M. Dumse. ...
+<GARY-S> Randy began his career in Forth at Rockwell in 1981. ...
+<GARY-S> and presented his first Forth paper atthe 1982 FORML ...
+<GARY-S> Randy is president and founder of New Micros Inc. ...
+<GARY-S>  NMI manufactures small computer systems, based on the...
+<GARY-S>  Forth processors developed by Randy, the R65F11 and the...
+<GARY-S>  F68HC11. Randy has a Physics degree from the University of...
+<GARY-S>  Northern Iowa. His topic tonight is 'Forth as a Stand-Alone O/S'.
+<GARY-S> It is with pleasure the GEnie Forth RT welcomes Randy M. Dumse.
+<GARY-S> ga Randy
+<[DUMSE] PRESS5> ok
+<[DUMSE] PRESS5> Thank you Gary
+<[DUMSE] PRESS5> Being  somewhat  isolated  here  in  Texas has its
+<[DUMSE] PRESS5> disadvantages.  The availability of other informed
+<[DUMSE] PRESS5> people to "bounce ideas off  of"  is  limited,  so
+<[DUMSE] PRESS5> most  of  my  opportunities  for  such interaction
+<[DUMSE] PRESS5> occurs  at  most  twice  a  year:  at   FORLM   or
+<[DUMSE] PRESS5> Rochester.   On the sorry, I'll try again
+<JETHOMAS> is here.
+<[DUMSE] PRESS5> Being  somewhat  isolated  here  in  Texas has its
+<[DUMSE] PRESS5> disadvantages.  The availability of other informed
+<[DUMSE] PRESS5> people to "bounce ideas off  of"  is  limited,  so
+<[DUMSE] PRESS5> most  of  my  opportunities  for  such interaction
+<[DUMSE] PRESS5> occurs  at  most  twice  a  year:  at   FORLM   or
+<[DUMSE] PRESS5> Rochester.   On the other hand, not having any one
+<[DUMSE] PRESS5> to give guided  direction  to  your  thinking  can
+<[DUMSE] PRESS5> allow  original  thought  to take some interesting
+<[DUMSE] PRESS5> directions.   How useful these thought  are  often
+<[DUMSE] PRESS5> can  not be determined by the originator.   It's a
+<[DUMSE] PRESS5> little like the male complex where no baby is ever
+<[DUMSE] PRESS5> pretty - until it's his own!  So it is with ideas.
+<[DUMSE] PRESS5> They are much like the only child a male can  bare
+<[DUMSE] PRESS5> - and therefore look pretty darn cute to dada.  It
+<[DUMSE] PRESS5> can  be  a  bit hard to be objective when there is
+<[DUMSE] PRESS5> that feeling of self investment in  the  thoughts.
+<[DUMSE] PRESS5> There  isn't  even a mother on which to blame half
+<[DUMSE] PRESS5> the genes.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> So with those thoughts, I begin:
+<[DUMSE] PRESS5>       Forth as a Stand Alone Operating System
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Both the R65F11 and F68HC11 single chip  computers
+<[DUMSE] PRESS5> have   been   designed  as  stand  alone  computer
+<[DUMSE] PRESS5> systems.    They  use  Forth  as  their  operating
+<[DUMSE] PRESS5> system.    In  this  regard  they  follow  in  the
+<[DUMSE] PRESS5> tradition of micros like the KIM-1,  SYM-1 and the
+<[DUMSE] PRESS5> AIM-65.    Each  of these had a buit in monitor to
+<[DUMSE] PRESS5> allow   user   interaction   with   the    system.
+<[DUMSE] PRESS5> Similarly, other systems used BASIC as their power
+<[DUMSE] PRESS5> on  operating  system,  such  as the (if my memory
+<[DUMSE] PRESS5> serves) OSI, TRS-80 and Apple.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> In any regard,  after the venerable  DEC  11  05's
+<[DUMSE] PRESS5> with  their hand loaded binary bootstraps put into
+<[DUMSE] PRESS5> memory with a switch and an LED for  each  address
+<[DUMSE] PRESS5> and  bit  in  memory,  all  system had an internal
+<[DUMSE] PRESS5> ROM'ed Bootstrap or BIOS or Monitor or language of
+<[DUMSE] PRESS5> some  description.     Only  a  few  have   relied
+<[DUMSE] PRESS5> exclusively  on Forth for that function.   Besides
+<[DUMSE] PRESS5> the New Micros  single  board  computers  and  the
+<[DUMSE] PRESS5> short  lived  Jupiter  ACE,  I  can't  recall  any
+<[DUMSE] PRESS5> specific examples.   I suppose that reveals a  bit
+<[DUMSE] PRESS5> of  short  sightedness  on  my  part  more than an
+<[DUMSE] PRESS5> objective reality,  or maybe  I'm  just  recoiling
+<[DUMSE] PRESS5> from the fact this refection makes me seem to find
+<[DUMSE] PRESS5> my   self   alone,   flying   into   the  face  of
+<[DUMSE] PRESS5> conventional   wisdom   with   the   products    I
+<[DUMSE] PRESS5> manufacture.  Hummmmm...
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Something  to  keep  in  mind,  "operating system"
+<[DUMSE] PRESS5> hasn't always meant "disk operating  system".    I
+<[DUMSE] PRESS5> recall  hearing  of having an option on a DEC 8 or
+<[DUMSE] PRESS5> DEC  11  of  having  the  option  of   buying   an
+<[DUMSE] PRESS5> "operating system" or a "tape operating system" or
+<[DUMSE] PRESS5> a "hard disk operating system".  This was prior to
+<[DUMSE] PRESS5> the  floppy  coming  into  popular  vogue.    Tape
+<[DUMSE] PRESS5> operating  systems  (both  paper   and   magnetic)
+<[DUMSE] PRESS5> predating  disk  systems  and  I  think card based
+<[DUMSE] PRESS5> operating systems predate those.   This  indicates
+<[DUMSE] PRESS5> to  me the essence of an operating system does not
+<[DUMSE] PRESS5> absolutely require an interactive access  to  mass
+<[DUMSE] PRESS5> storage.  A point I'll return to in a minute...
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> As most of us have heard,  Forth is nearly its own
+<[DUMSE] PRESS5> operating system.  In fact it is often stated that
+<[DUMSE] PRESS5> Forth is difficult to install  under  an  existing
+<[DUMSE] PRESS5> operating system because it is not well behaved.
+<[DUMSE] PRESS5>
+<R.G.MCDONALD> is here.
+<[DUMSE] PRESS5> These  comments  really  have  nothing  to do with
+<[DUMSE] PRESS5> Forth as a general language,  but come out of  the
+<[DUMSE] PRESS5> difficulty of doing blocks under another OS.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I  would  like  to  take  a  brief  moment TO RAIL
+<[DUMSE] PRESS5> VIOLENTLY     AGAINST     THE      CONCEPT      OF
+<[DUMSE] PRESS5> SCREENS&BLOCKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>                     BLOCKS
+<[DUMSE] PRESS5>              a parity in one act
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      When  I  receive  my mail,  no mater what
+<[DUMSE] PRESS5>      size or how many pages, I immediately cut
+<[DUMSE] PRESS5>      it up into 3x5" pieces so it will fit  in
+<[DUMSE] PRESS5>      a Rolodex file.  I have every other peice
+<[DUMSE] PRESS5>      of paper I've ever received stored there.
+<[DUMSE] PRESS5>      My  Rolodex is a fixed size and each card
+<[DUMSE] PRESS5>      has a sequencially numbered position.   I
+<[DUMSE] PRESS5>      can not change the number of cards in it,
+<[DUMSE] PRESS5>      or  their  order.   So,  I either replace
+<[DUMSE] PRESS5>      blank cards in the  middle  if  there  is
+<[DUMSE] PRESS5>      room, or add the new pages in at the back
+<[DUMSE] PRESS5>      where  there  are blank cards all the way
+<[DUMSE] PRESS5>      to the end.   I generally leave a gap  of
+<[DUMSE] PRESS5>      about  5  to  10  blank  cards  between a
+<[DUMSE] PRESS5>      groups  of  cards  because  it  is   very
+<[DUMSE] PRESS5>      difficult to move the cards in my Rolodex
+<[DUMSE] PRESS5>      after they are installed and I may need a
+<[DUMSE] PRESS5>      little room for editting.  If I can fit a
+<[DUMSE] PRESS5>      large  piece  of  mail  into  one  of the
+<[DUMSE] PRESS5>      existing gaps,  I simply break it up into
+<[DUMSE] PRESS5>      smaller  pieces  and  string  it out over
+<[DUMSE] PRESS5>      several gaps.  Its a great system - don't
+<[DUMSE] PRESS5>      you think?
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Thank you for your forbearance.  Now back  to  the
+<[DUMSE] PRESS5> questions at hand.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> As  I  was  saying  these comments come out of the
+<[DUMSE] PRESS5> difficulty  of  doing  blocks  under  another  OS.
+<[DUMSE] PRESS5> Ceratinly  BASIC  is not considered an ill behaved
+<[DUMSE] PRESS5> language,  and it speaks to  mass  storage.    The
+<[DUMSE] PRESS5> difference  apparently comes in Forth's insistance
+<[DUMSE] PRESS5> to  maintain  a  standard  interface  across   all
+<[DUMSE] PRESS5> supporting   operating   systems,    while   BASIC
+<[DUMSE] PRESS5> standardizes the language with  out  standardizing
+<[DUMSE] PRESS5> the  mass  storage  interface  which  varies  from
+<[DUMSE] PRESS5> installation to installation.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Since the title of tonights discussion is Forth as
+<[DUMSE] PRESS5> a Stand Alone Operating System,  we  must  discuss
+<[DUMSE] PRESS5> BLOCK's.  However, if two systems, say the OSI and
+<[DUMSE] PRESS5> Apple II have "power on OS's" using BASIC and have
+<[DUMSE] PRESS5> different  ways  of dealing with disk files - such
+<[DUMSE] PRESS5> as one calling it open and  close  and  the  other
+<[DUMSE] PRESS5> read-file  and write-file or what have you - do we
+<[DUMSE] PRESS5> assume  that  they  are  really   very   different
+<[DUMSE] PRESS5> languages?  No.  It seems only the Forth community
+<[DUMSE] PRESS5> so burdens itself.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> As  pointed out earlier an operating system can be
+<[DUMSE] PRESS5> an operating system without  needing  to  talk  to
+<[DUMSE] PRESS5> mass  storage.    I  must admit,  in compliance to
+<[DUMSE] PRESS5> Chuck's Moores comments,  I can  not  think  of  a
+<[DUMSE] PRESS5> smaller  or  simpler way to deal with mass storage
+<[DUMSE] PRESS5> than his BLOCK and SCREEN concepts.  Right now, if
+<[DUMSE] PRESS5> there is no other operating system above Forth, it
+<[DUMSE] PRESS5> is a way of getting mass storage in hand.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> It is  worthwhile  to  remember  Chuck  says  that
+<[DUMSE] PRESS5> BLOCK's  should be considered a base to start from
+<[DUMSE] PRESS5> - not an end all solution.   If you have  to  have
+<[DUMSE] PRESS5> mass storage access,  BLOCK's are a minimal way of
+<[DUMSE] PRESS5> getting it done.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I usually side with minimalism,  however,  in this
+<[DUMSE] PRESS5> case  ...  well,  suffice  it to say I keep hoping
+<[DUMSE] PRESS5> someone will come  up  with  a  simpler  and  more
+<[DUMSE] PRESS5> elegant solution (one with FILES I hope).
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> To  help  put my ire in perspective here,  I might
+<[DUMSE] PRESS5> imagine that I have put  more  stand  alone  FORTH
+<[DUMSE] PRESS5> Operating Systems into the world than anyone else.
+<[DUMSE] PRESS5> Its just a guess,  but, there must be near 100,000
+<[DUMSE] PRESS5> R65F11's and R65F12's in the world  by  now  (well
+<[DUMSE] PRESS5> I'm  certain  its over 24,000) (did you know every
+<[DUMSE] PRESS5> IBM 1200 baud modem has one?)  and  we're  nearing
+<[DUMSE] PRESS5> 10,000 in the F68HC11's early life cycle with many
+<[DUMSE] PRESS5> times  that  number  being  designed in for future
+<[DUMSE] PRESS5> systems.   Now in every one of those  systems  are
+<[DUMSE] PRESS5> words    specifically   designed   to   do   BLOCK
+<[DUMSE] PRESS5> manipulation.   I don't if one out of  a  thousand
+<[DUMSE] PRESS5> actually  uses that code in application.   Just to
+<[DUMSE] PRESS5> look at the F68HC11,  there are 20 out of the  231
+<[DUMSE] PRESS5> definitions  dedicated to controlling BLOCK's.   I
+<[DUMSE] PRESS5> sure would have rather used 10% of  my  ROM  space
+<[DUMSE] PRESS5> for  something more useful,  but I wanted to stick
+<[DUMSE] PRESS5> as close as possible to the Standard.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Here is a listing of  these  mass  storage  words.
+<[DUMSE] PRESS5> Remember  there  are  many  supporting orphans and
+<[DUMSE] PRESS5> user variables not named but still taking up  code
+<[DUMSE] PRESS5> room.
+<[DUMSE] PRESS5>
+<R.GILLIES> is here.
+<[DUMSE] PRESS5>      (LINE)
+<[DUMSE] PRESS5>      -->
+<[DUMSE] PRESS5>      .LINE
+<[DUMSE] PRESS5>       >L
+<[DUMSE] PRESS5>      B/BUF
+<[DUMSE] PRESS5>      BLK
+<[DUMSE] PRESS5>      BUFFER
+<[DUMSE] PRESS5>      EMPTY-BUFFERS
+<[DUMSE] PRESS5>      FIRST
+<[DUMSE] PRESS5>      FLUSH
+<[DUMSE] PRESS5>      INDEX
+<[DUMSE] PRESS5>      LIMIT
+<[DUMSE] PRESS5>      LIST
+<[DUMSE] PRESS5>      LOAD
+<[DUMSE] PRESS5>      OFFSET
+<[DUMSE] PRESS5>      SAVE-BUFFERS
+<[DUMSE] PRESS5>      SCR
+<[DUMSE] PRESS5>      THRU
+<[DUMSE] PRESS5>      TRIAD
+<[DUMSE] PRESS5>      UPDATE
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Now to some of the meat of the discussion.   There
+<[DUMSE] PRESS5> are basically five words  in  the  standard  Forth
+<[DUMSE] PRESS5> kernel  that must be rewritten to install Forth as
+<[DUMSE] PRESS5> an operating system a new  system  with  the  same
+<[DUMSE] PRESS5> processor.     Said  another  way,  if  I  have  a
+<[DUMSE] PRESS5> functioning Forth Operating System already running
+<C.TING> is here.
+<[DUMSE] PRESS5> on the AIM-65 and want to port it to the Apple  II
+<[DUMSE] PRESS5> (both 6502's), there are only five words that must
+<[DUMSE] PRESS5> be  rewritten to tailor is to the new environment.
+<[DUMSE] PRESS5> These five words are:
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      KEY
+<[DUMSE] PRESS5>      EMIT
+<[DUMSE] PRESS5>      ?TERMINAL
+<[DUMSE] PRESS5>      BLOCK  ( may vector through R/W )
+<[DUMSE] PRESS5>      BUFFER (  "   "  "     "     "  )
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Ofcourse,  there may be  some  hardware  dependant
+<[DUMSE] PRESS5> relocations  of  variables or user areas etc.  but
+<[DUMSE] PRESS5> the functions should still work if the package  is
+<[DUMSE] PRESS5> properly (law according to RMD) written.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> As  you  can  see,  three words deal with operator
+<[DUMSE] PRESS5> interface (usually serial I/O in my  systems)  and
+<[DUMSE] PRESS5> two  with  mass  storage.   All  the  words  (save
+<[DUMSE] PRESS5> ?TERMINAL ) are required words of the 83  Standard
+<[DUMSE] PRESS5> in the device layer.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Porting  a functioning Forth OS to a system with a
+<[DUMSE] PRESS5> different    processor    takes    more    effort.
+<[DUMSE] PRESS5> Additionally  all  machine  code  segments must be
+<[DUMSE] PRESS5> rewritten.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I've heard of people using so little of  a  native
+<[DUMSE] PRESS5> processors  assembly  language  that they use only
+<[DUMSE] PRESS5> four or five  machine  coded  definitions  in  the
+<[DUMSE] PRESS5> entire  kernel.    As  a  result  they  can port a
+<[DUMSE] PRESS5> working Forth OS to a new machine in a  matter  of
+<[DUMSE] PRESS5> hours.    They  simply  rewrite  the machine coded
+<[DUMSE] PRESS5> words according to the new  processors  needs  and
+<[DUMSE] PRESS5> modify  the  mentioned  I/O dependant words to fit
+<[DUMSE] PRESS5> the I/O hardware and install.   Rumor has  it  tar
+<[DUMSE] PRESS5> flowing  up hill may be faster than its dictionary
+<[DUMSE] PRESS5> searches.  Still,  one must admit,  once the Forth
+<[DUMSE] PRESS5> can  be "talked to" on the new system,  it is easy
+<[DUMSE] PRESS5> to interactively regenerate systems with  one  new
+<[DUMSE] PRESS5> machine  coded  word  at a time until a relatively
+<[DUMSE] PRESS5> "standard" response time is achieved.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> In my applications,  the 68HC11 and 65F11  machine
+<[DUMSE] PRESS5> code segments account for about 1.2K of the 8K/11K
+<[DUMSE] PRESS5> kernels.    This can vary according to the purpose
+<[DUMSE] PRESS5> of the system implementor.   There is a trade  off
+<[DUMSE] PRESS5> for  size  and speed.   When working in the kernel
+<[DUMSE] PRESS5> its often opposite what you might expect.  Machine
+<[DUMSE] PRESS5> code can often be faster AND smaller.   Sometimes,
+<[DUMSE] PRESS5> ofcourse,  it is only faster.  When you are trying
+<[DUMSE] PRESS5> to fit the most functions possible  in  a  limited
+<[DUMSE] PRESS5> amount of ROM space,  you may try every definition
+<[DUMSE] PRESS5> both ways to see which makes better sense.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I'll break here for Gary   ga
+<GARY-S> ga ken
+<[Ken] K.BUTTERFIEL> OK
+<[Ken] K.BUTTERFIEL> i HAVE USED YOUR PROCESSORS TO MAKE SEVERAL LARGE SYSTEMS.
+<[Ken] K.BUTTERFIEL> The problem I have is that without a disk you are reduced 
+to a serial port...
+<[Ken] K.BUTTERFIEL> operating at a very slow rate compared to a 40k source 
+file ...
+<[Ken] K.BUTTERFIEL> My question is how do you improve the throughput?
+<[DUMSE] PRESS5> I have to admit thats...
+<[DUMSE] PRESS5> a problem for me too some times...
+<[DUMSE] PRESS5> Ofcourse, you have to keep ...
+<[DUMSE] PRESS5> in mind the scope of the processor...
+<[DUMSE] PRESS5> your working on...
+<[DUMSE] PRESS5> I have consider using dual ported RAM and revectoring ...
+<[DUMSE] PRESS5> the I/O handlers...
+<[DUMSE] PRESS5> as cross compiling the functions on a larger system first.
+<[Len] NMORGENSTERN> ok
+<[Len] NMORGENSTERN> I personally like blocks...
+<[Len] NMORGENSTERN> and have a problem with those purists who what to...
+<[Len] NMORGENSTERN> want to get rid of them....
+<[Len] NMORGENSTERN> They are the best solution for portability...
+<[Len] NMORGENSTERN> as you have just pointed out.
+<[Len] NMORGENSTERN> ga
+<[DUMSE] PRESS5> If they are truly the best solution for portability...
+<[DUMSE] PRESS5> why are basic programs being ported from machine to machine...
+<[DUMSE] PRESS5> more common than Forth programs?
+<[jax@well] FIGCHAPTERS>
+<[jax@well] FIGCHAPTERS> I must admire your courage, Randy ...
+<[jax@well] FIGCHAPTERS> to tackle "religion" as you have tonight :-) ...
+<[jax@well] FIGCHAPTERS> but I rise to clear the air on a point ...
+<[jax@well] FIGCHAPTERS> that is often confusing to the beginner, and seemingly 
+also to us "pros" ...
+<[jax@well] FIGCHAPTERS> And that is the duality ...
+<[jax@well] FIGCHAPTERS> of blocks. The facet of BLOCK that the beginner 
+encounters ...
+<[jax@well] FIGCHAPTERS> is the inefficient use of BLOCKs for storing 
+unformatted ascii program text ...
+<[jax@well] FIGCHAPTERS> later he discovers that BLOCKs are the one-size-fits-al
+l virtual memory interface of Forth ...
+<[jax@well] FIGCHAPTERS> In any event, is not the problem with BLOCK ...
+<[jax@well] FIGCHAPTERS> that we lazy Forthers have never written a 
+text-formatting editor that uses BLOCKs transparently ...
+<[jax@well] FIGCHAPTERS> and not a problem with BLOCK itself? Methinks that 
+BLOCK is a sublime interface to virtual memory ...
+<[jax@well] FIGCHAPTERS> in clarity and simplicity equal in elegance to the 
+rest of the Forth concept ...
+<[jax@well] FIGCHAPTERS> our clumsy and inefficient use of same for storing 
+unformatted text notwithstanding. Comment?
+<[jax@well] FIGCHAPTERS> .
+<[DUMSE] PRESS5> Largely true...
+<[DUMSE] PRESS5> but is it the fault of the text editor or the...
+<[DUMSE] PRESS5> lack of an intermidiate file structure...
+<[DUMSE] PRESS5> As I said, I can't think of a better solution...
+<[DUMSE] PRESS5> but considering the cost as mentioned...
+<[DUMSE] PRESS5> I sure wish I or someone else could.
+<[DUMSE] PRESS5> ga
+<JETHOMAS> OK.
+<JETHOMAS> I inteneded to make JAX's point and he beat me to it.  If the 
+hardware gives you 1/4 K blocks or 2K blocks, then from that point it's all a
+ matter of what you do with them.
+<JETHOMAS> But we don't do much with them, maybe because there's no hint of a 
+standard..
+<JETHOMAS> ga
+<GARY-S> care to comment further randy
+<[DUMSE] PRESS5> ok
+<[DUMSE] PRESS5> My point was maybe they shouldn't be in the...
+<[DUMSE] PRESS5> standard at all. ...
+<[DUMSE] PRESS5> Then like BASIC we could adjust to the system at hand. ...
+<[DUMSE] PRESS5> But this takes us further from the topic ....
+<[DUMSE] PRESS5> of the evening. ...
+<[DUMSE] PRESS5> What do you do when Forth stands alone? ...
+<[DUMSE] PRESS5> In many of my applications mass storage is not ...
+<[DUMSE] PRESS5> needed or desired. ...
+<[DUMSE] PRESS5> Ken's comments as noted however. ...
+<[DUMSE] PRESS5> But since most of mine don't, why must I pay the ...
+<[DUMSE] PRESS5> penalty of 10% of my dictionary space?????   ga.
+<[Len] NMORGENSTERN> ok
+<[Len] NMORGENSTERN> Pass Jax has made my point...
+<[Len] NMORGENSTERN> better than I could.
+<[Len] NMORGENSTERN> ga
+<[jax@well] FIGCHAPTERS> Like I said, Randy, you're a brave man to tackle 
+"religion" ...
+<[jax@well] FIGCHAPTERS> anyway, to the case of standalone Forth ...
+<[jax@well] FIGCHAPTERS> Do you see any future ..
+<[jax@well] FIGCHAPTERS> In more sophisticated standalone Forth systems ...
+<GARY-S> sen 8 you are next - maybe jax won't steal your thunder this time
+<[jax@well] FIGCHAPTERS> In the past ...
+<[jax@well] FIGCHAPTERS> Systems like CYBOS ...
+<[jax@well] FIGCHAPTERS> have served a specific need very well ( CYBOS was a 
+standalone med records sys) ...
+<[jax@well] FIGCHAPTERS> ( running on VAXen ... )
+<[jax@well] FIGCHAPTERS> Do you think that the future holds standalone FORTH 
+multiuser workstations ...
+<[jax@well] FIGCHAPTERS> standalone FORTH parallel processing computers ...
+<[jax@well] FIGCHAPTERS> ...?
+<[jax@well] FIGCHAPTERS> .
+<[DUMSE] PRESS5> hold on a minute please, I think your addressing my next down 
+load
+<[DUMSE] PRESS5> if you'll give me a second to check...
+<[DUMSE] PRESS5> Gary, its not as long as the lead.    ga.
+<[DUMSE] PRESS5> its about 1/3 the size, but its the important thought of my 
+address
+<GARY-S> The meter is running on paying customers - if you can defer and we can 
+have you back for another conference to continue I'd appreciate it
+<GARY-S> ga
+<[DUMSE] PRESS5> roger
+<[DUMSE] PRESS5> briefly...
+<GARY-S> go ahead and manually respond to jax then and thanks for understanding
+<[DUMSE] PRESS5> why should dictionary searches stop with the dictionary...
+<[DUMSE] PRESS5> why not search disk as well for a command?? ...
+<[DUMSE] PRESS5> I think we need file names for this to happen ...
+<[DUMSE] PRESS5> and that will be the next generation of Forth
+<[DUMSE] PRESS5> as an ...
+<[DUMSE] PRESS5> operating system. ...
+<[DUMSE] PRESS5> Words executed from disk, yuo see is my upshot.   ga.
+<GARY-S> ga jet
+<JETHOMAS> Would it make any sense to add a mass storage system tied to ...
+<JETHOMAS> the SPI interface on your F6811 systems?
+<JETHOMAS> ga
+<[DUMSE] PRESS5> ok
+<[DUMSE] PRESS5> Well probable not...
+<[DUMSE] PRESS5> it is faster around 250 kbit/s
+<[DUMSE] PRESS5> ...
+<[DUMSE] PRESS5> however, a memory interface is the ultimate solution I think...
+<[DUMSE] PRESS5> We are working on a 1Meg static ram card in 2x4" format...
+<[DUMSE] PRESS5> that presents bytes sequentially to one address in memory...
+<[DUMSE] PRESS5> kind of a silicon floppy...
+<[DUMSE] PRESS5> That would be my hope for our future...
+<[DUMSE] PRESS5> with large files.    ga.
+<[Ken] K.BUTTERFIEL> I like the idea of a memory disk...
+<[Ken] K.BUTTERFIEL> But I I have an observation about files , ect..
+<[Ken] K.BUTTERFIEL> The Kanon Kat is reputed to be based on FORTH...
+<DANMILLER> is . true. ga
+<[Ken] K.BUTTERFIEL> Have 10 commands, and no file structures...
+<[Ken] K.BUTTERFIEL> This appears to be a different paradigm then an system I 
+have used...
+<[Ken] K.BUTTERFIEL>  Do You see a way to reduce FORTH to 10 usefull commands?
+<[Ken] K.BUTTERFIEL> ga.
+<[DUMSE] PRESS5> Not now, I've seen the KAT.  It's impressive
+<[DUMSE] PRESS5> but it is proprietary...
+<[DUMSE] PRESS5> I'm still cooking on my veiw of the future
+<[Len] NMORGENSTERN> ok
+<[Len] NMORGENSTERN> You have created the ultimate block system!
+<[Len] NMORGENSTERN> One-byte blocks!
+<[Len] NMORGENSTERN> .
+<GARY-S> ga randy
+<[DUMSE] PRESS5> That'll take a little more explaining for me to grasp....    
+ga.
+<GARY-S> len ?
+<[Len] NMORGENSTERN> I like to use electrical plugs as an analogy...
+<[Len] NMORGENSTERN> for standards:
+<[Len] NMORGENSTERN> If an automobile doesn't need a plug it shouldn't have one.
+..
+<[Len] NMORGENSTERN> but when may iron has one, it had better be standard!
+<[DUMSE] PRESS5> what can I say, YES.   ga.
+<GARY-S> closing arguments/statements please randy
+<[DUMSE] PRESS5> ok
+<[DUMSE] PRESS5> Since this is my first conference...
+<[DUMSE] PRESS5> I gues I over prepared a bit...
+<[DUMSE] PRESS5> and I suggest Gary...
+<[DUMSE] PRESS5> we append my 5 and a half...
+<[DUMSE] PRESS5> other files to the tail of the record...
+<[DUMSE] PRESS5> however, I have over shadowed my main focus ...
+<[DUMSE] PRESS5> with the comments on blocks ...
+<[DUMSE] PRESS5> They are as you were warned MY ideas ...
+<[DUMSE] PRESS5> and may not be as pretty as dada thinks ...
+<[DUMSE] PRESS5> The interesting thing ...
+<[DUMSE] PRESS5> is the posibilities when you think ...
+<[DUMSE] PRESS5> of using Forth as a Disk Operating System!!! ...
+<[DUMSE] PRESS5> and expand the concept of the linked list from ...
+<[DUMSE] PRESS5> memory into some kind of (forgive me) directory...
+<[DUMSE] PRESS5> on disk. ...
+<[DUMSE] PRESS5> In my mind, for the first time we have...
+<[DUMSE] PRESS5> the first OS that makes sense across posible ...
+<[DUMSE] PRESS5> generations of hardware ...
+<[DUMSE] PRESS5> and maybe some day ...
+<[DUMSE] PRESS5> makes the first Voice Activated Operating System ....
+<[DUMSE] PRESS5> It's all in the way you do your dictionary search.   ga.
+<GARY-S> Randy - thank you for some very interesting insight...
+<GARY-S> normally I turn the troops loose at this point,...
+<[Ken] K.BUTTERFIEL> thanks for talking
+<GARY-S> but if you will please remove the pause from your d/l ascii and...
+<[Len] NMORGENSTERN> A very stimulating conference. Thanks Randy.
+<GARY-S> just let the last bit scroll i would appreciate everyone's cooperation
+<GARY-S> ga now
+<[DUMSE] PRESS5> ok
+<[DUMSE] PRESS5> stand by for whip lash...
+<[DUMSE] PRESS5> Now  there  are some extensions I see as necessary
+<[DUMSE] PRESS5> to make  Forth  a  useful  stand  alone  operating
+<[DUMSE] PRESS5> system which are not covered in the Standard.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> To my way of thinking, the ultimate function of an
+<[DUMSE] PRESS5> computer  system  is not to talk to the programmer
+<[DUMSE] PRESS5> that develops programs on it,  but rather  to  RUN
+<[DUMSE] PRESS5> the programs so developed.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I  included  the word AUTOSTART in both my systems
+<[DUMSE] PRESS5> (R65F11 and F68HC11).   More  important  than  the
+<[DUMSE] PRESS5> word  itself is the autostart function.   When the
+<[DUMSE] PRESS5> system powers on,  it searches the  memory  for  a
+<[DUMSE] PRESS5> function  to  be  run.    Failing  that word being
+<[DUMSE] PRESS5> found, Forth itself is run.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I also allowed hearderless code  to  be  generated
+<[DUMSE] PRESS5> with H/C.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> To be both a useful and flexible operating system,
+<[DUMSE] PRESS5> a  stand  alone  Forth  operating system should be
+<[DUMSE] PRESS5> vectored as much as possible.   In the F68HC11 the
+<[DUMSE] PRESS5> control  blocks used by KEY ?TERMINAL and EMIT are
+<[DUMSE] PRESS5> vectored  in  the  user  area  and  the   routines
+<[DUMSE] PRESS5> themselves  are  also vectored for those who can't
+<[DUMSE] PRESS5> get by just making new control blocks and changing
+<[DUMSE] PRESS5> the  pointer.    BLOCK  and  BUFFER  are  vectored
+<[DUMSE] PRESS5> through  a user variable called UR/W.   In default
+<[DUMSE] PRESS5> it points to a ram disk function,  but be made  to
+<[DUMSE] PRESS5> control floppys, etc.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Stand  alone  Forth  operating systems should also
+<[DUMSE] PRESS5> give consideration for multitasking - or  -  as  a
+<[DUMSE] PRESS5> minimum allowing interrupt structures.  Personally
+<[DUMSE] PRESS5> I'm  not  a  fan  of  the  voluntary  multitasking
+<[DUMSE] PRESS5> schemes  where  every  I/O  function  call  is  an
+<[DUMSE] PRESS5> opportunity  for  the  system to take control away
+<[DUMSE] PRESS5> from a task.   My belief is the system  should  be
+<[DUMSE] PRESS5> completely   preemptable.      The   Forth  system
+<[DUMSE] PRESS5> variables can then  be  saved  and  a  high  level
+<[DUMSE] PRESS5> interrupt started easily.  Some of the Forths I've
+<[DUMSE] PRESS5> seen  do  really  crazy  things that prevent this.
+<[DUMSE] PRESS5> I've seen cases where a register  was  used  as  a
+<[DUMSE] PRESS5> stack pointer.  It was first incremented to take a
+<[DUMSE] PRESS5> value  off  the stack and THEN the accumulator was
+<[DUMSE] PRESS5> loaded with  the  value  from  BENEATH  the  stack
+<[DUMSE] PRESS5> pointer.    ARGH!   Start high level interrupts in
+<[DUMSE] PRESS5> that situation and mysterious little crashes every
+<[DUMSE] PRESS5> 10 hour will occur.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I've  often  wondered  if  the  people  who  write
+<[DUMSE] PRESS5> operating systems tend to make more money than any
+<[DUMSE] PRESS5> other software programmers.   It could give a hint
+<[DUMSE] PRESS5> why there are so many different operating systems.
+<[DUMSE] PRESS5> It would be interesting to see how  Microsoft  and
+<[DUMSE] PRESS5> Lotus sales compare...
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Have you ever noticed that there are no successful
+<[DUMSE] PRESS5> operating   system  that  survive  an  ungrade  of
+<[DUMSE] PRESS5> processors?  CPM was fine until the 8080 fell from
+<[DUMSE] PRESS5> grace.   MS-DOS is not even going to  survive  the
+<[DUMSE] PRESS5> 8088/8086  to  80286/80386  transition.    UNIX is
+<[DUMSE] PRESS5> largely a DEC phenomena.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> How about running MS-DOS on your Amiga? or Mac II?
+<[DUMSE] PRESS5> not with out some extra hardware you say?
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Is an operating system really a missing  piece  of
+<[DUMSE] PRESS5> firmware   the   chip   manufacturer  should  have
+<[DUMSE] PRESS5> included  in  their  processor   system?      This
+<[DUMSE] PRESS5> presupposes  a  certain  configuration of external
+<[DUMSE] PRESS5> hardware.   (Also it limits the  possibilities  of
+<[DUMSE] PRESS5> upgrading  by  floppy,  rather  than pulling out &
+<[DUMSE] PRESS5> swapping the processor.)
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Ok then,  is an operating system really a  missing
+<[DUMSE] PRESS5> piece  of  firmware the system manufacturer should
+<[DUMSE] PRESS5> have included in their boxed system?   This may be
+<[DUMSE] PRESS5> closer, but presupposes the pull to set a standard
+<[DUMSE] PRESS5> for  the rest of the industry and a willingness to
+<[DUMSE] PRESS5> release your proprietary operating system for  the
+<[DUMSE] PRESS5> rest of the industry to copy (license?).
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> To  expound  on  that  concept,  could you imagine
+<[DUMSE] PRESS5> making an Amiga clone,  or for that matter,  a Mac
+<[DUMSE] PRESS5> clone?  Their OS comes from the manufacturer.  Now
+<[DUMSE] PRESS5> can  you imagine making an IBM clone?   I hope so,
+<[DUMSE] PRESS5> it seems 10,000 other sources already have.   Why?
+<[DUMSE] PRESS5> The   OS   is   not   proprietary  to  the  system
+<[DUMSE] PRESS5> manufacturer and the chips to do the job  are  not
+<[DUMSE] PRESS5> exclusively controlled by that company.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> It  is strangley reasonable,  considering the vast
+<[DUMSE] PRESS5> investment of man  hours  it  takes  to  learn  to
+<[DUMSE] PRESS5> operate  computer  systems.   Have you ever wonder
+<[DUMSE] PRESS5> how  many  man  hours  that  is?    Based  on  the
+<[DUMSE] PRESS5> assumption  that a $800 computer represents 40 man
+<[DUMSE] PRESS5> hours to manufacture distribute and sell (40 hours
+<[DUMSE] PRESS5> at $20 an hour).   Is the  average  computer  user
+<[DUMSE] PRESS5> inside  a  company going to understand every thing
+<[DUMSE] PRESS5> necessary to be functional on that equipment in  a
+<[DUMSE] PRESS5> single week?   I think not.  To a company buying a
+<[DUMSE] PRESS5> system,  the true cost is $800  for  hardware  and
+<[DUMSE] PRESS5> several  times  that  in learning the proticulars.
+<[DUMSE] PRESS5> That we are unwilling to risk  possibly  $2400  of
+<[DUMSE] PRESS5> man   hours  against  a  hope  that  company  will
+<[DUMSE] PRESS5> continue to support a system that  could  have  at
+<[DUMSE] PRESS5> best  only  given  them a net profit of $100 sorta
+<[DUMSE] PRESS5> tells the tale...
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> The proper formula for vast  success  then  is  to
+<[DUMSE] PRESS5> have three parties.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      1. A chip manufacturer that makes processors
+<[DUMSE] PRESS5>      2. A system manufacturer that uses them.
+<[DUMSE] PRESS5>      3. An OS writer that supports the deal.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> If the chip manufacturer sets the hardware details
+<[DUMSE] PRESS5> and  doesn't  allow  second  sourcing,   they  are
+<[DUMSE] PRESS5> assured of a limited following.    If  the  system
+<[DUMSE] PRESS5> manufacturer  does  the  OS  and  software  - same
+<[DUMSE] PRESS5> thing.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> The future could get more interesting.   Only when
+<[DUMSE] PRESS5> the whole computer comes together on a single chip
+<[DUMSE] PRESS5> is there any opportunity for the chip manufacturer
+<[DUMSE] PRESS5> to steal the whole ball game.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> On  the  other  hand  look  at  the  New  Micros -
+<[DUMSE] PRESS5> Motorola relationship on the F68HC11.   It  was  a
+<[DUMSE] PRESS5> cooperative  effort.    Even though it IS a single
+<[DUMSE] PRESS5> chip computer,  one company did  the  hardware  an
+<[DUMSE] PRESS5> deliberately  allowed  some  one else to do the OS
+<[DUMSE] PRESS5> firmware.  The chip bears both company's logos...
+<[DUMSE] PRESS5> 
+<[DUMSE] PRESS5> Operating systems by their nature are interactive.
+<[DUMSE] PRESS5> I realize there  may  have  been  systems  in  the
+<[DUMSE] PRESS5> distant  past  (by  computing standards) that were
+<[DUMSE] PRESS5> not so.   By in large  today,  however,  when  the
+<[DUMSE] PRESS5> system  is  spinning in tight little loops waiting
+<[DUMSE] PRESS5> for  an  operators  inputs,   its  almost   always
+<[DUMSE] PRESS5> executing code from the operating system.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> What  is  the purpose of an operating system?   As
+<[DUMSE] PRESS5> its name implies,  its not(really a  program  that
+<[DUMSE] PRESS5> has  a  stand alone functional purpose (not in the
+<[DUMSE] PRESS5> sense Lotus 123,  Wordstar or a 2500 AD  Assembler
+<[DUMSE] PRESS5> does).   It is rather a support program that finds
+<[DUMSE] PRESS5> and  executes  other  programs  (such   as   those
+<[DUMSE] PRESS5> mentioned)  and  then provides an interface to the
+<[DUMSE] PRESS5> systems I/O devices.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> With an eye toward minimalism, what is the minimum
+<[DUMSE] PRESS5> "stuff"  necessary  to  be  called  an   operating
+<[DUMSE] PRESS5> system.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> I  would like to present this hypotheses: The main
+<[DUMSE] PRESS5> purpose of an operating  system  is  to  find  and
+<[DUMSE] PRESS5> execute programs at the user's request.   How much
+<[DUMSE] PRESS5> different in fact is this from the function of the
+<[DUMSE] PRESS5> Outer Interpreter?
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Why must a dictionary search be  limited  only  to
+<[DUMSE] PRESS5> the  functions in memory?   When you type a MS-DOS
+<[DUMSE] PRESS5> command it first sees  if  you  want  an  internal
+<[DUMSE] PRESS5> function like DIR or COPY .  If you are asking for
+<[DUMSE] PRESS5> a external function,  such as FORMAT ,  it locates
+<[DUMSE] PRESS5> and executes the function.  If you instead want to
+<[DUMSE] PRESS5> execute a program, for example,  LOTUS.EXE ,  just
+<[DUMSE] PRESS5> state  the  name  on the command line and it finds
+<[DUMSE] PRESS5> and executes that program.  (I hope that last line
+<[DUMSE] PRESS5> rang a bit of familiarity - it was meant to  sound
+<[DUMSE] PRESS5> like  the  Outer  Interpreter  in action.)  So why
+<[DUMSE] PRESS5> should Forth's Outer  Interpreter  be  limited  to
+<[DUMSE] PRESS5> only the words that are currently in memory.  If a
+<[DUMSE] PRESS5> function  isn't found in the dictionary,  why give
+<[DUMSE] PRESS5> an error message until the mass storage  directory
+<[DUMSE] PRESS5> is checked for the same word?  It just a matter of
+<[DUMSE] PRESS5> perspective  on how far you go to find the desired
+<[DUMSE] PRESS5> word.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> In Forth, which probably has the most general form
+<[DUMSE] PRESS5> of syntax ever devised  for  functions  are  files
+<[DUMSE] PRESS5> named by screen number rather than name?
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Are the peculiar names for functions such as @ and
+<[DUMSE] PRESS5> ! holding Forth back.  If they were named PEEK and
+<[DUMSE] PRESS5> POKE  would  Forth  be  a  more easily understood?
+<[DUMSE] PRESS5> Certainly  a  preprocessor  could   be   used   to
+<[DUMSE] PRESS5> translate  PEEK and POKE into @ and !  to make the
+<[DUMSE] PRESS5> Standards folks happy.
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Consider  how  differently  code  would  look  (to
+<[DUMSE] PRESS5> outsiders) if only we renamed : and ; as follows:
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      : begin_proc [COMPILE] : ; IMMEDIATE
+<[DUMSE] PRESS5>      : end_proc   [COMPILE] ; ; IMMEDIATE
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> and applied like this:
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      begin_proc square
+<[DUMSE] PRESS5>        DUP *
+<[DUMSE] PRESS5>      end_proc
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> That's one example, there are other possibilities,
+<[DUMSE] PRESS5> of  course.   One I like is redefining CONSTANT as
+<[DUMSE] PRESS5> IS although its results are so readable,  I'm sure
+<[DUMSE] PRESS5> not  even  the  C  language  people would like the
+<[DUMSE] PRESS5> idea.  So:
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      : IS CONSTANT ;
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      0 IS ZERO
+<[DUMSE] PRESS5>      1 IS ONE
+<[DUMSE] PRESS5>      2 IS ii
+<[DUMSE] PRESS5>      3 IS iii
+<[DUMSE] PRESS5>      4 IS iv
+<[DUMSE] PRESS5>      5 IS v
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>      B000 IS PORT-A
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> etc..
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5>
+<[DUMSE] PRESS5> Well I guess that's it...
+<[DUMSE] PRESS5> but it looked pretty bad on my screen...
+=== End of Steno notes. ===
+
+

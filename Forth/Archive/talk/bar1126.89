@@ -1,0 +1,521 @@
+
+
+Item    8145637                 89/11/27        10:07
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 11/26/89   Time: 21:53EST
+Attendees:
+
+
+[[Len] NMORGENSTERN]
+[[JAX.ASM] FIGCHAPTERS]
+[[John] J.KNIGHT2]
+
+Minutes:
+<[Len] NMORGENSTERN>  Hi Jax
+<[jax@well] FIGCHAPTERS> Hi Len, How was Asillymar?
+<[Len] NMORGENSTERN> v. good, I thought
+<APPERT> is here.
+<[jax@well] FIGCHAPTERS> upload your PASCAL<>Forth yet?
+<[Len] NMORGENSTERN> Hi Kevin. No Jax,
+<[Kevin] APPERT> hi Len, Jax
+<[jax@well] FIGCHAPTERS> <<< runs Assembler, don't be suprised
+	if sudden  DISCONNECT
+<[jax@well] FIGCHAPTERS> Hi Kev.
+<[Len] NMORGENSTERN> I found a few typos, and need to clean
+	them up. Will  upload tomorrow <editor's note: has been uploaded>
+<[Len] NMORGENSTERN> How do you mean, "runs assembler?"
+<[Len] NMORGENSTERN> <strange, CR does not transmit!>
+<[Len] NMORGENSTERN> <hence peculiar delays.
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> how was FORML, Len?
+<[Len] NMORGENSTERN> Wil Baden presented a very clear explanation of
+<[Len] NMORGENSTERN> CRC polynomials & how to compute them.
+<[jax@well] FIGCHAPTERS> I'm assembling in another
+     window, Len. Neat programs  that occasionally
+     invoke the famous Amiga FIREWORKS_MODE :-)
+<[Len] NMORGENSTERN> John Wavrik, a professor of Math at UC San Diego
+<[Len] NMORGENSTERN> <thanx>
+<[Len] NMORGENSTERN> uses Forth in analysis of polynomials
+     and other math structures
+<[Len] NMORGENSTERN> where the latter can have very odd types of coefficients
+<[Len] NMORGENSTERN> He finds that OOP in Forth does a lot for him, and he has
+<[Len] NMORGENSTERN> written a system to do that.
+<[Len] NMORGENSTERN> Ting presented a radix sort that
+     he says may be the fastest.
+<[Len] NMORGENSTERN> My objection is that he is sorting
+     16 bit numbers, which is an
+<[Len] NMORGENSTERN> artificial process. A "real" sort will usually have to move
+<[Len] NMORGENSTERN> records, usually but not alwoays short.
+<[Len] NMORGENSTERN> .
+<[Len] NMORGENSTERN> Tom Zimmer has a new version of
+     F-PC with hypertext  capability.
+<[Len] NMORGENSTERN> I plan to play with it soon if
+     I can unpack it. It is on an AT type
+<[Len] NMORGENSTERN> diskette & my computer cannot handle it!
+<[Kevin] APPERT> shall I send you a set of low density?
+<[Len] NMORGENSTERN> I would like that, Kevin
+<[Len] NMORGENSTERN> Tom has also built a metacompiler which is on the disk
+<[Kevin] APPERT> what address, Len?
+<[Kevin] APPERT> (I had it, and lost it)
+<[Len] NMORGENSTERN> It uses only a very small kernel
+     and the necessary words. He claims that
+<[Len] NMORGENSTERN> he can get final files that are only a few hundred bytes!
+<[Len] NMORGENSTERN> 304 Rheem Blvd., Moraga CA 94556
+<[Len] NMORGENSTERN> <much appreciated, Kevin>
+<[Len] NMORGENSTERN> Ting sometimes comes up with ideas that are so brilliant
+<[Len] NMORGENSTERN> but so odd, you don't know what
+     to think. He presented a very
+<[Len] NMORGENSTERN> nice "stack" of logical values
+     which uses 1 word (16 bits) and
+<[Len] NMORGENSTERN> shifts in and out! (that is merely clever. What is
+<[Len] NMORGENSTERN> possibly brilliant is a suggestion
+     that every data type have
+<[Len] NMORGENSTERN> its own stack. Thus ordinary integers,
+     double itegers, etc. etc.
+<[Len] NMORGENSTERN> This is a basis for object-oriented programming!
+<[Kevin] APPERT> Ting and others have been proponents
+     of that for some time.  There is a substantial
+     literature on the subject of logic stacks, loop
+     stacks, string stacks, and so on ad titanium (hard to say how far on,
+     that is)
+<[Len] NMORGENSTERN> <my explanation is abbreviated.>
+<[Kevin] APPERT>   Tom uses JSR-threaded code, and
+     when he uses a Forth word, the code for it is
+     brought in from the 'library' if possible.  If
+     not possible, it is defered and the forward references are resolved later.
+<[jax@well] FIGCHAPTERS> pliz to xkooz, send window
+     into space, must pause to reboot.
+<[jax@well] FIGCHAPTERS> disconnected.
+<[Len] NMORGENSTERN> Kevin, that is exactly right. I could not read the fast
+<[Len] NMORGENSTERN> notes that I took at Asilomar
+<[Len] NMORGENSTERN> I am waiting for Jax to come back
+<[Kevin] APPERT> the other neat thing about the current
+     release of FPC is the use of mess-dos style paths
+     for source and load files.
+<[Kevin] APPERT> I don't think there has been substantial
+     change since the Nov. 4 'Forth Day
+<[Kevin] APPERT> ' to FPC
+<FIGCHAPTERS> is here.
+<[Len] NMORGENSTERN> Tom says this version has not
+     been changed from a few weeks ago!
+<[Len] NMORGENSTERN> So you are right.
+<[Len] NMORGENSTERN> .
+<[Len] NMORGENSTERN> John Peters came up with a great
+     idea worth thinking about. A fellow
+<[Len] NMORGENSTERN> from Finland gave a very nice
+     talk, and afterwards, he was asked
+<[Len] NMORGENSTERN> how he got interested in Forth.
+     He said he read Brodie's book in the
+<[JAX.ASM] FIGCHAPTERS> who was fellow from Suomi?
+<[JAX.ASM] FIGCHAPTERS> <finland>
+<[JAX.ASM] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> He was the only Finn there. One
+     woman from China currently working in
+<[Len] NMORGENSTERN> Switzerland, several Germans
+<[Len] NMORGENSTERN> Lots of Canadians
+<[Len] NMORGENSTERN> .
+<[JAX.ASM] FIGCHAPTERS> <you know their national anthem:
+     "Suomi, how I love ya, how I love ya, my dear old Suomi">
+<[JAX.ASM] FIGCHAPTERS> Who was Finm?
+<[Len] NMORGENSTERN> <arrrrrrrrrrgggggggggggghhhhhhh>
+<[JAX.ASM] FIGCHAPTERS> Finn
+<[JAX.ASM] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> brb
+<[JAX.ASM] FIGCHAPTERS> tnx
+<[Kevin] APPERT> what's new with you, Jax?
+<[JAX.ASM] FIGCHAPTERS> In what department?
+<[Len] NMORGENSTERN> Antero Taivalsaari, Saynatsalo, Finland
+<[JAX.ASM] FIGCHAPTERS> Really?
+<[Len] NMORGENSTERN> (Saynatasalo is the city)
+<[JAX.ASM] FIGCHAPTERS> sonofagun.
+<[Kevin] APPERT> what kind of assembler you running?
+     or is it the program you are testing
+<[JAX.ASM] FIGCHAPTERS> Running CAPE on the Amiga.
+<[Len] NMORGENSTERN> CAPE?
+<[JAX.ASM] FIGCHAPTERS> assembler.
+<[Kevin] APPERT> this a product?
+<[JAX.ASM] FIGCHAPTERS> yes
+<[Len] NMORGENSTERN> Aah
+<[JAX.ASM] FIGCHAPTERS> assembling lotsa neet stuff.
+<[JAX.ASM] FIGCHAPTERS> So what did Anti have to say
+     at Asilomar aside from "Forth is neat".
+<[Kevin] APPERT> (except when it gets messy)
+<[Len] NMORGENSTERN> His talk was on a new Forth named Cool
+<[Len] NMORGENSTERN> with object oriented features. COOL is an acronym
+<[Len] NMORGENSTERN> for "Coherent object-oriented language"
+<[Len] NMORGENSTERN> .
+<[JAX.ASM] FIGCHAPTERS> They wrote this in Finland?
+<[Len] NMORGENSTERN> Yep
+<[JAX.ASM] FIGCHAPTERS> Veddy Interesting!
+<[Len] NMORGENSTERN> I guess they produce more than architects.
+<[JAX.ASM] FIGCHAPTERS> What was his connection with this?
+<[Kevin] APPERT> reminds me of the laser builders next
+     door to my shop.  The back door says " Coherent Employees Only! "
+<[Len] NMORGENSTERN> I don't know. He is quite young, only a student.
+<[JAX.ASM] FIGCHAPTERS> Ruff of hair on top of his
+     head, grey suit, right? Pleasant smile.
+<[Len] NMORGENSTERN>  University of Jyvaskylya
+<[Len] NMORGENSTERN>  University of Jyvaskyla
+<[Len] NMORGENSTERN> (sic)
+<[Len] NMORGENSTERN> (first spelling was sick)
+<[Len] NMORGENSTERN> <pun, please laugh>
+<[Len] NMORGENSTERN> Wil Baden ran a contest, "How is Programming like sex?"
+<[Len] NMORGENSTERN> Prize for best answer.
+<[JAX.ASM] FIGCHAPTERS> So this Antero, about 6 feet
+     tall, ruff of brown hair on top of head, probably
+     nice grey two-peice suit?
+<[Kevin] APPERT> sounds like a copyright violation
+<[Len] NMORGENSTERN> About 6 feet 2 inches, I have rarely seen anyone so blond
+<[Len] NMORGENSTERN> and wearing pants and a shirt.
+<[Len] NMORGENSTERN> (no tie)
+<[JAX.ASM] FIGCHAPTERS> ok, thanx
+<[Len] NMORGENSTERN> (As usual, the only spiffy dressers were Glen Haydon and
+<[Len] NMORGENSTERN> Martin Tracy.)
+<[Kevin] APPERT> I like my answer (Because if you arn't
+     REALLY enjoying yourself, you must be din  doing it wrong
+<[Len] NMORGENSTERN> That was given. The wives & companions
+     were allowed to enter too
+<[Kevin] APPERT> Bob Smith wasn't nattily attired?
+<[Len] NMORGENSTERN> My favorite was "It's no fun if you do it with UNIX"
+<[Kevin] APPERT> gaaaaaaaaaaaa
+<[Len] NMORGENSTERN> (not a prize winner)
+<[JAX.ASM] FIGCHAPTERS> what won?
+<[Kevin] APPERT> what won?
+<[JAX.ASM] FIGCHAPTERS> great minds think alike
+<[Len] NMORGENSTERN> Baden said his wife disqualified
+     it because of what she thought
+<[Kevin] APPERT> and Jax and I also
+<[Len] NMORGENSTERN> was a misspelling!
+<[Len] NMORGENSTERN> (I don't remember the winner!)
+<[JAX.ASM] FIGCHAPTERS> <let's kill him, kevin>
+<[Len] NMORGENSTERN> (A eunuch is someone who is cut out to be a bachelor)
+<[Kevin] APPERT> nnnaaaaaaaa
+<[Len] NMORGENSTERN> I must tell you John Peters' great idea
+<[JAX.ASM] FIGCHAPTERS> programming is like sex in
+     that Forth programmers get it up faster ... :-)
+<[Len] NMORGENSTERN> Jax you might have won!
+<[Kevin] APPERT> ... and do it mostly for self-gratification
+<[Len] NMORGENSTERN> 1 bottle of wine
+<[Len] NMORGENSTERN> This Antero was telling how he
+     got started in Forth by reading
+<[Len] NMORGENSTERN> Brodies book in the library. John
+     said, Why don't we donate
+<[Len] NMORGENSTERN> copies to lots of libraries.
+<[Len] NMORGENSTERN> Somebody else said, we might be the Gideons of Forth.
+<[Len] NMORGENSTERN> But I think this has a LOT of merit!
+<[Len] NMORGENSTERN> <sorry, CR didn't work!>
+<[Len] NMORGENSTERN> A few hundred dollars might go
+     a long way to recruit youngsters.
+<[Len] NMORGENSTERN> I know that at one time (not so young) I read everything
+<[Len] NMORGENSTERN> our library had on computer science -- not much
+<[Kevin] APPERT> many librarys would just throw it
+     out.  it is not, after all, a C book.  in a decade
+     or so, there will be a ...
+<[Len] NMORGENSTERN> Kevin, you may be right, but the idea should
+<[Kevin] APPERT> small government department dedicated
+     to the burning of subversive literature, like Brodie.
+<[Len] NMORGENSTERN> be explored, not abandoned out of hand.
+<[Len] NMORGENSTERN> Do either of you get PC Magazine?
+<[Kevin] APPERT> perhaps a library discount?  or at
+     least a tear-off card they have to send in
+<[Kevin] APPERT> something to say "we want this, and
+     are going to put it on the shelf so people can
+     use it".  signed by a responsible officer, if possible
+<[Len] NMORGENSTERN> John Dvorak praised VP Planner! He probably doesn't know
+<[Len] NMORGENSTERN> that it was written in Forth.
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> John doesn't like Forth?
+<[Len] NMORGENSTERN> He is a real Forth-basher1
+<[Len] NMORGENSTERN> He is a real Forth-basher!
+<[Kevin] APPERT> what has he said?
+<[Len] NMORGENSTERN> I can't quote, it was some time
+     ago. It came up when he heard
+<[Len] NMORGENSTERN> about the new chips that run Forth.
+     He said that they were silly
+<[Kevin] APPERT> all those people using C can't be wrong!
+<[Len] NMORGENSTERN> to run such an obscure language.
+     If they had a chip that ran in C
+<[Len] NMORGENSTERN> then they would really have something.
+<[Len] NMORGENSTERN> <or words to that effect>
+<[JAX.ASM] FIGCHAPTERS> "ran in C
+<[JAX.ASM] FIGCHAPTERS>  ??
+<[JAX.ASM] FIGCHAPTERS>  :-)
+<[JAX.ASM] FIGCHAPTERS> The SC32 executes C quite nicely.
+<[JAX.ASM] FIGCHAPTERS> So does RTX
+<[Kevin] APPERT> what about the PDP-11?  C is a souped-up
+     macro assembler for  that language
+<[JAX.ASM] FIGCHAPTERS> Dvorak said that Forth had
+     been presented as a panacea.
+<[Len] NMORGENSTERN> But the chip's "native" language is Forth (or very close)
+<[Len] NMORGENSTERN> He did also say that.
+<[Len] NMORGENSTERN> The 8086 runs C nicely, too, but that is not the point, Jax
+<J.KNIGHT2> is here.
+<[JAX.ASM] FIGCHAPTERS> Good Knight!
+<[Len] NMORGENSTERN> Hi Sir Knight!
+<J.KNIGHT2> <g>how original
+<[Len] NMORGENSTERN> I'm sure you have heard it many times!
+<[JAX.ASM] FIGCHAPTERS> The 8086 runs C lousy. like it runs everything else.
+<[Len] NMORGENSTERN> But no lousier
+<J.KNIGHT2> I can't remember whether it was 3 or 4 times
+<[Kevin] APPERT> this always makes me a bit uneasy
+     when I see people selling Forth, Jax.  As you
+     know it is not a panacea.  It's just a nice sharp
+     tool, with which more than a few people have slit thier own throat
+     (or thoat, if on mars)
+<[Len] NMORGENSTERN> More like 3000 or 4000 probably
+<[JAX.ASM] FIGCHAPTERS> As panaceas go, it's a winner.
+<[Len] NMORGENSTERN> J. Please set your name. We like to be informal
+<[Len] NMORGENSTERN> Type /nam John or whatever at the beginning of a line.
+<J.KNIGHT2> how? I usually conf on CI$
+<[Len] NMORGENSTERN> You got it!
+<[John] J.KNIGHT2> Thanks
+<[Len] NMORGENSTERN> Do you use Forth?
+<[John] J.KNIGHT2> Is there a topic?
+<[JAX.ASM] FIGCHAPTERS> Yes, "why is programming like sex"
+<[Len] NMORGENSTERN> I have been reporting on the Asilomar Conference
+<[Len] NMORGENSTERN> That was a contest that Wil Baden held
+<[John] J.KNIGHT2> I'm just (that's with a capital J) learning
+<[John] J.KNIGHT2> Answer--Because it's easier to talk about than to do.
+<[Len] NMORGENSTERN> Interesting: almost all the submissions were anonymous!
+<[Len] NMORGENSTERN> How much Forth have you learned?
+<[John] J.KNIGHT2> Very little. I started realizing
+     that Basic wasn't what I wanted...
+<[John] J.KNIGHT2> And the others seemed like mountains
+     to climb and there was...
+<[Len] NMORGENSTERN> What Forth are you using?
+<[John] J.KNIGHT2> All the little things that said
+     it was easy and powerful
+<[John] J.KNIGHT2> I am using pigmy forth because it
+     is small and I figure that ...
+<[Kevin] APPERT> easy?
+<[Len] NMORGENSTERN> Do you have any specific problem or questions?
+<[John] J.KNIGHT2> As I learn it I can put it in my
+     Portfolio and take it with me.
+<[John] J.KNIGHT2> It seems to be but without knowing others it's hard to say..
+<[John] J.KNIGHT2>
+<[John] J.KNIGHT2> Too many to really even start to
+     ask. I reading STARTING FORTH now.
+<[Len] NMORGENSTERN> A good start (no pun intended)
+<[John] J.KNIGHT2> I think you're right. Some of the
+     things I'm writing don't seem to be on the screen
+<[John] J.KNIGHT2> After you write a program, how do you compile it to a .com?
+<[Len] NMORGENSTERN> I don't know about Pygmy. F83 has a special word to do that
+<[John] J.KNIGHT2> What is the word?
+<[Len] NMORGENSTERN> It is called SAVE-SYSTEM. You
+     will have to look at your manual for the
+<[Len] NMORGENSTERN> Forth that you use.
+<[Len] NMORGENSTERN> There is no standard for that word
+<[John] J.KNIGHT2> Pigmy uses almost all of the F83 commnands.
+<[John] J.KNIGHT2> I need something small because the Portfolio is very small.
+<[Len] NMORGENSTERN> You can try it. I don't think it can hurt anything.
+<[JAX.ASM] FIGCHAPTERS> If you want a program to auto-start,
+     instead of being invoked once loaded by ath last
+     word you defined, you have to tweak the BOOT word, too.
+<[Len] NMORGENSTERN> Right, Jax. That should also be in the manual
+<[Len] NMORGENSTERN> I will download Pygmy and look at it, then I can
+<[JAX.ASM] FIGCHAPTERS> You have a Forth with a manual? :-)
+<[Len] NMORGENSTERN> answer those questions.
+<[Len] NMORGENSTERN> in more detail.
+<[John] J.KNIGHT2> I get the impression that operating
+     system in Forth has a different meaning in Forth
+<[Len] NMORGENSTERN> In F83 you would write, for example, SAVE-SYSTEM FOO.COM
+<[Len] NMORGENSTERN> The reason for that is that the
+     older Forths were their own operating
+<[JAX.ASM] FIGCHAPTERS> Forth was meant to be its own OS, John ...
+<[Len] NMORGENSTERN> system. Only in the last 6-7 years
+     have we had Forths that run UNDER operating systems
+<[John] J.KNIGHT2> In the beginning you mean?
+<[JAX.ASM] FIGCHAPTERS> many Forths tend to coesxist only fitfully with host OS
+<[JAX.ASM] FIGCHAPTERS> Yes, John and frequently they still are .
+<[Len] NMORGENSTERN> Forth antedates most operating
+     systems, It was the beginning, John
+<[JAX.ASM] FIGCHAPTERS> I work in embedded control.
+<[JAX.ASM] FIGCHAPTERS> I just finished a single board
+     computer with Forth as the complete OS.
+<[Kevin] APPERT> Forth started out under operating
+     systems, then was applied to a class of problems
+     in which the operating system was in the way...
+<[John] J.KNIGHT2> You mean directly addressing the BIOS, etc.
+<[JAX.ASM] FIGCHAPTERS> What Forth really is conceptually
+     is an OS that is programmable down to the assembly level.
+<[JAX.ASM] FIGCHAPTERS> I mean, John ...
+<[JAX.ASM] FIGCHAPTERS> THat there Ain't No Durn BIOS!
+     It's Forth, and that's it. I wrote it.
+<[JAX.ASM] FIGCHAPTERS> That's the original Forth idea.
+<[JAX.ASM] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Right, that approach is avalable if you need to use it,
+<[Len] NMORGENSTERN> as Jax does quite often (and others too)
+<[John] J.KNIGHT2> Starting Forth is, of course, very
+     elementary--what is the next book I should look at?
+<[Len] NMORGENSTERN> Brodie's book still has traces of the old point of view.
+<[Kevin] APPERT> "why should I wait for some system
+     programmer's idea of a timely response to my request
+     for this disk block?  The retrace time on this
+     video is short and I nead it NOW!"
+<[Len] NMORGENSTERN> Kelly and Spies
+<[JAX.ASM] FIGCHAPTERS> Thinking Forth is good, same
+     author. Better in fact than Starting Forth.
+<[Kevin] APPERT> and "THINKING FORTH"
+<[Kevin] APPERT> beat me to it , Jax
+<[JAX.ASM] FIGCHAPTERS> Threaded Interpretive Languages
+     by Loeliger, Byte books, 1978, is good.
+<[Len] NMORGENSTERN> Very good, but not, I think for a beginner, Jax
+<[Len] NMORGENSTERN> Also download Jack Brown's (J.BROWN11) LESSONS
+<[JAX.ASM] FIGCHAPTERS> Forth itself, a good commercial
+     system, is the best teacher, ...
+<[JAX.ASM] FIGCHAPTERS> also attendance at a Forth Interest Group chapter ...
+<[Kevin] APPERT> " FORTH TOOLS"  contains usefull examples
+<[JAX.ASM] FIGCHAPTERS> Forth programmers tend to be self-taught.
+<[JAX.ASM] FIGCHAPTERS> .
+<[JAX.ASM] FIGCHAPTERS> Loeliger was the second Forth book I read. Showed me 
+exactly how Forth worked.
+<[JAX.ASM] FIGCHAPTERS> .
+<[John] J.KNIGHT2> Why didn't it become more popular?
+<[Len] NMORGENSTERN> Jack Brown is a math professor in BC (Canada) who has
+<[JAX.ASM] FIGCHAPTERS> Forth didn't have AT&T backing it, like C does.
+<[Len] NMORGENSTERN> written excellent tutorials
+<[JAX.ASM] FIGCHAPTERS> Also, Forth has some disturbing
+     things to say about how computer science views
+     the world. Not popular with academics for thatreason!
+<[Len] NMORGENSTERN> Also, Forth "really is a different
+     language" as I like to say
+<[Len] NMORGENSTERN> and it seems strange to rigid
+     thinkers, who contitute the majority
+<[Len] NMORGENSTERN> of programmers.
+<[John] J.KNIGHT2> What do you mean JAX?
+<[Kevin] APPERT> most programmers tend...
+<[JAX.ASM] FIGCHAPTERS> I mean Forth has a one-pass
+     left-to-right parser, for instance. Makes parsing theory look asnine.
+<[Kevin] APPERT> to use language which they...
+<[Kevin] APPERT> are taught in school...
+<[Kevin] APPERT> like C and Fortran...
+<[Kevin] APPERT> Pascal is dying out now, but...
+<[JAX.ASM] FIGCHAPTERS> not so.
+<[Kevin] APPERT> for a while people actually thought it ...
+<[Kevin] APPERT> was a usefull tool for solving problems...
+<[Kevin] APPERT> because it was almost ...
+<[JAX.ASM] FIGCHAPTERS> Forth also suggests that a
+     lot of programming teams could be a lot smaller
+     if they used Forth, another disturbing concept to rigid thinkers.
+<[Kevin] APPERT> universally accepted in schools.
+<[Len] NMORGENSTERN> John, why don't you EMAIL questions
+     to me, and attend these Sunday
+<[Len] NMORGENSTERN> conferences as often as you can?
+<[JAX.ASM] FIGCHAPTERS> The main problem NOW with Forth
+     is that C and C-based op systems are already in
+     place, and putting up Forth in the same situations
+     would be re=-inventing the wheel.
+<[Kevin] APPERT> I gota go.  night all
+<[Kevin] APPERT> has left.
+<[Len] NMORGENSTERN> My function as sysop is to run
+     learning conferences, like this one
+<[Len] NMORGENSTERN> Bye Kevin
+<[JAX.ASM] FIGCHAPTERS> Forth can do everything C can
+     and a damn sight easier, but you know how it is
+     when there are entrenched interests.
+<[JAX.ASM] FIGCHAPTERS> Forth keeps popping up here and there.
+<[Len] NMORGENSTERN> I suspect that Forth can do some
+     things easily that C can do with
+<[JAX.ASM] FIGCHAPTERS> THe SUN 4 boots itself with FOrth, then loads UNIX.
+<[Len] NMORGENSTERN> great difficulty, Jax
+<[John] J.KNIGHT2> However someone who works for a
+     living would use the best tools he could fine wouldn't he?
+<[JAX.ASM] FIGCHAPTERS> I know NO unemployed Forth programmers.
+<[JAX.ASM] FIGCHAPTERS> .
+<[JAX.ASM] FIGCHAPTERS> <<< worked in Forth for years. Need work?
+<[John] J.KNIGHT2> I didn't mean that <blush>
+<[JAX.ASM] FIGCHAPTERS> Well, it's a valid question.
+<[JAX.ASM] FIGCHAPTERS> Anyway, yes, use the language that pleases you.
+<[JAX.ASM] FIGCHAPTERS> I am on a 68000 assembly language binge these days.
+<[Len] NMORGENSTERN> My experience with Forth programmers
+     is that they are a very varied
+<[Len] NMORGENSTERN> and lively bunch.
+<[Len] NMORGENSTERN> Not all young either.
+<[John] J.KNIGHT2> I meant that a carpenter uses the
+     best tools the can afford not just the most popular
+<[JAX.ASM] FIGCHAPTERS> at home I haven't loaded Forth
+     in weeks! (still use daily at work, though).
+<[JAX.ASM] FIGCHAPTERS> Also used C, Lisp, Prolog, others.
+<[Len] NMORGENSTERN> Ah, but often the boss says, WE DO IT IN C
+<[JAX.ASM] FIGCHAPTERS> Yes, the carpenter neither
+     praises nor blames its tools.
+<[JAX.ASM] FIGCHAPTERS> So you have the right attitude, John.
+<[JAX.ASM] FIGCHAPTERS> .
+<[John] J.KNIGHT2> No but he chooses his tools carefully.
+<[JAX.ASM] FIGCHAPTERS> Right.
+<[John] J.KNIGHT2> What FORTH do you suggest that I learn on?
+<[JAX.ASM] FIGCHAPTERS> Luckily, there are modern host-OS-compatible
+     Forths for every popular architecture.
+<[Len] NMORGENSTERN> What machine do you have?
+<[JAX.ASM] FIGCHAPTERS> If you are a DOS programmer,
+     F-PC Forth is "stylish" these days ...
+<[John] J.KNIGHT2> At home I have a 386, at work 8088,
+     and the Portfolio is a 8088
+<[JAX.ASM] FIGCHAPTERS> if you are a pro, you would
+     use HS-Forth, LMI Forth or polyFORTH for the DOS world.
+<[Len] NMORGENSTERN> F-PC is big, Jax. It decompiles
+     to a couple of megabytes
+<[JAX.ASM] FIGCHAPTERS> if you run OS/2, you want UniForth from LMI>
+<[John] J.KNIGHT2> What is ZenForth
+<[Len] NMORGENSTERN> Zen Forth is an attempt to incorporate the latest standard
+<[JAX.ASM] FIGCHAPTERS> That's a nice PD forth by Martin
+     Tracy, but it's like learning jazz first before you learn classical.
+<[Len] NMORGENSTERN> in as small a Forth as possible
+<[Len] NMORGENSTERN> I don't think it is good for starters.
+<[John] J.KNIGHT2> I am looking for small, that's why I looked at Pigmy..
+<[Len] NMORGENSTERN> Zen is 3 - 4 k
+<[John] J.KNIGHT2> [Pigmy] was supposed to be compatable with f83 and smaller
+<[JAX.ASM] FIGCHAPTERS> My favorite for "easy forth"
+     is F83S6 which is here in the library.
+<[Len] NMORGENSTERN> Too small sometimes means featureless & hard to use
+<[Len] NMORGENSTERN> I will look at Pygmy
+<[JAX.ASM] FIGCHAPTERS> download F83S^.ARC and the
+     file WILSEDIT.TXT to explain the FABULOUS screen editor.
+<[JAX.ASM] FIGCHAPTERS> oops, F83S6.ARC, should be.
+<[JAX.ASM] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> F83S is an extension of F83 with
+     a lot of nice features
+<[JAX.ASM] FIGCHAPTERS> Best forth blockfile editor in existence.
+<[JAX.ASM] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Big but not gigantic
+<[John] J.KNIGHT2> like what
+<[JAX.ASM] FIGCHAPTERS> ...???
+<[John] J.KNIGHT2> the nice features?
+<[Len] NMORGENSTERN> Oh, it has such things as sorted
+     word lists, a v. good editor
+<[Len] NMORGENSTERN> (as Jax mentioned). It's been
+     several years since I used it.
+<[JAX.ASM] FIGCHAPTERS> Have you visited Atlanta FIG?
+<[Len] NMORGENSTERN> You can HUNT, which is like FIND
+     but scans for parts of words
+<[John] J.KNIGHT2> What are there so few FIGS. I'm
+     in atlanta and the closest BBS I fould find was far far away?
+<[John] J.KNIGHT2> Does it have a sponsered BBS?
+<[Len] NMORGENSTERN> Jax do you have the Atlanta Fig address ?
+<[JAX.ASM] FIGCHAPTERS> The ATLANTA FIG Chapter Coordinator is John Hennenfent, 
+(404) 393-3010
+<[Len] NMORGENSTERN> John, Jax is Fig chapter coordinator.
+<[Len] NMORGENSTERN> (for the Fig international )
+<[JAX.ASM] FIGCHAPTERS> Excuse, that is Nick Hennenfent, not John H.
+<[Len] NMORGENSTERN> Jax, John, I do have to leave.
+     Jax, why don't you capture & down load
+<[Len] NMORGENSTERN> to me <upload that is> if there is anything of interest?
+<[JAX.ASM] FIGCHAPTERS> Not all FIGs have BBSes, btw.
+     We do in Denver, though. (303) 278-0364 3/12/24
+<[JAX.ASM] FIGCHAPTERS> ok, len.
+<[Len] NMORGENSTERN> Thanx
+<[JAX.ASM] FIGCHAPTERS> gnite hope you had ...
+<[JAX.ASM] FIGCHAPTERS> a happy tanach's-giving ... :-)
+<[Len] NMORGENSTERN> Night, all. John, come back, and also attend Thursday 
+conferences!
+=== End of Steno notes. ===
+
+

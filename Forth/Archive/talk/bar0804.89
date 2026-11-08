@@ -1,0 +1,253 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 08/03/89   Time: 22:18EDT
+Attendees:
+[[Gary] GARY-S]
+[[Kevin] APPERT]
+[[Dennis] D.RUFFER]
+[[Dave] DHWEINSTEIN]
+   Items discussed: Chuck Moore conference 8/24,OOF package, Fortran on GEnie,
+                Ada at DoD,Missing SIGFORTH newsletters,Forth resource update,
+                space shuttle CPU's, Freemont box benders
+Minutes:
+<D.RUFFER> is here.
+<[Kevin] APPERT> him Dennis
+<D.RUFFER> Hello Gary, Kevin
+<[Kevin] APPERT> oops Him=HI
+<[Gary] GARY-S> Denni - I'm here - go unpack, whatever
+<[Dennis] D.RUFFER> no, you've got it wrong...this time I'm packing to go home 
+tomorrow YEA!
+<[Gary] GARY-S> go pack then
+<[Kevin] APPERT> where are you ?
+<[Gary] GARY-S> guess you saw who our August conferee is
+<[Dennis] D.RUFFER> I'm in Rochester right now kevin
+<[Dennis] D.RUFFER> yes, how did you convince Chuck to do it?
+<[Gary] GARY-S> asked him - he's nice, so am I (any arguments )
+<[Dennis] D.RUFFER> no argument from me :-)
+<[Gary] GARY-S> He was hoping to be able to make an announcement, but that is 
+not to be
+<[Kevin] APPERT> Forth is rather good, as religions go.  You can't talk to 
+Buddah or Martin Luther any more.
+<DHWEINSTEIN> is here.
+<[Kevin] APPERT>  hi Dave
+<[Dave] DHWEINSTEIN> Hullo
+<[Gary] GARY-S> guess you also noted the problem I had with GEnie yesterday - 
+it's fixed
+<[Dennis] D.RUFFER> ah yes, you have access now?
+<[Gary] GARY-S> yep
+<[Gary] GARY-S> What the hell do they do with those flags anyway ?
+<[Dennis] D.RUFFER> just danl and company playing around again
+<[Dennis] D.RUFFER> you know them programmer types...
+<[Dennis] D.RUFFER> just can't leave well enough alone :-)
+<[Gary] GARY-S> Dave W's shortfall as a writer in need of space is going to be 
+our library windfall - right Dave ?
+<[Dave] DHWEINSTEIN> The OO code will be uploaded *REAL SOON NOW*. I need to 
+make sure that what is in is working, add polymorphism and auto-initializ
+ation, and then tighten up the code a wee bit. (Then later add a heap manager, 
+integrate that with the OO code, through the whole thing on top ogf the
+ virtual memory system)
+<[Dave] DHWEINSTEIN> err throw.
+<[Dave] DHWEINSTEIN> Right. All code will be uploaded. The modules and record 
+code are fine and working nicely (at least every time I've checked...no
+bugs so far have crept back in).
+<[Kevin] APPERT> Flags?
+<[Gary] GARY-S> enable/attend flags for conference/category areas Kev
+<[Dave] DHWEINSTEIN> And they can be uploaded whenever it is I have a chance.
+<[Dennis] D.RUFFER> Danl is the GEnie system programmer kevin, and he is 
+responsible for all this stuff we complain about <grin>
+<[Dave] DHWEINSTEIN> The OO code is still being revised, expanded, and cleaned 
+up. And I still have to write an article about a moving platform. :-)
+<[Dave] DHWEINSTEIN> Have pitty on the man...isn't this system done in Fortran?
+<[Gary] GARY-S> Timing is great Dave - there has been a resurgence of OO 
+interest - witness the messages in the NEON Topic (I expanded into OOF)
+<[Dave] DHWEINSTEIN> (no no no...one t...one t... stupid fingers)
+<[Dennis] D.RUFFER> Fortran and C (mostly now)
+<[Dave] DHWEINSTEIN> Yeah. It's been all over Usenet. I'm busy today and 
+tomorrow (a good friend is getting married), but given time I hope to have it
+ uploaded in the next week.
+<[Gary] GARY-S> I don't think the Fortran is doing the forgetting
+<[Dave] DHWEINSTEIN> (The resurgence in OO code)
+<[Gary] GARY-S> I think disk swapping is the problem
+<[Dave] DHWEINSTEIN> Real Programmer's Rule #1: Blame everything on inferior 
+languages like Fortran.
+<[Dave] DHWEINSTEIN> Real Programmer's Rule #2: Avoid Ada like the plague. (Ada 
+is a trade mark of the bloody DoD)
+<[Dave] DHWEINSTEIN> (Fortran is something no one will trade mark because they 
+are not willing to take the blame)
+<[Dennis] D.RUFFER> Danl is really quite good at it, and admits when it IS his 
+mistake
+<[Gary] GARY-S> DoD is trying harder and harder to enforce ADA only to find 
+resistance mounting - I love it
+<[Kevin] APPERT> Bacas admits blame
+<[Dave] DHWEINSTEIN> Ada is a monstrosity. Shout it from the hilltops. Shout it 
+in the classrooms. Shout it in the design meetings.
+<[Dennis] D.RUFFER> DoD has created so many loop holes, even Forth can get in
+<[Gary] GARY-S> ForTran is still a helova bit twiddler/pure cruncher
+<[Dave] DHWEINSTEIN> Ahh...but it is also a monstrosity. It is possible to be 
+both (just look at a Cyber)
+<[Dennis] D.RUFFER> actually, anywhere they can, they have rewritten the GEnie 
+code into C
+<[Gary] GARY-S> After twenty + years it is pointless to try to patch lousey I/O
+<[Dennis] D.RUFFER> tis a pity that no one has written Forth for the Honeywells 
+yet :-)
+<[Dave] DHWEINSTEIN> "I don't know what scientists will be using in the year 
+2000, but they'll call it Fortran"
+<[Gary] GARY-S> Fortran 99
+<[Dave] DHWEINSTEIN> There was talk of that a while back... remember. It died a 
+horrid death when we found it out we'd have to code it in Fortran.
+<[Gary] GARY-S> Hmmm - quiche eaters - not in pure binary ?
+<[Dave] DHWEINSTEIN> Anything else new out there? (I'm on a quick schedule 
+tonight...I need to run lots of errands and then get ready for tomorrow)
+<[Gary] GARY-S> Dave - where the heck are the SIGFORTH newsletters ?
+<[Dave] DHWEINSTEIN> George is on that one. I got one by a back handed method. 
+The information...
+<[Dave] DHWEINSTEIN> ACM sent me regarding local SIGForth chapters...
+<[Dave] DHWEINSTEIN> ...included two big packets of newsletters, including the 
+first SigForth newsletter.
+<[Dave] DHWEINSTEIN> (Which to my surprise made me Local Chapter Coordinator)
+<[Kevin] APPERT> I got mine thru normal distribution
+<[Gary] GARY-S> Tell George he's going to start getting the JFAR treatment - 
+every FIGGY there will be a bitch
+<[Dave] DHWEINSTEIN> Which reminds me...ACM is extremely good at legalspeak. I 
+still haven't finished my legalese->techie translation of the local Sig
+ guidelines. (Also needs to be done this weekend).
+<[Dave] DHWEINSTEIN> It is ACM you should blame...they do they distribution. 
+CAll *them* up this week and bitch.
+<[Dave] DHWEINSTEIN> -y
+<[Kevin] APPERT> what if you don't speak techie?
+<[Dave] DHWEINSTEIN> What??? You want me to translate into *english*??? :-)
+<[Dave] DHWEINSTEIN> (I could translate it into yiddish) :-)
+<[Kevin] APPERT> oi
+<[Gary] GARY-S> no - American
+<[Dennis] D.RUFFER> no - Forth!
+<[Kevin] APPERT> empty do-nothing loops?
+<[Dave] DHWEINSTEIN> : LOCAL-SIG BEGIN GET-FORM GET-PERMISSION GET-PERMISSION 
+FILE-FORM GET-FORM FILE-FORM GET-MEMBERS GET-APPROVAL AGAIN ; IMMEDIATE
+<[Kevin] APPERT> looks endless to me
+<[Dennis] D.RUFFER> reverse polish legalese?
+<[Dave] DHWEINSTEIN> It's not *that* bad. It's just thick. If you have a local 
+ACM chapter...it looks pretty easy.
+<[Gary] GARY-S> Remeber - it is time to update the BBS/resource list, so pass 
+on info
+<[Dave] DHWEINSTEIN> If you don't then it gets a bit more complicated.
+<[Dave] DHWEINSTEIN> Ok.
+<[Dave] DHWEINSTEIN> Well...I need to go. Buy
+<[Gary] GARY-S> I talked to Druma, dave
+<[Dave] DHWEINSTEIN> (Err Bye...I need to go buy)
+<[Dave] DHWEINSTEIN> Oh? Are they linking into ForthNet?
+<[Gary] GARY-S> I suggested it
+<[Dave] DHWEINSTEIN> SO did I. Maybe they'll decide to.
+<[Dave] DHWEINSTEIN> Later.
+<[Dennis] D.RUFFER> do you want vendor boards on the list gary
+<[Gary] GARY-S> They can be reached by StarLink
+<[Dave] DHWEINSTEIN>  /run-errands
+<[Dennis] D.RUFFER> see ya dave
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> you bet !
+<[Gary] GARY-S> any and all
+<[Gary] GARY-S> we already have LMI and RCFB which is essentially Vesta
+<[Gary] GARY-S> does Harvard have one ?
+<[Gary] GARY-S> Jim Callahan's H/S not the Univ
+<[Gary] GARY-S> hello ????
+<[Dennis] D.RUFFER> i can give you the number of Forth, Inc's board (213) 
+318-6884, but can't remember the sysop's last name (it's randy something)
+<[Dennis] D.RUFFER> haven't heard of H/S hanving one
+<[Gary] GARY-S> e-mail it so I can compile the whole thing - include baud rates.
+..etc
+<[Dennis] D.RUFFER> ok, when I get back to have the right names ok?
+<[Gary] GARY-S> is Ray LMI's SysOp since Ron is gone ?
+<[Gary] GARY-S> enough of that -,anything new shaking at Rockwell ?
+<[Dennis] D.RUFFER> I could check this weekend.  Maybe they have the sysop's 
+name on the front door???
+<[Gary] GARY-S> please do Dennis
+<[Dennis] D.RUFFER> wrote a note to do it
+<[Gary] GARY-S> I think we are sans kevin
+<[Kevin] APPERT> hi
+<[Gary] GARY-S> anything new ?
+<[Kevin] APPERT> couldn't think of anything to say, so I was busy not saying it
+<[Gary] GARY-S> Did that code job ever make it out the door despite management ?
+<[Kevin] APPERT> a while back the software was "released"
+<[Gary] GARY-S> Are those still AIM's on the shuttles ?
+<[Kevin] APPERT> I'm fighting flakey RAMs now.
+<[Kevin] APPERT> AIM's?
+<[Gary] GARY-S> that's what I was told
+<[Kevin] APPERT> GRIDs
+<[Gary] GARY-S> for controllers
+<[Gary] GARY-S> really
+<[Dennis] D.RUFFER> which GRiD do they use?
+<[Gary] GARY-S> Doesn't Tandy own GRID, now
+<[Dennis] D.RUFFER> yes
+<[Kevin] APPERT> they were flying trs80-100 laptops before the accident, but 
+not any more
+<[Gary] GARY-S> hope they didn't need fast screens
+<[Kevin] APPERT> you had to swap out the plastic shield over the LCD, but other 
+than that you could fly as is
+<[Dennis] D.RUFFER> my GRiD flys with me all the time <grin>
+<[Gary] GARY-S> how come the choice(s) 0 rugged ?
+<[Kevin] APPERT> no, the lens swap comment was about the trs80/100
+<[Dennis] D.RUFFER> why did they switch?
+<[Kevin] APPERT> they were ill disposed to fly a cheap plasti computer in a 
+man-rated vehicle after an accident, I guess
+<[Gary] GARY-S> do the grids actually do any more ?
+<[Kevin] APPERT> a bit, they are PC compatible
+<[Gary] GARY-S> I kno they can - do they
+<[Kevin] APPERT> they have floppy drives instead of audio cassette
+<[Kevin] APPERT> they were always flying grids.  they just stopped the trs100s
+<[Gary] GARY-S> Now - I would worry about floppy's taking the G's
+<[Kevin] APPERT> floppys can generally take more Gs than people
+<[Kevin] APPERT> Grids are able to withstand the vibration and forces, they are 
+pretty rugged
+<[Gary] GARY-S> which model - the compass
+<[Kevin] APPERT> don't know, think that's the one
+<[Dennis] D.RUFFER> mines starting to have connector problems though
+<[Gary] GARY-S> use goldwipes Dennis
+<[Gary] GARY-S> from texwipe
+<[Dennis] D.RUFFER> problem is getting to them...pretty tight spacing
+<[Dennis] D.RUFFER> I've got some at home, if I can only locate the right box :
+-)
+<[Gary] GARY-S> then burn a hole in the ozone and zap them with freon tf
+<[Dennis] D.RUFFER> that may be the only way...I've never seen such small 
+spacing on header connectors
+<[Gary] GARY-S> till 1992 it's still legal anyway
+<[Dennis] D.RUFFER> better go stock up on some <smile>
+<[Gary] GARY-S> do NOT use contact cleaner !!!!
+<[Gary] GARY-S> heck - no shelf life
+<[Gary] GARY-S> no freon will keep indefinitely
+<[Gary] GARY-S> except in a hermetically sealed vessel - and what good is that
+<[Dennis] D.RUFFER> yep, but I'd better find a can when I get home
+<[Gary] GARY-S> make sure it is Freon-tf
+<[Dennis] D.RUFFER> this disk drive just suddenly decides it want to cycle power
+<[Gary] GARY-S> you may have pwr sup foil path cracking instead
+<[Dennis] D.RUFFER> Since I'm fairly close to Fremont CA, I might just drop in 
+for a PM
+<[Gary] GARY-S> just call me the sunshine man :-)
+<[Gary] GARY-S> surprised they haven't moved operations to Ft Worth
+<[Dennis] D.RUFFER> there is a little bar inside that turns red when exposed to 
+excessive vibration, and one of them is red (it dropped a little while
+ back)
+<[Dennis] D.RUFFER> not to mention the constant vibration over curbs :-)
+<[Gary] GARY-S> PM might be more than advised if you aren't up to cleaning foil 
+paths
+<[Gary] GARY-S> with a soldering iron
+<[Dennis] D.RUFFER> my handy dandy Radio trash volt meter is almost dead anyway
+<[Gary] GARY-S> How come there's so many pc makers in the Freemont area - 
+anyone know ?
+<[Kevin] APPERT>  cheap labor?
+<[Dennis] D.RUFFER> the chip maker used to be there, now there are a lot of 
+spare engineers
+<[Gary] GARY-S> lot of industrial pc packagers there
+<[Kevin] APPERT> well, this evening seems to be kinda dead.  See ya'all soon.  
+I'm gonna scoot
+<[Gary] GARY-S> any thing more forthish ?
+<[Kevin] APPERT> has left.
+<[Gary] GARY-S> yeah - let's close the Bar
+<[Gary] GARY-S> g'nite
+<[Dennis] D.RUFFER> did we boore him
+<[Dennis] D.RUFFER> good early night gary
+<[Gary] GARY-S> take care
+<[Gary] GARY-S> have a good trip
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,313 @@
+
+
+Item    8646900                 87/12/13        19:43
+
+From:   D.RUFFER                        Dennis A. Ruffer
+
+To:     TOMMACKIE                       Tom Mackie
+
+cc:     FIG$                            FIG RT Volunteers
+
+Sub:   FIG Survey
+
+  	Tom, I've heard we have the capability to do surveys now, and
+  that you are the one to talk to about it.  Well, I'd like to give it
+  a try.  I missed seeing the sample that was put up in the CB section,
+  but I captured the output from the GEnie survey you conducted a while
+  ago.  I haven't heard what kind of limitations this survey has, so I
+  pretty much just altered what I captured from the GEnie survey.  I
+  hope this is in the format that you need.  If not, let me know what
+  you need, and I'll change it.  I'd like to get this on our menus
+  before the holidays, so it can get the maximum exposure during the
+  holiday hours.
+
+  	Thanks!   DaR
+
+  GEnie        FIGSURVEY        Page  ???
+       Forth Interest Group Survey
+
+   1. Instructions
+   2. Take the Survey
+
+  Enter #, <P>revious, or <H>elp?1
+
+  The Forth Interest Group Survey has been designed for the purpose of providing
+  FIG a better understanding of the needs of our members, and to provide us
+  feedback about some of the pressing issues concerning the Forth Language.
+
+  The FIG Survey consists of 20 multiple choice questions. At the end of each
+  question, you will be prompted for an answer. Please choose the letter which
+  appears before your answer. On questions that may allow more than one answer,
+  you may choose to enter a group of letters separated by commas, as in A,B,C, 
+or
+  by placing a space between each letter, as in A B C, or by simply stringing 
+the
+  letters together, as in ABC. Any of the above choices will record your answers
+  correctly. The last question gives you the option to provide further comment 
+to
+  FIG via GE Mail.
+
+  At any point during the Survey, you may exit without recording your answers by
+  typing QUIT.  You may skip any question by pressing <RETURN> at the answer
+  prompt.  After you have completed the survey, you may answer just the skipped
+  questions, or answer all questions by taking the survey again.
+
+  The Forth Interest Group thanks you for your time and participation in the
+  Survey and in helping us to continue to offer a high quality service.
+
+
+  GEnie        FIGSURVEY        Page  ???
+       Forth Interest Group Survey
+
+   1. Instructions
+   2. Take the Survey
+
+  Enter #, <P>revious, or <H>elp?2
+
+  There are 20 total questions in this survey. Some questions require one 
+answer,
+  others allow multiple answers.  You will have a chance to send comments
+  following the survey.  To skip a question, simply press <RETURN> at the 
+prompt.
+  To end the survey, type STOP.
+
+  1. How long have you been a FIG member?
+
+      A.  0 -  1 year
+      B.  1 -  2 years
+      C.  2 -  3 years
+      D.  3 -  5 years
+      E.  5 - 10 years
+      F. Over 10 years
+      G. Not a FIG member
+  Answer ?
+
+  2. How long have you been using Forth?
+
+      A.  0 -  1 year
+      B.  1 -  2 years
+      C.  2 -  3 years
+      D.  3 -  5 years
+      E.  5 - 10 years
+      F. Over 10 years
+      G. Do not use Forth
+  Answer ?
+
+  3. How would you classify your Forth usage?
+
+      A.  Personal
+      B.  Professional applications
+      C.  Language developer
+      D.  Other
+  Answer ?
+
+  4. What type of "commercial" computer do you use?
+
+      A.  8088 IBM or compatible
+      B.  80286 IBM or compatible
+      C.  80386 IBM or compatible
+      D.  Apple // //e or GS
+      E.  Apple Macintosh 128K or 512K
+      F.  Apple Macintosh Plus, SE or II
+      G.  Commodore 64
+      H.  Commodore Amiga
+      I.  Atari 8 bit
+      J.  Atari ST
+      K.  CP/M based computer
+      L.  Tandy 1/3/4
+      M.  Tandy color computer
+      N.  Dumb terminal
+      O.  Other
+  Choose 1 or many ?
+
+  5. What type of Forth computer have you worked with?
+
+      A.  Novix NC4016
+      B.  Harris FORCE chip
+      C.  Rockwell R65F11
+      D.  Zilog Super-8
+      E.  Johns Hopkins Univ. Forth chip
+      F.  MVP Microcoded CPU/16
+      G.  WISC (Writable Instruction Set Computer)
+      H.  MISC (Minimal Instruction Set Computer)
+      I.  PC-RISC system
+      J.  Other
+      K.  Have not worked with any
+  Choose 1 or many ?
+
+  6. How often do you access this RoundTable?
+
+      A.  Less than once per week
+      B.  1 - 2 times per week
+      C.  3 - 4 times per week
+      D.  5 - 10 times per week
+      E.  More than 10 times per week
+  Answer ?
+
+  7. What is the average time you spend on the FIG RT per session?
+
+      A.  Less than 5 minutes
+      B.   6 - 15 minutes
+      C.  16 - 30 minutes
+      D.  31 - 60 minutes
+      E.  Over 60 minutes
+  Answer ?
+
+  8. What is the best day for you to join us in an on-line conference?
+
+      A.  Monday
+      B.  Tuesday
+      C.  Wednesday
+      D.  Thursday
+      E.  Friday
+      F.  Saturday
+      G.  Sunday
+  Choose 1 or many ?
+
+  9. When is the best time for us to hold an on-line conference?
+
+      A. 12:00-1:00 pm PST  (Sat or Sun)
+      B.  1:00-2:00 pm PST  (Sat or Sun)
+      C.  2:00-3:00 pm PST  (Sat or Sun)
+      D.  3:00-4:00 pm PST  (Sat or Sun)
+      E.  4:00-5:00 pm PST  (Sat or Sun)
+      F.  5:00-6:00 pm PST  (Sat or Sun)
+      G.  6:00-7:00 pm PST
+      H.  7:00-8:00 pm PST
+      I.  8:00-9:00 pm PST
+  Choose 1 or many ?
+
+  10. Who usually pays for your online usage charges?
+
+      A.  Yourself
+      B.  Your Company
+      C.  Your Parents
+      D.  Educational Institution
+      E.  Other
+  Answer ?
+
+  11. Please indicate your education level.
+
+      A.  Less than High School graduate
+      B.  High School graduate
+      C.  Some College
+      D.  Still in College
+      E.  2 yr. College graduate
+      F.  4 yr. College graduate
+      G.  Some post graduate
+      H.  Graduate degree
+      I.  I Choose not to answer
+  Answer ?
+
+  12. What is your age bracket?
+
+      A.  Under 18
+      B.  18 - 25
+      C.  26 - 34
+      D.  35 - 44
+      E.  45 - 54
+      F.  55 - 64
+      G.  Over 65
+  Answer ?
+
+  13. What is your sex?
+
+      A.  Female
+      B.  Male
+  Answer ?
+
+  14. How would you describe the ANSI Forth standardization efforts?
+
+      A.  Essential
+      B.  Useful
+      C.  Confusing
+      D.  Useless
+      E.  Disruptive
+      F.  Don't care
+  Answer ?
+
+  15. What parts of Forth should an ANSI standard address?
+
+      A.  Vocabulary support
+      B.  Mass storage support
+      C.  Repetition flow control
+      D.  Arithmetic operators
+      E.  Documentation requirements
+      F.  Testing requirements
+      G.  Machine assemblers
+      H.  Controlled Reference set
+      I.  ROMability support
+      J.  File structures
+      K.  Interpreter
+      L.  Dictionary access
+      M.  Numeric output
+      N.  Flow control
+  Choose 1 or many ?
+
+  16. Do you think the standard should be tied to specific cell sizes?
+
+      A.   8 bits
+      B.  16 bits
+      C.  32 bits
+      D.  64 bits
+      E.  Size independent
+  Choose 1 or many ?
+
+  17. How many times should  DUP DO ... LOOP  execute?
+
+      A.  0 times
+      B.  1 time
+      C.  65536 times
+      D.  A long time
+      E.  Forever
+  Answer ?
+
+  18. What should the result of -3 2 / be?
+
+      A.  -1
+      B.  -2
+      C.  Unspecified
+  Answer ?
+
+  19. Would you be interested in any of the following?
+
+      A.  Professional Forth newsletter
+      B.  Continuing education opportunities
+      C.  Management seminars
+      D.  Job referrals
+      E.  Legal referrals
+      F.  Financial referrals
+      G.  Market research
+      H.  Packaging assistance
+      I.  Customer support
+  Choose 1 or many ?
+
+  20. Do you wish to add additional comments?
+
+      A.  Yes
+      B.  No
+  Answer ?
+
+
+  Use *S to send your comments and exit GEmail.
+  Use *X to exit GEmail without sending comments.
+
+
+  No letters waiting
+
+     1>Can we get the continuing results of this survey?
+     2>*s
+
+  8595430 Created 87/10/31  22:34
+
+  8595430 Sent 87/10/31  22:34     To: FIGSYSOPS$
+
+
+  Thank you for taking the FIG Survey
+  Your answers have been recorded.
+
+
+
+=END=
+
+

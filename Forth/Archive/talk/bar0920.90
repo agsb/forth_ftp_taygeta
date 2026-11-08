@@ -1,0 +1,457 @@
+
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 09/20/90   Time: 22:40EDT
+Attendees:
+[[Gary] GARY-S]
+[[Dennis] D.RUFFER]
+[[Dick Miller] FIGGUEST]
+[[Wil] W.BADEN1]
+[[Robert] R.BERKEY]
+[[ting] C.TING]
+[[john w] J.WAVRIK1]
+[[]DANMILLER]
+[[AmigaDOS!] JAX]
+[[Len] NMORGENSTERN]
+
+Minutes:
+
+<[Len] NMORGENSTERN> is here.... Hi Gary... I made it!... I will
+                    be able to take the next 2 Thursday...
+                    conferences
+<[Gary] GARY-S> Thanks - I was on the phone with Dick - sorry
+<[Len] NMORGENSTERN> No problem!
+<[Gary] GARY-S> How was your RH ?
+<[Len] NMORGENSTERN> Thanks for your New Year's wishes.
+<[Gary] GARY-S> They were meant from the heart
+<D.RUFFER> is here.
+<FIGGUEST> is here.
+<[Gary] GARY-S> FYI, my Dad has begun hallucinating some
+<[Dennis] D.RUFFER> Hello Gary, Len
+<[Len] NMORGENSTERN> Hi Dennis. I was telling Gary that I will...
+                    be able to take the next 2 Thur. confs.... Do
+                    they know the cause?
+<[Dennis] D.RUFFER> Thanks Len, sorry to hear about that about
+your dad Gary
+<[Len] NMORGENSTERN> Hi Dick!
+<[Dennis] D.RUFFER> hello Dick, and WELCOME!
+<[Gary] GARY-S> Dick - /xec to kill echo  /sta will show I am job
+                    1, and /nam to hange your name
+<[Wil] W.BADEN1> is here.
+<FIGGUEST> Hi all.
+<[Len] NMORGENSTERN> Hi wil...
+<[Wil] W.BADEN1> Hi Gary, Len, Dennis.
+<[Dennis] D.RUFFER> nope you had it right the first time Dick,
+type "/name Dick"
+<[Wil] W.BADEN1> It's nice to "meet" you, Dick.
+<[Dennis] D.RUFFER> there ya got it!
+<[Dick Miller] FIGGUEST> Ha! Got it!... ga
+<J.WAVRIK1> is here.
+<[Dick Miller] FIGGUEST> Hi john!
+<[John W] J.WAVRIK1> Hi Dick
+<[Gary] GARY-S> One minute to showtime
+<[Dennis] D.RUFFER> well hi john, glad you could join us for this
+<R.BERKEY> is here.
+<[Dennis] D.RUFFER> hi robert!
+<[Robert] R.BERKEY> hiya!
+<[Wil] W.BADEN1> Hi John, Robert.
+<[Dick Miller] FIGGUEST> Yup!... ga
+<[Dennis] D.RUFFER> hey Wil, was your Control Flow file supposed
+                    to have graphics in it?... oops later Wil
+<[Gary] GARY-S> PARTY TIME - Let's go formal...  Before we begin
+                    tonight's conference I need to remind ......
+                    everyone this is a formal conference. .. ..
+                    .....  That means NO interlacing. Request a
+                    turn to speak by typing .....   !! <CR> or
+                    /RAI <CR>. I will keep a list and call on
+                    whoever ......  is next. PLEASE follow these
+                    simple rules : ......  PLEASE make your first
+                    response ok <CR> (so we know YOU know). ...
+                    Then, keep your lines short, ending
+                    incomplete thoughts ......  with three dots
+                    (...) and ending your question/statement with
+                    ga <CR>....                        thank you.
+<[Gary] GARY-S>    The GEnie Forth RoundTable is very pleased to
+                    welcome this ......  evening's special guest,
+                    Dick Miller who is a partner in Miller......
+                    Microcomputer Services, a cottage industry
+                    whose work-at-home.....  programmers develop
+                    state of the art microcomputer software
+                    ......  at all levels from operating system
+                    through language (MMSFORTH).....  to such
+                    varied application programs as word
+                    processors, data ......  base systems, and
+                    communications modules. ......  Before
+                    founding MMS in 1977, Dick worked as an
+                    electro-optical......   physicist for Polorad
+                    Electronics Corp., Block Engineering ......
+                    and EG&G, Inc. He has also served as
+                    Executive Director of ......  Lake Cochituate
+                    Watershed Association, an environmental
+                    ......  group dedicated to the effective
+                    public involvement in lake ......  management
+                    issues including water quality and use.
+                    ......  Dick holds a BS in Physics from
+                    Queens College and has studied ......  at
+                    Rensselaer Polytechnic Institute, Brooklyn
+                    Polytechnic  ......  Institute and New York's
+                    Hayden Planetarium. ......  He and his
+                    programmer-wife (and MMS partner) Jill still
+                    enjoy......  sailing boats -- from Sunfish to
+                    a three-masted square-rigger......  most of
+                    all.Dick is here to discuss whether to run
+                    Forth on DOS......  ... or NOT.    Please
+                    welcome tonight's guest, Dick Miller....   ..
+                    .. .. .. .. ga Dick
+<JAX> is here.
+<C.TING> is here.
+<[Dick Miller] FIGGUEST> Hi friends...... This is my first
+                    conference via keyboard...... so be kind and
+                    thanks for your r patience...... The topic
+                    for tonight's convefence, to DOS or not to
+                    DOS, echoes ...... some of the Forth
+                    philosophy we've been using at MMS since we
+                    released...... the first version of MMSFORTH
+                    way back in Sprinring 1979....... in parallel
+                    with the early FigForth efforts.... And,
+                    while we were waiting six months for an
+                    answer to our letter, ...... in the FIG
+                    mailbox, we rolled our own....... Then and
+                    since, some of the MMSFORTH programmers are:
+                    Tom Dowling, Jim ...... Gerow, Dave
+                    Lindbergh, John Rible, Bent Schmidt-nielsen,
+                    and of course myself ...... and Jill Miller.
+                    In addition to MMSFORTH, we offer FORTHWRITE,
+                    DATAHANDLER-..... PLUS, FORTHCOM, EXPERT-2,
+                    GENERAL LEDGER, 8087 and vector graphics
+                    support, ...... plus a wide variety of other
+                    utilities and games. Also custom Forth
+                    programming and..... standard and special
+                    hardware to users worldwide.  Sorry for the
+                    commercial..... but I hope this wilill open
+                    up some interesting question areas.... I have
+                    listed some areas of interest, but since we
+                    still offer a nonDOS version.....  I thought
+                    that might be a subject of some general
+                    interest.  Am I right?... ga
+<[John W] J.WAVRIK1> disconnected.
+<[Gary] GARY-S> ga dennis
+<[ting] C.TING> !
+<[Dennis] D.RUFFER> ok... Dick, do you get many sales for your
+                    non-DOS systems?  How much market demand is
+                    there? ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> Dennis, we encourage the use of the
+                    nonDOS version first, even for DOS users. We
+                    ...... find about 50% do use the nonDOS
+                    version exclusively, and others are split
+                    ...... between DOS use and those who use
+                    both....... But they won't know the
+                    difference unless they try the nonDOS
+                    first.... ga
+<[Gary] GARY-S> ga ting
+<[ting] C.TING> What is the busiest area of your products now?...
+                    ga Dick
+<[Gary] GARY-S> was that it ting ?
+<[ting] C.TING> Yes.
+<[Gary] GARY-S> ga dick
+<APPERT> is here.
+<J.WAVRIK1> is here.
+<[Dick Miller] FIGGUEST> Hi! Well, any users who are
+                    progogrammers  do use the Forth itself, so
+                    that looks like the main item....... BBut we
+                    are busy with custom applications as well....
+                    ga
+<[Gary] GARY-S> ga jax
+<[AmigaDOS!] JAX> Hi Dick ...... Congratulations on a longevity
+                    ..... rare in commercial Forth! ...... You
+                    mentioned ...... EXPERT-2 .... (which I
+                    ported to MVP and which they never released)
+                    ...... ( for amiga) ...... Hows is EXPERT-2
+                    doing these days? Interesting uses?
+                    Improvements?... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> Re Expert-2...... We sell it, but I
+                    don't get a chance to use it myself. I wish I
+                    did. ...... I am now discussing an expert
+                    system from Russia, and hope to offer it by
+                    year's end.... ga
+<[Gary] GARY-S> The floor is open - in the meantime Dick is truly
+                    international. We had hoped to have a
+                    special...... guest here from Russia tinight,
+                    but Igor missed the plane.
+<[Len] NMORGENSTERN> !
+<[AmigaDOS!] JAX> Expert system from russia?
+<[Gary] GARY-S> Dick care to mention the Russioan and British
+                    connections... ga Dick
+<[Dick Miller] FIGGUEST> Sure.  We are interested in doing
+                    business, but even more interested in
+                    helping...... others to do business in the
+                    U.S. market.  With this in mind, we have
+                    become...... the distributor for some Forth
+                    products from England: the MACH1 In-PC
+                    Board...... (a Harris chip board for the PC)
+                    and FORTH++ to go with it, and we are
+                    now...... preparing to introduce several
+                    different programs from the USSR.  I ......
+                    am still working on shaping the Russian
+                    products for the U.S. market, but...... both
+                    sides seem optimistic and the only one ready
+                    to name is the Expert System...... project.
+                    I am planning to demonstrate the MACH1 board
+                    at the local FIG meeting...... in Eastern
+                    Massachusetts in October, if anyone's in the
+                    area.... ga
+<[Gary] GARY-S> ga dennis
+<[Dennis] D.RUFFER> ok... It sounds like you are doing well
+                    then....... are the Russians using MMS Forth
+                    or their own varieties...... as we've seen in
+                    AstroForth (available in our Library)... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> We're not hurting, but we don't think
+                    we're doing well at the moment....... All of
+                    New England seems to be in a minor slump, and
+                    we see it in slowed...... software
+                    investments from our clients and customers.
+                    I wish we could hire one..... of the new
+                    Russian immigrants, Alex Sakharov, for
+                    example, but we just don't...... have enough
+                    work load just now.  As to the current
+                    Russian forth usage, ...... yes, AstroForth
+                    is common and MMSFORTH is not. BetaForth, a
+                    smaller version ...... which seems to be a
+                    subset of AstroForth, also is used well over
+                    there.... ga
+<[Gary] GARY-S> ga len
+<[Len] NMORGENSTERN> ok... How do your non-Dos programs handle
+                    DOS files?... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> Well, most of the time they don't, and
+                    get many other advantages by that fact.
+                    ...... But to transfer files, or ranges of
+                    blocks, we offer two major methods. ......
+                    XFER is our nonDOS file xfer utility, and
+                    FORTHCOM can do the same tricks....... over a
+                    RS-232 link.... ga
+<[Gary] GARY-S> ga robert
+<[Robert] R.BERKEY> Where do you see Forth's strengths in the
+                    next 15 years? (worldwide too) ga.
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> Go... wait...... Caught in the cross-
+                    fire!  Good question.  ...... I personally
+                    like Forth's abilities for rather
+                    conventional programming. ....... It is
+                    small, quick, flexible, and we try to keep
+                    MMSFORTH easy to learn and ...... very
+                    consistent in usage.  ....... So I hope the
+                    excitement about Forth chips and embedded
+                    systems ...... doesn't change Forth from
+                    those values which I see as beneficial to
+                    more ...... programmers.  In Russia, we hear
+                    that the cost and non-availability of ......
+                    hardware makes Forth the shoehorn that lets
+                    major programs fit on minor ...... computers.
+                    Like back in PDP-8 days, here.  And that
+                    sounds good to me, too. ...... I see some
+                    Forth directions going towards what I think
+                    of as C directions, ...... and I personally
+                    hope that doesn't become too popular at the
+                    expense of ...... these directions I favor
+                    myself.... gaga
+<[Gary] GARY-S> ga dennis
+<[Dennis] D.RUFFER> ok... well two questions cause I haven't
+                    found a good opening for the first...... 1)
+                    do you have problems with hard disks on you
+                    non-DOS version?...... 2) how do you see the
+                    ANS Forth efforts affecting the future?... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> 1) No, nonDOS MMSFORTH includes an
+                    optional hard disk driver, and
+                    instructions...... for repartitioning any
+                    range of cylinders for nonDOS use.  That in
+                    turn can be...... addresses as up to 8
+                    logical drives, which handle as Forth blocks
+                    in a trans...... parent manner. But in this
+                    mode, we don't boot MMSFORTH from the hard
+                    drive, just from Drive A. ...... 2) ANS FORTH
+                    efforts?  I personally am very discouraged by
+                    the current direction. ...... All our Boston
+                    standards group have voiced the same
+                    concerns, and we don't ...... think we will
+                    be able to stop the momentum to change Forth
+                    significantly. ...... I think I speak for all
+                    of us, in saying we want a small standard
+                    subset. ...... We don't think general
+                    portability is a reasonable goal. ...... We
+                    think obsoleting the few good Forth textbooks
+                    is a major mistake. ...... We think a group
+                    which thinks like ANS won't think like us.
+                    ...... We think our points are those of many
+                    Forth programmers, but not reflected ......
+                    by those in the standards effort. ......
+                    Sorry to be so negative, but that's how it
+                    looks from Boston FIG.... ga
+<[Gary] GARY-S> ANS Tech Committee could learn from MMS regarding
+                    transportability - you enjoy a high degree of
+                    it within your dialect don't you ?... ga dick
+<[ting] C.TING> !
+<[Dick Miller] FIGGUEST> Yes, Gary. ...... Back when the TRS-80's
+                    were significant, we developed for them.
+                    ...... Later, on IBM PC, we introduced
+                    methods to share disks between both ...... --
+                    and quite different -- systems. ...... For
+                    example, we introduced a disk format which
+                    ran on both, and offered ..... additional
+                    space for all.  Our "360K" disks hold 395K of
+                    user blocks, ...... plus a boot track. Etc.
+                    And we have many tricks for maintaining Forth
+                    code ...... in both flavors, at once.... ga
+<[Gary] GARY-S> ga jax
+<[Jack Woehr] JAX> I rise to challenge your assertion that ANS
+                    Forth will "obsolete" anything other than
+                    parochialism in the Forth community. Moore
+                    has indicated that "Forth is an approach,
+                    more than a specification for a programming
+                    language" ...... Particularly troubling is
+                    such negativism from a major vendor who
+                    declines to participate in X3J14.... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> A fair counter view, but if you don't
+                    keep this new standard small, we will ......
+                    be stuck with a big Forth, or a "nonstandard"
+                    one with limited marketing ...... appeal, and
+                    our users will be carried along on that tide.
+                    We believe in ...... what we're doing, not
+                    just in finding another flavor to market.
+                    ...... And I think many others agree. I know
+                    they do in Boston!... ga
+<[Gary] GARY-S> ga dennis
+<[Dennis] D.RUFFER> ok... From what I've seen, the ANS TC is
+                    starting to listen...... I must commend the
+                    Boston Std's group for sticking in there.....
+                    and encourage them to stick it out......
+                    there seems to be a groundswell of desire to
+                    trim back...... what many see as a bloated
+                    standard...... If they can do that to your
+                    satisfaction...... whould you implement
+                    it?...... and if you do...... do you see it
+                    as having an affect on your sales?... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> First, thanks for the encouraging words.
+                    I'll pass it on! ...... We would be pleased
+                    to support a new standard which we feel is
+                    worth that ...... support.  In addition to
+                    being small, I would like it to be very
+                    consistent ...... -- that is, non-tricky for
+                    beginners et al -- and as much as possible,
+                    to ...... track the past wordname usages
+                    which are in general use and in those good
+                    ...... textbooks.  I don't need improvements,
+                    but I do need smooth Forth for new ......
+                    users and for old ones who are being asked to
+                    jump through new hoops every ...... few
+                    years.  Does that answer your question
+                    adequately? We ARE interested, ...... and
+                    would look forward to a chance to be more
+                    positive about ANS FORTH.... ga
+<[Gary] GARY-S> ga ting
+<[ting] C.TING> Dennis said it well...... Ans is becoming
+                    significant...... by the documentation
+                    itself. ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> BASIS is very impressive, but we also
+                    find it very oppressive in the amount ......
+                    of new words, and in the changes which we
+                    feel will be a hassle to too many. ...... But
+                    I AM very impressed with the effort itself.
+                    Can such an effort be stopped? ...... Can it
+                    be sufficiently tempered, without angering
+                    its writers? ...... We can only hope for the
+                    latter.... ga
+<[Gary] GARY-S> ga john
+<[john w] J.WAVRIK1> ok... Thanks for recognizing the importance
+                    of textbooks and having..... Forth taught
+                    ...... Back to original subject (DOS vs non
+                    DOS)...... I think an important contribution
+                    to the viability of the nonDOS.....
+                    environment is that MMS has Forthwrite,
+                    Datahandler, etc ...... i.e. tools that
+                    people use most often....... When in the MMS-
+                    DOS version, are the files produced by
+                    these...... products totally compatible
+                    with..... other DOS files?...... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> Yes, keep up the good Forth coursework!
+                    That's most important! ...... MMS-DOS -- I
+                    like that Freudian slip, or whatever......
+                    Our MMSFORTH/DOS files CAN be totally
+                    compatible with others, but in DH+ we ......
+                    choose again to offer a different advantage.
+                    We use counted strings for all ...... fields,
+                    in a very fast and compact implementation..
+                    ...... We do have several methods, again, of
+                    converting to standard (read bulkier) ......
+                    file structures.... ga
+<[Jack Woehr] JAX> disconnected.
+<[]DANMILLER> is here.
+<[Gary] GARY-S> ga dennis
+<[Kevin] APPERT> has left.
+<[Dennis] D.RUFFER> ok... can you stay longer than an hour
+                    Dick?...... don't want to cramp your schedule
+                    too badly :-)... ga
+<[Gary] GARY-S> ga dick... ga dennis - we will extend a quarter
+                    hour... ga dennis
+<[Dennis] D.RUFFER> ok... you answered my question about your
+                    support for ANS...... but my other question
+                    was if/how you think...... it might affect
+                    your future/sales?... ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> Thanks, I did drop that one!  ...... I
+                    think a small, desirable, accepted standard
+                    is worth using, ...... and that such a move
+                    should improve sales here and elsewhere.
+                    Just keep ...... the size down, the changes
+                    down, the consistency and ease of use up.
+                    ..... I hope it happens.... ga
+<[Gary] GARY-S> Dick, please give the folks your telephone
+                    number, hours, etc... ga dick
+<[Len] NMORGENSTERN> has left.
+<[Dick Miller] FIGGUEST> Sure. ...... I will welcome calls on
+                    Forth and related itemss such as
+                    environmental applications, foreign contacts,
+                    even bluebirds! ...... Call us 9am to 9pm
+                    eastern time, at 508/653-6136. ...... Or
+                    write to MMS, 61 Lake Shore Road, Natick, MA
+                    01760-2099.  I... 'll look forward to more
+                    conversation!... ga
+<[Gary] GARY-S> ga wil
+<[Wil] W.BADEN1> Dick, when did you go to Queens College?  I met
+                    my wife-to-be there.  She is B.S. in Math.
+                    ga
+<[Gary] GARY-S> ga dick
+<[Dick Miller] FIGGUEST> Wil, that's a good question and I'll
+                    have to think.  It was a long time ago!
+                    ...... I must have graduated about 1959??...
+                    ga
+<DANMILLER> has left.
+<[Wil] W.BADEN1> Even longer for her.
+<[Gary] GARY-S> Dick - give closing comments please... ga dick
+<[Dick Miller] FIGGUEST> OK. ...... It's been fun, even if my
+                    keyboard got caught up with yours at times.
+                    ..... Hope some of you get to appreciate some
+                    of MMSFORTH's features, and I hope ...... we
+                    can keep some of those and still accommodate
+                    a new Forth standard. ...... Best wishes from
+                    Jill and me, and from our Boston Forth
+                    pals!... ga
+<[Gary] GARY-S>  Dick, on behalf of the GEnie Forth RoundTable,
+                    ......  'Thank you' for a stimulating
+                    discussion.......  All may stay and chat, but
+                    this conference has officially ended.
+
+=== End of Steno notes. ===
+
+

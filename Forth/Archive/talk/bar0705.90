@@ -1,0 +1,231 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 07/05/90   Time: 22:27EDT
+
+Attendees:
+[GARY-S]
+[[Kent] K.PETERSON5]
+[[Kevin] APPERT]
+[[Dennis] D.RUFFER]
+[[Wil] W.BADEN1]
+       
+   The question of the night: Was Mitch Bradley right ? Are some of us 
+   making too big a deal about 'minor' changes as proposed by ANS Forth ?
+   That comprised 90% of the discussion. Also discussed were a bug found
+   in Pygmy (TIB) and Speech Synthasizers.
+
+Minutes:
+<K.PETERSON5> is here.
+<APPERT> is here.
+<GARY-S> Hi - just posting the notice
+<GARY-S> Are some of us making too big a deal out of 'minor' changes as 
+proposed by ANS Forth ?
+<GARY-S> Kev, Kent ?
+<[Kent] K.PETERSON5> Well, a lot of people are reluctant to change what they 
+are used to...
+<[Kent] K.PETERSON5> or what feels "right" to them, but for the sake of getting 
+SOME standard...
+<[Kent] K.PETERSON5> comprimises have to be made.
+<[Kevin] APPERT> it has always been my feeling that there will be other Forths 
+besides ANS Forth...
+<[Kevin] APPERT> and it's hard for me to get excited about the ANS effort.  
+What's an example of a 'minor change' ?
+<GARY-S> NOT is not not - it is invert
+<GARY-S>   the other bitch is /
+<[Kevin] APPERT> for all the emotions and effort put in to both sides, as far 
+back as Brodie's "starting Forth"  and before, I don't think you can call
+that minor
+<GARY-S> Mitch does
+<[Kevin] APPERT> floored division?
+<[Kent] K.PETERSON5> But we could take the standard, load a bunch of our own 
+favorite words on top
+<[Kent] K.PETERSON5> and feel fairly comfortable, I think
+<[Kevin] APPERT> a wise man once told me that he defined NOT  in the following 
+fashion:
+<[Kevin] APPERT> : NOT true abort" Don't use this, nobody knows what it means " 
+;
+<[Kevin] APPERT> this was about 10 years ago, or so
+<[Kent] K.PETERSON5> I like it! :-)
+<GARY-S> The question really is, 'Is there too much wailing and gnashing of 
+teeth ? OR... is this an effort to squelch opposition - opposition required
+by ANS
+<[Kent] K.PETERSON5> A friend of mine said he gave up monitoring the ASNI 
+forth traffic. Too much volume from griping.
+<GARY-S> Is it all that different from 79 and 83, in regards to complaints ?
+<D.RUFFER> is here.
+<[Kent] K.PETERSON5> I think people believe (or hope) ANSI carries more weight.
+<GARY-S> answer the question Dennis
+<[Dennis] D.RUFFER> YES!!!!!!!!!
+<GARY-S> Don't hedge, say what you really mean . :-)
+<[Dennis] D.RUFFER> the problem I see was created with the 83 Std!
+<[Dennis] D.RUFFER> the ANS efforts are merely trying to recover and resolve 
+them
+<[Wil] W.BADEN1> is here.
+<GARY-S> By going back to 78 (and before ) ?
+<[Dennis] D.RUFFER> no, by making the controversies go away, by getting rid of 
+the controversial words or limiting their functions to what we can agre
+e on
+<GARY-S> 1's compliment ? Get real !
+<[Dennis] D.RUFFER> ie, NOT was controversial so it is gone
+<[Dennis] D.RUFFER>  / is controversial so it is also gone
+<[Dennis] D.RUFFER> where is 1's complement machines used or even considered in 
+the standard?
+<[Kent] K.PETERSON5> What will be left when all the controversy is done? DUP & 
+SWAP??
+<GARY-S> two keystrokes is better for divide ?
+<[Dennis] D.RUFFER> there are some on the TC who would love to standardize DUP 
+and leave it at that
+<[Dennis] D.RUFFER> two keystrokes?? How do you mean gary?
+<GARY-S> what is the new definition for divide ?
+<GARY-S> Hello wil - care to jump in ?
+<[Dennis] D.RUFFER>  / is defined for positive operators just as it has always 
+been
+<GARY-S> did you not say it was gone three replies before
+<[Kent] K.PETERSON5> You said / is gone. Did you mean \ ?
+<[Dennis] D.RUFFER> gone in the negative domains
+<[Kent] K.PETERSON5> Oh
+<[Kent] K.PETERSON5> So, the flooring arguments have been brushed aside?
+<GARY-S> I should have been more explicit - is there another language that uses 
+different operators for the same function if negative/positive ?
+<[Wil] W.BADEN1> Mitch is right that fuss shudnt be made over small matters 
+(like name changes.) But CATCH, THROW, etc., are major matters.
+<[Dennis] D.RUFFER> if you want to use negative operators in / you must define 
+it yourself using one of the 3 divide operators
+<GARY-S> I understand Len Morgenstern's proposal wasn't even considered - only 
+CATCH and THROW
+<[Dennis] D.RUFFER> Len's proposal was not even submitted as far as I know (I 
+have not seen it)
+<[Wil] W.BADEN1> In C division is undefined for negative numbers.
+<[Wil] W.BADEN1> C therefore has 3 operations for integer division: /  div  
+ldiv.
+<GARY-S> What would you like to see with regards to CATCH/THROW ?
+<[Dennis] D.RUFFER> I would like to see something more constructive than just 
+saying that it is bad
+<[Dennis] D.RUFFER> it is NOT true that the concept of error control is new to 
+Forth
+<[Dennis] D.RUFFER> I use 'ILDE and now 'ABORT vectored words in polyFORTH all 
+the time
+<[Dennis] D.RUFFER> CATCH/THROW just give me a more generic format for it
+<[Wil] W.BADEN1> I was going to present @JUMP and !JUMP (analogous to setjmp 
+set) but decided that no such proposal can be portable.
+<[Wil] W.BADEN1> All the objections to SP@ SP! RP@ RP! apply to CATCH THROW and 
+setjmp.
+<GARY-S> There seems to be some strong sentiment for setjmp in clf, Wil
+<[Dennis] D.RUFFER> sentiment, no matter how strong, is just not good enough.
+<[Kevin] APPERT>  how 'bout saving that stuf for FORTH 2000, when we can call 
+it existing practice!
+<[Dennis] D.RUFFER> we need some well thought out proposals for an alternative
+<[Wil] W.BADEN1> You cannot save context with just pointers.
+<[Dennis] D.RUFFER> CATCH/THROW meet the existing practice requirements in some 
+systems
+<[Dennis] D.RUFFER> just because you don't use something does not mean that it 
+does not exist
+<[Wil] W.BADEN1> Not Johns Hopkin, and RTX.
+<GARY-S> what makes you think I have , or is this a generic argument, Dennis?
+<[Dennis] D.RUFFER> the lack of existing practice argument has been bandied 
+about quite often recently, I don't think any of us (or anyone for that ma
+tter) can make that claim without examining ALL version of Forth
+<[Wil] W.BADEN1> Forth 2000 is going to be "Tiny C With Postfix Operators."
+<GARY-S> I believe that !
+<[Kevin] APPERT> I believe Wil is trying to get a rise
+<[Wil] W.BADEN1> No, just extrapolating ANSI proposals.
+<GARY-S> Dennis, since when is it required that ANYONE examine ALL existing 
+systems before having a right to voice an opinion about X3J14 ?
+<[Dennis] D.RUFFER> opinions are fine Gary, some of the comments that I have 
+read here in the BB have just gone beyond the line.
+<[Wil] W.BADEN1> The applications for which Forth is The Best do not need CATCH 
+& THROW, or local variables.
+<[Kevin] APPERT> do they need a standard, Wil
+<[Kevin] APPERT>  ?
+<GARY-S> Excuse me, but this is an open forum and ANS is an open committee. I 
+don't know if you are refering to me or comments in general; but I believe
+they have a place here. Dark corners yield bad decisions.
+<[Wil] W.BADEN1> Yes, to stop a recurrence of the Forth 83 debacle.  F83 was 
+one of the best things to happen to Forth; Forth 83 The Worst.
+<[Wil] W.BADEN1> All this / MOD NOT controversy comes right from Forth 83.
+<[Dennis] D.RUFFER> I'm sorry if I seem to be yelling at you specifically Gary. 
+ I do not mean to. I just have seen enough Forth to know that the exis
+ting practice argument is stupid when it comes to Forth
+<GARY-S> I'm not taking personal offense either. I just maintain discussion is 
+healthy.
+<[Dennis] D.RUFFER> I do not know of one application I have written in Forth 
+that did not need an error control mechanism Wil.
+<[Wil] W.BADEN1> True, but ABORT" will get you far.
+<[Kevin] APPERT> why is it in the charter of the committy, Dennis?  Existing 
+practice would have stopped the floored div. mess of F83!
+<[Dennis] D.RUFFER> discussion is more than just health Gary.  It is ESSENTIAL! 
+ That is what was missing with the 83 Std.  It was done in one week by
+ a bunch of self proclaimed experts who did not even ask for input.
+<[Dennis] D.RUFFER> not far enough Wil, when the task has no terminal
+<[Kevin] APPERT> took much longer than a week!  there was input solicited.
+<[Kevin] APPERT> (in some cases ignored)
+<[Dennis] D.RUFFER> that is exactly why it is in the charter kevin, to protect 
+the interests of the vendors
+<GARY-S> So - right or wrong, some of the 'fodder' you are seeing in the BB 
+does have a place.
+<[Dennis] D.RUFFER> yes, I encourage the debates Gary.  I just don't like the 
+"no existing practice" argument.
+<[Wil] W.BADEN1> Error recovery is easy to do when you know the particular 
+architecture.
+<[Dennis] D.RUFFER> I agree Wil, I do it all the time.  It would just be nice 
+to be able to do it in a portable way.
+<GARY-S> I *really* doubt portability will be the end result of X3J14
+<[Dennis] D.RUFFER> it is not in the charter Gary, but it will promote it as a 
+side effect
+<[Wil] W.BADEN1> Just say that at most one value on each stack may be kept in a 
+register.
+<[Wil] W.BADEN1> Then restore SP@ SP! RP@ RP!
+<GARY-S> I hope you are right
+<[Dennis] D.RUFFER> That would remove all of Chuck's chips from complying Wil
+<GARY-S> ABORT works for me, but I'm not trying to switch circuit loads or 
+runway guidance
+<[Dennis] D.RUFFER> I don't think I've ever been able to get away with the 
+standard ABORT" in any useful application
+<[Wil] W.BADEN1> I've said how to do it, and shown why CATCH THROW is wrong.
+<[Dennis] D.RUFFER> write it in a proposal Wil, they have to at least talk 
+about it then
+<[Wil] W.BADEN1> Propose SP@ etc.?
+<[Dennis] D.RUFFER> you will need to include rational as to how it can be done 
+p'ortably and why the alternatives are bad for it to get any kind of su
+pport
+<[Wil] W.BADEN1> (I have a speech synthesizer program attached and I'm 
+LISTENING to you.  You all talk funny.)
+<[Dennis] D.RUFFER> well then squabble squabble lahfahfaskldhds
+<GARY-S> set mine with a drawl, wil :-)
+<[Kent] K.PETERSON5> How's the pronunciation of a name like Yvonne?
+<[Wil] W.BADEN1> "eevun"
+<[Kent] K.PETERSON5> Not bad. Mine did Yavun till I put in a filter.
+<GARY-S> The phonetic abbreviations you use, probably suit a synthesizer very 
+well, don't they ?
+<[Wil] W.BADEN1> Yes.
+<[Dennis] D.RUFFER> now all you need is the faces to go along with them
+<GARY-S> I posted a complete list of known faces in the UNIX RT
+<[Wil] W.BADEN1> Hey, get back to Forth.
+<[Dennis] D.RUFFER> not the smiley kind, the ones VPC (I think it's called) 
+displays in conferences like this when you talk
+<[Kent] K.PETERSON5> I found a weird bug/feature in Pygmy today.
+<[Dennis] D.RUFFER> all that's Forth, what bug Kent?
+<[Kent] K.PETERSON5> TIB has an extra level of indirection. You have to do TIB 
+@ to get the F83 TIB.
+<[Dennis] D.RUFFER> ouch, that could be a nasty one for conversions
+<[Kent] K.PETERSON5> It baffled me for a while.
+<GARY-S> Leave e-mail to Frank, Kent. He REALLY does want that sort of input.
+<[Dennis] D.RUFFER> I wonder who's standard he followed for that one
+<[Kent] K.PETERSON5> I sent him a note just before I came here.
+<GARY-S> great
+<[Dennis] D.RUFFER> although, making it a variable is better than the games 
+I've seen done with #TIB and >IN to reposition TIB
+<GARY-S> Things are quiet - let's go home
+<[Kent] K.PETERSON5> OK. Bye.
+<[Dennis] D.RUFFER> did I shout everyone down?  I'm sorry!
+<[Wil] W.BADEN1> What did we decide about the question of the day?
+<GARY-S> Too much bitchin' but it has a place
+<[Dennis] D.RUFFER> I'm glad to see Mitch is going toe to toe with it at least
+<[Wil] W.BADEN1> Well, that's a positive note to end the  evening.
+<GARY-S> Hey, we can't always run on sunshine and lollypops
+=== End of Steno notes. ===
+
+

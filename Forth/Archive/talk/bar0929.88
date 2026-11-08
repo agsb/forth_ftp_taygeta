@@ -1,0 +1,375 @@
+
+
+             
+ Minutes of the FIGGY BAR RT Conference.
+ Date: 09/29/88   Time: 22:00EDT
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Jax Says Hi] VESTA]
+[[Rich] R.FRANZEN]
+[[Kevin] APPERT]
+ Items discussed: new ANS basis,SC32,Delta & Computer Cowboy (Chuck) boards,
+                  C.H.Ting,F-PC tutorial,Intel vs Motorola
+Minutes:
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> hey dave
+<[Dave] DHWEINSTEIN> Hey gary
+<[Gary] GARY-S> you're first - start the roll when ready
+<[Dave] DHWEINSTEIN> Hmmnnn...not much, I have to write a little 68kprogram to 
+write for class tomorrow
+<[Gary] GARY-S> what language
+<[Dave] DHWEINSTEIN> 68k assembly
+<[Gary] GARY-S> You jest about the size
+<[Dave] DHWEINSTEIN> Nope. Tiny. Disassemble certain classes of ADDs and MOVEs..
+and that's it. Just a pain to write (busy work).
+<[Gary] GARY-S> You like assembler, so you should be good at it
+<[Dave] DHWEINSTEIN> Yeah. I just hate make work.
+<[Gary] GARY-S> I understand
+<[Dave] DHWEINSTEIN> I'm writing this without a fully functional debugger 
+(working without a net so to speak)
+<[Gary] GARY-S> I just got the new ANS Basis - lots of changes
+<[Dave] DHWEINSTEIN> Should only take a few hours (and the pizza places deliver 
+all night)
+<[Dave] DHWEINSTEIN> Put it up on the GEnie library
+<[Gary] GARY-S> It's several typewritten pages - no thanks
+<[Gary] GARY-S> I do plan to post some aggrivation from it
+<[Dave] DHWEINSTEIN> If you put it on GEnie, I'll put it on Usenet... :-)
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> And have you been following comp.lang.forth?
+<[Gary] GARY-S> Dave - the basis is 85 double sided pages !!!!
+<[Dave] DHWEINSTEIN> Hey Jax..what'd your friend of the many chuck boards say 
+about selling one (I found more money too :-) )?
+<[Dave] DHWEINSTEIN> Type fast! :-)
+<[Jaxagain] VESTA>
+<[Gary] GARY-S> What is this money ???
+<[Jaxagain] VESTA> I forget, but something like 200
+<[Dave] DHWEINSTEIN> Hey wants 200 for one assembled?
+<[Jaxagain] VESTA> chip only. Maybe it was $150
+<[Jaxagain] VESTA> I'll ask again.
+<[Dave] DHWEINSTEIN> Oh..chip only. I'd kinda like a board around it (assembled 
+if you would).
+<[Jaxagain] VESTA> ( i was typing in another window.
+<[Jaxagain] VESTA> ...)
+<[Jaxagain] VESTA> You want egg in your beer, too?
+<[Jaxagain] VESTA> Why don't you buy an SC32
+<[Jaxagain] VESTA> .
+<[Dave] DHWEINSTEIN> Also...when I saw Dan Miller's system it was running with 
+a 3 1/2"...does this support that?
+<[Dave] DHWEINSTEIN> Cause I don't have that much money.
+<[Gary] GARY-S> Are you getting a commission on sales, Jax ? You should be if 
+you aren't .
+<[Jaxagain] VESTA> I should but I ain't
+<[Dave] DHWEINSTEIN> How much do they want for a development system 
+(monitor/keyboard, drive, board, ps,)?
+<[Jaxagain] VESTA> Not even a free chip!
+<[Jaxagain] VESTA> The cheap SOB's :-)
+<[Jaxagain] VESTA> They don't sell keyboards, guy!
+<[Gary] GARY-S> Do they know how much promotion you have done ?
+<[Jaxagain] VESTA> So what? Promotion they can get.
+<[Dave] DHWEINSTEIN> <-- lazy these days wants a whole system... :-)
+<[Jaxagain] VESTA> They would like to sell one or two boards.
+<[Gary] GARY-S> Not from inside the target community.
+<[Jaxagain] VESTA> I like to pay for my stuff.
+<[Jaxagain] VESTA> It gives credibility to my raves and flames.
+<[Dave] DHWEINSTEIN> What are the specs on the demo board?
+<[Jaxagain] VESTA> Read the topic.
+<[Jaxagain] VESTA> it's 169 lines long.
+<[Dave] DHWEINSTEIN> What post?
+<[Jaxagain] VESTA> The board will be 8k rm.
+<[Jaxagain] VESTA> ram.
+<[Jaxagain] VESTA> Where is it, gary?
+<[Dave] DHWEINSTEIN> 8k? 8 k?????
+<[Jaxagain] VESTA> It's in Forth engines.
+<[Jaxagain] VESTA> or some such. New Products or something.
+<[Jaxagain] VESTA> 8k for the cheapo get-acquainted board.
+<[Dave] DHWEINSTEIN> Check with your friend about those Chuck Boards? (They are 
+assembed chuck boards, right?)
+<[Jaxagain] VESTA> He doesn't sell Chuck boards. He had a few chips.
+<[Dave] DHWEINSTEIN> Sockets for more memory (what's the use of 32 bits if you 
+only use 8k of ram?)
+<[Jaxagain] VESTA> He will sell you one.
+<[Dave] DHWEINSTEIN> Oh.
+<[Jaxagain] VESTA> He is desinging a board for the MISC chip.
+<[Dave] DHWEINSTEIN> I Wonder if SC is having a close out on the chuck boards 
+yet...
+<[Jaxagain] VESTA> The legendary MISC chip that is like the horizon, always two 
+months away.
+<[Jaxagain] VESTA> SC is still selling delta boards, i have a price list. Just 
+a second.
+<[Dave] DHWEINSTEIN> Synchronized sqimming is NOT a valid olympic sport! Cover 
+the fencing!
+<[Jaxagain] VESTA> Delta @ $595.
+<[Dave] DHWEINSTEIN> The stand alone for $595?
+<[Jaxagain] VESTA> So buy a Chuck board before they are gone.
+<R.FRANZEN> is here.
+<APPERT> is here.
+<[Jaxagain] VESTA> hi rich.
+<[Jaxagain] VESTA> Hi kevin
+<[Jaxagain] VESTA> ( I am the doorman tonite)
+<R.FRANZEN> Hi
+<APPERT> hi jax
+<[Gary] GARY-S> Kev, Rich
+<[Dave] DHWEINSTEIN> How much for the stand alone? $595...hmm...thas high
+<[Jaxagain] VESTA> Chuck board @ ~$400.
+<[Jaxagain] VESTA> Can't beat it with a stick!
+<[Dave] DHWEINSTEIN> Ah. The delta is the in PC one. Is that $400 assembled or 
+kit?
+<[Jaxagain] VESTA> No , the Delta is a standalone. Assembled.
+<[Jaxagain] VESTA> The FORCE Board and the FOX and the something else are in-PC.
+<[Dave] DHWEINSTEIN> What are the specs on the Delta?
+<[Jaxagain] VESTA> Write for a price list?
+<[Dave] DHWEINSTEIN> Address for SC?
+<[Jaxagain] VESTA> The Delta is like a CHuck board. The Chuck board is the 
+Gamma Board.
+<[Jaxagain] VESTA> It's in the topic posting.
+<[Jaxagain] VESTA> but hold on, will repeat.
+<[Dave] DHWEINSTEIN> Ok. The Novixen post
+<[Jaxagain] VESTA> Also my SC32 posting.
+<[Jaxagain] VESTA> Here goes:
+<[Jaxagain] VESTA> Silicon Composers
+<[Jaxagain] VESTA> 200 California Ave.
+<[Kevin] APPERT> 210 California Ave. Suite K, Palo Alto CA 94306
+<[Jaxagain] VESTA> wiseass!
+<[Jaxagain] VESTA> ... :-)
+<[Jaxagain] VESTA> Suite I, anyway!
+<[Gary] GARY-S> phone 415/322-8763
+<[Jaxagain] VESTA> right.
+<[Dave] DHWEINSTEIN> Got it. Thanks
+<[Gary] GARY-S> comment please -
+<[Jaxagain] VESTA> You better have it! Three people worked to give it.
+<[Rich] R.FRANZEN> Be careful if you call computer cowboys...
+<[Dave] DHWEINSTEIN> Oh?
+<[Jaxagain] VESTA> gary?
+<[Gary] GARY-S> C H Ting is one of the nicest people over the phone <period>
+<[Jaxagain] VESTA> RIGHT!
+<[Rich] R.FRANZEN> You may get -THE- computer cowboy on the line! (i did)
+<[Jaxagain] VESTA> Ting is on my Best Mannered Programmers list.
+<[Dave] DHWEINSTEIN> :-)
+<[Kevin] APPERT> he's also very nice in corpus
+<[Gary] GARY-S> proves the really big movers and shakers don't need to make 
+loud noises
+<[Jaxagain] VESTA> Also pretty well informed about Forth.
+<[Dave] DHWEINSTEIN> Dijkstra is on mine. He's a nice guy.
+<[Jaxagain] VESTA> You don't have to show off if you have implemented Forth on 
+a parallel processing engine!
+<[Kevin] APPERT> Ting has been at ist for a verrry long time
+<[Jaxagain] VESTA> Since FIG Forth, anyway.
+<[Dave] DHWEINSTEIN> I can't believe they show synchronized swimming and not 
+fencing!
+<[Kevin] APPERT> He wrote the Nova Fig Forth
+<[Jaxagain] VESTA> When is he on GEnie, gary?
+<[Kevin] APPERT> he said he was gonna buy a modem (said it last sat.)
+<[Gary] GARY-S> soon - but I'll post when. I don't want to dilute Forsley's 
+conf and visa-versa
+<[Kevin] APPERT> coming soon at a GEnie neer you
+<[Jaxagain] VESTA> I'm gonna ask Forsely the same question I have been asking 
+him since Feb.
+<[Kevin] APPERT> has everybody seen FPC  (the latest member of the 
+Forth-of-the-month-club)
+<[Gary] GARY-S> That's what conferences are for
+<[Jaxagain] VESTA> Which version, kev? :-)
+<[Kevin] APPERT> where's the beef? jax
+<[Jaxagain] VESTA> THer are four that I know of.
+<[Kevin] APPERT> last sat.'s version
+<[Gary] GARY-S> Wait till you see Jack Brown's F-PC tutorial - you HAVE to put 
+it on the WELL, Jax
+<[Jaxagain] VESTA> The world turns, but Zimmer remains the same.
+<[Jaxagain] VESTA> I have seen it.
+<[Kevin] APPERT> up to 4 arced disks
+<[Jaxagain] VESTA> ( turtorial).
+<[Gary] GARY-S> Good stuff !
+<[Jaxagain] VESTA> very nice.
+<[Jaxagain] VESTA> yawn.
+<[Jaxagain] VESTA> More Intel bullpoop.
+<[Gary] GARY-S> I will be moving it to GEnie soon
+<[Jaxagain] VESTA> Not if I can help it.
+<[Kevin] APPERT> the documentation indicates it's all a plot to sell maxtore 
+hard disks
+<[Jaxagain] VESTA> :-)
+<[Gary] GARY-S> Ahh - it's good tutorial no matter
+<[Jaxagain] VESTA> It's a great tutorial. Intel chips are to forth what webbed 
+stockings are to Roman gladiators.
+<[Jaxagain] VESTA> ( mixed metaphor there)
+<[Jaxagain] VESTA> .
+<[Gary] GARY-S> Why do I get the feeling there is a failure to communicate....
+<[Jaxagain] VESTA> It's a great tutorial.
+<[Jaxagain] VESTA> FPC is for the Intel chip set.
+<[Gary] GARY-S> That's the ONLY issue
+<[Jaxagain] VESTA> Bleechh.
+<[Jaxagain] VESTA> Poo.
+<[Jaxagain] VESTA> Why do talented people like Zimmer waste their time with 
+that garbage.
+<[Dave] DHWEINSTEIN> (contemplates bank account...contemplates cost of board, 
+ps, docs, monitor/keyboard, encloseure, new modem for board) (wishes for
+ bigger bank account)
+<[Gary] GARY-S> Thank goodness you're a reasonable man
+<[Rich] R.FRANZEN> Jax, the 68000 isn't the best of FORTH engines either...
+<[Jaxagain] VESTA> Right.
+<[Dave] DHWEINSTEIN> :-)
+<[Rich] R.FRANZEN> Now the 6809--there's a FORTH chip!
+<[Dave] DHWEINSTEIN> But I'd rather use a 68k than an 80x86
+<[Jaxagain] VESTA> But beats 80286 by about a light year.
+<[Jaxagain] VESTA> Standalone on a FORTH chip is the way to go.
+<[Jaxagain] VESTA> Which brings up an interesting b
+<[Gary] GARY-S> 286 = segmented brain damage
+<[Jaxagain] VESTA> point.
+<[Jaxagain] VESTA> George Nichol pointed out ...
+<[Dave] DHWEINSTEIN> 286 had how many design teams, 3, r?
+<[Dave] DHWEINSTEIN> err 4
+<[Jaxagain] VESTA> that the SC32 instruction set ...
+<[Jaxagain] VESTA> transcends Forth ...
+<[Jaxagain] VESTA> For instance ...
+<[Jaxagain] VESTA> The top 4 stack & top 4 ret stack items are equally 
+accessible. ...
+<[Jaxagain] VESTA> Do you get the implication?
+<[Dave] DHWEINSTEIN> easy local variables for small words
+<[Dave] DHWEINSTEIN> :-)
+<[Jaxagain] VESTA> Hardware support for local vars in Forth; hardware support 
+for Multiple Code Fields.
+<[Jaxagain] VESTA> Right Dave, you are quite sharp!
+<[Gary] GARY-S> Does anyone know who the person(s) is/are behind FUTURE, Inc of 
+Blacksburg, VA ?
+<[Dave] DHWEINSTEIN> No,
+<[Dave] DHWEINSTEIN> I haven't heard anything about FUTURE inc
+<[Gary] GARY-S> They are in the NC4016 business too, Dave
+<[Dave] DHWEINSTEIN> oh?
+<[Gary] GARY-S> page 30 July/Aug FD
+<[Gary] GARY-S> phone 703/552-1347
+<[Dave] DHWEINSTEIN> <- doesn't have FD
+<[Rich] R.FRANZEN> Has the Cannon Cat died?
+<[Jaxagain] VESTA> Subscribe, dave!
+<[Gary] GARY-S> I dunno - does anyone
+<[Kevin] APPERT> nope. what is the processor in that?
+<[Dave] DHWEINSTEIN> Yea yea yea....I will Real Soon Now (I do everything Real 
+Soon Now)
+<[Rich] R.FRANZEN> 5 MHz 68000. Forth based business machine.
+<[Jaxagain] VESTA> brb
+<[Jaxagain] VESTA> has left.
+<[Gary] GARY-S> Did you get that ph # Dave
+<[Dave] DHWEINSTEIN> Yeah.
+<[Kevin] APPERT> gonna buy a forth engine, dave?
+<[Gary] GARY-S> Rich - what's cooking your way these days ?
+<[Dave] DHWEINSTEIN> If I can scrape up the cash. I just bought a Vespa and I 
+still have to get a license and plate (tomorrow the paperwork willing)
+<[Dave] DHWEINSTEIN> Class. And work (which means c)
+<[Rich] R.FRANZEN> Not much.  Just expanding system software tools.
+<[Gary] GARY-S> See any Forth jobs in Austin, Dave ?
+<[Dave] DHWEINSTEIN> Hmmn. Well...there is one firm doing a lot of work in 
+CONVERS (Forth desendant), but they are full up on programmers lat I heard.
+..otherwise...naaahh
+<[Kevin] APPERT>  I wonder is Harris hireing?
+<[Gary] GARY-S> I'm asking for an ex-Arkansan
+<VESTA> is here.
+<[Rich] R.FRANZEN> Harris was hiring about a month ago.  Don't know present 
+status.
+<[Gary] GARY-S> He wants to get back to Arkansas, but there's nothing really 
+here
+<[Jax Says Hi] VESTA> just checking Amiga conf. Nobody there.
+<[Dave] DHWEINSTEIN> Yeah...but Harris isn't in Austin (although Austin is a 
+RISC nerve-center)
+<[Jax Says Hi] VESTA> Wanted to see who saw my comp.sys.amiga flame.
+<[Dave] DHWEINSTEIN> Is Harris a member of the Sematech consortium?
+<[Kevin] APPERT> no, just a semi-non-sequitor
+<[Dave] DHWEINSTEIN> If so there may be work in Austin as Sematech fires up...
+<[Kevin] APPERT>  (my comment about Harris hiring)
+<[Gary] GARY-S> That's a pretty sharp off-the-cuff title, Kevin
+<[Gary] GARY-S> Keep me posted - this guy is 'super' Forth and C
+<[Dave] DHWEINSTEIN> Gary...I'll look about.
+<[Dave] DHWEINSTEIN> But I havent seen Forth jobs (or I would apply like a shot)
+<[Jax Says Hi] VESTA> You haven't seen Forth jobs? Would you like one?
+<[Gary] GARY-S> Colo Springs ?
+<[Jax Says Hi] VESTA> VESTA has been recruiting for a while. Denver.
+<[Dave] DHWEINSTEIN> Might I point out that I live in Austin for a reason 
+(degree plans and all that). Can you work long distance?
+<[Jax Says Hi] VESTA> There was a job in Sacramento, too with a friend of mine.
+<[Jax Says Hi] VESTA> Forsley still has a VAX Forth job.
+<[Gary] GARY-S> I swear I do NOT understand - good job, good company, good 
+location...
+<[Dave] DHWEINSTEIN> I'm working on a pair of degrees...that takes time.
+<[Jax Says Hi] VESTA> You mean Mr. X?
+<[Gary] GARY-S> I was talking Vesta there
+<[Jax Says Hi] VESTA> Yes. Housing is inexpensive ( comparatively) in Denver.
+<[Jax Says Hi] VESTA> VESTA is good place to work.
+<[Dave] DHWEINSTEIN> I'd be giving up about 6-7gs a year in "academic 
+incentives" to leave...and put my degree plans out the window.
+<[Jax Says Hi] VESTA> Boss is hands on.
+<[Jax Says Hi] VESTA> Big project starting now.
+<[Dave] DHWEINSTEIN> Open up an Austin branch and I'll jump like a shot!
+<[Jax Says Hi] VESTA> 68000 Forth.
+<[Jax Says Hi] VESTA> Any takers?
+<[Rich] R.FRANZEN> using J-FORTH kernel?
+<[Dave] DHWEINSTEIN> SIgh, If only it were in Austin... :-)
+<[Jax Says Hi] VESTA> Possibly. That is choice #1.
+<[Jax Says Hi] VESTA> Choice #2: A4th metacompiled!
+<[Rich] R.FRANZEN> hope for cheap memory :-)
+<[Jax Says Hi] VESTA> Choice#3 MachForth!
+<[Jax Says Hi] VESTA> Right.
+<[Gary] GARY-S> There's another promo - does Palo Alto shipping provide you 
+with free upgrades ?
+<[Jax Says Hi] VESTA> I don't even know if they are still in business ...
+<[Jax Says Hi] VESTA> I only know that they USED to offer a controller JSR 
+FOrth.
+<[Dave] DHWEINSTEIN> Why doesn't BE
+<[Gary] GARY-S> They still have a RT here on GEnie
+<[Jax Says Hi] VESTA> They don't advertise in FD so they might as well be dead, 
+from my point of view.
+<[Kevin] APPERT> they may be reached on their RT on GEnie
+<[Dave] DHWEINSTEIN> Why doesn't VESTA open up a location in Austin?
+<[Dave] DHWEINSTEIN> :-)
+<[Jax Says Hi] VESTA> Lend me 1/4 million $ and I will!
+<[Gary] GARY-S> Steve might even go for that, huh ?
+<[Dave] DHWEINSTEIN> Silly Jax! If I had the 1/4mil I wouldn't need a job
+<[Jax Says Hi] VESTA> Right.
+<[Rich] R.FRANZEN> It's not just a job...
+<[Jax Says Hi] VESTA> what is the RT on GEnie for PA
+<[Jax Says Hi] VESTA> ..?
+<[Rich] R.FRANZEN> It's an adventure!
+<[Jax Says Hi] VESTA> Right.
+<[Rich] R.FRANZEN> (apologies to US Navy)
+<[Jax Says Hi] VESTA> We are desigining a system AND implementing a FOrth at 
+the same time.
+<[Jax Says Hi] VESTA> This is hi power stuff.
+<[Jax Says Hi] VESTA> What is RT name for PA Shipping?
+<[Dave] DHWEINSTEIN> Sounds great. I just can't afford to move out of Austin 
+for a few years.
+<[Gary] GARY-S> page 450, MACH2
+<[Jax Says Hi] VESTA> gnite!
+<[Jax Says Hi] VESTA> has left.
+<[Gary] GARY-S> last time I answer him !
+<[Rich] R.FRANZEN> Gary, what is ForthNET?
+<[Gary] GARY-S> I should start posting Jack's tutorial this comming week, if 
+you know any one who could use it...
+<[Gary] GARY-S> turn them our way or the XCFB's
+<[Rich] R.FRANZEN> huh?
+<[Gary] GARY-S> ForthNet is a virtual network of Forth BBS's and info nets
+<[Kevin] APPERT> are the xcfbs linked, if so how?
+<[Gary] GARY-S> by me right now. I port every word !
+<[Gary] GARY-S> Hope to have software doing the job eventually
+<[Kevin] APPERT> manually? ugh
+<[Dave] DHWEINSTEIN> Gotta run...
+<[Dave] DHWEINSTEIN> see y'all later
+<[Gary] GARY-S> You gatta start somewhere
+<[Dave] DHWEINSTEIN> has left.
+<[Rich] R.FRANZEN> g'nite, Dave
+<[Kevin] APPERT> 'night dave
+<[Rich] R.FRANZEN> a  little luck, and a willingness to relocate,
+<[Kevin] APPERT> and a competant person can always find work.
+<[Gary] GARY-S> It is very strong in Germany and Australia
+<[Kevin] APPERT> even if he can't spell :)
+<[Rich] R.FRANZEN> can accomplish great career opportunities.
+<[Rich] R.FRANZEN> :-)
+<[Gary] GARY-S> It's not that hard to lurn to spel rit !
+<[Kevin] APPERT> my other communications package...
+<[Kevin] APPERT> has a spellling chakerr, but it broke...
+<[Kevin] APPERT> by different modem.
+<[Kevin] APPERT> anybody seen steve geller around?
+<[Gary] GARY-S> no
+<[Kevin] APPERT> thursdays or sundays>
+<[Rich] R.FRANZEN> uh-uh
+<[Kevin] APPERT> ah well
+<[Gary] GARY-S> I gotta go guys. you two can stay and chat but the official 
+stuff is ending.
+=== End of Steno notes. ===
+
+

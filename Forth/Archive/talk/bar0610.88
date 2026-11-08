@@ -1,0 +1,311 @@
+
+
+            
+Sub: Minutes of the FIGGY BAR for 6/10/88
+              
+Items discussed: Cat 10 contributions, FIG board nominee, (in) decency 
+league, Romable Forth at $69 vs $3000 +, Forth job searches, Assembler 
+style syntax, COBOL, APL and Forth, Forth, Forth.
+        
+Attendees:
+[[Gary] GARY-S]
+[[Dennis] D.RUFFER]
+[[jax] VESTA]
+[[Dave] DHWEINSTEIN]
+[[James] J.T.SAVIDGE]
+[[Kevin] APPERT]
+                    
+Minutes:
+<[Gary] GARY-S>
+<VESTA> is here.
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> It may be just you and me Jack
+<[jax] VESTA> and david...
+<[Gary] GARY-S> no - there's Dave
+<[jax] VESTA> well, have it your way ... it's Dave
+<[Dave] DHWEINSTEIN> Ok. I put my bit arguments up in 10.5
+<[Gary] GARY-S> Buenos Tacos - got to make the Texan feel at home
+<[jax] VESTA> Tejas.
+<[Gary] GARY-S> si ! mil gracias
+<[jax] VESTA> all he wants to talk about is UNIX, anyway!
+<[Gary] GARY-S> any bones to pick this evening ?
+<[Dave] DHWEINSTEIN> This chicken I'm working on...
+<[Gary] GARY-S> Jack - how long before I get my coloring book from the Well ?
+<[jax] VESTA> Is d.ruffer coming ... did you sign up fo the Well?
+<[Gary] GARY-S> no ... yes
+<[jax] VESTA> A few days, then. Have you logged on yet?
+<[Gary] GARY-S> dennis is still moving the Mrs and kiddies
+<[jax] VESTA> Glad to know he can still move his wife!
+<[jax] VESTA> ...:-)
+<[Gary] GARY-S> I logged on and got the 'manual on the way promise
+<D.RUFFER> is here.
+<[Gary] GARY-S> i lied
+<[Dave] DHWEINSTEIN> Gee gary
+<[jax] VESTA> speak of the devil.
+<[Dave] DHWEINSTEIN> Your accurate today
+<D.RUFFER> hello folks
+<[zippy] VESTA> am i elected yet?
+<[Gary] GARY-S> go way away dennis - you made a liar of me
+<D.RUFFER> what?
+<[Dave] DHWEINSTEIN> Why don't you go read my CELL topic post on Cat 10 and 
+then we'll talk. :-)
+<[Gary] GARY-S> i said you would not be here
+<[jax] VESTA> he said you were fooling around with your wife or something.
+<[Gary] GARY-S> i did - thanks
+<[Gary] GARY-S> I'm glad the last conf got you motivated
+<D.RUFFER> no, I'm just packing  topic 10?
+<[Gary] GARY-S> topic or cat 10 ???
+<[Dave] DHWEINSTEIN> 10.5.30
+<[Dave] DHWEINSTEIN> (to be completely specific)
+<[Gary] GARY-S> yes - i read it and am glad you put it up dave - no responses 
+yet though
+<D.RUFFER> I'm sorry, I haven't read it yet...
+<[Gary] GARY-S> they will come
+<APPERT> is here.
+<[jax] VESTA> extra ... wheel rediscovered!
+<[Dave] DHWEINSTEIN> What do you think?
+<[Gary] GARY-S> one from greg at least
+<[jax] VESTA> hi kevin.
+<[Kevin] APPERT>  hello Jax, all
+<[Gary] GARY-S> i thought you did a good job of presenting your views
+<[Dave] DHWEINSTEIN> Thank you. What did YOU THINK OF THE VIEWS!!?!
+<[Gary] GARY-S>  did you notiuce a form for submission to the committee is in 
+this months FD ?
+<[Dave] DHWEINSTEIN> No
+<[Gary] GARY-S> I agreed with your views in conference - why would I not do so 
+now ?
+<[jax] VESTA> I tried to post a suggestion but was defeated by GEnie.
+<[Dave] DHWEINSTEIN> But then. If I do't like the new standard, I'll ignore it 
+(like I've ignored F83). :-)
+<[Gary] GARY-S> say what ?
+<[jax] VESTA> He doesn't give a FIG.
+<[Gary] GARY-S> fair enough
+<[Dave] DHWEINSTEIN> Bingo.
+<[Dave] DHWEINSTEIN> I think that's very true for FORTH. And certainly more...
+<[Gary] GARY-S> don't you miss smudge ?
+<[Dave] DHWEINSTEIN> than any other language. Except for GNU, how many people 
+do you know who...
+<[Dave] DHWEINSTEIN> write their own language implementation?
+<[Dave] DHWEINSTEIN> How many C programmers wrote their compiler?
+<[Dave] DHWEINSTEIN> Now how many FORTHers.
+<[Dennis] D.RUFFER> every one! :-)
+<[Gary] GARY-S> how many C programmers know where their compiler is ?
+<[Dave] DHWEINSTEIN> makes it a lot easier to ignore the standard if it is inane
+<[jax] VESTA> watch you language! Ooh! He  said the "c" word ...
+<[Dave] DHWEINSTEIN> You know how I makes my money.
+<[Gary] GARY-S> Dennis - thought you were moving the wife and kiddos ??
+<[Dennis] D.RUFFER> I'll be right back folks
+<[Dennis] D.RUFFER> has left.
+<[jax] VESTA> there he goes.
+<[Dave] DHWEINSTEIN> Gary - he's "supervising" the move.
+<[Gary] GARY-S> I know it has to be me - got to do something about that left 
+guard
+<[Gary] GARY-S> Jump in anytime Kevin - no rules is now the rule
+<[Gary] GARY-S> Jax won
+<[jax] VESTA> hee hee.
+<[Dave] DHWEINSTEIN> Jax won wot?
+<[Gary] GARY-S> you had to be here at the start
+<[jax] VESTA> I just said that at $5 an hour we couldn't afford to be polite!
+<[Kevin] APPERT> Thanks, Gary.  This is a case of not having an opinion.  When 
+I don't have anything to say I generally don't say it. (grin)
+<[jax] VESTA> interlacing is more BS for your money!
+<[Dave] DHWEINSTEIN> Unlike everyone else here.
+<[Gary] GARY-S> we kept spanking his keyboard for interlacing - but he just 
+kept it going so we did too
+<[Gary] GARY-S> self defense
+<[Dave] DHWEINSTEIN> And its easier to heckle this way.
+<[jax] VESTA> besides, it is more modern ...
+<[Gary] GARY-S> makes it easy for the sysop to - I don't edit nuthin'
+<[jax] VESTA> We held debates like it was the 18th Century
+<[jax] VESTA> Now we just shout , a voice in Babel.
+<[Dave] DHWEINSTEIN> The person with the fastest fingers wins.
+<[Kevin] APPERT> If you can handle Forth, you can handle this.
+<[Gary] GARY-S> powder your wig varlet !
+<D.RUFFER> is here.
+<[jax] VESTA> Get's your reflexes going, like 5-minute chess.
+<[Gary] GARY-S> lets do talk forth though
+<[jax] VESTA> Dennis ... did I win the California Primary?
+<[Dave] DHWEINSTEIN> : AGREEMENT OK ;
+<[Gary] GARY-S> who voted ?
+<[Dave] DHWEINSTEIN> Make you feel better.
+<[Dennis] D.RUFFER> voted? for what?
+<[Kevin] APPERT> which OK, Dave?
+<[Gary] GARY-S> against - actually - Jax
+<[Dave] DHWEINSTEIN> Oll Korrect
+<[Kevin] APPERT> there are two known definitions for the word OK
+<[Gary] GARY-S> Jax - just don't strut and lord it - I hate that
+<[Zip P.Head] VESTA> Whe/nam
+<[Dave] DHWEINSTEIN> There are bunches of definitions. Just two STANDARD defs. :
+-)
+<[Gary] GARY-S> : OK 1 LOAD ;
+<[jax] VESTA> huh? display got trashed. Whatsay gary?
+<[Kevin] APPERT> 1) the PolyFORTH OK is a "Form Feed and give the printer back 
+to the system"
+<[jax] VESTA> think this conversation is degenerating.
+<[Kevin] APPERT> 2) : OK 1 load ;
+<[Dave] DHWEINSTEIN> I mean. I can plug in the other computer and type : OK ."  
+P**s Off " CR ; anthat would be fine
+<[Dennis] D.RUFFER> Jack, it will take time to get the nomination committee 
+going
+<[Dave] DHWEINSTEIN> And a definition of Ok. :-) (Inherently anti-standard)
+<[Gary] GARY-S> NUTZ Dave - now I'll have to edit !
+<[jax] VESTA> Just asking becuase i don't understand how it works.
+<[Dave] DHWEINSTEIN> Why?
+<[Gary] GARY-S> In case Rev Wildman reads our library
+<[Dave] DHWEINSTEIN> Who?
+<[Gary] GARY-S> The anti-smut crusader in Mississippi
+<[Kevin] APPERT> GEnie may scan for nasty words
+<[Dave] DHWEINSTEIN> And what has this to do with GEnie?
+<[Kevin] APPERT> to protect themselves from Fox Charlie Charlie
+<[Gary] GARY-S> He's one of them that thought Tom Sawyer was a commie plot or 
+something
+<[jax] VESTA> Another "bad word", kevin.
+<[Dave] DHWEINSTEIN> Could you turn off the Steno for a few minutes
+<[Gary] GARY-S> back to Forth - that was my digression
+<[Dennis] D.RUFFER> turn off steno???
+<[Dave] DHWEINSTEIN> So I can say what I think of this sheep fornicating 
+bible-thumping bubble-head ( Since you ALREADY have to edit)
+<[Gary] GARY-S> why ?
+<[jax] VESTA> didn't sam spade do that already
+<[jax] VESTA> ( j. marlowe --- sam spade's sec.)
+<[Gary] GARY-S> wait -
+<[Gary] GARY-S> say it Dave
+<[Dennis] D.RUFFER> go ahead and give it s**t!
+<[jax] VESTA> !@*#&^(*&^$(&
+<[Dennis] D.RUFFER> they NEED to know!
+<[Dave] DHWEINSTEIN> That kind of people really p**s my off. Who taught the 
+bozo how to use a f****n' computer?
+<[Dave] DHWEINSTEIN> Take his grep away and make him search by hand with a 
+brain-damaged hazeltine 1500. (Tilde off)
+<[Kevin] APPERT> what base is that, Jax?
+<[jax] VESTA> I can here the ECFB laughing from here.
+<[Gary] GARY-S> Where do you get one of them - mine just has a keyboard
+<[jax] VESTA> base 60, babylonian hex.
+<[Dennis] D.RUFFER> give me an example dave
+<[Dave] DHWEINSTEIN> Of being upset?
+<[Dennis] D.RUFFER> of what you don't like?
+<[Kevin] APPERT> actually 60 is a fairly usefull base, for some things (I 
+forget which)
+<[Gary] GARY-S> don't hold back - say what you REALLY think !
+<[jax] VESTA> It's great for divisiblility.
+<[Dave] DHWEINSTEIN> People who go fiddling through other people's statements 
+looking for sometthing that offends them (you don't like...don't go look
+ing for it). People who
+<[Kevin] APPERT> Jaffe passed some code around at the last...
+<[Dave] DHWEINSTEIN> try and tell me what I should and should not do (assuming 
+that I hurt no one else.
+<[jax] VESTA> .../2 /3 /4 /5 /6 /8 /9 /10 /12
+<[Dave] DHWEINSTEIN> People who try and make me a "better" person.
+<[Kevin] APPERT> Silicone (grin) Valley Fig meeting
+<[Dave] DHWEINSTEIN> CS Departments with PASCAL fetishes. etc...
+<[jax] VESTA> ...  /15
+<J.T.SAVIDGE> is here.
+<[Dennis] D.RUFFER> oh those things! <grin>
+<[Kevin] APPERT> which rewound the input stream and played it back if the base 
+was set to the wrong number...
+<[Dave] DHWEINSTEIN> Hehe
+<[Dennis] D.RUFFER> and here I thought you were p**sed at GEnie
+<[jax] VESTA> whiskers on kittens, warm wooling stockings and fingers with 
+mittens ...
+<[jax] VESTA> These are a few of D>WEINSTEINS favorite things ....
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> No. Just the yutzes who go looking for trouble.
+<[Dave] DHWEINSTEIN> Like scanning conferences for "naughty words".
+<[Dennis] D.RUFFER> jack is this interlaced enough for you? <grin>
+<[jax] VESTA> Did I miss it when tim leary logged on or are we all free 
+asscoiating
+<[Kevin] APPERT> for example if I typed 10 list and the base was Hex, it would 
+list screen 10 decimal if I modified the LIST word to do this.
+<[Dave] DHWEINSTEIN> No, but I'm listening to the Moody Blues singing about Tim 
+Leary...close enough?
+<[Gary] GARY-S> got any Bob Marley ?
+<[Dave] DHWEINSTEIN> No.
+<[jax] VESTA> So which presidential candidate is best for FORTH.
+<[Dave] DHWEINSTEIN> Ron Paul.
+<[Dennis] D.RUFFER> personally dave, I don't really worry about it
+<[jax] VESTA> I thought Pat Paulsen, myself.
+<[Kevin] APPERT> I also have a couple of words which I use a lot to set the 
+base from within a : definition
+<[Dave] DHWEINSTEIN> Gary wanted an excuse not to edit... (or to edit)
+<[Dennis] D.RUFFER> Jack Tanner!
+<[James] J.T.SAVIDGE> Elect Pat Palsen
+<[Dennis] D.RUFFER> NONE OF THE ABOVE!!!
+<[Kevin] APPERT> : $ hex ; imediate     : % decimal ; immediate   : & octal ; 
+immediate
+<[Dave] DHWEINSTEIN> Leave the post vacant for four years.
+<[Dennis] D.RUFFER> Yea!
+<[Dave] DHWEINSTEIN> four even
+<[jax] VESTA> I'm running in 2004.
+<[James] J.T.SAVIDGE> In the forth tradition let the canidate elect the people!
+<[Kevin] APPERT> used like  : test   $ 0FF5E % 20 * ;
+<[Gary] GARY-S> Who's running on the anarchy ticket ?
+<[jax] VESTA> everybody!
+<[Dave] DHWEINSTEIN> Ron Paul. Libertarian (close enough).
+<[Dave] DHWEINSTEIN> My man Ron.
+<[jax] VESTA> He's a dimwit.
+<[James] J.T.SAVIDGE> 15 canidates on the Anarky ticket
+<[Dave] DHWEINSTEIN> (Paul that is. Not LaserGun)
+<[Kevin] APPERT> is anybody listening, did you get that last?
+<[Gary] GARY-S> I said Anarchy - not Malarkey
+<[jax] VESTA> yes, kevin ...
+<[Dave] DHWEINSTEIN> Hye!!??!!
+<[jax] VESTA> F83S and JForth ...
+<[Dennis] D.RUFFER> Well at least kevin is talking about Forth
+<[jax] VESTA> do something similar.
+<[Gary] GARY-S> do Test again Kev
+<[jax] VESTA> Libertarianism is French 3rd Republic Radical party reborn.
+<[James] J.T.SAVIDGE> Jax, How is VESTA, I think I sent ya'll a resume.
+<[jax] VESTA> Led to downfall of Rebpublic.
+<[Kevin] APPERT> : test   $ 0FF5E % 20 * ;
+<[jax] VESTA> That's right, jim, we got it. Dindn't Steve Sarns call you.
+<[Gary] GARY-S> Thanks - now do the shadow screen
+<[James] J.T.SAVIDGE> Jax, No he didn't
+<[jax] VESTA> Well, I saw your rez. Will ask steve what's humpin' tomorrow.
+<[jax] VESTA> Steven Sarns is prez of vesta.
+<[Kevin] APPERT> I recommend the convention of preciding the numbers with zeros 
+so you know, for example that FF is form feed and not the Hex number 0
+FF.
+<[jax] VESTA> we could really use some help
+<[jax] VESTA> .
+<[James] J.T.SAVIDGE> Jax did my resume look good?
+<[Dave] DHWEINSTEIN> What is it you do?
+<[jax] VESTA> Where do you live, jim?
+<[Dennis] D.RUFFER> Kevin, why not make HEX etc IMMEDIATE
+<[James] J.T.SAVIDGE> Dallas!!!
+<[Kevin] APPERT> oops preceeding?
+<[jax] VESTA> did you ask for lotsa dough?
+<[jax] VESTA> I fergit.
+<[jax] VESTA> you can send private in this conf ...
+<[James] J.T.SAVIDGE> I did't put a price on it.
+<[Kevin] APPERT> what if you want to happen at run time?  like the words for 
+printing the time?
+<[jax] VESTA> if you don't want to discuss it
+<[Dave] DHWEINSTEIN> Soomebody else from the great steate of Texas
+<[Dave] DHWEINSTEIN> (typos deliberate)
+<[jax] VESTA> Well, dallas is pretty close for an interview.
+<[Dennis] D.RUFFER> then you [COMPILE] them
+<[James] J.T.SAVIDGE> jax, ????
+<[jax] VESTA> Dave, we make controller boards and program them.
+<[Dave] DHWEINSTEIN> Where?
+<[Gary] GARY-S> Coors-arado
+<[Kevin] APPERT> I guess I'm used to the syntax from assembler days
+<[James] J.T.SAVIDGE> I work with a man from Col.
+<[Kevin] APPERT> I was imprinted ( like a baby duck) on assembler syntax in my 
+youth
+<[Dennis] D.RUFFER> I thought I recognized it :-(
+<[jax] VESTA> You would like the Super 8, Kevin.
+<[Kevin] APPERT> why ,  Jax?
+<[Gary] GARY-S> That syntax works good for Forth - don't fight it
+<[jax] VESTA> kevin, because the Super 8 has a HUMONGOUS assembler.
+<[jax] VESTA> There are 325 registers!
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> risc to the -1
+<[Dennis] D.RUFFER> but it just adds a bunch more clutter!
+<[Dave] DHWEINSTEIN> Or a multi-regiusster RISC?
+<[Kevin] APPERT> I like simple , orthogonal instruction sets
+<[Dave] DHWEINSTEIN> 32000?
+<[Kevin] APPERT> LSI11, TI9989 and like that
+<[Gary] GARY-S> Did you read Gary feierbach's Conference on the Super 8
+<[jax] VESTA> The Super8 assembler is pretty orthagonal. Just big.
+<[Kevin] APPERT> there were some words on the FIG tree a while back, (getting ..
+

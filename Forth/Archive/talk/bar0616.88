@@ -1,0 +1,280 @@
+
+         
+                                
+ Minutes of THE FIGGY BAR Conference
+   Date: 06/16/88   Time: 22:32EDT
+  Items discussed : neural net ready to test drive, comp.lang.forth on usenet,
+                    3 regulars attack when a newcomer asks, 'what is Forth ?',
+                    look at PROLOG,texts used to get going in Forth 'back when'
+Attendees:
+[[gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Kevin] APPERT]
+[[Jax] VESTA]
+[[Frank] F.DUROSS]
+ 
+Minutes:
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Lack of green bills that crinkle and make me glad
+<[Dave] DHWEINSTEIN> (answer to question on door)
+<[gary] GARY-S> Nice response - too honest, but crisp and to the point
+<[Dave] DHWEINSTEIN> Is anyone coming on from the conference?
+<[gary] GARY-S> you
+<[gary] GARY-S> Did you ever return Sunday ?
+<[Dave] DHWEINSTEIN> But I'm not at the conference.
+<[Dave] DHWEINSTEIN> No
+<[gary] GARY-S> EXCUSE Moi - I thought you said to the (this) conference...
+<[Dave] DHWEINSTEIN> <- finished neural net on paper at work today (what can I 
+do if customers insist on using my resources) :-)
+<[gary] GARY-S> not 'FROM the conference .
+<[gary] GARY-S> I dunno
+<[Dave] DHWEINSTEIN> Tonight I'll find out if it works
+<[gary] GARY-S> Is this proprietary ?
+<[Dave] DHWEINSTEIN> Hell no.
+<[gary] GARY-S> Gonna post it if it goes ?
+<[Dave] DHWEINSTEIN> The only proprietary code I write is "official code" that 
+I write at work.
+<APPERT> is here.
+<[Dave] DHWEINSTEIN> I wrote it there because I couldn't use the devices (too 
+many "paying" users using them)
+<[Dave] DHWEINSTEIN> The only problem is that, even factored, the simulator 
+kernel is a block long!
+<[gary] GARY-S> Are you going to post it ?
+<[Dave] DHWEINSTEIN> I can't figure out how to get it smaller without loosing 
+all cohesion.
+<[Dave] DHWEINSTEIN> Yes I will
+<[Dave] DHWEINSTEIN> Here and on USENET
+<[gary] GARY-S> super - did Donnal ever contact you ?
+<[Dave] DHWEINSTEIN> Not yet.
+<[Kevin] APPERT> I hate coming in in the middle.
+<[Dave] DHWEINSTEIN> Topic is a neural net simulator I am working on.
+<[gary] GARY-S> Sorry - hi Kev
+<[Kevin] APPERT> hi guys, thanks Dave
+<[Dave] DHWEINSTEIN> I haven't even put it in yet. Once it works I'll
+<[Dave] DHWEINSTEIN> convert it into a stream file (my system supports both) 
+for easy inclusion with a graphics front end (wheeeeeeeeee)
+<[Dave] DHWEINSTEIN> All F79 of course
+<[gary] GARY-S> I can be reached on USENET now at the WELL
+<[Kevin] APPERT> please say "79-standard"
+<[Dave] DHWEINSTEIN> Oh. Is B10 Ansi FORTH or the IEEE.
+<[Dave] DHWEINSTEIN> I call it "FORTH" myself. Its the only one I am using at 
+the moment.
+<[Dave] DHWEINSTEIN> what is your address?
+<[Kevin] APPERT> (grin)
+<[Kevin] APPERT> I use standard MyForth (TM)
+<[Dave] DHWEINSTEIN> FORTH is standard, until you start using it!
+<[gary] GARY-S> I haven't got the manual yet, so I don't know - it also 
+connects to UUCP
+<[Dave] DHWEINSTEIN> What is your login name.
+<[gary] GARY-S> gars
+<[Dave] DHWEINSTEIN> then your address is probably: gars@well.UUCP
+<[gary] GARY-S> All lower case - WELL is Unix
+<[gary] GARY-S> true
+<[Dave] DHWEINSTEIN> We'll have to start something going on comp.lang.forth
+<[Dave] DHWEINSTEIN> I am olorin@juniper.UUCP
+<[gary] GARY-S> what is olorin ?? derived from
+<[Dave] DHWEINSTEIN> BTW: read the usenet posting etiquette. I have so far made 
+(1) post. Some mail, but one public post in two months.
+<[Dave] DHWEINSTEIN> Lord of the Rings/Silmarillian
+<[gary] GARY-S> I HAD to ask - sheesh
+<[Dave] DHWEINSTEIN> Anyway...*if* it works...I'll upload it.
+<[gary] GARY-S> How active is comp.lang.forth
+<[Dave] DHWEINSTEIN> Relatively dead. We have to get it rolling...
+<[Dave] DHWEINSTEIN> current topic is "what is up in the forth community"
+<[gary] GARY-S> Did you tell them GEnie
+<[Dave] DHWEINSTEIN> No
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> *you* tell them
+<[Dave] DHWEINSTEIN> Hey Jax
+<[jax] VESTA> woof!
+<[gary] GARY-S> Well - it is a fair response - if only for the ANS standard
+<[Dave] DHWEINSTEIN> Get yer but on comp.lang.forth...gary and I are planning 
+on taking it over! :-)
+<F.DUROSS> is here.
+<[Dave] DHWEINSTEIN> I did tell the guy who asked in mail...dunno if he got the 
+letter yet...I haven't gotten an asnwer
+<[Dave] DHWEINSTEIN> Lo Frank
+<[Frank] F.DUROSS> Hi everyone !~
+<[gary] GARY-S> Jax - what is my usenet address ... gars@well.uucp ?
+<[jax] VESTA> that's probably good enough nowadays.
+<[jax] VESTA> well!gars@lll-crg.arpa
+<[gary] GARY-S> got that dave ?
+<[Dave] DHWEINSTEIN> use rn...not readnews
+<[Dave] DHWEINSTEIN> garbled and overtyped...but yeah
+<[Frank] F.DUROSS> Yo ! What does allthis have to do with 4th
+<[jax] VESTA> Not to damn much.
+<[Dave] DHWEINSTEIN> My mail may have to go through emx at ut. (emx.cc.utexas.
+edu)
+<[gary] GARY-S> comp.lang.forth
+<[Dave] DHWEINSTEIN> We are planning on taking over comp.lang.forth on usenet!
+<[jax] VESTA> WELL has good mailer.
+<[Dave] DHWEINSTEIN> :-)
+<[Frank] F.DUROSS> Well I have no Idea
+<[jax] VESTA> Who can afford it? I PAY for usenet time
+<[jax] VESTA> Hi Frank, how do you FORTH?
+<[Frank] F.DUROSS>
+<[Dave] DHWEINSTEIN> So do I....$5 a year.
+<[jax] VESTA> ARGHH!
+<[jax] VESTA> ( green jealousy)
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> Course I don't think those are equal...
+<[gary] GARY-S> That's disgusting
+<[Dave] DHWEINSTEIN> Austin Unix User's Group has a student rate!
+<[jax] VESTA> Hop right in Frank.
+<[Frank] F.DUROSS> No I mean I wanna get into programming so I came here ! What 
+is forth
+<[gary] GARY-S> Frank - you figured this is freestyle didn't you ?
+<[jax] VESTA> FORTH is an operating system ... disguised as a program language.
+<[Dave] DHWEINSTEIN> ADVERTISEMENT: A FORTH novice series will start next month 
+as well as these rambloings!
+<[jax] VESTA> Let's get regular for the guest. Gary, call it to order
+<[jax] VESTA> .
+<[Frank] F.DUROSS>
+<[gary] GARY-S> TRUE - ON SUNDAY JULY 10
+<[Frank] F.DUROSS> Is Forth better than C or Pascal ?
+<[Dave] DHWEINSTEIN> It is a threaded language (generally), although it 
+compiles more efficiantly than any other compiledc language, is extensible, hi
+ghly flexible, fast, and small.
+<[gary] GARY-S> hold it for a minute gang
+<[gary] GARY-S> cool it Z!!!!
+<[Dave] DHWEINSTEIN> !!
+<[gary] GARY-S> ok - for a moment lets use protocol.
+<[gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Let me give you an example...
+<[Dave] DHWEINSTEIN> The University of Texas has a strong emphasis on the Algol 
+family
+<[Frank] F.DUROSS> I was using EZ 3d once and got a sys.eroor then it exited to 
+MacForth it was cool . I didn't even have MacForth on the disk ??
+<[Dave] DHWEINSTEIN> of languages (Algol, Pascal, Modula II, Ada)
+<[Dave] DHWEINSTEIN> I make my living doing systems programming
+<[Dave] DHWEINSTEIN> on an Alliant FX/8 Minisupercomputer, a Unix machine.
+<[Dave] DHWEINSTEIN> Since UNix is written in C, and C and Unix are so tightly 
+linked, I do ninety percent of my "for pay"
+<[Dave] DHWEINSTEIN> work in C (with Fortran, scripts and Awk thrown in). I have
+<[Dave] DHWEINSTEIN> also done assembly language work. Off all of these
+<[Dave] DHWEINSTEIN> choices, I do *all* of my leisure programming in FORTH
+<[Dave] DHWEINSTEIN> Because it is:
+<[Frank] F.DUROSS> Someone read my last message PLEEEEEEEAs
+<[Dave] DHWEINSTEIN> a) more powerful
+<[Frank] F.DUROSS> forget it
+<[jax] VESTA> hold on frank, he's tryin.
+<[gary] GARY-S> I think he's doing that Frank
+<[Dave] DHWEINSTEIN> b) easier to read (if you work to make your code clear)
+<[Dave] DHWEINSTEIN> c) easy to modify and expand
+<[Dave] DHWEINSTEIN> d) Works under the assumption that I know what I'm doing
+<[Frank] F.DUROSS> Is Forth Easy to learnm ?
+<[Dave] DHWEINSTEIN> and lets me work without getting in my way
+<[Dave] DHWEINSTEIN> 'e) is easy to debug
+<[Frank] F.DUROSS> Can I d/load a simple compiler assembler here ?
+<[jax] VESTA> yes
+<[gary] GARY-S> ga jax
+<[Frank] F.DUROSS> For a Mac
+<[jax] VESTA> OK Frank ...
+<[jax] VESTA> THat's interesting what you said ...
+<[Dave] DHWEINSTEIN> f) lets me do *anything* i want wth the power of assembly 
+(and intermixed assembly if I like) and a development time many times f
+aster than assembly
+<[Dave] DHWEINSTEIN> .
+<[jax] VESTA> FORTH is an interpreter, and in canned applications lik EZ3d
+<[jax] VESTA> the FORTH is hiding under the covers!
+<[jax] VESTA> I believe we have a MAC Forth here on the board ...
+<[Frank] F.DUROSS> So that's what that was
+<[jax] VESTA> yes we do ...
+<[jax] VESTA> I have it on disk at home. Check the library with key search MAC.
+<[jax] VESTA> Do you know how to use the library?
+<[Frank] F.DUROSS> IS there a beginners helpfile for forth here ?
+<[jax] VESTA> .
+<[jax] VESTA> MANY!
+<[Dave] DHWEINSTEIN> yes.
+<[gary] GARY-S> yes - check tutor.f83
+<[jax] VESTA> Also conference topics are there for beginners.
+<[Frank] F.DUROSS> Well I'll get to it !!!! Is this A HUGE file ?
+<[gary] GARY-S> read about any of Leonard Morgenstern's Topic area
+<[jax] VESTA> FORTH is not wide st
+<[jax] VESTA> spread enough to have a large ratio of ...
+<[jax] VESTA> experts to beginners!
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> FORTH is easier to learn if you work slowly, and play 
+round as much as possible. Tinker with what you learn as you learn it.
+<[gary] GARY-S> Frank - do you know how to do a library search ?
+<[Frank] F.DUROSS> Ok thanx
+<[jax] VESTA> SInce it is an interpreter, and extensible at that ...
+<[Dave] DHWEINSTEIN> Its fun, and lets you work well.
+<[Frank] F.DUROSS> Yes
+<[jax] VESTA> it can answer a lot of your questions itself.
+<[jax] VESTA> much more so than BASIC.
+<[Dave] DHWEINSTEIN> The biggest thing to be familiar with is the use of a 
+stack...any stack structure.
+<[gary] GARY-S> ok - look for Tutor, novice -- they are both there ...
+<[Dave] DHWEINSTEIN> BASIC (circle slash)
+<[jax] VESTA> You push it down, it pops up ( the stack, that is!)
+<[gary] GARY-S> AND don't interrupt guys...
+<[Frank] F.DUROSS> What is a Stacl?
+<[Dave] DHWEINSTEIN> !!
+<[Frank] F.DUROSS> Like HyperCard ?
+<[jax] VESTA> yes.
+<[gary] GARY-S> If you really want Forth handson make these conferences....
+<[jax] VESTA> sorta.
+<[Dave] DHWEINSTEIN> ( I just had to explane this one)
+<[gary] GARY-S> every Sunday starting July 10
+<[gary] GARY-S> ok ???
+<[gary] GARY-S> .
+<[gary] GARY-S> ga Frank
+<[Frank] F.DUROSS> What ^
+<[Kevin] APPERT> !
+<[Dave] DHWEINSTEIN> !!!
+<[gary] GARY-S> ga kev
+<[jax] VESTA> !!!!!
+<[Frank] F.DUROSS> has left.
+<[Kevin] APPERT> a stack , more like on HP calculators, is where forth ...
+<[Dave] DHWEINSTEIN> Oops.
+<[jax] VESTA> save it kevin, he left.
+<[gary] GARY-S> back to freestyle gang !
+<[Dave] DHWEINSTEIN> I think we lost our customer.
+<[Kevin] APPERT> keeps arguments which are...
+<[jax] VESTA> What are you up to KEVin
+<[Dave] DHWEINSTEIN> Do we come on striong...is that it?
+<[jax] VESTA> we didn't lose, he went to raid the icebox ( the library)
+<[gary] GARY-S> hey - we did good
+<[Kevin] APPERT> pushing back the frontiers of Knowledge.
+<[jax] VESTA> NO, you just don't dig the average GEnie user.
+<[Dave] DHWEINSTEIN> Oh..good..a new convert
+<[jax] VESTA> They're like butterflies. GEnie is expensive.
+<[Dave] DHWEINSTEIN> Nooo kidding! :-)
+<[jax] VESTA> Every other conf that doesn't have a guest speaker is interlaced. 
+He
+<[gary] GARY-S> Not compared to CIS or the Source
+<[jax] VESTA> mmusta thought we were crazy when we got polite.
+<[jax] VESTA> Yeah, but still not cheap.
+<[Kevin] APPERT> compared to local boards which are free, however (grin)
+<[jax] VESTA> He didn't have time to be pontificated.
+<[Dave] DHWEINSTEIN> The dollar movie is cheaper.
+<[Dave] DHWEINSTEIN> But the chat lines usually cost
+<[Kevin] APPERT> The pope wasn't even here!
+<[jax] VESTA> Signed onto a board today, asked if they wanted to talk FORTH ...
+<[jax] VESTA> SYSOP replied ...
+<[Dave] DHWEINSTEIN> (at keast until I put up a free one under UNIX)
+<[jax] VESTA> "SUre, we have a few FORTH bigots here."
+<F.DUROSS> is here.
+<[Dave] DHWEINSTEIN> Anyone heard of FYI (they use a FORTH derivative I believe)
+<[Dave] DHWEINSTEIN> Welcome back
+<[jax] VESTA> SpeWelcome back, stranger
+<[jax] VESTA> Did you find file?
+<[Kevin] APPERT> Forth is not a religion, it is not based on Faith.
+<F.DUROSS> HI I CAN'T FIND ANYTHING UNDER 'MAC' !
+<[jax] VESTA> let me check my library on disk. Hold tite.
+<[gary] GARY-S> get F83X
+<[Kevin] APPERT> is that for Mac, Gary?
+<[Dave] DHWEINSTEIN> <- finally found a new printer ribbon!
+<F.DUROSS> Aughghghghgh I just Cleared away ther files under 'MAC' ..........:(
+<[gary] GARY-S> While Jax is checking - did you get the NOVICE conferences info 
+?
+<F.DUROSS> No .
+<F.DUROSS> What is he checkin ?
+<[Dave] DHWEINSTEIN> If you're gonna use an off brand model of printer...make 
+sure that the only other printers using that ribbon are Trash 80's...the
+y never stop producing the ribbn!
+<[gary] GARY-S> every Sunday - starting July 10 is strictly for novices
+<[Dave] DHWEINSTEIN> No gurus allowed...they always argue
+<[Kevin] APPERT> it's a good idea, Frank.  It helps to have somebody push you ..
+

@@ -1,0 +1,215 @@
+
+Date: 04-03-88 (11:45)              Number: 463    
+From: STEVE PALINCSAR                 Read: YES
+Subj: 4TH BOOKS                     Status: PUBLIC MESSAGE
+
+              FORTH Books from the Library of Congress'
+       LCCC (Library of Congress Computerized Catalog) Database
+                         Compiled April 1988
+                       
+Anderson, Anita.
+  Mastering FORTH / Anita Anderson, Martin Tracy.  Bowie, MD, Brady 
+Communications Co, c1984.  vii, 216 p. : ill. ; 24 cm. 
+  Includes indexes.
+                   
+Armstrong, Margaret A., 1953-
+  Learning FORTH / Margaret A. Armstrong with technical assistance 
+from Mitchell E. Timin.  New York, Wiley, c1985.  226 p. : ill. ; 26 
+cm. 
+  Includes index.
+                     
+Bishop, Owen.
+  Exploring FORTH / Owen Bishop in collaboration with Audrey Bishop. 
+Englewood Cliffs, N.J, Prentice-Hall, c1985.  p. cm. 
+  "A Spectrum book."
+  Includes indexes.
+                        
+Brodie, Leo.
+  Starting FORTH : an introduction to the FORTH language and 
+operating system for beginners and professionals / Leo Brodie ; with 
+a foreword by Charles H. Moore.  Englewood Cliffs, N.J, Prentice-
+Hall, c1981.  xvi, 348, 16 p. : ill. ; 24 cm. 
+                      
+Brodie, Leo.
+  Starting FORTH : an introduction to the FORTH language and 
+operating system for beginners and professionals / Leo Brodie and 
+Forth, Inc. ; with a foreword by Charles H. Moore.  2nd ed.  
+Englewood Cliffs, N.J, Prentice-Hall, c1987. xvii, 346 p. : ill. ; 24 
+cm. 
+  (Prentice-Hall software series)
+  Includes bibliographies and indexes.
+                      
+Brodie, Leo.
+  Thinking FORTH : a language and philosophy for solving problems / 
+Leo Brodie. Englewood Cliffs, N.J, Prentice-Hall, c1984.  xiv, 300 p. 
+: ill. ; 24 cm. 
+  "A Spectrum book."
+  Includes index.
+                     
+Burnap, Steve.
+  FORTH, the fourth-generation language / Steve Burnap.  1st ed.  
+Blue Ridge Summit, PA, Tab Books, c1986.  vi, 185 p. : ill. ; 25 cm. 
+  Includes index.
+                     
+Chirlian, Paul M.
+  Beginning FORTH / Paul M. Chirlian.  Beaverton, Or, Matrix 
+Publishers, c1983. x, 240 p. : ill. ; 23 cm. 
+  Includes index.
+                      
+Chirlian, Paul                        M.
+  Beginning FORTH / by Paul Chirlian.  1st ed.  Blue Ridge Summit, 
+PA, Tab Books, 1984, c1983.  x, 240 p. : ill. ; 25 cm. 
+  Includes index.
+                        
+Dr. Dobb's toolbook of Forth / editors of Dr. Dobb's journal.  1st 
+ed. Redwood City, Calif, M&T Pub, <1987-   >.  v. <2   > ; 24 cm. 
+  Includes bibliographies and index.
+                         
+FORML Conference (5th : 1983 : Asilomar, Calif.)
+  Fifth FORML Conference : Forth Modification Laboratory, November 
+23-25, 1983, Asilomar, California, USA : conference papers.  San 
+Jose, CA (P.O. Box 8231, San Jose, 95125), Distributed by Forth 
+Interest Group, c1984.  viii, 352 p. : ill. ; 28 cm. 
+  Cover title: 1983 FORML Conference proceedings.
+  Includes bibliographies.
+                     
+Feierbach, Gary.
+  Forth tools and applications / Gary Feierbach and Paul Thomas.  
+Reston, Va, Reston Pub. Co, c1985.  vi, 154 p. : ill. ; 24 cm. 
+  Bibliography: p. 151-152.
+                      
+Geere, Ron.
+  FORTH, the next step / Ron Geere.  Wokingham, England Reading, 
+Mass, Addison-Wesley Pub. Co, c1986.  ix, 89 p. ; 24 cm. 
+  (Small computer series)
+  Includes index.
+  Bibliography: p. 85.
+                   
+Hogan, Thom, 1952-
+  Discover FORTH : learning and programming the FORTH language / Thom 
+Hogan ; illustrated by Mary M. Milewski.  Berkeley, Calif, 
+Osborne/McGraw-Hill, c1982 .  142 p. : ill. ; 24 cm. 
+  Includes index.
+                     
+Katzan, Harry.
+  Invitation to FORTH / by Harry Katzan, Jr.  Princeton, Petrocelli 
+Books, c1981.  232 p. : ill. ; 24 cm. 
+  Includes index.
+  Bibliography: p. 209-211.
+                              
+Kelly, Mahlon G.
+  FORTH, a text and reference / Mahlon Kelly and Nicholas Spies.  
+Englewood Cliffs, N.J, Prentice-Hall, c1986.  xxi, 487 p. : ill. ; 25 
+cm. 
+  (Prentice-Hall software series)
+
+Knecht, Ken, 1934-
+  Introduction to FORTH / by Ken Knecht ; edited by C.W. Moody ; 
+illustrated by R.E. Lund.  1st ed.  Indianapolis, Ind, H.W. Sams, 
+c1982.  142 p. ; 22 cm. 
+  (Blacksburg continuing education series)
+  Includes index.
+                             
+Lampton, Christopher.
+  Forth for beginners / by Christopher Lampton.  New York, F. Watts, 
+1985. 101 p. ; 24 cm. 
+  (A Computer literacy skills book)
+  Includes index.
+  Introduces the computer language Forth and explains how to use it 
+to write programs. 
+                           
+Martin, Thea.
+  A bibliography of Forth references / Thea Martin, editor.  2nd ed. 
+Rochester, N.Y, Institute for Applied Forth Research, 1984.  169 p. ; 
+28 cm. 
+                      
+McCabe, C. Kevin.
+  FORTH fundamentals / C. Kevin McCabe.  Beaverton, Or, Dilithium 
+Press, c1983. 2 v. : ill. ; 22 cm. 
+  Includes indexes.
+CONTENTS:v. 1. Language usage -- v. 2. Language glossary
+                        
+Oakey, Steve.
+  FORTH for micros / Steve Oakey.  London Boston, Newnes Technical 
+Books, 1984. 148 p. ; 22 cm. 
+  (Newnes programming books)
+  Includes index.
+                      
+Reymann, Joseph.
+  Understanding FORTH / by Joseph Reymann.  Sherman Oaks, CA, Alfred 
+Pub. Co, c1983.  47 p. ; 28 cm. 
+  (An Alfred handy guide)
+  Bibliography: p. 31.
+                      
+Reynolds, A. J.
+  Advanced FORTH / A.J. Reynolds.  Wilmslow, England, Sigma Press New 
+York, Halsted Press, 1986.  150 p. : ill. ; 21 cm. 
+  Includes index.
+                      
+Rochester FORTH Applications Conference (1983)
+  1983 Rochester FORTH Applications Conference, June 7-11, 1983 / 
+hosted by the Laboratory for Laser Energetics, the University of 
+Rochester, and the Institute for Applied Forth Research, Inc. ; 
+conference chairman, Lawrence P. Forsley ; proceedings editor, Diane 
+D. Ranocchia.  Rochester, N.Y, The Institute, c1983.  301 p. : ill. ; 
+28 cm. 
+  Includes bibliographies.
+                        
+Rochester FORTH Applications Conference (1984)
+  1984 Rochester FORTH Conference : real time systems, June 6-9, 
+1984, University of Rochester, Rochester, New York / Lawrence P. 
+Forsley, conference chairman.  Rochester, N.Y, Institute for Applied 
+Forth Research, c1984.  295 p. : ill. ; 28 cm. 
+  Includes bibliographies.
+                           
+Rochester FORTH Conference on Data Bases and Process Control (1982 : 
+University of Rochester) 
+  1982 Rochester FORTH Conference on Data Bases and Process Control, 
+May 18-21, 1982 / hosted by the Laboratory for Laser Energetics, the 
+University of Rochester and the Institute for Applied FORTH Research, 
+Inc.  Rochester, N.Y. (70 Elmwood Ave., Rochester 14611), The 
+Institute, c1982.  317, 5 p. : ill. ; 28 cm. 
+  Includes bibliographies.
+                      
+Rochester FORTH Standards Conference (1981) 
+  1981 Rochester FORTH Standards Conference, May 12-15, 1981 / hosted 
+by the Laboratory for Laser Energetics and the University Computing 
+Center, the University of Rochester ; Lawrence P. Forsley, conference 
+chairman ; Thea Mar tin, proceedings editor ; sponsored by the 
+Standard Oil Company (Ohio) ... et al..  Rochester, N.Y., The 
+University, 1981?.  378 p. : ill. ; 28 cm. 
+  Includes bibliographical references.
+                     
+Salman, W. P.
+  FORTH / W.P. Salman, O. Tisserand, B. Toulot ; translated by M.J. 
+Stewart. New York, NY, Springer-Verlag New York, 1984.  ix, 159 p. : 
+ill. ; 24 cm. 
+  Includes index.
+  Bibliography: p. 155-156.
+                     
+Scanlon, Leo J.
+  FORTH programming / by Leo J. Scanlon.  1st ed.  Indianapolis, 
+Ind., USA, H.W. Sams, c1982.  246 p. : ill. ; 22 cm. 
+  (The Blacksburg continuing education series)
+  Includes index.
+                   
+Terry, James (James D.)
+  Library of Forth routines and utilities / by James Terry ; with a 
+preface by Mike Edelhart.  New York, New American Library, c1986.  
+viii, 374 p. ; 24 cm. 
+  "A Plume/Shadow Lawn Press book."
+  Includes index.
+                        
+Toppen, David L.
+  Forth, an applications approach / David L. Toppen.  New York, 
+McGraw-Hill, c1985.  ix, 230 p. : ill. ; 23 cm. 
+  (A Byte book)
+  Includes indexes.
+                  
+Winfield, A. F. T. (Alan F. T.)
+  The complete FORTH / A.F.T. Winfield.  Wilmslow, Cheshire, U.K, 
+Sigma New York, Wiley, 1983.  xii, 131 p. : ill. ; 21 cm. 
+  Includes index.
+  Bibliography: p. 116.
+
+

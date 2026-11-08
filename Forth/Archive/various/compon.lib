@@ -1,0 +1,406 @@
+
+
+
+
+
+A Forth Component Library for Off-The-Shelf Distribution
+of Modules  
+
+
+
+
+
+John S. James P.O. Box 486 Santa Cruz, CA  95061 (408)
+479-9296  
+
+
+
+
+
+ABSTRACT  
+
+A system now being developed provides comprehensive
+support for moving large components of software systems
+among different institutions and work groups, across
+different Forth dialects and implementations, and across
+different operating systems.  The goal is to create a
+marketplace for off-the-shelf modules which can be used
+in many different environments as black boxes, with no
+need to know or change any of their internals.  
+
+
+
+
+
+NEED AND OPPORTUNITY  
+
+The biggest problem holding up greater acceptance of Forth
+is the lack of an effective library system for components
+of programs.  Despite the Forth standard, pre-written
+component packages large enough to be useful usually
+require an expert to get them even to compile, let alone run
+reliably, on a Forth system which has been customized for
+the requirements of a different institution.  
+
+A module system which could assure that components that
+were transportable would do much more than save the time
+spent in re-coding work already done:  
+
+
+
+1.  It would open a market for application components.  For
+example, a systems-oriented developer could write a good
+quicksort, or B-tree, or file editor, or network interface;
+these could run unchanged on any Forth which had the
+library system installed.  Then an applications-oriented
+developer could use these components off the shelf, for a
+job such as a real estate database or laboratory data
+acquisition, without needing to worry about or understand
+the modules' internals, or change them in any way. 
+Different software specialists could contribute what they
+can do best.  
+
+
+
+2.  Re-usable modules would help developers write
+error-free programs.  There is no way to prove programs
+correct, so the best available assurance, after all other
+precautions are taken, comes from months or years of
+reliable performance in widespread use.  
+
+
+
+3.  Large jobs expecially would benefit from tight,
+black-box modularity.  This kind of design helps tteams
+divide the work, understand, test, and modify the resulting
+systems, and re-use their software in future projects.  
+
+
+
+4.  Availability of off-the-shelf components would make
+Forth more attractive for many projects where otherwise
+it wouldn't have been used.  
+
+
+
+
+
+TECHNICAL OUTLINE  
+
+The following sketch shows one approach to these goals.  I
+am implementing what's described here but am not attached
+to this particular way to build a library, and will happily
+change this system if necessary to support the needs of
+vendors and other users of Forth.  Contact me to discuss
+changes, or to get on the mailing list for this project.  
+
+
+
+
+
+1.  ALL DIALECTS.  This library can be brought up on Forth
+83, Forth 79, 32-bit systems, and other dialects if there is
+demand.  
+
+A single module will not automatically run on the different
+Forth dialects.  For example, a developer who wrote in
+Forth 83 and also wished to support Forth 79 would need to
+hand-code the changes, preparing a companion module for
+Forth 79.  But once this initial work had been done - and it's
+a much smaller job than writing the software originally -
+both versions could be distributed together, and each
+customer's library system would select the right one to
+use.  In other words, after the initial development work has
+been done, the module will run automatically on all Forth
+systems with the library installed, in those dialects which
+the developer has chosen to support.  
+
+
+
+2.  OPERATING SYSTEMS.  In principle, it should often be
+possible to move modules automatically between different
+operating systems, such as MSDOS and UNIX, simply by
+copying a text file.  The Forth standard, plus the library
+support software, provides the environment necessary for
+the modules; any additional needs must be documented as
+special requirements.  
+
+At this time, however, all experience has been with a
+single operating system, MSDOS, on which this library is
+being implemented first.  
+
+
+
+3.  SOURCE DISTRIBUTION.  This system will distribute the
+software components as source code.  The reason is that
+without a compilation step at the target installation, it
+would be much harder to support the great diversity of
+Forth implementations which exist.  A disadvantage of
+distributing source is that developers will not be able to
+hide their proprietary work as well as if object code only
+could be shipped.  
+
+
+
+4.  MODULE COMPILER.  A module compiler, part of the
+library system, will delete all headers within a module,
+except those specially marked as being accessible from
+outside.  
+
+Deleting the headers saves memory, and also avoids the
+problem of cluttered glossaries.  For example, a quicksort
+module may have 20 words defined in it, but only one, SORT,
+seen by the outside world.  
+
+More importantly, this system encourages developers to
+design clean interfaces, so that a module can be used for a
+clearly defined set of tasks, with no tinkering required.  If
+all the words were available  outside the module, as is the
+case with Forth libraries now, developers would be tempted
+to leave their design unfinished, and expect users to
+understand parts of the source code and patch it when
+necessary.  
+
+This module compiler has been implemented as only three
+words, none with any stack effect.  MODULE and
+END-MODULE have the expected meaning.  I chose the name
+'**' ("star star") to mark the next word defined as available
+outside the module.  This word simply causes the next
+execution of CREATE to behave in the ordinary way and
+build a header in the dictionary; otherwise, within a
+module, CREATE is vactored so that it adds a definition to a
+temporary symbol table instead.  Since this system works
+by vectoring CREATE, it allows any kind of definition, not
+only colon definitions, to be used in a module.  
+
+The entiore module compiler takes well under 1K bytes,
+which includes as a byproduct a general-purpose
+symbol-table facility available for use by applications.  
+
+
+
+5.  DEFINED WORDSET.  All modules will be written in terms
+of a defined set of words, which will be a superset of the
+standard.  (Modules may also use their own code words, or
+words defined in other modules, or other system-specific
+words, provided that these dependencies are documented.)  
+
+A few new words will be provided with the library system,
+so that developers of modules can always assume that they
+are available.  Most of these will be in code.  Examples
+include system calls for file I/O and for screen
+management, a word to access data in activated records
+(see below), and a word to reverse the bytes within a range
+of memory (important as a building block for certain string
+operations and for string stacks).  
+
+In other words, the library system software will extend the
+Forth standard when necessary to build a comfortable
+environment for application development.  The new words
+will usually be short, and either in code or requiring
+customization to the particular system; otherwise, they
+could better be provided in a library module when needed. 
+New words will be added to the library system software
+only when clearly necessary for practical work.  
+
+
+
+6.  FILE I/O.  Unix-style file access (now available also in
+MSDOS) will be standard for this library system.  The basic
+functions, such as open, read or write up to N characters, or
+seek, will be provided by system calls, and may be
+simulated for operating systems on which they are not
+available (such as CP/M) by reblocking random record files. 
+Derived functions, such as buffered get and put of a single
+character and of a text line, will be provided in a module.  
+
+I/O "pipes" are important for library building.  Most Forth
+systems can use pipes already, except that EXPECT must
+ignore line feeds from the input (treat them as white
+space).  If an operating system does not offer pipes, the
+other parts of this Forth library system can still be used.  
+
+Effective use of pipes requires being comfortable with text
+files.  So a text file editor should be supplied with the
+library (as a module) for editing text files conveniently,
+without leaving Forth.  A simple full-screen editor which
+can be learned immediately is being implemented as a
+default, to be available with every installation of this
+module library.  More powerful file editors will surely be
+developed.  
+
+Modules can be distributed either as text files, or as files
+of screens.  The library recognizes either.  
+
+
+
+7.  STRING ARGUMENTS.  The library needs a uniform way to
+handle "look-ahead" string arguments, as in:  OPEN
+<filename>  
+
+I am implementing the following.  OPEN <filename>  
+
+works as expected either when executed, or in a colon
+definition.  If the name isn't known in advance, OPEN $  
+
+takes the name from a string stack (or simply from a
+memory buffer if there is no string stack).  OPEN $  
+
+can either be executed or compiled, also.  Note that the "$"
+is not a Forth word, but a special marker, like the right
+paren which closes a comment.  
+
+The library will provide a utility function for defining such
+words.  
+
+This string-argument system provides a uniform format for
+commands, whether they are compiled or executed, and
+whether they contain the strings or receive them later.  It
+does not require a special internal form of each command
+for the case of the arguments coming from memory rather
+than from the input stream.  It can be generalized to
+multiple arguments, and provides the customary prefix
+format for commands which accept strings, while allowing
+any subset of the string arguments to be passed
+postfix-style among routines, like numerical arguments in
+Forth.  
+
+
+
+8.  DATA AREAS.  The convention recommended (not
+required) is that modules compile to pure code, with all
+working storage and data areas (or pointers to them) kept
+in an activation record outside the module.  This re-entrant
+system provides ROMability, suitability for multitasking,
+and the ability for one task to use multiple instances of any
+data structure simultaneously.  Also, all memory
+management can be handled outside the module, when
+feasible - important because Forth does not have a standard
+way to allocate memory.  
+
+How does the module know where it's data area is?  One
+way to tell it would be to pass an extra stack argument
+with every call to a word defined in the module.  But
+usually it's more convenient to define a pointer variable
+outside the module, before it is compiled; the module
+makes all its memory references based on the value of that
+variable.  
+
+Any need for complex initialization - for example, telling
+the module the location and size of available memory
+working areas - can be handled by an initialization word in
+the module which takes reasonable stack arguments.  This
+word can be called again and again if necessary to create
+multiple instances of the data structure; later, the pointer
+value will select which instance is accessed.  
+
+Since the module must add an offset for almost every
+memory access, a defining word which creates efficient
+access words saves both time and memory.  This word 
+(BVARIABLE , with 'B' for 'based' ) is part of the library
+support software, always available to developers of
+modules.  
+
+
+
+
+
+WHAT THE LIBRARY WON'T DO  
+
+As mentioned above, this library system does not distribute
+modules as object code.  It does not deal with separate
+compilation of modules for linking or virtual execution.  
+
+Also, this system does not attempt to standardize Forth
+vocabularies (although it does permit their use within
+modules).  It would be hard to treat vocabularies in a
+uniform way, because different Forth systems implement
+them so differently.  And the module compiler, by removing
+unwanted headers, offers an alternative way to achieve the
+main purpose of vocabularies, avoiding having unwanted
+definitions accessible in the dictionary.  
+
+The decision to permit vocabularies but not otherwise
+support their use illustrates this system's philosophy of
+supporting application-oriented functions more than
+Forth-internal ones.  The library should help precisely
+where the shoe pinches against application developers
+trying to use Forth in practical projects; but some language
+elements are outside of its domain.  
+
+One area which the library could support but I prefer to
+avoid is data structures for using memory beyond 64K when
+running 16-bit systems.  We are headed toward 32-bit
+Forth for using this additional memory, and special 16-bit
+access words would be a distraction.  It seems better to
+keep the 16-bit and 32-bit library practices as compatible
+as possible.  However, this library system does not prevent
+someone else from developing modules for using memory
+outside of the address space, if they want to do so.  
+
+
+
+INSTALLING THE LIBRARY  
+
+Before the modules will run on a particular Forth, the
+library system must be installed.  
+
+This library will work best if vendors install it on their
+Forth implementations, and sell it either with their
+systems or separately.  To make it easier for vendors or
+anyone else to adapt the library, it is being designed to be
+installed on top of systems already in the field, without
+the need to recompile or ship a new Forth.  
+
+Here is what's involved in installing the library on top of an
+existing Forth:  
+
+
+
+(1)  CREATE and FIND are vectored to new versions which
+support the module compiler.  (If they are not vectorable,
+as in almost all current Forth systems, calls to the new
+definitions can be patched in.)  
+
+(2)  The module compiler needs to use the lower-level FIND
+primitive, if possible.  To save memory, it uses this word
+for its symbol-table search.  
+
+(3)  Some systems need a patch so that ;CODE is not
+confused by the absence of a header.  
+
+(4)  WORD should be vectorable to support input and
+compilation from text files.  Unlike other Forth
+compilation, there is not particular buffer size (such as 80,
+or 1024) in this case.  
+
+(5)  EXPECT should ignore any line-feed characters as input.  
+
+(6)  A number of other words, such as file I/O and
+windowing system calls, need to be defined for the
+particular operating system, but few of these involve any
+patches to the existing Forth.  
+
+Most of these added words are in code.  However, no
+assembler need be loaded, as the definitions can be entered
+as bytes already assembled, so that the assembler need not
+remain in memory with the library system.  
+
+This library system is in effect an application-oriented
+operating system built on top of Forth and an existing
+operating system.  The goal is to provide a comfortable
+environment for the application developer by filling in just
+those gaps which have been found to cause serious
+problems.  This system makes heavy use of the
+extensibility of Forth, and wouldn't be feasible without it.  
+
+And this system enhances Forth's extensibility, by allowing
+practical distribution of components of programs - pieces
+larger than a single word but smaller than the whole job.  
+
+Hopefully a module library will help coordinate the work of
+different developers, provide a market for system
+software, make it easier to write applications, and expand
+the use of Forth.  
+
+

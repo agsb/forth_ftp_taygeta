@@ -1,0 +1,259 @@
+
+      
+ Minutes of the FIGGY BAR RT Conference.
+      
+Date: 11/03/88   Time: 22:27EST
+Attendees:
+[[Gary] GARY-S]
+[[Dennis] D.RUFFER]
+[[Jack Woehr] FIGCHAPTERS]
+[[Kevin] APPERT]
+         
+Items discussed: voting booths and talking hands in Forth, FIG chapters' new
+               coordinator & reaching the chapters, CAD, Forth Horror stories
+Minutes:
+<FIGCHAPTERS> is here.
+<[jax|vesta] FIGCHAPTERS> woof
+<D.RUFFER> is here.
+<[Jack Woehr] FIGCHAPTERS> hoi!
+<[Dennis] D.RUFFER> hi guys
+<[Dennis] D.RUFFER> Do you have that set on a random generator jack?
+<[Jack Woehr] FIGCHAPTERS> it beats conversqation
+<[Dennis] D.RUFFER> did you guys hear the latest?
+<[Gary] GARY-S> says a lot for us
+<[Gary] GARY-S> which latest
+<[Jack Woehr] FIGCHAPTERS> latest what?
+<[Dennis] D.RUFFER> I just posted an interesting rumer
+<[Jack Woehr] FIGCHAPTERS> did yu spel it rite?
+<[Dennis] D.RUFFER> My parents caught a talk show...
+<[Dennis] D.RUFFER> you know the Today or Good Morning A... type
+<[Dennis] D.RUFFER> sometime like last Monday....
+<[Dennis] D.RUFFER> a guy on the talk segment...
+<[Dennis] D.RUFFER> was talking about the Voting Booths....
+<[Dennis] D.RUFFER> aparently they are written in Forth...
+<[Gary] GARY-S> rilly ?
+<[Dennis] D.RUFFER> and this guy was saying that that made them unsecure...
+<[Dennis] D.RUFFER> and that Forth could not be trusted, since it could be 
+modified
+<[Dennis] D.RUFFER> ain't that a bunch
+<[Gary] GARY-S> yeah - like each booth comes with a rs-232 and keyboard
+<[Dennis] D.RUFFER> I called Jan and told her
+<[Dennis] D.RUFFER> somehow Bess got wind of it and called my wife...
+<[Dennis] D.RUFFER> and then even called my parents...
+<[Dennis] D.RUFFER> they couldn't remember any more...
+<[Jack Woehr] FIGCHAPTERS> age does that
+<[Dennis] D.RUFFER> but the game is now afoot.
+<[Dennis] D.RUFFER> .
+<[Jack Woehr] FIGCHAPTERS> Did you see EE Design
+<[Jack Woehr] FIGCHAPTERS> this week?
+<[Gary] GARY-S> hell - let's tell them it's a conspiracy - chapter memberships 
+would go through the roof !!!
+<[Dennis] D.RUFFER> what was in EE?
+<[Jack Woehr] FIGCHAPTERS> A Hand!!
+<[Dennis] D.RUFFER> ??
+<[Jack Woehr] FIGCHAPTERS> A Hand for people who want to talk to Deaf Mutes.
+<[Jack Woehr] FIGCHAPTERS> You type, it signs, the blind/deaf party feels the 
+fingers.
+<[Gary] GARY-S> and what is the sound of A HAND clapping ?
+<[Dennis] D.RUFFER> neet!
+<[Jack Woehr] FIGCHAPTERS> in FORTH!
+<[Dennis] D.RUFFER> of course!
+<[Jack Woehr] FIGCHAPTERS> " The program comprises thirty pages of Forth".
+<[Dennis] D.RUFFER> wonder what will happen if the voting booths mess up?
+<[Jack Woehr] FIGCHAPTERS> The Dexter project ( the talking hand) was 
+programmed by David Jaffe of Palo Alto.
+<[Gary] GARY-S> Jax - we have a chapter meeting here manana - any message for 
+the faithful ?
+<[Gary] GARY-S> Jax ?
+<[Jack Woehr] FIGCHAPTERS> Yeah "are there any more at home like you?" where 
+are all the chapters that are not on the coasts? Each one should log in o
+n GEnie. If anybody knows Australian or English FORTHers, I can be reached 
+internationally on the WELL.
+<[Gary] GARY-S> I have UK addresses
+<[Gary] GARY-S> about 8 of'em
+<[Jack Woehr] FIGCHAPTERS> That's great, do they have email tags on them>
+<[Gary] GARY-S> no
+<[Dennis] D.RUFFER> and I have one in Aussie land
+<[Dennis] D.RUFFER> again no EMAIL
+<[Jack Woehr] FIGCHAPTERS> Ok, dennis, how do we rustle up postage. Is JD going 
+to call me or should I call him?
+<[Dennis] D.RUFFER> hasn't he called you yet?
+<[Jack Woehr] FIGCHAPTERS> No, but maybe it would be politerer if I called him 
+first.
+<[Jack Woehr] FIGCHAPTERS> ...???
+<[Gary] GARY-S> 45 cents / half-ounce airmail
+<[Dennis] D.RUFFER> try after 7:30 PST
+<[Jack Woehr] FIGCHAPTERS> I have his ### but if you have it handy ...???
+<APPERT> is here.
+<[Dennis] D.RUFFER> hi kevin
+<[Kevin] APPERT> Hi all. sorry I'm late
+<[Jack Woehr] FIGCHAPTERS> hi kevin.
+<[Gary] GARY-S> you missed nothing
+<[Kevin] APPERT> I'm doing this at work,. and I got "ONE MORTE THING"ed
+<[Jack Woehr] FIGCHAPTERS> He missed Dexter.
+<[Kevin] APPERT> Dexter?
+<[Jack Woehr] FIGCHAPTERS> ( must work at a funeral parlor)
+<[Gary] GARY-S> the voting cheat
+<[Jack Woehr] FIGCHAPTERS> "ONE MORTE THING" ??? something died.
+<[Kevin] APPERT> MORTE=MORE (typeo)
+<[Jack Woehr] FIGCHAPTERS> NO DEXTER THE TALKING HAND!!!
+<[Kevin] APPERT> Did you see the article
+<[Jack Woehr] FIGCHAPTERS> Programmed in Forth by David Jaffe on the Z80.
+<[Kevin] APPERT> in EE times about "Computers and Medicine"?
+<[Gary] GARY-S> can you post on the BBS
+<[Jack Woehr] FIGCHAPTERS> that's the article that mentioned DEXTER.
+<[Jack Woehr] FIGCHAPTERS> the one Kevin just mentions.
+<[Jack Woehr] FIGCHAPTERS> .
+<[Kevin] APPERT> I can post the date, the material is copyright
+<[Jack Woehr] FIGCHAPTERS> EE TIMES 31 Oct 1988
+<[Gary] GARY-S> I will send UK addresses in the next few days - to FIGCHAPTERS ?
+<[Kevin] APPERT> "Engineers give doctosrs a hand"  Pg 48
+<[Jack Woehr] FIGCHAPTERS> right.
+<[Jack Woehr] FIGCHAPTERS> And unlike my short little brother, FIG ...
+<[Jack Woehr] FIGCHAPTERS> I will *answer* my email.
+<[Jack Woehr] FIGCHAPTERS> .
+<[Dennis] D.RUFFER> <grin>
+<[Gary] GARY-S> you didn't mine
+<[Jack Woehr] FIGCHAPTERS> If it is rhetorical i don't, but we exchange notes 
+every few days, gary!
+<[Kevin] APPERT> Forth horror stories anybody?
+<[Gary] GARY-S> go kev
+<[Kevin] APPERT> I don't have one handy.  thought somebody else might
+<[Dennis] D.RUFFER> yea
+<[Gary] GARY-S> Is Denver Telenet fixed yet ?
+<[Dennis] D.RUFFER> how about your votes being tallied by Forth
+<[Dennis] D.RUFFER> Denver is on some sort of experiment
+<[Dennis] D.RUFFER> haven't gotten any deatils yet tho
+<[Gary] GARY-S> PCP is dead going in
+<[Kevin] APPERT> reminds me of a group where I work which got started using 
+Forth.
+<[Kevin] APPERT> so they hired a C programmer who re-metacompiled every time he 
+made a
+<[Kevin] APPERT> trivial change in his system.  He felt Forth was a slow 
+awkward way to
+<[Kevin] APPERT> complie code.  He went back to C, the group went to C, he 
+quit...
+<[Kevin] APPERT> the group dhas no clue what Forth is about...
+<[Gary] GARY-S> Conferences comming - Dec 8 = Mitch Bradley, Jan 12 = Mike Perry
+<[Kevin] APPERT> and we all lived happily ever after.
+<[Jack Woehr] FIGCHAPTERS> ( well being >>> mike perry )
+<[Kevin] APPERT> your text got mixed with mine, what dates for perry?
+<[Dennis] D.RUFFER> has mike picked a topic?
+<[Gary] GARY-S> jan 12
+<[Kevin] APPERT> ack
+<[Gary] GARY-S> not yet - neither has mitch that i can print
+<[Jack Woehr] FIGCHAPTERS> " Mitch Bradley Speaks: ' (($*&(#^&%&^$ ' "
+<[Kevin] APPERT> oops, I don't get IT Jax
+<[Jack Woehr] FIGCHAPTERS> Kevin ... similar He said that mitch's topic was 
+nothing he could print.
+<[Kevin] APPERT> ohhhhhhhhhh
+<[Jack Woehr] FIGCHAPTERS> Kevin .. similar horror story with a VESTA client.
+<[Jack Woehr] FIGCHAPTERS> Department in LARGE customer starts developing 
+project on a VESTA board.
+<[Jack Woehr] FIGCHAPTERS> Program is 95% completed, hardware of expensive 
+hi-ticket item all linked up.
+<[Jack Woehr] FIGCHAPTERS> A few things left to do, including final ROMming.
+<[Jack Woehr] FIGCHAPTERS> Office politics drives out lead programmer.
+<[Kevin] APPERT> stepping into rom always has a few problems
+<[Jack Woehr] FIGCHAPTERS> Replaced by an expert in 6502 assembler. Can't tie 
+shoelaces with roadmap.
+<[Kevin] APPERT> what was processor
+<[Jack Woehr] FIGCHAPTERS> After two months, has written ONE FORTH WORD:
+<[Jack Woehr] FIGCHAPTERS> ( 8086)
+<[Jack Woehr] FIGCHAPTERS> : GO LOAD RUN ;
+<[Kevin] APPERT> gaaaaaaaaaa
+<[Jack Woehr] FIGCHAPTERS> hahahhahahahahah! And he claims we make fun of him 
+when he calls.
+<[Jack Woehr] FIGCHAPTERS> Heaven forfend!
+<[Jack Woehr] FIGCHAPTERS> .... :-)
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> just say "GO"
+<[Jack Woehr] FIGCHAPTERS> we did , but he keeps coming back.
+<[Jack Woehr] FIGCHAPTERS> .
+<[Kevin] APPERT> just say NOreaga
+<[Kevin] APPERT> a bad programmer who does ...
+<[Kevin] APPERT> not understantd forth....
+<[Kevin] APPERT> will do with the language...
+<[Kevin] APPERT> and to our credability...
+<[Kevin] APPERT> I wonder why we try to get people...
+<[Kevin] APPERT> to try it.
+<[Jack Woehr] FIGCHAPTERS> In line with your point, Kevin ..
+<[Jack Woehr] FIGCHAPTERS> it is Chuck Moore who said ...
+<[Jack Woehr] FIGCHAPTERS> "Maybe it would be better if not so many people used 
+Forth"
+<[Gary] GARY-S> Dennis - I forwarded Mike's letter regarding ANS TC --- I am in 
+a holding...
+<[Gary] GARY-S> pattern till after the convention, ok
+<[Dennis] D.RUFFER> got it
+<[Dennis] D.RUFFER> but haven't read it yet
+<[Kevin] APPERT> anybody know a cheap car rental company in o.county?
+<[Gary] GARY-S> Just what I told you
+<[Kevin] APPERT> <going to the convention...
+<[Dennis] D.RUFFER> anyone know how to get from LA to Anaheim?
+<[Gary] GARY-S> Rent-^a-wreck has an outlet there
+<[Kevin] APPERT> travel agent blessed by FIG ...
+<[Jack Woehr] FIGCHAPTERS> yes.
+<[Kevin] APPERT> had best price =AVIS!!!!!
+<[Dennis] D.RUFFER> yuck
+<[Jack Woehr] FIGCHAPTERS> get on the freeway and head south.
+<[Gary] GARY-S> Take a jitney
+<[Jack Woehr] FIGCHAPTERS> Don't miss Orange County Airport while you're there.
+<[Kevin] APPERT> going to Wescon, and visiting also!  need wheels
+<[Jack Woehr] FIGCHAPTERS> Eight foot tall bronze statue of John Wayne, 
+reaching for his six-shooter!
+<[Gary] GARY-S> any forth stuff gentlemen ?
+<[Kevin] APPERT> I can say ADA, CAN'T I?
+<[Gary] GARY-S> How many volumes is the 'official' DOD Ada up to ??
+<[Jack Woehr] FIGCHAPTERS> ... :-0
+<[Kevin] APPERT> < writing a Forth program to generate a waiver request
+<[Kevin] APPERT> on request
+<[Kevin] APPERT> .
+<[Jack Woehr] FIGCHAPTERS> well, goodnite all and remember, ...
+<[Gary] GARY-S> jax - you gonna do a figchap column in FD ?
+<[Jack Woehr] FIGCHAPTERS> Am i invited?
+<[Jack Woehr] FIGCHAPTERS> guess so ... jd did one, right?
+<[Gary] GARY-S> leave one here to MARLIN.O
+<[Gary] GARY-S> just don't expect a response
+<[Jack Woehr] FIGCHAPTERS> ok, when Ihave something to say!
+<[Kevin] APPERT> anybody have
+<[Jack Woehr] FIGCHAPTERS> has left.
+<[Kevin] APPERT> any advice about...
+<[Kevin] APPERT> schematic capture.?
+<[Dennis] D.RUFFER> PCAD
+<[Kevin] APPERT> simulator?
+<[Kevin] APPERT> PCB layout?
+<[Dennis] D.RUFFER> don't think so, what scale you need?
+<[Dennis] D.RUFFER> sim that is, it does layout
+<[Kevin] APPERT>   scale?  how many parts - ~100 or so
+<[Gary] GARY-S> mils
+<[Gary] GARY-S> angstroms if your doing chips
+<[Dennis] D.RUFFER> surface mount?
+<[Kevin] APPERT> don't know yet, we layout with pretty wide traces
+<[Dennis] D.RUFFER> I've heard good reports about PCAD...
+<[Kevin] APPERT> in Mill Spcec parts?  goo luck
+<[Dennis] D.RUFFER> but I really don't know much about that stuff
+<[Kevin] APPERT> no, just dips and PGA's for us.  LCC's have to go on hybrids
+<[Gary] GARY-S> call Marty Fraeman at J-H Kevin !!
+<[Kevin] APPERT> who?
+<[Gary] GARY-S> Marty Fraeman or John hayes - they just did the Johns-Hopkins 
+32 bitter
+<[Kevin] APPERT> oh, those guys.
+<[Gary] GARY-S> You KNOW they've been using CAD
+<[Kevin] APPERT> yes, probably Mentor or such
+<[Gary] GARY-S> Who can better answer your questions
+<[Kevin] APPERT> with the final simulations on a BIG mainframe --- possibly w/ 
+accelerator
+<JAX> is here.
+<[Kevin] APPERT> rehi Jax
+<[Dennis] D.RUFFER> no answer?
+<[Gary] GARY-S> I remember Marty telling me he used a MAC a lot - maybe for 
+some of the design work
+<[Kevin] APPERT> the cost/beni ratio  of a mac is unnacceptable
+<[Gary] GARY-S> J-H Applied Physics lab, Laurel, Maryland
+<[woof.] JAX> well, till sunday.
+<[woof.] JAX> has left.
+<[Gary] GARY-S> g'nite all
+<[Dennis] D.RUFFER> night nite
+=== End of Steno notes. ===
+
+

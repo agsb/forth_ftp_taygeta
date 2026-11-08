@@ -1,0 +1,224 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+ FIGGY BAR of 25 April 1991. Notice on the door reads: Welcome to another open
+ FIGGY BAR. Are you ready for dpANS Forth ? Would you like Wil Baden to restart
+ the 'puzzels' topic ? If none of these appeal to you, start your own  ax 
+ grinding (Forth related). Your FIG-tender is Gary. We didn't discuss the
+ puzzels. We did discuss dpANS and give quick personnel sketches.
+
+Date: 04/25/91   Time: 22:26EDT
+Attendees:
+[GARY-S]
+[[Dennis] D.RUFFER]
+[[Len] NMORGENSTERN]
+[[doug] D.GARRETT]
+
+Minutes:
+<D.RUFFER> is here.
+<NMORGENSTERN> is here.
+<GARY-S> Well, that's 3 of the deacons, no choir ?
+<[Len] NMORGENSTERN> No comments about my singing!
+<[Dennis] D.RUFFER> la.la.la.la.laa.la.la.la
+<GARY-S> That good or that bad ?
+<[Len] NMORGENSTERN> Johhny one-note I know also
+<[Len] NMORGENSTERN> do re mi fa so
+<[Len] NMORGENSTERN> and ti
+<[Len] NMORGENSTERN> disconnected.
+<GARY-S> Have you checked out topic 10 lately ? dpANS is taking on a decidedly 
+nasty tone.
+<[Dennis] D.RUFFER> haven't checked yet today...is it getting worse?
+<GARY-S> Wait till you read the latest volleys
+<[Dennis] D.RUFFER> oh, are there any _new_ arguements this time? <sigh>
+<GARY-S> Elliott is doing a great job mopping up after all my spills - keep him 
+<grin>
+<[Dennis] D.RUFFER> yeh, he is picking this up _real_ fast...and I actually 
+think he enjoys it <smile>
+<GARY-S> No really new arguments, just the old arguments are growing teeth and 
+becoming personalized
+<[Dennis] D.RUFFER> hum...now how do I do my job (stop personal attacks) when 
+they happen across the ForthNet...hum
+<GARY-S> I guess Len is really gone ?!???
+<[Dennis] D.RUFFER> might have gotten a call..and no call waiting
+<D.GARRETT> is here.
+<GARY-S> You don't - and that may actually be good. You do have the right to 
+e-mail GEnie-ites whoveer off too far, but I'm not satisfied a few invectives 
+don't push the envelope a little.
+<[doug] D.GARRETT> Did I interrupt a discussion about swearing on Genie?
+<[Dennis] D.RUFFER> ah, no, but you can't do that :)
+<GARY-S> Dennis - one quick comment. Do you know the GEnieus RT has a topic for 
+other SysOps to leave messages in ? I have received a few new Unix users
+as a result of messages there.
+<LMORGENSTERN> is here.
+<[Dennis] D.RUFFER> yes, I should get into the GEnieus RT more often...
+<[Dennis] D.RUFFER> but there is just too much over there <sigh>
+<GARY-S> No - Doug, we were discussing the tember of the exchanges regarding 
+dpANS in Category 10, especially the ones off Usenet
+<[Dennis] D.RUFFER> Let's hope they don't get too nasty...
+<[len] LMORGENSTERN> Have you guys been having line problems?
+<[Dennis] D.RUFFER> GEnie is supposed to be a _family_ place...
+<GARY-S> If they do, I will continue to port them 'as is'
+<[doug] D.GARRETT> I browsed some bulletins between you and Doug Phillips.
+<[Dennis] D.RUFFER> and eventually, I would have to step in and...
+<GARY-S> We just don't have to condone personal attacks here
+<[Dennis] D.RUFFER> do something about it.  Not by my choice mind you...
+<[Dennis] D.RUFFER> but someone will eventually _ask_ me to.
+<[doug] D.GARRETT> I spoze a few expletives are OK, but personal attacks are no 
+no.
+<GARY-S> In a place that gets 5 feet of rain a year ? N-a-a-a-a-w
+<[Dennis] D.RUFFER> I can let it go until I get complaints...
+<[len] LMORGENSTERN> What cat-topic has this been in?
+<[Dennis] D.RUFFER> then, I will have to do something.
+<GARY-S> You have no control over c.l.f. or FigL Dennis
+<[Dennis] D.RUFFER> Speaking of that, what you's all reactions to the new...
+<[Dennis] D.RUFFER> GEnie arbitration "rules"?
+<[doug] D.GARRETT> Ingorance of them.
+<[Dennis] D.RUFFER> your right gary, but I do have responsibility to what can 
+appear on GEnie
+<GARY-S> Ingorance, huh ?
+<[doug] D.GARRETT> (ignorance in spelling, too!)
+<[Dennis] D.RUFFER> might be better off that way doug :)
+<[doug] D.GARRETT> I'm beginning to feel the urge to hide in the woods.
+<[Dennis] D.RUFFER> there is now an "official" procedure for handling debates 
+between users and sysops on GEnie
+<GARY-S> It hasn't reached that point, and probably won't considering the 
+combatants are both given to more statesmanship than is currently being 
+displayed
+<[Dennis] D.RUFFER> I don't think it will either gary.  Just considering how I 
+would handle it if it did
+<[Dennis] D.RUFFER> it was prompted by a very nasty arguement that is just now 
+settling down
+<[doug] D.GARRETT> Evidently   ah.  ga
+<GARY-S> and is supposed to stay unmentioned
+<[doug] D.GARRETT> My lips are sealed.
+<[Dennis] D.RUFFER> the debate is unmentionable, but the poilicies they created 
+are going to be with us for a while
+<[doug] D.GARRETT> Your messages to Doug Phillips were very diplomatic at 
+eloquent.
+<GARY-S> There are some strong opinions about what dpANS should be, and as it 
+nears completion it is reasonable to see some incampments forming
+<[doug] D.GARRETT> pmi, but in 25 words or less, what is dpANS ?
+<[Dennis] D.RUFFER> you want to splain it or should I gary?
+<GARY-S> BASIS coming to fruition - is that too few ?
+<[doug] D.GARRETT> oh, so this concerns Forth  (how do you get from Forth to 
+"dp" ?)
+<[Dennis] D.RUFFER> dp = Draft Proposed, i.e. pre-standard
+<[doug] D.GARRETT> ah, now I know.  Thank you.  25 words are up.  ga
+<[Dennis] D.RUFFER> draft proposed American National Standard
+<[Dennis] D.RUFFER> the X3 says we are in the computer languages group
+<[doug] D.GARRETT> I've been amazed at all the smoke surrounding this ANSI 
+bizness.  Much cooler-headed folk in MUMPS community...
+<[Dennis] D.RUFFER> he must be having some kind of problem tonight
+<GARY-S> Much noisier in the 'C' community
+<[doug] D.GARRETT> we go thru new standardization every 3 years or so.
+<[Dennis] D.RUFFER> the smoke is just the normal process of a child growing up
+<[doug] D.GARRETT> ah, thaz right, this is first time in the ANSI camp.
+<GARY-S> X3J11 was _much_ nastier than X3J14
+<[Dennis] D.RUFFER> yes, the first is the worst, and now it is coming to a head
+<[Dennis] D.RUFFER> I expect it to get _real_ nasty now <sigh>
+<[doug] D.GARRETT> Uh... could you explain to me (25 words or less, again)...
+<[doug] D.GARRETT> how ANSI imprimateur will make life better for you at Forth 
+Inc. ?
+<GARY-S> I tend to fall into the Ridriguez/Petty/Wavrik camp, but try to stay 
+neutral, or my message porting and SysOping would carry a stain.
+<[doug] D.GARRETT> You, too, Gary.  What's it really mean for you, in real life?
+<[doug] D.GARRETT> I'm curious, and don't know.  please ga
+<[Dennis] D.RUFFER> an ANS Forth standard would help FORTH, Inc. "sell" Forth 
+to places that are concerned about using "standard" language
+<GARY-S> It will legitimize Forth in DoD contract bids - that is certainly 
+significant
+<[doug] D.GARRETT> Very good reason!
+<GARY-S> Hmm - echos of the same thought, Dennis
+<[Dennis] D.RUFFER> it is not just DOD, but other large corporations as well
+<GARY-S> DoD is definitely the bell-cow, though.
+<[Dennis] D.RUFFER> we _have been_ turned down on jobs because we didn't use a 
+"standard" language
+<[doug] D.GARRETT> yeah.  Come to think of it, Veterans Admin couldn't 
+"legally"...
+<[Dennis] D.RUFFER> DOD does have some big contracts..that's for sure
+<[doug] D.GARRETT> use MUMPS until ANSI kissed & blessed it.
+<[doug] D.GARRETT> I assume there is an ANSI standard C, yes?
+<GARY-S> Also, what happens in DoD carries BIG ripples throughout the rest of 
+government. Witness Cobol. Witness Ada.
+<[Dennis] D.RUFFER> yes, C has made it, but they are also very bloody because 
+of it
+<GARY-S> That was the X3J11 I refered to earlier, Doug.
+<[doug] D.GARRETT> I'll rush right out and buy a copy   :)
+<[doug] D.GARRETT> Uh... do most of the anti-ANSI ballyhooers NOT work for 
+Uncle?
+<[Dennis] D.RUFFER> speaking of buying copies...any reaction to my message that 
+this is probably the last electronic version of the standard?
+<GARY-S> X3J11 caused the same furor among 'C' proponents of K&R that X3J14 is 
+now causing among F83 proponents
+<[doug] D.GARRETT> I've purposely stayed on the sidelines, ingorant (!), and 
+not read hardcopy nor electronic versions.  Sorry, Dennis.
+<GARY-S> No - quite the contrary. The BIGGEST brouhau is the changing of word 
+actions, the dropping of some, and the addition of C like structures.
+<[Dennis] D.RUFFER> that is good for you doug...you're blood presure is lower :)
+<GARY-S> Mostly calls for the style-sheet, Dennis
+<[Dennis] D.RUFFER> but I answered that last night, there is no style sheet 
+<sigh>
+<GARY-S> Someone also generated one that can be filtered through nroff ( I 
+think ????)
+<[Dennis] D.RUFFER> have you seen the output of any of these translater yet?
+<GARY-S> no - I'd rather send $15 to Heidi, or whoever.
+<[Dennis] D.RUFFER> not Heidi any more...Rible is taking care of it now
+<GARY-S> Doug - you're the paying customer - anthing you wanna discuss ?
+<[doug] D.GARRETT> Not much concerning Forth.  But I'm curious (nosey)...
+<[doug] D.GARRETT> about what other people do for a living.  I know Dennis 
+works for...
+<[doug] D.GARRETT> Forth Inc, but have no idea what he does.  Gary is...
+<[doug] D.GARRETT> without  any handles, other than from Arkansas...
+<[doug] D.GARRETT> What do y'all do, when not arguing/discussing ANSI dpANS 
+Forth BASIS ?
+<[Dennis] D.RUFFER> My official title is Engineering Product Coordinator, if 
+that helps doug :)
+<GARY-S> I am a field service engineer for a electro-mechanical process control 
+manufacturer
+<[doug] D.GARRETT> both help fill in a little color, in the stick-figure images 
+I have of you two.  Thanx.
+<GARY-S> I'm a husky stick, while you are at it. Not chubbo, just big
+<[doug] D.GARRETT> Dennis?  Dimension, please!
+<GARY-S> 6'4", 225#, mid-40's
+<[doug] D.GARRETT> All right!  Well, for the record...
+<[Dennis] D.RUFFER> I'm just a long haired bearded hippy who's suffering from 
+mid-life bulge :(
+<[Dennis] D.RUFFER> 5'8", ???, 35
+<[doug] D.GARRETT> I'm 5' 11", bulging in the middle, cover my 2-3 chins with a 
+beard, 42 years on this planet.
+<GARY-S> Viet vet, with a tolerant wife and beagle/terrier cross named Elliot 
+(Elliot is a she)
+<[Dennis] D.RUFFER> a she??? must be the one "t" :)
+<[doug] D.GARRETT> I was in USAF over there in 1970....
+<GARY-S> She's my "fuzzy-child"
+<[doug] D.GARRETT> Judy is my partner, and we have 4 cats.
+<[Dennis] D.RUFFER> seperated (recently), 2 kids (my son lives with me) living 
+on Hermosa Beach (yea!)
+<[doug] D.GARRETT> Dennis, did you study comp sci in college?
+<[Dennis] D.RUFFER> majored in math, minor comp sci
+<GARY-S> I walked around the Arkansas version of 'the wall' for 3 years before 
+I discovered by accident it din't really bother me a damn bit. That is
+one ghost I no-longer have to fight.
+<[doug] D.GARRETT> Ah.     The local vets (without my involvement/interest)...
+<[doug] D.GARRETT> are presently erecting a wall on the courthouse lawn....
+<[doug] D.GARRETT> I stand on the sidelines of that issue, too.  After wearing 
+a uniform...
+<[doug] D.GARRETT> for too many young-tender years, I'm not much of a "joiner" 
+in causes...
+<[doug] D.GARRETT> I've pretty much hoed my own row since discharge in '72, and 
+have...
+<[doug] D.GARRETT> recently backed into your local civil war in Forthland...
+<[Dennis] D.RUFFER> ah, free the slaves of ANSI...I like it <grin>
+<GARY-S> I'm going to close shop here - long road trip man~ana. Any last 
+comments for posterity ?
+<[Dennis] D.RUFFER> good night gary...you onto the road tomorrow?
+<GARY-S> yeah - 480 mile roundtrip
+<[doug] D.GARRETT> I'm too old to want to align with any camp, .     Good Luck 
+Out There, troops!
+<[doug] D.GARRETT> goodnite
+<[doug] D.GARRETT> has left.
+=== End of Steno notes. ===
+
+

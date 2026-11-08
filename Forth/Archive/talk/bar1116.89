@@ -1,0 +1,302 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 11/16/89   Time: 22:36EST
+
+Attendees:
+[[Gary] GARY-S]
+[[Jax It Is] FIGCHAPTERS]
+[[Mark] M.FOSTER3]
+[[Dave] OLORIN]
+[[Kevin] APPERT]
+[[Steve] S.WHEELER]
+[[Wil] W.BADEN1]
+[[Len] NMORGENSTERN]
+[DRMIKE]
+
+ FIGGY BAR of 16 November 1989 (ARC'd).The question of the night:"ROLL and
+ PICK have been removed from the 'required' wordset by the ANS TC. Do you 
+ care ? Why ?". Other items discussed include Wheeler/Sarns February guest
+ conference, Charles Curley's just completed conference, Wescon, Local
+ variables, wire-wrapped planes in trouble, various chips, FOR/NEXT vs 
+ DO/LOOP, TO , Pascal in Forth
+
+Minutes:
+<OLORIN> is here.
+<APPERT> is here.
+<[Dave] OLORIN> Answer: I don't use them...I don't care one way or another.
+<S.WHEELER> is here.
+<S.WHEELER> Hello.
+<[Kevin] APPERT> enjoyed last week with CC very much, Gary
+<[Dave] OLORIN> I personally find them rather inelegant, but that is a matter 
+of prejuidice (I learned Forth while not using ROLL and PICK, and every
+time I've ever felt the need, changing things around to make them unneeded made 
+the code cleaner).
+<[Dave] OLORIN> Hi Steve
+<[Gary] GARY-S> Wheeler is half the February guest contingent
+<[Dave] OLORIN> What's the temp like in Little Rock, Gary?
+<[Gary] GARY-S> COLD !
+<[Gary] GARY-S> Dropped 52 degrees in one day
+<[Dave] OLORIN> Yeah..it's going down into the upper thirties here tonight.
+<[Gary] GARY-S> Tornados out the kazoo
+<S.WHEELER> Personally, I have never used ROLL, but I tend to use "2 PICK" a 
+fair amount.
+<[Kevin] APPERT> this old neighborhood isn't the same without Charles, and it 
+was good to hear from him
+<[Wil] W.BADEN1> is here.
+<[Kevin] APPERT> I hear Huntsville got hit pretty hard
+<[Dave] OLORIN> (Has the fire place roaring away)
+<[Gary] GARY-S> Steve - I assume you and Sarns have accepted the Feb invitation 
+<S.WHEELER> I have, but I'm not certain the boss knows he's scheduled, yet.
+<[Gary] GARY-S> He will in time. right :-)
+<S.WHEELER> Maybe JAX will get around to letting him know sometime :-)
+<[Gary] GARY-S> Taking bets ?
+<[Kevin] APPERT> anybody else go to Wescon?
+<[Gary] GARY-S> Wil - care to answer the question
+<[Dave] OLORIN> Wescon?
+<[Wil] W.BADEN1> ok
+<S.WHEELER> Western Con-tucky?
+<[Wil] W.BADEN1> I think that they
+<[Wil] W.BADEN1> are theoretically important.
+<[Kevin] APPERT> Wescon is an anual trade show
+<[Dave] OLORIN> Ah.
+<[Kevin] APPERT> for the electronics industry
+<[Wil] W.BADEN1> I programmed in Forth for 8 years before using ROLL.
+<[Kevin] APPERT> alternately held in San Francisco and L.A.
+<[Wil] W.BADEN1> For 7 years before using anything but
+<[Wil] W.BADEN1> 2 PICK  except for .S .
+<[Dave] OLORIN> (still cannot remember using PICK or ROLL in code)
+<[Gary] GARY-S> I still don't use ROLL - PICK only rarely, so I could care less
+<S.WHEELER> I use "2 PICK" often enough that I'd hate to replace it with
+<S.WHEELER> " ROT DUP >R -ROT R>" , but I have yet to use ROLL in over 10 years 
+of Forth programming.
+<[Kevin] APPERT> : compost ( 1 2 3 --- 1 2 3 )   rot rot rot ;
+<[Wil] W.BADEN1> I believe that much more useful words would be OVER2 (or PLUCK)
+ and OVER3.
+<[Gary] GARY-S> That would be truer to the 'self-defining' concept for sure
+<[Wil] W.BADEN1> The word that would be most helpful to me would be +UNDER.
+<[Dave] OLORIN> This is a very good reason to keep them out of the required set.
+ If most FoForth programmers do not use them, making them required just
+ swells the size of the kernel for the rest of us.
+<[Dave] OLORIN> Yeah, old habits die hard...I use the return stack before I use 
+ROLL or PICK or anything like that.
+<[Wil] W.BADEN1> With OVER2 and OVER3 there wud be less cry for local variables.
+<[Dave] OLORIN> Didn't a LOCAL definition just make it into the working BASIS? 
+(I seem to remember something about that on comp.lang.forth)
+<[Wil] W.BADEN1> Yes.
+<[Dave] OLORIN> Which wordset?]
+<[Kevin] APPERT> Wescon had a broad assortment of CAE tools (schematic capture, 
+pcb autorouters,tdigital,  analog, thermal simulations, netlist->PAL c
+onversion, etc.)
+<[Wil] W.BADEN1> Let me look. (Minutes plus came today.)
+<[Kevin] APPERT> a long time user of Forth, HiTech Equipment Co. of San Diego, 
+had a product which may spell the end of the wire-wrapped prototype.  They
+have a plotter which writes an etch-resist pattern to the copper directly.  
+etch and done.
+<[Dave] OLORIN> (long low whistle)
+<S.WHEELER> Probably can't match the cost, though.
+<[Dave] OLORIN> Now that is an idea whose time has come!
+<[Gary] GARY-S> yet
+<[Kevin] APPERT> cost of what?
+<[Dave] OLORIN> Yeah...but who wants to try and wire-wrap for a bed-of-nails 
+chip?
+<S.WHEELER> Speaking strictly as a software type, I'd give it to a tech. :-)
+<[Dave] OLORIN> Remember to figure in your time when considering the cost of 
+wire-wrap...it gets expensive when you start figuring labor costs.
+<[Dave] OLORIN> Heh...the book I used to learn 68k assembly language was 
+talking about debugging tools...
+<[Kevin] APPERT> who wants to try a wire-wrap prototype of any fast or analog 
+logic?  they just are not valid.
+<[Gary] GARY-S> wire-wrapping does afford the opportunity to make engineering 
+changes (continuation engineering) in the field. You'd play hell doing that
+with an etched back-plane
+<M.FOSTER3> is here.
+<[Dave] OLORIN> 1) ICE is second-best
+<[Dave] OLORIN> 2) Debuggers are third-best
+<[Dave] OLORIN> 3) Write statements are fourth-best
+<[Dave] OLORIN> 4) Handing it off to junior engineers and forgetting about it 
+took the number one spot. :-)
+<S.WHEELER> That's the book by Krantz & Stanley, right?
+<[Dave] OLORIN> Have a *lot* of blank cards?
+<[Dave] OLORIN> Yeah. One of the best books in my library.
+<[Dave] OLORIN> Especially since Z-80 and 8080 were my first Assembly dialects.
+<S.WHEELER> I went 6502 -> Z80 -> 8086, and am trying to move on to 68k
+<[Kevin] APPERT> you can make kaptan flexible circuits using this technique...
+<[Kevin] APPERT> and simulate multilayer with a g-10 base board, soldered 
+completely, with kaptan layers on top.  it's a little time-intensive, but it
+ works well.
+<[Dave] OLORIN> I went Z-80 (briefly) -> 8080 (sigh) -> 8085 -> 68000 
+(Registers! Whee!) -> 8086 (mainly inline). Almost all of my assembly now (very
+little actually) is inline 8086 at home or inline 68k on the mini-super at work.
+<[Dave] OLORIN> The comparisons on the 68k work opposite from what you'd expect.
+<[Dave] OLORIN> (I can't remember which way they work without a reference...
+every time I try they work the other way... :-) )
+<[Wil] W.BADEN1> (a very familiar experience with me, too.)
+<S.WHEELER> Not familiar to me, yet.  JAX gets to do all the 68k stuff so far.
+<[Dave] OLORIN> The 68k is a nice chip. I'd like to get my hands on the new 
+32532 system Dave Rand and George Scolaro have designed and do a Forth for
+ that (I want to play with that architecture).
+<[Dave] OLORIN> I've been playing around with the idea of a slightly different 
+dictionary structure (to make the module system more efficient).
+<S.WHEELER> I like the NS32000 architecture.
+<[Kevin] APPERT> you fellows at Vesta might want to give HiTech a call.  It 
+sounds like this is right up your alley.
+<NMORGENSTERN> is here.
+<[Dave] OLORIN> The standard fields (i.e. name, code pointer, parameter pointer,
+ immediate or no, etc) would be seperate, and then the dictionary entry
+ would be a two pointer node, one to the body of the entry, and one to the 
+ next pointer.
+<[Kevin] APPERT> < still likes LSI-11's
+<[Dave] OLORIN> The one thing this *would* break is code which tries to go, say,
+ from the CFA to the LFA. Won't work (there's the possibility of a MANY->ONE 
+ binding to the name entry, so there isn't any unique link field to go 
+ back to)
+<[Dave] OLORIN> But it would make modules very efficient.
+<[Dave] OLORIN> (i.e. 2 cell cost instead of an entire dictionary entry cost)
+<[Mark] M.FOSTER3> Seems mighty quiet here .../sta
+<[Mark] M.FOSTER3> Sorry folks.  I don't know how that happenned.
+<[Gary] GARY-S> Mark - did you get my reply off the BBS yet ?
+<[Wil] W.BADEN1> LOCAL and TO are in the "locals extension word set."
+<[Mark] M.FOSTER3> Nope.  Still waiting....
+<[Mark] M.FOSTER3> I've got a question I can't seem to get anyone to answer on 
+the ForthNet.
+<[Dave] OLORIN> Shoot.
+<[Mark] M.FOSTER3> Thanks.  Can someone explain why FOR/NEXT ...
+<[Mark] M.FOSTER3> is better than DO/LOOP?  ...
+<[Mark] M.FOSTER3> Pygmy and cmFORTH use FOR/NEXT ...
+<[Kevin] APPERT> 1) Chuck thinks so
+<[Mark] M.FOSTER3> but other systems don't seem to. ga and thanks.
+<[Dave] OLORIN> I don't use FOR/NEXT so I'm not the best person to ask... :-)
+<NMORGENSTERN> As I understand it, Do/loop
+<NMORGENSTERN> works better on some machines, and For/next on others.
+<[Kevin] APPERT> 2) the FOR/NEXT is better adapted for some machines...
+<[Kevin] APPERT> Novix has it in hardware.  LSI-11s and 1802's have suitible 
+opcodes to build it.
+<[Mark] M.FOSTER3> What's best on an 8088?
+<NMORGENSTERN> Do/loop
+<[Kevin] APPERT> whatever you like.  this is Forth
+<[Wil] W.BADEN1>  DO/LOOP will never be as efficient as FOR/NEXT.
+<[Wil] W.BADEN1> FOR/NEXT will never be as effective as DO/LOOP.
+<NMORGENSTERN> The action is "when the difference between the index...
+<NMORGENSTERN> and the limit passes 0"
+<NMORGENSTERN> That is easily detected on 8088 machines.
+<[Mark] M.FOSTER3> I'll have to edit my capture file to figger out ...
+<[Wil] W.BADEN1> FOR/NEXT is a good idea ... 18 years too late.
+<[Kevin] APPERT> have both, use whichever appropriate.
+<[Mark] M.FOSTER3> damn!
+<[Dave] OLORIN> If you don't like the rules...change them. (This attitude 
+undoubtedly gives the standards team fits when dealing with everyones favori
+te variations)
+<[Mark] M.FOSTER3> what you gurus are saying ...
+<NMORGENSTERN> It's easy to write a word to change one type of limits to the 
+other
+<DRMIKE> is here.
+<NMORGENSTERN> : basic-style  (n1 n2 -- n1' n2')  2dup > if swap then 1+ swap ;
+<NMORGENSTERN> usage is 3 5 basic-style
+<NMORGENSTERN> The result will set up indices for a do .. loop
+<[Kevin] APPERT> when you need an index which corresponds to what you are DOing,
+ use DO, for example, in most cases     10 0 DO    might just as well
+be a for-next, but  512 256 DO must be a DO
+<NMORGENSTERN> that will go from 3 to 5
+<[Mark] M.FOSTER3> Thank you!
+<[Wil] W.BADEN1> 10 0 DO is a terrible choice for FOR/NEXT ...
+<[Wil] W.BADEN1> Try 0 9 DO -1 +LOOP
+<NMORGENSTERN> : bigtop 2dup > if swap then ;
+<NMORGENSTERN> The basic-style becomes : basic-style bigtop 1+ swap ;
+<[Kevin] APPERT> if you want to step thru an array in the forward direction, I 
+will point to the item or offset, rather than having to do arithmitic
+   or increment a stack item each pass  in a DO loop
+<[Kevin] APPERT> oops, that was not too clear
+<[Kevin] APPERT> DO loop = index you control      FOR/next = index you have to 
+manipulate (or use as is)
+<[Wil] W.BADEN1> The trouble there is double indexing.
+<NMORGENSTERN> What do you mean, Wil?
+<[Wil] W.BADEN1> Pointer goes up, counter goes down.
+<NMORGENSTERN> But isn't the counter hidden?
+<[Wil] W.BADEN1> DO/LOOP often allows you to go the way you want.
+<[Wil] W.BADEN1> I agree with Dijkstra. DO/LOOP and FOR/NEXT are both too 
+restrictive.
+<NMORGENSTERN> As we discussed last Sunday, Forth allows you to change the index
+<NMORGENSTERN> in a do/loop while it is running.
+<[Kevin] APPERT> what does he suggest
+<[Kevin] APPERT> Dijkstra?
+<[Wil] W.BADEN1> They force me to think in a narrow way.
+<[Wil] W.BADEN1> Edsger (sic).
+<[Wil] W.BADEN1> The Paul Revere of the structured programming revolution.
+<[Kevin] APPERT> I've heard of the gentleman.  What does he suggest as an 
+alternative to DO of For/next
+<[Wil] W.BADEN1> "Guarded iteration."
+<[Kevin] APPERT> yes. author of "GOTO Considered Harmfull" and other weitghty 
+missives
+<NMORGENSTERN> More like the Mao, Wil. The result of his efforts was a great 
+rigidity.
+<[Kevin] APPERT> like BEGIN  /  UNTIL   Wil ?
+<[Wil] W.BADEN1> Do we still have "humble programmer" in the library.
+<[Gary] GARY-S> what is the title -
+<[Kevin] APPERT> what library?  what "humble programmer" ?
+<FIGCHAPTERS> is here.
+<NMORGENSTERN> A humble Forth programmer is a contradiction in terms
+<[Gary] GARY-S> I never saw a file named 'humble programmer' - what title was 
+it filed under ?
+<[Wil] W.BADEN1> Try looking for "Dijkstra".
+<[Wil] W.BADEN1> It was put up in 1987.
+<[Gary] GARY-S> Unless Dennis pulled it for inactivity, it is still there
+<[Wil] W.BADEN1> Nov or Dec.
+<[Gary] GARY-S> I'll kill the steno if I leave the RTC, so I'll have to look 
+later
+<[Wil] W.BADEN1> I'd go look, but I don't want to miss a moment of this 
+occasion.
+<[Gary] GARY-S> I'll just check later and report my findings Sunday or next 
+Thursday
+  edit note : The 'humble programmer' file Wil refers to is #802 in the 
+              GEnie Forth RoundTable software library.
+<[Gary] GARY-S> care to tear into TO now ?
+<[Kevin] APPERT> is it HiTech you are looking at?  you are probably aware they 
+are a long time user of (guess what programming language)
+<[Wil] W.BADEN1> Local variables reduce Forth to the level of Tiny C, but not 
+as understandable.
+<[Mark] M.FOSTER3> Doesn't miniforth use TO a lot?
+<[Gary] GARY-S> I hope not
+<[Mark] M.FOSTER3> How come?
+<[Gary] GARY-S> TO is at least bad choice of terms and not the best way to do 
+things
+<[Wil] W.BADEN1> Local veriables fail to address the real problem of local 
+names.
+<[Len] NMORGENSTERN> Disagree: TO can be very useful. I prefer IS, but that's 
+because
+<[Gary] GARY-S> Wil - did you ever get edu forth going again ?
+<[Len] NMORGENSTERN> I am used to it.
+<[Wil] W.BADEN1> Still chasing fat rabbits.
+<[Len] NMORGENSTERN> Right Wil. See my presentation at Austin (not out yet! 
+disappointment)
+<[Gary] GARY-S> have you examined Frank Sergeants PYGMY as candidate
+<[Len] NMORGENSTERN> as the first-searched
+<[Len] NMORGENSTERN> What I did was to interject a temporary vocabulary
+<[Len] NMORGENSTERN> as the first-searched
+<[Wil] W.BADEN1> (Well, that was just what I was going to say.)
+<[Len] NMORGENSTERN> Pascal has the right idea on what a local is!
+<[Gary] GARY-S> Len - there has been interest in PASCL routines on ECFB, have 
+you posted your Forth-day stuff yet ?
+<[Len] NMORGENSTERN> No, I am presenting it at Asilomar, and
+<[Len] NMORGENSTERN> I would prefer to wait until after that.
+<[Gary] GARY-S> no prob - I was just amused at the timliness
+<[Kevin] APPERT> Len, in Pascal everything goes away whenever you leave a 
+module.  then you have to build it all up again when you re-enter.  what a t
+ime waster!  I don't think they have the right idea at all
+<[Len] NMORGENSTERN> No, only the local things go away. The global ones stay
+<[Len] NMORGENSTERN> It may be a time-comsumer but not a time-waster!
+<[Len] NMORGENSTERN> What is a time waster is to accidentally redfine a word, or
+<[Kevin] APPERT> yes, but you were saying they had the right idea about what a 
+local is.
+<[Wil] W.BADEN1> Not even a time-wastr.
+<[Len] NMORGENSTERN> have to think up a poor name because the good one is used.
+<[Kevin] APPERT> where do you keep track of the context so you know when it 
+means what, though, Len?
+<[Len] NMORGENSTERN> Often, you simply define your locals as A B C, etc
+<[Len] NMORGENSTERN> In a really local context, that's usually good enough.
+<[Len] NMORGENSTERN> You drop them when you don't need them any longer
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,307 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 03/08/90   Time: 22:39EST
+
+Attendees:
+[[Dennis] D.RUFFER]
+[[Gary] GARY-S]
+[[jax@well] FIGCHAPTERS]
+[[Deano] D.MARTINDAL1]
+
+  Open FIGGY BAR. Items discussed include Micromint 8051 board and chipforth,
+                  the target and PROM configuration,the ANS approach to meta,
+                  building Forth kernels from scratch, F-PC, BBL, Zen, Pygmy.
+Minutes:
+<D.RUFFER> is here.
+<[jax@well] FIGCHAPTERS> Hi Dennis, Gary.
+<[Gary] GARY-S> Open BAR - RYO tonite
+<[jax@well] FIGCHAPTERS> How's life at FInc, dennis?
+<[Gary] GARY-S> Soooo - roll it !
+<[Dennis] D.RUFFER> keeping busy at least
+<[jax@well] FIGCHAPTERS> Good to hear. Have you used 8051 xcompiler at all?
+<[Dennis] D.RUFFER> no, but had to find a replacement for the Intel evaluation 
+board for it
+<[jax@well] FIGCHAPTERS> Tell me details (if you can)!
+<[Dennis] D.RUFFER> the Evaluation board that we had been using...
+<[Dennis] D.RUFFER> allowed us to add a PROM and bypass their monitor...
+<[Dennis] D.RUFFER> but their latest board does not...
+<[Dennis] D.RUFFER> they also strongly urged us not to offer their...
+<[Dennis] D.RUFFER> evaluation boards for sale, since they will update them...
+<[Dennis] D.RUFFER> at any time and they do not test them...
+<D.MARTINDAL1> is here.
+<[Dennis] D.RUFFER> so we went to the source, MicroMint, who had the
+<[Dennis] D.RUFFER> original board, with Basic on it...
+<[Dennis] D.RUFFER> we can still add our own PROM and bypass theirs...
+<[Dennis] D.RUFFER> so everyone is happy again.
+<[jax@well] FIGCHAPTERS> Aha, so micromint is where yo wants a 8051 board from 
+if you are just dinking?
+<[Gary] GARY-S> post an address
+<[Dennis] D.RUFFER> yes, their BC52 board is a nice deal at $189 dollars
+<[jax@well] FIGCHAPTERS> Aha.
+<[jax@well] FIGCHAPTERS> Tenk U veddy nisely.
+<[Dennis] D.RUFFER> I don't have the address handy, but they advertise all over 
+the place
+<[jax@well] FIGCHAPTERS> No prob.
+<[Gary] GARY-S> How's Utah ?
+<D.MARTINDAL1> it's there
+<D.MARTINDAL1> so am I
+<[jax@well] FIGCHAPTERS> Love that Western Desert!
+<[Dennis] D.RUFFER> I found MicroMint's phone, however...
+<[Gary] GARY-S> Windy and cold from the looks of the weather map
+<D.MARTINDAL1> actually, kinda warm today
+<[Dennis] D.RUFFER> it is (203) 871-6170 and their Board is BCC52
+<[jax@well] FIGCHAPTERS> Got it.
+<D.MARTINDAL1> this is my altogether No. 1 first time here to the conference 
+room
+<[Gary] GARY-S> Before we wander hither and yon, remember next Thursday is the 
+guest conf with Dr. Wavrik, UCSD Math dept
+<[Gary] GARY-S> type /nam name
+<[Gary] GARY-S> Welcome Deano - the Thursday open FIGGY's are based on the 
+principle of open chaos. just jump in when one thread of conversation moves
+ you
+<[Dennis] D.RUFFER> what ya do in Forth deano?
+<[Deano] D.MARTINDAL1> mostly wish I could program in it for a living instead 
+of that ibm mainframe cr
+<[Deano] D.MARTINDAL1> ...crap
+<[Gary] GARY-S> don't you like sna ?
+<[Deano] D.MARTINDAL1> yecch!
+<[Gary] GARY-S> or MVS or BSC or..
+<[jax@well] FIGCHAPTERS> I dunno, i think a mainframe could be a neet toy!
+<[Deano] D.MARTINDAL1> with a 30 yr old operating system?
+<[Dennis] D.RUFFER> jack asked me some more about 8051 pF, shall I do a little 
+advertising in public (am I allowed :-)
+<[Gary] GARY-S> sysgod asks 'am i allowed?'
+<[Dennis] D.RUFFER> only when I am advertising Forth, Inc. <grin>
+<[Gary] GARY-S> It's my conference - hit it !
+<[Dennis] D.RUFFER> ok, Jack asked if 8051 was running polyFORTH ISD-4
+<[Dennis] D.RUFFER> ISD-4 stands for Integrated Development System
+<[jax@well] FIGCHAPTERS> (polly4th for dyslexics?)
+<[Dennis] D.RUFFER> but the 8051 runs under chipFORTH, which is a subset of 
+ISD-4
+<[jax@well] FIGCHAPTERS>  :-)
+<[Gary] GARY-S> postfix acronyms
+<[Dennis] D.RUFFER> chipFORTH is an umbilical support system
+<[Dennis] D.RUFFER> where you target compile to the 8051 from a PC
+<[Dennis] D.RUFFER> and then interactively test over the umbilical
+<[Dennis] D.RUFFER> it is pretty neat, but not a full up pF system
+<[Dennis] D.RUFFER> i.e. you have no disk or terminal directly attached
+<[Dennis] D.RUFFER> e.g. you can not say BLOCK on the target unless you
+<[Dennis] D.RUFFER> provide the hardware support yourself
+<[jax@well] FIGCHAPTERS> So how diff the targ compiler from a metacompiler?
+<[Dennis] D.RUFFER> Target Compiling is the name that Forth, Inc. uses for what 
+F83 etc calls meta compiling
+<[Dennis] D.RUFFER> the difference is that you can create PROMs or whatever you 
+want
+<[jax@well] FIGCHAPTERS> So what you are doing is meta/target compiling 
+anything from an app to a tiny Forth system onto the 8051?
+<[Dennis] D.RUFFER> you can even compile a CPU different than the host
+<[Dennis] D.RUFFER> exactly
+<[jax@well] FIGCHAPTERS> And all compiling is actually taking place on PC 
+(until you have tiny sys up & running?)
+<[Dennis] D.RUFFER> ALL compiling happens on the host
+<[Dennis] D.RUFFER> no compiler that can run on the target side is provided in 
+chipFORTH systems
+<[jax@well] FIGCHAPTERS> And you don't have to compile a sys, you can compile a 
+little application if you are hip to the art?
+<[Dennis] D.RUFFER> it can be as small as you want it to be
+<[Dennis] D.RUFFER> it doesn't even have to be Forth
+<[jax@well] FIGCHAPTERS> This is a world o' diff from the idea of a target 
+compiler as the sense of the word is being taken in X3J14.
+<[Dennis] D.RUFFER> how so?
+<[jax@well] FIGCHAPTERS> Well, in general the tendency is becoming to view a 
+target compiler ...
+<[jax@well] FIGCHAPTERS> as a compiler which generates binary for a target from 
+an ANS Forth program that could equally well have been ...
+<[jax@well] FIGCHAPTERS> loaded interpretively on an interpretive ANS Forth 
+system.
+<[jax@well] FIGCHAPTERS> You dig the difference?
+<[jax@well] FIGCHAPTERS> ga
+<[Dennis] D.RUFFER> I can see how their definition could be an extension of pF's
+<[Dennis] D.RUFFER> the biggest difference is that they imply you are also 
+compiling the nucleus
+<[Dennis] D.RUFFER> with pF's Target compiler's that does not have to be the 
+case
+<[Dennis] D.RUFFER> ga
+<[jax@well] FIGCHAPTERS> I understood it the opposite way! But now I guess you 
+are saying ...
+<[jax@well] FIGCHAPTERS> Nope, don't understand. To use chipForth don't you 
+have to compile a kernel of sorts?
+<[Dennis] D.RUFFER> The 8051 nucleus is included in the package
+<[Dennis] D.RUFFER> so you can compile a Forth application
+<[jax@well] FIGCHAPTERS> compiled or in source?
+<[Dennis] D.RUFFER> in source
+<[Dennis] D.RUFFER> but you don't have to use it
+<[Dennis] D.RUFFER> you could just as easily write the entire
+<[Dennis] D.RUFFER> application in assembler
+<[Dennis] D.RUFFER> and use the chipFORTH to compile it
+<[Dennis] D.RUFFER> and test it
+<[Dennis] D.RUFFER> ga
+<[jax@well] FIGCHAPTERS> in which case you gots yourself a $$$$.%% cross 
+assembler :-)
+<[Dennis] D.RUFFER> exactly :-)
+<[Dennis] D.RUFFER> I should mention that the chipFORTH umbilical
+<[Dennis] D.RUFFER> is written in Forth, so if you want to
+<[Dennis] D.RUFFER> test using the umbilical, ya kinda have
+<[Dennis] D.RUFFER> to include the nucleus and the talker code
+<[jax@well] FIGCHAPTERS> is it the same chipForth that does the 68HC11?
+<[Dennis] D.RUFFER> yes, only the nucleus is really any different
+<[jax@well] FIGCHAPTERS> the source nucleus for the target?
+<[Dennis] D.RUFFER> we also do the 8096/196
+<[Dennis] D.RUFFER> you don't get the nucleus for the host in cF
+<[Dennis] D.RUFFER> only the source for the target
+<[jax@well] FIGCHAPTERS> Aha, it's just pF sans source.
+<[Dennis] D.RUFFER> and sans options
+<[Gary] GARY-S> You still there Deano ?
+<[Deano] D.MARTINDAL1> still here
+<[jax@well] FIGCHAPTERS> how big is the chipForth executable?
+<[Dennis] D.RUFFER> gee, I don't know but likely less than 6K
+<[jax@well] FIGCHAPTERS> so it is really a minimal pF.
+<[Dennis] D.RUFFER> were you asking about the host executable or the targets?
+<[jax@well] FIGCHAPTERS> host. but tell about both, if you have time.
+<[Dennis] D.RUFFER> the target is the one under 6K
+<[Dennis] D.RUFFER> the host is the standard pF with some of the
+<[Dennis] D.RUFFER> option source code removed from the source file
+<[Dennis] D.RUFFER> i.e graphics, math, etc
+<[jax@well] FIGCHAPTERS>  6k for the target is akshooally kinda largish.
+<[Dennis] D.RUFFER> I believe the pF is around 30 K or so
+<[Dennis] D.RUFFER> well, I am only gessing there
+<[Dennis] D.RUFFER> the nucleus is a full up Forth kernal
+<[Dennis] D.RUFFER> but you can also trim it down to as small as you need
+<[jax@well] FIGCHAPTERS> which you can mix and match, as it were, discard 2@, 
+for instance?
+<[Dennis] D.RUFFER> yes, you can trim anything that you are not using
+<[jax@well] FIGCHAPTERS> But not my beard!
+<[jax@well] FIGCHAPTERS>  :-)
+<[Dennis] D.RUFFER> I said not using, I use my beard all the time (to hide 
+behind :-)
+<[jax@well] FIGCHAPTERS>  You ever meet Chuck Curley? He is aptly named! :-)
+<[Dennis] D.RUFFER> not yet
+<[Gary] GARY-S> jax is gonna start having to come his back, up and over :-)
+<[jax@well] FIGCHAPTERS> He's out here now with us.
+<[jax@well] FIGCHAPTERS> anyway, tnx Dennis for chipForth toot oriole.
+<[Dennis] D.RUFFER> I sure wish I got commisions off all the advertising I do :
+-)
+<[jax@well] FIGCHAPTERS> Look at it this way, you got a job, bub! :-)
+<[Gary] GARY-S> let's shift into something deano can participate in - or would 
+you rather just observe this time out ?
+<[Deano] D.MARTINDAL1> i'm game to talk--as soon as a subject I know anything 
+about pops up
+<[Gary] GARY-S> start one
+<[Dennis] D.RUFFER> sure, deano, have you done anything in Forth?
+<[Deano] D.MARTINDAL1> hobbyist stuff
+<[Dennis] D.RUFFER> such as?
+<[Deano] D.MARTINDAL1> before i knew much about forth...
+<[Gary] GARY-S> It is more ordinary to have 2 or 3 going simultaneously on 
+FIGGY nights
+<[Deano] D.MARTINDAL1> i implemented it on my one-time Commodore 128
+<[Gary] GARY-S> what are you driving now , still the C-128 ?
+<[Dennis] D.RUFFER> did you start from scratch or convert an exisiting system?
+<[Deano] D.MARTINDAL1> now have 286 epson
+<[Deano] D.MARTINDAL1> from scratch, starting forth, and 83 standard
+<[Dennis] D.RUFFER> congrats, few have gone that far
+<[Deano] D.MARTINDAL1> on the surface it looked pretty good...
+<[Deano] D.MARTINDAL1> but later I learned how inefficient my internals were
+<[Gary] GARY-S> did you do the inner interpreter in assembler
+<[Deano] D.MARTINDAL1> but of course
+<[Gary] GARY-S> then what was the prob ?
+<[Deano] D.MARTINDAL1> checked for stack under/overflow with each access...
+<[Deano] D.MARTINDAL1> jsr's instead of jumps for calling code words
+<[Dennis] D.RUFFER> is anyone ever finished tweeking Forth's internals?
+<[Dennis] D.RUFFER> there are so many ways to do it, you are never done 
+experimenting
+<[Gary] GARY-S> still - sounds like you did a commendable job
+<[Deano] D.MARTINDAL1> hank you
+<[Deano] D.MARTINDAL1> 't'hank you
+<[Gary] GARY-S> I also accept hanks :-)
+<[Dennis] D.RUFFER> what you using on the epson now?
+<[Deano] D.MARTINDAL1> do some custom programming in Clipper
+<[Deano] D.MARTINDAL1> masm
+<[Deano] D.MARTINDAL1> and, of course, working on my MSDOS forth
+<[Dennis] D.RUFFER> have you looked at the ones available here?
+<[Gary] GARY-S> rolling your own there too - I'm impressed
+<[Deano] D.MARTINDAL1> have f-pc
+<[Gary] GARY-S> Do you like f-pc
+<[jax@well] FIGCHAPTERS> deano, did you ever succeed in making your 286 4th 
+multiuser?
+<[Dennis] D.RUFFER> good enough, and can understand why you want to write your 
+own :-)
+<[Gary] GARY-S> Have you looked at bbl and pygmy - two other extremes
+<[Deano] D.MARTINDAL1> fg-pc has good parts, parts I don't care for
+<[Dennis] D.RUFFER> ah, a classic Forth programmer <grin>
+<[Deano] D.MARTINDAL1> did not succeed in finishing my pc 4th yet
+<[Deano] D.MARTINDAL1> have not looked at bbl & pygmy
+<[Gary] GARY-S> pygmy is a VERY minimal Forth for dos..
+<[Gary] GARY-S> bbl is a split header 32 bit forth and fast as hell !
+<[Deano] D.MARTINDAL1> must check them out
+<[Deano] D.MARTINDAL1> that's one thing I don't like about f-pc...
+<[Deano] D.MARTINDAL1> TOO big
+<[Dennis] D.RUFFER> Yea!
+<[Dennis] D.RUFFER> you might also look at ZEN if you like small
+<[Gary] GARY-S> caveat - BBL comes with a HUMONGOUS business language called 
+Abundance. Try to get just BBL if possible
+<[Deano] D.MARTINDAL1> like uncluttered more than small, so i can build to my 
+liking
+<[Gary] GARY-S> I don't care for that fat a kernel either (f-pc)
+<[Dennis] D.RUFFER> we do have BBL sans Abundance in the library
+<[Gary] GARY-S> VERY FAST !!!!!!!
+<[Deano] D.MARTINDAL1> source on any of these available?
+<[Gary] GARY-S> all of them
+<[Dennis] D.RUFFER> Martin Tracy's latest ZEN doesn't have full source
+<[Dennis] D.RUFFER> he is writting it in MASM now
+<[Dennis] D.RUFFER> but it is ANS compatable (before it is a standard)
+<[Gary] GARY-S> Roedy Green (BBL) Frank Sergeant (Pygmy) and Martin Tracy (Zen) 
+are also all available - ain't that nice ?
+<[Deano] D.MARTINDAL1> is he the one that wrote that article in EMBEDDED 
+SYSTEMS PROGRAMMING
+<[Dennis] D.RUFFER> yes, the same guy
+<[Deano] D.MARTINDAL1> about using masm to desigforth
+<[Gary] GARY-S> You may be thinking also of Jax - Jack Woehr - just left
+<[Dennis] D.RUFFER> yep, he also has been seen in DDJ
+<[Deano] D.MARTINDAL1> Wrote my original core for pc 4th with masm, now working 
+on metacompiler
+<[Deano] D.MARTINDAL1> I know it wasn't jax--him i would have remembered
+<[Dennis] D.RUFFER> Martin's article on masm and Forth was written around ZEN
+<[Dennis] D.RUFFER> what type of threading are you doing in your pc 4th?
+<[Deano] D.MARTINDAL1> indirect
+<[Dennis] D.RUFFER> not the fastes, but easier to think about
+<[Dennis] D.RUFFER> is it a 64K model?
+<[Deano] D.MARTINDAL1> split up into code seg, forth seg, data seg, header seg, 
+buffer seg
+<[Deano] D.MARTINDAL1> with (obviously) max of 64K each
+<[Dennis] D.RUFFER> very nice
+<[Deano] D.MARTINDAL1> except for buffer, which is unlimited
+<[Dennis] D.RUFFER> I assume only one file buffer
+<[Dennis] D.RUFFER> is that right?
+<[Deano] D.MARTINDAL1> file buffer, but not one
+<[Dennis] D.RUFFER> how many?
+<[Deano] D.MARTINDAL1> dynamically allocated, as loads call files
+<[Dennis] D.RUFFER> is buffer allocated until you run out of memory
+<[Deano] D.MARTINDAL1> yes, memory you have assigned to the buffer, anyway
+<[Gary] GARY-S> Guys - let's look for a quitting place
+<[Dennis] D.RUFFER> final question, will you put it into the pd when you are 
+done?
+<[Deano] D.MARTINDAL1> believe so
+<[Dennis] D.RUFFER> great, thanks!
+<[Gary] GARY-S> We'd sure like to see it in the GEnie library here
+<[Deano] D.MARTINDAL1> have to wait for the polished version
+<[Gary] GARY-S> Next week - no open FIGGY - John Wavrik is guest
+<[Deano] D.MARTINDAL1> i'd be too embarrassed to send it up in it's current 
+patchwork condition
+<[Gary] GARY-S> come make him feel welcome
+<[Dennis] D.RUFFER> you will have critics no matter how good it looks deano
+<[Dennis] D.RUFFER> but don't let that stop you
+<[Dennis] D.RUFFER> I for one am very interested
+<[Deano] D.MARTINDAL1> i'd still like to start with  a passable model
+<[Deano] D.MARTINDAL1> will call it 4th-PC -- watch for it (but not too sonn)
+<[Dennis] D.RUFFER> yes, you have to be able to justify the bugs (er features) 
+<grin>
+<[Deano] D.MARTINDAL1> har har
+<[Gary] GARY-S> Thanks for coming - don't be a stranger
+<[Deano] D.MARTINDAL1> see you later
+<[Dennis] D.RUFFER> good night all
+=== End of Steno notes. ===
+
+

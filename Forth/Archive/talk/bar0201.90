@@ -1,0 +1,238 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 02/01/90   Time: 22:32EST
+
+Attendees:
+[GARY-S]
+[[Doug] D.PHILIPS2]
+[[Kevin] APPERT]
+[[Wil] W.BADEN1]
+[V.STAMPS]
+
+ Items discussed include: ForthNet loops, DO..LOOP in pseudo code,a (maybe)
+  better way to address Standards issues - like no more CURRENT and CONTEXT !
+
+Minutes:
+<GARY-S> Sorry I'm late folks - you don't want to know
+<[Kevin] APPERT> nope.  was on a higherplain to denver, as it happened
+<[Doug] D.PHILIPS2> (I'm not a football fan, I was just curious).
+<GARY-S> good group here anywho
+<[Kevin] APPERT> I'm kinda suprised there was such a fuss over bowling
+<[Doug] D.PHILIPS2> Gary, you still don't like my posts, do you!  1/2 :-)
+<GARY-S> How many Brncos are required to change a flat ?..
+<[Doug] D.PHILIPS2> I give, how many?
+<GARY-S> only one, but they all show up for a blow-out
+<[Doug] D.PHILIPS2> Arrrrrrrrrrrrrrrrrrg
+<GARY-S> Explain what it is I don't like ?
+<[Doug] D.PHILIPS2> You don't port them!
+<[Kevin] APPERT> why can't bronco's qb place phone calls himself (he needs help 
+for it)?
+<[Kevin] APPERT> because he can't find the receiver
+<GARY-S> ooooooo
+<[Doug] D.PHILIPS2> I saw de Silva's reply to my message and neither of my 
+messages!
+<[Doug] D.PHILIPS2> I suspect that you're still filtering on 'ForthNet' in any 
+part of the header.
+<GARY-S> what does your From say for you and for ForthNet ports
+<[Doug] D.PHILIPS2> My personal from line is 'dwp@willett.UUCP (Doug Philips)'.
+<[Doug] D.PHILIPS2> ForthNets from line is 'ForthNet@willett.UUCP'
+<[Doug] D.PHILIPS2> Pfffft!
+<[Doug] D.PHILIPS2> Acckkk!
+<[Doug] D.PHILIPS2> <Why, why, why did I ask about Football?>
+<GARY-S> You don't know Kevin - but you'll learn
+<[Doug] D.PHILIPS2> Actually, forthnet's is 'ForthNet@willett.UUCP (ForthNet ...
+ GEnie)' but I don't recall the exact wording.
+<GARY-S> Mr. Appert is the pun jab of Forth
+<[Doug] D.PHILIPS2> Beginnings are such perilous times!
+<GARY-S> I will try to be more careful - those are damn similar
+<[Doug] D.PHILIPS2> And you're sliced bread?
+<[Doug] D.PHILIPS2> I'm just going to change my 'Organization:' line to remove 
+ForthNet.
+<GARY-S> Stuff Forth ish ?
+<[Doug] D.PHILIPS2> Did you set a topic?
+<[Kevin] APPERT> I but walk in the footsteps of greater Forthers/punsters than I
+<GARY-S> Do NOT change again
+<GARY-S> This week cfb will be VERY quiet and I will get the other end 
+straightened
+<GARY-S> Leonard occasionally challenges Kev for punny man
+<GARY-S> Last week we were cussing/discussing FOR...NEXT vs DO...LOOP..
+<GARY-S> want to continue or vault to a new subject ?
+<[Doug] D.PHILIPS2> Well, we were also talking about how to map
+<[Doug] D.PHILIPS2> other languages control structures into Forth.
+<GARY-S> You and Wil were
+<[Doug] D.PHILIPS2> And Leonard and someone else.
+<[Doug] D.PHILIPS2> But Len never got around to putting up a transcript.
+<GARY-S> Len has posted a file on Pascal routines in Forth, though
+<[Doug] D.PHILIPS2> What about vocabularies?  We didn't really get into them 
+last time.
+<GARY-S> Dave Weinstein was the other 'C'man at the helm last week
+<GARY-S> comments ???
+<[Wil] W.BADEN1> is here.
+<[Doug] D.PHILIPS2> Vocabularies?
+<[Kevin] APPERT> bah. humbug
+<[Doug] D.PHILIPS2> Hi Wil.
+<V.STAMPS> is here.
+<[Wil] W.BADEN1> wot did I innerup?
+<[Doug] D.PHILIPS2> Nuttin
+<[Wil] W.BADEN1> hi virgil.
+<[Doug] D.PHILIPS2> Hi
+<V.STAMPS> HI
+<[Doug] D.PHILIPS2> So, are vocabularies a dead topic?
+<[Wil] W.BADEN1> Then, who has an answer to DO ... LOOP in C?
+<[Kevin] APPERT> I was looking thru National Instruments  catalog the other day.
+  They have an Rs-232 <-> IEEE488 box with a forth-like language in RO
+M.
+<GARY-S> not much:We were digressing more than anything, and nothing 
+suignificant
+<[Doug] D.PHILIPS2> Wil, you need to notice when current index - stop changes 
+sign from when you started.
+<GARY-S> Pardon me - what is a forth-like lan ?
+<[Doug] D.PHILIPS2> disconnected.
+<[Kevin] APPERT> it looks like Forth, I don't know what differences there are.  
+There was a
+<[Wil] W.BADEN1> Direct manip of data on stack; a second stack; status 
+determined by two values.
+<D.PHILIPS2> is here.
+<GARY-S> with reference to a LAN though ?
+<[Kevin] APPERT> short : defintition
+<[Kevin] APPERT> I typed LANGUAGE, are you dropping characters?
+<GARY-S> apparently so
+<GARY-S> carry-on
+<[Doug] D.PHILIPS2> Not in 'C', but I think I have pseudo-code for DO ... LOOP.
+<[Doug] D.PHILIPS2> #define sign(x)  ((x) < 0 ? (-1) : 1)
+<[Doug] D.PHILIPS2> int s = sign( index - limit );
+<[Doug] D.PHILIPS2> for( ; s == sign( index - limit ); index += loop_incr) body;
+<[Wil] W.BADEN1> I dont think so.
+<[Wil] W.BADEN1> In fact I dont think it can be done with C's "for".
+<[Doug] D.PHILIPS2> C's for is just a while loop!
+<[Wil] W.BADEN1> DO...LOOP is a "do ... while (cond);" loop.
+<[Doug] D.PHILIPS2> Because of at least once execution semantics.
+<[Wil] W.BADEN1> Yes.
+<[Wil] W.BADEN1> But even F83 ?DO...LOOP cannot be done as "for(...)"
+<[Wil] W.BADEN1> (It's very windy here. Do everybody have bad connection tonite?
+)
+<GARY-S> No wind, but rain in torrents !
+<[Wil] W.BADEN1> Has there been any ANSI report uploaded?  I had talk with Jack 
+Brown.
+<GARY-S> Wil, Dr. John Wavrik has forwarded a suggestion I think has merit...
+<GARY-S> Have various positions regarding the standard posted as prelude and 
+then..
+<GARY-S> have round-robin discussions in RTC's to publicly air them..
+<GARY-S> he contends (correctly) no one person..
+<GARY-S> can accurately present the pros/cons of the Standards effort in one 
+1-hour RTC
+<GARY-S> .
+<[Wil] W.BADEN1> Go for it.
+<[Doug] D.PHILIPS2> But will the discussions get back to the TC?
+<GARY-S> We need someone to solicit volunteer presenters
+<GARY-S> yes - Dennis is running a log for E.Rather
+<[Wil] W.BADEN1> Has everybody heard: CONTEXT and CURRENT are out; DEFINITIONS 
+-> ADDITIONS; VOCABULARY -> WORDLIST>
+<GARY-S> WHY ? are they futzing with CURRENT and CONTEXT <sigh>
+<[Doug] D.PHILIPS2> What goes around comes around.
+<[Doug] D.PHILIPS2> Wil, what did they do about the control constructs?
+<[Wil] W.BADEN1> Becuz different systems implement it differently; by choosing 
+a new ...
+<[Wil] W.BADEN1> word they can agree on its meaning.
+<GARY-S> Dumb
+<[Wil] W.BADEN1> Nothing on control constructs.
+<[Wil] W.BADEN1> I was told they kept expecting me to show up Friday or 
+Saturday.
+<[Doug] D.PHILIPS2> Gary, this means that you can load the standard words on 
+top of an existing implementation and still claim conformance (depending
+on how strict they are
+<[Doug] D.PHILIPS2> about namespace pollution).
+<[Wil] W.BADEN1> Right.
+<[Doug] D.PHILIPS2> It strikes me that the names aren't super important, but 
+the concepts they are representing are.
+<GARY-S> Is Guy Kelly part of the TC ? Sure doesn't sound like anyone is 
+abiding by Guy's no violence to the current implementation edict
+<[Wil] W.BADEN1> There is no current implementation; there are many current 
+implementations.
+<[Wil] W.BADEN1> Guy has not been active for more than a year.
+<GARY-S> It shows
+<[Doug] D.PHILIPS2> I wonder if anyone has looked at X3J11 to see when is the 
+right time in the standards process to be involved in order to successfu
+lly promulgate key ideas.  Too early and you get screwed by changes... too late 
+and there isn't enough time/energy for rehashing 'old' issues.
+<[Wil] W.BADEN1> Take VOCABULARY: Forth 79, Forth 83, FigForth, PolyForth, 
+Mach2 -- all different.
+<[Wil] W.BADEN1> They voted that next meeting is the last for original 
+proposals.
+<[Doug] D.PHILIPS2> There is a theory that says having only a slight difference 
+in meaning between two concepts is worse than having a vast difference
+.  At least with new terms for vocabulary like stuff they'll avoid that trap.
+<[Wil] W.BADEN1> January 91 is target for draft proposal.
+<GARY-S> :No way will it make it
+<[Doug] D.PHILIPS2> Is there a set number of drafts before submission to X3?
+<[Wil] W.BADEN1> No.
+<[Doug] D.PHILIPS2> What is semantic diff. between BASIS and DRAFT?
+<[Kevin] APPERT> until the objections die down, they have to continue iterating
+<[Wil] W.BADEN1> Fetus and baby.
+<[Doug] D.PHILIPS2> Kevin, if they can 'vote' on 'no more original ideas', why 
+can't they vote on 'X is going to be Y, too bad'?
+<[Wil] W.BADEN1> Becuz it has to be approved by the community.
+<[Kevin] APPERT> ANSI requires that the noise level drop to essentially 0 
+before the draft becomes a standard
+<[Devil's Advo] D.PHILIPS2> Leave no turn unstoned.
+<GARY-S> Kevin has already cast his vote - noncompliance regardless . Right 
+Kevin
+<[Wil] W.BADEN1> Well said, Kevin.
+<[Kevin] APPERT> they have to answer ALL objections in some fashion
+<[Devil's Advo] D.PHILIPS2> As in "We've already considered your objection and 
+have found it to be groundless." ?
+<[Kevin] APPERT> I'm not a vendor, so I'm not compliant in any case (I don't 
+even give 'em away)
+<[Wil] W.BADEN1> Yes.
+<[Kevin] APPERT> there may turn out to be a certain amount of that Doug
+<[Devil's Advo] D.PHILIPS2> What level, if any, of justification are they 
+required by ANSI to give in their answers?
+<[Kevin] APPERT> My favorite is " you don't understand the vast technical 
+issues which justify us screwing you over in this bizzare fashion"
+<[Kevin] APPERT> If ANSI gets a lot of letters objecting to heavy handed 
+resolutions to objections, I would guess they will have second thoughts.  per
+haps even if they get one or two
+<[Wil] W.BADEN1> Right.
+<[Wil] W.BADEN1> That's what hapnd to Fortran 77.
+<[Devil's Advo] D.PHILIPS2> How does new vocabulary stuff interact with 
+multitasking, or doesn't std. address multitasking?
+<[Wil] W.BADEN1> Not as a language spec.  But PAUSE is presnt to accommodate.
+<[Kevin] APPERT> Liz Rather stated that ALSO/ONLY is bad news for multi-tasking.
+  She made a case for it's not being required word set
+<[Devil's Advo] D.PHILIPS2> How long till the new basis will be available (i.e. 
+printed?)
+<[Devil's Advo] D.PHILIPS2> Kevin, if you can have multiple data/return stacks 
+for muI~?~?litasking, why can't you have multiple dictionary stacks?
+<[Kevin] APPERT> I guess I would say we shouldn't force anything (like 
+also/only ) on anyone.  How 'bout we make the entire standard optional?
+<[Devil's Advo] D.PHILIPS2> +0/STA
+<[Wil] W.BADEN1> Indeterminable -- the chairman of that subcommittee resigned.
+<[Kevin] APPERT> no reason except size, Doug
+<GARY-S> Let me squeeze in my reminder that the February 15 guest conference 
+will feature Steve Sarns and Steve Wheeler of Vesta Technologies discussi
+ng Embedded Forth Systems
+<[Devil's Advo] D.PHILIPS2> The only real difficulty is serializing updates to 
+the dictionaries.
+<[Devil's Advo] D.PHILIPS2> But lightweight processes don't want to be too 
+independant.
+<[Kevin] APPERT> I've had a painfull impacted Forth system I've been wanting to 
+get removed...
+<[Wil] W.BADEN1> So no one has DO...LOOP in C.  Did anyone try?
+<[Devil's Advo] D.PHILIPS2> Nastly line noise, +0BRB.
+<[Kevin] APPERT> I have a C compiler around here someplace.  I don't want to 
+get all that dust in my floppy drive, though
+<[Wil] W.BADEN1> It duznt hav to work.
+<[Kevin] APPERT> like most C code
+<GARY-S> it doesn't apparently
+<[Devil's Adv.] D.PHILIPS2> Sigh.  Missed another good question.
+<GARY-S> well - tonite there doesn't appear to be a hot discussion to interrupt,
+ so any last shots
+<[Devil's Adv.] D.PHILIPS2> I guess no one saw, or reacted to de Silva's 
+anti-CM posts.  Bye.
+<GARY-S> ...* poof
+=== End of Steno notes. ===
+
+

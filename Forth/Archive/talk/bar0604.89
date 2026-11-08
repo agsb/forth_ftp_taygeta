@@ -1,0 +1,303 @@
+
+Item    7304079                 89/06/05        10:01
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Dr. Watson
+
+Date: 06/04/89   Time: 21:54EDT
+Attendees:
+[[len] NMORGENSTERN]
+
+Minutes:
+<[len] NMORGENSTERN> C. Set your first name by typing
+   /nam at the beginning of  a line
+<[len] NMORGENSTERN> Carl, I was interested in your progress.
+  Jax is very expert
+<[len] NMORGENSTERN> mostly in real-time programming and 68000 stuff
+<[len] NMORGENSTERN> I am more into PC DOS stuff.
+<[len] NMORGENSTERN> Any questions?
+<[HumanTorch] FIGCHAPTERS> <<< Thought Len was becoming
+  our resident MACHII expert!
+<[len] NMORGENSTERN> I have played with the Mac Forths only a little, Jax
+<[len] NMORGENSTERN> I have engaged in an ambitious project:
+<[len] NMORGENSTERN> I am studying Sedgwicks Algorithms.
+<[len] NMORGENSTERN> Like so many textbooks, the examples are in Pascal,
+<[len] NMORGENSTERN> so I have to translate them to Forth.
+<[len] NMORGENSTERN> There are some dilemmas:
+<[len] NMORGENSTERN> For example, arrays.
+<[len] NMORGENSTERN> In Pascal an array is entered via its
+  index & you can access
+<[len] NMORGENSTERN> the corresponding
+  element. In Forth...
+<[len] NMORGENSTERN> you put the index on the stack and
+  get the address of the element.
+<[len] NMORGENSTERN> This gives you a certain power. For example,
+<[HumanTorch] FIGCHAPTERS> How is this a dilemma
+<[HumanTorch] FIGCHAPTERS> ..?
+<[len] NMORGENSTERN> to move items in the array up, you can use CMOVE
+<[len] NMORGENSTERN> which is a fast primitive, rather than something
+   like a[i] = a[i+1] etc.
+<[len] NMORGENSTERN> The dilemma is, that for my own purposes,
+   I have no hesitation
+<[len] NMORGENSTERN> in converting in any manner that suits my convenience.
+<[len] NMORGENSTERN> If, I am writing for experienced Forth
+   programmers, I would do the same.
+<[len] NMORGENSTERN> But if I am trying to show Pascal users the power of Forth
+<[len] NMORGENSTERN> I would have to take the conversion
+   step by step, or I would
+<[len] NMORGENSTERN> confuse them.
+<[len] NMORGENSTERN> ga
+<[len] NMORGENSTERN> Another problem:
+<[len] NMORGENSTERN> Pascal, like BASIC, normally indexes arrays from 1 up.
+<[len] NMORGENSTERN> Forth prefers starting with 0, which
+   in my opinion is better. But in transferring a Pascal
+   algorithm to Forth, you have to make changes in a lot of places,
+   and errors can creep in.
+<[len] NMORGENSTERN> Pascal does allow the option of starting
+   with 0, but this does not help if the algorithm is already
+   written using arrays that start with 1.
+<[len] NMORGENSTERN> When you convert an algorithm, there
+   is less stress & fewer
+<[len] NMORGENSTERN> errors to simply transfer it "as is"
+   even though the resulting
+<[len] NMORGENSTERN> Forth is less than optimal.
+<[len] NMORGENSTERN> One thing that I thought would give me trouble
+<[len] NMORGENSTERN> was the use of variables. But they do not offer any major
+   problem. What I do is to
+<[len] NMORGENSTERN> create a Forth VARIABLE for each variable in Pascal
+<[len] NMORGENSTERN> Then I study the thing, and decide
+   what I can handle better on
+<[len] NMORGENSTERN> the stack and what should remain as variables.
+<[len] NMORGENSTERN> I can usually eliminate many variables
+   this way but I see no gain
+<[len] NMORGENSTERN> in replacing simple A @ and A! with
+   a lot of ROT OVER R> >R etc etc for no other reason than
+   to get rid of variables.
+<[len] NMORGENSTERN> Some Forth programmers look down on variables, but I think
+<[len] NMORGENSTERN> that convenience is the only criterion.
+<[len] NMORGENSTERN> For arrays, I have a neat array definer.
+<[HumanTorch] FIGCHAPTERS> : array create cells allot does> swap cells + ;
+<[len] NMORGENSTERN> I call it -BYTE-ARRAY. The usage is as follows:
+<[len] NMORGENSTERN> For 1 dimension arrays you write
+<[len] NMORGENSTERN> 10 1-DIMENSION 40 -BYTE-ARRAY FOO
+<[len] NMORGENSTERN> This creates an array of 10 40-byte elements.
+<[len] NMORGENSTERN> Now 3 FOO puts you on the 3rd element.
+   For 2-dimensional arrays you type 3 10 2-DIMENSION 40 -BYTE-ARRAY
+   FOO2. It has no protection against out-of-range indices.
+
+Editor's note: here it is:
+
+  0 \ A VERSATILE ARRAY DEFINER                           NLM870919
+  1 : -BYTE-ARRAY  ( r c e -- ) ( r c -- addr; or c -- addr)
+  2    CREATE  DUP 2OVER , , , ROT 1 MAX * * ALLOT
+  3    DOES>   DUP 2+ @ 0= IF 0 -ROT THEN    ( Fix stack if 1-dim)
+  4       >R SWAP R@ @ * + R@ 4 + @ * R> 6 + + ;
+  5 : 1-DIMENSION  ( c -- 0 c)   0 SWAP ;
+  6 : 2-DIMENSION ;
+  
+<[len] NMORGENSTERN> You can get the effect of Pascal records
+   by defining offsets
+<[len] NMORGENSTERN> Thus:
+<[len] NMORGENSTERN> : OFFSET ( n -- ) CREATE , DOES> @ + ;
+<[len] NMORGENSTERN> Say we define 0 OFFSET .NAME
+<[len] NMORGENSTERN> 20 OFFSET ADDRESS
+<[len] NMORGENSTERN> Then  3 FOO NAME will put in the name field,
+<[len] NMORGENSTERN> and 3 FOO .ADDRESS will put you in the address field.
+<[len] NMORGENSTERN> This usage resembles Pascal syntax
+<[len] NMORGENSTERN> ga
+<[len] NMORGENSTERN> (Hey Jax, have I left you speechless?)
+<[len] NMORGENSTERN> Carl, FIGCHAPTERS is Jack Woehr. He is FIG's chapter
+<[len] NMORGENSTERN> coordinator, whence his nom-de-silicon
+<[len] NMORGENSTERN> ga
+<[HumanTorch] FIGCHAPTERS> Speechless but not childless.
+<[HumanTorch] FIGCHAPTERS> .
+<[HumanTorch] FIGCHAPTERS> One danger in presenting Forth
+   to practitioners of other languages
+<[HumanTorch] FIGCHAPTERS> is that, in the course of trying
+   to make Forth *understandable* ...
+<[HumanTorch] FIGCHAPTERS> it can be made to appear more
+   complicated than it actually is.
+<[HumanTorch] FIGCHAPTERS> .
+<[len] NMORGENSTERN> True. My son Jamie was always good
+   at math. He wanted to take a
+<[len] NMORGENSTERN> statistics course, but coundn't fit
+   the advanced one into his schedule
+<[len] NMORGENSTERN> so he took the one for psychologists, etc.
+<[len] NMORGENSTERN> He became very frustrated, because he was trying to read
+<[len] NMORGENSTERN> a lot of detail into the vague kind of things
+<[len] NMORGENSTERN> they put into that kind of course.
+<[len] NMORGENSTERN> .
+<[HumanTorch] FIGCHAPTERS> <<< trying to remember where
+   he saw a "Morgenstern" named sometime this week???
+<[len] NMORGENSTERN> For him it was harder than the regular
+   course would have been.
+<[len] NMORGENSTERN> My son David writes in MicroTimes
+<[HumanTorch] FIGCHAPTERS> That's it.
+<[HumanTorch] FIGCHAPTERS> .
+<[HumanTorch] FIGCHAPTERS> Big grin.
+<[HumanTorch] FIGCHAPTERS> .
+<[len] NMORGENSTERN> Very good if I say so myself (and I do)
+<[len] NMORGENSTERN> Back to Forth. Pascal do loops are easy to translate:
+<[len] NMORGENSTERN> First define : BIGTOP 2DUP < IF SWAP THEN ;
+<[len] NMORGENSTERN> This takes 2 integers, & swaps them if necessary so the
+<[len] NMORGENSTERN> larger is on top. Better test it, I
+   may have mixed up < and > here
+<[len] NMORGENSTERN> In any case the word : FROMTO  BIGTOP 1+ SWAP ;
+<[len] NMORGENSTERN> will set up Pascal or BASIC type loop parameters,
+<[len] NMORGENSTERN> thus  3 6 FROMTO would give you 7 3 which would take
+<[len] NMORGENSTERN> which if followed by DO would take
+   the index from 3 to 6 inclusive.
+<[len] NMORGENSTERN> ga
+<[HumanTorch] FIGCHAPTERS> gotta run.
+<[HumanTorch] FIGCHAPTERS> nitol!
+<[len] NMORGENSTERN> Night. Take care of the baby.
+<[HumanTorch] FIGCHAPTERS> has left.
+<[len] NMORGENSTERN> Carl, do you have any questions?
+<[len] NMORGENSTERN> Do you know the difference between DO and ?DO   ???
+<[len] NMORGENSTERN> The difference happens when the two indices are equal.
+<[len] NMORGENSTERN> Thus 0 0 DO ..... LOOP  will execute 32K times
+<[len] NMORGENSTERN> whereas 0 0 ?DO . . . LOOP will execute 0 times.
+<[len] NMORGENSTERN> Otherwise they act the same.
+<[len] NMORGENSTERN> How is the weather in Pasadena?
+<[carl] C.STRUYCKEN1> Yes but I guess I should first leaRN
+   THE Chow do I get this to work?
+<[len] NMORGENSTERN> What do you mean?
+<[carl] C.STRUYCKEN1> Do I just write something and hit return?
+<[len] NMORGENSTERN> I got that clear.       You seem to
+   be doing ok.  What you do depends
+<[len] NMORGENSTERN> on your particular comm program.
+<[len] NMORGENSTERN> There are a few conventions. ga means "go ahead"
+<[len] NMORGENSTERN> Some use a . alone on a line: thus
+<[len] NMORGENSTERN> .
+<[carl] C.STRUYCKEN1> Can I write multiple lines or is the whole proce
+<[len] NMORGENSTERN> It is better to keep your lines short,
+   about 50-60 characters
+<[carl] C.STRUYCKEN1> ss interupted when I hit a return?
+<[len] NMORGENSTERN> for the following reasons:
+<[len] NMORGENSTERN> 1. People don't get impatient waiting
+<[len] NMORGENSTERN> 2. It is easier to read.
+<[len] NMORGENSTERN> ga
+<[len] NMORGENSTERN> Don't worry about interrupts. There can be a slight
+<[carl] C.STRUYCKEN1> Are you still holding pascal conf.
+   or can I ask a forth question
+<[len] NMORGENSTERN> problem when a lot of people are talking at once.
+<[len] NMORGENSTERN> ga
+<[carl] C.STRUYCKEN1> I am still working on a new view
+<[carl] C.STRUYCKEN1> I took out the ' because defined is
+   already providing the address
+<[carl] C.STRUYCKEN1> But now the new tickless view gets
+   the address ahead of itself instead of after
+<[carl] C.STRUYCKEN1> Is ther a way to change the order
+   in midstream or am I barking up the wrong tree here
+<[len] NMORGENSTERN> Do you happen to know which file has
+   the source for DEFINED
+<[len] NMORGENSTERN> and VIEW
+<[len] NMORGENSTERN> .
+<[carl] C.STRUYCKEN1> Yes LYes let me do a view on my other computer
+<[len] NMORGENSTERN> I found DEFINE  KERNEL86.BLK screen 68
+<[carl] C.STRUYCKEN1> view is in scr 7 of utilitiy.blk
+<[len] NMORGENSTERN> Thanx
+<[len] NMORGENSTERN> DEFINE is not the same as ' (tic)
+<[carl] C.STRUYCKEN1> I was not very clear
+<[len] NMORGENSTERN> ' gets the word, looks for it. If it can find it, it leaves
+<[carl] C.STRUYCKEN1> I am trying to make
+<[len] NMORGENSTERN> its CFA on the stack. If it can't it aborts.
+<[len] NMORGENSTERN> ga
+<[carl] C.STRUYCKEN1> No it does not abort, it leaves a
+   false flag but it keeps the adress of the string on the stack.
+<[len] NMORGENSTERN> Right. That is was FIND and DEFINED do. If the word is not
+<[len] NMORGENSTERN> found the stack is  string-adr 0
+<[len] NMORGENSTERN> If it is found, it is cfa x  X is 1 for an ordinary word
+<[len] NMORGENSTERN> and -1 for an immediate word.
+<[carl] C.STRUYCKEN1> This is what I wanted to make use
+   of. Defined So after defined thger would be a loop
+<[len] NMORGENSTERN> DEFINED is the same as FIND but has
+   capitalization control
+<[carl] C.STRUYCKEN1> to go thou
+<[carl] C.STRUYCKEN1> make that to go through all the vocabularies
+<[carl] C.STRUYCKEN1> until it has found the right vocabulary
+   and then it is time for view
+<[carl] C.STRUYCKEN1> but this version of view would not
+   have to do a tick because defined already did
+<[carl] C.STRUYCKEN1> .
+<[len] NMORGENSTERN> Why don't you study FORGET  That word cycles through
+<[len] NMORGENSTERN> all the vocabularies & might guide you. You realize that
+<[len] NMORGENSTERN> you are trying to do something very complicated
+<[len] NMORGENSTERN> I can't work it out right here -- the last time I played
+<[len] NMORGENSTERN> with the vocabulary structure was about 3 years ago.
+<[len] NMORGENSTERN> gs
+<[len] NMORGENSTERN> ga that is
+<[carl] C.STRUYCKEN1> Well, everything starts to get very
+   complicated when getting into the
+<[carl] C.STRUYCKEN1> different adress fields and then i
+   still now absolutely nothing about the compiler.
+<[len] NMORGENSTERN> You are doing it the right way. There is nothing like
+<[len] NMORGENSTERN> tackling a complicated problem to learn the language.
+<[len] NMORGENSTERN> The only problem is that you can get fascinated & not spend
+<[len] NMORGENSTERN> your time optimally.
+<[len] NMORGENSTERN> .
+<[carl] C.STRUYCKEN1> Yes that is a trap I have fallen into many times.
+<[len] NMORGENSTERN> I have done it more than you, probably being older.
+<[len] NMORGENSTERN> By the way, vocabularies are linked to each other
+<[len] NMORGENSTERN> by means of a special link field in
+   addition to the regualar one.
+<[len] NMORGENSTERN> That is how the word VOCS works. It lists all of the
+<[len] NMORGENSTERN> vocabularies in reverse order in which
+   they were originally defined.
+<[len] NMORGENSTERN> What kind of a machine do you have?
+<[carl] C.STRUYCKEN1> While debuggimng the tickless view
+   thedebugger got stuck in>IP or <IP do you happen to know what that means?
+<[carl] C.STRUYCKEN1> I have a Toshiba laptop and an Amiga
+<[len] NMORGENSTERN> IP is Forth's instruction pointer.
+<[len] NMORGENSTERN> Could you VIEW those words & tell me
+   what file they are in?
+<[len] NMORGENSTERN> Forth's IP is not to be confused with Intel's IP
+<[carl] C.STRUYCKEN1> These were the words I was defining myself
+<[carl] C.STRUYCKEN1> I have yet to learn what instruction pointers are
+<[len] NMORGENSTERN> ok
+<[len] NMORGENSTERN> Let's say you have defined a word   : FOO  DO-THIS  
+DO-THAT ;
+<[len] NMORGENSTERN> Now, when you execute FOO, IP points to the first "token" 
+in it
+<[len] NMORGENSTERN> which is DO-THIS  The address of the
+   next "token" which is DO-THAT
+<[len] NMORGENSTERN> is pushed onto the return stack, and
+   IP skips down a level to the first
+<[len] NMORGENSTERN> token in DO-THIS
+<[len] NMORGENSTERN> When it gets to the end of DO-THIS,
+   the top of the return stack is popped
+<[len] NMORGENSTERN> into the IP and DO-THAT is executed. This kind of action
+<[len] NMORGENSTERN> is why Forth is called "threaded"  Its action is a little
+<[len] NMORGENSTERN> bit like the yarn in a sweater. It
+   goes back and forth, in and out.
+<[len] NMORGENSTERN> .
+<[carl] C.STRUYCKEN1> I will make a better organized report
+   of the sview I am working
+<[len] NMORGENSTERN> Yes, put up the code as a message & I will try to answer.
+<[carl] C.STRUYCKEN1> on and leave it in
+<[len] NMORGENSTERN> I am leaving town in a few days, however,
+<[len] NMORGENSTERN> but someone else will help you.
+<[carl] C.STRUYCKEN1> ok thanks a whole lot so far.
+<[carl] C.STRUYCKEN1> I have to go now
+<[len] NMORGENSTERN> I have to leave now. We have these conferences
+<[len] NMORGENSTERN> Sunday & Thursday. There may be some skips while I am
+<[len] NMORGENSTERN> out of town, as both of the other sysops are having
+<[len] NMORGENSTERN> personal problms. Gary's parents are ill, and Dennis
+<[len] NMORGENSTERN> may be moving.
+<[len] NMORGENSTERN> But we will struggle on!
+<[carl] C.STRUYCKEN1> THANKS!!!
+<[len] NMORGENSTERN> Watch the notices, & I will be talking
+   to you in a few weeks
+<[carl] C.STRUYCKEN1> has left.
+=== End of Steno notes. ===
+
+
+
+=END=
+
+

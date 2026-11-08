@@ -1,0 +1,195 @@
+
+Sub: Minutes of FIGGY BAR RT Conference.
+
+Date: 06/06/91   Time: 22:00EDT
+
+Notice on the door reads: Welcome to the GEnie/FIG RoundTable's answer 
+to Monty Python - the Thursday night open 'FIGGY BAR'. All Forth and 
+computer related subjects are fair game. Items discussed include Unix
+difficultoes and Forth problems with a linked list/sort in FPC.
+
+Attendees:
+[GARY-S]
+[[Cliff] C.MORAVETZ1]
+[[Len] NMORGENSTERN]
+
+Minutes:
+
+<[Cliff] C.MORAVETZ1> Howdy!
+<[Cliff] C.MORAVETZ1> Hi Len!
+<GARY-S> You're the first victim - customer
+<NMORGENSTERN> Hi
+<[Len] NMORGENSTERN> I just had a frustrating week!
+<GARY-S> Leonard - welcome
+<[Cliff] C.MORAVETZ1> My frustrating week isn't over yet.
+<GARY-S> R-e-a-l-l-y ? a man of liesure ?
+<[Len] NMORGENSTERN> You tell me your frustration and I will tell you mine!
+<[Len] NMORGENSTERN> You tell me your frustration and I will tell you mine!
+<[Cliff] C.MORAVETZ1> Unix stinks!
+<GARY-S> What Unix platform and why do you think it stinks
+<[Len] NMORGENSTERN> ga Cliff!
+<[Cliff] C.MORAVETZ1> It's the same old story about how the terminal I/O is 
+done...
+<[Len] NMORGENSTERN> My headache will (has) responded to baby aspirin.
+<[Len] NMORGENSTERN> To cure yours may require decapitation!
+<[Cliff] C.MORAVETZ1> On the PC, when I hit XOFF, the display stops...
+<GARY-S> Are you using SysV or BSD ?
+<[Cliff] C.MORAVETZ1> On Unix, who knows when It'll stop. Inevitably, what...
+<[Cliff] C.MORAVETZ1> I wanted to look at has disappeared.
+<[Cliff] C.MORAVETZ1> SysV
+<[Cliff] C.MORAVETZ1> Aborting a program... Same disgusting stuff.
+<GARY-S> have you never heard of more or less ? that's why those paging 
+routines were invented
+<[Cliff] C.MORAVETZ1> I've used Ctrl-Q/Ctrl-S for years. Why can't flow control 
+work right?
+<GARY-S> shift/delete will break _any_ Unix process
+<[Cliff] C.MORAVETZ1> Shift-delete? what does that send?
+<GARY-S> Because you are using a multi-uuser, multi-taskker and it may be in 
+mid process when you hit cntl/Q
+<[Cliff] C.MORAVETZ1> There's no upper case DEL character.
+<[Cliff] C.MORAVETZ1> But the I/O routines should know how to keep barfing at 
+me!
+<GARY-S> You should use the tools Unix provides and you will avoid those 
+aggrivations
+<[Cliff] C.MORAVETZ1> Oh well, It could be worse and never pay attention.
+<GARY-S> next time pipe your text, program, whatever through either more or 
+preferably less
+<GARY-S> ie: cat <filename> | more
+<[Cliff] C.MORAVETZ1> I know how to use those things... I just think things 
+could have been done "right"
+<GARY-S> less is more automagic ...   less <filename>
+<GARY-S> Why on earth would you expect a multi-tasking environment to operate 
+like brain dead messy-dos ?
+<[Cliff] C.MORAVETZ1> Because the last multi-tasking/multiuser OS I used 
+handled this just fine!
+<GARY-S> which was ?...
+<[Cliff] C.MORAVETZ1> CP-V
+<[Len] NMORGENSTERN> What is that?
+<[Cliff] C.MORAVETZ1> Hah! The operating system for Sigma mainframes.
+<[Len] NMORGENSTERN> Thanx
+<GARY-S> CP-V, really ? On what ? This may get very interesting. I  fully 
+expected you to say OS/9
+<[Cliff] C.MORAVETZ1> Xerox used to make mainframes, and I've worked on the 
+Sigma 6 and Sigma 9 models.
+<[Cliff] C.MORAVETZ1> They are from the days of discrete components.
+<GARY-S> What sort of shop Cliff ?
+<[Cliff] C.MORAVETZ1> A University. Did most of my undergrad assignments on it.
+<GARY-S> There was one where I helped maintain a CDC 3300 - it was used in a 
+medical lab, Sigma ??? (model unknown)
+<[Cliff] C.MORAVETZ1> Later I worked for a company that made a clone for the 
+Sigma 9 called a T-85.
+<GARY-S> I thinkk most of the Sigmas must have ended up in University type 
+environments
+<[Cliff] C.MORAVETZ1> That, and real time. There's quite a few still running RT 
+applications.
+<GARY-S> Lot of GE and Westing House TTL boxes went that route, too
+<[Cliff] C.MORAVETZ1> Well, enough ancient history.
+<GARY-S> We mustn't forget len's frustrations - go for it, Len
+<[Cliff] C.MORAVETZ1> I just think it's funny that that clunky old box outdoes 
+Unix.
+<[Len] NMORGENSTERN> My problem is trivial compared to yours.
+<[Len] NMORGENSTERN> Much of the frustration is the feeling that I should
+<[Len] NMORGENSTERN> have figured it out after 3 minutes, not 3 days.
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> I was creating a sorted linked list and could
+<[Len] NMORGENSTERN> not get it to work right (elementary problem in
+<[Len] NMORGENSTERN> C.Sci. 101 ) It took me over 3 days to discover
+<[Len] NMORGENSTERN> that FPC's sort algorithm treats bytes between
+<[Len] NMORGENSTERN> 128 and 255 as negative!!!!
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> The fix took me about 10 minutes, once I figured
+<[Len] NMORGENSTERN> it out!
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN>
+<[Cliff] C.MORAVETZ1> Oh, negative characters!
+<[Cliff] C.MORAVETZ1> How neat!
+<GARY-S> Is this not documented somewhere ? If not- or even if so, it deserves 
+mention in the BB area
+<[Len] NMORGENSTERN> It's written in assembler using byte cmpare
+<[Len] NMORGENSTERN> The Intel CMP function works that way for bytes
+<[Len] NMORGENSTERN> Since most of don't use 128-255 for characters,
+<[Len] NMORGENSTERN> there is usually no problem.
+<[Cliff] C.MORAVETZ1> And it does signed compares?
+<[Len] NMORGENSTERN> The word is COMP ( a1 a2 l -- f)
+<[Cliff] C.MORAVETZ1> Well, I wouldn't say you're problem is trivial compared 
+to mine. 3 days?
+<[Cliff] C.MORAVETZ1> What a booger!
+<[Len] NMORGENSTERN> You are right, Gary. I will post a message to that effect.
+<[Len] NMORGENSTERN> One of the disadvantages of programming alone is
+<GARY-S> That's one of the things we should do - serve as bug fix repositories
+<[Len] NMORGENSTERN> that your mind gets in a rut. Someone else can frequently
+<[Len] NMORGENSTERN> spot your problem for you.
+<[Cliff] C.MORAVETZ1> I know - I'm working alone too.
+<[Len] NMORGENSTERN> I kept fiddling with the link algorithm. I was sure it was
+<[Len] NMORGENSTERN> right but it wouldn't work right, so I kept changing
+<[Len] NMORGENSTERN> and rewiriting it!!!
+<GARY-S> How true !  Once you accept a 'lie' you are in serious trouble.
+<[Len] NMORGENSTERN> (I must have a dozen ways to create a linked list!!!)
+<[Cliff] C.MORAVETZ1> If only a little bell would go *ding* inside your head 
+when you're looking in the wrong place.
+<GARY-S> hahahahahahaha
+<[Len] NMORGENSTERN> Speaking of looking in the wrong place
+<[Len] NMORGENSTERN> I have a rule:
+<[Len] NMORGENSTERN> When your test suite uncovers a problem carefully
+<[Len] NMORGENSTERN> examine the test suite before you examine your program!
+<GARY-S> You know - your recipe bookklet of linked lists would be a nice 
+library posting, too, Len
+<[Cliff] C.MORAVETZ1> If I'd been following that advice...
+<[Len] NMORGENSTERN> Actually the thing is so elementary, I don't think it would
+<[Cliff] C.MORAVETZ1> I could have saved myself 3 days of work.
+<[Cliff] C.MORAVETZ1> once.
+<[Len] NMORGENSTERN> be worth while except as a tutuorial
+<[Cliff] C.MORAVETZ1> Well, I think it's time to buzz off.
+<GARY-S> I totally disagree. people coming to Forth from a C or Fortran 
+environment often (always) bitch about the lack of libraries - your linked 
+list routines would be a nice addition.
+<[Cliff] C.MORAVETZ1> I've been spending too much on GEnie.
+<[Cliff] C.MORAVETZ1> has left.
+<GARY-S> Hey Cliff, nice chattiing
+<[Len] NMORGENSTERN> See you again, soon.
+=== End of Steno notes. ===
+
+
+
+=END=
+
+
+
+
+
+Item    0696001                 91/06/07        13:20
+
+From:   ELLIOTT.C                       Elliott Chapin
+
+To:     GARY-S                          Gary L. Smith
+
+cc:     FIGSYSOPS$                      FIG RT SysOps
+
+Sub: topic police
+
+Reply:  Item #7395630 from GARY-S       on 91/06/07 at 08:30
+
+Go ahead & add a topic.  If you haven't done MMOs to it from 10-15
+by the time I see it I'll do 'em - or leave a message saying where
+we'd like the discussion to continue.
+
+I've been wondering what to do about the fuzzy boundary between cat
+6 & 7.  And there's also the question of how to strike some
+meaningful division between hardware & software oriented
+discussions.  Perhaps it won't be very long before another category
+appears.  There are probably some more that should be in 7 rather
+than 1 or 6.  Maybe the new one should be called something like
+"Environmental Issues" and include OS and Quarterdeck/Windows/etc.
+oriented discussions.  I'll air a plan in time to do something
+before Rochester.
+
+
+
+=END=
+
+
+
+
+P 200?
+
+

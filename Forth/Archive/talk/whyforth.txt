@@ -1,0 +1,158 @@
+
+  
+  
+  
+                             WHY FORTH?
+                                  
+                           Gerald Shifrin
+                                  
+                     Satellite Business Systems
+  
+  
+  
+                          Feruary 2, 1985
+  
+  
+  
+  
+                            PRODUCTIVITY
+                            ------------
+  
+  1.	Structured Language
+  
+  2.	Extensible vocabulary (Toolbox)
+  
+  3.	Interactive development/testing
+  
+  4.	Incremental development
+  
+  5.	Fast compiles
+  
+  6.	Transportability
+  
+  7.	Target Compilation
+  
+  8.	Compact Language
+  
+  9.	Efficient execution
+  
+  
+  
+                               The WITHIN Function
+  
+  
+  In PL/I:
+  	 WITHIN:  PROCEDURE(LOW, HIGH, X) RETURNS(BIT(1));
+                DECLARE (LOW, HIGH, X) FIXED BINARY(31);
+                IF X >= LOW & X <= HIGH THEN RETURN('1'B);
+                ELSE RETURN('0'B);
+           END WITHIN;
+  
+  
+  In PL/I-like FORTH:
+  	 VARIABLE X  VARIABLE HIGH  VARIABLE LOW
+           : <=   ( n1 n2 -- f )   > NOT ;
+           : >=   ( n1 n2 -- f )   < NOT ;
+           : WITHIN     ( low high x -- f )
+  	      X @ LOW @  >=  X @ HIGH @  <=  AND
+  	      IF TRUE  ELSE FALSE  THEN  ( redundant )
+           ;
+  
+  
+  In FORTH:
+           : WITHIN   ( low high x -- f )
+                DUP ROT > NOT ROT ROT > NOT AND ;
+  
+  
+  OR:
+           : <=  > NOT ;
+           : -ROT  ROT ROT ;
+           : WITHIN   ( low high x -- f )
+                DUP ROT <= -ROT <= AND ;
+  
+  
+  
+  
+                               Advantages of FORTH
+  
+  
+  1.	Productivity -  all of the following FORTH features lead to
+      improved overall productivity.
+  
+  2.	High  quality -  the code-compile-link-test-debug-fix cycle
+      is  much  shorter and  faster  than  traditional languages,
+      encouraging  greater  testing.  Additionally,  the language
+      leads you into developing simple, easy-to-understand code.
+  
+  3.	Compact code -  Each FORTH program is less than 16 lines of
+      code (with rare exceptions), and usually less than 3 lines.
+      The   generated   code  is   very   small.   Typical  FORTH
+      implementations have a nucleus (or kernel) under 8k bytes.
+  
+  4.	Interactive   environment   -   all  coding,  testing,  and
+      debugging  is  done  interactively.  The full  power of the
+      FORTH system is available during all phases of development.
+      All development is done incrementally,  verifying each step
+      of the application before proceeding to the next step.
+  
+  5.	Structured  programming   -   FORTH  is   rich  in  control
+      structures  (IF-ELSE-THEN,   BEGIN  and   DO   loops,  CASE
+      statements,  etc.).  It does not have a GOTO statement, nor
+      does it  need  one.  All  variables,  constants,  and inner
+      programs (colon  definitions)  must be defined  before they
+      are   referenced.   Program   modularity   is   a  required
+      attribute of FORTH programs.
+  
+  6.	Transportability   -   Application   programs   are  easily
+      transported among  different  machines  (subject  to device
+      dependancies).
+  
+  7.	Language extensibility -  An inherent  feature of  FORTH is
+      its ability to extend  the language,  including data types,
+      control structures, and end-user vocabularies.
+  
+  8.	Target compilation -  Most FORTH systems include facilities
+      for target (or meta)  compiling to other processors, or ROM
+      based systems.
+  
+  
+  
+  
+  
+                             Disadvantages of FORTH
+  
+  
+  1.	Unusualness -  FORTH is not in wide use, so it is difficult
+      to find trained FORTH programmers. It is also not generally
+      available on large mainframe computers or minicomputers. As
+      a result,  few people have been exposed to it. However, our
+      experience proves that experienced programmers  can pick it
+      up quickly.
+  
+  2.	Speed  -  FORTH  is  generally  slower  than  assembler and
+      true-compiled languages (like C or FORTRAN). However, it is
+      faster than interpretive  systems (like BASIC or  APL), and
+      it provides facilities for optimizing critical  portions of
+      an application.
+  
+  3.	Postfix notation  -  Postfix  (or reverse  Polish) notation
+      turns some people off.  However,  our experience shows that
+      you can quickly become  comfortable with  it.  (And  HP has
+      sold a lot of calculators using postfix).
+  
+  4.	Write-only  code  -  Poorly written FORTH  programs  can be
+      almost  impossible  to  decipher  (much harder  than poorly
+      written programs  in  other languages).  On the other hand,
+      good FORTH programs are at least as simple to understand as
+      others  and  often  better,   due  to  its  modularity  and
+      structuredness.
+  
+  5.	Cultishness -  There  often is  an  appearance of religious
+      fervor  or  fanaticism  among  FORTH  programmers,  leading
+      "serious"   programmers   to   discount   much   of   their
+      propaganda-ish  remarks.   This  is  often   due  to  their
+      fascination with  the elegance  and power of  the language.
+      Also,  it is not difficult  to find similar fervor  among C
+      and APL devotees.
+
+

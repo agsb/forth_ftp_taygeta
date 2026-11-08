@@ -1,0 +1,1037 @@
+
+Item    2837741                 89/04/03        10:01
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 04/02/89   Time: 21:14EDT
+Attendees:
+[[Len] NMORGENSTERN]
+
+Minutes:
+<FIGCHAPTERS> is here.
+<[Len] NMORGENSTERN> Hi Jax
+<[jax@well] FIGCHAPTERS> Hi Len.
+<[Len] NMORGENSTERN> What's new
+<[jax@well] FIGCHAPTERS> New car.
+<[Len] NMORGENSTERN> What kind?
+<[jax@well] FIGCHAPTERS> Mazda 323
+<[Len] NMORGENSTERN> Oh yes, I remember you mentioned it last time. . .
+<[Len] NMORGENSTERN> I have a Mazda RX 4 about 12 years old
+<[Len] NMORGENSTERN> I have been playing around with F-PC
+<[Len] NMORGENSTERN> Very nice. Unfortunately a "memory hog" as Ting says
+<[jax@well] FIGCHAPTERS> Aha.
+<[Len] NMORGENSTERN> Hi?
+<[jax@well] FIGCHAPTERS> Jerry Shifrin ...
+<[jax@well] FIGCHAPTERS> Sent me a bunch of files ...
+<[jax@well] FIGCHAPTERS> I don't know yet if FPC ...
+<[jax@well] FIGCHAPTERS> is one of them ...
+<[jax@well] FIGCHAPTERS> if it is, I will check out the
+        new version ( I had an  old one ... F88).
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> F-PC is 4 disks crammed full of .ARC files
+<[Len] NMORGENSTERN> which expand to over 1 megabyte !!!
+<[Len] NMORGENSTERN> Of course, you don't need all of that.
+        Maybe 1 third is  really
+<[Len] NMORGENSTERN> necessary and another third useful.
+<[jax@well] FIGCHAPTERS> Well, I'm not shocked by large
+        Forth systems; I have  JForth! ( Two 880-k 3.5's)
+<[Len] NMORGENSTERN> Got it wrong. over 1 megabyte of .ARC
+<[Len] NMORGENSTERN> about 2 megabytes of expanded files
+<[jax@well] FIGCHAPTERS> The world has changed ... people
+        expect more  sophisticated programs ...
+<[Len] NMORGENSTERN> Yep. A question about file handlers.
+<[Len] NMORGENSTERN> ga
+<[jax@well] FIGCHAPTERS> that means bigger programs. YOur question? ga
+<[Len] NMORGENSTERN> I am trying to develop a set of file
+        words in addition to . ..
+<[Len] NMORGENSTERN> the real basic open close etc.
+<[Len] NMORGENSTERN> For example when you open a file, sometimes you want..
+<[Len] NMORGENSTERN> to erase an existing version, if any, and sometimes you...
+<[Len] NMORGENSTERN> want to guard against doing that. What
+        do you call these 2  words?
+<[jax@well] FIGCHAPTERS> well, what does the BASIS 7 say?
+<[jax@well] FIGCHAPTERS> They are examining that very problem.
+<[jax@well] FIGCHAPTERS> If they have an answer ( I know
+        they have discussed  that EXACT issue) ...
+<[Len] NMORGENSTERN> I didn't look!
+<[jax@well] FIGCHAPTERS> it is probably best to ride the wave.
+<[jax@well] FIGCHAPTERS> .
+<[jax@well] FIGCHAPTERS>
+<[Len] NMORGENSTERN> TThese words are not hard to write.
+<[jax@well] FIGCHAPTERS> I know one preliminary conclusion they had made ...
+<[Len] NMORGENSTERN> The problem is to make yourself a useful set.
+<[Len] NMORGENSTERN> ga
+<[jax@well] FIGCHAPTERS> which probably changed ...
+<[jax@well] FIGCHAPTERS> was that CREATE-FILE would silently delete ...
+<[jax@well] FIGCHAPTERS> an existing file! What a silly
+        concept! THere were  howls ...
+<[Len] NMORGENSTERN> But that is exactly what DOS does!
+<[jax@well] FIGCHAPTERS> so I suspect the latest BASIS ...
+<[jax@well] FIGCHAPTERS> would handle things differently
+        ( You are right about  DOS, Len ! ... BUT!!! ...
+<[jax@well] FIGCHAPTERS> ( Is DOS such a great example that FORTH should follow 
+it? I say no.)
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> The problem is one of communication
+        (positive) and  confusion (negative) . . .
+<[Len] NMORGENSTERN> Forth CANNOT use the word CREATE if
+        it does something  different from . . .
+<[Len] NMORGENSTERN> DOS. People will make mistake after mistake. .
+<[Len] NMORGENSTERN> and blame it on the standards team
+        (rightly so in my  opinion)
+<[Len] NMORGENSTERN> . . .
+<[jax@well] FIGCHAPTERS> Pardon my french. Screw DOS.
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> You can't do that any more than you
+        can screw Webster's  International Dictionary
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> .
+<[Len] NMORGENSTERN> When a word is commonly used in a certain
+        way it is  dangerous. .
+<[Len] NMORGENSTERN> and unfriendly to use it in another,
+        even if you have  logic on your side.
+<[Len] NMORGENSTERN> .
+<[jax@well] FIGCHAPTERS> DOS is *NOT* the paradigm of an
+        operation system in an  awful lot of the computer world ... UNIX is.
+<[jax@well] FIGCHAPTERS> I have a list of system calls for UNIX ...
+<[Len] NMORGENSTERN> I'm not talking examples or ideals,
+        I am talking about  confusion
+<[Len] NMORGENSTERN> ga
+<[jax@well] FIGCHAPTERS> I'll have to see what UNIX does for CREATE
+<[jax@well] FIGCHAPTERS> Probably the same thing, actually. But maybe not ...
+<[jax@well] FIGCHAPTERS> UNIX returns very informative error codes. ...
+<[jax@well] FIGCHAPTERS> But REGARDLESS of DOS being a sort
+        of standard for  USERS ...
+<[jax@well] FIGCHAPTERS> there is NO REASON that the Forth
+        Standard has to do  things the way DOS does ...
+<[jax@well] FIGCHAPTERS> none whatsoever, as far as I can
+        see. It's not  specifically *aimed* at DOS ...
+<[jax@well] FIGCHAPTERS> which is becoming, whether users
+        recognize it or not .. .
+<[jax@well] FIGCHAPTERS> an orphaned op system like CP/M
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN>                                                            
+    Maybe but not real soon.
+<[Len] NMORGENSTERN> Mayge Dos is moribund, but it is far from dead.
+<[jax@well] FIGCHAPTERS> didn't say dead, said "orphaned".
+<[Len] NMORGENSTERN> Anyway, a CREATE that erases the existing
+        version is  easier to program. . .
+<[Len] NMORGENSTERN> 1) If you want to destroy the existing
+        file, it's  obviously easier.
+<[Len] NMORGENSTERN> On the other hand, if CREATE doesn't
+        destroy the existing  version
+<[Len] NMORGENSTERN> it MUST have a built-in error check that determines
+<[Len] NMORGENSTERN> whether a version exists.
+<[Len] NMORGENSTERN> .
+<[jax@well] FIGCHAPTERS> ok, the UNIX call is CREAT and
+        it *does* destroy  previous version. It is an error
+        in any op sys to to create a file without c hecking
+        for existence already, if it is a possibility, anyway. 
+<[Len] NMORGENSTERN> Right. I vaguely remember that CP/M did the same.
+<[Len] NMORGENSTERN> As I mentioned, often you don't care
+        if you destroy the  old file, and
+<[Len] NMORGENSTERN> in that case you might as well do it directly.
+<[jax@well] FIGCHAPTERS> Brian Kernighan, in _Unix Programming
+        Environment,  says, "Ken Thompson was asked ....
+<[jax@well] FIGCHAPTERS> " what he would do differently
+        if he were to re-write  the UNIX op system from scratch ...
+<[jax@well] FIGCHAPTERS> " his answer:
+<[jax@well] FIGCHAPTERS> " ' I'd spell    creat    with an "e" ' ".
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> One reason I like Forth is that you can spell things out.
+<[Len] NMORGENSTERN> Out to the end, that is.
+<[jax@well] FIGCHAPTERS> I use some pretty long words these days ...
+<[jax@well] FIGCHAPTERS> that is, the headers are long ...
+<[jax@well] FIGCHAPTERS> "compose-null-query" was one of them lately.
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> I have a conflict between readablity and finger fatigue.
+<[jax@well] FIGCHAPTERS> With me, it's a necessity ...
+<[Len] NMORGENSTERN> My brain says "spell them out" but
+        I get tired of typing  them.
+<[jax@well] FIGCHAPTERS> I am too lazy to work at figuring
+        out my code which I  forget minutes after I am done.
+<[Len] NMORGENSTERN> I sometimes think that you should either spell them out
+<[Len] NMORGENSTERN> or use very short words like DS one
+        of my favorites which  means
+<[Len] NMORGENSTERN> "dump status".
+<[Len] NMORGENSTERN> .
+<[jax@well] FIGCHAPTERS> Well, I agree there. In any event,
+        my shadows are in  PLAYN INGLISH so that I can enjoy
+        the creative process months later when  I look back.
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> I read in a book that you should never
+        try to be clever . .  .
+<[Len] NMORGENSTERN> when you program because you might
+        have trouble  understanding . .
+<[Len] NMORGENSTERN> it later. The problem is
+<[Len] NMORGENSTERN> that what looks clear and obvious now , so much so that it
+<[Len] NMORGENSTERN> doesn't need documentation, is very hard to figure out
+<[Len] NMORGENSTERN> even 2 weeks later!
+<[Len] NMORGENSTERN> (doesn't seem to need documentation) I should have said
+<[Len] NMORGENSTERN> .
+<[jax@well] FIGCHAPTERS> Right ... I believe in good shadowing/commenting
+        as a  means for self-preservation ...
+<[jax@well] FIGCHAPTERS> since I do a lot of 2-3 day projects ...
+<[jax@well] FIGCHAPTERS> then don't hear from the customer for months ...
+<[jax@well] FIGCHAPTERS> and then on the phone they want long explanations.
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Explanations of the Forth code or of the user interface?
+<[jax@well] FIGCHAPTERS> Of the code, the interface, the
+        color of the keyboard,  whatever.
+<[jax@well] FIGCHAPTERS>
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> I'll bet that every time you go back. . .
+<[Len] NMORGENSTERN> you want to improve the documentation!
+<[jax@well] FIGCHAPTERS> tend to do so.
+<[jax@well] FIGCHAPTERS> .
+<[jax@well] FIGCHAPTERS> gotta go now.
+<[jax@well] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> things as possible.
+<[Len] NMORGENSTERN> Good talking to You I have to leave early also.
+<[jax@well] FIGCHAPTERS> gnite!
+<[jax@well] FIGCHAPTERS> has left.
+<[Len] NMORGENSTERN> mail
+=== End of Steno notes. ===
+
+
+
+=END=
+
+
+
+Item    2223558                 89/04/07        10:01
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 04/06/89   Time: 22:37EDT
+Attendees:
+[[Len] NMORGENSTERN]
+
+Minutes:
+<APPERT> is here.
+<[Kevin] APPERT> Hi
+<[Len] NMORGENSTERN> Got your book! Thanx
+<[Kevin] APPERT> got yours, thanks also
+<[Kevin] APPERT> hope you enjoy it
+<FIGCHAPTERS> is here.
+<[Kevin] APPERT> hi Jax
+<[Jax] FIGCHAPTERS> hi kev,len.
+<[Kevin] APPERT> Jax , you were interested in transputter, were you not?
+<[Jax] FIGCHAPTERS> si.
+<[Kevin] APPERT> have you seen the atw800?
+<[Jax] FIGCHAPTERS> ..???
+<[Kevin] APPERT> Atari
+<[Kevin] APPERT> Transputer
+<[Kevin] APPERT> Workstation
+<[Jax] FIGCHAPTERS> Right ... designed to hold four, starts
+        with one. They  released it finally?
+<[Kevin] APPERT> package looks a lot like a ps/2 tower
+<[Kevin] APPERT> seen in corpus in Hanover
+<[Len] NMORGENSTERN> corpus ???
+<[Kevin] APPERT> they are real
+<[Kevin] APPERT> oops, I guess "in the flesh" is not appropos for a computer.
+<[Jax] FIGCHAPTERS> transputer drop-in card running HELIOS coming for Amiga.
+<[Len] NMORGENSTERN> thanx
+<[Len] NMORGENSTERN> Correct Latin is "in corpore"
+<[Len] NMORGENSTERN> (pardon me, my erudition is showing)
+<[Kevin] APPERT> correct beureaucrateese is "report in corpus immediatley"
+<[Jax] FIGCHAPTERS> mens sana in corpore ..?
+<[Kevin] APPERT> when a phone call is not enough, and you
+        care enough to send  the verry  best
+<[Kevin] APPERT> :)
+<[Len] NMORGENSTERN> Internal memo at Hallmark:
+<[Len] NMORGENSTERN> Carrie Nuff to Sandy Vera Best
+<[Kevin] APPERT> aaaarrrrrrrrggggggggghhhhhhhhh
+<[Len] NMORGENSTERN> GA tell us more about the transputer.
+<[Kevin] APPERT> oper. sys is Helios on ATW
+<[Kevin] APPERT> software includes C (bleh)...
+<[Jax] FIGCHAPTERS> HELIOS is by Tim King who also wrote AmigaDOS.
+<[Jax] FIGCHAPTERS> ( note: NOT Exec, but the Dog.
+<[Jax] FIGCHAPTERS> ...)
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> debugger and beta fortran , bascal, modula2, basuck, no OCCAM?
+<[Len] NMORGENSTERN> huh?
+<[Kevin] APPERT> dog?
+<[Jax] FIGCHAPTERS>
+<[Kevin] APPERT> dogma? is he a philosopher >
+<[Jax] FIGCHAPTERS> The Dog is AmigaDOG, the shell that
+        confronts the command  line interface user ...
+<[Jax] FIGCHAPTERS> on the Amiga ...
+<[Jax] FIGCHAPTERS> as opposed to Exec ...
+<[Jax] FIGCHAPTERS> which is the multitasking opsys ....
+<[Jax] FIGCHAPTERS> and Intuition ...
+<[Jax] FIGCHAPTERS> which is the Graphic user interface.
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> ah, when you write a batch file you learn
+        to use a whole  different computer!
+<[Jax] FIGCHAPTERS> of course.
+<[Jax] FIGCHAPTERS> Amiga is not like Mac ...
+<[Kevin] APPERT> I have long felt this...
+<[Jax] FIGCHAPTERS> graphic only.
+<[Jax] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Does Amiga have batch files?
+<[Jax] FIGCHAPTERS> Yes, more powerful by far than DOS.
+<[Kevin] APPERT> to be a weakness of "point and grunt"
+<[Len] NMORGENSTERN> Good. They are lacking on the MAC and I miss them.
+<[Kevin] APPERT> any bozo can write simple basic and bat
+        progroms on a pc,  though, Jax
+<[Kevin] APPERT> there are command interpreters for the mac, Len
+<[Jax] FIGCHAPTERS> QED
+<[Len] NMORGENSTERN> Don't be contempuous of things that . . .
+<[Kevin] APPERT> or use your favorite, FORTH on the mac!
+<[Len] NMORGENSTERN> "any bozo" can write. They are often
+        the most useful  things, Kevin.
+<[Kevin] APPERT> That was my assertion, Len
+<[Kevin] APPERT> perhaps not phrased optimially
+<[Jax] FIGCHAPTERS> However ...
+<[Len] NMORGENSTERN> Thanx
+<[Kevin] APPERT> but if they can get the job done...
+<[Jax] FIGCHAPTERS> not any bozo can write a Unix shell
+        script, yet they are  quite useful nonetheless.
+<[Kevin] APPERT> without bothering a higher level type (moi?) , we are ahead of
+<[Kevin] APPERT> the game
+<[Kevin] APPERT> given a biginner's book, the problem-o-matic
+        bozo can indead  make a start at...
+<[Jax] FIGCHAPTERS> we're all bozos on this bus ...
+<[Jax] FIGCHAPTERS> so call Arnie's Whole Beef Halves ...
+<[Kevin] APPERT> doing dos-level bat file sorts of things in csh
+<[Jax] FIGCHAPTERS> no delivery in Sectors R or N after curfew!
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> firesign theatre inside joke warning (resolving
+        forward  reference)
+<[Kevin] APPERT> those were the days
+<[Jax] FIGCHAPTERS> tubs of slaw, too.
+<[Len] NMORGENSTERN> Jax, do you mean QuickKeys for doing the equivalent
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> the simple halcyon days of youth
+<[Len] NMORGENSTERN> of Batch files on the Mac?
+<[Kevin] APPERT> speaking of halcyon, anybody seen any zombies walking by??
+<[Jax] FIGCHAPTERS> You can attach batch files to quickkeys if you want.
+<[Jax] FIGCHAPTERS> Why, because of the Haitian revolution?
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> there are several interpreters for the
+        mac  Fastfinder? may be  one I don't know
+<[Kevin] APPERT> halcyon is a sleeping pill...
+<[Kevin] APPERT> which sometimes produces sleepwalkers instead
+<[Kevin] APPERT> jax
+<[Jax] FIGCHAPTERS> yo.
+<[Jax] FIGCHAPTERS> <<<< ( in and out of this window while editing in another)
+<[Len] NMORGENSTERN> Kevin and I are having a private coversation
+        about zombies.  Sorry Jax
+<[Jax] FIGCHAPTERS> don't wake me till its over!
+<[Jax] FIGCHAPTERS> ...:-)
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> are zombies consumed on the rocks or up?
+<[Len] NMORGENSTERN> I'm learning F-PC. If you are right
+        about the future of MS  DOS, Jax...
+<[Len] NMORGENSTERN> it's a very nice program coming too late.
+<[Kevin] APPERT> there is a new one 4.01...
+<[Kevin] APPERT> which came out about 15 min. after 4.0
+<[Jax] FIGCHAPTERS> ( if you ever play NETHACK ... your
+        little dog eats zombies!  If you eat one, you get sick and die!)
+<[Len] NMORGENSTERN> DOS 4.1 or F-PC 4.01>
+<[Kevin] APPERT> and has some bugies fixed
+<[Kevin] APPERT> mess-dos
+<[Jax] FIGCHAPTERS> Yes, Len. There is also a new release of TRSDOS ( 6.3)
+<[Len] NMORGENSTERN> thanx
+<[Jax] FIGCHAPTERS> The TRS80 is still extinct. Ua make, as they say in Hawai`i.
+<[Kevin] APPERT> i think fpc is 4.25 A or something...
+	(Editor's note: 2.25 is correct)
+<[Jax] FIGCHAPTERS> It is starting to look also like ...
+<[Kevin] APPERT> I think you'll have to tie up zimmer so
+        his fingers can't  reach the keys...
+<[Jax] FIGCHAPTERS> OS/2 is stillborn. ...
+<DHWEINSTEIN> is here.
+<[Kevin] APPERT> if you really want to freeze FPC
+<[Jax] FIGCHAPTERS> Unix is what's running on the 386's i see.
+<[Kevin] APPERT> hi Dave
+<[Dave] DHWEINSTEIN> Hullo
+<[Jax] FIGCHAPTERS> There is Unix for the Mac.
+<[Len] NMORGENSTERN> Hi Dave How's school?
+<[Jax] FIGCHAPTERS> THere is Unix for the Amiga.
+<[Dave] DHWEINSTEIN> Well its a bunch of big brick buildings... :-)
+<[Jax] FIGCHAPTERS> There is even Unix for Dave Weinstein!
+<[Dave] DHWEINSTEIN> Actually it is coming along well.
+<[Dave] DHWEINSTEIN> Hey Jax...I make my living (such as
+        it is) by working on  big Unix boxes. :-)
+<[Kevin] APPERT> has anyone dast written stand-alone forth for the Amiga?
+<[Len] NMORGENSTERN> You call that living, Dave?
+<[Dave] DHWEINSTEIN> It beats the alternative.
+<[Len] NMORGENSTERN> Yep.
+<[Jax] FIGCHAPTERS> the answer is almost, kev.
+<[Jax] FIGCHAPTERS> but who has time.
+<[Jax] FIGCHAPTERS> I want my SC32!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<[Kevin] APPERT> is that what big eUnix have instead of balls, is boxes?
+<[Jax] FIGCHAPTERS> Talked to Dr. George this week ....
+<[Dave] DHWEINSTEIN>
+<[Kevin] APPERT> which Dr. George
+<[Jax] FIGCHAPTERS> that "$850 proto board" is not finished
+        but has nonetheless  metamorphosized into an $1195 SBC!
+<[Len] NMORGENSTERN> Kevin: ouch!
+<[Jax] FIGCHAPTERS> But the bus card with the SC32 is on the marked at ~~$1995.
+<[Jax] FIGCHAPTERS> oops, market.
+<[Kevin] APPERT> Nicol?
+<[Jax] FIGCHAPTERS> yup.
+<[Dave] DHWEINSTEIN> Heh. $%^$%^*&^&$%R^& test places in
+        Austin want people  within 10% of optimum body weight
+        or I'd be able to afford one in 4 weeken ds of guinea pighood.
+<[Jax] FIGCHAPTERS> $395 for a chip!!!!!!!!!!!!!!!!
+<[Jax] FIGCHAPTERS> ouch.
+<[Dave] DHWEINSTEIN> (never let it be said I don't go looking
+        for ways to get  money)
+<[Jax] FIGCHAPTERS> wonder how many he'll sell.
+<[Jax] FIGCHAPTERS> Maybe we'll get one cheap at the liquidation. :-(
+<[Jax] FIGCHAPTERS> .
+<[Dave] DHWEINSTEIN> Heh.
+<[Kevin] APPERT> do you know something, Jax?
+<[Jax] FIGCHAPTERS> not really.
+<[Dave] DHWEINSTEIN> Not likely that he would.
+<[Kevin] APPERT> does not seem likely, SC has more work then they can handle...
+<[Jax] FIGCHAPTERS> yeah! it goes ... "Something in the way she moves ..."
+<[Kevin] APPERT> most of it in sort of a "forth inc." consulting mode
+<[Jax] FIGCHAPTERS> We can always dream! :-)
+<[Jax] FIGCHAPTERS> Anyway ...
+<[Jax] FIGCHAPTERS> Hoo iz gonna bye a $395 forth chip??????????????????????????
+???????
+<[Dave] DHWEINSTEIN> And they could give away complete
+        systems to deserving  programmers... (well if we can dream... :-) )
+<[Jax] FIGCHAPTERS> .../\/\/\/\/\ what's he smoking?
+<[Kevin] APPERT> who was gonna buy a forth processor with bugs (Novix) ?
+<[Jax] FIGCHAPTERS> They were cheep by comparison.
+<[Jax] FIGCHAPTERS> I mean.
+<[Dave] DHWEINSTEIN> Heh. I wonder if Intel would give away
+        i860 development  systems for Forth ports. NeXT
+        won't give away a cube for said purpose... (my but this is good stuff...  :-) )
+<[Jax] FIGCHAPTERS> 400 gazorgas.
+<[Len] NMORGENSTERN> I didn't know they were buggy
+<[Dave] DHWEINSTEIN> Yes and you ugly too.
+<[Kevin] APPERT> I think it's gonna have to migrate to some
+        place like Harris .. .
+<[Jax] FIGCHAPTERS> pass it don't bogart it.
+<[Dave] DHWEINSTEIN> Novix was *buggy*. Thats what happens
+        when you go broke  one design cycle before completion.
+<[Kevin] APPERT> before they will be able to sell very many
+        sc32.  they are not  a chip house and the support for serious customers is not there.
+<[Jax] FIGCHAPTERS> I want one and if there is NO OTHER
+        WAY HUMANLY POSSIBLE ... .
+<[Jax] FIGCHAPTERS> I may actually buy one!
+<[Jax] FIGCHAPTERS> .
+<[Dave] DHWEINSTEIN> (falls back aghast)
+<[Kevin] APPERT> I wonder how RTX is doing?  I bet it just
+        ain't taking off  like they hoped.  After all, you
+        can't run Lotue, DBase of Wordstar on it,  what good is it?
+<[Dave] DHWEINSTEIN> <- has decided to port forth to the i860. Now I need an 
+i860 box.
+<[Jax] FIGCHAPTERS> Roll me one, too dave.
+<[Kevin] APPERT> oops, thats Lotus, DBase, or Wordstar
+<[Dave] DHWEINSTEIN> :-)
+<[Kevin] APPERT> those were the days, Jax
+<[Kevin] APPERT> I'm an old hippie, and I don't know what to do...
+<[Dave] DHWEINSTEIN> By the way. Forth exists for the NeXT.
+        Mitch Bradley's  680x0 Forth should run with *no*
+        modifications (other than to any graphics  facilities
+        it has). Binaries from Sun 2's and 3's run as is on the NeXT. 
+<[Kevin] APPERT> should I hang on to the old stuff, or change into the new...
+<[Jax] FIGCHAPTERS> The Forty Year Old Hippie ... remember that comic book?
+<[Jax] FIGCHAPTERS> " I've had 200 trips and they've all
+        been bummers, but I  ain't giving up yet!"
+<[Dave] DHWEINSTEIN> (watches conversation grind to a halt)
+<[Len] NMORGENSTERN> A real conversation stopper Jax
+<[Dave] DHWEINSTEIN> (The $5 [soon to be $6] clock is running)
+<[Len] NMORGENSTERN> You left us all speechless, (a real accomplishment)
+<[Jax] FIGCHAPTERS> Well, we are an endangered species.
+<[Jax] FIGCHAPTERS> Hippies and hip camp followers have
+        had a tremendous  influence ...
+<[Len] NMORGENSTERN> While you are all here, I want to ask about something. . .
+<[Jax] FIGCHAPTERS> on arts and science in the seventies and eighties ....
+<M.FABERT> is here.
+<[Kevin] APPERT> ga, Len
+<[Len] NMORGENSTERN> that Jax and I were discussing last Sunday.
+<[Len] NMORGENSTERN> It's about CREATE-FILE (or other word to that effect)
+<[Dave] DHWEINSTEIN> (shoot)
+<[Len] NMORGENSTERN> Some of the standards people want to have it. ..
+<[Len] NMORGENSTERN> erase an existing file of the same name (if there is one)
+<[Kevin] APPERT> ah, what do they know?
+<[Len] NMORGENSTERN> There seems to be vehement disagreement. I personally 
+think they are right.
+<[Len] NMORGENSTERN> .
+<[Len] NMORGENSTERN> What are your opinions?
+<[Dave] DHWEINSTEIN> How about a flag. You determine the
+        action either on the  stack, or in a system variable.
+<[Kevin] APPERT> what's a file?
+<[Dave] DHWEINSTEIN> (whap) You stand-alone you.
+<M.FABERT> I agree with the standards people.  A flag or CREATE-New-File ...
+<M.FABERT> might be appropriate.
+<[Len] NMORGENSTERN> My reasoning is as follows:
+<[Len] NMORGENSTERN> I think that it is undesirable to incorporate
+        error  checking into a standard
+<[Len] NMORGENSTERN> word. The error checking should be separate. Second
+<[Len] NMORGENSTERN> You have to have a word that will erase
+        the file anyway &  it might as
+<[Len] NMORGENSTERN> well be create-file.
+<[Len] NMORGENSTERN> ga all
+<[Jax] FIGCHAPTERS> I agree now, len.
+<[Jax] FIGCHAPTERS> .
+<M.FABERT> Seems that we all are in agreement!
+<[Len] NMORGENSTERN> I know, I have convinced you Jax (a hard thing to do!)
+<[Dave] DHWEINSTEIN> disconnected.
+<[Len] NMORGENSTERN> (Not because you are stubborn, but
+        because you are usually  right)
+<[Len] NMORGENSTERN> I didn't expect such agreement. Apparently
+        there was hot  disagreement
+<[Len] NMORGENSTERN> at the standards meetings.
+<[Len] NMORGENSTERN> ga
+<M.FABERT> I'm always annoyed at systems that don't provide single function
+<M.FABERT> to create and/or update a file.
+<[Jax] FIGCHAPTERS> I just agree, len ...
+<[Jax] FIGCHAPTERS> that procedurally ..
+<[Kevin] APPERT> have they resolved the questions about
+        floating point on left  handed abaci?
+<[Jax] FIGCHAPTERS> it is an error to CREATE a file without
+        explicitly doing an  exists test ...
+<[Jax] FIGCHAPTERS> unless you don't care, as for instance,
+        with the temp files  generated by ARC.
+<[Jax] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> That is often the case.
+<[Jax] FIGCHAPTERS> Therefore, a non-testing CREATE is sound.
+<[Len] NMORGENSTERN> It's near sign-off time. Is there anything else?
+<[Jax] FIGCHAPTERS> Len, I am not hard to convince when
+        confronted by sound  reasoning of someone like yourself who has a frim grasp of the underlying
+realities of computer operation.
+<M.FABERT> Speaking of
+        creating files, I just read that NASA will be ... 
+<[Len] NMORGENSTERN> Thanks for the compliment!
+<[Len] NMORGENSTERN> ga
+<M.FABERT> processing over 1000 Gbits of data from space per day in the
+<M.FABERT> 1990's!
+<[Kevin] APPERT> most of it thinks like the temperature
+        of the left-side aux  widget
+<M.FABERT> Lots of it will be from the Global change experiments measuring .
+<M.FABERT> the temperature of your M. Jane fields!
+<[Kevin] APPERT> yea, the images do tend to pile up
+<[Len] NMORGENSTERN> M. Jane fields?
+<[Kevin] APPERT> you can get ERTS off-prints but U2 photos
+        are better for  spotting dope
+<M.FABERT> Big effors are going into technologie to make this data more
+<M.FABERT> available to researchers.
+<M.FABERT> Any data base flunkies out there?
+<[Kevin] APPERT> anyway, ERTS prints are available from
+        a number of sources,  like USGS.
+<M.FABERT> Global Change will make ERTS look like WWI photo reconnosance...
+<[Kevin] APPERT> not me, I make the mess, not clean it up.  Building 
+instruments to generate the flood of data is a lot more fun
+<M.FABERT> I Had a college job in the early 70's printing ERTS photos, tho.
+<M.FABERT> I agree with you, Kevin!
+<[Kevin] APPERT> for the un-initiated, with apologies: Earth
+        Resorces  Technology Satalite
+<M.FABERT> You remembered!
+<[Len] NMORGENSTERN> M. Jane fields?
+<[Kevin] APPERT> Images available on computer tape, also
+<M.FABERT> You know, Len, high profit crops.
+<[Kevin] APPERT> spottable by infra-red signature, Len
+<[Len] NMORGENSTERN> oh :->
+<M.FABERT> Some folks are experimenting with Optical tape.
+<[Kevin] APPERT> and optical disk
+<M.FABERT> Yea, I'm working on a high rate optical disk for NASA.
+<[Kevin] APPERT> and networks, you figure out were to tore it
+<[Kevin] APPERT> oops store it
+<[Kevin] APPERT> are you on SPAN, M.F. ?
+<[Kevin] APPERT> < i'm LOCKHD::APPERT
+<M.FABERT> No, I haven't bothered.  Other folks on my project are, I believe
+<[Kevin] APPERT> once again, acronym-o-philia is an occupational
+        hazard: Space  Analysis Network = SPAN
+<[Kevin] APPERT> dinner calls, bye folk
+<[Len] NMORGENSTERN> bye Kevin
+<M.FABERT> bye Kevin.
+<[Kevin] APPERT> has left.
+<M.FABERT> Wife calls, bye.
+<[Len] NMORGENSTERN> A parting thought. An optimist believes
+        this is the best of all possible worlds. A pessimist agrees.
+<M.FABERT> \bye
+<M.FABERT> has left.
+<[Len] NMORGENSTERN> Bye!
+<[Len] NMORGENSTERN> It's just you & I (note the correct grammar!)
+<[Jax] FIGCHAPTERS> woor
+<[Jax] FIGCHAPTERS> woof
+<[Len] NMORGENSTERN> Why don't we call it a day (my old friend Colette O'day)
+<[Jax] FIGCHAPTERS> good idea
+<[Jax] FIGCHAPTERS> OK BYE
+<[Jax] FIGCHAPTERS> has left.
+=== End of Steno notes. ===
+
+
+
+=END=
+
+
+
+
+Item    6276500                 89/04/10        10:02
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 04/09/89   Time: 21:45EDT
+Attendees:
+[[Len] NMORGENSTERN]
+[[jax] FIGCHAPTERS]
+[[@ Grass Vall] D.RUFFER]
+
+Minutes:
+<APPERT> is here.
+<APPERT> hi len
+<[Len] NMORGENSTERN> Hi Kevin
+<[Kevin] APPERT> I would like to open...
+<[Kevin] APPERT> this evening's procedings...
+<[Kevin] APPERT> with the VAX cheer (much like...
+<[Kevin] APPERT> the Bronx cheer)...
+<[Kevin] APPERT> :
+<[Len] NMORGENSTERN> Huh?
+<[Kevin] APPERT> SYS$SYS$SYSBOMM-BAH
+<[Kevin] APPERT> SYS$SYS$RAH-RAH-RAH!
+<[Len] NMORGENSTERN> Heh Heh :->
+<[Kevin] APPERT> (THEY WILL BE BY ...
+<[Kevin] APPERT> LATER TO CART ME OFF...
+<[Kevin] APPERT> TO THE home for the easily amused)
+<[Kevin] APPERT> how are things?
+<[Len] NMORGENSTERN> Don't count your boobies before they
+        are hatched. J.  Thurber
+<[Len] NMORGENSTERN> We had a very good meeting of NBFig yesterday
+<[Kevin] APPERT> a unicorn galloped by about 1/2 hour ago
+        while we are eating  diner...
+<[Kevin] APPERT> so I probably have nothing to worry about
+<[Len] NMORGENSTERN> That's another Thurber story.
+<[Kevin] APPERT> yup
+<[Kevin] APPERT> FORTHers tend to a number of things...
+<[Len] NMORGENSTERN> We had a very good meeting of NBFig yesterday
+<[Len] NMORGENSTERN> ga
+<[Kevin] APPERT> you too, we'll interlace
+<[Kevin] APPERT> among them bad puns and libertarianism(sp?)
+<[Len] NMORGENSTERN> We had a very good meeting of NBFig yesterday
+<[Len] NMORGENSTERN> 2 persons new to Forth.
+<[Kevin] APPERT> I think Thurber is probaby ...
+<[Len] NMORGENSTERN> I hope we convinced them of its virtues
+<[Kevin] APPERT> among those...
+<[Len] NMORGENSTERN> At least we convinced them of our enthusiasm
+<[Kevin] APPERT> but WHY do we keep wanting to convince the rest of the world...
+<FIGCHAPTERS> is here.
+<[Kevin] APPERT> that these things are the way to go ?
+<[Len] NMORGENSTERN> Hi Jax
+<[Kevin] APPERT> I think our...
+<[Kevin] APPERT> hi Jax
+<FIGCHAPTERS> hi
+<[Kevin] APPERT> interlaces have collided!
+<[Kevin] APPERT> I was just saying...
+<[Kevin] APPERT> Jax, that FORTHers tend to bad puns, libertarianism....
+<[Kevin] APPERT> Thurber...
+<[Kevin] APPERT> and questioning Authority...
+<[Kevin] APPERT> but asked why...
+<[Kevin] APPERT> they want to sell their unique world view ...
+<[Kevin] APPERT> to a seemingly unprepared...
+<[Kevin] APPERT> and perhaps actively...
+<[Kevin] APPERT> hostile world?
+<[Len] NMORGENSTERN> Libertarianism?
+<FIGCHAPTERS> Why is there air? ( Cosby)
+<FIGCHAPTERS> .
+<[Kevin] APPERT> I am not sure of the spelling.
+<[Len] NMORGENSTERN> Why  is the sky blue, we really mean What makes it blue?
+<[Len] NMORGENSTERN> Why is a meaningless question in this case.
+<[Kevin] APPERT> it's just something I've been asking for some time
+<[Len] NMORGENSTERN> I don't know how many Forthers are really libertarians.
+<[Kevin] APPERT> a few
+<FIGCHAPTERS> hopefully few. :-)
+<[Kevin] APPERT> why, Jax?
+<[Kevin] APPERT> I am not one, but I do not object to them
+<[Kevin] APPERT> not to be confused with Anarchists (tm)
+<FIGCHAPTERS> Well ...
+<FIGCHAPTERS> Kevin, history is interesting ....
+<FIGCHAPTERS> you find that every movement has its day ...
+<FIGCHAPTERS> and that every day has its precursor and predecessor ...
+<FIGCHAPTERS> ( am i getting too deep :_) ? )
+<FIGCHAPTERS> Anyway ..
+<[Kevin] APPERT> no ga
+<FIGCHAPTERS> The program of the libertarians ...
+<FIGCHAPTERS> is roughly the program ...
+<[Kevin] APPERT> leadsman, litigant, ah here we are...
+<FIGCHAPTERS> of the French Partie Radicale of the inter-world-war period ...
+<FIGCHAPTERS> whose program led more or less directly to the collapse ...
+<FIGCHAPTERS> of the Troisie'me Re'publique vs. the Reich.
+<FIGCHAPTERS> The Libs ...
+<[Kevin] APPERT> Libertarian:  n  an advocate of the doctrine of free wil
+<FIGCHAPTERS> are right that the gov't. is too intrusive ...
+<[Kevin] APPERT> l
+<FIGCHAPTERS> but their program ..
+<FIGCHAPTERS> is nonsense. You can diagnose the ailment ...
+<FIGCHAPTERS> and still be dead wrong about the cure.
+<FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Back to Forth
+<[Len] NMORGENSTERN> A good meeting of NB FIG yesterday
+<[Kevin] APPERT> this is true, I agree
+<[Len] NMORGENSTERN> David Trumpler talked. He and his cousin spent a year
+<[Len] NMORGENSTERN> inventing a Forth, called Pyramid. Then another cousin
+<[Len] NMORGENSTERN> a physician asked them to help him
+        set up an office  computer system
+<[Len] NMORGENSTERN> Ever since he has been in the business.
+        Called Trigon  Medical Systems.
+<[Kevin] APPERT> good idea len
+<[Len] NMORGENSTERN> Their Forth has some unusual features.
+<[Len] NMORGENSTERN> brb
+<[Kevin] APPERT> I know one thing, Jax.  I do not know what that cure is.
+<[Len] NMORGENSTERN> One of their principles is that the usual Forth does not
+<[Len] NMORGENSTERN> protect the system enough. Their Forth
+        allows less leeway  for the
+<[Len] NMORGENSTERN> programmer.
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> I AM the system
+<[Kevin] APPERT> who is to protect me from myself?
+<[Kevin] APPERT> to quote...
+<[Len] NMORGENSTERN> For example, you cannot fetch and store
+        from an absolute  memory location!
+<[Kevin] APPERT> Brodie:  (more or less...
+<[Kevin] APPERT> " the artist's paintbrush...
+<[Len] NMORGENSTERN> Each task has an alloted memory of
+        about 62K, and all  reading
+<[Kevin] APPERT> and the chef's pan....
+<[Len] NMORGENSTERN> and writing has to be done to it.
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> remain simple, yeilding....
+<[Kevin] APPERT> " and so on
+<[Kevin] APPERT>  reminds me of RSX
+<[Kevin] APPERT> the operating system...
+<[Kevin] APPERT> upon which VAX-VMS is based...
+<[Len] NMORGENSTERN> The chef's pan is simple & unyielding,
+        but the caps of  poison bottles
+<[Len] NMORGENSTERN> should not be.
+<[Kevin] APPERT> but they only had about...
+<[Kevin] APPERT> a shelf-yard of documentation then...
+<[Kevin] APPERT> we always thought it stood for...
+<[Kevin] APPERT> Really Suckey eXecutive :)
+<[Kevin] APPERT> Charles Moore thinks...
+<[Kevin] APPERT> every programmer should have the joy of ...
+<[Kevin] APPERT> crashing the computer (the worst that can happen)...
+<[Kevin] APPERT> every now and then.
+<[Len] NMORGENSTERN> Ah if it were so that crashing is the end of the damage!...
+<[Len] NMORGENSTERN> It is usually the beginning!
+<[Len] NMORGENSTERN> You get a crash if you are lucky.
+<[Kevin] APPERT> you have fallen into what I like to call...
+<[Kevin] APPERT> the ADA software reliability falicy(sp?)...
+<[Kevin] APPERT> named after the countess of Lovelace and
+        not a trademark of  the DOD...
+<[Kevin] APPERT> the reason for the interperter and an interactive...
+<[Kevin] APPERT> FORTH is to TEST!!!!!
+<[Len] NMORGENSTERN> Although I don't always care if you crash yourself,
+<[Kevin] APPERT> if you have not tested what you have written,
+        walked all the .. .
+<[Kevin] APPERT> paths, you are not writing FORTH!  you have missed...
+<[Kevin] APPERT> the biggest part of the ...
+<[Kevin] APPERT> language, and you should be coding...
+<[Kevin] APPERT> in some other language or not at all.
+<[Len] NMORGENSTERN> Don't crash into me: In multitasking,
+        we all need  protection
+<[Len] NMORGENSTERN> from each other.
+<[Len] NMORGENSTERN> I don't disagree fundamentally with
+        what you are saying,  Kevin
+<[Kevin] APPERT> multitasking is for applications
+<[Len] NMORGENSTERN> But there have to be limits.
+<[Kevin] APPERT> multiuser is for insane people!!!!!!!!
+<[Kevin] APPERT> there is nothing I can do to you on my Atari here in Sunnyvale,
+<[Len] NMORGENSTERN> What you say is possible for small
+        machines. But do we  have to
+<[Len] NMORGENSTERN> limit Forth to them??
+<[Kevin] APPERT> with you on your computer where you are.  Why are you afraid.
+<[Len] NMORGENSTERN> I'm not afraid. I crash all the time
+<[Len] NMORGENSTERN> (not really all the time, just often)
+<[Kevin] APPERT> no, but multiuser APPLICATIONS (operating
+        systems among them).. .
+<[Kevin] APPERT> are responsible for protecting themselves from the users.
+<[Len] NMORGENSTERN> It would be nice to have a protected
+        system for the early  part
+<FIGCHAPTERS> If any of you theoreticians have the dough,
+        why not finance my  development of a protected multiuser
+        Forth environment on a desktop paral lel mainframe?
+<[Len] NMORGENSTERN> of the work, when crashes are most frequent.
+<[Len] NMORGENSTERN> Wow!
+<[Kevin] APPERT> theoreticians? me?
+<[Kevin] APPERT> I just make it work.  I leave the (one's
+        complement) theory to  the ANSI bunch
+<FIGCHAPTERS> Four SC32's.
+<[Len] NMORGENSTERN> Probably it would be enough to rewrite ! c! and cmove
+<FIGCHAPTERS> or for Zilog Z80,000's for that matter.
+<[Kevin] APPERT> the @, c@ and so on
+<[Kevin] APPERT>
+<FIGCHAPTERS> right, that's the main thing.
+<[Kevin] APPERT> oops the = then
+<[Len] NMORGENSTERN> No, you can't bomb the system with a fetch.
+<[Kevin] APPERT> you cannot disrupt a government with a mimeo machine...
+<[Kevin] APPERT> but they are a felony to own in Moscow...
+<[Kevin] APPERT> without a permit.
+<[Kevin] APPERT> chuckle
+<[Len] NMORGENSTERN> If you can disrupt the gov. with a mimeo machine
+<[Len] NMORGENSTERN> then it's pretty weak. Which the party apparatus in Moscow
+<[Len] NMORGENSTERN> recognizes full well.
+<[Kevin] APPERT> some languages (perhaps pretty weak ones?) cannot fetch
+<[Len] NMORGENSTERN> Even BASIC can peek and poke.
+<[Kevin] APPERT> what do you mean EVEN BASIC?   my second
+        choice after FORTH!   Interactive, ...
+<[Kevin] APPERT> simple...
+<[Kevin] APPERT> popular...
+<[Len] NMORGENSTERN> What I mean is that BASIC is a beginner's language
+<[Kevin] APPERT> I think BASIC has a bum wrap
+<[Len] NMORGENSTERN> as you say, simple, popular, and "basic"
+<[Kevin] APPERT> I would sooner try to teach a beginner BASIC than FORTH
+<[Len] NMORGENSTERN> But the "B" is BASIC stands for Beginners
+<[Kevin] APPERT> and how many of us ever get past the beginner level?|
+<[Len] NMORGENSTERN> It was designed to be teachable.
+<[Len] NMORGENSTERN> How many really need to. A relative
+        of mine, whose IQ is  about 170
+<[Kevin] APPERT> I know some folks who would be a lot better
+        off if they would  stick ...
+<[Len] NMORGENSTERN> words part time keeping books. She says, if she needs to
+<FIGCHAPTERS> so where is Dennis RUffer?
+<FIGCHAPTERS> he was supposed to be here 2nite.
+<[Len] NMORGENSTERN> run a small program or compute a formula,
+        she writes it in  BASIC
+<[Kevin] APPERT> with BASIC instead of succumbing to the
+        lure of (sic) advanced,  powerful languages like C and Pascal
+<[Len] NMORGENSTERN> Why does she need more? Ans. She doesn't
+<[Len] NMORGENSTERN> Jax, do you mean Denver?
+<[Kevin] APPERT> maybe we are not trendy enogh?
+<[Kevin] APPERT> languages are named after people these
+        days ( we don't even  have an ...
+<[Kevin] APPERT> acronym!)   perhaps we should call it : " MOORE" !
+<[Len] NMORGENSTERN> We were talking about that yesterday.
+        Pascal was the big  thing
+<[Len] NMORGENSTERN> a few years ago Now it is C
+<FIGCHAPTERS> No, silly person! I mean on GEnie!
+<[Len] NMORGENSTERN> What will it be next year?
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> ADA
+<[Kevin] APPERT>
+<[Len] NMORGENSTERN> Maybe.
+<[Kevin] APPERT> barf
+<FIGCHAPTERS> gag me with an object.
+<[Len] NMORGENSTERN> Someone said in Anaheim " I don't know what language
+<[Len] NMORGENSTERN> engineers will be using in the 90's but I know
+<[Len] NMORGENSTERN> what they will call it.
+<[Len] NMORGENSTERN> .
+<FIGCHAPTERS> .../\ /\ /\ /\ /\ CLICHE CLICHE CLICHE
+<FIGCHAPTERS> Fortran. Right?
+<FIGCHAPTERS> But they won't be. They'll call it C.
+<[Len] NMORGENSTERN> Right. Old saws get to be old saws because they are true.
+<FIGCHAPTERS> C is going to replace Fortran as the Language we Love to Hate.
+<[Len] NMORGENSTERN> Hasn't it already
+<FIGCHAPTERS> No, what you say about Fortran is almost still true ...
+<[Kevin] APPERT> C programmers largely have not a clue
+<FIGCHAPTERS> but in five years it will be C.
+<FIGCHAPTERS> .
+<[Len] NMORGENSTERN> One reason for the popularity of Fortran...
+<[Len] NMORGENSTERN> is the huge number of algorithms written in it..
+<[Len] NMORGENSTERN> which is why engineers love it.
+<[Len] NMORGENSTERN> .
+<FIGCHAPTERS> Right, but there are efforts underway ...
+<FIGCHAPTERS> to port all those proven libraries ...
+<FIGCHAPTERS> to C. And C is simply a better language ...
+<FIGCHAPTERS> I am sure ...
+<FIGCHAPTERS> that it was a pain ...
+<FIGCHAPTERS> to translate all that cuneiform to the phonecian
+        alphabet back in  500 BCE ...
+<FIGCHAPTERS> but it was done because it had to be.
+<FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Before C will be popular, all of those
+        will have to be  rewritten
+<[Len] NMORGENSTERN> and DEBUGGED to the point where they
+        will be trusted  completely.
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> people who trust in the contents of black ....
+<[Kevin] APPERT> boxes generally get what they deserve!
+<[Len] NMORGENSTERN> After you have used a version of Fortran and a set of
+<[Len] NMORGENSTERN> algorithms for, say, 10 years, you feel you can trust it.
+<[Kevin] APPERT> I enjoy the opertunity of re-inventing the wheel because...
+<[Len] NMORGENSTERN> Black box or any other color.
+<[Kevin] APPERT> this affords me the parallel opertunity...
+<[Kevin] APPERT> of making it round this time!
+<[Len] NMORGENSTERN> "Round and round the wheel of fortune,
+<[Len] NMORGENSTERN> Where it stops, 'tis with his knee..."
+<[Len] NMORGENSTERN> (Irish Folk song)
+<FIGCHAPTERS> dos raidele dreit zich.
+<FIGCHAPTERS> ( yiddish song ).
+<FIGCHAPTERS> .
+<[Kevin] APPERT> why do I enjoy these Figgy bars so much?
+         why does it seem  that...
+<[Len] NMORGENSTERN> Gelt is dos keikeldich
+<[Len] NMORGENSTERN> es keikelt zich aveck
+<[Kevin] APPERT> so few others do?
+<[Len] NMORGENSTERN> (Money is round and it rolls away)
+<[Len] NMORGENSTERN> Another Yiddish song.
+<[Kevin] APPERT> coins are not even money any more!
+<[Len] NMORGENSTERN>  Only a poor man carries cash these days.
+<[Kevin] APPERT> my favorite definition of inflation:
+<D.RUFFER> is here.
+<[Kevin] APPERT> The counterfeiting of wharehouse recipts...
+<D.RUFFER> Hello Len, Kevin, FIGCHAPTERS
+<[Len] NMORGENSTERN> Dennis! How did your meeting go?
+<[Kevin] APPERT> for some comoditity the people have...
+<D.RUFFER> great! but now I'm tired
+<[Kevin] APPERT> agreed on as a medium  of exchange.
+<[Kevin] APPERT> hi Dennis
+<D.RUFFER> sorry jax, it was a script <grin>
+<[jax] FIGCHAPTERS> be good or i'll close this window!
+<D.RUFFER> looking for our notes right now
+<[Kevin] APPERT> do you have screens in your windows Jax?
+<[Kevin] APPERT> bugs can get in iff not
+<[jax] FIGCHAPTERS> No, under Amiga Intution (C) , ...
+<[jax] FIGCHAPTERS> Windows are in Screens!
+<[jax] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Ouch Ouch Ouch
+<[jax] FIGCHAPTERS> ( Screen ... graphic object containing
+        none or more windows  )
+<[jax] FIGCHAPTERS> right now I have three screens open ...
+<[Kevin] APPERT> remember what I said about a propensity for bad puns among 
+FORTHers
+<[jax] FIGCHAPTERS> two have a window a piece ..
+<[jax] FIGCHAPTERS> one has six windows open ...
+<[jax] FIGCHAPTERS> I am running VT100, microEmacs, two
+        Forths, and a few  utilities right now.
+<[jax] FIGCHAPTERS> .
+<D.RUFFER> 2 4ths?  doing what?
+<[Len] NMORGENSTERN> How much RAM?
+<[jax] FIGCHAPTERS> I have 815 K left of the 1.5 meg i started with .
+<[jax] FIGCHAPTERS> Two Forths because one was choking on
+        certain screens so I  opened the other to fix them.
+<[jax] FIGCHAPTERS> ( A4th and MVPForth )
+<[jax] FIGCHAPTERS> .
+<[jax] FIGCHAPTERS> The Amiga is really too much.
+<[Kevin] APPERT> my $ meter is getting up around 5.
+<D.RUFFER> much more efficient than windows that I'm using
+<[jax] FIGCHAPTERS> It's what IBM wants OS/2 to be.
+<[jax] FIGCHAPTERS> Someday soon maybe.
+<[jax] FIGCHAPTERS> ... :-)
+<[jax] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Such a good machine, but never became
+        very popular. (The  story also of Forth)
+<D.RUFFER> once they get a few more programs out
+<[Kevin] APPERT> anybody have a clue why these Figgy bars are so poorly 
+attended.  I certainly enjoy them
+<[jax] FIGCHAPTERS> It's popular enough to keep Commodore afloat.
+<[jax] FIGCHAPTERS> What it is is a scaled-down single-user SUN Workstation.
+<[jax] FIGCHAPTERS> .
+<D.RUFFER> wish we knew kevin
+<[Len] NMORGENSTERN> Thanx Kevin
+<[Kevin] APPERT> more popular than atari ST, Jax
+<[jax] FIGCHAPTERS> Thursdays have been lively lately.
+<[jax] FIGCHAPTERS> Yes, Atari was in there early but got left behind ...
+<[Len] NMORGENSTERN> Yes we had a good crowd.
+<[jax] FIGCHAPTERS> remember ...
+<D.RUFFER> need more people to attend
+<[jax] FIGCHAPTERS> Atari fired the guy who designed the
+        Amiga. Said it would  never sell and kicked him out.
+<[jax] FIGCHAPTERS> .
+<[Kevin] APPERT> self-fulfilling
+<[jax] FIGCHAPTERS> They used the 68k in the ST, but didn't believe users 
+wanted true multitasking.
+<[jax] FIGCHAPTERS> They were wrong, I note.
+<[jax] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> I sympathize with bad predictors.
+<[Len] NMORGENSTERN> I predicted that the people of the State of California
+<[Len] NMORGENSTERN> would never elect Ronald Reagan governor!
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> what is stopping the ST from being a true
+        multi-tasker, though,  Jax
+<[jax] FIGCHAPTERS> The op system they wrote for it ...
+<[jax] FIGCHAPTERS> and the Amiga makes it look so easy ...
+<[jax] FIGCHAPTERS> because of custom co-processor hardware
+        to handle the  graphics.
+<[jax] FIGCHAPTERS> .
+<[jax] FIGCHAPTERS> THe reason ...
+<[jax] FIGCHAPTERS> Windows ( an version ) is such a dog on IBM ..
+<[jax] FIGCHAPTERS> is that the CPU has to DRAW the SCREEN for hevvins sake .
+<[jax] FIGCHAPTERS> No such thing on AMy.
+<[jax] FIGCHAPTERS> .
+<[@ Grass Vall] D.RUFFER> screen does drawing?
+<[jax] FIGCHAPTERS> coproc's do screen.
+<[jax] FIGCHAPTERS> watch the pointer on an Amiga when you move mouse ...
+<[jax] FIGCHAPTERS> then watch pointer on IBM when you move mouse.
+<[jax] FIGCHAPTERS> You'll see.
+<[jax] FIGCHAPTERS> .
+<[@ Grass Vall] D.RUFFER> wish I could :-(
+<[jax] FIGCHAPTERS> So PS/2 is designed to be "as good as" an Amiga ...
+<[Kevin] APPERT> I. B.  M....  U.  B.  M.   we all B.  M.  ....
+<[jax] FIGCHAPTERS> if they ever finish the operating system.
+<[jax] FIGCHAPTERS> .
+<[jax] FIGCHAPTERS> jaxpredicts:
+<[Len] NMORGENSTERN> than something else never is.
+<[Kevin] APPERT> and throw in a T.I. graphics co-processor
+<[jax] FIGCHAPTERS> OS/2 will not ever be the new MS/DOS ...
+<[@ Grass Vall] D.RUFFER> Smart VGAs do some of what you are talking about
+<[Len] NMORGENSTERN> Morgenstern's principle: Something designed to be better..
+<[Len] NMORGENSTERN> than something else never is.
+<[jax] FIGCHAPTERS> Most people will run UNIX on the 386.
+<[jax] FIGCHAPTERS> with Xwindows.
+<[jax] FIGCHAPTERS> .
+<[@ Grass Vall] D.RUFFER> talk about dogs jax
+<[jax] FIGCHAPTERS> huh?
+<[jax] FIGCHAPTERS> you mean Xwindows?
+<[jax] FIGCHAPTERS> don't worry ...
+<[Kevin] APPERT> how much will this cost , Jax
+<[jax] FIGCHAPTERS> they'll fix it.
+<[jax] FIGCHAPTERS> how much?
+<[@ Grass Vall] D.RUFFER> Unix is more of a cpu killer than os/2
+<[Kevin] APPERT> UNIX started off as nearlly free, got a LOT more expensive
+<[jax] FIGCHAPTERS> you could set yourself up with an eight-user
+        system for say  $10 grand easy.
+<[jax] FIGCHAPTERS> minus the terminals for the other seven users.
+<[@ Grass Vall] D.RUFFER> who want 10 users on a PC?
+<[Kevin] APPERT> there is only one of me!
+<[jax] FIGCHAPTERS> .
+<[jax] FIGCHAPTERS> Well, if you want a real PERSONAL computer buy an Amiga.
+<[jax] FIGCHAPTERS> The 2500 will also run UNIX if you want.
+<[Kevin] APPERT> what people want is to run DBase, Lotus and word-*
+<[jax] FIGCHAPTERS> .
+<[jax] FIGCHAPTERS> So on the Amiga you run different programs.
+<[Kevin] APPERT>  so what we will all see is 386 machines running mess-dos
+<[jax] FIGCHAPTERS> Word Perfect is on the Amiga.
+<[@ Grass Vall] D.RUFFER> all at the same time kevin
+<[jax] FIGCHAPTERS> No, you will, and can see everywhere
+        now, 386's running  Unix.
+<[@ Grass Vall] D.RUFFER> Len, Wil says HI!
+<[jax] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Thanx
+<[Len] NMORGENSTERN> Kevin, saying that all people want to run is Lotus, etc
+<[jax] FIGCHAPTERS> if you want to log into a free BBS running
+        under System V  Unix ...
+<[Len] NMORGENSTERN> is like saying that they buy a car
+        to get from one place  to another.
+<[jax] FIGCHAPTERS> call CHARIOT @ (719) 632-4111.
+<[jax] FIGCHAPTERS> If you subscribe ( $12 a month ) ...
+<[jax] FIGCHAPTERS> you can play with Unix.
+<[jax] FIGCHAPTERS> .
+<[Kevin] APPERT> gentlemen, it was good sharing this time
+        of warm fellowship,  but I have errands to perform.  Fare you all well .
+<[Kevin] APPERT> has left.
+<[Len] NMORGENSTERN> Bye Kevin!
+<[@ Grass Vall] D.RUFFER> bye Kevin
+<[jax] FIGCHAPTERS> too late.
+<[@ Grass Vall] D.RUFFER> both of us
+<[@ Grass Vall] D.RUFFER> ok, are you gonna turn off the steno now?
+<[Len] NMORGENSTERN> ok
+(Remainder of meeting was private sysop business)
+=== End of Steno notes. ===
+
+

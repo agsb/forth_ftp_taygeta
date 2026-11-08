@@ -1,0 +1,118 @@
+
+**********
+Topic 6         Thu Nov 05, 1987
+P.SPEARING                   at 22:05 EST
+Sub: do  DOS files in F83                   
+
+I'm trying to learn FORTH, and can't seem to                                  
+Can     How does one work with DOS files from F83?
+8 message(s) total
+**********
+----------
+Category 12,  Topic 6
+Message 1         Thu Nov 05, 1987
+P.SPEARING                   at 22:07 EST
+          
+I'm trying to learn Forth, and I have the Laxen & Perry F83 package. Can ab
+nyone out there explain to me how to access regular do  DOS (ASCII) files from
+F83?   Thanks.
+----------
+Category 12,  Topic 6
+Message 2         Thu Nov 05, 1987
+LMORGENSTERN [leonard]       at 19:55 PST
+          
+    To P.Spearing.  To answer your question, how to access ASCII files in F83:
+What is your purpose? Let us know what you want to do, and we will try to
+help. Code to accomplish your goal is probably already in one of the files on
+this round table.
+     It is fairly easy to access ASCII files as though they were block files,
+reading characters one at a time from the blocks until you reach a CR-LF line
+terminator, then breaking the resultant string into words. (You may run into a
+problem if you use single-sided diskettes, which have sectors 512 bytes long.
+This is easily solved, however.) I must admit that I have never had to write
+such a handler myself, since it is built into a commercial Forth called
+MicroMotion, based on F83, that I have.
+     Using ASCII files as source instead of blocks is also done bye some
+Forths. The code to do this is not part of F83, but could be added.
+----------
+Category 12,  Topic 6
+Message 3         Fri Nov 06, 1987
+JAX                          at 19:35 PST
+          
+Will Baden's version of F83 fully handles DOS files. Check with your local FIG
+( if any). Baden called his FORTH F83X, I believe. Best solution: Buy an AMIGA
+and use JFORTH!!!!!
+----------
+Category 12,  Topic 6
+Message 4         Sat Nov 07, 1987
+LMORGENSTERN [leonard]       at 09:53 PST
+          
+F83X is an extension of F83, written by Will   Baden. It is contained in  4
+large ARC files named CALIF330.ARC, PONG330.ARC, PAND330.ARC, and PING330.ARC.
+Baden named the files after characters in the opera Turandot. These have the
+numbers 430-434 in   the library. I have just uploaded a file F83XHELP.ARC to
+supplement these.
+    John Peters, of the Silicon Valley FIG is working on a   new version of
+F83X called F83S. I don't know whether it is ready.
+    Although these Forths have a lot of good features      , they are rather
+formidable for a beginner.
+----------
+Category 12,  Topic 6
+Message 5         Sat Nov 07, 1987
+LMORGENSTERN [leonard]       at 09:59 PST
+          
+In my previous message, the   file PAND330.ARC should read PANG330.ARC  
+----------
+Category 12,  Topic 6
+Message 6         Thu Nov 12, 1987
+P.SPEARING                   at 04:40 EST
+          
+Thank you for suggesting F83X--I'll cg check on it tonight. I'd dearly love to
+buy an Amiga and use Jforth, but there are about a thousand good reasons why I
+can't right now (at about a dollar each). F83 seems to get high praise in
+Forth Dimensions, but I need more documentation than is provided there to help
+me get started. Maybe I should break down and buy a commercial Forth system,
+much as I  hate the thought of spending money. Thanks, all.
+----------
+Category 12,  Topic 6
+Message 7         Fri Nov 13, 1987
+LMORGENSTERN [leonard]       at 00:06 PST
+          
+ To P.SPEARING: I have the following advice for all beginners. IMHO (In my
+humble opinion -- although finding a humble Forth programmer is not an easy
+task), stick to F83. Spend your money on books and asking questions on GENIE,
+not on a commercial program. Many of these are well worth their cost, but you
+can't know which one is best for you until you have had some experience.
+     F83 is a good place to start. It has most of the features that a beginner
+would want, yet it is powerful enough that it has become a kind of informal
+standard. Several commercial Forths are based on it, and stepping up will be
+easy. There is also the
+
+    As to a tutorial for F83, I notice a new file just uploaded, which is 785
+F83TUTOR.ARC. There is also 537 F83-20.MAN Try them and let me know your
+opinion. Also, get the F83 source files, 241 F83.ARC. They are well
+documented, and should not be beyond you unless you are a rank beginner. A
+good book for the moderately advanced is Ting's Inside F83.
+
+     As to F83X, I am ambivalent. On the one hand, it has a lot of excellent
+enhancements, on the other, it is probably too much for a beginner. It was
+suggested to you because you asked about ASCII files.
+
+     Forth Dimensions is an excellent magazine, but you should not expect it
+to be a tutorial. I would suggest that you find a program there that doesn't
+look too difficult, and study it. I like to type source files by hand onto my
+machine, as it forces me to review it word by word. Then load it and try to
+run it. Change it if you think you can improve it (you might). Ask us
+questions about difficulties that you encounter, or about philosphy, or style.
+We are eager to help you.
+
+----------
+Category 12,  Topic 6
+Message 8         Fri Nov 13, 1987
+JAX                          at 20:49 PST
+          
+... and, of course, read the redoubtable Dr. CHTing's "Inside F83"
+    every day!
+----------
+
+

@@ -1,0 +1,234 @@
+
+Notes from the Silicon Valley FIG Chapter meeting  9/26/87
+Written by Scott Squires   GEnie: S.W.SQUIRES   CompuServe: 76545,573
+
+These are notes from the afternoon session only since I wasn't able to make
+it to the morning session.  Most of this information went by pretty quickly
+so I may have a few errors.
+
+I've uploaded the general meeting notes and the talk by Glen Haydon as
+separate files.
+
+    Chuck Moore, the inventor of Forth and driving force behind the Novix 
+Forth language chip, was one of the two main speakers at today's meeting.  
+As usual his talk was very interesting and filled with new concepts.  He has 
+a company called Computer Cowboys [ I guess this comes from the 'OK' corral? 
+] that sells a Novix board.  [ I've kept most of this in the same order as 
+the talk rather than editing it.  All comments are Moore's unless enclosed 
+in square brackets.] 
+
+    Chuck jokingly says he's been accused of being a standards buster.  
+Actually his attitude towards standards has been deteriorating rapidly.  His 
+motivation for Forth was to have personal interaction with the computer.  It 
+is weird and tragic that Forth is not more accepted than it is.  At least 
+Forth doesn't have to be accepted to be usuable.  Forth programmers aren't 
+dependent on standards or compilers written by others.  
+
+    He would like to see a standard so those people who require them will 
+have them.  Standards are to document current usage, not to improve it.  
+Chuck is involved in the current ANS standards process.  Smiling, he said 
+that he was afraid if he wasn't involved they'd do it wrong.  Among the 
+things he proposed was to have at least one meeting held in San Francisco 
+because that was the birthplace of FIG.  To not do so would be to ignore a 
+major factor in Forth.  He also wanted the cost for participation and 
+observing to be less than the $100 required.  People can give feedback 
+through other sources such as Bulletin Board Systems and magazines but it's 
+not the same as direct participation where you hear how the complaints are 
+voiced.  The standards process will be painful because people don't want to 
+give up things.  His new Forth will be different.  A lot of words (such as 
+WORD) will go away.  He stopped using LEAVE a few years ago.  The correct 
+definition of WHILE eliminates LEAVE.  
+
+    As he gets more involved with hardware he sees the benefits of Forth 
+more than ever.  Everyone is doing it wrong.  New computers are 
+conventional.  He is trying to make the design of his new computer, using a 
+Novix Forth chip, as different from the IBM PC as possible.  It will use a 
+Sony (or NEC) Multi-Sync monitor.  Color pictures will be displayed directly 
+from the Novix because it is fast enough to compute each pixel and display 
+it pixel by pixel.  Programming is difficult unless you like counting 
+cycles.  It takes 256 cycles to display a horizontal video line.  
+
+    The new computer will use a 3 key keypad.  Nobody is fond of QWERTY.  
+Why anyone would want to chain both hands to a keyboard is beyond him.  ( 
+Moore had been using a 7 key keypad last year.  ) With 3 keys you don't make 
+mistakes and you don't get tired.  
+
+    A computer is a way to put pictures on a screen.  He doesn't think 
+calculations are a worthwhile use of the computer.  Weather computers do 
+some of the most intensive calculational computing anywhere but it is so 
+complex you can't have any confidence in the final results.  
+
+    He questions whether multiply is really needed on a computer since he 
+rarely multiplies.  A 'feature' on the Novix chip prevents you from 
+multipling by an odd number.  With all of this in mind he did define some 
+specific multiply words for the Novix.  
+ : 3*  dup 2* ;  ( 3 Novix cycles )
+ : 4*  2* 2* ;   ( 3 )
+ : 5*  dup 2* 2* + ;  ( 4 )
+   6*  ( 3 )
+   7*  ( 5 )
+   8*  ( 4 )
+   9*  ( 5 )
+ : 10*  dup 2* 2* + 2* ;  ( 4 )
+   11*  ( 6 )
+ : 12*  2* dup 2* + 2* ;  ( 4 )
+ : 100*   10* 10* ;  ( 9 )
+( He had definitions for all but these are the only one's I copied down in 
+time.) Some of the odd numbers ( 7, 9, 11, etc.) took 5 or 6 cycles.  He was 
+suprised that he could do a 12* in only 4 cycles.  
+
+    The new computer board has been designed but not built yet.  Moore had 
+the artwork to show and hoped to have some made for the FIG convention.  The 
+FK4 board is 4 by 6 inches.  There are 3 - 32 bit connectors for I/O.  The 
+Novix chip has its 4 addresses for Data Stack, Return Stack, Program memory, 
+and I/O space.  It has two shift regions- one in low memory and one in high 
+memory for specialized tasks.  He's hoping to have it run at 6 Mhz.  
+ 
+    The video is clocked out at twice that speed (12 Mhz ).  It will support 
+512x300 by 16 color display.  He's also hoping to have a 16 table lookup and 
+has some ideas to make the video run at 4 times the chip clock speed (24 
+Mhz).  This would support 2 bits per pixel ( 4 colors in hi-res ).  
+
+    Other I/O: The edge connector can control a 3.5 inch floppy drive with 
+bit banging, a parallel port for a printer, a serial port, and a keyboard 
+port for the 3 key or 7 key keyboard.  
+
+    There are 12 chips for the basic system and 20 chips when fully stuffed.  
+All of these are MSI logic.  The stack is 32k deep.  On startup the PROM is 
+copied into RAM.  The board will be a 4 layer PC board.  
+
+    Chuck wrote a program to translate the graphics image on disk to the 
+Gerber photoplotter language, which he used for creating the printed circuit 
+artwork.  It supports such things as MOVE, DRAW, FLASH, CENTER, APERATURE, 
+REVERSE, and HOLE.  Everything only takes a block of code.  If it didn't he 
+wouldn't do it.  [ Actually I think it took 2 or 3 blocks fully loaded.] The 
+program follows a line on the raster image and converts it to a vector 
+scheme that the photoplotter requires.  PATH and/or FOLLOW is recursive 
+which Moore considers a pain to debug.  Five pieces of artwork for the board 
+are created ( front, back, power, ground, and holes) .  The information is 
+sent by modem to the photoplotting service.  The whole software with full 
+modem support took only 2 weeks to do.  He was used to their older 
+photoplotters but they now have a newer one that uses a laser printer.  The 
+system also includes an Eclipse computer for displaying the image on the 
+screen before plotting.  Unfortunately each of their devices interprets the 
+plotting language differently even though they're supposed to be compatible.  
+Alan Furman mentioned that this reminded him of a train crossing sign in 
+England- 'Stop when bell rings.  Stop at all other times in case bell is 
+broken'.  
+
+    Since the laser printer converted the vector data back into a raster 
+form Moore asked if it would be possible to just send it in that form rather 
+than him converting his raster to vector and them reconverting back into 
+raster.  No, they didn't think that was possible but they weren't sure.  
+This is common in the industry.  Even the people involved with the equipment 
+only know what keys to press; they don't know how it works.  
+
+    Because his tape drive was broken he sent the data to them by modem over 
+the GEnie network.  His modem program is one block and the XMODEM support is 
+one block.  Some of the words are- ?KEY, RCV, DUPLEX, HALF, FULL, OPEN, 
+CLOSE.  He likes HALF and FULL since they seem to perfectly describe half 
+and full duplex even if the word duplex isn't included in the phrase.  OPEN 
+and CLOSE were done as a considerable concession since he doesn't like 
+files.  These words were used to transfer 'contiguous blocks of data'.  
+
+    When Chuck visted the service they had some funny images to see.  Some 
+of the data had errors in it from being sent over the phone lines.  It took 
+a 50 and changed it into 41 which still has a valid checksum.  The service 
+software didn't support standard CRC error checks.  Moore called Microsoft 
+to see what type of CRC they were using so he could write a program to use 
+the required CRC.  Microsoft wouldn't tell him because that information was 
+proprietary.  "The function of a proprietary telecommunications standard is 
+very questionable", he said while shaking his head.  
+
+    Moore plans to make all of this software available with Campfire, the 
+stand alone computer made from this board.  He would like the libraries that 
+are becomming available on the different sources such as GEnie to have 
+primitives rather than complete applications software so he can build his 
+own application.  
+
+    The new keyboard- 3 keys could be used in a variety of ways.  Each key 
+could represent red, green and blue.  When you wanted something to happen to 
+the red image on the screen you'd hit the corresponding red button.  The 3 
+keys provide 7 choices.  No fingers means that the keyboard is idle.  It is 
+easy to coordinate 3 fingers.  When used to change an image on the screen 
+the change is done instantly since almost any change just takes one video 
+cycle.  
+
+    These 3 keys provide a lot of functions.  Moore has avoided menus in the 
+past because they were clumsy and awkward even on a Mac.  In his new menu 
+each menu item is a Forth word.  Each one of these either changes a 
+parameter or does something.  If you don't know what something does, try it.  
+The only word that could hurt would be SAVE but this will be out of the way 
+to avoid accidental saving something on top of something else.  These Forth 
+words are made of simple one line definitions and are fun to use.  The 
+keyboard doen't have a time out.  Timeout was a good idea but he's rusty at 
+using a standard keyboard these days so it usually times out when he doesn't 
+want it to.  [ Timeout was used to automatically do a carriage return if you 
+stopped typing for a given amount of time.  A good typist would type and 
+then pause for an instant at the end of a line rather than reaching over for 
+the Return key.  ] All the Forth words will be in the menu so you don't need 
+to type them in.  A smart editor will also be included.  This will allow you 
+to insert in a clause or control structure very easily.  When text is 
+required such as comments one set of key choices are E,O,A,I,U and another 
+set is for high frequency constants and special characters such as space and 
+backspace.  In two keystrokes he can type in 80% of the words he needs.  The 
+keys shouldn't require training and learned skills.  
+
+    Moore uses tracks which are 5 blocks at a time.  Blocks should continue.  
+He'd give users a choice of the length of a block ( 1k, 5k, whatever ) but 
+wouldn't want to give them variable length since limits performance and 
+causes more overhead than necessary.  
+
+    The software waits for a key, puts up vertical sync, and runs code to 
+display.  Each horizontal line starts with a sync.  Text to be displayed is 
+in a string.  The software takes the address to a reference table to display 
+the characters as pixels per scan line.  This is similar to the old Sinclair 
+computers.  He can change the video frequency at anytime but the Multi-sync 
+monitors take a few cycles to re-sync.  Each word counts the number of 
+cycles it takes and makes sure it takes 256 cycles so the horizontal number 
+of pixels remains constant.  An interrupt for the horizontal sync would 
+probably be better but the Novix chip doesn't have a working interrupt at 
+this time.  
+
+    If the image is complex he alternates display of red and blue fields.  
+The whole video control is great for moving things around on the screen and 
+for dithering images.  The three keys will be used to position things 
+instead of a pointing device such as a mouse.  Word definitions are red and 
+comments are blue.  He wants the display to be colorful, vibrant, and 
+informative.  
+
+    The menus will be broken down into groups of words and these will be 
+broken down further if required like a tree structure.  One menu will have 
+the stack words ( DUP, SWAP, etc.  ).  Another will have common words.  A 
+key must be pressed for 1/8 of second to take effect.  After a word is 
+executed it may move forward to the next menu, remaining at the same menu, 
+or backup.  One of the words themselves would be called BACK to backup 
+through the menus.  
+
+    A full word processor hasn't been implemented yet but it would probably 
+be broken up into common words and groups such as nouns and verbs.  This 
+would implement a prescribed dictionary such as Basic English that was 
+described in 1940 and had 840 words.  One advantage of this is the 
+elimination of spelling errors.  
+
+    Other thoughts- he could see using a TV camera to sense the placements 
+of your fingers instead of the 3 micro-switches currently used since you'll 
+probably want a TV camera with the system anyway.  Because the horizontal 
+frequency is contollable it would be possible to offset rows by 1/2 pixel 
+for hexagonal formats instead of strictly rectangular.  
+
+    Chuck is working on ideas of for a 32bit Forth chip that runs 10 times 
+as fast as the current Novix.  This would run at 50 Mhz and require 15 ns 
+RAMS.  This won't be the Buffalo Chip [ this is another design that Moore 
+has for a Forth chip that runs at 100 Mhz.  ] 
+
+    The board discussed earlier would cost less than $1000 and might include 
+software for the Novix 4016 simulator.  The old Forth was called cmFORTH and 
+was 3k in size.  The new Forth will be less than 3k.  He'd like it to 
+display fireworks like a demo on the Mac but do it better.  
+
+    His philosophy is to use the least amount of hardware.  Computing of the 
+Future will be broken into two categories: 1.  Complicated 2.  Relatively 
+simple.
+
+

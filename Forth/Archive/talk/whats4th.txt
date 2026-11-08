@@ -1,0 +1,226 @@
+
+  
+                               FORTH
+                  An Unusual Programming Language
+  
+  
+  
+                           Gerald Shifrin
+                    Control Systems Architecture
+                     Satellite Business Systems
+                            May 30, 1985
+  
+                              SUMMARY
+  
+  
+  o   What is FORTH?
+  
+  o   Advantages of FORTH
+  
+  o   Disadvantages of FORTH
+  
+  o   A Taste of FORTH
+  
+  o   Definition of INTERPRET
+  
+  
+  
+                           What is FORTH?
+  
+  
+  1.	A language invented by Charles  Moore in the  early 70's to
+      allow him to improve his productivity.
+  
+  2.	A   Threaded  Interpreted  List   language  which  compiles
+      programs as  lists of  addresses,  each of which  refers to
+      another list or else to a  "primitive"  ( a word written in
+      machine  language).  The interpreter portion of  FORTH then
+      threads  its way through these lists,  until  it  finds the
+      primitives to be executed.
+  
+  3.  An interpretive language like BASIC or APL which allows the
+      user  to  interactively  develop  and  debug  programs, and
+      explore the features of the language from a workstation.
+  
+  4.	A compiled  language  like  PL/I or PASCAL,  which provides
+      fast execution of compiled programs.
+  
+  5.	A high level language which  allows the user to  operate an
+      application using familiar vocabularies.
+  
+  6.	A low-level,  systems-oriented  language,  which allows the
+      programmer    to   perform    systems   functions   without
+      restriction.
+  
+  7.	A  design  language  for describing very high  level design
+      approaches to systems implementation.
+  
+  8.	A   handy  (Hewlett-Packard  like)   calculator  for  doing
+      arithmetic in any number base (from 2 to 36).
+  
+  9.	A  structured  programming language,  with  a  rich  set of
+      control     structures,  and  strict  rules  for  enforcing
+      modern software engineering concepts.
+  
+  10.	A single  board computer  (FORTH in ROM)  for inexpensively
+      developing  applications to run  refrigerators, telescopes,
+      robots, etc.
+  
+  11.	A   microcomputer   chip   for   inexpensively   developing
+      high-speed systems.
+  
+  
+                        Advantages of FORTH
+  
+  
+  1.  Productivity -  all of the following FORTH featuers lead to
+      improved overall productivity.
+  
+  2.  High  quality -  the code-compile-link-test-debug-fix cycle
+      is  much  shorter and  faster  than  traditional languages,
+      encouraging  greater  testing.  Additionally,  the language
+      leads you into developing simple, easy-to-understand code.
+  
+  3.  Compact code -  Each FORTH program is less than 16 lines of
+      code (with rare exceptions), and usually less than 3 lines.
+      The   generated   code  is   very   small.   Typical  FORTH
+      implementations have a nucleus (or kernel) under 8k bytes.
+  
+  4.	Interactive  environment   -   all   coding,  testing,  and
+      debugging is  done  interactively.  The full  power  of the
+      FORTH system is available during all phases of development.
+      All development is done incrementally,  verifying each step
+      of the application before proceeding to the next step.
+  
+  5.	Structured  programming   -   FORTH  is   rich  in  control
+      structures       (IF-ELSE-THEN,  BEGIN and  DO  loops, CASE
+      statements,  etc.).  It does not have a GOTO statement, nor
+      does it  need  one.  All  variables,  constants,  and inner
+      programs (colon  definitions)  must be defined  before they
+      are referenced.  Program modularity is a required attribute
+      of FORTH programs.
+  
+  6.	Transportability   -   Application   programs   are  easily
+      transported among  different  machines  (subject  to device
+      dependancies).
+  
+  7.	Language extensibility -  An inherent  feature of  FORTH is
+      its ability to extend  the language,  including data types,
+      control structures, and end-user vocabularies.
+  
+  8.	Target compilation -  Most FORTH systems include facilities
+      for target (or meta)  compiling to other processors, or ROM
+      based systems.
+  
+  
+  
+  
+  
+                       Disadvantages of FORTH
+  
+  
+  1.	Unusualness -  FORTH is not in wide use, so it is difficult
+      to find trained FORTH programmers. It is also not generally
+      available on large mainframe computers or minicomputers. As
+      a result,  few  people  have  been exposed  to it. However,
+      our experience proves that experienced programmers can pick
+      it up quickly.
+  
+  2.	Speed  -  FORTH  is  generally  slower  than  assembler and
+      true-compiled languages (like C or FORTRAN). However, it is
+      faster than interpretive  systems (like BASIC or  APL), and
+      it provides facilities for optimizing critical  portions of
+      an application.
+  
+  3.  Postfix  notation  -  Postfix (or  reverse Polish) notation
+      turns some people  off.  However, our experience shows that
+      you  can quickly become  comfortable with  it.  (And HP has
+      sold a lot of calculators using postfix).
+  
+  4.  Write-only  code  -  Poorly written FORTH  programs  can be
+      almost  impossible  to  decipher  (much harder  than poorly
+      written programs  in  other languages).  On the other hand,
+      good FORTH programs are at least as simple to understand as
+      others  and  often  better,   due  to  its  modularity  and
+      structuredness.
+  
+  5.  Cultishness  -  There  often is an appearance  of religious
+      fervor  or  fanaticism  among  FORTH  programmers,  leading
+      "serious"   programmers   to   discount   much   of   their
+      propaganda-ish  remarks.   This  is  often  due   to  their
+      fascination  with the  elegance and power  of the language.
+      Also,  it is not difficult to  find similar  fervor among C
+      and APL devotees.
+  
+  
+  
+  
+                          A Taste of FORTH
+  
+  
+  o   Reverse polish notation:
+           5 3 +
+           99 7 /
+           50 8 MOD
+  
+  o   Defining words: VARIABLE, CONSTANT, :
+  
+  o   Colon definitions:
+           : TEST 77 63 * 5 / . ;
+           : ? @ . ;
+  
+  o   IF-ELSE-THEN statements:
+           flag IF true-part ELSE false-part THEN
+           : EVEN? 2 MOD 0= IF ." Even number"
+                            ELSE ." Odd number"
+                            THEN   ;
+  
+  o   DO-Loops:
+           n1 n2 DO iterated statements LOOP or n3 +LOOP
+           : LIST-EVENS
+             0 DO I EVEN? IF I . THEN LOOP   ;
+           : LIST-EVENS
+             0 DO I . 2 +LOOP   ;
+  
+  o   BEGIN-Loops
+           BEGIN loop-statements true/false-test UNTIL
+           : GET-NUMBER
+             BEGIN  ." Enter a number between 1 and 10" CR
+                #INPUT DUP 1 11 WITHIN UNTIL   ;
+  O   CASE Statements
+  
+  o   Numeric, Character, String I/O and formatting
+  
+  o   Stack manipulation: DUP, SWAP, ROT, ...
+  
+  o   Disk I/O, Screen I/O
+  
+  o   Parsing words, dictionary search, vocabularies, ...
+  
+  o   Defining words - CREATE, DOES>
+           : CONSTANT
+             CREATE 2 ALLOT  !
+             DOES  @   ;
+  
+  
+  
+  
+  
+                         Definition of INTERPRET
+  
+  
+  :  INTERPRET
+     BEGIN
+        FIND
+        IF ( found) STATE @ <              ( are we compiling?)
+           IF ( compiling) CFA ,           ( compile the word)
+           ELSE ( executing) CFA EXECUTE   ( execute the word)
+           THEN
+        ELSE ( not found) HERE NUMBER DPL @ 1+  (decimal point?)
+           IF [COMPILE] DLITERAL                ( double #)
+           ELSE DROP [COMPILE] LITERAL          ( single prec)
+        THEN
+        ?STACK                             ( check the stack )
+     AGAIN   ;                             ( Loop forever)
+
+

@@ -1,0 +1,113 @@
+
+             Book Review: Dr. Dobb's Toolbox of Forth
+                    Edited by Marlin Ouverson
+                                 
+     (Available from Dr. Dobb's Catalog, 501 Galveston Drive,
+      Redwood City, CA 94063, $22.95, $39.95 with diskette)
+                                 
+                    Reviewed by Jerry Shifrin
+          (SYSOP, East Coast Forth Board - 703-442-8695)
+
+Here's an interesting collection of Forth articles from the last
+few years of Dr. Dobb's Journal. Marlin Ouverson (editor of Forth
+Dimensions) has collected and updated 26 Forth articles and made
+them available in a single volume. This book is organized as 5
+major sections and a set of appendices. The book consists of 253
+pages, sized 8 and 1/2 by 11.
+
+Following is the contents of this volume:
+
+
+Editor's Preface
+
+Part I: FORTH - The Language
+
+The Forth Philosophy by Kim Harris
+Teaching Forth as a First Language by John S. James
+Forth-83 and Vocabularies by George W. Shaw II
+
+
+Part II: Forth Programs
+
+GO in Forth by C.H. Ting
+Elements of a Forth Data-Base Design by Glen B. Haydon
+The Forth Sort by Mark I. Manning
+SEND and RECV by Robert Taylor
+Interfaces for a Mouse by Ray Duncan and Rick Wilton
+Relocating Loader in Forth by Joe Barnhart
+Forth Decompiler by Ray Duncan
+Screen-Oriented Editor Re-Visited by Henry Laxen and Michael A.
+   Perry
+Evolution of a Video Editor by Wendell C. Gates, PE
+H-19 Screen Editor by Albert S. Woodhull
+The Conference Tree by John S. James
+
+
+Part III: Mathematics in Forth
+
+Series Expansion in Forth by Wendell C. Gates, PE
+Forth Floating-Point Package by Alfred J. Monroe
+Signed Integer Division by Robert L. Smith
+
+
+Part IV: Modifications/Extensions
+
+A Proposal For Strings in Forth by Ralph Deane
+Non-Deterministic Control Words by Louis L. Odette
+Some Forth Coding Standards by Ed Wischmeyer
+Towards a More Writable Forth Syntax by Harvey Glass
+
+
+Part V: Implementing Forth
+
+Forth and the Motorola 68000 by Joe Barnhart
+A 68000 Forth Assembler by Michael A. Perry
+A Forth Assembler for the 6502 by William F. Ragsdale
+Z8000 Forth by Louis L. Odette
+
+
+Part VI: Appendices
+Converting fig-FORTH Programs for Forth-83 by Ray Duncan
+The Authors
+For More About Forth
+About the Editor
+
+
+While a number of articles here are quite dated and many are
+specific to a particular Forth implementation, there is still a
+wealth of information which would be useful to Forth programmers.
+While this book is not in the required reading list, it should be
+of interest to anyone working with any of the topics discussed.
+
+As an option, you can order a disk with the source code for the
+programs described in this book. The following files are included
+on the disk:
+
+     4THSORT  TXT     4992   8-15-86   9:31a
+     68KASM   TXT    17152   8-15-86  10:32a
+     68KFORTH TXT     6784   8-15-86   1:53p
+     ASM6502  TXT     5120   8-15-86  10:54a
+     DECOMPIL TXT     5632   8-15-86  11:17a
+     ELEMENTS TXT    13568   8-15-86  11:02a
+     EVOLTION TXT     6272   8-15-86  11:05a
+     FLOATING TXT    22400   8-15-86  11:10a
+     GOFORTH  TXT     7680   8-15-86  11:18a
+     H19      TXT    14720   8-15-86  11:21a
+     MOUSE    TXT     6784   8-15-86   1:52p
+     RELOCATE TXT    10880   8-15-86  11:25a
+     SCREEN   TXT    34560   8-15-86  11:30a
+     SENDRCEV TXT    12800   8-15-86   9:59a
+     SERIES   TXT    10880   1-01-80  10:34a
+     STRINGS  TXT     9600   8-15-86  11:33a
+     SYNTAX   TXT    17536   8-15-86  11:35a
+     WORDS    TXT     5888   1-01-80  10:32a
+     Z8000    TXT    34688   8-15-86  11:40a
+
+I'm not sure of the legality of putting these files up on the BBS
+- many of them are marked for public, non-commercial
+distribution, but the copyright laws are unclear about whether
+these are part of an "anthology". For now, I'll refer all
+interested persons to the publisher from whom the diskette may be
+purchased.
+
+

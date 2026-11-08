@@ -1,0 +1,612 @@
+
+
+
+ Minutes of April 7,1988 'FIGGY BAR'
+      
+ Attendees:
+[[Gary] GARY-S]
+[D.BARKER1]
+[JAX]
+[R.SULLIVAN1]
+                
+Minutes:
+<D.RUFFER> is here.
+<[Gary] GARY-S> hi guy
+<D.RUFFER> hi Gary
+<D.RUFFER> looks like you got it set up right.
+<[Gary] GARY-S> I got  here early - since I...
+<[Gary] GARY-S> didn't know how many might..
+<[Gary] GARY-S> have got my message wiuth the wrong times.
+<[Gary] GARY-S> ga
+<D.RUFFER> ok
+<D.RUFFER> well I really shouldn't stay...
+<D.RUFFER> got a lot of reviewing to do before I show up...
+<D.RUFFER> tomorrow.  Ya think you can handle it?
+<D.RUFFER> .
+<[Gary] GARY-S> Just you and me - we can move to room one or leave it as is - 
+or go and I'll give it a shot.
+<D.RUFFER> hey you need the experience anyway :-)
+<[Gary] GARY-S> Jennifer is taking notes - I know to mail them so adios if you 
+wish
+<[Gary] GARY-S> ga
+<D.RUFFER> ok, have a good time!
+<[Gary] GARY-S> thanks - me and Jenny
+<D.RUFFER> see ya later
+<D.RUFFER> don't worry someone always shows up!
+<[Gary] GARY-S> so go earn some money
+<D.RUFFER> bye bye  I'm already earning it!  :-)
+<D.RUFFER> has left.
+<APPERT> is here.
+<[Gary] GARY-S> Hi Kevin - we're it
+<[Kevin] APPERT> hi Gary
+<[Kevin] APPERT> Hi Jennifer (grin)
+<[Gary] GARY-S> Dennis was here but split
+<[Kevin] APPERT> I'll have to take off in a min
+<[Gary] GARY-S> She's not much of a talker
+<[Gary] GARY-S> What's on your mind
+<[Kevin] APPERT> nothing much at the moment
+<[Kevin] APPERT> what do you do with Forth? Work?
+<[Gary] GARY-S> Do you use Forth in your work - now ?
+<[Gary] GARY-S> I hear an echo - go first
+<[Kevin] APPERT> yup.  We build space inst. w/ uProcessors
+<[Gary] GARY-S> That's right !
+<[Gary] GARY-S> I remember now
+<[Kevin] APPERT> My assembler and development system are in Forth
+<[Kevin] APPERT>  .
+<[Gary] GARY-S> Did you see the one-timers about the comming conferences
+<[Gary] GARY-S> ga
+<NMORGENSTERN> is here.
+<[Kevin] APPERT> nope.  anything interesting?  I don't generaly read that stuff
+<[Kevin] APPERT> hi len
+<[leonard] NMORGENSTERN> Hi there
+<[Gary] GARY-S> You bet - Got Feierbach comming the 20th...
+<[Gary] GARY-S> and something that should also light your fire..
+<[Kevin] APPERT> what's he talking about - super 8?
+<[Gary] GARY-S> on May 4th - the guys from John Hopkins....
+<[Gary] GARY-S> that craeted the 32 bit engine
+<[Gary] GARY-S> ga
+<[Kevin] APPERT> that sounds great... I'll mark my calander
+<[Gary] GARY-S> Hi len
+<[leonard] NMORGENSTERN> hi
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> What do you want to know about the Super-8
+<[Gary] GARY-S> ga
+<[Gary] GARY-S> ga Leonard
+<[leonard] NMORGENSTERN> On the last Figgy bar ...
+<[leonard] NMORGENSTERN> Jax suggested a protocol. It is easier to ...
+<[leonard] NMORGENSTERN> edit than the one we have been using ...
+<[leonard] NMORGENSTERN> It goes like this. A blank line to get ...
+<[leonard] NMORGENSTERN> attention, three dots at the end of a line . . .
+<[leonard] NMORGENSTERN> and a . alone on a line to end.
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> I have no problem with either, we will...
+<[Gary] GARY-S> have to use the formal protocol...
+<[Gary] GARY-S> on the scheduled conferences...
+<[Gary] GARY-S> especially if we get other GEnie users.
+<[Gary] GARY-S> ga
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga Leonard
+<[leonard] NMORGENSTERN> It occurs to me that a ga alone on a . .
+<[leonard] NMORGENSTERN> line is as good as dot .
+<[leonard] NMORGENSTERN> ga
+<[Gary] GARY-S> agreed.
+<[Gary] GARY-S> Kevin - were you asking about Super-8
+<[Gary] GARY-S> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga Leonard
+<[leonard] NMORGENSTERN> No, a slip of the finger
+<[leonard] NMORGENSTERN> ga
+<[Gary] GARY-S> kev
+<[Kevin] APPERT> I assume that's what...
+<[Kevin] APPERT> gary F. is going to talk about.
+<[Kevin] APPERT> .
+<[Gary] GARY-S> true - with how he is running...
+<[Gary] GARY-S> F-83 on it. Jax is using this rig himself
+<[Gary] GARY-S> ga
+<JAX> is here.
+<[Gary] GARY-S> I gather with ll.
+<[Kevin] APPERT> hi JAX
+<[leonard] NMORGENSTERN> Hi
+<JAX>
+<[Gary] GARY-S> Jax - how do you like the 8 ?
+<[Gary] GARY-S> we were just talking about it
+<[Gary] GARY-S> ga
+<JAX> what happened to room one? Love the 8
+<JAX> the Peoples Forth Engine!!
+<JAX> :-)
+<JAX> .
+<[Gary] GARY-S> room one is Dennis '
+<[Kevin] APPERT> it was only a virtual room.  It got swapped out.
+<JAX> :-)
+<JAX> .
+<[Gary] GARY-S> ga Jax
+<JAX> I have a new religion!
+<JAX> The Inmos Transputer!
+<JAX> Am writing assembler for same in JForth!
+<JAX> .
+<[Gary] GARY-S> are you serious ?
+<[Kevin] APPERT>
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> I heard bad talk about that chip ga
+<JAX> Yes. Its a kludge. Len?
+<[Kevin] APPERT> on the Atari ST, JAX?
+<[leonard] NMORGENSTERN> What is the inmos transputer? . . .
+<[Gary] GARY-S> ga Kevin
+<[Kevin] APPERT> .
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> ga Kevin
+<JAX> The transputer ...
+<JAX> is a parallel engine ...
+<JAX> technologically something akin to what the 8080 was in its day ...
+<JAX> it is a kludge ...
+<JAX> but a marvel nonetheless ...
+<JAX> it leads the way to desktop parallel in the mid nineties ...
+<JAX> at business-like prices ...
+<JAX> it has the potential to demonstrate ...
+<JAX> the superiority of TIL's on development time ...
+<JAX> in the commercial development environment ...
+<[Kevin] APPERT> oops, gotta go. 'night all
+<JAX> that will spring up around parallel
+<[Kevin] APPERT> has left.
+<JAX> gnite
+<JAX> .
+<[Gary] GARY-S> now - ga Kevin
+<[Gary] GARY-S> oops - I mean Len
+<[leonard] NMORGENSTERN> pmi (pardon my ignorance) but what is a TIL?
+<[leonard] NMORGENSTERN> .
+<JAX> TIL  ..
+<JAX> THreaded Interpretive Language ... i.e. say , er ... FORTH!!
+<JAX> .
+<[Gary] GARY-S> If he won't I will
+<[Gary] GARY-S> or its sisters
+<[Gary] GARY-S> Tell me Jax,
+<[Gary] GARY-S> I heard it was so kludgy as to...
+<[Gary] GARY-S> be useless...
+<[Gary] GARY-S> why do you like it.
+<[Gary] GARY-S> ga
+<JAX> Because tho it is a pain in the ass considered as a 32-bit processor ...
+<JAX> It has "orthagonalised" the parallel communication protocol ...
+<JAX> quite successfully ...
+<JAX> the complaints you here have two origins ...
+<JAX> One: The difficulty of programmers to adapt to the concepts and 
+algorithms ...
+<JAX> and TWO: The troubles like microprocessors had when they were young: New 
+technology
+<JAX> .
+<[Gary] GARY-S> Question - can you get ( easily ) development...
+<[Gary] GARY-S> goodies for it or is all roll your own ?
+<[Gary] GARY-S> ga
+<JAX> The processor and the language are wrapped in one another ...
+<JAX> this is an engine designed by Computer Scientists with a capital "C>S>"
+<JAX> and the literature is redolent with high-sounding terms & equations ...
+<JAX> but yes, there is a parallel compiler ...
+<JAX> it is a theoretical model as radical as ALGOL was in its day ...
+<JAX> it is called OCCAM ...
+<JAX> but it is a compiled model. You can implement the theoretical aspects ...
+<JAX> in FORTH if you like. I like. WORK!!!!
+<JAX> .
+<[Gary] GARY-S> support ? hardware ?
+<JAX> Plenty. Call Inmos for lit. THey are generous.
+<JAX> THey are
+<JAX> trying ..
+<JAX> to sell a few!
+<JAX> I haven't bought one yet ...
+<JAX> But the literature is precise enough ...
+<JAX> to allow me to write an assembler ...
+<JAX> and start on my Parallel FORTH ...
+<JAX> without daily access to the machine!
+<JAX> .
+<[leonard] NMORGENSTERN> Fascinating!
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> sounds good ! hack still lives
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN> I just wanted to say that it sounds like a real
+<[leonard] NMORGENSTERN> challenge. How do you mount the chip if
+<[leonard] NMORGENSTERN> you get one?
+<[leonard] NMORGENSTERN> .
+<JAX>
+<[Gary] GARY-S> ga jax
+<JAX> You Thanx. You put them in a board. That's it ...
+<JAX> they don't share the bus!!!!
+<JAX> No capacitive penalty for loading ...
+<JAX> No bus contention as you add processors ...
+<JAX> The concept is the "wire" ....
+<JAX> a 10Mbit serial byte transfer connection ...
+<JAX> four sets of two wires each coming out of each transputer ...
+<JAX> ( vanilla transputer ... you can generate special configs)
+<JAX> You just swap bytes. That's the whole trip. Just swapping bytes.
+<JAX> SO you swap a hunk of 1024 bytes and what have you swapped between 
+Xputers?
+<[Gary] GARY-S> sounds tailor made for Forth
+<JAX> RIGHT!
+<JAX> BLOCKS LIVE !!!!
+<JAX> .
+<[Gary] GARY-S> Puts you back in your stand-alone pulpit
+<JAX> :-)
+<JAX> .
+<[Gary] GARY-S> ga jax
+<JAX> The architecture is fascination ..
+<JAX> but the language is tricky ...
+<JAX> since it is a 32 bit architecture ( tho there are 16 & 24 bit xputers)
+<JAX> you would expect longword handling in the assembler ...
+<JAX> WRONG
+<JAX> Constants are loaded *4* bits *at* *a* *time* ...
+<JAX> This is why people complain ...
+<JAX> but they don't understand ...
+<JAX> that that is what makes byte-transfer parallelism practical.
+<JAX> The result is that you can pack ...
+<JAX> a four bit opcode ...
+<JAX> like " ldc " ( load constant) ...
+<JAX> with a four-bit data word ...
+<JAX> in one one-byte serial message to the neighboring xputer ...
+<JAX> at 10 megabaud!
+<JAX> SO now you see why people say it's a kludge ...
+<JAX> It's waiting for technology & programming to catch up ...
+<JAX> with a noble concept.
+<JAX> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> unfinished is a word I hear a lot.
+<[Gary] GARY-S> I was trying...
+<[Gary] GARY-S> to remember who is also using...
+<[Gary] GARY-S> OCCAM, bvut I'm drawing a blank.
+<JAX> dan miller
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN> Is there anything written on it ...
+<[leonard] NMORGENSTERN> beyond what you get from Inmos?
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> ga jax
+<JAX> There have been
+<JAX> a few magazine articles ...
+<JAX> The tech literature is fascinating ...
+<JAX> but veddy blittish ( British)
+<JAX> :-)
+<JAX> They will send you some reprints ...
+<[Gary] GARY-S> Computer design had a series...
+<JAX> if you ask nice!
+<JAX> ga gary
+<[Gary] GARY-S> on it abnd other chips, but about...
+<[Gary] GARY-S> a year ago.
+<[Gary] GARY-S> ga jax
+<JAX> Len, you should take a look at the literature from INMOS ...
+<JAX> being an old bit-banger yourself ...
+<JAX> you might appreciate how sofistycated ...
+<JAX> the architecture has gotten ...
+<JAX> remmeber you told us one night ...
+<JAX> about "Nine byte instructions ...
+<JAX> with a stop byte" ??[A
+<JAX> Well,
+<JAX> this is a lot like that...
+<JAX> this is the dawn of a new architecture ...
+<JAX> that's liable to put old-timers like jax outa business ...
+<JAX> if i don't hurry up & learn!!
+<JAX> :-)
+<JAX> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga len
+<JAX> ga
+<[leonard] NMORGENSTERN> I couldn't work on it unless I could get
+<[leonard] NMORGENSTERN> a board all mounted with power supply etc...
+<[leonard] NMORGENSTERN> Although I put my old SOL together by myself...
+<[leonard] NMORGENSTERN> I have found that hardware & I don't mix
+<[leonard] NMORGENSTERN> .
+<JAX>
+<[Gary] GARY-S> ga jax
+<JAX> Excuse me for neglecting to expand ...
+<JAX> upon the hardware side of things as amply as on the theory ...
+<JAX> of the parallel model.
+<JAX> Inmos ...
+<JAX> and several third parties ...
+<JAX> make quite a variety of boards ...
+<JAX> The transputer is a Momma to fix up with a board ...
+<JAX> but the interconnection problem is simplicity itself.
+<JAX> So what you get yourself ...
+<JAX> is a board with a lot of holes for the transputers ...
+<JAX> you can't afford yet ...
+<JAX> and plug them in one at a time ....
+<JAX> since the OCCAM compiler views configuration of xputers ...
+<JAX> fundamentally "transparently" ...
+<JAX> although it allows you to configure for hardware ...
+<JAX> basically, it handles the processors itself.
+<JAX> Parallel FORTH would be more flexible ...
+<JAX> but somewhat demanding, jaxthinx ...
+<JAX> once we get up to speed, however ....
+<JAX> i suspect that the advantage FORTH has in development time over compiled 
+langs
+<JAX> would be augmented by the square of the number of transputers!
+<JAX> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga len
+<[leonard] NMORGENSTERN> pmi, you mount the transputers on a board...
+<[leonard] NMORGENSTERN> but what do you mount the board on?
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> ga jax
+<JAX> You can have a host ...
+<JAX> or a "master xputer" with slaves. Your choice ...
+<JAX> the more sophisticated xputers ...
+<JAX> have more sofisticated video services...
+<JAX> really, it is a COMPLETE development system ...
+<JAX> except ...
+<JAX> no FORTH yet!
+<JAX> .
+<[Gary] GARY-S> address for inmos , please
+<[Gary] GARY-S> ga jax
+<JAX> coming up. ga
+<[Gary] GARY-S> anything leonard ? ga
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN> I'd better watch out, or I ...
+<[leonard] NMORGENSTERN> might get hooked on this It sounds like ..
+<[leonard] NMORGENSTERN> the kind of thing I would like to do, but ..,
+<[leonard] NMORGENSTERN> I don't know if my theory is up to it .
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> wait till after Gary f,'s conf ...
+<[Gary] GARY-S> you might have a choice toi make.
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN>
+<[leonard] NMORGENSTERN> I can't make the Wednesday conferences. . .
+<[leonard] NMORGENSTERN> until summer, so I will download them & look.
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> I hate to hear that, but the...
+<[Gary] GARY-S> guests chose those dates..
+<[Gary] GARY-S> and I do want to keep them happy.
+<[Gary] GARY-S> ga
+<[leonard] NMORGENSTERN>
+<[leonard] NMORGENSTERN> Gary is a good writer, and if JAX is there. . .
+<[leonard] NMORGENSTERN> there should be a lot of good material . . .
+<[leonard] NMORGENSTERN> in the conference!
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> true - I also hope for a full..
+<[Gary] GARY-S> turnout to justify more..
+<[Gary] GARY-S> conferences.
+<[Gary] GARY-S> any guests you'd like to see me go for ?
+<[Gary] GARY-S> ga
+<[Gary] GARY-S> hello - any suggestions leonard ?
+<[leonard] NMORGENSTERN> I will keep my ears open. How about Mike Perry?
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> he would be good ! fo sure
+<JAX> Try INMOS Corporation, PO box 16000 Colorado Springs CO 80935
+<[Gary] GARY-S> Good suggestion.
+<[Gary] GARY-S> Cute - RPN addresses
+<JAX> There is also a company ion Ward Road in Wheat Ridge CO ...
+<JAX> That is making 4-xputer add-ons ...
+<JAX> for the SUN 68020 workstation ...
+<JAX> so you might watch the UNIX literature ...
+<JAX> also an add-on is coming for the Mac ...
+<JAX> and a drop-in for speedy grafix for the Amiga!
+<JAX> so stay tuned to the world of parallel ...
+<JAX> and read MicroTimes, California's largest monthly free-distribution 
+computer
+<JAX> publication, where a somewhat lite-weight article ...
+<JAX> on parallel by jax ( jack woehr) is coming up in a month or three.
+<JAX> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> address for utimes ?
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN> I am getting a MAC
+<[leonard] NMORGENSTERN> SE soon. After I learn it and learn MacForth. . .
+<[leonard] NMORGENSTERN> I might want to try the transputer!
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> what about MicrTimes address Jax
+<JAX> Microx is BAM PUBLICATIONS, Inc, 5951 Canning St., Oakland, CA 94609 12 
+issues $24
+<JAX> OR FREE ON THE NEWSTAND!
+<JAX> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> aha -
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN> If I get the issue with Jax's article. . .
+<[leonard] NMORGENSTERN> I will send it to you, Gary
+<[leonard] NMORGENSTERN> .
+<JAX> Had an articel
+<[Gary] GARY-S> sounds good - i appreciate
+<[Gary] GARY-S> ga jax
+<JAX> on JForth in the
+<JAX> was it Feb? issue ...
+<JAX> but it was eclipsed ...
+<JAX> by the article about the Brain Surgeons using Amiga + JForth ...
+<JAX> to save lives !!!
+<JAX> .
+<[leonard] NMORGENSTERN> I saw those!
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> do what !!!
+<JAX> Feb issue ... right ...
+<JAX> yes ...
+<JAX> they have to model three d in real time ...
+<JAX> and rotate and slice graphically ...
+<JAX> so they hooked jforth to Dpaint ...
+<JAX> or was it Aegis Draw ???
+<JAX> ...
+<JAX> and they cut people open on the basis of their renderings!
+<JAX> Forth has the same appeal to techies ...
+<JAX> that BASIC always had ...
+<JAX> instant gratification :-) !
+<JAX> .
+<[Gary] GARY-S> That's amazing as hell !
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga leonard
+<[Gary] GARY-S>
+<[leonard] NMORGENSTERN> Why so? Forth is ideal for real-time . . .
+<[leonard] NMORGENSTERN> applications
+<[leonard] NMORGENSTERN> .
+<JAX> and jforth
+<[Gary] GARY-S> cupla reasons...
+<JAX> is the fastest I've ever seen
+<JAX> .
+<[Gary] GARY-S> one it was only in a regional pub
+<[Gary] GARY-S>  and two - it was rigged with a paint program.
+<[Gary] GARY-S> I like it
+<[Gary] GARY-S> ga jax
+<JAX> It was at UCLA
+<JAX> he had been using an $80000 DEC ...
+<JAX> but found the Amiga did it better ... with JForth!
+<JAX> .
+<[Gary] GARY-S> does micro t always have forth - or regular ?
+<[Gary] GARY-S> ga
+<JAX> Not always ...
+<JAX> it is consumer oriented ...
+<JAX> but i have a slight in with the editor ...
+<JAX> anand besides ...
+<JAX> she is practical ...
+<JAX> if FORTH is viable ....
+<JAX> then she'll write about it ...
+<JAX> but FORTH is an op system, not just a language ...
+<JAX> and joe buyer really doesn't understand that kind of thing ..
+<JAX> thinking that that approach went out ...
+<JAX> with Apple BASIC ...
+<JAX> .
+<[Gary] GARY-S> This conference should promote a few inquiries.
+<[Gary] GARY-S> I hope she is ready
+<[Gary] GARY-S> ga jax
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga leonard
+<JAX> Her name is Mary Eisenhart ...
+<JAX> ga len
+<[leonard] NMORGENSTERN> I have seen regular articles on Forth . . .
+<[leonard] NMORGENSTERN> in Computer Shopper by Glenn Davis. Do you know him?
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S>  not personally
+<[Gary] GARY-S> I have had a few exchanges with him..
+<[Gary] GARY-S> when he was doing wind tests in the desert
+<[Gary] GARY-S> why ?
+<[Gary] GARY-S> ga
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN> Where is he? He writes for the beginner
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> I really don't know now leonard
+<[Gary] GARY-S> He was doing wind tests on antennas using forth.
+<D.BARKER1> is here.
+<[Gary] GARY-S> That's a long time ago though.
+<[leonard] NMORGENSTERN> Hi
+<JAX> hey
+<JAX> db
+<[Gary] GARY-S> ga jax
+<JAX> just saying hi to a new login id!
+<JAX> who DBARKER1?
+<JAX> ga
+<[Gary] GARY-S> no prob - hi d.b
+<D.BARKER1> I'm from spokane, wa
+<JAX> Yeah!
+<JAX> Apples!
+<[Gary] GARY-S> into forth ?
+<[Gary] GARY-S> ga db
+<D.BARKER1> cold weather!
+<[leonard] NMORGENSTERN> I was there for the Fair!
+<D.BARKER1> yes, I use it at work
+<JAX> what is work?
+<JAX> yours i mean ... i know what work is! :-)
+<D.BARKER1> I wrk at a place called Itron; we make hand held meter reading 
+competers
+<JAX> what chip?
+<D.BARKER1> compoters that is
+<[Gary] GARY-S> hold it gang  - hit three ... between thoughts
+<[Gary] GARY-S> ga db
+<D.BARKER1> RCA 1806 - yes, its archaic
+<JAX> what is forth like on an RCA 1806?
+<JAX> .
+<[Gary] GARY-S> ga jax
+<JAX> that was it! just that ?
+<JAX> .
+<D.BARKER1> its poly forth, and its mainly
+<[Gary] GARY-S> db are you aware of conf protocol ?
+<[Gary] GARY-S> ga db
+<D.BARKER1> the only forth I've used, accept for
+<D.BARKER1> a little a home.  Protocol?
+<JAX>
+<JAX> to get in a word ...
+<JAX> ....
+<JAX> to continue a line
+<[Gary] GARY-S> yes - type ... at the end of a line of...
+<JAX> and
+<JAX> .
+<JAX> to finish
+<JAX> .
+<[Gary] GARY-S> incomplete thoughts and end with...
+<[Gary] GARY-S> a single dot or a ga.
+<[Gary] GARY-S> ga db
+<D.BARKER1> sorry about that ! .
+<JAX>
+<[Gary] GARY-S> no prob - you're up jax
+<[Gary] GARY-S> ga jax
+<JAX> We make it up as we go!
+<JAX> .
+<D.BARKER1> I like that .
+<[Gary] GARY-S> how are you loading the forth onto the 1806 ?
+<[Gary] GARY-S> ga db
+<D.BARKER1> we compile on an IBM pc...
+<D.BARKER1> we download the code through another communicaton device.
+<[Gary] GARY-S> are you meta compiling the app ?
+<D.BARKER1> .
+<[Gary] GARY-S> ga db
+<D.BARKER1> I guess you could say that, if you mean using Create, DOES> .
+<JAX>
+<[Gary] GARY-S> ga jax
+<JAX> Recently jax has scoped ...
+<JAX> on the Zen of PolyFORTH ...
+<JAX> their idea ...
+<JAX> is to sell FORTH to groups of , say, engineers ...
+<JAX> who are primarily not what the average microcomputer hack ...
+<JAX> would call a programmer ...
+<JAX> they are engineers ...
+<JAX> proficient at solving problems with the tools at hand ...
+<JAX> and their attitude is " If the boss bought FORTH ...
+<JAX> I damn well better learn to use it!"
+<JAX> PolyFORTH ...
+<JAX> is somewhat targeted at this crowd ...
+<JAX> and FORTH Inc does not try ...
+<JAX> to sheep-dip them in FORTH ...
+<JAX> just give them enough to get it up & running on the application
+<JAX> this is kinda ...
+<JAX> what we do at VESTA ...
+<JAX> whose coporate account i did not use tonite ...
+<JAX> since the boss was supposed to show up here, but didn't!
+<JAX> we have the same customers ...
+<JAX> people who think FORTH is interesting ...
+<JAX> but are much more interested in it as a tool ...
+<JAX> to get things DONE EASY & QUICK ...
+<JAX> which is why us FORTHiacs still have jobs:-)!
+<JAX> .
+<[Gary] GARY-S> that and huge dams in Arab countries
+<[leonard] NMORGENSTERN>
+<R.SULLIVAN1> is here.
+<[Gary] GARY-S> ga len
+<[leonard] NMORGENSTERN> Alan Furman should see this. He has, ...
+<R.SULLIVAN1>
+<R.SULLIVAN1>
+<[leonard] NMORGENSTERN> as you know, the idea that the way to promote Forth . .
+ .
+<[Gary] GARY-S> wait rs
+<[leonard] NMORGENSTERN> is to get it into the universities. . .
+<[leonard] NMORGENSTERN> Maybe the enineers are better !
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> hi rs and
+<[Gary] GARY-S> ga rs
+<[leonard] NMORGENSTERN> Hi R.Sullivan!
+<R.SULLIVAN1> HELLO
+<JAX>
+<[Gary] GARY-S> you kept keying rs - any comment ?
+<[Gary] GARY-S> ga rs
+<[Gary] GARY-S> ga jax
+<JAX>
+<[Gary] GARY-S> ga jax
+<JAX> Len ,,, what allan suggest...
+<JAX> is a good idea ...
+<JAX> since in my field, at least ...
+<JAX> there is a shortage of qualified FORTH programmers ...
+<JAX> and most of us DARN TOOTIN didn't learn it in college ...
+<JAX> so if Allan pulls ...
+<JAX> while you & gary & i push from behind ...
+<JAX> we might just get the old nag out of the mud yet!
+<JAX> gotta go!
+<[leonard] NMORGENSTERN> I agree!
+<JAX> goodnite all & thanx
+<JAX> .
+<[Gary] GARY-S> We all need to go - any last words
+<D.BARKER1> Have a good night! .
+<[Gary] GARY-S> thanks guys this party is over
+<JAX> FORTH PROGRAMMERS GET IT UP FASTER !!!
+<[leonard] NMORGENSTERN> Goodbye
+<[leonard] NMORGENSTERN> has left.
+              
+=== End of Steno notes. ===
+
+

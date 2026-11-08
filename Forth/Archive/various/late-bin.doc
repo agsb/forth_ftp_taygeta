@@ -1,0 +1,65 @@
+
+		Late Binding Package for Forth-83
+		     ---------------------
+	This package, written on a Sun workstation using Mitch Bradley's PD
+F83 changes Forth from an early binding language to a late binding language
+(like Lisp and Smalltalk). This change has its drawbacks, the resulting code
+is less efficient, and continued use of the late binding will eventually
+cause you to run out of memory (unlike Lisp and Smalltalk, this package does
+NOT handle garbage collection).
+	So....if it's inefficient (both n terms of speed and memory usage), 
+why use it? When developing Forth code, its annoying to have to reload a slew
+of words after slightly changing a low level word deep in the bowels of
+your code. This package allows you to change a low level word, and have
+all of the higher level words which use that word use the new definition.
+	Once the program is working, just forget the late binding words, and
+recompile with the normal Forth compiler and the package will be in standard,
+early binding Forth.
+	Words added:
+		examine
+			examine is a version of the word see (the
+			decompiler in the Forth for which this was written)
+			and uses the see subword (see. This decompiles
+			late-binding words, which see does not.
+	Words redefined for late binding:
+		:
+		;
+		constant
+	All of these words function identically to their early-binding
+	counterparts (and in fact, with the exception of constant, they use
+	their early binding counterparts), but they produce late-binding words.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+( I hope no one is using a Hazeltine )
+			Implementation method
+	What this package does, and how it does it
+	: is redefined. The word to be compiled is created using make, and
+then the word is changed (inside the tib) to an underlying word (where the
+actual code is compiled), using word>underlying-word. (Note: if the word 
+already existed...it is not redefined by make...). It is this underlying word
+which is compiled using the standard early-binding definition of :.
+	; first calls the early binding version of ; to finish the underlying
+word. It then uses does to reassign the top-level word to do the underlying
+word. Once this is done it hides the underlying word.
+	Esentially, this is standard Forth forward referencing/defered
+words, but with all of the "paper work" handled by the new versions of :
+and ;.
+	constant is a simple redefinition. If the constant already
+exists, then the pfa is changed, otherwise it is created just like a
+normal constant.
+	Nonstandard words used in this package:
+"" - an immediate word which takes the next blank delimited string from the
+input stream, puts it in a pack string temporary location, and leaves the
+address of that string on the stack.
+"variable - defining word which defines a packed array of characters n bytes
+long (n being on the stack when "variable is executed)
+"copy - takes two addresses of strings ( addr1 addr2 -- ), and copies addr1
+to addr2
+"create - takes a pointer to a packed array of characters, and creates
+a word with that name
+hide - this Forth uses two words, hide and reveal, in the place of the
+toggeled smudge. If your Forth uses smudge, replace hide (hide works only
+on the most recently defined word)
+Dave Weinstein
+8/21/88 - Austin, Texas
+
+

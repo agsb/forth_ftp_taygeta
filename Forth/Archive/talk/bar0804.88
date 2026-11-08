@@ -1,0 +1,463 @@
+
+
+ Minutes of the FIGGY BAR for 4 Aug 1988
+        
+Date: 08/04/88   Time: 22:30EDT
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Actually Jax] VESTA]
+[[Dennis] D.RUFFER]
+[[Chris] C.KOVACS1]
+[[Rock] R.FRANZEN]
+[[Len] NMORGENSTERN]
+[P.KOZIAR]
+           
+Items discussed: Host vs Native, LMI+ & URForth, Job rumors at Harris,
+                 JFAR publishing schedule (?), FIG mail responses (?)             
+Minutes:
+<C.KOVACS1> is here.
+<[Gary] GARY-S> h'lo
+<[Gary] GARY-S> You're the first customer
+<C.KOVACS1> Hello Gary, not many people here yet...  How many people usually 
+check in?
+<[Gary] GARY-S> usually about 5 on these Thursday sessions, but can get busy !
+<R.FRANZEN> is here.
+<[Gary] GARY-S> How's California ?
+<[Gary] GARY-S> Well - we've got both coasts now
+<[Chris] C.KOVACS1> Very good... Calif is great lately, cooled down quite abit
+<[Gary] GARY-S> Chris - what is your involvement in Forth
+<[Chris] C.KOVACS1> Gary - well I have played around with forth for many years 
+but really haven't
+<[Chris] C.KOVACS1> done anything interesting with it
+<[Gary] GARY-S> What are you running on ?
+<[Gary] GARY-S> Don't mean to ignore you Rock - Hi ! Chris, what micro are you 
+using ?
+<[Chris] C.KOVACS1> I have an IBM running F83 forth.. Like it very much.  Got 
+into forth with the 6502 processor then to a cp/m system running Micro-L
+abs forth k
+<[Rock] R.FRANZEN> Hi, ya'll
+<[Chris] C.KOVACS1> Hi Rock..
+<[Gary] GARY-S> I'm still using CP/M
+<[Rock] R.FRANZEN> I've used CP/m fig-forth.
+<[Chris] C.KOVACS1> I still have a Xerox 820-II running F83 forth, love it!!
+<[Gary] GARY-S> Have you had a chance to pull some of the utilities off our 
+Library - there's some great F83 extensions
+<[Gary] GARY-S> I just got rid of my Xerox 820
+<[Chris] C.KOVACS1> Yes, sure have Gary...  I like the F83 forth better than 
+the Fig-forth, Rock.
+<[Chris] C.KOVACS1> Lucky you Gary!! I can get many now for nothing, ha ha..
+<[Gary] GARY-S> Rock , any news from Flrida ?
+<[Rock] R.FRANZEN> Now I use pre-POLYforth at work & Amiga Multi-Forth at home.
+<[Rock] R.FRANZEN> Rumor:  (Harris is just across street).  Harris needs an 
+_experienced_
+<[Rock] R.FRANZEN> forther for their FORCE project.  Drivers, compilers, etc.
+<[Gary] GARY-S> What level of Multi-Forth are you using ?/ Harris would be an 
+interesting place , have you considered it ?
+<[Rock] R.FRANZEN> On Amiga, there is only 1 level, version 1.23 is what I have.
+<[Rock] R.FRANZEN> I'd love Harris job, but I like what I do now.
+<[Gary] GARY-S> Rock - I have the original Owens Valley Forth Handbook - and I 
+have to believe it is VERY similar to the one you are image processing
+with
+<[Chris] C.KOVACS1> I am looking for a Forth that is multi-user/multitasking 
+and uses more that 64k that runs on an IBM, Iam I asking too much?? k
+<[Gary] GARY-S> No - call LMI - tell Ray what you want. He has LMI + and URForth
+<[Gary] GARY-S> Both run over 64K
+<[Rock] R.FRANZEN> Chris, why do you need greater than 64k dictionary?
+<NMORGENSTERN> is here.
+<VESTA> is here.
+<[Chris] C.KOVACS1> For different users??  I want to get my kids interesting 
+in computing and what a better way..
+<[Gary] GARY-S> Rock - this book lists the PDP-11 implementation - has to be 
+yours !
+<[Gary] GARY-S> Chris - do you have LMI's number ?
+<[Chris] C.KOVACS1> Gary- no I dont can you give it to me?
+<[Rock] R.FRANZEN> I'm not familiar with Owen's valley manual.  It very well 
+might be related.
+<[Gary] GARY-S> Geeze - Jax ! You are keeping your word on the WELL - it has 
+really picked up !!!!!
+<[Actually Jax] VESTA> LMI bbs 213 306-3530
+<[Actually Jax] VESTA> Post more, GARY.
+<[Chris] C.KOVACS1> Hello Jax and Len
+<[Len] NMORGENSTERN> Hi
+<[Actually Jax] VESTA> Hi!
+<[Gary] GARY-S> You can get a copy of the Owens Valley manual from CalTech's 
+bookstore
+<[Gary] GARY-S> Did you get my reply on Colo Mines AI BBS, Jax ?
+<[Actually Jax] VESTA> Yes. Wasn't sure it was you!
+<[Actually Jax] VESTA> "Smith" is not exactly a rare name.
+<[Actually Jax] VESTA> ... :-)
+<[Actually Jax] VESTA> .
+<[Gary] GARY-S> I just had to let you know you can run, but you can't hide :-)
+<[Actually Jax] VESTA> What is topic 2nite?
+<[Gary] GARY-S> roll your own - I was going to make it Greg's flames but 
+anything is OK
+<[Actually Jax] VESTA> Greg is pretty much right on. Where I disagree, it 
+doesn't worry me.
+<[Gary] GARY-S> Folks - this is no protocol protocol - just jump in
+<[Actually Jax] VESTA> One thing I DON"T like is the emphasis on hosted FORTH, 
+possibly at expense of standalone
+<[Gary] GARY-S> He sure didn't think much of hooking Cell like BASE
+<[Actually Jax] VESTA> Standalone is the MAINSTREAM of FORTH.
+<[Len] NMORGENSTERN> What do you mean by theat, Jax?
+<[Len] NMORGENSTERN> That's that!
+<[Actually Jax] VESTA> Well, they are all hot and bothered about host file 
+access.
+<[Gary] GARY-S> Jack- if there is no-host, what difference does it make ?
+<[Actually Jax] VESTA> My view is "big deal"
+<[Actually Jax] VESTA> repeat please, gary?
+<[Gary] GARY-S> ok
+<[Rock] R.FRANZEN> Why not support both?
+<[Gary] GARY-S> If there is no host to access , then you run native anyway, 
+right ?
+<[Len] NMORGENSTERN> I tend to agree because file access is more of...
+<[Gary] GARY-S> so where is the problem
+<[Len] NMORGENSTERN> an after thought than a primary consideration in...
+<[Len] NMORGENSTERN> programming.
+<[Len] NMORGENSTERN> .
+<[Actually Jax] VESTA> Right. Len, my point exactly. the emphasis ...
+<[Actually Jax] VESTA> Shows where the head is at.
+<[Gary] GARY-S> The ball is in you corner Jax
+<[Actually Jax] VESTA> Good example is ZIMMER and my hero TING ...
+<[Rock] R.FRANZEN> Len, in image processing, file access _is_ the heart of good 
+system.
+<[Actually Jax] VESTA> Now, these are two of the best Forth programmers in the 
+WORLD ...
+<[Len] NMORGENSTERN> Yes, but standards cannot deal with image processing!
+<[Actually Jax] VESTA> And they spend there time perfecting 8088 Forths! Gag me 
+with an 8259!
+<[Actually Jax] VESTA> .
+<[Len] NMORGENSTERN> The user has to build his program about his system.
+<[Len] NMORGENSTERN> .
+<[Gary] GARY-S> Jax is one of the few who know what C. H. stands for
+<P.KOZIAR> is here.
+<[Actually Jax] VESTA> You just have to buy his books to know that!
+<[Rock] R.FRANZEN> me too.  Charles Heath of Amiga fame?
+<[Gary] GARY-S> No doubt Rock will be behind your views 100% Jax
+<[Actually Jax] VESTA> He means C.H. Ting.
+<[Gary] GARY-S> Hey Pete
+<[Rock] R.FRANZEN> stand-alone=efficiency to match task at hand.
+<[Actually Jax] VESTA> It just got a little KOZIAR in here!
+<P.KOZIAR> I'm a little new at RTCs, so be patient with me!
+<[Actually Jax] VESTA> ... :-)
+<[Gary] GARY-S> Arrrrrrgh !!!
+<[Actually Jax] VESTA> rock ... forth shines standalone ... hosting is 
+crippling.
+<[Len] NMORGENSTERN> I hate puns, unless theyre mine.
+<P.KOZIAR> Old pun to me.
+<[Gary] GARY-S> You came to a bad place Pete - this is no protocol on Thursdays 
+- just jump in
+<[Actually Jax] VESTA> When you grow up with a funny name like mine, names are 
+funny to you.
+<[Gary] GARY-S> That's not punny
+<P.KOZIAR> I'm trying -- don't know if I can jump that high this late @ night!
+<[Gary] GARY-S> Thanks for the files
+<[Rock] R.FRANZEN> I dream of system on Amiga that supports Amigados...
+<[Rock] R.FRANZEN> and stand-alone.
+<[Actually Jax] VESTA> P.APPELMAN is working on it.
+<[Actually Jax] VESTA> The standalone part, anyway.
+<P.KOZIAR> If that thank's was for me, you're welcome -- hope they were of use 
+to some bodys.
+<[Gary] GARY-S> Rock says he thinks Harris is looking for Forth support 
+(interested Pete ?)
+<[Actually Jax] VESTA> ...$$$$ ???
+<P.KOZIAR> Well, what kind of support?  right now,
+<D.RUFFER> is here.
+<[Gary] GARY-S> Rock ?????
+<[Rock] R.FRANZEN> real, full-time work is the rumor
+<P.KOZIAR> I am balancing a full-time job, a part time job, and lots of extra 
+stuff.
+<[Actually Jax] VESTA> Hey Dennis!
+<[Gary] GARY-S> What do the rumors Mill ?
+<D.RUFFER> Yo!
+<[Gary] GARY-S> Hello stranger
+<[Dennis] D.RUFFER> what's the buzz
+<[Gary] GARY-S> Saw someone using your name in e-mail :-)
+<[Actually Jax] VESTA> The consensus is that Forth is favored.
+<[Gary] GARY-S> Yo Rock - what is Harris looking for ?
+<[Actually Jax] VESTA> [7m did this work? [m
+<[Rock] R.FRANZEN> Systems programmer with applications experience...
+<[Dennis] D.RUFFER> not on this end jack
+<[Actually Jax] VESTA> darn, guess GEnie strips it off.
+<[Actually Jax] VESTA> 
+<[Rock] R.FRANZEN> put FORCE to work in essentially OEM'd applications...
+<[Actually Jax] VESTA> that works!
+<[Gary] GARY-S> Don't do cntrl 'G's Jax - it hurts
+<[Rock] R.FRANZEN> this is just rumor-I haven't investigated personally.
+<[Actually Jax] VESTA> sounds good, rock!
+<P.KOZIAR> Where is Harris located?
+<[Gary] GARY-S> Call them up and post their response
+<[Actually Jax] VESTA> Sounds like fun! I am writing real-time apps on 8088 & 
+Super8 ...
+<[Gary] GARY-S> Tell them we are the job finder !!!
+<[Actually Jax] VESTA> Novix is headache but might be fun!
+<[Rock] R.FRANZEN> hot&muggy Melbourne, FL
+<[Gary] GARY-S> Melborne Fla
+<[Actually Jax] VESTA> is that where Harris is?
+<P.KOZIAR> I don't know -- both my jobs use FORTH, one the Novix and 8088,
+<[Rock] R.FRANZEN> World headquarters!
+<P.KOZIAR> the other the 68020/6881.
+<[Gary] GARY-S> My wife is from Hollywood, and central Arkansas is more muggy
+<[Rock] R.FRANZEN> It says so outside building, so it must be true.
+<[Actually Jax] VESTA> dropped an 8, right Pete?
+<P.KOZIAR> Try Baltimore for muggy!!!
+<[Actually Jax] VESTA> I spent a week in Baltimore one day.
+<[Len] NMORGENSTERN> Omaha, we used to have 90-90 days,
+<P.KOZIAR> Yup, that 8 is around here somewhere!
+<[Len] NMORGENSTERN> 90 temp & 90 humidity.
+<[Gary] GARY-S> You got sea breezes anyway - we don't get a lot of bayou breezes
+<[Actually Jax] VESTA> What part is Melbourne in.
+<P.KOZIAR> Well, almost right -- it's been over 100 lately.
+<[Rock] R.FRANZEN> 20 miles south of Cape Canaveral
+<[Chris] C.KOVACS1> Hate to say it guys, 70 temp 50 humidity
+<[Gary] GARY-S> Your disgusting
+<P.KOZIAR> Enjoy it while you got it!
+<[Actually Jax] VESTA> Well, it's ben 95 in Colo. but only 18% humdidity.
+<[Actually Jax] VESTA> Feels like Sauna.
+<P.KOZIAR> Nice to drop in, bbut I gotta go -- it's 10 PM here.
+<[Len] NMORGENSTERN> It's about 60 temp & 80 humidity in California. Cool but 
+foggy.
+<[Actually Jax] VESTA> So more about Harris Jobs!!!!!!!!!!!!!!!!!!!!!
+<[Gary] GARY-S> Sure is interesting, but it ain't Forth
+<[Actually Jax] VESTA> Harris jobs not Forth?
+<[Rock] R.FRANZEN> I don't know any more!
+<[Actually Jax] VESTA> Tease!
+<[Gary] GARY-S> Serious Rock, call and tell them to post it - send me the blurb 
+I'll post it
+<P.KOZIAR> has left.
+<[Gary] GARY-S> Gary Smith, P O Drawer 7680, Little Rock 72217
+<[Actually Jax] VESTA> ( also well!gars@lll-winken.arpa)
+<[Gary] GARY-S> True
+<[Rock] R.FRANZEN> I will investigate.  I have assumed this is low-key search 
+by Harris.
+<[Actually Jax] VESTA> Well, we're all pretty low.
+<[Gary] GARY-S> gars@well.UUCP works, too
+<[Actually Jax] VESTA> what's the key?
+<[Actually Jax] VESTA> ( from systems with good mailers, gary)
+<[Actually Jax] VESTA> ...   .arpa addrs are usually faster.
+<[Gary] GARY-S> we can't BITnet though can we ?
+<[Actually Jax] VESTA> yes.
+<[Actually Jax] VESTA> also CSNET
+<[Gary] GARY-S> REALLY
+<[Actually Jax] VESTA> the WELL she be CONNECTED>
+<[Gary] GARY-S> leave me e-mail how !!!
+<[Actually Jax] VESTA> mail out foo@bar.BITNET
+<[Gary] GARY-S> both BIT and CS
+<[Actually Jax] VESTA> si
+<[Actually Jax] VESTA> email ?'s mail   fair@well  . He knows EVERYTHING>
+<[Actually Jax] VESTA> .
+<[Len] NMORGENSTERN> Something has come up. I have to leave.
+<[Gary] GARY-S> Dennis - are you still a gypsy?
+<[Len] NMORGENSTERN> bye
+<[Actually Jax] VESTA> bye
+<[Len] NMORGENSTERN> has left.
+<[Dennis] D.RUFFER> not any more...
+<[Gary] GARY-S> Did you ever talk to Larry ?
+<[Actually Jax] VESTA> ( Forsley?)
+<[Actually Jax] VESTA> WHERE IS MY JFAR???
+<[Dennis] D.RUFFER> I'm now renting a townhouse (for 11 mos) in Rochester
+<[Gary] GARY-S> Ask him why they can't get my JFAR straight !!!!
+<[Dennis] D.RUFFER> call Larry tonight folks
+<[Actually Jax] VESTA> WHY DOESN"T FIG ANSWER EMAIL???
+<[Dennis] D.RUFFER> he said he is on but hasn't gotten to do it yet
+<[Gary] GARY-S> I have been dunned and after I sent a photcopy of canceled 
+check !
+<[Dennis] D.RUFFER> he even said he would try tonight
+<[Actually Jax] VESTA> He is hiding from his wrathful subscribers!
+<[Dennis] D.RUFFER> but you all know Larry
+<[Dennis] D.RUFFER> we'll see him when we see him
+<[Dennis] D.RUFFER> actually, he told me...
+<[Dennis] D.RUFFER> #2 is just about to go to the publishers
+<[Dennis] D.RUFFER> and number 3 is not far behind
+<[Actually Jax] VESTA> only 6 mos late!
+<[Actually Jax] VESTA> only 8 mos. late!
+<[Dennis] D.RUFFER> obviously, they are both full of the conf stuff.
+<[Dennis] D.RUFFER> also he mentioned the ASYST conf in October
+<[Actually Jax] VESTA> well, it's a GREAT mag & worth the wait. ( But they 
+better stop raising the price every year!)
+<[Dennis] D.RUFFER> supposedly he has a bunch of papers already
+<[Dennis] D.RUFFER> and he will either post the stuff, or send it to me
+<[Actually Jax] VESTA> where is posting on ASYST conf?
+<[Gary] GARY-S> yeah
+<[Dennis] D.RUFFER> not here yet!
+<[Dennis] D.RUFFER> have no idea when the dates are!
+<[Dennis] D.RUFFER> I'll post as soon as I find out
+<[Actually Jax] VESTA> THat will be of interest to Mines ... they use ASYST 
+there ( Colo School of Mines, Golden, CO)
+<[Gary] GARY-S> and excellent AI BBS
+<[Actually Jax] VESTA> Post there, gars ...
+<[Dennis] D.RUFFER> If they're a customer, they should already know about it
+<[Actually Jax] VESTA> though not so excellent. Kinda sleepy, rather.
+<[Actually Jax] VESTA> Probably you're right, DR.
+<[Dennis] D.RUFFER> as far as FIG answering mail....
+<[Actually Jax] VESTA> yes?????????
+<[Dennis] D.RUFFER> I sent them all out a letter tonight.
+<[Actually Jax] VESTA> GOOD LUCK
+<[Actually Jax] VESTA> I sent them seven.
+<[Dennis] D.RUFFER> if you let me know when you sent yours...
+<[Rock] R.FRANZEN> I got an answer once...
+<[Gary] GARY-S> Wonder if Marlin picked up my article ?
+<[Dennis] D.RUFFER> I will call them personally and find out what the holdup is
+<[Rock] R.FRANZEN> article was approved for publication...
+<[Actually Jax] VESTA> Well, only one lately. Sunday. It doesn't matter. My mag 
+showed up, two weeks late, beat to pieces by USMAIL ( or FIG?) but it
+would be nice just to know that they RECEIVE the email.
+<[Rock] R.FRANZEN> to best of my knowledge its never been published, though.
+<[Dennis] D.RUFFER> Jack, did you know that you can tag a letter to see if it's 
+been received?
+<[Gary] GARY-S> Dennis - ask if he got the new Best of and if there is anything 
+in the archives that will dovetail with ANY of GEnie's new editorial s
+chedules. -- OK ?
+<[Actually Jax] VESTA> DOn't have to tag it. Just use command mode.
+<[Actually Jax] VESTA> It says.
+<[Actually Jax] VESTA> But why do people pick up email if they aren't going to 
+answer it?
+<[Actually Jax] VESTA> I guess part of the problem is GEnie.
+<[Actually Jax] VESTA> Under UNIX, you reply to a letter immediately just by 
+typing   r   .
+<[Dennis] D.RUFFER> If they've received it, they should have read it!
+<[Actually Jax] VESTA> With GEnie, you have to do a song and dance to do email.
+<[Actually Jax] VESTA> Standing on one foot.
+<[Actually Jax] VESTA> .
+<[Dennis] D.RUFFER> send me the EMAIL numbers if you have them Jack...
+<[Dennis] D.RUFFER> I will find out what's hapening
+<[Actually Jax] VESTA> well, like I said, six letter a few months ago, no 
+answer. ( Until that young lady checked into the RTC, then I got an
+<[Actually Jax] VESTA> answer ..
+<[Actually Jax] VESTA> ,,,)
+<[Gary] GARY-S> Chris/Rock, anything else ?
+<[Actually Jax] VESTA> and the one I sent Sunday ..
+<[Actually Jax] VESTA> has been rendered moot by the US MAIL.
+<[Actually Jax] VESTA> Whenever someone gets email ...
+<[Rock] R.FRANZEN> I can't think of anything, Gary.
+<[Chris] C.KOVACS1> Gary- no just sitting back here.
+<[Actually Jax] VESTA> they should at least drop a form note "I'm looking your 
+letter over" or something.
+<[Actually Jax] VESTA> Easy in UNIX ... not impossible on GEnie.
+<[Dennis] D.RUFFER> that problem they are addressing...
+<[Gary] GARY-S> Didn't want this business stuff to take away from your 
+Conference needs
+<[Actually Jax] VESTA> That is called "electronic courtesy.
+<[Dennis] D.RUFFER> I don't answer EVERY letter I get...
+<[Actually Jax] VESTA> GARY how are you going to NET the WELL Forth conf.
+<[Dennis] D.RUFFER> and FIG is copied on them all as well as their own...
+<[Actually Jax] VESTA> DR > if you have a unix mbox, you tend to, because it is 
+easy to send Form Letters.
+<[Dennis] D.RUFFER> that may be, but we don't
+<[Dennis] D.RUFFER> I'm sorry but that is just the breaks
+<[Gary] GARY-S> I'm going to pull it in here and either split it to the right 
+conferenategory Topics or start a new one...
+<[Actually Jax] VESTA> One more rThe way to do it here ...
+<[Actually Jax] VESTA> is to send XMODEM form letters!
+<[Gary] GARY-S> and spin replies back to the Well so that comp.lang.forth can 
+pick them up...
+<[Actually Jax] VESTA> How are you going to link to -CFB, gary?
+<[Gary] GARY-S> ECFB and NCFB will pull them off here
+<[Gary] GARY-S> thats all folks
+<[Actually Jax] VESTA> How have you arranged that?
+<[Rock] R.FRANZEN> g'nite, folks
+<[Dennis] D.RUFFER> Jerry always picks up what we get
+<[Gary] GARY-S> I will notify Don and Jerry after I get the first file(s)
+<[Actually Jax] VESTA> bye Rock, thanks for the rumor.
+<[Rock] R.FRANZEN> has left.
+<DHWEINSTEIN> is here.
+<[Actually Jax] VESTA> Why not establish the topic here now, so maybe the GEnie 
+gang wil get the traffic started first?
+<[Actually Jax] VESTA> hey netnoise!
+<[Dave] DHWEINSTEIN> *bamph*
+<[Gary] GARY-S> D3nnis doesn't even know what I'm up to yet
+<[Dave] DHWEINSTEIN> Hey Jax
+<[Actually Jax] VESTA> don't tell him shhhh it's a secret!
+<[Dennis] D.RUFFER> huh?
+<[Gary] GARY-S> WHOA Dave !!!! Mitch ???
+<[Dave] DHWEINSTEIN> Saw your flame on comp.lang.forth
+<[Actually Jax] VESTA> which?
+<[Actually Jax] VESTA> of many.
+<[Actually Jax] VESTA> .
+<[Dave] DHWEINSTEIN> Haven't herrd from him recently. (Haven't written). Will 
+send follow up letter tonite.
+<[Dave] DHWEINSTEIN> Question:
+<[Gary] GARY-S> Please - Time is getting short ! What is his phone number ?
+<[Dave] DHWEINSTEIN> Is >body an F83 standard word?
+<[Chris] C.KOVACS1> @+-Oiga O/stat
+<[Actually Jax] VESTA> wmb@sun.com
+<[Dave] DHWEINSTEIN> I don't know. I use Internet.
+<[Chris] C.KOVACS1>
+<[Dave] DHWEINSTEIN> Oh that....yeah...Jax is right
+<[Dennis] D.RUFFER> F83 not 83 Std!
+<[Dave] DHWEINSTEIN> I will send him some follow up mail after I leace here
+<[Gary] GARY-S> True ! Dennis
+<[Dave] DHWEINSTEIN> Is it standard?
+<[Gary] GARY-S> Thanks Dave - really
+<[Dennis] D.RUFFER> for F83 Yes!
+<[Gary] GARY-S> NOT 83 Standard, though
+<[Actually Jax] VESTA> what's up Chris?
+<[Dave] DHWEINSTEIN> Good....I am trying to make that late binding package 
+portable
+<[Dave] DHWEINSTEIN> Picky picky picky
+<[Dave] DHWEINSTEIN> F83, 83 standard...SAME FREAKIN' THING
+<[Actually Jax] VESTA> NO!
+<[Gary] GARY-S> Go Chris:NOT TRUE !
+<[Actually Jax] VESTA> F83 is implementation
+<[Dave] DHWEINSTEIN> Why Not?
+<[Chris] C.KOVACS1> Jax- not much. got to run soon..
+<[Gary] GARY-S> That is true
+<[Actually Jax] VESTA> 83 Standard is document.
+<[Actually Jax] VESTA> ok, chris ...
+<[Dave] DHWEINSTEIN> Nit pickers
+<[Gary] GARY-S> adios, Chris:
+<[Actually Jax] VESTA> It AIN'T the same ... LMI is 83 Standard, lots diff from 
+F83, example.
+<[Dave] DHWEINSTEIN> That is actually what I meant. I am trying to make this as 
+portable as possible.
+<[Gary] GARY-S> Not really Dave - read the article (maybe 1 1/2 years ago) in 
+FD 'Why F83 is not 83 Forth'
+<[Chris] C.KOVACS1> Thanks Gary for the info about LMI, is it much like F83?? I 
+like F83 alot.
+<[Dennis] D.RUFFER> use Martin's PRELUDEs
+<[Dave] DHWEINSTEIN> Where am I going to get a 2 yr old FD?
+<[Gary] GARY-S> Yes
+<[Actually Jax] VESTA> From FIG, dummy!
+<[Actually Jax] VESTA> They SElL them, you know.
+<[Dennis] D.RUFFER> they are right here in the library
+<[Gary] GARY-S> You'll be right at home - only supported
+<[Dave] DHWEINSTEIN> <- never bought *anything* from FIG ('cept this RT)
+<[Actually Jax] VESTA> SUBSCRIBE!!!!
+<[Dave] DHWEINSTEIN> When I have green stuff that crinkles. Not lettuce!
+<[Actually Jax] VESTA> THought you meant your hair :-)
+<[Chris] C.KOVACS1> See Ya all Later, Happy "Forthing"
+<[Actually Jax] VESTA> So long, Chris.
+<[Gary] GARY-S> ok
+<[Dave] DHWEINSTEIN> So long
+<[Chris] C.KOVACS1> has left.
+<[Actually Jax] VESTA> FD on line, Dennis?
+<[Gary] GARY-S> BRB - keep going wihout the driver for a few
+<[Dennis] D.RUFFER> ok
+<[Dave] DHWEINSTEIN> All I wanted to know was if 99% of the 83 standard Forths 
+used >body...
+<[Actually Jax] VESTA> yes.
+<[Dennis] D.RUFFER> Dave, Martin's prelude is PRELUDE.ARC
+<[Actually Jax] VESTA> except the ones that use NAME>
+<[Dave] DHWEINSTEIN> Ok. I am doing a late-binding package
+<[Dave] DHWEINSTEIN> You ever try unarcing with a Model 100?
+<[Dave] DHWEINSTEIN> :-)
+<[Dennis] D.RUFFER> oh!
+<[Actually Jax] VESTA> like JForth.
+<[Dennis] D.RUFFER> what format do you need them in?
+<[Actually Jax] VESTA> ...   >NAME , NAME> etc
+<[Dave] DHWEINSTEIN> Text (7 bit)
+<[Dave] DHWEINSTEIN> And under 20 or 30k
+<[Dennis] D.RUFFER> ok, I'll put it on my list!
+<[Actually Jax] VESTA> ( model 100? What was wrong with the Model 4?)
+<[Gary] GARY-S> Sorry - but I'm going to have to mail this and split any last 
+shots for the record ?
+<[Dave] DHWEINSTEIN> Doesn't fit on my lap
+<[Gary] GARY-S> G'nite all
+<[Dennis] D.RUFFER> ok gary, do we want to contiue guys?
+<[Actually Jax] VESTA> gnite!
+<[Dennis] D.RUFFER> good night gary
+<[Dave] DHWEINSTEIN> Good nite Gar
+<[Actually Jax] VESTA> sam spade has stopped recording
+=== End of Steno notes. ===
+
+

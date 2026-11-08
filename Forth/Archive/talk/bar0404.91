@@ -1,0 +1,274 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 04/04/91   Time: 22:36EST
+
+Attendees:
+[[LEN] NMORGENSTERN]
+[GARY-S]
+[[Wil] W.BADEN1]
+[[doug] D.GARRETT]
+[GILES]
+[[Dave] OLORIN]
+
+ Items discussed: Library archiving, conditionals syntax,OOF in limbo, FORTH
+                 strengths, portability, extensibility, embedded applications,
+                 more sysntax...
+Minutes:
+<[LEN] NMORGENSTERN> is here.
+<[Wil] W.BADEN1> is here.
+<[LEN] NMORGENSTERN> A question Gary. Dennis says ARC is preferable to ZIP,
+<[Wil] W.BADEN1> hi gary.
+<[LEN] NMORGENSTERN> Which do you use?
+<GARY-S> Len - A wider mix of systems have .arc ported to them
+<GARY-S> I use .arc, .zip. .lzh, on all and .z and .Z on Unix
+<[LEN] NMORGENSTERN> Ah, thanx
+<GARY-S> Wil - have you had an opportunity to examine the latest bruhou in 
+standards over conditionals ? comment ?
+<[Wil] W.BADEN1> I don't think that it is appropriate for standardization.
+<[Wil] W.BADEN1> My preferences are {IF and }
+<GARY-S> The issue now, seems to be 'what' punctuations are used to demark IF 
+THEN ELSE
+<D.GARRETT> is here.
+<GARY-S> I'm not at all pleased with reversed parens
+<[Wil] W.BADEN1> In the interpretable mode.  There's no question about compiled 
+version.
+<GARY-S> lisp users love it, naturally
+<[LEN] NMORGENSTERN> Wil, Gary can you explain the questions?
+<[doug] D.GARRETT> hello, all.
+<[Wil] W.BADEN1> Doug, you told me 600 pages per minute.  That's incredible.
+<GARY-S> what questions ?
+<[LEN] NMORGENSTERN> About conditionals
+<[Wil] W.BADEN1> About interpreted conditionals.
+<[doug] D.GARRETT> You strike me as  somewhat curious of other languagues, and..
+<GARY-S> What to use to demark them
+<[doug] D.GARRETT> oops, sorry
+<[Wil] W.BADEN1> "Should Forth have conditional compilation and if so, what 
+should the syntax be?"
+<GARY-S> Don't apologize, Doug ---- during open FIGGY's it is comment when 
+ready !
+<[LEN] NMORGENSTERN> Ah. My opinion is very opinionated. 1. It should not be
+<[LEN] NMORGENSTERN> standard. 2. If it is, then it must work inside colon 
+definitions.
+<GARY-S> Thank you Mr. Baden - succinct and correct
+<[Wil] W.BADEN1> : { [ASCII] } WORD DROP ; IMMEDIATE
+<[Wil] W.BADEN1> : {IF 0= IF [COMPILE] { THEN ; IMMEDIATE
+<[Wil] W.BADEN1> : } ; IMMEDIATE
+<[Wil] W.BADEN1> That does it all.
+<[LEN] NMORGENSTERN> Looks good to me
+<GARY-S> You have read Chuck Eaker , Bill Bouma and Mitch Bradley comments ?
+<GILES> is here.
+<[Wil] W.BADEN1> Briefly.  I think they'r over-engineered.
+<GARY-S> agreed !
+<GARY-S> Mitch wants C flavouring - that is apparent
+<GARY-S> Unix, actually
+<[LEN] NMORGENSTERN> I will have to download the thread.
+<GARY-S> Cat 10, Topic 4 Len
+<[Wil] W.BADEN1> I don't think that conditional interpretation is important for 
+applications.
+<GARY-S> I rather like your no non-sense syntax, Wil.   nice
+<[Wil] W.BADEN1> A complete implementation -- "else" is { }
+<[Wil] W.BADEN1> This is also the classical solution.
+<[LEN] NMORGENSTERN> It's a matter of degree, Wil. In general, I agree, but
+<[LEN] NMORGENSTERN> it is often useful to have stuff for testing that you can
+<[LEN] NMORGENSTERN> turn on and off by setting a variable.
+<[Wil] W.BADEN1> : jkjkjkjkj   jkjkjj [ aVariable @ ] {IF ...... } sdfdfda ;
+<[Wil] W.BADEN1> ack?
+<[doug] D.GARRETT> Giles, WHY?!
+<[LEN] NMORGENSTERN> Exactly, Wil. And if you want, you can set up a single word
+<[LEN] NMORGENSTERN> to do just that, but I can't see it as a standards issue.
+<[Wil] W.BADEN1> To whom, Doug.
+<[Wil] W.BADEN1> : Test1 ; immediate
+<[doug] D.GARRETT> Excuse me, gentlemen.  Not that I'm trying to
+<[Wil] W.BADEN1> : Test1 ; [COMPILE] { ; IMMEDIATE
+<[doug] D.GARRETT> be anti-social.  I have a few messages...
+<[doug] D.GARRETT> that have nothing in common with your discussion about
+<GARY-S> So - make them
+<[doug] D.GARRETT> whethere a useful programming practice will or will not
+<[doug] D.GARRETT> be included in some sort of STANDARD.
+<[doug] D.GARRETT> As a practical programmer, making a partime wage...
+<[doug] D.GARRETT> I use whatever is well-documented in one place or another...
+<[doug] D.GARRETT> and provide THAT 'Standard' to my boss/customer...
+<[doug] D.GARRETT> I understand Your interests, but they are not mine, and I 
+didn't want
+<[doug] D.GARRETT> to interrupt what you were discussing.  Sorry for the 
+inconvenience.
+<GARY-S> Different opinions and a mix of subjects is exactly what the open 
+FIGGY is for
+<[doug] D.GARRETT> wow,  hello hello ?? anyone here?
+<[LEN] NMORGENSTERN> The problem is not that simple, Doug. If you want your
+<[LEN] NMORGENSTERN> program to have the maximum portablity, then you will have
+<[LEN] NMORGENSTERN> to write it as a standard program. (If you don't care, then
+<[LEN] NMORGENSTERN> of course it doesn't matter.)
+<[doug] D.GARRETT> `ah, thank you Gary S.  Ok, I'm out of the closet, no more
+<[doug] D.GARRETT> fumbling with trying to /SEN number
+<[doug] D.GARRETT> I gather there are two or more opposing points of view...
+<[doug] D.GARRETT> as to HOW TO build something useful into the upcoming 
+Standard, yes?
+<[Wil] W.BADEN1> At least, Doug.
+<[Wil] W.BADEN1> Gary -- what's the CAT and TOPIC numbers -- I'll download the 
+whole thing in one burst.
+<[LEN] NMORGENSTERN> Cat 10 Topic 4
+<GARY-S> Cat 10, Top 4 for the past 2 weeks
+<[Wil] W.BADEN1> Doug, I think we'r waiting for you.
+<[Wil] W.BADEN1> Thanks Len & Gary.
+<[doug] D.GARRETT> Hm...  Well, I hesitate to compare
+<[doug] D.GARRETT> Forth to MUMPS, because I would never want to sell
+<[doug] D.GARRETT> MUMPS to you all.   But in...
+<[doug] D.GARRETT> the business I program for, an industry-wide 'standard' for
+<[doug] D.GARRETT> extending the language is pretty-well defined and structured.
+<[doug] D.GARRETT> so one might look upon the ANS-MUMPS commands, functions, 
+global-handling
+<[doug] D.GARRETT> facilities as a 'KERNAL', and then...
+<[doug] D.GARRETT> the people who write the extensions to meet the design...
+<[doug] D.GARRETT> goals try to keep their shop tidy and in order, much
+<[doug] D.GARRETT> like a well organized machine shop.  Excuse the analogy, if 
+you
+<[doug] D.GARRETT> think it is inapporpriate.  Anyway, from...
+<[doug] D.GARRETT> MY point of view (I am NOT an engineer, nor did I conceive...
+<OLORIN> is here.
+<[doug] D.GARRETT> the software system that I extend using MUMPS...
+<[doug] D.GARRETT> I look upon however you want to do CASEs or LOOPs...
+<[doug] D.GARRETT> as pretty much  hmmm un-attached to my duties in the world.
+<[doug] D.GARRETT> When y'all figure out what you want to call standard, I'll 
+take
+<[doug] D.GARRETT> dutiful note.  But it won't change what
+<[doug] D.GARRETT> I'll be doing tomorow or the next month or year.  Sorry.
+<[doug] D.GARRETT> please go ahead, tholuhl.  I like to watch you all.  Thanks.
+<[Wil] W.BADEN1> Doug, your viewpoint is the proper one.
+<GARY-S> Dave - had a inquirey about your OOF - is that + TOTALLY + dead ?
+<[Wil] W.BADEN1> I feel that the attraction of Forth is two-fold. ...
+<[Dave] OLORIN> Well, uhmmmmmmm.
+<[Dave] OLORIN> It's close.
+<[Dave] OLORIN> (To being dead)
+<GARY-S> Then RIP
+<[Dave] OLORIN> I haven't looked at it in over a year.
+<[Wil] W.BADEN1> First, it's THE best language for embedded systems, and other 
+dedicated applications with limited resources.\
+<[doug] D.GARRETT> I heartily agree, Wil.
+<GARY-S> As you (wil) once pointed out, it is still tyhe champion "pathfinder"
+<[Wil] W.BADEN1> Secondly, it's SO simple that it can be COMPLETELY understood 
+after about 2 months study.
+<[Wil] W.BADEN1> This lets you do YOUR thing YOUR way.
+<[doug] D.GARRETT> Good.  I'm maybe halfway, then.
+<[Wil] W.BADEN1> As I also once said, "With Forth systems, when you'v seen one, 
+you'v seen one."
+<[doug] D.GARRETT> (chuckle) I agree, too.  Every one is ONE, limited 
+duplication
+<[doug] D.GARRETT> But I am slowly getting used to the second and third...
+<[Wil] W.BADEN1> Earlier we were talking about conditional compilation. This is 
+not ...
+<[doug] D.GARRETT> with their slight differences in vocabulary and i/o stuff
+<[Wil] W.BADEN1> appropriate for standardization.
+<[doug] D.GARRETT> ah.  I'm slowly getting a handle on what...
+<[doug] D.GARRETT> you all mean by conditional compilation...
+<[Wil] W.BADEN1> For Forth's eminent domain of bitty-boxes and toasters, we 
+shud be ...
+<[Wil] W.BADEN1> concentrating on what is minimum universal word repertoire.
+<[Wil] W.BADEN1> What can you do without.
+<[doug] D.GARRETT> Well, can't you almost arbitrarily chop off...
+<[Wil] W.BADEN1> I'd like to report on a study I made recently.
+<[doug] D.GARRETT> all but the first 100 common words, say 'This is the Kernal'.
+..
+<GARY-S> Toaster Ovens and Car emmission controls do not need a FAT Forth - 
+that's for sure
+<[doug] D.GARRETT> then publish the rest of a workman's toolbox as...
+<[doug] D.GARRETT> "recognized extensions in the trade", and let the...
+<[doug] D.GARRETT> implementor/programmer use what's needed.  I don't 
+understand...
+<[doug] D.GARRETT> why there's any controversy over what goes in and
+<GARY-S> Some - would have all of us haul around extra tools they feel arre 
+essential
+<[doug] D.GARRETT> what will get added in the final product.
+<[LEN] NMORGENSTERN> Yes you can, the word "arbitrarily" being the operative 
+word.
+<[LEN] NMORGENSTERN> The place where you would like to cut will be too high for 
+some
+<[LEN] NMORGENSTERN> and too low for others. Loud howls both ways.
+<[LEN] NMORGENSTERN> The problem, as I said before is portability and 
+communication.
+<[doug] D.GARRETT> Well, why not say hey guys, here is the entire known...
+<[LEN] NMORGENSTERN> "What you and your consenting computer do in private is 
+your
+<[LEN] NMORGENSTERN> own business and noblody else's." John Wavrik
+<[doug] D.GARRETT> universe of Forth, with a so-called ANS Standard...
+<[doug] D.GARRETT> kernal of primitives.  The rest is all standard programming 
+practices
+<[LEN] NMORGENSTERN> Doug, have you ever tried to take a program from Forth 
+Dimensions
+<[LEN] NMORGENSTERN> and make it work on your computer?
+<[doug] D.GARRETT> extending the language to meet the...
+<[doug] D.GARRETT> needs of the final product.   No, and I would'nt attempt it..
+<[doug] D.GARRETT> But I will read WELL-DOCUMENTED source code in any...
+<[doug] D.GARRETT> language.  Forth is not good at self-documenting...
+<[Dave] OLORIN> I need to run, folks..
+<[Dave] OLORIN> Take care...
+<[LEN] NMORGENSTERN> In your minimal system, EVERY WORD EXCEPT THE 100 IN THE 
+KERNEL
+<[doug] D.GARRETT> so it's up to the programmer...
+<[LEN] NMORGENSTERN> would have to be documented!!!!!
+<[LEN] NMORGENSTERN> would have to be documented
+<[doug] D.GARRETT> to get off his to embed good remarks so that anyone 
+following...
+<[doug] D.GARRETT> can read and know what's going on.  I can
+<[doug] D.GARRETT> only imagine or guess what the big issue is about the kernal.
+<[doug] D.GARRETT> if the Community has a good practice, it is published...
+<[doug] D.GARRETT> and made available as a tool, the tool can be copied
+<[doug] D.GARRETT> with it's documentation.  So WHAT if it sits on a shelf 
+because
+<[doug] D.GARRETT> no one needs to or wants to look at it.  If a problem occurs.
+<[doug] D.GARRETT> and it concerns something about how somebody implemented a 
+loop,
+<[doug] D.GARRETT> it's gonna become fairly obvious to whoever works
+<[doug] D.GARRETT> with the system to know how to debufg it.
+<[LEN] NMORGENSTERN> But, Doug, didn't you just say that you wouldn't try to
+<[LEN] NMORGENSTERN> port a program from Forth Dimensions? True, many good 
+things are
+<[LEN] NMORGENSTERN> published, but often in a Forth that is different from any 
+of mine
+<[LEN] NMORGENSTERN> and I don't have the time to work them out.
+<[LEN] NMORGENSTERN> ga
+<[doug] D.GARRETT> If you do it more than once in any piece of software...
+<[doug] D.GARRETT> you need to document it.  It's an extension to a primitive 
+kernal...
+<[doug] D.GARRETT> you need to document it.  It doesn't matter whether you
+<[doug] D.GARRETT> point to the 1987 ANS-MUMPS manual on the left shelf, or...
+<[doug] D.GARRETT> Mr Brodie's Starting Forth 2d Edition on the right shelf...
+<[doug] D.GARRETT> It's in print, nominally readable, and the programmer embeds 
+in his
+<[doug] D.GARRETT> source code, that he cribbed this and that from...
+<[doug] D.GARRETT> pages x, y, and z because of this and that.  If he had to
+<[doug] D.GARRETT> change the code, he makes a note of this deviation from...
+<[Wil] W.BADEN1> Forth is different from Mumps, etc., becuz wher the money is, 
+is in embedded systems. Len and I hav done a lot of translation from co
+mp.sci. algorithms to Forth.
+<[doug] D.GARRETT> the published "Standard" (left shelf or rioght shelf)...
+<[LEN] NMORGENSTERN> Again, it's a matter of time. Wouldn't it be nice to study 
+the
+<[LEN] NMORGENSTERN> documentation briefly, and just load the screens, not 
+examine & debug
+<[LEN] NMORGENSTERN> in detail to make sure every word in the thing matches 
+your Forth!!
+<[Wil] W.BADEN1> But that's the second appeal of Forth (that I mentioned abuv).
+<[doug] D.GARRETT> Wil, I think I agree agree again.  The issues surrounding 
+the...
+<[doug] D.GARRETT> proposed "need" for a standard kernal Forth...
+<[doug] D.GARRETT> do not concern small-system designers.  We don't need the
+<[doug] D.GARRETT> kitchen sink all the time.  I like a moderate
+<[doug] D.GARRETT> size development system with electric windows and 
+air-conditioning...
+<[Wil] W.BADEN1> The essential idea is "kernel".  Becuz of the extensibility of 
+Forth, evry Forther has his own kernel.
+<[LEN] NMORGENSTERN> By the way, Doug, there are many that agree with your 
+ideas, but
+<[LEN] NMORGENSTERN> I think they go too far towards the minimalist side.
+<[doug] D.GARRETT> but my target is gonna be about 8k.
+<[Wil] W.BADEN1> But a development system for Forth duz not hav to be in Forth.
+<[doug] D.GARRETT> I have occasionally imagined a Forth interpretter written
+<[doug] D.GARRETT> in MUMPS, but that would be madness
+<GARY-S> scuse me - I need to close the steno notes
+=== End of Steno notes. ===
+
+

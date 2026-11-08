@@ -1,0 +1,119 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 06/07/90   Time: 22:49EDT
+  
+ The question of the night : When an implementation of ANS Forth becomes
+                             available for your system will you use it, roll
+                             your own, don't know, don't care ?.....
+                             This lead to several opposing views of the TC's
+                             actions, the BASIS as it now exists, and view(s)
+                             of the future standard. The discussion between
+                             Robert Berkey and Dennis Ruffer over decisions
+                             made regarding division was especially involved.
+                             IF YOU HAVE ANY interest in the future of Forth,
+                             this FIGGY is another 'must read'.
+        
+                             Berkey contends every member of the TC should be
+                             'required' to write a "serious" program using the
+                             defined standard !
+ 
+                             Does the committee understand F-83 ? Is it just
+                             a jumping off point, or even being considered ?
+
+                             Will you be able to write 'standard' code ? Will
+                             you even want to ?
+
+Attendees:
+[[gars] GARY-S]
+[[Wil] W.BADEN1]
+[[Dennis] D.RUFFER]
+[[Robert] R.BERKEY]
+[[jaX3J14] JAX]
+[[John] JDHALL]
+
+Minutes:
+<[Wil] W.BADEN1> is here.
+<NMORGENSTERN> is here.
+<D.RUFFER> is here.
+<[Wil] W.BADEN1> Let me retrospect.
+<[Wil] W.BADEN1> I'll use it.
+<[gars] GARY-S> the question of the nite - answer it
+<[Wil] W.BADEN1> I did.
+<[Wil] W.BADEN1> I said I'd implement and use it.
+<[Wil] W.BADEN1> I do already.
+<[Len] NMORGENSTERN> Oh, Yes I will use the new standard.
+<[Dennis] D.RUFFER> sure, I'll implement it as soon as Forth, Inc lets me :-)
+<[gars] GARY-S> What are you running on wil ? still Apple ][ ?
+<[Wil] W.BADEN1> Mac.
+<[Dennis] D.RUFFER> whose Forth are you using on the Mac wil?
+<[Wil] W.BADEN1> Vacilating between PocketForth and MacForth.
+<[gars] GARY-S> How soon do any of you project major vendors offering a 
+standard kernel
+<[Dennis] D.RUFFER> I would suspect that Forth, Inc. will have one ready before 
+the standard is actually approved
+<[Dennis] D.RUFFER> right now, that will not be until March '92 at the earliest
+<[Wil] W.BADEN1> I use my 640K dual-floppy PC clone for Zen 1.2
+<[gars] GARY-S> Is the BASIS model still referred to as goofy ?
+<[Len] NMORGENSTERN> Who refers to it as goofy?
+<[Dennis] D.RUFFER> BASIS 12 is actually going to be pretty good IMHO
+<[Wil] W.BADEN1> Last week's Easter algorithm was checked out on MacForth and 
+Zen 1.2.
+<[gars] GARY-S> Once upon a time the BASIS was referred to by that (or some 
+similar) name to discourage premature modeling
+<R.BERKEY> is here.
+<[Dennis] D.RUFFER> from what I could infer at the last meeting, even the TC 
+thinks that it is pretty solid now
+<[gars] GARY-S> Bob - will or won't you ?
+<[Dennis] D.RUFFER> hi bob, how are you feeling about basis now?
+<[Robert] R.BERKEY> Writing standard code is highly impractical.
+<[gars] GARY-S> Is this a critique
+<[Robert] R.BERKEY> The core has been watered, burden placed on application 
+programmers.
+<[Dennis] D.RUFFER> true, but the result is consensus
+<[Wil] W.BADEN1> The core has been watered?
+<[Robert] R.BERKEY> The support of sign-magnitude machines is an empty idea.
+<[Wil] W.BADEN1> OK.  We agree.
+<[Robert] R.BERKEY> "concensus" means what we have been told to think, bah.
+<[Dennis] D.RUFFER> can you program in Forth without thinking now?
+<[gars] GARY-S> It is NOT too late to change sign-magnitude support !
+<[Wil] W.BADEN1> The word is "consensus" -- what we consent to, not result of a 
+census.
+<[Robert] R.BERKEY> The extensions, as Bradley notes, are important.
+<[Wil] W.BADEN1> For what?
+<[Robert] R.BERKEY> It's the core that is poisonous.
+<[Robert] R.BERKEY> Committee still doesn't understand Forth-83.
+<[Robert] R.BERKEY> There are Standard Programs and Standard Systems.
+<[Robert] R.BERKEY> A balance exists between the two.
+<[Robert] R.BERKEY> Adding from one takes from the other.
+<[Robert] R.BERKEY> I'd like to see every committee member write a serious 
+program
+<[Robert] R.BERKEY> as required by the standard.
+<[gars] GARY-S> That's a VERY interesting concept Bob ! I wonder if any will be 
+willing to rise to such a laudible challenge ?!?
+<[Robert] R.BERKEY> A Forth-83 + imposes a 20x performance penalty.  WHY?
+<[Robert] R.BERKEY> It might be possible to integrate one's and two's 
+complement.
+<[Robert] R.BERKEY> But the understanding of one' complement is such that
+<[Robert] R.BERKEY> the subcommittee chair told me that one's complement is 
+_not_ a number
+<[Robert] R.BERKEY> circle.
+<[Dennis] D.RUFFER> how do you mean "+ imposes a 20x performance penalty"?
+<[Robert] R.BERKEY>  + has been reduced from wrap-around numbers to "n"s.
+<[Robert] R.BERKEY> Unsigned addition has been removed, in particular.
+<[Robert] R.BERKEY> Since every array definition in existence requires unsigned 
+addition,
+<[Robert] R.BERKEY> every array definition ever written is broken.
+<[Dennis] D.RUFFER> how many arrays do you use that are longer than 32K?
+<[Robert] R.BERKEY> How many government contracts will call for Standard 
+Systems?
+<[Robert] R.BERKEY> Dennis, that's not the point.
+<[Robert] R.BERKEY> You don't know where your array exists in memory.
+<[Dennis] D.RUFFER> yes it is! the fact that arrays manipulate memory addresses 
+is where the problem lies, not with +
+<[Wil] W.BADEN1> What do you mean "unsigned addition"? -- addition of unsigned 
+numbers?
+<[Robert] R.BERKEY> It's the same problem as using addresses in a Forth-79 LOOP 
+

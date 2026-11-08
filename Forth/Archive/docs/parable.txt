@@ -1,0 +1,270 @@
+
+		      The Parable of the Cheese
+
+			    By R. J. Brown
+
+
+	       Copyright (c) 1988 Robert Jay Brown III
+		    All Rights Reserved Worldwide
+
+
+   Once upon a time there was a famous cheese factory in an obscure
+region of the south part of France.  They made the finest Brie in the
+entire world.  They attributed the exceptional quality of their
+cheese to the skill and diligence of the old "Father Cheese" who
+presided over the quality assurance department in the out-going
+inspection section of the plant.  This refined old gentleman had
+learned his skill at grading cheeses from his father.  He was the
+first born son of a first born son, had lived in the same house as
+his father and his father's fathers before that.  That house was the
+old farm house on the grounds of the cheese plant.  It dated back
+into the dim and dark distant past before anybody could remember.
+
+   Guiome, as was his name, had rather long, off-white, somewhat
+stringy hair and a long but rather thin beard of a similar color.  He
+wore a slightly crumpled black suit, an old black top hat, brown
+shoes with black spats, and carried an ancient hand rubbed cane made
+of fine imported ebony inlaid with iridescent mother of pearl, and
+topped with a carved "ivory" ball that was in reality an old
+discarded plastic billiard ball carved with a dremel moto-tool by his
+now disceased mother-in-law. (He clubbed her to death with it in
+order to gain possesion of it, but no one was cognizant of this
+hidden fact.)
+
+   Guiome rulled the entire plant, its grounds, and the little hamlet
+adjacent to it with a maleable soft iron fist.  It still hurt if you
+got hit with it though.  He wielded absolute power over whether any
+particular cheese was up to the standards of the factory, and every
+one accepted his judgement in such matters without question.  If more
+than ten cheeses were rejected in any seven hour shift, all twelve
+department heads were called in for a crisis meeting.  It was called
+a crisis meeting because it was always a crisis meeting Guiome.  He
+was arrogant and dispicable when it came to matters of quality
+control.  He would always replace one of the twelve with some totally
+inexperienced new hire off the production floor.  Twenty four hours
+later, if the situation had still not improved, he would go into the
+pump room and blow the dust off the float switch contacts and hope
+that would set things straight.  
+
+   He kept meaning to tell his secret-ary to take a memo wherein he
+would dictate his thoughts on how general grounds maintainence was
+crucial to maintaining good standards, but somehow it always got
+misinterpreted that he wanted the grass cut, or the flower beds
+weeded.  It was indeed a hilarious sight watching Bill, the gardener
+carefully brushing the snow aside with his mittened hand to pull the
+weeds out of the frozen garden as the clock chimed thirteen times on
+one bright midnite when the temperature had fallen to zero degrees K.
+shortly after Guiome had cast a chill by issuing the same zero
+maintenence memo for the 5.xx times ten to the nineteenth time.
+
+   I give all this detail to provide background for understanding the
+monumental nature of the task facing our hero, Willie May Jones, a
+post doctoral fellow at the Zulu Institute of Technology (ZIT).  She
+was a haggard middle aged woman who had struggled all her life to get
+an education.  Just as it seemed almost hopeless, the new and
+exciting field of Knowledge Engineering sprung on the scene.  She
+dutifully collected and mailed in her cereal box tops to get a chance
+at the aptitude test that would qualify her for the only scholarship
+of its kind: a complete tuition refund from the state operated
+university system that was repayable upon completion of her first
+work assignment successfully.
+
+   She breezed through the test, went off to darkest Africa, and
+studied hard.  Six years later, she emerged as the first human person
+to recieve any sort of degree at all from a cereal manufacturer.
+This qualified her perfectly to meet Guiome!
+
+   Willie May was wisked away in a surplus Goodyear blimp to land 5
+days later in the south central part of the cheese plant's cattle
+grazing pasture.  She promptly introduced herself to the financial
+backers of the cheese factory.  They told her this disturbing tale.
+
+   It seems that Guiome was getting old.  He still had absolute
+perfection with regards to judging cheeses, but the doctors had
+indicated that he would not live forever, and that, since he was
+childless, they had better be thinking about his replacement.  It was
+decided that with the perfection of automata and expert systems in
+recent times, it would be preferable to have Guiome's abilities
+available 24 hours a day instead of just seven.  His mirror image in
+an expert system would always be on the job, and it would not cause
+all of the personality conflicts that the old buzzard brought on.
+
+   So Ms. Jones was chosen to be the chief KE on the project.  What a
+thrill!  If she could pull this one off, she would owe thousands of
+dollars in back tuition, but who cared about that?  Her only goal in
+life was too succeed.  She would study the old meastro in every
+detail.  After all, she had had years of training by some of the best
+in the group, so she stood a fairly good chance of pleasing the
+investors and getting paid.
+
+   Ms. Jones stood beside Guiome that first day and watched a strange
+and ancient ritual that was to become routine before the years were
+over.  She was standing at his left side while he raised his right
+hand high over his head, extended his index finger and pointed in the
+direction of Polaris, exhaled, and plunged his finger towards the
+nadir, deep into the cheese that was just then coming down the
+conveyor.  "Ah oui, ces't magnifique!" he whispered just under his
+breath as he slowly shook his head from side to side.  Beside him,
+Ms. Jones mumbled "Huh?"  inaudibly.  She was too busy taking notes
+to ask any questions now.  The questions would come later, after the
+crutial data was analyzed.
+
+   After a week of this, a shift passed in which the pass/fail ratio
+was intolerable; that is to say, seven cheeses failed in a ten hour
+time period.  Guiome explaned to Ms. Jones that it was time to call a
+crisis meeting.  She had heard about these from the ladies in the
+rest room.  You could always count on two or three women in the
+ladies room, even on the graveyard shift.  One of them was always the
+same.  She trembled involuntarily a little on the way there now.
+Suddenly she needed a smoke.
+
+   While she was out, Guiome turned slowly around and wandered off.
+No one saw him again until he walked into the meeting just as it was
+ending.  He said, "It wasn't important anyway.  I just blew the dust
+off..."
+
+   The next day, Ms Jones had gathered enough raw knowledge, in the
+form of copious notes and diagrams, to start her analysis.  She began
+this by flying to Paris and climbing the Eifel Tower on her knees to
+gain the proper perspective.  Then she holed up in a fine hotel and
+had caviar and coke sent up via room service.  She never drank a
+drop.  The coke went flat.  Her toilet paper rolled off the sink
+and fell in the commode 64 feet away, along with all of her notes.
+"Oh well," she thought, "I'll just have to wing it."  And wing it she
+did.  She had a photographic memory, but the camera was loaded with
+black and white film, and she had been using an elaborate color
+coding scheme to keep topics separated.  After hours of listening to
+the same cut of "Red, Black, and Green" by Pharoh Sanders, she
+thought she had it all worked out.
+
+   "Every Good Boy Does Fine," she thought.  She consulted one of her
+most brilliant algorithms is HairLip, a point focused programming
+dialect based on LOOPs: ' BK BN RD OR YL GN BU VI GY WT ` "I know
+there's a connection in there somewhere, if I can just find it..."
+The words kept rolling over and under and to and fro and dup and drop
+and swap, as she powdered her face.  Wait a minute!  That's it! SWAP!
+Why didn't I see it before?  It's really obvious when you look at it
+the right way.  I'll just swap places with GUIOME and see for myself
+what it's like.  Then HE can tell me what i`m doing wrong!  It's
+gotta work.  It's brilliant!
+
+   She immediatly went to a second hand shop and and purchased an
+exact copy of Guiomes garb, made of finest cotton, hand picked.  She
+couldn't find any ivory crowned canes, however, so she had to settle
+for white plastic inlays with a mini-pearl tip.  She also forgot and
+left the price tag on her hat.
+
+   She returned to the cheese factory the next day and traded places
+with Guiome.  He thought it was a great idea: he needed a day off
+anyhow.  Just in case she should miss a bad cheese, though, he stood
+behind her and loomed over her in the shadows of the hall next to the
+conveyor.  What with the old stone walls and everything, his
+breathing echoed and reverberated, but never went very far from Ms.
+Jones.  Once he even snatched one off the belt after she had made the
+ritualistic plunge but failed to recognize that it was a reject.  "HA
+YOU MISSED ONE! Hee hee hee haa haw har ho hough hoo foo bar" and he
+disolved into a paroxsysm of laughter and melted into a puddle onto
+the floor that evaporateed and later recondensed as her tears: she
+sobbed softly over her first failure.  "i, i .. i'm really very
+sorry, your horror, but it looked ok to me.  what i mean is, you
+know..."  `NO!  UNDER KNOW CIRCUMSTANCES ARE YOU TO PERMIT ANY SUCH
+THING TO EVER HAPPEN AGAIN INSIDE THE KNOWN PHYSICAL UNIVERSE!'
+
+   kNOWLEDGE ENGINEERING IS INDEED A VERY DIFFICULT ART.  Ms. JOnes
+filed for reinforcements.  The next Monday Morning, a tribe of twelve
+seasoned veterans from MIT, KEE, and other such pedigrees fell on
+their knees and worshiped "Big BLUE" before catching planes and
+trains from all over the world to congregate and converge upon the
+little cheese kitchen.  
+
+   When they arrived, they approached the problem from a much more
+scientific point of view.  They attached six axis strain guages to
+the surface of the cheese, or rine as it is properly called.  They
+mounted multiple accelerometers on the ring finger of Guiome.  They
+used stroboscopic flash and stop action video tape to study every
+motion of the old Geezer in greatest detail.  They monitored his
+heartbeat, respiration, electroencephelogram, and galvanic skin
+response.  
+
+   With the help of the best supercomputers in the world, they
+reduced this myriad of detail to get the final answer.  They took
+Coriolis effect into account.  They were careful to correlate any
+results with the phase of the moon and the ascension of Jupiter.
+Groundhog day was even observed with a High Holy Feast.  The pH of
+the old mans skin was measured hourly.  In the end, they had
+calculated the Lyaponov exponent of the whole chaotic process to be
+exactly 19!  The answer was simple!  Build a robot!
+
+   So they built a robot, with a stainless steel hand, and a middle
+finger made of finest ivory.  They used hydraulic servos with LVDT
+shaft angle encoders at all the revolute joints, but to capture that
+final nuance of motion, a 220 VAC 3 PH 50 HZ solendoid in a prismatic
+configuration was attached to the critial finger.  At its tip was a
+precious black pearl.  The kinematic equations were carefully
+formulated and the Jacobian extracted in closed form by the symbolic
+math program written by Maxine Esmeralda, known as just MAXEMA for
+short.  This solved the dynamics of the system.
+
+   The rest is history.  After 11 years in the making, the expert
+system, now known affectionatly as BIG-G was ready for unveiling.  No
+one can really tell just how many people have worked on any project
+of this magnitude, so we have concentrated on the key players.  The
+sheet was removed, and there stood Guiome, ready to throw the switch
+and activate BIG-G.  Amidst fanfares of trumpets and cryings of
+babies, he slowly pulled the switch down.  It sputtered ever so
+slightly as the 3 phases engaged slightly out of time, so he opened
+it up again and gently puffed across the contacts, then looked up in
+the direction of Polaris and plunged the lever in a perfect
+semicircular arc.  
+
+   As the blades of the 3 pronged knife switch synchronously engaged,
+a speck of sludge caused the fuel injector of cylinder number 4 of
+the deisel engine driving the generating plant in town to clog and
+the device missed a beat as a wisp of white smoke wafted in the calm
+air, but then it cleared and continued to run.
+
+   The old man passed that winter, and the quality of the plant began
+to deteriorate.  The investors were dissapointed, but, as is the case
+with all good investors, they had an alternate plan.  They would have
+to convert the Brie factory over to the manufacture of yogurt, a
+mediocre quality product with great mass appeal.  Why, they would
+make millions!  "We should have done this long ago, George!"
+
+   A food process technologist was flown in from Cincinnati OH USA to
+size up the situation and determine what changes would have to be
+made in order to convert the plant.  He toured the facility and
+admired the beautiful grounds, obverving the neatly swept sidewalks
+and freshly mown grass.  He was especially fond of the old farm
+house.  He himself was in the process of renovating an old home on
+the Ohio in Kentucky.  
+
+   When he watched the futile robot in action, he commented to the
+aid at his side, "Gee, that's neat."  But as the fickle finger
+perforated the Rhine, the caustic fumes of NH3 percolated up his
+nostrils.  "How can anybody eat that stuff?  It smells just like
+horse piss!"  Jane commented that it didn't smell that way when
+everything was working right, and that that was supposed to be the
+very reason why he was here.
+
+   SO he called in the chemical engineers, and they recommended
+various and sundry methods of altering the ammonia concentration in
+the product.  "But we're supposed to start making yogurt next week,"
+Jane protested.  "Shut up JJ, can't you see I'm busy trying to save
+this whole wretched mess single handedly?"
+
+   Then he had sensors installed and thoroughly overhauled and
+cleaned up the entire system.  He was particularly perplexed as to
+how the process functioned at all when he discovered a blackened and
+charred set of points on a float switch in the pump room, but not
+having a replacement set available, he burnished them with a special
+diamond dust coated feeler guage designed just for the refurbishing
+of bimetalic contacts.  "That should keep y'all happy for another
+hundred years or so," he thought proudly to himself.
+
+   Today, the plant is again turning out the finest Brie cheeses in
+the entire world.  But last night, a drunk maintenence worker spilled
+beer on a float switch in the pump room.  "I hope nobody saw that,"
+he mumbled to himself. 
+ 
+
+

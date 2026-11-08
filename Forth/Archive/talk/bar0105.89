@@ -1,0 +1,269 @@
+
+ Minutes of the FIGGY BAR RT Conference.
+ 
+Date: 01/05/89   Time: 22:28EST
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[S.KUNZ]
+[[Jax] FIGCHAPTERS]
+[[Dennis] D.RUFFER]
+[[>< Ken] K.BUTTERFIEL]
+[[Len] NMORGENSTERN]
+       
+Items discussed: Looking for F83 for Z80 in ROM, checking on Computer Cowboy,
+                 FIGCHAPTERS e-mail, Austin chow list, Abundance as a tool,
+                 neural nets, looking for fast-and-nasty show-and-tell demos
+Minutes:
+<[Gary] GARY-S> Know where to get a Z-80 F83 in ROM ?
+<[Dave] DHWEINSTEIN> No. FIG?
+<[Gary] GARY-S> Are you kidding - they don't sell ROM's
+<[Gary] GARY-S> Maybe VESTA still does
+<[Dave] DHWEINSTEIN> Get the code, and ROM it yourself.
+<[Gary] GARY-S> IF I get away in Feb can I crash on your floor ?
+<[Dave] DHWEINSTEIN> Of course. You can even crash on my couch.
+<[Gary] GARY-S> All Right !
+<[Gary] GARY-S> Still no word - don't bet on it, though
+<[Gary] GARY-S> re : the z-80 , L&P is written for 8080 CP/M and the guy is 
+specifically looking for Z-80
+<[Dave] DHWEINSTEIN> Hmmmnn....someonce could always convert it.
+<[Dave] DHWEINSTEIN> (notice how cavelier I am about projects as long as *I* 
+don't have to do them)
+<[Gary] GARY-S> More trouble than it's probably worth - There just isn't that 
+much optimization to gain
+<[Dave] DHWEINSTEIN> But 8080  code runs on a Z-80.
+<[Gary] GARY-S> I have that same cavalier disease - don't we all ?
+<[Gary] GARY-S> sure it does
+<[Dave] DHWEINSTEIN> So why is the guy hung up about z-80 code.
+<[Gary] GARY-S> He is doing real-time process controll ( redun-dun dancy) with 
+Z-80's and wants to go Forth and Z-80
+<[Dave] DHWEINSTEIN> So why not use a Z8?
+<[Gary] GARY-S> I asked him that ? He didn't have a decent answer......
+<[Gary] GARY-S> more confusing to me he had talked to Feierbach
+<[Gary] GARY-S> Gary F does not exactly rip folks off
+<[Dave] DHWEINSTEIN> How much is a Z8 these days anyway?
+<[Gary] GARY-S> I don't know how he or Dumse ever make a living
+<[Gary] GARY-S> The Z8's themselves are awfully cheap - hell they use them in 
+appliances
+<[Dave] DHWEINSTEIN> How cheap is awfully cheap?
+<[Gary] GARY-S> They are the stove-bolt of micrcomputers
+<[Dave] DHWEINSTEIN> I know z-80s are .75 each...how much are the Z8s?
+<[Gary] GARY-S> I do NOT have a price list in front of me
+<[Dave] DHWEINSTEIN> About? Approximately?
+<[Gary] GARY-S> couple-a-bucks
+<[Dave] DHWEINSTEIN> How much for a ROM Forth for it? For that matter, how much 
+for a real simple board (approx)...you know, chip, ROM, Ram, power, se
+rial line? (if you know)
+<[Gary] GARY-S> I really don't know off-hand, Dave...
+<[Dave] DHWEINSTEIN> ok
+<[Gary] GARY-S> I have price sheets somewhere, but I don't know where and..
+<[Gary] GARY-S> they aren't current.
+<[Gary] GARY-S> Gary quoted prices in his conference though. Look there
+<[Dave] DHWEINSTEIN> Where is "there"?
+<[Gary] GARY-S> The conference is the Super8 one
+<[Gary] GARY-S> Library 1 , GEnie Forth RoundTable
+<S.KUNZ> is here.
+<FIGCHAPTERS> is here.
+<S.KUNZ> yes
+<[Gary] GARY-S> Jax - do vesta still do a z-80 in ROM ?
+<[Dave] DHWEINSTEIN> -p+o
+<[Jax] FIGCHAPTERS> Z80 ??????????????????????
+<[Jax] FIGCHAPTERS> No, did that guy come to GEnie like I suggested?
+<S.KUNZ> chaos it is
+<[Gary] GARY-S> Had someone call me looking for Forth in ROM for Z-80
+<[Jax] FIGCHAPTERS> us too.
+<[Jax] FIGCHAPTERS> don't see why not, but never saw one.
+<[Gary] GARY-S> From Haughton, LA ?
+<[Jax] FIGCHAPTERS> Wherever. Nice young guy.
+<[Gary] GARY-S> Yeah - well I can't figure why he doesn't just use Feierbach's 
+Super8
+<[Jax] FIGCHAPTERS> what's new  anybody?
+<[Jax] FIGCHAPTERS> ( because z80 is on bus cards and z80 is like 45 cents in 
+hundreds)
+<[Gary] GARY-S> Got a message on UUCP from Ken Butterfield
+<[Jax] FIGCHAPTERS> saying?
+<[Gary] GARY-S> Did he copy you ?
+<[Gary] GARY-S> just a e-mail test
+<[Jax] FIGCHAPTERS> Hmmm, not sure, don't have that file open yet.
+<[Jax] FIGCHAPTERS> I sent out an email test myself.
+<[Gary] GARY-S> well - let me know and I'll post it to you for your list
+<[Jax] FIGCHAPTERS> email it to me, I'll add it in.
+<[Gary] GARY-S> gotcha
+<[Jax] FIGCHAPTERS> gotta go, baby is crying.
+<[Jax] FIGCHAPTERS> disconnected.
+<S.KUNZ> Gary, does Computer Cowboys still exist?
+<[Gary] GARY-S> sorta - but Chuck is trying to peddle the operation
+<S.KUNZ> Does he still sell the board , delta I think?
+<D.RUFFER> is here.
+<[Dave] DHWEINSTEIN> Hey Dennis
+<[Gary] GARY-S> I don't know for sure - I'm satisfied he can cough up a copy 
+for you.
+<[Gary] GARY-S> Dennis do you know if Chuck is still selling Computer Cowboy 
+goodies ?
+<D.RUFFER> as far as I know he is
+<[Gary] GARY-S> That's about your answer
+<[Gary] GARY-S> dennis - quick SysOp note - there's nothing on Smitty's list we 
+can do much with unless you have 'Real-Time' photos to send him with t
+he GEnie booth
+<[Dave] DHWEINSTEIN> Dennis...will you be at the conference?
+<D.RUFFER> I didn't take any (didn't even take my camera :-(
+<D.RUFFER> no dave, gotta get some work done now
+<[Gary] GARY-S> Surely someone took a photo !
+<D.RUFFER> didn't notice anyone taking one of the booth though
+<[Gary] GARY-S> Ask Jan
+<[Gary] GARY-S> Dave - what kind of response are you/George getting
+<[Dave] DHWEINSTEIN> I don't know. I'm not really on that end of things. I've 
+ended up as the Austin connection for everyone interested in coming. 
+(which reminds me...)
+<S.KUNZ> bye
+<[Dave] DHWEINSTEIN> (I have phone cals to make tomorrow)
+<S.KUNZ> has left.
+<[Gary] GARY-S> I take it Alan Furman is pretty deeply involved
+<[Dave] DHWEINSTEIN> I really don't know. I only know about my end of things. 
+Which is limited primarily to arrangements in Austin for people coming t
+o the conf.
+<[Gary] GARY-S> I do know George's conference is being read
+<[Dave] DHWEINSTEIN> (for example...there are restaurants that are really only 
+for people on deep pocket expense accounts)
+<[Gary] GARY-S> pass that one
+<[Dave] DHWEINSTEIN> And then there are the restaurants I patronize.
+<[Dave] DHWEINSTEIN> (most of which have been listed on 710;1.5.3)
+<[Gary] GARY-S> which I read and copied for future reference
+<[Dave] DHWEINSTEIN> Good. Oh...the food at the Colorado St.....its alright, 
+but high priced
+<[Gary] GARY-S> no place that serves cabrito or carne adoba
+<[Dave] DHWEINSTEIN> ??
+<[Gary] GARY-S> Tex-Mex
+<K.BUTTERFIEL> is here.
+<[Gary] GARY-S> Chicano
+<[Dave] DHWEINSTEIN> You want Tex-Mex...we got TexMex...this is *Austin* gary.
+<[Gary] GARY-S> So how come you didn't know what cabrito was
+<[Dave] DHWEINSTEIN> It's just not my style.
+<[Dave] DHWEINSTEIN> O'Brians has TexMex (although I cannot vouch for its 
+wuality peersonally), we got Chuy's, we got TexMex everywhere.
+<[Gary] GARY-S> Did you get my bounce yet, Ken ? Your e-mail test got through 
+just fine
+<[= Ken] K.BUTTERFIEL> Yes I did, and I rerurned it ..
+<[Gary] GARY-S> and did you start your FIG chapter yet ?
+<[= Ken] K.BUTTERFIEL> Yours took about 4 hrs. to get to me
+<[Gary] GARY-S> not too shabby at all
+<D.RUFFER> Hey, I'm gonna go back to trying to figure out Abundance.  Just 
+thought I'd stop in and see what was happening
+<[Dave] DHWEINSTEIN> Hehah.
+<[Gary] GARY-S> later - dennis
+<[Dave] DHWEINSTEIN> Have fun Dennis.
+<D.RUFFER> bye bye
+<D.RUFFER> has left.
+<[= Ken] K.BUTTERFIEL> I'm trying to get a notice in the local lab newpaper at 
+the present...
+<[Gary] GARY-S> Wow - he'll be blind.
+<[= Ken] K.BUTTERFIEL> then I will have a try at a meeting.
+<[Gary] GARY-S> Roedy built a BIG package in Abundance
+<[Gary] GARY-S> That's the best approach
+<[= Ken] K.BUTTERFIEL> What is Abundance??
+<[Gary] GARY-S> I'm going to send Jax your e-mail address so you will be on the 
+chapter coordinators list
+<[Gary] GARY-S> It is a humongous dBase in Forth for Business applications 
+developed in a roll-your-own 32-bit Forth
+<[Gary] GARY-S> It is something to behold !!!
+<[Dave] DHWEINSTEIN> Joe User: "But isn't FORTH just for on the metal hardware 
+types and for astronomers. I mean, it isn't for business, right?"
+<[Dave] DHWEINSTEIN> Forther: "No no, there is an Abundance of Forth business 
+software."
+<[Gary] GARY-S> It's in our library if you want to take a look at it, ken
+<[= Ken] K.BUTTERFIEL> Kind of like Asyst except it is puplic domain?
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> This thing is monsterous in size. Roedy Green (the author ) 
+developed a special, multi headed 32-bit Forth just for Abundance
+<[>< Ken] K.BUTTERFIEL> I have been trying out the neural nets in the latest 
+DDJ using Neurl-nt
+<[Gary] GARY-S> and yes- it is public domain as long as it isn't used by 
+defense labs (cough-cough)
+<[Dave] DHWEINSTEIN> Hmmn? Interesting license.
+<[>< Ken] K.BUTTERFIEL> You trying to get me in hot water?
+<[Gary] GARY-S> I can gaurantee Roedy inserted that clause in his copyright
+<[Dave] DHWEINSTEIN> His choice. He wrote it.
+<[>< Ken] K.BUTTERFIEL> His right, and I can even agree with it.
+<[Gary] GARY-S> Matter-of-fact it's even included in the beta test of BBL he 
+sent me a few years ago
+<[Gary] GARY-S> BBL is the 32-bit Forth that drives abundance
+<[Len] NMORGENSTERN> oops!
+<[Len] NMORGENSTERN>
+<[Gary] GARY-S> What are you doing, Leonard ?
+<[Len] NMORGENSTERN> Playing with my macros!
+<[Gary] GARY-S> hahaha
+<[Dave] DHWEINSTEIN> That's illegal in public!
+<[Len] NMORGENSTERN> It may be illegal in public areas...
+<[Len] NMORGENSTERN> but not in pubic areas.
+<[Dave] DHWEINSTEIN> Are you macrobating again?
+<[>< Ken] K.BUTTERFIEL> Is this nesting in FORTH?
+<[Gary] GARY-S> whoa ! Is that Leonard Morgenstern said that ?
+<[Gary] GARY-S> Anyway - any Forth stuff this evening ?
+<[Dave] DHWEINSTEIN> Gee Gary, are you gonna have to edit again?
+<[Gary] GARY-S> nope
+<[Len] NMORGENSTERN> What do you mean, Dave?
+<[>< Ken] K.BUTTERFIEL> Anyone else tried neural-nt?
+<[Dave] DHWEINSTEIN> Gary gets touchy about editing from time to time.
+<[Dave] DHWEINSTEIN> neural-nt?
+<[Gary] GARY-S> Ken - you know of a source for Z-80 Forth in ROM ?
+<[>< Ken] K.BUTTERFIEL> The neural net shell in the library.
+<[Gary] GARY-S> dave - didn't you ?
+<[>< Ken] K.BUTTERFIEL> No I don't, do they still use z80's?
+<[Gary] GARY-S> oh -yeah.
+<[Gary] GARY-S>  some still use 8080's and 6502's
+<[Len] NMORGENSTERN> Incidentally, I have a z-80 running CP/M if there is...
+<[Len] NMORGENSTERN> anything that needs transferring, etc.
+<[Gary] GARY-S> Like what ?
+<[Len] NMORGENSTERN> I dunno. I never have used it except to test it.
+<[Gary] GARY-S> Dave - did you decide on a closet heater ?
+<[Dave] DHWEINSTEIN> I dunno. I need a computer. I could always go into debt...
+but I don't even know if I could afford the payments on a modern machine.
+<[Gary] GARY-S> ken - I'm sorry - I thought Dave had played with that neural 
+net.
+<[Gary] GARY-S>  I know a member of our local chapter is doing some things with 
+neural nets, but not that set
+<[Gary] GARY-S> He's building it for neo-natology studies at the hospital here
+<[Len] NMORGENSTERN> How's he going to use it there?
+<[Gary] GARY-S> Apparently there are a lot of what-if questions in the first 
+few hours of these really premature babies he hopes it will help sort thr
+ough
+<[Gary] GARY-S> I presume both backward and forward chaining (quickly) are 
+critical
+<[>< Ken] K.BUTTERFIEL> It sounds like he feels that nets can really do 
+something..
+<[Gary] GARY-S> I do know LISP engines are too slow to suit him
+<[>< Ken] K.BUTTERFIEL> It sound like more of an apllication for an expert 
+system.
+<[Len] NMORGENSTERN> That was my thought exactly.
+<[Gary] GARY-S> He has talked to the folks at OakRidge about 'REAL-OPS' so he's 
+serious
+<[Dave] DHWEINSTEIN> LISP engines have all the sppeed of a snail drawn 
+winnebago.
+<[>< Ken] K.BUTTERFIEL> We've been slimed.
+<[Len] NMORGENSTERN> How so?
+<[Dave] DHWEINSTEIN> (how is that for a menatl picture)
+<[Len] NMORGENSTERN> I get it :-)
+<[>< Ken] K.BUTTERFIEL> Best laugh i've had today.
+<[Len] NMORGENSTERN> I have a quick question that I have asked before.
+<[Len] NMORGENSTERN> Do you have any short programs or utilities...
+<[Len] NMORGENSTERN> that would demonstrate the power of Forth...
+<[Len] NMORGENSTERN> Complex enough to show the power...
+<[Len] NMORGENSTERN> simple enough for a mod.experienced programmer to 
+understand?
+<[Len] NMORGENSTERN> understand without really knowing Forth, that is.
+<[Len] NMORGENSTERN> Mike Perry suggested QuickSort, but I would like a few 
+others.
+<[Gary] GARY-S> I don't, but Donald Long had a really neat one - I'll ask if he 
+still does
+<[Dave] DHWEINSTEIN> has left.
+<[Len] NMORGENSTERN> Thanks
+<[Gary] GARY-S> Any last shots ?
+<[Gary] GARY-S> g'nite then
+<[>< Ken] K.BUTTERFIEL> I have a menu compiler that is very short in FORTH
+<[Len] NMORGENSTERN> Could you upload it?
+<[>< Ken] K.BUTTERFIEL> It demonstrates power but may not be easy to understand 
+until you know a little FORTH.  I will inded upload it.
+<[>< Ken] K.BUTTERFIEL> G.nite Gary
+=== End of Steno notes. ===
+
+

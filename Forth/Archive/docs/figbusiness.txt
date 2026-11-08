@@ -1,0 +1,341 @@
+
+
+ Minutes of the Forth RoundTable guest Conference,
+ with special guest, John D. Hall, FIG Treasurer.
+ Topic: 'The Business of FIG'
+ 
+ Entire contents of this transcript copyright(c) 1989
+ GEnie Forth RoundTable. The contents may be freely
+ copied and distributed in whole or in part provided
+ origination credit is included.
+
+Date: 12/14/89   Time: 22:29EST
+Attendees:
+[[Gary] GARY-S]
+[[John] JDHALL]
+[[Dave] OLORIN]
+[[Len] NMORGENSTERN]
+[[Kevin] APPERT]
+[[Dennis] D.RUFFER]
+[FIGCHAPTERS]
+[[[Robert]] R.BERKEY]
+[V.STAMPS]
+[[John W] J.WAVRIK1]
+
+Minutes:
+<[John] JDHALL> No, I have an opening remarks that are a little long...
+<[John] JDHALL> but they come slow.. ga
+<[Gary] GARY-S> no prob
+<[John] JDHALL> I am just looking at the help messages.. ga
+<[Gary] GARY-S> Did Computer Literacy have any of the books I recommended ?
+<[John] JDHALL> Yes, they are very good books.  The ones I got seemed to be..
+<[John] JDHALL> newer revisions but they were all Nutshell books. Thanks..ga
+<[Gary] GARY-S> Glad I could be of some help...
+<[Gary] GARY-S> I get so much help from others it's nice to be able..
+<[Gary] GARY-S> to help someone else occassionally
+<[Gary] GARY-S> We are in sort of a holding pattern for the moment...
+<[Gary] GARY-S> but you knew that..
+<[Gary] GARY-S> John <- meet -> john
+<J.WAVRIK1> Hello John
+<NMORGENSTERN> is here.
+<[John] JDHALL> Hi, It seems as if we have just talked.  We met at FORML, Gary..
+ ga
+<[Gary] GARY-S> Are you still undecided or can I remove the (tentative ) from 
+your conference ?
+<[John W] J.WAVRIK1> Let me see how this one goes
+<[Gary] GARY-S> you got it
+<[Gary] GARY-S> 2 minutes to show time
+<[John W] J.WAVRIK1> I want to see if I have any trouble with the connection 
+with the Univ.
+<D.RUFFER> is here.
+<APPERT> is here.
+<[Gary] GARY-S>    The GEnie Forth RoundTable is very pleased to welcome ...
+<[Gary] GARY-S>  John D. Hall as tonight's special guest. John is a programmer..
+<[Gary] GARY-S>  with Lockheed Palo Alto, and more importantly for tonight's...
+<[Gary] GARY-S>  conference, a FIG Board Member and the FIG Treasurer. ...
+<[Gary] GARY-S>  Mr. Hall has been involved in Forth since 1980, writing and...
+<[Gary] GARY-S>  using his own Z80 kernel. He is now developing a interactive...
+<[Gary] GARY-S>  Forth for the TI 34010 graphics processor. ...
+<[Gary] GARY-S>  John has been on the FIG Board since 1982 and has served ...
+<[Gary] GARY-S>  as the FIG Treasurer for the last five years.
+<[Gary] GARY-S>  Here to explain all you ever wanted to know about FIG, ...
+<[Gary] GARY-S>  Tonight's GEnie Forth RoundTable guest, John D. Hall.
+<[Gary] GARY-S>  ga John
+<[John] JDHALL>
+<[John] JDHALL> This is a little long, but comes at 3 sec intervals..
+<[John] JDHALL> My recollections.........
+<[John] JDHALL>
+<[John] JDHALL> Forth Interest Group was organized in 1978 and one of the
+<[John] JDHALL> first things that was done was the formation of Forth
+<[John] JDHALL> Implementation Team lead by Bill Ragsdale to build figForth
+<[John] JDHALL> and put it in the public domain.  Because figForth was
+<[John] JDHALL> implemented on many microprocessors based on a single
+<[John] JDHALL> model and released with complete source listings,  it
+<[John] JDHALL> became the defacto standard of Forth.  The listing were
+<[John] JDHALL> made available for $15 and were extremely popular.  To
+<[John] JDHALL> encourage extensions and modifications to Forth, the same
+<[John] JDHALL> people started Forth Dimensions, FORML and the Forth
+<[John] JDHALL> Standards Team.  Many of these same people wrote or
+<[John] JDHALL> encouraged others to write articles for Byte and the famous
+<[John] JDHALL> Byte Forth issue was published in Oct of 1980.
+<[John] JDHALL>
+<[John] JDHALL> Money was coming in faster than new uses for it could be
+<[John] JDHALL> found and sales taxes were collected but no formal
+<[John] JDHALL> organization existed to pay the sales tax and avoid any
+<[John] JDHALL> income tax.  At this time, FIG was only a loose confederation
+<[John] JDHALL> of interested Forth users that were spread around the world,
+<[John] JDHALL> so a California non-profit corporation, Forth Interest
+<[John] JDHALL> Group,Inc., was formed to centralize the contacts, establish a
+<[John] JDHALL> central distribution point for Forth information and establish
+<[John] JDHALL> the formal function of publishing Forth Dimensions and the
+<[John] JDHALL> FORML proceedings and the distribution of these and the
+<[John] JDHALL> figForth listings.  No great thought was given to the other
+<[John] JDHALL> reasons for having a corporation.  It was primarily to
+<[John] JDHALL> centralize the loose confederation of people and ideas and
+<[John] JDHALL> distribute contributed literature.  FIG was guided by a Board
+<[John] JDHALL> of Directors consisting of Bill Ragsdale, Kim Harris, John
+<[John] JDHALL> James, Dave Kilbridge and Dave Boulton.
+<[John] JDHALL>
+<[John] JDHALL> The corporation wasn't the answer to the problems of
+<[John] JDHALL> organization, it took people to make ideas happen.
+<[John] JDHALL> Organization ideas were and still are plentiful, people to
+<[John] JDHALL> implement the ideas were not.  From the beginning
+<[John] JDHALL> business meetings were held one evening a month on the
+<[John] JDHALL> Tuesday before the 4th Saturday of the month.  Before the
+<[John] JDHALL> corporation, FIG and the Silicon Valley chapter were the
+<[John] JDHALL> same and the planning for the Sat. meeting was
+<[John] JDHALL> finalized on the previous Tue.   As the corporation was
+<[John] JDHALL> formed, the corporation business meeting began to take over
+<[John] JDHALL> the topics of the Tue. meeting until finally the Silicon Valley
+<[John] JDHALL> chapter planning was split off to another night.
+<[John] JDHALL>
+<[John] JDHALL> Since actions took more time than was available at the
+<[John] JDHALL> business meetings, committees were formed to plan and
+<[John] JDHALL> guide activities as existing or new functions were needed.
+<[John] JDHALL> FORML and Forth Dimensions needed guidance.  FORML split
+<[John] JDHALL> into a conference and a convention.  People around the
+<[John] JDHALL> world were forming group meetings and wanted to be kept
+<[John] JDHALL> informed, so a chapter committee was formed.  Literature
+<[John] JDHALL> needed to be published and new books and publications
+<[John] JDHALL> needed to be reviewed. A publication committee was formed.
+<[John] JDHALL> Direct communication with the Forth community was
+<[John] JDHALL> needed, so a connection to GEnie was established and a
+<[John] JDHALL> committee of sysops was formed   All of the literature
+<[John] JDHALL> needed to be distributed and orders needed to be filled, so
+<[John] JDHALL> an outside organization was hired.  Money was being
+<[John] JDHALL> received and distributed on a daily basis and this was more
+<[John] JDHALL> than the volunteer treasurer could handle.  From the
+<[John] JDHALL> beginning, all of the functions of the FIG, Inc were
+<[John] JDHALL> handled by a group volunteers with the help a few paid
+<[John] JDHALL> people such as the editor of Forth Dimensions and Mountain
+<[John] JDHALL> View Press for distribution.  When we saw our way clear
+<[John] JDHALL> enough, a management organization was hired to try to tie
+<[John] JDHALL> all the office functions together to establish a central office
+<[John] JDHALL> for mail distribution and phone under the direct control of
+<[John] JDHALL> FIG, Inc.
+<[John] JDHALL>
+<[John] JDHALL> We are now at a point now where FIG, Inc, includes
+<[John] JDHALL>   1)  Editing, publication and Distribution of Forth Dimensions
+<[John] JDHALL>   2)  Production and convening the Annual FORML Conference
+<[John] JDHALL>   3)  Publication and distribution of the FORML Proceedings
+<[John] JDHALL>   4)  Production and convening the Annual Forth Convention
+<[John] JDHALL>   5)  Support and Sponsorship of the GEnie RoundTable
+<[John] JDHALL>   6)  Support and organization of approx 50 Chapters
+<[John] JDHALL>   7)  Distribution of over 90 publications
+<[John] JDHALL>   8)  Production and distribution of a growing disk library
+<[John] JDHALL>   9)  Membership enrollment of over 2000 members
+<[John] JDHALL>
+<[John] JDHALL> FIG, Inc is governed by a 7 member Board of Directors:
+<[John] JDHALL> Dennis Ruffer, John Hall, Terry Sutton, Mike Elola,
+<[John] JDHALL> Robert Smith, Jack Brown, Wil Baden
+<[John] JDHALL>
+<[John] JDHALL> Business is conducted by the Business Group including
+<[John] JDHALL> the above and:
+<[John] JDHALL> C.H. Ting, Jan Shepherd, Bob Barr, Marlin Ouverson,
+<[John] JDHALL> Bill Ragsdale, Robert Reiling, Tom Zimmer and others
+<[John] JDHALL> who are interested in the business of FIG
+<[John] JDHALL>
+<[John] JDHALL> The growth of FIG was probably not as chaotic as I am
+<[John] JDHALL> remembering it, but the organizing was driven by the needs
+<[John] JDHALL> that  had to be filled rather than with a planned structure
+<[John] JDHALL> and the organizing was done by those of us who are
+<[John] JDHALL> technically competent in Forth but not necessarily in
+<[John] JDHALL> organizations.
+<[John] JDHALL>
+<[John] JDHALL> Was FIG the answer for Forth?
+<[John] JDHALL>
+<[John] JDHALL> Well, yes, if the question was how do we establish a central
+<[John] JDHALL> focal point for Forth.  What we had done is created a
+<[John] JDHALL> "passive" organization, given it  ability to reach out to the
+<[John] JDHALL> Forth community and made it financially self-supporting as
+<[John] JDHALL> long as there were enough people who were interested in
+<[John] JDHALL> Forth and willing to support FIG.
+<[John] JDHALL>
+<[John] JDHALL> What we had not done was create an "active" environment
+<[John] JDHALL> for "encouraging" those who were interested in Forth,
+<[John] JDHALL> "instructing" those who were new to Forth, "supporting the
+<[John] JDHALL> creativity" of people who were advancing Forth or even
+<[John] JDHALL> "establishing the solid technical foundation" and background
+<[John] JDHALL> for the growth of Forth use.
+<[John] JDHALL>
+<[John] JDHALL> There are probably other things the FIG is not and should
+<[John] JDHALL> be.
+<[John] JDHALL>
+<[John] JDHALL> We have the organization and it has the room for new
+<[John] JDHALL> directions.  How do we now make it the organizational
+<[John] JDHALL> answer for Forth?
+<[John] JDHALL>
+<[John] JDHALL> ..
+<[John] JDHALL> Thanks, for listening.  ga
+<FIGCHAPTERS> is here.
+<R.BERKEY> is here.
+<FIGCHAPTERS> Hey JD, thanx for swinging by!
+<FIGCHAPTERS> We all know what FIG *is* ...
+<FIGCHAPTERS> It is the central repository ...
+<FIGCHAPTERS> the one place we can send our clients that we are *sure* they 
+willl ...
+<FIGCHAPTERS> be able to get some info about Forth!!! ...
+<FIGCHAPTERS> However ...
+<FIGCHAPTERS> in the category of things FIG is *not* ...
+<FIGCHAPTERS> some people think "Financially sound" is in that category. .,..
+<FIGCHAPTERS> ... ???
+<[John] JDHALL> FIG is financially sound.  We can provide the services..
+<[John] JDHALL> that we are currently supplying..
+<[John] JDHALL> We may have to cut back on the quality..
+<[John] JDHALL> But FIG will never not exist and Forth Dimensions..
+<[John] JDHALL> will probably continue to be published.  We..
+<[John] JDHALL> may not be able to expand into new area without additional..
+<[John] JDHALL> funds.  However, FIG in some form will be here for awhile.  ga
+<[Gary] GARY-S> jax has a follow-up, ga jax
+<FIGCHAPTERS> " cut back on quality " ...
+<FIGCHAPTERS> and "Forth Dimensions will probably continue" ...
+<FIGCHAPTERS> doesn't sound sound.
+<[John] JDHALL> We have made Forth Dimensions into a slick and well edited 
+publication,..
+<[John] JDHALL> but its main function is to distribute technical information.  .
+<[John] JDHALL> If we can't afford it we will have to cut the quality of..
+<[John] JDHALL> the printing and if necessary to quality of the editor who..
+<[John] JDHALL> is paid.  ..
+<[John] JDHALL> We would only do this at the last resort, but the important 
+part of..
+<[John] JDHALL> FD is the distribution of contributed articles.  ga
+<[Len] NMORGENSTERN> you say, its main function is to distribute technical 
+information.
+<[Len] NMORGENSTERN> Should there not be an active growth policy of some kind?
+<[John] JDHALL> Yes, and we have tried as many way as we can, but the results..
+<[John] JDHALL> so far have been disappointing.  We are still looking for..
+<[John] JDHALL> ways and the people to implement these ideas. ga
+<[Dennis] D.RUFFER> I can reiterate on that a little...
+<[Dennis] D.RUFFER> yes, we do have growth in our plans...
+<[Dennis] D.RUFFER> but with what appears to be a shrinking industry...
+<[Dennis] D.RUFFER> we have not had much luck...
+<[Dennis] D.RUFFER> some of our activities have not helped...
+<[Dennis] D.RUFFER> but we are reviewing everything at this point...
+<[Dennis] D.RUFFER> and we are always open to new suggestions...
+<[Dennis] D.RUFFER> let us know what you think would help...
+<[Dennis] D.RUFFER> and we will try to implement it...
+<[Dennis] D.RUFFER> however, our budget is only as large as...
+<[Dennis] D.RUFFER> we have members.  The chicken and egg theory definitely...
+<[Dennis] D.RUFFER> plays an improtant role.
+<[Dennis] D.RUFFER> but we are looking as far ahead as we can see.
+<[Gary] GARY-S> I might add the bloom has gone from most computer groups - 
+you're back jax
+<FIGCHAPTERS> John, Dennis ...
+<FIGCHAPTERS> this is a subject that I think ...
+<FIGCHAPTERS> almost all of us here in this "virtual room" ...
+<FIGCHAPTERS> have mooted ...
+<FIGCHAPTERS> so in this public forum ...
+<FIGCHAPTERS> let me reitierate a cupla things ...
+<FIGCHAPTERS> FIG is starving in the midst of plenty.
+<FIGCHAPTERS> IN this respect it resembles the United States Chess Federation 
+in the mid 1970's ...
+<FIGCHAPTERS> with the smae problems ...
+<FIGCHAPTERS> and some of the same causes.
+<FIGCHAPTERS> Declining membership ...
+<FIGCHAPTERS> Collapsing magazine finances ...
+<FIGCHAPTERS> Abandonment by advertisers ...
+<FIGCHAPTERS> Self perpetuating Board of Directors. A connection here? Your 
+ideas, please.
+<[John] JDHALL> I have heard this before, Jax, but I am waiting for the method..
+<[John] JDHALL> and the people interested in following up with the 
+implementation. ..
+<[John] JDHALL> I don't want to contridict Dennis, but if there was an..
+<V.STAMPS> is here.
+<[John] JDHALL> important function that we have missed and needs to be done,..
+<[John] JDHALL> we will find the money by removing it from some other..
+<[John] JDHALL> less pressing area.  What we need are active, active people..
+<[John] JDHALL> who will take the "Bull.." and run with the idea. ga
+<[Gary] GARY-S> questions / comments ??
+<[Gary] GARY-S> ga jax
+<FIGCHAPTERS> John , we've discussed a possible program before ...
+<FIGCHAPTERS> 1) 4D has to be put on financially sound footing ...
+<FIGCHAPTERS> 2) membership and advertising has to be increased ...
+<FIGCHAPTERS> 3) FIG has to realize that its main job is to service and attract 
+the novice and has to go into the school system.
+<FIGCHAPTERS> There is a model for "FIG Perestroika" ....
+<FIGCHAPTERS> to be found in the last-reel rescue of the United States Chess 
+Federation ...
+<FIGCHAPTERS> another organization supported mainly by amateurs that had to 
+play to its audience ...
+<FIGCHAPTERS> and in doing so found financial wellbeing and salvation.
+<[Gary] GARY-S> what about Glastnost ? :-) ga jd
+<OLORIN> is here.
+<[John] JDHALL> As I have said before on 1) and 2) and even 3)...
+<[John] JDHALL> Yes, Yes, and Yes, but How, How, How and who...
+<FIGCHAPTERS> The membership might figure out who and how if they got to elect 
+a new board.
+<[John] JDHALL> Some numbers,  as of last month our membership was 2020, and 
+our disk...
+<[John] JDHALL> sales are important, just as the figForth listings...
+<[John] JDHALL> were important in the early days.  ga
+<[Dennis] D.RUFFER> yes, jack, elections have been a "problem"...
+<[Dennis] D.RUFFER> but not one we are not aware of...
+<[Dennis] D.RUFFER> this last year was a year of transition...
+<[Dennis] D.RUFFER> in which we have tried some new things...
+<[Dennis] D.RUFFER> and dropped others that we costing more than they were 
+worth...
+<[Dennis] D.RUFFER> now, we have a need to continue the small...
+<[Dennis] D.RUFFER> steps we have started, and that will happen soon..
+<[Dennis] D.RUFFER> for now, we are holding our own...
+<[Gary] GARY-S> Bob Berkey - you have the honor of the last question
+<[[Robert]] R.BERKEY> 1) The USCF had ten times the membership of FIG and 
+already had an
+<[[Robert]] R.BERKEY> election mechanism in place,
+<[[Robert]] R.BERKEY> when the guard changed.
+<[[Robert]] R.BERKEY> 2) I heard in 1986 that there would be elections in NOV.
+<[[Robert]] R.BERKEY> But that was the last I heard of them.
+<[Gary] GARY-S> I had frankly hoped for more answers than questions but maybe 
+this is....
+<[Gary] GARY-S> what it will take to stimulate converstion and input from the 
+membership..
+<[Gary] GARY-S> closing comments, Jahn
+<FIGCHAPTERS> There were supposed to be, Bob, they're just waiting to announce 
+them in JFAR when it cathces up to 1986 :-)
+<[John] JDHALL> It doesn't take a Director to get something done.  ..
+<[John] JDHALL> The directors job is to guide, however,  many people who have...
+<[John] JDHALL> had ideas and implemented the have then...
+<[John] JDHALL> become members of the board.  ..
+<[John] JDHALL> I don't want to leave any of you with the impression that..
+<[John] JDHALL> I think that FIG is in anykind of a collapsing state....
+<[John] JDHALL> It will continue, and all of you are proof that the interest...
+<[John] JDHALL> is still high.  When there are no questions left,..
+<[John] JDHALL> then I will know that it is time to close shop.   ..
+<[John] JDHALL> Thanks for listening to my ideas of where we are.  ga
+<FIGCHAPTERS> But if the directors insulate themselves from accountability, 
+from election, who guides *them*? This is the problem Eastern Europe is now
+coming to grips with.
+<[Gary] GARY-S> last shot dennis
+<[Dennis] D.RUFFER> one final comment and yes Jack, we will do elections again
+rsn
+<[Dennis] D.RUFFER> THERE ARE NO ANSWERS....
+<[Dennis] D.RUFFER> Only a lot of hard work, and good intentions
+<[Dennis] D.RUFFER> and those sure can't be taken to the bank
+<[Gary] GARY-S>  John D. - on behalf of the GEnie Forth RoundTable ....
+<[Gary] GARY-S>  'Thank you' very much for a informative conference. ....
+<[Gary] GARY-S>  I know I feel more in touch with FIG policy !
+<[Gary] GARY-S>  All may stay and chat, but this conference has officially 
+ended.
+<[Len] NMORGENSTERN> Thanks for an excellent conference, John.
+=== End of Steno notes. ===
+
+

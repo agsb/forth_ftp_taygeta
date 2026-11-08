@@ -1,0 +1,482 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 05/03/90   Time: 22:29EDT
+  
+  The question of the night was:'Are you a member of FIG ? SigForth ACM ? Is
+  the GEnie Forth RoundTable serving your needs ?' What got hotly discussed
+  was Forth's place (or lack of place) in Computer Science and FIG's place
+  (or lack of place) with respect to that. There are no answers in this
+  transcript. There is debate !!!
+
+Attendees:
+[GARY-S]
+[[Len] NMORGENSTERN]
+[DANMILLER]
+[[Kevin] APPERT]
+[[Wil] W.BADEN1]
+[[Robert] R.BERKEY]
+[[FIG Plucker] JAX]
+
+Minutes:
+<GARY-S> roll 2d6
+<NMORGENSTERN> is here.
+<GARY-S> welcome
+<DANMILLER> is here.
+<GARY-S> Dan dan the sigforth man
+<[Len] NMORGENSTERN> We are doing a major paint etc. job. My computer was 
+covered for several days!
+<[Len] NMORGENSTERN> <suffering withdrawal symptoms.
+<GARY-S> you guys been needing water - we have it to spare
+<[Len] NMORGENSTERN> Yes I heard about the floods
+<GARY-S> The Arkansas River is 8 feet above flood stage - and it's raining
+<[Len] NMORGENSTERN> I remember big floods on the Missouri when I lived
+<[Len] NMORGENSTERN> in Omaha. Never affected me, as I lived on the hills.
+<[Len] NMORGENSTERN> Hi Dan. Long time since you were on a RT!!!!
+<GARY-S> very long time
+<DANMILLER> hi. but not much any more. had to pull back and retrench. too too 
+much at work.  100 hr plus weeks.  still looking for a fourth radiologist.
+<[Len] NMORGENSTERN> <Len is glad he doesn't have to work any more>
+<DANMILLER> I did run across an add in the journal of the society of nuclear 
+medicine.
+<DANMILLER> on one of the nuclear gamma camera companies was advertising 
+"increase your computing power by 32 to the FoRTH!.  its a french outfit 
+that
+<DANMILLER> uses 15 programmers. has 1.5 megabytes of binary.  the programming 
+team is
+<DANMILLER> composed of members in the us and europe.  interesting that they 
+advertise
+<DANMILLER> using a forth operating system in the add to physicians. The 
+name of the company is SOPHA  (I think I got the spelling right.)
+<APPERT> is here.
+<[Len] NMORGENSTERN> Engineers love Forth; Computer Science types hate it!
+<GARY-S> a LOT of you medical types seem to like Forth
+<GARY-S> still in Florida, Kev ???
+<[Kevin] APPERT> nope, back in sillycone valley
+<DANMILLER> They use dbase 4 apparently under forth or called ffrom forth with 
+the code for the calls
+<DANMILLER> embedded in the forth source as special comments!.   ...
+<DANMILLER> Yea but this wasn't a programmers journal.  This was for nuclear 
+medicine docs.
+<[Kevin] APPERT> this isn't the first time forth has been debased
+<DANMILLER> Like seeing an ad for forth in the Journal of forensics , Len.
+<GARY-S> Respond to the question(s) please gents (3 y/n/maybe is all it takes)
+<DANMILLER> member of sigforth. like the bbs. what was the other question?
+<GARY-S> The question on the door is....
+<GARY-S> are you a member of FIG ? sigForth ACM ? Is the GEnie Forth RT serving 
+your needs ?
+<DANMILLER> yes yes yes. ga
+<[Len] NMORGENSTERN> SigForth: Yes, Fig: Yes, Needs: Yes.
+<GARY-S> Dan - this is an open nigfht , we don"t get formal. Just jump in 
+anytime
+<[Kevin] APPERT> yes I am a member of the Forth Interest Group, and SigForth 
+ACM, not certain about needs.
+<[Wil] W.BADEN1> is here.
+<DANMILLER> hi will. liked your note a few months ago about comparison with c. 
+share your frustrations.
+<[Kevin] APPERT> GEnie/Forth RT is like forth itself.  If you don't like what 
+it's doing for you, change it so it does the right thing.  Unfortunately
+ you do not have the level of control over GEnie you have over forth
+<[Kevin] APPERT> you have the responsibility   without the authority
+<GARY-S>  sure you do - a note to the SysOps usually gets a prompt response
+<GARY-S>  (I hope that is the impression)
+<[Kevin] APPERT> there are certain things beyound even thier god-like
+powers, Gary
+<GARY-S> right
+<DANMILLER> So these Sopha guys are multinational , using forth for a major 
+application. had anyone heard of them before? ga
+<[Len] NMORGENSTERN> No
+<[Wil] W.BADEN1> No, who's Sopha?
+<JAX> is here.
+<[Len] NMORGENSTERN> In Forth, yo do not write programs. Instead, you desing 
+an instruction set which
+<[Len] NMORGENSTERN> becomes the solution to your problem or your application.
+<[Len] NMORGENSTERN> C. H. Ting.
+<[Kevin] APPERT> which you hope becomes the solution ...    .
+<[Len] NMORGENSTERN> One can only try, Kevin
+<DANMILLER> a nuclear medicine camera company. has a team of 15 forth 
+programmers both here and in europe. previously used f83 extended for them by 
+mike perry and are switchin to a forth by the guy who works for sun.    .ga
+<[FIG Plucker] JAX> You mean Mitch Bradley, Doc.
+<DANMILLER> yep.
+<[Kevin] APPERT> what about Ting?  I think I missed something
+<[FIG Plucker] JAX> All Hail Ting.
+<[FIG Plucker] JAX> Most prolific Forth writer in the world.
+<[Len] NMORGENSTERN> (Jax, his name is not A H TIng, It is C H Ting
+<[Len] NMORGENSTERN> I was merely quoting something from him.
+<DANMILLER> all say FFT in parralel in his honor.
+<[FIG Plucker] JAX> :-)
+<DANMILLER> jax whats lates tween you and fig.?
+<[FIG Plucker] JAX> Ha!
+<[FIG Plucker] JAX>  :-)
+<DANMILLER> answer garys questions.
+<[Kevin] APPERT> return of the revenge of the son of more about forth engines N,
+ where N is some large integer
+<[FIG Plucker] JAX> I told some terrible lies about FIG and they turned out to 
+be true!
+<DANMILLER> shame jax?
+<[Kevin] APPERT> which lies where they, Jax?
+<[FIG Plucker] JAX> me was BAD boy.
+<[FIG Plucker] JAX> FIG is not very viable as currently constituted.
+<[FIG Plucker] JAX> Not at least "viable" in my meaning of the word.
+<DANMILLER> so same for forth but we have fun anyway.
+<[FIG Plucker] JAX> Their "plan" is to shrink back like a collapsing white 
+dwarf star ...
+<[FIG Plucker] JAX> to their home base of Silicon Valley.
+<[FIG Plucker] JAX> No plans for growth.
+<DANMILLER> did intel just move?
+<[FIG Plucker] JAX> They have largely given up.
+<[Kevin] APPERT> : DEBATE \ resolved : Forth should not be promoted   ;
+<[FIG Plucker] JAX> Woof, Kevin.
+<[FIG Plucker] JAX> I am FORCED to promote Forth every day.
+<[FIG Plucker] JAX> Because I am paid for programming in Forth.
+<[Kevin] APPERT> Pro:    1)  promoting forth will cause incomp. twits to try 
+coding in what they think is Forth
+<[FIG Plucker] JAX> Aren't YOU promoting Forth.
+<[Kevin] APPERT> 2) said twits will write twit-code
+<[Kevin] APPERT> 3) they will be fired and forth will be banned from that shop,
+<[Kevin] APPERT> 4) decreasing the market for forth-based goods and forth 
+programmers.
+<[Wil] W.BADEN1> Well spoken, Kevin.
+<[FIG Plucker] JAX> I mean, they pay me to give good work to the customers ...
+<[FIG Plucker] JAX> and they WANT the customers to be HAPPY ...
+<[FIG Plucker] JAX> Ain't I supposed to say Forth is best?
+<[FIG Plucker] JAX> So why won't FIG what I pays $30 odd bucks a year  ...
+<[FIG Plucker] JAX> promote my trade better?!?!?!
+<DANMILLER> Can somebody here send a copy of zimmer's fpc to the"The Public 
+Software Library, PO BOX 35705, Houston,TX 77235-5705 please.
+<[Len] NMORGENSTERN> I will try to do that, Dan
+<[FIG Plucker] JAX> Wil, Kevin talks true feelings but practical nonsense.
+<[Kevin] APPERT> anybody want CON?  or should I argue with myself
+<[FIG Plucker] JAX> You take FORTH in and you *M*A*K*E* it work.
+<[FIG Plucker] JAX> No excuses. Forth is big enough for any job.
+<[Len] NMORGENSTERN> Kevin: You say that promoting forth will cause
+<[Len] NMORGENSTERN> incomp. twits to try coding in what they think is Forth:
+<DANMILLER> This is nelson fords's public domain software distribution center. 
+ He lists a few forths.  its a good service.  thanks Len.
+<[Len] NMORGENSTERN> But isn't that true of most computer languages; Most who
+<[Len] NMORGENSTERN> programs in it are semi-compitent at best!
+<[Kevin] APPERT> just debate, Jax.  there is always another side.  WHY is it 
+nonsense?
+<[FIG Plucker] JAX> It's nonsense because that isn't what happens in the world 
+where it counts.
+<[FIG Plucker] JAX> In realtime control ...
+<[FIG Plucker] JAX> there is enough forth ...
+<[FIG Plucker] JAX> so that when people do Forth ...
+<[FIG Plucker] JAX> it isn't "first night blues" with them ...
+<[FIG Plucker] JAX> There is a steady trickle of NEW JOBS in Forth in control 
+programming ...
+<DANMILLER> Hows your harris board coming jax?
+<[FIG Plucker] JAX> ( CREATE DOES> doesn't, Dan!!!! :-( )
+<[Kevin] APPERT> I have seen it happen in the world, Jax.  QED  (by a hunchback 
+it has been shown)
+<GARY-S> Kevin - you've done a good bit of Forth programming in other areas...
+<[FIG Plucker] JAX> Forth needs a more upbeat approach.
+<DANMILLER> chuckle. really?
+<[FIG Plucker] JAX> You bet, Dan.
+<GARY-S> Is jax point (s) still valid ?
+<[FIG Plucker] JAX> #($&(*#&$(*#
+<[FIG Plucker] JAX> ( I'll figger it out).
+<[FIG Plucker] JAX> ( that all to Dr. Dan)
+<[FIG Plucker] JAX> Kevin, so you met some BOOBS.
+<[FIG Plucker] JAX> I meet plenty of BOOBS in this business for sure.
+<[FIG Plucker] JAX> But there is still Forth, and it is sufficient to the task 
+at hand.
+<[Kevin] APPERT> I don't think his point is valid, even in Real-Time-land
+<[Len] NMORGENSTERN>  Everybody is a meathead but you and me, Jax
+<[FIG Plucker] JAX> I get paid sometimes to FIX what the boobs break.
+<[Len] NMORGENSTERN> And I am not so sure about you.
+<[FIG Plucker] JAX> So, they didn't ruin it for everyone else, Kevin ...
+<DANMILLER> Will say
+<[FIG Plucker] JAX> Forth is growing tremendously in Realtime ...
+<DANMILLER> calm down jax.         reaallly?
+<[FIG Plucker] JAX> Look, if I work with five other Forth programmers and we 
+sell five new semisolid Forth projects a year ...
+<[FIG Plucker] JAX> What's YOUR problem? :-)
+<DANMILLER> How many kits did harris give away?
+<[Kevin] APPERT> the folks that have closed doors in my workplace by being BAD 
+pseudo Forth programmers
+<[FIG Plucker] JAX> Dunno!
+<[FIG Plucker] JAX> Well, Kev, work somewhere they like Forth.
+<[FIG Plucker] JAX> And get on FIG's case to learn how to get publicity for 
+FORTH!!!
+<[FIG Plucker] JAX> A lesson they may be about to learn ... :-)
+<[Kevin] APPERT> I do work where they like Forth.  Selling it is hard in the 
+aftermath of one of these disasters, though, Jax.  Wouldn't you agree?
+<GARY-S> Does anyone ever contact Ken Butterfield anymore ?
+<[Len] NMORGENSTERN> He shows up occasionally on the RTC's
+<[FIG Plucker] JAX> No, I wouldn't Kevin.
+<[FIG Plucker] JAX> When I walked into one job ...
+<[FIG Plucker] JAX> they had just had a disappointment, some would call it a 
+disaster ...
+<[Len] NMORGENSTERN> With Forth, they tend to look on your successes as being 
+due
+<[Len] NMORGENSTERN> to your programming skill, and your disasters as being due 
+to Forth.
+<[Len] NMORGENSTERN> Not true of most other languages.
+<[FIG Plucker] JAX> with a Forth project ...
+<[FIG Plucker] JAX> I just met the guys again yesterday, two years after the 
+debacle ...
+<[FIG Plucker] JAX> They had tossed their Forth system and bought ...
+<[FIG Plucker] JAX> ANOTHER FORTH SYSTEM ...
+<[FIG Plucker] JAX> and ported the debacle and made the project work!!!
+<[Kevin] APPERT> your customers don't sometimes insist on C under those 
+circumstances?
+<[FIG Plucker] JAX> They used H/S Forth ....
+<[FIG Plucker] JAX> for its metacompiler ...
+<[FIG Plucker] JAX> This is a LARGE corporation ....
+<[FIG Plucker] JAX> and the head programmer's ...
+<DANMILLER> originally or subsequntly. ie cause or recovery of disaaster with 
+hsforth?
+<[FIG Plucker] JAX> predilicition is to BASIC ...
+<[FIG Plucker] JAX> ( HS FORTH saved the day.
+<[FIG Plucker] JAX>  ..)
+<[FIG Plucker] JAX> Like I said ..
+<[FIG Plucker] JAX> this is a BASIC man ...
+<DANMILLER> YEA.  nothing sells like commercial success.
+<[FIG Plucker] JAX> but he saw that FORTH was the ONLY way to finish his 
+project ....
+<[Len] NMORGENSTERN> I have heard that there have been many disasters
+<GARY-S> Is Mahlon still a spokesman for HS ?
+<[FIG Plucker] JAX> so he did it. So the debacle lost the dabaclers their jobs 
+but the debaclee finished the project on their own in Forth.
+<[Len] NMORGENSTERN> saved by Forth.
+<[FIG Plucker] JAX> So respectfully jaxdisagreez, kev.
+<[Len] NMORGENSTERN> I have heard that there have been many disasters rescued 
+by Forth
+<[Len] NMORGENSTERN> Rabal airport for one
+<[Kevin] APPERT> ok, but you can't assume everybody...
+<[Kevin] APPERT> makes their decisions on the basis of a ...
+<GARY-S> Rabal Airport ???!!??
+<DANMILLER> I had heard rabal was a disaster.for forth.
+<R.BERKEY> is here.
+<[Kevin] APPERT> sane, rational, ordered evaluation of all the facts, Jax.
+<GARY-S> welcome, robert
+<[Len] NMORGENSTERN> Bob, do you know the story about the Rabal Airport program.
+<[FIG Plucker] JAX> Kevin, what I CAN assume is that if a prospect comes to me 
+with a project that can be coded in Forth, I can show him/her why it sh
+ould indeed be so, and they BUY.
+<[Robert] R.BERKEY> No
+<[Len] NMORGENSTERN> I had heard that it was a mess, until reprogrammed in 
+Forth.
+<[Robert] R.BERKEY> Oh, Forth Incs?
+<[Len] NMORGENSTERN> Later the managers decided to reprogram it is something 
+else
+<[Len] NMORGENSTERN> & it took them a long time.
+<[Kevin] APPERT> you are a better salesman than I, Jax.  (and better than many 
+of the folk participating in certain aftermaths of other forth debacles)
+<[FIG Plucker] JAX> Probably. That's why I'm so disappointed at FIG's role in 
+the community.
+<[FIG Plucker] JAX> I have said 100 times here at least ...
+<[FIG Plucker] JAX> FIG couldn't sell shaved ice in Hades.
+<GARY-S> does have a familiar ring, yes.
+<[FIG Plucker] JAX> ( think I said "Hell" the last time, Gars)
+<DANMILLER> Why should fig. its a service organization.  puts out a small 
+newsletter.  what you expect and why of others.
+<[Kevin] APPERT> perhaps not.  can we avoid the necessity of pusshing the 
+bolder uphill. though, Jax
+<[FIG Plucker] JAX> If you want Forth, you shoulder the boulder.
+<DANMILLER> Forth people with forth projects with commercial success will sell 
+forth and if they cant maybe there a valid reasons.?
+<[FIG Plucker] JAX> I can program in Forth. I can program in C, too, but I'd 
+rather not.
+<[FIG Plucker] JAX> Dan ..
+<[FIG Plucker] JAX> There are valid reasons not to use Forth.
+<[FIG Plucker] JAX> IN certain projects ...
+<[Kevin] APPERT>  I maintain the number of adds in the newspaper...
+<[FIG Plucker] JAX> it isn't the best fit.
+<[Kevin] APPERT> for Forth programmers is decreased in the long run...
+<[FIG Plucker] JAX> But it is the premier, the absoute best realtime language 
+if you use a high-level language in preference to assembler.
+<[Kevin] APPERT> bye a population of incomp. Forth programmers...
+<[FIG Plucker] JAX> There's just no argument among those who are working in the 
+field ...
+<[FIG Plucker] JAX> They say ...
+<[FIG Plucker] JAX> "If you can do it in ASM, it's best ...
+<[Kevin] APPERT> which you propose to increase by incautious promotion of the 
+language.
+<[FIG Plucker] JAX> um ... Kevin ...
+<[FIG Plucker] JAX> HOW CAUTIOUS DOES FIG HAVE TO BE WITH ONE FOOT IN GRAVE???
+<[FIG Plucker] JAX> ( ahem ... where was I?)
+<[FIG Plucker] JAX> Anyway ...
+<[Robert] R.BERKEY> Criminy, FIGs always had one foot in the grave.
+<[FIG Plucker] JAX> ASM is best ..
+<[FIG Plucker] JAX> in realtime, so they say ...
+<[FIG Plucker] JAX> but no one ....
+<GARY-S> Kevin - I have to disagree here. Conservative, yes. Dead, not a good 
+plan.
+<[FIG Plucker] JAX> writes entire programs in ASM anymore, it's too slow and 
+hard.
+<[FIG Plucker] JAX> Gars, my definition of "dead" is "FIG relapsing into 
+insignificance outside Silion Valley"
+<GARY-S> Declining membership in a growing field bespeaks of dying.
+<[FIG Plucker] JAX> ok, just so we understand terms.
+<[FIG Plucker] JAX> Anyway, FORTH is the best realtime HLL.
+<DANMILLER> So is Vesta going to try to sell Harris boards and make a frforth 
+chip a commmercial success in real projects and do more for forth than Fig
+selling to fig?
+<[FIG Plucker] JAX> C is used because C is popular on PC's and Minis.
+<[FIG Plucker] JAX> I've even seen some PL/M.
+<GARY-S> The portion of PL/M/1 used by most programmers IS a LOT like BASIC
+<[FIG Plucker] JAX> Lotsa BASIC ..
+<[FIG Plucker] JAX> but even the BASIC programmers agree ...
+<[FIG Plucker] JAX> that Forth is the best for Realtime. THeir reasons for 
+*not* using Forth usually have to do with personal skilll level, never beca
+use they believe BASIC is better.
+<[FIG Plucker] JAX> Forth is better for realtime for a scad of reasons.
+<[Len] NMORGENSTERN> No Jax, C BASIC Fortran, etc. are used because they are
+<[Len] NMORGENSTERN> will known and managers do not worry about getting another
+<[Len] NMORGENSTERN> programmer if the one they have leaves.
+<[FIG Plucker] JAX> 1) Forth's internal structure is easily perceived in an 
+ASCII HEX dump.
+<[FIG Plucker] JAX> ( right len, but these are not "C IS BETTER" reasons, they 
+are political. I haven't met ANY C programmers in realtime that believe
+ that C is BETTER for realtime, just more practical in a given business 
+situation)
+<[FIG Plucker] JAX> 2) Forth allows interpretive poking ports, interpretive 
+user interfaces, no having to rewrite parser.
+<[Len] NMORGENSTERN> You are right that the reason I have given has no
+<[Len] NMORGENSTERN> relationship to the superiority or otherwise of Forth.
+<[FIG Plucker] JAX> 3) Forth multitasks with indescribable ease compared to any 
+C-base op sys I have seen.
+<[FIG Plucker] JAX> 4) Forth is lightweight and can reside as a kernel on an 
+embedded project with minimal ROM usage.
+<[FIG Plucker] JAX> 5) Forth has a simple view of I/O and files and is easier 
+to provide an environment for at the development station .
+<DANMILLER> Yes yes yes all that is true,,  so why don't folk make money with 
+it.
+<[FIG Plucker] JAX> I DO!
+<[FIG Plucker] JAX> Why don't YOU make money with it????
+<DANMILLER> real time forth shops aught to clean up the control business.
+<[FIG Plucker] JAX> We WILL!!!!!!!!!!!!!!!!!!!!!!
+<[Kevin] APPERT> as near as I can understand what you say, Jax, you assert 1) 
+nobody ever throws Forth overboard when its perceived as a failure and 
+2) they can be talked out of it when they do
+<[FIG Plucker] JAX> Do you know what we LACK???????????
+<DANMILLER> clean up in the control business.
+<GARY-S> You do a lot of precedence multi-tasking in Forth ?
+<[FIG Plucker] JAX> I could tell you some stories, gars ... :-)
+<GARY-S> I'd rather see the code
+<DANMILLER> i bite. what?
+<[FIG Plucker] JAX> WE LACK FORTH-ORIENTED MANAGERS WHO CAN MANAGE FORTH 
+PROJECTS.
+<[FIG Plucker] JAX> There are enough damn Forth programmers, we could have an 
+open season on them to thin out the herd :-)
+<[Len] NMORGENSTERN> Dan, my point is that the unpopularity of Forth has little 
+to
+<[Len] NMORGENSTERN> do with how good or bad it is. Therefore, trying to 
+convince managers
+<[Len] NMORGENSTERN> of its superiority is not going to do any good. You can 
+convince the
+<[Len] NMORGENSTERN> Enginerring staff, but it's more difficult to convenc
+<[Len] NMORGENSTERN>
+<[FIG Plucker] JAX> You give me a competent programmer ....
+<[FIG Plucker] JAX> who is willing to learn ...
+<[FIG Plucker] JAX> three months later ...
+<[FIG Plucker] JAX> I'll give you a comptent Forth programmer.
+<[Kevin] APPERT> 'willing to learn' are few and far between
+<DANMILLER> no lines at the library.
+<GARY-S> I like that line, Dan - original ?
+<[FIG Plucker] JAX> no books at library.
+<[Kevin] APPERT> what was crammed down their throats in school is usually the 
+end of that
+<[FIG Plucker] JAX> Forth books are disappearing .
+<[Kevin] APPERT> or Thoats, if they are martians
+<[FIG Plucker] JAX> FIG won't even sell Phil Koopman's book.
+<[FIG Plucker] JAX> Forth is growing, thank heavens, despite the organized 
+Forth community.
+<[Kevin] APPERT> publisher won't give them a discount
+<DANMILLER> no. credit to herb fred. 100k ultra marathon physician.
+<GARY-S> I like it - and will use it :-)
+<DANMILLER> other line is what do you mean you didn't have time to do it. did 
+<DANMILLER> you Eat today!...
+<[FIG Plucker] JAX> I sell *scores* of people boards with Forth on board each 
+year, people who have never used Forth, or used it much, before.
+<[Kevin] APPERT> do you send out a FIG application form with each board?  would 
+you?
+<[FIG Plucker] JAX> Sure, nobody ever asked. SIGForth did, though. We send.
+<[Len] NMORGENSTERN> That's a great idea: A little blurb about how good Forth is
+<[Kevin] APPERT> may I ask?
+<[Len] NMORGENSTERN> with each Board!
+<[FIG Plucker] JAX> Look, they KNOW how good Forth is when they get a VESTA SBC.
+<[FIG Plucker] JAX> They don't need no *steenking promo literature* :-)
+<[Kevin] APPERT> the board is the blurb for Forth, itself.  promote the 
+organisation
+<[Len] NMORGENSTERN> It never hurts to tell them again
+<[Len] NMORGENSTERN> and again and again and again........
+<DANMILLER> no not the intel board. they know when they buy your expertise.
+<[FIG Plucker] JAX> What's to promote? "Please join our little professional 
+society that is quietly going to sleep". Sign.
+<[Len] NMORGENSTERN> Advertising pays!
+<[FIG Plucker] JAX> sigh.
+<[Len] NMORGENSTERN> Jax, that's terrible!
+<[Len] NMORGENSTERN> A hell of a thing to say
+<[FIG Plucker] JAX> It's terrible all right, all the more so since true.
+<GARY-S> That is so obvious - I think that should be on the agenda - FIG 
+pamphlets to Forth providers for inclusion with the product
+<GARY-S> I used to do it, myself and never thought to recommend the idea after 
+I closed down HWS
+<[Len] NMORGENSTERN> It's dying, and I want to kill it dead
+<[Len] NMORGENSTERN> is what you are saying!
+<DANMILLER> is not.
+<[FIG Plucker] JAX> No, it's sleepy and I want to wake it up.
+<[Len] NMORGENSTERN> By sticking a sword in its chest, I suppose.
+<[FIG Plucker] JAX> No, by sticking a pointy boot toe up its butt.
+<DANMILLER> Who is going to sell vp planner now.  I heard paperback software 
+went belly up . did it?
+<GARY-S> really ?
+<[Len] NMORGENSTERN> Look back at what you said, and you will see why I am 
+angry.
+<[FIG Plucker] JAX> I said our professional organization is quietly going to 
+sleep.
+<[FIG Plucker] JAX> I said I want it to wake up.
+<[FIG Plucker] JAX> I said that to get my way I wanted to kick it in the butt.
+<[Len] NMORGENSTERN> No you said that you won't send out FIG invitations\
+<[Kevin] APPERT> before quitting time, let me recant to the extent that I agree 
+that Forth should be promoted, perhaps with some thought as to how to
+produce good forth programmers, and not just sheer numbers (such as unamed 
+other prog lang. with initials C
+<[Len] NMORGENSTERN> becuse FIG is moribund.
+<[FIG Plucker] JAX> No, I was NEVER ASKED. I just was emphasizing the 
+ludicrous nature of the enclosure.
+<DANMILLER> It takes a lot of volunteer work to run an organization.  Sigforth 
+folk worked hard on setting up two conferences.  Attendence year one was 23.
+<[Len] NMORGENSTERN> That's not kicking it anyway, it's starving it
+<GARY-S> Good suggestion Kev
+<[FIG Plucker] JAX> Len, I'm not PUNISHING the Forth Interest Group.
+<DANMILLER> Year two after much work was 26.      There aren't that many folk 
+out there to tap for resources jax.
+<[Len] NMORGENSTERN> It sure sounds as if you are
+<[FIG Plucker] JAX> They just can't get it together even to MEET and to HAND 
+PEOPLE the LITERATURE>
+<DANMILLER> figt has same problem.
+<[FIG Plucker] JAX> It's totally disorganized.
+<[FIG Plucker] JAX> It's aimless.
+<[FIG Plucker] JAX> It's bored and wants to go to sleep.
+<DANMILLER> is not.  just much to do . few to do it.
+<[FIG Plucker] JAX> I want FIG to wake up and take the leadership in the 
+popularization of Forth.
+<GARY-S> May 17 - Tom Almy of Terktronix on interfaces for non-forth users
+<GARY-S> TOM ALMY - May 17 - HERE !!!
+<[Len] NMORGENSTERN> Will make it if I can, Gary
+<[Kevin] APPERT> run for deity, Jax
+<[FIG Plucker] JAX> I'd rather run the bath water, Kev.
+<GARY-S> last call folk
+<[Kevin] APPERT> ;)
+<[FIG Plucker] JAX> But I'll run for the board if they ever hold election.
+<GARY-S> tick...
+<DANMILLER> jax call george need a vp for sigforth. <dan> bye
+<GARY-S> tick...
+<GARY-S> tick...
+<[Kevin] APPERT> I thought elections were scheduled?
+<[FIG Plucker] JAX> gnite.
+<[FIG Plucker] JAX> no, kev.
+<[FIG Plucker] JAX> not yet.
+<[Len] NMORGENSTERN> Bye all
+<[FIG Plucker] JAX> sigh.
+<[Len] NMORGENSTERN> has left.
+=== End of Steno notes. ===
+
+

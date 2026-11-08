@@ -1,0 +1,117 @@
+
+ Minutes of our 6 Oct 1988 RT Conference with special guest, Larry Forsley
+               
+  Larry's topic was 'Forth and the Future'
+Attendees:
+[[Gary] GARY-S]
+[[larry] PRESS9]
+[[Dave] DHWEINSTEIN]
+[D.MILEY]
+[[len] NMORGENSTERN]
+[[Rich] R.FRANZEN]       
+[SKY-KIMBALL]
+[[John] J.SCHOFFXX]
+[[JAX] VESTA]
+Minutes:
+<PRESS9> is here.
+<[Gary] GARY-S> Welcome Larry
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> Dave, how's Austin ?
+<[larry] PRESS9> hello all
+<[larry] PRESS9> ga
+<[Gary] GARY-S> any last questions, larry ?
+<[Dave] DHWEINSTEIN> Verah nice. Pleasant, cool, nice weather. Had a class meet 
+in a cafe today instad of a building. Have an enormous amount of quant
+um mech to do...
+<[Dave] DHWEINSTEIN> Larry...do you have any idea why UT Austin has not receive 
+its issues of JFAR recently?
+<[larry] PRESS9> I liked Mitch's RT
+<[larry] PRESS9> ga
+<[larry] PRESS9> !!
+<[Gary] GARY-S> we're free-wheeling right now, larry ...
+<[Gary] GARY-S> what would you like to know ?
+<[larry] PRESS9> Dave, did they or didn't they
+<[larry] PRESS9> ...reveive it?
+<[Dave] DHWEINSTEIN> They haven't.
+<[larry] PRESS9> Through what issue?
+<[Dave] DHWEINSTEIN> Or not recently. The last one they have has the 1987 
+Rochester Conference abstracts and reports.
+<[larry] PRESS9> That's the last one.  We're about to go to press...
+<[larry] PRESS9> with V 2...
+<[larry] PRESS9> the "virtues" of electronic publishing...
+<[Dave] DHWEINSTEIN> Oh. Ok. I need my Forth fix.
+<[larry] PRESS9> are slowing us down!...
+<[Dave] DHWEINSTEIN> I did just find a copy of Object Oriented Forth though. 
+It's brilliant.
+<[larry] PRESS9> 88 Conf proc is separate from JFAR this year.
+<[larry] PRESS9> It has problems.
+<[larry] PRESS9> See my technical article correcting them...
+<[Dave] DHWEINSTEIN> Will you be at the ACM SigFORTH conference here in Austin?
+<[larry] PRESS9> in in JFAR
+<[Dave] DHWEINSTEIN> Which issue. The upcoming one?
+<[larry] PRESS9> I don't know yet.  Maybe I'lll be invited down?
+<[larry] PRESS9> Yes V II
+<[Dave] DHWEINSTEIN> I'll look forward to it.
+<[larry] PRESS9> greate.
+<[larry] PRESS9> A funny story about Pountain's work...
+<[Dave] DHWEINSTEIN> We need papers for the ACM conf. The call for papers 
+should be out real soon now...
+<[Gary] GARY-S> Just Dave here right now Larry - all right if we wait a few 
+before starting ?
+<[larry] PRESS9> In trying to make it transportable he confused...
+<[larry] PRESS9> sure
+<[larry] PRESS9> vocabulary linking structure with the vocabulary words...
+<[larry] PRESS9> He wrongly chose linking structure.  I discovered this when I
+<[larry] PRESS9> taught with the book 15 months ago...  Solution.
+<[larry] PRESS9> rewrite his object words and in the process use vocabulary in 
+the...
+<[larry] PRESS9> defining portion rather than create.  this causes the entire 
+vocabulary
+<[larry] PRESS9> mechanism to remain hidden, and transportable.
+<[larry] PRESS9> ga
+<[Dave] DHWEINSTEIN> What we need are a standard way of using the Forth 
+compiler subsections, name fields, cfas, and links...
+<[larry] PRESS9> True.  I think that this winter, time permitting, I will look 
+again...
+<[Dave] DHWEINSTEIN> How to manipulate the dictionary structures in an 
+implementation independent manner
+<[larry] PRESS9> at what Dick did and what I wrote in 1981.
+<[larry] PRESS9> Implementation independence is crucial for teaching and usage.
+<[Dave] DHWEINSTEIN> Yes.
+<[Dave] DHWEINSTEIN> Absolutely
+<[Dave] DHWEINSTEIN> So many of the more elegant uses of Forth involve 
+rewriting some or all of the ZForth low levels...and we need a standard way to
+manipulate things, look up words, create things, modify cfas, hide words, etc
+<[larry] PRESS9> Dave, how's the quantum fluctuation.
+<[larry] PRESS9> I have proposed a project called common Forth, modeled on 
+common...
+<[larry] PRESS9> LISP.  It would begin with the ANSI standard and would...
+<D.MILEY> is here.
+<[Dave] DHWEINSTEIN> You mean the course? Eh. Not hard. Just tedious. And the 
+tests have 2 problems more on them than time permits. All we're doing no
+w is Hueckel theory.
+<[larry] PRESS9> give us what I think you're looking for.
+<[Dave] DHWEINSTEIN> Oh. You were talking about something else. (grin)
+<[Dave] DHWEINSTEIN> Common Forth. I like the idea.
+<[Dave] DHWEINSTEIN> Needs to be fairly large.
+<[larry] PRESS9> an uncommon idea for the uncommon wo(man)
+<[Dave] DHWEINSTEIN> That is...strings, floats, etc
+<[larry] PRESS9> or, the capability of having them.
+<[Dave] DHWEINSTEIN> And lots of documentation. My pet peeve is a Forth which 
+doesn't give me the data structures, the innards, the *source*
+<[larry] PRESS9> one must have guts.
+<[larry] PRESS9> That may be the downfall (and the saving grace)...
+<[larry] PRESS9> of UNIX.
+<[Gary] GARY-S> well - we better start and let the stragglers fill the gap - ok 
+Larry
+<[Dave] DHWEINSTEIN> Unix is my cash flow.
+<[larry] PRESS9> But the hackers always are superceded, or
+<[larry] PRESS9> at least outnumbered.
+<[larry] PRESS9> right Gary.
+<[Gary] GARY-S> no more interweaving - this is formal
+<[Gary] GARY-S> do you know how to request permission D.M.?
+<[Dave] DHWEINSTEIN> (Hates formal anything. I live in jeans and tt-shirts)
+<[Gary] GARY-S> ga d,m
+<D.MILEY> ok, I'm just watching
+<[Gary] GARY-S> If you want to speak type !! , I will keep a list and tell you..
+

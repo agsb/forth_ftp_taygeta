@@ -1,0 +1,213 @@
+
+
+
+ Minutes of a special GEnie Forth RoundTable Conference with Dr. Alan
+ Furman, independent software and electronics consultant. Alan presented
+ an update on sister organization, SigForth ACM.
+
+ Entire contents of this transcript copyright (c)
+ 1990 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 11/15/90   Time: 22:23EST
+
+Attendees:
+[[Dennis] D.RUFFER]
+[[Len] NMORGENSTERN]
+[[Alan F.] FIGGUEST] <- special guest, Dr. Alan T. Furman
+[[Gary] GARY-S]
+[[Fred] F.TEMPLE]
+[[john w] J.WAVRIK1]
+[[Wil] W.BADEN1]
+[[Dave] OLORIN]
+
+Minutes:
+<[Gary] GARY-S> Alan - any last questions ?
+<[Gary] GARY-S> SHOWTIME in the FIGGY ROOM
+
+<[Gary] GARY-S>    The GEnie Forth RoundTable is very pleased to welcome this ..
+<[Gary] GARY-S>  evening's special guest, Alan Furman, a software and 
+                 electronics ..
+<[Gary] GARY-S>  consultant based in Sunnyvale, CA. He received the BSEE ...
+<[Gary] GARY-S>  degree from Drexel University and the MS and PhD degrees ...
+<[Gary] GARY-S>  in electrical engineering from Carnegie-Mellon University. ..
+<[Gary] GARY-S>
+<[Gary] GARY-S>    Alan has worked in circuit design and image processing ...
+<[Gary] GARY-S>  research. His current areas of technical focus are motion ...
+<[Gary] GARY-S>  control, manufacturing automation, and machine vision. ...
+<[Gary] GARY-S>  He has better uses for his time than dealing with 
+                 nonextensible ...
+<[Gary] GARY-S>  programming languages and segmented address spaces. ...
+<[Gary] GARY-S>  Tonight Alan will bring us up to date on activities within ...
+<[Gary] GARY-S>  SigForth ACM and projections regarding that organization's ...
+<[Gary] GARY-S>  future. As a principle of this group's genesis Dr. Furman is ..
+<[Gary] GARY-S>  more than qualified. Please welcome tonight's guest, Alan 
+                 Furman.
+<[Gary] GARY-S>   .. .. .. .. .. ga Alan
+<[Alan F.] FIGGUEST> I should begin by acknowledging the tremendous 
+                     contribution...
+<[Alan F.] FIGGUEST> of George Shaw, who has been the driving force in SIGforth 
+<[Alan F.] FIGGUEST> from the beginning.  My main role was as a crusader, in 
+                     late 1988,
+<[Alan F.] FIGGUEST> for some kind of organization that would specialize in
+<[Alan F.] FIGGUEST> professional issues and the commercialization of Forth.
+<[Alan F.] FIGGUEST> FIG's constituency is a mixture of professionals and
+<[Alan F.] FIGGUEST> hobbyists.  And many of those professionals didn't care
+<[Alan F.] FIGGUEST> who admired Forth; they were in a position of having
+<[Alan F.] FIGGUEST> discretion over programming language.  Whenever you have
+<[Alan F.] FIGGUEST> a group of people together, you have to stick to things
+<[Alan F.] FIGGUEST> that they are all interested in at the  same time, which
+<[Alan F.] FIGGUEST> in FIG's case is Forth technology and sharing of ideas.
+<[Alan F.] FIGGUEST> ...
+<[Alan F.] FIGGUEST> So I wrote a sort of manifesto in which I proposed a group
+<[Alan F.] FIGGUEST> that would deal primarily with "professional" issues (so as
+<[Alan F.] FIGGUEST> to complement FIG rather than compete)...
+<[Alan F.] FIGGUEST> A few of us in the Silicon Valley chapter got together and
+<[Alan F.] FIGGUEST> started to think about how to create such an organization..
+<[Alan F.] FIGGUEST> but after a couple months, someone suggested reviving an 
+<[Alan F.] FIGGUEST> old suggestion of starting a Forth SIG in ACM.  This was 
+<[Alan F.] FIGGUEST> not exactly the same idea, but it was close enough, and
+<[Alan F.] FIGGUEST> the thought of ACM's stature rubbing off on Forth was
+<[Alan F.] FIGGUEST> great.  George Shaw really pursued the idea: he contacted
+<[Alan F.] FIGGUEST> ACM and learned that they were surprisingly receptive.  He
+<[Alan F.] FIGGUEST> jumped through the appropriate hoops and SIGForth was born.
+<[Alan F.] FIGGUEST> ...
+<[Alan F.] FIGGUEST> George has been the Char of SIGForth so far.  It has been a
+<[Alan F.] FIGGUEST> lot of work for a couple of reasons.
+<[Alan F.] FIGGUEST> ...
+<[Alan F.] FIGGUEST> I will shorten this...
+<[Alan F.] FIGGUEST> The first newsletter came out in April 89.  There was a 
+                     lot of
+<[Alan F.] FIGGUEST> delay because we had to switch both editors and 
+                     typesetters.
+<[Alan F.] FIGGUEST> The newsletters are just catching up; one came out in June,
+                     another
+<[Alan F.] FIGGUEST> is now in press, and the next is expected out in January.
+<[Alan F.] FIGGUEST> The "quarterly" newsletter will then be caught up...
+<[Alan F.] FIGGUEST> The first SIGForth conference was organized on very short
+<[Alan F.] FIGGUEST> notice.  Attandance has not been as high as hoped; next 
+<[Alan F.] FIGGUEST> year's is being held along with other ACM conferences, 
+<[Alan F.] FIGGUEST> with the hope of attracting people...
+<[Alan F.] FIGGUEST> The various projects (education, success stories, etc.) 
+<[Alan F.] FIGGUEST> have been very slow.  It is easy to be enthused at first,
+<[Alan F.] FIGGUEST> but followup is tough...
+<[Alan F.] FIGGUEST> Elections are happening soon, and Larry Forsley and I are
+<[Alan F.] FIGGUEST> recruiting candidates, so send e-mail to ATFURMAN or L.
+<[Alan F.] FIGGUEST> FORSLEY if interested.
+<[Alan F.] FIGGUEST> Membership hovers around 500. It is hard to get figures
+<[Alan F.] FIGGUEST> out of ACM because, according to George, they haven't
+<[Alan F.] FIGGUEST> figured out how to use them dang computers.
+<[Alan F.] FIGGUEST> I will close with some exciting news...
+<[Alan F.] FIGGUEST> The Forth community in Leningrad would like to put
+<[Alan F.] FIGGUEST> on a conference either fall 91 or spring 92...
+<[Alan F.] FIGGUEST> which will be run in cooperation with SIGForth.
+<[Wil] W.BADEN1> My wife just told me that we'll go.
+<[Gary] GARY-S> Alan - Paul frenger approached us regarding a SigForth presence
+                here, but there has been no follow-up as yet.
+<[Alan F.] FIGGUEST> Haven't heard anything yet myself.  Did he mean a 
+                     fullblown RT?
+<[Gary] GARY-S> no - a presence on the FIG RT - ie a topic area perhaps
+<[Alan F.] FIGGUEST> ..or a category.  Excellent idea by me.
+<[Dennis] D.RUFFER> If someone is willing to dedicate the time to taking care 
+<[Dennis] D.RUFFER> of it I'd gladly set up an area for you Alan...
+<[Dennis] D.RUFFER> But I wouldn't want to if you can't find someone to do
+                    the work.
+<[Dennis] D.RUFFER> If you can find a volunteer who is willing to do the 
+                    maintenance...
+<[Dennis] D.RUFFER> I can set them up so it wouldn't cost them much.
+<[Alan F.] FIGGUEST> ...maintenance?  Like changing the litter box?...
+<[Alan F.] FIGGUEST> send me e-mail telling what this entails and I'll
+<[Alan F.] FIGGUEST> consider doing it or recruiting someone.  Fair enough?
+<[Gary] GARY-S> good plan -
+<[Wil] W.BADEN1> ACM asked me for $150.00 to renew.  How can I join sigForth 
+                 without renewing ACM?
+<[Alan F.] FIGGUEST> It's all the computer's fault, Wil...
+<[Alan F.] FIGGUEST> If ACM would only use handwritten bill, I'm SURE they 
+<[Alan F.] FIGGUEST> would get their billing straight...
+<[Alan F.] FIGGUEST> (speaking as a victim of a billing error this spring)...
+<[Alan F.] FIGGUEST> The dues for SIGForth alone, without ACM membership, are 
+<[Alan F.] FIGGUEST> $42 for 91...
+<[Alan F.] FIGGUEST> I'll take a look at my last bill to see if there is a
+<[Alan F.] FIGGUEST> special code...be right back...
+<[Wil] W.BADEN1> No, the amount is legitimate, not a billing error.  But I have 
+               decided that there are other toys I'd rather buy with the money.
+<[Alan F.] FIGGUEST> OK I found it...
+<[Alan F.] FIGGUEST> my bill says "039 SIGFORTH"   $42.
+<[Alan F.] FIGGUEST> Well, there you have it.  I have just told you more
+<[Alan F.] FIGGUEST> than I know...Call them if you have to...ga
+<[Gary] GARY-S> Your February bash is almost on us Alan - want to get a word
+                in about paper submissions, chairman, etc ?
+<[Alan F.] FIGGUEST> Next year's conference...
+<[Alan F.] FIGGUEST> is in San Antonio...
+<[Alan F.] FIGGUEST> March 7-9, in conjunction with the ACM
+<[Alan F.] FIGGUEST> Computer Science and Computer Science Education
+<[Alan F.] FIGGUEST> conferences...
+<[Alan F.] FIGGUEST> The latest issue of SIGForth says that Paul Snow is..
+<[Alan F.] FIGGUEST> chairman, but I believe Phil Koopman is program
+<[Alan F.] FIGGUEST> chair or something. 
+<[Wil] W.BADEN1> I have been very favorably impressed with the quality of the 
+                 recent sigForth newsletter.  Really good.  Congratulations.
+<[Len] NMORGENSTERN> Hear Hear!
+<[Alan F.] FIGGUEST> Thanks most kindly...
+<[Alan F.] FIGGUEST> Paul Frenger is doing a fine, diligent job...
+<[Alan F.] FIGGUEST> and he is about to sling enough copy to catch up...
+<[Alan F.] FIGGUEST> after last year's snags, to boot. 
+<[Wil] W.BADEN1> I wonder if ACM is the right place for sigForth ...
+<[Wil] W.BADEN1> because of the  engineering orientation of Forth.  Has ...
+<[Wil] W.BADEN1> any thought been given to another "venue"?
+<[Alan F.] FIGGUEST> IEEE would be a *beautiful* organization to be connected
+<[Alan F.] FIGGUEST> with.  They are also harder to  break into...
+<[Alan F.] FIGGUEST> Dan Miller is an IEEE member, and I believe he...
+<[Alan F.] FIGGUEST> did some checking a few years ago...
+<[Alan F.] FIGGUEST> IEEE is much larger than ACM, and Wil's...
+<[Alan F.] FIGGUEST> "engineering orientation" comment is right on the mark...
+<[Alan F.] FIGGUEST> The situation is this:  Now that SIGForth is around,
+<[Alan F.] FIGGUEST> the prospects of getting into the IEEE structure are
+<[Alan F.] FIGGUEST> better than ever.  George Shaw just told me that he is
+<[Alan F.] FIGGUEST> interested in exploring some connection with IEEE...
+<[Alan F.] FIGGUEST> like distributing publications...
+<[Alan F.] FIGGUEST> One thing I can imagine is having SIGForth cooperation
+<[Alan F.] FIGGUEST> in IEEE conferences, such as realtime control and
+<[Alan F.] FIGGUEST> RISC architectures--which already have *several* ACM
+<[Alan F.] FIGGUEST> SIGS cooperating...
+<[Alan F.] FIGGUEST> IEEE Computer Society has technical committees...
+<[Alan F.] FIGGUEST> which might be another avenue...
+<[Alan F.] FIGGUEST> members of these committees would get appointed to...
+<[Alan F.] FIGGUEST> conference program committees, thereby helping
+<[Alan F.] FIGGUEST> Forthers' papers to get fair consideration...
+<[Alan F.] FIGGUEST> Anybody have more ideas? 
+<[Gary] GARY-S> I can atest both organizations grandfather each others members 
+                and there is some cooperative publishing between the two
+<[john w] J.WAVRIK1> What is the present status of the education effort..
+<[john w] J.WAVRIK1> beyond the list of those teaching Forth? ..
+<[john w] J.WAVRIK1> Are there any plans to support..
+<[john w] J.WAVRIK1> the pubblication of texts, monographs, etc?..
+<[Alan F.] FIGGUEST> As George Shaw puts it, ACM, from the inside, looks
+<[Alan F.] FIGGUEST> like a gigantic publication apparatus, supporting itself
+<[Alan F.] FIGGUEST> off the cash flow from shipping paper.  If something
+<[Alan F.] FIGGUEST> can pay its own way, and preferrably make a profit, then
+<[Alan F.] FIGGUEST> I would think it would be welcome.  And the more things
+<[Alan F.] FIGGUEST> listed in the ACM publications catalog with the F-word
+<[Alan F.] FIGGUEST> the better.
+<[Wil] W.BADEN1> I have decided to buy a C++ compiler ...
+<[Wil] W.BADEN1> insted of renewing ACM.  Na Leningrade dosvidanie.
+<[Alan F.] FIGGUEST> It's your money...
+<[Gary] GARY-S> closing remarks please alan
+<[Alan F.] FIGGUEST> SIGForth has reached the point at which its survival...
+<[Alan F.] FIGGUEST> is in good shape...
+<[Alan F.] FIGGUEST> The next stage is to bring the membership up to the
+<[Alan F.] FIGGUEST> level where all the fixed expenses represent less of a
+<[Alan F.] FIGGUEST> drag against a member's dues...
+<[Alan F.] FIGGUEST> and we can do more for members.  A doubling of
+<[Alan F.] FIGGUEST> membership would help a lot...
+<[Alan F.] FIGGUEST> Also, we have to chew a lot harder on what we have
+<[Alan F.] FIGGUEST> already bitten off in terms of projects...
+<[Alan F.] FIGGUEST> I think there is a lot of promise there.
+<[Gary] GARY-S> Alan, thank you for the update on SigForth ACM....
+<[Gary] GARY-S> we of the GEnie Forth RoundTable wish you continued success...
+<[Gary] GARY-S>
+<[Gary] GARY-S> all may stay and chat but this conference has officially ended.
+=== End of Steno notes. ===
+
+

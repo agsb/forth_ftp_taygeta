@@ -1,0 +1,356 @@
+
+ Minutes of the FIGGY BAR of 26 January 1989
+
+ EXCELLENT FIGGY ! Items discussed: high bit bug in F-PC for Amstrad, F-PC
+       Virtual Memory,SOL and ALTAIR revisited, Forth terminal emulation,
+       6552 serial transfer, making two Forth boards talk
+
+ Date: 01/26/89   Time: 22:41EST
+
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Len] NMORGENSTERN
+[[Kevin] APPERT]
+[[Ken] K.BUTTERFIEL]
+[[milton] M.FABERT] 
+       
+Minutes:
+<[Len] NMORGENSTERN> What happened last Sunday? I was watching the superbowl...
+<[Dave] DHWEINSTEIN> (coming soon to a library near you [when I get it done]...
+virtual memory for F-PC)
+<[Gary] GARY-S> Evening folks - just got here myself
+<[Dave] DHWEINSTEIN> Jax helped me solve an archive problem (high bit set in 
+unarchived files)
+<[Len] NMORGENSTERN> & thought I was to go on 6:30!...
+<[Len] NMORGENSTERN> Freudian slip!
+<[Gary] GARY-S> was that the source of all your F-PC troubles ?
+<[Dave] DHWEINSTEIN> Yep. High bit set in some characters in some file names.
+<APPERT> is here.
+<[Len] NMORGENSTERN> Dave, what do you mean by virtual memory for F-PC?
+<[Gary] GARY-S> I wonder if that is peculiar to the Amstrad or if we need to 
+document the bug ????
+<[Dave] DHWEINSTEIN> As in...a data set up which allows as much data space 
+(assuming you use the defining hooks provided) as you have disk space.
+<[Gary] GARY-S> more - if it is true VMS
+<[Len] NMORGENSTERN> Doesn't F-PC have that already?
+<[Dave] DHWEINSTEIN> No. It doesn't.
+<[Len] NMORGENSTERN> Thanx
+<[Gary] GARY-S> what about the bug ? is it Amstrad specific ?
+<[Kevin] APPERT> easy to implement on a system with BLOCK, I use it for the 
+code space in assemblers
+<[Dave] DHWEINSTEIN> Well...it is a sort of cut-rate VMS...for example...the 
+first version is not going to incldude garbage collection
+<[Kevin] APPERT> and metacompilers
+<[Dave] DHWEINSTEIN> I don't know gary.
+<[Len] NMORGENSTERN> F-PC has block as an option.
+<[Dave] DHWEINSTEIN> I refuse to use BLOCK. I hate BLOCK. I have a page ALLOTed 
+for the virtual memory page.
+<K.BUTTERFIEL> is here.
+<[Gary] GARY-S> Geeze , Dave... VMS sans garbage collection ? you are going to 
+have a pretty full disk darn quick
+<[Kevin] APPERT> why do you hate BLOCK, Dave?
+<[Len] NMORGENSTERN> What is there about your system that is different form 
+BLOCK, Dave?
+<[Dave] DHWEINSTEIN> You recreate the swap file when you need it.
+<[Dave] DHWEINSTEIN> Just a latent dislike from the days of block oriented 
+editors. Furthermore, BLOCK limits page size to 1k.
+<[Gary] GARY-S> welcom Ken, you came to a live one !
+<[Len] NMORGENSTERN> No, it doesn't Dave. you can reset your block size & 
+recompile.
+<[Dave] DHWEINSTEIN> Page size in the system I am working on is a maximum of 
+64k.
+<[Dave] DHWEINSTEIN> This doesn't require recompilation.
+<[Kevin] APPERT> you swap in and out 64 k at a time?
+<[Ken] K.BUTTERFIEL> I must admit to a liking for 'normal' files rather then 
+blocks
+<[Dave] DHWEINSTEIN> No...you swap in and out whenever the virtual address 
+needed is not in the current page...and pagesize can be anywhere from 1 byt
+e to 64k (user defined)
+<[Len] NMORGENSTERN> Then you are using variable-sized blocks, user defined.
+<[Dave] DHWEINSTEIN> Essentially.
+<[Kevin] APPERT> maybe I don't understand, but it sounds like you are working 
+WAY to hard at this
+<[Len] NMORGENSTERN> Then why do you hate blocks?
+<[Len] NMORGENSTERN> If you are using them?
+<[Dave] DHWEINSTEIN> Because of the way BLOCK is wired into the system.
+<[Dave] DHWEINSTEIN> Kevin -- what do you mean "too hard"?
+<[Kevin] APPERT> the goal seems to be ...
+<[Kevin] APPERT> a data set which appears to the user (programmer)...
+<[Kevin] APPERT> to be in memory, but in fact is on disk...
+<[Kevin] APPERT> when not being referenced...
+<[Kevin] APPERT> this can be accomplished with less then a (oops) screen of 
+code...
+<[Kevin] APPERT> why does the user care what the page size is...
+<[Kevin] APPERT> when you can accomplish the goal in a very simple, 
+straightford way...
+<[Kevin] APPERT> so what am I misunderstanding?  I feel I came in in the middle.
+..
+<[Kevin] APPERT> ( I did!) and I'm missing something
+<[Dave] DHWEINSTEIN> Well...
+<[Dave] DHWEINSTEIN> ...for one thing...no single variable can be larger than 
+the page size (btw...there is a way around it)...because...
+<[Dave] DHWEINSTEIN> ...all of the virtual>actual conversion is done when the 
+page is loaded,
+<[Dave] DHWEINSTEIN> and without an MMU...
+<[Dave] DHWEINSTEIN> ...it is impossible to trap illegal accesses...
+<[Len] NMORGENSTERN> pmi what is a MMU?
+<[Dave] DHWEINSTEIN> But I am interested in how int is possible to do this in 
+one screen?
+<[Dave] DHWEINSTEIN> An MMU...
+<[Kevin] APPERT> Memory Managemnt Unit
+<[Len] NMORGENSTERN> Thanx
+<[Ken] K.BUTTERFIEL> He cares about page size when it is fixed because it 
+intrudes on programming style.
+<[Kevin] APPERT> (usually wears a tie) :)
+<[Dave] DHWEINSTEIN> ...is a Memory Management Unit...it (among other things) 
+traps references to memory a user does not "own")
+<[Dave] DHWEINSTEIN> .
+<M.FABERT> is here.
+<[Ken] K.BUTTERFIEL> This is one reason I like named files and an editor that 
+will insert a line without losing another of the bottom of the block.
+<[Dave] DHWEINSTEIN> Ken--have you looked at F-PC?
+<[Kevin] APPERT> my editor beeps when I try to do that, Ken
+<[Ken] K.BUTTERFIEL> I have looked at F-PC and I liked what I saw of the SED 
+editor.
+<[Gary] GARY-S> welcome M.Fabert - jump right in , we're talking Virtual memory 
+in F-PC, do grafton, Virginians get involved in VMS ? :-)
+<[milton] M.FABERT> sure.  All the time (grin).
+<[Dave] DHWEINSTEIN> This is all done in F-PC (looks like I'll end up doing it 
+without using any inline assembly)
+<[milton] M.FABERT> VMS As in VAX VMS?
+<[Ken] K.BUTTERFIEL> I do most of my programming by downloading serially into 
+MAX-FORTH systems.
+<[Dave] DHWEINSTEIN> Virtual Memory System
+<[Gary] GARY-S> What is your model, Dave ?
+<[Dave] DHWEINSTEIN> In which context, Gary?
+<[Gary] GARY-S> VMS model
+<[Dave] DHWEINSTEIN> Well...because I have no way of flagging memory writes, I 
+am at the moment assuming pages are always "dirty".
+<[Ken] K.BUTTERFIEL> Where I have found the VMS to be the most useful is for 
+huge data array storage.
+<[Dave] DHWEINSTEIN> Yeah...but because I need a size count for each element, I 
+am using a word VCREATE which creates a new "virtual element" complete
+ with size count. It can be used...
+<[Dave] DHWEINSTEIN> ...inside arrays as long as each element is smaller than 
+the page size.
+<[Ken] K.BUTTERFIEL> The old FIG block structure was wonderful for creating an 
+array that actually existed on the disk and that was only read into buf
+fers when needed.
+<[milton] M.FABERT> One nice thing about FORTH is that you can avoid the ...
+<[Kevin] APPERT> : virtual@      ( addr --- data )   % 1024 /mod
+<[milton] M.FABERT> thrashing inherent in other OS VM systems.
+<[Dave] DHWEINSTEIN> The idea of what I am doing is avoiding "virtual@" or 
+"virtual!"...the idea is to make the VMS as user transparent as possible.
+<[Kevin] APPERT>     ( block_offset byte_offset )  swap start_virt + block + @  
+;
+<[Dave] DHWEINSTEIN> The does> portion of each word defined for virtual memory 
+contains the word "virtual>actual", which handles page swapping, and co
+nverting the virtual address in the variable to the actual address in the page.
+<[Kevin] APPERT> : virtual! ( data addr --- )    1024 /mod swap start_virt + 
+block + ! update ;
+<[Ken] K.BUTTERFIEL> This sounds like the method I used to write virtual arrays.
+  The user could treat the array like any other array.  Indexing was d
+one by the DOES> clause.
+<[Dave] DHWEINSTEIN> Yeah.
+<[Len] NMORGENSTERN> How do you handle UPDATE if you are using standard Forth 
+blocks?
+<[Kevin] APPERT> you have to get a little more clever if you allow things to 
+cross page boundarys, but you just have to do the !'s a byte or word at a
+ time.
+<[Kevin] APPERT> asking me , Len? I don't understand the question
+<[Gary] GARY-S> No pointers ?
+<[Ken] K.BUTTERFIEL> Of course a virtual array is 1/2 the speed of a memory 
+array because of the UPDATE in each store.
+<[Kevin] APPERT> bye the way, : % decimal  ; immediate
+<[milton] M.FABERT> Update should be done when you do a Virtual! or you run the 
+...
+<[Kevin] APPERT> it's a lot slower than that!  Ken
+<[milton] M.FABERT> risk of overwritting the block in a multitasking system ...
+<[Dave] DHWEINSTEIN> The updating scheme I am using doesn't update the swap 
+file until the page needs to be changed.
+<[Kevin] APPERT> the disk drive isn't used until the BLOCK buffer is needed in 
+forth, it's
+<[Len] NMORGENSTERN> Isn't that risky Dave? It puts you at the mercy of a power 
+failure.
+<[Kevin] APPERT> just marked as changed by UPDATE, Dave.
+<[Ken] K.BUTTERFIEL> Depending on the algorithm accessing the data you might 
+spend most of the time in local parts of the array and only seldom have t
+o swap pages.
+<[Kevin] APPERT> your have to FLUSH when you a done
+<[Dave] DHWEINSTEIN> Disk I/O is just as risky, Len. A power fialure can crash 
+a hard drive, etc etc... As it hahappens, I have batteries anyway.
+<[Len] NMORGENSTERN> What I mean is that if there is a long time between writes.
+..
+<[Len] NMORGENSTERN> the risk is increased.
+<[Kevin] APPERT> you have to mark your pages as "dirty" (changed) somehow, Dave,
+ that's all UPDATE is
+<[Dave] DHWEINSTEIN> But the swapfile is only for use while the program is 
+running. A power failure would render the swapfile useless anyway.
+<[Ken] K.BUTTERFIEL> Multitasking gives fits to most FORTH systems UNLESS each 
+task has its own block buffer region pointed to by a user variable!!!!
+<[Kevin] APPERT> if it's just data, it's usually expendable anyway
+<[Len] NMORGENSTERN> Kevin, that's a programmer talking, not a user!
+<[Kevin] APPERT> It came from somewhere, Len
+<[milton] M.FABERT> Within an application, if you do not UPDATE and access 
+BLOCK ...
+<[Kevin] APPERT> in my applications, the output of the assembler or 
+metacompiler ....
+<[Ken] K.BUTTERFIEL> If a user really wants his data protected he will learn to 
+get batteries and to back up his disk!! No backup is how most data is
+lost.
+<[Dave] DHWEINSTEIN> <-- don't look at me...I do all of my "programming for me" 
+in Forth (because I can't get paid for it..:-) )....I have enough trou
+ble with "what the users want" at work!
+<[milton] M.FABERT> for say, loading an overlay you run th????;???1?M???buffer.
+<[Kevin] APPERT> is easily re-created by running the assembler of metacompiler 
+again.
+<[Kevin] APPERT> In another popular application for this sort of thing... 
+vector to raster ...
+<[Kevin] APPERT> conversion, you just write your vectors again.  The tendency 
+is to use this
+<[Dave] DHWEINSTEIN> (change of subject warning)
+<[Kevin] APPERT> for temporary storage.
+<[Kevin] APPERT> what, Dave
+<[Dave] DHWEINSTEIN> For those planning on coming to the ACM SIGForth in Austin 
+this February...if you need information or help at the Austin end, fee
+l free to call me. My home phone is (512) 499-0590.
+<[Dave] DHWEINSTEIN> .
+<[Ken] K.BUTTERFIEL> What is an th????;???1?M???buffer   ??
+<[milton] M.FABERT> Line noise ....
+<[milton] M.FABERT> the risk of not FLUSHING the buffer.
+<[Ken] K.BUTTERFIEL> I've had that get into my video buffer.
+<[Ken] K.BUTTERFIEL> I have a question.  Any of you using FORTH to access this 
+round table?  I am using Aladdin myself.
+<[Dave] DHWEINSTEIN> Not me...I am using Mirror II.
+<[Gary] GARY-S> Ken - Mike Perry had trouble getting Aladdin to go - did you 
+have to do anything, but plug and go ?
+<[Kevin] APPERT> <<<< atari ST running FORTHMax, w/forth terminal emulator
+<[Len] NMORGENSTERN> I, too use Mirror II
+<[Kevin] APPERT> wimps
+<[Kevin] APPERT> (just kidding)
+<[Len] NMORGENSTERN> Better the devil you know than an angel you don't Kevin
+<[Gary] GARY-S> Did you write your own emulator Kev ?
+<[Kevin] APPERT> I know mine, I wrote it!  and I've got the source
+<[Ken] K.BUTTERFIEL> Aladdin is really useful for any part of GENIE.  I had no 
+problems other than having to find ARCE and ALADDIN on the IBM software
+ libs...
+<[Kevin] APPERT> open systems, remember from last time?  you gotta have control.
+ :)
+<[Kevin] APPERT> it's a powerfull drug which I've not been able to kick
+<[Ken] K.BUTTERFIEL> And getting an xmodem routine to download averything.  
+Then It was plug and go.
+<[Ken] K.BUTTERFIEL> I think Aladdin could be written in forth (main concepts) 
+that would be more useful and extendable as well.
+<[Gary] GARY-S> Hmm - I wonder what Mike's problem was ? He got his copy 
+directly from dennis - oh well...
+<[Gary] GARY-S> AND adaptable to other (non-IBM) architectures ?
+<[Ken] K.BUTTERFIEL> I got a copy from Dennis at the real time conference but 
+the disk had a CRC error in the middle of the Aladdin file.  So I starte
+d from scratch.
+<[Ken] K.BUTTERFIEL> It is always hard to adapt a design that talks to 
+specialized I/O to other...
+<[Ken] K.BUTTERFIEL> machines.  The serial port on a IBM is available through 
+DOS calls, BIOS calls...
+<[Ken] K.BUTTERFIEL> and by direct access to the hardware registers.  If you 
+use the registers...
+<[Kevin] APPERT> dos calls and bios calls are good out to about 300 baud!
+<[Ken] K.BUTTERFIEL> Then you might have to adapt to a different version of IBM 
+PC  BUT
+<[Ken] K.BUTTERFIEL> the code may be more transportable to a different machine, 
+say a 68000
+<[Ken] K.BUTTERFIEL> that uses a different uart.
+<[Len] NMORGENSTERN> Ken, is there a reference on that. I tried to set up 
+serial communications and couldn't get the handshaking right.
+<[Ken] K.BUTTERFIEL> I am speaking retorically, again most of my programming is 
+for a 68hc11 and I
+<[Ken] K.BUTTERFIEL> use a custom board design. I wouldn't dream of programming 
+a PC unless forced!
+<[Len] NMORGENSTERN> I'm forced. I own one!
+<[Ken] K.BUTTERFIEL> Let me ask some folks at work.  I know someone that does 
+mostly PC programming and would have a reference.  I'll leave a GENIE ma
+il message.
+<[Ken] K.BUTTERFIEL> Is your address NMORGENSTERN?
+<[Len] NMORGENSTERN> The machine is capable of transferring files to/from my 
+Mac at 9600 baud
+<[Len] NMORGENSTERN> Thanks, Yes it is.
+<[Len] NMORGENSTERN> My problem was in Forth. I use Mirror & the hardware's 
+fine.
+<[Gary] GARY-S> Port the messages that are not private onto the BBS , Len... 
+good subject material !
+<[Len] NMORGENSTERN> Right.
+<[Ken] K.BUTTERFIEL> My experience at the register level is that the 
+handshaking is critical but
+<[Ken] K.BUTTERFIEL> not really very complex.  I could send a file to the 
+system that does the work for a 6552 dual serial port adapter. I adapted cod
+e from Randy Dumse.
+<[Ken] K.BUTTERFIEL> Where should I send it, who wants it?
+<[Len] NMORGENSTERN> Why not upload it to the files area?
+<[Gary] GARY-S> Put it in the library or on the BBS or send to leonard and he 
+can disperse accordingly
+<[Ken] K.BUTTERFIEL> In a couple of screens you get the low level words and 
+clear to type,expect ect.
+<[Len] NMORGENSTERN> Either way, I will get it.
+<[Ken] K.BUTTERFIEL> I'll add it to the software library soon.
+<[Gary] GARY-S> GREAT !
+<[Len] NMORGENSTERN> Great. Thanks.
+<[Ken] K.BUTTERFIEL> The real excitment comes in trying to get two FORTH boards 
+to communicate
+<[Ken] K.BUTTERFIEL> together, one sending comands and then receiving results.
+<[Ken] K.BUTTERFIEL> I have found that the SLAVE can just be running the QUIT 
+interpreter, BUT...
+<[Ken] K.BUTTERFIEL> the MASTER unit has to deal with the ECHO of all of it's 
+commands!!!
+<[Len] NMORGENSTERN> Can't you handle it by changing KEY  ???
+<[Len] NMORGENSTERN> Link the two via their I/O. I did that for Forth and BASIC 
+running...
+<[Len] NMORGENSTERN> on the same computer!
+<[Ken] K.BUTTERFIEL> You might, but it helps in debugging the total system if 
+both processors are talking on the wires.
+<[Len] NMORGENSTERN> Yeah, debuggin I/O is v. difficult!
+<[Ken] K.BUTTERFIEL> I needed a 2 wire commo task and it really was easy once I 
+figured out how to
+<[Ken] K.BUTTERFIEL> keep the data straight.  The slave is really the easieast.
+<[Ken] K.BUTTERFIEL> BASIC and FORTH on the same computer,,, this sounds like 
+an HP71b calculator to me.
+<[Len] NMORGENSTERN> It was an old SOL with North Star basic running in half...
+<[Len] NMORGENSTERN> and Forth in the other. I wrote it up &...
+<[Len] NMORGENSTERN> it was published in Dr. Dobbs.
+<[Ken] K.BUTTERFIEL> I remember the SOL.  Same vintage as Processor Technology 
+and after ALTAIR.
+<[Len] NMORGENSTERN> SOL was Processor Tech. Went from nothing to the leading 
+company...
+<[Len] NMORGENSTERN> to bankrupt in 3 years!
+<[Kevin] APPERT>  gosh, those were the days.  anybody read Fire in the Valley?  
+great stuff!
+<[Gary] GARY-S> EXCELLENT !
+<[Ken] K.BUTTERFIEL> Not the only company to do that  where is ALTAIR, and they 
+started it.
+<[Len] NMORGENSTERN> Sol was a slicker machine. Sol was like a console radio...
+<[Gary] GARY-S> ALTAIR was purchased, then killed by Pertec
+<[Len] NMORGENSTERN> while Altair was like a crystal set.
+<[Ken] K.BUTTERFIEL> They went broke by trying to sell only to business
+<[Len] NMORGENSTERN> Then Right, Kevin. They made a mistake there.
+<[Ken] K.BUTTERFIEL> I agree that the sol was a neat package.
+<[Len] NMORGENSTERN> Don't underestimate the power of a bunch of hackers.
+<[Len] NMORGENSTERN> The computer nerds become the computer herds.
+<[Kevin] APPERT> what mistake, Len?
+<[Gary] GARY-S> Give Roberts credit - Altair had a lot to do with us in 
+conference tonight !
+<[Len] NMORGENSTERN> Selling to business.
+<[Ken] K.BUTTERFIEL> Sure don't cut off the folks who have been buying your
+product.
+<[Len] NMORGENSTERN> They were premature.
+<[Len] NMORGENSTERN> Altair was a good machine, but you had to know hardware to 
+run it....
+<[Len] NMORGENSTERN> Sol was more of a programming machine.
+<[Gary] GARY-S> It is closing time
+<[Ken] K.BUTTERFIEL> Unfortunately true.  I liked what they did and we owe a 
+lot to them.
+<[Gary] GARY-S> VERY INTERESTING EVENING
+<[Len] NMORGENSTERN> Bye, Ken. Gary, I will look into some of your suggestions. 
+...
+<[Len] NMORGENSTERN> I agree, very interesting!
+=== End of Steno notes. ===
+
+

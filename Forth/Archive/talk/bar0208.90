@@ -1,0 +1,632 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 02/08/90   Time: 22:33EST
+
+Attendees:
+[GARY-S]
+[[Dave] OLORIN]
+[[Kevin] APPERT]
+[[Van] C.VANHORN]
+[[Doug] D.PHILIPS3]
+[[jax] FIGCHAPTERS]
+[[Robert] R.BERKEY]
+
+  Question for the night: Is Embedded Forth Forth's last stand ? Other items
+  discussed include: emacs editors,SparcForth,SIGForth,Embedded Forth conf, 
+  number crunching,PostScript,paradigms and contructs of Forth and other 
+  languages.
+
+Minutes:
+<OLORIN> is here.
+<[Dave] OLORIN> (Reads door notice)
+<[Dave] OLORIN> No. No. No. No. No. At least, I hope not.
+<[Dave] OLORIN> I like *fat* Forth's. (grin)
+<GARY-S> With C's inroads at observatories it's a legitimate question
+<[Dave] OLORIN> It's a legitimate question, I just don't like one of the 
+possible answers.
+<[Dave] OLORIN> Look at Forth's inroads (i.e. SparcStation ROM).
+<GARY-S> Yeah - thanks to one person - Mitch
+<[Dave] OLORIN> There may be more commercial Forth's out thanks to Mitch 
+Bradley's work at sun than there ever were before. (Grin)
+<GARY-S> We need more Mitch's
+<[Dave] OLORIN> If that's what it takes.
+<GARY-S> Of course he has detractors, as well
+<[Dave] OLORIN> Who?
+<GARY-S> Mitch
+<[Dave] OLORIN> What are they saying?
+<GARY-S> he advocates an emacs type editor
+<[Dave] OLORIN> And? I *like* Emacs. Even though it does lead to some 
+interesting comments...
+<[Dave] OLORIN> Eight Megs and Continuously Swapping
+<[Dave] OLORIN> Eventually Mallocs All Core Storage
+<[Dave] OLORIN> Escape Meta Alt Control Shift
+<[Dave] OLORIN> Emacs Makes A Computer Slow
+<[Dave] OLORIN> etc etc etc
+<[Dave] OLORIN> I think an Emacs built around a Forth rather than Lisp would be 
+wonderful.
+<GARY-S> If you don't particularly care for fat forth (I don't) then emacs is a 
+monumental overkill
+<[Dave] OLORIN> Emacs is overkill on anything short of a fast workstation. It 
+is an enormous, obese creature, with a half dozen kitchen sinks. It can
+also do anything you could possibly want as an editor.
+<[Dave] OLORIN> On the other hand, I didn't use it until I started working on 
+Sun-3's and 4's. You need the power to make Emacs give tolerable perform
+ance.
+<GARY-S> Programmer's editors are necissarily brief and functional, NOT 
+houseboats ! I see no place for emacs in a Forth environment
+<[Dave] OLORIN> Emacs isn't so much an editor as a complete operating 
+environment. And if you are doing development on a workstation, there is no reas
+on not to use Emacs. If you are working on a 2k embedded system.. well...
+<APPERT> is here.
+<GARY-S> even microemacs is too obese for most forth environments
+<[Kevin] APPERT> Is notice on DOOR right?
+<D.PHILIPS3> is here.
+<[Kevin] APPERT> I thought that was the 15th
+<GARY-S> The notice says our *next* conference guests...
+<[Kevin] APPERT> oops
+<GARY-S> and yes, that is the 15th
+<[Dave] OLORIN> So what's the head count for the SIGForth conference next week? 
+Who here is going.
+<[Kevin] APPERT> I'm looking forward to it
+<[Dave] OLORIN> (Takes it that Kevin is going to be there)
+<[Doug] D.PHILIPS3> Not me!
+<[Kevin] APPERT> I'm locked up.  gotta reset.  BRB
+<[Doug] D.PHILIPS3> What's up tonight?
+<[Kevin] APPERT> say something
+<[Doug] D.PHILIPS3> Something.
+<[Dave] OLORIN> Something something something something
+<[Kevin] APPERT> thanks
+<[Kevin] APPERT> I'm back
+<GARY-S> Doug, Kev answer the question
+<[Dave] OLORIN> What crashed?
+<[Kevin] APPERT> are these guys from Vesta qualiied
+<[Kevin] APPERT> my terminal emulator crashed
+<GARY-S> Is embedded Forth Forth's last stand ?
+<[Dave] OLORIN> That'll break things in new and interesting ways.
+<[Dave] OLORIN> Never surrender!
+<[Dave] OLORIN> (grin)
+<[Doug] D.PHILIPS3> Is the appearance of those guests forth's last stand
+<[Kevin] APPERT> ahhhh just what I was getting to
+<[Doug] D.PHILIPS3>  ?
+<[Kevin] APPERT> no , definitaly NOT
+<GARY-S> asking Dave, we ended up in a conflab regarding emacs
+<[Kevin] APPERT> the last stand of forth
+<[Kevin] APPERT> there are LOTSA other areas
+<GARY-S> If you say lemonade...
+<[Dave] OLORIN> (that cool refreshing drink)
+<[Kevin] APPERT> apocraphyl story coming up after I put in my laundry.  stand 
+by.
+<[Doug] D.PHILIPS3> (Love to pucker!)
+<[Dave] OLORIN>  /laundry break
+<GARY-S> see how long it takes Kev to fold his dainties
+<[Kevin] APPERT> just putting them in
+<[Kevin] APPERT> if I were you guys, I wouldn't wait at 5$ / hour
+<[Kevin] APPERT> in the early days of ...
+<[Kevin] APPERT> forth there were two...
+<[Kevin] APPERT> places where it was used....
+<[Kevin] APPERT> one for real-time -sorta-embedded control (telescopes)
+<[Kevin] APPERT> and one for number crunching, data reduction...
+<[Kevin] APPERT> the folks at the telescope said" boy forth is great...
+<[Kevin] APPERT> for real time telescope control, and probably...
+<[Kevin] APPERT> good for all sorts of things like that...
+<[Kevin] APPERT> but it really SUCKS for number crunching"....
+<[Kevin] APPERT> the folks at the number crunching...
+<[Kevin] APPERT> establishment said...
+<[Kevin] APPERT> "boy forth is GREAT for number crunching....
+<[Kevin] APPERT> but it really sucks for real time control"
+<[Kevin] APPERT> the moral is ...
+<[Kevin] APPERT> shows ya what they knew
+<[Kevin] APPERT> it was designed for laying out carpets...
+<[Kevin] APPERT> running an accelerator...
+<[Kevin] APPERT> a top level 'menu' for a design simulator...
+<[Kevin] APPERT> and all sorts of other...
+<[Kevin] APPERT> things Chuck was doing in the early days...
+<C.VANHORN> is here.
+<[van] C.VANHORN> Hi!  Real FORTHERS!!!
+<[van] C.VANHORN> I thought it was designed for real time control!
+<[van] C.VANHORN> Oh my! if Charles could hear you know he would drop a 
+telescope on you!!
+<[Kevin] APPERT> there were things which looked a lot like forth long before 
+the Kit Peak days, as I understand it
+<FIGCHAPTERS> is here.
+<FIGCHAPTERS> zotz!
+<[Kevin] APPERT> oops, there are many of him.  HI JAX
+<[jax] FIGCHAPTERS> we are everywhere!
+<[Kevin] APPERT> finally, somebody who will interlace.  they all stood around 
+while I put in my laundry
+<[Kevin] APPERT> I am wondering if your freinds from Vesta are qualified to 
+comment on ...
+<[Kevin] APPERT> other applications of forth (other than embedded).  Isn't that 
+pretty much it for them?
+<[jax] FIGCHAPTERS> Well, that may be pretty much it for Steven Sarns ....
+<[van] C.VANHORN> the reinforcements are here!
+<[jax] FIGCHAPTERS> who is a competent Forth programmer but essentially a 
+hardware designer and businessman ( and rock climber and skiier! )
+<[jax] FIGCHAPTERS>  ...
+<[van] C.VANHORN> Sorry, I don't seem to be getting out
+<[Kevin] APPERT> <<< warrier/priest
+<[van] C.VANHORN> I am new to this.
+<[van] C.VANHORN> don't mean to interrupt
+<[jax] FIGCHAPTERS> but Wheels ( Steve Wheeler ) has programmed all sorts of .
+<[jax] FIGCHAPTERS> micros in Forth.
+<[van] C.VANHORN> Kevin was saying a discouraging word or two, and ...
+<[van] C.VANHORN> me being from Wyoming and all, ..
+<[van] C.VANHORN> (never was heard a .... etc>
+<[jax] FIGCHAPTERS> discouraging lexical unit re: what?
+<[Kevin] APPERT> interruptions are welcome.  we don't take turns here unless 
+somebody is confused, new, or we are having a guest speaker like next week.
+<[Kevin] APPERT> what did you think I said, Van?
+<[van] C.VANHORN> oh, a little stuff about forth being good for carpet stuff, I 
+love it!
+<[Kevin] APPERT> that actually was one of the very first...
+<[jax] FIGCHAPTERS> Well, Forth has never been better positioned in its history 
+<[jax] FIGCHAPTERS> than it is now ..
+<[Kevin] APPERT> things Chuck used an early version of Forth for, Van
+<[van] C.VANHORN> I have been looking for a  group of forth lovers..
+<[jax] FIGCHAPTERS> with the boom in embedded systems ...
+<[van] C.VANHORN> and I heard something that sounded to my untrained
+<[van] C.VANHORN> ears like the stuff C programmers spout at me.
+<[jax] FIGCHAPTERS> where Forth is the proven, not entirely popular, but 
+OBVIOUS choice.
+<[Doug] D.PHILIPS3> So can CM's original forth (or what its mutated into now) 
+really fill other bills, or does it need to mutate further?
+<[Doug] D.PHILIPS3> How far can it mutate and still be forth?  Is postscript a 
+kind of forth, or a child of forth, or what?
+<[Kevin] APPERT> whap whap whap ( and don't use the 'C' word again)
+<[van] C.VANHORN> The basic Kernel ALWAYS has to mutate
+<[Dave] OLORIN> Hey! Wait just one minute here!
+<[Doug] D.PHILIPS3> Kevin, I thought it was don't say SEA again!
+<[Dave] OLORIN> Some of us do make a living in 'C'.
+<GARY-S> PostScript is unofficialy a Forth Superset, Officially vehemently 
+denied
+<[van] C.VANHORN> Sorry, Kevie, but I wanted to clear my still unproven name.
+<[Kevin] APPERT> PostScrap is a Forth-Like-Language written by ...
+<[Dave] OLORIN> I prefer to think of 'C' as supporting my Forth habit.
+<[Doug] D.PHILIPS3> I ditto Dave.
+<[Kevin] APPERT> people who don'tunderstand what Forth is about.
+<[jax] FIGCHAPTERS> In my case ...
+<[Doug] D.PHILIPS3> Kevin, since PS is very forth-like, could you enlighten me 
+as to where they have taken some 'mis-steps'?
+<[van] C.VANHORN> I thought FORTH was about small, fast, efficient ...
+<[jax] FIGCHAPTERS> it's Forth that supports my C hobby!
+<[van] C.VANHORN> but it seems like the new systems are larger and larger and...
+<[Doug] D.PHILIPS3> Jax, what goes around comes around.
+<[van] C.VANHORN> l a r g e r!!!   ga
+<[Kevin] APPERT> you know more than Poscrip writers.  Poscrip is HUGE , SLOW, 
+and CU-COMBERSOME
+<[Doug] D.PHILIPS3> is that a feature of the language, or of the implementation?
+<GARY-S> that is spelled S-L-O-W, but it sure merges in print shops where no 
+other language has !
+<[Kevin] APPERT> if all known implementations suck, the language sucks   QED
+<[Doug] D.PHILIPS3> I won't bother to dispute that, it isn't worthy of the 
+effort.
+<[van] C.VANHORN> but there are some great aplications written in other 
+languages, does that mean they'rre GREAAT?
+<[Doug] D.PHILIPS3> You could write the spiffiest DBM using a turing machine, 
+but that doesn't mean its good/right/the best way.
+<GARY-S> Xerox tried to penetrate the PostScript (commercial) market and 
+conclusively proved you can always create a worse language than the existing
+one
+<[Kevin] APPERT> democracy is the worst form of goverment in the world, except 
+for all the others"  (Winston Churchill)
+<[Doug] D.PHILIPS3> Kevin, you still haven't answered my original question 
+about where, conceptually (not implementationally) postscript has fallen fr
+om the forth way.
+<[Dave] OLORIN> I've been tempted to put a virtual machine on top of a turing 
+machine, write an assembler for that virtual machine, and a compiler for
+ that assembler. Then run the turing machine on a few other layers (interpreter,
+ OS, etc).
+<[Dave] OLORIN> Just because it's *that* disgusting.
+<[Dave] OLORIN> (grin)
+<GARY-S> Dave - didn't you implement turing in Forth - or was that someone else 
+?
+<[Dave] OLORIN> Yeah, I wrote a turing machine using Mitch Bradley's Forth. It 
+should be in the Library here.
+<[van] C.VANHORN> seriously, all I hear nowdays is can we add a full screen 
+editor and floating point to the kernel to make it marketable...Nuts!!
+<[van] C.VANHORN> it's the old "we haver all that memory, why not use it" stuff.
+<[Kevin] APPERT> Postscript is unique, powerfull, and I use it frequently.  It 
+is conceptually huge.  Chuck looked at it in it's early days and felt t
+hat it was mis-implemented.
+<[Doug] D.PHILIPS3> Kevin, is it conceptually huge because of its inherent 
+design, or because its an application (print engining) that itself causes s
+uch explosion?
+<[Kevin] APPERT> isn't the application bound to the inherent design in this 
+case, Doug?
+<[Doug] D.PHILIPS3> I've been thinking about, when I reach the appropriate 
+stage, doing a post-script that is not printing specific, sort of a blend o
+f postscript syntax/style with forth's simplicity.  I still claim that it would 
+be postscript.
+<[Dave] OLORIN> Well folks, I'm off for the eve. See you next week...
+<[jax] FIGCHAPTERS> Have fun @ sig!
+<[Doug] D.PHILIPS3> In a word, Kevin, No.  Postscript strikes me as a forth 
+that's really postfix with a giant vocab for doing printing stuff.
+<[Kevin] APPERT> should be interesting to see, Doug.  I'm less concerned with 
+what you call it then with what it does and how well.
+<[Doug] D.PHILIPS3> Fair enough.
+<[Doug] D.PHILIPS3> Given my 'example', what is it about the 'philosophy' of PS 
+(not the philosophy
+<GARY-S> I see no point - PostScript is built for the specific task of 
+addressing printing needs
+<[Doug] D.PHILIPS3> of print engine communication) that seems anti forth?
+<[Doug] D.PHILIPS3> Gary, the point is that Forth claims to be post-fix, which 
+it is only partially.
+<[Doug] D.PHILIPS3> My c.l.f posts tried to point this out.  As as been 
+recently replied there,
+<[Doug] D.PHILIPS3> and not yet ported to GEnie, the more the conceptual model 
+for the language
+<[Doug] D.PHILIPS3> has exceptions, the harder it is to understand, because one 
+must remember all the special cases.
+<[Van] C.VANHORN> sorry, I fell off!, don't know what happened!
+<GARY-S> This is a game, right, van ? :-)
+<[Van] C.VANHORN> I don't know!  I was sitting ther and --- garbage!!
+<[Doug] D.PHILIPS3> Now, it may be that I'm striving for a hobgoblin, but I see 
+no a priori reason
+<GARY-S> that was just Kevin
+<[Doug] D.PHILIPS3> to believe so.
+<[Kevin] APPERT>  /disconnect Van
+<[Doug] D.PHILIPS3> Kevin, sorry to not give you a chance to answer, I'll 
+restate.  What is it about PS, syntactically, or philosophically, that is no
+t in the spirit of forth?
+<[Kevin] APPERT> it didn't work that time
+<[Van] C.VANHORN> What ARE you looking for, doug?
+<[Doug] D.PHILIPS3> I'm looking for consistency.  Which is a bugaboo for 
+completeness, of course.
+<[Kevin] APPERT> oops, sorry.  Thought it was retorical
+<[Doug] D.PHILIPS3> No prob, Kevin.
+<[Van] C.VANHORN> I think someone picked up my other line, Kevin
+<[Van] C.VANHORN> All ok now, I shot them.
+<[Doug] D.PHILIPS3> Forth is great, in part at least, because of its simplicity.
+<[Doug] D.PHILIPS3> Last time, or the time before, someone mentioned trying to 
+par forth down
+<GARY-S> REMINDER FOLKS * This comming Thursday, 15 february 1990.. Steve Sarns 
+and Steve Wheeler of Vesta Technology will be here to address question
+s about embedded forth systems
+<[Kevin] APPERT> you're probably better qualified to answer:)  I don't know a 
+lot about postscript in implementation, or use.  It is a black box I use
+, and once knew a bit more about.
+<[Doug] D.PHILIPS3> even further.  One way I see to do that is to eliminate the 
+inconsistency of
+<[Doug] D.PHILIPS3> some-post-fix-things and some-pre-fix-things.
+<[jax] FIGCHAPTERS> SBC68K == $295.00. The medium is the message!
+<R.BERKEY> is here.
+<[Kevin] APPERT> perhaps we'll talk about this again in a month, when I can get 
+a bit of preperation in and think a bit...
+<[Robert] R.BERKEY> What's happening in Cheyenne?
+<[Doug] D.PHILIPS3> Gary, are you trying to hint that we should be rapping this 
+up?
+<GARY-S> I'll make it the Topic on the door in about three weeks - 
+howz that ?!?
+<[Robert] R.BERKEY> Pardon, but what topic?
+<[Kevin] APPERT> I think Forth is whatever you choose to call Forth.  It gets 
+on my nerves when people callpostscript Forth, and tell me how terrible
+it is.
+<GARY-S> We've been postScripting
+<[Van] C.VANHORN> some frustration, lots of wind, and a lot of buffalo leavings.
+  same as kevin is doing here!
+<[Van] C.VANHORN> sorry kevin, couldn't pass up the opportunity.
+<[Doug] D.PHILIPS3> Kevin, that's a nice out, but I don't think i should call 
+'C' Forth!
+<[Robert] R.BERKEY> Sounds like lots of Forth there.
+<[Kevin] APPERT> I don't think you should call postscript Forth either, Doug.  
+That's my point
+<[Doug] D.PHILIPS3> There must be some 'essence' to 'Forth', whatever you call 
+it.  Perhaps its just the explicit stacks, or the postfix parts, or the
+ ability to build (without the requirement for) prefix words.
+<GARY-S> Robert - any bones you want picked any time soon ?
+<[Doug] D.PHILIPS3> And I'm trying to find out why not?
+<[jax] FIGCHAPTERS> well, after there in ANS Forth we will at least have a 
+"cover story" before the masses as to "what is Forth" ... even if we KNOW i
+t's whatever you want.
+<[Van] C.VANHORN> This is more FORTH programmers I have talked to EWVER in one 
+place!, bob
+<[Doug] D.PHILIPS3> Hey, I don't resemble that remark!
+<[Kevin] APPERT> personal abuse, Van?  how unbecoming
+<GARY-S> Get your last shots in now
+<[jax] FIGCHAPTERS> Make mine tequila
+<[Doug] D.PHILIPS3> Scotch, make it a double.
+<[Van] C.VANHORN> Actually, You just looked like a good target when I came on.  
+I see your true colors now, and I approve (not that MY approval means
+anything, I am an interested beginner!
+<[jax] FIGCHAPTERS> Van! Come see us sometime at VESTA in Denver!
+<[Van] C.VANHORN> I was on your board, and started to get the new PD system, 
+and will finish sometime soon.
+<[Kevin] APPERT> thank you all for an interesting time.  no sweat Van, just 
+kidding :) , hope to see you again, same time same channel.
+<[Doug] D.PHILIPS3> Kevin, I'd be curious to know what you consider a 'core' or 
+essence of forth that is not present, or is perverted in PS.
+<[Van] C.VANHORN> I want to look at it clopser.
+<GARY-S> Wrap it up ladies
+<[Van] C.VANHORN> Doug, have you read STARTING FORTH?
+<[Doug] D.PHILIPS3> Van, yes.  And my copy of THINKING FORTH is STILL on 
+backorder from FIG.
+<[Kevin] APPERT> sometime again, Doug.  I think chuck's opinions where more 
+relevent than my humbe ones
+<[Kevin] APPERT> humbe= humble
+<[Doug] D.PHILIPS3> Ok, later, but don't sell yourself short, I'm not looking 
+for divine bull-crap.
+<[Robert] R.BERKEY> Thinking Forth is out of print, last I heard.
+<[Van] C.VANHORN> Thinking FORTH is a great book.  When you get it, you will 
+understand the feeling behind it all.
+<[Doug] D.PHILIPS3> FIG claims to have it on back order.  I had thought that 
+they wouldn't be selling it if they can't get it!
+<GARY-S> ......poof **
+------------------------------ continuation of log courtesy of Doug Philips
+
+<[Robert] R.BERKEY> Gary, my concern right now is what's at the end of the
+input stream.
+<[Robert] R.BERKEY> oh,  well.
+<[Van] C.VANHORN> but the Stack is the whole reason for FORTH and the
+structure all revolves around that -- as far as I can see.
+<[Doug] D.PHILIPS3> Brain Fried.  What is your issue Robert?
+<[Doug] D.PHILIPS3> So why do some words read from the input stream instead of
+popping this off of the stack?
+<[Doug] D.PHILIPS3> this -> things.
+<[Robert] R.BERKEY> I don't see how the stack is so crucial.
+<[Doug] D.PHILIPS3> (Note, I think you should be allowed to easily build words
+that do that, but I don't yet understand how that fits into the core gestalt
+of forth).
+<[Robert] R.BERKEY> It seem more ike a side effect of simplicity.
+<[Doug] D.PHILIPS3> Robert, What do you see as the essence of forth, that
+which is most forth, and if changed results in not-forth?
+<[Van] C.VANHORN> The whole trick is getting the difference between COMPILING
+and running.
+<[Robert] R.BERKEY> I never understand the complaints about the math notation
+sequence.
+<[Robert] R.BERKEY> Not-Forth is barriers in the way of programming.
+<[Van] C.VANHORN> he NATURAL way to do math.  it is NOT the natural way to
+talk.  Maybe THAT is the difference.
+<[Doug] D.PHILIPS3> Van, that just means you need to have words which pop args
+off the stack when compiling, and words which are compiled and when run pop
+args  off the stack.
+<[Doug] D.PHILIPS3> I don't see how prefix is a priori tied to
+compiling/running issue.
+<[Van]  C.VANHORN> probably true.  
+<[Doug] D.PHILIPS3> Robert, that is a very subjective answer.  One might argue
+that the lack of
+<[Doug] D.PHILIPS3> consistency in postfix notation is a barrier in the way of
+programming. ga.
+<[Robert] R.BERKEY> an example?
+STRING, WORD, CREATE, IF, DO, ...
+<[Doug] D.PHILIPS3> STRING, WORD, CREATE, IF, DO, ...
+<[Robert] R.BERKEY> oh, like : name   
+<[Doug] D.PHILIPS3> Yes, that too.
+<[Robert] R.BERKEY> Strings are a mess.
+<[Doug] D.PHILIPS3> Ok, forget I mentioned strings.
+<[Van] C.VANHORN> amen!
+<[Robert] R.BERKEY> but  IF  ???
+<[Doug] D.PHILIPS3> condition IF  then-part ELSE else-part THEN.  VS.
+<[Robert] R.BERiKEY> IF  seems something like  +  or  *
+<[Doug] D.PHILIPS3> then-part else-part condition if-then-else.
+<[Doug] D.PHILIPS3> or some variant there-on.
+<[Doug] D.PHILIPS3> condition then-part else-part IF-THEN-ELSE.
+<[Robert] R.BERKEY> I wouldn't want the condition to go after the IF
+<[Doug] D.PHILIPS3> Why should condition be so much more special than the
+other parts?
+<[Robert] R.BERKEY> How would I pass it a parameter?
+<[Van] C.VANHORN> the flag is on the stack!
+<[Robert] R.BERKEY> I'm saying that IF is consistent with + and *
+<[Van] C.VANHORN> right.
+<[Doug] D.PHILIPS3> It is in the way in manipulates the stack, but it also
+manipulates IP, which + and * don't do, and that makes it different.
+<[Van] C.VANHORN> ( f-- ) IF
+<[Doug] D.PHILIPS3> In small talk you have the idea of blocks, or un-named
+words, which are passed to things like IF, iterate, etc.
+<[Van]i C.VANHORN> That is because IF is a compiling word, it MUST keep it's
+place
+<[Robert] R.BERKEY> Well, any branching construct must meddle with IP, right?
+<[Doug] D.PHILIPS3> Horse pucky!  It just happens to be implemented that way!
+<[Doug] D.PHILIPS3> Robert, sort of.  but forth doesn't have any explicit
+branching constructs,
+<[Robert] R.BERKEY> hmmm
+<[Van] C.VANsHORN> You  have to know how to jump to the else if needed.
+<[Doug] D.PHILIPS3> and tries to make IF ELSE THEN, DO LOOP etc. look as if
+branching, aka goto, is
+<[Rober t] R.BERKEY> F-PC has GOTO
+<[Doug] D.PHILIPS3> not in the proper domain of forth.
+<[Van] C.VANHORN> GOTOs are OUT!
+<[Van] C.VANHORN> DOWN with GOTOS
+<[Robert] R.BERKEY> Structured branching is a limitation that is useful.
+<[Ro bert] R.BERKEY> Which allows backtracking as to where you came from.
+<[Doug] D.PHILIPS3> I agree, but I think the problem comes in part because IF,
+and co. are COMPILING words, they don't really exist at run time.
+<[Robert] R.BERKEY> That's the curse of GOTO in general is that it is global.
+<[Roert].BERKEY>  implemented an interpretive 	GOTO that had a list of
+valid sorces.
+<[Doug] D.PHILIPS3> GOTO is not inherently evil, but abuses of it are.  If
+there were no goto at all, you'd have to do branching the way I want to.
+<[Doug] D.PHILIPS3> Or the way SmallTalk does.
+<[Robert] R.BERKEY> No more global possibilities, they were all listed right
+there at
+<[Robert] R.BERKEY> the entry point.  The problem went away.
+<[Van] C.VAENHORN> When you get THinking Forth, doug, look at Page 8!
+<[Doug] D.PHILIPS3> ' THEN-WORD ' ELSE-WORD condition IF-THEN-ELSE
+<[Doug] D.PHILIPS3> Van, that may be months!  What does page 8 say?
+<[Van] C.VANHORN> Just a picture of the goto in action, jumping into and out
+of various parts of the program at will..
+<[Varn] C.VANHORN> I know it dosn't have to do that, but in many programs..
+<[Doug] D.PHILIPS3> Although you can still use it to implement post fix
+control structures.
+<[Van] C.VANHORN> it does, just because of PATCHES.
+<[Van] C.VANHORN> bad word!
+<[Van] C.VANHORN> in forth, you  dont patch..
+<[Van] C.VANHORN>  badword
+<[Van] C.VANHORN> wait
+<[Van] C.VANHORN>  bad word.
+<[Van] C.VANHORN> you
+<[Van] C.VANHORN> the
+<[Doug] D.PHILIPS3> Robert, what's happening? Have I lost you or committed
+some simple novice sin?
+<[Van] C.VANHORN> I am trying to write 
+<[Van] C.VANHORN> "FIX"
+<[Van] C.VANHORN> and it won't come out!
+<[Van] C.VANHORN> what I ment was "FIX" the bad word, not patch the program
+forth is powerful because of the simplicity and generality of the data stack,
+<[Doug] D.PHILIPS3> If forth is powerful because of the simplicity and
+generality of the data stack,
+<[Van] C.VANHORN> but all I typed was not sent.
+<[Doug] D.PHILIPS3> then wouldn't it be even simpler and more powerful if the
+control constructs were as parameterizable as '+' is?
+<[Robert] R.BERKEY> I suppose you could implement that.
+<[Doug] D.PHILIPS3> My memory is a bit fogged, where you here earlier this
+evening for the Forth/PostScript comparison debate?
+<[Robert] R.BERKEY> IFXXX might take two parameters, a flag and an address.
+Yes!
+<[Doug] D.PHILIPS3> Yes!
+<[Robert] R.BERKEY> no.
+<[Robert] R.BERKEY> But I don't see what you've gained.  Maybe somehow with
+PostScript not forth.
+<[Doug] D.PHILIPS3> Ah.  I was trying to find out from Kevin Appert(sp?) what
+the difference between forth and postscript was that made him want to call
+postscript not forth.
+<[Doug] D.PHILIPS3> Robert, yes, DO is another good example.
+<[Doug] D.PHILIPS3> Forth is like smalltalk written in reverse (sort of).
+<[Robert] R.BERKEY> Van, are you still losing words?
+<[Doug] D.PHILIPS3> Except for the control constructs.
+<[Doug] D.PHILIPS3> The primary advantage with DO is avoiding the silly return
+stack restrictions.
+<[Van] C.VANHORN>  seems, Doug, like once IF, I don't know?
+<[Robert] R.BERKEY> Don't agree.  The return stack has the loop parameters on
+it.
+<[Van] C.VANHORN> ioops, Now I got some back!
+<[Doug] D.PHILIPS3> Which is why you can't EXIT from inside it!
+<[Doug] D.PHILIPS3> If you have a post-fix language like forth, as we've been
+hypothesizing,
+<[Van] C .VANHORN> .. unless you straighten out the stack, 
+<[Van] C.VANHORN> One of the nice things is
+<[Doug] D.PHILIPS3> it becomes obvious that you need a controlled way of
+exitting multiple layers of loops cleanly (not testing/setting scads of binary
+variables).
+<[Van] C.VANHORN> that you CAN brealk the rules, 
+<[Van] C.V ANHORN> and just remember the perameters -- if you want to.
+<[Doug] D.PHILIPS3> Yes, but the idea of the return stack being used for
+auxiallary data, while fine on the surface, breaks if you want to access that
+data inside DO LOOP.
+<[Robert] R.BERKEY> All I was saying is that's not related to passing DO
+execution addresses.
+<[Van] C.VANHORN> you just have to clean up your own messes before DOing
+stuff.
+<[Doug] D.PHILIPS3> And if you want to 'break' things you have to work that
+much harder.  Bleah.
+<[Robert] R.BERKEY> Given an unnamed sequence, I can name it XXX  and   IF XXX
+THEN
+<[Doug] D.PHILIPS3> But that isn't postfix. and it doesn't allow you to change
+XXX for different invocations of the word in which the IF is compiling.
+<[Robert] R.BERKEY> And if I want to pass this address as a parameter...
+<[Robert] R.BERKEY> ['] XXX  condition   IF  EXECUTE ...
+<[Robert] R.BERKEY> 
+<[Doug] D.PHILIPS3> Besides, you don't want to have to name every silly little
+sequence, but that isn't really the issue, because you could write code for
+generating unnamed words.
+<[Doug] D.PHILIPS3> I admit that my original motivation for getting into true
+postfix was the DO LOOP fiasco.
+<[Robert] R.BERKEY> Names asre fascinating.
+<[Doug] D.PHILIPS3> and that the IF case is somewhat weaker.
+<[Doug] D.PHILIPS3> And vocabularies more so?
+<[Robert] R.BERKEY> DUP SWAP DROP    Chuck (I guess) named them.
+<[Robert] R.BERKEY> These are "silly little sequence(s)".
+<[Van]  C.VANHORN> Voncabulariaes are one of the things I like MOST about FORTH!
+<[Doug] D.PHILIPS3> but every 3-10 word sequences don't deserve names.
+<[Robert] R.BERKEY> Names and factoring are related.
+<[Van] C.VANHORN> You can hide the silly little words, have an aplication that
+uses words like you and I use, and 
+<[Van] C.VANHORN> still roll the VOCS back to add, change, diddle all you
+want!
+<[Doug] D.PHILIPS3> I *knew* you'd say that.  I don't claim that they are
+unrelated, but I also don't claim to understand the relation fully either.
+<[Doug] D.PHILIPS3> BLISS was an interesting language because in it EVERYTHING
+is an expression, including control constructs.
+<[Doug] D.PHILIPS3> And you could name blocks and exit by name.  (Controlled
+goto).
+<[Doug] D.PHILIPS3> The other bogosity of DO LOOP is the scoping change for I.
+ But that is not necessarily related to these other issues.
+<[Doug] D.PHILIPS3> Anyway, once you go to a ' XXX limit start ITERATE type of
+construct it
+<[Robert] R.BERKEY> Most languages have nameud units of code.
+<[Doug] D.PHILIPS3> becomes very painful to do structured exits of more than
+one level.
+<[Robert] R.BERKEY> Like   xxx1 call   xxx2 call
+<[Robert] R.BERKEY> I don't follow.
+<[Van] C.VANHORN> I remember one of the most beautifull words I ever saw was..
+<[Van]s C.VANHORN> : CASE DUP;
+<[Doug] D.PHILIPS3> And most languages also have UNName units of code. 
+Smalltalk has block contexts, and ALGOL-60/SIMULA-67 have call-by-name.
+<[Van] C.VANHORN> as in  name  CASE  IF  word Else
+<[Doug] D.PHILIPS3> It may be that Forth's factoring alleviates some of the
+reasons for those things, but I'm not yet sure it relieves all of them.
+<[Doug] D.PHILIPS3> On of the other issues that is related to this is
+detecting which route was used to exit loops.
+<[Doug] D.PHILIPS3> Anyway... Robert, what did you want to talk about tonight?
+<[Robert] R. BERKEY> I'm not that familiar with other languages, just BASIC and
+FORTRAN.
+<[Doug] D.PHILIPS3> Anyway... Van, what did you want to talk about tonight?
+<[Robert] R.BERKEY> I'd say in general if your application needs a structure,
+...
+<[Robert] R.BERKEY> then implement that structure.  
+<[Robdert] R.BER KEY> Don't limit your thinking to the way Forth comes.
+<[Doug] D.PHILIPS3> I've been thinking about doing a ZEN-type forth with my
+kinds of stuff in it to see if I can put my moohla where my mouth is.
+<[Doug] D.PHILIPS3> Yes!!  That seems to be a very important thing.  It is
+necessary to try both
+<[Doug] D.PHILIPS3> to 'unlearn' other language paradigms and do things the
+forth way, and at the
+<[Doug] D.PHILIPS3> same time not be trapped by current implementations of
+forth, (if one subscribes to CM's idea that Forth is a way of thinking).
+<[Van] C.VANHORN> I found that you almost MUST have a real aplication in mind.
+<[Van] C.VANHORN> FORTH does not seem to be a language for "pfutzing around"
+<[Robert] R.BERKEY> I too dream of making my own Forth.
+<[Doug] D.PHILIPS3> Van, it seems to be the best language for futzing around,
+because of the interactivity, and the extreme factoring.
+<[Robert] R.BERKEY> I'm not sure what you mean, Van, by "pfutzing".
+<[Doug] D.PHILIPS3> Robert, What is your 'dream' forth like?  (Or, in what
+ways does it differ from traditional forth?)
+<[Van] C.VANHORN> well, It's fun to make words, but if you dno't have a job
+you want to do, you have no direction to go.
+<[Van] C.V ANHORN> it's just a bunch of nifty words.
+<[Robert] R.BERKEY> True of many tools in life, no?
+<[Doug] D.PHILIPS3> Van, how is that different from any other language, where
+its even more time consuming to make functions/compile, etc?
+<[Doug] D.PHILIPS3> (I futz by running my disk defragmenter!)
+<[Robert] R.BERKEY> A car, a boat.
+<[Van] C.VANHORN> I worte a few FORTH screens of D>B, H?B, H>D Etc, to do base
+conversions
+<[Van] C.VANHORN> and they work Great, they use one of the best parts of FORTH
+<[Van] C.VANHORN> but I simply never use them.
+<[Doug] D.PHILIPS3> SO you actually *waste* less time creating useless tools
+in forth?  ;-)
+<[Doug] D.PHILIPS3> Because forth is so much faster at building anything ;-)
+<[Van] C.VANHORN> I know, I can hardly hold my head up in public!
+<[Roberrt] R.BERKEY> For prototyping with hardware, Forth is fun.
+<[Doug] D.PHILIPS3> Robert, I'm still curious to know what your dream forth is
+like!
+<[Robert] R.BERKEY> Oh, it's got a COMPILER and an INTERPRETER ...
+<[Doug] D.PHILIPS3> Yeah, but then you have to be good with a soldering iron
+or wire wrap gun or what have you.
+<[Van] C.VANHORN> and what you hope to DO with it??
+<[Doug] D.PHILIPS3> I mean, how is it different from traditional forths?
+<[Robert] R.BERKEY> and stream files that are block based...
+<[Robert] R.BERKEY> <end of thought>.
+<[Van] C.VANHORN> All thought, or just yours??
+<[Doug] D.PHILIPS3> Here on the east coast its bed time.  Nice chatting with
+you all.  Gotta go.
+<[Robert] R.BERKEY> I don't like conventional compilers.
+<[Robert] R.BERKEY> The interpreter calls the compiler, and if you want to
+call the
+<[Robert] R.BERKEY> interpreter from the compiler you must stand on your head.
+<[Doug] D.PHILIPS3> (Gets you more blood that way!)
+<[Van] C.VANHORN> Is THAT what I  been doing worng!!
+<[Doug] D.PHILIPS3> Yeah, I too think there should be a better way, but don't
+yet have ideas on how to do it.
+<[Van] C.VANHORN> wRong
+<[Robert] R.BERKEY> Yeah, someday.
+<[Robert] R.BERKEY> I've got lot's of ideas.
+<[Doug] D.PHILIPS3> I'd love to hear them.  Maybe you could get them on line
+sometime? 
+<[Robert] R.BERKEY> (Too many ideas to implement them all.)
+
+=== End of Steno notes. ===
+
+

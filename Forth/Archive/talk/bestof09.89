@@ -1,0 +1,343 @@
+
+
+                
+                    Best of GEnie..... September 1989
+          News from the GEnie Forth RoundTable by Gary Smith
+
+   As promised at the close of last issue's 'Best of GEnie' this time we
+will re-examine ForthNet. ForthNet is a virtual Forth network that links
+designated message bases of several Bulletin Boards and Informattion Services
+in an attempt to provide greater distribution of Forth related information.
+It is provided courtesy of the SysOps of its various links. Readers of this 
+column may recall ForthNet was talked of as a dream yet unfulfilled in 'Forth
+Dimensions' Volume X, Number 4. At that time, there was cause to wonder if it 
+would even survive. Some questions still remain, serious questions, but as the 
+evolution continues it is increasingly eveident a purpose is being served; and 
+where there is purpose there is often will to succeed.
+   
+   For historical perspective ForthNet was a term coined in early 1986 when
+the Forth Interest Group was still searching for a home for its electronic
+message base that would provide easier and greater access than the FIGTree
+BBS. Discussions at that time were being conducted on Delphi (tm), and 
+consisted primarily of establishing guidelines and expectations. After the
+GEnie(tm) Forth RoundTable was established and I was included as one of the
+co-SysOps I once again began to explore the possibility of linking with other
+Forth message bases. With the encouragment of GEnie lead SysOp Dennis Ruffer
+and considerable help of Jack Woehr (jax) we established the first link with
+the GEnie Forth RoundTable and one topic of the Well forth.conf which Jack is
+fairwitness of. Later, I brought forth.conf on Wetware Unix BBS into this
+link.
+
+   Concurrently Jerry Shifrin had established the East Coast Forth Board as
+a premier source of Forth information exchange, and had linked it via PCBoard
+to West Coast Forth Board and later North Coast Forth Board. West Coast and
+North Coast have both since been dissolved by their operators, but in their
+places have risen British Columbia Forth Board and Real-Time Control Forth
+Board, both linked to Jerry's East Coast Forth Board. Also linked to this
+group is Metrolink Bulletin Boards which themselves maintain a loose network
+similar to Opus and Fido. 
+
+   It was the joining  of these two virtual nets into one ForthNet that has
+resulted in a great single message base for all Forth users. For this much
+credit must go to Jerry Shifrin. I was initially porting messages of
+interest from Don Madsen's North Coast Forth Board to GEnie. This helped
+extend the information input, but the circle was only half complete until
+Jerry developed methods to make the message bases flow to the East Coast
+Forth Board (and the other xCFB nodes) from GEnie and thereby finish the 
+circuit that everything became a homogeneous message base whereby all users
+of all services are literally able to communicate with one another. This has
+been an exciting development. Now Forth programmers are able to tap a very
+large pool of talent to help resolve problems. A new user of Forth encountering
+an editor problem received seven responses from four sources in two days. That
+is networking at its best. As a GEnie Forth RoundTable SysOp I will remind you
+all of this is available to you simply by logging onto the GEnie Forth
+RoundTable. You need not worry about the mechanics of ForthNet. All that is
+asked in return is your participation. Nothing could be easier.
+
+   All is not sunshine and roses, however. Much of the porting is still done
+by one or two individuals. The absence of either shows immediately. This is
+the bane of most virtual networks, though. Usenet functions only by the
+grace of the volunteer postmasters at its various Unix sites, which is part
+of the reason links in that system come and go. We hope to emulate their
+success and have more links come into ForthNet than go.
+
+   Exciting trends and possibilities are afoot. We are  currently establishing
+a link in Australia on Lance Collins BBS for the PCBoards. We are also trying
+to establish a Usenet link with other Forth sources with that common link. We
+are porting messages into GEnie for redistribution from Usenet comp.lang.forth
+and creating an edited ForthNet packet for distribution on Usenet. We have
+been in touch with several Forth users we previously would have had no real
+hope of establishing contact with. We want to encourage all who have
+contacted us to continue to do so, and those who have not to please do so.
+Jack Woehr (jax) jax@well.UUCP, jax@chariot.UUCP or myself (gars) at 
+well!gars@lll-winken.arpa (this also works for jax), gars@wet.UUCP or 
+gars@chinet.UUCP. Each new contact is like a new discovery.
+
+  The following are excerpts from recent letters and e-mail :
+
+ From lll-winken!@CUNYVM.CUNY.EDU:P_FERREIRA@INESCN.RCCN.PT Wed Jul 12
+ 03:21:43 1989
+ From: Paulo A. D. Ferreira <P_FERREIRA%INESCN.RCCN.PT@CUNYVM.CUNY.EDU>
+ To: well!gars@lll-winken.arpa
+ Date: Wed, 12 Jul 89 09:57:08 GMT
+ Subject: Forth BBS's
+
+ To: Gary Smith
+
+ From: Paulo Ferreira
+       p_ferreira@inescn.rccn.pt
+
+       Physical address:
+       Inesc Norte ( CG & CAD )
+       Largo de Mompilher 22
+       4000 Porto Portugal
+
+  As a new FIG member, i saw your article in Forth Dimensions,
+ regarding Forth on-line resources.
+   But...   I only have access to a X25 system, i have no modem, so
+ could you please tell me the addresses of some BBS that are accessible
+ this way?
+        I would be very grateful.
+
+             Paulo Ferreira
+
+ Appendix:
+         What do I do with Forth ?
+
+    I develop software for a graphics board prototype ( PC based ) with
+ a Texas 34010 Processor, and I have the interface with the 34010, from the PC
+ side written in Forth. The interface is only for development purposes, and it
+ includes a mini debugger for 34010 machine code.
+    The graphics board will be part of a system for nuclear medicine.
+
+ & r
+ To: well!gars@lll-winken.arpa P_FERREIRA%INESCN.RCCN.PT@CUNYVM.CUNY.EDU
+ Subject: Re:  Forth BBS's
+
+ By all means - Please start with the Forth conference here on the WELL
+ where you reached me. The well is accessible via X.25 - leave e-mail
+ to eric fair (fair@well) for details if you need access help. Eric is
+ the WELL's resident usenet/UUCP/inet guru.
+   Thanks for the info. It is super to hear from a distant Forther. I will
+ forward your message to jax, also and see if he can't put you on his
+ FIGCHAPTER e-mail list.
+    gars
+ 
+ ------------        
+ From pacbell!pyramid!munnari!usage.csd.unsw.oz.au!tedr Fri Jul 14 02:59:58
+1989
+ Date: Thu, 13 Jul 89 18:14:17 EST
+ From: munnari!usage.csd.unsw.oz.au!tedr (Ted Rofe)
+ To: well!gars
+
+ best of GENie
+ Gary,
+ I have just received the May/June 1989 issue of Forth Dimensions
+ and, as usual, enjoyed reading your "Best of GENie" section.
+ I note you have a quote from Larry Forsley in which he says:
+
+ "JFAR V,2 will be going to the printer just before Christmas...
+ JFAR V,3 and V,4 papers are nopw being processed.  I expect that
+ volume to be finished by June '89."
+
+ The quote was dated December 1988.
+
+ Did all this really come to pass?
+
+ We have not received any copies of JFAR since Volume IV.
+
+ I thought C.H. Ting's comparison of Forth and Zen (as well as
+ his quote from Lin Yu-Tang) very apt.
+
+ Regards,
+
+ Ted Rofe
+
+ tedr@usage.csd.unsw.oz
+
+ To: munnari!usage.csd.unsw.oz.au!tedr
+ Subject: JFAR!
+ Ted -
+   Thanks for the kudos. It is great to know I'm not writing to a vacuum.
+ Yes, JFAR FINALLY came to pass. I have had mine about 3 weeks, so you
+ should receive yours shortly.
+   re: Dr. Ting. He is also one of the nicest people it has been my great
+      pleasure to talk to since becoming involved in Forth. That says a LOT
+      because in my opinion Forth users are a pretty class act despite our
+      collective reputation as maverick rowdys :-)
+
+   Please stay in touch, Ted. We want VERY much to get Australia involved
+     electronically.
+     Gars
+ ------------
+    
+ 25 July 1989
+
+ From: Lance Collins, 65 Martin Road, Glen Iris. Victoria  3146
+ To: Gary Smith, P.O. Drawer 7680, Little Rock, AR 72217
+
+ Thanks for the messages which have been filtering back to me on
+ paper from ted Rofe. Turns out onr of our chapter members
+ can get to Usenet mail but his research assistant status is on a month
+ to month basis at present so he is not the mailbox to tell you
+ about.
+
+ Have had snail mail from Jack Brown re PCBoard and have ordered and
+ received a copy. (Please mail the registration card for me.) Have
+ only had a quick play so far but am not as impressed as I hoped I
+ would be. Seems that, like OPUS, third party shareware is needed
+ to make it work well. Especially netmail, which is where we
+ started on this. Have written to Jack Brown saying I have ordered
+ PCB and asking for the shareware etc . extras he promised.
+
+ On phone costs a 5 minute call could transfer a 30 to 50K ARC file
+ at 2400 bps for less than $10. For once a week the cost is painful
+ but bearable at least for a few months as an experiment. We will
+ also have to pay Jerry and Jack for disks and mailing of files.
+
+ Then there are 9600 modems, if satellite links actually provide
+ better throughput (moot).
+
+ You said to Ted Rofe that you only found out about our BBS recently.
+ I wrote to Kent Safford about it last November. I also asked Marlin
+ Ouverson if he would like an article about how we got our BBS set up.
+ (Tell JAX about this, he says in FD XI/2 he dreams of every chapter
+ having a BBS on ForthNet).
+
+ Following that last thought if there was a Forth file library and
+ many remote BBS's like ours then maybe FIG could provide an update
+ service for the chapters to subscribe to. Then we could spend our scarce
+ dollars on netmail and let snail mail carry the bulky stuff.
+
+  Regards
+
+
+  Lance
+         
+ From: Gary Smith, P.O. Drawer 7680, Little Rock, AR 72217
+ To: Lance Collins, 65 Martin Road, Glen Iris. Victoria  3146  
+
+ > Thanks for the messages which have been filtering back to me 
+
+  No. Thank you. Your continued contact has helped sustain momentum.
+  This ForthNet concept is not totally endorsed by all .. .. yet.
+
+ > can get to Usenet mail but his research assistant status is on a month
+ > to month basis at present so he is not the mailbox to tell you about.
+
+  Why not ? Even a month would help determine the value of Usenet mail.
+  There is an added reason to test Usenet. It appears (1) GEnie will
+  support Usenet mail via a gateway. (2) I am now attempting to solicit
+  some help in the way of someone who will edit a packet of ForthNet
+  messages for me to post to comp.lang.forth. We can presume your having
+  access to this Usenet/ForthNet port would cut down on your need to
+  carry so much traffic via PCBoard.
+
+ > (Please mail the registration card for me.)
+
+  Done.
+
+ > You said to Ted Rofe that you only found out about our BBS recently.
+ > I wrote to Kent Safford about it last November. I also asked Marlin
+ > Ouverson if he would like an article about how we got our BBS set up.
+
+  I must confess having seen the BBS note in Chapter listings I gave it
+  little creedence until its activity was confirmed by you.
+
+ > Have written to Jack Brown saying I have ordered
+
+ > (Tell JAX about this, he says in FD XI/2 he dreams of every chapter
+ > having a BBS on ForthNet).
+
+  I am posting this exchange to GEnie/ForthNet. Dennis Ruffer, Jack Brown,
+  Jack Woehr (jax), Jerry Shifrin, et al will read and know we are indeed
+  creating a necessary service. I will leave it to the FIG directors, the
+  Chapters Coordinator... to reply to your points.
+
+ > Following that last thought if there was a Forth file library and
+ > many remote BBS's like ours then maybe FIG could provide an update
+ > service for the chapters to subscribe to. Then we could spend our scarce
+ > dollars on netmail and let snail mail carry the bulky stuff.
+
+  That's the plan, Lance. That's the plan.   
+
+  Regards,
+
+   Gary
+ ------------
+   
+                                       PARIS, the 24th July 1989
+        J E D I
+
+    ASSOCIATION JEDI
+ 17, Rue de la Lancette
+   F - 75012 PARIS
+      (FRANCE)      
+                                           to  Mr Gary SMITH
+                                               P.O. Drawer 7680
+                                               Little Rock
+                                               ARKANSAS 72217 (USA) 
+
+                         Dear Gary,
+
+        After your letter published in FORTH DIMENSIONS Volume XI,
+ Nr 1, we inform you about the french FORTH BBS 'JEDI'. To contact 
+ us, connect you to the TELETEL network:
+
+    33 36 43 15 15      access-code  SAM*JEDI
+                        Sysop: Marc PETREMANN  (SECRETAIRE)
+
+ Set your modem and communication software to 1200/75 bauds with
+ 7 bits data, Even parity and 1 bit stop. The capacity access of
+ SAM*JEDI is 32 simultaneous ways.
+
+ If you call from HOUSTON, you can access to SAM*JEDI via the US-
+ VIDEOTEL network. For more information, call:
+
+   Videodial Inc.
+   1700 BROADWAY
+   NEW YORK  NY 10019  tel: 212-307-5005
+
+
+                                         with our respects.
+
+                                          Marc
+         
+                                               Gary Smith
+                                               P.O. Drawer 7680
+                                               Little Rock, AR 72217
+                                               = USA =
+
+      J E D I
+
+ ASSOCIATION JEDI
+ 17, Rue de la Lancette
+ F - 75012 PARIS
+ = FRANCE =
+
+ Dear Marc and Association JEDI,                     2 August 1989
+
+    Thank you for your letter of 24 July, which I received  today,
+ advising me of the FORTH BBS 'JEDI'.
+
+    I will post  your  letter to the GEnie Forth RoundTable and on
+ ForthNet today. I will  also  include you in our resource listing
+ update in FORTH DIMENSIONS.You should realize it will be at least
+ two issues before the information will appear in FORTH DIMENSIONS
+ so please be patient.
+
+    If any of your  association  members have  access to Usenet it
+ would make electronic contact  with you much easier. Both the FIG
+ chapters coordinator, Jack Woehr (jax) and myself (gars) are easy
+ to contact via Usenet.If possible please do so.
+  
+  Regards,
+   Gary         
+          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   If you would like to suggest an interesting guest, please leave me e-mail
+( posted to GARY-S ) on GEnie, ( gars on Wetware,Well, and ChiNet) or send me
+a note via U. S. mail. I also encourage anyone who feels he/she has a message 
+to share to contact me via the above or FIG offices.
+
+

@@ -1,0 +1,434 @@
+
+
+
+Minutes of the FIGGY BAR RT Conference.
+
+Date: 10/26/89   Time: 22:34EDT
+Entire contents Copyright (c) 1989 GEnie
+Forth RoundTable. Any or all parts of this
+file may be freely copied and distributed
+provided source credit is given.
+
+Attendees:
+[[Gary] GARY-S]
+[[Hadil] H.SABBAGH]
+[[Dennis] D.RUFFER]
+[[Len] NMORGENSTERN]
+[[John] JDHALL]
+[[Kevin] APPERT]
+[[Jax Of Cours] FIGCHAPTERS]
+
+ Items discussed: Heart/blood modeling,Bradley cforth, FCode on Sun SPARC,
+                  more on 'the' quake,guest conference schedule, Forth
+                  Business Applications, Management in Forth,Abundance,
+                  scroll on last character of a line,comm programs in Forth
+Minutes:
+<H.SABBAGH> is here.
+<[Hadil] H.SABBAGH> Hi Gary.
+<[Hadil] H.SABBAGH> Still snowing?
+<[Gary] GARY-S> Hi Hadil
+<[Gary] GARY-S> No way !
+<[Gary] GARY-S> 75 today
+<[Hadil] H.SABBAGH> I know. Its probably 95.
+<[Hadil] H.SABBAGH> Oh.
+<[Gary] GARY-S> How's the Zoo
+<[Hadil] H.SABBAGH> I haven't visited yet!!
+<[Gary] GARY-S> Noo York
+<[Hadil] H.SABBAGH> Yah.  Im too nerdy to really enjoy the city :-)
+<[Gary] GARY-S> as in Bronx Zoo
+<[Hadil] H.SABBAGH> Or the mayor
+<[Gary] GARY-S> How'd you do on your tests ?
+<[Hadil] H.SABBAGH> I passed.  I am now ABD: All But Dissertation...
+<[Hadil] H.SABBAGH> I.e, I haven't started yet :-)
+<[Gary] GARY-S> Got a theme
+<[Hadil] H.SABBAGH> Yah.  Fluid flow through a collapsible tube.
+<[Hadil] H.SABBAGH> Also known as blood flow through an artery.
+<[Hadil] H.SABBAGH> Requires a stupendous amount of Cray time.
+<[Gary] GARY-S> The dynamics ? turbulance ? ...
+<[Hadil] H.SABBAGH> Well, a complete simulation.
+<[Gary] GARY-S> really ? a complete model ?
+<[Hadil] H.SABBAGH> Yes!  I am adapting my advisor's method for 3d
+<[Hadil] H.SABBAGH> heart simulation.  He has the only method I know of
+<[Hadil] H.SABBAGH> where the heart wall motion and fluid flow are resolved
+<[Hadil] H.SABBAGH> at the SAME TIME.
+<[Gary] GARY-S> That's an ambitious project ! I'm suitably impressed.
+<[Hadil] H.SABBAGH> Unfortunately, I can't use Forth.
+<[Hadil] H.SABBAGH> I might use it for the graphics display tho'
+<[Gary] GARY-S> why
+<D.RUFFER> is here.
+<[Hadil] H.SABBAGH> Hi Dennis.
+<D.RUFFER> Hello Gary, Hadil
+<[Hadil] H.SABBAGH> I was boring Gary with my dissertation topic.
+<[Gary] GARY-S> You might want to check with Sperl on ECFB and see what he's 
+done with graphics for F-PC
+<[Dennis] D.RUFFER> boring Gary, is that possible?
+<[Gary] GARY-S> only worms bore
+<[Hadil] H.SABBAGH> Anyway.  I will probably try to get Mitch Bradley's CFORTH
+<[Hadil] H.SABBAGH> and adapt it to an IRIS workstation.
+<[Gary] GARY-S> Good plan - It's no secret I'm a bradley fan
+<NMORGENSTERN> is here.
+<[Dennis] D.RUFFER> hi len
+<[Len] NMORGENSTERN> Hi
+<[Hadil] H.SABBAGH> Hi Len.  Who isn't a Bradley fan?
+<[Gary] GARY-S> BRB - Dennis/Len keep the flow while I make a short exit
+<[Dennis] D.RUFFER> those who don't want to hear about C aren't
+<[Dennis] D.RUFFER> ok gary
+<[Hadil] H.SABBAGH> Well, C is okay... for writing a Forth interpreter :-)
+<[Len] NMORGENSTERN> I may not be able to stay long
+<[Len] NMORGENSTERN> I have a virus (human type, not computer)
+<[Len] NMORGENSTERN> One of the mysteries of Medicine: Why does an infectin 
+make you fatigued?
+<[Dennis] D.RUFFER> oh, sorry to hear you are not feeling well
+<[Hadil] H.SABBAGH> Yah me too.
+<[Gary] GARY-S> back - miss me ? :v)
+<[Len] NMORGENSTERN> Nothing very bad, thanks for your concerns.
+<[Dennis] D.RUFFER> not sure I would even write an interpreter in C unless I 
+had to
+<[Hadil] H.SABBAGH> It's portable in UN*X land.
+<[Gary] GARY-S> Hadil - know how to reach Mitch ?
+<[Hadil] H.SABBAGH> Yah. I have his address somewhere. Want it?
+<[Dennis] D.RUFFER> unfortunately yes, it's about the only way to get into Unix
+<JDHALL> is here.
+<[Hadil] H.SABBAGH> I'll have to look it up and send it to you.
+<[Gary] GARY-S> Hi again John
+<[Len] NMORGENSTERN> Hi John
+<[Dennis] D.RUFFER> well Hi John, how's the after shooks
+<[Hadil] H.SABBAGH> Hi John
+<[Gary] GARY-S> No - I have it , and his phone #
+<[Hadil] H.SABBAGH> Did you read the description of FCode? Awesome!
+<[Gary] GARY-S> Box 4444, Mt View 94040
+<[Hadil] H.SABBAGH> I don't know how he convinced the people at Sun to use 
+Forth!
+<[Hadil] H.SABBAGH> I mean Bill Joy is the *original* UNIX guru.
+<[Gary] GARY-S> I'm seeing a lot about FCode on the Net- Mitch blew some folks 
+away with that !!!
+<[Dennis] D.RUFFER> he didn't, but just snuck it in when they were'nt looking
+<[Dennis] D.RUFFER> actually, he beat everyone else with a debugger :-)
+<[Gary] GARY-S> He has included several Forth hooks in the Sun os
+<[Dennis] D.RUFFER> John, did you suffer any damage in the big shake up?
+<[Dennis] D.RUFFER> is John there, or is this just his computer?
+<[Gary] GARY-S> He shows in status
+<[Len] NMORGENSTERN> I have sent him a private message (3 lines) & he might 
+have missed it!
+<[Len] NMORGENSTERN> Missed yours, that is.
+<[Len] NMORGENSTERN> .
+<[John] JDHALL> No significant damage at home, but our bouiding at work is 
+being condemed.
+<[Gary] GARY-S> John Hall has graciously accepted as our december conference 
+guest
+<[Dennis] D.RUFFER> does that mean you don't have to go to work?
+<[John] JDHALL> I am home working today.  I had the ooption of working at home 
+or in another office.  Are they kidding?
+<[Hadil] H.SABBAGH> Where do you work John?
+<APPERT> is here.
+<[Hadil] H.SABBAGH> (Or am I supposed to know this?)
+<[John] JDHALL> Lockheed in Palo Alto
+<[Dennis] D.RUFFER> hi kevin
+<[Gary] GARY-S> hey kev
+<[John] JDHALL> Kevin's building was trashed also!
+<[Kevin] APPERT> My office is in the front seat of my car at the moment
+<[Hadil] H.SABBAGH> So was my friend's at Apple.
+<[John] JDHALL> I'm working at home today, Kevin.
+<[Gary] GARY-S> Puts a whole new meaning on the term 'urban renewal'
+<[Gary] GARY-S> Stuff Forth - anything anyone just HAS to talk about ?
+<[Kevin] APPERT> two doors down from my work address, there was a building 
+whose walls collapsed, (it was vacent for remodeling).  It's a vacant lot n
+ow
+<[John] JDHALL> Many tourists left the next day.  Not willing to see if this 
+was the Big one.
+<[Hadil] H.SABBAGH> Yah.  I would like to start a discussion about
+<[Kevin] APPERT> was Liz Rather the guest last week?
+<[Gary] GARY-S> January, Kevin
+<[Dennis] D.RUFFER> boy, would she love that name :-)
+<[Hadil] H.SABBAGH> the use of Forth in applications OTHER than machine 
+control/interfacing.
+<[Dennis] D.RUFFER> what apps?
+<[Hadil] H.SABBAGH> e.g., database, text processing, telecommunications, user 
+interface.
+<[John] JDHALL> How about business applications.
+<[Gary] GARY-S> The schedule as it now stands : November, Charles Curley  
+December: John D Hall   January Elizabeth Rather
+<[Dennis] D.RUFFER> for telecom, check out topic 17
+<[Hadil] H.SABBAGH> Yah. I've been following it.  Really good code.
+<[Hadil] H.SABBAGH> I could actually understand it!
+<[Dennis] D.RUFFER> thanks
+<[Gary] GARY-S> Has anyone played with Abundance ?
+<[Dennis] D.RUFFER> amazing, could you explain it to me <grin>
+<[Gary] GARY-S> We are talking FAST Forth and oodles of Business apps
+<[Dennis] D.RUFFER> do they have an assembler in Abundance?
+<[Gary] GARY-S> two
+<[Dennis] D.RUFFER> 2??
+<[Kevin] APPERT> I'm working for a defense manufacturer and would have to 
+ignore the silly use restrictions on Abundance.   They have EVERYTHING in 
+Abundance
+<[Hadil] H.SABBAGH> And the kitchen sink :-)
+<[Gary] GARY-S> a primitive one and a more ambitious one
+<[Gary] GARY-S> called SPASM and ORGASM
+<[Dennis] D.RUFFER> :-)
+<[Hadil] H.SABBAGH> I am thinking of ordering it.
+<[Dennis] D.RUFFER> I've got a question for all you Forthers...
+<[Gary] GARY-S> It's so damn cheap for all you get and it is a FAST FAST FAST 
+Forth
+<[Dennis] D.RUFFER> do any of your Forths allow you to write a character
+<[Kevin] APPERT> < Frother (mostly at the mouth)
+<[Dennis] D.RUFFER> in the last character on the screen...
+<[Dennis] D.RUFFER> without scrolling?
+<[Gary] GARY-S> no
+<[Hadil] H.SABBAGH> Haven't tried it.
+<[Dennis] D.RUFFER> tis a real problem in a terminal emulator
+<[John] JDHALL> I seem to remember form the IBM's that it is an IBM problem.
+<[Dennis] D.RUFFER> I'm having to fix PolyForth right now to handle it
+<[Gary] GARY-S> My old FIG Forth did that, too
+<[Kevin] APPERT> You can do a direct screen write on a PC with no difficulty.  
+All you need is a LONG! and knowledge of the address
+<[Hadil] H.SABBAGH> Why Dennis?  You shouldn't be using line 25
+<[Dennis] D.RUFFER> yes, the BIOS routines also have the problem
+<[Hadil] H.SABBAGH> for emulation anyway.
+<[Hadil] H.SABBAGH> Most systems want 24 line terminals.
+<[Dennis] D.RUFFER> you don't actually use line 25
+<[Dennis] D.RUFFER> however, the problem in when I use PolyForth windows
+<[Dennis] D.RUFFER> the terminal emulator sets line 24 as the last line
+<[Kevin] APPERT> BIOS routines much too slow for screen output on PCs
+<[Hadil] H.SABBAGH> Ah. I understand.
+<[Dennis] D.RUFFER> then the app goes and writes to the end of the line
+<[Gary] GARY-S> Wil Baden routinely re-writes his blocks to suit himself as 
+does Lee Brotzman if your looking for expert advice Dennis
+<[Hadil] H.SABBAGH> Have you tried a direct BOIS call?
+<[Dennis] D.RUFFER> I think I have it solved...
+<[Dennis] D.RUFFER> by doing the cursor scroll check before...
+<[Dennis] D.RUFFER> writting the character
+<[Hadil] H.SABBAGH> Yah. I was just going to suggest that that was the problem.
+<[Gary] GARY-S> Lee talked about his fixes in a FIGGY
+<[Gary] GARY-S> Same time Weinstein was discussing VSM in Forth
+<[Gary] GARY-S> and silence is expensive
+<[Dennis] D.RUFFER> I now need to do some thinking about characters outside the 
+window border
+<[Dennis] D.RUFFER> that creates an even harder problem to handle
+<[Dennis] D.RUFFER> at least if I don't want to totally re-write PolyForth's 
+drivers
+<[Dennis] D.RUFFER> maybe if I ever get the display settled, I can get back to 
+ZMODEM
+<[Dennis] D.RUFFER> anyone need a 32-bit CRC routine?
+<[Gary] GARY-S> got one ?
+<[Dennis] D.RUFFER> yes, but don't know if it's right yet
+<[Dennis] D.RUFFER> anyone got one I can compare against?
+<[Dennis] D.RUFFER> but I'll know as soon as I get further into ZMODEM
+<[Gary] GARY-S> 'Technical Aspects of Data Communications' by McNamara is a 
+good ref Dennis
+<[Kevin] APPERT> have you looked at John James' one in Forth Dimensions?
+<[Dennis] D.RUFFER> didn't know John did one...I'll have to look...do you 
+remember which one?
+<[Kevin] APPERT> nope.
+<[Dennis] D.RUFFER> thanks for the ref gary...I'm using some Pascal routines as 
+a reference
+<[Kevin] APPERT> it's in high level and he uses masks instead of shifts. It's 
+really rather clever.
+<[Gary] GARY-S> I just looked and McNamara gives the general algorithm but only 
+discusses CRC-12 and CRC-16 in detail
+<[Dennis] D.RUFFER> for 32 bits or 16?
+<[Kevin] APPERT> I can look it up and send mail, Dennis
+<[Gary] GARY-S> You better understand XOR intimately
+<[Dennis] D.RUFFER> great, I'll check the indeces I have also
+<[Kevin] APPERT> oops, I think it may be just 16
+<FIGCHAPTERS> is here.
+<[Dennis] D.RUFFER> I will need your RLE stuff soon also gary
+<[Kevin] APPERT> hi Jax
+<FIGCHAPTERS> hello all
+<[John] JDHALL> hi jax
+<[Dennis] D.RUFFER> hijack??   call the cops <smile>
+<FIGCHAPTERS> Hi JD, Kev, Gary
+<FIGCHAPTERS> No Baden 2nite? I have info for him.
+<[Dennis] D.RUFFER> I've got quite a few version of 16 bit CRC kev, but 32 it a 
+little tougher
+<[Dennis] D.RUFFER> I'm table driving both of them right now
+<[Dennis] D.RUFFER> but the table are expensive
+<[Dennis] D.RUFFER> on a 64K PolyForth
+<FIGCHAPTERS> topic 2nite?
+<[Gary] GARY-S> RYO
+<[Dennis] D.RUFFER> does anyone have some RLE compression code in Forth?
+<[Kevin] APPERT> be creative, Jax
+<[Gary] GARY-S> Did you ever get Forseburg out of your hair over that ?
+<FIGCHAPTERS> I am trying to be creative. I am working on four new Forths!
+<[Dennis] D.RUFFER> well, he is willing to let me use his for public domain
+<[Dennis] D.RUFFER> but I don't like his restrictions
+<[Dennis] D.RUFFER> and I think it can be done without knowing his code
+<[Dennis] D.RUFFER> I'm certainly going to try
+<[Dennis] D.RUFFER> gonna have to put g'night on a function key soon
+<[Gary] GARY-S> anything Forthish to discuss - if not....
+<[Dennis] D.RUFFER> anyone hear anything out of ansi yet?
+<[Kevin] APPERT> baa! humshit!
+<[Dennis] D.RUFFER> I gave Bess the 2 transcripts from the division bars
+<[Gary] GARY-S> The time to get serious about ansi is E. Rather's Jan 
+confernece
+<[Dennis] D.RUFFER> both Bob's rtc and the one before it will be handed out to 
+all
+<[Jax Of Cours] FIGCHAPTERS> The problem with ANSI is that they have SO MUCH TO 
+DO.
+<[Kevin] APPERT> " We must hurry, we must hurry, we have so much time and so 
+little to do ..." (Willy Wonka and the Choclate Factory)
+<[Dennis] D.RUFFER> gary, your note to GEnie central said something about the 
+jan meeting being the last ans meeting.   What did you mean by that?
+<[Jax Of Cours] FIGCHAPTERS> More like the Red Queen in _Thru the Looking Glass 
+_ " You have to run MUCH FASTER to stay in one place.
+<[Gary] GARY-S> Kev - you are getting miliantly anti-ansi ... care to expound ?
+<[Kevin] APPERT> ones complement?
+<[Gary] GARY-S> that's your reason
+<[Kevin] APPERT> no basis document on-line?
+<[Gary] GARY-S> What Jax - no amen
+<[Kevin] APPERT> Chuck Moore dropping out?
+<[Gary] GARY-S> He never dropped in !
+<[Kevin] APPERT> and so on ad dreadful nausium!
+<[Dennis] D.RUFFER> yes, he attended the first meetings
+<[Jax Of Cours] FIGCHAPTERS> Well, it's easy to snipe from the sidelines, but 
+the ANSI effort is having problems.
+<[Kevin] APPERT> no, my understanding was that he was a member at one point.
+<[Gary] GARY-S> He attended, but did not approve
+<[Jax Of Cours] FIGCHAPTERS> He is present even when absent, in effect.
+<[Dennis] D.RUFFER> he tried to argue, but that's not his forte
+<[Gary] GARY-S> His views are in our library
+<[Jax Of Cours] FIGCHAPTERS> The problem is that a Standard is about 50 man 
+years of effort, and it's hard to see that much getting done by Forth prog
+rammers on their own time before the turn of the century!
+<[Gary] GARY-S> I still vividly recall his remark on his FIRST ever conference 
+on CIS  - Standards are a red flag. If I accepted standards there would
+ be NO Forth.
+<[Kevin] APPERT> yes, it's easy to snipe from the sidelines.  I havn't got the 
+time, the money, or the constituancy to participate on a meaningfull le
+vel.  This does not prevent me from disagreeing with those who do.
+<[Jax Of Cours] FIGCHAPTERS> I agree with you mostly, Kevin. I just would like 
+to find some sort of problem-solving mode to shift into.
+<[Gary] GARY-S> We had him in his second ever conference and his prelude very 
+clearly repeats that view
+<[Gary] GARY-S> But - does the standard committee not serve the Forth 
+Community ? valid question
+<[Kevin] APPERT> most of my sour stomach from the standard is frustration at 
+being unable to spot any likely such mode, Jax
+<[Jax Of Cours] FIGCHAPTERS> The goals of Ansi X3j14 TC are very idealistic, 
+and it would be nice to see them be able to reach a meaningful comporomis
+e that would enrich the Forth environment.
+<[Jax Of Cours] FIGCHAPTERS> And enrich Forth programmers.
+<[Jax Of Cours] FIGCHAPTERS> know any?
+<[Jax Of Cours] FIGCHAPTERS>  ;_)
+<[Gary] GARY-S> rich or programmers :-)
+<[Jax Of Cours] FIGCHAPTERS> programmers who would like more respectability for 
+Forth.
+<[Kevin] APPERT> any standard will help.  We can point to it and say there is 
+one.  and then dierge from it
+<[Jax Of Cours] FIGCHAPTERS> we discussed this at last Denver FIG.
+<[Dennis] D.RUFFER> A standard might serve Forth, but Forth will NEVER serve a 
+standard
+<[Gary] GARY-S> Well put !
+<[Jax Of Cours] FIGCHAPTERS> We of the Forth community are largely no longer 
+young hackers, but project managers and higher.
+<[Jax Of Cours] FIGCHAPTERS> We DO know how to manage Forth projects. The old 
+saws about no team work in Forth no longer hold.
+<[Kevin] APPERT> tell that to Charles Curley next time you see him
+<[Gary] GARY-S> Ther lies a serious problem - lack of new blood
+<[Jax Of Cours] FIGCHAPTERS> THAT"S WHO I WAS DISCUSSING IT WITH! :-)
+<[Kevin] APPERT> how do you manage Forth projects?
+<[Jax Of Cours] FIGCHAPTERS> Of course, Curley is an iconoclast and a cynic, 
+but he agreed.
+<[Gary] GARY-S> Ask Shifrin or Rather
+<[Jax Of Cours] FIGCHAPTERS> You manage them with the skills placed at your 
+disposal by years of working
+<[Jax Of Cours] FIGCHAPTERS> in Forth ....
+<[Jax Of Cours] FIGCHAPTERS> with other programmers on team projects.
+<[Jax Of Cours] FIGCHAPTERS> That's how.
+<[Jax Of Cours] FIGCHAPTERS> .
+<[Dennis] D.RUFFER> to manage Forth project is NOT the problem, any more than 
+it is with any other language, the problem is to manage Forth programers
+<[Kevin] APPERT> I've heard Rather speak on the topic, and didn't derive 
+anything usefull from it (for whatever reason)
+<[Dennis] D.RUFFER> she doesn't know how to do it anybetter than any of us do
+<[Jax Of Cours] FIGCHAPTERS> Maybe you are not management oriented, Kevin ... 
+besides, she is talkinga at a corporate level, not a team level.
+<[Kevin] APPERT> she was talking about team level at the time
+<[Dennis] D.RUFFER> Bess is a CEO, NOT a manager
+<[Jax Of Cours] FIGCHAPTERS> Well, the main thing is that you have to agree to 
+work together.
+<[Gary] GARY-S> I bet there's some management going on at Ames NASA
+<[Jax Of Cours] FIGCHAPTERS> CURLEY's theory is:
+<[Dennis] D.RUFFER> the manager we have now, knows little about Forth, but a 
+lot about management and software engineering
+<[Jax Of Cours] FIGCHAPTERS> that each Forth word in the program has an "owner" 
+and that is the person you go to when you want that word to change.
+<[Jax Of Cours] FIGCHAPTERS> He also believes in source code management systems,
+ provided they are coded in Forth.
+<[Dennis] D.RUFFER> that is true of any software algorithm
+<[Kevin] APPERT> does he have a source code management system, Jax?
+<[Jax Of Cours] FIGCHAPTERS> Dennis ... is FINC well run?
+<[Gary] GARY-S> Ron Brathwaite can talk at length about the effects of a 
+mismanaged Forth project
+<[Jax Of Cours] FIGCHAPTERS> ( yes kev, a few screens of Forth).
+<[Dennis] D.RUFFER> good question...I'm not sure I'll answer in public <grin>
+<[Jax Of Cours] FIGCHAPTERS> Well, you can be general. I think it is an 
+interesting question. Is Forth's most hoary corporate entity showing its age,
+or is it still vital?
+<[Jax Of Cours] FIGCHAPTERS> .
+<[Kevin] APPERT> would you talk him into posting it?  sounds like a topic on 
+the BB. " Managing Forth" (unless there is one )
+<[Jax Of Cours] FIGCHAPTERS> He'll be speaking here in a month or two, right GS?
+<[Gary] GARY-S> Who he ?
+<[Gary] GARY-S> Curley ? - yes
+<[Dennis] D.RUFFER> there is one kev...Forth, Inc. is still vital, but 
+suffering many of the normal pains of becoming a real company
+<[Jax Of Cours] FIGCHAPTERS> "becoming" ?
+<[Dennis] D.RUFFER> yes, they hare making profits and now they need to learn 
+what to do with them
+<[Kevin] APPERT> spend it fast
+<[Jax Of Cours] FIGCHAPTERS> Learn to write Forths that aren't indirect 
+threaded.
+<[Dennis] D.RUFFER> they've done that, but to get bigger, they must spend the 
+profits on the right things
+<[Kevin] APPERT> real estate
+<[Gary] GARY-S> I would have thought Forth Inc and entrepreneural quit being 
+synonymous some time ago
+<[Gary] GARY-S> Last shots ?
+<[Dennis] D.RUFFER> no, the entrepreneural spirit just need to be harnessed 
+onto some common goals.
+<[Dennis] D.RUFFER> that is lacking right now
+<[Jax Of Cours] FIGCHAPTERS> Republicans stink!
+<[Jax Of Cours] FIGCHAPTERS> How's that, Gary?
+<[Gary] GARY-S> Forth last shots
+<[Jax Of Cours] FIGCHAPTERS>  :-)
+<[Jax Of Cours] FIGCHAPTERS> Oh, FORTH ... :-)
+<[Kevin] APPERT> next thing you know they'll hire a bunch of lawyers and MBAs 
+and start sueing everybody.  Just like apple
+<[Kevin] APPERT> (Forth INC. that is)
+<[Jax Of Cours] FIGCHAPTERS> I would like to see FINC move to Colorado
+<[Kevin] APPERT> why,  Jax?
+<[Gary] GARY-S> I wonder how well Sculley likes 'HIS' company now
+<[Dennis] D.RUFFER> if that happens, then we can really say it's gone, and so 
+will I be
+<[Jax Of Cours] FIGCHAPTERS> Because then I could possibly work for them.
+<[Jax Of Cours] FIGCHAPTERS> I would like to see Forth Inc thrive and prosper 
+and keep having new ideas.
+<[Kevin] APPERT> amen, Jax.
+<[Jax Of Cours] FIGCHAPTERS> They are doing very nice things in Control 
+programming.
+<[Dennis] D.RUFFER> so would I, and everyone else who works there, the problem 
+again is focus
+<[Jax Of Cours] FIGCHAPTERS> Focus on the new chips, big boy. And keep that 
+emphasis on multiprogramming.
+<[Gary] GARY-S> Forth on SPARC and 486 and 88000
+<[Dennis] D.RUFFER> engineering project and custom work can only do so much
+<[Jax Of Cours] FIGCHAPTERS> or AMD29000 or RTX 4000 or  ...
+<[Jax Of Cours] FIGCHAPTERS> right. You have to have PRODUCTS>
+<[Jax Of Cours] FIGCHAPTERS> I can see FINC is fishing around for 
+off-the-shelf products.
+<[Dennis] D.RUFFER> right, and there is the problem with focus
+<[Jax Of Cours] FIGCHAPTERS> I know the feeling, believe me.
+<[Gary] GARY-S> Project Engineering IS FINC's core ! Never ignore who brung you 
+to the dance !
+<[Jax Of Cours] FIGCHAPTERS> I don't think that $3750 8051 systems are entirely 
+the answer ... but i suppose you sell a few.
+<[Dennis] D.RUFFER> and it's awfully hard to do product while servicing the 
+bread and butter
+<[Jax Of Cours] FIGCHAPTERS> our problem exactly.
+<[Jax Of Cours] FIGCHAPTERS> we have backlog of  new prodcut releases.
+<[Gary] GARY-S> let's go home. ladies
+<[Jax Of Cours] FIGCHAPTERS> no time to write manuals! no time to polish.
+<[Dennis] D.RUFFER> good night ladies
+=== End of Steno notes. ===
+
+

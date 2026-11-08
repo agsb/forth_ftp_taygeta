@@ -1,0 +1,807 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 05/29/88   Time: 22:17EDT
+Attendees:
+[[Dennis] D.RUFFER]
+<[Dave] DHWEINSTEIN> 
+<[jax] VESTA> 
+<[James] J.T.SAVIDGE> 
+<[Gary] GARY-S> 
+<[Leonard] NMORGENSTERN>
+
+Minutes:
+<DHWEINSTEIN> is here.
+<[Dennis] D.RUFFER> hello dave
+<[Dave] DHWEINSTEIN> Hello
+<[Dennis] D.RUFFER> what's happening tonight?
+<[Dave] DHWEINSTEIN> I have a contestant for Leonard's bad FORTH contets...
+<[Dave] DHWEINSTEIN> (one line)
+<[Dave] DHWEINSTEIN> ZERO CONSTANT 37
+<[Dave] DHWEINSTEIN> ERR
+<[Dave] DHWEINSTEIN> 37 CONSTANT ZERO
+<[Dave] DHWEINSTEIN> (RPN TO RPN TO RPN CONVERSION)
+<[Dave] DHWEINSTEIN> Also thought about redefining primitives in the code, and 
+<[Dave] DHWEINSTEIN> never telling anyone...
+<[Dave] DHWEINSTEIN> Guaranteed to screw with people's minds!
+<[Dennis] D.RUFFER> :-) Did you forget the "." at the end?
+<[Dennis] D.RUFFER> I heard FORTH, Inc did that once...
+<[Dave] DHWEINSTEIN> <snicker>
+<[Dennis] D.RUFFER> or rather, they changed all the names that is...
+<[Dennis] D.RUFFER> was supposed to be an absolutely secure program...
+<[Dave] DHWEINSTEIN> How to give programmers breakdowns
+<[Dennis] D.RUFFER> and even the programmers couldn't figure it out after a 
+<[Dennis] D.RUFFER> while. :-)
+<[Dennis] D.RUFFER> .
+<[Dave] DHWEINSTEIN> That is deadly.
+<[Dave] DHWEINSTEIN> But job security! :-)
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> yes
+<[Dennis] D.RUFFER> well you showed up tonight...
+<[Dave] DHWEINSTEIN> If no one else can read your code...
+<[Dave] DHWEINSTEIN> I've showed up for the last three.
+<[Dennis] D.RUFFER> do you show up Thursday also?
+<[Dave] DHWEINSTEIN> Yeah..that's what I meant.. SunThuSun
+<[Dennis] D.RUFFER> Oh!...
+<[Dave] DHWEINSTEIN> If it comes down to it...I'd rather have it on Thursday...
+<[Dave] DHWEINSTEIN> there are too many good RTCs on Sunday nights
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> I'm just here to see who shows up....
+<[Dennis] D.RUFFER> and it's a hot sticky evening that I don't feel like doing 
+<[Dave] DHWEINSTEIN> anything better
+<[Dave] DHWEINSTEIN> That is a perverse reason for coming... :-)
+<[Dave] DHWEINSTEIN> Its hot rainy and humid here...
+<[Dave] DHWEINSTEIN> (Austin)
+<[Dennis] D.RUFFER> ug
+<[Dave] DHWEINSTEIN> ug? why ug?
+<[Dennis] D.RUFFER> well I'll soon have air conditioning...
+<[Dennis] D.RUFFER> and I can get out of this muggyness...
+<[Dave] DHWEINSTEIN> Aaahhh. I have AC and Ceiling Fans...and ABP Apartment! :-)
+<[Dennis] D.RUFFER> ABP?
+<[Dave] DHWEINSTEIN> All Bills Paid
+<[Dennis] D.RUFFER> ditto for me next month!
+<[Dave] DHWEINSTEIN> i.e. high rent but no monthly surprises that can bust the 
+<[Dave] DHWEINSTEIN> bank
+<[Dave] DHWEINSTEIN> And the way I eat electricity....
+<[Dave] DHWEINSTEIN> :-)
+<[Dennis] D.RUFFER> mine will be week to week, is your's also
+<[Dave] DHWEINSTEIN> Nope...12 month lease
+<[Dennis] D.RUFFER> staying for awhile uh?
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> Hey...I have a good job..and an education to aquire (or at 
+<[Dave] DHWEINSTEIN> least fake it well and endure the PASCAL/Modula type
+<[Dave] DHWEINSTEIN> courses)
+<[Dave] DHWEINSTEIN> Hey jax
+<[Dennis] D.RUFFER> well jacks here too!
+<[Dennis] D.RUFFER> education in Pascal dave?
+<[jax] VESTA> usual gang of idiots! :-)
+<[Dennis] D.RUFFER> da yup!
+<[Dave] DHWEINSTEIN> I have a CS department that thinks Wirth is ghod...
+<[Dave] DHWEINSTEIN> So I am naturally pounding the doors in trying to get a 
+<[Dave] DHWEINSTEIN> FORTH course offered. And watching the people taking the
+<[Dave] DHWEINSTEIN> Graphics course and learning C at the same time.
+<[Dave] DHWEINSTEIN> Their antics are downright funny...!
+<[Dave] DHWEINSTEIN> They have been under the impression that PASCAL was a real 
+<[Dave] DHWEINSTEIN> language for so long...that C blew their minds!
+<[Dennis] D.RUFFER> :-)
+<[Dennis] D.RUFFER> before we get into anything REALLY serious....
+<[Dennis] D.RUFFER> jack and dave, you are the regulars...
+<[Dennis] D.RUFFER> if you want to meet on Sundays, then be our guests...
+<[Dennis] D.RUFFER> I will try to make it, but let's leave this one...
+<[Dennis] D.RUFFER> to a really free format....
+<[Dennis] D.RUFFER> even more so than thursday night...
+<[Dennis] D.RUFFER> if one of us sysops shows up, then great...
+<[jax] VESTA> matter of opinion! ;-)
+<[Dennis] D.RUFFER> we'd do the the meeting leader stuff, and get steno notes 
+<[Dennis] D.RUFFER> :-)
+<[Dennis] D.RUFFER> , but...
+<[Dennis] D.RUFFER> if we don't, (you'd all be happier I know :-)...
+<[Dennis] D.RUFFER> then do your own thing....
+<[Dave] DHWEINSTEIN> we do anyway
+<[Dennis] D.RUFFER> if I know it will happen before 5:00 on Friday....
+<[Dennis] D.RUFFER> I can get someone else, like Jack maybe :-0
+<[jax] VESTA> foo. The FIG bar is under attack, and you are sounding retreat!
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> you can be leader tooo!
+<[Dave] DHWEINSTEIN> What is wrong with two meetings?
+<[jax] VESTA> or three?
+<[jax] VESTA> manpower.
+<[Dennis] D.RUFFER> nothing really dave, just time.
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> or seven?
+<[Dave] DHWEINSTEIN> .
+<[jax] VESTA> Well, if the sysops don't have enough time ...
+<[Dennis] D.RUFFER> hey, anytime you want to do one...
+<[jax] VESTA> more sysops?
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> yeasss
+<[Dave] DHWEINSTEIN> is this a demented plea for help?
+<[Dave] DHWEINSTEIN> :-)
+<[Dennis] D.RUFFER> all you have to do is start one yourself...
+<[Dennis] D.RUFFER> help is not the problem...
+<[Dennis] D.RUFFER> revenue is.....
+<[Dennis] D.RUFFER> they won't let us have unlimitted sysop accounts...
+<[Dave] DHWEINSTEIN> Sure...sit in the RTC burning up time ...until someone 
+<[Dave] DHWEINSTEIN> shows up out of curiousity?
+<[jax] VESTA> ...???? The GEnie gorilla wants a banana?
+<[Dave] DHWEINSTEIN> WHy not...?
+<[Dennis] D.RUFFER> internal accounts cost them money....
+<[jax] VESTA> BS
+<[Dennis] D.RUFFER> because, you should know, they are free.
+<[jax] VESTA> Of course.
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> Ahhh...yes...free time
+<[Dennis] D.RUFFER> we don't pay to help you guys...
+<[Dave] DHWEINSTEIN> Beancounters!!.
+<[Dennis] D.RUFFER> they pay us to get you to use GEnie
+<[Dave] DHWEINSTEIN> Oohhhh...and they don't want freebees for everyone.
+<[Dennis] D.RUFFER> if you can justify it on your own nickel
+<[jax] VESTA> so that they make money. Good system, but what if the board needs 
+<[jax] VESTA> service.
+<[Dennis] D.RUFFER> what service you talking about?
+<[Dave] DHWEINSTEIN> "The personal touch"
+<[jax] VESTA> Well, like hosted confs on sunday night?
+<[jax] VESTA> I won't be free on thursday for several weeks.
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> Or tuesday...or wednesday... :-)
+<[Dave] DHWEINSTEIN> .
+<[Dennis] D.RUFFER> hey, I can set you up to do it.
+<[Dennis] D.RUFFER> anybody can be meeting leader...
+<[jax] VESTA> ...?
+<[Dave] DHWEINSTEIN> Ditto
+<[Dennis] D.RUFFER> I just have to set it up before 5:00 on weekdays
+<[jax] VESTA> "who was king? who was not king?"
+<[Dennis] D.RUFFER> we have 3 "rooms", and I have a file...
+<[Dennis] D.RUFFER> that decides who is the "meeting leader"...
+<[Dennis] D.RUFFER> the ml has additional commands in here to set things up...
+<[Dave] DHWEINSTEIN> Hmmnn. The inner workings of GEnie revealed!
+<[Dave] DHWEINSTEIN> .
+<[Dennis] D.RUFFER> like the notices and the steno notes...
+<[jax] VESTA> Such as they are ...
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> I can set any user number into the file...
+<[Dennis] D.RUFFER> or at least I'm supposed to be able to...
+<J.T.SAVIDGE> is here.
+<[Dennis] D.RUFFER> last time I tried, I couldn't get at it...
+<[jax] VESTA> The savidge is restless tonite!
+<[Dave] DHWEINSTEIN> Hey JT
+<J.T.SAVIDGE> Greetings
+<[jax] VESTA> We're back to normal topic ... GEnie...
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> Have I had the pleasure?   guessing
+<[Dave] DHWEINSTEIN> such as it is
+<[Dave] DHWEINSTEIN> .
+<[jax] VESTA> Who has logged on to ECFB lately?
+<[Dave] DHWEINSTEIN> ECFB?
+<[James] J.T.SAVIDGE> ditto?
+<[jax] VESTA> East Coast Forth Board
+<[Dave] DHWEINSTEIN> Not me..Central Texas
+<[jax] VESTA> mclean va., 703-442-8695
+<[Dennis] D.RUFFER> gee are these REAL GEnie users?
+<[jax] VESTA> the only kind! :-)
+<[Dave] DHWEINSTEIN> No but we play them on TV!
+<[jax] VESTA> GEnie has its advantages.
+<[jax] VESTA> about two of them.
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> which 2?
+<[jax] VESTA> may users, many nodes.
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> oh those 2...
+<[jax] VESTA> many users, make that
+<[jax] VESTA> .
+<[jax] VESTA> ANYWAY ...
+<[Dennis] D.RUFFER> well, I'm pushing them to open up even more nodes...
+<[James] J.T.SAVIDGE> I thought it was "2" users.
+<[jax] VESTA> ECFB is flaming me/us about the level of our discussion here.
+<[Dennis] D.RUFFER> what? tell me more!
+<[jax] VESTA> They think we're the "elite" of Forth and that Forth is in 
+<[jax] VESTA> trouble ... :-)
+<[Dave] DHWEINSTEIN> (Buffer On!)
+<[jax] VESTA> I said, "Why don't you log on if you don't like it"
+<[jax] VESTA> NO ANSWER yet.
+<[jax] VESTA> Jerry S. Thinks we're pretty funny, tho.
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> Forth is in trouble cause we're here?????
+<[jax] VESTA> You won't believe ...
+<[Dave] DHWEINSTEIN> The level here is higher (or at least much more active) 
+<[Dave] DHWEINSTEIN> than it is on Usenet..and Usenet tends to get
+<[Dave] DHWEINSTEIN> techno real fast!
+<[jax] VESTA> the ridiculous discussions i get into on ECFB ...
+<[jax] VESTA> ... ( well maybe, since you know me ...)
+<[jax] VESTA> but those people are really predjudiced ...
+<[jax] VESTA> against Forth!
+<[jax] VESTA> I say things like ...
+<[Dave] DHWEINSTEIN> A FORTH board prejuidiced against FORTH??!!??
+<[jax] VESTA> " SInce Forth is broken down in smaller bits already ...
+<[jax] VESTA> it will be easier to reshape it for parallel ...
+<[jax] VESTA> " and they jump down my throat.
+<[Dennis] D.RUFFER> :-)
+<[James] J.T.SAVIDGE> Why?
+<[Dave] DHWEINSTEIN> brb
+<[jax] VESTA> I say it would be nice if FORTH had environment extensions like 
+<[jax] VESTA> UNIX, such as BBS es ...
+<[jax] VESTA> and they ask "Why, if UNIX already has it?"
+<[jax] VESTA> FOO.
+<[Dennis] D.RUFFER> are they against you or us jack <grin>
+<[jax] VESTA> Mostly me, because I have a big mouth ...
+<[jax] VESTA> and lots of ideas ...
+<[jax] VESTA> but they seem to think our discussion here are lame.
+<[jax] VESTA> Why don't more folks log on? I told them ...
+<[jax] VESTA> about the Johns Hopkins folks logging on the VERY NIGHT ...
+<[James] J.T.SAVIDGE> Parallel is lame?????
+<[jax] VESTA> they got their first 32bangers back from the sawmill ...
+<[jax] VESTA> if THAT ain't an excuse for a realtime conf, what is?
+<[jax] VESTA> That may be the key ...
+<[jax] VESTA> GUESTS EVERY WEEK!
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> an idea
+<[Dennis] D.RUFFER> but I can't do it right now :-(
+<[Dennis] D.RUFFER> but anyone else can...
+<[Dennis] D.RUFFER> I just can't cover the cost just yet.
+<[jax] VESTA> ...? what cost.
+<[Dennis] D.RUFFER> on-line charges for the leader.
+<[jax] VESTA> ...? explique, por favor.
+<[Dennis] D.RUFFER> uh?
+<[jax] VESTA> JT ... no, they just think they know it all about parallel.
+<[Dennis] D.RUFFER> Forth man not French!
+<[jax] VESTA> What is the "on-line charge for leader?"
+<[Dennis] D.RUFFER> just the normal $5/hour
+<[jax] VESTA> JT They think its funny i want to put parallel FORTH on the 
+<[jax] VESTA> xputer in BLOCKS.
+<[jax] VESTA> Thought you were free den.
+<[Dennis] D.RUFFER> I AM, and the other sysops are...
+<[jax] VESTA> and you're burning it up too fast?
+<[Dennis] D.RUFFER> but that doesn't mean someone else can't hold
+<[Dennis] D.RUFFER> a conference on their own nickel
+<[jax] VESTA> Try to get guests on under those conditions!
+<[Dennis] D.RUFFER> yes, essentually, our time is subtracted from our
+<[Dennis] D.RUFFER> revenue and that is not growing..
+<[Dennis] D.RUFFER> guests are really no problem either...
+<[Dennis] D.RUFFER> we can get "guest" accounts for them...
+<[Dennis] D.RUFFER> and again, they don't pay connect time.
+<[jax] VESTA> What is the balance of trade on FIG RT these days?
+<[Dennis] D.RUFFER> .
+<[Dennis] D.RUFFER> you mean how much money are we making?
+<[jax] VESTA> yup.
+<[Dennis] D.RUFFER> well, I haven't been spreading the word recently...
+<[Dennis] D.RUFFER> but....
+<[jax] VESTA> Get your steno pads ready!
+<[Dennis] D.RUFFER> we are holding pretty steady.....
+<[Dennis] D.RUFFER> at....:-)
+<[jax] VESTA> WHAT WHAT??? COME ON MAN!
+<[Dennis] D.RUFFER> about $100 a month (here come the SS :-)
+<[Dave] DHWEINSTEIN> For the whole SIG?
+<[Dennis] D.RUFFER> yes
+<[jax] VESTA> ONE HUNDRED CLAMS A MONTH? I'm surprised ...
+<[Dave] DHWEINSTEIN> Or your personal cut?
+<[jax] VESTA> GE doesn't throw us off.
+<[Dennis] D.RUFFER> our percentage of the usage
+<[jax] VESTA> That isn't chump change to GEnie.
+<[Dennis] D.RUFFER> your right jack
+<[jax] VESTA> So how much are you lazy sysops burning?
+<[Dennis] D.RUFFER> we are sitting about 25th on their lists
+<[jax] VESTA> from bottom?
+<[Dennis] D.RUFFER> from the top!
+<[jax] VESTA> Huh?
+<[Dave] DHWEINSTEIN> How many RTs are there?
+<[jax] VESTA> I thought an RT made about $600/mo or died.
+<[Dennis] D.RUFFER> the sysops spen about 1 hour for every 4 you guys do
+<[Dennis] D.RUFFER> that is too much for us to do....
+<[Dennis] D.RUFFER> I think there are about 75 RTs
+<[Dave] DHWEINSTEIN> Well hell...you're not doing too badly then!
+<[Dennis] D.RUFFER> yes they have been asking when we'd get up to our 
+<[Dennis] D.RUFFER> projections
+<[jax] VESTA> Which was?
+<[Dennis] D.RUFFER> but we only have about 200 of our 2500 members
+<[Dennis] D.RUFFER> and only about 20 use us per day...
+<[jax] VESTA> same 20, no doubt. Jax, ATFURMAN, DANMILLER ....
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> So you have a few "regulars"...and that's it
+<[Dennis] D.RUFFER> that is far below what we hoped for
+<[Dennis] D.RUFFER> that's all folks!
+<[Dennis] D.RUFFER> I can't tell names jack...
+<[jax] VESTA> So why don't you start a mailing to every college compscidept in 
+<[jax] VESTA> america?
+<[Dave] DHWEINSTEIN> Because CS dept.s are not terribly fond of FORTH (at least 
+<[Dave] DHWEINSTEIN> in my experience)
+<[Dennis] D.RUFFER> except in the BB, good idea jack
+<[jax] VESTA> SOMEONE must wonder what all these FORTHchips are doing coming 
+<[jax] VESTA> out these days!
+<[Dennis] D.RUFFER> but yes, that too cost money....
+<[jax] VESTA> So FIG could start a fundraiser.
+<[Dennis] D.RUFFER> and FIG isn't known for spending a lot of money.
+<[Dennis] D.RUFFER> fundraiser (how for what?)
+<[James] J.T.SAVIDGE> Up until ther 8800, the forth chips were the finest 
+<[James] J.T.SAVIDGE> examples of the Harvard Artecure.
+<[Dave] DHWEINSTEIN>
+<[jax] VESTA> For FORTH publicity, college outreaches, public education.
+<[Dennis] D.RUFFER> That's the first I heard that one James.
+<[jax] VESTA> Maybe we should go on strike?
+<[jax] VESTA> ... :-)
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> but but what will they do then?
+<[James] J.T.SAVIDGE> excuse me the 88000, from Moterola
+<[Dennis] D.RUFFER> and who would care! :-(
+<[jax] VESTA> we understood
+<[Dave] DHWEINSTEIN> Ohh...whew...thhought you were talking about VAXes..
+<[jax] VESTA> We would get in the press :-)
+<[Dennis] D.RUFFER> I've heard of the 88000 James, but Forth and Harvard?
+<[Dave] DHWEINSTEIN> Vax = Risc (to the -1)
+<[jax] VESTA> TING says FORTH is CISC.
+<[Dennis] D.RUFFER> somewhere in between
+<[jax] VESTA> ANYway ...
+<[jax] VESTA> The neat thing about FORTH these days ...
+<[James] J.T.SAVIDGE> The Novix chip is designed around the "Harvard" 
+<[James] J.T.SAVIDGE> arcectecure.
+<[jax] VESTA> is that it has broadened out so much in application and hardware .
+<[Dennis] D.RUFFER> it is?
+<[jax] VESTA> that there really isn't a corner of the Known Computing Univers ..
+<[jax] VESTA> that we don't have SOME kind of a toehold ...
+<[jax] VESTA> From Mainframes to Sun WOrkstations to Micros to COntrollers ...
+<[jax] VESTA> FORTH IS THERE, and YOU are THERE with it! :-)
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> yes, and the ads are comeing...
+<[Dave] DHWEINSTEIN> Yeah...From what I've heard..is that Sun uses FORTH 
+<[Dave] DHWEINSTEIN> extensively.
+<[James] J.T.SAVIDGE> Am I wrong about the Novix design folks?
+<[Dennis] D.RUFFER> I think the word is spreading now
+<[jax] VESTA> We don't know enough to tell, JT! :-)
+<[Dennis] D.RUFFER> but we still need a Microsoft or Borland Forth :-)
+<[James] J.T.SAVIDGE> <Like a viris> <grin>
+<[Dave] DHWEINSTEIN> As I understand...the Novix is massively Powerful..and 
+<[Dave] DHWEINSTEIN> since it operates in under 1 clock cycle..
+<[Dave] DHWEINSTEIN> =I'd guess that makes it RISC.
+<[jax] VESTA> What is meanink Harvard Arkitekchur, comrade3
+<[Dennis] D.RUFFER> Harvard arch...
+<[James] J.T.SAVIDGE> Seperate busses for each part.
+<[Dennis] D.RUFFER> says that the program and data are seperated...
+<[jax] VESTA> that's cute ... kissing a microprocessor.
+<[Dennis] D.RUFFER> and I don't really think the novix fits that.
+<[Dave] DHWEINSTEIN> It has multiple busses (5 I think)
+<[James] J.T.SAVIDGE> Dennis The Novix can seperate data and programs.
+<[Dennis] D.RUFFER> I guess it does have seperated (almost) paths
+<[Dennis] D.RUFFER> the program can only ocupy the lower half...
+<[James] J.T.SAVIDGE> It can only make code Jumps
+<[Dennis] D.RUFFER> and the data gets the top is that right?
+<[James] J.T.SAVIDGE> in the lower 64k. data can be above that.
+<[Dennis] D.RUFFER> but that is not TRUE Harvard
+<[James] J.T.SAVIDGE> explain?
+<[Dennis] D.RUFFER> where you can do both accesses at the same time.
+<[Dennis] D.RUFFER> you can access data and program in the same cycle
+<[Dave] DHWEINSTEIN> Be back in a bit (or at least on Thurs)
+<[Dave] DHWEINSTEIN> .exi
+<[Dave] DHWEINSTEIN> has left.
+<[James] J.T.SAVIDGE> The Novix can do that because of the bussing and parellel 
+<[James] J.T.SAVIDGE> execution.
+<[Dennis] D.RUFFER> uhm, it might be close then...
+<[Dennis] D.RUFFER> I just hadn't heard it called that way yet
+<[jax] VESTA> Brainstorm!
+<[jax] VESTA> FIG needs a promotional genius to take an interest in Forth!
+<[jax] VESTA> endBrainstorm>
+<[James] J.T.SAVIDGE> It can do a fetch of an address and do a return 
+<[James] J.T.SAVIDGE> instruction at the same time, for example.
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> that's it James, I guess they have it!
+<[Dennis] D.RUFFER> Jack
+<[jax] VESTA> yes, dennis?
+<[Dennis] D.RUFFER> FIG has been looking for (needing) a publisists...
+<[James] J.T.SAVIDGE> later folks.
+<[Dennis] D.RUFFER> for as long as I've been involved
+<[jax] VESTA> bye guy ... thandx
+<[Dennis] D.RUFFER> buy James
+<[Dennis] D.RUFFER> I mean bye James :-)
+<[jax] VESTA> good lck with parallel!
+<[jax] VESTA> let us know!!!!
+<[James] J.T.SAVIDGE> ok jax
+<[James] J.T.SAVIDGE> has left.
+<[Dennis] D.RUFFER> Jack, you know of a good publisists?
+<[jax] VESTA> you were saying
+<[jax] VESTA> yes.
+<[Dennis] D.RUFFER> who?
+<[jax] VESTA> I have written three articles in three months.
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> oh you mean you?
+<[jax] VESTA> Why not? You know any stauncher FORTH advocate?
+<[jax] VESTA> If we had a little money ...
+<[Dennis] D.RUFFER> well have I got a deal for you!
+<[jax] VESTA> to promote on campus ...
+<[jax] VESTA> you would see quite a trunaround.
+<[jax] VESTA> .
+<[jax] VESTA> deal?
+<[Dennis] D.RUFFER> how would you like to join the FIG troups?
+<[jax] VESTA> I have a job. What do you infer, sirrah?
+<[Dennis] D.RUFFER> well...
+<[jax] VESTA> a deep subject
+<[Dennis] D.RUFFER> we are just about to fire up a nominating comitee
+<[jax] VESTA> at the stake?
+<[Dennis] D.RUFFER> to replace Martin and Bob on the Board
+<DHWEINSTEIN> is here.
+<[Dennis] D.RUFFER> are you interested in volunteering?
+<[Dave] DHWEINSTEIN> For what?
+<[Dennis] D.RUFFER> welcome back dave
+<[jax] VESTA> What are Martin & Bob's jobs currently?
+<[Dave] DHWEINSTEIN> Hey. Dropped by another RTC...was boring...came back.
+<[jax] VESTA> I am not in California any more, either!
+<[jax] VESTA> Sounds interesting, tho.
+<[Dennis] D.RUFFER> Martin is tresurer, and Bob is president, but...
+<[Dennis] D.RUFFER> we would be electing new ones among the entire board...
+<[Dennis] D.RUFFER> we will be (maybe) electing 2 more people however...
+<[Dennis] D.RUFFER> and I can pass the recommendation along if you want to do 
+<[Dennis] D.RUFFER> it.
+<[jax] VESTA> "I accept the draft of my party" :-)[A
+<GARY-S> is here.
+<[Dennis] D.RUFFER> well
+<[jax] VESTA> latecomer!
+<[Dennis] D.RUFFER> gary and dave...
+<[Dave] DHWEINSTEIN> Hey Gary...took ya long enough
+<[Dave] DHWEINSTEIN> Yeasss
+<[Dennis] D.RUFFER> Jack has just agreed to be a FIG nominee.
+<[Gary] GARY-S> I live in the ozarks - remember ?
+<[jax] VESTA> for what, though ...?
+<[Dennis] D.RUFFER> just to be on the board for now jack...
+<[Dennis] D.RUFFER> if you are elected....
+<[jax] VESTA> I'm board enouff as it is :-)
+<[Dennis] D.RUFFER> you will get to "volunteer" for what you think...
+<[Dennis] D.RUFFER> needs to be done :-)
+<[jax] VESTA> No, I understood, dennis, thanks. Sounds like a good idea. 
+<[jax] VESTA> Volunteer for Ministry of Propaganda.
+<[Gary] GARY-S> oh mi gawd ! - what jax thinks ??
+<[Dennis] D.RUFFER> making a note :-)
+<[jax] VESTA> FORTH UBER ALLES!
+<[Gary] GARY-S> !!
+<[jax] VESTA> Let's round up C programmers for "re-education" camps.
+<[Dave] DHWEINSTEIN> Hey watch it! I make my living programming in C!
+<[jax] VESTA> You call that living?
+<[Gary] GARY-S> Scuse - but what did we just elect Darth Jax to ?
+<[Dave] DHWEINSTEIN> Itsmy second favorite language (maybe third)
+<[Dennis] D.RUFFER> but do you need an education? :_)
+<NMORGENSTERN> is here.
+<[jax] VESTA> It's my third after 4th and Prolog.
+<[jax] VESTA> I really appreciate C for wahat it is.
+<[Dennis] D.RUFFER> even leonard made it oh my
+<[Dave] DHWEINSTEIN> Forth, maybe assembly or Lisp, then C
+<[jax] VESTA> A nuisance.
+<[jax] VESTA> Hi Leonard.
+<[jax] VESTA> .
+<[Leonard] NMORGENSTERN> Hi
+<[Gary] GARY-S> hello - what is Jax gonna do ????
+<[Dennis] D.RUFFER> ok
+<[Dave] DHWEINSTEIN> Hey Leonard
+<[Dennis] D.RUFFER> I just asked if jack wanted to volunteer...
+<[Dennis] D.RUFFER> to be nominated to the FIG board of Directors...
+<[Dennis] D.RUFFER> this just means he might get on the ballot...
+<[Dennis] D.RUFFER> the nominating committee still has to be formed...
+<[Dennis] D.RUFFER> and they have to pick him...
+<[Leonard] NMORGENSTERN> H]I!
+<[Dave] DHWEINSTEIN> Yeehaw! Flood Warnings going up just south of here!
+<[Gary] GARY-S> who's resigning ?
+<[Dave] DHWEINSTEIN> And reaching me
+<[Dennis] D.RUFFER> and then he would have to be elected...
+<[Dennis] D.RUFFER> get the boats out dave!
+<[Dennis] D.RUFFER> Martin and Bob Gary!
+<[jax] VESTA> Take your Chevy to the levy?
+<[Dave] DHWEINSTEIN> Heh.. I'm on the second floor
+<[Dave] DHWEINSTEIN> Its dry
+<[jax] VESTA> Or is Levy out of town with Cohen?
+<[Dave] DHWEINSTEIN> or was dry
+<[Dennis] D.RUFFER> no problem then right? :-)
+<[Gary] GARY-S> Hmm - that's a surprise !
+<[Dennis] D.RUFFER> end of their terms gary
+<[Dennis] D.RUFFER> 3 years is enough!
+<[Leonard] NMORGENSTERN> !
+<[Gary] GARY-S> shoot them ! or do they get pastured ?
+<[jax] VESTA> exiled.
+<[Dennis] D.RUFFER> we're REAL informal leonard but ga anyway
+<[Leonard] NMORGENSTERN> ok
+<[Leonard] NMORGENSTERN> Jax would be good. ...
+<[Leonard] NMORGENSTERN> Shake them up a little!
+<[Leonard] NMORGENSTERN> .
+<[Dennis] D.RUFFER> yup :-)
+<[jax] VESTA> put the fear of the rabble in them!
+<[Leonard] NMORGENSTERN> A lot!
+<[Gary] GARY-S> another lousey 'YES' man - for sure !
+<[Dennis] D.RUFFER> :-)
+<[Leonard] NMORGENSTERN> Jax is no Yes man...
+<[Leonard] NMORGENSTERN> He can't even agree with himself!
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> that milk sop - never agitates
+<[jax] VESTA>
+<[Dennis] D.RUFFER> is it pick on jack time? uh? <grin>
+<[Gary] GARY-S> wus is the word
+<[jax] VESTA> Well, len, you know ... thtwo jews, three opinions
+<[Leonard] NMORGENSTERN>
+<[Leonard] NMORGENSTERN> Seriously, they need a change of direction...
+<[Gary] GARY-S> oiy vay
+<[Leonard] NMORGENSTERN> but I don't know which way...
+<[Dennis] D.RUFFER> we're working on it!
+<[Leonard] NMORGENSTERN> Certainly the people work very hard.
+<[Leonard] NMORGENSTERN> .
+<[jax] VESTA>
+<[jax] VESTA> campaign speech time?
+<[jax] VESTA> .
+<[Dennis] D.RUFFER> sure!
+<[jax] VESTA>
+<[jax] VESTA> What FORTH professionals and amateurs are up against ...
+<[Dave] DHWEINSTEIN> My boss?
+<[jax] VESTA> Is a massive, well-financed publicity campaign ...
+<[jax] VESTA> by AT&T, SUN, IBM, Open System etc ...
+<[Dave] DHWEINSTEIN> And FORTRAN hacks
+<[jax] VESTA> to convince the computer service consumer ...
+<[jax] VESTA> that UNIX is the be-all and end-all of the computational universe.
+<[Dave] DHWEINSTEIN> UNIX is nice
+<[Dave] DHWEINSTEIN> Big...but nice
+<[Dave] DHWEINSTEIN> Fun to work in
+<[jax] VESTA> Couple that with the emphasis on formal language descriptions in 
+<[jax] VESTA> college. ...
+<[Gary] GARY-S> so is donald duck, dave
+<[Leonard] NMORGENSTERN> !
+<[jax] VESTA> and you have a very negative atmosfere for the FORTH ...
+<[Dave] DHWEINSTEIN> Hey. If you gotta use a "standard" OS...UNIX is *my* choice
+<[jax] VESTA> So FIG should maybe not be the leader ....
+<[Dennis] D.RUFFER> rolling on the floor jump in anytime leonard :-)
+<[jax] VESTA> but should certainly encourage ...
+<[jax] VESTA> the disemination of free forth compilers on campus ...
+<[jax] VESTA> forth seminars on campus ...
+<[jax] VESTA> and forth publicity in the trade journals.
+<[jax] VESTA> .
+<[Gary] GARY-S> good idea ( again ) Jack
+<[Dave] DHWEINSTEIN> I have been pushing FORTH on campus
+<[Dave] DHWEINSTEIN> (Is pushing FORTH like pushing drugs?)
+<[jax] VESTA> Yes. Like pushing anything ...
+<[Gary] GARY-S> The cs department here won't even hear about Forth
+<[jax] VESTA> You gotta make em WANT it .
+<[Dennis] D.RUFFER> same dealers?
+<[Dave] DHWEINSTEIN> Ditto
+<[jax] VESTA> IBM is pushing a drug called OS/2
+<[Leonard] NMORGENSTERN> One problem with Forth is that it's a ...
+<[Leonard] NMORGENSTERN>
+<[jax] VESTA> FORTH is a more rational 32bit opsys
+<[Dave] DHWEINSTEIN> Its big fat, and poorly assembled
+<[Dennis] D.RUFFER> heavy drugs now!
+<[Dave] DHWEINSTEIN> OS/2
+<[Leonard] NMORGENSTERN> small computer laguage, and...
+<[Gary] GARY-S> get this - the ACM here actually hated to have me as a maember 
+<[Gary] GARY-S> becaause of my Forthish attitude
+<[Leonard] NMORGENSTERN> CS departments don't have much interest in them...
+<[Dave] DHWEINSTEIN> Hey--I'm joining ACM this week to get involved in FSIGForth
+<[Leonard] NMORGENSTERN> They are into mainframes.
+<[Leonard] NMORGENSTERN> ,
+<[jax] VESTA> LEN ...
+<[jax] VESTA> What about the FORTH mainframes in Europe? ....
+<[jax] VESTA> What about 32-bit FORTHS in America?
+<[jax] VESTA> .
+<[Gary] GARY-S> Dave - what do you suggest I do - the local ACM disbanded
+<[Dennis] D.RUFFER> still can't compete with OS/2 or UNIX
+<[Dave] DHWEINSTEIN> Hmmn. Dunno.
+<[Dave] DHWEINSTEIN> What about the FORTH under Unix group
+<[jax] VESTA> Yeah!
+<[jax] VESTA> Paul Thomas! Yeah!
+<[jax] VESTA> Rah!
+<[jax] VESTA> .
+<[Gary] GARY-S> Maybe one of you Texicans can invite a ARKIE guest to the 
+<[Gary] GARY-S> Austin Party ???
+<[Dave] DHWEINSTEIN> Unix is my favorite straight OS...and FORTH my favorite 
+<[Dave] DHWEINSTEIN> Language. What a combination.
+<[jax] VESTA> Unix is a hack.
+<[jax] VESTA> .
+<[Leonard] NMORGENSTERN> They are in Europe, not here!
+<[jax] VESTA> Yet! Besides....
+<[jax] VESTA> the new japanese 5th gen is in FORTH!
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> All large OSes are hacks
+<[Leonard] NMORGENSTERN>
+<[jax] VESTA> True, DW.
+<[jax] VESTA> But FORTH would be cleaner and more rational.
+<[jax] VESTA> ,
+<[jax] VESTA> ga len?
+<[Leonard] NMORGENSTERN> ok
+<[Leonard] NMORGENSTERN> Unix is full of features. To write something...
+<[Dave] DHWEINSTEIN> So will the Sysv.5 rewrite...C++ is a good language, and 
+<[Dave] DHWEINSTEIN> it is a 12 person team. Unix has had too many cooks.
+<[Leonard] NMORGENSTERN> like that in Forht would take...
+<[Leonard] NMORGENSTERN> man-years, and there aren't enough of us.
+<[Leonard] NMORGENSTERN> .
+<[jax] VESTA>
+<[jax] VESTA> Yet.
+<[jax] VESTA> .
+<[Gary] GARY-S>
+<[Dennis] D.RUFFER> but we CAN design it.
+<[Gary] GARY-S> Theres always nice tight Ada
+<[Gary] GARY-S> .
+<[Dave] DHWEINSTEIN> Too tight...like a straight jacket
+<[Gary] GARY-S> 28 volumes is a pretty serious user guide too
+<[jax] VESTA>
+<[jax] VESTA> One great thing about FORTH ...
+<[Dave] DHWEINSTEIN> Seriously folks. Unix had a lot of very good ideas. It has 
+<[Dave] DHWEINSTEIN> grown too fast recently. It has too be trimmed. And
+<[jax] VESTA> is that the library of literature ...
+<[jax] VESTA> is about 30 books, then you know everything! :-)
+<[Dave] DHWEINSTEIN> the UNIX "wizards" are worried that it won't be (hot from 
+<[Dave] DHWEINSTEIN> comp.unix.wizards on Usenet)
+<[Dave] DHWEINSTEIN> It is a very nice system to work under.
+<[Dave] DHWEINSTEIN> And we'll never pry the scientists aeay from FORTRAN.
+<[Leonard] NMORGENSTERN> !
+<[Leonard] NMORGENSTERN> Fortran has been polished for engineering...
+<[Leonard] NMORGENSTERN> computations, etc. and would be hard to beat...
+<[Leonard] NMORGENSTERN> in any language.
+<[Leonard] NMORGENSTERN> .
+<[jax] VESTA>
+<[jax] VESTA> Len, have you used EFL? Great front end for Fortran 77.
+<[Leonard] NMORGENSTERN> What is EFL?
+<[Leonard] NMORGENSTERN> .
+<[jax] VESTA> EFL ...
+<[jax] VESTA> Used to stand for Extended Fortran Lang.
+<[Dave] DHWEINSTEIN> At work..90% of the programmers know only FORTRAN. The 
+<[Dave] DHWEINSTEIN> other 10% know another language.
+<[jax] VESTA> It's really a precompiler/language ...
+<[Dave] DHWEINSTEIN> Like RATFOR?
+<[jax] VESTA> That allows structures, etc. like C ... RATFOR is subset of EFL.
+<[Dave] DHWEINSTEIN> Has it got a source debugger...debugging code that comes 
+<[Dave] DHWEINSTEIN> out of a preprocessor is hell?
+<[jax] VESTA> EFL comes out in neat, pretty f77. Compile it immediately or look 
+<[jax] VESTA> at it.
+<[jax] VESTA> Code output works with UNIX symbdeb tools.
+<[jax] VESTA> .
+<[jax] VESTA> Should be on your machine. cHeck it out, DW.
+<[Dave] DHWEINSTEIN> Also..some of the libraries are pure shit. SoI am trying 
+<[Dave] DHWEINSTEIN> to clean it up as I expand it...but it is pretty abysmal.
+<[Dennis] D.RUFFER> hey are we talking FORTRAN in the FIGGY BAR?
+<[Dave] DHWEINSTEIN> I don't think it is on the Alliant...I use FORTRAN and C 
+<[Dave] DHWEINSTEIN> intermixed in debugging (the underlying routines I write
+<[Dave] DHWEINSTEIN> are in C, the test code is in FORTRAN)
+<[Dennis] D.RUFFER> it must be after hours :-)
+<[jax] VESTA> Why not? It is the spiritual antecedent of FORTH.
+<[Dennis] D.RUFFER> uh?
+<[Leonard] NMORGENSTERN> Huh?
+<[jax] VESTA>
+<[Gary] GARY-S> no way
+<[jax] VESTA> MOORE said ...
+<[Leonard] NMORGENSTERN>
+<[jax] VESTA> he got the idea for FORTH ...
+<[jax] VESTA> When he tipped over his third tray of FORTRAN cards!
+<[jax] VESTA> .
+<[Leonard] NMORGENSTERN> I look on Fortran Basic, C etc as...
+<[Gary] GARY-S> how cum the first shot was in Algol then ?
+<[Leonard] NMORGENSTERN> variations of the same language. Forth...
+<[Dennis] D.RUFFER> he WAS using Fortran at the time!
+<[Leonard] NMORGENSTERN> really is a different language!
+<[Leonard] NMORGENSTERN> .
+<[jax] VESTA> Agree, len. FORTH is different from everything. Like jax :-)
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> Besides...UNIX looks great compared to some alternatives...
+<[Dave] DHWEINSTEIN> like NOS.
+<[Gary] GARY-S> Ther is NOTHIN' threaded about FORTRAN
+<[Leonard] NMORGENSTERN> What is NOS?
+<[Dave] DHWEINSTEIN> The operating system used on the Cyber 180 series.
+<[Leonard] NMORGENSTERN> Jax,
+<[jax] VESTA> music maestro please ... "When It's Laundry Time In The Rockies"
+<[jax] VESTA> yes len?
+<[Leonard] NMORGENSTERN> You mentioned the BNF parser
+<[jax] VESTA> good work.
+<[Leonard] NMORGENSTERN> I have used it to construct a file filter...
+<[Leonard] NMORGENSTERN> and also the parse numbers, and Basic expressions.
+<[Leonard] NMORGENSTERN> .
+<[jax] VESTA> ..?? BASIC? Say on!
+<[jax] VESTA> ( friend is writing a BASIC in FORTH)
+<[jax] VESTA> .
+<[Leonard] NMORGENSTERN> Just as a test of how it could be done.
+<[Dave] DHWEINSTEIN> WHy?
+<[jax] VESTA> Hey dave,
+<[Dave] DHWEINSTEIN> yeaassss
+<[jax] VESTA> BASIC is STILL BIG TIME in controllers ( yuch)
+<[jax] VESTA> but true!
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> Arrgghhh! WHy???
+<[Dennis] D.RUFFER> it's on chip!
+<[jax] VESTA> Every 40 year old engineer knows it.
+<[Gary] GARY-S> jax - did you get my dasnet reply ?
+<[jax] VESTA> negatory gary ... couldn't get jjwavrick, either. Mail came back.
+<[jax] VESTA> when did you send?
+<[Gary] GARY-S> Friday - I think
+<[jax] VESTA> Ok, I'll check my mail tonite on the well
+<[jax] VESTA> LEN ... post your basic interpreter!
+<[Leonard] NMORGENSTERN> I'll have to polish it. It uses symbols like...
+<[Gary] GARY-S> which BAS@S!is it closest to. Len ?
+<[Leonard] NMORGENSTERN> the old North Star Basic.
+<[jax] VESTA> Ok, it's agreed theN? I'm elected king of FORTH and get to cut 
+<[jax] VESTA> all your heads off? Gotta go do the laundry,
+<[Gary] GARY-S> that's almost CBASIC - right ?
+<[Leonard] NMORGENSTERN> It wasn't intended to be serisous.
+<[jax] VESTA> bye gang.
+<[Leonard] NMORGENSTERN> .
+<[Dennis] D.RUFFER> sure thing jack!
+<[jax] VESTA> goodnite. .... for a conference that wasn't supposed to be ...
+<[jax] VESTA> this was a great congerence/ Maybe we should ...
+<[jax] VESTA> cancel them all and then EVERYBODY would come!
+<[jax] VESTA> has left.
+<[Dennis] D.RUFFER> :-)
+<[Gary] GARY-S> wait'll DR tries to edit this thing !
+<[Dennis] D.RUFFER> yes gary and len...
+<[Dennis] D.RUFFER> jack dave and I...
+<[Dennis] D.RUFFER> decided to leave this open...
+<[Dennis] D.RUFFER> as an even more free for all...
+<[Dennis] D.RUFFER> than thursday is...
+<[Dave] DHWEINSTEIN> free??? its $5/hour
+<[Dave] DHWEINSTEIN> :-)
+<[Dennis] D.RUFFER> that's why I wasn't doing the ga's
+<[Dennis] D.RUFFER> :-)
+<[Dennis] D.RUFFER> but, if we can't make it....
+<[Dave] DHWEINSTEIN> Besides...we get to heckle
+<[Dennis] D.RUFFER> :-)
+<[Gary] GARY-S> answer my question aout a Texican invite Dave
+<[Dennis] D.RUFFER> they can handle it themselves.
+<[Dave] DHWEINSTEIN> yes...
+<[Dave] DHWEINSTEIN> (Go ahead Gary)
+<[Gary] GARY-S> I said since the local ACM disbanded I may have to finagle...
+<[Gary] GARY-S> a Texican invite to the Austin Party
+<[Gary] GARY-S> ...
+<[Gary] GARY-S> will you take in an arkie ?
+<[Gary] GARY-S> .
+<[Dave] DHWEINSTEIN> I'll ask. Course I should Join first. The ACM is supposed 
+<[Dave] DHWEINSTEIN> to fairly well disposed to me...I gave them 5000!
+<[Dave] DHWEINSTEIN> factorial in laser printout (giving Lisp machines
+<[Dave] DHWEINSTEIN> breakdowns is my hobby)
+<[Dave] DHWEINSTEIN> :-)
+<[Leonard] NMORGENSTERN> How many zeroes at the end?
+<[Dave] DHWEINSTEIN> At least 3 lines worth (I'd have to check...I have a copy 
+<[Dave] DHWEINSTEIN> on my desk at work)
+<[Dave] DHWEINSTEIN> .
+<[Leonard] NMORGENSTERN>
+<[Gary] GARY-S> Darn - I meant to ask jack if he saw the transputer piece in 
+<[Gary] GARY-S> BYTE
+<[Leonard] NMORGENSTERN> The last few days I've been working on a B-tree...
+<[Leonard] NMORGENSTERN> for Forth. Uses BLOCz_S! Ideal for that
+<[Leonard] NMORGENSTERN> application.
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> That I would like to see posted
+<[Leonard] NMORGENSTERN> It would be useful for a lot of things.
+<[Gary] GARY-S> you betcha - b-trees do lots of neat things
+<[Leonard] NMORGENSTERN> The main advange is minimum disk action.
+<[Leonard] NMORGENSTERN> .
+<[Dennis] D.RUFFER>
+<[Dennis] D.RUFFER> have you seen Larry Forsely's B tree?
+<[Gary] GARY-S> gotta run - nite all
+<[Gary] GARY-S> no
+<[Leonard] NMORGENSTERN> No
+<[Dennis] D.RUFFER> here it is if I remember it....
+<[Dennis] D.RUFFER> : tree  create  does>  myself ;
+<[Dennis] D.RUFFER> and you can put in "stuff"...
+<[Dennis] D.RUFFER> to do what you want to do.
+<[Leonard] NMORGENSTERN> I think you are confusing B-trees with binary trees!
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> has left.
+<[Dave] DHWEINSTEIN> B-Trees give honey! :-)
+<[Dennis] D.RUFFER> somewhat, but this is the primitive...
+<[Leonard] NMORGENSTERN> They are stinkers!
+<[Dennis] D.RUFFER> you can make it do whatever you need.
+<[Dave] DHWEINSTEIN> Especially the killer variaty
+<[Dave] DHWEINSTEIN> -a +e
+<[Leonard] NMORGENSTERN> Huh?
+<[Dave] DHWEINSTEIN> Killer B Trees
+<[Leonard] NMORGENSTERN>
+<[Leonard] NMORGENSTERN> I pushed the wrong key!
+<[Dave] DHWEINSTEIN> Oh well.. I gotta go. More on the Neural Net code as it 
+<[Dave] DHWEINSTEIN> develops...
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN> has left.
+<[Leonard] NMORGENSTERN> Dennis, how is your new job?
+<[Dennis] D.RUFFER> ok I guess
+<[Leonard] NMORGENSTERN> You must have slightly less pressure...
+<[Leonard] NMORGENSTERN> to be on tonight.
+<[Leonard] NMORGENSTERN> .
+<[Dennis] D.RUFFER> I'm moving the family to Rochester in June
+<[Dennis] D.RUFFER> it is calmer her at home, but...
+<[Dennis] D.RUFFER> got a lot of pressure still...
+<[Dennis] D.RUFFER> can I go to bed yet?
+<[Dennis] D.RUFFER> .
+<[Leonard] NMORGENSTERN> Gook luck!
+<[Leonard] NMORGENSTERN> Bye now!
+<[Dennis] D.RUFFER> thanks!
+<[Leonard] NMORGENSTERN> has left.
+=== End of Steno notes. ===
+
+

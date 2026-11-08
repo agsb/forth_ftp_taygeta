@@ -1,0 +1,316 @@
+
+
+ Minutes of the Special GEnie Forth RT Conference with Bill Ragsdale,
+ president of Dorado Systems. Bill discussed his company's approach
+ to 'Targeted Applications in Forth'. Also discussed was various
+ Forth models and what Bill sees as a major failure by the X3J14 ANS
+ Technical Committee as they construct the new standard.
+
+ Entire contents of this transcript copyright (c)
+ 1990 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 08/16/90   Time: 22:33EDT
+
+Attendees:
+[[Bill R] FIGGUEST]
+[GARY-S]
+[[Ting] C.TING]
+[[Andy] A.MCFARLAND]
+[[Brian] B.SUTTON1]
+[[FRANK] F.SERGEANT]
+[[Dave] OLORIN]
+[[Wil] W.BADEN1]
+[[IRV] I.MONTANEZ]
+[[Len] NMORGENSTERN]
+[[Robert] R.BERKEY]
+[[Dennis] D.RUFFER]
+
+Minutes:
+<C.TING> is here.
+<GARY-S> have you typed /xec to kill echo and /sta to confirm you are job 1 and 
+I am job 2
+<[Bill R] FIGGUEST> yes
+<GARY-S> C. H. Ting - have you had a chance to look at Sergei Baranoff's 
+minimal Forth, 'beta' in the library ?
+<[Bill R] FIGGUEST> who is really Jennifer Marlowe?
+<GARY-S> a log file personalized
+<[Bill R] FIGGUEST> I thought it might be from Sherlock Holmes! ga
+<A.MCFARLAND> is here.
+<GARY-S> The name is from a detective series, she was Mike Hammer's secretary I 
+believe
+<C.TING> Gary, I just saw it in the library.
+<[Bill R] FIGGUEST> It had that pulp novel ring to the name.
+<GARY-S> I personally believe you are correct, minimal (assembled) Forth's are 
+necessary for hacker interest
+<GARY-S> Let's just hope 1) you are correct, and 2) their re-emergence is not 
+too late
+<B.SUTTON1> is here.
+<[Andy] A.MCFARLAND> Hi -- I am new to the real time conference
+<F.SERGEANT> is here.
+<GARY-S> I will hit you with some rules shortly, that we have to maintain for 
+formal conferences, till then it is just like a country telephone - jump
+ in when ready
+<OLORIN> is here.
+<I.MONTANEZ> is here.
+<[Wil] W.BADEN1> is here.
+<GARY-S> 1 minute to show time folks
+<GARY-S> 1 minute and ticking
+<[Dave] OLORIN> (puts on his soon-to-be-unemployed-programmer hat)
+<NMORGENSTERN> is here.
+<R.BERKEY> is here.
+<GARY-S>  Before we begin tonight's conference I need to remind ...
+<GARY-S>  everyone this is a formal conference. .. .. ..
+<GARY-S>  That means NO interlacing. Request a turn to speak by typing ...
+<GARY-S>   !! <CR> or /RAI <CR>. I will keep a list and call on whoever ...
+<GARY-S>  is next. PLEASE follow these simple rules : ...
+<GARY-S>  PLEASE make your first response ok <CR> (so we know YOU know). ...
+<GARY-S>  Then, keep your lines short, ending incomplete thoughts ...
+<GARY-S>  with three dots (...) and ending your question/statement with ga <CR>.
+<GARY-S>                        thank you.
+<GARY-S>    The GEnie Forth RoundTable is very pleased to welcome this ...
+<GARY-S>  evening's special guest, Bill Ragsdale, President and founder...
+<GARY-S>  of Dorado Systems, maker of components in computerized management...
+<GARY-S>  of building security. All Dorado products are programmed in ...
+<GARY-S>  Forth. Bill recently became President and investment advisor...
+<GARY-S>  of the Sunshine Growth Trust, a public mutual fund. ...
+<GARY-S>  Bill is a member of the ANSI Standards Committee for Forth ...
+<GARY-S>  continuing his earlier efforts as Chairman of the Standards ...
+<GARY-S>  Team for Forth 79 and 83. ...
+<GARY-S>  Bill was the founding President of the Forth Interest Group,...
+<GARY-S>  guiding its growth from 1979 to about 1985. Bill and wife ...
+<GARY-S>  Anne have two children and reside in Hayward, CA. ...
+<GARY-S>  Bill's topic is "Targeted Applications for Forth" ...
+<GARY-S>  ( or where it 'Should' be the primary language)
+<GARY-S>   - Please help welcome Bill Ragsdale.  ..
+<GARY-S>   .. .. .. .. .. ga Bill
+<[Bill R] FIGGUEST> Hi, All Im glad to be here thru the magic of Genie ga
+<[Bill R] FIGGUEST> We need commercially viable Forth applications that are 
+                    motivating . ..
+<[Bill R] FIGGUEST> to the buyer (company) and seller (Forth programmer)...
+<[Bill R] FIGGUEST> This is needed for Forth to be rewarding to all and...
+<[Bill R] FIGGUEST> viable in the long term.  I propose "tailored applications".
+<[Bill R] FIGGUEST> These are standard and custom software in a product form...
+<[Bill R] FIGGUEST>  The features are  - quick turnaround.
+<[Bill R] FIGGUEST>                    - done in a field the programmer 
+                                         knows well...
+                                       - have customers under a time pressure
+<[Bill R] FIGGUEST> I would look for applications written from an application 
+<[Bill R] FIGGUEST> shell which the Forth programmer customizes...
+<[Bill R] FIGGUEST> The prices would be $500 to 1,000 in  1 - 2 hours.
+<[Bill R] FIGGUEST> or $5,000 to 10,000 when it requires 1 - 2 days...
+<[Bill R] FIGGUEST> We do such products at Dorado Systems, in this price range..
+<[Bill R] FIGGUEST> Any comments 
+<[Dave] OLORIN> At the risk of being burned as a heretic...
+<[Dave] OLORIN> I don't see a future for Forth outside of small...
+<[Dave] OLORIN> niche markets.
+<[Dave] OLORIN> Let me explain.
+<[Dave] OLORIN> I've spent the better part of the last year...
+<[Dave] OLORIN> working in a part of the industry which has...
+<[Dave] OLORIN> been dominated by a language very similar in both...
+<[Dave] OLORIN> flexibility and fanaticism of its adherents to Forth.
+<[Dave] OLORIN> The research community, dominated for years by Lisp,
+<[Dave] OLORIN> and using Lisp specific hardware, is moving *away*
+<[Dave] OLORIN> from Lisp and into C and (especially) C++.
+<[Dave] OLORIN> This is a language with far more programmers than Forth,
+<[Dave] OLORIN> a vastly greater respectability, and an equally vehement
+<[Dave] OLORIN> user base, and yet it is dying off because of the need
+<[Dave] OLORIN> for standardization.
+<[Dave] OLORIN> I don't think that Forth will survive outside of isolated
+<[Dave] OLORIN> quick turn-around markets (such as you've described). We're
+<[Dave] OLORIN> even losing the astronomy base that we had for so many years
+<[Dave] OLORIN> do to the proliferation of high-power workstations.
+<[Dave] OLORIN> Can Forth survive the sudden loss of resource scarcity?
+<[Bill R] FIGGUEST> I agree.  I think Forth will continue only in niche areas 
+                    such as
+<[Bill R] FIGGUEST> robotics and graphics.  The reason targeted applications are
+<[Bill R] FIGGUEST> appropriate is to leverage on the programmers prior 
+                    knowledge
+<[Bill R] FIGGUEST> of the application area and because of Forth's quick 
+                    turnaround.
+<[Bill R] FIGGUEST> We areI wish the overall outlook was better.
+<[Wil] W.BADEN1> Bill, when last we spoke face-to-face, you said that most of 
+                 Dorado's work is now in another language.  Is that still so? 
+                 and what is that other language? 
+<[Bill R] FIGGUEST> No thats not the case.  All our
+<[Bill R] FIGGUEST> applications are written in Forth and all of our
+<[Bill R] FIGGUEST> test equipment is done in Forth.  We are doing
+<[Bill R] FIGGUEST> 1 to 4 K one chip processors for realtime input and
+<[Bill R] FIGGUEST> the format conversions to the users special I/O formats.
+<[Bill R] FIGGUEST> We are stricktly a Forth shop. 
+<[FRANK] F.SERGEANT> How do you prospect for customers? 
+<[Bill R] FIGGUEST> Our customers don't even know we use Forth.  We sell the
+<[Bill R] FIGGUEST> product with customization offerd at a modest cost...
+<[Bill R] FIGGUEST> generally a 10 piece miminum order.  The customizatio
+<[Bill R] FIGGUEST> comes along at to premium.  We are shifting to
+<[Bill R] FIGGUEST> a $1500 charge in addition to the 10 piece minimum.
+<[Bill R] FIGGUEST> Our advantage, as a product manufacturer is that we
+<[Bill R] FIGGUEST> have the ongoing sales relationship, independent of Forth.
+<[Bill R] FIGGUEST> The programmer also has the problem of prospecting for
+<[Bill R] FIGGUEST> clients.
+<[Ting] C.TING> I do not understand how you can produce a $1000 product in 2 
+                hours. 
+<[Bill R] FIGGUEST> We do it.  . ..
+<[Bill R] FIGGUEST> The hardware is a $150 card reader with a standard PC board
+<[Bill R] FIGGUEST> and aprocessor.  The user sends us a sample ID card and or
+<[Bill R] FIGGUEST> an input format.  We customize 1 or two screens of code
+<[Bill R] FIGGUEST> to move the card digits into the specified output format.
+<[Bill R] FIGGUEST> we have about 6 shell programs to work from.  The total bill
+<[Bill R] FIGGUEST> to the customer is $1500 which includes the 10 card readers.
+<[Bill R] FIGGUEST> We have been disappointed with the reorder rate and use
+<[Bill R] FIGGUEST> an added $1500 one time charge to filter out the buyers
+<[Bill R] FIGGUEST> who are not committed to a longer term relationship..
+<[Robert] R.BERKEY> I didn't understand what kind of "card"s these are.
+<[Bill R] FIGGUEST> These are security ID cards coded like credit cards.
+<[Bill R] FIGGUEST> Similar product would be electronic scales,...
+<[Bill R] FIGGUEST> data colection unit, time and attendace time clocks.
+<D.RUFFER> is here.
+<GARY-S> I presume you are reading mag-stripe ...
+<GARY-S> are you using the IATA field or ABA ?
+<[Bill R] FIGGUEST> Yes, in this field...
+<[Bill R] FIGGUEST> we know a lot about little, a very narrow application field.
+<[Bill R] FIGGUEST> Most of the work is ABA on Track 2, but we also do IATA
+<[Bill R] FIGGUEST> on track 1 or 3.
+<GARY-S> any thrift third (track 3 ) ?
+<[Bill R] FIGGUEST> The thrift or MINTS format on track 3 seems to be fading 
+                    away.
+<[Bill R] FIGGUEST> I think people use the IATA on three.  Only IBM and some
+<[Bill R] FIGGUEST> financial institutions seem to use the IATA and MINTS 
+                    format.
+<[Bill R] FIGGUEST> Another targeted application area is bar code reader
+<[Bill R] FIGGUEST> customization.  This is hotter than magnetic stripe now.
+<[Bill R] FIGGUEST> A program could probably do well with
+<[Bill R] FIGGUEST> a simple bar code reader with an internal one chip
+<[Bill R] FIGGUEST> processor and do customized applications. ga
+<GARY-S> are you doing flat graphics (bar code) also
+<[Bill R] FIGGUEST> No we specialize in higher security applications of
+<[Bill R] FIGGUEST> magnetic striped cards.  Nuclear power plants, large
+<[Bill R] FIGGUEST> office buildings and so on.    Another application
+<[Bill R] FIGGUEST> area would be the access control units that actually
+<[Bill R] FIGGUEST> control the door.  There are about 40 manufactures of these
+<[Bill R] FIGGUEST> units, but they are slow on the draw for customization.
+<[Bill R] FIGGUEST> Several firms I know have lost the firmware source code
+<[Bill R] FIGGUEST> for their systems and can't change! 
+<[FRANK] F.SERGEANT> What microprocessor do you use/prefer (& why?)? 
+<[Bill R] FIGGUEST> We use the Mot 68705 CMOS EPROM   and the 68HC11 for larger 
+                    jobs.
+<[Bill R] FIGGUEST> presently all our jwork is in EPROM with a little EEPROM
+<[Bill R] FIGGUEST> on board for start up parameters we change on the
+<[Bill R] FIGGUEST> production line.  The HC11 is particulary fine for forth
+<[Bill R] FIGGUEST> and for our work.  We have found several clients who
+<[Bill R] FIGGUEST> are also using these,but programmed in assembler or C.
+<[Ting] C.TING> Bill, You can choose the tool because you own the business...
+<[Ting] C.TING> But we have to survive by convincing the boss that Forth is ok..
+<[Ting] C.TING> Any thought about winning an argument and losing the job?
+<[Bill R] FIGGUEST> That is the case. , but as sales manager I
+<[Bill R] FIGGUEST> want the benefits of forth.  I walk up to Andrew McKewan,
+<[Bill R] FIGGUEST> our programmer (and Enginering Manager) with
+<[Bill R] FIGGUEST> a need and he fills it in 1/2 hours.  Sell that
+<[Bill R] FIGGUEST> quick turn around to the boss and he'll support
+<[Bill R] FIGGUEST> Forth.  There are other ways but we get the results.
+<[Bill R] FIGGUEST> I havent worked in C environments, but most prior
+<[Bill R] FIGGUEST> cases I saw 1 to 4 day turnaround on similar projects.
+<[Bill R] FIGGUEST> We need to sell the results of Forth not just Forth.
+<[Bill R] FIGGUEST> Forth programmers need to keep one factor in the
+<[Bill R] FIGGUEST> back of their mind. I, as a Forth progrmmmer want
+<[Bill R] FIGGUEST> to do things my way.  When I make tradeoffs I still have
+<[Bill R] FIGGUEST> to keep the manager/company point of view in mind.
+<[Bill R] FIGGUEST> Many of the Forth programmers seem to grow a defensive
+<[Bill R] FIGGUEST> or defiant attitude that their method or Forth dictates
+<[Bill R] FIGGUEST> what is to happen on the project.  Managers may
+<[Bill R] FIGGUEST> sometime change the language to change the people they
+<[Bill R] FIGGUEST> work with in the future.  Think it over. 
+<[Robert] R.BERKEY> Have you had occasion to manage more than one Forth 
+<[Robert] R.BERKEY> programmer on a given project? 
+<[Bill R] FIGGUEST> No, I still think it is one programmer/one project.  Its 
+<[Bill R] FIGGUEST> like the Texas ranger sent to stop a riot.  When asked
+<[Bill R] FIGGUEST> where his help was he said 'You only have one riot so
+<[Bill R] FIGGUEST> you only need one Ranger'.
+<[Wil] W.BADEN1> I believe Work Stations and Windowing Systems have made a 
+                 tremendous improvement in turn around.  Can Forth keep its
+                 monopoly on quick turn around much longer?
+<[Bill R] FIGGUEST> I worry about both of those items...
+<[Bill R] FIGGUEST> I used to know every bit and flag in my computer system.
+<[Bill R] FIGGUEST> When forth is running with the virtual Forth machine at 
+                    least knew all of the Forth internals.  ..
+<[Bill R] FIGGUEST> now with the computers so advanced, we are losing touch with
+<[Bill R] FIGGUEST> the real hardware and the virtual hardware.  I think
+<[Bill R] FIGGUEST> the trend is not reversable, but it works against small
+<[Bill R] FIGGUEST> applications and individual programmers.  it does not
+<[Bill R] FIGGUEST> bode well for Forth. 
+<[Ting] C.TING> I think there are still lots of room for Forth applications in..
+<[Ting] C.TING> embedded systems...
+<[Ting] C.TING> Bill, I would like to ask you, as the author of figForth, ...
+<[Ting] C.TING> that Forth resulted from metacompilation vs from straight 
+<[Ting] C.TING> assembly which one should we provide to users...
+<[Ting] C.TING> I think metacompiled Forth hurts the acceptance of Forth ...
+<[Ting] C.TING> to beginning users.
+<[Bill R] FIGGUEST> I think that either is ok if the nucleus is less that 
+                    12,000 bytes.
+<[Bill R] FIGGUEST> Beyond that point it should be meta compiled.  This issue
+<[Bill R] FIGGUEST> has nothing to do with the acceptance of Forth, just the
+<[Bill R] FIGGUEST> effort the user expends for startup and maintenance.
+<[Bill R] FIGGUEST> People can learn the internals either way...
+<[Bill R] FIGGUEST> and this is great.   I do think the Forth virtual
+<[Bill R] FIGGUEST> machine should be standardized. and the current
+<[Bill R] FIGGUEST> standards committees is on the wrong track...
+<[Bill R] FIGGUEST> They should be looking at absolute portability of
+<[Bill R] FIGGUEST> applictions, be it large or small.  The richness
+<[Bill R] FIGGUEST> of the language can come later. 
+<[Wil] W.BADEN1> Forth will survive.  You have identified where and how -- 
+                 dedicated applications with precious resources. 
+                 Congratulations. 
+<[FRANK] F.SERGEANT> What did you learn working with Charles Moore?
+<[Bill R] FIGGUEST> I only had the opportunity to work with Chuck for the
+<[Bill R] FIGGUEST> time I served on the Board of Directors
+<[Bill R] FIGGUEST> of Forth Inc.  I had to learn From reading his code.
+<[Bill R] FIGGUEST> That was probably the best mentorship I ever had. 
+<[Ting] C.TING> figForth was enormously successful.  F83 and FPC much less so...
+<[Ting] C.TING> Can we repeat the history?
+<[Bill R] FIGGUEST> I think F83 ...
+<[Bill R] FIGGUEST> eclipesed figForth.   It was more robust n
+<[Bill R] FIGGUEST> on more machines and had a better variety of
+<[Bill R] FIGGUEST> tools.  MVP Forth comes in a close second, for in
+<[Bill R] FIGGUEST> its day it had great, distributed sponsorship. By that
+<[Bill R] FIGGUEST> I mean more sponsors that just the original vendor.  
+<[Bill R] FIGGUEST> FigForth got off to a good start and still helps people.
+<[Bill R] FIGGUEST> get going, but we collectively designed it to be just a 
+                    platform and 
+<[Bill R] FIGGUEST> not to threaten any other's commercial efforts.  Its time
+<[Bill R] FIGGUEST> came and went.  We can't put the Genie back in the bottle..
+<[Bill R] FIGGUEST> so other Forth language generations will come.  I do
+<[Bill R] FIGGUEST> harp, though, on absolute portability at the level of the
+<[Bill R] FIGGUEST> lowest 100 to 150 words.
+<GARY-S> Irv - you have last question
+<[IRV] I.MONTANEZ> BILL, WHAT ROUGHLY IS THE PERCENTAGE MAKE-UP OF YOUR FORTH 
+<[IRV] I.MONTANEZ> LANGUAGE APPLICATIONS WORKLOAD, AND IN WHAT AREAS.
+<[Bill R] FIGGUEST> We use F83 for product development...
+<[Bill R] FIGGUEST> and for test equipement.   A couple of production units,
+<[Bill R] FIGGUEST> label printers for example, are still in MVPForth because
+<[Bill R] FIGGUEST> of the computer they run on.  We tried FPC but it was just
+<[Bill R] FIGGUEST> too big to 'get our arms around' and there were side
+<[Bill R] FIGGUEST> effects of changes that we were impatient to resolve.  So 
+<[Bill R] FIGGUEST> we stick with the safe and sane F83. In our business areas
+<[Bill R] FIGGUEST>  we usea multiuser systesm in Pick..
+<GARY-S> closing comments please, Bill.
+<[Bill R] FIGGUEST> Thanks for the chance to chat this evening...
+<[Bill R] FIGGUEST> I offer this challenge to the Forth community, or at least
+<[Bill R] FIGGUEST> the one persone who might make it happen...
+<[Bill R] FIGGUEST>
+<[Bill R] FIGGUEST> How can we hold an interactive RoundTable like this, 
+<[Bill R] FIGGUEST> programmed in Forth, by facsimilie?  ...
+<[Bill R] FIGGUEST> I want to feed in hand written material and have it 
+<[Bill R] FIGGUEST> distributed in realtime to the participants.
+<[Bill R] FIGGUEST> I think we can write quicker and with aids
+<[Bill R] FIGGUEST> like diagrams more effectively than we type.
+<[Bill R] FIGGUEST> So a fax roundtable is the next generation.  Thanks
+<[Bill R] FIGGUEST> all for the fellowship we've enjoyed over the years.
+<[Bill R] FIGGUEST> Forth is **more** than a language. 
+<GARY-S>  Bill Ragsdale, on behalf of the GEnie Forth RoundTable, ...
+<GARY-S>  'Thank you' for a stimulating conference. ...
+<GARY-S>
+<GARY-S>  All may stay and talk, but this conference has officially ended.
+=== End of Steno notes. ===
+
+

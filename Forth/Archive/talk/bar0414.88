@@ -1,0 +1,159 @@
+
+
+
+
+Sub: Minutes of your RT Conference.
+
+Date: 04/14/88   Time: 22:33EDT
+Attendees:
+[[Gary] GARY-S]
+[[jax] VESTA]
+[J.T.SAVIDGE]
+
+Minutes:
+<[Gary] GARY-S>
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> Hey Leonard
+<[leonard] NMORGENSTERN> Hi
+<[Gary] GARY-S> I may have to switch confusers - can you read this ?
+<[leonard] NMORGENSTERN> yes
+<[leonard] NMORGENSTERN> What is a confuser?
+<[Gary] GARY-S> Good - I'll just cook along till something hoppen
+<[Gary] GARY-S> That's my term for these megaswitch boxes we play with
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> Dennis is much busy on the road with FORTH Inc
+<[Gary] GARY-S> ga
+<[leonard] NMORGENSTERN> I got a marvellous book, not about Forth . . .
+<[leonard] NMORGENSTERN> Called the Portable Curmudgeon, by Jon Winokur . . .
+<[leonard] NMORGENSTERN> Example: Oscar Levant says about Doris Day. . .
+<[leonard] NMORGENSTERN> " I knew her before she was a virgin"ok
+<[Gary] GARY-S> haha
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> ga
+<[Gary] GARY-S> Interestingly, this was also a day of...
+<[Gary] GARY-S> book purcahasing for me...
+<[Gary] GARY-S> but MUCHO MAS serious ! A two volume
+<[Gary] GARY-S> goodie fro MIT press by Rumelhart and McClelland...
+<[Gary] GARY-S> called 'Parallel Distributed Processing'...
+<[Gary] GARY-S> about 1200 pages of intro to neural nets...
+<[Gary] GARY-S> NOT light reading !
+<[Gary] GARY-S> ga
+<[leonard] NMORGENSTERN> With 1200 pages, it isn't light to carry around, 
+either.:-)
+<[Gary] GARY-S> I went for the paper-back.
+<[Gary] GARY-S> no sweat
+<[Gary] GARY-S> ga
+<[leonard] NMORGENSTERN> When I retired, I thought I would have a lot
+<[leonard] NMORGENSTERN> of time to catch up on
+<[leonard] NMORGENSTERN> the deep stuff. . .
+<[leonard] NMORGENSTERN> But I seem too busy. I want to try to apply
+<[leonard] NMORGENSTERN> Dick Pountain's Object Oriented Forth.
+<[leonard] NMORGENSTERN> He writes well, & isn't hard to understand,
+<[leonard] NMORGENSTERN> but it isn't easy to try to apply it to a practical
+<[leonard] NMORGENSTERN> application.
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> GREAT BOOK - I highly recommend !
+<[Gary] GARY-S> I did a mini-revue on it on the BBS...
+<[Gary] GARY-S> I like his writing anyway, so my opinion is really opinion.
+<[Gary] GARY-S> ga
+<[leonard] NMORGENSTERN> Have you actually used it?
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> Some - but nothing I want to post
+<[Gary] GARY-S> ga
+<[leonard] NMORGENSTERN> What did you use it for?
+<[leonard] NMORGENSTERN> .
+<[Gary] GARY-S> Just playing with the ideas ...
+<[Gary] GARY-S> Between it and Townsend's book you get a real twist...
+<VESTA> is here.
+<[leonard] NMORGENSTERN> Is that JAX
+<[jax] VESTA> you bet! woof!
+<[Gary] GARY-S> on programming in logic. I liked the exercise, but don't forsee 
+doing anything real with it.
+<[Gary] GARY-S> hey Jax
+<[jax] VESTA> @@@!
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> Talking OO Forth
+<[Gary] GARY-S> ga Leonard
+<[jax] VESTA> ...?
+<[leonard] NMORGENSTERN> Jax, have you used Pountain's Object Oriented Forth
+<[leonard] NMORGENSTERN> for anything practical?
+<[leonard] NMORGENSTERN> .
+<[jax] VESTA>
+<[Gary] GARY-S> ga Jax
+<[jax] VESTA> Have JFORTH ...
+<[jax] VESTA> which has obj oriented extension ODE ...
+<[jax] VESTA> example is JAXBOXES.SRC in FIG lib here on GEnie.
+<[jax] VESTA> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> have you read Pountain's or Townsends stuff ? I like
+<[Gary] GARY-S> ga len
+<[leonard] NMORGENSTERN> JForth runs on the Mac, is that correct?
+<[leonard] NMORGENSTERN> .
+<[jax] VESTA> Amiga.
+<[jax] VESTA> .
+<[Gary] GARY-S> ga jax
+<[jax] VESTA> JForth ...
+<[jax] VESTA> is 32 bit JSR Forth ...
+<[jax] VESTA> ODE is fab extension ....
+<[jax] VESTA> helped me grok Object Oriented ...
+<[jax] VESTA> which is very nice for many types of projects ...
+<[Gary] GARY-S> ie:
+<[jax] VESTA> and probably would be useful for implementing a constraint-resolut
+ion ...
+<[jax] VESTA> type of PROLOG in FORTH .
+<[jax] VESTA> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> besides boxes have you done anything '(real' ?
+<[Gary] GARY-S> ga leonard
+<[leonard] NMORGENSTERN> pmi (pardon my ignorance
+<[leonard] NMORGENSTERN> what is fab extension?
+<[leonard] NMORGENSTERN> .
+<[jax] VESTA>
+<[Gary] GARY-S> ga jax
+<[jax] VESTA> Meant " a fabulous extension" to JForth...objects in FORTH. Foo 
+to C!
+<[jax] VESTA> .
+<[Gary] GARY-S> what about my 'real' ??
+<[Gary] GARY-S> ga
+<[jax] VESTA> Well, depends on what you call "real" ....
+<[jax] VESTA> jax believes in low-overhead data objects ...
+<[jax] VESTA> which are useful and re-useable time and time again ...
+<[jax] VESTA> am not so sure that the concept of "inheritance" is so profound 
+in FORTH ...
+<[jax] VESTA> since the compiler in FORTH is infinitely extensible already ...
+<[jax] VESTA> so my tastes run to the type of object characterised in my files .
+..
+<[jax] VESTA> DIMARRAY.SRC and DIMLIMS.SRC in which ...
+<[jax] VESTA> the data objects are _seperate_ from the array index limits check.
+..
+<[jax] VESTA> allowing the programmer to optionally dispense with the overhead .
+..
+<[jax] VESTA> of the limits check in cases where it is just a waste of time...
+<[jax] VESTA> above mentioned files also in FIG libraray ...[A
+<[jax] VESTA> though you have to be careful with jaxfiles since his amiga ...
+<[jax] VESTA> does not automatically append carriage returns to every line ...
+<[jax] VESTA> so look for the ones that say they have <cr>'s if you are using a 
+MSDOS box.
+<[jax] VESTA> .
+<[leonard] NMORGENSTERN>
+<[Gary] GARY-S> ga len
+<[Gary] GARY-S>
+<[leonard] NMORGENSTERN> But isn't that just good programming practice? , , ,
+<[leonard] NMORGENSTERN> I always write things like arrays, etc...
+<[leonard] NMORGENSTERN> asthat assume that the stack is correct. If checking. .
+ .
+<[leonard] NMORGENSTERN> is noeeded, then it should be a separate Forth word
+<[leonard] NMORGENSTERN> .
+<[jax] VESTA>
+<[Gary] GARY-S> setting ranges and idiot proofing is checks - true
+<[Gary] GARY-S> ga jax
+<[jax] VESTA> I agree ... but we may have ...
+<[jax] VESTA> confused two issues here ...
+<[jax] VESTA> The main point of object oriented ...
+<[jax] VESTA> is not limits-checking perse ...
+<[jax] VESTA> but the concept of relieving the programmer ...
+<[jax] VESTA> of some of the effort of differentiating between the handling ...
+<[jax] VESTA> of data objects of different sizes and types _explicitly_ ...[A
+<[jax] VESTA> These "smart arrays" ...
+<[jax] VESTA> know alot about themselves and can respond to the same messages ..
+

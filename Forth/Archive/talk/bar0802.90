@@ -1,0 +1,329 @@
+
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 08/02/90   Time: 22:27EDT
+
+The question of the night:"BASIS12 is posted in the library. The mission of
+X3/J14 nears end. Is the result a viable standard ?' This was the only	REAL
+Forth related discussion, but covered several areas of concern.
+
+Attendees:
+[[Gary] GARY-S]
+[[Doug] D.PHILIPS3]
+[[Brian] B.SUTTON1]
+[[Windows-JAX] JAX]
+[[Larry] LDAWSON]
+
+Minutes:
+<JAX> is here.
+<JAX> has the basis been posted to USENET yet?
+<[Gary] GARY-S> not by me
+<JAX> ok, will dload and post.
+<JAX> when did it arrive? by whose hand?
+<[Gary] GARY-S> Dennis posted it (and edited for posting)
+<[Gary] GARY-S> any thoughts on the query
+<JAX> Plenty.
+<JAX> Will have more thoughts after august meeting.
+<[Gary] GARY-S> That is austensibly the wind-down
+<JAX> (edited it in what manner?
+<[Gary] GARY-S> to get rid of the printer codes that ASCII doesn't comprehend
+<JAX> aha.
+<[Gary] GARY-S> Nada to do with content
+<JAX> when did Den post?
+<JAX> (in some cases the printer codes *are* content ...
+<[Gary] GARY-S> last night, or night before
+<JAX> (anyway, we agreed at Melbourne to post it in its old, ugly WORD format)
+<JAX> (i suppose they will be mailing me a disk anyway, since we were supposed 
+to post to USENET)
+<JAX> how many K
+<[Gary] GARY-S> When you copy, you will see all intent and remarks are in place
+<JAX> [AOh, I am sure, I am not implying that anyone is changing anything!
+<[Gary] GARY-S> any thoughts on tonights question ?
+<B.SUTTON1> I think I missed the question; I'm new here.
+<[Brian] B.SUTTON1> Hi Gary -- what's going on tonight?
+<[Gary] GARY-S> It's just us for the moment - if you want to see other commands 
+type /hel
+<[Brian] B.SUTTON1> I've read through the manual, & probably just need to do 
+things once or twice to imbed them into my memory cells.
+<[Gary] GARY-S> I also put a handy 3x5 help card  in the library called RTC/QK.
+REF you might want to capture later
+<[Brian] B.SUTTON1> Great, that'll be a help  I'm sure.
+<[Gary] GARY-S> The question is 'do you think the ANS product is a viable 
+standard?'
+<[Brian] B.SUTTON1> I know nothing about it at the moment.
+<D.PHILIPS3> is here.
+<[Gary] GARY-S> Is the standard a usable one Doug ?
+<[Doug] D.PHILIPS3> Cheat answer:  There is no standard yet, so it can't be 
+usable!
+<[Doug] D.PHILIPS3> I haven't seen BASIS12 yet, so I don't know what has 
+changed.  I suspect
+<[Doug] D.PHILIPS3> that usability is a matter of degree, rather than a binary 
+yes/no.
+<[Brian] B.SUTTON1> Is there a particular major new point in the  new standard?
+<[Gary] GARY-S> This is hardly an objective question - my straw polls are 
+supposed to be heavily typed toward subjective
+<[Gary] GARY-S> Have you been following it at all, Brian ?
+<[Brian] B.SUTTON1> Not a bit, unfortunately -- I've just signed up with GEnie 
+this past week, and haven't yet caught up on my FORTH DIMENSIONS readin
+g; sorry.
+<[Doug] D.PHILIPS3> Brian, do you mean all 12 years worth?
+<[Gary] GARY-S> As Doug pointed out, it is NOT a staqndard yet - but since this 
+is BASIS12 of the X3/J14 ANS Technical Committee the shape is largely
+there
+<[Doug] D.PHILIPS3> (or is it 13?)
+<[Brian] B.SUTTON1> Well, the past 3 years at least, Doug.
+<[Gary] GARY-S> Waht kernel(S) are you familiar with ?
+<[Doug] D.PHILIPS3> Did you start current and work back, or are you working 
+towards current ?
+<[Brian] B.SUTTON1> I've been involved in FORTH about 10 years now; currently 
+using F83 on a cp/m machine; also have used FIG on a TI
+<[Doug] D.PHILIPS3> What kinds of things do you do with it?
+<[Gary] GARY-S> The ANS will be more like F83 than FIG, but there are some 
+dramatic changes
+<[Brian] B.SUTTON1> Mostly business stuff -- accounting, WP, etc.
+<[Brian] B.SUTTON1> Dramatic changes?
+<[Doug] D.PHILIPS3> Sounds like, ah, ah, r..., re... rea... real... work!
+<[Brian] B.SUTTON1> After about 5 years of refinement, It's starting to look 
+halfway professional!
+<[Gary] GARY-S> Do you use your stuff in an actual business environment ? The 
+accounting stuff sounds interesting - is it propriatary, or can you post
+ it ?
+<[Brian] B.SUTTON1> I use it to run my Chiropractic office; it uses 
+approximately 20 overlays...
+<[Gary] GARY-S> I have to confess geographic ignorance - where is Odessa FL ?
+<[Brian] B.SUTTON1> Next to Tampa.
+<[Doug] D.PHILIPS3> Isn't that part of the Ozarks?
+<[Brian] B.SUTTON1> Just about
+<[Gary] GARY-S> That isn't funny - you know I have a trip into the Ozarks 
+tomorrow !!
+<[Doug] D.PHILIPS3> Tee Hee Hee
+<[Brian] B.SUTTON1> hope you make it back
+<[Doug] D.PHILIPS3> He's actually out huntin' 'Bagos from what I hear!
+<[Doug] D.PHILIPS3> Just what you tie them to, I'm not sure.
+<[Gary] GARY-S> I'm having difficulty reading what you are inferring Brian. The 
+Ozarks are boondocks, but not the Bermuda Triangle
+<[Brian] B.SUTTON1> Well, never having been to those particular boondocks, but 
+knowing a few people who have, it does seem sort of spooky.
+<[Brian] B.SUTTON1> So what sort of work are you people doing with FORTH?
+<[Gary] GARY-S> Back to X3/J14 .. there is now both operators for Symetrical 
+AND floored division
+<[Gary] GARY-S> There is now a error trap mechanism called catch/throw
+<[Gary] GARY-S> NOT is not NOT - it is INVERT
+<[Gary] GARY-S> what else , Doug  ?
+<[Brian] B.SUTTON1> sounds like the basics are expanding.
+<[Doug] D.PHILIPS3> Hmmm.
+<[Gary] GARY-S> There was an effort to incorporate 1's compliment - thank 
+goodness that was seen as foolish
+<[Doug] D.PHILIPS3> UM/MOD SM/MOD  -- / controversy
+<[Gary] GARY-S> yeah - no simple / divide operator - but I noted that
+<[Doug] D.PHILIPS3> Actually, the basics AREN'T expanding, its just that the TC
+<[Doug] D.PHILIPS3> has to deal with various factions of "existing practice" 
+that are
+<[Doug] D.PHILIPS3> incompatable.  Comprise, well, it is a political, not 
+technical process.
+<[Doug] D.PHILIPS3> The TC hasn't, as far as anyone has said so far, broken 
+anything.
+<[Gary] GARY-S> Ironically Laxen and Perry's F-83 could not be included in the 
+usage count
+<[Doug] D.PHILIPS3> They've pointed out where there already exists portability 
+difficulties.
+<[Brian] B.SUTTON1> you mean that instead of separate operators we need to 
+decide on the best and use that only?
+<[Doug] D.PHILIPS3> Just the opposite.
+<[Gary] GARY-S> NOT if you want your code to be portable
+<[Doug] D.PHILIPS3> There is no way to decide on the "best".  That is a 
+subjective interpretative
+<[Doug] D.PHILIPS3> (gack) judgement call.   The best the TC can do,
+<[Gary] GARY-S> You must prelude to your operators
+<[Doug] D.PHILIPS3> and I think that they are doing OK, is to
+<[Doug] D.PHILIPS3> identify areas of conflict and provide alternative 
+solutions.
+<[Doug] D.PHILIPS3> That is why / , is "broken".  Actually it was already, but 
+no one
+<[Doug] D.PHILIPS3> either realized it, or would admit it.
+<[Gary] GARY-S> What is 'actually' being created is a rubber stamp, for vendors 
+who must market to government jobs that demand adherence to a IEEE or
+ANS standard (don't tell anyone where you heard that)
+<[Brian] B.SUTTON1> but the point of standardization is to use the lowest 
+common denominator that most people would start with, on average, no?
+<[Doug] D.PHILIPS3> Personally I don't think any "standard" can be "perfect".  
+"Good" is a  lot to
+<[Doug] D.PHILIPS3> ask, but may be attainable.
+<[Doug] D.PHILIPS3> Try defining "lowest common denominator" and "most people" 
+and ...
+<[Doug] D.PHILIPS3> so on.
+<[Gary] GARY-S> I would agree with your premise - I don't think that will be 
+the result, though, Brian
+<[Brian] B.SUTTON1> What sort of politics do you see being involved?
+<[Doug] D.PHILIPS3> Gary, I totally disagree with that.  It is an illusion.
+<[Gary] GARY-S> what is it you disagree with
+<[Doug] D.PHILIPS3> Gary, I disagree that Brians point is feasible.
+<[Doug] D.PHILIPS3> I think that if you examine it closely enough you'll find 
+that it is
+<[Gary] GARY-S> ms-windows or X-windows
+<[Doug] D.PHILIPS3> unsupportable.  It is based on the flawed idea that there 
+is a common
+<[Doug] D.PHILIPS3> demoninator that "average" people start with.
+<[Doug] D.PHILIPS3> You would think after all the TC has been through the past 
+3 years
+<[Windows-JAX] JAX> Amiga Windows and ms-windows. In and out of windows all the 
+time.
+<[Doug] D.PHILIPS3> that that would be obvious by now.
+<[Gary] GARY-S> ms (yech!)
+<[Doug] D.PHILIPS3> Too bad AJAX isn't a window cleaner!
+<[Windows-JAX] JAX> woof!
+<[Gary] GARY-S> did you cature and extract the BASIS JAXON ?
+<[Doug] D.PHILIPS3> Brian, do you play with Forth "on the side"?
+<[Windows-JAX] JAX> Yes!
+<[Doug] D.PHILIPS3> Brian, do you consider the Business stuff "on the side"?  
+What do you
+<[Gary] GARY-S> If your accounting program can be shared I hope you will 
+consider uploading it, Brian (uploads are free time)
+<[Doug] D.PHILIPS3> use Forth for "for fun?"
+<[Gary] GARY-S> on the door, jax - since we are nearing the end of the X3/J14 
+process is the result going to be a viable standard ?
+<[Windows-JAX] JAX> Viable from a computer science point of view, from a Forth 
+point of view, from an economic point of view or from a political point
+ of view?
+<[Doug] D.PHILIPS3> Yea Jax!
+<[Gary] GARY-S> You and Doug - always wanting to philosophy ! shheeeesh ! Just 
+answer it from a market or user perspective
+<[Brian] B.SUTTON1> Gary, the program probably wouldn't run on anything but a 
+Xerox at the moment, since I use some z80  code specific for that machin
+e.
+<[Gary] GARY-S> as in 820 ?
+<[Gary] GARY-S> is your XEROX AN 820 ? -1 ? -2 ?
+<[Doug] D.PHILIPS3> Brian, Just jump in.  What Forth stuff do you do for "fun"? 
+ Is the accouting stuff "fun"?
+<[Brian] B.SUTTON1> a 16/8, actually an improvement of the 820-II; Doug, it's 
+all fun!
+<[Doug] D.PHILIPS3> Yeah, Jax, just what ARE you trying to pull.  Is Wavrik 
+full of it or not?
+<[Windows-JAX] JAX> Gary ... the situation as I see it is as follows: ...
+<[Windows-JAX] JAX> Yes there will be a codeable, implementable standard ...
+<[Larry] LDAWSON> is here.
+<[Windows-JAX] JAX> 1) Will ANS accept it? Will enough vendors hang in there to 
+give it stature? Will the user community accept it? WIll the compromis
+es we have to make turn enough people off that the whole process will render 
+itself irrelevant? Will we finish up before the members of the committee
+go broke attending meetings?
+<[Windows-JAX] JAX> The thing, Doug, about Wavrik and Bradley's postings on the 
+'net ...
+<[Windows-JAX] JAX> is that they are *both* right ...
+<[Windows-JAX] JAX> This is something Moore has tried to say all along ...
+<[Gary] GARY-S> Ray Duncan has already publicly stated if it isn't fairly 
+upward compatible from F-83, LMI will NOT implement
+<[Windows-JAX] JAX> thatForth ...
+<[Windows-JAX] JAX> is an APPROACH more than a SPECIFICATION ...
+<[Windows-JAX] JAX> we freeze it in a Standard for economic reasons ...
+<[Doug] D.PHILIPS3> Which is why I think ANY Forth Standard will be flawed.
+<[Windows-JAX] JAX> but there is always going to be that inherent contradiction 
+...
+<[Doug] D.PHILIPS3> Not necessarily useless, but hardly perfect.
+<[Windows-JAX] JAX> that Forth is a one-time one-of-a-kind type thingy.
+<[Doug] D.PHILIPS3> The real question is, what, given ANY ANS Forth standard, 
+will be the impact
+<[Doug] D.PHILIPS3> on the programmers "in the trenchs"?
+<[Windows-JAX] JAX> It's the price you pay for excess creativity in ANY field ..
+. lack of "respectability"
+<[Windows-JAX] JAX> The impact on the guy in the trenches will be:
+<[Windows-JAX] JAX> MORE INCOME if we make this fly.
+<[Gary] GARY-S> Are we trying to paint a chameleon with one stroke of a large 
+brush ?
+<[Windows-JAX] JAX> I guarantee it.
+<[Doug] D.PHILIPS3> (Not just directed at JAX, everyone jump in!)
+<[Windows-JAX] JAX> I type fastest, though!
+<[Windows-JAX] JAX>  :-)
+<[Doug] D.PHILIPS3> I have often wondered WHY ANS was approached to support a  
+Forth Standard.
+<[Windows-JAX] JAX> Stature.
+<[Doug] D.PHILIPS3> Is that what you are suggesting Gary, that we would be 
+better off with no ANS sstandard?
+<[Windows-JAX] JAX> They started a "Forth-87" committee ...
+<[Gary] GARY-S> to grant authenticity to the rubber stamp !
+<[Brian] B.SUTTON1> could someone refresh my memory on ANS?
+<[Windows-JAX] JAX> which deferred to ANSI when Liz Rather and others made 
+progress on the ANSI front
+<[Windows-JAX] JAX> (A)merican (N)ational (S)tandards (I)nstitute.
+<[Windows-JAX] JAX> ( i think!)
+<[Brian] B.SUTTON1> thanks.
+<[Doug] D.PHILIPS3> Its really too bad ANSI doesn't require a consensus BEFORE 
+it'll let you start the process!
+<[Doug] D.PHILIPS3> (I know, I know).
+<[Gary] GARY-S> There was an effort to gain IEEE standardization when ANS 
+agreed - that ended the IEEE effort
+<[Windows-JAX] JAX> Well, in effect, they do.
+<[Windows-JAX] JAX> Doug, the work of X3/J14 is constantly under the eye of X3.
+<[Windows-JAX] JAX> They are *not* entirely happy with us!
+<[Windows-JAX] JAX> We need MORE COMMUNITY SUPPORT!
+<[Windows-JAX] JAX> MORE ENTHUSIASM!
+<[Doug] D.PHILIPS3> Ok, to rephrase the question on the door, everyone answer.  
+If BASIS12 were to be made the standard, would you use it?  What other
+ effect would it have on you, personally?
+<[Larry] LDAWSON> IEEE and similar organizations are member orgs of ANSI, they 
+use ANSI to formalize the development and PUBLICATION of standards.
+<[Windows-JAX] JAX> ... & more vendors, damn them! :-)
+<[Gary] GARY-S> J11 enjoyed a similar fate - and people are still using K & R
+<[Windows-JAX] JAX> oh, poo gary ...
+<[Windows-JAX] JAX> the penmanship is on the room divider in that case ... ANS 
+C wins.
+<[Doug] D.PHILIPS3> The world won't end if you use K&R.  Pooh on JAX!
+<[Windows-JAX] JAX> Everyone is going ANS C, it just takes time.
+<[Brian] B.SUTTON1> so what's the problem with FORTH-83?
+<[Windows-JAX] JAX> Doug, I could care less one way or the other! I just mean, 
+it's obvious that ANS C has been accepted by the market.
+<[Windows-JAX] JAX> Brian, 83-STANDARD demands 16 bits and a very limited 
+conception of the execution engine, among other problems!
+<[Windows-JAX] JAX> 83-STANDARD was great, but it is *way* behind the state of 
+the art.
+<[Doug] D.PHILIPS3> Ok, so noone will answer that question.  How about this:
+<[Larry] LDAWSON> ANY standard is going to be behind the state of the art, it 
+has to be!
+<[Brian] B.SUTTON1> I was going to say that!
+<[Gary] GARY-S> 64K limit in a megabyte world IS a problem, no doubt
+<[Windows-JAX] JAX> Well, there are limits. Yo *cant* accept a 64 k limit these 
+days ... Gary said it.
+<[Doug] D.PHILIPS3> What is the ratio of C to Forth programmers that have 
+implemented a "compiler" for their language?  Whater or worse than 
+F-83 for machine dependancies?)
+<[Gary] GARY-S> The BIG free Forth (l&P) was not included in the mix, so it has 
+zilch effect
+<[Doug] D.PHILIPS3> Not necessarily "direct" effects, Gary.
+<[Brian] B.SUTTON1> My experience has been worse.
+<[Gary] GARY-S> Uniforth could not be counted, either
+<[Doug] D.PHILIPS3> I was thinking more of a background type thing.  Many C 
+programmers haven't
+<[Doug] D.PHILIPS3> even seen the insides of a C compiler, let alone have built 
+one from scratch.
+<[Doug] D.PHILIPS3> That difference in experience base, does it affect the 
+standards process?  Good bad or not at all?
+<[Gary] GARY-S> Intersting - but what's the point ?
+<[Doug] D.PHILIPS3> (Its at the end of my pencil, but that's not important
+ right now)
+<[Brian] B.SUTTON1> Gary did you mean to say that the ANS proposals would make  
+the programming environment  a foreign language to f83 users?
+<[Windows-JAX] JAX> well, i have work to do that requires i disconnect. Good 
+night Gary, and thank you for a stimulating discussion.
+<[Gary] GARY-S> I think the fact that many Forth programmers have created at 
+least one kernel, or certainly hacked someone elses only increases the le
+velk and intensity of arguments - Heck, we ALL know what 'REALLY' works :-) 
+right ?
+<[Gary] GARY-S> g'nite guys
+<[Gary] GARY-S> get your knee jerks in quick
+<[Doug] D.PHILIPS3> Gary, the point is what the impact of the standard should 
+be.
+<[Brian] B.SUTTON1> where do we find transcripts?
+<[Gary] GARY-S> library 1
+<[Doug] D.PHILIPS3> Forth cannot be killed by the ANS standard, no matter how 
+bad.  Vive la Forth!
+<[Larry] LDAWSON> The intent of any standard is to assure compatibility/
+portability among standards users. Period.
+<[Brian] B.SUTTON1> amen
+<[Doug] D.PHILIPS3> Yeah Larry!
+<[Gary] GARY-S> well said
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,325 @@
+
+Following appeared in the Proceedings of the 1983 Rochester Forth
+Conference.
+-----------------------------------------------------------------
+                                 
+                           They, Robots
+                                 
+                                 
+                         Charles H. Moore
+                     C. H. Moore & Associates
+                           Drawer CP-66
+                Manhattan Beach, California 90266
+                                 
+
+Synopsis
+--------
+
+Twenty-five years with the robots, ten speaking Forth. I want to
+share with you some hard-won lessons. Believe that the robot is a
+beast, and a wild one at that. Know that his name is Murphy.
+
+Robots involve a lot of hardware, mechanical as well as
+electronic. I have lost patience with hardware, in the same way I
+did with software. I can design better and intend to do so.
+Although "...all I want to do is write a good program", the
+software's no good if the hardware's no good. I caution you, the
+more you know about your project, all aspects, the better your
+chance of success.
+
+
+Lest We Forget
+--------------
+
+Ten years ago FORTH solved the software problem. Today the world
+struggles with Ada and Basic, Unix and CPM. Costs are climbing,
+programmer shortfall is desperate, complexity is out of control.
+The triumph of the day is the space shuttle, four of whose brains
+manage to function.
+
+FORTH solves the software problem. It does so by addressing the
+real problem. FORTH is the language for man-machine
+communication. It allows you to isolate a concept, assign a label
+to it, and convey its meaning to a computer. It allows you to use
+this concept to teach more elaborate ones. It allows you to
+establish a context and maintain it through layers of complexity.
+These are precisely the characteristics of human languages. They
+must be the characteristics of computer languages.
+
+FORTH evolved in the world of minicomputers. It accommodated the
+world of microprocessors, only to watch them become
+microcomputers. It has seen an industry turn full-circle, and the
+problems of yesterday become the problems of today. Through the
+chaos of this infant technology, to paraphrase Nevil Shute
+Norway, "A programmer can do for two bob what any damn fool can
+do for a quid." Although the robot is the realization of a
+programmer's dream, the blunt truth is that he is unlikely to
+program it successfully. His best will not be good enough.
+
+Although FORTH is the best tool available for programming robots,
+it is not accepted as such. If we hope to continue to work in
+FORTH, we must assure that our programs use its power and exhibit
+its virtues. They must be compact, efficient and readable.
+Although these are characteristics of the language, they depend
+on the programmer for expression. It is not enough to solve a
+problem; it must be done well. I fear the art of programming,
+even FORTH programming, is not well.
+
+
+Robots I Have Known
+-------------------
+
+It is necessary to define robot. A computer is not a robot. Let
+us agree that a robot can act upon its environment. This rules
+out business systems, image systems, signal-processors. There
+remain telescopes, vehicles, almost anything with moving parts.
+It is axiomatic that a robot act in real-time. This
+characteristic above all places demands upon the software. I have
+a simulator that runs a billion times slow. It is not a robot.
+
+Of course robots have no particular shape or size; they are not
+humanoid. My first robot was a gas chromatograph. It ingested gas
+with a clicking of valves; beyond that it was a signal processor.
+It was programmed in assembler, FORTRAN proving inadequate, and
+violated the rules I shall be listing. This was 1966.
+
+My next robot was a radio-telescope, followed by other radio and
+optical telescopes. The biggest was the 300 foot transit dish at
+Greenbank, West Virginia. A telescope is the quintessential
+robot: huge, articulated, precise. It has two, maybe three,
+degrees of freedom. These are called axes, even when nothing is
+rotating. It is amazing how complicated an axis is. It must be
+described (and all are different), programmed (and all are
+different), monitored (and all are different), and displayed (and
+all are different). In fact, display is the most demanding and
+difficult aspect, since control is often automatic (autonomous
+servos).
+
+I reprogrammed an Air Force satellite test station that qualifies
+as a robot. A large number of control and status signals, but no
+articulation. Here was a classic FORTH solution using standard
+data-base, reporting and multi-programming techniques to simplify
+an apparently complex problem. A signal was defined as a data
+structure with access code, limits and alarm action.
+
+Plotters, even printers, might qualify as robots, but don't.
+However, a microdensitometer must. This is a device that
+raster-scans a photographic plate to digitize an image. I've done
+several of these; in fact, one mode of telescope observation is
+to raster scan a rectangle of sky to build an image. The
+demanding characteristic of a scanner is the speed and momentum
+of its mechanical parts, plus the need for versatile control.
+
+A whole class of robots reside in process control. I have
+programmed several chemical pilot plants. These are typically a
+largish rack of pipes, valves, furnaces and dials that effect a
+chemical process on a modest scale. Excitement is enhanced by
+high pressure, temperature and reactivity. Likewise, a
+plasma-torch spectrograph carries a heightened level of interest.
+
+I have never programmed a real robot. One with shoulder, arm,
+wrist and grip; maybe even touch and vision. However, I have done
+an animation movie camera with even more axes (11) and
+extraordinary requirements for precision. One day I will program
+a vehicle, hopefully one I'd be willing to ride.
+
+It would be nice if there was any order to these machines -
+larger or more complex, perhaps. But there's not even a
+correlation with difficulty. None were finished to my
+satisfaction, nor was that even possible.
+
+
+Robots Speak FORTH
+------------------
+
+>From this experience, I have distilled polyFORTH and it is the
+necessary and sufficient tool to implement real-time systems. It
+is not perfect, but if you will read polyFORTH, you can learn
+what I know. What follows is a crude translation of certain
+features into English.
+
+A real-time system never has enough time. This is one of
+Parkinson's laws. A graphic example of this is the marvelous and
+popular
+
+          CREATE . . . DOES>
+
+construct that is never used. Instead the equally marvelous and
+efficient
+
+          CREATE . . . ;CODE
+
+The proportion of assembly code is much higher in a real-time system.
+Virtue does not lie in minimizing assembly code (thus maximizing
+portability) but in maximizing performance.
+
+It is that a hundred bytes of code can be produced directly in
+machine language - actual hex numbers. A thousand bytes of code needs
+assembly language. More should be done in high-level language for
+reasons of cost and documentation. Thus the choice of language
+requires an estimate of the size of the job. This choice is
+complicated by the universal tendency to underestimate.
+
+A proper FORTH development system supports all three choices. Q.E.D.,
+robots should be programmed in (or via) FORTH. However, my experience
+indicates that the complexity of a robot will easily exceed a
+thousand bytes. To write a target application in FORTH exacts an
+overhead of 500 bytes of machine code to provide primitives for the
+virtual FORTH computer. This cost is negligible and is recovered by
+the compactness of the resulting program.
+
+On the other hand, I resist the notion that a robot requires 64k of
+memory, or perhaps even more. I would guess that 4k to 8k of memory
+is right for an embedded application, considering the cost,
+reliability, maintainability and documentability of a program. More
+than that risks catastrophic failure.
+
+
+Multi-Phasic Mutterings
+-----------------------
+
+The key to successfully programming a robot is handling several
+asynchronous tasks. A simple multi-programmer, such as in polyFORTH,
+makes it easy. Although a program can be written that, in effect,
+does its own task-switching, this results in complex and inefficient
+code. Very hard to debug, document and maintain.
+
+Recognizing that the problem requires several tasks is an important
+design step. However, this does not demand an elaborate operating
+system. "Multi-tasking" is a different concept from "operating
+system". It requires only local variables and stacks for different
+tasks, and an idle loop that sequences them. Simply considering each
+task in turn (round-robin) is adequate.
+
+The act of assigning work to independent tasks is one aspect of
+factoring the problem into manageable sub-units. This phase of
+programming is most often done badly, or it is difficult to teach.
+FORTH programming is largely factoring. Once you have decided what
+words you need, it is easy to code them. But deciding is not easy. It
+is iterative, challenging and rewarding.
+
+One consideration is to know when you are done. That is, when you
+have defined the right words. I stop when most words fit on one line.
+Should you see block-sized definitions, laugh.
+
+Another clue to incomplete design are IF statements. It is a
+wonderful property of FORTH that few conditionals are needed. My
+explanation is that the programmer makes decisions, once, that other
+languages require the program to do repeatedly.
+
+Now to my thesis: tasks must be asynchronous. If you have two
+synchronous tasks - say one operating every second, the other every
+ten seconds - they can be combined (with significant savings). The
+single task merely executes an extra word every tenth time. The job
+of assigning tasks is reduced to deciding which are truly
+asynchronous.
+
+Each communications input line is unarguably independent and requires
+a separate task. This task can also handle half-duplex output.
+Full-duplex communications requires two tasks.
+
+Maintaining a live display across a serial line is an independent
+task; however, a memory-mapped display need not be. Often a display
+task can monitor signals for limit violations. Each axis is not
+independent. A single task can usually control all axes
+synchronously. But communication and control are never synchronous.
+
+Another aspect of multi-programming is timing. Often a task must
+delay a while. I use a word MS that delays a number of milliseconds.
+While it is waiting, other tasks can run. In fact, it is also
+running, testing the time until it continues. Here we encounter a
+design tradeoff. It is expensive to start a task that will merely
+test the time and quit. Much cheaper to let the clock interrupt
+time-out, no?
+
+No! It is tempting to queue tasks in the order they are to be
+restarted, and let the clock interrupt start them. But building and
+maintaining such a queue becomes a major job. Suppose there are no
+tasks? Or the queue is full? Or a task is started somewhere and must
+be removed? Or the programmer wants to display the queue? Moreover,
+this makes the mechanism of waiting on time completely different than
+waiting on input, whereas the concepts are very similar.
+
+
+The Numbers of the Beast
+------------------------
+
+Numbers are what robots are all about. They tend to be small numbers,
+often one or two bits. They are never floating point.
+
+It is useful to name these numbers, for a well-chosen name aids
+understanding. A more practical consideration is that describing is
+often done in hex, while using is decimal.
+
+Using the name of an input should provide its value. Using an output
+should set its value. Such words may be definitions.
+
+          : D/A ( n)  EFF@ ! ;
+          : A/D ( - n)  EFF4 @ ;
+          
+but if there are enough of the same kind, a defining word is
+appropriate.
+
+          : A/D ( n)  CREATE , DOES> ( - n) @ @ ;
+          EFF4 A/D TEMPERATURE
+
+Digital signals are usually packed into registers. Naming them should
+handle this packing.
+
+          : LIMIT ( - t)  EFF2 @ 4 AND ;
+          : DIRECTION ( n)  8 * EFF4 @ FFE7 AND OR EFF4 ! ;
+
+Defining words can again mask and access for you.
+
+It is an art to choose names. The goal is to write a program someone
+else can read. It is gratifying and reassuring when the designer
+reads your program and agrees that it represents his intent. This
+gets you off the hook, and, if he could only use the EDITOR, allows
+him to make simple changes. For example,
+
+          BEGIN  PUSHED WHILE  PULSE REPEAT
+
+is pretty obvious.
+
+I make a distinction between I/O numbers that have an objective
+reality, and VARIABLES that do not. The phrase
+
+          . . . SLEWING @ IF . . .
+
+implies a task that must maintain a variable to remind itself what it
+is doing. Why doesn't it know? A hard-to-appreciate feature of FORTH
+is the information contained in the return stack. It is not
+accessible to the programmer, but it is to the computer. It records
+not only what is being done, but how it came to be done. Rely on it.
+
+Assignment of tasks can be done with an eye to minimizing the number
+of state variables. For example, if a position servo is running one
+axis, it can keep its target on the stack. Running several axes
+requires an array of targets and output registers (perhaps even servo
+algorithms), with an index to the current one.
+
+
+Whither - Can We Reach Ectopia?
+-------------------------------
+
+To me, 'ectopia' is living symbiotically with your environment. On
+Earth this might mean a simple lifestyle; in space it certainly does
+not! In either case, high-technology is desirable, but must be
+non-obtrusive.
+
+We live in an economy dominated by failing machines. The automobile
+industry is concerned with Service and Spares, the airline industry
+with Certificating and On-time departures, the retail industry: "We
+service what we sell". When will we decide that a simple machine
+which works is better than a complicated one which fails?
+
+Software doesn't fail. But that doesn't mean that it works. It is
+accepted that conventional software cannot be completely tested - all
+paths through a maze cannot be explored. This is insane! FORTH
+software can be tested.
+
+My favorite robot is one to walk along a row of plants, uprooting
+weeds, dispensing water and squashing bugs. Solar powered, ten kilos.
+Let's make it possible.
+
+

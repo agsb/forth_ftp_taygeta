@@ -1,0 +1,310 @@
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 03/02/89   Time: 22:26EST
+Attendees:
+[D.BAKAS]
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[jax68008] FIGCHAPTERS]
+[Bob] R.KRONSCHNAB]
+[[Sheila] S.COOTES]
+[[Kevin] APPERT]
+[Murray] M.ANDEREGG] 
+[[Dave] DHWEINSTEIN]
+
+Items discussed: Sigforth ACM, 68K Forth & GEM, 68K SBC, keystroke tokens via 
+case or array ?, Wil Baden in conference, Harris stuff, F-PC VMS, The Computer
+Journal, JFAR (yet)
+
+Minutes:
+<NMORGENSTERN> is here.
+<[Len] NMORGENSTERN> Gary, I'm sorry I had to leave you all in the lurch a 
+couple of weeks ago...
+<[Len] NMORGENSTERN> I was going to Austin, & I thought I could take a portable.
+..
+<[Len] NMORGENSTERN> and log on Sunday Nite...
+<[Len] NMORGENSTERN> But my cousin suddenly had to change plans...
+<[Len] NMORGENSTERN> & I couldn't do it.
+<[Len] NMORGENSTERN> I will be on next Sunday, as usual.
+<[Gary] GARY-S> no sweat - wait a sec - I'm talking to Wil
+<[Gary] GARY-S> I don't think there was a conf Sunday
+<[Len] NMORGENSTERN> Give him my regards
+<R.KRONSCHNAB> is here.
+<[Len] NMORGENSTERN> Where is Roberts Wisconsin?
+<R.KRONSCHNAB> Hehe, 15 miles east of St. Paul, Mn.
+<R.KRONSCHNAB> Actually more like 20 miles.
+<[Len] NMORGENSTERN> I'm from Omaha myself
+<R.KRONSCHNAB> Good to be here.  Would be nice to be in Omaha.  Cold here.
+<[Len] NMORGENSTERN> Set your name by typing /Nam followed by your first name...
+<[Len] NMORGENSTERN> We like to be informal
+<[Len] NMORGENSTERN> ExGreat, Bob. How do you use Forth?
+<[Bob] R.KRONSCHNAB> Like so?
+<[Bob] R.KRONSCHNAB> Use it as a sort of hobby.
+<[Len] NMORGENSTERN> What machine do you have?
+<[Bob] R.KRONSCHNAB> Would like to learn enough to use it for something useful.
+<[Bob] R.KRONSCHNAB> 1 meg 520ST.
+<[Len] NMORGENSTERN> Forthers learn fast. Within a few months, you will be 
+modifying the editor...
+<[Len] NMORGENSTERN> We all do (have done) that!
+<[Len] NMORGENSTERN> Which Forth do you use?
+<[Bob] R.KRONSCHNAB> Already have done that.  Started out with 4XForth....
+<[Bob] R.KRONSCHNAB> then worked with two local guys who wanted to write their 
+own Forth....
+<[Bob] R.KRONSCHNAB> I did the GEM bindings.
+<[Len] NMORGENSTERN> Then you are advanced!
+<[Len] NMORGENSTERN> I'm looking for beginners whom I can help.
+<[Bob] R.KRONSCHNAB> Sort of...still need to pick up on some stuff, would also 
+like to work on something differint.
+<[Bob] R.KRONSCHNAB> Have purchased the F83 source through FIG and am looking 
+to work with that.
+<[Len] NMORGENSTERN> I was at the ACM (Association for Computing Machinery) 
+meeting in Austin
+<[Len] NMORGENSTERN> Lots of stuff about real-time processing.
+<[Bob] R.KRONSCHNAB> I read about that... How is it going?
+<[Len] NMORGENSTERN> We had 30 attendees, one from Germany.
+<[Len] NMORGENSTERN> Also one from Denmark who wasn't there physically but...
+<[Len] NMORGENSTERN> sent a paper to be read...
+<[Len] NMORGENSTERN> Very good, considering the SIGFORTH has been organized 
+only since about...
+<[Len] NMORGENSTERN> Novermmber.
+<[Bob] R.KRONSCHNAB> This is the first time I am on here... what usually goes 
+on?
+<[Len] NMORGENSTERN> Thursday: about half the conferences are formal, the rest 
+are like...
+<[Len] NMORGENSTERN> this one, very informal. Sunday is mine, and I...
+<[Len] NMORGENSTERN> like to pick a topic: something technical...
+<[Len] NMORGENSTERN> a tutorial or discussion.
+<[Len] NMORGENSTERN> Also informal.
+<[Bob] R.KRONSCHNAB> What will it be Sunday?
+<[Len] NMORGENSTERN> What would you like?
+<[Gary] GARY-S> sorry about the absenteeism - I was chatting with next weeks 
+'super' guest
+<FIGCHAPTERS> is here.
+<[Len] NMORGENSTERN> Yes, Wil BAden himself!
+<[Gary] GARY-S> You bet !!!
+<[Bob] R.KRONSCHNAB> Well, I am sort of looking around for info on  Kernal 
+souce in 68000 Assembler.
+<[Gary] GARY-S> He should make for a super conference
+<[Len] NMORGENSTERN> Gary, Jax: Bob is an experienced Forther, first tine on.
+<[jax68008] FIGCHAPTERS> bob there is a file called SFORTH.ARC or somesuch ...
+<[Gary] GARY-S> We have a 68K kernel in the library, Bob
+<[jax68008] FIGCHAPTERS> that is a 68k figforth in asm.
+<[Gary] GARY-S> true
+<[Bob] R.KRONSCHNAB> Thank you, will down load it later.
+<[Len] NMORGENSTERN> My experience is PC's and very little on the Mac.
+<[Gary] GARY-S> Jax - did you get e-mail from me via net ?
+<[jax68008] FIGCHAPTERS> not in the last cupla days, gars, re: what?
+<[Gary] GARY-S> just a UUCP net test from lrark!
+<[Len] NMORGENSTERN> Could I ask all of you a question?
+<[Gary] GARY-S> go
+<[Len] NMORGENSTERN> I'm trying to write a translate table to...
+<[Len] NMORGENSTERN> change keystrokes into actions. Simple in principle...
+<[Len] NMORGENSTERN> but I would like to know...
+<[Len] NMORGENSTERN> how others actually implement it.
+<[Gary] GARY-S> go jax
+<[jax68008] FIGCHAPTERS> what about the model of CCFORTH in the L&P Kernel?
+<[jax68008] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> That's ok for control characters...
+<[Len] NMORGENSTERN> but the IBM has several hundred scan codes, what with...
+<[Len] NMORGENSTERN> function keys, alt keys, etc. Also...
+<[Len] NMORGENSTERN> I want to have the tables context sensitive...
+<[Gary] GARY-S> ?KEY too hard to implement ? try case of
+<[Len] NMORGENSTERN> so when you go from one part to another the actions change.
+<[Gary] GARY-S> did you copy, Len
+<[Len] NMORGENSTERN> Say it again.
+<[Gary] GARY-S> use case
+<[jax68008] FIGCHAPTERS> I have nested menu program up on my BBS that I wrote 
+for an app.
+<[Gary] GARY-S> I had excellent results using case statements
+<[jax68008] FIGCHAPTERS> menus nest deeper, then unnest as you [Q]uit back 
+upwards.
+<[Len] NMORGENSTERN> Gary, is case efficient? Someone told...
+<S.COOTES> is here.
+<[Bob] R.KRONSCHNAB> Have you thought about creating an array of addresses and 
+indexing into them....
+<[Len] NMORGENSTERN> me that if 15% of your keys are used, a table is more 
+efficient than a case.
+<[Bob] R.KRONSCHNAB> then you could change an address in the array depending on 
+the context.
+<[Gary] GARY-S> How many different keystrokes , Len ? you do have to case each 
+one
+<[Len] NMORGENSTERN> Bob, that is what I plan, but I have never actually done 
+it.
+<[jax68008] FIGCHAPTERS> Hi Sheila ... Harris People 'oe?
+<[Len] NMORGENSTERN> Probably 10-15 for each menu.
+<APPERT> is here.
+<[Len] NMORGENSTERN> Mostly arrow keys.
+<[Sheila] S.COOTES> Not me, but fmany friends
+<[Gary] GARY-S> You've got two ways to try, now - play with each
+<[Len] NMORGENSTERN> Thanx.
+<[jax68008] FIGCHAPTERS> Hi KEevin.
+<[Gary] GARY-S> Welcome to our chaos sheila
+<[Sheila] S.COOTES> Yo!
+<[Gary] GARY-S> Our only rule is no rules
+<[jax68008] FIGCHAPTERS> Bob, what kind o' programming you do?
+<[Kevin] APPERT> hi Jax.  Is that all you can think of?  Six and Eighting?
+<[jax68008] FIGCHAPTERS> This week, Kevin, anyway!
+<[jax68008] FIGCHAPTERS> My "toy" is up and running.
+<[Len] NMORGENSTERN> What toy, Jax?
+<[Kevin] APPERT> congratulations
+<[Bob] R.KRONSCHNAB> Just for fun stuff so far.... am working on a game and 
+have also down the GEM interface for a custom FOrth.
+<[Gary] GARY-S> Hey - jax - are you a car richer tonite ?
+<[jax68008] FIGCHAPTERS> What do you think of a 68008 board, Len ...
+<[jax68008] FIGCHAPTERS> with a duart ...
+<[jax68008] FIGCHAPTERS> and an edge connector ...
+<[jax68008] FIGCHAPTERS> 64 k sys rom, ( 32 bit L&P Forth ) ...
+<[jax68008] FIGCHAPTERS> 64 k program rom ...
+<[Kevin] APPERT> Atari ST Gem, or 8086 Gem, Bob?
+<[jax68008] FIGCHAPTERS> 64 k RAM ...
+<[Bob] R.KRONSCHNAB> ST GEM.
+<[jax68008] FIGCHAPTERS> and an edge connector for expansion ...
+<[jax68008] FIGCHAPTERS> for about $185 ?
+<[Bob] R.KRONSCHNAB> Jax appears to be multitasking.
+<[Len] NMORGENSTERN> What can I say, Wow!
+<[Gary] GARY-S> RAM expansion ?
+<[Kevin] APPERT> have you looked at Mitch Bradley's GEM interface for FORTHMacs?
+<[jax68008] FIGCHAPTERS> Yup, we call it "interlace mode" here, Bob :)
+<[Len] NMORGENSTERN> (Sorry someone just came to the door -- have to leave)
+<[Len] NMORGENSTERN> has left.
+<[jax68008] FIGCHAPTERS> right, gary ... the edge connector is for a ( yet to 
+be designed but simple ) expansion socket board ... maybe $95.
+<[Gary] GARY-S> All you new/late arrivals next week is a formal conference with 
+Wil Baden as guest !
+<[jax68008] FIGCHAPTERS> up to 1 meg memory total on 68008.
+<[Gary] GARY-S> That's expansion enough
+<[Kevin] APPERT> I'll bring a tie.  Wil is into kinky stuff.
+<[jax68008] FIGCHAPTERS> for a controller, i should think so. At least this 
+year.
+<[jax68008] FIGCHAPTERS> ( those prices are not offers, that is my 
+"guesstimate" of our eventual sale price)
+<[jax68008] FIGCHAPTERS> ( this is JAX not VESTA speaking.
+<[jax68008] FIGCHAPTERS> ..)
+<[jax68008] FIGCHAPTERS> .
+<[Gary] GARY-S> What do Sarns say?
+<[jax68008] FIGCHAPTERS> Sarns say, "Bye" and take airplane east for a business 
+meeting. I gues when he comes back we go car shopping :-)
+<[jax68008] FIGCHAPTERS> said also "I'm satisfied".
+<[Gary] GARY-S> Sheila - you handing out RTX's to the crowd ?
+<[Kevin] APPERT> you with Harris, Sheila?
+<[Gary] GARY-S> Are you there, Sheila ?
+<[Sheila] S.COOTES> Boy, how dumb (and new) can I be?  What's RTX?  I'm with 
+the school system, not Harris.  Have a good friend who is a "repair chief
+" there.  (for their computers)
+<[Kevin] APPERT> or is it GE/RCA/INTERSIL/.../Joe's TV Repair/Harris these days?
+<[Gary] GARY-S> I just figuered everyone in Melborne was up to their 
+hip-pockets in RTX's
+<M.ANDEREGG> is here.
+<[Sheila] S.COOTES> My friend is looking for another position.  He thinks they 
+are in hot water - money wise.
+<[Kevin] APPERT> Harris makes a chip called the RTX which executes Forth 
+language directly
+<[Sheila] S.COOTES> Thanks
+<[Gary] GARY-S> Sorbus is hiring - Sorbus is ALWAYS hiring
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> Tell your friend that
+<[Sheila] S.COOTES> Other phone's ringing.  Gotta go......
+<[Kevin] APPERT> Harris sells everything they can make in standard products.  
+How could they be in trouble, I wonder.
+<[Dave] DHWEINSTEIN> Hullo
+<[Sheila] S.COOTES> has left.
+<[Gary] GARY-S> hi Mr. VMS
+<[Kevin] APPERT> hi Dave
+<M.ANDEREGG> ?Hello
+<[Kevin] APPERT> does that stand for Verry Mediocre System?
+<[Dave] DHWEINSTEIN> Don't say that so loud Gary...say VM or VirtMem...VMS 
+calls up horrific images of Vaxen...
+<[Kevin] APPERT> oh, I thought you ment Vax-VMS Gary
+<[Gary] GARY-S> Dave is making VMS go on F-PC
+<[Dave] DHWEINSTEIN> ssee....See...SEEE Gary! Look at the rumors you start! :-)
+<[Dave] DHWEINSTEIN> Has made. It works fine.
+<[jax68008] FIGCHAPTERS> Why not, they have ported UNIX to the Z80.
+<[Dave] DHWEINSTEIN> How can you fit Unix in 64k?
+<[Gary] GARY-S> I was just giving you CYA room - how come it isn't uploaded ?
+<[Kevin] APPERT> yuchhh what a horrific concept.  VMS is a trademark of DEC
+<[jax68008] FIGCHAPTERS> swap swap swap swap swap swap swap ....................
+.......
+<[Dave] DHWEINSTEIN> Cause I have to finish the paper I promised dan for Monday,
+...and I have work for a class and I'm going to dallas tomorrow...
+<[Murray] M.ANDEREGG> Anybody use forth on a Mac out there?
+<[jax68008] FIGCHAPTERS> it's called (( appropriately, jaxthinx )) UZI
+<[Kevin] APPERT> IBM's operating system is called VM
+<[Gary] GARY-S> Has anyone actually run UZI ?
+<[Kevin] APPERT> i was using call by name, not call by value, sorry
+<[Dave] DHWEINSTEIN> "System/3 System/3...It runs all its programs in RPG...Its 
+made by our favorite monopoly...System/3 System/3"
+<[Kevin] APPERT> anybody mentioned JFAR lately?
+<[Dave] DHWEINSTEIN> I've seen the new one.
+<[Gary] GARY-S> How come it isn't in the uploads, Dave - he asks AGAIN
+<[Dave] DHWEINSTEIN> Because I have to check with Dan and make sure that 
+uploading it won't interfere with anything with ACM...
+<[Dave] DHWEINSTEIN> If he gives the OK I'll send it right up.
+<[Gary] GARY-S> goodenough
+<[Kevin] APPERT> anybody know if Dr. C.H.Ting has an account?
+<[Gary] GARY-S> Where did you see a new JFAR ?
+<[Dave] DHWEINSTEIN> Larry had a whole box of them at the conference of course.
+<[Gary] GARY-S> yes he does.
+<[Kevin] APPERT> what name Ting, do you know Gary?
+<[Dave] DHWEINSTEIN> Along with the Rochester Proceedings (a copy of which is 
+here at my desk)
+<[Gary] GARY-S> It may be C.Ting
+<[Kevin] APPERT> how many issues were published of JFAR last year?  Am I 
+missing some?
+<[Gary] GARY-S> How's the overflow article coming, kev ?
+<[Dave] DHWEINSTEIN> I'll try to have the code uploaded by the beginning of 
+next week.
+<[Dave] DHWEINSTEIN> Assuming its ok.
+<[Dave] DHWEINSTEIN> The newest JFAR is 5.2
+<[Kevin] APPERT> no free time, dead in the water.  nobody seems real hot for it,
+<[Gary] GARY-S> Oh hey Dave - call or write Computer Journal
+<[Kevin] APPERT> isn't 5 last year's volume?
+<[Dave] DHWEINSTEIN> Why?
+<[jax68008] FIGCHAPTERS>  no it's not kevin. ....
+<[jax68008] FIGCHAPTERS> it's 1987's volume.
+<[jax68008] FIGCHAPTERS> WHERE IS MY COPY???????????????????????????????????????
+???????????????
+<[Gary] GARY-S> They DO want to do some Forth articles/columns
+<[Dave] DHWEINSTEIN> Ok. So they're running behind... :-)
+<[Gary] GARY-S> see BBS 4.7.last
+<[Dave] DHWEINSTEIN> A regular column?
+<[Kevin] APPERT> how many issues is Larry in A-rears?
+<[Gary] GARY-S> 5
+<[jax68008] FIGCHAPTERS> So that's what has been keeping larry busy, huh dave? 
+Running behind :)
+<[Kevin] APPERT> I don't think he likes being the butt of all these jokes
+<[Dave] DHWEINSTEIN> Gary?
+<[Dave] DHWEINSTEIN> Do they want a regular column?
+<[jax68008] FIGCHAPTERS> Well then he can mail out the darn magazine.
+<[Bob] R.KRONSCHNAB> has left.
+<[Gary] GARY-S> The Computer Journal,190 Sullivan Crossroad, Columbia Falls,MT 
+59912
+<[Dave] DHWEINSTEIN> Do they want a regular Forth column?
+<[Gary] GARY-S> ASK - Bill Kibler's last column implied 'yes'
+<[Dave] DHWEINSTEIN> I'll call them tomorrow (makes note). I can always use 
+more income... :-)
+<[Gary] GARY-S> ph:406/257-9119
+<[Gary] GARY-S> They also use Lilliput Z-node BBS want that number ?
+<[Dave] DHWEINSTEIN> Naaaahhhhh
+<D.BAKAS> is here.
+<[Dave] DHWEINSTEIN> Hey...did you get the car Jax?
+<[Gary] GARY-S> Jax - one more time. Did you get the car ?????
+<[Kevin] APPERT> what kind of stuff does ComputerJournal publish?
+<[jax68008] FIGCHAPTERS> I "won the contest" but the boss is out of town so I 
+await his certification of the "prize award"
+<[Gary] GARY-S> grass roots hdwr/sftwr ala Micro Cornucopia
+<[Dave] DHWEINSTEIN> But Micro C doesn't want a Forth column (I bent Dave's ear 
+again a few days back). Also...SOG SouthWest will be in Dallas late this summer.
+<[Gary] GARY-S> ZSDOS,C pointers, Shells - mostly newage hacker (pre-Wargames 
+def)
+<[jax68008] FIGCHAPTERS> gotta go gang gnite
+<[jax68008] FIGCHAPTERS> has left.
+<[Gary] GARY-S> this is close to a wrap - anything else ?
+<[Dave] DHWEINSTEIN> Had a heavy Forth influence when it started
+<[Dave] DHWEINSTEIN> I gotta run...
+<[Dave] DHWEINSTEIN> ...thanks for the tip gary...
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> g'nite all
+=== End of Steno notes. ===
+
+

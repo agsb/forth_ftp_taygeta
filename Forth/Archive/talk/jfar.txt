@@ -1,0 +1,74 @@
+
+          The Journal of Forth Application and Research
+                                 
+JFAR comes out quarterly with reviewed articles, book reports,
+technical notes, letters, conference abstracts and special
+features. JFAR staff include:
+
+  Lawrence P. Forsley, publisher, University of Rochester
+  Dr. James Basile, editor-in-chief, Long Island University
+  Dr. Mahlon Kelly, US editor, University of Virginia
+  Dr. Hans Nieuwenhuyzen, European editor, University of Utrecht
+
+JFAR is published by the not-for-profit Institute for Applied
+Forth Research, Inc. in cooperation with the Long Island
+University Faculty of Communication, Computer and Information
+Sciences. JFAR is the only peer-reviewed publication on Forth.
+Papers are critiqued by an editor and 3 reviewers, familiar with
+the area. Reviewers, like authors and readers, come from
+companies and universities or are consultants and entrepreneurs.
+
+
+Back Issues
+-----------
+Volume 1, No. 1: Robotics
+
+Volume 1, No. 2: Data structures
+
+Volume 2, No. 2: Real-time Systems
+
+Volume 3, No. 2: Software Productivity
+
+Volume 3, No. 3: Forth Extensions
+
+Volume 4, No. 1: Expert Systems in Forth
+
+Volume 4, No. 2: Real-time Artificial Intelligence
+
+Volume 4, No. 4: Embeddings of Languages in Forth
+
+Volume 5, No. 1: Proceedings of the 1987 Rochester Forth
+Conference on Comparative Computer Architectures
+
+
+Subscription rates, volume 5
+----------------------------
+Corporate, Institutional: $125, $140 outside N. America
+
+Individuals, additional Corporate subscriptions: $50, $70 outside
+N. America
+
+Subscriptions must be prepaid in US funds on a US bank,
+MasterCard or VISA. Orders are handled by Total Information, 844
+Dewey Avenue, Rochester, New York 14613. Call (716) 254-0621 and
+ask for Forth.
+
+Corporate/Institutional subscriptions are also available through
+library and subscription services worldwide.
+
+Back issues
+-----------
+Volume 4 - $50
+Volume 3 - $50
+Volume 2 - $40
+Volume 1 - $30
+Set, Vols 1-4 - $150
+
+Individual issues of Volumes 2, 3, and 4, are also available at
+$15 each. Outside N. America, add $10 per volume or $5 per issue
+for shipping. All international orders are shipped airmail.
+
+Bibliography of Forth References, 3rd ed., 1987: $20, $25 outside
+N. America. Nearly 2,000 Author-Subject Indexed References.
+
+

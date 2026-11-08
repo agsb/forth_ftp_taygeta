@@ -1,0 +1,236 @@
+
+
+
+
+          Ninth FORML Conference                 November 27, 1987
+
+
+
+                         "Nights on the RoundTable"
+                                    or
+                     "How I spent my summer vacation"
+
+                                    by
+                               Dennis Ruffer
+                                Lead Sysop
+                           Forth Interest Group
+                            RoundTable on GEnie
+
+     ABSTRACT:
+
+               For the  past 7  months (going  on 3  years) I have
+          been  involved  with  the  establishment  of  a Bulletin
+          Board, dedicated to the Forth language.  Now that we are
+          finally  "alive"  on  the  GE  Network  for  Information
+          Exchange, GEnie  for short,  it is  probably time that I
+          try to set down some of the history of how  we got here,
+          what  we  had  in  mind,  and  where we are going in the
+          future.
+
+     HISTORY:
+
+               I am, perhaps, not the best  one to  be giving this
+          history,  since  I  came  on rather late in the process.
+          However, for the record,  I will  try to  relate some of
+          the more significant events.  I think this whole process
+          started back in 1981 with John James' Conference Tree, a
+          message based  system running  on an Apple computer.  By
+          1984, FIG had decided  that  they  would  need something
+          more,  and  started  investigating  alternatives.   They
+          looked into custom systems,  CompuServe, and  DELPHI.  A
+          custom    system    required   continuing   maintenance,
+          CompuServe was very complicated to get involved with and
+          DELPHI  could  not  handle  the  number  of  users  they
+          expected.  At the 1985 Rochester Conference, I  met John
+          James for  the first  time, and was instantly drawn into
+          this process by his enthusiasm.
+
+               By 1986, John had dropped out  of the  process, but
+          we were  gearing up to repeat some of the ground that he
+          had already covered, but  this  time,  the  momentum was
+          strong  enough   that  something  had  to  happen.    We
+          contacted GEnie,  CompuServe and  Uninet, and  of all of
+          them, GEnie was the most receptive. By January of 87, we
+          had a  signed contract  with them  for what  is now, the
+          Forth Interest Group Round Table.
+
+
+
+
+          Author: Dennis A. Ruffer                     Page 1 of 4
+
+
+          Ninth FORML Conference                 November 27, 1987
+
+
+
+               At last  year's FORML  conference, a  few of us got
+          together to  establish  our  direction.    Our  goals in
+          establishing this board are to: Connect the FIG Chapters
+          and promote the  growth  of  the  Forth  Interest Group.
+          Last  year  we  were  hoping  to get it going in time to
+          support the ANSI Standards discussions, but since we did
+          not  open  in  time,  they have established MCI as their
+          communication network.  We  decided  that  we  would not
+          detract from any of the existing Forth Boards, so we are
+          only posting status reports  from the  ANSI efforts, and
+          we welcome  any one  to post  our files  and messages on
+          their Board.  At last  year's  FORML  we  were  going to
+          close our  board to  access by  only FIG members, but in
+          discussions later in the year, we were able  to convince
+          FIG to leave the system "mostly" open to the public.  We
+          determined at the time,  that  we  needed  some  way for
+          international users  to access  us, but  that system has
+          yet to be determined.  Finally,  we selected  our system
+          operators  as  the  FIG business offices, Scott Squires,
+          Gary Smith, and myself.  I guess I didn't step back soon
+          enough, because  before I knew what was happening, I was
+          "elected" as the leader, and therefore get the privilege
+          of writing papers like this one.
+
+     THE PRESENT:
+
+               We are now a part of the GE Network for Information
+          Exchange.    GEnie  is  a  service  provided  by  the GE
+          Information   Services   Company  (GEISCO)  to  generate
+          revenue after normal business hours.  The GEISCO network
+          (so they  tell me) is the largest privately held network
+          in the world, with  connected  nodes  around  the globe.
+          Presently,  I'm  sorry  to  say,  they  only allow GEnie
+          access in the US, Canada, and Japan.  Many countries are
+          very sensitive about cross-border information transfers,
+          and  GE  can  not  afford  to  jeopardize  their  normal
+          business  activities.     However,   they  are  actively
+          pursuing opening new nodes, and we've heard rumors  of a
+          node in England opening up "real soon now".
+
+               For those  of you  who haven't  visited us yet, you
+          can sign  up  on  GEnie  by  setting  your communication
+          parameters to  Half Duplex  (local echo), 8 data bits, 1
+          stop bit, no parity, 300 or  1200 baud,  and having your
+          computer  call  1(800)  638-8369.    After connection is
+          made,  type  HHH,   and   at   the   U#=   prompt,  type
+          XJM11849,GENIE.    You  will  be  asked  a few questions
+          (namely your credit card number), and assigned a account
+
+
+
+          Author: Dennis A. Ruffer                     Page 2 of 4
+
+
+          Ninth FORML Conference                 November 27, 1987
+
+
+
+          number  and  password.    There  is a one-time charge of
+          $18.00 to join, but you  will  not  be  charged  for the
+          first  3  hours  on  line,  which, by the way, only cost
+          $5.00 per hour after the 3 hours is used up.  After your
+          account  is   validated,  you  can  access  the  system,
+          substituting your account number and password at the U#=
+          prompt.    We  are  located  in their Personal Computing
+          section, under Language RoundTables, right next  door to
+          the  Mumps  RT.    On  GEnie you can bypass the menus by
+          moving directly to our  "page", by  typing m710,  or for
+          those of us with short memories, just type FORTH.
+
+               We  are  alive  and  active, with over 500 files on
+          line  in   the  libraries,   and  over   110  topics  of
+          conversation going  on in  the Bulletin  Board.  October
+          18th we had our  first  Real  Time  Conference  with Don
+          Colburn of  Creative Solutions,  and by  the time I give
+          this paper we  will  have  had  a  few  other  events in
+          connection with  the Forth  Convention.   We've had over
+          675 visitors,  more  than  100  of  them  have  been FIG
+          members.   To help  promote FIG  membership, FIG members
+          are given extra  privileges  in  the  Bulletin  Board by
+          having   access   to   the   Private  Categories;  Forth
+          Dimensions Interaction, and The Job Market.
+
+     THE FUTURE:
+
+               Well, two years ago, I had no idea that I  would be
+          playing  a  leadership  role  in this process, and I'm a
+          little hesitant  in trying  to predict  what will happen
+          even two  years from  now.  Our board is obviously going
+          to change with the  changing  interests  of  it's users.
+          You all will see to that, since it is you, the user, who
+          make the  contributions that  establish who  and what we
+          are.  One thing is for sure, it is going to cost more to
+          use this service in the future.  The FCC is  resolved to
+          eliminate  the  "advantage"  these  services  have  over
+          normal long distance rates, but they are still undecided
+          on  how  they  are  going  to  accomplish that.  Also GE
+          itself, has a significant  influence over  our future on
+          GEnie.   They are  continually enhancing the system, and
+          who can tell what they will give to  us next.   Already,
+          the "next  network" is  being shaped  in a  topic on our
+          Bulletin Board, and I'm trying very hard not to convince
+          them that  we already  have the  "best" system available
+          today.
+
+               Anyway, no matter what  the  future  has  in store,
+
+
+
+          Author: Dennis A. Ruffer                     Page 3 of 4
+
+
+          Ninth FORML Conference                 November 27, 1987
+
+
+
+          please join  us and  help us  form it.   For this is the
+          future as far as communication is concerned.   The Forth
+          Interest Group  is committed  to it,  and I hope you all
+          will support it with your participation.
+
+     ACKNOWLEDGEMENTS:
+
+               I'd like  to take  this opportunity  to express our
+          gratitude to all those who have helped us along the way.
+          To John James, for his inspiration.  To Bob Reiling, for
+          giving us  a free reign as he watched in the background.
+          To Jan Shepherd, for putting up with me.  To  John Hall,
+          for finding time to help, and encouraging me when things
+          were slow.  To Marlin Ouverson, for his plans.   To Gary
+          Smith and  Scott Squires for keeping their tempers as we
+          stepped on each other's  toes getting  everything set up
+          "just  right".    To  Charles  Grandgent,  Alan  Furman,
+          Leonard Morgenstern, Waymen Askey and Daniel  Miller for
+          their    extensive    contributions    and   stimulating
+          conversations.  And finally,  to Jerry  Shifrin, for his
+          files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Author: Dennis A. Ruffer                     Page 4 of 4
+
+

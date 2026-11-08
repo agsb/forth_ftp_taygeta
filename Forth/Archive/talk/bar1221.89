@@ -1,0 +1,362 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 12/21/89   Time: 22:37EST
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[Wil] W.BADEN1]
+[[Kevin] APPERT]
+[[Dave] OLORIN]
+[[virgil] V.STAMPS]
+[[JaxMas] FIGCHAPTERS]
+  Items discussed: ForthNet -> UseNet porter discovers Forth, Forth Syntax,
+  Ada the greedy, closures, SmallTalk/PostScript/Forth comparisons/asides,
+  is FIG becomming a last man club ? a province of E.S. programmers with no
+  voice ? Where is Forth's tomorrow ? More on X3/J14, Elizabeth Rather 1/18/90.
+Minutes:
+<NMORGENSTERN> is here.
+<[Len] NMORGENSTERN> Hi. Do you think we will have a crowd?
+<[Gary] GARY-S> no,- I probably should have canceled
+<[Len] NMORGENSTERN> I just finished editing last Sunday's
+<[Len] NMORGENSTERN> & will put it up tomorrow (maybe tonight)
+<[Len] NMORGENSTERN> One of the best!
+<[Gary] GARY-S> really - sorry I didn't attend
+<[Len] NMORGENSTERN> Dennis & Wil stayed on almost 2 hours talking to
+<[Len] NMORGENSTERN> this new fellow. He is a knowlegable programmer
+<[Len] NMORGENSTERN> who has just discovered Forth.
+<[Wil] W.BADEN1> is here.
+<[Gary] GARY-S> was he fighting Forth or accepting the differences fairly well
+<[Len] NMORGENSTERN> More curiosity than anything else.
+<[Gary] GARY-S> wil - you were just being talked about
+<[Wil] W.BADEN1> Hi len gary
+<[Wil] W.BADEN1> Oh?
+<[Len] NMORGENSTERN> Wil, I was just discussing last Sunday's conference.
+<[Wil] W.BADEN1> I've promisd that I'd be here tonite.
+<[Gary] GARY-S> Len allowed as how the discussion was excllent
+<[Gary] GARY-S> to whom did you promise
+<[Wil] W.BADEN1> 2 1/3 hours.
+<[Len] NMORGENSTERN> His name was Doug Philips
+<[Gary] GARY-S> will you be here 1/18 ?
+<[Len] NMORGENSTERN> I hope to
+<[Wil] W.BADEN1> I hope.
+<[Gary] GARY-S> Do you not recognize who Doug is, Len
+<[Len] NMORGENSTERN> No
+<[Len] NMORGENSTERN> Should I
+<[Gary] GARY-S> He is the W-O-N-D-E-R-F-U-L volunteer who is porting ForthNet 
+back into Usenet, closing the loop
+<[Wil] W.BADEN1> Great.
+<[Len] NMORGENSTERN> Yes, he & Dennis talked about that at the end of the 
+conference
+<[Gary] GARY-S> read recent 14-2 and 14-6 postings
+<[Wil] W.BADEN1> Len, did u upload transcript?
+<[Len] NMORGENSTERN> Will do so tomorrow
+<[Len] NMORGENSTERN> (Len figured he had a lot of time because no Sunday conf
+<[Len] NMORGENSTERN> until after the holidays)
+<[Wil] W.BADEN1> ok.  i'l pick it up next week. (I'm off to Phoenix for Xmas.)
+<[Gary] GARY-S> Doug is involved in Mach at Carnegie-Mellon, so his sudden 
+discovery of Forth is even more the remarkable
+<[Gary] GARY-S> Wil you should like him - he cringes at people doing computer 
+tasks
+<[Kevin] APPERT> is here.
+<[Kevin] APPERT> hi Wil, Len, Gary
+<[Kevin] APPERT> willin' Gary?
+<[Gary] GARY-S> always handy with a pun, aren't you, Kevin ?
+<[Kevin] APPERT> Forth is a language for those who like to play with words!
+<[Kevin] APPERT> (Charles Curley, I think)
+<[Gary] GARY-S> this is an open FIGGY - any gauntlets to cast [anyone]
+<[Len] NMORGENSTERN> Forth lends itself to linguistic analogies more than any 
+other computer language.
+<[Wil] W.BADEN1> Kev, have u heard of CalTech's new dept of ancient Egyptian 
+plumbing?
+<[Kevin] APPERT> nope
+<[Len] NMORGENSTERN> <Len sees bad pun coming>
+<[Wil] W.BADEN1> It's the pharaoh's faucet major.
+<[Gary] GARY-S> she divorced Lee
+<[Kevin] APPERT> Egypt was a so-called "water empire".  they are the most...
+<[Kevin] APPERT> long-lived of the forms of government with wich we humans...
+<[Wil] W.BADEN1> (This in my voice mailbox this morning.)
+<[Kevin] APPERT> seem to have a penchant for saddling ourselves with (which).
+<[Kevin] APPERT> redundant prepositions used for increased reliability
+<[Len] NMORGENSTERN> Kevin, weren't you scolding George Perry & me
+<[Len] NMORGENSTERN> for discussing grammar the other day. Now you are doing it.
+<[Wil] W.BADEN1> Forth has no grammar -- only syntax.
+<[Kevin] APPERT> you want consistency?
+<[Kevin] APPERT> try ADA
+<[Len] NMORGENSTERN> Those IRS agents are everywhere!
+<[Kevin] APPERT> it has the consistency of re-constituted possum upchuck!
+<[Wil] W.BADEN1> Forth's syntax is "spell it right."
+<[Gary] GARY-S> No No No Kevin ! Bad Boy ! Bad !
+<[Kevin] APPERT> not even that.   spell it the way you did the last time!
+<[Kevin] APPERT> me ?  bad?   why?
+<[Gary] GARY-S> You said the countess of Augusta word
+<[Kevin] APPERT> oh, the 'A' word
+<[Wil] W.BADEN1> Have any of you done a project with it?
+<[Kevin] APPERT> I like your idea, Wil, of runnning a spelling checker over 
+your Forth code
+<[Wil] W.BADEN1> Not just read about it, but worked in it?
+<[Kevin] APPERT> we're eccentric, but not THAT eccentric!
+<[Gary] GARY-S> The only project I have done is attempt to count the system's 
+manuals. You start by counting the rooms they occupy
+<[Kevin] APPERT> to support the overhead of ADA,(even it's proponants say) you 
+need a LARGE project!
+<[Kevin] APPERT> I maintain there are no large projects, only large budgets.
+<[Kevin] APPERT> and large groups of people intent on spending them
+<[Wil] W.BADEN1> Forth is slanted (to use a mild term) toward the invidual 
+programmer.
+<[Gary] GARY-S> Ada is a government sponsored language - that should give a 
+hint to what you might expect ...
+<[Gary] GARY-S> like bureaucratic heierarchy
+<OLORIN> is here.
+<[Len] NMORGENSTERN> Wil, could I ask a question about last Sunday?
+<[Len] NMORGENSTERN> What did Doug Philips mean by "closures"
+<[Gary] GARY-S> To whom are you addressing that ????
+<[Wil] W.BADEN1> The body of a definition.
+<[Len] NMORGENSTERN> (To Wil)
+<[Len] NMORGENSTERN> Is it that simple? He seemed a bit worried
+<[Len] NMORGENSTERN> that Forth didn't have them.
+<[Len] NMORGENSTERN> And why are they called that?
+<[Wil] W.BADEN1> Forth uses lots of small definitions.
+<[Wil] W.BADEN1> Because they are complete, ie "closed".
+<[Kevin] APPERT> never heard anything in Forth called a "closure" before
+<[Len] NMORGENSTERN> Not Forth, Kevin. He was
+<[Len] NMORGENSTERN> talking about smalltalk, I believe.
+<[Wil] W.BADEN1> and postscript.
+<[Gary] GARY-S> Postscript has STRONG Forth flavor
+<[Len] NMORGENSTERN> He was trying to figure out what Forth does about closures
+<[Kevin] APPERT> postscript is a real problem for me.  everybody thinks is IS 
+forth!
+<[Wil] W.BADEN1> ST is more Forth like than Forth.
+<[Len] NMORGENSTERN> Meanwhile I was trying to figure out what he was referring 
+to.
+<[Kevin] APPERT> It's not small, it's not fast, and as used it isn't interctive
+<[Gary] GARY-S> PS is NOT Forth - maybe a superset of, But NOT Forth
+<[JaxMas] FIGCHAPTERS> No Dennis this week?
+<[Gary] GARY-S> he was here Sunday
+<[Len] NMORGENSTERN> He's tired from last Sunday, I think.
+<[Kevin] APPERT> try explain that to someone who KNOWS it IS Forth, Gary!
+<[JaxMas] FIGCHAPTERS> PS neither super nor sub. ... Just one of those 
+"Forth-Like Languages" that Charlie Johnson of MISC loves to talk about.
+<[Kevin] APPERT> it's a Forth-like lanuage...
+<[JaxMas] FIGCHAPTERS> Hi Wil!
+<[Gary] GARY-S> Have you worked with PS - I have, trust me - it is NOT Forth
+<[Wil] W.BADEN1> Forth "p IF x ELSE y" in ST becomes
+<[Kevin] APPERT> with many of the worst features of forth, and without many of 
+the best features
+<[Wil] W.BADEN1> p {x} {y} IFELSE
+<[Dave] OLORIN> Ah well. I'm off for the eve. (Moving hardware around tonight)
+<[JaxMas] FIGCHAPTERS> There's your favorite construct, Wil!
+<[Len] NMORGENSTERN> Like a tangelo, a cross between an orange and a tangerine
+<[Gary] GARY-S> Damn fine universal text language, though
+<[Len] NMORGENSTERN> without the advantages of either.
+<[Kevin] APPERT> what do you get when you cross.
+<[Dave] OLORIN> Less vampires?
+<[Len] NMORGENSTERN> Gary, why do you say its a "universal text language"?
+<[Wil] W.BADEN1> {x} is a closure that puts what we call cfa (or such) on stack.
+<[Kevin] APPERT> run over.
+<[JaxMas] FIGCHAPTERS> aha!
+<[JaxMas] FIGCHAPTERS> : IFELSE ROT IF DROP ELSE NIP THEN EXECUTE ;
+<[Wil] W.BADEN1> "ifelse" is not immediate -- it executes the appropriate cfa.
+<[Gary] GARY-S> You can stick print engines in any shop that speaks PS and run 
+'as is' if it also speaks PS..
+<[JaxMas] FIGCHAPTERS> p ' x ' y ifelse
+<[Gary] GARY-S> it is a defacto printing language.
+<[Kevin] APPERT> GRA-FORTH (or somesuch) used to have those things floating 
+around
+<[Wil] W.BADEN1> {x} and {y} are not evaluated.
+<[Gary] GARY-S> Xerox tried to break the PostScript monopoly but couldn't
+<[Wil] W.BADEN1> MacForth uses [: x :]
+<[Kevin] APPERT> what about the postscript clones?
+<[Wil] W.BADEN1> Dunno.
+<[Kevin] APPERT> I know one is available for the ATARI
+<[Gary] GARY-S> It supports all the printer's functions - kerning, included
+<[Kevin] APPERT> it is supposed to have better scaling rules than the original
+<[Wil] W.BADEN1> Yes jax, but x and y are orphans.
+<[JaxMas] FIGCHAPTERS> <<< his big fun lately has been writing an H19 init file 
+for his TRS80 to do edits on a VAX/VMS system.
+<[Wil] W.BADEN1> Doug was concerned with vectoring.
+<[JaxMas] FIGCHAPTERS> A lot of cute branches and resolves, but sugar.
+<[JaxMas] FIGCHAPTERS> Forth would have you just put the orphans in words.
+<[Wil] W.BADEN1> Agreed.
+<[Kevin] APPERT> the gods of software punished us today for making two changes 
+before we tested.
+<[Wil] W.BADEN1> Not the way to go
+<[JaxMas] FIGCHAPTERS> How was that, Kev?
+<[Kevin] APPERT> for it is truly written "one change shalt thou make ...
+<[Kevin] APPERT> and test thou one...
+<[Kevin] APPERT> and not two...
+<[Kevin] APPERT> and three is right out...
+<[Kevin] APPERT> lest thou be smitten with a plague of related bugs...
+<[Kevin] APPERT> forever and ever, unto the (large integer)'th generation."
+<[JaxMas] FIGCHAPTERS>  /\/\/\ has been hanging around St. Silicon too long.
+<[JaxMas] FIGCHAPTERS> Wil, any new thoughts on the Standard, (which took a 
+BEATING [ lip beating! :-) ] on USENET this week from none other than Bradley
+[ & others ]???
+<[Wil] W.BADEN1> Jax, I'm disenchanted myself.
+<[JaxMas] FIGCHAPTERS> I have all the answers for FIG , should I come up with a 
+few for ANSI :-) :-)
+<[Wil] W.BADEN1> Try.
+<[Wil] W.BADEN1> Things don't stay decided.
+<[JaxMas] FIGCHAPTERS> OK, make it a condition that all X3J14 members maintain 
+a USENET account and post regularly.
+<[JaxMas] FIGCHAPTERS> They should talk to a few Forth programmers once in a 
+while :-)
+<[Gary] GARY-S> LET ME SLIP IN A REMINDER...
+<[Gary] GARY-S> January 18 - Elizabeth Rather in conference
+<[JaxMas] FIGCHAPTERS> Standards generating is thankless task. Like Poor Jenny, 
+Wil ...
+<[JaxMas] FIGCHAPTERS> " You (X3J14) deserve a bed of roses ..."
+<[Kevin] APPERT> what are the answers for FIG?  shoot the bums, and replace 
+them with a different bunch (of bums) ?
+<[JaxMas] FIGCHAPTERS> " But history discloses ..."
+<[JaxMas] FIGCHAPTERS> " That you couldn't make up your mind!" :-)
+<[Wil] W.BADEN1> She would make up her mind.
+<[JaxMas] FIGCHAPTERS> In 27 languages, she couldn't say "No."
+<[JaxMas] FIGCHAPTERS> Kev ... board elections.
+<[Gary] GARY-S> Be here and attack the chair yourself - That is precisely why 
+Elizabeth is accepting a guest spot
+<[JaxMas] FIGCHAPTERS> No attack necessary. Dying of lethargy.
+<[JaxMas] FIGCHAPTERS> Or so Wil would have us believe? :-)
+<[Kevin] APPERT> do you get the feeling that Forth Inc. feels we are all 
+"hobbyists" if we are not working for them ?
+<[Wil] W.BADEN1> No.
+<[Kevin] APPERT> "skilled hobbyists"
+<[Kevin] APPERT> if we are using their product, I guess
+<[JaxMas] FIGCHAPTERS> Look, in the REAL world, Forth is booming.
+<[JaxMas] FIGCHAPTERS> Why are we so organizationally screwed?
+<[Kevin] APPERT> what does the No. belong to Wil?
+<[Wil] W.BADEN1> I dont think FInc thinks were hobbyists.
+<[JaxMas] FIGCHAPTERS> Wil, my new year's wish for 1990 is that FIG gets back 
+on feet and that we generate a standard that the hard nosed-est business
+man and the priest of Forth canboth agree on.
+<[Gary] GARY-S> I'm also pretty sure Wil, Kev and I 'could' sell shaved ice in 
+hell, Jax :-)
+<[JaxMas] FIGCHAPTERS> Maybe with a personality kit, Gary :-)
+<[Gary] GARY-S> Thank you very much
+<[Kevin] APPERT> are there enough people willing to run and serve Jax?
+<[JaxMas] FIGCHAPTERS> Incidentally, what fine luck to have found that USENET 
+port, Gary! Hope it holds up.
+<[JaxMas] FIGCHAPTERS> Wil still will serve on Board, I think.
+<[JaxMas] FIGCHAPTERS> Jax is ready.
+<[Gary] GARY-S> It was a marvelous stroke of PURE luck
+<[JaxMas] FIGCHAPTERS> Maybe Glenn Tenney would come back if he thought we were 
+serious.
+<[JaxMas] FIGCHAPTERS> Zimmer
+<[Kevin] APPERT> don't get the UNIX flu on that port
+<[JaxMas] FIGCHAPTERS> Ting.
+<[JaxMas] FIGCHAPTERS> ( Though I haven't asked these guys)
+<[JaxMas] FIGCHAPTERS> Marc De Groot might.
+<[Gary] GARY-S> Marc is pretty busy - he'd be good
+<[JaxMas] FIGCHAPTERS> Anyway, the question is not ....
+<[JaxMas] FIGCHAPTERS> " can we get prestige forth programmers to ascend to 
+Heaven on the Board" ...
+<[JaxMas] FIGCHAPTERS> but rather ...
+<[JaxMas] FIGCHAPTERS> " For two years can we hold together a practical 
+marketing team that can make some money for FIG, good forth programmers or 
+total novice"
+<[JaxMas] FIGCHAPTERS> I think I could find a slate.
+<[JaxMas] FIGCHAPTERS> at least three I could
+<[Gary] GARY-S> Marketing and identity are serious, serious problems
+<[JaxMas] FIGCHAPTERS> Me , Al Mitchell and John von Neumann.
+<[Kevin] APPERT> Heinlien in "Grumbles from the Grave" makes the point in a 
+letter to John Cambell, that the Navy man is not equipped to run a public
+relations campaign for the Navy, being taught Truth, Honor and all that stuff...
+<[JaxMas] FIGCHAPTERS> Forth needs an infusion of good PR and FIG needs a money 
+transfusion.
+<[Gary] GARY-S> Think it would help if the FIG board read Ogilvey insted of 
+Brodie ? :-)
+<[JaxMas] FIGCHAPTERS> Machiavelli, more like.
+<[JaxMas] FIGCHAPTERS> or Eric Hoffer.
+<[Len] NMORGENSTERN> Who is Ogilvie?
+<[JaxMas] FIGCHAPTERS> Sales.
+<[Kevin] APPERT> do we really want to promote Forth in that fashion?  I get 
+this vision of loading guns and giving them to children.  lots and lots of
+ them.
+<[JaxMas] FIGCHAPTERS> Steven Sarns when he speaks ...
+<[JaxMas] FIGCHAPTERS> is likely to present the heterodox opinion ...
+<[JaxMas] FIGCHAPTERS> that FIG ....
+<[JaxMas] FIGCHAPTERS> should drop it and change its name and thrust to the 
+"Embedded Control Group"
+<[JaxMas] FIGCHAPTERS> Yes, we want to load FORTH into their computers and turn 
+children loose.
+<[JaxMas] FIGCHAPTERS> Exactly.
+<[JaxMas] FIGCHAPTERS> THat's the only thing to do.
+<[Gary] GARY-S> No - jax - Forth still represents more than just embedded 
+systems
+<[JaxMas] FIGCHAPTERS> I agree.
+<[JaxMas] FIGCHAPTERS> I told S.E.S. just that.
+<[JaxMas] FIGCHAPTERS> I'm just telling you what a man said who used to spend 
+$1000 a year in FIG ads.
+<[JaxMas] FIGCHAPTERS> WHo doesn't even subscribe to FD anymore.
+<[JaxMas] FIGCHAPTERS> Look, I know where Forth programmers are coming from.
+<[JaxMas] FIGCHAPTERS> There are three Embedded Systmems new Forthers to every 
+one desktop Forther.
+<[JaxMas] FIGCHAPTERS> They are NOT being serviced ...
+<[JaxMas] FIGCHAPTERS> Neither in terms of being assisted to learn Forth ...
+<[JaxMas] FIGCHAPTERS> Nor in being assured ....
+<[JaxMas] FIGCHAPTERS> that "the free market" is going to churn out ...
+<[JaxMas] FIGCHAPTERS> enough new Forth programmers ...
+<[JaxMas] FIGCHAPTERS> to make their software maintainable if they DO write it 
+in Forth.
+<[Len] NMORGENSTERN> Does FIG have ads in Embedded Systems magazine?
+<[JaxMas] FIGCHAPTERS> No
+<[Gary] GARY-S> I've got a fair question ...
+<[Gary] GARY-S> When's the last time you saw a forth programer...
+<[Gary] GARY-S> without grey hair ? that is a problem - no future
+<[JaxMas] FIGCHAPTERS> Vu zaanen di yerushim?
+<[JaxMas] FIGCHAPTERS> Classic question of yiddish authors.
+<[JaxMas] FIGCHAPTERS> Good question.
+<[JaxMas] FIGCHAPTERS> We have to BEGAT them, Gars!
+<[Wil] W.BADEN1> Ouch Gary, That hurts.
+<[JaxMas] FIGCHAPTERS> Time's a wasting.
+<[Gary] GARY-S> well ?
+<[JaxMas] FIGCHAPTERS> I teach Forth all week to my customers.
+<[JaxMas] FIGCHAPTERS> I'm doing my part.
+<[JaxMas] FIGCHAPTERS> I'd like to expand it some.
+<[Wil] W.BADEN1> This was the comment made by the young man from Finland...
+<[Wil] W.BADEN1> He was surprised how old the attendees at FORML were.
+<[JaxMas] FIGCHAPTERS> I'm with you, wil
+<[JaxMas] FIGCHAPTERS> He's right.
+<[JaxMas] FIGCHAPTERS> It's because we aren't doing our job ...
+<[JaxMas] FIGCHAPTERS> and shoring up our own careers to boot.
+<V.STAMPS> is here.
+<[Wil] W.BADEN1> I'm 61 and I wasnt the oldest.
+<[JaxMas] FIGCHAPTERS> Let me be frank with myself ...
+<[Kevin] APPERT>  how many kids can afford FORML?
+<[JaxMas] FIGCHAPTERS> I flirt with other languages ...
+<[Len] NMORGENSTERN> I'm 66
+<[Kevin] APPERT> or have the time?
+<[JaxMas] FIGCHAPTERS> but when it gets down to BIZNESS ...
+<[JaxMas] FIGCHAPTERS> I don't want to program but in Forth.
+<[JaxMas] FIGCHAPTERS> It's too much trouble .
+<[JaxMas] FIGCHAPTERS> So ... I have to boost Forth ...
+<[JaxMas] FIGCHAPTERS> or look for anew career.
+<[Gary] GARY-S> We MUST find a way to rekindle that flame in young programmers
+<[JaxMas] FIGCHAPTERS> We have to invade the university.
+<[JaxMas] FIGCHAPTERS> We have to go into the highschool.
+<[Len] NMORGENSTERN> I think giving Starting Forth to libraries will help a lot
+<[Len] NMORGENSTERN> I have started the ball rolling.
+<[Gary] GARY-S> Who the hell wants to belong to another 'last man' club ?
+<[JaxMas] FIGCHAPTERS> We have to do this in an organized manner.
+<[JaxMas] FIGCHAPTERS> You ever read Isaac Bashevis Singer's Nobel Prize 
+acceptance speech>
+<[Gary] GARY-S> Yeah - we presented a FORTH LIBRARY to the university here
+<[Gary] GARY-S> That is not the soultion
+<[Gary] GARY-S> closing time - any last comments
+<[JaxMas] FIGCHAPTERS> "Yiddish has not yet said its last word. It contains 
+treasures tha have not been revealed to the eyes of the world"
+<[JaxMas] FIGCHAPTERS> Forth is like that.
+<[Gary] GARY-S> We have a public recognition problem fostered by a group 
+complex - we aren't recruiting new users - not a good plan
+<[JaxMas] FIGCHAPTERS> We have a marketing problem.
+<[JaxMas] FIGCHAPTERS> Also a "reality" problem.
+<[JaxMas] FIGCHAPTERS> First step: Stop selling FIG memberships based on April.
+<[JaxMas] FIGCHAPTERS> Makes for deluded financial thinking and annoys the hell 
+out of the members.
+<[Gary] GARY-S> well - now that I've given everyone heartburn - HAPPY HOLIDAYS 
+- and goodnite :-)
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,28 @@
+
+Following is from the 1/87 issue of the Atlanta FIG newsletter, 
+The Forth Estate:
+
+DON SCHRADER demonstrated his Novix based development board 
+running in an IBM AT. The system ran 10 million empty loops in 3 
+seconds and recompiles itself in about 4 seconds. Don says that 
+Harris should have a product out by April. Also Software Composers 
+has changed their name to Silicon Composers. The High Tech 
+Revolution BBS is up and running at 951-9251 and caters to Forth 
+and AI interests.
+
+BRIAN WALSH brought in his HP-28C which may be the ultimate 
+scientific calculator. Its Forth heritage is very obvious with 
+keys for DUP, SWAP, OVER, etc. The calculator has a 4 line, 23 
+character display, symbolic math processing, and plotting 
+capabilities.
+
+NICK HENNENFENT brought along the Computone 9620, an NEC V20 
+based, battery powered laptop. The machine has an 8x80 display and 
+a built in thermal printer. Software for the machine is all 
+written in Forth including policy illustration programs for the 
+insurance industry, a communications program, a spreadsheet, and a 
+word processor. The machine is completely menu driven, has a built 
+in print spooler, and provides a hot key to toggle between any two 
+applications.
+
+

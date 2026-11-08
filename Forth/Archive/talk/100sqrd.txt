@@ -1,0 +1,107 @@
+
+Following are Mahlon Kelly's comments on his experiences with New Micro's
+100 Squared board and the Rockwell 65F11 Forth chip.
+
+Date: 05-30-86 (22:52)              Number: 1763   
+  To: ALL                           Refer#: NONE
+From: MAHLON KELLY                  Recv'd: (N/A)
+Subj: ROCKWELL CHIP, ETC.           Sec'ty: PUBLIC MESSAGE
+
+Yesterday I received the 100 squared board from New Micros, Randy 
+Dumpse's company. It uses the Rockwell 65F11 Forth chip, and is a 
+complete Forth-based micro intended for oem development in such areas as 
+machine control, data acquisition, etc. I am going to be configuring it
+as a 16 channel, 12 bit programmable data acquisition system, with data
+going to battery backed RAM. The board is 10 cm on a side (thus 100 [mm] 
+squared), and with the two a/d boards, will fit in a 10 x 10 x 10 cm 
+cube. OIIt's a really impressive device for what it is intended to do. I 
+am going to make a data acquisition system that will collect 16 
+channels of data at half-hour intervals and store it in the 
+battery-backed RAM. Should be able to take care of a week's data. The 
+whole thing, including power from a motorcycle battery, will be in a 
+watertight housing and submerged in the lake.
+     If anyone's interested in the saga of this project, say so, and 
+I'll give periodic updates.
+
+
+Date: 06-02-86 (01:21)              Number: 1805   
+
+Some have expressed an interest in my experiences configuring New 
+Micro's 100 squared board as a data logger. Here's the first 
+installment.
+     The 100 squared is a 10 cm square board with 8 chips plus an 8k ROM 
+containing a Forth development system and two sockets for additional 2 
+or 8k memory chips. The memory chips can be PROMs, with a variety being
+accepted, or RAM. There is an RS-232A port, two 8 bit parallel i/o 
+ports, and points for 7.5 to 17+ VAC or DC power input. Also a jack for
++5 regulated DC power and 20 V vpp for the PROMs. There is a bus on 
+which other boards can be stacked; I will be stacking 2, 8 channel, 
+12-bit a/d converter boards for the data logger. The idea is then to 
+store the data in battery-backed RAM chips (the RAM is bank selected, by 
+the way) which can be pulled in the field and be brought back to the lab 
+and interrogated. Or, since the board is only $240, the whole thing can
+be brought back and replaced with another. This will make a package 10 
+cm on a side and about 3 in thick which can be powered with an 80 amp-hr 
+battery for about a week in the field, logging data (temp, oxygen, ph in 
+water) every half hour, taken in at 1 min intervals, smoothed, and 
+converted to "real" values by the small computer.
+     Getting the board up is simplicity itself. Plug in a terminal (I am 
+using my Columbia with Perfect Link), set the com specs at 1200 baud, 2
+stop bits, no parity, hit the reset button, and you see the Rockwell 
+Forth prompt. You now are interactively programming it in Forth. Oh, I 
+forgot to mention the most important thing --- it uses the Rockwell 6511 
+or 6512 Forth chip as its processor. That's a 6502 configured to use 
+Forth instead of assembler as its main language. There is also a Forth 
+assembler in the development ROM, along with other utilities. Rather 
+impressive to be programming a 10 cm square board in that way.
+     The Forth is a modified FigForth, with some nice development tools
+in the ROM. Documentation on the language, provided in a manual by 
+Rockwell is impressive. New Micro's documentation, although complete, is 
+not for the novice. I had to call them for several points of 
+clarification on, for example, the power supply and on bank selecting th 
+e RAM chips with software. Turns out that if one of the lines of a 
+parallel port is jumpered to a point on the board called E10, then 
+bringing that port low sends banks in the second RAM. If port B is used, 
+then PB ! selects the lo and hi's on the port, 0 being lo. Thus
+     PB @ 2 BASE ! 11111110 AND PB !
+would select the second RAM. But there are words to do it automatically, 
+and to then store data or fetch it. Thus 255 0 BANKC@ would do a C@ from 
+the second RAM and return to the first, where presumably one's language
+is. BANKC! does the opposite; and BANKEXECUTE will execute a definition
+in the second RAM. Using the BANKC! and BANKC@ stuff lets such things as
+BANKCMOVE be defined, so that data can be brought into an array, say, in 
+the main RAM and moved to the second bank for storage.
+     Enough (or perhaps too much) for now. I'll tell more as I work on 
+the thing.
+
+
+Date: 06-03-86 (03:37)              Number: 1824   
+
+The 100 squared board has a provision for handshaking (x-on x-off) when
+uploading programs from another machine. Not blocks, just thinks that 
+what is coming in is being typed on a remote terminal. Thus I can send 
+source files to it from the PC via the RS-232 port. At least that's the
+theory. I haven't gotten that far yet. You can download memory either by 
+doing C@s and EMITs to the RS-232 or by vectoring output. Of course the
+program to do the downloading has to be in the 100 squared, but that's 
+no problem.
+     With the bank switching scheme you can, in theory, have up to 4 meg 
+available. But there are sockets on board for only 16k. Shouldn't be too 
+much of a problem to mount more sockets in the prototype area, however.
+Randy Dumse tells me that a change would be needed in the prom that 
+controls the addressing.
+     There is also provision for piggybacking a disk controller board 
+onto it. But somehow using disks with a machine that is 10 cm on a side
+seems silly. There is provision for disk i/o in the development rom 
+(BLOCK, SCR, LIST, etc.) but when used without the controller they seem
+to lock the system.
+     The theory behind the board, of course, is that it is for oem 
+development, and thus the limited memory. One of the nicer things to do
+would be to use it as a data logger and dial it up with an auto-answer 
+modem to dump the logged data as needed. Since I'll be using it in a 
+remote location, there'll be no phone lines, but I think I'll write the
+software to do that anyway. One could also have it autodial and 
+periodically give a report on what it's doing. All sorts of 
+possibilities.
+
+

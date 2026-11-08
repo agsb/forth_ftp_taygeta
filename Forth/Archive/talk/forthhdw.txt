@@ -1,0 +1,61 @@
+
+(originally from WESCON '85)
+
+Firms currently offering FORTH microengines:
+        Monolithic Memories, Inc.
+        Novix (Cupertino, CA)
+        Hartronix (Tempe, AZ)
+
+"...For its part, [Monolithic Memories, Inc.] has based its FORTH engine on a 
+ family of LSI components featuring 16-bit-wide data paths.  The family
+ includes a 16-bit ALU with four working registers and an on-chip
+ long-wordlength carry network, a 16x16 Cray multiplier with the entire 32-bit
+ product simultaneously available at the outputs, and a 16x16 shifter geared
+ for cascadeability to long wordlengths."
+
+"Instruction fetching and decoding are handled separately from the instruction
+ execution.  A large main memory serves for both instructions and data storage.
+ The decoding and execution of instructions occurs in an instruction sequencer
+ built of PROMS and registered PROMs.  The PROMs hold typical horizontal
+ microcode with most fields containing the control value for the circuitry
+ in the rest of the engine and with one field containing the address to the
+ next microinstruction.  Thus, frequently-used FORTH words that require
+ multiple cycles for execution can be implemented directly in microcode without
+ the overhead of multiple function calls."
+
+"...The NOVIX FORTH engine itself is a single chip that directly executes
+ FORTH primitives in a single clock cycle.  The initial implementation of the
+ device is based on a 4000-gate CMOS semicustion IC that runs at an 8-Mhz clock
+ rate.  A two-stack architectural prototype has been built that is capable of
+ 8-MIPS performance, as measured in FORTH instructions.  Because of the simple
+ nature of FORTH and the use of conventional memory (without the requirements
+ for tag bits as in LISP), FORTH machined design is relatively
+ straightforward."
+
+"...Building the Hartronix H.FORTH single-board computer required very
+ little in the way of hardware.  Principal components of the CPU include
+ a four-bit ALU, the microprogram sequencer and nibble registers.  The CPU uses
+ bipolar technology and can achieve 60-nsec cycle time.  High-speed control
+ memory is used to store microcoded primitive instructions.  Control store
+ memory of four kilobytes is currently used but up to 14K control words can
+ be installed.  The hardware needed to build the CPU required only 229 gates
+ for the microprogram sequencer, 381 gates for the nibble registers, 168 gates
+ for the port and 169 for the ALU.  Another 77 gates were required for
+ miscellaneous functions for a total of 1024 gates.  The board contains
+ 48kbytes of 250-nsec user memory.  However, a virtual machine architecture
+ allows each user to directly access 128kbytes and up to 2 Mbytes without
+ mapping.  Other features include two RS422/432 serial ports running at
+ 38.4kbaud, a floppy disk controller, clock calendar and an I/O port."
+
+"...To demonstrate the power of the machine, Hartronix has compared the
+ execution of a simple synchronous I/O instruction on the H.FORTH machine and
+ on the 68000.  The purpose of the instruction was to send 16 bits in serial
+ fashion to and from the I/O port." 
+
+"...While the H.FORTH...loop took 700nsec, the 68000 assembly language version
+ took 12 to 25usec, an order of magnitude slower.  Although Hartronix designers
+ admit that their machine does not have such an edge in all cases, they feel
+ that the H.FORTH architecture still compares favorably even in the more
+ demanding task of [high level language] emulation."
+
+

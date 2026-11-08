@@ -1,0 +1,188 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 11/01/90   Time: 22:30EST
+   
+  Items discussed include: Forth on SPARC, multitasking systems, RISC,
+       problems with ANS proposal(s), FORML
+
+Attendees:
+[[Gary] GARY-S]
+[[Wil] W.BADEN1]
+[[Robert] R.BERKEY]
+
+Minutes:
+<[Wil] W.BADEN1> is here.
+<[Wil] W.BADEN1> So I see.
+<[Gary] GARY-S> anything you'd like to get off your chest or start a 
+discussion on - nows your chance
+<[Wil] W.BADEN1> I was disconnected a couple of weeks ago in the middle of 
+answering a question.
+<[Gary] GARY-S> so - proceed with the remainder now
+<[Wil] W.BADEN1> Arguably the best article ever written on Forth is Peter 
+Kogges's "An Architectural Trail"".  I'll upload the intro later.
+<[Gary] GARY-S> You mentioned that , yes - I would appreciate more info on the 
+article.
+<[Wil] W.BADEN1> Kogge's article is IEEE Computer March 1982.
+<[Gary] GARY-S> I was not taking 'Computer' then
+<[Wil] W.BADEN1> "an architectural trail to threaded-code systems."
+<[Wil] W.BADEN1> The right names of the two books.  Interpretation and 
+Instruction Path Coprossing, Debaere & Campenhout.
+<[Gary] GARY-S> Isn't that what you said last week ?
+<[Wil] W.BADEN1> Good, then I wasnt cut off.
+<[Wil] W.BADEN1> Do you use Unix for your work?
+<[Gary] GARY-S> no - proprietary multitaskers
+<[Wil] W.BADEN1> 68000 based, 80x86??
+<[Gary] GARY-S> no - Intel all the way
+<[Wil] W.BADEN1> Which?
+<[Gary] GARY-S> depending on period of mfr, all the way from 8080 to 80486
+<[Gary] GARY-S> intel and data general for mini's
+<[Wil] W.BADEN1> Whence is your unix connection?
+<[Wil] W.BADEN1> -- or is it just C?
+<[Gary] GARY-S> unix - personal interest, plus I wanted to be more in tune to a 
+multitasking environment that I could play with
+<[Wil] W.BADEN1> What do you run unix on?
+<[Gary] GARY-S> 3b1, and a AT clone
+<[Wil] W.BADEN1> How complete is the AT version?
+<[Gary] GARY-S> It's MicroPort before the chapter 11, uses at&t binaries - 
+very complete
+<[Gary] GARY-S> SysV 3.2
+<[Gary] GARY-S> The 3b1 is SysV 3.5
+<[Wil] W.BADEN1> Bending but not completely changing the subject, the company 
+I've worked with for 9 years has been acquired by Timeplex, a subsidiary
+ of Unisys.
+<[Gary] GARY-S> I'm aware only in name
+<[Gary] GARY-S> Unisys is one of the Minneapolis companies that just dumped a 
+lot of people on the street
+<[Wil] W.BADEN1> (Yeah, we know all about it.)
+<[Wil] W.BADEN1> We have been using Sparc 1 workstations for 1 1/3 years.
+<[Gary] GARY-S> Have you looked at the internals - Mitch's Forth widgets
+<[Wil] W.BADEN1> (Sometimes I feel like a jinx.)
+<[Gary] GARY-S> This isn't the Almond Joy commercial, is it ?
+<[Wil] W.BADEN1> I've brought it up, and decompiled a few things, but it
+<[Wil] W.BADEN1> is just to launch unix.
+<[Wil] W.BADEN1> (Almond Joy commercial?)
+<[Wil] W.BADEN1> (Is that TV related?  I don't have a TV.)
+<[Gary] GARY-S> Sometimes you feel like a nut - sometimes you don't
+<[Gary] GARY-S> Radio and TV
+<[Gary] GARY-S> Mitch said you can access the kernel and use it though...
+<[Gary] GARY-S> they had a crash course on Forth for their field people
+<[Wil] W.BADEN1> If it weren't for movies and Twin Peaks I wouldnt have any 
+popular culture.
+<[Wil] W.BADEN1> It's easy to get into.
+<[Wil] W.BADEN1> But Forth, or particularly a threaded Forth, doesnot fit well 
+with RISC.
+<[Gary] GARY-S> Do you know Unix enough to compare SUN OS with other BSD 
+derivitives ?
+<[Wil] W.BADEN1> No.
+<[Gary] GARY-S> The Forth - is it Inderect or Direct Threaded -
+<[Wil] W.BADEN1> Release 4.03 merges BSD and System V.
+<[Gary] GARY-S> sort of
+<[Wil] W.BADEN1> I believe it's ITC.
+<[Wil] W.BADEN1> Something else to check on.
+<R.BERKEY> is here.
+<[Gary] GARY-S> That would be easiest to install, but probably least compatible 
+with RISC
+<[Wil] W.BADEN1> Ah, thanks for triggering me.
+<[Wil] W.BADEN1> It has to be ITC.
+<[Gary] GARY-S> what was the trigger ?
+<[Wil] W.BADEN1> Your comment about compatibility with RISC.
+<[Gary] GARY-S> ahhh
+<[Wil] W.BADEN1> Direct threaded would use the sliding register windows.
+<[Gary] GARY-S> Stack pointers and RISC - not your best plan
+<[Wil] W.BADEN1> A feature is the use of Forth using dedicated 8 registers to
+<[Wil] W.BADEN1> monitor and debug RISC.
+<[Gary] GARY-S> If you get a chance to tweak around I'd be interested in your 
+findings
+<[Wil] W.BADEN1> Well Robert, are you going to drop in at least at FORML?
+<[Robert] R.BERKEY> hmmm, still have made no plans to be there.
+<[Robert] R.BERKEY> Right now I'm thinking about Detroit.
+<[Gary] GARY-S> You are both reasonably close aren't you ?
+<[Robert] R.BERKEY> I'm about two hours away.
+<[Wil] W.BADEN1> I'm 7 hours.
+<[Gary] GARY-S> Trust me - that's close
+<[Gary] GARY-S> I'm looking at 500-1000 mile weeks now
+<[Robert] R.BERKEY> I only have to commute 6 miles round trip to work, so 2 
+hours looks long.
+<[Gary] GARY-S> When is Detroit - I do not recall
+<[Gary] GARY-S> soon
+<[Wil] W.BADEN1> My wife & I get up 4 a.m. Friday to drive up.
+<[Robert] R.BERKEY> Start's Tuesday through Saturday.
+<[Gary] GARY-S> yeah - soon
+<[Gary] GARY-S> This is about the last real chance to get proposals in the 
+original draft
+<[Wil] W.BADEN1> Another question for you, Gary.  What do you know about CHORUS?
+<[Gary] GARY-S> nada
+<[Robert] R.BERKEY> I've about given up on BASIS.
+<[Wil] W.BADEN1> How so, Robert?
+<[Robert] R.BERKEY> For example, they are still using 'w' in pointless and 
+direct
+<[Robert] R.BERKEY> contradiction with Forth-83.
+<[Gary] GARY-S> after all the time you've invested it's foolish to back off now
+<[Robert] R.BERKEY> The proposal I submitted to clean that up disappeared from 
+my viewpoint--
+<[Robert] R.BERKEY> i.e., it's no longer in the proposal log, but I never heard 
+what it's
+<[Robert] R.BERKEY> disposition was.
+<[Gary] GARY-S> Then you should file a complaint to ANSI
+<[Gary] GARY-S> not the TC, but ANSI
+<[Robert] R.BERKEY> Perhaps, I think it's the communities problem now.
+<[Gary] GARY-S> One letter to the oversight member will require a response and 
+perhaps investigation
+<[Gary] GARY-S> It's called 'hardball'
+<[Robert] R.BERKEY> I'm a concensus person.
+<[Robert] R.BERKEY> and a technician, not a politician.
+<[Gary] GARY-S> Do you actually believe concensus washed your proposal under a 
+table ?
+<[Wil] W.BADEN1> What do mean?
+<[Robert] R.BERKEY> Sigh, hard to explain I suppose.
+<[Gary] GARY-S> I'll go along with the crowd, but I don't believe I should be 
+treated in a cavalier manner either - if I have offered a serious point
+to consider.
+<[Robert] R.BERKEY> The committee has no policies that they really commit 
+themselves to.
+<[Wil] W.BADEN1> The root of consensus is "consent", not census.
+<[Robert] R.BERKEY> So they play their own semi-private games.
+<[Robert] R.BERKEY> Concensus means the agreement of all.
+<[Robert] R.BERKEY> So I'm missing the point about "consent" and "census".
+<[Wil] W.BADEN1> No, Robert, it doesn't.
+<[Robert] R.BERKEY> <--- looking up concensus in dictionary.
+<[Wil] W.BADEN1> You won't find it.
+<[Gary] GARY-S> Do you read data Communications ?
+<[Robert] R.BERKEY> sp consensus.
+<[Wil] W.BADEN1> Sometimes, we get stacks of them at work.
+<[Robert] R.BERKEY> 2: A: general agreement: UNANIMITY
+<[Wil] W.BADEN1> You're getting warmer, Robert.
+<[Wil] W.BADEN1> Ok, I'll accept that.
+<[Gary] GARY-S> The article was a few months back in Data Communications on 
+CHORUS, but it didn't exactly snap my head around.
+<[Wil] W.BADEN1> But in the sense that you vote for it, not believe it.
+<[Wil] W.BADEN1> I'm not sanguine about it.
+<[Wil] W.BADEN1> It's written in C++ (95 percent).
+<[Gary] GARY-S> Novell (NetWare) will probably make a major impact now that 
+they have included Unix in their mix
+<[Wil] W.BADEN1> Anyhow, ANS Forth will by definition be a consensus.
+<[Gary] GARY-S> That is a requirement
+<[Wil] W.BADEN1> You have always seemed to me to be an anti-consensus person.  
+Like me.
+<[Gary] GARY-S> One that works better in pronciple than in practice
+<[Gary] GARY-S> ^^^^ to Robert ???
+<[Wil] W.BADEN1> Yes.
+<[Robert] R.BERKEY> I want a community, not a brawling bunch of selfish 
+hypocrites.
+<[Wil] W.BADEN1> To both of you: "One who agrees against his will is of the 
+same opinion still."
+<[Robert] R.BERKEY> So I have spoken out against the hypocrisy of a vendors 
+standard.
+<[Gary] GARY-S> and bitterly so
+<[Robert] R.BERKEY> Perhaps that's what you see as "anti-consensus".
+<[Wil] W.BADEN1> If it's my turn, No Comment.
+<[Gary] GARY-S> I make a motion this meeting of the Cal-Ark FIG chapter be 
+called to a close
+<[Wil] W.BADEN1> Aye.
+<[Robert] R.BERKEY> hahaha, might as well, this isn't much fun right now!
+<[Gary] GARY-S> so carried - g'nite
+=== End of Steno notes. ===
+
+

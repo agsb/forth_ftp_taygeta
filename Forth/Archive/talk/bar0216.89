@@ -1,0 +1,346 @@
+
+ Minutes of the FIGGY BAR RT Conference.
+
+ Date: 02/16/89   Time: 22:16EST
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN] 
+[[Kevin] APPERT]
+[[Jax] FIGCHAPTERS]
+  
+ Items discussed: F-PC VMS in final draft,Austin ACM SigForth conf, Fig
+                  chapters via e-mail, STILL NO JFAR, Crunch and the soviets, 
+                  flavors of Unix, Micro-C letter, stack overflow
+minutes:
+<[Gary] GARY-S> Dave - are you having a conf yet ?
+<[Dave] DHWEINSTEIN> Conf starts tomorrow morning.
+<[Dave] DHWEINSTEIN> And I have to clean this place up.
+<[Gary] GARY-S> no early arrivals to entertain ?
+<[Gary] GARY-S> Boy - were you ever missed big time last week !!!
+<[Dave] DHWEINSTEIN> Not yet. And they better not show up. The place is a 
+disaster. What happenned?
+<[Gary] GARY-S> Ken Butterfield was in Calif (U of C operates Los Alamos) and 
+had as guest John Pratt....
+<[Gary] GARY-S> and they were dead to continue the multi-tasker VMS discussion
+<[Dave] DHWEINSTEIN> "dead to continue"?
+<[Gary] GARY-S> wanted to continue the discussion
+<[Gary] GARY-S> and there's another part of the missing discussion
+<[Kevin] APPERT> Hi Gary,Dave
+<[Dave] DHWEINSTEIN> Oh. Well..the Virtual Memory system will be in the 
+proceedings of the Conference (assuming I get this paper done tonight).
+<[Gary] GARY-S> did you ever get the VMS going
+<[Gary] GARY-S> question answered
+<[Dave] DHWEINSTEIN> I am putting the final touches on it right now (as we 
+speak), and then I am finishing up my paper tonight.
+<[Gary] GARY-S> That was the second anyway Dave - not last week
+<[Gary] GARY-S> last week was Dumse's conference
+<[Kevin] APPERT> Hi, Jax
+<[Kevin] APPERT> stand alone forth was last week?
+<[jax???] FIGCHAPTERS> yep
+<[Gary] GARY-S> true
+<[Kevin] APPERT> <kiking self for missing it
+<[jax???] FIGCHAPTERS> I beg your pardon!!!
+<[Kevin] APPERT> guess I read the replay
+<[Gary] GARY-S> d/l it from the library - it was 90% notes anyway
+<[Kevin] APPERT> what's it called????
+<[Gary] GARY-S> stand-alone
+<[Kevin] APPERT> ack
+<[Gary] GARY-S> .txt or .arc
+<[Kevin] APPERT> 90% notes?
+<[Gary] GARY-S> you bet - Randy did a lot of presentation - few questions
+<[jax???] FIGCHAPTERS> Lots of religion, though.
+<[Kevin] APPERT> give me that real time religion
+<[jax???] FIGCHAPTERS> Come ye unto BLOCK and be SAVE-FORTHed
+<[Gary] GARY-S> file # 1549 is the text version, 1550 the ARC'd one Kev
+<[Kevin] APPERT> if it's good enough for Chuck Moore, it's goodenough for me
+<[Gary] GARY-S> did you copy appert ?
+<[jax???] FIGCHAPTERS> ." Hallelujah"
+<[Kevin] APPERT> thanks
+<[Kevin] APPERT> yes, I copy
+<[Dave] DHWEINSTEIN> ." Ammmmmeeennnnnnnn!!!!!!!! " cr cr cr beep
+<[Kevin] APPERT> "we will code our systems naitive, 'cause we find it more 
+creative...
+<[Gary] GARY-S> have a big disk area - it's twice as long as any other 
+conference
+<[Kevin] APPERT> If it's good enough for Chuck, it's good enough for me"
+<[Gary] GARY-S> Dave - I have a request
+<[Gary] GARY-S> Take some manner of ACM conf proceedings notes and post them
+<[Kevin] APPERT> (sung to the tune of "old time religion"  --- borrowed from C.
+Curley
+<[Dave] DHWEINSTEIN> I'll try. We will be publishing complete proceedings.
+<[Gary] GARY-S> or -steal them from the official steno and post them
+<[Dave] DHWEINSTEIN> And I'd have to clear it with Dan anyway (don't woant to 
+inadvertently break the rules)
+<[Gary] GARY-S> bend them this way as a return on the extra conference with 
+George
+<[S. Rushdie] FIGCHAPTERS> Yes, be careful what you publish.
+<[Fanatic] DHWEINSTEIN> (ferblam)
+<[Fanatic] DHWEINSTEIN> 2.6 million dollars richer
+<[jax] FIGCHAPTERS> $5 million for K's head.
+<[jax] FIGCHAPTERS> $10 milllion for the whole body, stuffed.
+<[Gary] GARY-S> everyone get their copy of JFAR ?
+<[jax] FIGCHAPTERS> HAAAHAHAHHAAAAAAAAAAAAHHAHHAHAHAAAAAAAAAAA
+<[jax] FIGCHAPTERS> Really?
+<[jax] FIGCHAPTERS> hello?
+<[jax] FIGCHAPTERS> Is it out, really?
+<[jax] FIGCHAPTERS> ( JFAR )
+<[Gary] GARY-S> I am going to do this every single FIGGY to make sure there is 
+ongoing comment about a case of duplicity at work
+<[Dave] DHWEINSTEIN> Is it arriving or should we string you up to dry for that 
+joke Gary?
+<[jax] FIGCHAPTERS> He does that to me every week so that I post angry things 
+about JFAR
+<[Gary] GARY-S> I'm taking the only action at my immediate disposal
+<[Iblis] FIGCHAPTERS> O ye who promise to publish FORTH and do not fulfill your 
+vows!
+<[Gary] GARY-S> I resent the lies so I make them public knowledge
+<[Jax] FIGCHAPTERS> WEINSTEIN ...
+<[Jax] FIGCHAPTERS> You are going to see this luftmensh Forsley at Austin, 
+right?
+<[Jax] FIGCHAPTERS> When he turns around, kick him in the butt for us, ok?
+<[Gary] GARY-S> luftmensh Herr Jax ?
+<[Jax] FIGCHAPTERS> One who lives on air.
+<[Jax] FIGCHAPTERS> In the air, about 16 inches up.
+<[Gary] GARY-S> ist Jaxism, ja ?
+<[Coding Away] DHWEINSTEIN> Luftmensh. Folyak efsher, ober leftmensh?
+<[Coding Away] DHWEINSTEIN> (don't you love translating non-roman characters 
+into this alphabet)
+<[Jax] FIGCHAPTERS> a ganev.
+<[Jax] FIGCHAPTERS> ba mir iz a romanish alef-bais far iidish.
+<[Coding Away] DHWEINSTEIN> Er hat unser gelt gehot.
+<[Jax] FIGCHAPTERS> abgdhvzkticlmnsyfxqr$+
+<[Jax] FIGCHAPTERS> fershteist?
+<[Jax] FIGCHAPTERS> fyr$tii$t ?
+<[Gary] GARY-S> When one of you manages to post in Crylic or Kanji, then we 
+talk royalties
+<[Coding Away] DHWEINSTEIN> Nayn.
+<[Coding Away] DHWEINSTEIN> # - Kanji for tic-tac-toe
+<[Jax] FIGCHAPTERS> U meya Kirilski alfavit, to^ze.
+<[Jax] FIGCHAPTERS> oops .. "menya"
+<[Gary] GARY-S> yes
+<[Coding Away] DHWEINSTEIN> (People are going to love reading this figgy bar 
+transcript)
+<[Jax] FIGCHAPTERS> Draper sends postings from the well to the S.U.
+<[Gary] GARY-S> Are you still getting netmail vis-a-vie Fig Chapters, Jax ?
+<[Jax] FIGCHAPTERS> I solicited members for FIG in russian, posted in roman 
+chars.
+<[Kevin] APPERT> John Draper, Capn' Crunch????
+<[Gary] GARY-S> yes
+<[Jax] FIGCHAPTERS> Two weeks later, FIG gets an app ... From Bulgaria!! Any 
+connection? Hmm...
+<[Jax] FIGCHAPTERS> Yes, I get mail all the time, mostly from US
+<[Jax] FIGCHAPTERS> But some from as far away as Finland.
+<[Jax] FIGCHAPTERS> Was successful in helping set up a chapter there.
+<[Jax] FIGCHAPTERS> Put strangers in touch, now I see a chapter exists.
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> are you going to compile and post to keep the interest up ?
+<[Jax] FIGCHAPTERS> I was waiting for the FIG board meeting ...
+<[Jax] FIGCHAPTERS> They were going to enunciate policy ...
+<[Gary] GARY-S> vapor-meeting
+<[Jax] FIGCHAPTERS> and give me my marching orders ...
+<[Jax] FIGCHAPTERS> then the meeting went the way of last fall's Board election 
+:-)
+<[Jax] FIGCHAPTERS> Now I have NO NEWS for my international mailing list.
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> vapor poof
+<[Gary] GARY-S> have you logged onto wetware to see our getforth command ? 
+slick !
+<[Jax] FIGCHAPTERS> Wish Ruffer would tell me what to do.
+<[Jax] FIGCHAPTERS> Getting these guys to telecom ( except dennis ) is like 
+pulling teeth ...
+<[Kevin] APPERT> wetware?
+<[Jax] FIGCHAPTERS> Why the heck they have to get together in CALIFORNIA when 
+we have an electronic meeting place I do NOT understand.
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> Jack Brown does - but you'd expect that - so two members do, 
+both sysops
+<[Jax] FIGCHAPTERS> SO let's have a meeting and establish policy so I have 
+somethin in my hands except my Wang.
+<[Gary] GARY-S> Yeah Kev, Wetware Diversions Unix BBS 415/753-5265
+<[Jax] FIGCHAPTERS> ... :-)
+<[Jax] FIGCHAPTERS> .
+<[Jax] FIGCHAPTERS> computer, that is.
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> No wang jokes - I'm not doing extensive edits
+<[Jax] FIGCHAPTERS> Don't you have a Wang too?
+<[Gary] GARY-S> Kev - That's a local call for you, log on
+<[Kevin] APPERT>     oh, unix.  Blech.  Wasted a good part of today trying to 
+get STTY to work as documented
+<[Jax] FIGCHAPTERS> I haven't been telecomming too much since I have been 
+spending about two hours a night working on RCFB.
+<[Gary] GARY-S> I need to get a few REAL Forthers on there so help spread the 
+word in the bay area, will you please Kevin ?
+<[Kevin] APPERT> ok.
+<[Jax] FIGCHAPTERS> Jeez, now there are TOO MANY Forth boards around!
+<[Jax] FIGCHAPTERS> ... :-)
+<[Gary] GARY-S> no way !
+<[Jax] FIGCHAPTERS> I agree.
+<[Kevin] APPERT> You can't GIVE forth away to most unix users.  I've literally 
+tried
+<[Jax] FIGCHAPTERS> Forth will win the battle to survive ...
+<[Coding Away] DHWEINSTEIN> Plus there is the Druma FORTH board here in Austin 
+(active as a fossil)
+<[Jax] FIGCHAPTERS> because like Linus' pumpkin patch, we are more sincere!
+<[Gary] GARY-S> Thanks in VERY LARGE part to Shifrin the xCFB's are more nearly 
+really linked to GEnie...
+<[Gary] GARY-S> now we (JAX) need to get the Unix BBS's linked and ForthNet 
+will be more...
+<[Jax] FIGCHAPTERS> Kev ... I have TWO Forths up on the Well ( BSD 4.3 )
+<[Gary] GARY-S> than just smoke and portaghe
+<[Gary] GARY-S>
+<[Kevin] APPERT> can you tell if there any takers?
+<[Jax] FIGCHAPTERS> huh?
+<[Kevin] APPERT> has anybody downloaded either of your two forths, or can you 
+tell?
+<[Gary] GARY-S> read the notes when it's posted
+<[Jax] FIGCHAPTERS> not posted for download.
+<[Jax] FIGCHAPTERS> Bradley's is one.
+<[Jax] FIGCHAPTERS> He doesn't want it posted yet.
+<[Jax] FIGCHAPTERS> The other is Allan Pratt's canine.
+<[Jax] FIGCHAPTERS> You must know about that. Yawn. Snooze.
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> nope, what's canine?
+<[Gary] GARY-S> Wetware will soon have it's own cforth running on-line
+<[Jax] FIGCHAPTERS> woof-woof. Bow-wow. Pratt's forth ( circa 1983 ) is a dog.
+<[Kevin] APPERT> cruddy forth,  Gary?
+<[Gary] GARY-S> Pratt's was so buggy, it's easier to write fron DOCOL, NEXT on 
+up
+<[Jax] FIGCHAPTERS> It is good enough ...
+<[Jax] FIGCHAPTERS> and powerlessly safe enough under UNIX ...
+<[Jax] FIGCHAPTERS> to be used for a demo forth ...
+<[Coding Away] DHWEINSTEIN> (Programming like mad and writing a paper and 
+cleaning up and...)
+<[Jax] FIGCHAPTERS> that people can step into from a menu while in my Forth/AI 
+Conference on the WELL.
+<[Kevin] APPERT> is canine a descendant of REPTILE?  sounds like one of those 
+"what do you get when you cross..." jokes
+<[Dave] DHWEINSTEIN> It's been one of those weeks.
+<[Jax] FIGCHAPTERS> Bradley's Forth is very neet.
+<[Jax] FIGCHAPTERS> That one I use on the WELL for serious.
+<[Jax] FIGCHAPTERS> .
+<[Kevin] APPERT> 68000 native or forth-in-C, Jax?
+<[Jax] FIGCHAPTERS> The WELL is a VAX 11/750 ( though they are buying new iron )
+ ...
+<[Jax] FIGCHAPTERS> It is in C, a JSR 32-bit Forth ...
+<[Jax] FIGCHAPTERS> Not too slow!
+<[Jax] FIGCHAPTERS> .
+<[Dave] DHWEINSTEIN> Sigh. Oh well...I gotta run
+<[Gary] GARY-S> g'nite Dave
+<[Kevin] APPERT> 750?  those were the days.  we've got one of those
+<[Dave] DHWEINSTEIN> (Noise of hard work in the distance)
+<[Kevin] APPERT> nite,Dave
+<[Jax] FIGCHAPTERS> They are buying something distributive, starts with an S. 
+sexy machine.
+<[Dave] DHWEINSTEIN> Oh. Heh. Some budding genius sliced through a trunk line 
+at work today. No power for over an hour, and it took another hour to ge
+t the computers working again.
+<[Jax] FIGCHAPTERS> What is it, gars, that they are buying for the WELL?
+<[Kevin] APPERT> shoot him
+<[Gary] GARY-S> I don't know Jax
+<[Dave] DHWEINSTEIN> The MicroVax came up like a champ...but the Cyber stayed 
+dead for a long time (good!)...and the Alliant had some errors coming up
+ that we took a while fixing. Kevin--we don't know who the idiot is and they 
+won't tell us.
+<[Jax] FIGCHAPTERS> Kevin, what's a big sexy multiprocessor computer whose 
+manufacturer or brandname starts with "S"
+<[Dave] DHWEINSTEIN> Symmetric?
+<[Dave] DHWEINSTEIN> Spectrum?
+<[Kevin] APPERT> Systolic?
+<[Jax] FIGCHAPTERS> Dave, Ik hob nit gevoost as di hot geret mama-loshn!
+<[Kevin] APPERT> Silly Systems
+<[Gary] GARY-S> Sun
+<[Jax] FIGCHAPTERS> Gary ... no. It is a symmetric or something.
+<[Jax] FIGCHAPTERS> Heavy iron.
+<[Jax] FIGCHAPTERS> Multiprocessors, BSD 4.3 so they can run PicoSpam.
+<[Dave] DHWEINSTEIN> Tsai Gezunt!
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> Is BSD in it's incarnations or AT & T V going to triumph ?
+<[Jax] FIGCHAPTERS> There is a new System V.
+<[Jax] FIGCHAPTERS> System V was just there to introduce Planned Obsolesence 
+into Op SYstems.
+<[Gary] GARY-S> There is also AIX and POSIX
+<[Jax] FIGCHAPTERS> BSD is hairy-chested UNIX.
+<[Jax] FIGCHAPTERS> Sys V is rosewater UNIX.
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> That's the way Sun is going
+<[Jax] FIGCHAPTERS> SUN-OS is probably the best of all for small minis ...
+<[Gary] GARY-S> It is closer aligned to BSD 4.3 by a long shot
+<[Jax] FIGCHAPTERS> Since SUN seems to understand what computers are for. 
+They're for moving the mouse around, storing huge program files, hooking up
+to transputers, and drawing string art and playing chess with.
+<[Gary] GARY-S> This is expensive dead space - say something in Forth
+<[Gary] GARY-S> or - let's go to the house
+<[Kevin] APPERT> : truisim ." unix sucks" ;
+<[Kevin] APPERT> or am supposed to have a space before the trailing " acording 
+to ANSI
+<[Jax] FIGCHAPTERS> Gnite, gang, jax gotta fly electronically. Next stop, 
+sausalito.
+<[Gary] GARY-S> What o/s do you like Kev
+<[Kevin] APPERT> how about after?
+<[Kevin] APPERT> stand alone polyFORTH if I have to buy it
+<[Kevin] APPERT> MyFORTH if I can roll my own
+<[Gary] GARY-S> no - I mean for multi-user environments , or do you also
+<[Gary] GARY-S> Why don't you post your terminal emulator to the library ?
+<[Kevin] APPERT> there's only one of me.  I don't recommend multi-user 
+environments.
+<[Kevin] APPERT> it's eccentric. (like it's author, some would say :) )
+<[Gary] GARY-S> so -
+<[Kevin] APPERT> and also anything I publish will come back to haunt me...
+<[Kevin] APPERT> as we saw with cornicopia Fig-Forth.  I don't wanna support 
+the thing!
+<[Gary] GARY-S> You forget, I've used some of your code - post it
+<[Kevin] APPERT> I'd have to clean it up a lot!
+<[Kevin] APPERT> what did you use?
+<[Gary] GARY-S> Is that a solid 'no' or a 'maybe' ?
+<[Kevin] APPERT> maybe, some day...
+<[Kevin] APPERT> I'm booked full time *3 until after a rocket launch in aug.
+<[Kevin] APPERT> what did you use of mine?
+<[Gary] GARY-S> that Micro-C for sure ... after I massaged it to fit my machine
+<[Kevin] APPERT> ever see MENU: in JFAR?
+<[Kevin] APPERT> that was fun
+<[Gary] GARY-S> I want to say 'yes' ,but I can't be 100% sure
+<[Gary] GARY-S> I know I saw it - I don't know if I played with it
+<[Kevin] APPERT> I never heard word one about that one.
+<[Gary] GARY-S> That's strange - makes you wonder, doesn't it ?
+<[Gary] GARY-S> I HATE writing to a vacuum !!!!
+<[Kevin] APPERT> there is a complete menu-bar-pull-down authoring widget in FPC
+<[Kevin] APPERT> I think any mail may have gotten swallowed
+<[Kevin] APPERT> I haven't heard anything from that fellow who wrote to Micro-C.
+  I wonder how he is doing.
+<[Gary] GARY-S> Even put-downs are better than being ignored, but very few 
+bother to write anymore
+<[Gary] GARY-S> He dropped me a 'thank you' saying after he wrote the letter...
+<[Gary] GARY-S> he mellowed the problem out and after thinking...
+<[Gary] GARY-S> things over, got the computer out and it flew for him...
+<[Gary] GARY-S> he likes it, and got it going before we wrote.
+<[Kevin] APPERT> I was thinking about an article about overflow flag in Forth 
+arith.
+<[Kevin] APPERT> I should ask Mr. Moore what he thinks about overflows.
+<[Gary] GARY-S> I wish some 'REAL' articles would start appearing again
+<[Kevin] APPERT> he didn't treat the issue at all that I know of.
+<[Kevin] APPERT> where does one publish?
+<[Gary] GARY-S> You KNOW I'm not going to say JFAR,,,
+<[Kevin] APPERT>  ACM com?
+<[Kevin] APPERT> what JFAR.
+<[Gary] GARY-S> so that leaves FD, CACM, Dr Dobbs and ESP
+<[Kevin] APPERT> ESP?
+<[Kevin] APPERT> computer language, also
+<[Gary] GARY-S> Embedded Systems Programming - Freeman whatever, same ones that 
+do CLM
+<[Kevin] APPERT> naaaaaa
+<[Gary] GARY-S> then you have narrowed to CACM and FD
+<[Kevin] APPERT> FD probably won't look that good on Vita, though
+<[Kevin] APPERT> and CACM prob. won't be interested in discussion about 
+overflow.
+<[Gary] GARY-S> ACM will have a SigForth newsletter - ask Dan Miller, george 
+Shaw
+<[Kevin] APPERT> what do you think about overflow?
+<[Gary] GARY-S> You won't get good results with it
+<[Kevin] APPERT> you mean nobody's interested?
+<[Gary] GARY-S> It is no improvement over underflow
+<[Kevin] APPERT> oh, you were kidding.  I see
+<[Gary] GARY-S> no ! it would make a good article !!! write it
+<[Gary] GARY-S> kev - I've got to go, sorry
+=== End of Steno notes. ===
+
+

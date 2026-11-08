@@ -1,0 +1,243 @@
+
+
+
+ Minutes of the Special GEnie Forth RT Conference with Jim Callahan,
+ president of Harvard Softworks. Jim discussed FOOPS, his company's
+ Object Oriented Language addition to HS/Forth.
+
+ Entire contents of this transcript copyright (c)
+ 1991 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 10/10/91   Time: 22:44EDT
+Attendees:
+[GARY-S]  <------------- Moderator SysOp
+[[JIM] FIGGUEST] <------ Special Guest, Jim Callahan
+[[ROBERT] R.GESSWEIN1]
+[[Len] NMORGENSTERN]
+[[Dennis] D.RUFFER]
+[[Dave] OLORIN]
+
+Minutes:
+<FIGGUEST> is here.
+<[JIM] FIGGUEST> Looks like I'm all ready.
+<GARY-S> super - no attendees yet, so relax
+<R.GESSWEIN1> is here.
+<GARY-S> we are just getting set up for a guest conference - hang around
+<GARY-S> Hi Len - welcome
+<[Len] NMORGENSTERN> Hi all
+<GARY-S> Thanks Robert - do you program in Forth ?
+<[Len] NMORGENSTERN> Visit our Sunday Evening sessions
+<[Len] NMORGENSTERN> which are designed for beginners
+<[Len] NMORGENSTERN> 8:30 Eastern time
+<[Len] NMORGENSTERN> (conducted by yours truly)
+<D.RUFFER> is here.
+<GARY-S> Hi Dennis - been busy I gather ?>
+<[Dennis] D.RUFFER> yea, busy aint the word for it...<sigh>
+<GARY-S> Today - You could have had mine ! I sent you a nasty-gram
+<[Dennis] D.RUFFER> me?  should I go read it?
+<GARY-S> no - when I thought I might still be on the road - that message
+<[Dennis] D.RUFFER> yea I read that...and was gonna be here on time...but then 
+saw your one tonight ;)
+<GARY-S> Let's get started and let any stragglers struggle
+<GARY-S>
+<GARY-S>      The GEnie Forth RoundTable is pleased to welcome as
+          tonight's guest, Jim Callahan, president of Harvard Softworks.
+          Jim has a BS in Physics and a MS in Computer Science and had
+          been doing well programming big computers when he got seduced
+          by ALTAIR, IMSI, and the IBM PC; only to be frustrated by a
+          lack of real languages. His problems really began when he
+          discovered Forth - an extensible incremental compiler that
+          obsoleted even mainframe languages - or would give a decent
+          implementation. OPPORTUNITY !
+         
+          He developed HS/FORTH to be fast, expandable, complete, and 
+          bury the dinosaurs! The dinosaurs still roam beneath the gloss of
+          turbothrusters and windows while Forth development continues at
+          a pace Jim sees as slow. Ten years later He is still plugging away
+          polishing, adding here and there, including OOP. Harvard Softworks
+          Forth is the highly respected result. Please welcome Jim Callahan.
+           .. .. .. .. .. .. ga Jim
+         
+<[JIM] FIGGUEST> Thanks for the intro.
+                 I'll begin by claiming that raw Forth has the
+                 best potential (and about the worst features)
+                 of any language I know. That mustard seed of
+                 potential, however, lets you add ANYTHING that
+                 you need for any given job, and add it just as
+                 effectively as in languages dedicated to that
+                 feature. Object Oriented Programming is one such
+                 feature. The problem with OOL's is that they put
+                 you in a straight jacket and complicate one part
+                 of a program while they simplify another. Patches
+                 for C and other languages, while they provide
+                 useful features, are somewhat awkwardly integrated
+                 and can in no way be optimized or extended for
+                 specific situations. A Forth OOL can be customized
+                 as needed, and exhibit negative overhead - the
+                 program can become faster and more compact than
+                 with conventional control structures, and much
+                 more readable. We regard OOL as the first real step
+                 toward a natural language computer language --
+                 we've made it all the way to:  subject verb
+                 Next? 
+<[Len] NMORGENSTERN> Could you give us an example of the syntax that
+                     your OOP system uses?
+<[JIM] FIGGUEST> Sure, let's assume you want to control a robot,
+                 much more general than windows. ..
+                     10 paces ALVIN FORWARD
+                 or a complex robot with multiple arms (inherited of
+                 course)    10 degrees ALVIN 's RIGHT-ARM RAISE
+                 or control a whole expedition:
+                          FOR-ALL MAR 's robot ADVANCE
+                 etc, piled higher and deeper.  
+<[Len] NMORGENSTERN> Thanx
+<GARY-S> Jim - this implies HS Forth/OOP can multitask
+         or multiuser or both ... can it and can it control say a
+         gang of steppers requiring precision movements all at once ?
+<[JIM] FIGGUEST> Yes HS/FORTH can multitask, and multi-user,
+                 although the examples cited don't necessarily
+                 imply that. Simultaneous precision movement
+                 also depends on hardware availability. That
+                 which is there is necessarily somewhat sequential. 
+<[Dennis] D.RUFFER> Jim, how deeply have you embedded your OO features into 
+                    Forth itself?
+                    Do you do any of your basics with them?
+                    and have they helped?
+<[JIM] FIGGUEST> We would like eventually to do a rewrite because there
+                 are many internal areas that would benefit greatly.
+                 Currently the FOOPS package is a 3 page file that you
+                 load when needed. 
+<[Dennis] D.RUFFER> What areas do you think would benefit then?
+<[JIM] FIGGUEST> File I/O certainly, the windowing and graphics package,
+                 and multitasking. The standard Forth user variable basis
+                 for multitasking is most inadequate. Could also get into
+                 math and formulas - but by then it isn't looking much
+                 like Forth anymore. The only feature we'd never consider
+                 scrapping is interactive incremental compilation itself.
+<GARY-S> Since Forth is synchronous in nature what method do you employ for 
+         multitasking - round-robin would be less painful but harder to 
+         control I would think.
+<[JIM] FIGGUEST> HS/FORTH supports both round robin and interrupt driven
+                 multitasking. There are, of course, some reasonable limits
+                 on what may be done in the interrupt driven tasks. For
+                 instance, if the PAD is to be used, the interrupt driven
+                 task must have its own. 
+<[Dennis] D.RUFFER> Jim, could you tell us more about the features of your OOP?
+                    i.e. does it have late binding, etc.
+<[JIM] FIGGUEST> We believe that language features should be enabling
+                 rather than confining.  Let the programmer or manager
+                 create the restrictions as appropriate given experience
+                 and the situation. Along those lines, FOOPS allows you
+                 to encapsulate your objects. It makes sure that only
+                 valid messages are accepted, and only valid methods
+                 executed. Private data is just that, private - and
+                 inheriting objects can only directly access that data
+                 if an appropriate method has been created. There are
+                 however, many ways to send messages to objects. First
+                 are the simple syntactical outlines presented earlier.
+                 It is also possible to convert messages to id numbers
+                 or even method addresses and directly apply them to
+                 objects. Very useful for some table driven problems and
+                 for extensions like the FOR-ALL modifier.  I could go
+                 on till dawn, but I'd better give someone else a turn. 
+<GARY-S> FOOPS is obviously a superset of HS/Forth - or an application driven 
+         from HS/Forth. What does that do to HS/Forth's vaunted reputation as 
+         a speedy kernel ?
+<[JIM] FIGGUEST> Since the kernel isn't modified, it's just as fast as ever, 
+                 and the FOOPS extension is very efficiently organized so 
+                 that its execution has very little overhead. Usually less than
+                 doing the same routine with conventional logic. If you try to
+                 use it for something that is not naturally represented as 
+                 objects, perhaps a set of differntial equations, there might
+                 be some small overhead, but not much.If I looked at it closer,
+                 even diffy q's might benefit. Who knows? 
+<OLORIN> is here.
+<GARY-S> How would people interested in HS/Forth and FOOPS contact you for more 
+         information - address/phone/fax ?????
+<[JIM] FIGGUEST> Our phone number/answering machine/fax are all the same:
+                   (513) 748-0390
+                 Harvard Softworks
+                 PO Box 69
+                 Springboro  OH 45066
+<[Len] NMORGENSTERN> You say that FOOPS "allows" you to encapsulate
+                     objects. Then it is optional. I thought
+                     encapsulation was a requirement in an OOP system.
+<[JIM] FIGGUEST> While using FOOPS encapsulation and all other
+                 protections are inherent. But there are other
+                 facilities available, and ways of mixing them in
+                 unless your better judgement or your boss makes
+                 a rule agin' it. 
+<[ROBERT] R.GESSWEIN1> Do you have or need garbage collection, constructors/
+                       destructors and all that typical "OO" stuff?
+                       Are objects created on the fly and left on the stack 
+                       as parameters?
+<[JIM] FIGGUEST> Garbage collection is usually (NOT ALWAYS) an excuse
+                 for sloppy programming. It comes from the enslavement
+                 of OOL to those ephemeral windows ( 2 dimensional
+                 hierarchically limited robots with limited ancestries).
+                 However, it is possible to reuses objects, and ones
+                 that have been discarded could easily be put in a discard
+                 linked list. For those few situations that genuinely? benefit
+                 from garbage collection, we will include an add on utility
+                 that efficiently performs that function shortly.  
+<GARY-S> FOOPS, as you describe it, follows the PARC Smalltalk model rather 
+         closely - how close ? (approximations are fine <grin>)
+<[JIM] FIGGUEST> I've only briefly looked  at Smalltalk. I never could stand
+                 the straight jacket - and Smalltalk goes for a "cute" syntax
+                 that I couldn't much tolerate. I'm sure the underlying ideas
+                 are similar but I prefer a straightforward and extensible
+                 syntax.  
+<GARY-S> You mentioned subject verb order earlier - could you amplify on that
+         a bit ?
+<[JIM] FIGGUEST> From some of the talk I've heard various places I think
+                 that some people are confusing "object" as a thing with
+                 "object" of a sentence. I think our understanding and
+                 future extendability would be better served avoiding that
+                 and considering the "object" to be the "subject" of the
+                 sentences we write. Considering it the object is basically
+                 egocenter - the progammer/program becomes the subject, and
+                 that is very limiting once we need to go to the next step
+                 and write not merely: (not FOOPS)   RAISE ARM
+                 but:   (FOOPS some day)   ALVIN 's RIGHT-ARM RAISE CUP AND 
+                                           DRINK
+<[Len] NMORGENSTERN> I think that this may match your concept
+                     Object: Anything that may be apprehended intellectually
+                     (Random House Dictionary)
+<[JIM] FIGGUEST> Seems to me verbs can be apprehended intellectually. Things
+                 must have a cerain degree of specificity, as well as
+                 generality. There is more danger, and more immediate utility,
+                 in being to specific. The enslavement of OOL to windows is
+                 a good case in point. Windows can survive without multiple
+                 inheritance support, and with half baked multiple inheritance
+                 support -- and that has been one of the major flaws of
+                 early OOLs. 
+<GARY-S> Closing comments please, Jim
+<[JIM] FIGGUEST> I think we have only scratched the surface (global
+                 comment) in the evolution of OOL's, much as we
+                 have only scratched the surface in the evolution of
+                 Forth. In both cases most people are so busy trying
+                 to use the part that's already available to accomplish
+                 something that is needed immediately that there is no
+                 concerted effort to finish writing the tools. Most
+                 people fundamentally interested in the tools lack the
+                 organization to really forge for a long distance into
+                 new ground - and few individuals can really accomplish
+                 what an organized and well directed group can. In
+                 any case, I predict that the OOL path will have us
+                 programming  in something closely resembling natural
+                 language and clearly based on Forth within a few years.
+                 enuf said, and thanks for the invitation.
+<GARY-S> I was already aware that HS/Forth is a quality product. Mahlon 
+         Kelly and Nicholas Spies speak highly of it in "FORTH: A TEXT 
+         AND REFERENCE".
+         It was a pleasure to learn of its Object Oriented features, as 
+         well. 
+         Jim, on behalf of the GEnie Forth RoundTable, thank you for a great 
+         conference.
+<GARY-S> This conference is officailly closed.
+=== End of Steno notes. ===
+
+
+

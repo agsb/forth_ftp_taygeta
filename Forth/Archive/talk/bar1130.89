@@ -1,0 +1,376 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+ Date: 11/30/89   Time: 22:32EST
+
+Attendees:
+[GARY-S]
+[[Kevin] APPERT]
+[[Len] NMORGENSTERN]
+[[Robert] R.BERKEY]
+[[milton] M.FABERT]
+[[Wil] W.BADEN1]
+[[John] J.KNIGHT2]
+[[RUSS] R.MILLER8]
+
+ FIGGY BAR of 30 Nov 1989. The night's question is in support of Jack Brown's
+ search for a good teaching Forth. Do you think a minimal Forth or a obese
+ Forth is a better teaching tool ? Why ? ... this discussion became quite 
+ involved
+ Other items discussed include comm programs, Pascal Routines in Forth, OOF,
+ Forth's future (again), creating a program delay.
+ 
+Minutes:
+<[Len] NMORGENSTERN> Gary, I finally was able to upload
+<[Len] NMORGENSTERN> my Asilomar talk
+<[Len] NMORGENSTERN> It took 3 attempts! I must have a bad modem.
+<GARY-S> I saw the posting - it showed them still hidden. Are they ?
+<[Len] NMORGENSTERN> Should not be. I unhid them tonight.
+<[Len] NMORGENSTERN> about 90 minutes ago
+<GARY-S> It may NOT be your modem, what comm program are you using ?
+<[Len] NMORGENSTERN> Mirror III
+<[Len] NMORGENSTERN> I had the same troubles with Mirror II
+<GARY-S> hmm - that should be ok GEnie and pro-comm+ do not get along
+<GARY-S> kev
+<[Len] NMORGENSTERN> Hi Kevin
+<[Kevin] APPERT> Hi, Len
+<GARY-S> procomm works fine, but procomm+ throws up a lot
+<[Kevin] APPERT> Hi Gary
+<[Kevin] APPERT> Len and I like Mirror
+<[Len] NMORGENSTERN> That's interesting. I am going to buy a 2-way serial 
+switch
+<GARY-S> Len doesn't tonight
+<[Kevin] APPERT> he used to
+<[Len] NMORGENSTERN> so I can communicate from the Mac
+<[Len] NMORGENSTERN> I like the program, Kevin, but I am having trouble 
+uploading
+<[Kevin] APPERT> xmodem?
+<[Len] NMORGENSTERN> Don't know whether it is my program, my computer, or my 
+phone lines
+<M.FABERT> is here.
+<[Len] NMORGENSTERN> Hi Bob!
+<GARY-S> comon in Robert
+<GARY-S> Bob, just type /cha 2
+<R.BERKEY> is here.
+<GARY-S> Hi stranger
+<[Len] NMORGENSTERN> brb
+<GARY-S> Milt - it's cold your way tonite isn't it
+<[milton] M.FABERT> not too bad, I like it cool.
+<[Kevin] APPERT> 1) lean Forths have less to understand, sooner to the knee in 
+the learning curve
+<GARY-S> thanks for a response kev
+<[Len] NMORGENSTERN> About tonight's subject: I think there is an  optimum
+<[Len] NMORGENSTERN> Too lean or too fat = hard to learn
+<[Len] NMORGENSTERN> F83 may be just about right.
+<GARY-S> What IF you had to choose just one
+<[Wil] W.BADEN1> is here.
+<GARY-S> I know John Wavrick is using F-83 as his class kernel
+<[Kevin] APPERT> 2) Forth programmers should not get used to a bunch of "black 
+boxes" written by others.  They just arn't there in forth.  they are th
+e work of the devil.  they do !ALMOST! what you want.  They do it !ALMOST! as 
+fast as you need, and so on..
+<[Wil] W.BADEN1> hi gary, kevin, len, bob, milton.
+<[Len] NMORGENSTERN> Kevin, when you start out, the boxes should be VERY black
+<[Kevin] APPERT> nope.  not at all
+<[Len] NMORGENSTERN> Opening them up too soon is bad pedagogy.
+<[milton] M.FABERT> I second Lens motion.  However, an ample supply of example 
+code
+<GARY-S> explain your reasoning len
+<[Kevin] APPERT> if you arn't willing to understand the problem, you should not 
+use Forth
+<[milton] M.FABERT> for such things as imput formatting etc is needed.
+<[Len] NMORGENSTERN> Students have to explore step by step. Preferably on their 
+own
+<[Len] NMORGENSTERN> Forth is very good for this.
+<[Len] NMORGENSTERN> I find that students quickly become semi-expert in a few 
+weeks to
+<[Len] NMORGENSTERN> months, and even get ambitious enough to write their own 
+Forth.
+<[Kevin] APPERT> 3) Lean or fat, the SOURCE IS ESSENTIAL!!!  this includes VIEW,
+ or LOCATE or whatever you call it.  The watershead in File-oriented F
+orths, in my opinoin, was when Tom Zimmer added VIEW to a File-Forth.
+<[Len] NMORGENSTERN> I would start a beginner out with the stack, basic stack 
+ops, etc.
+<GARY-S> The much maligned Jupiter Ace had a great stack demo program that made 
+a super introduction to one of Forth's absolute basic features..
+<[Len] NMORGENSTERN> I would NOT talk about how the return stack is implemented 
+in assembler
+<[Len] NMORGENSTERN> until later
+<GARY-S> I believe stack comprehension is the root you MUST begin with
+<[Kevin] APPERT> 4) a tutorial and reference are also essential.  many 
+documenters don't seem to know the difference
+<[Len] NMORGENSTERN> <hear, hear>
+<GARY-S> interesting insight, kev
+<[Kevin] APPERT> I'll sell you the copyright chead, Gary. :)
+<[Kevin] APPERT> oops, cheap
+<GARY-S> awww - and I wanted it chead
+<[milton] M.FABERT> A good trace utility along the line of LMI's debug
+<[milton] M.FABERT> would help understanding whats going on.
+<GARY-S> at the beginning, milt, later, what..
+<[Robert] R.BERKEY> I use F-PC trace heavily, but it is also a crutch.
+<[Len] NMORGENSTERN> Agree, Milt but
+<[Len] NMORGENSTERN> I don't think that tracing is highly advanced
+<[milton] M.FABERT> Unfortuantely not.  But it can be quite enligtening
+<[Kevin] APPERT> I don't generally use trace, but it's probably easier than 
+drawing stack diagrams.
+<GARY-S> hmmm - berkey's name goes in the obese forth pile <sigh>
+<[milton] M.FABERT> to see the effect on stacks dynamically.
+<[Len] NMORGENSTERN> What I meant is that tracing is a good tool for beginners, 
+Milt.
+<[Robert] R.BERKEY> I want both the dumb and the smart tools.
+<GARY-S> Milton, again, would you introduce trace immediately, later ????
+<[milton] M.FABERT> make it avaliable it the teaching FORTH system.
+<[Wil] W.BADEN1> To me, tracing is a teaching aid, not a programming aid.
+<[milton] M.FABERT> we are talking about teaching begineers, LEN?
+<GARY-S> I think beginners using F-PC is a mistake
+<[Wil] W.BADEN1> hear, hear.
+<[Kevin] APPERT> 5) the best way to go (this is my conclusion) is to start with 
+a lean Forth, and make a fat Forth from it with tools the student adds
+<[Len] NMORGENSTERN> I am.
+<[Kevin] APPERT> why, Gary?
+<GARY-S> F-PC hides a lot of internals I think you MUST learn
+<[Wil] W.BADEN1> Yay, Kevin.
+<[Kevin] APPERT> hides?  the source is there, Gary
+<[Len] NMORGENSTERN> But the Forth cannot be too lean. Zen Forth would be a bad 
+one for starters!
+<GARY-S> what about pygmy ?
+<[Len] NMORGENSTERN> <Len has not checked it out>
+<[Kevin] APPERT> the first word they must learn is VIEW, and thier little P-P'a 
+must be wacked itXX  if they don't use it and DUMP, and other things to
+take the Forth apart and see what makes it tick
+<[milton] M.FABERT> How about teaching professional programmers FORTH?
+<[Robert] R.BERKEY> It would help to know what FOrth is.
+<GARY-S> I just think F-PC (and I will admit as I did to george Hawkins) I do 
+NOT use F-PC enogh to be knowledgable, .. I think it just makes it too easy 
+to ignore the guts
+<[Wil] W.BADEN1> Professional programmers are repelled by Forth; engineers love 
+it.
+<[Kevin] APPERT> if they want to, real pros suck it up by osmosis.  I have seen 
+it happen.  It happens very quickly
+<[Len] NMORGENSTERN> I have heard that too, Wil
+<[Len] NMORGENSTERN> It isn't that they can't learn it, Kevin
+<[Kevin] APPERT> why do you say F-PC hides internals, Gary?I didn't understand
+<[Len] NMORGENSTERN> It seems that they don't want to
+<GARY-S> The comment I recently got was 'I can't stand on my head a program !' 
+<groan>
+<[Len] NMORGENSTERN> That attitude is like the man who said, Why can't those 
+damn Frenchmen
+<[Len] NMORGENSTERN> quit speaking their crazy language and start speaking what 
+God intended,
+<[Len] NMORGENSTERN> that is English.
+<[Robert] R.BERKEY> Gary, do you mean that F-PC has made too many choices for 
+the programmer?
+<GARY-S> I am not saying they are NOT there, kev, I am simply saying you don't 
+become as involved with the internals... like automatic transmissions still
+have gears, but you are a hell of a lot more aware of them using a floor 
+stick shift
+<[Robert] R.BERKEY> The F-PC editor is a black box that resists exposing its 
+internals.
+<GARY-S> that's the point, bob
+<[Kevin] APPERT> oh gosh, sounds like an argument for blocks, with simple block 
+editors, Bob.
+<[Robert] R.BERKEY> It also almost useless for something other than its 
+designed purpose.
+<[Kevin] APPERT> editing?
+<[Len] NMORGENSTERN> <Len has tried them both & still prefers blocks>
+<[Robert] R.BERKEY> What Kev?
+<[Kevin] APPERT> huh?
+<[Robert] R.BERKEY> I'm getting overlap between typing and responses.
+<[Robert] R.BERKEY> I don't know what you said.
+<GARY-S> by the same token I am falling in love with Roedy Green's BBL, but I 
+don't think I would have near the same appreciation if it were my first
+system <period>
+<[Robert] R.BERKEY> about block editors.
+<[Kevin] APPERT> oh.
+<[Kevin] APPERT> I said your statement...
+<[Kevin] APPERT> about the F-PC editor sounded like an argument for ...
+<[Kevin] APPERT> blocks and the simpler editors which accompany them.
+<J.KNIGHT2> is here.
+<[Wil] W.BADEN1> All the advantages that Forth had 6-10 years ago have melted, 
+except economy.
+<[Robert] R.BERKEY> Oh, I would want to use pieces of ZSED for other purposes
+<[Robert] R.BERKEY> such as editing blocks.
+<GARY-S> h'lo john - welcome to the fray
+<[Wil] W.BADEN1> Gross Forths are hari kare.
+<[Robert] R.BERKEY> I've never been excited about editing on blocks.
+<[John] J.KNIGHT2> Thanks
+<[Kevin] APPERT> what kind of computer do you have, Bob?  Perhaps you shold use 
+a communications program with a seperate compose window?
+<[Kevin] APPERT> what advantages have melted, Wil?
+<[Robert] R.BERKEY> Yes, I'm on with procomm.
+<[Robert] R.BERKEY> ???
+<[milton] M.FABERT> Sometimes one wonders if there is too much emphasis in 
+teaching..
+<[Wil] W.BADEN1> Immediacy, intimacy, expansibility.
+<[milton] M.FABERT> how to build a FORTH system instead of programming
+<[milton] M.FABERT> applications in forth.
+<[Kevin] APPERT> isn't it, still?
+<GARY-S> t-r-a-n-s-p-o-r-t-a-b-i-l-i-t-y
+<GARY-S> or was that always a myth
+<[Wil] W.BADEN1> Hell no, C is much more portable.
+<GARY-S> IF it adheres to K&R
+<[Len] NMORGENSTERN> Milt, the pedagogical problem is finding an application
+<[Robert] R.BERKEY> FIG was the peak of Forth transportability.
+<[Len] NMORGENSTERN> that is simple enough for a beginner to prorgram
+<[Kevin] APPERT> nope.  there are no C's for :  1802, PACE, PDP8, ...
+<[Len] NMORGENSTERN> but interesting enough to get her/him excited.
+<[Wil] W.BADEN1> I can use the same C programs on 4 different computers.
+<[Kevin] APPERT> ... the Massivly Parrallel Processor, and so on for more 
+computers than one can count.
+<[Wil] W.BADEN1> Quite true.  The future of Forth is Embedded systems and Forth 
+engines.
+<[Wil] W.BADEN1> I don't do hardware.
+<[Len] NMORGENSTERN> I agree & it saddens me because I have little interest in 
+those subjects
+<[Kevin] APPERT> and everything else which computers can be used for, Wil.  
+There are many examples of huge successes in areas outside those you menti
+on
+<GARY-S> WHY does everyone keep insisting Forth is good only as the smallest 
+common denominator - no wonder the language lost ground in astronomy
+<[Kevin] APPERT> The future of Forth is whatever people use it for.  
+Reliability of code built and tested in small modules is the unique selling 
+point to a world which does not know how to produce reliable code
+<GARY-S> or small effecient object code
+<[Wil] W.BADEN1> That is no longer unique to Forth.
+<[Len] NMORGENSTERN> Those who get PC Magazine should read John Dvorak's column
+<[Kevin] APPERT> I think it lost ground because students use what they are 
+taught, wether they are driving screws or nails with that hammer!!
+<[Len] NMORGENSTERN> He says that what we need to keep Microsoft & IBM from 
+dominating
+<[Len] NMORGENSTERN> the whole computer world is a consortium of the successful 
+small program
+<[Len] NMORGENSTERN> developers. He cites VP Planner as one of them. He 
+probably doesn't
+<[Len] NMORGENSTERN> know it was written in Forth -- J. D. is a notorious Forth 
+basher.
+<GARY-S> I've got unix sitting in front of me and I'm not that smitten with c
+<[Wil] W.BADEN1> I sure don't like unix.
+<[Kevin] APPERT> it is unique to Forth in that no other languages support the 
+testing of a small module!  (without building a scaffold for it)
+<[Robert] R.BERKEY> Interesting point.
+<GARY-S> I would argue kevin makes a valid point there
+<[Kevin] APPERT> my favorite answer to "Why is programming like sex?" : because 
+doing it with UNIX is no fun.
+<[Wil] W.BADEN1> OOP is a library of scaffolds.
+<[Len] NMORGENSTERN> UNIX are men who were cut out to be bachelors
+<[Len] NMORGENSTERN> <Len apologizes>
+<[Kevin] APPERT> it has been said here on this conf. that Forth is the only 
+language which interfaces smoothly with OOP (don't know myself)
+<GARY-S> If you are attempting to bait me into an argument about unix, save 
+your breath. I keep my two RT tasks seperate
+<[Wil] W.BADEN1> (Don't, Len. It was a good one.)
+<[John] J.KNIGHT2> Are these new bashes or have they simply been hoaned through 
+time?
+<[Wil] W.BADEN1> New to me.
+<[John] J.KNIGHT2> They sound familar to me <g>.
+<[Kevin] APPERT> are the responses to the FORML "Why is programming like sex?" 
+contest going to be uploaded, Wil?  (please, please, please)
+<[Wil] W.BADEN1> I'm a slow starter.
+<[Wil] W.BADEN1> Kev, I uploaded them Monday.
+<R.MILLER8> is here.
+<GARY-S> since you have mentioned oop a couple of times, I have to give dave 
+Weinstein another 'atta-boy' for his presentation of Object Oriented Forth
+in the last 'The Computer Journal' nice treatment
+<[Len] NMORGENSTERN> <Hear Hear>
+<[Wil] W.BADEN1> See section 12.
+<[Kevin] APPERT> oops!  thanks, Wil
+<[Wil] W.BADEN1> Category 12.
+<GARY-S> hi russ - welcome
+<GARY-S> cat 12 - flames ?
+<[Wil] W.BADEN1> Len, was the disk I gave you OK?
+<[Wil] W.BADEN1> Oh, I thought it was humor.
+<GARY-S> it's both, and I read the programming is like... piece
+<GARY-S> funny
+<[Robert] R.BERKEY> FLAMES HUMOUR =  ???
+<GARY-S> Category 12 in the BB, Bob
+<[Wil] W.BADEN1> Kevin, how did you hear about it?
+<[Kevin] APPERT> Len talked about it on Sunday, and Bob Smith and I had a good 
+chuckle today
+<[Wil] W.BADEN1> Ah.
+<[Robert] R.BERKEY> Do you work with Bob Smith?
+<[Robert] R.BERKEY> What is the application there?
+<GARY-S> Is all that Forth activity at Lockheed proprietary ?
+<[Kevin] APPERT> we buildspace instruments and ground support equip for 
+customers like NASA
+<[Kevin] APPERT> what do you mean by propietary?
+<GARY-S> can any of it be posted here
+<[Kevin] APPERT> if they pay for it, they own it.  we can generally share, but 
+it's a fair amoungt of work to get it approved
+<GARY-S> understood
+<[John] J.KNIGHT2> Len how do I create a delay. Say do job #1 wait 3 seconds do 
+job #2
+<[Kevin] APPERT> most of the stuff...
+<[Kevin] APPERT> we do isn't very ...
+<[Kevin] APPERT> general-interest...
+<[Kevin] APPERT> and when we do have...
+<[Kevin] APPERT> something, we generally try to share...
+<[Kevin] APPERT> with the rest of the Forth community.
+<[Len] NMORGENSTERN> John asked how to introduce a delay into Forth
+<[Len] NMORGENSTERN> What Forth do you use, John
+<[Kevin] APPERT> Bob Smith's FORML paper was Lockheed-sponsored work
+<GARY-S> do  loop
+<[Wil] W.BADEN1> Yes, I believe he mentions your name.  If not there, elsewhere.
+<[John] J.KNIGHT2> I've been using PYGMY but it's compatable with F83
+<[Kevin] APPERT> in the thank-yous at the end
+<[Len] NMORGENSTERN> In F83, Screen 2 of utility.blk has a word MS
+<[Wil] W.BADEN1> Yeah.
+<[Len] NMORGENSTERN> For example 200 ms will introduce 200 milliseconds of 
+delay.
+<[Robert] R.BERKEY> polyForth also has  MS
+<[Wil] W.BADEN1> Also ANS.
+<[Robert] R.BERKEY> F-PC has  TENTHS  and  SECONDS
+<[John] J.KNIGHT2> So I would say job1 200 ms job2
+<[Len] NMORGENSTERN> Right.
+<[Robert] R.BERKEY> It usually not as accurate as the name implies.
+<[Len] NMORGENSTERN> F83 has a variable FUDGE
+<[Kevin] APPERT> a delay should put a task to sleep in a multi-tasking 
+environment.  a DO PAUSE LOOP uses unnecessary resorces.  It's just polling!
+<[Len] NMORGENSTERN> You jiggle it until it's right.
+<[Robert] R.BERKEY> 20 ms jitter is common on the PC>
+<[John] J.KNIGHT2> What  is that?
+<GARY-S> That's your choice though - precidence or polling, usually
+<[John] J.KNIGHT2> OK
+<[Kevin] APPERT> the problem is the clock(interrupt service routine) has to be 
+equipped to wake you.
+<[Len] NMORGENSTERN> Yes, you could do it via DOS calls but that is complicated
+<[Kevin] APPERT> yuch!
+<GARY-S> and not very Forthish
+<[Len] NMORGENSTERN> Whether it is necessary for accuracy depends on your 
+application.
+<[Len] NMORGENSTERN> The hell with Forthish
+<[Len] NMORGENSTERN> Forth uses whatever resource is best to get the job done
+<GARY-S> ex-cuuuuse me :-)
+<[John] J.KNIGHT2> Not trying to be accurate. Just trying to design a Xmas card 
+on disk
+<[Robert] R.BERKEY> BIOS calls needs an AT or later.
+<[Len] NMORGENSTERN> (One of the beauties of Forth. In Pascal-Basic-C you have 
+to use what
+<[Len] NMORGENSTERN> they give you )
+<GARY-S> if you don't have ms or some similar pause you can write a do nothing 
+pause
+<GARY-S> last shots gentlemen
+<[Robert] R.BERKEY> VARIABLE DELAY
+<[John] J.KNIGHT2> Tell me about do nothing pause
+<[Robert] R.BERKEY> : WAIT  DELAY @ 0 DO LOOP ;
+<GARY-S> bob just did
+<[Kevin] APPERT> : SEX ( approx delay )   0 DO   1000 0 DO I I / LOOP   LOOP  ; 
+ is the right order of magnitude for delay in seconds
+<[Robert] R.BERKEY> OR
+<[Len] NMORGENSTERN> Similar in F83 but uses 2 nested loops
+<GARY-S> hahahahaha
+<[Robert] R.BERKEY> : WAIT   DELAY @ 0 DO   0 0 DO LOOP   LOOP ;
+<[Kevin] APPERT> oops.  should be I I / DROP      or you overflow stack!!!
+<GARY-S> if that's it, good nite all
+<[Len] NMORGENSTERN> In F83
+<[Len] NMORGENSTERN> : ms 0 ?do fudge @ 0 ?do loop loop ;
+<[Kevin] APPERT> there was some code I wrote which had an interrupt service 
+routine invoked every 4 secconds, and a different version which put out a
+ring count, called:   RING-4-SEX-SERVICE  (no kiddn)
+<[Len] NMORGENSTERN> John do you have any more questions?
+<[John] J.KNIGHT2> Not right now, thanks
+<[Len] NMORGENSTERN> Ok, come again.                                            
+<[Robert] R.BERKEY> A ring count?
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,308 @@
+
+>From rsk@pucc-j (Wombat) Wed Jan  8 23:29:20 1986
+Relay-Version: version B 2.10.2 9/18/84; site bdmrrr.UUCP
+Posting-Version: version B 2.10.3 alpha 4/15/85; site pucc-j
+Path: bdmrrr!rlgvax!seismo!lll-crg!qantel!ihnp4!inuxc!pur-ee!pucc-j!rsk
+From: rsk@pucc-j (Wombat)
+Newsgroups: net.micro,net.lang.c,net.lang.pascal,net.lang.forth
+|Subject: FORTH, the heat is on (sorry Don Henley) [long]
+Message-ID: <703@pucc-j>
+Date: 9 Jan 86 04:29:20 GMT
+Date-Received: 10 Jan 86 07:07:53 GMT
+References: <1191@princeton.UUCP> <681@pucc-j> <444@tekchips.UUCP>
+Reply-To: rsk@pucc-j.UUCP (Wombat)
+Distribution: net
+Organization: Purdue University
+Lines: 256
+Keywords: set oven temperature to 250 degrees
+Xref: seismo net.micro:14162 net.lang.c:7710 net.lang.pascal:453 net.lang.forth:
+
+In article <444@tekchips.UUCP> toma@tekchips.UUCP (Tom Almy) writes:
+>Normally I don't bother to flame back at flames, but this one has some
+>errors that I cannot ignore.
+
+Flame?!  You must be joking; I didn't even turn the torch on!  Oh, well...
+
+>In article <681@pucc-j> rsk@pucc-j.UUCP (Wombat) writes:
+>>
+>>There are severe problems with Forth that prevent it from being much more than
+>>an interesting (failed) exercise in threaded-interpretative language design.
+>>
+>>It is (1) compact, (2) modifiable at runtime, (3) extensible and (4) hard to
+>>read.  Some of these are also features/flaws of other languages, depending on
+>>your viewpoint. However, I'd like to point out the following:
+>
+>I fail to see how item (1) could be considered a "flaw", Forth is no more
+>modifiable at runtime (2) than most other languages except Pascal, (3)
+>is a subjective judgement.
+
+I did not claim that (1) was a flaw; for that matter, I did not claim that
+(2), (3), or (4) were flaws either.  I	claimed that (1) through (4) were
+properties of the language "Forth" and that they were features or, OR,
+flaws of other languages.  Please read what I wrote, not what you think I wrote.
+
+Onwards.  (2) is certainly true of Forth, and certainly not true of languages
+like C or Pascal, unless someone is really determined.	However, it appears
+to be a standard technique in Forth to write modifiable code.  It certainly
+is easy to do--much, much easier than in C or Pascal.  I have seen enough
+examples of such coding (by competent Forth programmers) to convince me
+that such practices are status quo in the Forth community.
+
+Now, then. (3) is most certainly not a subjective judgement; it is the core
+of the Forth philosophy.  If you do not understand this, then you lack a
+basic understanding of how Forth works.  I would be most curious to see
+an example of a Forth program (of modest size) which did not define any
+new "words" in order to perform a useful task.
+
+>>1. Forth is a lot harder to read than even Lisp or APL; at my former employer,
+>>where we used Forth in real-time control and number-crunching applications,
+>>we called it a "write-only" language.
+>
+>A lot of this has to do with programming style.  It is possible to write
+>readable Forth code, see the book "Thinking Forth".  And it is also possible
+>to write unreadable programs in any language.
+
+This is certainly true; however, the tendency to write unreadable code is
+accentuated in Forth because the language itself provides no help whatsoever
+to aid the programmer in writing clean code.
+
+>>2. There are many incompatible implementations of Forth, and even
+>>implementations from the same vendor behave radically different on
+>>different processors.
+>
+>The vendor in question must be Forth, Inc.  They strive to be incompatible
+>between their implementations.  This is not the case for products of
+>Laboratory Microsystems, MicroMotion, F83, and even the ancient FIG Forths.
+
+The vendor in question is *ALL* Forth vendors; the supposed Forth '79 standard
+would appear to firmly entrenched in quicksand.  My experience has been
+that porting Forth is far worse a nightmare than porting Pascal, C, or Fortran.
+
+>>3. The debugging support is non-existent.
+>
+>The public domain F83 has an interactive debugger.  A display-oriented
+>debugger is an option for Laboratory Microsystems IBM-PC product.
+
+I will amend my statement to be "almost non-existent".
+
+>>4. The primitive set of operators is *very* large; and it is not orthogonally
+>>constructed; the names are not even *close* to mnemonic; and many operators
+>>have uncontrollable side effects outside the modules in which they are used.
+>
+>Unfortunately, true, but most names are mnemonic and quite a few others are
+>understandable after you know the naming conventions.  For instance "." in a
+>name always means "print", "?" at the beginning of a name means it does
+>something conditionally, and "?" at the end of the name means it leaves a
+>boolean result.
+
+"understandable after you know the naming conventions" is an excuse; it is
+similar to claiming that the selection of "der", "die" or "das" for the
+definite article is understandable once one knows the naming conventions
+of German.  Both claims are utter nonsense; knowledge of N Forth operators
+does not appear to lend significant aid when attempting to decipher the
+meaning of a newly-encountered operator.  [...any more than knowing that
+doors are feminine and cars are neuter helps predict what German grammar
+will consider elevators to be...]
+
+The problem of operator overlap is even nastier, however; I can't recall
+ever seeing a language where there are so many ways to do the same thing,
+each of which has different obscure side effects from the other.
+
+>>5. Forth is not structured, typed, or anything like that.  When
+>>using Forth, you may forget anything you learned from Software Tools, or
+>>Elements of Programming Style, or Niklaus Wirth, or, roughly speaking,
+>>the last 15 years of evolution in programming techniques.
+>
+>Well it is structured, at least as far as control structures are concerned.
+>There are no "gotos".  Provided control structures are:
+>1. IF statement, with optional ELSE.  Never any ambiguity of association
+>   between IF and ELSE like in some other languages.
+>2. DO LOOP structure.	Most implementations have a variation which allows
+>   skipping the block if it is to be executed zero times.  Loop can count
+>   up, count down, or count by a varying amount (positive negative or zero
+>   on any particular iteration).  A command exists to exit a loop in the
+>   middle.
+>3. Two iterative structures, one with conditional exit at the end, and the
+>   other with conditional exit anywhere in the middle.
+>4. Most implementations have a CASE statement.  For those that don't, it
+>   can be easily (and in an implementation independent way) be added.
+>
+>Data structures can be added as desired.
+
+You, my lucky friend, are working with a Forth onto which someone has
+added some semantic sugar.  However, possession of a do-loop, a couple
+of conditionals, and an iterative structure does not make Forth a
+structured language.
+
+"Date structures can be added as desired", eh?  Well, one could argue that
+they could added to assembly language as well.	The point is that Forth
+does *NOT* have any, and most of us with some programming to do have better
+ways to occupy ourselves than figuring out how to introduce Forth to
+concepts like struct{} or union{}, or array[] for that matter.
+
+I don't even want to think about what it would take to implement
+type-checking; I'd rather rewrite tar(1) in Lisp.
+
+>>And now, I'd like to quote another article that appeared at the time:
+>>
+>>> From: libes@nbs-amrf.UUCP
+>>> Newsgroups: net.ai
+>>> Subject: Forth for AI?  NO!
+>>> Date: Sun, 22-Jan-84 19:54:16 EST
+>>>
+>>> 1) Manipulating programs as data in Forth is difficult.  Also
+>>> impractical, since it has no garbage collection.  You can't expect to
+>>> service high-priority interrupts if you've just run out of space!
+>>> (Forth's primary use is for real-time control.)
+>
+>But this was cited as undesirable in (2).
+
+Wrong.	Also note that manipulate != modify.
+
+>>> 2) Can't pass arguments explicitly.  You must pass information by
+>>> putting it on the stack.  Since I pushed the 2nd arg at line 6 and then
+>>> used the stack to do something else, what are the odds that at line 23,
+>>> I can push the 3rd arg on the stack and then call that function with
+>>> confidence?  Reading code, trying to find out what the arguments are, is
+>>> like counting parens in Lisp, except now imagine that every atom in the
+>>> list manipulates the count of ('s and )'s!
+>
+>You can pass arguments in variables and there are several published techniques
+>to create named parameters (so they can be accessed without stack
+>manipulation).  But the biggest flaw here is "line 23".  The proper Forth
+>programming technique is to have lots of small functions rather than a few
+>big ones because subroutine calls are cheap.  I have a 5000 line Forth
+>application, and there is only one function longer than 15 lines and no
+>more than a dozen longer than ten lines.  Forth code can also be DOCUMENTED
+>(anybody know what that word means?) with comments as to stack contents.
+
+Oh, bullshit.  The point, again, is that Forth, as is, does not have these
+"published techniques".  Such claims are akin to asserting that C has runtime
+checking because one vendor has an implementation of it.  I can't speak for
+the other correspondent, but I'd prefer to discuss the *language*, not the
+amalgamation of all available features from all vendors.
+
+Let's do some arithmetic.  5000 lines of code; discarding your one very
+long function and generously assigning a length of 10 to the remaining
+functions yields a count of 500 functions.  500 FUNCTIONS!!  Is *this*
+the way to write a program?!  No thanks.  Incidentally, I think the
+original correspondent's point is valid even if "23" is replaced with "9";
+you are once again grasping at straws.
+
+"DOCUMENTED...with comments as to stack contents"  Hmm, I seem to remember
+doing a fair amount of that when writing assembler; doesn't sound like much
+of an improvement to me.
+
+>>> 3) Forward referencing (including recursion) is not normal and must be
+>>> done by manipulating compiled code.  Bye-bye portability. Indeed, I have
+>>> never seen anyone write a recursive Forth routine (although it can be
+>>> done).  Bye-bye AI.
+>
+>True, it is not normal, but it can be done in a portable fashion without
+>manipulating compiled code.  I have written many recursive Forth routines,
+>and recursion is *VERY* efficient in Forth.  Also Forth metacompilers and
+>compiler do allow for forward referencing at the cost of not being
+>interactive (in other words "batch").
+
+"efficient" is a nice buzzword, but efficiency is not the issue here.
+The lack of a clean, built-in, and natural way to do recursion in Forth is.
+
+>>> 4) Code is generated as you type (or load) in Forth source.  Hence you
+>>> lose all possible benefits of a good compiler, i.e. type-checking,
+>>> optimization, etc.	As for syntax checking, forget it.  The syntax of
+>>> the language is so simple, almost every combination of Forth words is
+>>> syntactly correct (although meaningless).  If you mistyped that last
+>>> word, you'll find out at run-time.
+>
+>Control structures are checked for syntatic correctness. Compilers can
+>do optimizations and produce code quality comparable with that of C or
+>Pascal.  If you mistype a word you find out right away (assuming that
+>the word is not a valid Forth word).
+
+The checking of control structures for correctness does not cover all
+bases; it covers very few of them.  There is, as stated, no type-checking
+either; and mistyping a word that *is* a Forth word is the very problem!
+
+>>> 5) Scoping, name-space rules are terrible.	For example, it is impossible to
+>>> write a subroutine that uses variables that are *guaranteed* to be local.
+>>> (How can you ever be confident about your code?)
+>
+>You CAN write subroutines that use variables guaranteed to be local (technique
+>requires writing of three one-line routines which localize the scoping of
+>selected words (which may not only be variables but also other subroutines).
+>
+>You can also write code without worrying about redefining existing routines
+>(no reserved words or function names) since your definitions do not alter
+>the operation of the existing functions.  Thus if your application were so
+>brash as to redefine the operation of "+", the Forth nucleus would continue
+>to use the original version.
+
+Uh-huh.  Note that subsequent function definitions would, however, use the
+new operator "+".  Note also that scoping is built in to most languages,
+so that kludging it in isn't required.
+
+>>> 6) The emphasis on Forth is on speed at the cost of everything else. For
+>>> example, if you can keep track of all data by storing it on the stack,
+>>> great, but if you have to use a variable (no less a structure) you start
+>>> losing efficiency.	Using a variable in Forth is akin to using those
+>>> features in PL/I that are great but really slow the runtimes down.	And
+>>> Forth simply isn't fast to begin with. Any decent compiler can do better
+>>> (then "threaded-code").
+>
+>Using variables in Forth is frequently faster than stack manipulation.
+>Forth compilers can handle variables with the same efficiency as other
+>compilers.  No Forth programmer will ever claim that threaded-code is faster
+>than true compilation, but it is faster than other interpreted languages such
+>as BASIC LISP and Smalltalk.  The use of threaded code allows for very fast
+>and incremental compilation which greatly reduces the edit-compile-test
+>cycle time of program debugging.  If the final program is insufficiently
+>fast, then portions of it can be compiled or rewritten in assembly language.
+
+Nonsense.  Using a variable in Forth results in slow execution, and yields
+ugly code, since Forth abhors non-stack parameters.  The use of threaded
+code has next-to-zero influence on the edit-compile-test cycle; as most
+folks familiar with software engineering know, there are a couple of blocks
+in there marked "think" that represent the largest expenditure of time.
+Forth does nothing to reduce the time spent there.
+
+----------
+To borrow from some anonymous person on the net from a while back,
+Forth is like falling in a hole, crawling out after a protracted
+struggle, and then saying "Look at the great thing I've done."
+I don't think anyone should take this language seriously; it's just
+too hard to learn, too hard to use, and too antiquated.
+--
+Rich Kulawiec  pucc-j!rsk or rsk@asc.purdue.edu
+
+
+>From fetrow@entropy.UUCP (David Fetrow) Sat Jan 11 00:55:45 1986
+Relay-Version: version B 2.10.2 9/18/84; site bdmrrr.UUCP
+Posting-Version: version B 2.10.3 4.3bsd-beta 6/6/85; site entropy.UUCP
+Path: bdmrrr!rlgvax!seismo!harvard!talcott!panda!genrad!decvax!decwrl!pyramid!pe
+From: fetrow@entropy.UUCP (David Fetrow)
+Newsgroups: net.micro,net.lang.forth
+|Subject: Re: FORTH, the heat is on
+Message-ID: <241@entropy.UUCP>
+Date: 11 Jan 86 05:55:45 GMT
+Date-Received: 14 Jan 86 06:46:29 GMT
+References: <1191@princeton.UUCP> <681@pucc-j> <444@tekchips.UUCP> <703@pucc-j>
+Distribution: net
+Organization: UW MathStat, Seattle
+Lines: 14
+Keywords: ENOUGH
+Summary: Info content going down
+Xref: seismo net.micro:14201 net.lang.forth:367
+
+
+ At this point the debate seems to be getting nasty. FORTH is certainly
+interesting (whether it's "failed" or not) and FIG will GIVE away an
+implementation. Whether it's worth using is a matter of taste and application.
+If it's useful it's very easy to find out, if it's lousy it's also easy to
+find out: try it (on something non-critical).
+ If nothing else it's an interesting experience, as evidenced by this debate.
+
+--
+
+  -"Daphnia Dave" Fetrow
+
+

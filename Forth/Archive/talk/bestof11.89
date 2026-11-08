@@ -1,0 +1,212 @@
+
+
+                
+                    Best of GEnie..... November 1989
+          News from the GEnie Forth RoundTable by Gary Smith
+
+   Once again it is time to enjoy some comments from recent GEnie Forth 
+RoundTable guest conferences. Since I am charged with both the priviledge
+of producing this column and arranging the guest conferences I must admit
+I truly enjoy these recaps. They give me an opportunity to recall some of
+the pearls of wisdom I have been audience to, but perhaps failed to properly
+savor. There are most definitely some pearls to be gathered.
+ 
+   With the possible exception of conferences such as FORML, Rochester,
+euroFORML and now Australian Forth Symposium and SigForth I can not imagine
+where else one could hope to be exposed to the views of such a variety of
+Forth luminaries. Frankly, I doubt even those afford such a front row seat
+even if it were possible to attend any or all these worthwhile functions.
+If you have not participated in one of these conferences I encourage you
+to do so. The words remain for your inspection in the GEnie Forth Library,
+but the intamacy of the moment is missed forever.
+  
+   Still, we have now, so sit back and enjoy with me these moments of
+insight. The guests will be the creators of VP-PLANNER+, Jim Stephens,
+Kent Brothers, Doug Lankshear and Chris Worsley; Steve Roberts, vagabond
+computerist and columnist with John Bumgarner of Information Appliance Inc.
+and Terry Holmes creator of tForth; Tom Zimmer, creator of FPC, the public
+domain Forth for PC's with greatly extended features; Roedy Green who created
+the 32-bit public domain BBL Forth and Abundance business manager; Chuck Moore,
+Forth's creator and owner of Computer Cowboy; Phil Koopman Senior Scientist 
+for Harris Semiconductor and author; and Robert Smith of Lockheed Palo Alto 
+and Forth math guru.
+  
+   In the past I have presented the guests opening remarks, used to set
+the tone of their respective conference. This format has been well accepted
+by the readers so the expression, "If it ain't broke, don't fix it." seems 
+appropriate. 
+  
+  Jim Stephenson (with Kent Brothers, Doug Lankshear, Chris Worsley)
+  May 1989
+  Stephenson Software
+
+ First, a short blurb about VP-Planner for those who may not know it.
+ VP-Planner is a spreadsheet/database program for the IBM PC best known 
+ for its Lotus 1-2-3 compatible spreadsheet linked with powerful dBASE 
+ and multidimensional data file handling capabilities.  It was initially
+ developed in Forth by Jim Stephenson, Dave Mitchell, and Kent Brothers of
+ Vancouver, Canada, and was first released in September 1985 by Paperback
+ Software of Berkeley, CA.  VP-Planner Plus, released in October 1987,
+ added more database features, 1-2-3 release 2 compatibility, back-
+ ground/priority recalculation, and multi-step undo.  The product has been
+ translated into more than 10 languages and is sold world-wide.  Further
+ development on as-yet-unannounced features continues.
+
+ The development team now also includes Doug Lankshear, Rick Falck, Bob 
+ Tellefson, and Chris Worsley. Jim, Kent, Doug, and Chris have joined the
+ conference this evening to share ideas and answer questions about either
+ VP-Planner or the Forth development system.  The Forth system has the
+ following characteristics:
+                  1. direct threaded with NEXT coded in-line;
+                  2. top-of-stack in BX register;
+                  3. compiler words and headers in separate area of memory;
+                  4. text in separate area for foreign language translation;
+                  5. colon bodies separated from machine code;
+                  6. hybrid colon/assembly words;
+                  7. local variables and subwords;
+                  8. overlays;
+                  9. extensive Forth-level breakpoint/trace facility;
+                 10. IEEE 64/80-bit software floating point & 80x87 support.
+         
+  Steve Roberts (with John Bumgarner and Terry Holmes)
+  June 1989
+  Freelance writer on tour somewhere on Winnebiko
+  
+ You probably already know about the Winnebiko so I won't go into much detail
+ on the general stuff lifestyle, solar, etc.  The emphasis here is on the 
+ control system, and I'm delighted to have with me (electronically) John and
+ Terry,  who can answer the substantial questions about the new FORTH laptop
+ and the details of its implementation.
+ 
+ Essentially, I am using this machine as the hub of a real-time control
+ environment in the new bike in charge of a large "resource bus" that carries
+ all audio, serial, and digital information in the bike.
+
+  *note: The projected release for Information Appliance's Swyft Forth Laptop
+         was first quarter 1990. gls
+       
+  Tom Zimmer
+  June 1989
+  Senior Programmer at Maxtor and Creator of F-PC Forth    
+
+ I'm not sure what to say leading after such a nice intro, but I will say that
+ I am glad to be invited to this round table and the the oportunity to learn
+ more about genie.
+
+ My latest efforts have been in the area of cleaning up F-PC for a new release.
+ The first and perhaps the most significant is the adjustment of F-PC to use
+ multiple directories for its sources, rather than keeping five billion files
+ all in one directory. F-TZ as it is called for the moment uses a Forth PATH
+ as suggested from the east coast forth board.
+    
+  Roedy Green
+  July 1989
+  Owner of Canadian Mind Products and creator of BBL Forth        
+
+ There are two sorts of things you probably would be interested in hearing
+ about.
+                  1. the internals of the 32 bit BBL Forth compiler.   
+                  2. The externals of the Abundance database language.
+
+ Abundance is more interesting because I was able to experiment with some
+ novel concepts in languages. BBL is interesting from the point of view
+ of fanatical attention to detail.
+
+ ...Jaunting is the most interesting (feature of Abundance). It is the ability
+ to run backward in time. Arrays and files use identical syntax.  There are no 
+ subscripts. Like a spreadsheet, values automatically redisplay on the screen
+ when recomputed.
+       
+  Chuck Moore
+  August 1989
+  Originator of Forth and owner of Computer Cowboy
+
+ Pre-conference  Prelude:
+ The 'Future of ...' is a catchall for everything having to do with
+ Forth.  Its current place in the world is impossible to determine -
+ and largely irrelevant.  Forth is a valuable tool - and will remain
+ so - regardless of the number using it.
+ 
+ Recently I was obliged to use conventional CAD software.  I am
+ dismayed that it hasn't evolved from the 60's.  Forth is the only
+ hope for improved software, ignoring the ever-hopeful AI and
+ neural nets.
+ 
+ Computers are getting ever more complicated, in violation of the
+ first principle of human activity: KEEP IT SIMPLE .  In respect for
+ this unique forum - 25 words or less - I offer the following
+ statements to challange/guide question/comment.
+ 
+ 1- I like classic Forth.
+ 2- This includes BLOCKs - simpler, faster, better than files.
+ 3- VOCABULARY has been mis-used by FIG-Forth.  It is a poor
+    substitute for fast compile.
+ 4- Forth must evolve.  Standards are very dangerous.
+ 5- ANSI committee deserves thanks for 'above and beyond call of duty'.
+    Theirs is the impossible dream.
+ 6- Marvelous opportunity for non-ANSI Forths.
+ 7- Forth architecture is superb for micro (macro) computers.
+    Many variants should be explored.
+ 8- Three keys are necessary and sufficient.  QWERTY is a joke.
+ 9- Marvelous opportunity for non-IBM PCs.
+ 10- Work smart, not hard - Forthought.
+ 11- A program that can do everything (ie, SPICE) can do nothing
+     well, fast, easily.
+ 12- PUSH and POP are better names for >R and R>.
+ 13- Multiply is a much over-used arithmetic operation.
+     ie, FFT can be replaced by Walsh-Hadamard.
+ 14- Floating-point is a bad joke.
+ 15- Withold source code only when you're ashamed of it.
+
+ Forth is the best computer language. I'll be using it another 20 years with
+ a few changes.
+   
+
+  Phil Koopman
+  September 1989
+  Senior Scientist, Harris Semiconductor and author of
+  "Stack Machines: The New Wave"
+
+ Some of the things I have found out about stack machines go against widely
+ held (at least, outside the Forth community) ideas.
+  For example stack machines:
+     - don't need stacks bigger than 16 to 32 elements
+     - need  not have a significant context switching time
+     - can cycle their clocks every bit  as fast as (or perhaps faster than) 
+       RISC processors 
+
+ One thing I run across continually is that folks confuse the requirements for
+ real-time embedded control with those of workstation environments.
+
+ One of my professional goals is to understand more about Forth-derived stack
+ computers in order to help them gain acceptance in applications for which they ..
+ are well suited.  Stack machines seem to be superb at real-time embedded
+ control (although I still want to do more research  to quantify this notion). 
+ But, what about other application areas?  If stack machines are the answer,
+ what are the questions? ..
+   
+  Robert L. Smith
+  October 1989
+  Research Specialist with Lockheed, Palo Alto
+
+ THANK YOU.  For floored division, it helps to focus on the modulus or
+ remainder rather than the quotient.  Most users use  only positive
+ argusments, so floored or non-floored give the same results.  For almost all
+ cases that I know of, if you have at least a negative numerator, you probably
+ should use floord division.
+
+ For Floating Point:
+    (1) should Forth have it at all? and 
+    (2) If so, should it be in the Standard? And 
+    (3) IEEE floating point?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -          
+    
+   It is never too late to begin participation in the guest conferences. They
+are usually scheduled for the third Thursday of the month except for the last
+three months of the calendar year when they are scheduled for the second
+Thursday to avoid conflict with the holidays. Obviously there are exceptions,
+so it is always wise to note the current schedule that appears each day you
+log onto the GEnie Forth RoundTable. I might add without attendees (with 
+questions) it is pointless to schedule these wonderful guests. 
+
+

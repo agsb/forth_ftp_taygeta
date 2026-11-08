@@ -1,0 +1,223 @@
+
+Boston Forth Interest Group ANS Forth Group
+c/o Dave Petty
+Box Two
+Cambridge, MA  02140-0001
+
+Dear BFIGAFG:
+
+The purpose of this letter is to respond in more detail to your letters to us expressing 
+concern over the developing draft standard.  I also enclose [posted on BBS in Nov.] a 
+public response that I drafted for the January Forth Dimensions, which will also publish 
+your October letter to me.  Many of the comments that follow were contributed by other 
+members of the TC; you may properly consider this as a group response.
+
+In the first place, please be assured that we do listen to your many contributions, both 
+formal proposals and general comments.  We have carefully considered all issues raised.  
+Some of your substantive proposals passed (e.g. the big file proposal, passed at the last 
+meeting).  In many cases, issues raised by BFIG had already been considered at length at 
+previous meetings.  The committee has been meeting for 3 1/2 years, and few stones 
+have gone unturned.  Many committee decisions have resulted from long deliberation and 
+carefully-crafted compromise between competing factors, and were ultimately decided by 
+"consensus" voting rules.  Such decisions are unlikely to be reversed lightly, unless new 
+facts are presented.
+
+The TC has made strenuous efforts to identify the needs felt most strongly by various 
+segments of Forth users and implementors, by such methods as public debate, study of 
+existing systems, and surveys.  The ANS process emphasizes fairness, openness, and 
+representation.  Anyone can become a committee member, and the committee has 
+attempted to minimize the cost of membership by frugal practices.  The committee voting 
+rules require consensus on all issues; a simple majority is not sufficient to pass a 
+proposal.  The committee membership includes vendors, system programmers, and users 
+in approximately equal numbers.  The committee has tried to balance the needs of all 
+these constituencies.
+
+This places us in the difficult position of having to listen to many voices in addition to 
+yours, trying to reach a consensus that encompasses as many points of view as possible.  
+Set against your avowed minimalist standards are many other people who really do 
+believe we should add hundreds of words to tackle every conceivable issue, and we have 
+resolutely resisted any temptation to do so.  We've received a number of proposals 
+containing over twenty words, none of which we've passed.  Not only are we far from 
+offering a list of "all known words," we aren't even listing a significant fraction of the 
+words offered by most implementors represented on the TC.
+
+Proposals to add words to the standard are subjected to careful scrutiny and must be 
+passed by a "near consensus" vote.  The "don't add new words" sentiment is well-
+represented on the committee.
+
+In many cases, the philosophies you articulate are generally shared by the TC; we do 
+differ in many cases in where the lines are to be drawn.  Specifically, we have attempted 
+to factor the standard into a "minimum" core wordset with optional additions.  We've 
+spent many hours wrestling with the exact composition of this core wordset, and we aren't 
+finished quite yet.
+
+The committee is aware of the strengths and weaknesses of other languages, but is not 
+trying to "make Forth look like C."  The argument that "C has this function" has on 
+occasion been interesting, but not compelling; a more compelling argument has been that 
+"virtually all widely used Forth implementations provide some form of this function," which 
+has been true in many instances where we have added words that distress you.  The 
+feedback that we get from Forth users (vendors from their customers, individual users 
+from their own experience and that of their colleagues) is frustration at the inability of 
+implementors to reach consensus on functions such as, for example, >COLROW (which 
+virtually all implementors today provide, under various names and similar semantics), and 
+a demand for standard ways of doing such common things.
+
+The committee recognizes that computing environments have evolved substantially in the 
+last 10 years, and has added optional extension wordsets to increase Forth's utility and 
+portability in those environments.  The fact that some other languages already have 
+extensions for those environments does not weaken the strong distinctions between Forth 
+and those languages.
+
+You say that the reasons for the simplicity, clarity, and ease of Forth programming have 
+been forgotten.  Certainly "small number of words" cannot be the only advantage of Forth 
+over other languages, as Forth has always had significantly more commands than most 
+other languages.  Therefore, there must be other reasons unrelated to the number of 
+words, such as its interactive programming style, internal consistency and efficiency, and 
+extensibility.
+
+Regarding your concern that ANSI standards criteria do not apply to extensible 
+languages:  ANSI standards criteria address such issues as cost of compliance, openness 
+and fairness of procedures, continuity, and consensus.  These criteria are independent of 
+the particular nature of the language (extensible or not); we haven't seen in the ANSI 
+guidelines any preconceptions about what a language should look like or what it should 
+contain.  It is certainly true that extensibility creates some special opportunities; in 
+general, it has eased our task, rather than complicating it.  We are, for example, well 
+aware that many of the Core Extension words are easily implementable from Core words.
+
+We acknowledge that a central characteristic of Forth is programmer freedom.  Taken to 
+its logical conclusion, this raises the issue of whether or not it is appropriate to even 
+consider standardizing Forth.  This is indeed debatable.  The fact that a substantial 
+number of people have contributed time and money by participating in the X3J14 process, 
+both as members and observers, proves that many consider it appropriate.  And the fact 
+that previous standards have been widely followed, despite known flaws, proves that most 
+Forth implementors and users find standards more useful than limiting.
+
+We are also acutely aware that in view of the fact that most Forth programs control some 
+special hardware there will, in practice, be few fully portable Forth programs.  But there is 
+still great value of a standard in easing transitions from one system to another.  There is 
+nothing about a standard that limits a programmer's freedom (in Forth or any other 
+language) to do whatever is necessary to solve the problem at hand in the most effective 
+way.
+
+Portability of programmers is a realistic goal.  This can be achieved by requiring that 
+Standard Forth systems provide adequate documentation of Non-Standard words.  This 
+would be a powerful incentive for vendors to comply as closely as possible to the 
+standard.  We doubt that the requirement to document non-standard words encourages 
+vendors to minimize their number.  Successful vendors already document their non-
+standard words.  That hasn't reduced their proliferation.  In fact, in order to be successful 
+a vendor had better provide much more documentation of Standard words than the 
+Standard does; a standard is not intended to be documentation, let alone a tutorial for 
+new Forth programmers.
+
+Although a lot of Forth programs don't use any assembly language, it is a mistake to 
+assume that anyone on the TC expects most programmers to forgo use of assembly 
+language in future programming.  However, for those wishing to write a program that can 
+be transported more easily than is currently possible, we have adopted some 
+mechanisms to help minimize the need for assembly language, as well as what we call 
+"carnal knowledge," or assumptions about specific implementation strategies.
+
+The reason for adding new words is not only to avoid assembly language, however.  Other 
+reasons are to provide a common interface to system functions (e.g., files, memory 
+allocation), additional capabilities (e.g., floating point) and existing functions whose 
+usage has diverged.
+
+The fact that Chuck has reduced the size of his own version is of little bearing on the 
+issue.  Those of us who have worked with Chuck for many years know that he, like many 
+other Forth programmers, frequently changes his own personal Forth implementation, 
+often in ways incompatible with existing Forth community usage.  Chuck often uses 
+systems that are heavily customized for a particular hardware environment, and is 
+relatively unconcerned about the portability of programs to other systems.  I'm sure that 
+Chuck would be among the first to agree that many of his techniques are not appropriate 
+for a stable public standard.
+
+We are somewhat baffled by your assertion that having many words negates the 
+advantages of extensibility.  In the first place, "many" is pretty subjective in this context.  
+Is 135 Core words "many" in view of the fact that most commercially available Forths offer 
+on the order of a thousand, or that a significant application may require several thousand 
+words?  Surely this is the essence of extensibility.
+
+Based on feedback from implementors on the TC and those we've been in contact with, 
+we seriously doubt that vendors will necessarily feel constrained to offer all Core 
+Extension words or all optional wordsets.  We do expect that, to the extent that an 
+implementor offers similar functions, he will find it advantageous to move toward 
+conformity on those functions.
+
+If a user's extension is duplicated by a standard function, there is no advantage to 
+"reinventing the wheel."  The standard meaning increases the value of programmer 
+training because the knowledge of that function may be transferred to other systems.  If 
+the user's extension is not duplicated by a standard function, then the only disadvantage 
+of the standard function's existence is the reservation of the name.  The committee feels 
+that this is not a serious problem.
+
+Bear in mind that not only are extensions and optional wordsets not required to be 
+memory-resident, even Core words may be supplied in source code or "demand-loaded" 
+form.  Most vendors have such technology.  Therefore, the fact that the Standard 
+describes a number of functions in no way increases a required minimum kernel size; this 
+remains entirely under the control of the implementor.
+
+Despite the presence of some new words, we do not feel that we're creating a "different 
+language" or one that is profoundly incompatible with previous practice.  The TC has 
+taken great care to provide a migration path that does not require vendors to adopt 
+changes that break their customers' existing code.  New words have been added in cases 
+where:
+
+ a) In "previous Forth practice," standard words exist whose use is already incompatible 
+among different systems.  In this case, new names were chosen to provide precise 
+definitions of the same functions, without name conflicts for existing systems.
+ b) Previous standards have not attempted to solve a particular problem, yet numerous 
+existing implementations include solutions for that problem.  In this case, new words were 
+added with names and definitions that are consistent with the general "flavor" of existing 
+solutions, and which do not conflict with existing systems.
+
+Most of the new words are in optional wordsets.  The exceptions are those whose sole 
+purpose is to aid transportability (e.g., CELLS) and are thus useless if you can't count on 
+their presence, and those adopted to solve truly pressing problems brought to us by many 
+people (e.g., POSTPONE and INVERT).
+
+It is true that new documentation and training will be required.  However, this is a short 
+term effect.  In the long term, to the extent that the standard is adopted, learning time will 
+be reduced, because the amount of "relearning" necessary to move from one Forth 
+system to another will decrease.  Furthermore, reduction in system-to-system variation 
+will cause new texts to be more widely applicable.  New textbooks will be able to 
+document popular extensions as standard words, instead of being tied to particular 
+vendors' systems.  The basic Forth programming lexicon is mostly unchanged, so 
+additional learning will be mostly incremental in nature.
+
+All new words are based upon proven technology.  In some cases, the precise formulation 
+of a new word is the result of a compromise or "synthesis" between the various proposals 
+we have received.  Several experienced system implementors are committee members, 
+and proposed new words are scrutinized carefully for "implementability."  Several 
+members have conscientiously "tracked" BASIS on their own systems, and reported 
+results.  On a number of occasions this has led to improvements.  One of the reasons that 
+we've attempted to get broad circulation of BASIS (and, indeed, why we elected to put 
+some new technology in early) is to give as many people as possible an opportunity to try 
+things and report results.  This has been very effective:  for example, we changed LOCAL 
+to (LOCAL) with more general semantics based on public reaction, and retained the 
+technology because of generally favorable public reaction to the concept.
+
+We cannot see how the work we have done can reduce programming speed and 
+efficiency.  No one needs to "avoid reserved word names" when writing programs that do 
+not need to be portable.  Portability should improve, since many previously-existing 
+portability problems have been identified and fixed.  Programs will be able to make use of 
+commonly-available system features with standard words, rather than having to do 
+something different for each system, and programmers will spend far less time learning 
+how common functions are performed on each new implementation.  If we didn't truly 
+believe that our work would become much easier, we surely wouldn't have invested as 
+heavily as we have in this effort.
+
+I hope the above has helped you to understand our work a little better.  I trust you 
+appreciate that we do listen to you, even though we cannot literally adopt all your 
+proposals.  I also hope you recognize that the essence of communication is that it be bi-
+directional; part of my reason for investing this much effort in responding to you is to 
+enable you to continue to contribute meaningfully over the next months, which you can 
+best do if you understand our methods, our approach, and the context in which we're 
+operating.  It would, of course, be most useful if you could continue to attend meetings.  I 
+believe it was very helpful having Dave at Vancouver, and hope he or others of you can 
+come back.  We also look forward to another meeting in Boston next fall, and thank you 
+very much for inviting us.
+
+Sincerely yours,
+Elizabeth D. Rather, Chair
+
+
+

@@ -1,0 +1,251 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 01/25/90   Time: 22:27EST
+
+FIGGY BAR of 25 January 1990. Tonite's question: Do you prefer the 
+syntax of DO...LOOP or FOR...NEXT ? Any reason(s) ?
+These constructs in 'C', and other construct conumdrums. Is index at fault ?
+Attendees:
+[[Gary] GARY-S]
+[[Doug] D.PHILIPS2]
+[[Dave] OLORIN]
+[[Wil] W.BADEN1]
+
+Minutes:
+<D.PHILIPS2> is here.
+<[Gary] GARY-S> I just answered mail from you :-)
+<[Doug] D.PHILIPS2> Ah, Tommy's mail?
+<[Gary] GARY-S> You managed to really screw up ua big time !
+<[Doug] D.PHILIPS2> I'm curious as to why Len hasn't uploaded sundays transcript
+<[Doug] D.PHILIPS2> yet.  Any clue?
+<OLORIN> is here.
+<[Dave] OLORIN> DO..LOOP -- I'm a traditionalist.
+<[Doug] D.PHILIPS2> Do I have to re-enter the room to see the sign on the door 
+again?
+<[Dave] OLORIN> Hullo Doug
+<[Gary] GARY-S> do you feel comfortable responding to the question, doug
+<[Gary] GARY-S> posted as you enter the RTC - do you prefer DO...LOOP or FOR... 
+NEXT ? Why ?
+<[Wil] W.BADEN1> is here.
+<[Doug] D.PHILIPS2> DO...LOOP, its more general.
+<[Dave] OLORIN> Both.
+<[Dave] OLORIN> (grin)
+<[Dave] OLORIN> I use DO ... LOOP because its what I'm used to.
+<[Doug] D.PHILIPS2> Ah, historical precedant.
+<[Dave] OLORIN> Or general laziness.
+<[Dave] OLORIN> (grin)
+<[Gary] GARY-S> what say ye, Wil !
+<[Wil] W.BADEN1> FOR..NEXT better than DO..LOOP, but...
+<[Wil] W.BADEN1> It's 18 years too late.
+<[Doug] D.PHILIPS2> Well, its conceptually simpler anyway.
+<[Doug] D.PHILIPS2> What about defining the words which can be used to create 
+those constructs?
+<[Gary] GARY-S> Is syntax a consideration at x3/j14 ?
+<[Wil] W.BADEN1> 9 FOR ( ten times) NEXT is conceptually simpler?
+<[Gary] GARY-S> FOR..NEXT syntax should make it the construct of choice...
+<[Doug] D.PHILIPS2> Wil, so 0 FOR NEXT iterates once, does -1 FOR NEXT iterate 
+at all?
+<[Gary] GARY-S> but I sure wouldn't want to trash 18 years of DO..LOOP code
+<[Dave] OLORIN> Of course 0 0 DO ( lots) LOOP is also a pain.
+<[Doug] D.PHILIPS2> Gary, Pygmy has FOR NEXT, with DO LOOP as add on 
+compatability screens.
+<[Wil] W.BADEN1> Doug, what do you want -1 FOR NEXT to do?
+<[Gary] GARY-S> I am satisfied PYGMY is reflecting (forecasting) what will be 
+the future..
+<[Gary] GARY-S> ie: both will be available
+<[Dave] OLORIN> Wil: Look at me funny.
+<[Doug] D.PHILIPS2> Don't know, Wil.  I want a way for FOR NEXT to be able to 
+execute 0 times.
+<[Dave] OLORIN> (is still of the opinion that computers should have a "You must 
+be crazy but I'll do it anyway" light)
+<[Doug] D.PHILIPS2> If you can build DO LOOP on top of FOR NEXT, which is more 
+'Forth' like?
+<[Gary] GARY-S> FOR...NEXT will make one pass regardless
+<[Doug] D.PHILIPS2> I've got a noisly line, BRB
+<[Doug] D.PHILIPS2> disconnected.
+<[Gary] GARY-S> Wil - current status of your Edu-Forth
+<[Wil] W.BADEN1> I've been wondering if FPC or PYGMY might be better.
+<D.PHILIPS2> is here.
+<[Gary] GARY-S> You already know my vote if you're taking a straw poll
+<[Wil] W.BADEN1> -1 FOR NEXT behaviour shud depend on hardware. ...
+<[Wil] W.BADEN1> Some hardware will do it once, other hardware Virtually 
+Forever.
+<[Dave] OLORIN> Wrong!
+<[Dave] OLORIN> Language definitions should never mark something as "Hardware 
+Dependent".
+<[Wil] W.BADEN1> IOW, a standard shud leave it undefined.
+<[Doug] D.PHILIPS2> What about a looping construct like C's for(init;test;
+repeat).   Syntax is open issue, of course.
+<[Dave] OLORIN> You can mark it as "undefined", but making it...
+<[Dave] OLORIN> ..."hardware dependent" makes it too quirky.
+<[Dave] OLORIN> (Ahh. We agree)
+<[Doug] D.PHILIPS2> How is 'hardware dependant' semantically different from 
+'undefined'?
+<[Wil] W.BADEN1> "hw dep" is a form of "undef".
+<[Doug] D.PHILIPS2> Right.  What does ANS say about the definitions of these 
+things?
+<[Dave] OLORIN> Hardware Dep. implies that something may be used.
+<[Dave] OLORIN> Undefined implies "Leave that sucker alone".
+<[Dave] OLORIN> Slight difference in semantics.
+<[Wil] W.BADEN1> I wish I cud find the circa 1974 review of C where the C "for" 
+is criticized.
+<[Wil] W.BADEN1> ACM Computing Reviews.
+<[Doug] D.PHILIPS2> Did you agree with the review, Wil?
+<[Wil] W.BADEN1> Dave, if you are interested in portability, "leave that sucker 
+alone" always.
+<[Doug] D.PHILIPS2> Actually, the idea of getting the loop control info in one 
+place seems a good one to me (of course, I'm a 'C' programmer by profes
+sion :-).
+<[Dave] OLORIN> <-- also a professional C programmer. Mostly.
+<[Doug] D.PHILIPS2> If it isn't marked as portable in the standard, don't use 
+it, or if you
+<[Wil] W.BADEN1> (My orthographic regulator is still broken; another early nite 
+for me.)
+<[Doug] D.PHILIPS2> must, hide it behind a word or two that can be 
+reimplemented without tainting the rest of the program.
+<[Dave] OLORIN> The standard should be portable. That's the point of having one.
+<[Doug] D.PHILIPS2> Bye, Wil?
+<[Wil] W.BADEN1> When I first encountered the F83 "?DO" I thot it was great.  
+Now I know it as a kludge.
+<[Wil] W.BADEN1> Doug, Not yet.  I thot I'd forewarn.
+<[Doug] D.PHILIPS2> I'm still curious to here your objections to something like 
+C's 'for'.
+<[Wil] W.BADEN1> I dont object to it; it's what I want.
+<[Doug] D.PHILIPS2> Great!  Did you think the ACM criticism specious, or was 
+there really room for improvement?
+<[Wil] W.BADEN1> In defensive programming there shud be a way to do something 
+Zero Times gracefully.
+<[Wil] W.BADEN1> The ACM reviewer didnt know his ....
+<[Wil] W.BADEN1> Now in historical perspective it's amusing.
+<[Wil] W.BADEN1> What I want to say is "for( i = INITIAL; i < LIMIT; i += 
+INCREMENT) something;
+<[Doug] D.PHILIPS2> And how do you want to say that you should say that in 
+Forth's syntax?
+<[Wil] W.BADEN1> There is no way to do that in with a DO loop or ?DO.
+<[Dave] OLORIN> To do that in Forth you have two options. You can have a loop 
+function take...
+<[Dave] OLORIN> a word as its increment/whatever argument...
+<[Dave] OLORIN> ...or you can include something along the lines of Lisps lambda 
+functions,
+<[Doug] D.PHILIPS2> But you can also say: for(i=head;i != NULL; i = i->next) 
+something;
+<[Dave] OLORIN> ...a function defined namelessly inside of a loop to be 
+executed as the
+<[Dave] OLORIN> ...pre-loop-test function.
+<[Wil] W.BADEN1> Agreed. Forth's DO loops are too restrictive.
+<[Doug] D.PHILIPS2> I was briefly reviewing my smalltalk books today.  They 
+have the
+<[Doug] D.PHILIPS2> idea of iterating over the contents of containers, and the 
+idea of
+<[Doug] D.PHILIPS2> looping while condition is true/false.  I don't have them 
+with me, so I
+<[Dave] OLORIN> E.g. ( initial condition ) DO ( body ) (increment) {[ 
+current-loop done? ]} LOOP
+<[Wil] W.BADEN1> It works both ways: You can write ?DO ... incr +LOOP but it's 
+a mess.
+<[Wil] W.BADEN1> ... in C.
+<[Dave] OLORIN> Which is essentially a BEGIN WHILE REPEAT.
+<[Doug] D.PHILIPS2> can't remember how you iterate over integer ranges without 
+hitting everything,
+<[Doug] D.PHILIPS2> i.e. for(i=0; i< 100; i += 5) foo;
+<[Wil] W.BADEN1> The Forth 83 LOOP is very strange.
+<[Doug] D.PHILIPS2> So, Wil, how do we get something like C's for with Forth's 
+syntax?
+<[Wil] W.BADEN1> Termination duz not depend on a condition but an action.
+<[Gary] GARY-S> The idea was to fix 79's no-pass
+<[Dave] OLORIN> Ah well. I'm off.
+<[Wil] W.BADEN1> As you said, BEGIN WHILE REPEAT.
+<[Wil] W.BADEN1> DAVE, wait.
+<[Doug] D.PHILIPS2> Bye Dave.
+<[Dave] OLORIN> Yes?
+<[Wil] W.BADEN1> Dave, would you try your hand at ?DO incr +LOOP in C?
+<[Dave] OLORIN> Sure.
+<[Wil] W.BADEN1> Doing in C exactly what the Forth duz.
+<[Wil] W.BADEN1> OK, catch you later. Bye.
+<[Wil] W.BADEN1> I'd like to see your answers also.
+<[Gary] GARY-S> whom ?
+<[Wil] W.BADEN1> All of you.
+<[Doug] D.PHILIPS2> Wil, please qualify your pronouns.
+<[Wil] W.BADEN1> It's a non trivial problem.
+<[Wil] W.BADEN1> Dont try to do it online.
+<[Dave] OLORIN>     unsigned counter, limit, increment;
+<[Gary] GARY-S> FOR..NEXT is surperior syntax, but I can't see throwing away 18 
+years of DO..LOOPs was my response to my question
+<[Dave] OLORIN>     if (counter != limit)
+<[Dave] OLORIN>        while (counter != limit)
+<[Dave] OLORIN>           {
+<[Dave] OLORIN>              ....
+<[Dave] OLORIN>              counter += increment;
+<[Dave] OLORIN>           }
+<[Dave] OLORIN>
+<[Dave] OLORIN>
+<[Wil] W.BADEN1> Dave. No.
+<[Dave] OLORIN> Like that? Or do I need to go hunt up my copy of the standard 
+again.
+<[Doug] D.PHILIPS2> You have to account for counter passing limit but not 
+equaling it.
+<[Wil] W.BADEN1> Right. And the conditions depend on relative position in the 
+"circle of numbers".
+<[Dave] OLORIN> Ahh./exit
+<[Doug] D.PHILIPS2> My copy of "Starting Forth" says:  'The boundary always 
+lies between
+<[Doug] D.PHILIPS2> limit and limit - 1, regardless of which direction +LOOP is 
+going.'
+<[Wil] W.BADEN1> Ok, now write that in C.
+<[Doug] D.PHILIPS2> 'It is crossing this boundary that causes the loop to 
+terminate.'
+<[Doug] D.PHILIPS2> Ok Wil, have you tried it yet?  (How well do you know C?)
+<[Wil] W.BADEN1> I dont have anything I like yet.
+<[Doug] D.PHILIPS2> You mean functionally or esthetically?
+<[Wil] W.BADEN1> (I wrote my first C in 1975.)
+<[Dave] OLORIN> Urggh.
+<[Dave] OLORIN> It's kludgeable.
+<[Wil] W.BADEN1> Esthetically for sure.  But I'm not completely happy I really 
+solved it.
+<[Wil] W.BADEN1> Oh yes.
+<[Dave] OLORIN> I'll try to have something pretty for nexct thursday.
+<[Dave] OLORIN> (and if that doesn't work I'll just pretty format it)
+<[Dave] OLORIN> Night
+<[Dave] OLORIN> has left.
+<[Doug] D.PHILIPS2> Wil, why the urge to write DO LOOP in C?  Does this mean 
+that C's for is not fit for Forth because it isn't easily moldable into t
+hat construct?
+<[Wil] W.BADEN1> No. This shows the kludginess of DO LOOP.
+<[Doug] D.PHILIPS2> I'll grant that.  What about doing a Forth syntax for C's 
+for loop?
+<[Gary] GARY-S> Bouma points to sloppy index handling as Forth's culprit - 
+comments ?
+<[Wil] W.BADEN1> Part of it.
+<[Wil] W.BADEN1> Forth 83 DO LOOP is a very complex, hard to understand, 
+concept.
+<[Doug] D.PHILIPS2> Gary, I started that thread, but you didn't get it because 
+of 'ForthNet' in the header silliness!
+<[Wil] W.BADEN1> Mitch's "(unsigned) a>= (unsigne) b" may be a good approach.
+<[Gary] GARY-S> I know - I see all the references - trouble maker :-)
+<[Wil] W.BADEN1> Forth syntax for C "for" loop was given already: BEGIN WHILE 
+REPEAT.
+<[Doug] D.PHILIPS2> Wil, but it must work for crossing the boundary the other 
+way too, the test
+<[Doug] D.PHILIPS2> depends on the direction of the loop.
+<[Doug] D.PHILIPS2> Wil:  That doesn't cut it,  it still leaves the third 
+clause separated from the other two.
+<[Doug] D.PHILIPS2> I want a syntax that keeps all three parts together.
+<[Wil] W.BADEN1> Oh, you want to get it all up front.
+<[Doug] D.PHILIPS2> Yes, that is the point.  The beauty of the 'for' construct 
+is that it
+<[Doug] D.PHILIPS2> keeps all the relevant info in place!
+<[Doug] D.PHILIPS2> in place -> in one place
+<[Wil] W.BADEN1> Right.
+<[Doug] D.PHILIPS2> So, I ask again.  How to do it with Forth's syntax?
+<[Wil] W.BADEN1>
+<[Gary] GARY-S> I will be wrapping up on the numbers tonite if you guys want to 
+grind to some conclusions and/or continuation break-point
+<[Wil] W.BADEN1> In my method.
+<[Wil] W.BADEN1> Cancel that. I want to desk check it.
+<[Gary] GARY-S> let's head home then
+=== End of Steno notes. ===
+
+

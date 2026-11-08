@@ -1,0 +1,68 @@
+
+Reproduction of a letter and flyer from Rick VanNorman.
+Uploaded by S.W.SQUIRES  Nov. 24, 1987
+
+"My Novix computer, which I call the PFE (for Personal Forth Environment),
+is now out of the state of flux that it has existed in for about one year.
+It currently exists only as a modified Fk3, but is currently in PC layout
+as a complete board which will be available by 01 January.
+
+The PFE as sold will be a complete, standalone system.  It comes with a
+monochrome monitor, an IBM type keyboard, a 3-1/2" disk drive, and lots
+of software (everything that I currently have for the Novix).
+
+The PFE is not for everyone, but I think that it is a wonderful way to 
+work. " 
+
+Personal Forth Environment Specifications
+- 5 MHz NC4016 cpu
+- 64K words of static memory for program and data
+  . Decoded for expansion to 160K words
+- 4K words of "shadow" EPROM
+- Separate return and data stacks
+- Floppy disk interface
+  . 1000K on a double sided 3-1/2" drive
+  . 6K bytes per track
+- Video interface
+  . uses standard IBM monochrome monitor, 50Hz
+  . 24 x 80 characters
+  . 480 x 260 pixels
+  . other character sizes can be displayed
+  . text and graphics can be intermixed
+- Keyboard interface
+  . uses IBM-PC-XT keyboard
+  . full scan code input available for custom software
+- Printer interface
+  . parallel, Centronics compatable
+- Full source code
+  . EPROMS
+  . standard tools (that I use in my environment)
+  . full-screen editor
+  . text editor (80 columns x 256 lines)
+  . graphical demos
+  . CAD system (used to layout the PFE)
+  . XMODEM send and receive (for transfers to other computers)
+  . character set editor
+  . the game of LIFE
+  . disk analysis tools
+
+- Package includes:
+  . Fully populated and tested PFE cpu board
+  . 3-1/2" disk drive
+  . Monochrome monitor
+  . Keyboard
+  . Power supply
+  . Cables
+  . Software on disk
+  . User manual
+
+- Price: $995.00 + shipping and handling
+
+- Availability:  2 weeks ARO after 01 January 1988
+
+                          Rick VanNorman
+                          800 Rebecca Drive
+                          Boulder Creek, CA  95006
+                          (408) 338-2554
+
+

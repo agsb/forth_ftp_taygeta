@@ -1,0 +1,365 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+  Date: 05/04/89   Time: 21:29EDT
+
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Wil] W.BADEN1]
+[[actually jax] FIGCHAPTERS]
+[[len] NMORGENSTERN]
+[L.BROTZMAN]
+  
+Items discussed: computer buys,new Computer Journal calendar,RCFB on ForthNet,
+                 BitNet,FIGL,teaching Forth to high schools,Forth on Astro-12,
+                 SUPER-SEE as learning aid,abyss known as JFAR,FD white space
+Minutes:
+<NMORGENSTERN> is here.
+<[Len] NMORGENSTERN> Hi Gary!
+<[Gary] GARY-S> hi len - sorry about that
+<[Len] NMORGENSTERN> Hi there Gary Do you use Mirror?
+<[Gary] GARY-S> Only when I shave
+<[Len] NMORGENSTERN> I have a little script file that I set up that beeps
+<[Len] NMORGENSTERN> when somebody comes on. It goes like this:
+<[Len] NMORGENSTERN> LW C ">"
+<[Len] NMORGENSTERN> AL
+<[Len] NMORGENSTERN> AL
+=== ===
+<GARY-S> sorry bout that - low battery
+<[Len] NMORGENSTERN> You must be using a portable!
+<GARY-S> true
+<[Len] NMORGENSTERN> I would love to have one, but can't justfy 4 computers!
+<GARY-S> data comm will suck a low battery dry quicker than ANYTHING
+<[Len] NMORGENSTERN> I have a PC clone, a Mac, and an obsolete PC clone with 
+256 k
+<[Len] NMORGENSTERN> that will run CP/M
+<GARY-S> I'm looking for a super bargain AT
+<[Len] NMORGENSTERN> There are lots of them in the ads
+<GARY-S> 2 grand ain't my idea of a bargain
+<[Len] NMORGENSTERN> brb
+<[Len] NMORGENSTERN> Whole Earth Access has a Turbo 286
+<[Len] NMORGENSTERN> w/o hard disk for 1399. I guess thats 2 grand when you put
+<[Len] NMORGENSTERN> everything into it.
+<GARY-S> hard card and EGA = ???
+<[Len] NMORGENSTERN> Mono
+<[Len] NMORGENSTERN> "mono card"
+<GARY-S> IF I get a new box minimum config is 12 MHz clock , 286 w/ 30Meg hard 
+card and EGA
+<[Len] NMORGENSTERN> Here's IBM Model 30 with 20 MB disk & vga "on board" for 
+1995
+<[Len] NMORGENSTERN> (Monitor not incl)
+<GARY-S> now you understand - 2 grand
+<[Len] NMORGENSTERN> Right. A lot of bucks
+<GARY-S> I did pick up a 286 Motherboard for $40.00
+<DHWEINSTEIN> is here.
+<[Len] NMORGENSTERN> It says ibm 20mb hd or the CMS 30 mb hd "
+<[Dave] DHWEINSTEIN> Hullo...just dropping in for a minute.
+<[Len] NMORGENSTERN> Hi Dave
+<GARY-S> hola David:
+<[Dave] DHWEINSTEIN> The first Forth column will be in fact two columns, but 
+moved back to issue #40 instead of #39. Which means...
+<FIGCHAPTERS> is here.
+<[Dave] DHWEINSTEIN> ...I get to rewrite the prose I didn't like!!!!!!
+<[Dave] DHWEINSTEIN> (yeah)
+<GARY-S> I notice Forth only got a cursory nod from Kilber this issue
+<[Dave] DHWEINSTEIN> So the code planned for the first two columns will be one 
+column, and an introduction to Forth fornewcomers will be another colum
+n.
+<[Dave] DHWEINSTEIN> Yep.
+<[Len] NMORGENSTERN> Who is Kilber?
+<[Dave] DHWEINSTEIN> It'll probably get more if he uses the MC68HC11FN.
+<[Dave] DHWEINSTEIN> Oh well...I need to run... full info on 13.
+<GARY-S> Bill - wrote the Forth Tutorial in Forth in our library
+<[Dave] DHWEINSTEIN> has left.
+<[Len] NMORGENSTERN> Thanx
+<GARY-S> Jax'n - how are you this fine evening ?
+<[King Zog] FIGCHAPTERS> Just peachy now that i have escaped the basement
+<[Len] NMORGENSTERN> Jax, I am using something you said as "Quote of the Month"
+<[King Zog] FIGCHAPTERS> uh oh
+<GARY-S> It is but one layer in the mansion
+<[Len] NMORGENSTERN> in our North Bay FIG newsletter.
+<[King Zog] FIGCHAPTERS> ( gars ... RCFB is down there ) Len ... What?
+<[Len] NMORGENSTERN> C programmers are muttering inanities, while Forth 
+programmers
+<[Len] NMORGENSTERN> are answering questions that were never asked.
+<[King Zog] FIGCHAPTERS> Did I say that?
+<[Len] NMORGENSTERN> that I recorded it).
+<[King Zog] FIGCHAPTERS> aha. will it be used at my trial?
+<[Len] NMORGENSTERN> Depends on the accuser and the accusation.
+<[King Zog] FIGCHAPTERS> I'm like Ollie ...
+<GARY-S> has RCFB benefitted from the net ?
+<[Len] NMORGENSTERN> " All litigation shall be the responsibility of the 
+litigator
+<[King Zog] FIGCHAPTERS> I'll never lie to you unless I have a reason to.
+<[King Zog] FIGCHAPTERS> ... :-)
+<[Len] NMORGENSTERN> and all allegations -- need I go on?
+<GARY-S> I will not be the alligator
+<[King Zog] FIGCHAPTERS> i'm crying crocodile tears.
+<[King Zog] FIGCHAPTERS> Yes, gars.
+<W.BADEN1> is here.
+<[King Zog] FIGCHAPTERS> Now at least there are some messges in the conference.
+<[Len] NMORGENSTERN> Hi Wil
+<GARY-S> again - is RCFB benefitting from the net - ie: is local traffic 
+greater
+<[King Zog] FIGCHAPTERS> Hi Editor In Cheif.
+<GARY-S> hi Wil
+<W.BADEN1> Hi all.
+<[King Zog] FIGCHAPTERS> Gary ... yes ... i am posting all the time now!
+<[King Zog] FIGCHAPTERS> ... :-)
+<GARY-S> Let's walk down there...
+<[Len] NMORGENSTERN> has left.
+<W.BADEN1> Hi gary, len, & jack.
+<[QMENU] FIGCHAPTERS> bye, len!
+<GARY-S> any salient comments appreciated - this is open anarchy
+<GARY-S> Jax - guess you got my mail per Mr. Patel
+<[QMENU] FIGCHAPTERS> I've never met Wil but I think of him every time I press 
+F2, which is about 400 times a day or more.
+<[QMENU] FIGCHAPTERS> Yes, I am glad you got that straightened out to your 
+satisf.
+<GARY-S> Is that an honor ?
+<[QMENU] FIGCHAPTERS> Do you know what it means to press F2?
+<GARY-S> Wil - jump in at will (pun NOT intended)
+<L.BROTZMAN> is here.
+<GARY-S> hey Lee - how's Unisoft
+<[actually jax] FIGCHAPTERS> LB ... how are you and all the little lbs. ?
+<[actually jax] FIGCHAPTERS> .. :-)
+<L.BROTZMAN> Don't know.  Haven't talked to Arne for two months
+<GARY-S> We need to get Lee's BitNet goodies worked into ForthNet next
+<[actually jax] FIGCHAPTERS> ( PS ... email J.BROWN11 and tell him how to get 
+on your FIGIL mailer ...)
+<W.BADEN1> This is appalling.  I'm trying to remember.  STAMP, I believe. (to 
+Jax).
+<[actually jax] FIGCHAPTERS> It's whatever you named UPDATE + FLUSH ... KEEP ?
+<W.BADEN1> Has anyone heard what's happening in Boston?
+<[actually jax] FIGCHAPTERS> What's happening in Boston?
+<[actually jax] FIGCHAPTERS> ( i'll bite ).
+<GARY-S> Besides pool table rapes
+<W.BADEN1> ANSI.
+<[actually jax] FIGCHAPTERS> Shaa ... that was New Bedford.
+<W.BADEN1> Today thru sat.
+<GARY-S> Why are you NOT there ?
+<W.BADEN1> $$$.
+<GARY-S> good point
+<[actually jax] FIGCHAPTERS> are you coming to Denver?
+<L.BROTZMAN> Waiting for washington
+<W.BADEN1> Yes!!!
+<[actually jax] FIGCHAPTERS> WHEN ???????????????????
+<[actually jax] FIGCHAPTERS> lee what has happened to your FIGIL mailing list?
+<W.BADEN1> Oct. or Nov.
+<[actually jax] FIGCHAPTERS> SPEAK AT DENVER FIG??
+<L.BROTZMAN> FIGIL is still there.
+<[actually jax] FIGCHAPTERS> Tell Jack Brown how to get to you.
+<L.BROTZMAN> It just redistrubutes the Usenet stuff
+<W.BADEN1> Happy to.
+<L.BROTZMAN> Hooo Hummm
+<[actually jax] FIGCHAPTERS> He is learning to use BITNET
+<[actually jax] FIGCHAPTERS> Great, Will ... can you email me a firm date?
+<GARY-S> Lee - any chance we will start receiving FIGL news here or on the 
+xCFB's since all are networked (sort-of) one drop will get boucoups distrib
+ution
+<W.BADEN1> gary -- tnx for passing on message from J.brown.
+<W.BADEN1> Jax- not yet.
+<[actually jax] FIGCHAPTERS> Ok, keep in touch. We have our own BBS.
+<GARY-S> see above message to Lee, Wil - I am the network mule
+<L.BROTZMAN> WEll--- I have to download, archive and index the stuff...
+<[actually jax] FIGCHAPTERS> RCFB (303) 278-0364
+<L.BROTZMAN> It doesn't sound like much but it competes...
+<L.BROTZMAN> with my work day, and my school day, and my home life.
+<[actually jax] FIGCHAPTERS> As Jerry Shifrin says ...
+<GARY-S> Just keep us in mind - especially when you want MAX impact
+<W.BADEN1> Seriously now, what should "educational Forth" be like?
+<[actually jax] FIGCHAPTERS> "It is hard to overestimate the time necessary to 
+run and maintain a BBS"
+<L.BROTZMAN> Not to mention that most of the stuff isn't much...
+<L.BROTZMAN> when stacked up against the usual...
+<L.BROTZMAN> fare on the xCFB networks.
+<[actually jax] FIGCHAPTERS> I have been teaching a Forth class for about a 
+year now, Wil ...
+<[actually jax] FIGCHAPTERS> to everything from Mainframers to retired 
+engineers dinking controllers.
+<W.BADEN1> and?
+<[actually jax] FIGCHAPTERS> Teaching Forth ( to me ) has been teaching how 
+Forth WORKS, teaching the PHILOSOPHY of same, and answering a LOT of silly
+ questions that are very userfu.
+<[actually jax] FIGCHAPTERS> useful.
+<GARY-S> user fu - we're all familiar with that
+<[actually jax] FIGCHAPTERS> I'm a foot fighter ... i practice Toe Fu.
+<[actually jax] FIGCHAPTERS> What is "educational" Forth, Wil?
+<W.BADEN1> ok
+<GARY-S> Wil - have you ever developed any determinants routines ?
+<W.BADEN1> I have that as an action item on the fig board. ..
+<W.BADEN1> Gary -- not in Forth.
+<W.BADEN1> OSMy present feeling is that it should be minimal ANSI ...
+<L.BROTZMAN> About education...
+<GARY-S> Jack Brown was looking for same - trying to do them in Forth using 
+recursion
+<W.BADEN1> compatible with Starting Forth, with ...
+<L.BROTZMAN> archi warnock an I gave a twelve week seminar if Forth here at 
+Goddard...
+<W.BADEN1> OSOSfew crashes, and always a sense of where you are.
+<L.BROTZMAN> Archie talked about basic high-level Forth...
+<L.BROTZMAN> I talked about internal Forth execution.
+<L.BROTZMAN> Archie's class was about 20 people, mne about 10.
+<W.BADEN1> Initially it should be MS-DOS runnable
+<GARY-S> you should be excellent at that, Lee
+<L.BROTZMAN> It was fun but we hit roadblocks trying to explain the ...
+<L.BROTZMAN> language across processors...
+<W.BADEN1> to the data segment, so the code segment couldn't be clobbered. ga
+<[actually jax] FIGCHAPTERS> Cute. Forth with training wheels!
+<[actually jax] FIGCHAPTERS> .
+<[actually jax] FIGCHAPTERS> You know ...
+<[actually jax] FIGCHAPTERS> you could create ...
+<[actually jax] FIGCHAPTERS> a cute little teaching engine ....
+<GARY-S> Wil - you may have noticed Thursday non-guest FIGGY's are a form of 
+anarchy, like French coffee brunches
+<[actually jax] FIGCHAPTERS> a microprocessor board that could be used by four 
+users to learn forth in a classroom ...
+<GARY-S> everyone talking at once
+<[actually jax] FIGCHAPTERS> the ZILOG Z80000 ( yes, eighty-thousand ) has MMU 
+on chip which would allow ...
+<W.BADEN1> The editor is limited to 1000 lines, equivalent to 64 blocks.
+<[actually jax] FIGCHAPTERS> hardware implementation of that which you are 
+describing.
+<[actually jax] FIGCHAPTERS> .
+<W.BADEN1> OSbut loaded from MS-DOOS cr-lf text files.
+<GARY-S> isn't there a minimum forth dictionary on chip ?
+<[actually jax] FIGCHAPTERS> ??? not on z80,000 ... on super8, yes, ( Z880 ).
+<GARY-S> oops !
+<[actually jax] FIGCHAPTERS> z80000 aka z320 ... 32 bits + on-chip MMU. Great 
+for protected multiprogrammed Forth system!
+<L.BROTZMAN> JAX, can your review of the new JForth be released via telecomm 
+yet?>
+<[actually jax] FIGCHAPTERS> wil ... wher existeth this beastie you describe? 
+in your 386?
+<[actually jax] FIGCHAPTERS> lb ... did it appear yet?
+<W.BADEN1> 256k minimal MS-DOS.
+<L.BROTZMAN> I don't read Amiga journals.
+<[actually jax] FIGCHAPTERS> I think they own it if they publish, but I will 
+check ... microtimes lets me distribute.
+<[actually jax] FIGCHAPTERS> but not sure about Amazing Computing.
+<[actually jax] FIGCHAPTERS> They have not even confirmed they will publish.
+<[actually jax] FIGCHAPTERS> Nor has ESP, where I may have an article for June.
+<L.BROTZMAN> Give me volumew and I will gladly buy the issuer
+<[actually jax] FIGCHAPTERS> You got me, chief. I just check the newsstands 
+like everyone else ...
+<NMORGENSTERN> is here.
+<GARY-S> Wil - DID you respond to Jack on-line ?
+<[actually jax] FIGCHAPTERS> all these magazines pay like 4 months late.
+<GARY-S> wb len
+<[len] NMORGENSTERN> Thanx
+<W.BADEN1> Gary- I put a message on the topic.  I don't yet know how to respond.
+<[actually jax] FIGCHAPTERS> Len ... tell us about your sex change.
+<[len] NMORGENSTERN> Huh?
+<GARY-S> If you responded in the topic - that will do the trick
+<[actually jax] FIGCHAPTERS> ( 4D has him as "Leona Morgenstern" on page 4 of 
+March 1989 )
+<[Wil] W.BADEN1> OSOS(Uproarious laughter.)
+<[len] NMORGENSTERN> Not so bad as some other perversions of my name
+<[len] NMORGENSTERN> In High school, some called me "Morgangrinder"
+<[actually jax] FIGCHAPTERS> wifey is Von Dassow. Became "Von Dogchow" in H.S.
+<[actually jax] FIGCHAPTERS> and MY name is WOEHR. You can imagine .............
+.....
+<GARY-S> the combination of the two leads to some intresting implications
+<[len] NMORGENSTERN> (reading rapidly in 4D)
+<GARY-S> Anyone know if Magellan has any Forth on board (Lee)
+<[actually jax] FIGCHAPTERS> Page 4, middle of page.
+<[len] NMORGENSTERN> thanx
+<[actually jax] FIGCHAPTERS> THAT didn't bother me, Len. ...
+<L.BROTZMAN> I wouldn't be surprised either way (Forth or no Forth)
+<[actually jax] FIGCHAPTERS> What WAS unsettling ...
+<[actually jax] FIGCHAPTERS> was all the white space in 4D.
+<L.BROTZMAN> I know that the ASTRO-12 mission next April is Forth controllerd
+<[actually jax] FIGCHAPTERS> My boss has pulled out of 4D, and it doesn't look 
+like he's alone.
+<GARY-S> Gonna put your ads in a high mover like JFAR ?
+<[actually jax] FIGCHAPTERS> No, ESP.
+<L.BROTZMAN> The paylod specialist for Astro-1 and I ...
+<L.BROTZMAN> developed a Forth for the Commodore 64 together.
+<[actually jax] FIGCHAPTERS> FORSLEY WHERE IS MY MAGAZINE ??????????????????????
+??????????????????????????????????????????????????????????????????????
+????????????????????????????????????????????????????????????????????????????????
+????????????????????
+<GARY-S> Is this recently, Lee, and WHY ?
+<GARY-S> why 6502 ?
+<L.BROTZMAN> That was ancient history, but he adapted UniForth...
+<L.BROTZMAN> for the patform controllers of the Ultaviolet telecope
+<L.BROTZMAN> ... which is on board.
+<GARY-S> That's this comming April ?
+<[actually jax] FIGCHAPTERS> Wil ... is your educational Forth going to be 
+distributed?
+<L.BROTZMAN> The NASA Launch manifest is now up in the air...
+<[actually jax] FIGCHAPTERS> good place for it
+<L.BROTZMAN> Astro-1 may laucnh in April or May '90
+<GARY-S> Is it P.D. Wil ?
+<[Wil] W.BADEN1> OSjax ... Oh yes. It is for FIG.
+<[actually jax] FIGCHAPTERS> WE don't have a word for them , but ...
+<[Wil] W.BADEN1> OSDo y'all think I'm on the right track?  Is there something 
+I'm missing?
+<GARY-S> Why not post it here ?
+<[actually jax] FIGCHAPTERS> Chess players do: "PATZER" there are a lot of old 
+PATZERs in this world who could use it.
+<[actually jax] FIGCHAPTERS> Idiot proof it the best you can.
+<[actually jax] FIGCHAPTERS> Help screens, a' la F-PC Forth?
+<GARY-S> Back to your ANSI comments - I applaud the minimalist path
+<[Wil] W.BADEN1> OROROSOROSOSOSOSOSHelp frames yes. But how much content?
+<[actually jax] FIGCHAPTERS> what is filling up your buffer with OROSOROSOROS ?
+<[actually jax] FIGCHAPTERS> Content ...
+<GARY-S> wil - what's with all the OSOS,OROSOROS.. ?
+<[actually jax] FIGCHAPTERS> A diagram of the definition?
+<[Wil] W.BADEN1> Buffered keyboard on RedRyder and backspaces. This is the 
+first I knew of it. ..
+<[actually jax] FIGCHAPTERS> ... /header/engine/this/that/tother/unnest
+<[actually jax] FIGCHAPTERS> list of CFA's and names of all compiled words in 
+def?
+<[Wil] W.BADEN1> Will try harder. (Still unsure of self on BB.)
+<[actually jax] FIGCHAPTERS> sort of like a full-screen SUPER-SEE
+<[Wil] W.BADEN1> to jax- fake an example, plz.
+<[actually jax] FIGCHAPTERS> if you could click on a word on the screen with 
+the mouse and SUPER-SEE screen came up, WOW!
+<[actually jax] FIGCHAPTERS> example: ( everyone hold off a second) ...
+<L.BROTZMAN> Heading out , adios.
+<[actually jax] FIGCHAPTERS> user types SUPER-SEE ZOTZ
+<L.BROTZMAN> has left.
+<[actually jax] FIGCHAPTERS> and screen pops up:
+<[actually jax] FIGCHAPTERS> ZOTZ
+<[actually jax] FIGCHAPTERS> ... /84ZOTZ/NEST/SWAP/DUP/ROT/UNNEST
+<[actually jax] FIGCHAPTERS> NEST = 654
+<[actually jax] FIGCHAPTERS> SWAP - 405
+<[actually jax] FIGCHAPTERS> DUP = 426
+<[actually jax] FIGCHAPTERS> ROT = etc ...
+<[actually jax] FIGCHAPTERS> WORDS LIKE: SEE ZORG ZNARG ZLOTZ
+<[actually jax] FIGCHAPTERS> CLICK HERE to return to Forth
+<[Wil] W.BADEN1>    Mouse optional.  High school class lab with minimal MS-Dos 
+machines.
+<[actually jax] FIGCHAPTERS> right, i get carried away.
+<[Wil] W.BADEN1> The disassembly should be compilable Forth.
+<[actually jax] FIGCHAPTERS> neato
+<GARY-S> like a true step-trace decompile
+<[actually jax] FIGCHAPTERS> there is a guy in our forth class who would love 
+that.
+<[Wil] W.BADEN1> A good friend ses that comments should optionall be compiled 
+so they can be decompiled.
+<[actually jax] FIGCHAPTERS> REPTIL works like that, wil.
+<[Wil] W.BADEN1> What is the cost? (storage and compile time.)
+<[len] NMORGENSTERN> Wil, do you worry about that in a teaching system?
+<GARY-S> I'm mailing this puppy in, gentlemen - any last comments for posterity 
+?
+<[actually jax] FIGCHAPTERS> ref: JFAR IV,ii page 231 ff.
+<GARY-S> You got JFAR IV ?
+<[Wil] W.BADEN1>      to gary- none for posterity, but personal thanx for 
+holding my hand Mar.9.
+<[actually jax] FIGCHAPTERS> YES goldurnit, but not V,ii,iii,iv
+<[actually jax] FIGCHAPTERS> FORSLEY I WANT MY MAGAZINE!
+<[actually jax] FIGCHAPTERS> *&*&*&*&**!@(#(*@!&)(#*&$)(@*#&$)(*#@&
+<GARY-S> My pleasure, I assure you - nice piece of work Wil
+<[len] NMORGENSTERN> I have IV
+<GARY-S> and on that happy note ..
+=== End of Steno notes. ===
+
+
+
+=END=
+
+

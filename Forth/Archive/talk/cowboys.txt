@@ -1,0 +1,31 @@
+
+==========================
+forth/critiques #41, from dmiller, 1741 chars, Sat Aug  2 14:03:55 1986
+There is/are comment(s) on this message.
+--------------------------
+TITLE: Leo Brodie's video
+Leo Brodie has a tape that will be of great interest to those
+dreaming of building a nc-4000 forth computer. I bought a copy.
+and spent last night watching the better parts about 5 times.
+The first part is a little slow and shows Chuck Moore assembling
+a forth kit step by step.  It is meant to be an illustrated assembly
+manual for the kit.  The next part is fascinating.  It shows Chuck
+demonstrating the cpu and showing various configurations and power
+supplies.  The cmos cpu with 48 k memory took only 50 ma with a 1 MIP
+performance, 1 mhz clock and would run about 3 weeks on 4 D cells.
+He shows about 6 add on peripherals including a 3 chip video capture
+frame grabber, a 2 chip prom burner, rs 232 port, parrallel port,
+minimal 7 switch ascii one hand keyboard, floppy interface using only
+2 latch chips.   Fascinating what he can do with a bare handfull of
+cheap chips.  The last part of the tape shows George Nichols demosnstrating
+the software composer's line of assembled boards.  They have a real rugged
+board/box set. Since the power consumption is so low about 100 ma at 4 MIPS/
+4 Mhz clock the computer plus 64 k words (128 k bytes) of memory doesn't
+need a fan and can be sealed for operation in dusty industrial/robotics
+applications. No fan noise!.  George's box will bolt into an ibm pc
+empty case and use the ibm power supply.  Or the box can be powered by
+recharging nicads and line to give a battery backed ram and embedded in 
+a robot or other  application.    This tape should be essential for anyone
+getting the Computer Cowboy's Forth kit.  I found it fascinating even though
+I hav3e a different board.   usual disclaimers . no relation tothose mentioned.
+no commercial connection.   <<dan>>

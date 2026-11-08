@@ -1,0 +1,106 @@
+
+{ Here are a few excerts from some messages and from an on-line COnference
+I collected recently on another network.  They were extracted at random, 
+and it's my fault they are a bit haphazard..  Mr.  Lightsey has expressed 
+interest in "spreading the word" about the MACBOT project and will come 
+over here for a conference if we have enough interest.  
+
+    If you are interested in getting or contributing to his newsletter,
+"U.S. Macbotics" here is his address:
+ B.W. Lightsey
+ 3434 Santee Rd.
+ Baltimore, MD  21236
+ (301) 882-9535
+ (301) 682-1948 work
+    
+    It is looking like a version of Forth will be the language of choice 
+for programming the thing.  There is some serious interest in a PD (i.e.  
+FREE) language, as well as strong cases for MacForth or Mach 2.  I 
+suggested a comprise would be to write a modestly expandable Robot Control 
+Language in MacForth, then turnkey the thing.  Source code would remain 
+freely available for anyone who wanted to purchase MacForth and modify 
+things.  
+
+    Since Forth is THE Robot control language and MacForth is THE Macintosh 
+Forth, and since we have a nice cluster of folks using the same language 
+over here and in the User Group, it would be natural for us to make a 
+strong case for being "in charge" of the software development.  ANYONE 
+INTERESTED IN COORDINATING SUCH AN EFFORT???? 
+
+    Please leave short comments in msg section 12, and feel free to Upload
+ideas, comments, proposals, program outlines, etc etc to DL12.
+
+--ward  }
+
+
+{this quote describes the inception of the idea}
+ "Macbot is a cooperative effort by Macintosh enthusiasts to design 
+hardware and software to allow the Apple Macintosh computer to be a mobile, 
+sensor-equipped robot capable of programmable movement, data collection and 
+a degree of independent decision-making.  All hardware and software designs 
+for Macbot shall be freely placed in the public domain by their creators." 
+Doug Clapp, MacUser, March, 1987.  p.  59.  
+
+We need people interested in getting involved at whatever level they feel 
+comfortable with.  NO ONE IS TOO INEXPERIENCED!!! Any and all can get 
+involved.  It's usually true in a project such as this that the people who 
+make it work are those with less experience and more enthusiasm (although 
+experienced, enthusiastic people are welcome also).  You get involved, I'll 
+find you something to do, guaranteed! Let me know what you'd like to do, 
+what you're capable of doing, what you're willing to do, and what you think 
+of Macbot and what you'd like to see him do.  
+
+Right now I need opinions, attitudes, comments, questions, articles, 
+letters, graphics, satire, reviews, you name it, I need it; INPUT! Leave 
+something on the BBS, upload a file, send me a letter, whatever.  I do need 
+material for U.S.  Macbotics .  I would appreciate your either uploading 
+letters or articles you would like to see published, or sending them to me 
+on disk in text files (Word or MacDraw readable).  I'll send your disk 
+(same one!) right back if you send a SASE.  Send in your 
+letters/submissions by 15 May to get them included in the June issue.  
+Later entries I'll bump to the next issue.  Please either upload your entry 
+and leave me a message here with the file number, or send me a disk in text 
+format (Word, MacDraw, etc.) I'll send your disk right back if you send a 
+SASE.  
+
+Organization: Just a note on the organization here; I have been asked by 
+Doug Clapp to direct this effort.  I intend to do that.  I will accept all 
+input gladly and without limit, but retain the right to make a final 
+decision myself.  MACBOT WILL NOT BE A COMMITTE CREATURE!!! I will allow 
+individuals or groups to make decisions (type of interface, hardware, 
+language, etc.) providing those individuals or groups have shown expertise 
+in that area and have been willing to work will all of us to develop 
+Macbot.  
+
+I can't personally direct all aspects of Macbot as I haven't the technical 
+skills to do so.  What I can do is find people skilled in those areas whose 
+recommendations I can trust, and work with them to all achieve a common 
+goal.  Please help me work towards this goal by maintaining your patience 
+with ideas other than your own; remember, you lose depth perception when 
+looking through a keyhole.  
+
+ If you're interested in working in or directing a particular effort, 
+motion control, BBS's, public relations, man/machine interface, etc., let 
+me know! 
+
+U.S.  Macbotics: The first issue was more of a "Hello, Guess Who's Here?" 
+sort of thing.  Regardless, I'll mail it out to those who don't have a 
+modem.  I'm going to upload it (soon) 
+
+For the record: "All material, past, present, and future, published in U.S.  
+Macbotics or placed on public files for the Macbot project, is free of 
+copywrite or patent and may be copied, downloaded, and distributed free of 
+charge." The intent is to allow free and uninhibited use of Macbotia, 
+protect ourselves from legal liability, and prevent commercial use of 
+Macbotia.  
+
+
+{from a msg to me..}
+I like the idea of using MacForth (any language) to develop a control 
+language which is independant of the original.  How about you or one of 
+your members developing a proposal on this type of language system for 
+Macbot.  Perhaps Don could do it in conjunction with one of your members 
+who is experienced in using Forth in industrial applications? 
+Thanks again!     B.W.
+
+

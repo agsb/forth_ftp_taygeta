@@ -1,0 +1,230 @@
+
+           
+                
+                      Best of GEnie..... July 1988
+          News from the GEnie Forth RoundTable by Gary Smith
+      
+  Let's talk. Let's really talk about ideas and their presentation. That is 
+the premise behind RTC's, Real Time Conferences, on the GEnie Forth RoundTable.
+If you are not participating in these conferences you are depriving yourself
+of a unique experience.
+  
+  The conferences may be broken down into three distinctly different cat-
+egories. The regular Thursday night FIGGY BAR is quite literally a free forum
+that resembles a food-fight of ideas. I must confess I usually am the sysop
+responsible for these exercises in chaos, though Dennis Ruffer has also had
+his fair share of sitting in as meeting leader of the FIGGY BAR. The central
+theme in these Thursday night ( 9:30 pm Eastern ) is that anything goes as 
+long as the discussion involves Forth or items of interest to the Forth 
+community. Items discussed have included image processing, radar control,
+robotics, chapter activities, standards...and comp.lang.forth on Usenet.
+  
+  Sunday night ( 8:30 pm Eastern ) Leonard Morgenstern conducts his Question
+and Answer FIGGY BAR for intermediate and beginning Forth programmers. His
+first full conference was on Arrays, and I can not imagine anyone involved
+in Forth not gaining insight from the presentation. Leonard became a sysop
+because of his unselfish desire to share his knowledge of Forth, and it is
+a pleasure to observe Leonard in his natural element. Do not let the stated
+target group of the Sunday night sessions dissuade you from attending. I can
+absolutely promise these are for anyone interested in learning more about
+Forth.
+  
+  The third category is our guest conferences. These represent a marvelous
+opportunity to rub elbows with the movers and shakers of Forth while sitting
+comfortably at home at our own keyboards. Our guests to date have been Don
+Colburn, "The sacred cows of Forth" ( October 1987 ), Gary Feierbach "Forth
+and the Super8", ( April 1988 ), John Hayes and Marty Fraeman of Johns-Hopkins
+Applied Physics Lab, "FRISC3 32-bit Forth Computer" ( May 1988 ), and Mahlon
+Kelly, "Forth as a Teaching Tool" ( July 1988 ). By the time this makes print
+we should have had a guest conference with Mitch Bradley.
+
+  What wonderful experiences each of these guest conferences has been. The rest
+of the column this issue will be devoted to the opening comments that started
+each of these. 
+
+Don Colburn, Creative Solutions Incorporated, October 1987 :
+----------------------------------------------------------
+
+<[Don Colburn]> I was wondering if many people had a chance to read the file 
+that Ward uploaded here for me.  It had some of my thoughts on this topic.  
+perhaps we could conduct a poll of what topics would be of most interest.  
+I'll number them 1) 16-bitness, 2) text files, and 3) System interfaces.  How 
+about everyone simply entering the number that they would most like to talk 
+about right now.  
+   
+( concluding remarks of the remarks Don is refering to : )
+
+Conclusions
+-----------
+Any new standardization effort for Forth must address itself to
+both traditional 16-bit "controller" and newer 32-Bit
+"workstation" environments.  The effort should be conducted by
+a highly qualified, small team who are compensated for their
+efforts by a consortium of interested individuals, groups,
+companies, and vendors. The team should concentrate on
+developing a formal specifiation for the minimum possible set of
+words.  The words should be specified independant of stack
+width or address space.  The goal of the team should be to
+characterize current practice rather than institutionalize new
+methods. 
+
+The team should solicit the widest possible range of inputs from
+the Forth community.  Submission of materials, however, should
+only be presented to the team in written form, accompanied with
+compelling written arguments in favor of the submission.  The
+team should produce at least one draft standard which is
+distributed by the consortium.  Both draft and final standard
+documents should be copyrighted by the consortium, and be
+distributed for a fee to defray costs.  
+
+<[Don Colburn]> Let's talk about 16-bitness, and text files
+and then discuss "other" categories.
+
+<[Don Colburn]> I think that Chuck Moore presents a very good case for 
+16-Bitness, for controller applications.  A lot of people continue to be 
+confused over the applicability of 16-bit systems on workstation computers.  I 
+note that Both Alan and Gerry have worked with 32-bit systems.  Is this still 
+an issue?  
+
+<[Don Colburn]> My only point is that I'd like to avoid having to explain for 
+the 100th or so time at the next standards meeting why I find the suggestion 
+that I preceede every "@" with a "L@" or some other silly suggestion.  glad to 
+see that this may be less of an issue than I've been told it was.   
+  
+Gary Feierbach, Inner Access, April 1988 :
+----------------------------------------
+
+<[GARY-F] PRESS34> greetings
+1st i will start with some implementation notes the 8 K nucleus contains the
+following:
+  all good FORTH words including multitasker, double number set, things like 
+  3DUP, 4DUP, BETWEEN, WITHIN, string words, and at least a few words that are 
+  quite obscure and useless outside the nucleus.
+
+<[GARY-F] PRESS34> but, the 8 K nucleus contains no heads! The 8 K development 
+  ROM has those along with a FORTH style structured assembler, with the entire
+  Super8 instruction set (alot) and words that compile code like BEGIN, UNTIL, 
+  WHILE, REPEAT, IF, ELSE, THEN.
+
+<[GARY-F] PRESS34> The development ROM also contains disk I/O words for using 
+  the PC as a file server (BLOCK, Etc.) and some other misc stuff.
+ 
+<[GARY-F] PRESS34> The Super 8 itself runs at 20Mhz but this is misleading to 
+  those not familiar with the flim-flam of 1 chip micro makers it is 
+  immediately divided by 2 on board the chip and all timings in the manual are
+  related to this 10Mhz clock.
+
+<[GARY-F] PRESS34> It is still quite fast however, about 2.5 times faster than 
+  my PC which runs at 4.77Mhz on the other hand it isnt a novix chip so dont get too 
+  excited. This is a $7 item to go into automobile dashboards or washing 
+  machines. It contains 2 counter timers, 1 UART, 5 8-bit parallel ports (4 are bit
+  programmable), 1 DMA channel, vectored interrupts, 277 gp regesters and a 
+  partridge in a pear tree.
+
+<[GARY-F] PRESS34> The implementation is as close to the F83 public domain 
+  implementation as possible.
+  
+John Hayes and Marty Fraeman, Johns-Hopkins University/Applied Physics Lab, 
+--------------------------------------------------------------------------
+May 1988 :
+--------
+
+<[John&Marty] PRESS11> Over the past couple of years, we have designed a number
+  of 32 bit Forth processor chips.  We call our chips FRISCs (Forth Reduced
+  Instruction Set Computers).  Tonight we want to talk about our latest effort,
+  FRISC 3.  To find out more about FRISC 1 and 2, see the 1986 FORML Proceedings
+  or the 1987 Rochester Proceedings.
+
+<[John&Marty] PRESS11>    FRISC 3 is a word addressed machine, i.e. no bytes.  
+  All internal elements of the chip are fully 32 bits wide.  The top portions 
+  of the parameter and return stacks are cached on chip to improve performance
+  and retain a single path between memory and the CPU.
+
+<[John&Marty] PRESS11>    The FRISC 3 instruction set consists of eight 
+  instructions in three categories: 
+       control flow instructions:
+         call 
+         branch 
+         conditional branch 
+       load/store instructions: 
+         load
+         store 
+         load address low 
+         load address high 
+       other:
+         microcode 
+  All eight instructions take one clock cycle to execute except for load and 
+  store which take two cycles. All FRISC 3 instructions are 32 bits wide. 
+ 
+ Here are the three instruction formats: 
+        +------+------------------------------------+ 
+        |Type:3|              Address:29            | 
+        +------+--------+----+----+-------+---------+
+        |Type:3|Return:1|R1:4|R2:4|Stack:4|Offset:16|
+        +------+--------+----+----+-------+---------+ 
+        |Type:3|Return:1|R1:4|R2:4|Stack:4|  ALU:16 |
+        +------+--------+----+----+-------+---------+ 
+
+<[John&Marty] PRESS11> The three msbs of the instructions selects one of the 
+  above instruction types.  In the control flow instructions the remaining 29 
+  bits are an absolute destination address.  In load and store instructions 
+  the 16 bit Offset is added to R1 to form an address.  R2 is the destination 
+  of load instructions and the source for stores.  The load address instructions 
+  make the same address calculation just described but loads the address into
+  R2.  In the microcode instruction there is a 16 bit ALU control field instead
+  of the Offset field.  The microcode instruction implements most Forth 
+  primitives (i.e. dup, over, +, <, etc.).  Both the load/store and  microcode 
+  instructions have a return bit.
+  
+Mahlon Kelly, co-author "Forth: A Text and Reference", "Forth as a Teaching
+---------------------------------------------------------------------------
+Tool, July 1988 :
+---------------
+  
+<[Mahlon] PRESS32>      I would like to put forward the idea that Forth is an 
+  excellent language for teaching introductory courses in computers. In fact,
+  that it is by far the best language available.
+
+<[Mahlon] PRESS32> Most languages were developed for use on mainframes, and 
+  although the usual stated reason for their development is to make it easy
+  for humans to use the machines, another is to protect the machines from 
+  humans. Thus those languages are designed to preve/t users from being aware
+  of the equipment itself. Thatt stands in the way of students really under-
+  standing how computers work.
+
+<[Mahlon] PRESS32> Forth does the opposite. The more you know about the machine,
+  the better you can use Forth. Thus the student is encouraged to learn not only
+  about the language, but about computers. And since Forth is interactive, Forth
+  encourages the best type of learning, that is, learning from mistakes.
+
+<[Mahlon] PRESS32> Direct memory and register access are both available, and 
+  perhaps more important is the use of any desired number base. It is vey easy
+  to teach about binary, octal, decimal, and hex arithmetic. It is very easy
+  to teach about logical operators. And it is even very easy to introduce
+  assembly language.
+
+<[Mahlon] PRESS32> Perhaps most importantly it is easy to teach about machine 
+  and assembly instructions, and to get across the differences  among machine,
+  assembler, and higher-level languages. In the first lecture of my course I 
+  teach how to define  SQUARE DUP * ;
+  Then I have them look at and disassemble DUP and * . Now when they program 
+  they know what they are doing to the machine. They do this while sitting at 
+  computers.
+
+<[Mahlon] PRESS32> I have been told y one M.S. student in comp. sci. thata 
+  after my Forth course (which he took to learn the language, not computers,
+  obviously) he had the equivalent lvel of understanding of computers of a third 
+  year student in comp. sci. The course assumes no background.
+
+<[Mahlon] PRESS32> QUESTIONS: 
+    Are these ideas correct, or should we continue to teach intro*. Pascal, 
+      BASIC, FORTRAN, etc.?
+    How is Forth best taught? That is, is it best to teach how it works first,
+      or how to use it first?
+    How can we convince comp. sci. departments of Forth's value, not only as 
+      a language but as a teaching tool?
+  
+  Hope to see you at our next Real Time Conference where we can talk, really
+talk, about Forth.
+
+

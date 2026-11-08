@@ -1,0 +1,315 @@
+
+    
+  Minutes of the FIGGY BAR of June 23, 1988
+               
+Date: 06/23/88   Time: 22:37EDT
+Attendees:
+[[Dave] DHWEINSTEIN]
+[[Gary] GARY-S]
+[[Dennis] D.RUFFER]
+[[Cliff] C.MORAVETZ]
+[[actually jax] VESTA]
+[[Kevin] APPERT]
+[[Dennis] D.RUFFER]
+     
+Items discussed: Cliff asks the "Why Forth ?" question, Forth on the WELL, 
+                 search for conference guest (Mitch Bradley gets e-mail), 
+                 looking for PD Forth support on MAC, SPARC, TICOL, drouth
+          
+Minutes:
+<[Cliff] C.MORAVETZ> Hi Jenny!
+<[Gary] GARY-S> Soory I'm late
+<[Kevin] APPERT> wink wink, nudge nudge
+<[Cliff] C.MORAVETZ> Is this confernce usually in this room?
+<VESTA> is here.
+<[Gary] GARY-S> Thursday's is
+<[Dave] DHWEINSTEIN> Late...you...never... :-)
+<[Dave] DHWEINSTEIN> Hey Jax..Wasup
+<[actually jax] VESTA> hey hey hey fat albert is here!
+<[Gary] GARY-S> Who is Cliff - what do you FORTH ?
+<[Dave] DHWEINSTEIN> He has doubts. I am answering them. :-)
+<[Kevin] APPERT> hi, Actually
+<[Cliff] C.MORAVETZ> Why do you have to arrange Forth's arguments by hand?...
+<[actually jax] VESTA> You can call me Ack, like bill the cat.
+<[Cliff] C.MORAVETZ> Most other languages do it for you.
+<[actually jax] VESTA> C.M ... why do you have to stuff them in variables in C?
+<[actually jax] VESTA> "Sh** happens" is the answer.
+<[Dave] DHWEINSTEIN> Because the stack is used directly rather than implicitly..
+.it is more efficient. More trouble, but more powerful and flexible.
+<[Dave] DHWEINSTEIN> The compiler does it for you otherwise, and the compiler 
+is NOT AS GOOD AT IT.
+<[Gary] GARY-S> Jack - don't make me hafta edit - por favor
+<[Kevin] APPERT> They arn't, Jax as you well know.  They are on a stack which 
+is hidden from the user
+<[Cliff] C.MORAVETZ> Languages should make it easier.
+<[Dave] DHWEINSTEIN> Take your C or PASCAL code, read the assembly output of 
+the compiler. It is ugly as hell.
+<[actually jax] VESTA> You don't know the half of it. Besides, I was just 
+quoting a bumper sticker.
+<[Kevin] APPERT> not Monitoring.
+<D.RUFFER> is here.
+<[Cliff] C.MORAVETZ> I don't worry about the black box.
+<[Dave] DHWEINSTEIN> FORTH does. It takes practice.
+<[actually jax] VESTA> Edit me alittle more, huh, gary? :-)
+<[Dave] DHWEINSTEIN> WHen speed and power are important, you can't afford to 
+let the computer screw up.
+<[Cliff] C.MORAVETZ> Fight fire with fire?
+<[Kevin] APPERT> not worrying about the black box can be fatal in this bis.
+<[Gary] GARY-S> Cliff - because Forth gives you more freedom to do what you 
+want the trade off is you have to do more of the basic stuff
+<[Cliff] C.MORAVETZ> I see.
+<[Dennis] D.RUFFER> hello folks
+<[Dave] DHWEINSTEIN> The more "powerful" tjethe languages get, the less control 
+you have over what is actually done. You *don't* know what is being do
+ne if the compiler takes too much control. Compiler bugs have given me problems 
+I would never have with FORTH (cause I'd grab the source and start dig
+ging :-) ).
+<[Cliff] C.MORAVETZ> The reason why I am here is I really can't make up my mind 
+about Forth..
+<[Gary] GARY-S> I remember a quote - 'YOu can do almost anything you want in 
+Forth - you just have to do it yourself "
+<[Kevin] APPERT> I perceive a shortage of public domain FORTH for the MAC.  Is 
+this real, or imagained?
+<[actually jax] VESTA> hey dennis ... how was the RochFest?
+<[actually jax] VESTA> True, apparently.
+<[Cliff] C.MORAVETZ> One minute I like it, the next minute it drives me nuts.
+<[Dave] DHWEINSTEIN> Gee Jax...you forgot the C
+<[Gary] GARY-S> NOT TRUE
+<[Dave] DHWEINSTEIN> (does this mean Gary has to edit?)
+<[Dennis] D.RUFFER> it was great Jack, if only I was able to see more of it
+<[actually jax] VESTA> What happened?
+<[Cliff] C.MORAVETZ> What can't you do with Pascal or C that you can't do with 
+Forth?
+<[Gary] GARY-S> It is just all under MAC FORTH user's group - Ward McFarland et 
+al
+<[Dave] DHWEINSTEIN> When will the reports be out? and how much?
+<[Dave] DHWEINSTEIN> You want an example. You can write good clean
+<[actually jax] VESTA> Want to rephrase that question, Cliff?
+<[Kevin] APPERT> public domain versions?
+<[actually jax] VESTA> few.
+<[Dave] DHWEINSTEIN> code in FORTH that is cleaner and easier to read, AND MORE 
+EFFICIENT than you can in Pascal or C.
+<[Dennis] D.RUFFER> there is less PD Forth only because F83 went comercial in 
+that case
+<[Gary] GARY-S> Dennis - answer my mail yet ?
+<[actually jax] VESTA> Besides, with Pascal & C you don't automatically get an 
+interpreter, a
+<[Cliff] C.MORAVETZ> What can you do with Forth that you can't do with Pascal 
+or C?
+<[actually jax] VESTA> virtual memory syste
+<[actually jax] VESTA> and a multitasker.
+<[Dave] DHWEINSTEIN> Of course, the trade of is, FORTH let's you screw up.
+<[Dennis] D.RUFFER> ANYTHING!
+<[Kevin] APPERT> It seems like Mac-hackers arn't as likely to share for free
+<[Dave] DHWEINSTEIN> Write an expert system slanguage on top of it in 3k of 
+source! (FORPS)
+<[Kevin] APPERT> or maybe there arn't as many of them?
+<[actually jax] VESTA> Mac is a more cynical commercial crowd.
+<[Cliff] C.MORAVETZ> You haven't been reading Dr. Dobbs... There have been both 
+of these published there.
+<[Dave] DHWEINSTEIN> Build chips based on the archietecture that work (unlike 
+the Pascal or Lisp chips)
+<[actually jax] VESTA> on the other hand , I have three forths on my Amiga, two 
+are PD
+<[Cliff] C.MORAVETZ> MAybe jax can't make up his mind either?
+<[Dennis] D.RUFFER> MacF83 went commercial real early
+<[Dave] DHWEINSTEIN> I gotta run...got a show to go to.
+<[actually jax] VESTA> ...???
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> Freedom of choice
+<[Dennis] D.RUFFER> ST F83 went public first
+<[Kevin] APPERT> that was my feeling, Jax, I wanted to see if it seemed that 
+way to anybody else (Mac beeing comercial)
+<[actually jax] VESTA> That's true, Cliff!
+<[actually jax] VESTA> I start projects in all three simultaneously sometimes!
+<[actually jax] VESTA> Hard to finish that way!
+<[Cliff] C.MORAVETZ> By the way, who offers source for expert system in three 
+blocks of code?
+<[actually jax] VESTA> Has R>J>BROWN been in tonite?
+<[Cliff] C.MORAVETZ> jax is his own human multitasker!
+<[Dennis] D.RUFFER> FORPS (Forth Production System) is right here on the board
+<[actually jax] VESTA> inhuman, some say.
+<[Gary] GARY-S> MOST do !
+<[actually jax] VESTA> also not pd but interesting is EXPERT 2 in MVP Forth, 
+which is QUITE portable.
+<[Cliff] C.MORAVETZ> I don't know much about expert systems, but that seems a 
+little bit forced. Only three screens indeed!
+<[actually jax] VESTA> How is the weather back east, Dennis and Gary. Out here 
+it is so hot the rattlesnanakes are fainting.
+<[Dennis] D.RUFFER> is Gary out east? :-)
+<[actually jax] VESTA> arkansas
+<[Dennis] D.RUFFER> it's cooling off today jack
+<[actually jax] VESTA> i'm in Colorado, remember.
+<[Kevin] APPERT> my favorite example of compact code is the three screen 8080 
+assembler
+<[Gary] GARY-S> Arkansas is in a worse drouth than 1934 (dust bowl)
+<[actually jax] VESTA> Yeah, they thought I was too hard on them on ECFB saying 
+they were anti FORTH
+<[actually jax] VESTA> So they posted an exchange we had about them.
+<[actually jax] VESTA> I told them if they wanted the intellectual waters to 
+rise, they had better
+<[Cliff] C.MORAVETZ> Is there some east-west rivalry going on here?
+<[actually jax] VESTA> jump in the tub with us!
+<[Dennis] D.RUFFER> I talked with Jerry about you jack
+<[actually jax] VESTA> No, Cliff ...
+<[Kevin] APPERT>  next most is Poly FORTH ... in 8k
+<[actually jax] VESTA> More like, a rivalry between people who think FORTH is 
+the answer ...
+<[Gary] GARY-S> Getting on ECFB via PCP is next to impossible !!!!!
+<[actually jax] VESTA> and people who think FORTH IS THE ANSWER.
+<[actually jax] VESTA> It's easy for me, via PCP ... one dialup and I'm there!
+<[actually jax] VESTA> DOn't understand your problem, Gary.
+<[Gary] GARY-S> WHAT !
+<[actually jax] VESTA> can you get DC ok, first of all.
+<[Cliff] C.MORAVETZ> Eh jax? YOur thought missed the mark -- ME
+<[Gary] GARY-S> How do you get in that easy ?
+<[Kevin] APPERT> what's a PCP.  ?   you guys on angel dust doing speed-dialing 
+(grin_)?
+<[Gary] GARY-S> Yeah - DC - no sweat
+<[actually jax] VESTA> Cliff ... maybe you were asking about weather talk and I 
+was talking BBS talk.
+<[actually jax] VESTA> GARY ... then your problem is you are dialing wrong.
+<[Dennis] D.RUFFER> Cliff, Forth fanatics are always argueing about something 
+<grin>
+<[actually jax] VESTA> Even though ECFB is in McLean VA ...
+<[actually jax] VESTA> AND in a different area code that the City of Talking 
+Buildings ...
+<[Gary] GARY-S> I'm scripted for 202-442-8695
+<[actually jax] VESTA> you DO NOT dial an area code. just dial 4438695.
+<[actually jax] VESTA> oops
+<[Kevin] APPERT> PCP?  What's that?
+<[actually jax] VESTA> 4428695
+<[actually jax] VESTA> P C PURSUIT>
+<[Cliff] C.MORAVETZ> You just mentioned another thing about forth. When do you 
+stop arguing, and get something DONE?
+<[Gary] GARY-S> no 202 ?
+<[actually jax] VESTA> a 25 buck a month service.
+<[actually jax] VESTA> no 202.
+<[Dennis] D.RUFFER> sometimes late at night clif :-)
+<[Gary] GARY-S> TNX
+<[actually jax] VESTA> you;re IN 202 from the DC note
+<[actually jax] VESTA> node
+<[Kevin] APPERT> we don't argue as much as proponants of other languages...
+<[actually jax] VESTA> CLIFF ... Forth is so quick to program in you have more 
+time to argue!
+<[actually jax] VESTA> but less money to do it with ... sigh.
+<[Gary] GARY-S> I'll change the old script - with PCP BBS too
+<[Kevin] APPERT> because we mostly go off in our own direction, and accomplish 
+things.
+<[actually jax] VESTA> Forth is sure neat in controller applications!
+<[actually jax] VESTA> I have written several apps start to finish in three 
+days a piece!
+<[Dennis] D.RUFFER> even major ones don't take much longer than a few months
+<[Cliff] C.MORAVETZ> But the standard Forth has so few features.
+<[actually jax] VESTA> It is designed that way to keep it flexible.
+<[Dennis] D.RUFFER> standard forth? which one's that?
+<[Kevin] APPERT> standard what?
+<[Cliff] C.MORAVETZ> Forth-83.
+<[Gary] GARY-S> That means you add features YOU chose
+<[Kevin] APPERT> (grin)
+<[Dennis] D.RUFFER> again, which one's that?
+<[actually jax] VESTA> Once you understand FORTH you won't bemoan the lack of 
+anything except Floating Point, which will be in the next standard, we p
+romise :-0
+<[actually jax] VESTA> .
+<[Kevin] APPERT> what would you like ?
+<[actually jax] VESTA> egg in your beer? :-0
+<[Dennis] D.RUFFER> we have Floating point source for MVP from G Haden
+<[Gary] GARY-S> add Zen Forth FP and what else do you want ?
+<[actually jax] VESTA> UNIFORTH had floating point.
+<[Cliff] C.MORAVETZ> That's what I don't link-- you're always making up for the 
+shortcomings of Forth. I wanna get something done.
+<[Dennis] D.RUFFER> just go and do it cliff
+<[actually jax] VESTA> We do! Holy cow, we write a lot of programs ... IBM, 3M,
+<[Dennis] D.RUFFER> don't worry about what you don't have
+<[Dennis] D.RUFFER> just write what you need!
+<[actually jax] VESTA> FORD MOCO and others use FORTH ... think they are 
+playing with their dongs?
+<[Kevin] APPERT> If you need that much support, maybe Forth isn't for you.
+<[Cliff] C.MORAVETZ> What do those companies use Forth for?
+<[actually jax] VESTA> NASA uses FORTH.
+<[Dennis] D.RUFFER> what DON'T they use Forth for!
+<[Cliff] C.MORAVETZ> How about accounts payable?
+<[actually jax] VESTA> NASA usess Forth ever since its interpretive nature 
+saved MARINER from missing Mars
+<[Kevin] APPERT> "never met an application I didn't like"
+<[Dennis] D.RUFFER> I've heard that being done in the UK
+<[Gary] GARY-S> Monster parallel processor mapping the sky for surprises for one
+<[Dennis] D.RUFFER> that is account cliff
+<[actually jax] VESTA> CYBOS is an entire Accounting/Medical Records package in 
+FORTH from McDonnel Douglas.
+<[actually jax] VESTA> Runs on a network of minis.
+<[Kevin] APPERT> there are a couple of accounting packages, one accounts 
+payable and Peachtree for the PC
+<[actually jax] VESTA> VP PLANNER is a famous IBM Spreadsheet in FORTH.
+<[Cliff] C.MORAVETZ> It seems that Forth is so controller oriented, though.
+<[Dennis] D.RUFFER> cliff I can't think of anything that hasn't been done in 
+Forth
+<[Gary] GARY-S> Ashton - Tate is Forthing now and LOVES it
+<[actually jax] VESTA> FORD used FORTH to test their anti-slip-into-parking-gear
+ dohickey. We had the guy who designed it here on the RTC one night.
+<[Dennis] D.RUFFER> gary, careful, they have dropped rapid file!
+<[Cliff] C.MORAVETZ> I can't think of anything that hasn't been done id 
+(shudder) BASIC.
+<[Gary] GARY-S> Radar control is a big Forth use
+<[actually jax] VESTA> We at VESTA have done projects for BIG companies.
+<[Dennis] D.RUFFER> true cliff, but sometimes Forth succeeeds :-)
+<[Cliff] C.MORAVETZ> This is interesting, since you hardly ever hear about 
+Forth.
+<[actually jax] VESTA> Forth, ( interestingly like PROLOG), is often used to 
+prototype new systems later coded in other languages.
+<[Cliff] C.MORAVETZ> That's what I hear from you guys.
+<[Dennis] D.RUFFER> nobody talks about it much
+<[Dennis] D.RUFFER> except us programmers
+<[actually jax] VESTA> I write about it almost every month in MicroTIMES ... 
+you are in California, pick up a copy!
+<[Gary] GARY-S> The skycam at football games is Forth controlled
+<[Dennis] D.RUFFER> people consider it a competitive advantage
+<[Cliff] C.MORAVETZ> What column is that? I got a copy on my desk here!
+<[actually jax] VESTA> What month?
+<[Kevin] APPERT> Something you said earlier reminded me about a story...
+<[actually jax] VESTA> Column is "Programmer's Perspective".
+<[Gary] GARY-S> tell him you REAL name Actual
+<[actually jax] VESTA> Jack J. Woehr
+<[Cliff] C.MORAVETZ> May '88
+<[Kevin] APPERT> from the early days of FORTH, Inc...
+<[Kevin] APPERT> when it (FORTH) was up in two locations...
+<[Cliff] C.MORAVETZ> I think FF on your BB is a move in the right direction.
+<[Kevin] APPERT> one doing telescope and inst. control in real time...
+<[Gary] GARY-S> A damn big Egytian dam owes its functionality to FORTH (notice 
+the caps, Dennis)
+<[Kevin] APPERT> the other doing production number crunching...
+<[Dennis] D.RUFFER> also check out QF cliff
+<[actually jax] VESTA> OOPS try February or June. Next Column in August: "FORTH:
+ The Orphan Comes of Age".
+<[Cliff] C.MORAVETZ> What's QF?
+<[Dennis] D.RUFFER> new Forth from Gary Bergstrom for the IBM PC
+<[Kevin] APPERT> The guys at the telescope said "FORTH is great for real-time 
+stuff, but it SU**S for number crunching...
+<[Dennis] D.RUFFER> support mouse and windows (it's own)
+<[Kevin] APPERT> the guys at the number crunching shop said, you guess it.
+<[actually jax] VESTA> Forth is fine for crunchy nums, you just have to write 
+the stuff to do it.
+<[actually jax] VESTA> We do trig in FORTH at Vesta.
+<[Cliff] C.MORAVETZ> The usual (i think) Forth multitasker seems a bit 
+primitive.
+<[Dennis] D.RUFFER> those people will never give up FORTRAN
+<[actually jax] VESTA> ASYST is a mathematical analysis package in FORTH.
+<[Cliff] C.MORAVETZ> Why isn't it preemptive?
+<[actually jax] VESTA> More economical NON preemptive.
+<[Dennis] D.RUFFER> round robin IS better cliff
+<[Cliff] C.MORAVETZ> I gave up FORTRAN a long time agoe. Out of the caves I am.
+<[Dennis] D.RUFFER> even Microsoft WINDOWS is round robin (sort of)
+<[Kevin] APPERT> why don't you load the gun and shoo t yourself in the foot?  
+Preemptive multi-taskers are deadly
+<[Cliff] C.MORAVETZ> Why?
+<[Kevin] APPERT> especially for real-time applications
+<[actually jax] VESTA> Though no reason it COULDN't be premeptive, it is not a 
+Standard feature. We have been discussing this aspect on the WELL ( 415
+ 322-6106 7-n-E)
+<[Kevin] APPERT> you never know where the computer is going to be when you need 
+it.  The worst
+<[Dennis] D.RUFFER> in real time, what if you don't want it to interrupt you?
+<[actually jax] VESTA> One of the great "why hasn't it been done?'s " of FORTH 
+is a multiuser FORTH with a protected kernel in protected mode on 80286
+

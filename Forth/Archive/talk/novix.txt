@@ -1,0 +1,173 @@
+
+
+                           Novix Cut 1
+
+Data      Instruction(s)           Data Stack Status:
+Fetch       (Forth)                Before:        After:         
+Opcode      (Description)
+(octal)
+                                   
+167100    @                        where          what
+               Fetch contents of top 
+               of stack.
+164000    @ +                      incr,where     what+incr
+               Fetch  top  of  stack 
+               (where)  and add  in
+               crement(incr).
+164200    @ +c                     incr,where     what+incr+carry
+               Fetch  where and  add 
+               increment  and  carry 
+               bit.
+162000    @ -                      decr,where     what-decr
+               Fetch where and  sub
+               tract decr.
+166000    @ SWAP -                 amount,where   amount-what       
+               Fetch where and  sub
+               tract  what  from  a
+               mount.
+163000    @ OR                     amount,where   amount OR what
+               Fetch where,  OR with 
+               amount.
+165000    @ XOR                    amount,where   amount XOR what
+               Fetch where, XOR with 
+               amount.
+161000    @ AND                    amount,where   amount AND what
+               Fetch where, AND with 
+               amount.
+1647nn    DUP @ SWAP nn +          where          what,where+nn
+               Incrementing fetch
+1627nn    DUP @ SWAP nn -          where          what,where-nn
+               Decrementing fetch
+
+Data
+Store
+Opcode
+(octal)
+
+177000    !                   what,where     ...
+               Store     what     at 
+               location where.
+177100    OVER SWAP !         what,where     what
+               Non-destructive store
+1747nn    SWAP OVER ! nn +    what,where     where+nn
+               Incrementing store
+1727nn    SWAP OVER ! nn -    what,where     where-nn
+
+                           Novix Cut 2
+
+                        Local Data Fetch 
+
+Opcode    Instruction(s)           Data Stack Status:
+(Octal)     (Forth)                Before         After:
+            (Description)
+1471nn    nn @                     ...            what
+               Fetch contents of nn
+1440nn    nn @ +                   prev_sum       prev_sum+what
+               Fetch  contents of nn 
+               and  add to  previous 
+               sum on top of  stack. 
+               (Carry     flag    is 
+               affected.)
+1442nn    nn @ +c                  prev_sum       prev_sum+what+carry
+               Fetch contents of  nn 
+               and  add it and carry 
+               to  previous  sum  on 
+               top  of  stack.(Carry 
+               flag is affected).
+1420nn    nn @ -                   prev_sum       prev_sum-what
+               Fetch contents of  nn 
+               and  subtract it from 
+               previous  sum on  top 
+               of stack.(Carry  flag 
+               affected).
+1460nn    nn @ SWAP -              prev-sum       what-prev_sum
+               Fetch contents of  nn 
+               and subtract previous 
+               sum  on top of  stack 
+               from  it.(Carry  flag 
+               affected).
+1430nn    nn @ OR                  prev_sum       prev_sum OR what
+               Fetch  contents of nn 
+               and OR it to previous 
+               sum on top of  stack. 
+               (Carry flag affected.)
+1450nn    nn @ XOR                 amount         amount XOR what
+               Fetch  contents of  nn 
+               and  XOR it to  amount 
+               on top of stack. (Car
+               ry flag affected.)
+1410nn    nn @ AND                 amount       amount AND what
+               Fetch contents of  nn 
+               and  AND it to amount 
+               on top of stack. 
+               (Carry  flag  affect
+               ed.)
+
+                            LOCAL DATA STORE
+
+Opcode    Instruction(s)           Data Stack Status:
+(Octal)     (Forth)                Before         After:
+            (Description)
+
+1570nn    nn !                     what           ...
+               Store what at nn.
+1511nn    DUP nn !                 what           what
+               Store   what  at   nn 
+               nondestructively.
+1540nn    DUP nn ! +               prev_sum,what  prev_sum+what
+               Store  what at nn and 
+               add what to  previous 
+               sum.(Carry affected).
+1560nn    DUP nn ! -               prev_sum,what  prev_sum-what
+               Store  what a nn and 
+               subtract  what   from 
+               previous   sum.(Carry 
+               affected).
+1520nn    DUP nn ! SWAP -          prev_sum,what  what-prev_sum
+               Store  what at nn and 
+               subtract previous sum 
+               from   what.   (Carry 
+               affected).
+1530nn    DUP nn ! OR              amount,what    amount OR what
+               Store  what at nn and 
+               OR  what to  amount.
+1550nn    DUP nn ! XOR             amount,what    amount XOR what
+               Store  what at nn and 
+               XOR what to amount. 
+1510nn    DUP nn ! AND             amount,what    amount AND what  
+               Store  what at nn and 
+               AND what to amount. 
+
+                           Novix Cut 4
+
+In 
+the table that follows, n will stand for a 16 bit number and nn 
+will stand for 5 bit number.
+
+                       Full Literal Fetch
+Opcode         Instruction    Data Stack Status:
+(octal)        (Forth)        Before         After
+               (Description)
+147500         n              ...            n
+144400         n +            what           what+n
+144600         n +c           what           what+n+carry
+142400         n -            what           what-n
+146400         n SWAP -       what           n-what
+143400         n OR           what           what OR n
+145400         n XOR          what           what XOR n
+141400         n AND          what           what AND n
+
+                       Short Literal Fetch
+Opcode         Instruction    Data Stack Status:
+(octal)        (Forth)        Before         After
+               (Descriptionn)
+1575nn         nn              ...            nn
+1544nn         nn +            what           what+nn
+1546nn         nn +c           what           what+nn+carry
+1524nn         nn -            what           what-nn
+1564nn         nn SWAP -       what           nn-what
+1534nn         nn OR           what           what OR nn
+1554nn         nn XOR          what           what XOR nn
+1514nn         nn AND          what           what AND n
+
+

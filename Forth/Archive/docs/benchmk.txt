@@ -1,0 +1,90 @@
+
+
+At a recent MNFIG meeting the MACH II version of FORTH was demonstrated
+on an Macintosh. It is subroutine threaded, many primitives
+are assembled inline.  Consequently it is fast and big compared to 
+conventional indirect threaded FORTH's.  Tho execution speed is not
+the only criteria to compare FORTH implementations it is often cited
+when comparing languages etc. I decided to dig out some benchmarks 
+to get some basis for comparing execution speed.  I used the prime number
+Sieve of Eratosthenes as published in Byte Jan 1983 pg 286. I used it
+as close as possible to the way it was published making modifications only
+as necessary. (Forth 83 variables, memory map limitations etc) I did not 
+replace DROP DROP with 2DROP for example.
+   The results are compiled from several sources and notes on my 
+findings that explain a few items are in a seperate bulletin.
+Fred Olson 
+computer       Language              clock   time  notes
+IBM PC   MMSFORTH ver 2.1            4.77    55.9  1
+IBM PC   MVP PADS                    4.77    55.5  1
+IBM PC   polyFORTH                   4.77    55.6  1
+IBM PC   LMI PC/FORTH                4.77    55.3  1
+IBM PC   LMI PC/FORTH+               4.77    97.2  1,5
+IBM PC   QUEST FORTH-32              4.77   131.2  1,6
+IBM PC   MS FORTRAN ver 3.2          4.77    23.7  1
+IBM PC   BASICA (interpreted)        4.77  2002.1  1
+Compaq   HS-FORTH                    4.77?   48    2
+PC Clone F83-MSDOS                   4.77    69.   2,4
+PC Clone LMI ver 1.2 (fig)           4.77    56.   2,4
+PC Clone F83-MSDOS                   8.00    41.   2
+PC Clone LMI ver 1.2 (fig)           8.00    31.   2
+Compaq 386 F83-MSDOS                16.00     9.2  2
+Osborne  F83-CP/M                    4.00    94.   2
+Apple ][ F83X (Wil Baden)           ~1.00   191.   2
+Hitachi 6303 fig-FORTH                .61   219.   2
+TERAK PDP 11-03  poly FORTH          ?       75.   2
+PDP 11-60 (Scanner Lab) poly FORTH   ?       12.5  2
+Macintosh  MACH II                  ~8.      12.3  2
+68000      polyFORTH                 8.00    29.0  3
+68000      Assembler                 8.00     4.9  3
+VAX 780    "C"                       ?        1.4  3
+NC4000P    novixFORTH (cells)        6.00      .85 3
+NC4000P    novixFORTH (optimised)    6.00      .45 3
+IBM 3033   PL/1                      ?         .36 3
+
+NOTES:
+1 From Pearson & Gerow , "Comparison of FORTH's for the 
+  IBM PC" , a document from the Boston FIG chapter dated 3-OCT-84 that was
+  distributed with the FIG chapter mailings. It compares several FORTH's on
+  several aspects including the Sieve timings.
+  version               vendor (see ads in Forth Dimensions)
+  MMSFORTH ver 2.1     Miller Microcomputer Systems
+  MVP PADS             Mountain View Press
+  polyFORTH            Forth Inc.
+  LMI PC/FORTH         Laboratory Microsystems Inc.
+  LMI PC/FORTH+        "           "           "
+  QUEST FORTH-32       Quest Research Inc, Huntsville, AL (F.D. Vol 6 #1 pg 32)
+  
+2 These are timings I did in April 1987.
+  LMI ver 1.2 (fig)   see above.  Old version (~1982) that I have on loan.
+  F83-MSDOS  Henry Laxen and Mike Perry's public domain 83 Standard FORTH.
+  F83-CP/M    "     "                 
+  F83X for Apple][ similar to F83. Implemented by Wil Baden / Orange Cty CA FIG
+  6303 fig-FORTH  adapted from 6800 figFORTH by Peopleware Systems, Mpls,MN
+  MACH II for Macintosh by Palo Alto Shipping Co. Menlo Park, CA 
+
+3 These timings came from a sheet distributed by NOVIX that has the COMSOL
+  logo.  COMSOL is Computer Solutions Limited, Surrey,England. These timings 
+  were probably done in 1986. 
+4 The difference in the time for the LMI fig and the F83 caught my attention
+  and I looked for an explaination. Both are conventional 64K ITC implemen-
+  tations. In fact both implement the virtual machine using the same registers.
+  Using DEBUG I found that in LMI's FORTH some code words in the kernel have
+  NEXT inline rather than jumping to it. (I have not determined how many or
+  which words. The assembler's "NEXT" generates jumps to the NEXT code. Also
+  note that this is a rather old version.)  To verify that this accounted
+  for the difference in timing I patched F83's centralized NEXT to jump to
+  a temporary copy and did the Sieve again. It took 83 seconds, 14 seconds
+  longer. If the 14 seconds taken by the extra jump each time thru NEXT is
+  subtracted from F83's normal time to get an estimate of F83's speed if
+  NEXT were compiled in-line, the resulting 55 seconds corresponds closely
+  to the other FORTH's on the PC.  Note that F83's centralized NEXT allows
+  the implementation of the high level debugger, an extremely useful tool.
+5 PC/FORTH+ is a 32 bit implementation from LMI which according to their 
+  recent catalog has "speed penalty ... in the range of 30-50% for the 8086
+  processor family."
+6 QUEST's FORTH-32 is (was?) a 32 bit implementation.
+
+Fred Olson
+
+

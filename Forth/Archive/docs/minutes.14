@@ -1,0 +1,337 @@
+
+X3J14/90-015 Draft Minutes, X3J14 Meeting #14, November 6-10, 1990, Page 1
+Doc. no: X3J14/90-015     November 16, 1990
+
+Draft Minutes of X3J14 Meeting #14
+ANS Forth Technical Committee
+November 6-10, 1990
+
+CALL TO ORDER AND ACTION ITEM REVIEW
+
+The chair thanked meeting host Leonard Zettel of Ford Motor Co. for arranging to have the 
+meeting in the Ford Management Development Center.  Mr. Zettel offered remarks of welcome.
+
+The chair welcomed a visitor (Brad Rodriguez) from Canada and Dr. Richard Haskell (Oakland 
+University, Michigan) as alternate for Bill Ragsdale.
+
+Mr. Rash was acting secretary in the absence of Mr. Tracy.  A quorum was present.
+
+The last meeting's minutes were approved unanimously.  The agenda was accepted.
+
+Action Item review from Meeting #13:
+
+ 1. CBEMA has sent the chair a list of members.  The chair noted that it included many 
+errors.  IEEE comembership arrangements apparently are still unrecognized by CBEMA.  This 
+requires further efforts by the chair.
+ 2. Mr. Baden's flow tree font has been implemented for use in BASIS.
+ 3. The daily start time for Meeting #14 is 9:00 a.m.
+ 4. The next meeting will be at Forth, Inc. during the last week of January, 1991.  The 
+full schedule is as follows:
+
+   Jan. 29 - Feb. 2     Los Angeles    Forth, Inc.
+   April 23 - 27        Atlanta        Don Schrader
+   July 30 - Aug. 3     Denver         Jack Woehr (Vesta)
+   Oct. 15 - 19         Boston         Gary Chanson
+
+ 5. The chair wrote a letter of thanks to B.C.I.T. for the arrangements for the last 
+meeting.
+ 6. The chair has submitted the revised Statement of Work to X3.
+
+DOCUMENTATION COMMITTEE REPORT 
+
+BASIS 13 was submitted to the TC and adopted.  BASIS 13 has been provided to the networks 
+in RTF format.  Mr. Rodriguez indicated his appreciation for this.  BASIS 13 also has been 
+posted on various electronic bulletin boards.
+
+RESEARCH COMMITTEE REPORT
+
+The committee is currently inactive, and its membership is indefinite.  Mr. Colburn 
+observed that our position vis-a-vis common practice is undermined by lack of an active 
+research committee.  Mr. Zettel noted that this endeavor cannot be mechanized, which is 
+why it requires a committee.
+
+INTERNATIONAL COMMITTEE REPORT
+
+No report, no activity (except last meeting, which was in Canada).
+
+OTHER BUSINESS
+
+The chair indicated that Heidi Banner is no longer with Forth, Inc. and that a new 
+recording secretary for X3J14 is now needed.  Any candidates for this job should be made 
+known to the chair as soon as possible.
+
+ACTION ON TECHNICAL PROPOSAL
+
+STP-166  File Access Word Names                  failed 0/10
+TP-384A  Controlled Reference words              passed 8/1   MB letter
+TP-411A  Single-Double Conversions               passed 9/1
+TP-450.2 SHIFT and ASHIFT                        failed 0/9   MB letter
+TP-452   State-Smart ' and CHAR                  withdrawn
+TP-462   Number Conversion Definition            failed 0/10
+TP-479   Terminal Input and Output               failed 0/9
+TP-494A  Make BL required                        passed 9/0
+TP-542   Fixed Point Real Arithmetic             failed 1/9   JLR letter
+TP-543   Numeric Input Conventions               failed 1/9   JLR letter
+TP-551A  Timing Things                           passed 9/0
+TP-569A  Error Handling (CATCH & THROW)          passed 9/0
+TP-570   The file wordset should not require buffered i/o
+                                                 failed 0/10
+TP-572   Modeless Number Input                   failed 3/7
+TP-583   Digit Definition                        withdrawn
+TP-600   Eliminate ALSO and ONLY                 failed 1/8   AK letter
+TP-602   Real Number Input Conversion            recommitted
+TP-632   IRV Numbers                             withdrawn
+TP-638A  REMEMBER before forgetting              passed 8/1
+TP-646A  Input stream - Repositioning            passed 9/0
+TP-648   Character manipulation                  failed 0/10
+TP-652A  Clarify file existence test             passed 9/0   MB letter
+TP-657   ACQUIRE                                 failed 0/10
+TP-658A  [COMPILE]                               passed 9/0
+TP-663   Moving Words from the Core Word Set to Ext. Core
+                                                 recommitted
+TP-663   Moving Words from the Core word set to Ext. Core Word Set
+                                                 failed 0/9   JR letter
+TP-674   Do not require the Block Word Set to be implemented 
+                                                 failed 0/8   AK letter
+TP-680A  "wordlist" to "word list" ; "WORDLIST" to "WORD-LIST"
+                                                 passed 9/0   JR letter
+TP-686   Generalize Section 4.0050 block         failed 0/9
+TP-688   Revise definition of search order       failed 0/9
+TP-695A  Delete 7.0020, "                        passed 10/0
+TP-698   Change stack picture of ?KEY            failed 0/9
+TP-699   Change definition of ALSO               failed 0/9
+TP-703   Modify Definition of 7.1010 CREATE-FILE failed 0/10
+TP-704   Modify Definition of 7.1190 DELETE-FILE failed 0/10
+TP-705   Modify Definition of 7.1395 EXTEND-FILE failed 0/10
+TP-706   Modify Definition of 7.1970 OPEN-FILE   failed 0/10
+TP-707   Modify Definition of 7.2080 READ-FILE   failed 0/10
+TP-708   Modify Definition of 7.2090 READ-LINE   failed 0/10
+TP-709   Modify Definition of 7.2480 WRITE-LINE  failed 0/10
+TP-714   Revise definition of 7.1965 ONLY        failed 0/9
+TP-715   Revise definition of 7.2037 PREVIOUS    failed 0/9
+TP-716   Modify Definition of 7.2130 RENAME-FILE failed 0/10
+TP-731   Definition of RECURSIVE                 failed 2/7   MB letter
+TP-744A  COMPILE,                                passed 9/1
+TP-745   tic and comma implications              passed 10/0
+TP-747   Delete ?DO                              failed 0/9
+TP-749   COMPILING?                              failed 1/8
+TP-751   FP Syntax                               failed 0/9
+TP-752   Compliance with Accepted Practice       add to Appen. B, 9/0
+TP-755   PROGRAMMABILITY OF WORD CREATION        failed 1/9   MB letter
+TP-756   Naming Conventions and File Words       failed 0/10  MB letter
+TP-766A  File I/O should use address units       passed 10/0
+TP-773A  Removal of Words from Core Word set to String Word set
+                                                 passed 9/0   JR letter
+TP-780A  Clean up Counted String definition      passed 9/0
+TP-782A  QUERY is broken                         passed 10/0
+TP-783A  Labeling & Optional/Extensions Word Sets
+                                                 passed 9/0
+TP-787   Amend Appendix A's discussion of data types
+                                                 passed 10/0
+TP-789   Remove ALSO                             failed 0/9   JS letter
+TP-791   Remove LEX                              failed 0/10  AK letter
+TP-792   Remove PARSE                            failed 1/9   MB letter
+TP-795   Allow VALUE inside a definition         failed 0/10  AK letter
+TP-796A  Counted String Literals                 passed 8/2
+TP-798   Define White Space                      failed 0/9 
+TP-799A  Allow ." in Execution                   passed 9/1   AK letter
+TP-803   Eliminate IOR from Memory Allocation Functions
+                                                 failed 0/10  AK letter
+TP-804   Is COMPARE Too Complicated?             failed 0/10  AK letter
+TP-805   EXTEND-FILE Should Work in Characters   failed 0/10  AK letter
+TP-806   SEEK-FILE is Too Complicated            failed 0/10  AK letter
+TP-807   Wither Hyphens                          passed 10/0  AK letter
+TP-808   UNLOOP should be a no-op                failed 0/10  AK letter
+TP-810A  File Flush Operation is Missing         passed 10/0  AK letter
+TP-812   No Temporary Buffers                    failed 0/10  AK letter
+TP-822   No Equal                                withdrawn 
+TP-826A  Tight 4                                 passed 9/0 
+TP-831A  Improve the function the File Access Word Set
+                                                 passed 10/0  JR letter
+TP-832   Remove the distinction between blocks and block files
+                                                 failed 0/10  GB letter
+TP-837   FOR's Index Name                        failed 1/8 
+TP-838   W@                                      failed 0/10 
+TP-839   AKEY                                    failed 0/9 
+TP-841   Add increment operator to EXT CORE word set
+                                                 failed 0/10  AK letter
+TP-842   Extend (LOCAL) to allow multi-cell values
+                                                 failed 0/10  AK letter
+TP-844   Change storage order of (LOCAL)         recommitted 
+TP-846A  Delete */MOD /MOD MOD                   passed 10/0 
+TP-849A  Floating Point Equality Operators       passed 10/0 
+TP-855A  Add BYE                                 passed 9/1 
+TP-856   Minor fix ups, Part 1 (POST)            passed 9/0 
+TP-857A  >NUMBER and CONVERT are Incomprehensible
+                                                 passed 9/0 
+TP-858A  Data Space Cleanup                      passed 8/0 
+TP-859A  Data Space Wording                      passed 8/0 
+TP-860A  Minor Fix Ups, Part 2 (POST)            passed 8/0 
+TP-861A  Memory Allocation Cleanup               passed 8/0 
+TP-862A  Improved syntax for C words             passed 9/0 
+TP-863A  Clean up POSTPONE, COMPILE, and [COMPILE]
+                                                 passed 9/0 
+TP-864A  Improve ' and [']                       passed 9/0 
+TP-865A  Control Flow Cleanup                    passed 10/0 
+TP-866   Legitimize FOR and NEXT                 withdrawn 
+TP-867A  Choose definitions of C! and MOVE       passed 9/0 
+TP-868A  Create Input Stream Usage Section       passed 9/0 
+TP-869A  Clarify usage of transient memory regions
+                                                 passed 10/0 
+TP-870   $ Unnecessarily Orphaned                withdrawn
+TP-871   3.4 Stacks Caution                      passed 10/0
+TP-872A  OK is Forth                             passed 9/1
+TP-873A  Guidelines for Implementors             passed 8/0
+TP-874A  Rationales                              passed 8/0
+TP-875   Why do we have Wordsets?                passed 8/0
+TP-876   Rationale for the DOUBLE Wordset        passed 8/0
+TP-877   Block Wordset Rationale                 passed 8/0
+TP-878A  Minor Cleanups                          passed 10/0
+TP-879A  No Multitasking                         passed
+TP-880A  Fix definition of exception             passed 8/0
+TP-882A  Combined multiple post proposals        passed 8/0
+TP-884A  Optional word sets write up for Appendix B.
+                                                 passed
+TP-885   Delete the Locals Word Set              failed 0/8
+TP-886   Return to VOCABULARY and DEFINITIONS    failed 0/10  MB letter
+TP-887   Delete ENVIRONMENT?                     failed 0/10  DC letter
+TP-888   Delete CATCH and THROW                  failed 0/8   MB letter
+TP-889   Criteria for acceptance of new words    failed 0/9   AK letter
+TP-890   Add an Experimental Word Set            failed 0/10  GB letter
+TP-891   Candidates for the Experimental Word Set
+                                                 withdrawn
+TP-892A  Delete misleading paragraph from "1.3 Content"
+                                                 passed 10/0  DC letter
+TP-893   Delete misleading text from "5.7.2 New Technology"
+                                                 passed 8/0
+TP-894A  Restrict EMIT to decimal codes 32-127
+         considered as resolution of TC,         passed 10/0  DC letter
+TP-895   The order of bytes or bits within double cell numbers
+                                                 failed 0/10  GB letter
+TP-896   Add a D0< operator                      passed 10/0  GB letter
+TP-897   Make File Access independent of Blocks  failed 0/8   GB letter
+TP-898   Clarify search order changes with ADDITIONS
+                                                 passed 8/0   GB letter
+TP-899A  Floating point numbers are not rational numbers
+                                                 passed 7/1   GB letter
+TP-900   Embedded decimal point should mean floating point
+                                                 failed 0/10  GB letter
+TP-901   Case insensitive                        failed 0/8   GB letter
+TP-902   Mandate floored division for / /MOD MOD */ */MOD
+                                                 failed 0/8   JH letter
+TP-903A  No control characters in words          passed 9/0   JH letter
+TP-904   Clarify definition of wordlist          passed 8/0   JH letter
+TP-905   Delete misleading sentence from "5.3.9 Control Flow"
+                                                 passed 8/0   JH letter
+TP-906   Clarify definition of ' (tick)          failed 0/8   JH letter
+TP-907   -TRAILING should use unsigned counts    passed 8/0   JH letter
+TP-908   Clarify semantics of 2@                 passed 8/0   JH letter
+TP-909A  ?KEY should be nondestructive           passed 8/2   JH letter
+TP-910   Add the word SYNONYM                    failed 0/8   AK letter
+TP-911   EVALUATE shouldnUt use TIB et al        failed 0/8   MB letter
+TP-912.1AChange PARSE to accept an address       passed 7/3   AK letter
+TP-912.2AChange PARSE to accept an address       passed 10/0  AK letter
+TP-913   Typo in I and J                         passed 8/0   JH letter
+TP-914   Remove scope from the definition of "local"
+                                                 failed 0/8   AK letter
+TP-915   VARIABLEs should be initialized to zero failed 0/8   AK letter
+TP-916   Change >COLROW to YXCOORD               failed 0/8   AK letter
+TP-917A  Clarify format of ?                     passed 8/0   JH letter
+TP-918   Rename POSTPONE to COMPILE'             failed 0/8   AK letter
+TP-919   Change INVERT to NOT                    failed 0/8   JH letter
+TP-920   ACCEPT should use unsigned counts       failed 0/8   ER letter
+TP-921   ACCEPT should only terminate on "return"
+                                                 failed 0/10  MB letter
+TP-922   /STRING exception when length exhausted passed 8/0
+TP-923   Typo in SKIP                            passed 8/0
+TP-924   Fix stack diagram for QUIT              passed 8/0
+TP-925A  "Well formed" means "error free"        passed 8/0   JH letter
+TP-927   Delete the definition of "user value"   failed 0/8   JH letter
+TP-928A  Basis general formatting (post)         passed 9/0
+TP-929A  More readable glossary entry (post)     passed
+TP-930A  section 6/7 cleanups (POST)             passed 9/0
+TP-931A  Rename Wordsets                         passed 7/2
+TP-932A  Minor fix ups - part 3                  passed 9/0
+TP-933A  String Fix Ups                          passed 9/0
+TP-934   Expunge Repetitions                     passed 9/0
+TP-937A  Data Type Compatibility                 passed 10/0
+TP-938A  Unsigned Arithmetic                     passed 10/0
+TP-939A  Addresses are Numbers                   passed 10/0
+TP-940   Generalize equality                     passed 9/0
+TP-941A  Gather general exception conditions     passed 10/0
+TP-942A  Consolidate Exceptions                  passed 10/0
+TP-943A  Remove Section 7 (Non-)Definitions      passed 10/0
+TP-944A  Core source                             passed 9/0
+TP-945A  No editing entitlements to ACCEPT       passed 10/0
+TP-946A  Change "exception condition" to "non-portable usage"
+                                                 passed 10/0
+TP-947   Reword ALSO                             withdrawn
+TP-948A  Programmer's toolkit                    passed 10/0
+TP-949   Dispersed definitions                   passed 10/0
+TP-950   move search order words                 passed 9/1
+TP-951A  Section 1.3 Content                     passed 10/0
+TP-952   nouns are FILE-xxxx                     passed 10/0
+TP-953A  Don't force compiler state vector recursion
+                                                 passed 10/0
+TP-954A  Return of ASCII                         recommitted
+TP-955A  Character Set Definition                passed 10/0
+TP-956A  Further encapsulation of wordsets       passed 10/0
+TP-957A  Enable THROW on ambiguities             passed 10/0
+TP-958A  Allow no foreknowledge                  passed 10/0
+TP-960   Moving .( and 0> from CORE to CORE EXT  passed 9/1
+
+Mr Kobziar moved to instruct the document editor to include the rationale from proposal 
+TP-004 in the definition of INVERT.  Motion passed 8/0.
+
+Mr Kobziar moved to correct a procedural error on TP-677, by showing it as failed with the 
+same vote as TP-677A had, and renumbering TP-677 as TP-829.  So ordered by the chair with 
+no objection.
+
+TP-833 "Fix BASIS with respect to the input stream" was considered as a resolution of the 
+TC and passed.
+
+TP-894 "Restrict EMIT to decimal codes 32-127" was considered as a resolution of the TC 
+and passed.  Mr. Colburn to write letter.
+
+ACTION ITEMS
+
+ 1. A proposal log is henceforth to be sent with each BASIS.
+ 2. Follow ups on letter writing assignments are to be reviewed at the beginning of each 
+meeting, and each meeting's new letter writing assignments are to be reviewed at the end 
+of the meeting.  All letters must reference proposal names and numbers.  All letter 
+writers are to provide a copy of each letter to the BASIS editor for use in developing 
+rationales.  This includes all past letters not yet provided.
+ 3. Mr. Colburn is to provide a rationale for ENVIRONMENT? based on Mr. Rash's position 
+paper on environmental interrogation, and send it to BASIS editor.
+ 4. The chair is to prepare a response to Dave Petty's letter to Forth Dimensions.   
+Inputs from any member of the committee are welcomed, but must be provided quickly, as the 
+deadline for submission of the response to FD is about Nov. 16.  Mr. Rible is asked to 
+once again encourage Mr. Petty to attend TC meetings.
+ 5. BASIS editor is to include a prominent editor's box at the beginning of the Locals 
+Word Set to indicate that a change in the storage order of locals is being considered.
+ 6. The input stream working group is to report back at the next meeting regarding related 
+items in the communique of November 10, 1990 from Dave Petty.
+ 7. (Post meeting).  BASIS editor is to include content of Mr. Forsley's proposal TP-752 
+as a rationale in the Statement of Work section.
+
+BURNING ISSUES
+
+  Count   Issue
+    7     Rationales
+    6     Wordlists
+    6     Missing sections in BASIS
+    5     Consistency of BASIS language
+    4     Guidelines for implementers
+    2     PAUSE implications
+    1     Prose clarity and quality
+
+NEXT MEETING
+
+The chair noted that if BASIS is not out by December 15, a postponement of the next 
+meeting may be necessary.
+
+ADJOURNMENT
+
+There being no further business, the meeting was adjourned.
+
+

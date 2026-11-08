@@ -1,0 +1,684 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 09/15/88   Time: 22:11EDT
+Attendees:
+[D.RUFFER]
+[M.WRIGHT12]
+[[Yet Is Jax] VESTA]
+[[Alan F.] ATFURMAN]
+[J.SHIFRIN]
+[L.FORSLEY]
+[[Cliff] C.MORAVETZ]
+[[Dave] DHWEINSTEIN]
+[R.FRAZEN]
+
+Minutes:
+<D.RUFFER> haven't had time to look at it yet
+<D.RUFFER> ok there we go
+<D.RUFFER> haven't really had any time tonight....
+<[Dave] DHWEINSTEIN> I wrote it because I need it for a project I'm working on 
+<[Dave] DHWEINSTEIN> every now and again...adding Modula-2 style modules to
+<[Dave] DHWEINSTEIN> Forth
+<D.RUFFER> just got home about 7:30, and answering e-mail since
+<D.RUFFER> well, if you give me a minute, I can look now
+<[Dave] DHWEINSTEIN> Ok
+<[Dave] DHWEINSTEIN> It's real short (or I can dump it up now)
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> Hey Jax
+<[Is Jax Agin] VESTA> yo.
+<D.RUFFER> no dave, Im running under topview
+<[Dave] DHWEINSTEIN> It's an official meeting of the "Fraser Fan Club"
+<[Dave] DHWEINSTEIN> Ohh
+<[Is Jax Agin] VESTA> Is he any relation to Warnier/Orr?
+<D.RUFFER> How'd Orr get in here?
+<[Dave] DHWEINSTEIN> I dunno. Oh. I think I got Dijkstra interested in Forth. 
+<[Dave] DHWEINSTEIN> But he won't speak at the conference (although he may
+<[Dave] DHWEINSTEIN> show)...he is too busy (galley proofs to edit and
+<[Dave] DHWEINSTEIN> another conference)
+<R.FRANZEN> is here.
+<[Is Jax Agin] VESTA> hi rich
+<R.FRANZEN> Howdy.
+<[Dave] DHWEINSTEIN> But I gave him two references to get, "Forth: A Text and a 
+<[Dave] DHWEINSTEIN> Reference" and "Thinking Forth"
+<D.RUFFER> good choices
+<[Is Jax Agin] VESTA> ...ALL> jax is multitasking, don't be surprised if I 
+<[Is Jax Agin] VESTA> don't answer comments directed at me for a minute or two.
+<D.RUFFER> so am I jax <grin>
+<[Dave] DHWEINSTEIN> But Jax...we're always surprised when you answer (even 
+<[Dave] DHWEINSTEIN> more so when the answer is cogent)     :-)
+<D.RUFFER> I've got Daves binding package in another window
+<ATFURMAN> is here.
+<[Dave] DHWEINSTEIN> Waddya think?
+<[Dave] DHWEINSTEIN> (that is the [runtime] package your looking at, right?)
+<D.RUFFER> do-foo?   Hi alan
+<[Dave] DHWEINSTEIN> Yep..it is...heh
+<[Alan F.] ATFURMAN>
+<[Dave] DHWEINSTEIN> Hi Alan
+<[Alan F.] ATFURMAN> Did I see a notice for 15 minutes ago?
+<[Alan F.] ATFURMAN> No one was around here then.
+<[Dave] DHWEINSTEIN> <- been here since 22 past
+<D.RUFFER> no, I got here late
+<D.RUFFER> just put up the notice about 5 minutes ago
+<[Alan F.] ATFURMAN> Larry Forseley, non?
+<[Is Jax Agin] VESTA> what notice?
+<[Dave] DHWEINSTEIN> That's the 6th
+<D.RUFFER> sent him a note tonight
+<D.RUFFER> but he didn't mention if he'd show up tonight
+<D.RUFFER> the one on the door to the RTC jax
+<[Alan F.] ATFURMAN> So...
+<[Dave] DHWEINSTEIN> So.,..what do you think of the [runtime] word?
+<D.RUFFER> do we have a topic tonight?
+<D.RUFFER> I'm still "analyzing" dave
+<[Is Jax Agin] VESTA> what file?
+<D.RUFFER> Dave just posted a late binding package
+<D.RUFFER> well not quite what I'd call a package
+<D.RUFFER> just a short file
+<[Dave] DHWEINSTEIN> Few pointers:  [""] is immediate, and compiles a counted 
+<[Dave] DHWEINSTEIN> string into the dictionary...when the compiled word is
+<[Dave] DHWEINSTEIN> run the address of the string is on the stack
+<[Dave] DHWEINSTEIN> ". prints a counted string
+<[Is Jax Agin] VESTA> foo where is peckedge, keptin?
+<D.RUFFER> let me try to send it to ya all
+<D.RUFFER> hang on to you capture files :-)
+<[Is Jax Agin] VESTA> arrrghh not the dreaded GEnie conference upload??????
+<D.RUFFER> maybe, just a minute
+<[Dave] DHWEINSTEIN> Or I can upload it
+<D.RUFFER> \         --dave (9/15/88)
+<D.RUFFER> : (runtime)     ( word-name-addr -- )
+<D.RUFFER>                 ( finds word-name and executes it if it exists, otherwise )
+<D.RUFFER>                 ( it aborts with an error message                         )
+<D.RUFFER>         ( word ) find if
+<D.RUFFER>                 execute
+<D.RUFFER>         else
+<D.RUFFER>                 ". abort" not found"
+<D.RUFFER>         then
+<D.RUFFER>         ;
+<D.RUFFER> : [runtime]     ( -- )
+<D.RUFFER>                 ( input stream: <name> )
+<D.RUFFER>                 ( changes the binding of <name> to runtime instead of compile )
+<D.RUFFER>                 ( time                                                        )
+<D.RUFFER>         [compile] [""]                  \ Compile <name> into the dictionary
+<D.RUFFER>         compile (runtime)               \ and add the code to find and
+<D.RUFFER>                                         \ execute <name>
+<D.RUFFER>         ;
+<D.RUFFER>         immediate
+<D.RUFFER> how'd that look?
+<[Is Jax Agin] VESTA> it's a mess.
+<[Dave] DHWEINSTEIN> Like what I wrotye
+<[Dave] DHWEINSTEIN> -y
+<R.FRANZEN> a little ruffer than I'm used to.
+<[Is Jax Agin] VESTA> right
+<[Dave] DHWEINSTEIN> urrggggeeeeee
+<[Dave] DHWEINSTEIN> <wince> <wince> <wince>
+<[Is Jax Agin] VESTA> don't wein, dave.
+<D.RUFFER> did it get messed up in the transfer?
+<[Is Jax Agin] VESTA> probably in the writing.
+<[Dave] DHWEINSTEIN> Go jax off vesta
+<D.RUFFER> shall I try it again?
+<[Dave] DHWEINSTEIN> :-)
+<R.FRANZEN> no, we need to strip your name, though.
+<[Is Jax Agin] VESTA> that's my new comm protocol ...
+<[Dave] DHWEINSTEIN> Let me
+<[Is Jax Agin] VESTA> jaxon/jaxoff.
+<[Dave] DHWEINSTEIN> Here goes:
+<[Dave] DHWEINSTEIN> \                  Runtime Binding for F83
+<[Dave] DHWEINSTEIN> \                written by David Weinstein
+<[Dave] DHWEINSTEIN> \
+<[Dave] DHWEINSTEIN> \   This simple pragma -- [runtime] -- (and its underlying word...(runtime) )
+<[Dave] DHWEINSTEIN> \   allows programmers to bind a name to its function at runtime, instead of
+<[Dave] DHWEINSTEIN> \   compile time.
+<[Dave] DHWEINSTEIN> \
+<[Dave] DHWEINSTEIN> \   Example:
+<[Dave] DHWEINSTEIN> \     : foo     ( -- )
+<[Dave] DHWEINSTEIN> \          [runtime] do-foo ;
+<[Dave] DHWEINSTEIN> \
+<[Dave] DHWEINSTEIN> \   : do-foo beep ;
+<[Dave] DHWEINSTEIN> \   foo   (beeeeeeeeepppppppp)
+<[Dave] DHWEINSTEIN> \   : do-foo ." Hehehehe" cr ;
+<[Dave] DHWEINSTEIN> \   foo
+<[Dave] DHWEINSTEIN> \   Hehehehe
+<[Dave] DHWEINSTEIN> \   forget do-foo
+<[Dave] DHWEINSTEIN> \   forget do-foo
+<[Dave] DHWEINSTEIN> \   foo
+<[Dave] DHWEINSTEIN> \   do-foo not found
+<[Dave] DHWEINSTEIN> \
+<[Dave] DHWEINSTEIN> \   (you get the idea)
+<[Dave] DHWEINSTEIN> \
+<[Dave] DHWEINSTEIN> \         --dave (9/15/88)
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN> : (runtime)     ( word-name-addr -- )
+<[Dave] DHWEINSTEIN>                 ( finds word-name and executes it if it exists, otherwise )
+<[Dave] DHWEINSTEIN>                 ( it aborts with an error message                         )
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN>         ( word ) find if
+<[Dave] DHWEINSTEIN>                 execute
+<[Dave] DHWEINSTEIN>         else
+<[Dave] DHWEINSTEIN>                 ". abort" not found"
+<[Dave] DHWEINSTEIN>         then
+<[Dave] DHWEINSTEIN>         ;
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN> : [runtime]     ( -- )
+<[Dave] DHWEINSTEIN>                 ( input stream: <name> )
+<[Dave] DHWEINSTEIN>                 ( changes the binding of <name> to runtime instead of compile )
+<[Dave] DHWEINSTEIN>                 ( time                                                        )
+<[Dave] DHWEINSTEIN>         [compile] [""]                  \ Compile <name> into the dictionary
+<[Dave] DHWEINSTEIN>         compile (runtime)               \ and add the code to find and
+<[Dave] DHWEINSTEIN>                                         \ execute <name>
+<[Dave] DHWEINSTEIN>         ;
+<[Dave] DHWEINSTEIN>         immediate
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN> How'd that go...
+<[Dave] DHWEINSTEIN> ???
+<[Alan F.] ATFURMAN> Well enough I can hit you with a question...
+<[Dave] DHWEINSTEIN> Ok
+<[Alan F.] ATFURMAN> I recently used a little "vectoring of words"...
+<[Alan F.] ATFURMAN> similar to deferred words...
+<[Alan F.] ATFURMAN> and I got to thinking: what if I compiled the deferred 
+<[Alan F.] ATFURMAN> word's guts
+<[Is Jax Agin] VESTA> ^^^^ needs typing lessons
+<[Alan F.] ATFURMAN> and plugged in the pointer, and everything was fine, then 
+<[Alan F.] ATFURMAN> forgot the
+<[Alan F.] ATFURMAN> content word.  Then the patched pointer would be pointing 
+<[Alan F.] ATFURMAN> outside the
+<[Alan F.] ATFURMAN> dictionary.  The code would probably still be there, and 
+<[Alan F.] ATFURMAN> be valid.
+<[Alan F.] ATFURMAN> But: what if I compiled something else, but did not bind 
+<[Alan F.] ATFURMAN> the
+<[Alan F.] ATFURMAN> deferred word to something new.  Then points to garbage.  
+<[Alan F.] ATFURMAN> What to do?
+<[Dave] DHWEINSTEIN> This doesn't do anything like that. It holds the name of 
+<[Alan F.] ATFURMAN> the word (the string)...
+<[Alan F.] ATFURMAN> Is this a worry down in the noise, that I should just 
+<[Alan F.] ATFURMAN> forget about?
+<[Alan F.] ATFURMAN> <end>
+<[Dave] DHWEINSTEIN> Then it uses find to search the current dictionary for the 
+<[Dave] DHWEINSTEIN> word, and executes it if it is there. So it never points
+<[Dave] DHWEINSTEIN> to garbage.
+<[Is Jax Agin] VESTA>
+<[Dave] DHWEINSTEIN> .
+<[Is Jax Agin] VESTA> Nice, kinda silly tho
+<[Is Jax Agin] VESTA> .
+<[Dave] DHWEINSTEIN> Why silly?
+<[Is Jax Agin] VESTA> DEFER does something similar.
+<D.RUFFER> there is deffinitely a problem with line length
+<[Dave] DHWEINSTEIN> No it does not.
+<[Is Jax Agin] VESTA> without programmer intervaention.
+<D.RUFFER> I think I've solved it, shal I try it again?
+<[Is Jax Agin] VESTA> Yes it does. If you execute an uninitialized word, you 
+<[Is Jax Agin] VESTA> get ...
+<[Dave] DHWEINSTEIN> I need to be able to look up different words in different 
+<[Dave] DHWEINSTEIN> didictionaries (i.e. even defer has a binding to one word)
+<[Is Jax Agin] VESTA> " uninitialized execution vector.
+<R.FRANZEN> (no, Dennis, I think we have it.)
+<D.RUFFER> this is NOT a defered word concept
+<J.SHIFRIN> is here.
+<[Is Jax Agin] VESTA> Well if you want that, you can build in a multiple vector 
+<[Is Jax Agin] VESTA> word that tests CONTEEXT.
+<[Is Jax Agin] VESTA> Hi Jerry.
+<D.RUFFER> hi jerry, hop right in :-)
+<[Dave] DHWEINSTEIN> This is far simpler
+<J.SHIFRIN> Hi all
+<J.SHIFRIN> What's up?
+<D.RUFFER> this is by far simpler jax
+<[Dave] DHWEINSTEIN> Discussing a new binding package I cooked up yesterday
+<D.RUFFER> gonna have to send it again for jerry's sake
+<[Is Jax Agin] VESTA> OCTOBVER 1ST --- REALTIME CONTROL & FORTH BOARD (303)
+<[Is Jax Agin] VESTA> 278-0364
+<J.SHIFRIN> Hey - way to go!
+<D.RUFFER> nice ad jax
+<R.FRANZEN> Alan, in specific answer to your question...crash!
+<[Dave] DHWEINSTEIN> A Jaxvert
+<D.RUFFER> ready to capture again?
+<J.SHIFRIN> Jax, can I publicize this?
+<[Is Jax Agin] VESTA> foo.
+<[Is Jax Agin] VESTA> yes jerry.
+<C.MORAVETZ> is here.
+<[Is Jax Agin] VESTA> I will tonite, if I get on ECFB
+<[Is Jax Agin] VESTA> I have an ad prepared.
+<D.RUFFER> here goes for the late comers
+<[Is Jax Agin] VESTA> Would like to upload it here, but &^*(&%(*&^ GENIE!
+<[Dave] DHWEINSTEIN> Hey Cliff...still slumming in C???? (:-)
+<[Cliff] C.MORAVETZ> Not at the moment.  Got laid off.
+<D.RUFFER> why can't you upload here jax?
+<[Dave] DHWEINSTEIN> Ouch. Sorry to here that.
+<[Dave] DHWEINSTEIN> hear even
+<[Cliff] C.MORAVETZ> Yeah, 29 out of 56 people go laid off.
+<[Is Jax Agin] VESTA> Well, GEnie and my computer aren't on speaking terms.
+<D.RUFFER> huh?
+<J.SHIFRIN> Those durn Amigas(!)
+<[Is Jax Agin] VESTA> I have a CR-only file made, but GEnie won't swallow it 
+<[Is Jax Agin] VESTA> ascii upload.
+<[Dave] DHWEINSTEIN> What happenned?
+<[Cliff] C.MORAVETZ> Chapter 11.
+<D.RUFFER> upload it binary, and I'll "fix" it
+<[Dave] DHWEINSTEIN> Ouch
+<[Is Jax Agin] VESTA> You want it cr-only, or cr-lf?
+<[Is Jax Agin] VESTA> or lf-only?
+<D.RUFFER> doesn't matter, I'll fix
+<[Is Jax Agin] VESTA> brb
+<[Is Jax Agin] VESTA> has left.
+<D.RUFFER> are we ready to get back to late binding?
+<[Dave] DHWEINSTEIN> Ok
+<[Cliff] C.MORAVETZ> We've been in chap. 11 for a long time.  The creditors 
+<[Dave] DHWEINSTEIN> finally got up in arms and decided to put in a trustee.
+<[Dave] DHWEINSTEIN> Then things changed.
+<D.RUFFER> jerry and clif, would you like to see the code?
+<[Dave] DHWEINSTEIN> Uhhoh...more on Gilbert
+<J.SHIFRIN> Dennis, if possible, I'd like to get the disks back from you to 
+<J.SHIFRIN> stock Jax's BBS.
+<[Cliff] C.MORAVETZ> What code?
+<[Cliff] C.MORAVETZ> Morse? :)
+<J.SHIFRIN> I lost track. What code?
+<D.RUFFER> Boris hasn't gotten me the last of them yet jerry
+<[Dave] DHWEINSTEIN> A pragma I wrote to cobind words at runtime instead of 
+<[Dave] DHWEINSTEIN> compile times
+<D.RUFFER> I'll bug him again tomorrow
+<D.RUFFER> here it comes
+<[Dave] DHWEINSTEIN> -co
+<[Alan F.] ATFURMAN> Late [you should live so long even] binding
+<D.RUFFER> ready your capture file
+<J.SHIFRIN> Can you send back what you have (I'm pretty low on disks and new 
+<J.SHIFRIN> stock hasn't arrived).
+<D.RUFFER> \         --dave (9/15/88)
+<D.RUFFER> : (runtime)     ( word-name-addr -- )
+<D.RUFFER>         ( word ) find if
+<D.RUFFER>                 execute
+<D.RUFFER>         else
+<D.RUFFER>                 ". abort" not found"
+<D.RUFFER>         then
+<D.RUFFER>         ;
+<D.RUFFER> : [runtime]     ( -- )
+<D.RUFFER>                 ( input stream: <name> )
+<D.RUFFER>         [compile] [""]
+<D.RUFFER>         compile (runtime)
+<D.RUFFER>         ;
+<D.RUFFER>         immediate
+<D.RUFFER> sure jerry
+<[Dave] DHWEINSTEIN> Also...[""] is immediate and compiles a counted string 
+<[Dave] DHWEINSTEIN> into a dictionary entry, leaving the address of the
+<[Dave] DHWEINSTEIN> string on at runtime, and ". prints a counted string
+<[Dave] DHWEINSTEIN> And Gilbert is headed straight for Austin
+<[Cliff] C.MORAVETZ> Well, if you see Gilbert, tell him I said Hi.
+<J.SHIFRIN> Where are you, Dave? I have a bro in Austin.
+<[Dave] DHWEINSTEIN> I have a few more vulgar things to say to Gilbert.
+<[Dave] DHWEINSTEIN> 24th and Lamar
+<[Dave] DHWEINSTEIN> (near the UT campus)
+<J.SHIFRIN> ???Is that Austin?
+<[Dave] DHWEINSTEIN> Is what Austin??
+<J.SHIFRIN> 24th and Lamar.
+<[Dave] DHWEINSTEIN> Yes
+<[Cliff] C.MORAVETZ> Austin is my left foot, Fred is my right foot.
+<R.FRANZEN> g'nite, ya'll
+<[Cliff] C.MORAVETZ> Bye, Franzen
+<R.FRANZEN> has left.
+<M.WRIGHT12> is here.
+<[Cliff] C.MORAVETZ> Hi M.
+<[Alan F.] ATFURMAN>
+<[Dave] DHWEINSTEIN> Hullo M
+<M.WRIGHT12> hi
+<[Cliff] C.MORAVETZ> has left.
+<D.RUFFER> did we finishe bindings?
+<J.SHIFRIN> What was that code for? Deferred execution?
+<VESTA> is here.
+<D.RUFFER> sort of late binding jerry
+<[Dave] DHWEINSTEIN> No. It is used to bind a word at execution time. This 
+<[Dave] DHWEINSTEIN> means that it will pick the first word in the local
+<[Dave] DHWEINSTEIN> dictionary to use
+<D.RUFFER> dave wrote it
+<[Yet Is Jax] VESTA> what *use* do you envision for this concept?
+<J.SHIFRIN> Dave, I looked over your BINDING file. Very nice. Is this more of 
+<J.SHIFRIN> the same?
+<[Dave] DHWEINSTEIN> Well. I am using it in the Modula-2 style module package I 
+<[Dave] DHWEINSTEIN> am writing for Forth
+<[Dave] DHWEINSTEIN> Yes...this is very similar,m but even later binding
+<[Dave] DHWEINSTEIN> -m
+<J.SHIFRIN> I didn't get a chance to play with it. Maybe soon... Hope you can 
+<J.SHIFRIN> put up an updated package.
+<[Yet Is Jax] VESTA> ( jerry hustles more software for his board :-))
+<D.RUFFER> just got one tonight jerry
+<D.RUFFER> I'll get it unhidden soon
+<[Dave] DHWEINSTEIN> The update would be a rewrite of load...since load does 
+<[Dave] DHWEINSTEIN> not work with this package in Mitch's Forth)
+<J.SHIFRIN> Well, I'm trying to justify buying the Perstor controller (ARLL!).
+<[Yet Is Jax] VESTA> what is?
+<[Yet Is Jax] VESTA> OH hd controller.
+<J.SHIFRIN> Gives you twice the capacity of a disk (20 meg >> 40).
+<[Yet Is Jax] VESTA> RLL ... doesn't work with F83S
+<[Yet Is Jax] VESTA> *{crash}*
+<J.SHIFRIN> F83S??
+<[Yet Is Jax] VESTA> F83S
+<[Yet Is Jax] VESTA> by baden &c.
+<J.SHIFRIN> I'll byte. F83X?
+<[Yet Is Jax] VESTA> more f83x, f83y, F83S.
+<[Alan F.] ATFURMAN> S for Son of F83X?
+<[Yet Is Jax] VESTA> F83S is distributed by the San Francisco Forth Interest 
+<[Yet Is Jax] VESTA> Group.
+<D.RUFFER> he's gonna run out of letters soon :-)
+<[Yet Is Jax] VESTA> Yes alan.
+<J.SHIFRIN> I see. An arrangement of the alphabet I hadn't previously seen.
+<[Yet Is Jax] VESTA> It is Super L&P with seperated heads.
+<[Yet Is Jax] VESTA> Best screen editor in the Forth world.
+<[Yet Is Jax] VESTA> Bar none.
+<J.SHIFRIN> Compare it to F-PC, please.
+<[Yet Is Jax] VESTA> Same relationship as L&P <> F-PC. F83S is Baden's souped 
+<[Yet Is Jax] VESTA> up L&P ...
+<[Yet Is Jax] VESTA> with the best screen editor in existence.
+<[Yet Is Jax] VESTA> .
+<J.SHIFRIN> Guy Kelley (sp?) had a pretty nifty screen editor. Seen it?
+<[Yet Is Jax] VESTA> name?
+<J.SHIFRIN> Er...I'll have to check the board.
+<[Yet Is Jax] VESTA> Baden's is so fast it is frightening.
+<[Yet Is Jax] VESTA> I have tried ZEDIT and others.
+<[Yet Is Jax] VESTA> UGH>
+<D.RUFFER> yea, what was that file jerry <grin> {searching...}
+<[Yet Is Jax] VESTA> Badens is better than any screen editor I have on my Amiga,
+<[Yet Is Jax] VESTA> even.
+<[Yet Is Jax] VESTA> But who uses screens for source on the Amiga?
+<[Dave] DHWEINSTEIN> (contemplates quantum mechianics due tomorrow)
+<[Yet Is Jax] VESTA> BLOCK is a mess on the Amiga.
+<J.SHIFRIN> See FEDDEMO.ARC (is here yet?).
+<[Alan F.] ATFURMAN> Huh?
+<[Yet Is Jax] VESTA> You *have* to use files on Amy.
+<[Alan F.] ATFURMAN> Does this mean JAX NIX BLOX HAX ?????
+<[Yet Is Jax] VESTA> No, BLOCK is the mainstream of Forth.
+<D.RUFFER> that's the name!
+<[Yet Is Jax] VESTA> But Amiga inverse optimizes BLOCK.
+<[Yet Is Jax] VESTA> It's the file system.
+<D.RUFFER> file # 759
+<[Yet Is Jax] VESTA> BLOCK is horrible on AMy.
+<[Alan F.] ATFURMAN> But... but...
+<[Yet Is Jax] VESTA> Eventually I will use the amiga trackdisk.device to write 
+<[Yet Is Jax] VESTA> my own BLOCK system that will poduce ...
+<[Alan F.] ATFURMAN> how do you do stuff like data bases and b-trees if you 
+<[Alan F.] ATFURMAN> can't
+<J.SHIFRIN> Don't think Guy included full source. It's PC based. Good luck on 
+<J.SHIFRIN> Amiga.
+<[Yet Is Jax] VESTA> disks AMY can't read under norm al circumstances.
+<[Alan F.] ATFURMAN> get raw disk, let alone virtual memory space?
+<[Yet Is Jax] VESTA> Right, alan, you just use a file interface in place of 
+<[Yet Is Jax] VESTA> block.
+<J.SHIFRIN> Jax, which BBS software do you have?
+<[Yet Is Jax] VESTA> You can make it 1024 bytes if you want.
+<D.RUFFER> shades of MVP Forth JAX <yuck>
+<[Yet Is Jax] VESTA> We ordered PCBOARD today.
+<[Yet Is Jax] VESTA> well, dennis, if your Forth is standalone, BLOCK is the 
+<[Yet Is Jax] VESTA> answer ...
+<[Dave] DHWEINSTEIN> later y'all
+<[Dave] DHWEINSTEIN> has left.
+<J.SHIFRIN> Great. If you get the current (12.1) release we're all set. If they 
+<J.SHIFRIN> ship\
+<[Yet Is Jax] VESTA> I have TWO 32-bit Forths on Amy, and I have a lot of room 
+<[Yet Is Jax] VESTA> to manoeuvre.
+<[Yet Is Jax] VESTA> Right.
+<[Yet Is Jax] VESTA> 12.1 is it.
+<J.SHIFRIN> new version, it'll take a few weeks.
+<[Yet Is Jax] VESTA> They promised free BBS upgrade to 14.0
+<J.SHIFRIN> 10-4. I'll ship utilities asap.
+<[Yet Is Jax] VESTA> but we get 12.1 by tuesday next
+<[Yet Is Jax] VESTA> thank you jerry.
+<J.SHIFRIN> Gotta go now. have stay low, Dave.
+<[Yet Is Jax] VESTA> chat you on ECFB later.
+<J.SHIFRIN> has left.
+<D.RUFFER> bye jerry
+<D.RUFFER> now, jax, are you gonna use "hard" blocks when you have files?
+<[Alan F.] ATFURMAN> What is F83? Soft blocks?
+<[Yet Is Jax] VESTA> what are we talking about, dennis?
+<D.RUFFER> yes!
+<[Yet Is Jax] VESTA> Oh, I see ...
+<D.RUFFER> they still use the file system
+<[Yet Is Jax] VESTA> That's the problem on AMIGA ... it is a lot of work to get 
+<[Yet Is Jax] VESTA> around Exec ...
+<D.RUFFER> but I thought I read that jax was gonna use...
+<[Yet Is Jax] VESTA> but the handles are there ...
+<[Yet Is Jax] VESTA> and if you want, you can use them ...
+<D.RUFFER> blocks drirect to the controller.   Why?
+<[Yet Is Jax] VESTA> When JFORTH implemented BLOCK ...
+<[Yet Is Jax] VESTA> they made them "soft" BLOCK to keep the disk Amiga File 
+<[Yet Is Jax] VESTA> System compatible.
+<[Yet Is Jax] VESTA> >>>
+<[Yet Is Jax] VESTA> the problem with that ...
+<[Yet Is Jax] VESTA> is that in a 512-byte hard block in AmigaDOS ...
+<[Yet Is Jax] VESTA> only 488 are data ...
+<[Yet Is Jax] VESTA> you get the picture ...
+<D.RUFFER> uggg!
+<[Alan F.] ATFURMAN> AARRGGHH!!!!
+<[Yet Is Jax] VESTA> inefficiency^2
+<[Yet Is Jax] VESTA> BUT ...
+<[Yet Is Jax] VESTA> Amiga is a wonderfuly flexible machine ...
+<[Yet Is Jax] VESTA> the handles are there in the op system ...
+<[Yet Is Jax] VESTA> for a non-compatible file system ....
+<[Yet Is Jax] VESTA> the    trackdisk.device    is there for use ...
+<[Alan F.] ATFURMAN> Ah, like UNIX.
+<[Yet Is Jax] VESTA> and you can roll your own, if inclined.
+<[Yet Is Jax] VESTA> right alan ... AmigaDOS/EXEC/Intuition is like ...
+<D.RUFFER> as long as it includes error correcting
+<[Yet Is Jax] VESTA> single-user Sun Unix.
+<[Yet Is Jax] VESTA> .
+<D.RUFFER> otherwise, you have "FollyForth" (ala Murdock)
+<[Yet Is Jax] VESTA> ... /TIMe?
+<D.RUFFER> .... /roll?
+<M.WRIGHT12> JAX`
+<[Alan F.] ATFURMAN> While we're here...
+<[Yet Is Jax] VESTA> yes, m.wright?
+<[Alan F.] ATFURMAN> I just want to check:
+<M.WRIGHT12> WHERE DO I FIND FORTH FPR 8051
+<[Alan F.] ATFURMAN> You all know that a 32-bit Forth chip is being sold...
+<[Yet Is Jax] VESTA> hmmm ...
+<[Yet Is Jax] VESTA> that is interesting. there is an 8051 forth somewhere.
+<[Alan F.] ATFURMAN> by Silicon Composers, licensee of Johns Hopkins Applied 
+<[Alan F.] ATFURMAN> Physics Lab.
+<M.WRIGHT12> 8085?
+<[Yet Is Jax] VESTA> Also, m.wright.
+<[Yet Is Jax] VESTA> The problem is I dunno if there is a Pub Domain one around 
+<[Yet Is Jax] VESTA> for either.
+<M.WRIGHT12> ROMED
+<[Alan F.] ATFURMAN> FORTH Inc. I believe has a development environment for
+<[Yet Is Jax] VESTA> there is definitedly romable polyFORTH for 8051
+<M.WRIGHT12> FREE
+<[Alan F.] ATFURMAN> the 8051 or 8031
+<[Yet Is Jax] VESTA> FREE is the problem.
+<D.RUFFER> interesting alan, SC is dealing the APL chip now?
+<[Yet Is Jax] VESTA> I know who might now.
+<[Alan F.] ATFURMAN> Also, Bryte Forth
+<[Alan F.] ATFURMAN> .
+<[Yet Is Jax] VESTA> that should be "know".
+<[Yet Is Jax] VESTA> Let me look around.
+<[Yet Is Jax] VESTA> I will email you if I find something on another BBS.
+<[Yet Is Jax] VESTA> ok?
+<M.WRIGHT12> CAN I ROM F83(8080) FOR 8085
+<D.RUFFER> include me too jax
+<L.FORSLEY> is here.
+<[Yet Is Jax] VESTA> It could be done, if you understand 1) the metacompiler 
+<[Yet Is Jax] VESTA> and b) the 8085 assembly set.
+<D.RUFFER> hi larry
+<[Alan F.] ATFURMAN> Larry! goodness gracious!
+<[Yet Is Jax] VESTA> If you want to roll your own ...
+<L.FORSLEY> ??
+<D.RUFFER> you also need to "Fix" variables
+<[Yet Is Jax] VESTA> just write anassembler for 8051 and 8085 and metacompile.
+<L.FORSLEY> Hi Dennis.  Hi Alan
+<D.RUFFER> romming F83 larry :-)
+<M.WRIGHT12> NOT GOOD ENOUGH
+<[Yet Is Jax] VESTA> Hey larry.
+<[Yet Is Jax] VESTA> why not good enough?
+<L.FORSLEY> Hi Jack
+<[Yet Is Jax] VESTA> Ever fill that VAX slot?
+<[Alan F.] ATFURMAN> Call the Air Marshall!
+<L.FORSLEY> Not yet. ststill looking
+<[Yet Is Jax] VESTA> GFL
+<L.FORSLEY> eh?
+<[Yet Is Jax] VESTA> Forth programmers are *not* a dime a dozen right now.
+<L.FORSLEY> no, about 2 bits.
+<[Yet Is Jax] VESTA> ( Good F'ing Luck)
+<L.FORSLEY> thanks.
+<M.WRIGHT12> IAM NOT GOOD ENOUGH YET AT FORTH
+<L.FORSLEY> time.
+<[Yet Is Jax] VESTA> aha ... well, mwright, that is a problem.
+<L.FORSLEY> Dennis, how's 7:30 tomorrow night?
+<[Yet Is Jax] VESTA> I'll email you if I run across such a free forth.
+<M.WRIGHT12> THANK YOU
+<[Yet Is Jax] VESTA> Why that chip? whynot buy a 8088 board with f83 on board 
+<[Yet Is Jax] VESTA> from VESTA ( my company)?
+<[Alan F.] ATFURMAN> Ah yes, Larry...
+<M.WRIGHT12> CHEAP
+<[Yet Is Jax] VESTA> so are our boards.
+<[Yet Is Jax] VESTA> is your time building a controller and obtaining a 
+<[Yet Is Jax] VESTA> language worth $169.00?
+<M.WRIGHT12> I LOOKED AT YOUR BOARDS
+<[Alan F.] ATFURMAN> I know someone out Rochester way who will be doing a 
+<[Alan F.] ATFURMAN> little Forth
+<[Yet Is Jax] VESTA> that's what our board costs.
+<[Yet Is Jax] VESTA> Alan ... so what about the 32-banger JHAPL?
+<[Alan F.] ATFURMAN> programming.  What is a convenient place for him to learn?
+<[Alan F.] ATFURMAN> End of question for Larry.
+<[Alan F.] ATFURMAN> About 32-bit chip...
+<L.FORSLEY> what was the question alan?
+<L.FORSLEY> Ah, I happened to hear about the jpl chip tonight.
+<[Alan F.] ATFURMAN> Where can a Mech. Eng. type learn a little Forth 
+<[Alan F.] ATFURMAN> programming (gad are we getting out of phase).
+<L.FORSLEY> Ah, come into my parlor said the spider to the fly.
+<D.RUFFER> ah but that's what makes it fun alan :-)
+<[Alan F.] ATFURMAN> Give me specifics and I will relay.
+<[Alan F.] ATFURMAN> E mail if you wish.
+<[Yet Is Jax] VESTA> mwright --- what is your applicaton?
+<L.FORSLEY> Dennis, how's 7:30 pm?
+<D.RUFFER> and now an ad from Dash Find
+<M.WRIGHT12> D/A
+<[Yet Is Jax] VESTA> alan --- when is that 32-banger for sale?
+<[Alan F.] ATFURMAN> Um, Real Soon Now...
+<D.RUFFER> I'll give you a call tomorrow to comfirm but sounds ok now :-)
+<L.FORSLEY> See George Nicol fo r his new 32 bit banger.
+<[Alan F.] ATFURMAN> My info. is a month old.  Here goes:
+<L.FORSLEY> OK, Dennis.
+<M.WRIGHT12> JAX CAN I CALL YOU AT WORK
+<[Yet Is Jax] VESTA> mwright --- 303 422-8088
+<M.WRIGHT12> GOT IT
+<L.FORSLEY> I have a conference on a Forth like language
+<L.FORSLEY> ASYST on the PC in 3 weeks.  There will be
+<[Yet Is Jax] VESTA> new bbs for Vesta ... coming Oct 1 ... 303 278 0364
+<[Alan F.] ATFURMAN> Eat at Joe's.
+<L.FORSLEY> some introductory material presented.  Oct 9-11,
+<L.FORSLEY> University of Rochester.
+<[Yet Is Jax] VESTA> burma shave ( close, for gov't.)
+<M.WRIGHT12> has left.
+<D.RUFFER> more specific info larry?
+<L.FORSLEY> On what?
+<L.FORSLEY> chips
+<L.FORSLEY> dinner
+<L.FORSLEY> cysts
+<D.RUFFER> intro material?
+<L.FORSLEY> ??
+<[Yet Is Jax] VESTA> 32-banger????????
+<L.FORSLEY> Ah, it's on Asyst.
+<[Alan F.] ATFURMAN> you rang?
+<[Yet Is Jax] VESTA> who has it? how much? when?
+<L.FORSLEY> George Nicol.
+<[Yet Is Jax] VESTA> who he?
+<[Alan F.] ATFURMAN> All right...
+<L.FORSLEY> 32 bits.  He's playing both ends.
+<[Alan F.] ATFURMAN> harrumph...
+<D.RUFFER> is conf 9-11?
+<[Yet Is Jax] VESTA> woof
+<L.FORSLEY> Harris and APL
+<[Alan F.] ATFURMAN> .
+<[Yet Is Jax] VESTA> ga alan.
+<[Alan F.] ATFURMAN> 'scuse me?
+<[Alan F.] ATFURMAN> ok
+<L.FORSLEY> is ga alan like Ga As?
+<[Yet Is Jax] VESTA> who has 32banger Forth chip for sale?
+<[Yet Is Jax] VESTA> JAX WANTS!
+<L.FORSLEY> Harris in engineering samples
+<[Alan F.] ATFURMAN> right
+<[Alan F.] ATFURMAN> .
+<[Yet Is Jax] VESTA> $$$.cc ???
+<L.FORSLEY> It's Phil Koopmans.  Lots of microcode.
+<L.FORSLEY> I don't know about the price.
+<[Alan F.] ATFURMAN> No. APL.
+<L.FORSLEY> Ah.  See George.
+<[Yet Is Jax] VESTA> APL ... yeah ... woof? how much?? who?? phone#?
+<L.FORSLEY> Silicon composters in Palo Alto
+<[Yet Is Jax] VESTA> ( Koopmans is WISC, write? :-) )[A
+<L.FORSLEY> right.
+<[Yet Is Jax] VESTA> SC has APL?
+<L.FORSLEY> he's wiscy.  I talked to him tonight.
+<[Yet Is Jax] VESTA> $$$.CC???
+<[Yet Is Jax] VESTA> ( apl )
+<L.FORSLEY> I don't know.  Ask Dave Williams at Harris.  Or, Mike Graff.  I 
+<L.FORSLEY> think
+<[Alan F.] ATFURMAN> 'scuse me...
+<[Yet Is Jax] VESTA> any word on the Moore Buffalo CHip?
+<L.FORSLEY> Williams is more interested in the 16 bit banger for the momemnt
+<[Yet Is Jax] VESTA> ga alam
+<L.FORSLEY>
+<[Yet Is Jax] VESTA> APL32@$$$.cc??
+<L.FORSLEY> I talked with one of the finaciers last summer about the buffalo 
+<L.FORSLEY> chip.
+<[Alan F.] ATFURMAN> Sorry. -60dB SNR. Checksum error.
+<L.FORSLEY> Moore is on the way.
+<[Yet Is Jax] VESTA> BREAK DETECTED
+<[Yet Is Jax] VESTA> think alan wants to say something.
+<D.RUFFER> sorry, no breaks accepted at this time
+<D.RUFFER> try again later
+<[Yet Is Jax] VESTA> how about an out-of-state checksum?
+<D.RUFFER> :-) ga alan?
+<[Alan F.] ATFURMAN> .
+<[Yet Is Jax] VESTA> ( smartest thing he said tonite)
+<L.FORSLEY> Brief, and to the point.
+<L.FORSLEY> Make him president.
+<[Yet Is Jax] VESTA> SO S>C> HAS APL 32 BIT CHIP >>> HOW MUCH $$$? ANYBODY?
+<D.RUFFER> don't think anyone knows jax
+<[Yet Is Jax] VESTA> woof.
+<D.RUFFER> do ya want I should shut em up alan? <grin>
+<L.FORSLEY> I'll guess that no chip, just boards.  About 5-8K
+<[Alan F.] ATFURMAN> .
+<L.FORSLEY> I know how George "operates"
+<[Yet Is Jax] VESTA> arrgghhhhhhh
+<[Yet Is Jax] VESTA> who needs ugly board ... give me chip & docs, have JForth, 
+<[Yet Is Jax] VESTA> will Assemble.
+<L.FORSLEY> What happened to Charlie Johnson's poor man's
+<L.FORSLEY> 16bit banger?
+<[Yet Is Jax] VESTA> two months as usual!!!
+<L.FORSLEY> OH.  Not Gould again?
+<[Yet Is Jax] VESTA> "Two months" .. for the last two years!
+<[Yet Is Jax] VESTA> I see Cliff King once a week.
+<L.FORSLEY> Chuck's chip was always 6 months, but then it got built.  Twice!
+<[Yet Is Jax] VESTA> If he were eating forth chips, he would have starved by 
+<[Yet Is Jax] VESTA> now.
+<[Yet Is Jax] VESTA> Jax gets to write editor for Charlie J. chip if it ever 
+<[Yet Is Jax] VESTA> comes off!
+<L.FORSLEY> Well gang.  See you all later.
+<L.FORSLEY> Dennis, give me a call when you want.  Just give us a chance
+<[Yet Is Jax] VESTA> Say hi to Rochester for me, and J> Benny, too.
+<D.RUFFER> see ya tomorrow larry
+<L.FORSLEY> to shop.
+<L.FORSLEY> righty oh.
+<[Yet Is Jax] VESTA> Yowza!
+<L.FORSLEY> right on (wrong decade, oh well)
+<L.FORSLEY> has left.
+<[Pinhead] VESTA> Am I elected yet, Dennis?
+<[Alan F.] ATFURMAN> Pinhead? Is Larry your chaperone?
+<D.RUFFER> haven't even heard if we have a nominating committe yet :-(
+<[Zippy P.] VESTA> Life is a blur of Republicans and meat.
+<[Zippy P.] VESTA> Are we serving donuts in another solar system?
+<[Zippy P.] VESTA> If you can't think of anything nice to say, say something 
+<[Zippy P.] VESTA> surreal.
+<D.RUFFER> just push the thumb jax...sheesh
+<D.RUFFER> is it getting late...or what?
+<[jax@chariot] VESTA> echo /EXI > GEnie
+<[Alan F.] ATFURMAN> My budget says it is.
+<D.RUFFER> alan did you have something to say?
+<[jax@chariot] VESTA> gnite all.
+<[jax@chariot] VESTA> ...???
+<[jax@chariot] VESTA> alan ???
+<[Alan F.] ATFURMAN> Good night and thanks for all the fish.
+<[Alan F.] ATFURMAN> has left.
+<[jax@chariot] VESTA> 42
+<D.RUFFER> fish?
+<[jax@chariot] VESTA> has left.
+=== End of Steno notes. ===
+
+

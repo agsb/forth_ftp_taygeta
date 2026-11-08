@@ -1,0 +1,165 @@
+
+             New Product Announcement, March 4, 1988
+
+                    LMI TMS34010 Metacompiler
+
+
+Laboratory Microsystems Inc. announces a new version of the LMI
+Forth Metacompiler (cross-compiler) targeted to the Texas
+Instruments TMS34010 graphics processor.  The LMI Metacompiler
+turns any IBM PC, PC/AT, or PS/2 compatible into an inexpensive
+development system for this powerful new CPU.
+
+
+The TMS34010
+
+The Texas Instruments TMS34010 is a 32-bit microprocessor that
+offers:
+
+     * machine level instructions for both linear and XY
+       addressed line drawing, pixblt (pixel block transfer),
+       region fills, clipping, and much more;
+
+     * manipulation of up to 8096 x 8096 pixels with up to 16
+       bits per pixel;
+
+     * up to 16 MB of display memory;
+
+     * built-in cache;
+
+     * 50 MHz performance, with faster processors planned -- the
+       highest performance graphics microprocessor currently
+       available.
+
+Unlike most other graphics processors, the TMS34010 is a full-
+fledged general-purpose CPU and can serve as the heart of a
+complete computer system.
+
+
+The LMI Metacompiler
+
+The LMI Forth Metacompiler is a professional application
+development tool.  It compiles Forth source code into a stand-
+alone ROMable or disk-based application.  The new application may
+be any turnkey application, including a new interactive Forth
+interpreter/compiler.
+
+The term metacompiler describes a special Forth compiler which:
+
+     * is written in Forth;
+
+     * accepts Forth source code and/or assembly language
+       statements as input;
+
+     * produces an executable image as output;
+
+     * can produce a new interpreter/compiler, and (to some
+       extent) emulate the actions of the target's compiler
+       during cross-compilation --- in other words, a compiler-
+       compiler.
+
+The designations host and target distinguish between the system
+that the Metacompiler runs on and the system that its output runs
+on.
+
+The host system is the computer that actually performs the
+metacompilation.  The source code for the target application
+resides in a disk file on the host system.  This source code is
+converted by the Metacompiler into an executable target image,
+which also resides in a disk file on the host system.
+
+The target system is the computer that runs the object code 
+produced by the Metacompiler.  The object image file produced 
+by the Metacompiler must be transferred from the host system to 
+the target system to be executed.  This is done, for instance, 
+by copying the image into EPROM, by moving the disk containing 
+the object image file to the target (if it has its own disk
+drives), or, in the case where a TMS34010 development board is
+resident on the host, by using a loader program.
+
+The LMI Metacompiler has the following features:
+
+     * multi-pass, table-driven compilation;
+
+     * excellent error handling;
+
+     * creates ROMable or disk based applications;
+
+     * supports local labels and conditional compilation
+       directives;
+
+     * allows definition and invocation of new defining words and
+       immediate words in the target code;
+
+     * optional generation of headerless code;
+
+     * optional compilation from intermediate states;
+
+     * built-in TMS34010 cross-assembler, using standard TI
+       mnemonics;
+
+     * compatible with the Forth-83 Standard;
+
+     * detailed 200 page manual -- written in plain English;
+
+     * no royalty or resale licensing fee for "well-behaved"
+       target applications;
+
+The LMI Metacompiler for the TMS34010 has a number of enhancements
+to ease programming.  The foremost of these is that both the 
+high level language and the cross assembler take byte addresses, 
+translating them into bit addresses (which are required by the 
+TMS34010) internally.  Bit addresses may also be specified explicitly 
+when necessary.
+
+Included with the LMI TMS34010 Metacompiler is a loader program
+which uploads a compiled image into the RAM on a TMS34010
+development board.  The loader can also act as a communications
+program between the PC and the development board, allowing
+interactive development and debugging on the target CPU.  In
+fact, source code can be loaded and compiled by the target from a
+file on the PC host.
+
+
+Hardware Requirements
+
+The LMI Metacompiler requires an IBM PC, PC/AT, PS/2, or
+compatible with at least 320 KB of RAM and MS-DOS or PC-DOS
+version 2.0 or later.  The Metacompiler, associated tools, and
+the source files for the TMS34010 Forth target system occupy
+approximately 400 KB of disk space; thus, a fixed disk is
+recommended.
+
+TMS34010 development boards are available from Texas Instruments
+through your local TI distributer.  None of the TI programming
+tools are necessary, however, since the LMI Metacompiler and
+loader program constitute a complete, self-contained development
+environment.
+
+
+Metacompiler Availability
+
+The LMI Forth Metacompiler for the TMS34010 is available
+immediately from stock for $1000.00. The Metacompiler is supplied
+on two 5.25" double-sided double-density diskettes or one 3.5"
+microdisk in IBM PC-DOS or MS-DOS format.
+
+Versions of the LMI Metacompiler are also available for the
+following CPU targets: 8080/85, Z-80, HD64180, 80x86/87, 680x0,
+8051/31, 80535, 8096/97, 6303, Z-8, 1802, 6502, 65816, and 6809.
+
+
+                  Laboratory Microsystems, Inc.
+                 3007 Washington Blvd, Suite 230
+                         P.O. Box 10430
+                    Marina del Rey, CA 90295
+                         (213) 306-7412
+
+                       In Europe, contact:
+                  Forth-Systeme Angelika Flesch
+                         P. O. Box 1103
+                         D-7814 Breisach
+                          West Germany
+                          (49) 7667-551
+
+

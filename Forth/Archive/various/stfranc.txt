@@ -1,0 +1,332 @@
+
+Wil Baden's second paper for FORML '87.
+
+St.Francis' Terminal Input ***** *
+
+Terminal input is defined to support
+
+	Command line editing,
+	Instant menu selection,
+	Source-code line editing,
+	Source-code screen editing,
+	User-defined text macro keys, and
+	User-defined function macro keys.
+	
+1. Nuclear Implementation.
+
+EXPECT is the Forth word to receive terminal input. It accepts
+characters, up to the number requested, and may perform editing on them.
+The definition in the Zen nucleus is:--
+
+Exhibit 1.
+
+		: (expect) ( buf len) \ Receive len chars at buf.
+	    0 ( buf len col) DUP SPIC !   0 INS? !
+	    BEGIN
+      	 2DUP >
+   	 WHILE
+      	 KEY ( ... char) DUP BL - 95 U< \ Printable char?
+	       IF
+         	 STROKE ( ... ) \ Printable.
+      	 ELSE
+         	 ~STROKE ( ... ) \ Unprintable.
+      	 THEN
+   	 REPEAT
+   	 SPAN ! 2>R ( ) HERE 2R> CMOVE ;	
+
+When a character is printable, STROKE echoes it, saves it, and counts
+it. ~STROKE ("wiggle stroke") handles the unprintable characters by
+executing a routine appropriate to the character. This may affect the
+characters already received. In particular, we want a carrier return to
+terminate input and a backspace character to delete the preceding
+character.
+
+Exhibit 2.
+
+		: ~M ( buf col len - buf col len) \ Carrier return.
+	    MIN DUP ;
+
+		: ~H ( buf col len - buf col len) \ Backspace.
+	    DUP
+	    IF
+	       BACKSPACE   1-   SPIC @
+	       IF
+	          INS? @ 0= SPIC +!
+	       THEN
+	    THEN ;
+
+As you may have surmised, INS? is a variable used to indicate whether
+characters are being inserted. SPIC is a variable used to tally how many
+old characters have been replaced. STROKE increments this when not
+inserting. A backspace will also maintain this count.
+
+Exhibit 3.
+
+		: STROKE ( buf len col char - buf len col) \ Printable char.
+	    2DUP EMIT HERE + C! ( buf len col) \ Echo char and save it.
+	    1+ \ Increment col.
+	    INS? @ 1+ SPIC +! ; \ Increment SPIC when not inserting.
+
+The definition of EXPECT differs from the usual definition by saving
+characters in an intermediate buffer until the operation is complete,
+and then moving them all at once to the destination. Because of this, it
+will be possible to restore, correct, or otherwise edit the previous
+contents of the destination. This will be implemented by macro key
+definitions.
+
+Instead of explicit tests for characters or a table lookup of characters
+with associated functions, ~STROKE uses the Forth dictionary mechanism
+to select the proper operation for a character. It does this by
+converting the unprintable character to a counted string and then using
+FIND to search for it and execute it when found.
+
+Exhibit 4.
+
+		: ~STROKE ( buf col len char - buf col len) \ Unprintable.
+	    ~ENCODE ( buf col len addr) FIND ?DUP AND
+	    IF
+	       EXECUTE ( buf col len)
+	    THEN ;
+
+Control characters as well as any other special characters supported by
+your system, such as function keys and alt-characters, can be used for
+macros. The operations for <return> and <backspace> are given by ~M and
+~H respectively. These words must always be included in the dictionary
+search order.
+
+The conversion from unprintable character to counted string is system
+dependent. As specified by Forth-83, KEY must return all bits that are
+available. In our kernel we define KEY for an ordinary character to
+return its value in the low order byte with the high order byte zero,
+and for a special character to return zero in the low order byte with a
+unique system dependent value in the high order byte. This is what is
+done by MS-DOS and can be emulated in any implementation. The values of
+the high order byte will be system dependent. We will use the MS-DOS
+values in our examples without prejudice.
+
+Some MS-DOS manuals refer to the low order byte as the main byte and the
+high order byte as the aux byte.
+
+Exhibit 5.
+
+		: ~ENCODE ( ... char - ... addr) \ Char to counted string.
+	    SPLIT ( ... lo hi) SWAP ( ... hi lo) <#   DUP
+	    IF
+	       64 XOR   DUP HOLD
+	    ELSE
+	       BASE @ >R   DECIMAL   #S   R> BASE !
+	    THEN
+	    ASCII ~ HOLD   #> ( ... addr len)
+	    OVER 1- C! ( ... addr) 1- ;
+
+In any implementation, for <return>, <backspace> and <rubout>, (i.e. 13,
+8 and 127,) ~ENCODE will yield "~M", "~H" and "~?".
+
+Other control characters will be handled similarly, e.g. <ctrl-C> will
+become "~C".
+
+When the low order byte is zero the string is the decimal value of the
+high order byte preceded by "~". Thus MS-DOS <Home>, <PgUp> and <PgDn>
+become "~71", "~73" and "~81", and <F1>, <F2> ... <F10> become "~59",
+"~60" ... "~68".
+
+Check your technical manual for the values for your system.
+
+
+2. Command Line Editing.
+
+Our first application is command line editing. We emulate the ten
+function MS-DOS command line editor.
+
+<RETURN>	Terminate input.
+
+<BACKSPACE>	Delete previous character.
+
+<F1>	Copy next character.
+
+<F2>x	Copy all characters up to (but not including) the x character.
+
+<F3>	Copy the remaining characters.
+
+<F4>x	Skip all characters up to (but not including) the x character. (Do
+not change insert mode.)
+
+<F5>	Start editing the characters which have been accepted.
+
+<DEL>	Skip the next character.
+
+<INS>	Toggle the insert mode. When the insert mode is on new characters
+are inserted.
+
+<ESCAPE>	Discard all characters which have been accepted and start
+editing again.
+
+
+We first define the functions and then make one-word definitions using
+them.
+
+(In the definitions the variable MODIFIED has been set but not used.
+This variable will be used in the screen editor.)
+
+Exhibit 6.
+
+		: DITTO ( buf col len - ... )
+	    0 INS? !   2 PICK SPIC @ + C@ STROKE ;
+
+		: INS ( ... - ... )
+	    INS? @ 0= INS? ! ;
+
+		: DEL ( ... - ... )
+	    1 SPIC +!   TRUE MODIFIED ! ;
+
+		: -TEMPLATE ( buf len col char - buf len col flag)
+	    >R ( buf len col) 3DUP > SWAP SPIC @ + C@ R> = NOT AND
+	    ( buf len col flag) SPAN @ SPIC @ > AND ;
+
+		: DITTO-TO-CHAR ( buf col len - ... )
+	    KEY >R
+	    BEGIN
+	       R@ -TEMPLATE
+	    WHILE
+	       DITTO
+	    REPEAT
+	    R> DROP ;
+
+		: DITTO-TO-END ( buf col len - ... )
+	    BEGIN
+	       TRUE -TEMPLATE
+	    WHILE
+	       DITTO
+	    REPEAT ;
+
+		: DEL-TO-CHAR ( buf col len - ... )
+	    KEY >R
+	    BEGIN
+	       R@ -TEMPLATE
+	    WHILE
+	       DEL
+	    REPEAT
+	    R> DROP ;
+
+		: DISREGARD ( buf len col - ... )
+	    0 INS? !   0 SPIC !
+	    BEGIN
+	       ~H   DUP 0=
+	    UNTIL ;
+
+		: SUPPLANT ( buf len col - ... )
+	    SPAN ! ( buf len) HERE 2 PICK SPAN @ CMOVE
+	    SPAN @ ( buf len col) DISREGARD ;
+
+		: ~[ DISREGARD ; 	\ <Escape>
+		: ~82 INS ;	\ <Ins>
+		: ~83 DEL ;	\ <Del>
+		: ~59 DITTO ;	\ <F1>
+		: ~60 DITTO-TO-CHAR ;	\ <F2>
+		: ~61 DITTO-TO-END ;	\ <F3>
+		: ~62 DEL-TO-CHAR ;	\ <F4>
+		: ~63 SUPPLANT ;	\ <F5>
+
+3. Macro Keys.
+
+To install a macro key all that has to be done is make a definition in
+an appropriate vocabulary. One key can have different definitions in
+separate vocabularies, although this should be rare. The keys that are
+available will depend on your system.
+
+For example, if you want the tab key <ctrl-I> to give you three spaces,
+one way is to define:--
+
+Exhibit 7.
+
+		: ~I ( buf len col - ... )
+	    BL STROKE   BL STROKE   BL STROKE ;
+
+STROKE and ~STROKE have been used to implement a WordStar-like screen
+editor. The screen editing commands are also available at the same time
+as using a line editor, like that described in Brodie, STARTING FORTH,
+either edition. Screen editing commands are just macros.
+
+Macros are executed immediately. With MS-DOS special keys, the following
+or the equivalent are convenient in the FORTH vocabulary. On other
+systems different names would be used depending on the values returned
+for the function key.
+
+Exhibit 8.
+		: ~71 L ; \ <Home>
+		: ~73 B L ; \ <PgUp>
+		: ~81 N L ; \ <PgDn>
+
+STROKES is useful for writing macros to reduce key strokes when entering
+text, i.e. text macros.
+
+Exhibit 9.
+		: STROKES ( buf col len str n - buf col len)
+	    2OVER - MIN ?DUP AND ?DUP
+	    IF
+	       OVER + SWAP
+	       DO ( buf col len)
+	          I C@ STROKE
+	       LOOP
+	       TRUE MODIFIED !
+	    THEN ;
+
+Thus if you want <ctrl-F> to give you FORTH DEFINITIONS when entering
+source you can define:-
+
+Exhibit 10.
+
+		: ~F ( buf len col - ... )
+	    " FORTH DEFINITIONS " STROKES ;
+
+Many applications for macros will occur to you as you use them.
+
+4. Instant Menu Selection.
+
+Instant menu selection is an immediate application for a function macro
+key. Any line of a source block can be taken as a menu item. When
+interpreting, the line the cursor is on will be executed. A Zen
+implementation is:-
+
+Exhibit 11.
+
+		: MENU-SELECTION ( buf len col - ... )
+	    'LINE C/L -TRAILING STROKES   ~M ;
+
+If your system recognizes an <ENTER> key as distinct from <RETURN> then
+<ENTER> is a good choice for menu selection. Otherwise, choose a
+function key, such as <F10> in MS-DOS.
+
+		: ~68 MENU-SELECTION ; \ <F10>
+
+The up-arrow, down-arrow, page-up, and page-down keys should have macros
+defined to move the cursor up and down and walk back and forth through
+blocks.
+
+Menus are ordinary source blocks with lines containing a comment telling
+what selecting that line will do, and a few Forth words to do it. To
+display a menu just list the block. For a menu item to cause a transfer
+to another menu, the line should have a command to list that other
+block.
+
+As a safety feature the top line in a menu may begin with ";S ", "EXIT
+", "\S ", or "\\ "--whatever your system uses to terminate the
+interpretation of source blocks. This prevents dangerous things from
+happening if the block is inadvertently loaded.
+
+In a programming environment this simple technique will be powerful and
+flexible. For applications, you can wrap some sugar-coating around it.
+
+
+All source code has been noted, i.e. it has all necessary stack
+indications. The stack state is given by these two rules.
+
+1.	The stack state at the beginning of a line is either given there or
+is the same as that given by the previous stack indication, except
+before a logical structure word.
+
+2.	The stack state at extra space in the middle of a line is the same as
+that given by the previous stack indication, except after ELSE, where it
+is the same as after the matching IF.
+
+

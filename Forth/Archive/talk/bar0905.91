@@ -1,0 +1,247 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 09/05/91   Time: 22:35EDT
+
+  Items discussed include why Ray Duncan not likeley as a conference guest,
+  LMI UR-Forth, BASIS 17, retrofitting milling machines, Control Flow, ok
+  prompt, free/shareware impacting commercial opportunity.
+
+Attendees:
+[GARY-S]
+[[MIKE] M.KELLY36]
+[[doug] D.GARRETT]
+[W.BADEN1]
+       
+Minutes:
+<M.KELLY36> is here.
+<GARY-S>  Hi Mike - how goes it ?
+<D.GARRETT> is here.
+<[MIKE] M.KELLY36> No complaints.
+<[MIKE] M.KELLY36> Like to see Ray Duncan as a guest.
+<GARY-S> I would like to see Ray as a guest too, but that is totally out of the 
+question
+<[MIKE] M.KELLY36> Where are u from Doug?
+<[MIKE] M.KELLY36> Why Gary ?
+<[doug] D.GARRETT> Bloomington  Indiana.  I see you're from New Jersey
+<[MIKE] M.KELLY36> How did you know that ?
+<GARY-S> It's a long story, but in essence Ray would just rather not have any 
+dealings with FIG, even ancillary contact such as this.
+<W.BADEN1> is here.
+<[MIKE] M.KELLY36> Native hoosier myself. Spent most of my " wonder years " in 
+Carbondale Ill. though.
+<[doug] D.GARRETT> Ray, as in Ray Duncan?  (I came in late)
+<[MIKE] M.KELLY36> Yep.
+<GARY-S> Wil can support my statement - Ray Duncan, yes Doug
+<[doug] D.GARRETT> Hmmmm....I was thinking of buying his LMI UR/FORTH.  Any 
+opinions out there?
+<[MIKE] M.KELLY36> Seems like a decent guy. Many dealings of late with him.
+<W.BADEN1> Right.
+<GARY-S> it's  a personal issue with him.
+<[MIKE] M.KELLY36> EXTREMELY GOOD PACKAGE !!!!
+<GARY-S> Excellent package - and superb support
+<W.BADEN1> It's a very good Forth.
+<W.BADEN1> I wud hav ben happy to hav adopted it for ANS.
+<GARY-S> I regret it, but I also recognize Ray's position and respect it
+<[MIKE] M.KELLY36> Buy it and buy it NOW!!!!
+<[doug] D.GARRETT> I appreciate the opinion.   Okay okay  tomorrow I get the 
+check book out!!
+<W.BADEN1> It is the Forth with the most sales.
+<[MIKE] M.KELLY36> Seriously, for more info on it from a " user's " point of 
+view, I can give u my work or home #.
+<[doug] D.GARRETT> LMI has a coupla other Forth systems.  Y'all are talking 
+about UR/FORTH  yes ?
+<GARY-S> Yes
+<GARY-S> though LMI PC-Forth plus isn't exactly shabby
+<[doug] D.GARRETT> Yes, Mike, I'd like to chat via voice sometime soon.  I'll 
+hafta
+<[doug] D.GARRETT> sell the idea to my partner in this endeavor.
+<[MIKE] M.KELLY36> I use the UR/FORTH system now. Originally the PC/FORTH 
+system. Also have experience with the 8096 metacompiler and have just ordere
+d the 68xxx metacompiler.
+<[doug] D.GARRETT> But we generaly agree that UR/FORTH is longer, lower, wider, 
+and better.
+<[MIKE] M.KELLY36> All very good products ( well supported too ).
+<W.BADEN1> Last Friday I got the draft proposed ANS Standard.
+<GARY-S> Donald long has his entire Florida Drum, extrusion plant running on a 
+single 386 running UR-Forth
+<[doug] D.GARRETT> Gary:  does your company/employer sell milling machines?
+<GARY-S> no
+<[doug] D.GARRETT> Ah
+<GARY-S> Laser CNC milling - yes
+<GARY-S> machine milling, no
+<[MIKE] M.KELLY36> I can be reached at 609 346-2212 ( home east coast with 9 mo.
+ old so bear that in mind ) or work 609 767-6800 x 2286.
+<[doug] D.GARRETT> Thanks, Mike.  Reall soon, I'll call.  Whuz the scoop with 
+ANS Standard, Wil?
+<W.BADEN1> Is Donald Long back in the US?
+<GARY-S> He was in Bad-Hamburg last time I called, but he was due back shortly
+<W.BADEN1> Ther hav ben lots of editorial changes from Basis17, but nothing 
+substantial.
+<[MIKE] M.KELLY36> Halfway through it myself.
+<W.BADEN1> (I met Donald at German FORML 1985.)\
+<GARY-S> He said you had met there
+<W.BADEN1> Still dpANS has many typos.
+<W.BADEN1> I'm back with pseudo-status on X3J14.\
+<W.BADEN1> I hav to respond to comments on Control Flow.
+<GARY-S> Hmmm - never say, "Never!", huh, Wil ?
+<W.BADEN1> Yeah.
+<[MIKE] M.KELLY36> They mispelled EXPECT.
+<W.BADEN1> I'm unhappy that D+ and DNEGATE are no longer in the core.
+<GARY-S> Flow control is sure a hot damn issue with John Wavrik
+<GARY-S> He sure took issue with what TC did with START;
+<W.BADEN1> Is he repeating himself, or am I dense?
+<GARY-S> meaning ????
+<[MIKE] M.KELLY36> I think that the " ok " prompt should be stricken in favor 
+of a prompt vector.
+<GARY-S> I like the ok prompt, but could live with either
+<[MIKE] M.KELLY36> I say ( again ) we lock Greg Bailey and John Wavrik in a 
+room with a thesaurus and a dictionary and let 'em have at it.
+<GARY-S> I saw that comment in the weeds,as it was ;-)
+<W.BADEN1> Mike, no problem.  Just write a one-line shell that interprets 
+keyboard, \
+<W.BADEN1> responds the way you want.
+<[MIKE] M.KELLY36> Agreed, but " ok " is a relic. A prompt that gives you BASE 
+and DEPTH info is far better.
+<GARY-S> Wil - You're a Mac user - or are you ?
+<W.BADEN1> Yes/
+<GARY-S> You do know Lowenstein is my Sept 19th guest ?
+<W.BADEN1> Agreed, but no problem.
+<[MIKE] M.KELLY36> Orioles outfielder?
+<GARY-S> You and names - NO! Bob Lowenstein who is promoting a revamped Neon as 
+Yerk
+<W.BADEN1> Yes. I intend to be here. (Next Thursday I will be at Orange Apple 
+Computer Club board meeting.)
+<[MIKE] M.KELLY36> To me " knowing " what is to be expected from a standard is 
+all that I really care about. It doesn't really affect me or my work in
+ an embedded application.
+<W.BADEN1> (I'm the local Big Mac, or more probably, Fat Mac.)
+<[MIKE] M.KELLY36> Doug , you still here ?
+<GARY-S> Really enjoyed those eels and sparrows, huh ?
+<[doug] D.GARRETT> yes.  Just wondering how fat, Wil?
+<[MIKE] M.KELLY36> What is your application Doug ?
+<GARY-S> For dog catcher\
+<[doug] D.GARRETT> Well...  Milling machine retro-fits.
+<W.BADEN1> More than I want to make public.  I frightened little children in 
+China.
+<GARY-S> The seventh son !
+<[MIKE] M.KELLY36> BUDDHA IS BACK
+<W.BADEN1> My belly's big enough, but my ear lobes are too short.
+<[doug] D.GARRETT> I quit my part-time MUMPS job a few months ago.  Back to full
+<[doug] D.GARRETT> time electrical contracting.  My knees hurt.
+<[doug] D.GARRETT> A buddy (ex-machine shop operator) tells me there are bookoo
+<[doug] D.GARRETT> Bridgeport mills OUT THERE, wanting to be upgraded.
+<[doug] D.GARRETT> Am I crazy to attempt it?
+<GARY-S> About 50 of them at American Airlines repair center in Tulsa alone
+<GARY-S> (if I remember correctly)
+<W.BADEN1> (Gary, the cow tendons, ox blood clot soup, and sea slugs in brown 
+sauce were my favorites.)
+<[doug] D.GARRETT> Are they sitting in corners, un-used and forlorn?
+<GARY-S> mmm-mmm, makes my mouth water, for sure. Gooood cracker.
+<[MIKE] M.KELLY36> I agree. ( Stop me if I start to sound like anything even 
+resembling a zealot ) But... I have long thought that Forth is a great ch
+oice for metal shop work automation of ANY kind. Most of an operator's time is 
+spent " in laying out " a cut.
+<[doug] D.GARRETT> yeah yeah, pump me up!
+<GARY-S> Matter of fact they were in use, Doug
+<[MIKE] M.KELLY36> I'm not kidding. Our own shop experiences this very thing.
+<GARY-S> Mike, there is a tremendous after market doing just that ! Creating 
+front-ends for CNC controllers
+<[doug] D.GARRETT> My buddy has found 9 Bridgeports  and 3 Burgmasters
+<[doug] D.GARRETT> scattered throughout the state, sitting in corners with
+<[doug] D.GARRETT> busted controls.  Bridgeport won't touch them...
+<[doug] D.GARRETT> The shop managers tell him YES YES sign a contract right now!
+<GARY-S> That sounds like, "Name your price !"
+<[doug] D.GARRETT> Well, he says they've been quoted $30k to $50k per machine.  
+Seems like
+<[doug] D.GARRETT> there's some room for profit there.  But maybe I'm 
+overlooking something...
+<[doug] D.GARRETT> I know how to bid electrical power & light installations, 
+but this is...
+<[doug] D.GARRETT> something entirely new.
+<GARY-S> I'm logged in tonight on a NEC UltraLite I picked up from a 
+liquidator (IME). Nice little laptop.
+<GARY-S> Doug - do it smart. Bid at quote plus parts
+<[MIKE] M.KELLY36> The BIG down side is .... once they're automated ... the 
+operator's need to be trained. And I gotta tell you when blue collar sees jo
+bs going out the window, you are gonna meet Resistance.
+<[doug] D.GARRETT> My turn to cook dinner, so I gotta go.  Hmmm... I didn't 
+completely follow...
+<GARY-S> I heard that - BUT a machine to operate beats the heck out of boat 
+anchors
+<[doug] D.GARRETT> what you meant, Gary.
+<[doug] D.GARRETT> about "bid at quote plus parts", that is
+<GARY-S> BID at say 28K plus travel/parts. That way you are assured of a nice 
+profit. No hidden losses.
+<[doug] D.GARRETT> ah, I like it.  Mike, as far as resistance by blue collar 
+types goes...
+<[doug] D.GARRETT> These shops are already automated.  The Bridgeports have 
+been shelved (they
+<[doug] D.GARRETT> are obsolete NC and CNC), and newer machines are in use 
+right now...
+<[doug] D.GARRETT> Upgrading the Bridgeports will just add more production 
+capability at "minimal" cost.
+<GARY-S> Maybe even add jobs.
+<[MIKE] M.KELLY36> Great ... if you have ???'s about LMI et al. give me a buzz 
+at home or work.
+<[doug] D.GARRETT> Mike, can I call tomorrow nite (Friday).  And both of you, 
+thanks for the positive comments.
+<GARY-S> nite Doug
+<[doug] D.GARRETT> Nice to have you back, Wil.  Sorry I gotta fly.  Hunger 
+hurts.  Bye.
+<GARY-S> Sounds like he may have an inside road to some nice security
+<[MIKE] M.KELLY36> So Gary, why is Ray D. reticent about participating in a 
+discourse such as this?
+<GARY-S> He does NOT like FIG - pure and simple
+<GARY-S> This RT is FIG sponsored
+<[MIKE] M.KELLY36> But there HAS to be a reason.
+<GARY-S> I don't think it is my place to discuss Ray's position, though
+<W.BADEN1> Gresham's law applied to program products.
+<[MIKE] M.KELLY36> ????
+<GARY-S> That's a fair assesment, and well said.
+<[MIKE] M.KELLY36> It may be fair but ... .XX: do you mean Wil ?
+<W.BADEN1> Free software drives out commercial software.
+<GARY-S> That, in essence, is the sum and total of the standoff, as it were.
+<GARY-S> I can't quibble with Ray's position, personally.
+<W.BADEN1> Nor can I.
+<GARY-S> I can tell you, he's always been totally upfront with me.
+<[MIKE] M.KELLY36> FIG CAN'T have taken that big a bite. A " REAL " company 
+would be crazy to use aFIG Forth ( unless it was their own ).
+<GARY-S> You asked, and you have a bonified answer. I can't add to that.
+<W.BADEN1> How about eForth, cmForth, Pygmy?
+<W.BADEN1> F83, FPC?
+<GARY-S> GK-Forth, which is a commercial class kernel.
+<GARY-S> and BBL
+<[MIKE] M.KELLY36> Wil, if I went to my boss and said " Mervin here downloaded 
+this software off a BBS, I think we ought to go with it ... my boss wou
+ld have another employee real quick. Support, upgrades ... mean a lot .
+<W.BADEN1> Right, but vendors do see free ware as a threat.
+<GARY-S> Mike, BBL and GK-Forth are both major pieces of work, that have no 
+doubt impacted the price/demand level of Commercial products
+<GARY-S> The primary distributor of this free/shareware is FIG.
+<[MIKE] M.KELLY36> Who wrote 'em ? Who backs 'em ? Who is RESPONSIBLE ? A board 
+of director's would want to know.
+<GARY-S> Roedy Green, Guy Kelly, Frank Sergeant, C.H. Ting are all well 
+respected names.
+<GARY-S> Wil Baden
+<GARY-S> Mike Perry
+<[MIKE] M.KELLY36> Don't get me wrong. FIG is great. It is the initiation for 
+most of us into Forth.
+<[MIKE] M.KELLY36> And all of these people ( no offense Wil ) would STOP what 
+they are doing to provide me ( the downloader ) with support.
+<GARY-S> I  obviously agree, as a SysOp on their public media; but it is rather 
+myopic not to consider other opinions.
+<[MIKE] M.KELLY36> As Descartes said ( just before he disappeared ) " I think 
+NOT !!! "
+<[MIKE] M.KELLY36> ( Old joke ... but it fit )
+<GARY-S> I dunno - Mitch Bradley does some pretty serious support for his 
+Forthmacs, and it is VERY inexpensive.
+<[MIKE] M.KELLY36> Gotta go ... nice typin' to ya both. See ya next Thurs. or 
+Sun.
+<W.BADEN1> So long, Mike.
+<[MIKE] M.KELLY36> has left.
+<GARY-S> sounds like a good place to nail the door shut.
+=== End of Steno notes. ===
+
+

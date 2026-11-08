@@ -1,0 +1,406 @@
+
+
+ Minutes of the Guest GEnie Forth RoundTable Conference, with special
+ guest Jef Raskin, originator of the Apple Mac and the Canon Cat.
+  
+ The topic was: "What happened to the Cat ?" in reference to the marketing
+                failure of the Canon Cat. This initial discussion rapidly
+                gave way to a more thorough look at what the interface
+                between computer and man should be. Certainly, an area that
+                it can be safely argued Jef Raskin is one of the ranking
+                authorities of, if not 'the' authority.
+
+ Entire contents of this transcript copyright (c)
+ 1990 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+ 
+Date: 10/17/90   Time: 22:32EDT
+Attendees:
+[[Gary] GARY-S] - - - -  moderator, host SysOp     
+[[Dennis] D.RUFFER]
+[[JEF] FIGGUEST]  - - -  guest of honr, Jef Raskin
+[[martin] M.ROWLAND1]
+[[Norm] N.SMITH11]
+[[Wil] W.BADEN1]
+[[Bill] B.CLARK10]
+[[Kevin] APPERT]
+[[Cool CAT] JAX]
+[[Dave] OLORIN]
+[[martin] M.ROWLAND1]
+
+Minutes:
+<JAX> is here.
+<D.RUFFER> is here.
+<FIGGUEST> is here.
+<[Gary] GARY-S> Hello Jef Raskin :-)
+<OLORIN> is here.
+<N.SMITH11> is here.
+<[Gary] GARY-S> any last questions ?
+<[JEF] FIGGUEST>        I am relaxing.  Enjoying the bytes scroll by as the sun 
+                sets here
+<[JEF] FIGGUEST>        in lovely Pacifica, watching the ocean over my CRT.
+<[Gary] GARY-S> want to trade for a lightening storm ?
+<[Dennis] D.RUFFER> must be nice Jef, we're envious :-)
+<[Dave] OLORIN> I'm not. Snow is predicted by week's end.
+<[Dave] OLORIN> And the wind blew the smog to Kansas this morning. The front 
+range was georgeous. (Spelling optional)
+<[Gary] GARY-S> By the way - Jef is using a Cat tonight
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        I wouldn't mind some lightning.  The reason I'm in 
+Pacifica is
+<[JEF] FIGGUEST>        that it makes my moniker palindromic.
+<[Gary] GARY-S> cute
+<[Gary] GARY-S> You have definitely set the standard for obfuscated excuses for 
+living locale
+<[JEF] FIGGUEST>        That's right, this is beamed to you via thousands of 
+lines of
+<[JEF] FIGGUEST>        FORTH code.  (The palindrome: I'm A PACIFICA PA.  My 
+children are
+<[JEF] FIGGUEST>        named AZA and AVIVA.  We refer to my wife as MOM.)
+<[Gary] GARY-S> arrrrrgh
+<[Wil] W.BADEN1> is here.
+<[Dennis] D.RUFFER> have you ever done a real time conference Jef?
+<[Dave] OLORIN> 1&2&1&2&1&2&1&2&1&2&1&2&1&2&1&2 <--- finger exercises
+<[Gary] GARY-S> Mr. raskin claims to have the fastest fingers in the Pacific 
+rim - I would not dispute his claim
+<[JEF] FIGGUEST> I have done a real time conference, Dennis.
+<[JEF] FIGGUEST> I would.
+<[Cool CAT] JAX> a b c ch d e f g h i j k l ll m n ~n o p q r rr s t u v w x y z
+<[Cool CAT] JAX> spanish ex.
+<[Dave] OLORIN> A new conference competition? Finger time trials?
+<[Gary] GARY-S>  **** SHOW TIME at the FIG RITZ ****
+<B.CLARK10> is here.
+<[Gary] GARY-S>  Before we begin tonight's conference I need to remind ...
+<[Gary] GARY-S>  everyone this is a formal conference. .. .. ..
+<[Gary] GARY-S>  That means NO interlacing. Request a turn to speak by typing ..
+<[Gary] GARY-S>   !! <CR> or /RAI <CR>. I will keep a list and call on whoever .
+<[Gary] GARY-S>  is next. PLEASE follow these simple rules : ...
+<[Gary] GARY-S>  PLEASE make your first response ok <CR> (so we know YOU know). 
+<[Gary] GARY-S>  Then, keep your lines short, ending incomplete thoughts ...
+<[Gary] GARY-S>  with three dots (...) and ending your question/statement with 
+                 ga <CR>.
+<[Gary] GARY-S>                        thank you.
+<[Gary] GARY-S>    The GEnie Forth RoundTable is very pleased to welcome this ..
+<[Gary] GARY-S>  evening's special guest, Jef Raskin who is best known for ...
+<[Gary] GARY-S>  having created the Macintosh project while working at Apple.
+<[Gary] GARY-S>
+<[Gary] GARY-S>  Before Apple he was a muscician and a conductor, and ...
+<[Gary] GARY-S>  a University professor and computer center director. Since ...
+<[Gary] GARY-S>  then this multi-faceted man ran a company that created the ...
+<[Gary] GARY-S>  Canon Cat (which he is using tonight) which is compounded ...
+<[Gary] GARY-S>  of physical parts, Forth, and a better way of interfacing ...
+<[Gary] GARY-S>  humans and computers. ...
+<[Gary] GARY-S>  Currently he is a human interface design consultant, working ..
+<[Gary] GARY-S>  for many big companies, that he says will, in general ...
+<[Gary] GARY-S>  ignore his advice. (doubt registered by the moderator :-) )
+<[Gary] GARY-S>     Please welcome tonight's guest, Jef Raskin.
+<[Gary] GARY-S>   .. .. .. .. .. ga Jef
+<[JEF] FIGGUEST>        Please let people know that multi-faceted is not 
+                 related in any
+<[JEF] FIGGUEST>        way to "two-faced."  I am pleased to be here, and I 
+                 think that it
+<[JEF] FIGGUEST>        might be best to just start with questions.
+<[Cool CAT] JAX> First I were a Programmer ...
+<[Cool CAT] JAX> Now I am a Project Engineer ....
+<[Cool CAT] JAX> Jef, how long do I have to wait before I start having 
+                 Ideas? :-)
+<APPERT> is here.
+<[JEF] FIGGUEST>        When I see the directions the questions take, I can 
+                 make more
+<[JEF] FIGGUEST>        extended comments.  Thank you Mr. Cat.  My real 
+                 interest these
+<[JEF] FIGGUEST>        days is in interfaces.  For example, windows are dumb, 
+<[JEF] FIGGUEST>        icons wrong, and mouses a nuisance.
+<[Cool CAT] JAX> Heresy! Burn Him :-)
+<[Dennis] D.RUFFER> sticking to that "heresy", let me ask....
+<[Dennis] D.RUFFER> how/why did you start the Mac project?
+<[JEF] FIGGUEST>        I can't stand the usual hand-to-mouse existnce.  The 
+<[JEF] FIGGUEST>        real question is why we have to bother with all those 
+                 "features" when
+<[JEF] FIGGUEST>        we are trying to get something done.  I started the Mac 
+                  project...
+<[JEF] FIGGUEST>        in 1979.  I have learned something in the intervening 
+                  decade.  In
+<[JEF] FIGGUEST>        those days I was (correctly, I think) inspired by the 
+                  work at PARC...
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        But one mustn't confuse "better" with "good".  The Mac 
+<[JEF] FIGGUEST>        was better, but one can go a lot better.
+<[Wil] W.BADEN1> Please tell us what you think happened to the CAT. 
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        It was, I have been told, a victim of interncine 
+                 warfare within
+<[JEF] FIGGUEST>        Canon and a lack of marketing support.
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        I am sure of the second hypothesis.
+<[Gary] GARY-S> There was excitement here after John B was in conference with 
+                Steve Roberts...
+<[Gary] GARY-S> about the possibilty of a portable, personal Forth laptop...
+<[Gary] GARY-S> then BINGO the CAT is on sale in Service Merchandise...
+<[Gary] GARY-S> that's a lot of smoke and mirrors.
+<[Gary] GARY-S> any further comment ?
+<[JEF] FIGGUEST>        They are, by the way, still available.  A guy, David 
+                 Wing, in San
+<[JEF] FIGGUEST>        Diego has kept track of them.  Canon did not know what 
+                 it had,
+<[JEF] FIGGUEST>        and tried to sell it through its electronic typewriter 
+                 division.
+<[JEF] FIGGUEST>        This was a mistake.  Then they tried selling it for 
+                 twice the
+<[JEF] FIGGUEST>        design price.  That was a mistake.
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        We did make some prototype portables,  I have one here 
+                 and it
+<[JEF] FIGGUEST>        works (and runs FORTH) but our Vulture Capitalists had 
+<[JEF] FIGGUEST>        lost their stomachs (and minds.).
+<[Dennis] D.RUFFER> I know what the CAT is, and saw you use one at the Anaheim 
+                    Conf...
+<[Dennis] D.RUFFER> but others may not know, could you give a brief description?
+<[JEF] FIGGUEST>        I wrote an article in Midnight Engineering magazine 
+                 about the
+<[JEF] FIGGUEST>        history of what happened, which see, cf. op cit, and 
+                 all that....
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        The Cat is a one-piece "work processor" with keyboard, 
+                 screen...
+<[JEF] FIGGUEST>        and disk drive.  It does word processing, spreadsheets,
+<[JEF] FIGGUEST>        calculations, programming, data base stuff, and you 
+                 could even
+<[JEF] FIGGUEST>        program in FORTH and assembly language, all without 
+                 ever leaving
+<[JEF] FIGGUEST>        the editor or having to issue a system command...
+<[JEF] FIGGUEST>        The display was bit-mapped but Canon never let us tell 
+<[JEF] FIGGUEST>        the customers about the graphics that were built in.  I 
+                 almost forgot
+<[JEF] FIGGUEST>        to mention that it has a built-in modem and 
+                 communications
+<[JEF] FIGGUEST>        facilities which I am using this very instant.
+<[Kevin] APPERT> will you tell us...
+<[Kevin] APPERT> what you can of whats in...
+<[Kevin] APPERT> your mill?  whats next?
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        Unlike most of the packages I assume you are using, I 
+                 can type
+<[JEF] FIGGUEST>        while reading what you are sending me.  This gives me a 
+<[JEF] FIGGUEST>        fast start.  Next is Steve Job's company.
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        I am a consultant for a number of companies designing 
+<[JEF] FIGGUEST>        new products and improving interfaces.
+<[Gary] GARY-S> By the time I got around to buying a Cat there were none 
+<[Gary] GARY-S> available, or are there ?
+<[JEF] FIGGUEST>        Yes, there are.  The Mr. Wing mentioned above knows of 
+<[JEF] FIGGUEST>        some. FORTHite John Bumgarner may also know.
+<[Gary] GARY-S> address/phone for Mr. Wing ?
+<M.ROWLAND1> is here.
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        I will deliver address presently...
+<[JEF] FIGGUEST>        1538 Grenada Ave
+<[JEF] FIGGUEST>        San Diego CA 92012
+<[Kevin] APPERT> where would one get a copy of your Midnight Engineering 
+magazine article?  I've never seen it ...
+<[Kevin] APPERT> at local library, or at all for that matter
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        Maybe I can get the address for that, too.  It is a 
+                 magazine for
+<[JEF] FIGGUEST>        entrepreneurs.  They seem to be in business, since 
+                 (unlike some)
+<[JEF] FIGGUEST>        I got paid for writing for them.
+<[Gary] GARY-S> I have addree - will post soon
+<[Dennis] D.RUFFER> Jef, if mice and icons and windows are not the interface...
+<[Dennis] D.RUFFER> you prefer now, what do you recommend that we program now?
+<[Gary] GARY-S> Midnight Engineering, 111 E. drake rd, suite 7041, Ft. Collins, 
+                CO  80525
+<[JEF] FIGGUEST> ...
+<[JEF] FIGGUEST> First of all, the secret of a good interface as two parts...
+<[JEF] FIGGUEST>        (that should keep them on line)...
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        1.  Keeping things visible so that it easy to learn 
+                (see Don Norman's book, The Psychology of Everyday Things)...
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        2.  Designing the system so that the user can form 
+                 habits, which
+<[JEF] FIGGUEST>        allows the system to be operated unconsciously (like 
+                 driving a
+<[JEF] FIGGUEST>        car) while you concentrate at the task at hand.
+<[Wil] W.BADEN1> I'm told that the new Canon computer looks a lot like the Mac. 
+                 Yes/No?  Does it also have CAT features?
+<[JEF] FIGGUEST>        Which one? ga
+<[Wil] W.BADEN1> I'm not sure.
+<[Gary] GARY-S> care to comment jef, or move on
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        If it has certain Cat features, they'll hear from my 
+                 lawyers.  I
+<[JEF] FIGGUEST>        am not aware of any Canon product using our interface 
+                 concepts.
+<[Dennis] D.RUFFER> moving on, at the Anaheim RealTime programmers convention...
+<[Dennis] D.RUFFER> you mentioned that the only thing you didn't like...
+<[Dennis] D.RUFFER> about Forth was the direction of the parens...
+<[Dennis] D.RUFFER> could you expond on that here for our guests?
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        I think that a program should look like an essay, with 
+                 occasional
+<[JEF] FIGGUEST>        bits of code that do the work.  I published a bit of 
+                 code in this
+<[JEF] FIGGUEST>        style in Programmers At Work (Microsoft Press).  The 
+                 idea is that...
+<[JEF] FIGGUEST>        human-readable stuff is more important.  If you are 
+                 clear in your
+<[JEF] FIGGUEST>        documentation then the code is easier to read, more 
+                 likely to be
+<[JEF] FIGGUEST>        bug-free, and easier to modify later...
+<[JEF] FIGGUEST>        So you should just type comments, then use parens to 
+                 set off the
+<[JEF] FIGGUEST>        ugly, interpreter or compiler-readable stuff. ga
+<[Gary] GARY-S> Is it the icons you feel are no longer relavent in the Mac 
+interface ? If so what do you think of the rather grand scale move toward X
+windows and/or Mach and/or Geos and/or name your GUI ?
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        When the world gets hooked on something (and Apple 
+                 becoming a
+<[JEF] FIGGUEST>        multi-billion dollar company is a big hook) then it gets
+<[JEF] FIGGUEST>        followed...
+<[JEF] FIGGUEST>        That came out garbled...
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        1.  Icons...
+<[JEF] FIGGUEST>        An icon is a symbol equally unreadable in all natural 
+                 languages.
+<[JEF] FIGGUEST>        The original research...
+<[JEF] FIGGUEST>        that led to their use doesn't apply to the way they are,
+                 in fact, used...
+<[JEF] FIGGUEST>        What we often see in our windows or on our Macs are 
+                 screens full of identical icons distinguish..
+<[JEF] FIGGUEST> .
+<[JEF] FIGGUEST>        2.  The move to these interfaces is caused by the 
+                 collective
+<[JEF] FIGGUEST>        inability of the large companies to do anything better 
+                 or more
+<[JEF] FIGGUEST>        creative.  They all follow each other around like sheep.
+<[Dennis] D.RUFFER> are you still doing any of your work in Forth?
+<[JEF] FIGGUEST>        No, I am not.  I am presently working with SmallTalk 
+                 V/Mac.  This is not
+<[JEF] FIGGUEST>        because I love to memorize thousands of methods and
+<[JEF] FIGGUEST>        objects, but because of the clients I have to work with.
+<[Dennis] D.RUFFER> when gary asked about GUI's you seemed to avoid the issue...
+<[Dennis] D.RUFFER> do you think GUI's are better or just the latest rave...
+<[Dennis] D.RUFFER> that the "sheep" are following?
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        Sorry, I didn't mean to.  I am not against graphics in 
+<[JEF] FIGGUEST>        an interface, nor the lack of graphics.  The question
+                  is, is it good for humans to use?...
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        For example, when I am in the word processor, I can't 
+                  do a
+<[JEF] FIGGUEST>        calculation or send a message.  When I am in the
+<[JEF] FIGGUEST>        telecommunications package I can't evaluate a 
+                 spreadsheet.  I
+<[JEF] FIGGUEST>        always have to stop and ask pretty please before I do 
+                 anything...
+<[JEF] FIGGUEST>        I spend too much of my time pleasing the system and 
+                 having to think about extraneous things.
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        On the Cat (for example) I can do a calculation while I 
+<[JEF] FIGGUEST>        am communicating with you.  No permission or commands, 
+                 just do it.
+<[Gary] GARY-S> does the cat multi task ? what about multi user ?
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        In my arena, there is one machine (or many machines) 
+                 per person.
+<[JEF] FIGGUEST>        I think that multi-user is generally not the way to go. 
+                 Many
+<[JEF] FIGGUEST>        small machines communicating through some kind of server
+<[JEF] FIGGUEST>        (hmmm...) is to be preferred.  What do you mean by 
+                 multi task?
+<[Dennis] D.RUFFER> I think my question will also follow on that Gary...
+<[Dennis] D.RUFFER> I think I hear you saying Jef, that there is just no...
+<[Dennis] D.RUFFER> a tight enough coupling between our applications...
+<[Dennis] D.RUFFER> at present.  However, I'm running under Windows 3 right now.
+<[Dennis] D.RUFFER> I can load as many applications as I want...
+<[Dennis] D.RUFFER> and hot key to anyone that I need...
+<[Dennis] D.RUFFER> with the mere touch of a button (or screen area)...
+<[Dennis] D.RUFFER> are you saying that is not tight enough?
+<[Dennis] D.RUFFER> How much tighter can you make the connection?
+<[JEF] FIGGUEST>        More than that, the problem is with the concept of 
+                 applications.
+<[JEF] FIGGUEST>        Your having to hot key from one another is a symptom.  
+                 I don't
+<[JEF] FIGGUEST>        have to hot key, and systems I design have not so much 
+                  a tighter
+<[JEF] FIGGUEST>        coupling, but avoid the separation in the first place.
+<[JEF] FIGGUEST>        I replace the concept of an application with the 
+                 concept of a
+<[JEF] FIGGUEST>        command.  If I type 34 * sqrt(87)...
+<[JEF] FIGGUEST>        Then it is just text.  Now instead of having to call up 
+<[JEF] FIGGUEST>        a calculator...
+<[JEF] FIGGUEST>        I can just highlight it and invoke, say, the print 
+                 command and see it printed...
+<[JEF] FIGGUEST>        The send command and see it on my screen.
+<[JEF] FIGGUEST> Or I can use the calculate command and see 317.13 on my screen.
+<[Wil] W.BADEN1> Seems a lot like MPW.
+<[Dennis] D.RUFFER> Then you are saying that the application should have 
+                    commands...
+<[Dennis] D.RUFFER> for everything the user might want to do?...
+<[Dennis] D.RUFFER> that seems a little monopolistic to me...
+<[Dennis] D.RUFFER> do you see any way with your approach...
+<[Dennis] D.RUFFER> to have mutiple companies making different...
+<[Dennis] D.RUFFER> commands depending on what the user feels..
+<[Dennis] D.RUFFER> he needs to buy?
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        There's that word "application" again.  You can't 
+                 possibly have
+<[JEF] FIGGUEST>        sufficient commands for all tasks.  Software, instead 
+                 of adding
+<[JEF] FIGGUEST>        applications, adds commands.  There is a very slick way 
+                 of doing
+<[JEF] FIGGUEST>        this in a paradigm very similar to the Cat's...
+<[JEF] FIGGUEST>        The Cat has an "Answer" command which allows third-party
+<[JEF] FIGGUEST>        developers to work from within the editor in a very 
+                 "natural" way.  By...
+<[JEF] FIGGUEST>        "natural" I mean that it will feel familiar to one who 
+                 uses the rest of the system.
+<[Gary] GARY-S> Jax you have the priviledge of asking the last question tonight.
+<[Cool CAT] JAX> Jef, your opinions about ...
+<[Cool CAT] JAX> user interface and input devices ...
+<[Cool CAT] JAX> actually is quite reminiscent of Chuck Moore's attitude 
+                 towards such things.
+<[Cool CAT] JAX> Do you consider Moore much of a personal influence?
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        Instead of menus, why can't one just point to lists of 
+<[JEF] FIGGUEST>        editable commands that have no special halo...
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        I first used FORTH when it was about 2 years old (on an 
+                 IBM 1800,
+<[JEF] FIGGUEST>        I think...)
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        And I found it worked much like I liked things to work. 
+                  APL was
+<[JEF] FIGGUEST>        another great example (except for how things are 
+                 spelled)...
+<[JEF] FIGGUEST>        I think that it was more of a parallel development 
+                 rather than an
+<[JEF] FIGGUEST>        influence.  Little minds travel in the same ruts...
+<[JEF] FIGGUEST>        But I like him personally, and wish the world thought 
+<[JEF] FIGGUEST>        as clearly and as simply as FORTH's designer.
+<[Gary] GARY-S> closing comments please Jef
+<[JEF] FIGGUEST>
+<[JEF] FIGGUEST>        I will stick around for a few minutes if anybody wants 
+<[JEF] FIGGUEST>        to communicate further, but aside from a demonstration
+<[JEF] FIGGUEST>        it is somewhat difficult to show the fluidity and
+                 agility that the kind of interfaces...
+<[JEF] FIGGUEST> that I am working on demonstrate.  It is a matter
+<[JEF] FIGGUEST>        of how it feels, how easy it is to learn, of not having 
+<[JEF] FIGGUEST> to change methods as you get to be an expert....
+<[JEF] FIGGUEST>        It is a matter of not having to think about the system 
+                 when
+<[JEF] FIGGUEST>        you've learned it -- and it won't trip you up .
+<[martin] M.ROWLAND1> in your midnight engineering article you said you were 
+                      working on something with japan?
+<[JEF] FIGGUEST> I am working with a number of clients, and some are in Japan.
+<[Gary] GARY-S>  Jef, on behalf of the GEnie Forth RoundTable, ...
+<[Gary] GARY-S>  'Thank you' for a intriguing discussion.
+<[Gary] GARY-S>
+<[Gary] GARY-S>  All may stay and talk, but this conference has officially 
+                 ended.
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,36 @@
+
+forth/lab #105, from sjones, 2029 chars, Wed Jan 28 22:26:16 1987
+There is/are comment(s) on this message.
+--------------------------
+TITLE: HP-28C Forth Calculator +
+Has anyone else here purchased the new HP-28C "calculator"? [It is a border-
+line product... sold as a calculator [only 2K ram], but designed by HP's
+Portable Computer Division]. Many Forth books comm
+ent on how Forth can be
+viewed as an extension of the way HP RPN calculators work... well, I guess
+HP listened when they designed the 28C. [An earlier portable computer... the
+71B, had a Basic-like progra^[Oxmming language... UGH!]
+It has a typed machine... it supports Real (floating) numbers, [12 digit BCD],
+complex numbers, binary integers [with settable word size from 1 - 64 bits],
+strings, vectors [one-dimensional arrays of reals], matrixes [two-dimensional],
+Lists [collections of mixed types of objects], names [to use for variable or
+program id's], program objects, and algebraic expressions.
+The data stack can hold ANY object... operations are defined for most types
+and combinations of objects. [ A matrix can be multiplied by a real number,
+[scalar], or by a vector ]. It has "standard" stack operations, such as
+DUP, SWAP, DUP2, OVER, DROP, ROT, etc. It also has a number of words that
+work on a variable number of objects on the stack, such as DROPN, DUPN, ROLL,
+ROLLD, and PICK.
+It can do some things that absolutely NO other calculator can do... and you'd
+be hard pressed to find programs to do them on a computer... [MACSYMA from
+MIT is an example... muMath is another (its actually derived from MACSYMA)]
+You can do SYMBOLIC algebraic calculations, [even calculus...].
+(Enter the expression 'a+b', type x**2, and the expression becomes '(a+b)^2'.
+Then press EXPAND (from a ALGEBRA menu) and it becomes 'a*a+2*a*b+b*b'... If
+a and b are defined, then you can EVAL the expression. You can even
+differentiate an equation or integrate it!)
+I'm absolutely overwhelmed with this machine!
+[Forth purists may not like the changed syntax of IF..., it is
+IF ... THEN ... ELSE ... END instead of ... IF ... ELSE ... THEN . Personally,
+I prefer the IF THEN ELSE END syntax!]
+Enjoy, Scott

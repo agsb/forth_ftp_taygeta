@@ -1,0 +1,15 @@
+
+=========[ NOTES ON TOOLS.BLK ]====================[ BY STEVE PALINCSAR ]====
+
+TOOLS.BLK needs something else, probably an extended version of F83, to load
+(more on this when I dig into it further.)  But it did have a really nice
+word, ETC, that starts a listing going and pages it along with a space bar.
+Simple, really, but I sure hadn't thought of it; and I liked it so much that
+I keyboarded it in right there and saved my system with it.
+
+-------------------------------------------------------------------------------
+
+Steve Palincsar
+1/26/86
+
+

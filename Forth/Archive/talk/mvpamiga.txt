@@ -1,0 +1,37 @@
+
+>From tenney@well.UUCP (Glenn S. Tenney) Thu Jan  9 05:00:39 1986
+Relay-Version: version B 2.10.2 9/18/84; site bdmrrr.UUCP
+Posting-Version: version B 2.10.3 4.3bsd-beta 6/6/85; site well.UUCP
+Path: bdmrrr!rlgvax!seismo!lll-crg!well!tenney
+From: tenney@well.UUCP (Glenn S. Tenney)
+Newsgroups: net.micro.amiga,net.lang.forth
+ Subject: MVP-FORTH available for the Amiga
+Message-ID: <454@well.UUCP>
+Date: 9 Jan 86 10:00:39 GMT
+Date-Received: 10 Jan 86 01:35:32 GMT
+Reply-To: tenney@well.UUCP (Glenn S. Tenney)
+Distribution: net
+Organization: Whole Earth Lectronic Link, Sausalito CA
+Lines: 16
+Keywords: FORTH
+Summary: Call (415)961-4103 for more info
+Xref: seismo net.micro.amiga:1479 net.lang.forth:365
+
+MVP-FORTH, a public domain FORTH on many different systems, is now
+available for the Commodore-Amiga.  Mountain View Press (MVP) does sell
+this system along with lots of FORTH books, but MVP-FORTH can also be
+found at user groups and on bbs'es, but try to get the Amiga specific
+documentation!	I am in the process of uploading all of the MVP-FORTH
+Amiga modules (source and object) to the Well expecting to have it all
+uploading by 13 January 1986.
+
+You can call Mountain View Press at (415)961-4103 (USA) for more info.
+
+-- Glenn Tenney
+UUCP: {hplabs,glacier,lll-crg,ihnp4!ptsfa}!well!tenney
+ARPA: well!tenney@LLL-CRG.ARPA
+Delphi: TENNEY
+As Alphonso Bodoya would say... (tnx boulton)
+Disclaimers? DISCLAIMERS!? I don' gotta show you no stinking DISCLAIMERS!
+
+

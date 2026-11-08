@@ -1,0 +1,991 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 05/07/89   Time: 21:21EDT
+Attendees:
+[[Dennis] D.RUFFER]
+[[jax] FIGCHAPTERS]
+[M.MELLEN1]
+[[Jack of BCFB] J.BROWN11]
+[[Wil] W.BADEN1]
+[D.GOLDING]
+[[Paul] P.THUTT]
+
+Minutes:
+<FIGCHAPTERS> is here.
+
+<D.RUFFER> hi jax  {call the cops :-)}
+
+<[jax] FIGCHAPTERS> Yo! You there? Musta gone to drink a glass o' water  hi
+
+<D.RUFFER> no just setting up the windows again
+
+<[jax] FIGCHAPTERS> So ... let's discuss whether the ANSI standard should
+          be shot or hanged!
+
+<D.RUFFER> why do you want to hang ANSI
+
+<[jax] FIGCHAPTERS> Well, because they are mind-f***ing us, to use an old
+          Hippie/Yippie phrase
+
+<D.RUFFER> how so?
+
+<[jax] FIGCHAPTERS> Well, they have everyone convinced (falsely) that
+          publishing the BASIS entails legal dangers.  Another example ...
+          of how out of touch they are with reality ...  anyone who has
+          seen modern telecomm disclaimers ...  like: ...  "HEY YOU! YA,
+          YOU! WE TAKE NO RESPONSIBILITY WHATEVER FOR THIS! FORGET IT !"
+          would realize what a load of horsefeathers they have sold us.  .
+
+<D.RUFFER> ok  well, in a way you are right...  ANSI themselves are a
+          little behind the times...  but they also have been burned many
+          times before...  they deal with many standards committees...  and
+          many groups of users like us...  they have just learned to be
+          very cautious  .
+
+<M.MELLEN1> is here.
+
+<D.RUFFER> hi m.m
+
+<M.MELLEN1> hi
+
+<[Dennis] D.RUFFER> what you do m.m (what is you firt name anyway :-)
+
+<M.MELLEN1> first name is mike. I write s/w for Harris Semiconductor -
+          RTX2000
+
+<[jax] FIGCHAPTERS> Hey Mike ...
+
+<M.MELLEN1> Yah?
+
+<[Dennis] D.RUFFER> oh yea, I thought I recognized the name
+
+<[jax] FIGCHAPTERS> I hear rumours that Software at Harris is an "orphan"
+          department.
+
+<M.MELLEN1> Well... we're in a strange position. we !have! to produce s/w
+          because the  cucustomers "expect" it, but we don't try to make
+          our products overly competitive with  anyone else's. Some
+          incentive to do good, huh?
+
+<[jax] FIGCHAPTERS> well, that's life. No incentive, huh? How about job
+          security?  hah.  ..:-)  .
+
+<[Dennis] D.RUFFER> sounds like the way harris is with all their products
+
+<[jax] FIGCHAPTERS> Well, Dennis, I have met their chip theorists and they
+          are damned sharp!  Harris has a young face.
+
+<[Dennis] D.RUFFER> nice military products, but not very competitive on the
+          commercial market
+
+<[jax] FIGCHAPTERS> The prices the gov't pays, who needs commercial?
+
+<M.MELLEN1> we're trying to change ouour Our purchase of GE,RCA, etc should
+          change our commercial image
+
+<[jax] FIGCHAPTERS> Tandy sells the TRS-80 Model 4 for $1100 these days!
+          Because NASA buys them. A 128k Z80. Can you imagine?
+
+<[Dennis] D.RUFFER> you are buying GE????
+
+<[jax] FIGCHAPTERS> I'm all for Harris ...  I've been to their
+          presentations ...  and they say "Forth!" loud and clear without
+          blushing.  .
+
+<[Dennis] D.RUFFER> I knew GE bought RCA, but Harris chews up GE....  that
+          is a mouthful.
+
+<M.MELLEN1> GE, Intersil, and RCA semi operations. You should see our new
+          logo. It almost  doesn't fit on a business card
+
+<[Dennis] D.RUFFER> ok, GE must have gotten rid of that business line
+
+<M.MELLEN1> that was their orphan operation
+
+<[jax] FIGCHAPTERS> Mike ... Harris called me about the RTX 32-bitter. They
+          said they were going to come around and ask what we'd like to see
+          in them.  Have they started that yet?
+
+<[Dennis] D.RUFFER> I was just curious if GEnie got swallowed without me
+          noticing
+
+<[jax] FIGCHAPTERS> NO, GEISCO and the rest of GE are still firmly in GE
+          hands.
+
+<M.MELLEN1> the 32-bitter (RTX4000) is still in its infant stages. You will
+          be hearing from us in the near future
+
+<[Dennis] D.RUFFER> hey, you guys know anything about sorting algorithms?
+
+<[jax] FIGCHAPTERS> Call me bubblehead!  .
+
+<[Dennis] D.RUFFER> boo hiss, not the bubble
+
+<[jax] FIGCHAPTERS> There's lots of sorts of sorts. What sort do you want?
+
+<[Dennis] D.RUFFER> I've been playing with a KWIK sort algorithm
+          recently...
+
+<[jax] FIGCHAPTERS> Mike ... that's great
+
+<[Dennis] D.RUFFER> in fact, it is the topic tonight...
+
+<[Dennis] D.RUFFER> I finally got it working about a half hour ago...  you
+          guys interested in seeing it?
+
+<M.MELLEN1> sure
+
+<[jax] FIGCHAPTERS> likewise
+
+<[Dennis] D.RUFFER> ok
+
+<[jax] FIGCHAPTERS> LISTING ok  .. :-)  .
+
+<[Dennis] D.RUFFER> well, we are going to delve a little bit into polyForth
+          to do this...  that is the language I'm using right now, and this
+          is...  as I said, hot off the presses.
+
+<[jax] FIGCHAPTERS> PAGE
+
+<[Dennis] D.RUFFER> again, excuse the slight delays, I'm cutting from the
+          source blocks...
+
+<[jax] FIGCHAPTERS> GOLDEN
+
+<[Dennis] D.RUFFER> ( Sort Utilities )
+<[Dennis] D.RUFFER> VARIABLE COMP       VARIABLE TRADER     VARIABLE SORTER
+<[Dennis] D.RUFFER> VARIABLE KEPT       VARIABLE KEEPER
+<[Dennis] D.RUFFER>
+<[Dennis] D.RUFFER> ~ : COMPARE ( n1 n2 - -1 | 0 | 1 )   COMP   @EXECUTE ;
+<[Dennis] D.RUFFER>   : TRADE   ( n1 n2)                 TRADER @EXECUTE ;
+<[Dennis] D.RUFFER>   : KEEP    ( n)                     KEEPER @EXECUTE ;
+<[Dennis] D.RUFFER>   : SORT    ( n)                     SORTER @EXECUTE ;
+
+<[Dennis] D.RUFFER> I see I'm going to have to shorten my name
+
+<[jax] FIGCHAPTERS> is the ~ significant or is that a typo?  take it
+          @EXECUTE is PERFORM  .
+
+<D.RUFFER> these are the variables used by the system...  the ~ means to
+          store the entire name characters...  to prevent collision with
+          COMPILE...  which has only a 3 character name...
+
+<M.MELLEN1> has left.
+
+<D.RUFFER> did I bore Mike?   Do you want to continue Jack?  oh Jack, did I
+          scare you away too?  is anyone out there?????
+
+<[jax] FIGCHAPTERS> hi  eating, fingers greasy  ga
+
+<D.RUFFER> is this too much?   Shall I go on?
+
+<[jax] FIGCHAPTERS> ga, iwalk away & return  excuse, dinner & baby  ga
+
+<D.RUFFER> ok, Jennie and I will talk while you eat :-)  BTW, @EXECUTE is
+          F83's PERFORM...  but it adds a test for 0 and is a noop if the
+          variable...  doesn't contain anything   (nice touch)
+
+<[jax] FIGCHAPTERS> what
+
+<D.RUFFER> the test for 0
+
+<[jax] FIGCHAPTERS> if it contains ' @EXECUTE :-)
+
+<D.RUFFER> no, that won't work....  it would be ' EXECUTE ....
+
+<[jax] FIGCHAPTERS> aha  right  i had a funny Forth adventure  but goahead
+          w/ SORT
+
+<D.RUFFER> these would be used as ' COMP !  then you type COMPARE to
+          execute it...  also, there is another "trick word" that I am
+          about to use...
+
+<D.RUFFER> : S@ ( # - b)   SCR @ BLOCK + C@ ;
+<D.RUFFER> : S! ( b #)     SCR @ BLOCK + C! ;
+<D.RUFFER> : TRD   TRADER ASSIGN  2DUP S@  SWAP S@  ROT S!  SWAP S! ;
+<D.RUFFER> : KP    KEEPER ASSIGN  S@ KEPT ! ;
+<D.RUFFER> : CMP     COMP ASSIGN  KEPT @  SWAP S@  - ;
+<D.RUFFER>
+<D.RUFFER> 1 +B LOAD ( Load sorting algorithm ) KWIK TRD KP CMP
+
+<D.RUFFER> these are just some test words, but illistrate the word
+          ASSIGN...  is is a little bit of a trick...  it stores the
+          interpreter pointer into the variable, and then exits...  as you
+          can see in the last line, you just execute the words...  and the
+          execution vectors are set up...  the equivalent in something like
+          F83...  would be to take out the variables and the ASSIGNs from
+          the...  definitions, and do a ' on the words and store them into
+          the variables...  this is just a little bit of a short cut...
+          and allows me to redefine these words to do what I really want to
+          do...  obviously if I write a sort, I want to use it to do real
+          work...
+
+<J.BROWN11> is here.
+
+<[jax] FIGCHAPTERS> hijack!
+
+<J.BROWN11> HI DENNIS
+
+<D.RUFFER> well I jack...
+
+<[jax] FIGCHAPTERS> what's your BITNET addr?
+
+<D.RUFFER> you snuck in there on me...
+
+<[jax] FIGCHAPTERS> Dennis ...
+
+<D.RUFFER> I was just rambling on about sorts  yes?
+
+<[jax] FIGCHAPTERS> Does FORTH Inc. still do standalone mini systems?
+
+<[Jack of BCFB] J.BROWN11> figgy jax are you picking up the FIG conference
+          yet on RCFB
+
+<D.RUFFER> they will do anything they can find someone to pay for :-)
+
+<[jax] FIGCHAPTERS> Yes, JB! Indeed!
+
+<[jax] FIGCHAPTERS> Dennis, do they have a workstation Forth off shelf?
+
+<[Jack of BCFB] J.BROWN11> did you get the little report that bc fig
+          started up again
+
+<[jax] FIGCHAPTERS> with PCB CAD?  Yes, JB! Indeed ...
+
+<D.RUFFER> it depends on what you call a mini right now...  what kind of
+          workstation you talking about?
+
+<[jax] FIGCHAPTERS> I was QUITE impressed with oyour report ...  and am
+          replying you on ForthNet.  What kind yu g, h
+
+<[Jack of BCFB] J.BROWN11> do you think we might get other tellecommers to
+          make reports
+
+<[jax] FIGCHAPTERS> ps  oops. parity  what kind you got, dennis?
+
+<W.BADEN1> is here.
+
+<[jax] FIGCHAPTERS> JB , I garbled you, say gain?  Hi Wil!
+
+<D.RUFFER> I'm not sure what you mean...
+
+<[Jack of BCFB] J.BROWN11> sorry about butting in looks like there are two
+          simultaneous threads
+
+<D.RUFFER> hello wil!
+
+<[jax] FIGCHAPTERS> Yes, no problem. Now eight threads.
+
+<[Jack of BCFB] J.BROWN11> wow hi will,  jack b. is here too
+
+<D.RUFFER> called interactive fiction jack :-)
+
+<[jax] FIGCHAPTERS> Dennis, we need PCB CAD. Possibly new computer. Is
+          there a shelf pF product?
+
+<[Jack of BCFB] J.BROWN11> wil I have been posting you puzzles in the
+          network Peer review conference
+
+<D.RUFFER> not really, you are just talking about a terminal aren't you?
+
+<[Jack of BCFB] J.BROWN11> i'm getting confused
+
+<[jax] FIGCHAPTERS> If you buy a SUN with SUN OS ...
+
+<[Wil] W.BADEN1> Jack - how do I get'em?
+
+<[jax] FIGCHAPTERS> you get an op system and all sorts of software ... like
+          PCB CAD
+
+<[Jack of BCFB] J.BROWN11> I want to talk to wil baden,  let's go to anothe
+          room wil baden
+
+<[jax] FIGCHAPTERS> Does pF have ... standalone multiuser for like a 386 or
+          68020 ...
+
+<D.RUFFER> and you get UNIX, but good like finding a decent Forth
+
+<[Wil] W.BADEN1> ok lead on.
+
+<[jax] FIGCHAPTERS> JB, WIL ... use /CHA <room#> command
+
+<[Jack of BCFB] J.BROWN11> will type: /roo 2
+
+<[jax] FIGCHAPTERS> and PCB CAD?
+
+<[Wil] W.BADEN1> has left.
+
+<[Jack of BCFB] J.BROWN11> ops wil baden type /roo 2  has left.
+
+<D.RUFFER> pF has many varieties of 386 and 68K Forths, but nothing on UNIX
+          yet
+
+<[jax] FIGCHAPTERS> Don't NEED Unix.  Want reason NOT to buy Unix.
+
+<D.RUFFER> then why buy SUNs
+
+<[jax] FIGCHAPTERS> Want multiuser multiprogrammed ForthStation with
+          PCBCAD.  Just mentioned for comparison.  .
+
+<D.RUFFER> why not MSDOS CAD system?
+
+<[jax] FIGCHAPTERS> They ucksay.
+
+<D.RUFFER> why mutiuser, when PCs are soo inexpensive?
+
+<[jax] FIGCHAPTERS> There is a lot of Nike-netting in our joint.  It's time
+          to put a stop to it.  A 386 runs System V.
+
+<D.RUFFER> Nike-netting???
+
+<[jax] FIGCHAPTERS> what's pF's answer?
+
+<D.RUFFER> they don't have one right now...
+
+<[jax] FIGCHAPTERS> ( Nike-net ... you run around in your Nike sneakers
+          with disks in your hand)
+
+<D.RUFFER> I ran into the same problem with the job I'm on...  they wanted
+          MAP on a VME bus...  Motorola only offers it on UNIX  we could't
+          offer them anything but putting in a UNIX system :-(
+
+<[jax] FIGCHAPTERS> If Forth is to survive in desktop computing ...  We
+          need some Forth-based minis.
+
+<D.RUFFER> I agree, and I will mention that you are asking...  but don't
+          hold your breath :-(
+
+<[jax] FIGCHAPTERS> I'd love to do it myself.  I MAY do it myself, if I can
+          get a cheap mini.  Amiga is nice for that, but not popular
+          enough.
+
+<D.RUFFER> I would prefer a WINDOWS version myself, but the I don't like...
+          sharing my computer with anyone but myself
+
+<[jax] FIGCHAPTERS> But maybe!  You are right ...  but there are reasons
+          multiprogrammed systems exist.
+
+<D.RUFFER> there are????
+
+<[jax] FIGCHAPTERS> And Forth is pretty much a no-show in that field.  Yes,
+          there are!
+
+<D.RUFFER> what are they?
+
+<[jax] FIGCHAPTERS> Source code control is a darn good reason for it.
+
+<D.RUFFER> I can do that with a network!
+
+<[jax] FIGCHAPTERS> Foof. Networks are as much work to maintain as
+          multiuser.
+
+<D.RUFFER> I had just such a system set up back at my last employer
+
+<[jax] FIGCHAPTERS> BUT I approve of networks.  I would just be more
+          comfortable with a 4-user mini.
+
+<D.RUFFER> not if you buy a good one, but I agree, they take a network
+          administrator
+
+<[jax] FIGCHAPTERS> There is an IBM System 34 up for tax auction here in
+          Golden next week.  It is outdated and a piece of you-know but I
+          may bid. It is two-user.  .
+
+<D.RUFFER> minis served a purpose back when computers where expensive, I
+          just don't see the need any more  I used to work on a 34...
+
+<[jax] FIGCHAPTERS> That's because all the minis are FROM the era ...  TELL
+          ME ABOUT 34!  ga  .
+
+<D.RUFFER> no more poser than a Z80 I thought  make that power
+
+<[jax] FIGCHAPTERS> cp?  cpu?  .
+
+<D.RUFFER> yes, they don't know much about mutitasking yet...  they started
+          that design with the 32...  which was just a 8 bit computer (or
+          so it seemed)...  then they added some memory and some disk...
+          then designed a time slicer, and called it a mini  is Monitoring.
+          I'm monitoring 2, but can't talk to them :-)
+
+<[jax] FIGCHAPTERS> hmmm  so  waht is 34 cpu?
+
+<D.RUFFER> have no idea jack, but it doesn't have much horse power...
+
+<[jax] FIGCHAPTERS> oh well  .
+
+<D.RUFFER> 2 users is about all you will be comfortable with  you would do
+          better buying a 386 at 25Mhz
+
+<[jax] FIGCHAPTERS> the thing about minis now ...  is that they are
+          parallel machines  the WELL just sold the VAX ...  and bought a
+          Sequent with 6 processors!  FLIES with 30 users on line!  .
+
+<D.RUFFER> not Monitoring.  boy monitoring 2 was just too confusing
+
+<[jax] FIGCHAPTERS> wha'ts happening ther?
+
+<D.RUFFER> yes, now you are talking about a machine that is too expensive
+          to dedicate to one user
+
+<[jax] FIGCHAPTERS> is Monitoring.
+
+<D.RUFFER> wil is having fun learning how to use GEnie...normal stuff :-)
+
+<[jax] FIGCHAPTERS> not Monitoring.  let's go over ther!  has left.
+
+<D.RUFFER> jack, that was the reason minis were "invented"  ah well, let's
+          see if I can  is Monitoring.
+
+<[jax] FIGCHAPTERS> is here.
+
+<D.RUFFER> welcome back jack...  I'll keep monitoring what's going on over
+          there
+
+<[jax] FIGCHAPTERS> do you know what dan quayle listens to on his sony
+          walkman?
+
+<D.GOLDING> is here.
+
+<D.RUFFER> what jack?
+
+<[jax] FIGCHAPTERS> left, right, left, right ...  ... :-)  .
+
+<D.RUFFER> :-)  hi don?
+
+<D.GOLDING> HI ALL
+
+<[jax] FIGCHAPTERS> hi don  .s
+
+<[Wil] W.BADEN1> is here.
+
+<[Jack of BCFB] J.BROWN11> is here.
+
+<D.GOLDING> hi Will!
+
+<[jax] FIGCHAPTERS> welcome back to civilization.
+
+<D.RUFFER> welcome back jack and wil
+
+<[Wil] W.BADEN1> hi don.
+
+<D.RUFFER> sorry, I just was stuck in here
+
+<[Jack of BCFB] J.BROWN11> hi what's the topic
+
+<[Wil] W.BADEN1> what trubls with sorts?
+
+<D.RUFFER> ah the topic....  are we ready to continue where I left off?
+
+<[jax] FIGCHAPTERS> it's 7:30 MDT. I gotta go.
+
+<D.RUFFER> I soved the problem about 8:00 tonight
+
+<[Wil] W.BADEN1> No, i dont know where you were.
+
+<D.RUFFER> ok, see ya jack
+
+<[Wil] W.BADEN1> bye jax.
+
+<[jax] FIGCHAPTERS> bye all, see you in January, Wil! :-)
+
+<D.GOLDING> bye Jax
+
+<[jax] FIGCHAPTERS> has left.
+
+<D.RUFFER> I had just done the introductions  I was just about to show the
+          real code...  I could still do that, and explain whatever
+          questions come up...  about the undefined words...  anyone game?
+
+<[Wil] W.BADEN1> ga
+
+<D.RUFFER> not Monitoring.
+
+<[Jack of BCFB] J.BROWN11> ga
+
+<D.RUFFER> ok, here we go
+
+<D.RUFFER>    ( KWIK Sort Algorithm )
+<D.RUFFER> : DOWN ( # - #')  BEGIN  DUP COMPARE  0> WHILE  1+  REPEAT ;
+<D.RUFFER> : UP   ( # - #')  BEGIN  DUP COMPARE  0< WHILE  1-  REPEAT ;
+<D.RUFFER>
+<D.RUFFER> : EXCHANGE ( #1 #2 - #1' #2')   BEGIN  SWAP DOWN  SWAP UP
+<D.RUFFER>       2DUP > NOT IF  2DUP TRADE  SWAP 1+  SWAP 1-  THEN
+<D.RUFFER>       2DUP > UNTIL ;
+<D.RUFFER>
+<D.RUFFER> : EOL ( # n1 n2 - ... #')   SWAP 2>R  BEGIN  I I'
+<D.RUFFER>       2DUP + 2/ KEEP  EXCHANGE  R> ROT >R  SWAP 2DUP <
+<D.RUFFER>       IF  ROT 1+  ELSE  2DROP  THEN
+<D.RUFFER>       I I' < NOT UNTIL  2R> 2DROP ;
+<D.RUFFER>
+<D.RUFFER> : KWIK ( n)   SORTER ASSIGN  0 SWAP 1-  1
+<D.RUFFER>    BEGIN  1-  ROT ROT EOL  ?DUP 0= UNTIL ;
+
+<D.RUFFER> ok this probably needs a little expaining...
+
+<[Wil] W.BADEN1> no.
+
+<D.RUFFER> first the ASSIGN word, do you all know what it does?
+
+<[Wil] W.BADEN1> What's the problem with it.
+
+<D.RUFFER> nothing any more...
+
+<D.GOLDING> has left.
+
+<D.RUFFER> I finally found my flaw :-)  I was not saving the compare point
+          with KEEP...  thus the point for the COMPARE in UP and DOWN was
+          changing on me...
+
+<[Wil] W.BADEN1> I presume ASSIGN is polyForth ASSIGN.
+
+<D.RUFFER> yes it is wil
+
+<D.GOLDING> is here.
+
+<D.RUFFER> welcome back don  do you guys mean you understand this mess?
+
+<[Jack of BCFB] J.BROWN11> Sorry, but the barbeque is calling
+
+<D.RUFFER> ok see ya jack
+
+<[Wil] W.BADEN1> BYE JACK.  bcnu.
+
+<[Jack of BCFB] J.BROWN11> it is hot up here and gotta go for supper  will
+          check back in an hour..
+
+<D.GOLDING> hi again, I thought tonight was going to be VP Planner, so I
+          went to the other rom...
+
+<[Jack of BCFB] J.BROWN11> has left.
+
+<D.RUFFER> no, VP Planner will be on this thrusday  oops thursday
+
+<D.GOLDING> OK  typos are ok in reattime!
+
+<[Wil] W.BADEN1> Let me look at the coding offline. the idea's look right.
+          ...
+
+<D.RUFFER> that sort will be a little clearer if you download the steno
+          notes after I post them next week <grin>
+
+<[Wil] W.BADEN1> Did u write the code from scratch? or adopt from
+          somewhere?
+
+<D.RUFFER> it is designed to be mutipurpose, and just something to play
+          with  no, I adopted from a file we have here on line...  the
+          files is called VISISORT.ARC  HERE IS THE AD FROM SCREEN 0
+
+<D.RUFFER>        VISIBLE SORT ROUTINES
+<D.RUFFER>
+<D.RUFFER>             taken from
+<D.RUFFER>
+<D.RUFFER>      COMPUTE'S GAZETTE - MAY 1985
+<D.RUFFER>
+<D.RUFFER>         "Understanding Sorts"
+<D.RUFFER>                 by
+<D.RUFFER>            Arieh Shamish
+<D.RUFFER>
+<D.RUFFER> : =================================:
+<D.RUFFER> : Converted to FORTH by Norm Arnold:
+<D.RUFFER> : =================================:
+
+<[Wil] W.BADEN1> It's a shame that it will crash your system once in a very
+          rare while.
+
+<D.RUFFER> he did a bubble sort and a shell sort also...  oh yea will?
+          Under what cercomstances
+
+<[Wil] W.BADEN1> You shud add a line to choose the smaller of two halves.
+
+<D.RUFFER> I'll play along :-)  why so wil?
+
+<[Wil] W.BADEN1> so that u can guarantee that the required stack size ...
+          will not exceed log(base 2) of N.
+
+<D.RUFFER> yes  it will fill up the stack pretty quick...  I havn't
+          calculated how much yet.
+
+<[Wil] W.BADEN1> Otherwise a very rare ...  combo of values will cause
+          stacking ...  for every pivot.  I will look at it offline and
+          give a full report. ga
+
+<D.RUFFER> ok, have you used the KWIK algorithm before?
+
+<[Wil] W.BADEN1> This is quicksort by c.a.r.hoare, published in 1962.
+
+<D.RUFFER> thank you for the precise reference
+
+<[Wil] W.BADEN1> wait a moment...  Collected Algorithms of A.C.M., #63 and
+          64.  1961 not 1962.
+
+<D.RUFFER> ok, it sound like I'd better put in a stack check them.  I was
+          considering that anyway
+
+<[Wil] W.BADEN1> this is the first step in finding ...  OSwhat is still the
+          fastest known algorithm for sorting ...  on a single processor.
+
+<D.RUFFER> does that reference contain some better algorithms?
+
+<D.GOLDING> what is the fastest?
+
+<[Wil] W.BADEN1> over a period of several years it was improved
+          considerably.  OSthe basic algorithm is good but more
+          sophistication in choosing ...  OSthe pivot and optimizing the
+          actions.
+
+<D.GOLDING> is their a limit to the number of items sorted?
+
+<[Wil] W.BADEN1> No limit.
+
+<D.RUFFER> this is limited by stack size
+
+<D.GOLDING> that is my question.  there is a limit?
+
+<[Wil] W.BADEN1> As long as the stack is at least log(base2) of N  (times
+          two).
+
+<D.RUFFER> each "pivot" as wil calles them causes 2 items to be put on the
+          stack
+
+<[Wil] W.BADEN1> Thus to sort 1,000,000 items requires a stack depth of 40.
+
+<D.GOLDING> I have 100,000 items, how large a stack do I need?  ok  how can
+          you be having stack size problems with 40?
+
+<D.RUFFER> actually, I also have to have room for about 5 additional items
+          on a single iteration  I didn't have any stack problems yet...
+          but haven't done anything of significance with it yet.
+
+<[Wil] W.BADEN1> stack problems are very very very very rare but can happen
+          ...  and when it does will be a complete mystery.
+
+<D.GOLDING> I thought you're system would crash sometimes....
+
+<D.RUFFER> no, I had a basic algorithm problem until about 8:00 tonight
+          <grin>  that was when KEEP crept into the system :-)  it makes
+          sure I can keep track of the pivot point
+
+<[Wil] W.BADEN1> You need 34 stack depth plus a few for scratch for
+          100,000.
+
+<D.RUFFER> I'd hope you have that much on your working stack anyway  but I
+          will put in a stack check, so at least it aborts "gracefully"
+
+<[Wil] W.BADEN1>  STACK check not needed.  Just choose the smaller
+          partition.  I will check offline.
+
+<D.RUFFER> can that be done efficiently?...
+
+<[Wil] W.BADEN1> Yes.
+
+<D.RUFFER> I found the stack depth to be pretty dependent on the data
+          content.
+
+<[Wil] W.BADEN1> You have a lot of overhead already that u dont need.  The
+          stack depth should not be data dependent.
+
+<D.GOLDING> pass by address then?
+
+<[Wil] W.BADEN1> that is, the max stack depth should not be data dependent.
+          to don. of course.
+
+<D.RUFFER> I will have to do some analysis...  I look forword to seeing
+          what you can do to it too wil
+
+<[Wil] W.BADEN1> I have a version in Zen that I did a couple of years ago,
+          I'll exhume it.
+
+<D.RUFFER> hum, sounds like the makings of a contest to me....
+
+<D.GOLDING> or homework....
+
+<D.RUFFER> who can come up with the fastest sort in one screen or less :-)
+
+<[Wil] W.BADEN1> OSa cupl o'years ago I thot that I had found a ...  way to
+          make Fastest KnowN Sort even faster.  This made me  hyper.  I was
+          right -- but someone else had already done it.
+
+<D.GOLDING> if you say one screen ot less, you will get unreadable,
+          unuseable code, fewest words...better...
+
+<D.RUFFER> yes, will have to set criteria based on words or some such
+          measure
+
+<D.GOLDING> better yet, fastest!
+
+<D.RUFFER> I don't think I would go with just fastest...  you can do
+          wonders by using a bunch of memory.
+
+<D.GOLDING> if its there, use it!
+
+<D.RUFFER> I think the most "elegent" solution would also be very
+          conservative on memory
+
+<D.GOLDING> I would like to see real world solutions that others can use,
+          if you sort 10 i  10 items only but simple and fast, it would be
+          futile...
+
+<D.RUFFER> I agree, it would have to handle a pretty large set of data...
+          I would probably also have to post the data set.  have we wound
+          this topic down for tonight?
+
+<[Wil] W.BADEN1> don -- is oc fig ready to discuss fast sorting in Forth?
+
+<D.GOLDING> yes sir! how about at the advanced meeting?
+
+<[Wil] W.BADEN1> Right by me.  Time to eat.
+
+<D.RUFFER> what's os fig?
+
+<[Wil] W.BADEN1> OSdon't we hav enuf with rtx chip?  orange county fig
+          chapter(to which Don and I belong).
+
+<D.GOLDING> I don't think we want to consume all of the time on it.
+
+<D.RUFFER> ok, do enough people have interest in sorting techniques?
+
+<D.GOLDING> I would say this is a very important topic...  Wil, that
+          compression routine that used a binary tree was like a sorting al
+
+<[Wil] W.BADEN1> No, some sorting algorithms ues a binary tree.
+
+<D.GOLDING> that is what I meant
+
+<[Wil] W.BADEN1> Dennis, why do u hav to carry 5 items on stack?
+
+<D.RUFFER> well, the original did it all in variables...  I use the stack
+          instead...  I tried to do some analysis...
+
+<[Wil] W.BADEN1> No variable required in Forth.
+
+<D.RUFFER> and had a couple more efficient methods...  I don't think the
+          variables were needed either...  the original even made another
+          stack <yuk>
+
+<D.GOLDING> sounds like a canidate for local variables?
+
+<[Wil] W.BADEN1> not really.
+
+<D.RUFFER> but as I said, I had a bug until about 30 minutes before...
+          this RTC, so I only had time to do the simplest...  version that
+          was closest to the original...  that one worked!
+
+<D.GOLDING> it would be nice with a problem like this one to use names,
+          keep the items on the stack and let Forth keep track of it....
+
+<D.RUFFER> you only need to deal with about 3 items on the top of the stack
+          at any one given time  that was my liit anyway :-)  I do so hate
+          having to use things like PICK and ROLL
+
+<[Wil] W.BADEN1> i'm glad that there is still interest in sorting.
+
+<D.RUFFER> I'm actually surprised that there was...  I just had a need for
+          one, so tried to do it.
+
+<D.GOLDING> it makes for Write Only Code...WOC...  Wil's favorite topic!
+
+<[Wil] W.BADEN1> the grandchildren of quicksort put a stop to the  OSsearch
+          for fastest sorting.
+
+<P.THUTT> is here.
+
+<D.GOLDING> What is OS??????
+
+<[Wil] W.BADEN1> OSTo dennis--Don mean WOC not sorting.
+
+<J.BROWN11> is here.
+
+<D.RUFFER> I was wonder if he meant that my code was read only (oh no :-)
+
+<[Wil] W.BADEN1> OSMy version of RedRyder (9.4) does that.
+
+<D.RUFFER> hello Mr Thutt, and welcome back jack
+
+<D.GOLDING> it looked pretty good...
+
+<[Wil] W.BADEN1> Hi P.Thutt.
+
+<P.THUTT> hello all I see Wil is still writing only?
+
+<[Wil] W.BADEN1> Hi Jack.
+
+<[Dennis] D.RUFFER> if we are going to give names again <grin>
+
+<[Jack of BCFB] J.BROWN11> hi
+
+<[Jack of BCFB] J.BROWN11> what's new
+
+<[Dennis] D.RUFFER> we are just winding down on sort philosophy
+
+<[Wil] W.BADEN1> Where is hillsboro?
+
+<P.THUTT> hillsboro is in Oregon
+
+<[Wil] W.BADEN1> OIC.
+
+<[Dennis] D.RUFFER> anything else we want to talk about?
+
+<P.THUTT> My first time on, however I talked with (listened to Wil at
+          FORML87)
+
+<[Wil] W.BADEN1> dennis--how do i find about updating RedRyder 9.4?
+
+<[Dennis] D.RUFFER> go over to the Mac RT wil, they probably have it  or is
+          it commercial ware?
+
+<[Wil] W.BADEN1> P.Thutt -- help me place you.  To Dennis--commercial now
+          and paid for.  but the company is no longer at the address I
+          have.
+
+<P.THUTT> I was interested in Novix, and liked your f83x phraser
+
+<[Dennis] D.RUFFER> I'm sure they will have current information in the Mac
+          RT, since most of them use it, or so they say.
+
+<[Wil] W.BADEN1> oh yes, I remember. what's the P for?
+
+<P.THUTT> paul
+
+<[Wil] W.BADEN1> Dennis-what do I do? post a message in some topic?
+
+<[Jack of BCFB] J.BROWN11> Paul  try /nam Paul
+
+<P.THUTT>  I also chided someone about anagrams
+
+<[Dennis] D.RUFFER> wil, try a SEArch in their BB
+
+<[Wil] W.BADEN1> Paul-tell me more about anagrams.
+
+<[Dennis] D.RUFFER> just go into their BB and type SEARCH /RedRider/ ALL
+          or you might find the topic by just doing an INDEX
+
+<[Wil] W.BADEN1> Dennis- I think I hav an early release with 2-3 bugs.
+
+<[Paul] P.THUTT> ned w. bain i think  actually ned w. bail
+
+<[Wil] W.BADEN1> Good one. I hadn't found that one yet.
+
+<[Dennis] D.RUFFER> must be more neil baud jokes right?
+
+<[Paul] P.THUTT> I have been stuck in the non-4th world at work recently,
+          and wonder what's going on.
+
+<[Wil] W.BADEN1> ewa blind    edw blain  ... about 30 so far.
+
+<[Dennis] D.RUFFER> is anything NEW going on with Forth?
+
+<D.GOLDING> The RTX2000 by Harris.
+
+<[Dennis] D.RUFFER> no, the RTX4000 is new, but not out yet
+
+<[Jack of BCFB] J.BROWN11> Dennis,  has Gary-s been on with any of the VP-
+          Planner people yet?
+
+<[Paul] P.THUTT> What is the 4000
+
+<D.GOLDING> does the RTX-4000 have a 16 bit or 32 bit ASIC bus?
+
+<[Dennis] D.RUFFER> he was going to do a practice session this weekend, but
+          hadn't heard when  the 4000 is the 32 bit version  have no idea
+          what size bus they have...  would immagine it has to be 32 bit.
+
+<[Paul] P.THUTT> Is there float hardware for the rtx-4000?
+
+<[Dennis] D.RUFFER> there isn't even hardware for the rtx4000 yet <grin>
+
+<D.GOLDING> that's alot of pins: 32 data, 32 address, 32 ASIC plus
+          interupts,etc.
+
+<[Paul] P.THUTT> Ah yes, but with 4th engines the software exists before
+          the hardware.
+
+<[Dennis] D.RUFFER> yes, I'm sure you could put software floating point on
+          it <grin>
+
+<[Jack of BCFB] J.BROWN11> sure, send me one and I'll do it
+
+<[Dennis] D.RUFFER> Mike {forget last name } from harris was on here
+          earlier
+
+<D.GOLDING> you could tie the Floating Point Processor of your choice on
+          the ASIC bus...
+
+<[Wil] W.BADEN1> gotta go.  zai jian.  17
+
+<[Dennis] D.RUFFER> thanks for stopping by wil
+
+<[Jack of BCFB] J.BROWN11> bye will
+
+<D.GOLDING> Has anyone else played with a RTX 2000 here?
+
+<[Wil] W.BADEN1> has left.
+
+<[Paul] P.THUTT> Is anyone still concerned about mainstreaming 4th or is
+          the world accepting it only as embedded
+
+<[Dennis] D.RUFFER> define mainstreaming
+
+<D.GOLDING> bye Wil, see ya at the advanced meeting...
+
+<[Paul] P.THUTT> mainstreaming means acceptance by academics, computer
+          press etc as development lang for "real products"
+
+<[Dennis] D.RUFFER> we are trying to work on it, but it is a tough road
+
+<[Paul] P.THUTT> Question arises from various "Is 4th dead?" articles
+
+<D.GOLDING> The world wants bigger more computers for monster bug infested
+          programs...
+
+<[Dennis] D.RUFFER> join us on Thursday for a "real" Forth product
+
+<[Paul] P.THUTT> What happens Thur
+
+<[Dennis] D.RUFFER> VP PLanner will be our guests
+
+<[Paul] P.THUTT> Whose 4th was their devl. environ.?
+
+<[Dennis] D.RUFFER> I believe it was their own, but I think Jack knows
+          more????
+
+<D.GOLDING> 40 % of the code is machine code, I talked to Kent...
+
+<[Paul] P.THUTT> What time Thur.
+
+<[Dennis] D.RUFFER> 9:30 Eastern
+
+<[Paul] P.THUTT> Hope to join then. bye for now
+
+<[Dennis] D.RUFFER> see ya then
+
+<D.GOLDING> bye Paul
+
+<[Dennis] D.RUFFER> well folks, it's getting late for me also...
+
+<[Paul] P.THUTT> has left.
+
+<[Dennis] D.RUFFER> can we call this a night?
+
+<[Jack of BCFB] J.BROWN11> I'm still here
+
+<[Dennis] D.RUFFER> if I leave, you will loose the steno...
+
+<[Jack of BCFB] J.BROWN11> what time is it there
+
+<D.GOLDING> Yes where can I find info on Novix and RTX?
+
+<[Dennis] D.RUFFER> but you are welcome to stay and enjoy...  it is now, at
+          the tone 10:46:30pm
+
+<D.GOLDING> 7:46 in California...
+
+<[Jack of BCFB] J.BROWN11> same in BC Canada
+
+<[Dennis] D.RUFFER> yes, well have fun...  see you guys later
+
+=== End of Steno notes. ===
+
+

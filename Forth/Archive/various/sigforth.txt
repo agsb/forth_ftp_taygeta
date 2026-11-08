@@ -1,0 +1,180 @@
+
+
+
+ Minutes of the Forth RT Guest Conference.
+    
+ Date: 12/15/88   Time: 22:42EST
+  
+ Special guest: George Shaw
+ Topic : 'SigForth ACM'
+         The reasons, and expectations of the newly established Forth 
+         Special Interest Group of the Association for Computing Machinery
+         The GEnie Forth RoundTable provided the first public forum among 
+         Forth users and FIG members for discussiing this entry with the 
+         professional user as its stated target.
+      
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Len] NMORGENSTERN]
+[[Dennis] D.RUFFER]
+[[George] PRESS20]
+[[Alan F.] ATFURMAN]
+[[Jax] FIGCHAPTERS]
+[[PAUL@ICOM] PSNIVELY]
+   
+Minutes:
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> I was hoping you'd show
+<[Dave] DHWEINSTEIN> I would nae miss it.
+<[Gary] GARY-S> Got something to say - help spread the word..
+<D.RUFFER> Hello Gary, Dave
+<[Gary] GARY-S> I just became fw on Wetware (415/753-5265) gars@wet.UUCP forth.
+conf
+<D.RUFFER> couldn't miss George :-)
+<[Gary] GARY-S> good
+<[Gary] GARY-S> more the merrier
+<NMORGENSTERN> is here.
+<[Dave] DHWEINSTEIN> Hi Len
+<[Len] NMORGENSTERN> Hi
+<[Dave] DHWEINSTEIN> Heh...the SYSOP to Joe User ratio is 3/1...
+<[Len] NMORGENSTERN> brb
+<[Gary] GARY-S> Len - george speaks highly of you, sir
+<[Len] NMORGENSTERN> Thanks!
+<[Dave] DHWEINSTEIN> So...Gary...Little Rock getting hyped up about the Cotton 
+Bowl?
+<[Gary] GARY-S> sure - with Kenny a former player of the last Ark team to make 
+number 1
+<[Gary] GARY-S> Kenny Hatfield=coach
+<[Dave] DHWEINSTEIN> Yeah. Are you going to be coming down to the conf?
+<[Gary] GARY-S> dunno yet
+<[Len] NMORGENSTERN> Dave, I plan to be there. Where do I get a form?
+<[Dave] DHWEINSTEIN> Requests for symposium information should be directed to:
+<[Dave] DHWEINSTEIN> Dr. Paul Frenger or Mr. Rick Hoselton
+<PRESS20> is here.
+<[Len] NMORGENSTERN> Thanks, Dave.
+<[Dave] DHWEINSTEIN> Technology Information Center, Inc.
+<[Gary] GARY-S> hey George - welcome
+<[Dave] DHWEINSTEIN> 2900 Wilcrest Drive #400
+<[Dave] DHWEINSTEIN> Houston, TX 77042
+<[Dave] DHWEINSTEIN> Telephone: (713) 952-1060
+<[Gary] GARY-S> any last questions ? if not...
+<[Dave] DHWEINSTEIN> George..is it alright if I put up the photocopies I have 
+of the call for papers (I only got the one copy of the call)?
+<[George] PRESS20> Fine with me GA
+<[Dave] DHWEINSTEIN> Ok.
+<[Gary] GARY-S> lets get started then...
+<[Gary] GARY-S> This is a formal conference - no interlacing please...
+<[Gary] GARY-S> remember to make ok<cr> your first response...
+<[Gary] GARY-S> keeep it tight and end...
+<[Gary] GARY-S> partial sentences with three dots..
+<[Gary] GARY-S> end with ga ..
+<[Gary] GARY-S>  The GEnie Forth RoundTable is pleased to welcome...
+<[Gary] GARY-S> as this evening's special guest, George Shaw. ...
+<[Gary] GARY-S> George is owner of Shaw Laboratories, a custom...
+<[Gary] GARY-S> programming shop, dealing primarily in Forth applications. ...
+<[Gary] GARY-S> He has been programming in Forth for over ten years, ...
+<[Gary] GARY-S> was a member of the 83 Standards Committee, ...
+<[Gary] GARY-S> and is a current member of the X3/J14 Technical ...
+<[Gary] GARY-S> Committee charged with task of writing the ANS Forth. ...
+<[Gary] GARY-S> He has served as chapter chairman for Silicon Valley FIG, ...
+<[Gary] GARY-S> and is currently chairman of the North Bay FIG chapter. ...
+<[Gary] GARY-S> Mr. Shaw has twice served as chairman of Asilomar, and is...
+<[Gary] GARY-S> founder and chairman for the Forth Special Interest Group...
+<[Gary] GARY-S> of the Association for Computing Machinery, which will...
+<[Gary] GARY-S> be holding its first convention in Austin, TX in February. ...
+<[Gary] GARY-S> The topic tonight is 'SigForth ACM'. Introducing George Shaw.
+<[Gary] GARY-S> ga George
+<[George] PRESS20> We, (myself and others) started the ACM SIG to bring Forth ..
+<[George] PRESS20> into the professional computing arena...
+<[George] PRESS20> ACM is very visable in the universities and colleges...
+<[George] PRESS20> and is very well respected around the world. ...
+<[George] PRESS20> We felt that having a SIG would give Forth a large boost in 
+image as a language ...
+<[George] PRESS20> for serious use by professionals. ...
+<[George] PRESS20> Thanks to Alan Furman for starting the whole thing...
+<[George] PRESS20> and analyzing the situation to give us direction ...
+<[George] PRESS20> and goals.  I have a list of our initial projects ...
+<[George] PRESS20> which I would like to try to send in ...
+<[George] PRESS20> However, there are no periods (...) at the end of the ...
+<[George] PRESS20> lines, but the comm program should wait 5 seconds after each 
+line...
+<[George] PRESS20> I will let you know when it is done ...
+<[George] PRESS20> here it comes ...
+<[George] PRESS20> Education: Moving Forth into the universities and
+<[George] PRESS20> colleges to create an awareness of Forth and a
+<[George] PRESS20> better supply of Forth programmers.
+<[George] PRESS20> not working as planned ...
+<[George] PRESS20> Gary, should I try it anyway ga
+<[Gary] GARY-S> yes - please do
+<[George] PRESS20> Education: Moving Forth into the universities and
+<[George] PRESS20> colleges to create an awareness of Forth and a
+<[George] PRESS20> better supply of Forth programmers.
+<PSNIVELY> is here.
+<[George] PRESS20>
+<[George] PRESS20> "Forthics": Research to create a basic set of Forth
+<[George] PRESS20> programming ethics as well as management metrics to
+<[George] PRESS20> increase the success of Forth projects.
+<[George] PRESS20>
+<[George] PRESS20> Market: a study of the job requirements and the
+<[George] PRESS20> Forth programming skills available to determine
+<[George] PRESS20> trends in the Forth job marketplace and skills
+<[George] PRESS20> required for the future.
+<[George] PRESS20>
+<[George] PRESS20> Successes/Failures: a study of the historical
+<[George] PRESS20> applications of Forth to create an awareness of
+<[George] PRESS20> Forth's wide spread use and to determine what the
+<[George] PRESS20> characteristics and causes are for successes and
+<[George] PRESS20> failures.
+<[George] PRESS20>
+<[George] PRESS20> ANS Forth:  participate through your SIGForth
+<[George] PRESS20> representative in the ANSForth committee to
+<[George] PRESS20> produce an American National Standard for Forth
+<[George] PRESS20> that everyone can use,
+<[George] PRESS20>
+<[George] PRESS20> State of the Industry:  SIGForth periodically
+<[George] PRESS20> compiles surveys of the Forth industry to evaluate
+<[George] PRESS20> the status of the Forth product market, job market,
+<[George] PRESS20> workplace, education availability, job requirements
+<[George] PRESS20> etc.  Participate in these surveys and be one of
+<[George] PRESS20> the first to reap their benefits through their
+<[George] PRESS20> publication in the SIGForth newsletter.
+<[George] PRESS20>  thats it, sorry for the mess, computers never do what you 
+tell them ...
+<[Len] NMORGENSTERN> Came thru fine.
+<[George] PRESS20> Any questons. ga
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Well...I've been working from the inside to try and get 
+Forth in here at UT...
+<[Dave] DHWEINSTEIN> ...but so far the only result is that I am recognized on 
+sight by a large portion of the CS faculty as "the Forth fanatic" (no me
+an trick in a University of 50,000+). If UT is typical...
+<[Dave] DHWEINSTEIN> ...how do you plan to try and get this in to Universities? 
+GA
+<[Gary] GARY-S> ga george
+<[George] PRESS20> I have Tom Hand, at the Florida Institute of Technology...
+<[George] PRESS20> working on compiling a list of universities and colleges...
+<[George] PRESS20> where Forth is currently taught so that we have examples ...
+<[George] PRESS20> and a syllabus for courses in Forth as they are applies to ..
+<[George] PRESS20> several different areas.  We are planning on doing...
+<[George] PRESS20> a survey to 2500 university departments to determine their 
+interest...
+<[Paul@ICOM] PSNIVELY> has left.
+<[George] PRESS20> and to offer our help in having Forth taught....
+<[George] PRESS20> As for people viewing you as a Forth fanatic...
+<[George] PRESS20> all of us here have been through that (or are still ...
+<[George] PRESS20> there).  the trick is to know 'C' and be able to give ...
+<[George] PRESS20> rational comparisons to Forth ('C' is Forth's most direct...
+<[Alan F.] ATFURMAN> !!
+<[Dave] DHWEINSTEIN> !!
+<[George] PRESS20> competitor).  You don't want to come off as religious...
+<[George] PRESS20> otherwise they won't take you seriously...
+<[George] PRESS20> we must represent both strengths and weaknesses...
+<[George] PRESS20> otherwise we will not be believed.  ga
+<[Gary] GARY-S> ga jax
+<[Jax] FIGCHAPTERS> ok
+<[Jax] FIGCHAPTERS> FIrst of all, we of the Forth community
+<[Jax] FIGCHAPTERS> have reason to be grateful to ACM SIGForth ...
+<[Jax] FIGCHAPTERS> for having found ...
+<[Jax] FIGCHAPTERS> a channel for the boundless energies of Alan Furman ! :-) ..
+

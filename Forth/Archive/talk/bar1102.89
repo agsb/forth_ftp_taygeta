@@ -1,0 +1,322 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 11/02/89   Time: 22:32EST
+Attendees:
+[[Gary] GARY-S]
+[W.BADEN1]
+[[Dave] OLORIN]
+[[Jim] JTITTSLER]
+[[Len] NMORGENSTERN]
+[JETHOMAS]
+[[jax@well] FIGCHAPTERS]
+[[Kevin] APPERT]
+
+  ** WARNING ** Much of this conference was devoted to attempts to express
+                thoughts using syllabic and phonetic abbreviations. NO EDIT
+                was performed to make these attempts more comprehensible.
+
+The Question of the Night:
+Welcome to another open FIGGY BAR. In Forth-79 AGAIN was in the Controlled Ref 
+Set, in Forth-83 uncontrolled, in ANS X3/J14 it is once again controlled.
+controlled. Do you (1) agree (2) disagree (3) care (4) I use only the Required
+Word Set.
+
+ Other items discussed: Dave Weinstein's Object Oriented Forth Extensions are
+ now uploaded, Upcomming guest conferences, Phillips Telegraphic code as a
+ terminal front-end processor,C and Pascal exercises in Forth.
+
+Minutes:
+<[Gary] GARY-S> Welcome Jim
+<[Jim] JTITTSLER> Hello Gary.
+<[Dave] OLORIN> And for good news....the much balleyhoed long awaited Object 
+Oriented Forth version 2.0 is done and *working* and will be uploaded *to
+night*.
+<[Gary] GARY-S> Did my notes to Allan actually flush you out for a FIGGY ?
+<[Gary] GARY-S> That's great Dave !
+<[Gary] GARY-S> Dave - I'm trying to get Jim and Allan Pratt to do a guest Conf
+<[Gary] GARY-S> Jim - we don't follow protocol in these open FIGGY BARs - just 
+jump in whenever
+<W.BADEN1> is here.
+<[Gary] GARY-S> Wha happen
+<[Gary] GARY-S> Evening Wil
+<[Dave] OLORIN> Trying to beat some sense into my term program.
+<W.BADEN1> Hi, gary, dave.
+<JETHOMAS> is here.
+<[Dave] OLORIN> Hullo Wil
+<[Dave] OLORIN> not Monitoring.
+<[Gary] GARY-S> When will you post your OOF Dave ? Tonite ? and it runs on...
+<[Dave] OLORIN> It will go up tonight. A big arc file.
+<APPERT> is here.
+<[Gary] GARY-S> Jet, Kev
+<[Dave] OLORIN> (The object code is 3 parts, and it requires the record code 
+and the module code)
+<[Dave] OLORIN> All (I think) of the implementation dependent code has been 
+abstracted into a single module, so porting shouldn't be that bad.
+<[Gary] GARY-S> Is this a whole new kernel or a 83 extension, Dave
+<[Dave] OLORIN> It's an extension. It was developed for F-PC.
+<[Gary] GARY-S> Since F-PC is PC specific that sorta limits porting
+<[Dave] OLORIN> It should be fairly easy to port. It is not dependent on PC 
+architecture.
+<FIGCHAPTERS> is here.
+<[Gary] GARY-S> jax
+<FIGCHAPTERS> foof!
+<W.BADEN1> Hi jax. Sorry I missed u last week.
+<[Gary] GARY-S> Did you talk to Wheels ?
+<[jax@well] FIGCHAPTERS> Hi wil, got some info for ya.
+<[Dave] OLORIN> All of the implementation dependent stuff (from CELL size to 
+words like >body) and the structure of the dictionary are in one place. S
+o changing that module should be all that is needed (although block people will 
+need to run it through a stream->block converter)
+<[jax@well] FIGCHAPTERS> It's Wheeler & Sarns, Gary, both are Stevens. There 
+are four stevens at VESTA, we call em the Gang of Steves.
+<[jax@well] FIGCHAPTERS> just a sec, wil, I'll run up and get the info.
+<[Gary] GARY-S> It was Wheeler who more-or-less volunteered, so that's why I 
+used the (nam) he used on the Moore conf
+<W.BADEN1> (Gary, once again I hav a bored meeting on 2nd thurs. Giv Charles my 
+regrets.)
+<[jax@well] FIGCHAPTERS> that's fine.
+<[Gary] GARY-S> well - did you? - so I can remove the tentatuive
+<[jax@well] FIGCHAPTERS> Your man, Wil, was Wlater Polk Phillips, 6/14/1846 to 
+1/31/1920
+<[jax@well] FIGCHAPTERS> oops, Walter.
+<[jax@well] FIGCHAPTERS> Yes, that's fine Gary. Wheeler & Sarns.
+<[Gary] GARY-S> Wil - we go back to third Thursdays AFTER E. Rather's January 
+Conference
+<[Gary] GARY-S> Ohhh - both of them ! gotcha
+<[jax@well] FIGCHAPTERS> Philips Telegraphic Code is 1897.
+<[jax@well] FIGCHAPTERS> Right, Gary.
+<W.BADEN1> Jax, whr dd u fd tt? and wt else?
+<[Gary] GARY-S> How bout explaining to the rest of us
+<[jax@well] FIGCHAPTERS> Source: Dictionary of American Biography, Vol. 7, page 
+545
+<W.BADEN1> Is it still available.
+<[jax@well] FIGCHAPTERS> Have a call in for any sources. Phillips prolific 
+writer, but stuff like that not so common in libraries in Colorado. Have to
+ search a bit.
+<W.BADEN1> wt else dd he do?
+<[jax@well] FIGCHAPTERS> Regular contributor to _Telegrapher_ and associate 
+editor _ELectrician_.
+<[jax@well] FIGCHAPTERS> Stories sketches and paragraphs written as "John 
+Oakum" published 1876, _Oakum Pickings_
+<[Kevin] APPERT> Phillips Telegraphic code, for those of you who were not here 
+last time this was discussed, is a set of curtations of common words us
+ing the telegraph character set.
+<[jax@well] FIGCHAPTERS> Author, _My Debut In Journalism_ 1892
+<[jax@well] FIGCHAPTERS> Washington rep of New York Associated Press during 
+Hayes admin.
+<[Kevin] APPERT> D.C.Hayes?
+<[jax@well] FIGCHAPTERS> Rutherford B.
+<[Kevin] APPERT> And I thought the current administration was a little hazy!
+<[jax@well] FIGCHAPTERS> 1892 - 1897 general manager United Press, 1893-1897 
+"War of the Giants", ends in collaps of United Press.
+<[Gary] GARY-S> Again - what does this have to do with Forth
+<[jax@well] FIGCHAPTERS> Large and rotund, yet avid bicyclst.
+<W.BADEN1> an ipt fea ws tt abbreviations hv unique expansions.
+<[jax@well] FIGCHAPTERS> author of humorous _Song of the Wheel_.
+<W.BADEN1> I want to wri a phillips front a back end to a terminal emulator.
+<[jax@well] FIGCHAPTERS> d. Vinyard Haven, Mass, post-deceasing son and wife.
+<[Kevin] APPERT> how else would it be, Wil?  Ambiguous expansions would render 
+the scheme useless
+<[jax@well] FIGCHAPTERS> see also:
+<[jax@well] FIGCHAPTERS> Jas. D. Reid _The Telegraph In America_ (1897)
+<W.BADEN1> exactly. tr r no ambiguous exansions.
+<[jax@well] FIGCHAPTERS> VItor Rosewater, _Hist. of Cooperative News-Gathering 
+in US (1930)
+<[jax@well] FIGCHAPTERS> N.Y. Times, Feb 1 1920.
+<W.BADEN1> tr = there, thr = thr, etc.
+<[jax@well] FIGCHAPTERS> .
+<[Kevin] APPERT> Newsgathering? Cooperative? in this country? Cooperative with 
+whom?
+<[jax@well] FIGCHAPTERS> UPI, AP
+<[jax@well] FIGCHAPTERS> etc.
+<W.BADEN1> tnx, jax. excellent.  Nw to get a copy f code.
+<[jax@well] FIGCHAPTERS> New "face" here (to me at least) ...participant #3, 
+Jim Tittsler.
+<W.BADEN1> f = of the, d = in the.
+<[jax@well] FIGCHAPTERS> Hi Jim!
+<[Jim] JTITTSLER> I only stop by occasionally.  Hello Jax.
+<[Gary] GARY-S> re: Question of Nite- does it matter if AGAIN is/is not 
+Controlled ?
+<W.BADEN1> hi jim.
+<[jax@well] FIGCHAPTERS> ( Wil .. like I said, i have call in for material. 
+lets see what pops up).
+<W.BADEN1> Since I made the proposal, I'd like to see it controlled.
+<[Kevin] APPERT> What is the big deeal about AGAIN?
+<[jax@well] FIGCHAPTERS> Do you know Kevin, Jim,since you are in same burg?
+<[jax@well] FIGCHAPTERS> I gues on some machines, AGAIN is the equiv of 0 UNTIL 
+... but on some chips, AGAIN is nice machine instruction
+<JETHOMAS> I don't care about AGAIN, so I say why not control it?
+<[Kevin] APPERT> nope, I've heard the name
+<[Kevin] APPERT> are you the Atari J.Tittsler?
+<[Jim] JTITTSLER> Yes.
+<[Gary] GARY-S> 0 UNTIL is the hi level def - it performs infinite loop
+<[Kevin] APPERT> oh god, another living legend
+<W.BADEN1> I missed last week becuz I was getting ANSI report from Jack Brown.
+<[jax@well] FIGCHAPTERS> Hows the weather in Birmingham, JE?
+<JETHOMAS> Turning coldeer, a little drizzle.
+<NMORGENSTERN> is here.
+<[jax@well] FIGCHAPTERS> Snow here.
+<[jax@well] FIGCHAPTERS> hiLen.
+<[Len] NMORGENSTERN> Hi all
+<W.BADEN1> hi len.
+<[jax@well] FIGCHAPTERS> were youhere sunday nite?
+<[Len] NMORGENSTERN> I forgot to set my clock, came 1 hr. early &quit
+<[Len] NMORGENSTERN> when nobody came!
+<JETHOMAS> Why a Phillips Code terminal?  Does it shorten the transfer?
+<[Len] NMORGENSTERN> <abject apologies>
+<W.BADEN1> If u hv it on bh ends.
+<W.BADEN1> also reduce typing.
+<[Kevin] APPERT> I probably passed thru a few min. after the hour, and figered 
+it for a daylight savings time problem, Len
+<[jax@well] FIGCHAPTERS> so why should AGAIN get bounced around from wordset to 
+wordset? It's a fairly intuitive construct, esp. in the birthplace of
+Forth, to wit, control programming.
+<[jax@well] FIGCHAPTERS> Useit almost EVERY PROGRAM!
+<JETHOMAS> Why Phillips instead of some other archiving?
+<W.BADEN1> it's fo direct communication.
+<W.BADEN1> like nw.
+<W.BADEN1> it cd reduce typing 25 %.
+<[Gary] GARY-S> Not your typing Wil !
+<JETHOMAS> OH!  It's so YOU can remember it!
+<W.BADEN1> tni i am using wt I rmb ab it.
+<[Len] NMORGENSTERN> Wil, I find that I don't type letters but letter 
+combinations
+<[Len] NMORGENSTERN> thus, tion is, in a sense 1 stroke.
+<[Len] NMORGENSTERN> To use Phillips, I would have to relearn my fingering.
+<W.BADEN1> i picked up sm o it 40 years ago.
+<W.BADEN1> quite true.  me too.
+<[Len] NMORGENSTERN> It would be easier if you learned it from the start
+<JETHOMAS> If you had the eemulation incoming, you could see Wil's words 
+expanded.
+<[Len] NMORGENSTERN> Reading it is (usually) no problem, it's writing it!
+<W.BADEN1> it's n so hard.
+<W.BADEN1> u dt hv to abbreviate.
+<[Len] NMORGENSTERN> I guess it might be like learning a new musical instrument
+<[Len] NMORGENSTERN> You learn to translate the notes to different fingers, etc.
+<W.BADEN1> sm f wds i hv spelled out may hv an abbreviation.
+<JETHOMAS> If we're going to do new spellings, what about Shaw's syllabary?
+<JETHOMAS> 56 symbols and you save a third on spellings.
+<W.BADEN1> it mb (= may be) no more difficult thn cngg keyboards.
+<[Len] NMORGENSTERN> cngg??
+<W.BADEN1> tn = then, thn = than.
+<JETHOMAS> A real phonetic alphabet.
+<W.BADEN1> cng = change, chg = chg.
+<[Len] NMORGENSTERN> No not phonetic! syllabic!
+<W.BADEN1> chj = challenge.
+<W.BADEN1> mg = manage, hence mgr, mgt.
+<JETHOMAS> Great for voice synthesizers.
+<JETHOMAS> Onlly problem is learning new codes....
+<W.BADEN1> no, ideographic.
+<JETHOMAS> I didn't mean Phillips, I meant Shaw.
+<W.BADEN1> u wd b abl to add to ur vocabulary.
+<[Len] NMORGENSTERN> Not completely, Wil. The symbols represent sounds but not
+<[Len] NMORGENSTERN> phoneme by phoneme
+<W.BADEN1> no, not sounds. tt wd b ambiguous. their is not there.  thr <> tr.
+<JETHOMAS> I just realized, you (len) mean the professional shorthand.
+<[Len] NMORGENSTERN> Chinese is ideographic, Babylonian was syllabic, Spanish 
+is phonetic
+<[Len] NMORGENSTERN> Phillips is half way between syllabic and ideographic.
+<JETHOMAS> I meant George Bernard Shaw's revised spelling
+<[Len] NMORGENSTERN> The problem with Shaw's system is that there is no
+<[Len] NMORGENSTERN> standard English pronunciation!
+<JETHOMAS> That is only a problem if it's a problem for you.
+<[Len] NMORGENSTERN> How do you mean?
+<JETHOMAS> I listen to Southern accents every day.  It all comes out.
+<[Len] NMORGENSTERN> Granted that nobody says the gh in night, except maybe in 
+Scotland
+<[Len] NMORGENSTERN> but there is a lot of variation otherwise. In Boston they 
+say sawr
+<W.BADEN1> n rly, len.  ix (= it is) strictly based on spelling.
+<[Len] NMORGENSTERN> Phillips is, but Shaw's system wasn't
+<JETHOMAS> Both are for human-to-human transmission.
+<[Len] NMORGENSTERN> Shaw wanted to use a pure phonetic system. Phonetic means
+<[Len] NMORGENSTERN> based on the sounds of the langugage as spoken,
+<W.BADEN1> as u js sed, spoken whr?
+<[Len] NMORGENSTERN> Precisely the problem!
+<JETHOMAS> I say, if you spell it the way you speak it, the only real problem 
+is that people will know your social status....
+<W.BADEN1> t pronunciation o American English h cngd in my lifetime.
+<[Jim] JTITTSLER> But then you don't see as many Guttenburg presses either Wil.
+<[Len] NMORGENSTERN> So have words. Few has changed from a noun to an adjective 
+in 30 years
+<[Gary] GARY-S> Folks - just so you know , there is NO WAY I am going to edit 
+this conference. It goes up 'AS IS' !!!!
+<W.BADEN1> any one for Forth?
+<[Gary] GARY-S> Please !
+<[Len] NMORGENSTERN> I am giving a talk Saturday for "Forth Day"
+<[Len] NMORGENSTERN> A tutorial on translating Pascal to Forth
+<W.BADEN1> whr?
+<[Kevin] APPERT> an advantage of a totalitarian goverment: they could mandate a 
+uniform grapheme/phoneme correspondence
+<[Len] NMORGENSTERN> Foster City (Near SF)
+<[Len] NMORGENSTERN> Where Ting works
+<[jax@well] FIGCHAPTERS> back
+<W.BADEN1> i guess i wi hv to miss it.
+<[Gary] GARY-S> Len, how about posting the transcript to the library
+<[Len] NMORGENSTERN> Actually, I am giving a more detailed version at Asilomar 
+at the
+<[Kevin] APPERT> SF, as we all know, stands for science fiction, indeed near 
+Applied Biosystems!
+<[Len] NMORGENSTERN> end of the month & don't want to put up the whole thing
+<[Len] NMORGENSTERN> but I will do a few parts of it.
+<W.BADEN1> ok then, i'll catch it there.
+<[Len] NMORGENSTERN> If there are any beginners, I hope to catch their interest.
+<[Len] NMORGENSTERN> (recuruitment)
+<[Gary] GARY-S> Late arrivals - Dave Weinstein is putting his OOF in the 
+library tonite
+<[Len] NMORGENSTERN> The theme of Asilomar is OOS (Object oriented stuff)
+<W.BADEN1> Len, i'm doing "Seeing Forth", the examples in chapter 1 of K&R 
+translated to
+<W.BADEN1> forth.
+<[jax@well] FIGCHAPTERS> thatoughtabe pretty funny
+<[Kevin] APPERT> and you thought trans-substantiation was the province of the 
+roman catholic chucrch
+<[Len] NMORGENSTERN> Great!
+<W.BADEN1> we'll probaby be in the same hour.
+<[Gary] GARY-S> O-ooo That I would like to see Wil !
+<[Len] NMORGENSTERN> Not funny at all, could be very useful
+<[Gary] GARY-S> I was serious
+<[jax@well] FIGCHAPTERS> : Hello.f ( ---) ." Hello, world!" r ;
+<[jax@well] FIGCHAPTERS> ooops, "cr" not r.
+<W.BADEN1> I'll upload a text version after the conference.
+<[Gary] GARY-S> thanks
+<[Len] NMORGENSTERN> Actually, translating from P. to F. is not hard,
+<[Len] NMORGENSTERN> although it can be tricky at times
+<[Len] NMORGENSTERN> but it is MUCH more difficult to translate the other way
+<[Len] NMORGENSTERN> because Forth can do things easily that are very difficult 
+in Pascal.
+<[Gary] GARY-S> Reminder - This comming Thursday will be Charles Curley's guest 
+conference
+<W.BADEN1> Actually Gary, i'll upload just before leaving for FORML.
+<[Gary] GARY-S> That'll work, too
+<[Kevin] APPERT> I'm excited already!
+<W.BADEN1> Notice I sed text version, I can't do the graphics.
+<[Gary] GARY-S> last call folk
+<W.BADEN1> Any one for Forth?
+<[Kevin] APPERT> what about AGAIN?  what is the issue
+<[Kevin] APPERT> I still don't understand
+<[Gary] GARY-S> controlled/uncontrolled/don't care
+<[Kevin] APPERT> pro? con?
+<W.BADEN1> I wd prefer controlled, but will accept uncontrolled.
+<[Gary] GARY-S> in Forth-79 it was part of the controlled word set
+<JETHOMAS> What is the advantage of uncontrolled?
+<[Gary] GARY-S> in 83 it was moved out, X3/J14 has it controlled again
+<[Gary] GARY-S> If you use it like 0 UNTIL and in words like QUIT it is of 
+little concern , but there have been creative adaptations
+<[Kevin] APPERT> What are the arguments for and against ?
+<[Gary] GARY-S> Wil - i defer to you
+<W.BADEN1> the system words <MARK, >MARK, <RESOLVE >RESOLVE do nothing that 
+<W.BADEN1> can't be done with IF UNTIL HOWEVER and AGAIN.
+<[Kevin] APPERT> "creatuve" adaptations should not be guaranteed portable!  
+existing practice does not include two guys in L.A.!
+<[Kevin] APPERT> oops, late for dinner.  Night all
+<W.BADEN1> I wan't to get rid of Mark etc, but need AGAIN to take their place.
+<[Kevin] APPERT> just as it was getting ineresting
+<[Gary] GARY-S> Then AGAIN in contriolled is necessary for you
+<W.BADEN1> yes.
+<[Gary] GARY-S> Thanks - and let's wrap it folks
+=== End of Steno notes. ===
+
+

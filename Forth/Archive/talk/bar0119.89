@@ -1,0 +1,166 @@
+
+ minutes of the FIGGY BAR of 19 January 1989
+  
+ Attendees:
+ [[Gary] GARY-S]
+ [[jax@well] FIGCHAPTERS]
+ [[Dave] DHWEINSTEIN]
+ [[Kevin] APPERT]
+  
+ Items discussed: Ilg and Brown's DDJ article, Amstrad PPC640, MS-DOS/Amiga,
+                  Unix, pre-emptive multitasking,JFAR non-compliance crusade,
+                  F-PC,Orion
+Minutes:
+<FIGCHAPTERS> is here.
+<[Gary] GARY-S> rorrim ?
+<[llew@xaj] FIGCHAPTERS> .sey
+<[Gary] GARY-S> mmh
+<[Gary] GARY-S> yhw
+<[llew@xaj] FIGCHAPTERS>   ?ton yhw
+<[Gary] GARY-S> You are the first customer so mirror and RPN - why not indeed
+<[llew@xaj] FIGCHAPTERS> .emit eht ta aedi doog a ekil demees tI
+<[Gary] GARY-S> pu evig I
+<[llew@xaj] FIGCHAPTERS> !ko
+<[llew@xaj] FIGCHAPTERS> eromyna ti od t'now I
+<[Gary] GARY-S> I don't care, but you've got an awfully small audience
+<[jax@well] FIGCHAPTERS> preaching to the choir again.
+<[Gary] GARY-S> Did you see the new DDJ yet ?
+<[jax@well] FIGCHAPTERS> yawn.
+<[Gary] GARY-S> With ref to ?
+<[jax@well] FIGCHAPTERS> DDJ in Jeneral.
+<[jax@well] FIGCHAPTERS> but occasionally they hit.
+<[Kevin] APPERT> is here.
+<[jax@well] FIGCHAPTERS> what struck you?
+<[jax@well] FIGCHAPTERS> nivek ih
+<[Kevin] APPERT> let me pop that off the stack
+<[Kevin] APPERT> hi Jax
+<[Gary] GARY-S> R J Brown and Ilg have a nice piece on Real Time (Forth) which 
+will be ignored in mass by the 'C' viewers who congregate in DDJ
+<[jax@well] FIGCHAPTERS> Aha, well they buried well enough i didn't find it.
+<[jax@well] FIGCHAPTERS> but i just opened it ten minutes ago.
+<[jax@well] FIGCHAPTERS> tell you what i HAVEN'T seen ...
+<[jax@well] FIGCHAPTERS> MY JFAR!
+<[jax@well] FIGCHAPTERS> .
+<[Gary] GARY-S> page 52 - also Martin's column returneth
+<[jax@well] FIGCHAPTERS> hmm i have it open in front of me ... yer right, more 
+forth than they have had in the last six months!
+<[Gary] GARY-S> You are also right about the stagnation that prevails in DDJ 
+anymore
+<[jax@well] FIGCHAPTERS> The ads are so tedious that it is almost too much 
+effort to open the magazine.
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Hullo
+<[Gary] GARY-S> get my note Dave ?
+<[jax@well] FIGCHAPTERS> BUT when did we hear new promises about JFAR coming 
+out? Huh? huh?
+<[Dave] DHWEINSTEIN> Yeah. Too bad you can't make it.
+<[Gary] GARY-S> almost exactly six weeks ago Jax !
+<[Gary] GARY-S> Thanks for the offer anyway, Dave
+<[Dave] DHWEINSTEIN> (moves into the modern age)
+<[Dave] DHWEINSTEIN> You're welcome. Anyone else planning on coming to the conf.
+ and needing crash space?
+<[jax@well] FIGCHAPTERS> I mean, I walked in late to that conf ... when did he 
+say it was gonna be published?
+<[Kevin] APPERT>
+<[Dave] DHWEINSTEIN> I think they promised it for a few  weeks ago.
+<[Gary] GARY-S> Jump in Kev - no rules tonite
+<[Kevin] APPERT> that was an oops, i bumped the keyboarf
+<[Kevin] APPERT> oops, board
+<[jax@well] FIGCHAPTERS> right the first time, kev.
+<[Kevin] APPERT> :)
+<[Gary] GARY-S> The conf is 'ForthInPUb' and it is definitely there for the 
+world to see
+<[jax@well] FIGCHAPTERS> :) :)
+<[Dave] DHWEINSTEIN> Gary...my GEnie bill this month ought to be impressive.
+<[jax@well] FIGCHAPTERS> aha.
+<[Dave] DHWEINSTEIN> (for the FIG RT that is)
+<[Kevin] APPERT> < spent much of this week coding in BASIC.  UGH!!!!
+<[Dave] DHWEINSTEIN> My condolensces.
+<[Gary] GARY-S> You haven't been on - why impressive ?
+<[jax@well] FIGCHAPTERS> just wondering at what date i get to start my 
+"crusdade" again, or give up and accept the refund.
+<[Dave] DHWEINSTEIN> Much downloading.
+<[Kevin] APPERT> the JFAR crusade, Jax?
+<[Gary] GARY-S> Can you use 2400 in Austin ?
+<[Kevin] APPERT> or som other
+<[jax@well] FIGCHAPTERS> Jawohl
+<[Kevin] APPERT> 2400 = twice the price?
+<[Dave] DHWEINSTEIN> Yes...I can...but I am not. Too much of a pain (I never 
+can remember the 2400 baud node number)
+<[Gary] GARY-S> Jax - I think a crusade is (at least) in order
+<[Dave] DHWEINSTEIN> <- has new plaything
+<[Kevin] APPERT> what, Dave
+<[Dave] DHWEINSTEIN> Amstrad PPC640.
+<[jax@well] FIGCHAPTERS> I'm all crusaded out ... besides, i *already* have the 
+plague.
+<[Kevin] APPERT> well wash your hands after you play with it.
+<[jax@well] FIGCHAPTERS> went to see the doctor today, said "i'm feelin ok, 
+just this persistent fever" ...
+<[Gary] GARY-S> Through Sears, dave ?
+<[jax@well] FIGCHAPTERS> he took blood and said "How did you walk in here 
+unaided?"
+<[Dave] DHWEINSTEIN> No. From Augusta Warehouse. Great price and fantastic 
+service.
+<[Gary] GARY-S> un AID ed ?
+<[jax@well] FIGCHAPTERS> Not a bit of it.
+<[jax@well] FIGCHAPTERS> Virused to the max.
+<[Dave] DHWEINSTEIN> $769 for 640k, 2 3.5" 720k drives, 2400 badu internal, etc.
+..
+<[Gary] GARY-S> Augusta - where is the ad ? Computer Shopper ?
+<[jax@well] FIGCHAPTERS> three different kinds, they was all swimming around in 
+me blood.
+<[Dave] DHWEINSTEIN> 8Mhz 8086.
+<[Dave] DHWEINSTEIN> No. PC Magazine, or PC World or something like that.
+<[Kevin] APPERT> 8086 or 8088?
+<[Dave] DHWEINSTEIN> The Amstrad is the weird looking laptop...the one with the 
+screen all the way on the left and a full sized AT keyboard (17"+)
+<[Dave] DHWEINSTEIN> 8086
+<[Gary] GARY-S> I can get a Kaypro laptopper with 2 3.5" disks for about $600. 
+- anyone know how good/bad they are ?
+<[jax@well] FIGCHAPTERS> you can get an Amiga 500 for about that.
+<[jax@well] FIGCHAPTERS> why not buy a real computer?
+<[Dave] DHWEINSTEIN> Hmmnn. Old. They were from way back when. I don't know 
+much else.
+<[Kevin] APPERT> when I was a boy, Kaypro only made one computer, and it would 
+break your lap
+<[Dave] DHWEINSTEIN> Because I know people with Amiga 500's who say that 512k 
+is too little memory for an Amiga.
+<[Dave] DHWEINSTEIN> Besides, it's not a laptop.
+<[jax@well] FIGCHAPTERS> it comes with all sorts of expansion opportunities ...
+<[Gary] GARY-S> Jax - like it or not (not, I know) my needs are in the MS-DOS 
+world
+<[jax@well] FIGCHAPTERS> it's almost a laptop ...
+<[jax@well] FIGCHAPTERS> and i had 512 on my 1000 for a year and a half.
+<[jax@well] FIGCHAPTERS> The old sob story about the MSDOS world doesn't hold 
+water anymore.
+<[jax@well] FIGCHAPTERS> Even IBM is trying to escape from that albatross with 
+OS/2
+<[jax@well] FIGCHAPTERS> It's just that Amiga suceeded in 1985 in setting up a 
+real multitasker.
+<[Dave] DHWEINSTEIN> I don't care about an "MS-DOS" world. This machine does 
+what I want it to, and the price is right.
+<[jax@well] FIGCHAPTERS> It just keeps getting better.
+<[jax@well] FIGCHAPTERS> At VESTA ...
+<[jax@well] FIGCHAPTERS> we still sell 8088 boards and keep around an AT or two 
+...
+<[jax@well] FIGCHAPTERS> but our development environment is the Amiga now.
+<[Gary] GARY-S> Do you run Unix on it ?
+<[jax@well] FIGCHAPTERS> Not yet, but why not?
+<[Dave] DHWEINSTEIN> <- downloaded F-PC last night.
+<[jax@well] FIGCHAPTERS> Later, when we have more people that will be fun.
+<[Kevin] APPERT> how do you like it?
+<[jax@well] FIGCHAPTERS> UNIX is a dinosaur, anyway.
+<[Kevin] APPERT> F-PC, Dave?
+<[Dave] DHWEINSTEIN> Haven't had time to take more than a cursory look at it. 
+But I like what I see.
+<[Gary] GARY-S> Amiga is multi-tasking.  Is it multi-user/multi-tasking ?
+<[Kevin] APPERT> did you get all the utilities?
+<[Kevin] APPERT> add-ons?
+<[Dave] DHWEINSTEIN> The whole thing (source, help files, docs, executable, etc)
+ takes 3 720ks.
+<[Kevin] APPERT> accessories?
+<[Gary] GARY-S> Dave - you must have all the SEQ files
+<[Dave] DHWEINSTEIN> If it was in GEnie Files 1373-1378 I have it.
+<[jax@well] FIGCHAPTERS> Just multitasking. Can be used somewhat multiuser, but 
+the opsystem is designed for single-user full pre-emptive multitasking
+

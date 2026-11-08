@@ -1,0 +1,184 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+  
+Date: 12/01/88   Time: 22:09EST
+Attendees:
+[[Gary] GARY-S]
+[L.FORSLEY]
+[Jack Woehr] FIGCHAPTERS]
+  
+  Items discussed: (inter)national FIG chapters coordinator agenda, spreading 
+                   the Forth philosophy on Unix, George Shaw & ACM
+Minutes:
+<[Gary] GARY-S>
+<L.FORSLEY> is here.
+<L.FORSLEY> Hi gary
+<[Gary] GARY-S> Hey Larry - welcome to an empty conference
+<L.FORSLEY> Slow night eh?
+<[Gary] GARY-S> dead so far - some start this way
+<L.FORSLEY> Well, I'll go have dinner and return.
+<[Gary] GARY-S> Did you try the press acct ?
+<L.FORSLEY> by the by, the he press account is working.
+<[Gary] GARY-S> super !
+<L.FORSLEY> thanks.
+<L.FORSLEY> has left.
+<[Gary] GARY-S> you bet ! Thank you !
+<[Gary] GARY-S>
+<FIGCHAPTERS> is here.
+<[Gary] GARY-S> You just missed Forsley -
+<[Jack Woehr] FIGCHAPTERS> He ducked just before i tossed ... :-)
+<[Gary] GARY-S> I'd rather save it for a week anyway, and I bet you'd jump 
+right in !
+<[Jack Woehr] FIGCHAPTERS> you bet ...
+<[Jack Woehr] FIGCHAPTERS> btw ...
+<[Jack Woehr] FIGCHAPTERS> am right this second editing
+<[Jack Woehr] FIGCHAPTERS> replies i got from the net ...
+<[Jack Woehr] FIGCHAPTERS> so excuse if i "swap you out" of core from time to 
+time !
+<[Gary] GARY-S> do what ?
+<[Jack Woehr] FIGCHAPTERS> like a mainframe ... paged virtual memory ... being 
+on GEnie gets "swapped out"
+<[Gary] GARY-S> oh - now i understand
+<[Jack Woehr] FIGCHAPTERS> as i flip screens ...
+<[Jack Woehr] FIGCHAPTERS> to edit these replies & save ...
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> no prob - gotta question for you
+<[Jack Woehr] FIGCHAPTERS> ok shoot.
+<[Gary] GARY-S> Once you set your Coordinator agenda include a conference here 
+- ok ?
+<[Jack Woehr] FIGCHAPTERS> intend to have confs here myself with chapter 
+leaders!
+<[Gary] GARY-S> I mean an open guest conference to establish your goals
+<[Jack Woehr] FIGCHAPTERS> the goals will be set by the Board
+<[Jack Woehr] FIGCHAPTERS> I just am looking for a change to meet every forther 
+in the World!
+<[Gary] GARY-S> BUT - you still will be the body of those goals
+<[Jack Woehr] FIGCHAPTERS> chance, that is.
+<[Jack Woehr] FIGCHAPTERS> That's an intersting way of putting it ...
+<[Gary] GARY-S> Oh well - do let me know when to put you on  the calendar
+<[Jack Woehr] FIGCHAPTERS> I think more of being the receptionist at the office 
+of those goals.
+<[Jack Woehr] FIGCHAPTERS> Anyway ... what is the goal? to popularise Forth ...
+<[Jack Woehr] FIGCHAPTERS> to make palatable to the public what they should 
+leap at the chance of tasting without being prodded.
+<[Gary] GARY-S> You're the coordinator - what are your goals...
+<[Jack Woehr] FIGCHAPTERS> My goals? To stay employed thru the coming recession 
+:-)
+<[Gary] GARY-S> I think the first is to re-establish chapter links
+<[Jack Woehr] FIGCHAPTERS> seriously though ...
+<[Jack Woehr] FIGCHAPTERS> to encourage the chapters to take active steps to 
+spread the knowledge of FORTH which they embody ...
+<[Jack Woehr] FIGCHAPTERS> especially to the young ...
+<[Jack Woehr] FIGCHAPTERS> since academia ignores FORTH ..
+<[Jack Woehr] FIGCHAPTERS> and it is our responsibility ...
+<[Jack Woehr] FIGCHAPTERS> to produce FORTH programmers in numbers ...
+<[Jack Woehr] FIGCHAPTERS> that can convince industry that FORTH is a viable 
+investment in maintainable code.
+<[Jack Woehr] FIGCHAPTERS> If we start now ...
+<[Gary] GARY-S> again ! I think you MUST first re-establish links with the 
+chapters - there's a lot of lost communication and faith with FIG
+<[Jack Woehr] FIGCHAPTERS> in six years we can produce and entire new 
+generation ...
+<[Jack Woehr] FIGCHAPTERS> of FORTH programmers.
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> sorry about the steps - did you copy
+<[Gary] GARY-S> .
+<[Jack Woehr] FIGCHAPTERS> right.
+<[Jack Woehr] FIGCHAPTERS> Well, i put out the call ...
+<[Jack Woehr] FIGCHAPTERS> as you know ...
+<[Jack Woehr] FIGCHAPTERS> on the NET ...
+<[Jack Woehr] FIGCHAPTERS> so far three responses.
+<[Jack Woehr] FIGCHAPTERS> in two days .
+<[Jack Woehr] FIGCHAPTERS> One of them from Draper ...
+<[Gary] GARY-S> I think you'll have to snail mail some
+<[Jack Woehr] FIGCHAPTERS> who says,  yes he can help put FIG in the heart of 
+the Evil Empire ...
+<[Jack Woehr] FIGCHAPTERS> Snail mail will emanate from FIG central in CA
+<[Gary] GARY-S> Guess you saw GEnie says 'NO' to crunch
+<[Jack Woehr] FIGCHAPTERS> It is not yet clear how all this is going to 
+coordinate ... the chapter coordinator is a little uncoordinated from FIG ...
+<[Jack Woehr] FIGCHAPTERS> But am burning rubber, even if not getting very far 
+just yet! :-)
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> Even with Ruffer on the board we have comm probs with FIG office
+<[Gary] GARY-S> It's pretty absurd, but that's the system (or lack thereof)
+<[Jack Woehr] FIGCHAPTERS> Right, it is a classic syndrom of small non-profits .
+..
+<[Gary] GARY-S> .
+<[Jack Woehr] FIGCHAPTERS> they laugh when I say this ....
+<[Jack Woehr] FIGCHAPTERS> but I am very serious when I say ...
+<[Jack Woehr] FIGCHAPTERS> that the model for FIG is the United States Chess 
+Federation ...
+<[Jack Woehr] FIGCHAPTERS> a small non-profit catering to a tiny interest group 
+...
+<[Jack Woehr] FIGCHAPTERS> composed of pros feuding with amateurs ...
+<[Jack Woehr] FIGCHAPTERS> an not mucho $$$.
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> It's apropro
+<[Gary] GARY-S> btw - I am fw on Wet
+<[Jack Woehr] FIGCHAPTERS> huh?
+<[Gary] GARY-S> There's a Unix BBS in san Francisco called Wetware Diversions...
+<[Gary] GARY-S> that has more class and programming than the...
+<[Gary] GARY-S> name implies, though it does support a bawdy conference too...
+<[Gary] GARY-S> anyway they want a forth conf on there...
+<[Gary] GARY-S> ergo ! That's why all the questions about cforth
+<[Gary] GARY-S> .
+<[Jack Woehr] FIGCHAPTERS>
+<[Jack Woehr] FIGCHAPTERS> hmm
+<[Gary] GARY-S> 753-5265 - I'll be starting the conf shortly
+<[Jack Woehr] FIGCHAPTERS> ok, glad to hear that things are hopping in SF vis - 
+a - vis Forth under UNIX ...
+<[Jack Woehr] FIGCHAPTERS> but the WELL's class is only part the programming of 
+its aging, overloaded vax ...
+<[Jack Woehr] FIGCHAPTERS> it is more the fact that it is the "root dir" for a 
+few hundred ..
+<[Jack Woehr] FIGCHAPTERS> of the shakers and movers of my g-g-g-generation.
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> oh - there's no competition at all...
+<[Gary] GARY-S> it's just an opportunity to spread more forth philosophy
+<[Gary] GARY-S> .
+<[Jack Woehr] FIGCHAPTERS> as such, I approve.
+<[Gary] GARY-S> thank you
+<[Gary] GARY-S> don't be surprised if there are other questions
+<[Gary] GARY-S> .
+<[Gary] GARY-S> wonder if dave has seen the george shaw conference date
+<[Jack Woehr] FIGCHAPTERS>
+<[Jack Woehr] FIGCHAPTERS> dave?
+<[Jack Woehr] FIGCHAPTERS> weinstein?
+<[Gary] GARY-S> weinstein
+<[Jack Woehr] FIGCHAPTERS> hmmm .. is he a gshaw fan?
+<[Gary] GARY-S> oh geeze - are you kidding ?
+<[Gary] GARY-S> he's a big ACM fan at least
+<[Jack Woehr] FIGCHAPTERS> ok
+<[Jack Woehr] FIGCHAPTERS> where is the rest of the gang tonite? speaking of dhw
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> he's been talking about little else but the sigforth acm and 
+the austin bash in feb
+<[Gary] GARY-S> duno
+<[Gary] GARY-S> I was just starting to kill it when larry showed up - then you
+<[Jack Woehr] FIGCHAPTERS> ok, well I have to send some email on the well!
+<[Jack Woehr] FIGCHAPTERS> catch you there ... ps, i fixed the menus.
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> there are some bad messages lately - have you noticed
+<[Jack Woehr] FIGCHAPTERS> hmm what?
+<[Gary] GARY-S> partial ones on the WELL
+<[Gary] GARY-S> just a few - so don't get hyper
+<[Gary] GARY-S> oh - did you get your dec FD yet ?
+<[Jack Woehr] FIGCHAPTERS> huh?
+<[Jack Woehr] FIGCHAPTERS> what bad messages?
+<[Jack Woehr] FIGCHAPTERS> yes got december 4D
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> did you read my column - you got front billing
+<[Jack Woehr] FIGCHAPTERS> Foof! i think the best way to make a fool of a man 
+is to quote him. ( M. Twain)
+<[Jack Woehr] FIGCHAPTERS> .
+<[Gary] GARY-S> m twain said 'FOOF' ?
+<[Jack Woehr] FIGCHAPTERS> No, the FOOF was mine.
+<[Jack Woehr] FIGCHAPTERS> (C) 1988 j.woehr
+<[Gary] GARY-S> say 'goodnight' gracie
+<[Jack Woehr] FIGCHAPTERS> goodnite, gracie.
+<[Jack Woehr] FIGCHAPTERS> has left.
+=== End of Steno notes. ===
+
+

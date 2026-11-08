@@ -1,0 +1,719 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 09/21/89   Time: 21:30EDT
+
+Attendees:
+[[Dennis] D.RUFFER]
+[[mike] M.MELLEN1]
+[I.MONTANEZ]
+[[Wil] W.BADEN1]
+[[Jaxgorithm] FIGCHAPTERS]
+
+Minutes:
+<M.MELLEN1> hi
+
+<[Dennis] D.RUFFER> how close are you to Hugo?
+
+<M.MELLEN1> He (it?) is going to miss us
+
+<[Dennis] D.RUFFER> glad to hear it
+
+<[mike] M.MELLEN1> South Carolina isn't
+
+<[Dennis] D.RUFFER> yea, I'm listing to new right now and it looks like they
+               will get a real big blow down ther
+
+<[mike] M.MELLEN1> We got David ten years ago. That was enough for this centy
+               centy
+
+<[Wil] W.BADEN1> is here.
+
+<[mike] M.MELLEN1> Sorry, new keyboard.
+
+<[Dennis] D.RUFFER> well Good evening Wil
+
+<[Wil] W.BADEN1> Hi Dennis.  How do you do, Mike.
+
+<[mike] M.MELLEN1> Just fine. How about yourself?
+
+<[Wil] W.BADEN1> I'm trying new software.
+
+<[Dennis] D.RUFFER> What software Wil?
+
+<[Wil] W.BADEN1> What's the good words for tonite. Red Ryder 10.3
+
+<[Dennis] D.RUFFER> Good words?  Donno...just sitting in for Gary Is that a
+               new RR?
+
+<[Wil] W.BADEN1> No, it's 2 years old, but I just bought it. I had RR 9.4
+               since 1986.
+
+<[Dennis] D.RUFFER> Oh, thought they might have gotten a new version out
+
+<[Wil] W.BADEN1> I have been using MicroPhone II, which is great. RR 11 is
+               due imminently. RR has one feature that MicroPhone duzn't --
+               Keyboard buffer.
+
+<[Dennis] D.RUFFER> does that mean a conference window?
+
+<[Wil] W.BADEN1> Yes.
+
+<[Dennis] D.RUFFER> indespensible in these RTCs
+
+<[Wil] W.BADEN1> MicroPhone III is due imminently also. So I've found. What
+               iron are you using, Mike?
+
+<[Dennis] D.RUFFER> of course...after you've bought something else
+
+<[mike] M.MELLEN1> Procomm, the old standby
+
+<[Wil] W.BADEN1> No, it was a $20 upgrade for RR, and I'm told MicroPhone
+               will be free.
+
+<[Dennis] D.RUFFER> then your not out too much Procomm doesn't have a conf
+               windows does it Mike
+
+<[Wil] W.BADEN1> I bought MicroPhone for $225 at EggHead on May 22, and
+               learned of the update ...
+
+<[Wil] W.BADEN1> 10 days later.
+
+<[Dennis] D.RUFFER> They'd better give it to you free then Wil
+
+<[Wil] W.BADEN1> So they promised.
+
+<[mike] M.MELLEN1> PC has a "chat" mode, where you can see Remote and Local
+               echos. Is that what you mean?
+
+<[Wil] W.BADEN1> I'm not sure.  What I have is a window where I enter text
+               but it isn't sent ... until I hit return.
+
+<[Dennis] D.RUFFER> the conf window that I'm talking about is where you can
+               type a line (or more) and not worry about what else is coming
+               in
+
+<[Wil] W.BADEN1> Exactly.
+
+<[mike] M.MELLEN1> That's Procomm's Chat mode
+
+<[Wil] W.BADEN1> Can anyone tell me about ARIEL?
+
+<[Dennis] D.RUFFER> Hum, I didn't know they had one, but it makes sense since
+               everyone else does ARIEL is a simple BB system written in
+               Forth I haven't used it, but what you need to know?
+
+<[Wil] W.BADEN1> Do they have CRC with XMODEM?
+
+<[Dennis] D.RUFFER> They have XMODEM, but don't know if they have the CRC
+               flavor
+
+<[Wil] W.BADEN1> The XMODEM CRC is not quite standard.  They flip the 2 bytes
+               of it.
+
+<[Dennis] D.RUFFER> Bob Schemmel (R.SCHEMMEL1) is doing a lot of work on it
+               right now.  He might be able to answer your question
+
+<[Wil] W.BADEN1> I've been very well impressed with what I've seen of him
+               here on GEnie. What Forth(s) are you running, Mike?
+
+<[Dennis] D.RUFFER> He is very new to Forth, but he has more enthusiasm than
+               I've seen in a long time
+
+<[mike] M.MELLEN1> PC/FORTH at work, FTZ at home
+
+<[Wil] W.BADEN1> What do you thing of FTZ?
+
+<[mike] M.MELLEN1> I love it. It's the environment we were trying to develop
+               at Harris
+
+<[Dennis] D.RUFFER> Is FTZ Zimmer's latest update?
+
+<[Wil] W.BADEN1> I have not been able to run even F-PC on my Imitation Blue
+               Machine.
+
+<[mike] M.MELLEN1> If there is such a thing as Zimmer's latest, yes, FTZ is
+               it
+
+<[Wil] W.BADEN1> No hard disk -- just two floppies.
+
+<[Dennis] D.RUFFER> What's it got new, over F-PC?
+
+<[mike] M.MELLEN1> Hypertext help screens, mouse support
+
+<[Dennis] D.RUFFER> Jack Brown has managed to get F-PC onto 2 floppies Wil
+
+<[Wil] W.BADEN1> That's the one I can't run.  Jack sent me the disks
+               directly.
+
+<[Dennis] D.RUFFER> Ah, it's got mice <grin>
+
+<[Wil] W.BADEN1> Actually I can run it, but when I say "DIR" it crashes.
+
+<[Dennis] D.RUFFER> Do "real" programmers use mice? :-)
+
+<[mike] M.MELLEN1> and color and text files and lots more
+
+<[Wil] W.BADEN1> It also crashes when I do a CR in the editor.
+
+<[mike] M.MELLEN1> my wife needs to use the phone, so I'll see you later
+
+<[Dennis] D.RUFFER> You might ask Jack to send you what he's got.  He said
+               that it works, but I think you need enough memory for a RAM
+               disk
+
+<[Wil] W.BADEN1> I've spent a long time today trying to use "vi" on a Sun
+               WorkStation.
+
+<[Dennis] D.RUFFER> bye Mike
+
+<[Wil] W.BADEN1> (Bye, Mike)
+
+<[mike] M.MELLEN1> has left.
+
+<[Dennis] D.RUFFER> excuse my ignorance, but what is vi?
+
+<[Wil] W.BADEN1> I have what Jack did.  It includes a RAM disk. THE unix
+               editor.
+
+<[Dennis] D.RUFFER> oh yes, I 've heard the name, but couldn't remember the
+               function
+
+<[Wil] W.BADEN1> I really missed Mac editing.
+
+<[Dennis] D.RUFFER> is it that bad, or just no mouse
+
+<[Wil] W.BADEN1> Basically it's bad for 1980's. It was designed for 30 cpm
+               tty. It duzn't refresh screen unless you tell it.
+
+<[Dennis] D.RUFFER> oh, ala TECO?
+
+<[Wil] W.BADEN1> It doesn't word wrap. (Not that unfriendly.)
+
+<[Dennis] D.RUFFER> screen or line oriented    TECO is friendly?  :-)
+
+<[Wil] W.BADEN1> You have a command mode and an insert mode, and no
+               indication which you're in. Sure, TECO will any thing you
+               want.
+
+<[Dennis] D.RUFFER> ug, I hate it already I had to use TECO back in college,
+               and hated it then
+
+<[Wil] W.BADEN1> WHEN (note the emphasis) you get into Unix you WILL learn
+               "vi".
+
+<[Dennis] D.RUFFER> ME into UNIX...egads NO!
+
+<[Wil] W.BADEN1> Wanna bet?
+
+<[Dennis] D.RUFFER> NO :-( but I'm staying ignorant as long as possible
+
+<[Wil] W.BADEN1> SUN WS makes Macs look sick. Well, puny maybe.
+
+<[Dennis] D.RUFFER> BTW When is the next OCFIG?
+
+<[Wil] W.BADEN1> Wed, Oct 27.
+
+<[Dennis] D.RUFFER> How do I get there?
+
+<[Wil] W.BADEN1> Glen Fed S&L on Edinger. S. on 405, off at Golden West,
+               about 2 miles to Edinger (toward ocean) L. on Edinger and turn
+               in first driveway. Edinger is boundary of Golden West College.
+
+<[Dennis] D.RUFFER> great thanks.   I'll try to make it what time?
+
+<[Wil] W.BADEN1> Are at Forth,INc.? 7:30. Check with Steve Sjolander, who
+               comes regularly.
+
+<[Dennis] D.RUFFER> yep, and having all sorts of fun documenting right now
+               Steve is away right now (don't know exectly where)
+
+<[Wil] W.BADEN1> Amplification -- GlenDALE Fed. S&L.
+
+<[Dennis] D.RUFFER> I'll try to find it Maybe Horace is planning on going
+               also
+
+<I.MONTANEZ> is here.
+
+<[Dennis] D.RUFFER> Hello I.M
+
+<[Wil] W.BADEN1> Horace make the LA FIG but I havn't seen him at OC FIG. Hi
+               I.M.
+
+<[Dennis] D.RUFFER> Yes, he said he didn't get down there much
+
+<[Wil] W.BADEN1> Where is Coram?
+
+<[Dennis] D.RUFFER> I.M type /name (your name) to let us know who you are
+               <grin> Coram???
+
+<I.MONTANEZ> HEIRVING MONTANEZ FROM COTHAT IS ON LONG ISLAND IN NY
+
+<[Wil] W.BADEN1> (Not you, Dennis -- I.M.) Where on L.I.?  I lived there 36
+               years. Malba, near Whitestone.
+
+<I.MONTANEZ> ABOUT 7 MILE NORTH OF EXIT 64 ON LIE
+
+<FIGCHAPTERS> is here.
+
+<[Dennis] D.RUFFER> ah, did a /sta and found out about coram <smile>
+
+<[Wil] W.BADEN1> Hi jax.
+
+<[Jaxgorithm] FIGCHAPTERS> Hi wil
+
+<[Dennis] D.RUFFER> Hi jack....look out now <grin>
+
+<[Wil] W.BADEN1> Wher'v u bin?
+
+<[Jaxgorithm] FIGCHAPTERS> interesting ... as I logged on ... intro screen
+               said ... "No members in Conference" .
+
+<[Wil] W.BADEN1> Likewise.  (There were two.)
+
+<[Jaxgorithm] FIGCHAPTERS> GEnie bwoke again, mommy!
+
+<[Dennis] D.RUFFER> hum...can't check it, but I'll report as soon as we are
+               done seems to be getting bwoke a lot recently maybe it is not
+               all back since the last one
+
+<[Jaxgorithm] FIGCHAPTERS> Watt's Gnu? You can't be once again what you never
+               was!
+
+<[Dennis] D.RUFFER> Have any of you checked out IMAGINE*NATION yet?
+
+<[Jaxgorithm] FIGCHAPTERS> no
+
+<[Dennis] D.RUFFER> it's a neat interface system they just added to GEnie
+
+<[Jaxgorithm] FIGCHAPTERS> Called 4thinc the the other day and dropped yer
+               name.
+
+<[Dennis] D.RUFFER> Dropped it on what Jack?
+
+<[Jaxgorithm] FIGCHAPTERS> On a sales hack.
+
+<[Dennis] D.RUFFER> oh them <smile>
+
+<[Jaxgorithm] FIGCHAPTERS> I wanted that game poster! They offered free copy.
+
+<[Dennis] D.RUFFER> are they sending you one?
+
+<[Jaxgorithm] FIGCHAPTERS> They wanted info about me, my company, told them I
+               was "4th Inc-Aware" yes, sending one. Told 'em that you told
+               me how easy it is to pinch E. Rather on tush ... <just
+               kindding>
+
+<[Wil] W.BADEN1> Irv, what's the nearest well know town to Coram?
+
+<[Dennis] D.RUFFER> yep, do it all the time :-)
+
+<I.MONTANEZ> NEW YORK CITY 40 MILES WEST...
+
+<[Wil] W.BADEN1> Ouch.
+
+<[Dennis] D.RUFFER> that close huh?
+
+<[Wil] W.BADEN1> How far from Garden City or Manhasset?
+
+<I.MONTANEZ> YOU GOT IT ...
+
+<[Jaxgorithm] FIGCHAPTERS> Wil, I don't read BBS too much any more, just "hit
+               and run" as it were ... did you answer my last few postings on
+               "BASIS on-line"?
+
+<[Wil] W.BADEN1> No, Jax.  I'm suffering from Ted Dickens' disappearance,
+               too.
+
+<[Jaxgorithm] FIGCHAPTERS> ...???
+
+<[Wil] W.BADEN1> When I spoke to some one at Forth,Inc, they sed he dropt off
+               the face of the earth.
+
+<[Jaxgorithm] FIGCHAPTERS> Was Ted a TC member?
+
+<[Dennis] D.RUFFER> What's happnin in Forth out on LI I.M?
+
+<I.MONTANEZ> NOT MUCH AT THE PRESENT TIME...
+
+<[Wil] W.BADEN1> brb has left.
+
+<I.MONTANEZ> JIM BASILI AND I ARE THINKING ABOUT RESTARTING EITHER A FIG
+               GROUP...
+
+<[Jaxgorithm] FIGCHAPTERS> I>M> ... di dyou local FIG fade?
+
+<I.MONTANEZ> WE HAVE TRIED TO CONTACT THE NY FIG CHAPTER BUT NOONE ANSWERS
+               THE PHONE.
+
+<W.BADEN1> is here.
+
+<I.MONTANEZ> APPARENTLY THIS HAS BEEN THE CASE FOR THE LAST 2 YEARS...
+
+<[Dennis] D.RUFFER> well...it sound like you have a calling then
+
+<[Jaxgorithm] FIGCHAPTERS> Well, I'm going to call around to the FIG Chapters
+               and try to find out neat little things like that. You know,
+               gang, for years they have been saying FOrth is dead ... Forth
+               still lives and is getting better and better ...
+
+<[Wil] W.BADEN1> No, they havn't.
+
+<[Jaxgorithm] FIGCHAPTERS> but DOS is dead! Proof: the 4.0 debacle. ...
+
+<[Dennis] D.RUFFER> now Jack, can you prove it to my 4.77Mhz 8088?
+
+<[Jaxgorithm] FIGCHAPTERS> to my management-alert eye ... that event says ...
+               that DOS has been handed off to the junior programmers to
+               maintain ... while the BIG BOYS do Unix and OS/2. Kiss of
+               Death. ( 8088? Run plyFOrth, silly!) .
+
+<[Dennis] D.RUFFER> I'm sure that is true Jack, but that doesn't mean it is
+               dead... I've even heard that IBM is out of the 8088 market but
+               how many of them were introduced this year DOS 3.2 is alive
+               and well!
+
+<[Jaxgorithm] FIGCHAPTERS> 3.3 you mean. 3.2 was buggish.
+
+<[Dennis] D.RUFFER> sorry, I only have 3.21
+
+<[Jaxgorithm] FIGCHAPTERS> I run 3.1 when I *have* to. Wil has done some nice
+               work under DOS ... what says Wil?
+
+<[Dennis] D.RUFFER> actually, who even used DOS anymore
+
+<[Wil] W.BADEN1> The Balkanization of computers.  I don't know what u are
+               saying.
+
+<[Dennis] D.RUFFER> I'm running under Windows 386 all the time
+
+<[Wil] W.BADEN1> Yes, but just in Forth.
+
+<[Jaxgorithm] FIGCHAPTERS> "Balkanization?" interesting metaphor
+
+<[Wil] W.BADEN1> The only DOS I use is FORMAT and COPY.
+
+<[Jaxgorithm] FIGCHAPTERS> incidentally, looks like the Balkanization of the
+               Balkans now underway!
+
+<[Wil] W.BADEN1> What's goes 'round...
+
+<[Jaxgorithm] FIGCHAPTERS> T.M. ... good luck starting FIG chapter, helps to
+               have a BBS as touch-point.
+
+<[Wil] W.BADEN1> Irv, do you know Malba?
+
+<I.MONTANEZ> NO..
+
+<[Wil] W.BADEN1> So we're even.
+
+<[Jaxgorithm] FIGCHAPTERS> ( oops, going computer blind ... that remark was
+               for I.M., ( not T.M.) How's your editor coming, Wil?
+
+<[Wil] W.BADEN1> I hav screen proto-type but other things are delaying.
+
+<[Dennis] D.RUFFER> Martin should be ready for it soon! :-)
+
+<[Wil] W.BADEN1> I want to try to use Martin's latest.
+
+<[Dennis] D.RUFFER> It looked interesting when I was over there last week
+
+<[Jaxgorithm] FIGCHAPTERS> WHere is GaRY THis week?
+
+<[Dennis] D.RUFFER> Off on vacation, ug! Does anyone know where I can get
+               terminal specs?
+
+<[Jaxgorithm] FIGCHAPTERS> I'm going to visit Jerry SHifrin in VA next week
+               (while on unrelated business trip) There is nice book on that
+               Dennis.
+
+<[Dennis] D.RUFFER> YES?
+
+<[Jaxgorithm] FIGCHAPTERS> Guy wrote it when he found there was no such
+               thing, tried to compile as much info as possible, said even
+               the manufactureres usually can't answer questions ...
+
+<[Dennis] D.RUFFER> do you know the name?
+
+<[Jaxgorithm] FIGCHAPTERS> Forget name of it, but it is everywhere, will
+               email name. ( everywhere there is good compute book selection)
+
+<[Dennis] D.RUFFER> great!  I'm to the terminal emulator part of my modem
+               program right now
+
+<[Jaxgorithm] FIGCHAPTERS> what terminal?
+
+<[Dennis] D.RUFFER> I've got ADM-3a (easest) done, and ANSI working but not
+               done
+
+<[Jaxgorithm] FIGCHAPTERS> I have about six ADM-3's at work. (and one
+               Hazeltine and two televideos!
+
+<[Dennis] D.RUFFER> nothing to them, cept a handful of control codes only one
+               escape sequence (to set cursor)
+
+<[Jaxgorithm] FIGCHAPTERS> It's maddening, really, I have had to deal with
+               VT220/240 etc. You can see how screwy it is ... when you deal
+               with polished programs like ProComm ..
+
+<[Dennis] D.RUFFER> Now they are the ones I'm fighting with emulating now
+
+<[Jaxgorithm] FIGCHAPTERS> and see how even ProComm didn't quite get it
+               perfect.
+
+<[Dennis] D.RUFFER> I'm not worried about perfect, just functional
+
+<[Jaxgorithm] FIGCHAPTERS> The ONLY people who understand VT *perfectly* work
+               at DEC.
+
+<[Dennis] D.RUFFER> so I can add in what I want when I need it
+
+<[Jaxgorithm] FIGCHAPTERS> I have been studying ( ready for this ) VAX C
+               lately.
+
+<[Dennis] D.RUFFER> oh no...not the big C
+
+<[Jaxgorithm] FIGCHAPTERS> You saw my upload!
+
+<[Dennis] D.RUFFER> haven't looked at it yet
+
+<[Jaxgorithm] FIGCHAPTERS> The point is ... ifyou want to program a UNIX
+               supermini ... Frankly, you had better know C.
+
+<[Dennis] D.RUFFER> If you want to program in any UNIX you'd better know C
+
+<[Jaxgorithm] FIGCHAPTERS> But for programming Forth-based Workstations,
+               Forth is best.
+
+<[Dennis] D.RUFFER> well, have we wound down on that comeback?
+
+<I.MONTANEZ> I AM GETTING A LITTLE CONFUSED MYSELF.  I APOLOGIZE FOR M/rai
+
+<[Jaxgorithm] FIGCHAPTERS> CONFUSED about what?
+
+<I.MONTANEZ> interrupting but what workstations are forth basec.. ga
+
+<[Jaxgorithm] FIGCHAPTERS> None, really. I'm just planning ahead!
+
+<I.MONTANEZ> 0.k.. g good.. ga
+
+<[Dennis] D.RUFFER> not yet that is (if jax can get one going :-)
+
+<[Jaxgorithm] FIGCHAPTERS> You bet. Based on RTX4000!
+
+<[Wil] W.BADEN1> SUN work stations are Forth based.
+
+<[Jaxgorithm] FIGCHAPTERS> Sort of.
+
+<[Dennis] D.RUFFER> in ROM that is
+
+<[Jaxgorithm] FIGCHAPTERS> The boot ROM is Forth. But that loads in, then
+               hands over control to, one of the most fully-featured UNIX
+               systems on earth.
+
+<[Wil] W.BADEN1> Yup.
+
+<[Jaxgorithm] FIGCHAPTERS> It's time we had some Forth-based desktop parallel
+               supercomputers! Anybody got $250,000? I'll start on one if you
+               do! :_) <<< pet theme ... Forth parallel supers on desktop.
+
+<[Wil] W.BADEN1> Forth may be the language for Massively Parallel Processor.
+
+<[Jaxgorithm] FIGCHAPTERS> Does everyone know who is blond, has big breasts,
+               and lives in Minnesota?
+
+<I.MONTANEZ> Who?...
+
+<[Jaxgorithm] FIGCHAPTERS> Salman Rushdie. Do you know what Salman Rushdie's
+               latest book is called?
+
+<I.MONTANEZ> no?...
+
+<[Jaxgorithm] FIGCHAPTERS> "Buddha, You Fat Fool" ..:-)
+
+<I.MONTANEZ> Cute...
+
+<[Dennis] D.RUFFER> Well folks, it looks like we are disintegrating
+
+<[Wil] W.BADEN1> The Mac LapTop has a transistor for each display pixel --
+               256,000 of them.
+
+<[Jaxgorithm] FIGCHAPTERS> Zotz!
+
+<[Wil] W.BADEN1> What if there were a Forth processor for each pixel?
+
+<[Jaxgorithm] FIGCHAPTERS> that's display technology, all right.
+
+<[Dennis] D.RUFFER> Heard it is just about to be released FINALLY
+
+<[Jaxgorithm] FIGCHAPTERS> Then you would have more display power then you
+               could ever use!
+
+<[Wil] W.BADEN1> What do you mean, finally? For two monthw we knew it would
+               be September 20.
+
+<[Dennis] D.RUFFER> the market wanted it a year ago
+
+<[Jaxgorithm] FIGCHAPTERS> You know, it's really sad to think, Wil ... that
+               in a decade or two ... Dennis and I will be standing in
+               unemployment line ... saying, "wish we had seen those organic
+               molecular computers coming in time" ...:-) Only ... we'll
+               probably be saying it in Japanese. .
+
+<[Dennis] D.RUFFER> :-) I've been there! Just hope I can make a million and
+               retire in time <grin>
+
+<[Wil] W.BADEN1> This is why I don't think Garbage Pail Forth has a future.
+
+<[Jaxgorithm] FIGCHAPTERS> How defining GBF? oops GPF?
+
+<[Wil] W.BADEN1> Like Garbage Pail Pizza -- everything in it.
+
+<[Dennis] D.RUFFER> F-PC
+
+<[Jaxgorithm] FIGCHAPTERS> Works fine as long as it will target compile, Like
+               JFORTH. 3-k objects produced by 165 k development system. Many
+               many many many many loadable options. including full obj-
+               oriented. .
+
+<[Wil] W.BADEN1> Bob Berkey called me last week and we talked for 3 hours.
+               Quote: "I don't understand why people are so concerned with
+               signed division ... it's rare, it's obscure, and it makes
+               people unhappy." He's right.  Real programmers don't divide by
+               negative numbers.
+
+<[Dennis] D.RUFFER> What's Bob up to these days Wil?
+
+<[Jaxgorithm] FIGCHAPTERS> I wish it were true.
+
+<[Wil] W.BADEN1> I was speaking to programmer on JPL Neptune gig.
+
+<[Dennis] D.RUFFER> Has anyone on the TC seen a "real" use for them yet?
+
+<[Jaxgorithm] FIGCHAPTERS> ( since neg division in my 68kDT forth is buggy
+               right now)
+
+<[Wil] W.BADEN1> Everything in 8086 assembler and no need for signed
+               division. Bob suggests "NO" as a synonym for "0=". I could
+               live with it.
+
+<[Dennis] D.RUFFER> So could I
+
+<[Wil] W.BADEN1> He duzn't like "NON" becuz it's a prefix. (But so is "NOT".)
+
+<[Dennis] D.RUFFER> NOT really does belong to the OR and AND bit operators
+
+<[Jaxgorithm] FIGCHAPTERS> I wish Ray Duncan would come around here
+               sometimes.
+
+<[Dennis] D.RUFFER> it sounds as if that is coming across in the TC also
+
+<[Wil] W.BADEN1> "< NO" for ">=" and "> NO" for "<=" is reasonable.
+
+<[Jaxgorithm] FIGCHAPTERS> As the honcho of the only Forth company listed in
+               Programmers' Connection catalog!
+
+<[Dennis] D.RUFFER> I wish any of the vendors would stop by occationally
+
+<[Wil] W.BADEN1> Greg sed it well.  FST was capricious to make their changes;
+               ANS wud be ... capricious to undo them.
+
+<[Jaxgorithm] FIGCHAPTERS> Amen, Wil.
+
+<[Wil] W.BADEN1> I wish I knew the demographics of the entire Forth
+               community. I think LMI has more systems than all other vendor
+               combined, but ... Forth,Inc has the greatest dollar value.
+
+<[Jaxgorithm] FIGCHAPTERS> Get on USENET and meet more of them!
+
+<[Dennis] D.RUFFER> LMI probably has the most users, but Forth, Inc. has more
+               applications LMI is product based, Forth, Inc is custom
+               application based
+
+<[Jaxgorithm] FIGCHAPTERS> HARRIS is going to be biggest dollar force in
+               Forth for forseeable future.
+
+<[Wil] W.BADEN1> What are they doing about division?
+
+<[Jaxgorithm] FIGCHAPTERS> Harris? or 4TH Inc.?
+
+<[Wil] W.BADEN1> Harris.
+
+<[Jaxgorithm] FIGCHAPTERS> Supporting it.
+
+<[Wil] W.BADEN1> What form?
+
+<[Jaxgorithm] FIGCHAPTERS> Hardware, I believe.
+
+<[Wil] W.BADEN1> Floored division?
+
+<[Dennis] D.RUFFER> 0 or negative infinity floored?
+
+<[Jaxgorithm] FIGCHAPTERS> The products I have seen are 83- STANDARD. But I
+               haven't see pF on it. .
+
+<[Dennis] D.RUFFER> pF is on it and running well
+
+<[Jaxgorithm] FIGCHAPTERS> floored?
+
+<[Wil] W.BADEN1> What do u know about Forth,inc division?
+
+<[Dennis] D.RUFFER> obviously with 0 based division it is the same they have
+               had for ever
+
+<[Jaxgorithm] FIGCHAPTERS> Wil ... email R.VANNORMAN of Harris here on GEnie
+               with your question.
+
+<[Wil] W.BADEN1> It's ironic that Forth,Inc proposed floored division to FST
+               for Forth 83.
+
+<[Dennis] D.RUFFER> that IS interesting
+
+<I.MONTANEZ> Has anyone invited Ray Duncan to particII have to leave
+               goodnight all...
+
+<[Jaxgorithm] FIGCHAPTERS> gnite I.M. good luck w. FIG chapter.
+
+<I.MONTANEZ> has left.
+
+<[Jaxgorithm] FIGCHAPTERS> did u get email addr, wil?
+
+<[Dennis] D.RUFFER> have either of you noticed the "bug" in Julian dates
+
+<[Wil] W.BADEN1> Yeh. Thanx. Huh?
+
+<[Dennis] D.RUFFER> If they are based on 1900, they just became negative 16-
+               bit numbers
+
+<[Jaxgorithm] FIGCHAPTERS> REAL Julian dates? They go back to 63 BC or so.
+
+<[Dennis] D.RUFFER> the only ones I know is those found in PolyForth
+
+<[Wil] W.BADEN1> Jan 1, 4713 BC.
+
+<[Dennis] D.RUFFER> they are based on Jan 1 1900
+
+<[Wil] W.BADEN1> DaR, look at them as unsigned values and all is well.
+
+<[Jaxgorithm] FIGCHAPTERS> jaxgoez gnite all!
+
+<[Dennis] D.RUFFER> We do, but there are a few cases where it is a problem
+               good night jack
+
+<[Jaxgorithm] FIGCHAPTERS> has left.
+
+<[Dennis] D.RUFFER> I ran into a problem on a 32 bit system that did a sign
+               extend on them ended up with yesterdays date well hope to see
+               you Wed Wil. time for me to go also
+
+<[Wil] W.BADEN1> Good.  Likewize i'm shoor. G'nite.
+
+<[Wil] W.BADEN1> has left.
+
+<[Dennis] D.RUFFER> good night
+
+=== End of Steno notes. ===
+
+

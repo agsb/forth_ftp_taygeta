@@ -1,0 +1,304 @@
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 04/11/91   Time: 22:28EDT
+
+ Notice on door: "Minimalist" is being used as a synonym for "anti-
+ progressive" in some  ForthNet traffic. Do you concur or disagree ?"
+ This set the tone for much of the evening's discussion. Other items
+ discussed include the upcoming MISC conference with Charles Johnsen,
+ free access during the MISC conference, Ans MUMPS extensions.
+
+Attendees:
+[[doug] D.GARRETT]
+[GARY-S]
+[[Dennis] D.RUFFER]
+[JAX]
+[[LEN] NMORGENSTERN]
+
+Minutes:
+<D.GARRETT> is here.
+<[doug] D.GARRETT> hmmm...
+<GARY-S> Hey Doug - respond to tonites question
+<[doug] D.GARRETT> stand by...
+<[doug] D.GARRETT> I'm not sure...  can you elaborate?
+<[doug] D.GARRETT> I haven't read any forthnet traffic.
+<[doug] D.GARRETT> I'm a new guy, please remember...
+<GARY-S> In a recent exchange between Frank earl and Mitch Bradley the subject 
+was the inclusion/exclusion of the word defer.
+<[doug] D.GARRETT> I don't think I've joined ...
+<[doug] D.GARRETT> any religious groups yet, so I don't know the WORD
+<D.RUFFER> is here.
+<GARY-S> Mitch said the reason for the non-inclusion was a strong minimalist 
+faction, implying minimalists are opposed to any useful but unecessary words
+<GARY-S> Hi Dennis - care to respond to the ????
+<[doug] D.GARRETT> I *think* I know what is meant by "minimalist"....
+<[doug] D.GARRETT> so the question is...
+<[doug] D.GARRETT> "is minimalism bad for Forth?"  thaz really the question, eh?
+<GARY-S> Yes , Do you agree that minimalist ==+> anti-progressive ?
+<[Dennis] D.RUFFER> there are minimalists and then there are minimalists
+<[doug] D.GARRETT> minimalists want to keep the kernal small, yes?
+<GARY-S> yes !
+<[Dennis] D.RUFFER> yes, some who use the minimalists badge are trying to stop 
+things out of basis alltogether...
+<[doug] D.GARRETT> hmmm...
+<[Dennis] D.RUFFER> then there are those who understand that they only have to 
+minimalize the core word set
+<GARY-S> I qualify as a minimalist and I state my position as not wanting a 
+turbo-forth
+<[Dennis] D.RUFFER> but do you care if others have turbo forth and they also 
+are standard?
+<GARY-S> NOT as long as it is in the form of extensions - the extra trappings 
+have no place in the adopted core word-set
+<[doug] D.GARRETT> At the risk of putting words in his mouth, is...
+<[doug] D.GARRETT> Wil Baden a "minimalist", too?
+<[doug] D.GARRETT> Bear with me, gents.  I can be a little slow...
+<[Dennis] D.RUFFER> I've seen Wil go both ways over time :)
+<[doug] D.GARRETT> Ah, a human.
+<GARY-S> I don't give a damn if you add Mount Shasta - but keep it outside the 
+required word set
+<[Dennis] D.RUFFER> I haven't read today's messages, but...
+<[doug] D.GARRETT> Well, why (in 25 words or less) do...
+<[doug] D.GARRETT> the "non-minimalists"  ("progressives" ??) care if...
+<[Dennis] D.RUFFER> the general pattern has seemed to be Mitch against the 
+"minimalists"...
+<[Dennis] D.RUFFER> I don't think that is fair
+<[doug] D.GARRETT> the kitchen sink is in the extension wing of the house...
+<GARY-S> There are some, frankly, who want the migration forom C to Forth to 
+Pascal to be essentially seamless
+<[doug] D.GARRETT> instead     ahhh, now you've hit it!...
+<[Dennis] D.RUFFER> The "maximalists" that I've heard, don't care if it is in 
+the core or in an extension word set
+<[doug] D.GARRETT> So this is really concerned with competing against...
+<[Dennis] D.RUFFER> it is the "minimalists that seem to be objecting to the 
+words being in there at all
+<[doug] D.GARRETT> the big boys in the de...
+<[doug] D.GARRETT> (oops  my screen gets scrambled with mixed messages)
+<GARY-S> hmmm - my mind does, how do you keep the scramble confined to your 
+screen <grin>
+<[doug] D.GARRETT> Well shux, I still straddle the fence...
+<[Dennis] D.RUFFER> aren't you using a split screen doug?
+<[doug] D.GARRETT> no, Dennis.  Old crosstalk circa 1984.
+<[doug] D.GARRETT> I quit buying software in 1984  (snort!)
+<[doug] D.GARRETT> I'm still too new to Forth to be polarized...
+<[Dennis] D.RUFFER> oh, too bad...you really aught to check out some of the pd 
+stuff...a "chat" window really does help a lot :)
+<[doug] D.GARRETT> I'll eventually find time.  Actually, though, I still...
+<[doug] D.GARRETT> use Crosstalk because I tell myself THE NEXT ...
+<[doug] D.GARRETT> program I use will be written by ME...
+<[doug] D.GARRETT> (presumably in Forth.  6 months ago it would have been C++ 
+or...
+<[doug] D.GARRETT> Eric Isaacson's A86 assembler.  Forth is better and more fun 
+than assembler.
+<[doug] D.GARRETT> So, right now I'm a pretty low level Forth programmer...
+<[doug] D.GARRETT> and tend to use a minimal kernal...
+<[doug] D.GARRETT> but I got no argument with a bigger & better system...
+<[doug] D.GARRETT> as long as I can strip it to my own needs.
+<[doug] D.GARRETT> You gotta understand, gents...
+<[doug] D.GARRETT> I work in a pretty nice database environment...
+<JAX> is here.
+<[doug] D.GARRETT> that already has as much kitchen sink as I'd want...
+<[Dennis] D.RUFFER> hiya jack :D
+<[doug] D.GARRETT> I realize that the interpretter could be written in Forth...
+<JAX> Hi D, G , DG.
+<[doug] D.GARRETT> and then I'd have a MUMPS system in Forth...  the...
+<[doug] D.GARRETT> question is, if I have such a system already in Forth...
+<[doug] D.GARRETT> I may as well just rename it MUMPS and go on about my 
+business...
+<[doug] D.GARRETT> So.  What are these problematic extensions to Forth?  What 
+do they do that makes them so controversial?
+<GARY-S> respond to the question, jax ???
+<[Dennis] D.RUFFER> I'll try to be a little more genteel then :)
+<[Dennis] D.RUFFER> Back to the subject...
+<[Dennis] D.RUFFER> The question, IMHO, appears to be why we can't add a...
+<[Dennis] D.RUFFER> bunch of neat words to BASIS, in extention word sets...
+<[Dennis] D.RUFFER> not in the kernel.  The people I hear quoting the...
+<[Dennis] D.RUFFER> minimalists attitude seem to say this is wrong...
+<[Dennis] D.RUFFER> I think it is essential if we are going to compete...
+<[Dennis] D.RUFFER> with the "big boys".
+<[Dennis] D.RUFFER> the "extensions" are floating point, graphics, files, 
+database..you name it, some people just don't want them in the standard.
+<[doug] D.GARRETT> Well, I can only speak from experience...
+<JAX> jaxthinx question is to be debated by those not working in Forth 
+professionally.
+<[doug] D.GARRETT> most of the extensions you mentioned, Dennis...
+<[doug] D.GARRETT> with the very big exception of "database"...
+<[doug] D.GARRETT> are NOT (I repeat NOT) in the ANS MUMPS standard...
+<[doug] D.GARRETT> and we get along just fine without it being "standard"
+<[doug] D.GARRETT> all of those extensions are so system-dependent...
+<[Dennis] D.RUFFER> jax, "is" or "should be" discussed by nonproffesionals?
+<[doug] D.GARRETT> that to try to be covered by a software standard just 
+doesn't work well
+<JAX> I think it's a question to be mooted by non-professionals. Professionals 
+are ...
+<JAX> occupied with immediate problems and react with expediency.
+<[Dennis] D.RUFFER> but doug, MUMPS is a databse standard, not a general 
+purpose standard
+<[doug] D.GARRETT> I use a vendor-supplied set of extensions for all the...
+<JAX> Ideology is for the dilletante, for the most part. Slim forths are nice, 
+fat forths are nice, medium forths are nice, depending on the problem.
+<[doug] D.GARRETT> bells and whistles concerning our VGA graphics...
+<[doug] D.GARRETT> our communications equipment, laser printers...
+<JAX> I will make one "ideological" statement though.
+<[doug] D.GARRETT> MUMPS is a standard language, but our system will NOT 
+directly...
+<[Dennis] D.RUFFER> the question is NOT what Forth's are nice, but what is 
+"nice" for the standard?
+<JAX> Forth is like Ralph's Pretty Good Grocery (Garrison Keillor) ...
+<[doug] D.GARRETT> port to another MUMPS platform...
+<[doug] D.GARRETT> with a significant amount of programmer intervention...
+<JAX> If your Forth doesn't have it, you can probably do without it.
+<JAX> What is nice for the Standard is pretty much what has been written into 
+it. Any care to discuss specific items?
+<[doug] D.GARRETT> I work in an operation that is tied...
+<[Dennis] D.RUFFER> however, I want to write standard programs, and I would 
+like to have standard tools to do what my applications needs to do
+<[doug] D.GARRETT> to a specific hardware & software platform.
+<[doug] D.GARRETT> I have another example...
+<[doug] D.GARRETT> The Veterans Administration has a pd data manager...
+<[doug] D.GARRETT> that every MUMPS programmer is familiar with...
+<[doug] D.GARRETT> VA FileMan is not part of the ANS-MUMPS standard, but it is 
+a very...
+<[doug] D.GARRETT> real defacto standard in my trade.  So are several...
+<[doug] D.GARRETT> commands and functions we use every day...
+<[doug] D.GARRETT> that were started i n  DEC MUMPS, and filtered down to...
+<[doug] D.GARRETT> the other vendor's MUMPS systems.  These are very real 
+standards, but
+<[doug] D.GARRETT> not ANS standards.  My question (from this point of view)...
+<[doug] D.GARRETT> is who cares if the usual tools are part of ANS standard or..
+<[doug] D.GARRETT> part of FIG Toolbox Number 3 "standard"?...
+<[doug] D.GARRETT> I you can get your community (I use the term loosely...)
+<[doug] D.GARRETT> to reconize a common set of words...
+<[doug] D.GARRETT> and then say OK, go to it.
+<[Dennis] D.RUFFER> ok, lets take that FileMan system as an example...
+<[Dennis] D.RUFFER> does it run on most MUMPS systems?  If so, then...
+<[Dennis] D.RUFFER> it is a "standard" application that people can use...
+<[Dennis] D.RUFFER> we can not do that today in Forth...
+<[Dennis] D.RUFFER> I would like to be able to.
+<[doug] D.GARRETT> Ah, NOW i begin to understand.  Yes, VAFM will...
+<[doug] D.GARRETT> run on any MUMPS platform, because it is plain vanilla MUMPS.
+..
+<NMORGENSTERN> is here.
+<[doug] D.GARRETT> consequently, no nice graph9ics...
+<[doug] D.GARRETT> or a standard way to position cursor on the screen.  The...
+<[LEN] NMORGENSTERN> Hi Better late than never, I always say
+<[LEN] NMORGENSTERN> especially when I am late!
+<[doug] D.GARRETT> MUMPS programmer must add those as extensions.
+<[doug] D.GARRETT> hi len
+<[Dennis] D.RUFFER> that's exactly the point then doug...
+<[doug] D.GARRETT> But if you have more than one dialect of the basic...
+<[Dennis] D.RUFFER> right now, the set of words that you CAN use to write....
+<[doug] D.GARRETT> words to get a system up and running...
+<[Dennis] D.RUFFER> a standard application in forth is pretty slim...
+<[Dennis] D.RUFFER> I'd like it to be a large as possible (personally :)
+<[doug] D.GARRETT> But you DO have all the primitives for character and block 
+devices, yes?
+<[Dennis] D.RUFFER> you have block and emit, yes
+<[doug] D.GARRETT> Is there any chance all warring parties could at least agree.
+<[doug] D.GARRETT> on a common set of unique words, kernal or extensions?
+<[doug] D.GARRETT> evidently not.
+<GARY-S> If "core" remains conceptually minimal and "extension" exists for the 
+extra stuff most minimalists could live with that arrangement just fine
+<[Dennis] D.RUFFER> that is what they are trying to do :)
+<[doug] D.GARRETT> In my ignorance, I guess I perceive...
+<JAX> What does a minimalist need with a standard?
+<[Dennis] D.RUFFER> that is what thy have today gary, but some seem not to be 
+satisfied
+<JAX> Does Chuck Moore concern himself with "standardizing" his three-key input 
+stream?
+<JAX> Standards are business.
+<[doug] D.GARRETT> that the line dividing  line dividing...
+<JAX> The purist may retreat to the wilderness to be alone with his or her 
+angry Jehovah.
+<JAX> .
+<[doug] D.GARRETT> the Kernal from the Extensions is fuzzy.
+<[LEN] NMORGENSTERN>
+<JAX> The nice thing  about Forth is you can have it both ways. Forth is easy 
+enough to implement.
+<JAX> .
+<[LEN] NMORGENSTERN>
+<GARY-S> Chuck Moore will continue to do his own thing - that is why Forth was 
+created and it is why he will ignore the standard
+<[Dennis] D.RUFFER> it is not fuzzy at all doug, just some have not appeared to 
+have seen it ;(
+<[doug] D.GARRETT> something caught in your throat, Len?
+<[LEN] NMORGENSTERN> I think the "minimal" set should NOT be truly
+<[LEN] NMORGENSTERN> minimal, as in EFORTH. It should be a reasonable
+<[LEN] NMORGENSTERN> small set.
+<GARY-S> I can accept that e-forth is too bare
+<GARY-S> I don't think Pygmy, astro or F-83 are too bare, though
+<[doug] D.GARRETT> I've been challenging myself with Bob Illyes riForth.  very 
+bare.
+<[LEN] NMORGENSTERN> I am reminded of the old Jewish story about the Rabbi
+<[LEN] NMORGENSTERN> who gave a sermon consisting of 2 words, "God Exists"
+<[LEN] NMORGENSTERN> Some thought it was too short...
+<[LEN] NMORGENSTERN> but there were others who thought it was too short.
+<[LEN] NMORGENSTERN> blew it. I should have said "too long"!!!!
+<[doug] D.GARRETT> So I reckon  been working with a minimalists' system...
+<[doug] D.GARRETT> and didn't even know I was in the middle of a crisis!
+<[LEN] NMORGENSTERN> I don't consider Pygmy minimalist
+<[LEN] NMORGENSTERN> It has vocabularies, file management, an editor and
+<[LEN] NMORGENSTERN> lots of other features.
+<GARY-S> I likke the cover that FD once had of a Forth and  Pascal (I think) 
+programmer observing creation ...
+<JAX> I think the minimal Forth concept has been illustrated sufficiently that 
+it is reasonably acheivable. What we need now are functional Workstatio
+n Forths, even standalone Workstation Forth OSes.
+<[doug] D.GARRETT> come on, Gary,  I wanna know the rest!
+<[Dennis] D.RUFFER> I agree jack, the minimal forth has been proven and is 
+fairly standard, but what standards does the "big" forth have to work with?
+<GARY-S> To the Pascal programmer it was not elaborate enough, to the Forth 
+programmer it was too elaborate
+<JAX> ANS 91
+<GARY-S> There is still great elegance in simplicity
+<[Dennis] D.RUFFER> maybe jack, but did they go far enough? can they ever go 
+far enough for that type of system?
+<[doug] D.GARRETT> Organizing you mavericks is like herding kittens>
+<JAX> Woof. That's far enough for this review. Next time, maybe more.
+<GARY-S> review ???
+<GARY-S> adios jax
+<JAX> No, I am answering Dennis's question!
+<GARY-S> NEXT THURSDAY - IN CONFERENCE    Charles Johnsen of MISC
+<JAX> (Dennis *did* sound rhetorical!
+<[Dennis] D.RUFFER> agreed jack, we need to get it past the next steps before 
+we can extend it :)
+<[doug] D.GARRETT> hey, one more time.  what was the official question?
+<[Dennis] D.RUFFER> yes folks, and next week's RTC is FREE!!!!!!
+<JAX> Did anyone read Charlie Johnsen's paper about MISC (Mutable Instruction
+<GARY-S> JAX was kind enough to post Cherles paper that serves as the 
+conference prelude
+<JAX> Set computer)?
+<[Dennis] D.RUFFER> the Bulletin Board will be free all day (6pm to 6am) 
+Thursday and Sunday
+<JAX> What's the occasion?
+<[Dennis] D.RUFFER> and the RTC's Thursday and Sunday nights will be free
+<[doug] D.GARRETT> oo!
+<GARY-S> IT is _strongly_ recommended you read the paper before the conference 
+and come prepared
+<[Dennis] D.RUFFER> this is part of $pring Break!
+<[LEN] NMORGENSTERN> will do!
+<[doug] D.GARRETT> homework  shux!
+<GARY-S> This will be   a hardware conference !~!!
+<[doug] D.GARRETT> I'll be there.
+<[doug] D.GARRETT> Easter DAYLITE Time, yes? :)
+<[doug] D.GARRETT> I'm on Eastern STANDARD, year round. :)
+<GARY-S> Believe it or not the old Signetics joke about a write-only chip 
+becomes reality
+<[Dennis] D.RUFFER> yes but Eastern...not Easter...that season's just about 
+past :)
+<GARY-S> You have to come to the conference if you want to kknow what good 
+awrite-only chip is
+<[doug] D.GARRETT> I signed up for FIG last month...
+<[doug] D.GARRETT> when do I get my secret decoder ring?
+<GARY-S> Last call for last shots on the official transcript
+<[Dennis] D.RUFFER> yes, got you letter doug...and passed it alone the chain :)
+<[doug] D.GARRETT> Or a membership card with a membership number...
+<[Dennis] D.RUFFER> decoder ring...you mean we have one????? <smile>
+<GARY-S> steno closing ...
+<GARY-S> tick
+<[doug] D.GARRETT> Jax BBS asks if I'm a member (yes)...
+<GARY-S> tickk
+<[doug] D.GARRETT> but it also asks for my number (I don't know it!)
+=== End of Steno notes. ===
+
+

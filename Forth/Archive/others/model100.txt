@@ -1,0 +1,81 @@
+
+			       From the FIG Tree
+
+*** TRS-MODEL-100         6-JAN-85
+  PARENT=SYSTEMS              USAGE=316
+
+*** 100-FORTH             6-JAN-85
+  PARENT=FOR-MODEL-100        USAGE=289
+A Forth, conforming to the 79 standard,is available from:
+    American Micro Products
+    705 N. Browser
+    Richardson, TX. 75081
+    (214) 238-1815
+ 
+two different Forths for ... these folks up and have
+them send FIG a review copy, or six.
+  -- Dave Anderson
+
+*** NO-GOOD               5-FEB-85
+  PARENT=100-FORTH            USAGE=232
+READ 100-FORTH-INTERNALS UNDER TANDY-SUPPORT. THAT FORTH IS NO GOOD!!!
+
+*** MVP-100-FORTH        06-JAN-85
+  PARENT=MODEL-100 !      USAGE=268
+COMPUTER FAIRE FOR $100.00. (!).
+IT REQUIRES AT LEAST 24K BYTES FOR OPERATION.  THE SYSTEM APPEARS TO OCCUPY
+ABOUT 9K AND ALLOWS ABOUT
+.. FOR BUFFERS AND DICTIONARY SPACE. NEITHER AN
+EDITOR OR ASSEMBLER IS INCLUDED. SUSPECT A 32K MACHINE WOULD BE NECESSARY TO
+RUN WITH ANY EASE.
+  GLEN HAYDON APPARENTLY CODED THE FORTH.
+
+*** REF-MANUAL            6-JAN-85
+  PARENT=FOR-MODEL-100        USAGE=256
+RADIO SHACK now has TRS80 MODEL 100 tech. Ref Manual for $9.95
+It has calling sequences and schematics.
+Not too great but best out yet.
+Has anyone used MULTI-PLAN on the 100, it is supposed to be a ROM?
+Has anyone used any FORTH on a 100?
+It would be nice if there was a ROM based one to leave the Ram for data.
+The model 100 is getting cheap enough to make a super stand alone controller.
+It is a little limited with number of I/O pins to the world though.
+Steve Calfee
+
+*** TANDY-SUPPORT       2kSN-85
+  PARENT=FOR-MODEL-100        USAGE=261
+I called Tandy in Fort Worth in hopes of receiving info about Model 100
+internal routines.  They told me they had no such information and suggested I
+try the Compuservu Model-100 SIG. Ugh.
+  The November '83 issue of the TRS-80 Microcomputer News contains a summary
+of a number of ROM routines (LCD, Keyboard, Printer, Sys/1/Modem,Casette &
+RAM files).  It does not, however, say anything about how to pass parameters
+to these routines.  The issue should be available at most Tandy Computer Ctrs.
+
+*** 100-FORTH-INTERNALS   5-FEB-85
+  PARENT=TANDY-SUPPORT        USAGE=220
+THE REFERENCED FORTH FOR THE 100 IS A WARMED OVER MVP FORTH WITH ABSOLUTELY
+NO HARD STORAGE AND ONLY 8 BLOCK BUFFERS IN MEMORY. IT IS INADEQUATE FOR
+ANY SERIOUS PURPOSES, EXCEPT POSSIBLY LEARNING SOMETHING ABOUT FORTH. THE
+DOCUMENTATION ONLY TELLS YOU HOW TO LOAD THE TAPE. IT IS ALSO SLOW. AS TO 100
+INTERNALS, THE CALLS ARE PROPRIETARY TO MICROSOFT, AND VERY, VERY HARD
+TO COME BY UNLESS YOU FIND STUFF BY THE BLACKMARKET AND BACK ALLEY.
+
+*** MODEL-100-ROM         6-JAN-85
+  PARENT=FOR-MODEL-100
+BYTE MAGAZINE MAY 1984 PG.288 CONTAINS SOME USEFUL INFO ON MODEL 100 ROM
+ROUTINES:
+ALSO HAS PROGRAM TO DETERMINE LENGTH OF FILES. VERY INTERESTING!
+*** RICK CHEVRIE ***
+
+*** M......-RW          31-AUG-85
+  PARENT=FOR-MODEL-100
+MOVING SCREENS INTO AND FROM TEXT F
+E ADDRUSSES
+THESE SCREENS CAN BE UP OR DOWNLOADED TO OTHER SYSTEMS. A WORD THAT ALLOWS A
+CALL TO THE INTERNAL M100 SYSTEM WOULD BE HELPFUL. ALSO, I HAVE HEARD
+THAT SOME EXPERIMENTERS HAVE SUCCESSFUL USED THE
+RS232 PORT FOR DISK I/O. IF I FIND MORE INFO I WILL PASS IT ON.
+LIKEWISE, ANY CONTRIBUTIONS TO THIS PURPOSE WOULD BE APPRECIATED.
+
+

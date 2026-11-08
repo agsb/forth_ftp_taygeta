@@ -1,0 +1,158 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 03/16/89   Time: 22:36EST
+
+Attendees:
+[[Gary] GARY-S]
+[[Kevin] APPERT]
+[[Dave] DHWEINSTEIN]
+[[oaxomoxao] FIGCHAPTERS]
+[[Len] NMORGENSTERN]
+  
+ Items discussed: Managers adding features at the end of a code write,looking
+                  for ROM based F-83/8088,BYTE (de)evaluation, Bozo filters,
+                  rocket ready bus, job search,i860,Forth articles now being 
+                  written for TCJ and ESP,Forth for PIXAR,why Brits drive on
+                  the left,Standards and JFAR redux.
+Minutes:
+<[Gary] GARY-S> First customer tonite Kev
+<[Gary] GARY-S> I have a thought
+<[Kevin] APPERT> seen the source for f83 in rom for 8088 around anywhere?
+<[Kevin] APPERT> what thought?
+<[Gary] GARY-S> Write your stack article for either FD or/ Computer Journal 
+Dave is writing a column for now
+<[Kevin] APPERT> stack?  do you mean exception handleing (like arithmetic 
+overflow) ?
+<[Gary] GARY-S> that's the one you told me about, isn't it ?
+<[Kevin] APPERT> the one I told about was exception handleing, I don't have all 
+that ...
+<FIGCHAPTERS> is here.
+<[Kevin] APPERT> much to say about the stack
+<[Kevin] APPERT> hi jax
+<[jaxaj] FIGCHAPTERS> hi!
+<[Kevin] APPERT> ^^^^^^^^^palinjax
+<[Gary] GARY-S> my misunderstanding, sorry - still , write the thing
+<[oaxomoxao] FIGCHAPTERS> What's up?
+<[Kevin] APPERT> havinga great time at work
+<[Gary] GARY-S> sky, mostly
+<[oaxomoxao] FIGCHAPTERS> 68008 is up.
+<[Gary] GARY-S> are you a car richer ?
+<[oaxomoxao] FIGCHAPTERS> Yes and no. Yes I win, no I haven't chosen a car yet.
+<[Kevin] APPERT> we were having a perliminary config. control meeting to list 
+the things to check off before release of software on one of my jobs...
+<[Kevin] APPERT> and the instr. manager decides that he has to have changes.  
+back 2 weeks in the middle of a major panic on that program and two othe
+rs.
+<[Gary] GARY-S> what sort of project ? how many K ?
+<[Kevin] APPERT> 6 k of assy language (in forth assm ) for Nsc800 processor for 
+space instr.
+<[Gary] GARY-S> how nice !
+<[Kevin] APPERT> the reliability issues with stuff like this are scarey as all 
+get-out
+<[Kevin] APPERT> very bad to start making changes again this late in the program
+<[Gary] GARY-S> hardware is usually based on double redundancy - what is your 
+criteria ?
+<[Kevin] APPERT> Jax, do you guys sell source for a FORTH-IN-ROM 8088?
+<[Kevin] APPERT> we design, check, test, and call in an outside auditor
+<[Gary] GARY-S> Jax must be checking on his toddler
+<[oaxomoxao] FIGCHAPTERS> We will sell our metacompiler under certain 
+conditions. Why don't you just buy one of our boards? It's cheaper.
+<[Kevin] APPERT> need source.  have std-bus card set for instr.
+<[oaxomoxao] FIGCHAPTERS> Toddler fine, you are right, gary, I will be in and 
+out of the discussion tonight.
+<[oaxomoxao] FIGCHAPTERS> We used to sell and STD-bus card.
+<[oaxomoxao] FIGCHAPTERS> Like I said, we could sell our metacompiler source. 
+But bux.
+<[Kevin] APPERT> with MIL-Spec pin and socket connectors
+<[oaxomoxao] FIGCHAPTERS> sounds sexy.
+<[Kevin] APPERT> what balpark?
+<[Kevin] APPERT> we cannot fly card edge connectors in a rocket payload, never 
+get past shake teest
+<[oaxomoxao] FIGCHAPTERS> Call me at work or visit our BBS. RCFB is 303 278 
+0364. Work is 303 422 8088
+<[Kevin] APPERT> ack.  will do.
+<[Gary] GARY-S> You might also check with Feierbach
+<[Kevin] APPERT> Byte has turned into the worlds most expensive multi-vendor 
+computer catalog
+<[Kevin] APPERT> they were gonna rename it "computer shopper", but it was taken
+<[Kevin] APPERT> no technical content left at all
+<[Kevin] APPERT> but Jerry Pornelle is fun to laugh at.
+<[Gary] GARY-S> It quit pretending to be non-prejudiced evaluation a long time 
+ago.
+<[Gary] GARY-S> You buy ad- you get review
+<[Kevin] APPERT> "I have no technical basis for holding any opinions, but here 
+they are..."
+<[Kevin] APPERT> at least he hasn't said anything bad about Forth
+<[Gary] GARY-S> Chaos has no manners
+<[Gary] GARY-S> not recently you mean
+<[Kevin] APPERT> "so Seymour Cray dropped by and set up the CRAY2 in the attic .
+.."
+<[Kevin] APPERT> not recently, right
+<[Kevin] APPERT> I just recall him saying that he didn't know anything about it,
+ never anything very bad
+<[Gary] GARY-S> What attic has a Cray or is that more of your JP humour ?
+<[Kevin] APPERT> more JP
+<[Kevin] APPERT> he seems to drop a lot of names
+<[Kevin] APPERT> I'm always very impressed ;)
+<[Gary] GARY-S> He put some pretty big bad-mouth on Forth for about three 
+issues a year, maybe two ago
+<[Kevin] APPERT> what did he say, I don't recall.
+<[Gary] GARY-S> For one, he said something to the effect...
+<[Gary] GARY-S> nothing meaningful or useful had ever been..
+<[Gary] GARY-S> written in Forth and Forth..
+<[Kevin] APPERT> oh yes, I remember hearing about that.
+<[Gary] GARY-S> programmers were lost in esoterica writing useless utilities.
+<[Gary] GARY-S> That's a paraphrase, but close
+<[Kevin] APPERT> ah well, I always tell myself it helps the cause...
+<[Kevin] APPERT> the bozos get filtered out by such noise...
+<[Kevin] APPERT> and don't wind up trying to write C or BASIC programs in Forth
+<[Gary] GARY-S> Now there's an idea who's time has come - a bozo filter
+<[Kevin] APPERT> I remember this fellow who used to make small changes on the 
+application level and re-meta-compile his whole blanged system
+<[Gary] GARY-S> Table or array processed ? There'd be a lot of Bozos to filter :
+-)
+<[Kevin] APPERT> digital bozo processing?
+<[Kevin] APPERT> with a cuisinart?  (cutting off their fingers may discourage 
+them)
+<[Gary] GARY-S> I think you've said, but who do you work for, Kevin ?
+<[Kevin] APPERT> Lockheed Space Sciences Laboratory, Space Instr. Group
+<[Gary] GARY-S> I recall
+<[Gary] GARY-S> Do they actually read applications filed on that BBS in LA ?
+<[Gary] GARY-S> American Teleweb is the BBS
+<[Kevin] APPERT> anyway, this bozo I was telling you about got a whole 
+department down on Forth, then quit the company.  got em started on C.
+<[Kevin] APPERT> american telewhat?  never heard of it
+<[Gary] GARY-S> It's a LA BBS that has help wanted sections for Lockheed, 
+Hughes and a few others
+<[Kevin] APPERT> I can only assume they do.  We are a little more selective in 
+our hiring.
+<[Gary] GARY-S> Should I take that personally ?
+<[Kevin] APPERT> you have to prove you are willing to work 20 hours a day, and 
+smile a lot at idiots from the computing dept.
+<[Kevin] APPERT> nope, want a job?
+<[Gary] GARY-S> I'm keeping an eye open, but no panic (yet)
+<[Kevin] APPERT> ever been to silicon valley?
+<[Gary] GARY-S> yes
+<[Kevin] APPERT> a starter home here is 1/4 mill
+<[Gary] GARY-S> I know
+<[Gary] GARY-S> Commute from Redwood City :-)
+<[Kevin] APPERT> not much trafic on this corner is there?
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Hullo
+<[Gary] GARY-S> I do have more realistic living costs in Little Rock, for sure
+<[Gary] GARY-S> Hi dave
+<[Gary] GARY-S> Thought you were neglecting us now that you're a columnist
+<[Dave] DHWEINSTEIN> :-)
+<[Dave] DHWEINSTEIN> (sad look). Bills just piled in this week. My engine 
+seized on the highway (not a Good Thing...especially at 60 with only 2 whee
+ls)
+<[oaxomoxao] FIGCHAPTERS> he's just playing around. I'm in another window 
+writing an article for ESP!
+<[Dave] DHWEINSTEIN> <- wants an Intel 80860
+<[Kevin] APPERT> ESP?
+<[Gary] GARY-S> Harris sure jumped on ESP
+<[Kevin] APPERT> Electonic Sex Pervesions?
+<[oaxomoxao] FIGCHAPTERS> Embedded Systems Programming, a Freeman publication ..
+

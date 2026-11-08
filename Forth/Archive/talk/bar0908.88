@@ -1,0 +1,246 @@
+
+         
+ Minutes of the FIGGY BAR                
+        
+Date: 09/08/88   Time: 22:13EDT
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[Still Jax] VESTA]
+ 
+ Items discussed: Larry Forsley conf in Oct, is ForthNet a lost cause ?, BTREE
+                  in Forth, Possible Ting conf
+Minutes:
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> Evening Leonard
+<[Len] NMORGENSTERN> Hi
+<[Gary] GARY-S> Did you see the guest notice ?
+<[Len] NMORGENSTERN> Yes. Larry ought to be v. good.
+<[Gary] GARY-S> I think so - good subject, too !
+<VESTA> is here.
+<[Len] NMORGENSTERN> Yes. Hi Jax
+<[Gary] GARY-S> hey jax
+<[Just Jax] VESTA> foobar!
+<[Len] NMORGENSTERN> Gary, I finished my BTREE! I am now pre-alpha...
+<[Gary] GARY-S> colon foobar, please
+<[Len] NMORGENSTERN> testing it.
+<[Just Jax] VESTA> Just the "hired help" around, eh?
+<[Len] NMORGENSTERN> So far.
+<[Gary] GARY-S> That's super - is it F83 ? I'd like to test drive it
+<[Len] NMORGENSTERN> Yes.
+<[Just Jax] VESTA> Is BTREE a BBS?
+<[Len] NMORGENSTERN> I never know whether you are kidding, Jax.
+<[Just Jax] VESTA> Well, the old FIG BBS was called something-TREE...
+<[Just Jax] VESTA> ..??
+<[Len] NMORGENSTERN> I will send around copies when it gets a little...
+<[Len] NMORGENSTERN> better polished & documented.
+<[Just Jax] VESTA> what is this btree?
+<[Len] NMORGENSTERN> Jax It was called the FigTree
+<[Len] NMORGENSTERN> ok
+<[Len] NMORGENSTERN> A B-Tree is a way of storing information on disks...
+<[Gary] GARY-S> Len - wanna define Btree and make sure you sepeerate the common 
+misconception (binary)
+<[Len] NMORGENSTERN> It has the advantage of minimum disk access....
+<[Len] NMORGENSTERN> BTrees and Binary trees are not the same....
+<[Gary] GARY-S> very common misconception
+<[Gary] GARY-S> ga len
+<[Len] NMORGENSTERN> I will try to find the little message I put up about it...
+<[Len] NMORGENSTERN> a few months ago...
+<[Len] NMORGENSTERN> A good reference is Wirth. Data Structures + Algorithms, 
+etc.
+<[Just Jax] VESTA> what is the basic algo?
+<[Len] NMORGENSTERN> Category 2 topic1 message 20
+<[Gary] GARY-S> That implies you modified it from Pascal or Modula 2 code ???
+<[Len] NMORGENSTERN> in a nutshell.
+<[Just Jax] VESTA> brb
+<[Just Jax] VESTA> has left.
+<[Len] NMORGENSTERN> Well, Wirth has it in Pascal, of course. I find it very 
+hard to read...
+<[Len] NMORGENSTERN> pascal code, but his theoretical explanation...
+<[Len] NMORGENSTERN> is very clear.
+<[Len] NMORGENSTERN> The tough part is deletion!
+<[Gary] GARY-S> his newest books are in modula 2 and the typesetting is 
+atrocious !!!
+<[Len] NMORGENSTERN> My edition is Pascal, not too bad, but!!!!!
+<[Gary] GARY-S> He didn't improve with age is all I gotta say
+<VESTA> is here.
+<[Still Jax] VESTA> All I get is a prompt again.
+<[Still Jax] VESTA> foo!
+<[Len] NMORGENSTERN> Gary, if some things were deleted, might they...
+<[Len] NMORGENSTERN> be renumbered?
+<[Still Jax] VESTA> i thought of that.
+<[Gary] GARY-S> Len - will you please fetch and display your message for this 
+( ? )
+<[Len] NMORGENSTERN> I will look for it. It's probably in an .ARC file 
+somewhere...
+<[Len] NMORGENSTERN> on my disks.
+<[Len] NMORGENSTERN> brb
+<[Gary] GARY-S> Jax - Phil sounds interested in putting BIX in the ForthNet 
+loop :-)
+<[Len] NMORGENSTERN> has left.
+<[Gary] GARY-S> just gotta get permission from the head BIXen
+<[Still Jax] VESTA> anyway, looks like we will have a Denver Forth Board within 
+a month.
+<[Gary] GARY-S> do you plan to link with xCFB's
+<[Still Jax] VESTA> Possibly/probably. the important thing is getting it up & 
+running first.
+<[Still Jax] VESTA> (obviously).
+<[Gary] GARY-S> How cum no enthusiasm for the BIX thing ?
+<[Still Jax] VESTA> I think that that sort of thing will never work by hand. 
+Has to be software.
+<[Still Jax] VESTA> Doesn't work out on the WELL.
+<[Still Jax] VESTA> TOo much work.
+<[Gary] GARY-S> I will be out of pocket for a few weeks...
+<[Gary] GARY-S> either you will have to be the porter..
+<[Still Jax] VESTA> or it dies.
+<[Gary] GARY-S> or just cool it till I get back...
+<[Still Jax] VESTA> see ... that sort of delivery went out with the pony 
+express.
+<[Gary] GARY-S> you are probably right, but we have to start some where ! RIGHT 
+!
+<[Still Jax] VESTA> The start is already there. The problem is linking up with 
+UNIX & mainfames.
+<[Still Jax] VESTA> -CFB stands on its own legs.
+<[Still Jax] VESTA> The problem will not be solved until the ForthNet is on 
+more sophisticated
+<[Gary] GARY-S> sort of - Don is still on the edge in Minneapolis
+<[Still Jax] VESTA> hardware.
+<[Gary] GARY-S> Got a proposal ? you were all for this a month ago
+<[Still Jax] VESTA> I am for the idea. I see the practical problems as 
+currently insurmountable.
+<[Still Jax] VESTA> Enthusiasm differs from stupidity only in degree.
+<[Gary] GARY-S> you even pushed for it as is !
+<NMORGENSTERN> is here.
+<[Still Jax] VESTA> True, but it *doesn't work*.
+<[Still Jax] VESTA> I was for the effort ...
+<[Still Jax] VESTA> but let's get serious and make it really work.
+<[Still Jax] VESTA> We need software events to do the shlepping.
+<[Gary] GARY-S> I'm for that, but as I said I will be gone a while
+<[Still Jax] VESTA> I don't have time to do it ... let the darn computers do it!
+ that's what they built them for.
+<[Still Jax] VESTA> We have to have a transfer event that does UUCP mail with 
+the WELL to make it
+<[Still Jax] VESTA> work on the well.
+<[Len] NMORGENSTERN> I couldn't find my notice on BTREES. I will...
+<[Len] NMORGENSTERN> upload it in a few days when I find it.
+<[Gary] GARY-S> How does Lee make his BitNet message box go for BitNet and 
+FIG-L ?
+<[Still Jax] VESTA> BitNet is interconnective with UUCP.
+<[Len] NMORGENSTERN> I posted it Sept 12, '87. Is there a time factor?
+<[Still Jax] VESTA> we are discussing ForthNet and how to implement.
+<[Len] NMORGENSTERN> (almost 1 year has pssed.
+<[Len] NMORGENSTERN> That's passed!
+<[Gary] GARY-S> close enough
+<[Gary] GARY-S> One last comment on ForthNet for tonight ....
+<[Still Jax] VESTA> Anyway, if we can do an event on the -CFB net just to 
+upload to a directory, that might be enough.
+<[Still Jax] VESTA> ( on the WELL, that is).
+<[Gary] GARY-S> GEnie is not UUCP connected, and since this idea was mine...
+<[Still Jax] VESTA> If we get into the FORTHNET on the Denver Board, I will try 
+to do that.
+<[Gary] GARY-S> I sure don't want to be left standing at the station !
+<[Still Jax] VESTA> Well, you promised more work than you can deliver, typical 
+of programmers!
+<[Gary] GARY-S> onward and downward
+<[Still Jax] VESTA> whither?
+<[Gary] GARY-S> yon
+<[Gary] GARY-S> did you talk to C. H. T. ?
+<[Still Jax] VESTA> The question is not if ForthNet is dead ... it is quite 
+busy. Is FIG dead?
+<[Len] NMORGENSTERN> Who?
+<[Still Jax] VESTA> TING .. no haven't had time.
+<[Gary] GARY-S> Ting
+<[Still Jax] VESTA> Maybe after I hang up here.
+<[Gary] GARY-S> no prob - Forsley is on Oct 6
+<[Still Jax] VESTA> He is often busy till 8:30 PDT.
+<[Gary] GARY-S> I can believe
+<[Still Jax] VESTA> That is over an hour from now.
+<[Still Jax] VESTA> When is open?
+<[Still Jax] VESTA> So i can suggest a date.
+<[Gary] GARY-S> pick a time after Oct 6
+<[Still Jax] VESTA> Any day or just thursday.
+<[Len] NMORGENSTERN> Thursday is best because people are used to it.
+<[Still Jax] VESTA> Len we were going to invite Dr. Ting.
+<[Len] NMORGENSTERN> .
+<[Gary] GARY-S> Bradley is sorta pegged for mid-Nov, but that isn't cast in 
+stone
+<[Len] NMORGENSTERN> Do you mean etched in concrete?
+<[Still Jax] VESTA> Was it Kevin Appert who said he would lend Ting a modem?
+<[Gary] GARY-S> close enough
+<[Len] NMORGENSTERN> I gathered that. Ting would be very good.
+<[Gary] GARY-S> yes
+<[Still Jax] VESTA> But I have heard that he is not comfortable with Telecom, 
+may just be a libel!
+<[Len] NMORGENSTERN> He may not be a good typist.
+<[Still Jax] VESTA> He gets teased, I think.
+<[Gary] GARY-S> it's worth a shot - just let me know when/where to call him 
+after you've chatted - ok ?
+<[Still Jax] VESTA> Some lowbrow was criticizing Ting's books tonite on ECFB.
+<[Still Jax] VESTA> I replied, "Hie thee to the feet of Ting and there learn 
+instruction!"
+<[Gary] GARY-S> And how many books has the critic written ?
+<[Len] NMORGENSTERN> Disraeli said, "It is easier to be citcal than correct."
+<[Still Jax] VESTA> I don't think there is anyone except MOORE who understands 
+Forth so thoroughly.
+<[Still Jax] VESTA> as ting, that is.
+<[Gary] GARY-S> hmmm - that is a very broad swath you just cut. standing by it ?
+<[Still Jax] VESTA> Think about it.
+<[Still Jax] VESTA> Ting has implemented forth on parallel, VAXen, image 
+processors, pc's ...
+<[Gary] GARY-S> I try not to exclude that many people in one breath
+<[Still Jax] VESTA> he has explained, or help explain every popular Forth 
+system since about 1981.
+<[Gary] GARY-S> I'm not arguing against Ting's Forth awareness, I'm in awe of 
+it....
+<[Still Jax] VESTA> And his conceptualizations are the most profound in our 
+limited literature.
+<[Gary] GARY-S> I am just also aware others know a LOT
+<[Still Jax] VESTA> The yang/yin description of metacompilation.
+<[Still Jax] VESTA> His characterizations of popular processors by their 
+strength as forth engines.
+<[Len] NMORGENSTERN> He demonstated a music program to us...
+<[Still Jax] VESTA> His introduction to _Footsteps_ ...
+<[Still Jax] VESTA> .
+<[Len] NMORGENSTERN> It uses multitasking, one task for each instrument...
+<[Len] NMORGENSTERN> A timer signals each when it it time to do its thing!
+<[Len] NMORGENSTERN> .
+<[Gary] GARY-S> I had a thought, Jax
+<[Still Jax] VESTA> He is very creative, but more than that, he always sees 
+what is the *core issue* about life/comp sci in each feature he describes.
+<[Gary] GARY-S> If Ting is reluctant because he doesn't feel comfortable typing 
+on telecomm...
+<[Still Jax] VESTA> we are guessing, here, gary ... may be untrue
+<[Gary] GARY-S> maybe he WOULD respond to someone else doing the keying for him
+<[Len] NMORGENSTERN> It was only a thought.
+<[Still Jax] VESTA> that is a good idea! Who would be the "phantom typist?"
+<[Gary] GARY-S> who's going to loan the modem ?
+<[Still Jax] VESTA> i forget ... was it kevin?
+<[Gary] GARY-S> eggs-zackly
+<[Still Jax] VESTA> got a better idea. I will write to him.
+<[Still Jax] VESTA> Let me hang up and I will write him a letter tonite.
+<[Gary] GARY-S> why not the call ?
+<[Still Jax] VESTA> I think it is intrusive.
+<[Still Jax] VESTA> Well, hell, maybe I will.
+<[Len] NMORGENSTERN> I will see him Sat. at the N. Bay Fig. He almost always 
+comes.
+<[Still Jax] VESTA> I dunno ... I always feel *coarse* telephoning at home.
+<[Gary] GARY-S> whatever, but I will be gone before the letter is returned, so 
+there is no hurry
+<[Still Jax] VESTA> where going?
+<[Still Jax] VESTA> Ok len, i'll call him, why don't you talk to him.
+<[Gary] GARY-S> I got some business to attend to
+<[Len] NMORGENSTERN> Let's do both.
+<[Still Jax] VESTA> your parole officer catch up with you gary?
+<[Still Jax] VESTA> ... :-)
+<[Len] NMORGENSTERN> Gary, do you have someone to cover Sept 15?
+<[Gary] GARY-S> close enough
+<[Len] NMORGENSTERN> I am reluctant to commit myself, but will if nobody...
+<[Gary] GARY-S> I left a message up Jax
+<[Len] NMORGENSTERN> else is available
+<[Gary] GARY-S> the 22nd is Covered and Len said he'd get the 29th if I'm not 
+back by then
+<[Still Jax] VESTA> I'll take the 5th ... :-)
+<[Still Jax] VESTA> cu @ well, guy!
+=== End of Steno notes. ===
+
+

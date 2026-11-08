@@ -1,0 +1,228 @@
+
+                      Best of GEnie..... March 1988
+  News from the GEnie Forth RoundTable by Gary Smith
+    
+   When I was asked to begin a 'Best of GEnie' column for 'Forth Dimensions'
+I immediately realized I wanted Leonard Morgenstern's Topic area to be among
+the first areas presented. Leonard has done a marvelous job of presenting our
+language of choice in bite ( byte ? ) size chunks, and in such an entertaining
+fashion as to create a novice and experienced Forth user tutorial area. 
+   
+   Time constraints and the shear depth of material available in Leonard's area
+dictated making the entire first 'Best of GEnie' column an extraction of that
+one Topic. Future installations will include discussions of the ANS FORTH X3/
+J14 Technical Committee. Those of you who are not aware the future of Forth is
+being decided on GEnie NOW are missing an opportunity to make your wishes known.
+  
+  Besides serving as the centerpiece in the first 'Best of GEnie' Leonard had
+several coinciding events that make March 1988 especially memorable. He just
+celebrated a birthday and his retirement from the rat race. He also graciously
+accepted an offer to join Dennis Ruffer, Scott Squires and me as co-hosts of 
+the Forth RoundTable on GEnie. Congratulations, Leonard, and 'Thank you'.
+
+Category 3,  Topic 1
+Message 3         Sat Jan 16, 1988
+M.HAWLEY                     at 21:19 EST
+ 
+Dennis, The word  OK?  appears in the ANAGRAMS.ARC file which I recently
+downloaded from this board. It was in another that I can't remember now.
+ANAGRAMS looked like a lot of fun but it wouldn't run on any of my public
+domain FORTHs because of the missing OK?  . As a newcomer to FORTH , I find
+this sort of thing very frustrating. I thought this was the purpose of having
+standards. Another problem word I ran into was 2ARRAY . It was in BULLCOWS for
+ZENFORTH but not defined in the version of ZENFORTH that I have. As an example
+of how it should be done. I downloaded UNARC.SCR and UNARC.F83 which is a
+prelude  for F83 to run this application written in some non-standard FORTH, 
+NORTHFORTH or something like that. It worked perfectly the first time. My
+compliments to that masterful programmer. As a beginner, I run into deadends
+real fast when I hit an undefined word which is not in the '83 wordset or any
+of the manuals I have. Thanks for your attention to my problems. I imagine
+others have had similar experiences and get turned off of FORTH for that
+reason. ....meh...
+----------
+Category 3,  Topic 1
+Message 5         Sun Jan 17, 1988
+S.W.SQUIRES [scott]          at 03:39 EST
+ 
+STANDARDS PEOPLE, please note message #3 above.  Finding undefined words in
+source code is a pet peeve of mine.  As a beginner I went through the same
+problem and sometimes still do.  It's no fun typing in a tool you've been
+wanting and then finding that it is missing one word with no info as to what
+it even does.  It's also very easy to  assume that 'everyone' has this word
+and knows what it is ( 2ARRAY, ASCII, MYSELF, etc. )  Now is 2ARRAY a 2
+dimensional array defining word or a single dimension double precision array? 
+I've seen it used both ways.  
+
+This is where the standards come in- common words should be in the standard or
+at least in the controlled reference word set. A utility that would come in
+handy would be the ability to compare words  with the raw standards and
+display the ones that aren't in the standards and that aren't defined in the
+standards.  The Forth-79 from MicroMotion used to do this by setting one of
+the unused bits in the name field if the word was standard.  -scott
+----------
+Category 3,  Topic 1
+Message 6         Sun Jan 17, 1988
+M.HAWLEY                     at 17:06 EST
+ 
+Dennis,  Let me correct myself. The hangup word in ANAGRAMS was NUF? I have
+since found a definition of NUF? in F83X320C   ... a version of FORTH-83 that
+I don't usually use. : NUF?   KEY? DUP  IF 2DROP BEEP KEY 13 = THEN ; The
+hangup word 2ARRAY appears in LIFE.SCR  -the game of life contained here in
+LIFE.ARC.   OK? I believe appeared in BULLCOWS written for ZENFORTH and I'm
+vaguely aware that there is a newer version of ZEN than the one I have. Last
+but not least, I was unable to load MAZE.BLK from MAZE.ARC because of the word
+VIDEO   . Is VIDEO a standard FORTH-83 word ? I don't find it in the book "
+INSIDE F83 " by C. H. Ting . And I can't find it in my public domain FORTHs
+including F83, F83x320C, ZENFORTH, SEATTLE FORTH, MVPFORTH. This gets old
+fast. It would be nice to be able to assume that an application uploaded here
+for public consumption would contain definitions for all non-F83 standard
+words, but this does not seem to be the case. Another correction, the def. of
+NUF? above omitted one KEY . It should be: : NUF?   KEY? DUP IF KEY 2DROP BEEP
+KEY 13 = THEN ; ... meh ...
+----------
+Category 3,  Topic 1
+Message 7         Sun Jan 17, 1988
+LMORGENSTERN [leonard]       at 17:37 PST
+ 
+     To M.HAWLEY and Scott Squires: I sympathize with anyone who has run into
+the problem of trying to load a utility and finding undefined words in it.
+There is no other name for it than bad documentation. Sometimes it is due to
+laziness or sloppiness, but more often, I think, it is inexperience. Forth
+makes it possible for green programmers to do very clever and useful things.
+Not knowing better, they assume that others can use their source code. (There
+wasn't any difficulty with BASIC, was there?) If this is so, new and better
+standards, although much needed in other ways, will not solve this problem, as
+we already have the resources for it. 
+     There are two solutions, at least one of which should always be applied
+by the programmer who submits a file: One is to meticulously compare the words
+in his/her source with the prelude. The other solution is to load the prelude
+and application on top of some widely available version of Forth, such as F83
+or even Fig-Forth. If it loads and runs without flaw, an experienced
+programmer will know how to modify it to run on another system.
+
+     Journals, such as Forth Dimensions, always check this sort of thing
+before publication. However, we don't have the resources for that kind of
+thing on a bulletin board like this one, and have to trust those who submit
+files. Unfortunately, it is a matter of Let the User Beware!
+----------
+Category 3,  Topic 1
+Message 10        Tue Jan 19, 1988
+J.SHIFRIN                    at 01:42 EST
+ 
+Leonard, I'm afraid you're incorrect about journals like Forth Dimensions
+checking to make sure that all published code was standard. In fact, that was
+one of my greatest frustrations in getting started with Forth. FD seems to
+publish about anything (fig, 79, 83, special implementations) without regard
+for portability. It typically includes a fair amount of CODE defs as well.
+Personally, I gave up on getting useful code from FD, other than ideas and
+approaches.
+----------
+Category 3,  Topic 1
+Message 12        Tue Jan 19, 1988
+JAX [Jack Woehr]             at 21:15 PST
+ 
+In defense of Forth Dimensions: Actually, the assumption there is that you
+have EVERY issue from way back when, where these "nonstandard" words like
+RECURSE were first mentioned. It's just added motivation to buy bound volumes
+...
+----------
+Category 3,  Topic 1
+Message 13        Wed Jan 20, 1988
+J.W.BAXTER                   at 21:38 PST
+ 
+As another defense of Forth Dimensions, they do mark each listing as to what
+sort of Forth it is.  If they made some arbitrary choice (all  submissions
+must be Forth-83, for example), they would have even fewer submissions to
+choose from.  I think they're on the right track.
+  --John
+----------
+Category 3,  Topic 1
+Message  23       Mon Jan 25, 1988
+LMORGENSTERN [leonard]       (Forwarded) 
+ 
+To M.HAWLEY To write pixels in Forth, you have to access the DOS video driver
+or use the ANSI system. The exact call depends on your system. In MS/DOS you
+would use a call to interrupt 10H. There is a file 660 VIDEO.ARC that is
+described as "Video words for IBM F83". Look into it. It would be appreciated
+if you would let us know whether it does what you want.   Leonard.
+----------
+Category 3,  Topic 1
+Message 25        Fri Jan 29, 1988
+M.HAWLEY                     at 21:06 EST
+ 
+Well, VIDEO.ARC looks promising. I unarced it with UNARC.F83, a good example
+of a usefull application that runs using only standard words ( and F83 in
+particular ). The unarced file is VIDEO.BLK which looks similar to the
+VIDEO.BLK file from VIDEOF83.ARC . Unfortunately it did not load completely.
+It hangs on the word SLL which I don't find in the standard. At first I
+thought maybe it was an assembler word but it is not in a code definition. 
+So, frustration again.
+     I'm just an amateur programmer who wants to learn FORTH or the sheer fun
+of it. I am persuaded that FORTH is the most versatile and in some sense the
+most powerful of  languages...potentially. But I am still singing the FORTH-
+BEGINNERS-BLUES.
+
+To: M.HAWLEY   I downloaded VIDEO.ARC and found your problem
+line, which is line 13 of screen 2. It reads:
+     : pg>bh   page# @ 8 sll ;     (s - bx )
+You are right that SLL is not in the standard -- it is not even
+in F83. I have worked out what it does, illustrating the value of
+well-chosen word names and good documentation. We start with the
+stack diagram, contained within the "stack parentheses" (s   ),
+preferred by some programmers over ordinary parentheses. The
+diagram says that PG>BH leaves BX on the stack. In Intel 8086/88
+assembler, BX is the whole B register, and BH is its high order
+part. Now, the documentation for certain 10H interrupts requires
+that BH contain the page number.
+     Next, we look at the word name, PG>BH. Clearly, it puts the
+video page number into BH. It is now a short step to recognizing
+that SLL shifts BX left by 8 bits, discarding whatever is pushed
+off the high end, and filling the low end with zero bits.
+     Now comes the "AHA!" SLL is "SHIFT LEFT LOGICAL", easy
+enough to write in F83 assembler. Continuing, I find that some
+additional words need definition.
+     #SPLIT   ( n -- hi lo ) Split a word into two bytes. Note:
+          Most Forths have the stack diagram ( n -- lo hi)
+     #JOIN    ( hi lo -- n ) Opposite of #SPLIT. Same comments as
+          for #SPLIT.
+     C@L  ( seg ofs -- b ) "Long C-fetch." Similar to C@, but the
+          stack specifies a segment and offset. Most Forths
+          use ( ofs seg -- b).
+     C!L  ( b seg ofs -- ) "Long C-store." Same comments as for
+          C@L.
+     CMOVEL ( ofs1 seg1 ofs2 seg2 n -- ) "Long CMOVE" Move data
+          from one segment to another. Same comments.
+     I have written a prelude, F83PRELU.BLK, and have combined it
+with VIDEO.BLK and this note, into a new VIDEO.ARC file. If the
+sysops accept it, it will replace the previous VIDEO.ARC. I will
+upload it to you personally, so you will have it regardless.
+     The problems you are having are universal, and are a real
+hindrance to the adoption of Forth. Anyone uploading a file has a
+moral obligation to define every non-standard word. Since F83 is
+well known and available without cost, it can serve as a
+secondary standard.      Leonard.
+----------
+ 
+>>>> New File <<<<<<<<<<<<
+
+ Name: VIDEO1.ARC
+ Number: 911         Address: LMORGENSTERN  Bytes: 11340
+ Library: 3
+ ------------------------------------------
+ Description:
+ This is a complete video driver, written by Bill Beers, to which I have a
+ added an F83 prelude and short documentation.
+ Keywords: VIDEO, MS/DOS, MS-DOS, BEERS, F83, 8086, 8088, GRAPHICS, DISPLAY,
+ SOURCE
+------
+Category 3,  Topic 1
+Message 27        Sat Feb 06, 1988
+M.HAWLEY                     at 17:13 EST
+ 
+Thanks Leonard. The prelude and VIDEO blocks loaded and ran on the first try.
+I especially enjoyed your explanation of your thought processes and methods of
+deciphering someone else's code. This was a valuable lesson to a novice like
+myself. Now I'm sorting through the various words in the VIDEO block and
+trying to learn how to use them. 
+
+

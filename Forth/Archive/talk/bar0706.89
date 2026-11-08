@@ -1,0 +1,278 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 07/06/89   Time: 22:35EDT
+
+Attendees:
+[[Kevin] APPERT]
+[[Gary] GARY-S]
+[[len] NMORGENSTERN]
+[[Dave] DHWEINSTEIN]
+[[Wil] W.BADEN1]
+[C.TING]
+[[jax] FIGCHAPTERS]
+
+Busy, Busy FIGGGY BAR of 6 July 1989. Among the MANY items discussed: Source/
+CompuServe merger, Buffalo (Chuck) Chip, ACM SigForth, MPP,Kitt's Peak job,
+Roedy Green conf 20 July, 1's compliment, Internet Worm, Forth stro-srot-sort 
+routines, B-tree, report generators, Object Oriented Forth, SC32, Single
+Boards, FORGET FORGET, Telecomm as a tool, BASIS8
+
+Minutes:
+<[Gary] GARY-S> Hi - how's cal   we are having a frog strangler in central ark
+<[Kevin] APPERT> it's a bit warm here at the moment.  Frog strangler?
+<[Gary] GARY-S> lot of rain
+<[Kevin] APPERT> hi, Len
+<[len] NMORGENSTERN> Hi all
+<[Kevin] APPERT> oh.  wern't you having drought before this?
+<[Gary] GARY-S> If I suddenly disappear blame Arkansas Spark and Fizzle, 
+Lightening, or Tornado
+<[Gary] GARY-S> That was last year
+<[len] NMORGENSTERN> My cousin lives in Shreveport. Much water there!
+<[Gary] GARY-S> We had the remnants of Allison stall out over the Ark-La-Tex 
+triangle and it has rained unrelenting for W-e-e-e-e-e-e-k-s now
+<[len] NMORGENSTERN> 102 F here today.
+<[Gary] GARY-S> Until I actually have to paddle I'll take too much rather than 
+too little rain
+<[Gary] GARY-S> The drought last year broke me of bitching about rain for a 
+long time
+<[Gary] GARY-S> Things telecomm - Source is CompuServe
+<[len] NMORGENSTERN> The merger is official?
+<[Gary] GARY-S> Things Forth - the Chuck chip is nearing completion
+<[Kevin] APPERT> more properly known as the "Buffalo Chip" , apropos from 
+Computer Cowboys :)
+<[Gary] GARY-S> CompuServe acquiring Source reminds me of the Burroughs/Memorex 
+merger - don't look for a long, happy marriage
+<[Dave] DHWEINSTEIN> Hullo
+<[Kevin] APPERT> hi Dave
+<[len] NMORGENSTERN> Got my ACM SIGFORTH bulletin today (second copy)
+<[len] NMORGENSTERN> 32 good pages, worth reading
+<[Gary] GARY-S> You missed it - Dave, the FIGGY is over
+<[Dave] DHWEINSTEIN> (puzzled look) Looks at time.
+<[len] NMORGENSTERN> ditto
+<[Dave] DHWEINSTEIN> A six minute FIGGY?
+<[Gary] GARY-S> Len - I haven't got my original yet !!!
+<[Kevin] APPERT> we are now in NOT-figgy   or Figgy-Bar in logic notation , I 
+guess
+<[Gary] GARY-S> Ask Allan 'what the hey ?' for me
+<[Dave] DHWEINSTEIN> Neither have I (but then I haven't checked todays mail 
+either)
+<[len] NMORGENSTERN> I live right
+<[Gary] GARY-S> Just whistling up DW's shorts
+<[Dave] DHWEINSTEIN> Thought so.
+<[Gary] GARY-S> Anyone know any of the MPP people - like Mike Nemeth
+<[len] NMORGENSTERN> pmi What is MPP?
+<[Dave] DHWEINSTEIN> Oh...There is a Forth job opening! (I'd look into it but 
+they want a #$^#@ degree :-( ) At Kitt Peak no less.
+<[Gary] GARY-S> Are they really converting a lot of Forth stuff to C ?
+<[Kevin] APPERT> MPP?  massively perverse persnikityness?
+<[Gary] GARY-S> Massively Parallel Processor - at Goddard, Len
+<[len] NMORGENSTERN> thanx
+<[len] NMORGENSTERN> I sent in my proofs for the Austin conf. Proceedings 
+should be out soon
+<[Gary] GARY-S> What is the skinny on the Kitt Peak job - have you posted to 
+the Bulletin Board
+<[Kevin] APPERT> Kitt Peak has been doing that for years, replacing working 
+systems with more expensive, newer, more complicated things which do the s
+ame or lesser job
+<[Gary] GARY-S> Los Almos does the same - they have standing orders at Cray , 
+use to at CDC
+<[Dave] DHWEINSTEIN> Not yet. I'll copy it out of Usenet when I get a chance. 
+It does require Unix/C/68000 experience (they are moving from Forth on P
+DP 11's to Unix on VME 68000s)
+<[len] NMORGENSTERN> (A pair of orioles outside my window)
+<[Kevin] APPERT> at Los Almos a Cray is considered a perosnal computer
+<[Dave] DHWEINSTEIN> (A cat flopped out on my bed)
+<[Gary] GARY-S> Wonder what became of Ken Butterfield ? Guess we were too mild 
+for him
+<[Gary] GARY-S> Reminder - Roedy Green will be conference guest on July 20
+<[Kevin] APPERT> too mild? what does he want do you think?
+<[Gary] GARY-S> You can get one up by reading October 86 Byte
+<[len] NMORGENSTERN> Everybody loves a good fight, provided
+<[len] NMORGENSTERN> he/she is not involved personally, and
+<[len] NMORGENSTERN> sometimes even then.
+<[len] NMORGENSTERN> (Jax's principle)
+<[Wil] W.BADEN1> is here.
+<[Gary] GARY-S> The one conference Ken loved was where we got talking about 
+Dave's VMS stuff
+<[Dave] DHWEINSTEIN> Hullo Wil
+<[Wil] W.BADEN1> hi dave, kev, len, & gary.
+<[Gary] GARY-S> Wil - how goes it ? Like the Usenet goodies you are getting ?
+<[Wil] W.BADEN1> They're great.
+<[Dave] DHWEINSTEIN> WHich will be published (with code) in the upcoming ACM 
+proceedings (the reason for its lack of appearance in the library)
+<[Kevin] APPERT> anybody see ACM proceedings, issue before last on the internet 
+worm.
+<[Gary] GARY-S> Yes - in the red binder
+<[Gary] GARY-S> Dave - do you know when the rest of us will get our ACM Forth nl
+<[Wil] W.BADEN1> yes.
+<[Dave] DHWEINSTEIN> I don't know. I haven't gotten mine yet!!!! (Of course I 
+moved...so it may be following me...but I know my new address has trickl
+ed through to George)
+<[Dave] DHWEINSTEIN> Yeah. I also got more material from some of the MIT sites 
+(The wonders of anonymous FTP and a laser printer)
+<[Gary] GARY-S> I wish some of those news people who insist on calling the ARPA 
+thing a virus would read that article - even they could understand the
+ difference
+<[Dave] DHWEINSTEIN> I liked the comment that the Boston Herald hired an artist 
+to draw in track holes on the hardcopy provided by the MIT group ("I g
+uess they would have preferred dot matrix to the laser printer we used")
+<[len] NMORGENSTERN> A Forth question about sorting
+<[len] NMORGENSTERN> I have never used a sort in a program that I have written
+<[len] NMORGENSTERN> Which one(s) have you used, & what do you like or dislike 
+about them?
+<[Dave] DHWEINSTEIN> It depends on what you want to do, and on the data set, 
+and on what operations will occur more/most often.
+<[len] NMORGENSTERN> For example?
+<[Dave] DHWEINSTEIN> Well....what do you want to do with it?
+<[len] NMORGENSTERN> What I need to do I need a B-tree, which I am writing
+<[len] NMORGENSTERN> Large data set on disk, search with minimum disk access. 
+Constructing
+<[len] NMORGENSTERN> the tree is done once at load time.
+<[len] NMORGENSTERN> I am asking generally
+<[len] NMORGENSTERN> (I have been reading the theory)
+<[Dave] DHWEINSTEIN> The problem is that there is no "generally". It depends on 
+the case, and which is the most important consideration(s) (code, size
+, speed, coding time).
+<[Dave] DHWEINSTEIN> If you have a theory book, it will probably tell you the 
+efficiency of various operations in Big-O notation.
+<[len] NMORGENSTERN> Give me a "don't": for example, Don't use quick-sort when 
+the
+<[len] NMORGENSTERN> data may be almost ordered to start with.
+<[Dave] DHWEINSTEIN> Right. Or don't use a bubble sort for random data. But it 
+does work when one or two things is undordered.
+<[Gary] GARY-S> does that not require pre-test of data
+<[Dave] DHWEINSTEIN> The heap sort, while one of the most complicated to code, 
+is usually the most efficient. (That one I use my cookbook for).
+<[Kevin] APPERT> Knuth's second volume of "the Art of Computer Programming" , 
+called "Sorting and Searching" is a good place for a survey, if you can
+ignore the Tape-based stuff which was relevant a couple of years ago, but is no 
+longer.
+<[Dave] DHWEINSTEIN> I would advise writing down the conditions and then 
+checking the cookbook for the sort which best meets them.
+<[Dave] DHWEINSTEIN> Don't laugh. The Cyber is still a heavily used computer, 
+and NOS is a tape based OS (you have to rewind a file after using it).
+<[len] NMORGENSTERN> There is nothing like asking the man who has used or 
+written one
+<[Kevin] APPERT> why isn't the B-tree ordered as it is constructed?
+<[len] NMORGENSTERN> The books have too much information sometimes.
+<[Dave] DHWEINSTEIN> Yes.
+<[len] NMORGENSTERN> Kevin it is
+<[Kevin] APPERT> oh, you build it again each time?
+<[len] NMORGENSTERN> I haven't decided, but I probably will
+<[Kevin] APPERT> why not save it as a B-tree
+<[Gary] GARY-S> When are you going to post that puppy, len
+<[Dave] DHWEINSTEIN> (Digs data structures book out of box)
+<[len] NMORGENSTERN> if it is fast enough. The data are natural for ASCII files
+<[len] NMORGENSTERN> that can be modified by a word processor, so I will
+<[len] NMORGENSTERN> probably go that way.
+<[len] NMORGENSTERN> The B-tree isn't ready. George Shaw keeps suggesting 
+improvements.
+<[Kevin] APPERT> probably a lot easier to write an un-b-tree-er
+<[len] NMORGENSTERN> After some yelling & screaming, I finally have to agree 
+<[len] NMORGENSTERN> that he is right.
+<[len] NMORGENSTERN> The latest is to have facilities to use several trees at 
+the
+<[len] NMORGENSTERN> same time, which means putting the parameters in a "tree 
+control block"
+<[len] NMORGENSTERN> Everything has to be changed!
+<[len] NMORGENSTERN> Maybe I will put up the last working version, that allows 
+only 1 tree
+<[len] NMORGENSTERN> at a time.
+<[Gary] GARY-S> I was hoping you would post some sort of running dialog to the 
+BBS
+<[Wil] W.BADEN1> len - is this disk, or ram based?
+<[len] NMORGENSTERN> B-tree is valuable because it minimizes disk access in a 
+disk-based
+<[len] NMORGENSTERN> file. If the whole tree can be crammed in Ram, then there 
+are
+<[len] NMORGENSTERN> probably better ways to handle it.
+<[Gary] GARY-S> and disk mechanics is a vulnerable spot in any system
+<[len] NMORGENSTERN> True. I have been trying to make it as bomb proof as 
+possible,
+<[Wil] W.BADEN1> I mean the master indexes?
+<[len] NMORGENSTERN> but I don't know if I am doing it right.
+<[len] NMORGENSTERN> By the way, that is one reason I would like to keep the 
+file
+<[len] NMORGENSTERN> ASCII and construct the tree on each run.
+<[len] NMORGENSTERN> Wil, the application I have in mind is:
+<[len] NMORGENSTERN> each record is rather short, but has a large number
+<[len] NMORGENSTERN> of "key words".
+<[len] NMORGENSTERN> I want to search for all records that possess a certain 
+key,
+<[len] NMORGENSTERN> and I want the keys sorted so I can list the records by 
+keys
+<[len] NMORGENSTERN> as well as by their own identifiers.
+<[Wil] W.BADEN1> gotcha.
+<[len] NMORGENSTERN> For some data bases, the best format is a pamphlet with
+<[len] NMORGENSTERN> things listed alphabetcially.
+<[len] NMORGENSTERN> Programmers who write data bases always assume that access
+<[len] NMORGENSTERN> will always be via the computer.
+<[Kevin] APPERT> I've always seen the opposite.  "Report Generators" are 
+usually very hard-copy oriented
+<[len] NMORGENSTERN> True in business, but not usually true on personal 
+computers
+<[Gary] GARY-S> You better believe RPG II is !
+<[Kevin] APPERT> I'm talking about things like DBase, and like that
+<[Gary] GARY-S> How goes the OO Forth article, dave
+<[len] NMORGENSTERN> I have programmed an incomplete form of my program in 
+DBASE II
+<[Dave] DHWEINSTEIN> Code is *almost* done.
+<[Gary] GARY-S> Is this like Pountain's ?
+<[Dave] DHWEINSTEIN> SmallTalk object<-- message model, instance variables, 
+multiple inheritance, eth works.
+<[Dave] DHWEINSTEIN> Not really. His is more of the Ada style packages. This is 
+truer to the object oriented paradigm, and I think it will mesh very w
+ell with Forth.
+<[Dave] DHWEINSTEIN> It also heavily uses the code developed in the first 
+column (records and modules).
+<[Gary] GARY-S> What kernel - F83 ?
+<[Dave] DHWEINSTEIN> F-PC. I plan to do an F83 port for the article as well.
+<[Gary] GARY-S> You better for TCJ - a lot of their readers do not use MS-DOS
+<[Dave] DHWEINSTEIN> Yeah. It will be better to have the port anyway, by its 
+very nature the code is implementation dependent, and F-PC and F83 gives
+a good base. (Also people new to the language won't need to do the port 
+themselves)
+<[Gary] GARY-S> what a BURST of silence
+<C.TING> is here.
+<[Dave] DHWEINSTEIN> I was typing!!
+<[Dave] DHWEINSTEIN> Hullo Dr. Ting.
+<[Wil] W.BADEN1> Hi ken.
+<[Kevin] APPERT> hi,ting
+<[Gary] GARY-S> Chen H. Ting - evening Doctor
+<[len] NMORGENSTERN> Hi
+<C.TING> Hello, sorry that I am late.  What's up?
+<[Gary] GARY-S> OO Forth, B-Trees, stuff
+<[Dave] DHWEINSTEIN> Anyway, the underlying model is that messages send 
+themselves to objects, which then act on themselves.
+<[len] NMORGENSTERN> We were talking about sex, but now that you have come, we 
+will quit
+<[Dave] DHWEINSTEIN> The implementation (for Forth of course) is that the 
+messages (defined by the message defining word)...
+<[Dave] DHWEINSTEIN> use the address off the object to search through the 
+method and inherited class lists...
+<[Dave] DHWEINSTEIN> for the proper method (matching the unique message #), or 
+execute...
+<[Dave] DHWEINSTEIN> ...the deferred word NO-METHOD if none is found (allowing 
+silent error trapping for production code).
+<[len] NMORGENSTERN> v. interesting.
+<[Gary] GARY-S> Doesn't that require some garbage collection
+<[Dave] DHWEINSTEIN> No. The objects are in fact Forth words, just like any 
+other.
+<[Gary] GARY-S> or bit bucket
+<[Dave] DHWEINSTEIN> So to get rid of them, you use the standard FORGET.
+<FIGCHAPTERS> is here.
+<[Kevin] APPERT> hi, Jax
+<[Dave] DHWEINSTEIN> There is only one method list and class list for each 
+class. The objects have pointers to those lists.
+<[len] NMORGENSTERN> Hi
+<[Dave] DHWEINSTEIN> Hullo Jax.
+<[jax] FIGCHAPTERS> aloha all!
+<[Gary] GARY-S> benos noches
+<[Wil] W.BADEN1> Jax, thanx for the 1's comp stuff.  Great.
+<C.TING> Hi, Jax.
+<[jax] FIGCHAPTERS> Yr Welcome, Wil. Hello, Dr. Ting.
+<[Dave] DHWEINSTEIN> Avoids garbage collection because it avoids "temporary 
+objects" (which SmallTalk, being a "pure" OO language must suffer through)
+

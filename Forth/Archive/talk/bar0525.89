@@ -1,0 +1,432 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 05/25/89   Time: 22:39EDT
+Attendees:
+[[Gary] GARY-S]
+[[len] NMORGENSTERN]
+[D.RUFFER]
+[[jax] FIGCHAPTERS]
+[W.BADEN1]
+  (This was a meeting of the deacons !) Items discussed: FIG's financial health
+            and GEnie, ANSI as a not-so-non-profit organization and other axes.
+Minutes:
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> Hi Len
+<NMORGENSTERN> Hi How goes? Are you still on call?
+<[Gary] GARY-S> you bet, but not tonite
+<NMORGENSTERN> Good, you can relax. I remember the days when I was on call
+<NMORGENSTERN> If the phone rings, you feel it in your stomach.
+<[Gary] GARY-S> Phone hell ! I wear a pager
+<NMORGENSTERN> Ah modern times!
+<[Gary] GARY-S> They can ALWAYS find me
+<NMORGENSTERN> I have always thought of the phone as an instrument of the devil
+<NMORGENSTERN> Fortunately, I have never had to use a pager.
+<[Gary] GARY-S> It is - the devil of it is , it is now a necessity much of the 
+time
+<NMORGENSTERN> I plan to cancel Sunday Figgy. We never get many attendees on
+a holiday
+<[Gary] GARY-S> Pagers are good and bad - they relieve you from the tedium of 
+having to...
+<D.RUFFER> is here.
+<[Gary] GARY-S> stay close to a phone and/or check in...
+<NMORGENSTERN> Hi Dennis!
+<[Gary] GARY-S> That is definitely better.
+<NMORGENSTERN> Right.
+<D.RUFFER> HI SYSOPS
+<[Gary] GARY-S> Again , there is no respite, though. ...
+<[Gary] GARY-S> You are ALWAYS available.
+<[Gary] GARY-S> Hi Dennis.
+<NMORGENSTERN> At my medical school, the interns were 2 to a room,
+<D.RUFFER> hi guys, just us workers showed up?
+<NMORGENSTERN> the operator would ring 1 or 2. They learned to sleep through
+<NMORGENSTERN> when the ring was not for them.
+<NMORGENSTERN> Nobody here but us roosters, Dennis.
+<[Gary] GARY-S> I actually got where I slept through the diving klaxon...
+<[Gary] GARY-S> on the submarine I was on, and...
+<[Gary] GARY-S> with God as my witness, it was only 3 - 4 feet from my rack.
+<[Gary] GARY-S> Enough of that - any Forth stuff to cuss/discuss ?
+<[Gary] GARY-S> Dennis - how do our figures look to you (author's report) and 
+remember this is public.
+<D.RUFFER> a public "review" huh <grin>
+<[Gary] GARY-S> why not
+<D.RUFFER> well, we are not costing more than we generate yet
+<D.RUFFER> but we are pretty close
+<D.RUFFER> we seem to be holding our revenue base
+<D.RUFFER> but our costs have been increasing as we add files
+<D.RUFFER> we still make money every month
+<D.RUFFER> and our usage statistics are still going up.
+<D.RUFFER> if you want to see some real statistics
+<D.RUFFER> I could go capture some?
+<[Gary] GARY-S> Let me comment and ask a question in that order...
+<[Gary] GARY-S> The statement : I was real encouraged by traffic the past few 
+days/weeks...
+<[Gary] GARY-S> but noticed it had fallen off tonight.
+<[Gary] GARY-S> The question: Would it be to our advantage...
+<[Gary] GARY-S> or a dis-service to catalog and..
+<[Gary] GARY-S> remove inactive files. ?....
+<[Gary] GARY-S> I know IF I were a paying user and had to..
+<[Gary] GARY-S> ask for a file and then come back for it...
+<[Gary] GARY-S> I'd just take my business elsewhere.
+<D.RUFFER> well
+<D.RUFFER> even Jerry has been putting some of his files...
+<D.RUFFER> into offline archives, or re-organizing them better.
+<D.RUFFER> we are lucky, that we don't have to pay for storage...
+<D.RUFFER> however, big brother is still watching, and he will become...
+<D.RUFFER> concerned if we start costing more than we can generate...
+<D.RUFFER> when I say our earnings ratio climbing...
+<FIGCHAPTERS> is here.
+<D.RUFFER> I started the OFFLINE lists, and it has seemed to help...
+<D.RUFFER> so far, only one person has asked to have something...
+<D.RUFFER> uploaded again.  Then we even got more downloads...
+<D.RUFFER> many of the other RTs have been experimenting...
+<D.RUFFER> with ideas like this.  Some will take files offline...
+<D.RUFFER> others will just reupload the "dead" ones.
+<D.RUFFER> the reupload sounds like a "trick"...
+<[Gary] GARY-S> So does LAPTOPS here on GEnie. IBM PC and CP/M do not.<- store 
+files, that is. ...
+<D.RUFFER> The LAPTOPS has less traffic than we do...
+<D.RUFFER> the IBM and CP/M are up on the top of the lists
+<[jax] FIGCHAPTERS> x3j14? cell size?
+<D.RUFFER> they can support many more files than we can
+<[Gary] GARY-S> They also have thousands of files on-line
+<D.RUFFER> I think IBM is sitting close to 15K files right now
+<[Gary] GARY-S> true - and CP/M 7000
+<[jax] FIGCHAPTERS> page 556 @ 7 or 8 k
+<D.RUFFER> I have no idea what their revenue is...
+<D.RUFFER> but I'll bet it is doing pretty good.
+<D.RUFFER> I've been told that we should be doing closer to...
+<[Gary] GARY-S> I guess what I'm wondering is this...
+<[Gary] GARY-S> is there a direct correlation between files available..
+<[Gary] GARY-S> and traffic in the BBS.
+<W.BADEN1> is here.
+<D.RUFFER> not really
+<D.RUFFER> the files are only one source of revenue
+<D.RUFFER> it tends to be the largest source...
+<[Gary] GARY-S> You also say they are a storage albatross
+<D.RUFFER> but a healthy BB traffic pays a lot of bills
+<[jax] FIGCHAPTERS> dennis ... try ADVERTISING .. i.e. FIG GE RT ... Largest 
+on-line repository of Forth files IN THE WORLD!!!
+<[Gary] GARY-S> That's arguable
+<D.RUFFER> yea, I've noticed we are not hardly even mentioned in 4D anymore :-(
+<[jax] FIGCHAPTERS> by`whom?
+<D.RUFFER> yes it is argueable
+<[jax] FIGCHAPTERS> by whom?
+<[len] NMORGENSTERN> Advertise where?  The number of Forthers who are not 
+members of FIG
+<[len] NMORGENSTERN> are legion.
+<D.RUFFER> I believe ECFB has a larger library than we do
+<[jax] FIGCHAPTERS> how about ESP magazine? INCREDIBLE response to vesta's ad.
+<[jax] FIGCHAPTERS> ECFB doesn't have a larger lib on line.
+<[len] NMORGENSTERN> What is ESP?
+<[Gary] GARY-S> Cost's bucks and we are NOT selling a product
+<[jax] FIGCHAPTERS> besiteh hell we ain't!
+<D.RUFFER> Actually
+<[Gary] GARY-S> Embedded Systems Programming
+<D.RUFFER> we have started to discuss adverts with GEnie
+<[jax] FIGCHAPTERS> what you mean "we aren't selling a product?" sheesh.
+<[len] NMORGENSTERN> thanx
+<D.RUFFER> but I have not followed up on it
+<[jax] FIGCHAPTERS> we sure are ... on line services.
+<D.RUFFER> besides handing it off to Kent...
+<D.RUFFER> I guess that is a mistake
+<[Gary] GARY-S> Not like a sbc like vesta where we can recover ad costs !
+<[jax] FIGCHAPTERS> yes we can!
+<D.RUFFER> how?
+<[jax] FIGCHAPTERS> if you double readership, you double revenue, right dennis?
+<D.RUFFER> yes, but will we actually double it?
+<[Gary] GARY-S> Jax - get real ! I have run ads and they are EXPENSIVE mothas
+<[jax] FIGCHAPTERS> you had better.
+<D.RUFFER> I agree that is the goal, but not always reality
+<[jax] FIGCHAPTERS> i think that some business sense is lacking in FIG.
+<D.RUFFER> If I find some time, I will bug Kent about it again
+<[jax] FIGCHAPTERS> why bother?
+<[Gary] GARY-S> Do we NOT have a business manager ?
+<[jax] FIGCHAPTERS> Is that really Kent's job?
+<D.RUFFER> yes it is supposed to be <grin>
+<[jax] FIGCHAPTERS> Kent's job is not,  jaxthinx, to fillin for a lack of 
+creativity on FIG's part. He is there to be of technical assistance. To buy
+the ad you design.
+<[len] NMORGENSTERN> That would also be my impression
+<D.RUFFER> actually it is the job of a publicity person, which we are sorely 
+lacking right now
+<[jax] FIGCHAPTERS> You have to have something to publicize.
+<D.RUFFER> the ads have already been designed
+<[Gary] GARY-S> Well, Mr. Board member, I believe we have aired (publicly, no 
+less) a complaint about performance of the business manager...
+<D.RUFFER> some very nice ones from GEnie
+<[jax] FIGCHAPTERS> "Hurry to FORTH, the Camille of programming languages ... " 
+:-)
+<D.RUFFER> but we haven't tried to use them yet
+<[Gary] GARY-S> will you please forward same at the next meeting ?
+<D.RUFFER> yes
+<D.RUFFER> and I will see what I can do about it NOW!
+<[Gary] GARY-S> ting ewe
+<[jax] FIGCHAPTERS> oh ,bs. Kent does his job. It's just no one is giving 
+things much direction, hiuh?
+<D.RUFFER> you are right jax
+<[jax] FIGCHAPTERS> FIG has yet to demonstrate it has a genuine strategy to 
+save declining interest.
+<D.RUFFER> I can only blame myself
+<[jax] FIGCHAPTERS> But maybe ...
+<[Gary] GARY-S> I said management - not - job performance, jax
+<[jax] FIGCHAPTERS> that is only my perspective from 1500 miles away.
+<D.RUFFER> it is my job to follow up what I have asked the FIG offices to do
+<[jax] FIGCHAPTERS> advertising in GEnie magazine is silly.
+<D.RUFFER> I will do it (anyone have another round toit?)
+<[jax] FIGCHAPTERS> Anyone on GEnie who wants us will find us within three 
+months.
+<[jax] FIGCHAPTERS> We pop up in the logo that often.
+<[jax] FIGCHAPTERS> We need to advertise where control programmers and project 
+planners will see us.
+<[Gary] GARY-S> I also perceive a lack of direction, jax - either what you have
+is contageous, or the fact is genuinely noticable
+<[jax] FIGCHAPTERS> and teenagers.
+<[jax] FIGCHAPTERS> teenagers.
+<[jax] FIGCHAPTERS> teenagers.
+<[jax] FIGCHAPTERS> teenagers.
+<[len] NMORGENSTERN> I don't know if you know it
+<[len] NMORGENSTERN> but CompuServe now bills monthly or quarterly
+<D.RUFFER> lack of direction is noticable gary
+<[Gary] GARY-S> is the pean for new blood ringing in mine ear ?
+<[jax] FIGCHAPTERS> try a board election! :-)
+<[len] NMORGENSTERN> They used to charge for what you used, which could be $0
+<D.RUFFER> we tried to do something about it
+<[len] NMORGENSTERN> This may cause a movement away from them.
+<D.RUFFER> but I don't see many results yet
+<D.RUFFER> we are hoping it does len
+<[Gary] GARY-S> I sure closed my CIS account !
+<[jax] FIGCHAPTERS> len, compuserve and bix have both introduced innovative new 
+billing schemes.
+<D.RUFFER> they are all hurting
+<[Gary] GARY-S> all expensive I might add
+<D.RUFFER> while we are gaining ground :-)
+<[jax] FIGCHAPTERS> well, not bad for a year's service as a sysop, $499 (?) on 
+BIX
+<[Gary] GARY-S> Phil Wasson's area on BIX is barely a shadow of its former self.
+<[Gary] GARY-S> sad, too
+<[jax] FIGCHAPTERS> maybe the mainframe bbs is not profitable any more ...
+<D.RUFFER> s..t we do better than that
+<[jax] FIGCHAPTERS> GEnie seems to be doing ok, though.
+<D.RUFFER> at least FIG does <grin>
+<[jax] FIGCHAPTERS> We are probably killing Phil's board, us and ForthNet.
+<D.RUFFER> GEnie doesn't have to worry about supporting a network
+<[jax] FIGCHAPTERS>   ????????????????????/
+<D.RUFFER> GEISCO is dooing great at that
+<[jax] FIGCHAPTERS> genie IS a network
+<[Gary] GARY-S> BIX's attitude isn't helping - it stinks of McGraw-Hill
+<D.RUFFER> no GEISCO is the network
+<[jax] FIGCHAPTERS> they pay geisco.you better believe they account for every 
+penny!
+<D.RUFFER> we just utilize their off hours excesses
+<[jax] FIGCHAPTERS> not so ... i.e. new rate structure ...
+<[jax] FIGCHAPTERS> furthermoe ...
+<D.RUFFER> right now, GEnie only accounts for about 10% of GEISCO's income
+<[jax] FIGCHAPTERS> GEnie introducing new daytime semi-service, partial access 
+to GEnie via 976 phone numbers in pilot run in Dnever currently.
+<[jax] FIGCHAPTERS> GEisco's net under-utilized, GEnie part of strategy to 
+bring it back up towards capacity.
+<D.RUFFER> that pilot is not going over very big jack
+<[jax] FIGCHAPTERS> correect.
+<D.RUFFER> they are getting more aggresive
+<[jax] FIGCHAPTERS> right.
+<[jax] FIGCHAPTERS> GEnie is doing better than the others, gaining as the 
+others decline.
+<D.RUFFER> GEISCO is starting to notice us, and we are starting to impact their 
+bottom line
+<[jax] FIGCHAPTERS> "Let a Thousand BBSes Bloom"
+<D.RUFFER> remember, we have NO costs, so GEnie's income directly affects the 
+bottom line
+<[jax] FIGCHAPTERS> x3j14? cell size?
+<D.RUFFER> the new rates, merely reflect how they see us going
+<[Gary] GARY-S> how do you want it implemented
+<[jax] FIGCHAPTERS> not at all
+<[Gary] GARY-S> call it / them what ?
+<[jax] FIGCHAPTERS> : CELL whatever ;
+<[jax] FIGCHAPTERS> : CELLS whatever * ;
+<[Gary] GARY-S> why not part of the word set
+<[jax] FIGCHAPTERS> controlled reference.
+<[Gary] GARY-S> to reflect say 32 bits on a 386
+<[jax] FIGCHAPTERS> or ONE bit on the NASA MPP
+<[jax] FIGCHAPTERS> ...:-)
+<[Gary] GARY-S> There are STLL lots of 8-bitters out there. ignore them ?
+<D.RUFFER> they had better not, gary
+<[jax] FIGCHAPTERS> can you see it?
+<[jax] FIGCHAPTERS> Nasa Ames implementation of CELL ...
+<W.BADEN1> CE;; and CELL+ are required words  (this quarter).
+<[Gary] GARY-S> so - back to my evening's question ?
+<[jax] FIGCHAPTERS> : CELL 8 / ;
+<[jax] FIGCHAPTERS> ... :-)
+<[jax] FIGCHAPTERS> ..????? CELL+ ????? that's not standard practice, who came 
+up with that novelty?
+<W.BADEN1> has anybody reported on ANSI?
+<[jax] FIGCHAPTERS> CELLS yes.
+<[Gary] GARY-S> how to do so - dynamically as part of the kernel (I would hope)
+<[len] NMORGENSTERN> CELL+ would be used to move the address pointer up 1
+<[jax] FIGCHAPTERS> HEY BTW a guy who worked on the last FORTRAN standard told 
+me THEY DISTRIBUTED BASIS ELECTRONICALLY ... but limited it to ONE OUTL
+ET>
+<W.BADEN1> Correction CELLS AND CELL+.
+<[len] NMORGENSTERN> 1 cell+ that is
+<[jax] FIGCHAPTERS> nice novelty.
+<[jax] FIGCHAPTERS> who needs it in standard. CELL CELLS but CELL+ ???
+<[Gary] GARY-S> They didn't on ANSI 'C', and we all know what a happy success 
+story that rewrite of Pascal is
+<W.BADEN1> No , 1 cells or 0 CELL+
+<[jax] FIGCHAPTERS> i can see we is in a heap o' trouble already.
+<[Gary] GARY-S> I hope this is not already cast in portland cement, wil
+<[len] NMORGENSTERN> Address arithmetic and arithmetic arithmetic are not 
+necessarily the same
+<[jax] FIGCHAPTERS> yeah wil, put on your armor and fight in our crusade for a 
+little X3J14 glasnost!
+<W.BADEN1> DEFINITELY not.  What
+<W.BADEN1> What is most bothersome?
+<[jax] FIGCHAPTERS> TC hiding from telecom.
+<[jax] FIGCHAPTERS> you're here, ray duncan is here, bailey *used* to come 
+visit ...
+<[jax] FIGCHAPTERS> mike n. pops up once a threemonth.
+<[Gary] GARY-S> Bailey was THE TC liaison for a l-o-n-g time. So I refuse to 
+badmouth Greg
+<[jax] FIGCHAPTERS> where is he now?
+<[jax] FIGCHAPTERS> QUIS CUSTODIET IPSOS CUSTODES?
+<[jax] FIGCHAPTERS> ... :-)
+<[Gary] GARY-S> I guess he and Ted both got tired of writing to a vacuum
+<[jax] FIGCHAPTERS> they weren't
+<[jax] FIGCHAPTERS> the lurkers were reading.
+<[jax] FIGCHAPTERS> telecom is 90% lurkers.
+<[Gary] GARY-S> often, they were - or the choir.
+<[jax] FIGCHAPTERS> really.
+<[Gary] GARY-S> You bet ! - Lotssa preaching to the choir
+<[jax] FIGCHAPTERS> that's because we are so un-creative about marketing Forth.
+<[Gary] GARY-S> what does paleotaurus think ?
+<W.BADEN1> the feeling was that we were not getting any feedback...
+<W.BADEN1> remember that i wasn't on a board until recently.
+<W.BADEN1> i assure you that outside proposals get more attention than ...
+<W.BADEN1> those for members of the committee. ...
+<W.BADEN1> i just got basis 8.  and we are down to quiblles.  bob berkey ...
+<W.BADEN1> made a lot of proposals.
+<[jax] FIGCHAPTERS> I'll bet you VESTA each put the BASIS on line and you'll 
+get more feedback than you know what to do with. You're shutting one of the
+fastest-growing FORTH communities out of the process.: EUROPE.
+<[jax] FIGCHAPTERS> oops.
+<[jax] FIGCHAPTERS> start at PUT BASIS ON LINE>
+<W.BADEN1> i would love it.
+<[jax] FIGCHAPTERS> then let's do it.
+<[jax] FIGCHAPTERS> FORTRAN did it.
+<W.BADEN1> uh
+<[jax] FIGCHAPTERS> ONE OUTLET.
+<[jax] FIGCHAPTERS> GEnie FIG RT!!!!!!
+<[Gary] GARY-S> GEnie is ONE outlet
+<[jax] FIGCHAPTERS> copyright, no further electronic distribution.
+<W.BADEN1> the problem we were warned about by ANSi. ...
+<W.BADEN1> was changes.
+<[jax] FIGCHAPTERS> it can be arranged.
+<[len] NMORGENSTERN> Jax, I cannot see why on-line BASIS would make a great 
+difference
+<[jax] FIGCHAPTERS> len ... right. That's because a lot of people involved in 
+GEne FIG RT don't really grok telecom as she is spoke.
+<W.BADEN1> E.g.  UNDO has been change to UNLOOP, and ASCII and [ASCII] back
+<W.BADEN1> and CHAR to [CHAR].
+<[jax] FIGCHAPTERS> Wil ... ANSI straw dog. I demeurre. CAVEATS in HEADER warn 
+of possible changes, disclaimer of responsibility.
+<[Gary] GARY-S> That seems a moot argument, Wil, if anyone can acquire the 
+reports ! - I do, and I think it is insulting to presume I'm too ignorant 
+to sort through changes in a dynamic proposla !!!!!
+<W.BADEN1> DONT pick on me.  i'm for it.  i'm just giving their reason.
+<[jax] FIGCHAPTERS> If you hide your light under a bushel ... :-)
+<[Gary] GARY-S> Please pass on these comments
+<[jax] FIGCHAPTERS> Wil ... not YOU straw dog! ANSI objection being STRAW DOG!
+<W.BADEN1> wil do.
+<W.BADEN1> understood.
+<[jax] FIGCHAPTERS> COMMENT was to you.
+<[jax] FIGCHAPTERS> sorry! :-)
+<[jax] FIGCHAPTERS> ANSI is concerned about its profits, not the quality of our 
+standard.
+<[jax] FIGCHAPTERS> if i understand correctly.
+<[jax] FIGCHAPTERS> do i ?
+<W.BADEN1> YES YES YES/
+<[Gary] GARY-S> what is ANSI's position as you see it, wil ?
+<W.BADEN1> disconnected.
+<[jax] FIGCHAPTERS> we got him all worked up!
+<[jax] FIGCHAPTERS> sigh.
+<[Gary] GARY-S> Hmmm - ran off another
+<[jax] FIGCHAPTERS> i am a menace.
+<[jax] FIGCHAPTERS> <<< stop him before he flames again!
+<[jax] FIGCHAPTERS> currently ...
+<[jax] FIGCHAPTERS> involved in telecom flamefest with Tyler Sperry ...
+<[jax] FIGCHAPTERS> ansi TC ...
+<[jax] FIGCHAPTERS> half of WELL ...
+<D.RUFFER> we need to be able to stay a little calmer folks
+<[jax] FIGCHAPTERS> why is every body always picking on me? :-)]
+<[Gary] GARY-S> charlie brown - do-ta-do-ti-do
+<D.RUFFER> maybe because you pick first??? <grin>
+<[len] NMORGENSTERN> Jax, there was a man who went around with a sign...
+<[jax] FIGCHAPTERS> won't SOMEONE please tell me what DIDDY-WAH-DIDDY means ... 
+:-)
+<[len] NMORGENSTERN> that said "Don't kick me". He wondered why everybody 
+kicked him!
+<[jax] FIGCHAPTERS> i have fun ... BBSes are the greatest video game ever 
+invented!
+<[Gary] GARY-S> last call
+<D.RUFFER> do you want some statistics of how we are doing gary?
+<[jax] FIGCHAPTERS> gnite!
+<[jax] FIGCHAPTERS> has left.
+<[Gary] GARY-S> post away
+<[Gary] GARY-S> we will close with them dennis
+<D.RUFFER> just for the record, while you guys were yelling at each other
+<D.RUFFER> I put together somethings we could probably disclose
+<D.RUFFER> if it gets me in trouble, well, I never said it right???
+<[Gary] GARY-S> uh-huh
+<W.BADEN1> is here.
+<D.RUFFER> just a moment while I post
+                         USA             Canada             Japan
+  Module    Hits    Prime   NonPrime  Prime   NonPrime  Prime   NonPrime
+ -------- -------- -------- -------- -------- -------- -------- --------
+
+ General     1748     0.34    19.06     0.03     0.58     0.06     0.08
+ SW LIB       941     0.85   138.72     0.00     1.98     1.05     1.62
+ BB           329     0.00    38.72     0.00     1.26     0.00     0.01
+ RTC/TP        25     0.00    16.27     0.00     0.00     0.00     0.00
+
+   Users: 300 B  1200 B  2400 B   Total
+              0     286      40     326
+
+ There are about 368 topics in the BB.
+ There are about 965 files in the SW Library.
+
+   Storage:                                KBytes
+   RTC/TP                                    104
+   Bulletin Board                           9646
+   Software Library                        32387
+   General                                   728
+              Total                        42865
+
+<D.RUFFER> those are some of the statistics for April
+<D.RUFFER> to explain a little
+<D.RUFFER> the HITS are incremented whenever someone enters that area
+<D.RUFFER> and the other numbers in the table are the number of hours
+<D.RUFFER> those are each totals for the month
+<D.RUFFER> .
+<[Gary] GARY-S> Thanks Dennis - Wil, you didn't leave angry, did you ?
+<W.BADEN1> What an embarrasing ...
+<W.BADEN1> time to lose carrier.
+<W.BADEN1> It took me all this time to get back.
+<[Gary] GARY-S> It's closing time - Push your chairs to the bar, gentlemen
+<W.BADEN1> Do you still want to know ...
+<W.BADEN1> what i think about ansi?
+<[Gary] GARY-S> I'm closing the RTC for tonite - glad it was only lost carrier :
+-) - next week maybe ( if that meets your approval - or you can do it now
+<[Gary] GARY-S> ga wil
+<[len] NMORGENSTERN> Wish I could stay (have to leave just when it's getting 
+really interesting)
+<W.BADEN1> To me ANSI is a
+<W.BADEN1> a non profit organiztion whose purpose it to ...
+<W.BADEN1> make money. ...
+<W.BADEN1> this money is to cover administrative costs. ...
+<W.BADEN1> i think that unknown inner circle ...
+<W.BADEN1> are making out very well.  ga
+<[Gary] GARY-S> Thanks for an honest appraisal - g'nite all
+=== End of Steno notes. ===
+
+

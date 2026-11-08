@@ -1,0 +1,242 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 06/03/90   Time: 21:02EDT
+Attendees:
+[[Dennis] D.RUFFER]
+[APPERT]
+[[Wil] W.BADEN1]
+
+Minutes:
+<APPERT> is here.
+<[Dennis] D.RUFFER> hi Kev!
+<APPERT> Hi. How does one get good sex? you said ask anything
+<[Dennis] D.RUFFER> beg for it? and I said I'd answer :-)
+<APPERT> reminds me of dan feilding on "Night Court"
+<[Dennis] D.RUFFER> he must be desperate too
+<APPERT> he met this woman one time...
+<W.BADEN1> is here.
+<APPERT> said "you must be the kind ...
+<[Dennis] D.RUFFER> hi wil
+<[Wil] W.BADEN1> Hi Kevin, Dennis.
+<APPERT> of desperate , sniviling weak slime... who would do anything
+                    for a woman"
+<[Dennis] D.RUFFER> ah, my kind of man <grin>
+<APPERT> hi wil.  he said " why how could you misjudge me so " she
+                    said " too bad "
+<[Dennis] D.RUFFER> abviously the wrong come back
+<APPERT> " just what I was looking for" later, after they had made
+                    arrangements to get together... she said, " and be
+                    punctual, I punish for tardiness"... Dan turns
+                    around and makes an "all right" motion from Night
+                    Court, Wil.  \
+<[Dennis] D.RUFFER> yea! punishment...sounds better all the time
+                    <snicker>
+<APPERT> what's new Wil?
+<[Wil] W.BADEN1> What is "Night Court"?
+<APPERT> TV
+<[Dennis] D.RUFFER> do we have anything about Forth to talk about?
+<APPERT> sitcom about a ...
+<[Wil] W.BADEN1> Ah.  Sorry, I don't have one.
+<APPERT> booking court in N.Y.C. good for you. safe from brain rot
+<[Wil] W.BADEN1> I wouldn't have time for Forth or even a profane
+                    language if I had.
+<[Dennis] D.RUFFER> you are finding time for Forth now Wil?
+<APPERT> have you heard about the... object-oriented extensions to
+                    LISP ...
+<[Wil] W.BADEN1> I still compare algorithms in several languages.
+<APPERT> lots of people are excited about?  (straight line prompt)
+                    >>>>
+<[Wil] W.BADEN1> XLISP, Allegro?
+<APPERT> they call it THMALLTALK (no kidding, they really do)
+<[Dennis] D.RUFFER> well that's unique! :-)
+<[Wil] W.BADEN1> That's great.
+<[Dennis] D.RUFFER> I though Lisp already had OO stuff built in
+<APPERT> nope, needs extensions] is writing in profane language
+                    profanity, Wil?
+<[Wil] W.BADEN1> No.
+<[Dennis] D.RUFFER> Lisp is one of those that I bypassed while
+                    learning Forth
+<APPERT> :-)
+<[Wil] W.BADEN1> -- communication.
+<APPERT> ouch.  how right.  how true
+<[Dennis] D.RUFFER> so, Kev, have you seen these extensions to Lisp?
+<APPERT> Forth is a language for communication with a computer.  Most
+                    languages these days seem bent on the goal of
+                    communicating with other people first, computer
+                    second. Dennis, nope, just read a short article in
+                    one of the trade freebies.  don't recall the title
+                    but I checked and it wasn't the april 1 issue
+<[Dennis] D.RUFFER> yes, the computer is merely the medium we choose
+                    to use the goal is communicating with ourselves
+<[Wil] W.BADEN1> I've come across a marvelous new language. I ordered
+                    the 1989 book about it, but it's already being
+                    reprinted.
+<[Dennis] D.RUFFER> yes? and it is called?
+<APPERT> what's it called, Wil?
+<[Wil] W.BADEN1> It's intended for the Basic arena, but it's easier,
+                    clearer, shorter. It reminds me of Pascal, APL,
+                    and Hypertalk, only better. It is implemented in
+                    Unix, and PC, and Atari, and Mac. It's ABC - an
+                    alternative simple language for microprocessors.
+                    It's the easiest language and the most powerful
+                    I've ever used.
+<[Dennis] D.RUFFER> what does ABC stand for if anything?
+<[Wil] W.BADEN1> Nothing.  References: The ABC Programmers Handbook,
+                    Prentiss Hall 1989. Computer Software(IEEE) Jan
+                    1987.
+<[Dennis] D.RUFFER> sounds interesting...and it's easier that Forth?
+<[Wil] W.BADEN1> Source is available on Unix. Yes.
+<APPERT>  where source available?  in what?
+<[Wil] W.BADEN1> It has five basic types, strong type checking but no
+                    declartions.
+<[Dennis] D.RUFFER> if on Unix, what's it implemented in?  C?
+<[Wil] W.BADEN1> C for unix.  I've not seen PC or Mac Source. If you
+                    type W it echoes W?RITE and you can continue or
+                    hit tab. If you then type H it changes echo to
+                    WH?ILE. It automatically indents structures.
+                    Extra return outdent. I'm anxiously waiting for
+                    the book. It's interpretive (of course) so it's
+                    not intended for system application.
+<[Dennis] D.RUFFER> It sounds like one of those languages that is so
+                    powerful, that it is difficult to make it doe
+                    something not orginally designed in
+<[Wil] W.BADEN1> It has a very primitive structure. An example
+                    HOW TO RETURN factorial n
+                        IF n <= 1
+                           RETURN 1
+                        RETURN n*factorial(n-1)
+                    Case changes are done by editor. ga.
+<[Dennis] D.RUFFER> ah, recursion is buit right in...that's nice
+<[Wil] W.BADEN1> Or ...
+                     HOW TO RETURN factorial n
+                        PUT 1 IN result
+                        FOR i IN {1..n}
+                           PUT i*result IN result
+                        RETURN result
+                    You type H, it echoes HOW TO ?
+
+<<<< Slight interruption by kids picking up phone >>>>
+
+<APPERT> I was told once not to use the G word
+<[Wil] W.BADEN1> Are you in GTE land, DaR?
+<APPERT> hellow Watson
+<D.RUFFER> no, my daughter picked up the phone I just hope the steno
+                    survived
+<[Wil] W.BADEN1> I apologize, Sylvania.
+<D.RUFFER> that was some good stuff, and I'd hate to loose it
+<APPERT> I have it.
+<D.RUFFER> good, I'll let you know if I need it
+<[Wil] W.BADEN1> Just wait. I've done a lot without any documentation.
+<D.RUFFER> most of the times, the steno is automatically mailed on a
+                    disconnect, but sometimes they mess up
+<[Wil] W.BADEN1> The five types are: number, text, compound, list,
+                    table.
+<D.RUFFER> that's ok Wil, from what you showed us it loks neat
+<APPERT> do you have a version of this to use?  is there one on GEnie?
+<D.RUFFER> is it a pd language?
+<[Wil] W.BADEN1> I use MacABC (on the Mac) and abc on unix.
+<APPERT> where does one get source?
+<[Wil] W.BADEN1> Yes, it's pd. Unix.
+<D.RUFFER> just a sec, I'll go check the PC library brb
+<APPERT> do you mean USENET?
+<[Wil] W.BADEN1> I had our unix expert get the source, and I compiled
+                    on Sun workstation. I think so.
+<D.RUFFER> nope, it's not there unless it has something other than abc
+                    in its name
+<[Wil] W.BADEN1> I have it.  Stand by.
+<APPERT> anything new with you Dennis?
+<[Wil] W.BADEN1> Sorry, just the mail address.
+<D.RUFFER> nothing really...getting into standard stuff recently
+                    though
+<APPERT> standard = ANSI  >  ?
+<D.RUFFER> yes, went to the meeting in Florida
+<APPERT> your nickle?
+<D.RUFFER> no, Forth, Inc's
+<APPERT> it's an all CA night at the FIGGIE BAR tonight
+<D.RUFFER> Dean wasn't available, so I was (er) appointed yea, not
+                    even any newbies :-)
+<APPERT> I was asking before, is it possible to extend an invite to
+                    passers by who just 'joined' the conferance via
+                    email?
+<D.RUFFER> yes, I can do some group mail on the people who have
+                    stopped by I haven't yet due to the bad feeling
+                    "junk mail" can generate
+<APPERT> hmmmmmmmm  you may be right
+<D.RUFFER> we do announce them on the front door so everybody sees
+                    them and special guests get announced in the GEnie
+                    front door people can't say they haven't heard and
+                    I don't like to keep hounding them
+<APPERT> I suppose so.  I'm suprised we don't get more beginners here.
+<D.RUFFER> What I'd really like to do is get some classes going I have
+                    an opening for a teacher over in the CALC RT but I
+                    need a teacher to do it
+<APPERT> maybe we need teh equivalant of the famous BYTE Forth issue.
+<D.RUFFER> I'm not sure that would have the same impact anymore before
+                    '80 not many had heard of Forth now, most have
+                    heard, and just don't care
+<APPERT> well, dinner is ready.  gotta scoot.  send mail if you want
+                    my log file. 'night has left.
+<D.RUFFER> will do thanks kev well just us Wil anything more you want
+                    to say about abc?
+<[Wil] W.BADEN1> So tell more about ANSI.
+<D.RUFFER> well, they passed a bunch of proposals made " state smart
+                    and added catch and throw for error control
+<[Wil] W.BADEN1> (I'll probably be doing much about abc.) Well, one
+                    out of three aint bad.
+<D.RUFFER> which one?
+<[Wil] W.BADEN1> For years I've jested about Forth versus profane
+                    languages -- languages "outside of the temple" of
+                    Forth. Now I see the profanation of Forth.
+<D.RUFFER> yes? how so?
+<[Wil] W.BADEN1> THROW and CATCH or any such is impossible without
+                    knowing the size of context (not CONTEXT). How can
+                    you save the stack when you don't know how many of
+                    its values are where?
+<D.RUFFER> I don't remember the actual mechanics of it, but I agree
+                    that it doesn't look too safe either
+<[Wil] W.BADEN1> Of course, you can introduce a word  defined     n
+                    CONSTANT ENVIRONMENT with n appropriate for the
+                    system, and then say RESTART CREATE ENVIRONMENT
+                    for each context. The thing that is getting lost
+                    is that for is a language for applications. Forth
+                    does not have fancy data structures becuz most
+                    Forth applications don't need them.
+<D.RUFFER> If I remember right, all the mechanism does is allow you to
+                    jump out of a bunch a nesting, and pass a
+                    parameter back up.
+<[Wil] W.BADEN1> What is getting confused is the language, and the
+                    programming environment.
+<D.RUFFER> it was justified, since they took out RP@, RP! and SP@ ,
+                    SP!
+<[Wil] W.BADEN1> The sample code I've seen presumes at most one value
+                    to be saved.
+<D.RUFFER> I have to agree with them, that most applications do need
+                    some kind of error control I think they need both
+                    the return and the parameter stak pointers saved
+<[Wil] W.BADEN1> All arguments against RP@ RP! SP@ SP! apply to THROW
+                    and CATCH. Not good enuf.
+<D.RUFFER> they did require the words RP and SP stuff that is
+<[Wil] W.BADEN1> They must also preserve whatever of the stack is not
+                    in a register.
+<D.RUFFER> No, the stack contents are not guarenteed we had to go to a
+                    lot of trouble changing the documentation to show
+                    just how bad it could become
+<[Wil] W.BADEN1> Novix kept 1 value of RS in a register, JohnsHopkins,
+                    4 (I think).
+<D.RUFFER> all that is preserved, is the stack pointer the contents
+                    are not guarenteed well, dinners on the table
+<[Wil] W.BADEN1> You cannot just save stack pointers if some of the
+                    stack is not pointed to.
+<D.RUFFER> I agree that it can be dangurous, some thought it was
+                    essential
+<[Wil] W.BADEN1> Impossible.
+<D.RUFFER> yea, that is a term also :-) well, gotta go
+<[Wil] W.BADEN1> bye, DaR.
+<D.RUFFER> see ya later Wil have a good night!
+<[Wil] W.BADEN1> has left.
+=== End of Steno notes. ===
+
+

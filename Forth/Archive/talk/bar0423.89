@@ -1,0 +1,785 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: "Sam"
+
+Date: 04/23/89   Time: 22:09EDT
+
+Attendees:
+[D.RUFFER]
+[[len] NMORGENSTERN]
+[[Kevin] APPERT]
+[[jax32] FIGCHAPTERS]
+
+Minutes:
+<NMORGENSTERN> is here.
+
+<[len] NMORGENSTERN> Hi, I made it on time!
+
+<D.RUFFER> hi len
+
+<D.RUFFER> I thought you were not going to be here
+
+<[len] NMORGENSTERN> Hi  I went to see my granddaughter in a play. I just
+                    made it  despite traffic. If there had been any
+                    slowup...
+
+<D.RUFFER> did you put together any kind of tutorial for tonight?
+
+<[len] NMORGENSTERN> I would not.  No, but I can improvise. Any
+                    suggestions?
+
+<D.RUFFER> do you normally?
+
+<[len] NMORGENSTERN> I discusDenpends on who is here. Usually the people
+                    who come are fairly experienced & we just chat.  I
+                    presented vocabularies at the last North Bay Fig &  can
+                    do it again.
+
+<D.RUFFER> well, I've got a UART control system that I could talk about
+
+<[len] NMORGENSTERN> I would like that!
+
+<[len] NMORGENSTERN> brb  %I had to set up my "chat mode" with split
+                    screen.
+
+<D.RUFFER> ok  I can extract some code from an application I did a couple
+                    years back.  I've been looking at it again, and it
+                    could be interesting  (maybe)
+
+<[len] NMORGENSTERN> Sounds good. I know v. little about real-time control
+                    v. little = nothing
+
+<D.RUFFER> ok, then this one even gets into interrupts
+
+<[len] NMORGENSTERN> Great
+
+<D.RUFFER> we'll wait till some more people show up, and see if they are
+                    intereseted also
+
+<[len] NMORGENSTERN> Just what I was going to suggest
+
+<D.RUFFER> on another note...  do you have data for the data base you are
+                    setting up?
+
+<[len] NMORGENSTERN> That is the problem. I have a few things:  a list of
+                    bbs'  a list of Fig chapters, probably not quite up to
+                    date  a partial list of books on forth  a list of
+                    vendors  & a few other things.  .
+
+<APPERT> is here.
+
+<D.RUFFER> hi kevin
+
+<[len] NMORGENSTERN> Hi Kevin
+
+<[Kevin] APPERT> hi Len, Den
+
+<D.RUFFER> did you see the stuff on the knowledge base I put into the
+                    Pivate Cat?
+
+<[len] NMORGENSTERN> No. Will look at it
+
+<D.RUFFER> it might be interesting to do something online with the data
+
+<[len] NMORGENSTERN> What I would like to do is this:  1. Set up a small
+                    data base.  3. NOT accept any criticisms! If somebody
+                    thinks there is an error,  he/she would have to submit
+                    a correct version, and then
+
+<[Kevin] APPERT> an error like skipping 2.?
+
+<[len] NMORGENSTERN> we would substitute it for the incorrect 1  2. Publish
+                    it, prossibly on Genie  What I would like to do is
+                    this:  I have a funny terminal program! it skips lines
+                    then transmits others!
+
+<D.RUFFER> oh, interesting
+
+<[Kevin] APPERT> weird, the previous version of mirror works fine.
+
+<[len] NMORGENSTERN> I am always right because:  If you show me that I am
+                    wrong, I will change my mind, and then  I will be
+                    right.
+
+<D.RUFFER> If I could find a volunteer to help (hint hint) to help set it
+                    up, we could put it online and maintain it quite easily
+
+<[len] NMORGENSTERN> Yep, Kevin, it died of "improvements" as the old
+                    medical joke goes.  I would like to work on that,
+                    Dennis, with you.
+
+<[Kevin] APPERT> why don't you use the old version?
+
+<D.RUFFER> Check out topic 3 in cat 16 before you agree to anything :-)
+
+<[len] NMORGENSTERN> John Peters, who used to be disk librarian  Kevin,
+                    this is better in many ways. I just have to get used to
+                    it  John said that Zimmer has done a hypertext in
+                    Forth!  I want to look at that, & maybe we can run our
+                    data base in that.  Thanks, Dennis will do
+
+<[Kevin] APPERT> be carefull what you call "hyper".  It is becomming the
+                    "turbo" of this season
+
+<[len] NMORGENSTERN> Right, Kevin
+
+<[Kevin] APPERT> do you really mean hypertext, or hypercard?
+
+<D.RUFFER> Tom need to make a windows version to do it right.
+
+<[len] NMORGENSTERN> Don't know the correct name; it should be able to go
+
+<[Kevin] APPERT> the concepts are similar, but not identical as I
+                    understand it
+
+<[len] NMORGENSTERN> from screen to screen by pressing keys; be intuitive &
+                    easy to learn.  .  Also easy to update, which Mac
+                    Hypercard really is not,  point of view.
+
+<[Kevin] APPERT> does somebody know anything about controlling uarts?
+
+<[len] NMORGENSTERN> although it is powerful & not hard to learn from the
+                    programmers  point of view.  .
+
+<D.RUFFER> I do kevin, but was waiting for some more people
+
+<[Kevin] APPERT> never struck me as being hard if you have the data sheet.
+                    impossible without it!
+
+<D.RUFFER> they are not, but I was going to extract some code from an old
+                    application of mine that controls their features on a
+                    PC  that is if there was any interest in seeing it :-)
+
+<[len] NMORGENSTERN> You have to use the "tools", set a button, etc. etc.
+                    The PC ypertext I use merely needs a file name
+                    enclosed in angle brackets, with optional screen # &
+                    line  .  What exactly is a UART? I don't have a precise
+                    idea, Dennis
+
+<D.RUFFER> Universal Asyncronous Receiver/Transmitter
+
+<[Kevin] APPERT> universal asynchronous receiver/transmitter
+
+<[len] NMORGENSTERN> Thanx
+
+<[Kevin] APPERT> ^^^^^^types faster
+
+<D.RUFFER> beat ya, na na
+
+<D.RUFFER> really just a parrallel to serial converter
+
+<[Kevin] APPERT> changes parallel bus transactions...  from the processor
+                    into serial async (like rs232)  and back again...
+
+<FIGCHAPTERS> is here.
+
+<D.RUFFER> hi jax
+
+<[len] NMORGENSTERN> Hi Jax
+
+<[jax32] FIGCHAPTERS> hi  .
+
+<D.RUFFER> why 32 tonight jack?
+
+<[Kevin] APPERT> although rs232 actually can be used syncronously. (with a
+                    seperate...  clock rather than the self-clocking async.
+
+<[jax32] FIGCHAPTERS> because ...  i wrote ans assembler over the weekend
+                    for the SC32.  .
+
+<[len] NMORGENSTERN> ans assembler?
+
+<[jax32] FIGCHAPTERS> ( an )  .
+
+<[Kevin] APPERT> hi Jax
+
+<[jax32] FIGCHAPTERS> rehi kev
+
+<D.RUFFER> why a seperate clock kevin? (thinking he might know more than I
+                    do)
+
+<[Kevin] APPERT> you do without the stop and start bits, and can run a lot
+                    faster  in order to de-code async...
+
+<D.RUFFER> I guess most of the chips I'm used to need a baud clock anyway,
+                    and can do sync as a byproduct
+
+<[jax32] FIGCHAPTERS> brb ... will stay on line but wandering off after
+                    runaway baby ...
+
+<[Kevin] APPERT> you use a clock which runs a clock...  16 * the bit
+                    rate...  so you can count those clocks (16 + 8) from
+                    the start bit edge to the  middle of the 1'st data
+                    bit...  if you are using syncronous transmission, all
+                    you need is a 1x clock, and  you shift the data right
+                    in, the only timing problem...  is the question of
+                    wether the data has settled by the time you get the...
+                    active edge of the clock.  .
+
+<D.RUFFER> yes, I haven't played much with sync yet...  but I understant
+                    that they usually use a special startup sequence...
+                    instead of the 1 start bit that async uses
+
+<[Kevin] APPERT> it isn't used much, as the whole reason for serial
+                    communications....  is to minimize the number of long,
+                    thin copper pieces.  you need not have another one for
+                    the clock
+
+<D.RUFFER> it is used a lot by IBM byt they use the bisync variety  but
+                    please don't ask me to explain bisync :-(  ok  are we
+                    ready to start a little playing with code?
+
+<[len] NMORGENSTERN> ga
+
+<D.RUFFER> ok, I will be pulling this stuff from the actual source, so
+                    please bear with the delays (Windows isn't exactly
+                    speedy)
+
+<[Kevin] APPERT> is Jennifer taking the night off?
+
+<D.RUFFER> yes, "Sam" agreed to step in for here <smile>
+
+<D.RUFFER> first we will start with some constants
+
+<D.RUFFER> HEX    3F8 CONSTANT 1COM     2F8 CONSTANT 2COM
+<D.RUFFER>         20 CONSTANT 8259A     21 CONSTANT 8259B   DECIMAL
+<D.RUFFER>            CREATE   SAVE-AUX     0 , 0 ,
+<D.RUFFER>            VARIABLE AUX          1COM AUX !
+
+<D.RUFFER> 1COM and 2COM are the address for the uarts on a PC
+
+<[Kevin] APPERT> it's nice to know there are still some constants in this
+                    ever-changing world :-)
+
+<D.RUFFER> the 8259A and B are the interrupt controllers that you have to
+                    deal with if you want "real fast" data input.  SAVE-AUX
+                    is used to remember what the interrupt pointer was
+                    pointing to before you change it.  MSDOS gets real
+                    upset if you don't restore it before you exit.  and AUX
+                    contains the current port address, notice I start by
+                    using 1COM.
+
+<GARY-S> is here.
+
+<D.RUFFER> now some simple deffinitions
+
+<[Kevin] APPERT> hi gary
+
+<[Gary] GARY-S> 'lo
+
+<D.RUFFER> : +AUX ( # -- a   P: Add base address to port # )   AUX @ + ;
+<D.RUFFER> : @AUX ( # -- b   P: Fetch byte at com port )   +AUX PC@ ;
+<D.RUFFER> : !AUX ( b # --   P: Store byte at com port )   +AUX PC! ;
+
+<D.RUFFER> these words allow me to talk to either port from high level
+                    excuse the inefficient code, but these words are not
+                    used when time is a problem.
+
+<D.RUFFER> now some more constants
+
+<D.RUFFER> : UART ( name \ # --   P: Port Definitions )   CONSTANT ;
+<D.RUFFER>
+<D.RUFFER> 0 UART DLL    2 UART IIR    4 UART MCR    6 UART MSR
+<D.RUFFER> 1 UART DLM    3 UART LCR    5 UART LSR    7 UART MSP
+<D.RUFFER> 0 UART RBR    0 UART THR    1 UART IER
+
+<D.RUFFER> and before you ask, here is what they stand for
+
+<D.RUFFER> IIR   Interrupt ID register     IER   Interrupt enable register
+<D.RUFFER> RBR   Recieve buffer register   THR   Transmitt holding register
+<D.RUFFER> DLL   LSB Divisor latch         DLM   MSB Divisor latch
+<D.RUFFER> LCR   Line control register     LSR   Line status register
+<D.RUFFER> MCR   Modem control register    MSR   Modem status register
+<D.RUFFER> MSP   Modem speed register
+
+<D.RUFFER> these define all the registers on an 8250 UART that is in every
+                    IBM PC on the market  some use more soffisticated
+                    chips, but these words should work on them all.  most
+                    of the work is done in the Line control register.  It
+                    is a read only port  so I need the following word to
+                    talk to it.
+
+<D.RUFFER> VARIABLE 'LCR ( -- a   P: Contents of LCR )          HEX
+<D.RUFFER> : !LCR ( b mask --   P: Mask and set bits in LCR register )
+<D.RUFFER>          'LCR C@  AND +  DUP 'LCR C!  LCR !AUX ;
+
+<D.RUFFER> it saves the contents so I can set one "feature" at a time.
+
+<[Kevin] APPERT> who was that maske register?  oops, masked  }-)
+
+<D.RUFFER> here is the control words:
+
+<D.RUFFER> : Bits ( n -- P: Data bits)   5 MAX  8 MIN  5 -      0FC !LCR ;
+<D.RUFFER> : Stps ( n -- P: Stop bits)   1 MAX  2 MIN  1 -  4 * 0FB !LCR ;
+<D.RUFFER> : Penable ( ? -- P: Parity Enable) IF  8 ELSE 0 THEN 0F7 !LCR ;
+<D.RUFFER> : Eparity ( ? -- P: Even Parity)   IF 10 ELSE 0 THEN 0EF !LCR ;
+<D.RUFFER> : Sparity ( ? -- P: Stick Parity)  IF 20 ELSE 0 THEN 0DF !LCR ;
+<D.RUFFER> : Break   ( ? -- P: Send Break)    IF 40 ELSE 0 THEN 0BF !LCR ;
+<D.RUFFER> : Daccess ( ? -- P: Divisor Latch) IF 80 ELSE 0 THEN 07F !LCR ;
+<D.RUFFER>                                                      DECIMAL
+
+<D.RUFFER> I've used this stuff in a couple of Forths, so I could not
+                    garantee the value  of true, thus the IFs instead of
+                    just ANDing the masks  this is the normal stuff that
+                    needs to be set on a UART  also we need baud control:
+
+<D.RUFFER> : Baud ( n --   P: Set Baud Rate to n  1<n<300 or 1200)
+<D.RUFFER>          1152 100 ROT */  256 /MOD  1 Daccess
+<D.RUFFER>          DLM !AUX  DLL !AUX  0 Daccess ;
+
+<D.RUFFER> this allows you to say things like 1200 Baud
+
+<[len] NMORGENSTERN> v. nice
+
+<D.RUFFER> next, we need to define all the other controls that a PC has:
+
+<D.RUFFER> CREATE DTR          MCR C,  1 C, ( -- a   P: Data Term Rdy )
+<D.RUFFER> CREATE RTS          MCR C,  2 C, ( -- a   P: Request To Send )
+<D.RUFFER> CREATE Modem-reset  MCR C,  4 C, ( -- a   P: Reset bit )
+<D.RUFFER> CREATE Interrupts   MCR C,  8 C, ( -- a   P: Interrupt enable )
+<D.RUFFER> CREATE Loopback     MCR C, 16 C, ( -- a   P: Self test loop )
+<D.RUFFER> CREATE Receiver     IER C,  1 C, ( -- a   P: Uart receiver )
+<D.RUFFER> CREATE Transmitter  IER C,  2 C, ( -- a   P: Uart transmitter )
+<D.RUFFER> CREATE Line-status  IER C,  4 C, ( -- a   P: Line indicator )
+<D.RUFFER> CREATE Modem-status IER C,  8 C, ( -- a   P: Modem indicator )
+
+<D.RUFFER> and since these are "do nothing" words, we need a way to turn
+                    them on and off:
+
+<D.RUFFER> : ENABLE  ( a --   P: Turn on control bit )
+<D.RUFFER>       DUP 1+ C@          SWAP C@  DUP @AUX ROT OR   SWAP !AUX ;
+<D.RUFFER> : DISABLE ( a --   P: Turn off control bit )
+<D.RUFFER>       DUP 1+ C@  255 XOR SWAP C@  DUP @AUX ROT AND  SWAP !AUX ;
+
+<D.RUFFER> that is the extent of the modem control  is there any questions
+                    before I move on to the "real meat"?
+
+<[len] NMORGENSTERN> Dennis, thanx
+
+<[Gary] GARY-S> Is tonite terminal emulator nite ?
+
+<[len] NMORGENSTERN> In ENABLE DISABLE what does "a" stand for?  (in the
+                    stack diagrams)
+
+<D.RUFFER> UART night gary   "a" stands for an address on the stack
+
+<[len] NMORGENSTERN> Thanks
+
+<D.RUFFER> I try to follow the conventions set up by Kim Harris
+
+<[Gary] GARY-S> earlier you said there were other...  UART's besides the
+                    8250...  just a note, they have to accept the 8250
+                    command set...  to be compatible...  they may do more,
+                    BUT they can NOT do less.  ga
+
+<D.RUFFER> true  when I said these words should work, I meant on most IBM
+                    PCs and compatables  there are a few that use some
+                    "improved" chips in the PC  but since the must still be
+                    compatable, these words should still work.
+
+<[Gary] GARY-S> That was my point exactly
+
+<D.RUFFER> any other questions, or are we ready for some code <evil grin>
+
+<[Gary] GARY-S> Since this is a gathering of the deacons - g'nite  has
+                    left.
+
+<D.RUFFER> is everyone else up for more of this?
+
+<[len] NMORGENSTERN> ga
+
+<D.RUFFER> ok  now for the root of the interrupt system:
+
+<D.RUFFER> CREATE VECTORS ( -- a   P: Interrupt vectors )   8 ALLOT
+
+<D.RUFFER> CREATE INTR ( -- a   P: Initial Interrupt Entry )   ASSEMBLER
+<D.RUFFER>           DI PUSH   DX PUSH   CX PUSH   AX PUSH   DS PUSH
+<D.RUFFER>           CS AX MOV   AX DS MOV   0 # AX MOV   AUX #) DX MOV
+<D.RUFFER>           IIR # DX ADD   DX AL IN   7 # AX AND   1 # AX CMP 0<>
+<D.RUFFER>           IF   AX DI MOV   VECTORS # DI ADD   0 [DI] JMP   THEN
+<D.RUFFER> HERE      8259A # DX MOV   32 # AL MOV   DX AL OUT  ( EOI )
+<D.RUFFER>           DS POP   AX POP   CX POP   DX POP   DI POP   IRET
+
+<D.RUFFER> ok, does this need explaination? :-)  the VECTORS will hold
+                    vectors for the interrupt code...  the 8250 can
+                    generate 4 different interrupt that all use this  code
+                    to get into them  the first line of INTR just save all
+                    the registers I will use  the next re-establishes the
+                    segment pointer, and loads the port address  then we
+                    fetch the Interrupt Identification Register  to see if
+                    the interrupt was me (in case of spurious interrupts)
+                    if it was one of mine, I jump to the proper vector
+
+<[Kevin] APPERT> or more than one device connected to a given interrupt
+
+<D.RUFFER> otherwise, at the HERE I return from the interrupt.  the EOI
+                    isn't needed (I found) since it is done by the IRET
+                    but that line acknowledges the interrupt to the 8259
+                    that is a special chip to handle interrupt on the PC  I
+                    also use the code after HERE to return from the
+                    vectored interrupts
+
+<[Kevin] APPERT> it's handy to have a disable-interrupt at the beginning
+                    and an enable at the  end if you are going to test the
+                    code by invoking it yourself
+
+<D.RUFFER> a disable is not needed at the beginning kevin  since intel
+                    chips take care of that when vectoring to the interrupt
+                    test code???  but I KNOW this works! :-)
+
+<[Kevin] APPERT> :-)
+
+<[jax32] FIGCHAPTERS> are we swapping interrupt structure horror stories?
+
+<D.RUFFER> then, I use a macro to patch in the interrupt vectors
+
+<D.RUFFER> ASSEMBLER DEFINITIONS
+<D.RUFFER> : VECTOR ( addr # --   P: Finish and vector UART interrupts )
+<D.RUFFER>            2* VECTORS + !  [ DUP ]  LITERAL #) JMP ;  DROP
+
+<D.RUFFER> this code patches in the vector, and assembles a jump to  the
+                    HERE that we saw in the previous code.
+
+<[jax32] FIGCHAPTERS> maybe one of the assembled assembly jeenyuses can
+                    help me ...  this is a VESTA story ...  called the
+                    "Interrupt that Wouldn't Die"  a true horror story that
+                    continues to the present date!  Some of our boards ...
+
+<D.RUFFER> yes?
+
+<[jax32] FIGCHAPTERS> have always booted DOS ...  if the detachable board
+                    with the disk controller is present ...  and a disk is
+                    in the drive with MSDOS on it. ...  Anyway ...  on the
+                    188 boards ...  we changed the BIOS so that everything
+                    was synched ...  with the NMI int service that
+                    originates in the DUART counter ...  instead of timing
+                    the disk service by loops at powerup.  Dig? much more
+                    scientific! :-) ...  Anyway ...  Nowadays ..  If the
+                    board and BIOS find the disk controller ...  and the
+                    disk is present ...  the DUART INT goes active-lo and
+                    is NEVER SERVICED. BYE BYE Time. Board locked up.
+                    ....???????????????????????????????????????????????????
+                    ????  .
+
+<D.RUFFER> it sure will be if the DUART is not serviced...
+
+<[jax32] FIGCHAPTERS> right.
+
+<[Kevin] APPERT> is the int acknowledged?
+
+<[jax32] FIGCHAPTERS> but WHY is it not serviced? it is NMI
+
+<D.RUFFER> have no idea what causes it, but I'd sugest a dummy routine to
+                    service it
+
+<[jax32] FIGCHAPTERS> It just goes /INT in the middle of the test to see if
+                    the controller is there and BOING!  It is already
+                    active at powerup, has been serviced a few times
+                    already.
+
+<[len] NMORGENSTERN> What is NMI?
+
+<[Kevin] APPERT> non maskable interupt
+
+<[len] NMORGENSTERN> thanx
+
+<D.RUFFER> is there an interrupt vector present to do it?
+
+<[jax32] FIGCHAPTERS> It gets to the place in the code and BYE.  Oh, yes,
+                    the code is all there.  If you knew how many times we
+                    have taken this apart .
+
+<D.RUFFER> hum, sounds like logic analyzer time
+
+<[Kevin] APPERT> have you used your orion to capture a trace?
+
+<[jax32] FIGCHAPTERS> This is something we studied since last September.
+                    You bet, but Orion is a little flakey vis-a-vis NMIs on
+                    the 188.
+
+<D.RUFFER> that is the problem with interrupts, you just have to assume
+                    that they happen properly.  They are pretty tought to
+                    look at even with a good tracer.
+
+<[jax32] FIGCHAPTERS> right ...  esp when analyzer wants same vect.  .
+
+<[Kevin] APPERT> perhaps you have found a bug with the 188?
+
+<[jax32] FIGCHAPTERS> we thought ...  that we MIGHT INDEED have found a
+                    80188 bug.
+
+<[Kevin] APPERT> is this repeatable?  does it happen every time?
+
+<[jax32] FIGCHAPTERS> HEVVINS NOSE that there are enough Intel buggies.
+                    yes, it happens EVERY Time.  Since September.  The
+                    goofy thing is ....  if we launch the SAME ROUTINE
+                    after it is booted ...  by "pencilling in" the BIOS
+                    variables that hold controller info ...  and calling
+                    the int ...  it boots DOS like a whiz.  .
+
+<D.RUFFER> does the orion have a time analyzer mode in it, where you can
+                    look at what is on the bus signals?
+
+<[Kevin] APPERT> something not getting initialized?
+
+<[jax32] FIGCHAPTERS> You'd think so kev, but it doesn't look like it.
+
+<D.RUFFER> or bus cross talk <shudder>
+
+<[jax32] FIGCHAPTERS> I say it's a hole in the DUART code ...  what's that
+                    D.R. .. how so?  .
+
+<D.RUFFER> maybe, just maybe...  the interrupt signals are getting
+                    crossed...  or the address lines...  I've seen it
+                    happen, and boy is it a bitch to track
+
+<[Kevin] APPERT> there are several logic analyzers (HP and Arium and
+                    Phillips) on the market ...
+
+<[jax32] FIGCHAPTERS> but!  This is an int that occurs 18 times a second
+                    ...  that works fine at all times EXCEPT during boot
+                    ...  at one exact point in the code that we have been
+                    over ...  time and time again ...  at a point where ...
+                    a DMA xfer begins.  .
+
+<[Kevin] APPERT> these days which record transitions and not states.
+                    perhaps you can rent a ...   cad-o-lax and analyze it
+                    to death.
+
+<D.RUFFER> ah, more clues....  have you toughrouly analyzed the code?....
+
+<[jax32] FIGCHAPTERS> Well, is code ever analyzed thoroughly? That is a
+                    matter for Religion, not Science ...  but as far as is
+                    within us, as they say, YES>
+
+<D.RUFFER> maybe the is a bug, if it is reapeatable, that points to
+                    software, and it should be finable
+
+<[jax32] FIGCHAPTERS> .  "should be" is the operative word in that
+                    sentence, in this case.  .
+
+<D.RUFFER> it is sometimes nice to have timeing diagrams right next to the
+                    source code, but it take a real good analyzer to do it.
+
+<[jax32] FIGCHAPTERS> well, Intel ...  Keeps reassuring us ...  that there
+                    is no conflict ...  DMA<>NMI ...  "but" ...  .
+
+<D.RUFFER> and you believe them <ha ha>
+
+<[Kevin] APPERT> see what you get for being clever.  use a timing loop (and
+                    a stone knife while you are about it)
+
+<[jax32] FIGCHAPTERS> not my code!
+
+<D.RUFFER> I have always gotten out the scopes to verify what they said.
+
+<[jax32] FIGCHAPTERS> my advice :  "No more intel chips"!  but do they
+                    listen? :-)  .
+
+<[Kevin] APPERT> segments are for earthworms!
+
+<D.RUFFER> hard to get away from them when making a MSDOS computer
+
+<[jax32] FIGCHAPTERS> If it was just segments, we could live with it.  what
+                    it is all about, is outdated concepts embedded in
+                    silicon.  which covers 90 % of the chips made.  but NOT
+                    the SC32!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  .
+
+<[Kevin] APPERT> do you actually have a sc32, or are you just writing
+                    assemblers ?
+
+<D.RUFFER> ok, have we proved we can't really help you jack?  Do we want to
+                    continue the lesson?
+
+<[jax32] FIGCHAPTERS> answers: almost & yes.  dennis ... ENOUGH BALONEY :-)
+                    Len ... are you member any computer book clubs?
+
+<[len] NMORGENSTERN> No, I am a member of no book club at all  ga
+
+<D.RUFFER> ok to continue?
+
+<[jax32] FIGCHAPTERS> .  what did I interrupt Dennis ( pardon pun)
+
+<D.RUFFER> ok, I don't hear any objections so here I go:  we were just
+                    about to get into the interrupt code itself...  before
+                    talking about the the receive and transmit, here are
+                    the ones that are not really used:
+
+<D.RUFFER> ASSEMBLER  HERE ( P: Modem status interrupt )
+<D.RUFFER>            MSR # DX MOV   AUX #) DX ADD   DX AL IN   0 VECTOR
+<D.RUFFER>
+<D.RUFFER> ASSEMBLER  HERE ( P: Line status interrupt )
+<D.RUFFER>            LSR # DX MOV   AUX #) DX ADD   DX AL IN   3 VECTOR
+
+<D.RUFFER> all these words do is reset the interrupting thingie  you will
+                    get these with noise on the line, or when the modem is
+                    working...  if you want to use this code for modem
+                    transfers, you will need to put some code into these...
+                    my application was on a clean line to a directly
+                    connected device  a tape reader if you must know  you
+                    can see the use of VECTOR here...  it takes the address
+                    from the HERE at the beginning of the code  and the
+                    interrupt vector number  and patches in the return
+                    jump.
+
+<[Kevin] APPERT> tape reader?  those were the days
+
+<D.RUFFER> actually, it is still being used kevin  cassette tapes no less
+
+<[len] NMORGENSTERN> I thought you meant paper tape.
+
+<D.RUFFER> ok, to do the receive logic, first we need somewhere to put the
+                    characters
+
+<[jax32] FIGCHAPTERS> gnite all  has left.
+
+<D.RUFFER> VARIABLE IN-PTR     ( -- a   P: Buffer pointer )
+<D.RUFFER> VARIABLE IN-POINTER ( -- a   P: Received pointer )
+<D.RUFFER>   CREATE IN-BUFFER  ( -- a   P: Received character buffer )
+<D.RUFFER>                       HERE   2048 DUP ALLOT   BLANK
+<D.RUFFER>
+<D.RUFFER> LABEL >CHR ( -- a   P: Buffer character )   IN-BUFFER # DI MOV
+<D.RUFFER>              IN-PTR #) CX MOV   CX DI ADD   AL 0 [DI] MOV
+<D.RUFFER>              CX INC   2047 # CX AND   IN-POINTER #) CX CMP
+<D.RUFFER>              0<> IF   CX IN-PTR #) MOV   THEN   RET
+<D.RUFFER> CODE !CHR ( b --   P: Store character in buffer )
+<D.RUFFER>             AX POP   >CHR #) CALL   NEXT   END-CODE
+<D.RUFFER>
+<D.RUFFER> : ?CHRS ( -- #   P: # of characters in buffer )
+<D.RUFFER>           IN-PTR @  IN-POINTER @  - DUP 0< IF  2048 +  THEN ;
+
+<D.RUFFER> the IN-PTR is for putting characters in, and the IN-POINTER is
+                    for taking them back out.  the >CHR is the subroutine I
+                    will call, and !CHR is a test word (yes even I do that
+                    from time to time) used to store characters into the
+                    buffer.  ?CHRs will tell me how many characters are in
+                    the buffer.  then we have the receive interrupt code:
+
+<D.RUFFER> ASSEMBLER HERE ( P: Receive character interrupt )
+<D.RUFFER>                  RBR # DX MOV   AUX #) DX ADD   DX AL IN
+<D.RUFFER>                  >CHR #) CALL   2 VECTOR
+
+<D.RUFFER> this gets the character into the AL register, and passes it to
+                    the receive subroutine.  the transmit interrupt is not
+                    used either, but is needed to clear the mask if it is
+                    ever received:
+
+<D.RUFFER> ASSEMBLER HERE ( P: Transmit character interrupt )
+<D.RUFFER>                  IER # DX MOV   AUX #) DX ADD   DX AL IN
+<D.RUFFER>                  253 # AX AND   DX AL OUT   1 VECTOR
+
+<D.RUFFER> That is really all there is to it.  except the reset routine,
+                    but first...  are there any questions on this?
+
+<[len] NMORGENSTERN> ga
+
+<D.RUFFER> ok  the reset routine is a little custom...  but I am pasting
+                    directly from the application:
+
+<D.RUFFER> : URESET ( -- P: Reset the uart to operate )
+<D.RUFFER>    0 0 !LCR  0 MCR !AUX  0 IER !AUX
+<D.RUFFER>    IN-PTR OFF  IN-POINTER OFF
+<D.RUFFER>    8 Bits  1 Stps  2400 Baud
+<D.RUFFER>    SAVE-AUX 2@  OR 0= IF  ?VECTOR @VECTOR  SAVE-AUX 2!
+<D.RUFFER>                           @SEG INTR ?VECTOR !VECTOR  THEN
+<D.RUFFER>    8259B PC@  8  AUX @ 1COM = IF  2*  THEN  NOT AND
+<D.RUFFER>    8259B PC! ( 8259 Interrupt mask )
+<D.RUFFER>    Modem-reset ENABLE  50 MS  Modem-reset DISABLE
+<D.RUFFER>    Receiver ENABLE  DTR ENABLE  RTS ENABLE
+<D.RUFFER>    RBR @AUX DROP  Interrupts ENABLE  5 MS ;
+<D.RUFFER>
+<D.RUFFER> : UNRST ( --   P: Turn off UART )   8259B PC@  8  AUX @ 1COM =
+<D.RUFFER>    IF  2*  THEN  OR 8259B PC!  SAVE-AUX 2@ ?VECTOR !VECTOR
+<D.RUFFER>    0, SAVE-AUX 2!  0 IER !AUX ;
+
+<D.RUFFER> this should be pretty self explainitory, but....  I see I missed
+                    something...
+
+<D.RUFFER> : ?VECTOR ( -- a   P: Determine which interrupt vector to use )
+<D.RUFFER>             11  AUX @ 1COM = IF  1+  THEN ;
+
+{ed: I think this is what the missing code does, but I did not test it}
+CREATE !VECTOR ( aseg a # --   P: Set interrupt vector )   HEX
+                 AX POP   DX POP   DS POP   25 # AH MOV   21 INT
+                 IS AX MOV   AX DS MOV   NEXT
+CREATE @VECTOR ( # -- aseg a   P: Get interrupt vector )
+                 AX POP   35 # AH MOV   21 INT   ES PUSH   BX PUSH
+                 IS AX MOV   AX ES MOV   NEXT
+
+<D.RUFFER> this words determines which interrupt to patch...  my words
+                    @VECTOR and !VECTOR are just the IBM function call way
+                    to  look at and set the interrupt vectors...  and I
+                    don't have the code on line to paste, sorry.  the UNRST
+                    is needed before you can return to DOS.  any questions?
+
+<[len] NMORGENSTERN> No. Thank you Dennis. I have a lot to think about
+                    here..  I will study it.
+
+<[Kevin] APPERT> For posterity, I recommend a look at John James article on
+                    this topic, which is more complete than Dennis has time
+                    to be tonight.  You can find it by looking in the
+                    "Bibliograpy of Forth"  it was in Forth Dimensions some
+                    time ago
+
+<D.RUFFER> I will try to do some cleaning up of it before posting the
+                    transcript...  I didn't have time to go into much
+                    depth.
+
+<[len] NMORGENSTERN> I'll look it up.
+
+<[Kevin] APPERT> 60 min. is  on .  good night all  has left.
+
+<D.RUFFER> I will have to look up Jon's stuff
+
+<[len] NMORGENSTERN> Dennis you put up a lot of material!
+
+<D.RUFFER> a little too much I think  were the delays too long?
+
+<[len] NMORGENSTERN> I have only recently caught on to the idea. . .  that
+                    an interrupt is essentially a subroutine that can be
+                    called at a time determined either by the program or by
+                    an external device.  That is why I said I know almost
+                    nothing about them!
+
+<D.RUFFER> they are the only way to deal with real time situations
+
+<[len] NMORGENSTERN> I think your timing was good.
+
+<D.RUFFER> good, I hope it gets a lot of downloads
+
+<[len] NMORGENSTERN> It probably will
+
+<D.RUFFER> thanks to Microsoft Windows, which made this pasting possible
+
+<[len] NMORGENSTERN> I wondered how you did it!
+
+<D.RUFFER> switching back and forth real fast :-)
+
+<[len] NMORGENSTERN> Thanks again for taking this! My granddaughter was in
+                    a play  They may show a scene in a Pepsi ad! wouldn't
+                    that be something!  (Still under negotiation)
+
+<D.RUFFER> sounds real neet for her  glad you could be there
+
+<[len] NMORGENSTERN> She's 9, and was a born actress!  That is she was
+                    miming at about 18 months.
+
+<D.RUFFER> sounds real talented, is she going to get into it?
+
+<[len] NMORGENSTERN> Well, I will be able to take next week, God willing  I
+                    may discuss vocabularies, if there is interest.
+
+<D.RUFFER> good, I will have to work on coming up with another topic
+
+<[len] NMORGENSTERN> There is not a lot of real-time stuff published, I
+                    believe,...  so it would be useful to have it here.
+
+<D.RUFFER> if nothing else, these are at least downloaded  well, my fingers
+                    are tired...  see ya later?
+
+<[len] NMORGENSTERN> right, thanks again, bye  has left.
+
+=== End of Steno notes. ===
+
+

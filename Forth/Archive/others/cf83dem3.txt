@@ -1,0 +1,39 @@
+
+After originally submitting the CF83DEMO package earlier this
+month, a bug was discovered which caused the system to crash on
+the CoCo III under some conditions.  The bug did not effect
+the CoCo II.
+
+If you are using a CoCo II, the DEMO's operation will be
+identical, no matter which of the versions you have.
+
+If you are using a CoCo III, insert your disk in Drive #0 and
+enter RUN CF83DEMO - After clearing the opening screen to the
+"ok" prompt, enter:
+
+				262 c@ .
+
+If the result is 59, you have the corrected version and you do
+not need to do anything further.
+
+If the result is 0, you have the older version and you should
+download this corrected version.
+
+Alternatively, you can correct the older version by entering:
+
+	16 base !
+	create coco3 ( -- ) here dup 2- ! 3406 , 1A50 , 867E ,
+		B7FE , F4B7 , FEF7 , CC47 , 32FD , FEF5 , CC46 ,
+		C4FD , FEF8 , 1CAF , 3506 , AEA1 , 6E91 ,
+	decimal
+	coco3
+	forget coco3
+
+Unfortunately, you will have to enter this code each time you run
+the DEMO, so it would probably be better to download this
+corrected version instead.
+
+								M.D.J.
+								08-22-91
+
+

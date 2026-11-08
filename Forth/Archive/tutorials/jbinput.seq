@@ -1,0 +1,194 @@
+
+\ Original Date: September 12, 1988
+\ Last Modified: September 28, 1988
+\ Author:        Jack W. Brown
+\ Function:      Boiler plate, Bullet proof integer numeric input.
+\ Usage:         <position cursor>  #IN ( -- number )
+
+\ Overview:
+\ The idea is to allow only valid single signed integer input
+\ with editing by checking each key press as it arrives. All
+\ invalid key presses including function keys will be rejected.
+\ The value of the number is formed as valid digits are entered
+\ so that it is impossible to enter a number outside the range
+\ of -32767 through 32767.  If the cursor is first positioned
+\ screen entry will be limited to 6 character positions from this
+\ initial cursor postion.
+
+\ Notes:
+\ 1) All word defintions have been author and date coded to
+\    reflect the date and author of the most recent change.
+\ 2) Revision history added to beginning of file.
+\    This is absolute requirement when a team of programmers
+\    is working on a very large application.  Any change made
+\    is reflected in the revision history and with the actual
+\    word definition.
+\ 3) Only non-FORTH83 word used in #OUT
+
+\ Possible Improvements:
+\ 1) Modify code to allow single signed number input in any BASE.
+\ 2) Modify code or make a new version called D#IN for bullet proof
+\    input of signed double integers.
+
+\ Revision History:
+\ JWB 12 09 88  Converted from F83 Blocks to *.SEQ file for F-PC
+\ JWB 28 09 88  Commented out test for invalid interval in (IN)
+\ JWB 28 09 88  Inserted comment about non standard word #OUT.
+\ JWB 28 09 88  Added CONSTANTs to make code more readable and
+\               to avoid non standard ASCII and CONTROL.
+\ JWB 28 09 88  Clarified operation of RUBOUT.
+\ JWB 28 09 88  Clarified operation of +DIGIT.
+\ JWB 28 09 88  Renamed RESET? to CLEAR_SIGN? for readability.
+\ JWB 28 09 88  Changed . to _ in CORRECT.IT and PROCESS.IT
+\ JWB 28 09 88  Modified NEGATIVE? to include DUP
+\ JWB 28 09 88  Reformated #IN and removed DUP to accomodate above.
+
+\  Constants added for readablilty.
+07 CONSTANT CONTROL_G   \ Bell character
+08 CONSTANT CONTROL_H   \ Back space character.
+48 CONSTANT ASCII_0     \ The digit " 0 "
+57 CONSTANT ASCII_9     \ The digit " 9 "
+45 CONSTANT ASCII_-     \ The minus sign character.
+13 CONSTANT CONTROL_M   \ The carriage return character
+
+\ Interval testing words. Naming convention motivated by the
+\ mathematical intervals (a,b) [a,b] (a,b] and [a,b).
+\ Would better names be  (A,B) [A,B] ... ?
+\ Application Note:  In VP-Planner these four words were
+\ implemented in machine code and saved approximately 500 bytes,
+\ resulted in increased execution speed and better readability
+\ than when actual tests were coded inline in highlevel Forth.
+
+\ (IN)  leaves a true flag if   a < x < b
+: (IN)  ( x a b --  flag )  ( JWB 28 09 88 )
+\        2DUP < NOT ABORT" Invalid interval."
+         -ROT OVER < -ROT > AND ;
+
+\ [IN]  leaves a true flag if a <= x <= b  , otherwise false.
+: [IN]  ( x a b --  flag ) ( JWB 02 10 85 )
+        1+ SWAP 1- SWAP (IN) ;
+
+\ (IN]  leaves a true flag if a <  x <= b  , otherwise false.
+: (IN]  ( x a b --  flag ) ( JWB 02 10 85 )
+        1+ (IN) ;
+
+\ [IN)  leaves a true flag if a <= x <  b  , otherwise false.
+: [IN)  ( x a b --  flag ) ( JWB 02 10 85 )
+        SWAP 1- SWAP (IN) ;
+
+\ Note #OUT is not in the FORTH83 standard. ( JWB 28 09 88 )
+\ #OUT is a variable that contains the number of charaters output since
+\ the last carriage return.  Its value must be corrected so that words
+\ EMITing characters leave its value the same as the actual horizontal
+\ cursor position.  If this is not done systems like L&P F83 may produce
+\ auto word wrap when #OUT exceeds 80.
+
+\ Sound alarm bell.
+: BELL    ( -- ) ( JWB 07 10 85 )
+        CONTROL_G EMIT -1 #OUT +! ;
+
+\ Leave true flag if valid digit.
+: DIGIT?  ( n --  flag ) ( JWB 07 10 85 )
+        ASCII_0 ASCII_9 [IN] ;
+
+\ Rub out most recent digit. Note that correction to #OUT is -4
+\ because three characters have been EMITed and the cursor ends
+\ up one character position to the left!
+: RUBOUT  ( -- ) ( JWB 28 09 88 )
+        CONTROL_H EMIT SPACE
+        CONTROL_H EMIT
+        -4 #OUT +! ;
+
+\ Erase digit from screen, adjust number being formed and
+\ decrement the digit count. Note:
+\ count = number of digits that have currently been entered.
+\ n     = the value of the number currently on the screen.
+: -DIGIT  ( count n  --  count-1 n/10 ) ( JWB 28 09 88 )
+        RUBOUT        \ Remove character from screen.
+        SWAP 1- SWAP  \ Adjust digit count.
+        10 / ;        \ Adjust value of number.
+
+\ Increment digit count and add in digit. This word is complicated
+\ by the fact that we must check to make sure that the digit entered
+\ must not allow the number formed to be outside the valid single
+\ signed integer range.  Note: n'= 10n+key-48
+: +DIGIT  ( count n key --  count+1 n'   If valid key) ( JWB 28 09 88 )
+          (             --  count   n    If invalid key )
+        SWAP 10 UM*        \ Scale number by 10 and leave as double#.
+        2 PICK ASCII_0 -   \ Convert key to digit value.
+        0 D+               \ Extend to double, add to leave new value.
+        32767. 2OVER DU<   \ Check for out of range single number.
+        IF   10 UM/MOD     \ Too big, restore original value.
+             NIP NIP BELL  \ remove remainder, and key.
+        ELSE DROP          \ convert double number to single number.
+             SWAP EMIT     \ Echo digit key to the screen.
+             SWAP 1+ SWAP  \ Increment the current digit count.
+        THEN ;
+
+\ Reset sign flag to indicate non negative number if digit count
+\ is zero.
+: CLEAR_SIGN? ( flag count n --  ff count n ) ( JWB 28 09 88 )
+      OVER 0= IF  ROT DROP FALSE -ROT THEN ;
+
+\ Correct an error input.
+: CORRECT_IT ( flag count num key --  flag count num ) ( JWB 28 09 88 )
+       DROP OVER  0<>         \ Is digit count non zero?
+       IF   -DIGIT            \ Remove most recent digit.
+       ELSE BELL              \ Sound warning.
+       THEN
+       CLEAR_SIGN? ; \ Clear numbers sign if count is 0.
+
+\ Process all other keystrokes.
+: PROCESS_IT ( flag count num key --  flag count num ) ( JWB 28 09 88 )
+       DUP  DIGIT?            \ Check for digit.
+       IF   +DIGIT            \ Echo & convert digit, inc count
+       ELSE DROP BELL         \ Invalid key or overflow.
+       THEN ;
+
+\ Apply sign to number.
+: APPLY-SIGN  ( flg count num key -- num ) ( JWB 28 09 88 )
+       DROP NIP SWAP          \ Drop key, nip count, get sign flag.
+       IF NEGATE THEN  ;      \ Apply sign to number.
+
+\ Negative number?
+: NEGATIVE? ( count num key  -- count num key flag ) ( JWB 28 09 88 )
+       DUP ASCII_- =  3 PICK 0= AND ;
+
+\ Set sign flag to true indicating a negative number
+\ is being input.
+: SET-FLAG  ( flg cnt num key --  flg cnt num ) ( JWB 07 10 85 )
+      EMIT ROT DROP TRUE -ROT   \ Set sign flag true.
+      SWAP 1+ SWAP  ;           \ Increment digit count.
+
+\ This is the boiler plate, bullet proof interger number
+\ input routine.  It supposedly only allows input of positive
+\ or negative 16 bit integers.  Only valid digit keys are
+\ allowed.
+\ flag  = sign flag, true means negative number being entered.
+\                   false means positive number.
+\ count = current count of digits entered.
+\ number= current value of number on users screen.
+\ key   = key press code from users input.
+: #IN   ( --   number ) ( JWB 28 09 88 )
+      FALSE 0 0    ( flag count number )
+      BEGIN KEY    ( flag count number key ) \ Fetch key press.
+        NEGATIVE?                    \ Negative number?
+        IF   SET-FLAG                \ Set sign flag true.
+        ELSE DUP CONTROL_M =         \ Return entered?
+             IF   APPLY-SIGN EXIT    \ Apply sign to number and exit
+             THEN
+             DUP CONTROL_H =         \ Correct error input?
+             IF   CORRECT_IT         \ This does it.
+             ELSE PROCESS_IT         \ Process all other keys.
+             THEN
+        THEN
+      AGAIN ;
+
+\ Word to test #IN
+: TEST ( -- )
+      BEGIN
+           CR #IN 3 SPACES DUP .
+      0= UNTIL ;
+
+
+

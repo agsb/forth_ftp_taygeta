@@ -1,0 +1,258 @@
+
+                      THREADING TECHNIQUES IN FORTHS
+
+ FORTH  has  been  implemented  on  almost  every  possible   computer 
+ processor  and  this  has  lead  to  a wide variety of implementation 
+ styles.  The discussion of  32  vs  16  bit  implementations  and  of 
+ environments  and operating systems is a subject for some other time. 
+ The purpose of this  article  is  to  describe  the  differences  and 
+ implementations  of  various  threading techniques:  ITC,  DTC,  STC, 
+ Token,  Compiled,  Segment  threaded,  Status  threaded,  NOVIX,  and 
+ others.  
+
+ Definitions of terms to be used:
+    ITC      -  Indirect   Threaded Code
+    DTC      -  Direct     Threaded Code
+    STC      -  Subroutine Threaded Code
+    CFA      -  Code       Field Address
+    PFA      -  Parameter  Field Address
+    Jcode    -  Jump/Call/Jump-to-subroutine code
+    Ptr      -  Pointer
+    Header   -  size  and location of header depends on implementation. 
+                Could be inline, separated, or even non-existent 
+    Inner Interpreter -
+                the 'routine' that controls  the  execution  of  FORTH 
+                words after they have been compiled 
+
+
+ Representation of ITC :
+
+    /header/  /CFA/  /PFA
+
+    /header/  /Ptr/  /list......./
+    /header/  /Ptr/  /code......./
+    /header/  /Ptr/  /data......./
+
+    CFA = address of machine language routine that  will  process  the 
+          data in the PFA area.  Points to PFA if definition is a code 
+          word.  
+
+    PFA  =  [ ':' definition ] contains list of pointers that point to 
+                               the CFA's of other definitions.  
+
+          [ 'CODE' word ] contains executable machine language routine 
+                          that usually ends with a transfer of control 
+                          to the inner interpreter.  
+
+          [ data structures] contains data to be used ( any format needed)
+
+
+
+  Representation of DTC :
+
+    /header/  /CFA/  /PFA
+
+    /header/  /Jcode  /list......./
+    /header/  /Jcode  /code......./
+  [ /header/  /code.............../  ] ( a variation )
+    /header/  /Jcode  /data......./
+
+    CFA = a jump/call to machine language routine  that  will  process 
+          the  data in the PFA area.  Points to PFA if definition is a 
+          code word.  
+
+    PFA  =  [ ':' definition ] contains list of pointers that point to 
+                               the CFA's of other definitions.  
+
+          [ 'CODE' word ] contains executable machine language routine 
+                          that usually ends with a transfer of control 
+                          to the inner interpreter.  
+
+          [ data structures] contains data to be used ( any format needed)
+
+
+  Representation of STC :
+
+    /header/  /CFA/  /PFA
+
+A.  /header/  /Jcode.Jcode.Jcode...../  ( list of Jcodes)
+B.  /header/  /anycode.............../  ( not just calls)
+    /header/  /Jcode  /list........../
+
+    CFA = a jump/call to machine language routine  that  will  process 
+          the data in the PFA area. ':' and 'code' words do not really 
+          have  a  CFA  separate from the PFA unless so desired by the 
+          implementer of the system.  
+
+    PFA = [ ':' definition ] contains executable calls to other  words 
+                             (A.)  or executable code of any kind (B.).
+                             Version B.  is basically a true  compiler 
+                             and    allows   a   certain   amount   of 
+                             optimizing.  In  both  cases,  the  inner 
+                             interpreter   is   the  machines  program 
+                             sequencer/counter and not a routine.  
+
+          [ 'CODE' word    ] see [ ':' ]
+
+          [ data structures] contains data to be used ( any format needed)
+
+
+
+
+ Representation of Token threading :
+
+
+    -----
+    ITC :
+    -----
+    /header/  /CFA/  /PFA
+
+    /header/  /Ptr/  /token.list.../
+    /header/  /Ptr/  /code........./
+    /header/  /Ptr/  /data........./
+
+    CFA = address of machine language routine that  will  process  the 
+          data in the PFA area.  Points to PFA if definition is a code 
+          word.  
+
+    PFA = [ ':' definition ] contains pointers to the token table that 
+                             contains references to other words (token 
+                             tables described below).  
+
+          [ 'CODE' word    ] SEE ITC.
+          [ data structures] SEE ITC.
+
+
+    -----
+    DTC :
+    -----
+    /header/  /CFA/  /PFA
+
+    /header/  /Jcode  /token.list.../
+    /header/  /Jcode  /code........./
+  [ /header/  /code................./  ] ( a variation )
+    /header/  /Jcode  /data........./
+
+    CFA = a jump/call to machine language routine  that  will  process 
+          the  data in the PFA area.  Points to PFA if definition is a 
+          code word.  
+
+    PFA = [ ':' definition ] contains pointers to the token table that 
+                             contains references to other words (token 
+                             tables described below).  
+
+          [ 'CODE' word    ] SEE DTC.
+          [ data structures] SEE DTC.
+
+
+    -----
+    STC :
+    -----
+    /header/  /CFA/  /PFA
+
+A.  /header/  /Jcode.Jcode.Jcode...../  ( list of Jcodes)
+B.  /header/  /anycode.............../  ( not just calls)
+    /header/  /Jcode  /list........../
+
+    CFA = a jump/call to machine language routine  that  will  process 
+          the data in the PFA area. ':' and 'code' words do not really 
+          have  a  CFA  separate from the PFA unless so desired by the 
+          implementer of the system.  
+
+    PFA  = [ ':' definition ] contains executable calls to other words 
+                             (A.) or executable code of any kind  (B.).
+                             Version  B.  is basically a true compiler 
+                             and   allows   a   certain   amount    of 
+                             optimizing.  In  both  cases,  the  inner 
+                             interpreter  is  the   machines   program 
+                             sequencer/counter  and  not a routine.  A 
+                             token reference would  be  a  call  to  a 
+                             table  of  jumps.  This  scheme  has many 
+                             variations.  
+
+          [ 'CODE' word    ] see [ ':' ]
+          [ data structures] contains data to be used ( any format needed)
+
+
+    -----------
+    TOKEN TABLE
+    -----------
+
+    The  token  table  is  little  more  than  a list of references to 
+    definitions in the vocabularies. The way references are made varies 
+    according to the needs and whims of  the  designer.  In  a  simple 
+    ITC/DTC  system,  the  table  simply contains the addresses of the 
+    words.  
+          /table_start
+             addr_word_0
+             addr_word_1
+              ......
+             addr_word_n
+
+     In a more elaborate version,
+          /table_start
+             modifier_0 / addr_word_0
+             modifier_1 / addr_word_1
+              ......
+             modifier_n / addr_word_n
+     where modifier_x is additional information about the routine. Most 
+     commonly,  the modifier  is  just  a  segment  or  bank-selection 
+     number.  It  can  contain  such  information  as  'available/not-
+     avail/virtual' , relocation info, user #, security, network node, 
+     ad infinitum.  
+
+     A variation on this scheme has been proposed that would include a 
+     CFA either as modifier_x or in front of  it.  This  method  would 
+     allow a mix of methods in the table if desired.  The CFA could be 
+     ITC, DTC,  STC,  or any other weirdness.  The CFA can process the 
+     following addr_word_x in any manner before passing control.  
+
+     Token   threading  provides  flexibility at  the  cost  of  extra 
+     indirection and slower execution. In large systems, it provides a 
+     way to use 8- and 16-bit references to address spaces larger than 
+     64k without causing the word definitions to  contain  32-bit  PFA 
+     entries.  
+
+
+ Representation of other threading schemes :
+
+     I  will now attempt to present some other schemes,  both used and 
+     proposed.  This list is incomplete since the number of schemes is 
+     limited only by the imagination,  memory size,  and the trade-off 
+     of speed vs. design-needs.  
+
+     1. Segment threading: for 8086, with limited usefulnesses in later 
+        80x86 chips.  PFA contains segment references (16-bit) and the 
+        inner  interpreter  always  starts  interpreting  at  a fixed 
+        offset in the word's segment.  This scheme  allows  a  16-bit 
+        Forth to use the full 1-megabyte range of the 8086. The author 
+        of  the scheme warns that later 80x86 chips have high overhead 
+        on segment register overrides.  
+
+     2. Bit threading:  for NOVIX NC4000.  A single bit  in  a  16-bit 
+        opcode  determines  if  the  opcode is a call to routine or an 
+        executable instruction.  This scheme allows a 1-cycle call  to 
+        subroutine.  Another bit in the opcode indicates a return from 
+        subroutine  at end of execution of the opcode.  In most cases, 
+        this allows a return with no cycle time or  at  most  1-cycle.  
+        Neat.  Because of the NC4000's design,  a single 16-bit opcode 
+        has the effect of several Forth instructions in many cases.  
+
+
+
+ Useful references :
+
+      Journal of Forth Application and Research, Vol.2, no.4, 1984.
+        (discusses extended addressing schemes)
+
+      FORML Conference Proceedings, 1980-present.
+
+      BYTE magazine, Sept. 1980, p.206, "Varieties of Threaded Code
+        for Language Implementation".
+
+      'Threaded Interpretive Languages: Their Design and Implementation,' 
+         by R.G. Loeliger.  Peterborough, NH: Byte Books, c1981.
+
+      various articles in FORTH DIMENSIONS
+
+

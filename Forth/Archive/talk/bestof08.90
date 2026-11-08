@@ -1,0 +1,357 @@
+
+                
+                     Best of GEnie..... August 1990
+          News from the GEnie Forth RoundTable by Gary Smith
+  
+   As the working BASIS being modified by the X3/J14 ANS Forth Technical
+Committee comes closer to a final document some of the debate surrounding
+Forth's future standard seems to be heating up. Recently, one of the HOT
+POTATOES has been dynamic memory allocation. There are those who think
+the current tools used in Forth are more than sufficent, and there are
+those who would 'borrow' concepts incorported in 'C'. 
+   My next column will return to one of the more popular themes, excerpts
+from recent guest conferences. 
+   Read along in the two topic areas devoted to this exchange, and once
+you have drawn your own conclusions make them known. You have only your-
+self to blame if course is followed you do not agree with. 
+
+ ************
+ Category 10 'Forth Standards'
+ Topic 36  Sub: Memory and PIC                         
+
+Memory spaces and position independent code
+ ************
+ ------------
+Category 10,  Topic 36
+Message 11        Sun Jun 03, 1990
+GARY-S                       at 06:29 EDT
+ 
+             
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 05-31-90 (17:27)              Number: 406 (Echo)
+   To: ALL                           Refer#: NONE
+ From: DAVID BREEDING                  Read: (N/A)
+ Subj: DYNAMIC ALLOCATION            Status: PUBLIC MESSAGE
+
+ Although I consider dynamic allocation to be one of the highest
+ priorities in the new standard, I have yet to read ANYTHING about it.  I
+ keep waiting for someone to bring it up, but somehow no one ever does,
+ so I've finally gotten down to writing myself.
+ All of the so called "modern" languages support some form of dynamic
+ allocation within the language itself.  This memory can be called from
+ fast ram, cache, or even disk.  All of this is transparent to the user. 
+ One of the reasons I heard that colleges don't use Forth for teaching is
+ that it leaves out this very thing.  I'm not saying that adding DA will
+ make colleges and universities start teaching Forth, but I bet they'll
+ sit up and notice.
+
+ Now...how to implement it...
+
+ First, let's keep it simple.  Two words, DALLOT and UNALLOT.  All this
+ does is return an address of N items and then returns this address to a
+ pool.  Most of the work in DA is easily accomplished using ram past
+ HERE, and then feeding the memory back (keeping a linked list of
+ deallocated memory chunks) to HERE after UNALLOT.
+
+ Any specialized memory management could be handled by the individual
+ system, only the standard words need to be there for the programers.
+ ------------
+Category 10,  Topic 36
+Message 12        Sun Jun 10, 1990
+B.RODRIGUEZ2                 at 09:26 EDT
+ 
+Huh.  I guess C and Pascal aren't "modern" languages.  Certainly there is no
+dynamic memory allocation "within the language itself" in C; it's part of the
+function library.  A distinction with a difference! And, while it's been years
+since I dusted off my Jensen & Wirth, I seem to recall static allocation in
+Pascal, too.
+
+Local variables are dynamically allocated in both languages, but this topic is
+called "Local Variables" in X3J14 circles.
+
+Not to say that dynamic allocation is unnecessary.  Nick Solntseff and I
+recently implemented such a system for our Forth work, using the same words
+with different names: ALLOC and RELEASE.  Soon to be published in JFAR, we're
+told.
+
+I agree, these seem to be the essential primitives.  (Damfino why C has so
+many forms of 'alloc'.  Enlightenment please?)  Let me make one further
+suggestion: in real-time environments it is beneficial to force
+compaction/garbage collection at a convenient (idle) time, rather than at the
+usually-critical moment when an allocation runs out of room. (Assuming here
+that your system needs compaction or garbage collection, and you're desperate
+enough to use such in a real-time problem.) Perhaps a third word, COLLECT,
+should be defined.  Easy to make it a no-op when it's not needed.
+
+BUT...  this should NOT be bound up with the notions of "what is the Forth
+language" (like LISP).  This should be a standardized LIBRARY FUNCTION.  More
+power to the X3J14 TC for moving in this direction!
+
+- Brad
+ ------------
+Category 10,  Topic 36
+Message 13        Wed Jun 13, 1990
+GARY-S                       at 06:41 EDT
+ 
+             
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 06-12-90 (00:41)              Number: 409 (Echo)
+   To: DAVID BREEDING                Refer#: 406
+ From: DARRYL BIECH                    Read: NO
+ Subj: DYNAMIC ALLOCATION            Status: PUBLIC MESSAGE
+
+ Maybe I'm getting a little technical here, but I'm wondering if you were
+ implying that the application will take care of shrinking its claim on
+ system memory (say .com files for example) and moving the stack out of
+ the way etc. prior to deallocations? 
+                                                             -d.b.
+
+ NET/Mail : British Columbia Forth Board - Burnaby BC - (604)434-5886   
+ ------------
+Category 10,  Topic 36
+Message 14        Fri Jun 15, 1990
+GARY-S                       at 06:34 EDT
+ 
+             
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 06-14-90 (17:15)              Number: 412 (Echo)
+   To: DARRYL BIECH                  Refer#: 409
+ From: DAVID BREEDING                  Read: NO
+ Subj: DYNAMIC ALLOCATION            Status: PUBLIC MESSAGE
+
+ That could all be handled on a system level and does not need to be
+ addressed at the "standards" level.  There are a lot of ways to
+ implement DA but a lot of it depends on the hardware setup of the
+ system.  All I am proposing is a STANDARD way of doing DA.  All of the
+ perticulars (like caching and extended memory use) could be handled by
+ the programmers of the compiler.  The only thing that makes since to me
+ is the inclusion of the two words DALLOT and UNDALLOT.  Which returns an
+ address for use, or returns it to the "heap".
+
+ It is a truly exciting subject...when I was in college we used DA
+ extensivly (this was about 5 years ago).  Using DA and recursion you can
+ do some truly great things that deal with HUGE amounts of data.  I have
+ always regreted not having DA as a part of the FORTH language.
+ ------------
+Category 10,  Topic 36
+Message 15        Sat Jun 16, 1990
+GARY-S                       at 07:25 EDT
+ 
+             
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 06-14-90 (08:43)              Number: 414 (Echo)
+   To: B.RODRIGUEZ2                  Refer#: 411
+ From: RAY DUNCAN                      Read: NO
+ Subj: MEMORY AND PIC                Status: PUBLIC MESSAGE
+
+ Dynamic memory allocation is very useful.  All of the LMI Forth systems
+ have had this for several years.  But I agree that it should be viewed
+ as an extension to the language rather than part of the core language
+ (similar to its implementation as part of the RTL in C) --- it doesn't
+ make any sense to require that this be supported in a ROM'd ANSI
+ Standard FORTH kernel, for example.
+
+ NET/Mail : LMI Forth Board, Los Angeles, CA (213) 306-3530             
+ ------------
+Category 10,  Topic 36
+Message 16        Mon Jun 18, 1990
+GARY-S                       at 07:19 EDT
+ 
+             
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 06-16-90 (10:54)              Number: 652 (Echo)
+   To: JEFF CYNX                     Refer#: NONE
+ From: RAY DUNCAN                      Read: NO
+ Subj: COMMENT                       Status: PUBLIC MESSAGE
+
+ My injunction against this is both worldy and spiritual.  If you want
+ your program to run properly under multitasking environments such as
+ DesqView, Win 3, OS/2's DOS box, etc. you should be "well-behaved" in
+ your use of memory.  Not using MALLOC means that you will not be able to
+ use new capabilities such as SHELL" and that your program will not be
+ easily portable to the higher-performance UR/FORTH systems for DOS,
+ OS/2, or 32-bit 80386 protected mode.
+
+ NET/Mail : LMI Forth Board, Los Angeles, CA (213) 306-3530             
+ ------------
+Category 10,  Topic 36
+Message 17        Mon Jun 18, 1990
+GARY-S                       at 07:20 EDT
+ 
+             
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 06-16-90 (07:45)              Number: 416 (Echo)
+   To: DAVID BREEDING                Refer#: 412
+ From: DARRYL BIECH                    Read: NO
+ Subj: DYNAMIC ALLOCATION            Status: PUBLIC MESSAGE
+
+ Why not have dynamic allocation as an extension or "standard option"
+ which would be palatable to both small and large implementations of the
+ language?                                                     -d.b.
+
+ NET/Mail : British Columbia Forth Board - Burnaby BC - (604)434-5886   
+ ------------
+ ************
+
+Category 18 'comp.lang.forth 
+Topic 86 Sub: Dynamic Memory Allocation              
+
+>From Usenet comp.lang.forth: Global Storage of setjmp()...
+  - This closes the loop on Cat 10, Top 36 Memory and PIC
+ ************
+ ------------
+Category 18,  Topic 86
+Message 1         Mon Jun 18, 1990
+GARY-S                       at 07:33 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ Path: willett!dwp
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: Re: global storage of setjmp()/longjmp()
+ Message-ID: <1181.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 17 Jun 90 14:55:58 EDT
+ References: <9006151345.AA06437@ucbvax.Berkeley.EDU>
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ In <9006151345.AA06437@ucbvax.Berkeley.EDU>, wmb@MITCH.ENG.SUN.COM writes:
+
+ > > (personally I find a "malloc"ed array of jmp_buf's treated as a stack
+ > > of recovery points more useful than the potential uses of "foo", but
+ > > that's just me.)
+ > 
+ > Which is exactly the point.  ANS Forth CATCH and THROW implicitly
+ > perform this stacking action for you, for free.  You don't have to
+ > synthesize your own stack.  The nested handlers go on the return
+ > stack in a very natural and easy-to-implement fashion, and they
+ > are automatically removed without any special care on the part of
+ > the programmer.
+
+ For FREE?
+
+     Catch frames must interfere with uses of the return stack in the
+ same way that DO LOOP indicies do.
+
+ There must either be:
+
+ 1)    A pointer to the topmost catch frame.
+ 2)    A unique tag to mark catch frames on the return stack.
+
+ Since there is no special care on the part of the programmer required,
+ then option 1) would require support in NEXT and option 2) would restrict
+ the kinds of temporaries shoved on the return stack.
+
+ I don't see how it is FREE.  Still, I suppose that having a
+ separate Catch/Throw stack would be exceeding the charter of X3J14.
+ In fact, the scheme you describe must have had some "common practice"
+ to be adopted, or is this not true?
+
+ I would like to hear more details about how its supposed to work.
+ (maybe I should wait until BASIS12 is put online.)
+
+ -Doug
+
+ P.S.  This reminds me somewhat of the 'alloca' controversy for C.  
+ (Allocate memory on the stack so that procedure exit/longjmp will
+ automatically reclaim it.)
+
+ ------------
+Category 18,  Topic 86
+Message 2         Tue Jun 19, 1990
+GARY-S                       at 06:29 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: gary@softway.oz (Gary Corby)
+ Newsgroups: comp.lang.forth
+ Subject: Re: C memory allocation
+ Message-ID: <3085@softway.oz>
+ Date: 18 Jun 90 00:04:24 GMT
+ References: <9006151404.AA07624@ucbvax.Berkeley.EDU>
+ Organization: Softway Pty Ltd, Sydney, Australia
+
+ In <9006151404.AA07624@ucbvax.Berkeley.EDU> 
+                         wmb@MITCH.ENG.SUN.COM (Mitch Bradley) writes:
+
+ >> (Damfino why C has so many forms of 'alloc'.  Enlightenment please?)
+
+ >Some reasons:
+ > 1) history
+ > 2) C library functions are not arbitrarily constrained to be
+ >    the "most primitive possible" functions.
+ > 3) Different alignment requirements for different data types.
+
+ Another reason:  The actual system calls used to change data segment
+ space allocation are brk(2) and sbrk(2).  The first sets an absolute 
+ boundary and the second alters the boundary relative to the current one.
+ Malloc(), calloc(), talloc(), free() and friends all come down to brk()
+ and sbrk() in the end.  So there are "most primitive possible" functions.
+ So primitive in fact that nobody in their right mind wants to use them 
+ if malloc() or something like it is available.
+
+ Gary
+ -- 
+ Gary Corby  (Friend of Elvenkind)   Softway Pty Ltd
+       ACSnet: gary@softway.oz
+      UUCP: ...!uunet!softway.oz!gary
+ ------------
+Category 18,  Topic 86
+Message 3         Tue Jun 19, 1990
+GARY-S                       at 06:30 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM (Mitch Bradley)
+ Newsgroups: comp.lang.forth
+ Subject: C memory allocation
+ Message-ID: <9006182017.AA18273@ucbvax.Berkeley.EDU>
+ Date: 18 Jun 90 19:28:29 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch Bradley <wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV>
+ Organization: The Internet
+
+ > Another reason:  The actual system calls used to change data segment
+ > space allocation are brk(2) and sbrk(2).  The first sets an absolute
+ > boundary and the second alters the boundary relative to the current one.
+ > Malloc(), calloc(), talloc(), free() and friends all come down to brk()
+ > and sbrk() in the end.  So there are "most primitive possible" functions.
+ > So primitive in fact that nobody in their right mind wants to use them
+ > if malloc() or something like it is available.
+
+ Note that, while this is true in Unix, it is not necessarily true in
+ other operating systems.  Consequently, while sbrk() is certainly
+ the primitive memory allocation operation for Unix, it does not
+ necessarily even EXIST on all C implementations.  In particular, I would
+ expect that it would be difficult to properly implement sbrk() on
+ the Amiga (probably the Amiga C library simulates it with some restrictions).
+ sbrk() assumes that each process has its own address space, which is
+ not generally true.  Use of sbrk() is not necessarily portable.
+
+ BTW, since brk() can be implemented in terms of sbrk(), sbrk() is the
+ true primitive on Unix systems.  In many Unix implementations, sbrk()
+ is the true system call, and brk() is implemented as a library routine,
+ a thin veneer around sbrk().
+
+ Mitch Bradley
+ ------------
+
+

@@ -1,0 +1,219 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 09/06/90   Time: 22:27EDT
+
+Attendees:
+[GARY-S]
+[[Dave] OLORIN]
+[[Len] NMORGENSTERN]
+[[mike] M.CHRISTOPH2]
+[[Wil] W.BADEN1]
+[[not crook!] JAX]
+[[Dennis] D.RUFFER]
+ 
+       The FIGGY BAR was open had no 'question of the night. Items discussed
+       include Object Oriented Forth, literal strings implementation, the
+       FIG board, GEnie's new rates and structure.
+
+Minutes:
+<OLORIN> is here.
+<GARY-S> hey dave - are you in Colo ?
+<[Dave] OLORIN> Not yet.
+<[Len] NMORGENSTERN> What's this about Colorado?
+<[Dave] OLORIN> I'm in a state of impending ulcer as I peddle my resume and 
+look for work.
+<[Dave] OLORIN> Job hunting, Len.
+<GARY-S> You guys are two more than showed up last week :-)
+<[Len] NMORGENSTERN> Good Luck!
+<[Len] NMORGENSTERN> I had no one Sunday!
+<[Dave] OLORIN> I'm going to (maybe) hear from one group tomorrow. They want me 
+in either Denver or Pittsburg. I want me in Denver. :-)
+<[Dave] OLORIN> (Or maybe they don't want me. (sigh))
+<[Wil] W.BADEN1> is here.
+<[Len] NMORGENSTERN> Getting a good job is a matter of luck, good 
+qualifications and
+<[Len] NMORGENSTERN> good interview.
+<[Dave] OLORIN> I've had all of the interviews. Now they either offer or they 
+don't.
+<GARY-S> Dave - Got TCJ today sans Forth column :-(
+<[Dave] OLORIN> Yeah. So did I. :-(
+<[Dave] OLORIN> I need to send him an article tomorrow. Now I finally have 
+*time*.
+<GARY-S> Dave - you NEED to check out cat 18, Top 69 !!!!!!!
+<[Len] NMORGENSTERN> What's that?
+<GARY-S> oof
+<JAX> is here.
+<[Dave] OLORIN> I may even get the OOFORTH 3.0 revision working if I can 
+refrain from biting my nails and watching the phone.
+<M.CHRISTOPH2> is here.
+<[Dave] OLORIN> Tell me that Vesta just won an enormous contract and you need 
+programmers desperately!
+<[not crook!] JAX> I would, but it would be a lie.
+<[not crook!] JAX> Rather, we need desperate programmers :-)
+<[Len] NMORGENSTERN> My principle in life is: don't worry about anything
+<[Len] NMORGENSTERN> you can't do anything about. I sometimes succeed in
+<[Len] NMORGENSTERN> achieving this goal!
+<[Dave] OLORIN> I've discovered that the only thing worse than being 
+frantically busy with no time to program for yourself is having all the time 
+in the world and being too worried about finding work to program.
+<[not crook!] JAX> Well, my brief foray into the world of FIG politics has hit 
+some shoals ...
+<[not crook!] JAX> I only gathered 16 signatures (from around the world) ...
+<GARY-S> 'Well - wil, jax any progress in VC to report ?
+<[not crook!] JAX> so there will be no election ...
+<[not crook!] JAX> strangely enough ..
+<[Len] NMORGENSTERN> pmi, what's "VC"
+<[not crook!] JAX> MIke Elola informs me there *are* candidates for the board ..
+<[Wil] W.BADEN1> VC ??
+<[not crook!] JAX> I think Gary meant BC.
+<GARY-S> VanCouver
+<D.RUFFER> is here.
+<[Dave] OLORIN> Len: I and my impending ulcer generally agree with you. But 
+since I did *not* expect the funding company to cancel the research, I don
+'t have an "end of contract" job-hunting fund built up.
+<[not crook!] JAX> None of them, though, gathered any signatures ???
+<[not crook!] JAX> Strange.
+<[mike] M.CHRISTOPH2> I had a little comment related to an earlier talk
+<GARY-S> what's that mike ?
+<[Dave] OLORIN> It's easy to spot. It doesn't make typos!
+<[Dave] OLORIN> (grin)
+<[Wil] W.BADEN1> I'm off Ansi committee.
+<[not crook!] JAX> Is shame, Wil.
+<[Wil] W.BADEN1> Yes, I'm sorry about it.
+<[not crook!] JAX> I am not entirely unhappy with things as they stand in BASIS 
+...
+<[not crook!] JAX> Am implementing on Amiga. Will see how it turns out, post 
+here when done.
+<[mike] M.CHRISTOPH2> Well some folks had made some suggestions related to 
+backwards FORTH or HTROF
+<[mike] M.CHRISTOPH2> An i got it working
+<[not crook!] JAX> Well, you're missing a lot of hair pulling, anyway.
+<[not crook!] JAX> The odd thing about the BASIS is the same oddity as that 
+about presidential candidates, if you get my drift, Wil ...
+<[not crook!] JAX> i.e., one of them gets chosen eventually.
+<[mike] M.CHRISTOPH2> these are words to print %cls% as is this, but the CLS 
+<GARY-S> why don't you post it in the library mike ?
+<[Dave] OLORIN> HTROF - Hard To Read Or Follow
+<[mike] M.CHRISTOPH2> Its realy slick for what i needed
+<[Len] NMORGENSTERN> What do you mean "backwards?" PN without the R?
+<[mike] M.CHRISTOPH2> Well I don't realy know if any one would want a backwards 
+forth!
+<GARY-S> semi first ????
+<[Len] NMORGENSTERN> Algebraic notation>
+<[mike] M.CHRISTOPH2> Backward forth is this:
+<GARY-S> You've got our attention mike - how about some details
+<[mike] M.CHRISTOPH2> Normally forth is in COMMAND mode, you switch to string 
+literals by
+<[mike] M.CHRISTOPH2> using ." or " (or in my case p") while in backward forth 
+EVERYTHING is a string literal unless you request FORTH
+<[mike] M.CHRISTOPH2> follow? GA
+<[Len] NMORGENSTERN> Sounds a little like EVAL
+<[mike] M.CHRISTOPH2> I call it H-trof
+<[mike] M.CHRISTOPH2> it is perfect for my application and you can switch back 
+and forth (no pun) at
+<[mike] M.CHRISTOPH2> any time to regular forth
+<GARY-S> h-trof , sounds very C-ish
+<[mike] M.CHRISTOPH2> I cant believe it has been under my nose
+<[mike] M.CHRISTOPH2> ITS FORTH backwards!
+<[mike] M.CHRISTOPH2> I thought it was a good name... oh well!
+<[Len] NMORGENSTERN> No, the name is good. I don't think anyone
+<[Len] NMORGENSTERN> has used it before.
+<[mike] M.CHRISTOPH2> the % (do you agree that is backwards forth?
+<GARY-S> There have been several requests for string literal code, ,so if you 
+could please do post your implementation in the library Mike
+<[Len] NMORGENSTERN> No, in what way is it backwards?
+<[mike] M.CHRISTOPH2> Ok.  have i explained it well enough?
+<[Len] NMORGENSTERN> It sounds to me as if you are executing strings that
+<[mike] M.CHRISTOPH2> guess not. Would you all agree that forth (while 
+compiling) is in command mode?
+<[Len] NMORGENSTERN> are stored in memory as if they were entered at the 
+keyboard.
+<[mike] M.CHRISTOPH2> the forth words are compile NOT INTERPRETTED
+<GARY-S> I _like_ the name, regardless
+<[mike] M.CHRISTOPH2> fI thought it was moorish!
+<[Len] NMORGENSTERN> HaHa
+<[mike] M.CHRISTOPH2> The string literals are preceeded by a word that prints 
+(could be display) the literals
+<[mike] M.CHRISTOPH2> just like a (.")
+<[mike] M.CHRISTOPH2> then when you switch to forth those forth words are 
+compiled
+<[Len] NMORGENSTERN> "Print" and "display" are often used interchangeably
+<[Len] NMORGENSTERN> Harks back to the old teletype days when they
+<[Len] NMORGENSTERN> REALLY were the same.
+<[mike] M.CHRISTOPH2> then when you leave command mode
+<[mike] M.CHRISTOPH2> you are back to literal. It is exaclty the opposite as 
+normal.
+<[mike] M.CHRISTOPH2> I credit you all for the idea. It took about two hours to 
+do.
+<GARY-S> Wil - you didn't get as big response to your challenge as I thought 
+you might. I did enjoy the responses from Mitch Bradley and John Wavrik -
+ didn't you ?
+<[Wil] W.BADEN1> Yes. Very much.
+<[mike] M.CHRISTOPH2> what challenge
+<GARY-S> readable code
+<[Dave] OLORIN> Wil: I'll stand by anything I've released. So check in the SL 
+for Uploads from either DHWEINSTEIN or OLORIN.
+<[Dave] OLORIN> The code I've hidden in the back circular files is another 
+matter. :-)
+<[Wil] W.BADEN1> Mitch's and John's replies show that principles for readable 
+Forth are known.
+<[not crook!] JAX> Dennis and I are having an interesting private conversation 
+about how the FIG Board is planning on seating a new member who receive
+d no nominating signatures at all.
+<[Dennis] D.RUFFER> erggggg, now Jack, are we going to have to get nasty :-)
+<GARY-S> I often have wondered if the Puzzles and Problems should be revived, 
+but restructured to consider our more far-flung envelope
+<[not crook!] JAX> Oh, yes, we are.
+<[mike] M.CHRISTOPH2> I love puzzles. Got one?
+<GARY-S> Wil does - or did
+<[Dave] OLORIN> Nasty, huh. Well at least hold on '
+<[mike] M.CHRISTOPH2> Is it too long to say now
+<[Dave] OLORIN> 'til I can grab some popcorn and a beer.
+<[not crook!] JAX> If my assumption, that FIG matters, is correct, we have to. 
+Prove to me that I am wrong, that FIG doesn't matter, and I'll leave yo
+u in peace to run it like a banana republic.
+<[mike] M.CHRISTOPH2> Fig matters!
+<[Dennis] D.RUFFER> disconnected.
+<[not crook!] JAX> One board member down ... you leaving too, wil? :-(
+<[Wil] W.BADEN1> Not now (even though you asked me to resign).
+<[not crook!] JAX> Right, that's a good sport! :-)
+<[not crook!] JAX> My argument with Dennis is that : it's true I didn't gather 
+enough sigs ...
+<D.RUFFER> is here.
+<[not crook!] JAX> But that doesn't mean the Board would be right to seat a 
+member who gathered *NONE*.
+<GARY-S> wil - any thoughts on reviving 'puzzles' ?
+<[Dennis] D.RUFFER> Sorry, kids can be such a pain
+<[Wil] W.BADEN1> Gary, there are some that were never posted.
+<[mike] M.CHRISTOPH2> how bout a simple puzzle now?
+<GARY-S> did you copy my suggestion to revise the rules to take our larger 
+envelope into consideration ?
+<[Wil] W.BADEN1> Why do you think it took so long to answer permutation problem?
+<[Wil] W.BADEN1> How do you mean larger envelope?
+<[Dennis] D.RUFFER> Jack, you have a copy of the FIG Bylaws.  If you can show 
+me where we are doing something in violation of those Bylaws I might be
+able to do something about it.  Otherwise, you are just blowing smoke!
+<GARY-S> I suspect there were too many puzzles too closely spaced
+<[Wil] W.BADEN1> Ah.
+<[Wil] W.BADEN1> But the permutation problem took a year to get an answer.
+<[Dave] OLORIN> Someone developed it on a slow machine? (ducking)
+<GARY-S> Just as some things develop positive momentum I think that was a 
+victim of negative momentum
+<GARY-S> Inertia is a law !
+<[Pol. Hack] JAX> Dennis ... FIG is not well-served by an entirely 
+self-perpetuating board of directors.
+<[Pol. Hack] JAX> I guess I was to lackadaisical about this whole thing.
+<[Dennis] D.RUFFER> Jack, you had a chance to do something about it, but you 
+were unable to attract enough support for your views.
+<[Dave] OLORIN> You know, this conversation really needs a smoke filled 
+backroom to be effective. (Goes off to close the flue and pull the computer in
+to the closet)
+<GARY-S> I have two cents to throw on the FIG-Board fire. If there is not 
+greater involvement in telecomm you are blowing air in a bag. Offices have m
+oved to computers and modems, why not FIG ?
+<[Pol. Hack] JAX> Dennis, the individual you are planning to seat on the board 
+attracted NO SUPPORT for their views. They did not go to the membership
+

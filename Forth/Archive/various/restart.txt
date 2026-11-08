@@ -1,0 +1,227 @@
+
+Wil Baden's third paper for FORML '87.
+
+Restarting Forth **
+
+The Forth command line interpreter is QUIT. It is the default Forth
+application.
+
+QUIT
+
+	 Clear the return stack, advance in the current output device to the
+beginning of the next line, accept new input from the current input
+device, and begin text interpretation. Do not display an initial
+message.
+
+: QUIT   RESET   BEGIN   CR   QUERY   INTERPRET ( any) OK?  AGAIN ;
+
+When Forth begins executing it goes to ABORT and from there to QUIT. The
+function of ABORT will be performed by every error recovery sequence.
+ABORT is the default Forth error restart sequence.
+
+ABORT
+	 Clear the data stack and perform the function of QUIT. Do not
+display an initial message.
+
+: ABORT   BEGIN   PRESET ( ) QUIT ( addr len) GRIPE ( ) AGAIN ;
+
+In QUIT the work of clearing the data stack is factored into RESET.
+However the data stack is not completely cleared: one item is left on
+it. This has no impact on existing programs.
+
+RESET
+	 Reset Return stack pointer to the item at the beginning of the stack
+so that one item is left on the stack.
+
+In ABORT the work of clearing both stacks all the way to the bottom is
+done by PRESET.
+
+PRESET
+	 Reset Parameter stack pointer and Return stack pointer to their
+beginning so that both stacks are empty. Set interpret state. In some
+systems, also assign terminal input buffer.
+
+We now have a way to customize the error recovery sequence. We can also
+dedicate an application.
+
+ABORT shows the pattern for doing this: the default application is QUIT
+and the default error recovery sequence is GRIPE.
+
+GRIPE sounds like TYPE and takes the same parameters, ( addr len). It
+displays the error message-provided by ABORT" . It may also attempt to
+display the name of the word being interpreted.
+
+PRESET leaves both stacks empty. Invoking the next word will put the
+address of the return point on the return stack. RESET leaves that
+address alone. A word can get back to that location by RESET EXIT. On
+the return the parameters for an error message string are assumed.
+
+The default application and default error recovery sequence can be
+changed, and ABORT" will still work with them.
+
+: (err)   RESET ;
+: ABORT" ( Compile: -- ; Run: ... flag -- ... addr len or ... )
+   [COMPILE] IF   [COMPILE] "   COMPILE (err)   [COMPILE] THEN ;
+   IMMEDIATE
+
+(err) in the definition of ABORT" cannot be replaced with RESET.
+
+You can build a variable error message string and follow it with RESET
+EXIT or RESET ; to emulate ABORT".
+
+The following trivial example changes the default application to indent
+three spaces for every value on the stack before receiving new input.
+This is preventative debugging: if you are surprised by the indentation
+then you are in trouble. It will also show you logical structure as you
+compile a definition from the keyboard.
+
+The error recovery message is changed as well.
+
+: OLD-ABORT   ABORT ;
+: INDENT   DEPTH ( n) STATE @ - 3 * SPACES ;
+: SHELL
+   BEGIN   CR   INDENT   QUERY   INTERPRET ( any) OK?   AGAIN ;
+: ABORT
+   BEGIN   PRESET SHELL ( a n) CR   ." Abort: "   GRIPE ( ) AGAIN ;
+
+To install new application and error handler:
+
+	ABORT
+
+To re-install old application and error handler:
+
+	OLD-ABORT
+
+With PRESET and RESET you can establish intricate error recovery and
+restart networks. The following generic QUIT can be used to restart the
+default application in most implementations. The idea is to return to
+the position just before you invoke your default application.
+
+: QUIT   RESET R> CELL - >R ;
+
+
+All source code has been noted, i.e. it has all necessary stack
+indications. The stack state is given by these two rules.
+
+1.	The stack state at the beginning of a line is either given there or
+is the same as that given by the previous stack indication, except
+before a logical structure word.
+
+2.	The stack state at extra space in the middle of a line is the same as
+that given by the previous stack indication, except after ELSE, where it
+is the same as after the matching IF.
+
+This demonstration plays MASTERMIND, a.k.a. BULLS'N'COWS or BAGELS,
+against you. When the stack is empty it prompts for a value; when the
+stack is not empty it takes the bottom of the stack without prompting.
+QUERY INTERPRET is used for input. The vocabulary search order can be
+modified to control what commands are available. Error recovery in
+ABORT" does not take you out of the application. You can use CHOICE
+<number> to pick your number and then use ANS to answer the first prompt
+and <F3> <return> to answer the rest. The source is noted, i.e. it has
+all necessary stack notes. The source is as it was first written. Use
+GAME to start a new game. Use ABORT to get back to Forth's default
+application. The program guesses your number. You are encouraged to
+cheat and make errors to observe the program's behavior.
+
+7 CONSTANT COLORS   4 CONSTANT COLUMNS
+
+VARIABLE ROW   VARIABLE GUESSES   1000 ALLOT
+: GUESS ( - a) GUESSES ( a) ROW @ + ;
+
+VARIABLE SEED   HERE SEED !
+: CHOOSE ( u - u)
+   SEED @ ( u n) 5421 *   1+   DUP SEED !   UM* SWAP DROP ;
+: BOUNDS ( a n - a+n a) OVER + SWAP ;
+: UNDER+ ( a b c - a+c b) ROT + SWAP ;
+
+: >CHAR ( n - c) DUP 10 U<
+   IF   ASCII 0 ( a c)
+   ELSE   ASCII A ( a c) 10 -   THEN   + ;
+
+: MAKE-FIRST-GUESS
+   CR ." Colors are "   COLORS 0 DO   I >CHAR EMIT   SPACE   LOOP
+   0 ROW !   GUESSES COLUMNS BOUNDS DO   CHOOSE I C!   LOOP ;
+
+: SHOW-GUESS
+   CR   ." My guess is "
+   GUESS COLUMNS BOUNDS
+   DO   I C@ >CHAR EMIT   LOOP ;
+
+: HOW-MANY-BULLS? ( - n)
+   BEGIN   DEPTH 0=
+   WHILE   CR
+      ." How many correct values in correct place? "
+      QUERY   INTERPRET ( any)
+   REPEAT ( n any) DEPTH 1- ROLL ;
+
+: HOW-MANY-COWS? ( - n)
+   BEGIN   DEPTH 0=
+   WHILE   CR
+      ." How many correct values but in wrong place? "
+      QUERY   INTERPRET ( any)
+   REPEAT ( n any) DEPTH 1- ROLL ;
+
+: MISTAKE? ( flag)
+   0= ABORT" You have entered invalid data." ;
+
+: BUMP-GUESS
+   GUESS COLUMNS BOUNDS
+   DO   I C@ 1+ DUP COLORS < AND DUP I C! I ROW @ - C@ -
+      IF   UNDO   EXIT THEN
+   LOOP   0 ROW !   0 MISTAKE? ;
+
+: BULLS ( a a - n)
+   2>R 0 2R> ( n a a) COLUMNS BOUNDS
+   DO ( n a) COUNT I C@ =
+      IF   1 UNDER+   THEN
+   LOOP   DROP ;
+
+: CATTLE ( a a - n)
+   2>R 0 2R> ( n a a) SWAP   COLUMNS BOUNDS
+   DO ( n a) DUP COLUMNS ( n a b m)
+      I C@ SCAN   SWAP DROP IF ( n a) 1 UNDER+   THEN
+   LOOP   DROP ;
+
+: STILL-POSSIBLE ( a - flag)
+   DUP GUESS BULLS OVER COLUMNS + C@ =
+   IF   DUP GUESS CATTLE SWAP COLUMNS 1+ + C@ = ( flag)
+   ELSE   DROP 0 ( flag) THEN ;
+
+: POSSIBLE ( - flag)
+   GUESS GUESSES
+   DO   I STILL-POSSIBLE 0=
+      IF   0 ( flag) UNDO   EXIT THEN ( )
+      COLUMNS 2+
+   +LOOP   TRUE ;
+
+: MAKE-NEXT-GUESS
+   GUESS COLUMNS 2+ 2DUP ROW +! + COLUMNS CMOVE
+   BEGIN   BUMP-GUESS   POSSIBLE UNTIL ;
+
+: PLAY-GAME
+   BEGIN   SHOW-GUESS
+      HOW-MANY-BULLS? ( n) DUP COLUMNS U<
+   WHILE   GUESS COLUMNS + C! ( )
+      HOW-MANY-COWS? ( n) DUP COLUMNS 1+ U< MISTAKE?
+      GUESS COLUMNS + C@ +   DUP COLUMNS 1+ U< MISTAKE?
+      GUESS COLUMNS 1+ + C! ( )
+      MAKE-NEXT-GUESS
+   REPEAT ( n) DROP ( ) CR   ." Game ended."   OK?   ABORT ;
+
+: GAME
+   MAKE-FIRST-GUESS
+   BEGIN   PRESET ( ) PLAY-GAME CR TYPE   AGAIN ;
+
+VARIABLE CHOSEN   COLUMNS CELL - ALLOT
+
+: CHOICE
+   CHOSEN COLUMNS ERASE
+   BL WORD ( a) COUNT CHOSEN SWAP COLUMNS MIN BOUNDS
+   DO   COUNT ASCII 0 - I C!   LOOP   DROP ;
+
+: ANS ( - n n)
+   GUESS CHOSEN BULLS ( n) GUESS CHOSEN CATTLE ( n n) OVER -
+   OVER .   DUP . ;
+
+

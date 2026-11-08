@@ -1,0 +1,731 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Dr. Watson
+
+Date: 08/10/89   Time: 22:15EDT
+Attendees:
+[[Dennis] D.RUFFER]
+[[Kevin] APPERT]
+[[BOB] R.SCHEMMEL1]
+[[Dave] DHWEINSTEIN]
+[J.PURPLE]
+[P.ZAWASKY]
+[HONKYTONK]
+
+Minutes:
+<APPERT> is here.
+<D.RUFFER> hi kevin
+<[Kevin] APPERT> hi Dennis
+<[Dennis] D.RUFFER> what's happening?
+<[Kevin] APPERT> < going to get some tortilla chips and salsa other than
+     that, nothing much you?
+<[Dennis] D.RUFFER> ok, I'm eating right now too otherwise, I'm just
+     working on the same thing, here in LA for a couple of weeks, then back
+     to Rochester
+<[Kevin] APPERT> jet commutes are always a lot of fun
+<[Dennis] D.RUFFER> yes, this last time, my ears got so clogged, I've got a
+     doctor's appointment tomorrow to (hopefully make them better again
+<[Kevin] APPERT> what happened sunday? nobody here!
+<[Dennis] D.RUFFER> ended up taking today off sick (no sleep last night :-(
+     I was wondering if that happened I had a note in my daytimer to cover
+     it, but missed it
+<[Kevin] APPERT> ear infections are nasty!
+<[Dennis] D.RUFFER> I still haven't got use to the time changes
+<[Kevin] APPERT> I was a little late, but hung around 1/2 hour
+<[Dennis] D.RUFFER> yes, got an infection in both ears now
+<[Kevin] APPERT> owwwwwwwwwwwww
+<[Dennis] D.RUFFER> Switching time zones all the time is sure confusing I
+     need to remember where I am going to be when I write notes in my
+     daytimer
+<DHWEINSTEIN> is here.
+<[Dennis] D.RUFFER> hi dave
+<[Kevin] APPERT> you remember a while ago I was talking about carry and
+     overflow in Forth arithmetic?
+<[Dave] DHWEINSTEIN> Hullo
+<[Kevin] APPERT> hi Dave
+<[Dennis] D.RUFFER> don't remember, but go ahead and talk about it
+<[Kevin] APPERT> naaaaa, just wanted to say there are a couple of other
+     folks talking about the same thing I heard about.
+<[Dave] DHWEINSTEIN> Just dropping in to say hey.
+<[Kevin] APPERT> what's new, Dave  ?
+<[Dave] DHWEINSTEIN> Not much. Facing *deadlines* everywhere.
+<[Dennis] D.RUFFER> well hay dave, aren't you going to stay? <frown>
+<[Dave] DHWEINSTEIN> For a bit. Not too long.
+<[Kevin] APPERT> how long till retirement for you, Dave?
+<[Dennis] D.RUFFER> sounds like the column is keeping you pretty busy
+<[Dave] DHWEINSTEIN> Hmmmnn......first I need to get a degree. :-)
+<[Kevin] APPERT> :)
+<[Dave] DHWEINSTEIN> Well...in this case it isn't so much the column, as
+     what its about.
+<[Kevin] APPERT> it doesn't get any better
+<[Dave] DHWEINSTEIN> I am writing about Object Oriented Forth, and write
+     now the object environment is a moving target.
+<[Dennis] D.RUFFER> ah yes, who's objects are you going towrite about?
+<[Kevin] APPERT> who is moving it?
+<[Dave] DHWEINSTEIN> (Polymorphism, auto-initialization, dynamic object
+     construction, and message continuation are all in the to-do queue)
+     Well...ahh...err....welll....ummm....me.
+<[Kevin] APPERT> what fun!
+<[Dennis] D.RUFFER> the more you know.....
+<[Dave] DHWEINSTEIN> Bye SIGForth '89 I will have a demo OO system built
+     around F-PC 2.25 including virtual memory, object libraries, dynamic
+     object construction, etc up and running. (And will promptly run out of
+     space in F-PC. Sigh)
+<[Dennis] D.RUFFER> and finding time to program too...impressive <smile>
+     run out of space???
+<[Dave] DHWEINSTEIN> My job-job is 8-5. I can leave it when I leave the
+     office. Well there is only a certain amount of code space
+     available...and I use headers like a madman. :-) (Not to mention
+     vocabularies)
+<[Dennis] D.RUFFER> sounds like you need to get your data objects out of
+     the dictionary
+<[Dave] DHWEINSTEIN> I have all (or most of) the parts...I need to
+     integrate them.
+<[Dennis] D.RUFFER> has anyone done a database for F-PC yet?
+<[Dave] DHWEINSTEIN> That is the point of the virtual memory. (That code is
+     written and seems to be debugged...it better be...I released it at
+     SIGForth '89) Err....that should be SIGForth '90 above.
+<[Dennis] D.RUFFER> does that also mean you haven't released it yet
+<[Dave] DHWEINSTEIN> Writing code for modules and records made the OO code
+     possible.
+<[Dennis] D.RUFFER> don't remember seeing it
+<[Dave] DHWEINSTEIN> No...the virtual memory code should be in the SIGForth
+     proceedings, but I am not sure it *can* be uploaded here.
+<[Kevin] APPERT> no, the oops stuf is gonna be released in 90, the ... vm
+     code was released in 89 why not uploadable?
+<[Dennis] D.RUFFER> Is ACM going to stop the articles from being uploaded?
+<[Dave] DHWEINSTEIN> I need to check the ACM legalities. ACM owns the
+     copyright to the VM code. (A mistake which will not be made with the
+     OO code).
+<[Kevin] APPERT> why do they own copywrite>
+<[Dave] DHWEINSTEIN> I think it can be uploaded if the ACM copyright is
+     acknowledged, but I am not sure. Because it was included with the
+     paper. And I signed a piece of paper saying so. (The paper made no
+     sense without the code, and I wanted the paper to make sense).
+<[Kevin] APPERT> hmmmmmmmm.  I guess I was asking why you signed the paper.
+<[Dave] DHWEINSTEIN> I am pretty sure it can be duplicated if copyright is
+     acknowledged, but I have to check.
+<[Dennis] D.RUFFER> well, then just make enough changes to the code to make
+     it look different and upload it as new and improved <grin>
+<[Dave] DHWEINSTEIN> Not really sure. It seemed like a good idea at the
+     time. Dennis: I'll just wait for the port to F-TZ. :-)
+<[Dennis] D.RUFFER> that will work also :-)
+<[Kevin] APPERT> I don't think they care much if you (c) the thing yourself
+     do they?
+<[Dave] DHWEINSTEIN> Of course you just need to get the proceedings, and
+     then you can use a "scholarly paper" (snicker) as a basis for your own
+     version. Hold on a sec.
+<[Dennis] D.RUFFER> hold on to what???
+<[Dave] DHWEINSTEIN> (I'm checking something)
+<[Kevin] APPERT> just ask Zerox, APPLE HAS MORE LAWYERS THAN ENGINEERS!!!!
+     &#$!
+<[Dennis] D.RUFFER> I wonder if ACM's copyright is the same as FIG's.... it
+     is just there to protect the author... not to claim that FIG has
+     exclusive rights...
+<[Kevin] APPERT> may beeeeeeeeee
+<[Dennis] D.RUFFER> the word "exclusive" is the key.... if it appears in
+     the ACM documents, then Dave is in trouble... as well as any author
+     who writes for them .
+<[Kevin] APPERT> there is a great phrase in one of the Heinlein novels ....
+     about an alternate universe in which they had... a "year they hanged
+     the lawyers"
+<[Dennis] D.RUFFER> must have been utopia
+<[Dave] DHWEINSTEIN> Nope. Just checked. No specific (c) in the code
+     itself. Although authorship is acknowledged. Lemme check my ACM
+     legalisms guide (TM) for a sec.
+<[Kevin] APPERT> ,well if you ran over somebody while drunk, they run you
+     over, leave you lying for the same amount of time... and so on
+<[Dennis] D.RUFFER> tis a shame that even us programmers have to worry
+     about that stuff these days the classic eye for an eye senario
+<[Kevin] APPERT> did the internet worm have a copywright notice?
+<[Dennis] D.RUFFER> smile, it violated it itself
+<[Kevin] APPERT> the author could sue!
+<[Dave] DHWEINSTEIN> I think it is under the "Copying without fee is
+     permitted provided that the copies are not made or distributed for
+     direct commercial advantage and credit to the source is given." So
+     GEnie is out, as it charges for distribution, but Usenet or Forthnet
+     are in. I think.
+<[Dennis] D.RUFFER> NO
+<[Dave] DHWEINSTEIN>$Disclaimer: I don't even admit to knowing lawyers.
+<[Dennis] D.RUFFER> GEnie charges for access, not distribution all you have
+     to do is tell where it came from and it sounds like the ACM clause is
+     satisfied
+<[Dave] DHWEINSTEIN> Ahhh. I dunno. I assume, as ACM is for professionals,
+     that use of code from ACM is allowed (otherwise it doesn't do
+     professionals much good), but I don't know.
+<[Kevin] APPERT> hmmmmmmmmmm  I don't understand what the diff is in the
+     eyes of the law
+<[Dave] DHWEINSTEIN> I'll call ACM and find out. (I'm still translating the
+     %R^&$$%& local Sig guidlines for the newsletter)
+<[Kevin] APPERT> between access and distribution
+<[Dave] DHWEINSTEIN> Basically what it comes down to is that if I can
+     upload it, I'd be glad to.
+<[Dennis] D.RUFFER> The difference is subtle kevin, but there GEnie is like
+     paying for a subscription to a magazine
+<[Kevin] APPERT> can I upload 123, debase, and wordstar, then?
+<[Dennis] D.RUFFER> and getting the code in it.
+<[Dave] DHWEINSTEIN> (Things are much easier in dealing with _TCJ_)
+<[Dennis] D.RUFFER> no, I would have to delete those kevin however, even
+     places like PC-SIG can distribute
+<[Kevin] APPERT> so if ACM 'owns' Dave's code... ?
+<[Dennis] D.RUFFER> public domain and things with copyrights like this and
+     even charge for the media
+<[Dave] DHWEINSTEIN> Well they do hold the copyright. That much I gave
+     them.
+<[Dennis] D.RUFFER> that is essentially all GEnie is doing GEnie is
+     charging you to use this electronic media
+<[Dave] DHWEINSTEIN> Ahh...but ACM does not allow charges for media. I
+     don't think.
+<[Dennis] D.RUFFER> but even they charge for the media
+<[Kevin] APPERT> they don't have the choice, as it turns out
+<[Dennis] D.RUFFER> you have to join ACM to get the magazine
+<[Dave] DHWEINSTEIN> (The idea was more or less to give it as wide a
+     distribution as possible)
+<[Kevin] APPERT> it's like Rockwell saying "we can use Abundance" .  What
+     does the owner own?
+<[Dave] DHWEINSTEIN> No...you can buy the proceedings seperately. And
+     typing in the code for your own use surely counts as "fair use".
+     (fload disclaimer.doc)
+<[Dennis] D.RUFFER> the key word there Dave, is that you can BUY the
+     proceedings
+<[Dave] DHWEINSTEIN> Yes. But ACM can do whatever it wants (it has the
+     copyright...with some restrictions). Other people are another matter.
+<[Dennis] D.RUFFER> the Rockwell case is different kevin
+<[Kevin] APPERT> somebody talk about NEXT or something, this legal $%^#
+     makes me ill!
+<[Dave] DHWEINSTEIN> (For example, I believe I retain the right to use my
+     work for future works)
+<[Dennis] D.RUFFER> there, Rockwell doesn't think the Abundance folks have
+     enough muscle to do anything about it
+<[Kevin] APPERT> yes, Dennis, it sure is!  but I was making the point that
+     even if you own the
+<[Dennis] D.RUFFER> I sure hope you do dave <smile>
+<[Dave] DHWEINSTEIN> Talk on Usenet a while back concerned a Forth for the
+     Am29000. (keeping the stacks in registers)
+<[Dave] DHWEINSTEIN> If I were a lawyer I'd live better, have more money,
+     and fewer scruples than I do now. So I dunno.
+<[Kevin] APPERT> (c) to a piece of software, you can't always set the
+     conditions under which it is used!
+<[Dennis] D.RUFFER> true
+<[Dave] DHWEINSTEIN> (Caveat: I still don't understand the Am29000
+     instruction set)
+<[Dennis] D.RUFFER> what about the am29000?
+<[Dave] DHWEINSTEIN> Yes...but I signed a piece of paper stating copyright
+     transfer.
+<[Dennis] D.RUFFER> how many registers does it have?
+<[Dave] DHWEINSTEIN> RISC Chip which now has a controller version. 192 I
+     think. 128 "local" variables.
+<[Kevin] APPERT> yaaayyyyy.  what about the am29k?  the reason you became
+     an engineer (billboard in silicon valley)
+<[Dave] DHWEINSTEIN> I think they are register stacks (the locals) ala the
+     A-B-C registers of the transputer, but I am not sure. (That was the
+     impression I got)
+<[Dennis] D.RUFFER> enough to make a small stack
+<[Dave] DHWEINSTEIN> Hasn't been implemented, just talked about. Now if AMD
+     (which has a big plant in Austin) would send me a development board
+     I'd be glad to do it for them (sleep...I don't need it...I can run on
+     caffeine and willpower for months :-) )
+<[Dave] DHWEINSTEIN> BTW: Anyone heard anything new about the RTX-4001?
+<[Kevin] APPERT> 128 registers a small stack?  are you putting the entire
+     contents of a prom on there or something?
+<[Dennis] D.RUFFER> put those cases of Jolt in the corner <grin>
+<[Dave] DHWEINSTEIN> (Or for that matter any Forth chip looking for beta-
+     testers) :-)
+<[Dennis] D.RUFFER> haven't heard any more about the 4001 yet
+<[Kevin] APPERT> like I said, it won't get any better.  Ancient Chinese
+     curse:  may you live in interesting times.  these are them
+<[Dennis] D.RUFFER> if you want both a return and a parameter stack, then
+     you only have 64 each it is probably enough, if you don't do extensive
+     recursion
+<[Dave] DHWEINSTEIN> Tell me about it. Work. Class. Programming. Writing.
+     Figuring out how to pay the bills (an art in itself). Music. Keeping
+     the cat as far from mischief as possible (also an art in itself).
+     Sleep: n. mythical (grin)
+<[Kevin] APPERT> computer Snoopy:  " Recurse you Red Barron! "
+<[Dave] DHWEINSTEIN> I like interesting times. If it weren't interesting,
+     it wouldn't be fun. Of course I would get more rest...
+<[Dennis] D.RUFFER> we sure ain't getting bored
+<[Dave] DHWEINSTEIN> Oh. Almost forgot. Politics (annoying, irritating, and
+     a lost cause, but still something I persist in).
+<[Dennis] D.RUFFER> not that too :-) I'll stick to religion it's safer
+<[Dave] DHWEINSTEIN> Depends on where you live. :-)
+<[Dennis] D.RUFFER> tis true, religion in Lebanon can get quite tense
+<R.SCHEMMEL1> is here.
+<[Dave] DHWEINSTEIN> Hullo
+<[Dennis] D.RUFFER> ho Bob how's the other side of the mountains nice name
+     bob :-)
+<[Dave] DHWEINSTEIN> Ah well. I need to run. All this legalisms worn me
+     out. Bye.
+<[Dennis] D.RUFFER> bye dave
+<[Dave] DHWEINSTEIN> has left.
+<[Dennis] D.RUFFER> how's the telecom program coming bob?
+<R.SCHEMMEL1> Haven't got that far yet.
+<[Dennis] D.RUFFER> so how far have you gotten (obvious question ;-)
+<R.SCHEMMEL1> I am still in the "basics" stage of trying to learn how to
+     write programs. ga
+<[Dennis] D.RUFFER> have you figured out how to do it yet?
+<[Kevin] APPERT> in Forth?  you don't write programs.  you build pieces,
+     you fiddle around, you exercise functions,  I don't ever remember ever
+     writing a program
+<R.SCHEMMEL1> It comes down to what Glen Hayden said; To learn forth you
+     have to make the concepts in the dictionary a working part of your
+     life.
+<[Kevin] APPERT> be the code
+<[Dennis] D.RUFFER> it is sure a problem when you forget what you wrote
+     when you started a project
+<R.SCHEMMEL1> I think too much too soon bogs you down in the bbeginning.
+<[Dennis] D.RUFFER> the key is to keep the pieces small
+<[Kevin] APPERT> reminds me of how one slices a bagel
+<[Dennis] D.RUFFER> then start gathering them together into something that
+     resembles what you want
+<R.SCHEMMEL1> I am trying to lighten the load by limiting myself to fewer
+     words
+<[Dennis] D.RUFFER> what do bagels have to do with programming kevin???
+<R.SCHEMMEL1> until I can form an intelligible sentence.
+<R.SCHEMMEL1> I meI mean Chuck Moore.
+<[Kevin] APPERT> carol who?
+<D.RUFFER> :-)   just another snographer kevin but I'll bet I lost a set
+     there
+<[Kevin] APPERT> to answer your question: you throw the bagel in the air,
+     close your eyes, and as it falls, draw the knife thru the center of
+     the bagel.  works every time.  if that isn't like programming, I don't
+     know what is! :)
+<D.RUFFER> gotta watch that power supply cable closer sound pretty randomly
+     succesful kevin
+<[BOB] R.SCHEMMEL1> Dennis, I underestimated the learning curve for Forth.
+<D.RUFFER> most people do bob it is easy to write your first program
+<[Kevin] APPERT> zen bagel slicing never fails, Dennis.  it's not random
+<D.RUFFER> i.e. : hi ." hello" ;
+<[BOB] R.SCHEMMEL1> I am taking a week off from work next week to study
+     forrth.
+<D.RUFFER> but another matter to do something useful
+<[Kevin] APPERT> at lease you didn't say ." hello world"
+<D.RUFFER> excellent idea bob
+<[BOB] R.SCHEMMEL1> I can't get going with the interuption of work every
+     day.
+<D.RUFFER> let us know if there is any way we can help bob
+<[Kevin] APPERT> sounds like a great idea, good luck oops.  time to go to
+     dinner
+<D.RUFFER> ok bye kevin
+<[Kevin] APPERT> has left.
+<D.RUFFER> I ate while we talked
+<[BOB] R.SCHEMMEL1> I have all the software I need for now, but if I think
+     of any thing I'll let you know.
+<D.RUFFER> ok, I sure wish you luck
+<[BOB] R.SCHEMMEL1> Thanks Dennis, I appreciate your patience!
+<D.RUFFER> start out small, and build upon what you learn
+<[BOB] R.SCHEMMEL1> I'll get rolling soon I hope.
+<D.RUFFER> the FEP has gone into the background here anyway
+<[BOB] R.SCHEMMEL1> I think I picked a great time to jump on the forth
+     wagon.
+<D.RUFFER> yes, why?
+<[BOB] R.SCHEMMEL1> Because I can talk to all the great forth heads.
+<D.RUFFER> ah yes, it was really difficult before we started this
+     electronic network
+<[BOB] R.SCHEMMEL1> MOst of the world is still in the dark ages.
+<D.RUFFER> I had a hard time in Michigan even understanding what else was
+     done in Forth Most of the Forth community is still there also but we
+     are certainly shaking the bushes
+<[BOB] R.SCHEMMEL1> I think whhen I get better at it I might be able to
+     help you organize everything.
+<D.RUFFER> ge, a volunteer....I'd really apreciate it bob
+<[BOB] R.SCHEMMEL1> I would like to get a chance to show you how I think
+     the board would be easier for a beginner. I smart program to bring
+     them up slowly.
+<D.RUFFER> that would be great...I often can't see what to do about it you
+     know, the old trees theory
+<[BOB] R.SCHEMMEL1> I think once you get to the top of the mountain you are
+     in no position to help those on the bottom.
+<J.PURPLE> is here.
+<D.RUFFER> that is probably very true bob hi j.p. bob, remember to file
+     some of your early thoughts... that way you can refere to them as you
+     approach the top
+<[BOB] R.SCHEMMEL1> I want to build a program that starts with a dictionary
+     of one word and adds words. as you learn to use them.
+<D.RUFFER> maybe, you might want to switch to something a little smaller F-
+     PC is an awfully big concept to swollow
+<[BOB] R.SCHEMMEL1> you can say that again!
+<D.RUFFER> have you checked out pygmy yet?
+<[BOB] R.SCHEMMEL1>  not yet I can't seem to find a version of forth
+<D.RUFFER> it is truely small, and has a lot of PolyForth's concepts in it
+<[BOB] R.SCHEMMEL1> that is strickly standard and nothing but the standard.
+<D.RUFFER> there is NOT one Bob <smile>
+<[BOB] R.SCHEMMEL1> Thats why!
+<D.RUFFER> Martin Tracy's ZEN Forth is the closest we've got
+<[BOB] R.SCHEMMEL1> I  might check that out
+<J.PURPLE> Scuse me folks, can I ask a question?
+<[BOB] R.SCHEMMEL1> sure
+<[Dennis] D.RUFFER> sure j.p.
+<[BOB] R.SCHEMMEL1> yes?
+<J.PURPLE> I uploaded a file to the A2PRO board (FORTH) for the apple and I
+     wanted to know if you all would want a copy over here?
+<[Dennis] D.RUFFER> we sure do... I don't get ovet there very often and
+     generally we let the authors spread things around
+<J.PURPLE> I used the FIG model and assembled a real simple version.
+<[BOB] R.SCHEMMEL1> Dennis, I have a question for you.
+<[Dennis] D.RUFFER> ok, just a sec bob j.p., that would be very useful I
+     don't think we have much for the a2 except the uniforth sampler a
+     truely public domain one would be nice. use library 4 for systems yes
+     bob
+<[BOB] R.SCHEMMEL1> Would you consider letting me play customer service rep
+     on line?
+<[Dennis] D.RUFFER> cust rep for what product bob?
+<[BOB] R.SCHEMMEL1> Forth
+<[Dennis] D.RUFFER> oh, that one <smile> sure, send me mail about how you
+     would like to do it j.p. what format is your file in?
+<[BOB] R.SCHEMMEL1> I would like to find out exactly what people want and
+     then locate it
+<J.PURPLE> It's free.  The first version had 41 downloads, so I guess
+     there's some interest in it.  I assembled it under Merlin Pro.
+<[Dennis] D.RUFFER> that would be useful Bob...maybe a Find Me topic of
+     cat? excuse me j.p., but what is Merlin Pro
+<J.PURPLE> It's a editor-assembler for the Apple
+<[Dennis] D.RUFFER> ok, then 41 download is impressive... by format I meant
+     file format... is it compressed or what?
+<J.PURPLE> I thought so, but I haven't had any mail about it, so I wonder
+     sometimes. It's sqeezed using BLU, an apple squeezer.
+<[Dennis] D.RUFFER> in that area, the curious will download anything...
+<J.PURPLE> Takes the core out, too, I think.
+<[Dennis] D.RUFFER> over here, the ones who will use it download :-)   is
+     there anyway to give it too us raw? or in ARC or ZIP format... we've
+     had quite some debates about formats over here
+<J.PURPLE> Sure, I could just send the binary file up.
+<[Dennis] D.RUFFER> great, I can take care of it from there what's it
+     called so I can look for it?
+<J.PURPLE> I could ARC it (I'm actually using an AMIGA now), but I'm not
+     sure that many apple people use ARC.
+<[BOB] R.SCHEMMEL1> I would like to create customer account files to record
+     who wants what and where it was found  and what level of experience
+     they are at. so I can chart everyones progress to see how each person
+     gets where they are.
+<[Dennis] D.RUFFER> some do, and we have an unARC written in Forth the
+     other Forth boards are using ZIP right now, but I'm sticking with ARC
+     that sounds useful Bob, but might take some time .
+<J.PURPLE> Sounds like it'd work, then.  I'll stick it all together and
+     send it up in the next couple of days.
+<[Dennis] D.RUFFER> and it's name is....?
+<J.PURPLE> OOOh I don't know...8)   PURPLE.FORTH, beleive it or not!
+<[BOB] R.SCHEMMEL1> Do you remember how you got starrted Dennis ?
+<[Dennis] D.RUFFER> great name!
+<J.PURPLE> Colorful
+<[Dennis] D.RUFFER> BTW what is your first name j.p.?
+<J.PURPLE> Bob, that project sounds like what GENIE is doing here... a big
+     project!
+<[BOB] R.SCHEMMEL1> Yes and no
+<[Dennis] D.RUFFER> I remeber bob, but I did it for my job and had a
+     personal tutor
+<[BOB] R.SCHEMMEL1> lucky you
+<J.PURPLE> First name is John, but all my friends call me Wakeley (middle
+     name)
+<[Dennis] D.RUFFER> it was year before I got into the FIG world ok Wakaley,
+     I will watch for your file
+<J.PURPLE> I haven't joined, the $30 for the model books broke me <yuk,
+     yuk>.
+<[BOB] R.SCHEMMEL1> I want to make it possible to study everyones path up
+     the learning ladder to see who learns faster and why.
+<[Dennis] D.RUFFER> make that years before I got into FIG (say 5 or so)
+<J.PURPLE> Everyones???
+<[Dennis] D.RUFFER> it is $30 per year for membership wakeley
+<[BOB] R.SCHEMMEL1> Forth Rt members
+<[Dennis] D.RUFFER> but you get a real nice magazine to read every other
+     month
+<J.PURPLE> I know,  since I got the manuals, finances are much looser
+     around here.  I may just spring for it.
+<[BOB] R.SCHEMMEL1> You know; DAY 1: ETC...
+<[Dennis] D.RUFFER> day 1 at Forth, Inc. was sure an education
+<[BOB] R.SCHEMMEL1> exactly
+<[Dennis] D.RUFFER> when we started our project 10+ years ago I mean
+     progress at learning Forth depends a good deal on how you use it
+<[BOB] R.SCHEMMEL1> I have gone around in circles and spun my wheels alot.
+<[Dennis] D.RUFFER> if it is for a job, it goes a lot faster cause you boss
+     is breathing down your neck and you do it all day and night learning
+     it on your own, like you are doing is neccessarily a lot slower
+<[BOB] R.SCHEMMEL1> I like the Heathkit motto: "we WON'T let you fail."
+<[Dennis] D.RUFFER> I'm afraid quite a few people HAVE failed at Forth
+<[BOB] R.SCHEMMEL1> I would like to implement that on the Genie Forth RT.
+<[Dennis] D.RUFFER> many look at it for the first time and say yuk and few
+     have the perserverience to stick out the learning curve
+<[BOB] R.SCHEMMEL1> I said "What the ?"
+<[Dennis] D.RUFFER> but those who do, are truely unique individuals
+<P.ZAWASKY> is here.
+<J.PURPLE> I like Brodie's attitude in Thinking Forth-
+<[Dennis] D.RUFFER> and worth much more as software engineers after they
+     get over the learning cycle
+<[BOB] R.SCHEMMEL1> That's because it is a a philosophy and a thinking
+     model
+<J.PURPLE> It may not be a fast language, but the discipline and
+     organizational skills you learn are really valuable.
+<[BOB] R.SCHEMMEL1> that trains the mind
+<[Dennis] D.RUFFER> it IS a philosophy about how to think about programming
+     that can be applied to any other language
+<[BOB] R.SCHEMMEL1> My point is there is TOO MUCH MYSTERY
+<[Dennis] D.RUFFER> however, once you learn Forth, it is difficult to but
+     up with the bull that other languages make you put up with
+<J.PURPLE> Someday I hope to have enough time to absorb it all (some).
+<[Dennis] D.RUFFER> there is NO mystery Bob...just mysterious programmers
+     <smile> the basic Forth word set is really very simple however, unlike
+     other languages, the basics are not enough to get the job done
+<[BOB] R.SCHEMMEL1> That is why I want to reveal the behind the scenes
+     action of how people learn forth
+<J.PURPLE> I find less mystery than in other languages, really you can
+     create your own reality.
+<[Dennis] D.RUFFER> I have not stop learning about Forth since I started 12
+     years ago
+<J.PURPLE> You're not dead yet
+<[BOB] R.SCHEMMEL1> I mean mystery of who learns faster and why.
+<J.PURPLE> Oh, you seem to be following more than one thread here?
+<[Dennis] D.RUFFER> there is a 3rd dimension of thinking that has to go on
+     when learning Forth
+<HONKYTONK> is here.
+<J.PURPLE> pianoman!
+<[Dennis] D.RUFFER> hi honky
+<[BOB] R.SCHEMMEL1> I mean case st
+<HONKYTONK> joua!
+<[BOB] R.SCHEMMEL1> studies
+<HONKYTONK> hiya even!
+<J.PURPLE> FIGs
+<[Dennis] D.RUFFER> I think you will find it depends more on the individual
+     than on the process Bob
+<[BOB] R.SCHEMMEL1> case studies of each members progress
+<[Dennis] D.RUFFER> some can think in this 3rd dimension easier
+<[BOB] R.SCHEMMEL1> what makes a good forth learning path in terms of
+     software and practice?
+<J.PURPLE> Bob, I think you should go over to Roberta Pournelle's board
+     (Education).  They're really into learning curves and such.
+<[BOB] R.SCHEMMEL1> I only want to know how people get where they are
+<HONKYTONK> has left.
+<[Dennis] D.RUFFER> Bob, the education RT might have some simular
+     experiences say for artists or musicians
+<J.PURPLE> I've always felt my curve is more like a square wave...there's
+     some sort of threshhold, and then the light...
+<[Dennis] D.RUFFER> it take the same side of the brain
+<[BOB] R.SCHEMMEL1> The "thresshold is when the chain reaction goes
+     critical.. or brain reaction
+<J.PURPLE> What happened to honkytonk, I was enjoying the music.
+<[Dennis] D.RUFFER> You might be waiting for something that will not
+     happen...
+<J.PURPLE> Don't say that!!!
+<[BOB] R.SCHEMMEL1> I want to MAKE IT HAPPEN
+<[Dennis] D.RUFFER> said this seemed a little deap, and apologized for
+     leaving
+<J.PURPLE> deap
+<[Dennis] D.RUFFER> there is no deap understanding that suddenly hits you
+<J.PURPLE> only arpeggios
+<[Dennis] D.RUFFER> at least it didn't happen that way with me after
+     writting Forth for a while... and looking at others code... I
+     discovered that I could understand what they did
+<[BOB] R.SCHEMMEL1> at some point the associations begin to acelerate
+<[Dennis] D.RUFFER> and found it was not much different that what I was
+     doing
+<J.PURPLE> I have been happy to find that I can make things happen as far
+     as learning goes. That's the threshhold I referred to.
+<[BOB] R.SCHEMMEL1> yes
+<[Dennis] D.RUFFER> Forth is something that is hard to learn from text
+     books you just need to do it, again and again soon it becomes natural
+<P.ZAWASKY> AND AGAIN
+<[BOB] R.SCHEMMEL1> Thats been my problem, I keep getting interupted while
+     I am trying to do it
+<[Dennis] D.RUFFER> then you can see the simularities in others code
+<J.PURPLE> I found it helpful to assemble the basic code, and see it from
+     the ground up as an example of style.
+<[Dennis] D.RUFFER> that is a problem...picking up after an interruption
+     means relearning what you were doing
+<[BOB] R.SCHEMMEL1> It6ts like trying to finish a hot meal and going back
+     to find the food cold reheating it only to be interupted again..
+<[Dennis] D.RUFFER> just pop it in the microwave bob <smile>
+<J.PURPLE> That's where some good notes come in handy.
+<[BOB] R.SCHEMMEL1> good point
+<J.PURPLE> That's also where FORTH is good, you leave off at a word, not a
+     subroutine.
+<[Dennis] D.RUFFER> and a good programming style that include good notes
+     about what you are doing document while you code, cause you will never
+     have time to do it later
+<[BOB] R.SCHEMMEL1> ok Dennis, how about NOTES from a programmer files for
+     the beginners to read
+<[Dennis] D.RUFFER> how so?
+<J.PURPLE> That's where FORTH is bad, not much self-documentation.
+<[BOB] R.SCHEMMEL1> exactly! the mystery
+<[Dennis] D.RUFFER> the documentation comes from the programmer it IS NOT
+     Forth's fault
+<[BOB] R.SCHEMMEL1> I said that
+<J.PURPLE> I wasn't blaming.
+<[Dennis] D.RUFFER> it is the programmer's!!!!!!
+<[BOB] R.SCHEMMEL1> ok Dennis I'll start a PROGRAMMERS DIARY
+<[Dennis] D.RUFFER> notes from a programmer make nice late night reading
+     material, but tend to be only appreciated by the author...Very few
+     will havethe same experiences but for your own sake, it is an
+     indespesible tool!
+<J.PURPLE> I think of it as a distillation process.  It can ease the mental
+     burden to leave lots of development behind one word and pick up from
+     there
+<[Dennis] D.RUFFER> i.e. DO IT!
+<[BOB] R.SCHEMMEL1> and upload them DIARY OF A FORTH STUDENT?
+<[Dennis] D.RUFFER> sure, it might be interesting
+<J.PURPLE> Might be another Anne Frank.
+<[Dennis] D.RUFFER> and someone might point out any flaws in the process
+<[BOB] R.SCHEMMEL1> EXCEDRIN HEADACHE # 25 ; the missing BASE word etc..
+<J.PURPLE> A bad one.
+<[BOB] R.SCHEMMEL1> MISTAKES OF A PROGRAMMER ? OUTTAKES disconnected.
+<J.PURPLE> Bleeps and Bloopers.
+<[Dennis] D.RUFFER> oops he got bit too
+<J.PURPLE> I guess.
+<[Dennis] D.RUFFER> I got disconnected earlier too
+<J.PURPLE> a mystery no doubt Do they do that when you don't pay your bill
+     fast enough?
+<[Dennis] D.RUFFER> who is this P.zawasky that is just listening in the
+     background????
+<J.PURPLE> ??
+<P.ZAWASKY> a silent one
+<[Dennis] D.RUFFER> no, they hit you before you can even get on
+<J.PURPLE> I'll remember.
+<[Dennis] D.RUFFER> I guess so...what is your claim to fame???
+<J.PURPLE> None I can remember
+<R.SCHEMMEL1> is here.
+<[Dennis] D.RUFFER> bob's back!
+<R.SCHEMMEL1> DARN TELEPHONE SALES PEOPLE!
+<J.PURPLE> Ah, back from the mysterious beyond.
+<P.ZAWASKY> not much 68hc11 stuff (nms) long tin=mr=====time fig member
+<[Dennis] D.RUFFER> must have been call waiting
+<J.PURPLE> Call waiting.
+<R.SCHEMMEL1> I got yes
+<[Dennis] D.RUFFER> glad to hear it p.z.
+<R.SCHEMMEL1> disconected
+<J.PURPLE> check out the delete key p.z.
+<[Dennis] D.RUFFER> gee, I got call waiting cancel.....
+<P.ZAWASKY> will try
+<J.PURPLE> They've got override!
+<R.SCHEMMEL1> this time I punched in *70 to suspend it override as you call
+     it
+<[Dennis] D.RUFFER> yes, that is the key code bob!!!
+<J.PURPLE> No, the caller has the override.
+<[Dennis] D.RUFFER> I put it right in my dial string
+<R.SCHEMMEL1> OH NO!
+<J.PURPLE> Yup.
+<[Dennis] D.RUFFER> I don't think anyone can override it (I hope) except
+     maybe the operator in an emergency
+<J.PURPLE> I don't have to worry, we still have to give our number to the
+     operator for long distance.  They laugh when you ask for call waiting
+<[Dennis] D.RUFFER> do you still have pulse dial too???
+<J.PURPLE> Just joking...another mystery!
+<R.SCHEMMEL1> So what shall I call it? DIARY OF Mr. FORTH ?
+<J.PURPLE> No. They say in 2 years (every year, 2 more years).
+<[Dennis] D.RUFFER> like 2 months j.p.?
+<J.PURPLE> Dr. LISP & Mr. FORTH.
+<[Dennis] D.RUFFER> Diary of a Forthaholic
+<R.SCHEMMEL1> HA! HA!
+<J.PURPLE> As I said, a distillation process.
+<R.SCHEMMEL1> FORTHAHOLICS ANONYMOUS
+<[Dennis] D.RUFFER> are we denegrating to insanity now?
+<R.SCHEMMEL1> no
+<J.PURPLE> I'll sign up with ALAFORTH, since I'm not a member.
+<[Dennis] D.RUFFER> funny, then why are you learnign Forth <smile>
+<R.SCHEMMEL1> So do you have a preference for a name for the Diary Dennis?
+<J.PURPLE> 8)
+<[Dennis] D.RUFFER> not that I can think of (or the one I mentioned :-)
+<P.ZAWASKY> got to go learn more about F-PC..bye
+<R.SCHEMMEL1> Ok but I don't know any Lisp
+<J.PURPLE> bye pz
+<[Dennis] D.RUFFER> bye pz
+<[Dennis] D.RUFFER> no bob the Forthaholic one
+<P.ZAWASKY> has left.
+<[Dennis] D.RUFFER> anything else to talk about tonight?
+<R.SCHEMMEL1> I think that hi
+<J.PURPLE> Another trial for a learning curve analysis!
+<R.SCHEMMEL1> How is everything on the RT?
+<[Dennis] D.RUFFER> ok I guess
+<R.SCHEMMEL1> There doesn't seem to be alot of new messages.
+<[Dennis] D.RUFFER> lot's of new things coming in the future
+<J.PURPLE> Doesn't sound too enthusiastic.
+<[Dennis] D.RUFFER> there never is a lot of activity here but enough to
+     keep us alive
+<R.SCHEMMEL1> That will change
+<J.PURPLE> Everybody's thinking
+<[Dennis] D.RUFFER> do we give that impression jp?
+<J.PURPLE> not really
+<[Dennis] D.RUFFER> I think the lack of messages shows we are all busy
+<J.PURPLE> My interest waxing in FORTH again, especially since talking with
+     youse.
+<[Dennis] D.RUFFER> but the activity is getting better we didn't turn you
+     off to Forth did we
+<J.PURPLE> No, waxing, not waning.
+<[Dennis] D.RUFFER> or excuse me, waxing is better huh glad to hear it
+<R.SCHEMMEL1> I know there is a way to to custom tailor the RT
+<J.PURPLE> Sure, like waxing poetic and stuff.
+<[Dennis] D.RUFFER> we are all invloved very deaply in it
+<J.PURPLE> deap
+<R.SCHEMMEL1> what happened to "deep"?
+<[Dennis] D.RUFFER> deeply (ok I can't speel :-)
+<J.PURPLE> and invloved (Freudian)?
+<[Dennis] D.RUFFER> the fingers are faster than the mind, and I hate
+     backspace
+<R.SCHEMMEL1> Dennis do you have CHAT MODE ON THE RT? sysop that is
+<[Dennis] D.RUFFER> anybody can use the NOTIFY command
+<J.PURPLE> use SEN ?
+<[Dennis] D.RUFFER> send only works in the RTC
+<J.PURPLE> oh
+<R.SCHEMMEL1> D
+<[Dennis] D.RUFFER> but notify is GEnie wide, unless they are in a XMODEM
+     or in the BB or other places of interest :-(
+<R.SCHEMMEL1> I've got it!
+<[Dennis] D.RUFFER> then you have Aladdin that send automatic notify replys
+<R.SCHEMMEL1> Start a Catagory called "WHAT I WAS LOOKING FOR WHEN I LOGGED
+     IN"
+<J.PURPLE> Is this the regular night for the RTC?
+<[Dennis] D.RUFFER> start with a topic Bob, and we can see if it take soff
+<R.SCHEMMEL1> OK
+<[Dennis] D.RUFFER> yes, Thursday at 9:30 Eastern
+<J.PURPLE> Mystery.
+<[Dennis] D.RUFFER> and Sundays at 8:30 Esatern Sundays are usually
+     tutorials, but sometimes they are also free format
+<J.PURPLE> I'll be back (copywrite Scharzenegger).
+<R.SCHEMMEL1> Dennis, I know this might
+<[Dennis] D.RUFFER> glad to hear it
+<R.SCHEMMEL1> seem like another sidetrack but if I wait alittle before
+     tackling the telecom program maybe I will have a better idea of what
+     it should include.
+<[Dennis] D.RUFFER> no problem bob...it just means that I might try to do
+     something also (on telecom side)
+<J.PURPLE> Telecom is a nightmare.  Doing 3 things at once.
+<[Dennis] D.RUFFER> it is a multitasking dream!
+<R.SCHEMMEL1> The program Dennis and I have in mind is very multitasking
+<J.PURPLE> I have a good time watching the AMI load from disk and write out
+     the line at the same time.
+<R.SCHEMMEL1> show off
+<J.PURPLE> Are you using 386's or what.
+<[Dennis] D.RUFFER> this should be a real excersise in multitasking as we
+     analyse the incoming data for capture paterns
+<R.SCHEMMEL1> I have an XT
+<[Dennis] D.RUFFER> I have a 386, but can do the same on apples Forth's
+     multitasker is very efficient
+<J.PURPLE> I didn't think it was possible with the hardware.
+<[Dennis] D.RUFFER> speed in a telecom program only determines the size of
+     the data buffer
+<R.SCHEMMEL1> I want to write a program that teaches you as it does
+     everything else bye (by) monitoring
+<J.PURPLE> Sweet bye and bye. oh, only by.
+<R.SCHEMMEL1> what comes in on your calls and on the boards Dennis, I
+     really enjoyed the Roedy conference!
+<[Dennis] D.RUFFER> good, I'm sorry I missed it errr, no... I did get to
+     catch a little of it...I seem to remember
+<R.SCHEMMEL1> It was helpful, especially since it was the occasion for him
+     uploading BBLINTERNALS AND BBLFAST
+<[Dennis] D.RUFFER> yes, those should help
+<R.SCHEMMEL1> both very illuminating My homework data stack gets deeper
+     every day
+<[Dennis] D.RUFFER> a week off sound like just the ticket for you
+<R.SCHEMMEL1> I am looking at eight books
+<J.PURPLE> That's bad for a LIFO stack.
+<R.SCHEMMEL1> yes the   week will help ]"10 DAYS IN AUGUST"
+<[Dennis] D.RUFFER> well, I've got to run folks
+<R.SCHEMMEL1> bye Dennis!
+<J.PURPLE> me too, a work day tomorrow.
+<[Dennis] D.RUFFER> looking forward to the purple forth, and for the notes
+     bob
+<J.PURPLE> see ya
+<R.SCHEMMEL1> bye John!
+<[Dennis] D.RUFFER> see ya all later thanks for coming
+<R.SCHEMMEL1> I'm out your welcome
+=== End of Steno notes. ===
+
+

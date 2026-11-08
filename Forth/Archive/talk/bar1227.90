@@ -1,0 +1,296 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 12/27/90   Time: 22:42EST
+Attendees:
+[[gars] GARY-S]
+[[Kevin] APPERT]
+[[80jax196] JAX]
+[[Wil] W.BADEN1]
+      Items discussed include Forth Dimensions, Forth in Oceanography,
+      eForth, Vesta 80i96 SBC, Guy Kelly in conference, the search for
+      female Forth RT conference guests, rules for lunar holidays, origin
+      of 'bigot', good bathroom reader
+Minutes:
+<APPERT> is here.
+<[gars] GARY-S> Hello stranger
+<[gars] GARY-S> I was starting to think I had offended you
+<[Kevin] APPERT> allow me to convey you one complete set of season's greetings, 
+complete with ...\
+<[Kevin] APPERT> happy new year option.
+<[gars] GARY-S> cute
+<[Kevin] APPERT> just been busy at work, getting home too late for much-loved 
+figgy bar
+<[Kevin] APPERT> read last F.D. ?  one of the articles was written by a fellow 
+at Woods Hole Oceoonographic inst.
+<[Kevin] APPERT> reading between the lines of the capsule author bio, I 
+conclude there is a
+<[Kevin] APPERT> signifigant Forth presence there.
+<[gars] GARY-S> which one - just got my FD today
+<[Kevin] APPERT> hmmmmm let me go grab it.  article on interrupts serviced with 
+high level
+<[Kevin] APPERT> as I recall
+<[gars] GARY-S> Interrupt handling - just found it
+<[gars] GARY-S> Barrie Walden
+<[Kevin] APPERT> at one point, some folks were getting together a collection of 
+Forth 'success stories' to help in selling forth.
+<[gars] GARY-S> I see Mr. Walden is using a 6809 chip ! VERY popular chip in 
+Europe
+<[gars] GARY-S> Two years ago I did a serious insiders look at some Belguin 
+equipment and it was _full_ of 6809's
+<[gars] GARY-S> What are you so embroiled in you have no time for the FIGGY ?
+<[Kevin] APPERT> we just moved back to our building after a year of remodeling..
+<[gars] GARY-S> ohhhh - and ouch !
+<[gars] GARY-S> you'll never find everything
+<[Kevin] APPERT> I have an infrared photometer and an ultraviolet photomoter....
+<[Kevin] APPERT> a rocket payload and a Novelle Netware (TM) network ....
+<[Kevin] APPERT> in the works....
+<[Kevin] APPERT> and my department has been reorganized and I have to account 
+for and transfer...
+<[Kevin] APPERT> three departments worth of physical property.
+<[gars] GARY-S> Do you like paperwork or did you just get caught ?
+<[Kevin] APPERT> I do it because it needs to be done
+<JAX> is here.
+<[80jax196] JAX> hi Kev, Gars.
+<[gars] GARY-S> You came very close to finding an empty conference room
+<[Kevin] APPERT> <<<<uploading set of season's greatings for Jax.
+<[80jax196] JAX> did someone lose one?
+<[gars] GARY-S> Kev and I were leaving
+<[80jax196] JAX> aha
+<[gars] GARY-S> I think you're about to get New Year'd
+<[Kevin] APPERT> How goes it.  what's knew and exciting
+<[80jax196] JAX> by Kevin?
+<[80jax196] JAX> Well, what's new is ...
+<[80jax196] JAX> Today, I pretty much completed Vesta Forth-83i96.
+<[gars] GARY-S> Is eForth going on the i8096 ?
+<[Kevin] APPERT> they were duely uploaded.  the new year option has now been 
+bundled with the rest of the set
+<[80jax196] JAX> I'm also working on eForth for the 80196.
+<[80jax196] JAX> But the Vesta language is the one I'm proud of.
+<[80jax196] JAX> I designed it in a notebook on my way to Melbourne last spring 
+for X3J14.
+<[Kevin] APPERT> Vesta Forth for the 80196?
+<[gars] GARY-S> 83i96
+<[80jax196] JAX> We have a new single board computer, the SBC196 ... the 
+language for it is Forth-83i96.
+<[Kevin] APPERT>  features?
+<[80jax196] JAX> All the usual Vesta stuff, pretty much.
+<[80jax196] JAX> The uniqueness is twofold:
+<[80jax196] JAX> 1) The 80196 is a 16-banger without seg regs ... but 
+Forth-83i96 uses a 96-k memory model, and ...
+<[80jax196] JAX> 2) The user's code compiled interactively is ROMmable directly,
+ without the step of copying back to RAM for execution.
+<[80jax196] JAX> The SBC196 is a neat control computer.
+<[80jax196] JAX> It has I^2C bus (Philips) and MicroWire bus.
+<[80jax196] JAX> Onboard RTC ...
+<[80jax196] JAX> Pin connector for offboard access ( 4k of mem map is for 
+offboard access)
+<[80jax196] JAX> 80C196 has Hi SPeed Inputs and Outputs, PWM generator ...
+<[Kevin] APPERT> no experience, myself.  how do you address beyond 64k w/out 
+seg regs?
+<[80jax196] JAX> LOW POWER BOARD running, about 80 uA ...
+<[80jax196] JAX> idle, about 28 uA ...
+<[Kevin] APPERT> RTC = time of day or count of clock osc. ticks?
+<[80jax196] JAX> 80C196 PowerDown state (re-awaken with extint) is ~ 1uA !!!
+<[80jax196] JAX> RTC == Realtime Clock chip, also tick counter in timer int of 
+course.
+<[80jax196] JAX> Board is ~ 3"x 4".
+<[80jax196] JAX> Development configuration is 64K EPROM + 128K SRAM.
+<[80jax196] JAX> Runtime configuration for user's ROMmed app is 64K EPROM + 32K 
+SRAM.
+<[80jax196] JAX> Provides at runtime one of the following two setups:
+<[80jax196] JAX> 16K user dictionary + 28K data space + 4K offboard mem-map + 
+16K binary code
+<[80jax196] JAX> or ...
+<[80jax196] JAX> 32K user dictionary + 12K data space + 4K offboard mem-map.
+<[Kevin] APPERT> how do you go beyond 64k w/ 16 bits and no seg. regs. ?
+<[80jax196] JAX> It's a secret :-)
+<[Wil] W.BADEN1> is here.
+<[gars] GARY-S> The preceeding has been a commercial endorsement of Vesta 
+Technology, Inc
+<[80jax196] JAX> Just bragging about my 96K Forth on a 16-bit chip!
+<[Kevin] APPERT> you mean I have to get the intel data book and read it?  
+that's cruel
+<[Kevin] APPERT> seasons greetings, will (this comes bundled with rev 3.0 happy 
+new year)
+<[Wil] W.BADEN1> ANSI, o corse?
+<[80jax196] JAX> Aw, heck Gars, I'm just pleased because I feel this is the 
+best thing I have ever done in Forth.
+<[Kevin] APPERT> ansi.  bah .   humbug.
+<[gars] GARY-S> In case you gents don't know it, our first guest conf of 1991 
+is with Guy Kelly on the 14th of Jan !
+<[80jax196] JAX> Wil, it's 83-STANDARD but I could make it ANS in a week since 
+the internals are so ANS-like.
+<[Wil] W.BADEN1> Kevin, rev 3.0?
+<[Kevin] APPERT> rev 2.575 had too many bugs, Wil.
+<[Kevin] APPERT> so we just uped the rev. and re-released it.  (changed our 
+phone support number)
+<[Wil] W.BADEN1> Kevin, where are you working nowadays?
+<[80jax196] JAX> Interesting thing about the year ...
+<[Kevin] APPERT> Lockheed Palo Alto Research Labs.
+<[80jax196] JAX> This fall, the Jewish year 5751 started.
+<[Kevin] APPERT> Space Sciences Laboratory
+<[80jax196] JAX> 5751 in letters (the way Jewish dates are written) ...
+<[80jax196] JAX> is T Sh N A
+<[Wil] W.BADEN1> With John Hall?
+<[80jax196] JAX> which implies, "there shall be enmity."
+<[80jax196] JAX> Pretty true.
+<[Kevin] APPERT> In a different department, same Co., same location ,  
+different building
+<[Wil] W.BADEN1> Jax, can rosh hasshanah fall on Sunday or Wednesday?
+<[80jax196] JAX> I don't think so, but I forget. Let me look it up.
+<[Wil] W.BADEN1> Why not?
+<[Kevin] APPERT> you don't have a pull-down religous holiday calander?
+<[gars] GARY-S> I am still looking for female Forthers to invite as guests in 
+conference - any nominees ??????
+<[80jax196] JAX> No, I have a Machzor from the previous century. About ten of 
+them. And I can't find the one with the eternal calendar ... just a sec!
+<[Kevin] APPERT> Linda (not sure about first name) Melvin comes to mind.
+<[80jax196] JAX> R"H only on Monday, Tuesday, Thursday, Saturday.
+<[gars] GARY-S> Who is she and how do I contact her ?
+<[Wil] W.BADEN1> Is Forth or femality the dominant quality?  If the latter, Jan 
+Shepherd.
+<[Kevin] APPERT> why female?
+<[Wil] W.BADEN1> Didn't she get the LAST figgy award?)
+<[gars] GARY-S> She definitely MUST have a topic of Forth interest - so Jan is 
+only a maybe
+<[Wil] W.BADEN1> No, she's a sure thing.  That is, if FIG *really* does have 
+something to do with Forth.
+<[gars] GARY-S> Because in three years of monthly or greater frequency 
+conferences only Elizabeth Rather has appeared to add _any_ balance to a strong
+ly weighted male party
+<[Wil] W.BADEN1> What does she think is the future of Fig & Forth?
+<[Wil] W.BADEN1> (That's a good question for Bess and Jan.)
+<[80jax196] JAX> The reason that R"H falls on the days mentioned above is so 
+Y"K doesn't fall on  Friday or Saturday and so that Hoshanah Rabah doesnt
+ fall on Sabbath.
+<[Wil] W.BADEN1> Jax, what's the pilpul for that?
+<[80jax196] JAX> If Y"K falls on Friday you can't prepare for the Sabbath.
+<[80jax196] JAX> If on Sunday, you can't prepare for Y"K
+<[Kevin] APPERT> there don't seem to be a lot of females working on the nuts & 
+bolts level which seems to attract Forthers.  Females tend to be more c
+onstrained by society, Forthers tend to be more libertarians and/or anarchists.
+<[80jax196] JAX> Hoshana Rabah involves beating around with branches, can't be 
+done on Sabbath.
+<[Wil] W.BADEN1> And Wedneday?
+<[gars] GARY-S> Has anyone told Adm. Grace Hopper about this ?
+<[80jax196] JAX> I haven't met a heck of a lot of African-American programmers, 
+either.
+<[Kevin] APPERT> Exceptions don't make no never-minds to statistacal 
+genralizations which start with " tend to be..."
+<[gars] GARY-S> Understood
+<[gars] GARY-S> But I do like to argue as much as you
+<[80jax196] JAX> I have met some very good femal programmers though. Microsoft 
+BASIC for the Amiga was written largely by a woman I met.
+<[80jax196] JAX> Are you doing another computer calendar, Wil?
+<[80jax196] JAX> Charles Curley gave me a Hex calendar for 0x7c7 (1991).
+<[Kevin] APPERT> maybe females tend not to be joiners of organizations like Fig.
+<[gars] GARY-S> or is this still the same calendar getting dates and events 
+pasted in
+<[Wil] W.BADEN1> Is he using my program?
+<[gars] GARY-S> MOST Forth programmers tend not to join FIG
+<[80jax196] JAX> If If R"H fell on Wednesday, Y"K would be Friday
+<[80jax196] JAX> Yes, he is using your program.
+<[80jax196] JAX> With credit attached.
+<[Wil] W.BADEN1> (You got it, Gary.  I'm still for a mathematical rule for 
+Ramadan.)
+<[Wil] W.BADEN1> With Full and New Moons?  I'm pleased that people still make 
+use of my divertisments.
+<[gars] GARY-S> How many religeons will your calendar eventually cover ?
+<[80jax196] JAX> Yes, FM and NM included
+<[80jax196] JAX> Did it on his Atari.
+<[80jax196] JAX> Were you short the rule for Ramadan?
+<[Wil] W.BADEN1> J, C, M, and P.
+<[80jax196] JAX> (Better watch out for Baha'i, if you list every one of THEIR 
+holidays you'll NEVER finish! :-) )
+<[80jax196] JAX> P?
+<[gars] GARY-S> Hindu
+<[Wil] W.BADEN1> (Pagan.)
+<[80jax196] JAX> The Hindus ain't Pagan! WE'RE Pagan!
+<[80jax196] JAX>  :-)
+<[80jax196] JAX> At least *I* am ... neo-American secular-humanist pagan.
+<[gars] GARY-S> That should be Hindu ?
+<[Kevin] APPERT> Druid anybody?  I understand THOSE are the pagans
+<[Wil] W.BADEN1> Hadn't thot of Hindu.  Don't know anything about their 
+calendar.
+<[80jax196] JAX> "Pagan" is a common Borinqueno surname.
+<[Kevin] APPERT> what place
+<[Wil] W.BADEN1> From?
+<[Kevin] APPERT>  ?
+<[gars] GARY-S> Greek Orthodox ?
+<[Wil] W.BADEN1> Portin Rico.
+<[80jax196] JAX> Puerto Rico == Borique.
+<[Wil] W.BADEN1> Borigua.
+<[80jax196] JAX> That's cuba.
+<[80jax196] JAX> Boricua.
+<[gars] GARY-S> Ramadan is contingent upon the new moon being sighted from 
+Cairo if that helps Wil
+<[80jax196] JAX> The place names are polynesian in the carribean.
+<[Kevin] APPERT> what if its cloudy, Gary?
+<[80jax196] JAX> In Cairo?
+<[80jax196] JAX>  :-)
+<[gars] GARY-S> No Rama rama ding dong
+<[Wil] W.BADEN1> Here's a test for Jax? Why is a bigot a "bigot"?
+<[Kevin] APPERT> CBW weapons drifting over from an Iraqui purge of some ethnic 
+minority ( I did not specify water vapor clouds)
+<[80jax196] JAX> sounds nasty in French.
+<[gars] GARY-S> That's where the naval observatory is, so it has become the 
+modern reference point for the new moon to intiate Ramadan
+<[Kevin] APPERT> whose navels do they observe?
+<[Wil] W.BADEN1> It's from the Spanish word for moustache.  Now why does 
+moustache mean bigot?
+<[gars] GARY-S> orange ones
+<[80jax196] JAX> No se'.
+<[Kevin] APPERT> why, Wil?
+<[gars] GARY-S> The clouds you speak of should follow the new moon by roughly 2 
+nights
+<[Wil] W.BADEN1> The word originally meant Visigoth, who were known for their 
+moustaches and Puritanical Unitarianism.
+<[80jax196] JAX> pico, -are (L.) to smear with pitch.
+<[Wil] W.BADEN1> They were so obnoxious there was a crusade to eliminate them.
+<[80jax196] JAX> probably part of the reason.
+<[Kevin] APPERT> finaly some mention of Visigoths!   I've been wondering why 
+those darn Vandals get all the good press.
+<[80jax196] JAX> Slang words rarely have one sole deriviation.
+<[80jax196] JAX> They are usually fortuitous intersections of several 
+linguistic coincidences.
+<[Wil] W.BADEN1> Yeah, it does sound to good to be true.
+<[gars] GARY-S> Yeah ! If you really want some Havoc wreaked, call on a few 
+Visigoths
+<[80jax196] JAX> Saturday Night Live in about 1973 had a real funny bit about 
+the Romans vs. the Vandals ... Centurion comes out of his tent to find i
+t has been T.P.'ed.
+<[Wil] W.BADEN1> (There's hope for my children. Number One Daughter asked for 
+Quine's "Quiddities" for Christmas.)
+<[Kevin] APPERT> reminds me of Paul Revere.  He was one of several who rode 
+that night.  He just had the press agent so he is the one we remember.
+<[Kevin] APPERT> huh? Wil?
+<[gars] GARY-S> How old is number one ?
+<[Wil] W.BADEN1> 33.
+<[Wil] W.BADEN1> This year the family is having Christmas early -- Jan 1, 1991.
+<[Wil] W.BADEN1> Last year it was Jan 6.
+<[Kevin] APPERT> What's a Quiddity and why would one want one?  Wil?
+<[gars] GARY-S> Hope for the children (?)
+<[Wil] W.BADEN1> We schedule Christmas so that the family can all be together.
+<[80jax196] JAX> well, it is about 20:40 here ... jaxsplitz!
+<[Kevin] APPERT> 'night
+<[gars] GARY-S> adios ciao
+<[80jax196] JAX> aloha kev wil gars
+<[80jax196] JAX> has left.
+<[Kevin] APPERT> so what's a Quiddity, Wil?
+<[gars] GARY-S> Quid Kevin and we can all go home
+<[Wil] W.BADEN1> Willard Van Orman Quine is a famous logician, and linguist.
+<[Wil] W.BADEN1> Quiddities is his latest, and perhaps last, book; and great 
+for the potty-side.
+<[gars] GARY-S> Carried by Walden, B. Dalton et al ?
+<[Kevin] APPERT> describe the contents?  what's in the book?
+<[Wil] W.BADEN1> Ok, catch you all next year, after I've opened my Christmas 
+presents.
+<[Wil] W.BADEN1> Short articles, cross-referenced, on logic, language, 
+philosophy.
+<[gars] GARY-S> Seems we started the evening this way, kev ! g'nite
+<[Kevin] APPERT> good night , Wil, Gary
+=== End of Steno notes. ===
+
+

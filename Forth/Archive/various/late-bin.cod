@@ -1,0 +1,88 @@
+
+\                             Late Binding Package for F83
+\                              written by David Weinstein
+\                             Constants (for portability)
+4 constant cell
+\                                     Variables
+variable position
+128 "variable "top-level-word
+128 "variable "underlying-word
+\                                    Code
+: constant      ( late binding version of constant )
+   	[compile] "" find if
+        	>body ! 
+   	else
+        	"create , does> @ 
+   	then  
+   	; 
+: examine       ( a word to decompile words created with this package )
+                ( -- )
+                ( input stream: <word-name> )
+   	' >body @ (see ;
+: whitespaces   ( -- addr 80 bl)
+        tib >in @ +
+        80
+        bl
+        ;
+: set           ( position distance position-variable address -- )
+        rot ( distance position-variable-address position)
+        tib - ( get the new value for >in )
+        swap ( and ) ! ( the position )
+        drop ( distance )
+        ;
+: reposition    ( -- )
+        position @ >in ! ;
+: word>underlying-word  ( -- )
+        position @ tib + ( compute address )
+        dup c@           ( get character )
+        ascii ( = if
+                ascii _
+        else
+                ascii (
+        then swap c!
+        ;
+: read          ( addr-of-string-var -- )
+        reposition
+        [compile] "" swap "copy
+        ;
+: make          ( addr-of-name-string -- )
+        dup ( string )
+        find if
+                drop drop
+        else
+                "create cell allot does> @ execute
+        then
+        ;
+: late-bind-failed      ( -- )
+        abort" Late Bind Failed"
+        ;
+: does          ( top-level-word-string-addr underlying-word-addr -- )
+        ( underlying-word ) find if
+                swap ( top-level-word ) find if
+                        >body !
+                else
+                        late-bind-failed
+                then
+        else
+                late-bind-failed
+        then
+        ;
+: (;)
+        [compile] ; ; immediate
+: ;     ( late binding version of ; )
+        [compile] ;
+        "top-level-word "underlying-word does
+        hide ( the underlying word )
+        ; immediate
+: :     ( late binding version of : )
+        whitespaces skip
+        position set
+        "top-level-word read
+        "top-level-word make
+        word>underlying-word
+        "underlying-word read
+        reposition
+        [compile] :
+        (;) immediate
+
+

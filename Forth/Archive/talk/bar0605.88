@@ -1,0 +1,453 @@
+
+
+
+Sub: Minutes of your RT Conference.
+    The FIGGY BAR  06/05/88 
+  Items discussed include Leonard's upcoming Nivice Tutorial FIGGY BARS,
+starting Sunday, July 10, Forth Standards and Category 10 here on the 
+Forth RT, state smart words and the concept of cells.
+Attendees:
+[[Gary]GARY-S]
+[HIGHC]
+[[jax] VESTA]
+[[Dave]DWEINSTEIN]
+          
+Minutes:
+<DHWEINSTEIN> is here.
+<GARY-S> Hey Dave - guess you know you started something ?
+<[Dave] DHWEINSTEIN> Hello Gary
+<[Dave] DHWEINSTEIN> Ohh?
+<GARY-S> you bet - the Sunday Novice Q & A
+<[Dave] DHWEINSTEIN> But there is noone here?
+<GARY-S> NOT tonight !
+<GARY-S> There will be an announcement in FD - and Leonard...
+<GARY-S> will chair the tutorial sessions starting...
+<GARY-S> July 10. Spread the word !
+<[Dave] DHWEINSTEIN> How?
+<GARY-S> You type - you talk - obnoxious people communication skills
+<[Dave] DHWEINSTEIN> Thank you. But to whom?
+<GARY-S> Probably not the bus driver - but any computer type is fair game
+<[Dave] DHWEINSTEIN> Has anyoone else been here tonight?
+<GARY-S> No - you're the first , that's why you get me at my best ??????
+<[Dave] DHWEINSTEIN> This is your best? Sheesh...
+<[Dave] DHWEINSTEIN> Well...
+<GARY-S> Hey - it gets worse as you get older
+<[Dave] DHWEINSTEIN> since the subject is standards....
+<[Dave] DHWEINSTEIN> I LIKE MY STATE-SMART WORDS!!!!!!!!!
+<GARY-S> Have you said so in Cat 10 ?
+<[Dave] DHWEINSTEIN> No
+<GARY-S> Then - PLEASE DO
+<[Dave] DHWEINSTEIN> Hey...I use F79...their in there!
+<[Dave] DHWEINSTEIN> But...I guess I'll say something.
+<GARY-S> Point to make here...
+<GARY-S> There is going to be an ans standard...
+<GARY-S> it will be adopted by the community as a whole...
+<GARY-S> it is being drafted now...
+<GARY-S> if you want your opinions and ideas considered in...
+<GARY-S> the future of Forth you have to voice them...
+<GARY-S> IT is that simple.
+<GARY-S> .
+<[Dave] DHWEINSTEIN> If Ghod, and nature, had meant for us to have
+<[Dave] DHWEINSTEIN> standards, he'd never have let them be designed by 
+committees.
+<[Dave] DHWEINSTEIN> .
+<GARY-S> no argument there... as Chuck Moore has said...
+<GARY-S> standards are a red flag and if he conformed...
+<GARY-S> to standards there would be no Forth...
+<GARY-S> but, there will be an ANS standard that will serve as a model...
+<GARY-S> and State smart is one of the BIG arguments.
+<GARY-S> .
+<[Dave] DHWEINSTEIN> RS232 is a great example!
+<[Dave] DHWEINSTEIN> BRB
+<HIGHC> is here.
+<GARY-S> hey Bill
+<HIGHC> GOOD EVENING
+<GARY-S> Got an argument going with Dave W as soon as he returns...
+<[Dave] DHWEINSTEIN> High Bill
+<GARY-S> Beer run I think
+<[Dave] DHWEINSTEIN> -gh
+<[Dave] DHWEINSTEIN> You called it.
+<[Dave] DHWEINSTEIN> .
+<GARY-S> RS-232 was never more than a recommended standard ...
+<GARY-S> That's what the (R) stands for.
+<[Dave] DHWEINSTEIN> Standard???
+<GARY-S> What does that have to do with Forth ?
+<[Dave] DHWEINSTEIN> Just another example of ANSI at its worst.
+<GARY-S> Not true - RS232 was EIA's baby...
+<GARY-S> I do data comm , so I know this ball field
+<[Dave] DHWEINSTEIN> Saw a T-Shirt once, RS232 (circle slash)
+<GARY-S> Any way - what do you like about which specific state-smart words ?
+<GARY-S> ['] ?
+<[Dave] DHWEINSTEIN> Yes.
+<[Dave] DHWEINSTEIN> I also like ."
+<[Dave] DHWEINSTEIN> And state-smartness in general.
+<GARY-S> It has its place, but some argue it gets in the way ...
+<[Dave] DHWEINSTEIN> How?
+<GARY-S> and they aren't all that smart...
+<GARY-S> you reply ....
+<[Dave] DHWEINSTEIN> How are they not smart?
+<GARY-S> Did anyone else just get a list of help commands ?
+<[Dave] DHWEINSTEIN> No
+<GARY-S> Wonder how I did that ?
+<HIGHC> WHAT HELP COMMANDS???
+<[Dave] DHWEINSTEIN> Try /help...that'll do it.
+<GARY-S> Actually, I can't even play a good devil's advocate here...
+<GARY-S> cause I like them too....I just wish..
+<GARY-S> I could encourage you to post a comment in Cat 10...
+<GARY-S> Greg Bailey pointed out that there are more people that show up for 
+the...
+<GARY-S> ANS TC meetings than are posting comments if you exclude...
+<GARY-S> committeee members and sysops...
+<[Dave] DHWEINSTEIN> Where are the ANS TC meetings?
+<GARY-S> the whole point of Cat 10 is to give folks a chance to get...
+<GARY-S> involved in the draft process and not repeat another 79-Standard, F-83 
+Standard...
+<GARY-S> where after they were drafted everyone said, "How cum ?"!!!
+<[Dave] DHWEINSTEIN> ...and ignored them...
+<[Dave] DHWEINSTEIN> Standards and FORTH just seem intrinsically opposed... :-)
+<GARY-S> The meetings are posted in the BBS - the next one is comming up real 
+soon...
+<HIGHC> WHEN ARE THE NEXT STANDARDS DUE ?
+<GARY-S> let me look here in a minute
+<[Dave] DHWEINSTEIN> I mean...you rewrite the language anyway... ! :-)
+<GARY-S> Bill - dave ...you two get acquainted...
+<GARY-S> BRB
+<[Dave] DHWEINSTEIN> 'ello
+<HIGHC> DAVE DO YOU MAKE MONEY WRITING FORTH?
+<[Dave] DHWEINSTEIN> Got any questions?
+<[Dave] DHWEINSTEIN> No. I make my living writing in C, Fortran, and AWK (and 
+Bourne Scripts and C-Shell Scripts) under Unix (4.2 BSD -- COncentrix) o
+n a Minisupercomputer.
+<[Dave] DHWEINSTEIN> .
+<HIGHC> SOK, THEN WHO DOES.
+<[Dave] DHWEINSTEIN> Jax makes his money in FORTH.
+<HIGHC> FOR WHAT TYPE OF APPS. IN FORTH??
+<[Dave] DHWEINSTEIN> I don't know?
+<HIGHC> MY IMPRESSION IS THAT PEOPLE SWITCH...
+<HIGHC> TO FORTH TO PROGRAM BETTER!!!
+<[Dave] DHWEINSTEIN> I prefer FORTH to any other language (including its related
+<[Dave] DHWEINSTEIN> language [and predecessor] LISP). But I
+<[Dave] DHWEINSTEIN> also enjoy UNIX (and C), and there is a much bigger and
+<[Dave] DHWEINSTEIN> better paying market for C/UNIX Wizards.
+<[Dave] DHWEINSTEIN> .
+<HIGHC> DOES FORTH HAVE THE ABILITY TO PATCH IN AND OUT OF C??
+<[Dave] DHWEINSTEIN> There is a standard team at work on that. But not ANSI. 
+Instead, it is
+<[Dave] DHWEINSTEIN> working on running FORTH under UNIX. And to work 
+effectively in UNIX, being able to switch into C is important.
+<[Dave] DHWEINSTEIN> (Check the library doing a search under the keyword UNIX 
+for the working report)
+<[Dave] DHWEINSTEIN> The other way is to compile the C code, but capture the 
+Assembly it produces as
+<[Dave] DHWEINSTEIN> mnemonics. Most coimpilers let you do this
+<[Dave] DHWEINSTEIN> and since most FORTHs have
+<HIGHC> DO YOU KNOW OF ANY SOFTWARE DEVELOPERS USING FORTH..
+<HIGHC> OR MAJOR CORPS. ??
+<[Dave] DHWEINSTEIN> the ability to use assembly intermixed, you can feed it in 
+as assembly.
+<[Dave] DHWEINSTEIN> Sun uses FORTH a great deal in development.
+<HIGHC> ONE OF MY REASONS FOR LOOKING AT FORTH IS...
+<GARY-S> NUTZ ! I can't find it ! August is the next vote on the Basis ( I 
+think ),..
+<GARY-S> and it seems Jun 10 is the next TC meeting
+<GARY-S> sorry
+<HIGHC> TO BE ABLE TO JUMP IN AND OUT OF APPS. IN DIFFERENT LANGUAGES...
+<[Dave] DHWEINSTEIN> Where?
+<[Dave] DHWEINSTEIN> Not at the moment.
+<[Dave] DHWEINSTEIN> Although I think the UNIX/FORTH team is working on that. 
+Gary, is WMB on GEnie?
+<GARY-S> If you guys can get on - I'll keep looking ?
+<[Dave] DHWEINSTEIN> Here?
+<[Dave] DHWEINSTEIN> or has it got a physical location?
+<GARY-S> It has a place - DC - i think ...
+<GARY-S> let me look a little longer
+<[Dave] DHWEINSTEIN> Just a leetle ways from here
+<[Dave] DHWEINSTEIN> (DC that is)
+<[Dave] DHWEINSTEIN> .
+<[Dave] DHWEINSTEIN> Be back in a bit.
+<[Dave] DHWEINSTEIN> has left.
+<GARY-S> Bill - didn't mean to leave you in a lurch
+<GARY-S> The idea Dave proposed Thursday is going into effect...
+<GARY-S> July 10 and I think you'll get a LOT out of it.
+<HIGHC> i
+<HIGHC> Which is??
+<GARY-S> Leonard will be holding a Novice Q & A..
+<GARY-S> each sunday...how does that sound ?
+<GARY-S> .
+<HIGHC> gGreat he sent me some e-mail..
+<HIGHC> We are having a strom up this way which is raising hell with...
+<HIGHC> my modem, so if I disappear you'll know why!!!
+<GARY-S> You may want to get off anyway if there's a lot of lightening.
+<GARY-S> It will zap a computer in a flash !
+<HIGHC> no it seems to be between my node and here which a 200 mile call for me!
+!!
+<GARY-S> Have you looked at some of the tutorial stuff on the Board ?
+<HIGHC> yes but some of it is very confusing, it seems to be scattered...
+<GARY-S> leonard and Scott both put up some good stuff...
+<HIGHC> some organization into a begginers list...
+<GARY-S> I agree it is scattered...
+<HIGHC> file would help..
+<GARY-S> Leonard did consolidate a good bit of it in a library...
+<DHWEINSTEIN> is here.
+<GARY-S> file, You may want to just download it and study it in your leisure..
+<[Dave] DHWEINSTEIN> re
+<GARY-S> and save a buck in the process.
+<GARY-S> .
+<HIGHC> If you could get the different versions together with ...
+<HIGHC> there associated help files it would help also!!
+<[Dave] DHWEINSTEIN> Hey...Lower Case??!!??
+<HIGHC> Please excuse the typo's!!
+<[Dave] DHWEINSTEIN> :-)
+<GARY-S> Easier said than done.
+<HIGHC> I'm a two pinky plunker!!
+<[Dave] DHWEINSTEIN> Ten fingers and a self taught no tecnique pseudo touch 
+typist.
+<GARY-S> Dave = I was wrong on both counts
+<[Dave] DHWEINSTEIN> Ohh?
+<GARY-S> Rochester, NY June 14-18
+<[Dave] DHWEINSTEIN> (trying to mask look of shock)
+<[Dave] DHWEINSTEIN> During the Conference no doubt.
+<[Dave] DHWEINSTEIN> Yeah.
+<GARY-S> It has been in DC, It has been on the west coast , this time Rochester
+<GARY-S> NO - not during the conference - a week before !
+<[Dave] DHWEINSTEIN> Heh. My ghod...people will have to go to Rochester twice 
+in one month? That is cruel!
+<GARY-S> Is that stunned silence ?
+<GARY-S> Yeah - dumb I think !
+<[Dave] DHWEINSTEIN> Stunned perhaps...silence...never! :-)
+<HIGHC> better than in Feb!!!
+<GARY-S> The ANS TC people are footing their own bills too...
+<GARY-S> that's one reason I think we owe them the donation of our input...
+<GARY-S> it's a simple enough consideration
+<GARY-S> .
+<GARY-S> You can still hit permafrost in June, NO PROB
+<[Dave] DHWEINSTEIN> You'd think they'd force us to shut up.
+<GARY-S> No - they want the input
+<GARY-S> They need it to do their job?
+<GARY-S> ANSI will not let the standard stand without input !
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> Any style standardizations?
+<[Dave] DHWEINSTEIN> Hey Jax.
+<GARY-S> And they require a period of arbitration after the final draft is 
+submitted
+<[Dave] DHWEINSTEIN> Took ya long enough.
+<[jax] VESTA> he
+<[jax] VESTA> y
+<[jax] VESTA> .
+<HIGHC> greetings
+<GARY-S> why indeed
+<GARY-S> I got that mess on DASNET - Geez !!!!
+<[Dave] DHWEINSTEIN> Borlamd claims not to be working on Turbo FORTH! (A 
+shocking announcement I am sure) :-)
+<GARY-S> I coulda believed you - proof wasn't necessary
+<[jax] VESTA> thought you would find it funny ... anyway, we are straightened 
+out now.
+<[jax] VESTA> WEINSTEIN ...
+<[Dave] DHWEINSTEIN> Yeas?
+<[jax] VESTA> the thing that kills me about UNIX email ...
+<[Dave] DHWEINSTEIN> Yeas??
+<[jax] VESTA> is that when you get a letter ...
+<[Dave] DHWEINSTEIN> Yeas???
+<[jax] VESTA> a simple   r    will reply alright ....
+<[jax] VESTA> BUT TO THE WRONG ADDRESS>
+<[jax] VESTA> >>>>!!!
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> hehehehhehehehehehhehehe
+<[Dave] DHWEINSTEIN> Beats me. I usually use a Mailtool on a Sun for any kind 
+of long distance mail.
+<[jax] VESTA> So you logs on and plays with your tool?
+<[jax] VESTA> ...:-)
+<[jax] VESTA> .
+<GARY-S> I'm real sure everyone has access to their very own SUN
+<[Dave] DHWEINSTEIN> Sure does. And I uses more MIPS to make my tools more 
+powerful.
+<[jax] VESTA> Have the xputer drop in for it yet?
+<[Dave] DHWEINSTEIN> No. Not my own. A sun at the Workstation facility at UT.
+<[jax] VESTA> they make it ...
+<[Dave] DHWEINSTEIN> Not mine. If I owned it, I might.
+<[jax] VESTA> up the street from my workplace.
+<[jax] VESTA> .
+<GARY-S> borrow a feww dozen
+<[jax] VESTA> love to. back in the sixties ...
+<[Dave] DHWEINSTEIN> Then send me one... hehehe
+<GARY-S> nice boxes
+<[jax] VESTA> we would say, let's "liberate" a few.
+<[jax] VESTA> .
+<GARY-S> comshaw in the Navy
+<GARY-S> any response to the question of the nite ?
+<[jax] VESTA> Yeah ... what is q of nite?
+<GARY-S> on the door - you don't read the notice ?
+<[jax] VESTA> I don't read notices as I stumble into a bar!
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> I don't read anything as I stumble out.
+<GARY-S> So how cum you're not contributing to the Standards discussion ?
+<[Dave] DHWEINSTEIN> (Fond remembernces of the party we held for a friend who 
+graduated from High School yesterday)
+<GARY-S> king's you
+<[jax] VESTA> I do MORE than my share. They pobably wish I would shut up.
+<[Dave] DHWEINSTEIN> Then I should jump in and shout.
+<GARY-S> No - they don't ..
+<[Dave] DHWEINSTEIN> What do you think of state-smart words?
+<[jax] VESTA> Too smart for their own good.
+<GARY-S> I'm trying to coax (pry) dave into posting his comments...
+<[Dave] DHWEINSTEIN> WHy?
+<[jax] VESTA> ASCII should be state smart.
+<GARY-S> in support of state-smart
+<GARY-S> only in Colorado
+<[jax] VESTA> I've never been crazy about EXIT having a dual meaning, tho.
+<GARY-S> Do you like the others ?
+<[jax] VESTA> Do you have a list on the tip of the tongue?
+<[Dave] DHWEINSTEIN> No I don't. But your real clothe. You jutht made a typo.
+<GARY-S> The first that came to my mind was [']
+<[Dave] DHWEINSTEIN> or ."
+<[jax] VESTA> ....( Who is HIGHC and what do you think?)
+<GARY-S> Jax - Bill
+<GARY-S> Bill - Jack
+<[jax] VESTA> Pleeztameecha.
+<HIGHC> what the hell is  a smart word??
+<[jax] VESTA> A word ..
+<[jax] VESTA> that knows if you are compiling or interpreting
+<GARY-S> Leonard starts the Novice FIGGY's July 10
+<[jax] VESTA> and behaves differently in different company.
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> Over a month away?
+<[jax] VESTA> ...( there is a variable STATE in Forth ....)
+<GARY-S> He wants to ride a train in Canada with his lady first
+<[jax] VESTA> ... (set while compiling, off while interpreting(
+<[jax] VESTA> .
+<[jax] VESTA> Like I said on the BB ...
+<HIGHC> were this original in the language??
+<[jax] VESTA> What i hope the standards team does ...
+<GARY-S> In the beginning there were not so many that knew the difference 
+between compile and interpret.
+<[jax] VESTA> is mostly NOTHING except free the standard from wordsize 
+limitation.
+<[Dave] DHWEINSTEIN> A long long time ago...in a MAINFRAME far far away..a 
+strange creation took place.
+<GARY-S> do you agree with the cell concept - or totally open concept ?
+<[jax] VESTA> CELL.
+<[Dave] DHWEINSTEIN> Differentiate please (I'm falling behind in my jargon).
+<GARY-S> What about crossing cell size boundaries
+<GARY-S> 8 bit, 16, bit, 32 bit...ad infinitum, Dave
+<[jax] VESTA> How about leave it open, except you are guaranteed that ther is a 
+CEWLL.
+<[Dave] DHWEINSTEIN> <- Works with a standard 9 years old...don't ask me 
+current questions? :-)
+<[Dave] DHWEINSTEIN> I'd say a 32 bit cell.
+<[jax] VESTA> What do you see FORTH on , Dave?
+<[jax] VESTA> CELL just means whatever the wordsize is on the box.
+<[Dave] DHWEINSTEIN> FORTH chips. They are sooo fast. Probably the JH APL.
+<[jax] VESTA> I mean, at work, what do you see it on.
+<GARY-S> If you say 32-bit then in three years people are gonna ask ...
+<[jax] VESTA> If at all.
+<[Dave] DHWEINSTEIN> NO!
+<[Dave] DHWEINSTEIN> If you set it to box size...
+<GARY-S> Why the heck didn't you consider the posibility of 64 bits...and so on
+<[Dave] DHWEINSTEIN> that means lots of machien specific code.
+<[Dave] DHWEINSTEIN> Efficiency.
+<[jax] VESTA> Right, which is why CELL.
+<[jax] VESTA> CELL is always there.
+<[Dave] DHWEINSTEIN> 32 bits gives a large addressing space, but doesn't hurt 
+too much.
+<[jax] VESTA> you don't have to know how big it is.
+<[Dave] DHWEINSTEIN> will CELL return the word size in bits?
+<[Dave] DHWEINSTEIN> You do in some applications.
+<GARY-S> If ( correct me Jack ) you write for a cell size you can deal with 
+your...
+<GARY-S> own architecture ( limitation ) with some sort of prelude that...
+<GARY-S> defines your implementation of CELLL
+<GARY-S> got it ?
+<[jax] VESTA> Nohuh?
+<[jax] VESTA> ...
+<[Dave] DHWEINSTEIN> Not sure.
+<[Dave] DHWEINSTEIN> What does CELL put on the stack?
+<[jax] VESTA> on a 32-banger  ... 4
+<[jax] VESTA> on a 16 ... 2
+<[Dave] DHWEINSTEIN> Ok. Than I coukld live with it.
+<[jax] VESTA> on a 64 .... 8
+<[Dave] DHWEINSTEIN> As long as it there is a way of determining.
+<[jax] VESTA> Which means you can write WORDSIZE - INDEPENDENT code.
+<[jax] VESTA> if you don't DEMAND byte addressing.
+<[Dave] DHWEINSTEIN> Will this mean a new set of words however. Will C! store 
+1/2 of a CELL, and D! store two CELLS?
+<[jax] VESTA> Sorta...JForth is 32 bits.
+<GARY-S> and AA  a pen lite
+<[jax] VESTA> ...  the word ! does a 32-bit store
+<[jax] VESTA> ... and W! does 16, like C! does 8.
+<[Dave] DHWEINSTEIN> D! does 64..
+<[jax] VESTA> also W@ and W, are included, along with ALIGN which is in LP but 
+is a no-op ...
+<[Dave] DHWEINSTEIN> But does
+<[jax] VESTA> in KERNEL86.BLK
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> this provide for higher CELLS. If we have a 64 bit CELL, 
+we'd
+<[Dave] DHWEINSTEIN> have C -> 8, W -> 16, ! -> 32, D -> 64, ...?
+<[Dave] DHWEINSTEIN> or would it all shift right one?
+<[jax] VESTA> no ...
+<[jax] VESTA> if it was in 16 ...
+<[jax] VESTA> ... ! should do a 64 LW! 32 W! 16 C! 8
+<[jax] VESTA> jaxthinx!
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> That is a problem, no?
+<GARY-S> That's how you get machine dependent problems which we need to resolve
+<[jax] VESTA> Is [Bill] HIGHC near the Universtiy of New Hampshire?
+<HIGHC> No near the u of Sherbrooke Que.!!!
+<[Dave] DHWEINSTEIN> Then we get dependent.
+<[jax] VESTA> SHERBROOKE! a cute little town. Stayed in the Dorms in august 
+once.
+<GARY-S> Why are you in Ft. Valley, GA if your home is Austin, Dave or is that 
+personal ?
+<HIGHC> Cute little ladies too!!
+<[Dave] DHWEINSTEIN> What about a word like !! which takes the stack arguments 
+( value address size-of-value -- )
+<[Dave] DHWEINSTEIN> and @@
+<[Dave] DHWEINSTEIN> I live in Austin. GEnie just doesn't thinik so.
+<GARY-S> Thanks - confused me - what about your buddy that also had a Ft Valley 
+Status
+<[Dave] DHWEINSTEIN> Relative.
+<[Dave] DHWEINSTEIN> Parental Unit.
+<GARY-S> all things are
+<[Dave] DHWEINSTEIN> Only way to keep in touch over 2000 miles.
+<[jax] VESTA> Toutes les quebecoise sont ingenieuses ...
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> ANy thoughts on !!, Jax?
+<[jax] VESTA> Gesundheit.
+<[jax] VESTA> .
+<HIGHC> Oui!!!
+<GARY-S> any way - are you now more involved in the standard ?
+<[Dave] DHWEINSTEIN> Me?
+<[jax] VESTA> you.
+<GARY-S> sure
+<[Dave] DHWEINSTEIN> Yeah. Why not.
+<GARY-S> good - I7ve done my job
+<[Dave] DHWEINSTEIN> NO WHAT DO YOU THINK OF !! OR I'LL STAY IN ALL CAPS 
+FOREVER!
+<[Dave] DHWEINSTEIN> +W
+<GARY-S> Write it
+<[jax] VESTA> I think you should post it to the standards discussion for the 
+Beeg Boys to kick around.
+<GARY-S> : !! what
+<[Dave] DHWEINSTEIN> Stack description:
+<[Dave] DHWEINSTEIN> ( value address size-of-value -- ) ( stores value as a 
+size-of-value size chunk at address )
+<[jax] VESTA> HIGHC ... you go to U Sherbrooke?
+<GARY-S> that's exactly what you need to post in cat 10
+<HIGHC> No...SMU>>>
+<[jax] VESTA> There is a form for proposals ... where is it, Gary?
+<GARY-S> another Texican !
+<[Dave] DHWEINSTEIN> Yeehaww!
+<[jax] VESTA> What study?
+<GARY-S> Greg never put it in the library - It's being modified...
+<[jax] VESTA> What computers, too?
+<HIGHC> Partying!!!
+<GARY-S> just follow the format Lee Brotzman uses
+<[Dave] DHWEINSTEIN> Which is?
+<[jax] VESTA> oThe format Lee uses ..
+<[jax] VESTA> is to bash them over the head with so many proposals they get 
+dizzy! :-)
+<GARY-S> Lee has several proposals posted - check one of them for style - it's 
+good
+<[jax] VESTA> .
+<GARY-S> Lee is the only one who is going to get a lot of his ideas considered..
+

@@ -1,0 +1,53 @@
+
+
+ Minutes of the Forth RoundTable guest Conference.
+ with special guest, Charles Curley, neologist
+ Topic: 'A Minimalist View of Forth'
+  
+ Entire contents of this transcript copyright(c) 1989
+ GEnie Forth RoundTable. The contents may be freely
+ copied and distributed in whole or in part provided
+ origination credit is included.
+
+Date: 11/09/89   Time: 22:30EST
+Attendees:
+[[Gary] GARY-S]
+[[Dave] OLORIN]
+[[Jax] FIGCHAPTERS]
+[[Len] NMORGENSTERN]
+[[Charles] PRESS20]
+[[Kevin] APPERT]
+[[Mark] M.FOSTER3]
+[[Pete] P.BETZ1]
+
+
+Minutes:
+<OLORIN> is here.
+<[Dave] OLORIN> I'm the token "features features features" advocate! :-)
+<[Dave] OLORIN> (btw: I will post the patches to upgrade OOFORTH to OOFORTH 2.1 
+soon [more features])
+<NMORGENSTERN> is here.
+<PRESS20> is here.
+<[Gary] GARY-S> there's our guest
+<[Len] NMORGENSTERN> Hello Charles!
+<PRESS20> hi, all. long time no talk
+<[Dave] OLORIN> Hullo Charles. I'm your token "features Features FEATURES" 
+guest. :-)
+<[Len] NMORGENSTERN> <testing>
+<[Gary] GARY-S> Mr. Curley - check /sta and do a /nam change please
+<[Len] NMORGENSTERN> Looks good
+<[Gary] GARY-S> any last questions charles ?
+<[Charles] PRESS20> nope, all set. ga
+<[Gary] GARY-S> 1 minute to conference
+<[Gary] GARY-S> Charles I will be cueing you with CC instaed of Charles
+<[Gary] GARY-S> there will be stragglers show up after we start
+<[Gary] GARY-S> Let's go folks
+<[Gary] GARY-S>    The GEnie Forth RoundTable is very pleased to welcome ...
+<[Gary] GARY-S>  Charles Curley as tonight's special guest. Charles Curley has .
+..
+<[Gary] GARY-S>  been programming in Forth since 1979, when he implemented ...
+<[Gary] GARY-S>  fig-forth on an Ohio Scientific. Since then he has worked...
+<[Gary] GARY-S>  at Rockwell International, Hughes Aircraft, Strand Lighting,...
+<[Gary] GARY-S>  and other places, all in Forth. He has taken his original ...
+<[Gary] GARY-S>  implementation and evolved it into 'Real-Forth', a sometimes ..
+

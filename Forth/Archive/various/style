@@ -1,0 +1,169 @@
+
+\ PI calculating program                              17sep87mdp
+\ converted to f83 by mark penacho  - Genie mail address M.PENACHO
+\ Last Revision: 11/18/87  07:13:31 PM  wjm
+
+\ Reformatted for legibility by Ward McFarland (WMCFARLAND)
+  ( a few unnecessary temporary variables for holding borrows and carries
+    were removed and the stack was used instead )
+
+\ I suggest that before examining this file, you take a look at PI.ARC which
+\  is the original version in block format and try to figure out the algorithm.
+\ Mark had used the "traditional" (i.e., write-only) Forth style  (ALL CAPS,
+\  no stack maps, no comments, no pretty-printing, minimal phrasing, etc.)
+
+\ While I enjoyed playing with the original version of PI, I found it 
+\  impossible to figure out the algorithm or even to decide the sensible 
+\  places to put PAUSE to make it run in the background.  
+
+
+\ Having read, edited, debugged, extended many other folks' Forth code, I
+\  have been frustrated by the frequent problem of code being hard to read,
+\  often because the programmer doesn't use the Tab key or change the
+\  setting of the Shift key!
+
+\ By reformatting it according to my style preferences (see my file STYLE.TXT),
+\  I have been able to eliminate some redundancies and figure out enough to
+\  add sensible comments that can be used to deduce the exact Taylor series
+\  used in the computation.  I use UPPER CASE only for new words and for control
+\  words ( IF THEN BEGIN AGAIN DO LOOP , etc ) which along with indentation
+\  of subordinate structures makes it easier for me to follow the flow of
+\  the code.  Where the code is particularly tricky or when making examples 
+\  for beginners, I do even more vertical separation of phrases (it starts to
+\  look like Pascal!)
+
+\ While additional optimization could be applied and better factoring of
+\  the algorithm itself is possible, my point here is that without
+\  easily readable code, modifications or debugging are difficult.
+\  A variation I did with local variables is particularly easy to read.
+
+\ This shows one of the advantages of Text files vs Blocks files when it 
+\  comes to PrettyPrinting -- I find that vertical expansion of complex words 
+\  is very useful for legibility and more meaningful comments can be made 
+\  without the 64 character width limitation of Blocks files.  
+
+\ While I might sound a bit compulsive about style, I can ALWAYS read my code
+\  several months later, and my debugging has become much faster and easier.
+
+\ I welcome comments and criticisms on my opinions.
+
+
+
+Forth definitions
+decimal
+
+
+
+variable PSIZE                \ contains the number of digits of precision
+
+
+\ the next three words define byte arrays - each byte contains a decimal digit
+\ this permits multi-digit precision
+
+create POWER  10240 allot
+create TERM   10240 allot
+create RESULT 10240 allot
+
+
+
+\ some temporary variables, pointers and flags...
+
+variable PPOINT             \ Pointer to array being divided
+variable DIVISOR
+variable ZERO               \ Zero=0 only when all digits of PPoint =0
+variable EXP
+variable PSIGN
+
+
+
+\ A few simple implementations of Multi-digit precision decimal arithmetic...
+
+: DIV ( -- | divide array pointed to by PPOINT by DIVISOR )
+    0 zero !
+    0                                \ put prior remainder on the stack
+    ppoint @ dup  psize @ + 1+  swap
+    DO  10 *   i c@  +               \ add prior remainder to next digit
+        divisor @   /mod
+        2dup +   zero @ or   zero !  \ Zero=0 only when all digits of PPoint =0
+        i c!                         \ save quotient, leave remainder on stack
+    LOOP
+    drop ;
+
+
+: ADD ( -- | add TERM array to RESULT array --> RESULT )
+    0                                    \ put prior carry on the stack
+    0   psize @
+    DO  result i + c@   term i + c@  +   \ add each pair of digits
+        +                                \ add carry
+        dup  10 <                        \ generate new carry?
+        IF  0  ELSE -10 + 1 THEN
+        swap result i + c!               \ save result, leave carry on stack
+    -1 +LOOP
+    drop ;
+
+
+: SUB ( -- | subtract TERM array from RESULT array --> RESULT )
+    0                                    \ put prior borrow on the stack
+    0   psize @
+    DO  result i + c@    term i + c@ -   \ subtract each pair of digits
+        swap -                           \ subtract borrow
+        dup  0<                          \ generate new borrow?
+        IF 10 + 1 ELSE 0 THEN
+        swap result i + c!               \ save result, leave borrow on stack
+    -1 +LOOP
+    drop ;
+
+
+\ Now, the algorithm itself...
+
+: INIT ( pass# -- | initialize before each pass through P-CALC )
+    power psize @ 1+ erase             \ clear POWER array
+    term  psize @ 1+ erase             \ clear TERM array
+    3 over 2* - psign !                \ PSIGN = +1 on pass 1,  -1 on pass 2
+    1 =
+    IF   result psize @ 1+ erase       \ clear RESULT array on pass 1
+         16   5                        \ divisor =   5   power(0) = 16
+    ELSE  4 239                        \ divisor = 239   power(0) =  4
+    THEN
+    divisor !  power c!
+    power ppoint !
+    div                                \ divide POWER array by DIVISOR
+    1 exp ! ;
+
+
+: P-PRINT ( -- | print RESULT array )
+    result c@ ascii 0 + emit              \ print first digit
+    ascii . emit                          \ print decimal point
+    result psize @ + 1+ result 1+
+    DO   i c@   ascii 0 +   emit          \ print remainder of array
+    LOOP ;
+
+
+: P-CALC ( n -- | compute PI to N digits - leave answer in RESULT array )
+    psize !
+    3 1                                     \ make two Passes over the array
+    DO  i init                              \ initialize for each Pass
+        BEGIN
+            power term psize @ 1+ cmove     \ copy POWER array to TERM array
+            term ppoint !   exp @ divisor !
+            div                             \ divide TERM array by EXP
+            psign @ 0>  				    \ add/subtract TERM and RESULT arrays
+            IF add  ELSE sub  THEN
+            psign @ negate psign !          \ toggle PSIGN
+            2 exp +!                        \ increment EXP by 2
+            i 1 =  IF 25 ELSE 239 THEN
+            divisor !    power ppoint !
+            div                             \ divide POWER array by 25 or 239
+            i 2 = IF div THEN               \ do it twice on Pass 2
+            zero @  0=                      \ continue until POWER all zeroes
+        UNTIL
+    LOOP  ;
+
+
+: PI ( n -- | compute & print PI to N places )
+	10240 min
+    p-calc
+	p-print ;
+
+
+

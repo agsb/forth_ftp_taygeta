@@ -1,0 +1,392 @@
+
+
+
+                                        GEnie
+                                   On 25 Cents/day
+                                         by
+                                    Dennis Ruffer
+                                     Lead Sysop
+                           Forth Interest Group RoundTable
+                         GE Network for Information Exchange
+
+          ABSTRACT
+
+               Last   September,   we   opened  the  Forth  Interest  Group
+          RoundTable on the GE  Network  for  Information  Exchange, better
+          known as  GEnie.   Through this paper I will introduce you to the
+          system, and  show you  the fastest  way to  stay in communication
+          with the rest of the Forth industry.
+
+          BACKGROUND
+
+               GEnie [1] is  an information service provided by the General
+          Electric Information Services Company (GEISCO) and  has proven to
+          be an  aggressive competitor  to the "better known" services such
+          as the  Source [2] and  CompuServe [3].   GEnie provides services
+          competitive with  these others,  and costs  less during non-prime
+          hours [4].  There has been a lot of discussion about why we chose
+          GEnie over all the other alternatives, but basically it came down
+          to the fact that they were willing to accept us, and that it made
+          the most  sense economically,  both for  users and  for the Forth
+          Interest Group.  Besides, this is not the  first system supported
+          by FIG, nor will it be the last.
+
+               The Forth  Interest Group has arranged a special signup deal
+          for its members.  By using  our signup  account number,  your new
+          account  will  be  credited  with  3  extra  free hours (a $15.00
+          value).  I should  point out  that our  advertising has  said the
+          signup  fee  was  $18.00,  but  presently it costs $29.95 to join
+          GEnie and they give you 2 free hours in addition to the 3 we have
+          arranged for  you to  get.  Thus for $29.95, you get $25.00 worth
+          of non-prime usage credits.  After  you've used  up your credits,
+          you are  charged $5.00/hour for non-prime use, and beware of this
+          one, $35.00/hour for prime time use.   In  other words,  use your
+          time sparingly, and don't sign on before 6:00 at night.
+
+               That is  what this paper is about, how to conserve your time
+          on GEnie.  That is one of the more important jobs a sysop (SYStem
+          OPerator) has, and Scott Squires (S.W.SQUIRES), Gary Smith (GARY-
+          S), Leonard  Morgenstern  (NMORGENSTERN),  and  I  (D.RUFFER) are
+          there anytime  you need  assistance.  GEnie is somewhat different
+          than other systems of its type.  One difference is that it is not
+          listening to  you when it is not asking you for something.  Thus,
+          wait for the prompts before  you  try  to  type.    Another major
+          difference is  the way  it organizes the Bulletin Board messages.
+          If  you  have  used  other  Bulletin  Board  systems,   or  other
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 2
+
+          Information  Services,  you  may  have  some  re-learning  to do.
+          However, once you learn a few basic commands, the rest  is really
+          straight  forward,  and  there  is  always on-line help that will
+          explain the more complex combinations.
+
+               GEnie is  a  very  large  system,  with  services  that will
+          intimidate the  uninitiated.   I encourage you to investigate all
+          the services that are available to you, but  I caution  you to be
+          aware, that  some services  cost extra.  Generally, they are well
+          marked with a $ before the menu item.  You  will be  charged more
+          if you  select that  item.   Also the uninitiated should be aware
+          the clock is ticking whenever they are on-line.   Minutes quickly
+          turn  into  hours  when  you  are  trying to read everything that
+          flashes across your  screen,  so  I  encourage  you  to  not read
+          everything on-line, but to capture the text to your printer or to
+          a disk file.  You should  keep you  trips on-line  short and read
+          what you  have captured after you log off, and you should program
+          you communication software so that it does as much of  the job as
+          possible.
+
+               I  will  not  go  into  all  the various ways to set up your
+          hardware except to say  that  all  it  takes  is  a  modem  and a
+          terminal.   The modem  is set up with 8 data bits, 1 stop bit, no
+          parity, use half duplex mode, and be capable  of sending  a BREAK
+          signal.  If you don't know what all this is, or can not implement
+          your hardware this way, I'd be glad to  help you  individually to
+          explain it  or tell  you how  to get  GEnie to do it differently.
+          What I'd rather do right now is tell you how  to keep  your costs
+          as low  as possible.   If you follow this procedure, you can keep
+          in touch with everything  that is  going on,  on-line in  the FIG
+          RoundTable.
+
+          THE PROCEDURE
+
+               The  sequence  that  starts  on  page  5  of  this paper was
+          captured from an actual log in.  I've underlined the  things that
+          I typed,  and added  numbered notes on the right hand side of the
+          page.  Also  each  of  my  entries  are  finished  by  hitting my
+          carriage return key.  Follow along as I explain the steps.
+
+               Starting with  <-1, this is the command you give a Hayes [5]
+          compatible modem to dial the phone.   The  800 number  I give you
+          there, as  well as  the account  number given in <-3 are used for
+          initial signup.  During the initial signup, you will be  asked to
+          supply billing  information and  they will give you a local phone
+          number, your own account number  and  password.    Substitute the
+          numbers they  give you for these numbers.  After your modem makes
+          the connection (indicated by the CONNECT), you type HHH as  in <-
+          2.   Remember to  pause about  1/10 of  a second  between each H.
+          GEnie will respond with  U#=  or  some  gibberish.    If  you get
+          gibberish,  type  a  carriage  return  and GEnie will ask for the
+          number again, hopefully so you can read it.
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 3
+
+
+               At the U# prompt, you type your password.   For  the initial
+          signup, when  you will  be using  the 800 number, use the account
+          number and password that I give on line <-3, but  do not  add the
+          numbers after  GENIE.   Those extra numbers are the page and menu
+          item you will need to go  to the  FIG Bulletin  Board.   Once you
+          have your  own account  number and  password, substitute them for
+          the  XJM11849,GENIE  and  use  the  ,710;1   to  avoid   all  the
+          intervening menus.   GEnie  is organized by menu "pages" and each
+          "page" has a number at the upper right corner.  We are located on
+          page 710 and menu item 1 is the FIG Bulletin Board.  Within GEnie
+          you can use m710;1 to do  the same,  or type  FORTH to  go to our
+          main menu (both of our menus can be seen on page 7 of this text).
+
+               After you have entered your account number and password, the
+          initial signup will start asking you questions.   Ignore the fact
+          that they  do not mention the extra 3 hours, your account will be
+          credited  properly.    Once  your  account  information  has been
+          validated,  you  will  be  able  to sign in with your new account
+          number, and see text similar to what I've included here.   Notice
+          <-4 points  out one  of our  advertisements for the Johns-Hopkins
+          conference we had May 4th.   These signon  messages let  you know
+          what is  going on  through out  GEnie.   At <-5 GEnie checks your
+          mailbox and tells you if there is anything in it.  Make a note if
+          you had any, and we'll get back to reading it later.
+
+               Now,  you  enter  the  FIG  RoundTable, and are greeted with
+          various messages.  You are capturing this aren't  you, because we
+          will occasionally  give you  more details about important events,
+          and you will want to read about them later.  On my  next page, we
+          enter the  Bulletin Board  and enter  Category 1.  You will see a
+          more complete menu than I show at <-6, but once you've seen  it a
+          few time, you can turn it off by typing PROmpt NONe.  The capital
+          letters are all that  GEnie requires  you to  type.   BRO ALL NOR
+          will  read  all  the  new  messages  in all Topics and Categories
+          without asking you to reply on-line.  You may want to play around
+          here  to  see  what's  in  all  the  Topics  and  Categories, but
+          remember, I'm showing you the quickest way.
+
+               After the latest messages have flashed by, we  return to the
+          prompt (1  ?) in  <-7.  Here I use the move command to go to page
+          711 and choose item  11.   711 is  our Software  Library page and
+          item 11 lets you see what files have been uploaded since you last
+          used this command (i.e. when you were last on).  You then see the
+          file listing,  but again,  I urge you to just move on and look at
+          the listing later.  This command has been recently (880707) added
+          to the  Library menu,  and needs  some initial  setup.  The first
+          time you use it, it will produce the same listing as menu  item 2
+          (i.e. a  full directory  listing).  If you hit your BREAK key [6]
+          the file pointer will get updated properly and you will  not have
+          to see the entire list next time you use it.
+
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 4
+
+               After the  file listing, you are presented with the Software
+          Library menu.  At this point, we have  completed our  tour of the
+          FIG RoundTable  and it  is time  to check your personal mail.  If
+          you remember what message  you got  when you  signed on,  you can
+          decide whether  you need to do this step or not.  I had some mail
+          in my box, so at <-11 I tell GEnie that  I want  to read  it.  It
+          starts with a listing of the mail queue, then begins listing your
+          mail.  After the mail, you are returned to the  RoundTable menus.
+          Normally, you  would get  the Software  Library menu, but to show
+          you what our main menu looks like, I  showed it  returning there.
+          We are  done, so  at <-12  I type BYE.  GEnie tells me to "Have a
+          nice day!",  and  tells  me  how  long  I  was  on-line  at <-13.
+          Finally, at <-14 we hang up the phone.
+
+          SUMMARY
+
+               The bottom  line is  at <-13.  It only cost 23 cents to take
+          this trip.  This was an actual login, included the full text from
+          a message  in the  Bulletin Board,  and the  complete letter sent
+          from Dan Miller.  Your  cost  may  vary,  depending  on  how long
+          you've been  away and how popular you are.  Messages are added to
+          the Bulletin Board daily, and you may have  a lot  of friends who
+          want to communicate with you electronically, and of course, these
+          estimates will be higher in California.  However,  if we  look at
+          the cost  per minute  (8.3 cents),  or the cost per character (at
+          1200 baud you can send 864 characters for 1 penny) [7], I know of
+          very few other mediums that are cheaper to use.  So why don't you
+          give us a try?  We're as close as your nearest telephone.
+
+               Reach out and touch, the Forth community.
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 5
+
+
+ATDP1(800)638-8369                           <-1 Modem commands to dial GEnie
+                                                 Use your local node's number
+CONNECT
+HHH                                          <-2 Type pauses between H's
+U#=XJM11849,GENIE,710;1                      <-3 Your account, password, and
+                                                 go to FIG Bulletin Board
+ ** Thank you for choosing GEnie **
+
+  The Consumer Information Service
+       from General Electric
+        Copyright (C), 1988
+
+GEnie Logon at: 21:18 EDT on: 880503
+Last Access at: 20:34 EDT on: 880503
+
+*  See Religion & Ethics RoundTable  *
+   Explore & share. Type "RELIGION"
+
+*   Who wrote poetry in the nude!!   *
+  Check "WRITERS" Trivia for answer.
+
+* Guests from: Johns-Hopkins Applied *       <-4 Notice our ad
+  Physics Lab. "FIG" RTC 5/4 9PM EDT
+
+You have 1 LETTER WAITING.                   <-5 Notice mailbox check
+
+Welcome Dennis A. Ruffer
+Last visit at: 20:34 on: 880503
+
+Welcome to the Forth Interest Group RoundTable
+
+Your hosts on this RoundTable are:     FIG          The FIG Business Offices
+Sysops - D.RUFFER  Dennis A. Ruffer    S.W.SQUIRES  Scott W. Squires
+         GARY-S    Gary L. Smith       NMORGENSTERN N. Leonard Morgenstern
+
+For on line help, Enter: MANUAL   or   M10;5   or   M625;6
+
+Mark your calendar:
+THE FIGGY BARS Thursday night 9:30 EDT and Sunday night 8:30 EDT
+Architecture of a 32-bit Forth Engine           May 4th 9:00 EDT
+
+No Members in Conference
+
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 6
+
+GEnie
+  FIG Software Bulletin Board
+
+Hello Dennis A. Ruffer            
+Last On: Tue May 03, 1988 at 20:35 EDT
+
+Category  1 Introduction to FIG On-Line
+
+1 ?BROwse ALL NOReply                        <-6 Read all messages
+
+Category   6 Applications in Forth
+**********
+Topic 15        Wed Sep 16, 1987
+DANMILLER                    at 18:19 CDT
+Sub: Forth Engines / Harris                 
+
+This topic will be devoted to discussion of Harris Semiconductor 's Forth
+Processor Family: applications, development and information.
+1 new messages
+**********
+----------
+Category 6,  Topic 15
+Message 32        Tue May 03, 1988
+DANMILLER                    at 19:40 CDT
+ 
+"You are invited to a Forth-based 15 MIPS Real Time  Microcontroller Premier"
+. . .
+----------
+1 ?M711;11                                   <-7 List new files
+
+ALL Libraries
+  No. File Name             Type Address      YYMMDD Bytes   Access Lib
+----- ------------------------ - ------------ ------ ------- ------ ---
+
+ 1035 BAR0501.ARC              X D.RUFFER     880502   10080      0   1
+      Desc: The FIGGY BAR II, 05/01/88
+ 1036 DECOMP.BQY               X M.LONG4      880502    2520      1   6
+      Desc: Decompiler for Apple // Uniforth
+End of Directory.
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 7
+
+GEnie                         Page 711
+         FIG Software Library         
+        Library: ALL Libraries        
+
+ 1. Description of this Library
+ 2. Directory of files
+ 3. Search File Directory
+ 4. Browse through files
+ 5. Upload a new file
+ 6. Download a file
+ 7. Delete a file you own
+ 8. Set Software Library
+ 9. Save Current Software Library
+10. Instructions for Software Exchange
+11. Directory of New Files
+
+Enter #, <P>revious, or <H>elp?READ          <-11 Read your mail
+
+Queue#    Item  From         Length   Sent   Subject
+     1 2901221  DANMILLER         8 88/05/03 rochester                     
+
+
+Item    2901221                 88/05/03        19:46
+
+From:   DANMILLER                       Daniel L. Miller
+
+To:     D.RUFFER                        Dennis A. Ruffer
+
+Sub: rochester
+
+I reposted the harris inv. . . .
+
+=END=
+
+GEnie           FORTH         Page 710
+   Forth Interest Group RoundTable    
+        Library: ALL Libraries        
+
+ 1. FIG Bulletin Board
+ 2. FIG Real Time Conference
+ 3. FIG Software Library
+ 4. About The RoundTable
+ 5. RoundTable News             880421
+ 6. Take a Survey
+
+Enter #, <P>revious, or <H>elp?BYE           <-12 Sign off
+
+Thank you for choosing GEnie.
+Have a nice day!
+
+Online: 2 minutes, 40 seconds.               <-13 Cost = 23 cents
+
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 8
+
+OFF AT 21:21EDT 05/03/88                     <-14 Hang up
+
+
+GEnie On 25 Cents/day             by Dennis Ruffer                   Page 9
+
+REFERENCES
+
+          1. General Electric  Network  for  Information  Exchange, General
+          Electric,  GEnie  Services  Box  02B-C, 401 N. Washington Street,
+          Rockville, MD 20850, (800) 638-9636
+
+          2. Source Telecomputing Corporation, 1616  Anderson Road, McLean,
+          VA 22102, (703) 734-7500
+
+          3. CompuServe   Information   Services,   P.O.  Box  20212,  5000
+          Arlington  Centre  Blvd.,  Columbus,  Ohio  43220,  An  H&R Block
+          Company, (800) 848-8990
+
+          4. Non-prime hours are 6:00pm to 8:00am in whatever time zone you
+          live when you signed up.  In  other  words,  if  you  sign  up in
+          Boston, but move to LA, you would be charged non-prime rates from
+          3:00pm to 5:00am PST.
+
+          5. Hayes Microcomputer Products, Inc.,  5923 Peachtree Industrial
+          Blvd., Norcross, Georgia 30092, (404) 499-8791
+
+          6. The BREAK  key is set on the SET Terminal features menu.  Type
+          SET and follow the prompts to see what your setting  is.   A zero
+          indicates that  your software  and modem can send a "true BREAK",
+          which is a unique  bit signal  that can  not be  confused for any
+          other character.   If  your software  can not send one (check you
+          software and hardware manuals), you can  change it  to some other
+          character (03 = Control C).
+
+
+          7. At  $5.00/hour  and  1200  Baud  (which  is  approximately 120
+          characters per second): $5.00/hour = 8.333  cents/minute = .13889
+          cents/second = 1 cent/7.2 seconds = 1 cent/864 characters.
+
+

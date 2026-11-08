@@ -1,0 +1,161 @@
+
+X3J14 Report	11/16/90	Page 1
+
+Elizabeth D. Rather, Chair, X3J14
+
+The primary focus of this article is to respond to concerns expressed by Boston FIG 
+regarding our work towards ANS Forth.  First, though, I'd like to give a little background.
+
+X3J14 has held 14 meetings, the most recent of which was in Detroit Nov. 7-11.  A total of 
+36 people have participated as Principal voting members (of which 21 are currently voting 
+members), and an equivalent number have also participated actively as alternates or 
+observers.  Of these, 15 list themselves as producers (including FORTH, Inc., CSI, LMI, 
+Harris, Vesta, Johns Hopkins and a number of individual producers), 20 as consumers, 
+and one as a general interest group (FIG).  Several of our members are well known in the 
+Forth community, including George Shaw, Mitch Bradley, Bob Berkey, Bill Ragsdale, 
+Larry Forsley and Martin Tracy.  Some represent large organizations:  NASA, IBM, NCR, 
+Ford Motor Co.; while others are individual consultants.  Some of our members are 
+extremely highly skilled systems programmers, with extensive knowledge of Forth 
+internals, while some are relatively casual users who are keenly interested in this 
+process.  Some are experienced with only one vendor's system, while others have used 
+several.  Similarly, some are expert programmers in a number of languages and OSs, 
+while others aren't.  In short, it's a very diverse group.  In addition to our members, nearly 
+100 people have purchased at least one copy of our working BASIS documents; of these, 
+most have bought several, and about 30 are subscribers.
+
+We have met in many places:  Melbourne, FL; Washington, DC; Rochester; Boston; 
+Detroit; Vancouver; Portland; San Jose; Palo Alto; Los Angeles; and San Diego.  In 1991 
+we may add Atlanta and Boulder, Col.  In all of these places we've invited area Forth 
+users to attend, contribute, and vote in TSC sessions (see below), and many have done so.
+
+Since our formation in August, 1987, we've had 10 four-day meetings and four five-day 
+meetings.  With an average attendance of about 12 members and five visitors, that 
+represents about 1,020 work days, many of which were 10-12 hours long, or roughly 4 1/4 
+years of work.  In addition, we have poured many hours of work into proposals and study 
+between meetings.
+
+We've processed 958 proposals:  518 passed, 301 failed, 110 were withdrawn (because 
+they were redundant or dealt with issues that had already been decided), 11 were 
+declared comments, and 18 are still pending.  This is a lot of work, by a lot of very bright, 
+dedicated people.
+
+Here is how we work.  The TC is governed by strict rules laid down by our governing 
+organization, X3 (Information Processing Standards group of ANSI), which require, among 
+other things, that every technical decision represent a consensus of the members.  In 
+order to arrive at that consensus, we've set up a sub-group, called the Technical 
+Subcommittee, or TSC.  Greg Bailey is its chair.  It consists of whoever is present at a 
+meeting:  members, alternates, visitors, each with one vote.  This group debates issues, 
+often at great length, until it reaches a consensus, and then forwards that decision to the 
+TC for official action.  Usually the consensus survives in the TC, with most votes being 
+overwhelmingly in support of the TSC's decision.  Sometimes, however, new facts or 
+questions arise about a proposal or issue, in which case we refer it back to the TSC.  No 
+proposal is permitted to pass or fail with a significant minority opinion.  In practice, this 
+has ensured that there are no hasty or casual decisions, and no one's "private agenda" 
+can prevail in the absence of overwhelming support.
+
+At our first meeting, we adopted a statement of our Scope of Work, a step required by X3.  
+A copy is attached.  This was re-examined at length in May and August of this year, and 
+amended somewhat for clarity.  In summary, this charter called for us to examine 
+"common existing practices" in Forth, as well as identifying significant "problem areas" 
+and attempting to resolve them.  Neither of these has been easy.  What is "common 
+existing practice?"  FORTH-83?  FORTH-79?  One implementation that happens to have 
+thousands of users?  One brutal truth is that if we adopted a guideline that required all 
+major implementations to agree, we'd have a subset of Forth that would run only on a 16-
+bit engine and have a command set so limited that no significant programs could be 
+written with it.  We have consistently and unanimously rejected this as a guideline.
+
+One of our earliest acts was to identify vendors with over 200 users, and send them a 
+questionnaire soliciting information as to which, if any, standard they followed and what 
+they considered to be major problem areas that needed to be addressed.  We also 
+solicited input from many other sources, including FIG chapters, electronic bulletin 
+boards, customers of member vendors, etc.  We found very broad compliance with 
+FORTH-83, a significant minority of FORTH-79 compliance, and some specific areas of 
+concern, such as need to run on other than 16-bit architectures (especially 32-bit 
+systems), need to deal with host OSs, floating point arithmetic, etc..  There were many 
+others.  The implementors we studied had virtually all tackled these issues, with 
+predictably diverse approaches.  In order to resolve this diversity, we adopted a guideline:
+
+	If we changed the behavior of a word from its meaning in FORTH-83, FORTH-79 or 
+significant current usage, we'd give it a new name.
+
+This prevents "breaking" existing code, as users wishing to comply with ANS FORTH can 
+freely choose to either:  
+
+    a) Do a blanket name change, if they comply with the meaning;
+    b) Keep the old name and meaning, not changing existing programs, and add the new 
+name and meaning for later use;
+     c) Add a "shell" on top of a system defining the new word in terms of the existing word;
+ or d) Add a shell under an application defining the old word in terms of the new word.
+
+X3, which has been through these wars before (thirty years of FORTRAN and COBOL 
+standards, for example), is very concerned about "cost of compliance," and as most of us 
+operate on tight budgets, we heartily agree.  All of these approaches are far cheaper than 
+examining all instances of a word and deciding whether the usage is impacted by the 
+change of meaning.  However, this has been a source of some "new" word names which 
+have been adopted to resolve important usage conflicts (e.g., NOT) and technical 
+problems (e.g., usage of COMPILE and [COMPILE].
+
+We had many requests for things that were clearly new as far as Forth standards were 
+concerned, but with which several implementors and users had extensive experience.  In 
+some of these cases we synthesized this experience, and then commissioned our 
+members to try the synthesis and report results.  This has been the case with all the 
+optional word sets.
+
+Our status at this time is that we're about ready to publish a draft proposed standard or 
+"dpANS" for review, probably shortly after our next meeting (January 29-Feb. 3, 1991, at 
+FORTH, Inc.).  The rules governing this phase of our activity are as follows:
+
+ 1. The TC must approve the dpANS by a 2/3 vote of all members (taken by mail).  
+Negative votes must be responded to in writing and will be kept with the document 
+through all the following steps.
+ 2. The dpANS is then submitted to X3's Standards Planning and Requirements 
+Committee (SPARC) for review, which will take several months.
+ 3. The dpANS is then published for public review, for a four-month period.  Public review 
+comments are sent to X3, and are tracked by them.  The TC must respond in writing to all 
+adverse public review comments, and the responses are reviewed by X3 to ensure that 
+we're truly responsive.
+ 4. If, as a result of input from X3 or the public, we elect to make changes, the revised 
+dpANS then goes out for additional two-month public review periods as often as needed 
+until all issues are resolved to the satisfaction of both the TC and X3.
+ 5. Finally, the dpANS plus all unresolved adverse comments and/or negative votes by TC 
+members goes to X3 for review and final approval.
+
+Most of our remaining work involves adding rationales and explanatory materials to help 
+people understand not only what the Standard says but why we did what we did.  We do 
+have what we consider to be good reasons for each addition, subtraction and change, and 
+we are attempting to articulate these reasons as clearly as we can.  There's a little 
+remaining technical work on multitasking, number conversions and search order.
+
+Now, with this background, I'd like to comment on the specific concerns of the Boston FIG 
+group.
+
+These people have been among our most active and dedicated outside contributors.  
+They've met regularly, and reviewed our work carefully and diligently.  They've sent us 
+extensive notes and comments, all of which have been distributed within the TC and read 
+carefully by most of us.  They've also submitted 18 proposals, of which ten have passed 
+(some amended) and eight failed.
+
+Their underlying concern is with the overall size of the standard, especially the required 
+CORE word set.  We generally agree with many of their viewpoints, perhaps more than 
+they realize.  But the devil is in the details:  just what is the minimum useful word set?  
+Our definition of it is represented by CORE, 135 words (compared with 132 in FORTH-83).  
+BFIG has proposed dropping such words as 1+, 1-, 2@, 2!, 2DROP, 2DUP, 2OVER, 
+2SWAP, MAX, MIN, SPACE and others that have been in every standard and virtually all 
+implementations.  We simply feel this is carrying minimalism too far.
+
+No one on the TC believes we are even close to defining "a complete Forth," and we 
+agree that this is principally an implementor's task.  We have rejected many proposed 
+additional words and word sets, submitted both by members and outside observers.  In 
+fact, over two thirds of our outside proposals have offered additional words, many of which 
+have merit but were rejected as being outside common practice.
+
+We are grateful for all the outside help we've received, from BFIG and others, and hope it 
+will continue through the review process.  We urge as many people as possible to 
+participate, by buying copies of our current BASIS (send checks for $10 made to the Forth 
+Vendor's Group, c/o FORTH, Inc., 111 N. Sepulveda, Manhattan Beach, CA  90266), down-
+loading BASIS (now published in massive RTF files on Genie and other boards), attending 
+our next meeting (contact me at 1-800-55-FORTH for more information) and sending us 
+your proposals and comments.
+
+
+

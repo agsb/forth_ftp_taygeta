@@ -1,0 +1,361 @@
+
+
+Sub: Minutes of the FIGGY BAR RT Conference.
+
+Date: 08/31/89   Time: 22:25EDT
+
+Attendees:
+[[Gary] GARY-S]
+[[Hadil] H.SABBAGH]
+[[Wil] W.BADEN1]
+[[Kevin] APPERT]
+[[Len] NMORGENSTERN]
+
+  Items discussed:question of the nite: should floating point be part of
+        X3/J14, ADA vs IEEE fp,numerical analysis, Phil Koopman conference,
+        porting Forth to a CRAY-2, Martin Tracy's wedding, Len Morgenstern's
+        38th anniversary, Factoring O(N) for FFT, sines of sines ...
+
+Minutes:
+<H.SABBAGH> is here.
+<[Gary] GARY-S>  any thoughts on tonite's question ?
+<[Hadil] H.SABBAGH> Yes. Floating point should be part of the std.
+<[Gary] GARY-S> thanks
+<[Hadil] H.SABBAGH> what do you think?
+<[Gary] GARY-S> any reason you feel that way ?
+<[Hadil] H.SABBAGH> Well, I am a numerical analyist by training...
+<[Hadil] H.SABBAGH> and floating point is not about to go away
+<[Gary] GARY-S> well - care for some counter-point
+<[Hadil] H.SABBAGH> sure
+<[Gary] GARY-S> There is nothing unique about fp you canNOT accomplish by 
+scaling...
+<[Gary] GARY-S> Floating point, unless you are very careful is flawed by nature.
+..
+<[Gary] GARY-S> case in point...
+<[Gary] GARY-S> accountants would never trust an item count inventory to fp...
+<[Gary] GARY-S> when integer is available in ANY language...
+<[Gary] GARY-S> I do use fp myself, but I do NOT consider it good methodology, 
+nor..
+<[Gary] GARY-S> a panacea.
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Answer: Controlled Reference Set
+<[Hadil] H.SABBAGH> First, I agree that most people use floating point...
+<[Hadil] H.SABBAGH> incorrectly.  I was trained
+<[Hadil] H.SABBAGH> in grad school on the use of floating point.
+<[Hadil] H.SABBAGH> It is non-trivial...
+<[Hadil] H.SABBAGH> However, just because it is in the standard...
+<[Hadil] H.SABBAGH> does not require people to use it...
+<[Hadil] H.SABBAGH> and people who MUST use it...
+<[Dave] DHWEINSTEIN> But if it is in the required standard, then standard 
+systems must contain it, which takes space in embedded systems which don't
+need it.
+<[Hadil] H.SABBAGH> can be assured that it will work in an understandable 
+manner...
+<[Dave] DHWEINSTEIN> Which is why I say in the controlled reference set. If you 
+include it, it should work in XXX manner, but you need not include it.
+<[Hadil] H.SABBAGH> That would be the best way.  I doubt that there are many
+<[Hadil] H.SABBAGH> new embedded systems w/o some floating point.
+<[Dave] DHWEINSTEIN> Oh there are many controller level applications which will 
+*not* need floating point.
+<[Dave] DHWEINSTEIN> (i.e. device controllers)
+<[Gary] GARY-S> You would champion Jack Brown's recommendation that X3/J14 
+adopt IEEE fp I assume, Hadil ? Right ?
+<[Hadil] H.SABBAGH> I concur.  Controlled reference is best here.  I have
+<[Hadil] H.SABBAGH> Re IEEE: I am actually in favor of...
+<[Hadil] H.SABBAGH> a floating point standard a la ADA...
+<[Dave] DHWEINSTEIN> I would agree. Use IEEE FP. No sense in being nonstandard 
+for the sake of being nonstandard. Saves my having to write glue code.
+<[Wil] W.BADEN1> is here.
+<[Hadil] H.SABBAGH> Which was an attempt to provide a general...
+<[Hadil] H.SABBAGH> framework for floating point, of which IEEE is one subset.
+<[Hadil] H.SABBAGH> Hi Wil.
+<[Wil] W.BADEN1> hi dave, gary.  Salaam Hadil.
+<[Gary] GARY-S> I will gag if the word ADA appears many more times tonite - you 
+have been warned
+<[Dave] DHWEINSTEIN> (My answer to the intro question was to put them in the 
+Controlled Reference Set)
+<[Hadil] H.SABBAGH> Salaam alekum.
+<[Gary] GARY-S> That's three staright CRF votes
+<[Gary] GARY-S> four actually
+<[Hadil] H.SABBAGH> Look, ADA is not my favorite either, but lets not be
+<[Hadil] H.SABBAGH> language elitists. We can learn from...
+<[Hadil] H.SABBAGH> other programming experiences too!
+<[Gary] GARY-S> I agree - I just think Ada is a very bad camel
+<[Dave] DHWEINSTEIN> Here here!
+<[Hadil] H.SABBAGH> I agree, basically. But many intelligent people spent time..
+<[Hadil] H.SABBAGH> on it; it bears some study.
+<[Hadil] H.SABBAGH> Its approach to floating point addresses the very issues...
+<[Hadil] H.SABBAGH> that make floating point so unreliable.
+<[Hadil] H.SABBAGH> I really believe more scientists would use ...
+<[Dave] DHWEINSTEIN> There are still arguments by theorists (i.e. Wirth) that 
+Ada is flawed, not because it is so bloated, but because it includes such
+flawed techniques as exception handling (Wirth wants to set a flag and check 
+it later...sheesh).
+<[Gary] GARY-S> The fault was not with the strawman,tinman,ironman design proof 
+Ada went through - I applaud that...
+<APPERT> is here.
+<[Gary] GARY-S> It was the God-awful required set of proceedures attached to 
+the RFP
+<[Hadil] H.SABBAGH> Forth given its applicability to more existisng systems 
+platforms.
+<[Wil] W.BADEN1> Hi Kev.
+<[Kevin] APPERT> hi all
+<[Dave] DHWEINSTEIN> Hullo Kevin
+<[Gary] GARY-S> Kev -
+<[Hadil] H.SABBAGH> hi kevin
+<[Gary] GARY-S> some innovations succeed
+<[Wil] W.BADEN1> It was politics. ...
+<[Wil] W.BADEN1> Red, Green, Yellow, and Blue, all tried to (1) ...
+<[Wil] W.BADEN1> Have greater features than the others, and (2) ...
+<[Wil] W.BADEN1> Propose something that the generals and colonels would buy.
+<[Gary] GARY-S> Any thoughts on it, Kev - tonites ??
+<[Kevin] APPERT> My understanding of the ANSI Forth Morass charter was strong...
+<[Kevin] APPERT> on codifying "existing practice" (whatever that is)...
+<[Kevin] APPERT> and I don't see how floating point fits in
+<[Gary] GARY-S> I wouldn't want some of my practices codified :-)
+<[Hadil] H.SABBAGH> Yes, but w/o codifying FP, noone will ever use Forth
+<[Kevin] APPERT> join the forth non-standards team, Gary
+<[Hadil] H.SABBAGH> for FP. This excludes
+<[Hadil] H.SABBAGH> many potential users.
+<[Kevin] APPERT> that does not worry me, Hadil
+<[Gary] GARY-S> You the chairman, Kev ?
+<[Kevin] APPERT> of what? Gary
+<[Gary] GARY-S> the non-standards team
+<[Kevin] APPERT> oh, no.  everybody is their own.
+<[Wil] W.BADEN1> Charles Curley has the chair by right of priority.
+<[Kevin] APPERT> committies of one produce coherent consistant entities
+<[Gary] GARY-S> I don't see what the hell's wrong with scaling, but I'm a 
+self-confessed minimalist, anyway
+<[Hadil] H.SABBAGH> Floating point = scaling in hardware.
+<[Gary] GARY-S> usually
+<[Kevin] APPERT> yes, Charles wrote a hilarias send-up of standards called "the 
+Forth non-Standard"  it's probably somewhere on GEnie
+<[Hadil] H.SABBAGH> I am thinking of hardware which includes FP.
+<[Dave] DHWEINSTEIN> Gary: I agree..which is why I think it should be in the 
+Controlled Reference Set. It is something that should be included, becaus
+e it is an important conceptual unit, and should be standardized, but because 
+it is not always needed, it should not be part of the "core". (i.e. I don't 
+need it on a disk controller)
+<[Hadil] H.SABBAGH> Examples: CRAY, Sun + wintek, lotts of workstations.
+<[Gary] GARY-S> there were chips before 8087 came along
+<[Hadil] H.SABBAGH> Forth could really take off in the
+<[Hadil] H.SABBAGH> graphics applications, if it was more
+<[Hadil] H.SABBAGH> easily disseminated to different
+<[Kevin] APPERT> how do you get away with calling it existing practice,Dave?
+<[Hadil] H.SABBAGH> machines and operating environments.
+<[Wil] W.BADEN1> But Charles Curley says that only his is the Real Forth.
+<[Kevin] APPERT> no , not THE, just RealForth
+<[Hadil] H.SABBAGH> Why have a standard otherwise Kevin?
+<[Dave] DHWEINSTEIN> I don't. I don't fall into that trap. I want a coherent 
+standard. And all of us have written plenty of incoherent Forth.
+<[Gary] GARY-S> I did agree with the rest of you - Controlled Reference Set 
+makes sense - then I don't have to include it and you can
+<[Hadil] H.SABBAGH> Wil: All standards development are political...
+<[Wil] W.BADEN1> What's the difference between Controlled Reference Set and 
+Standard Library?
+<[Kevin] APPERT> well, Dave, you can either follow the rules of the charter, or 
+not.
+<[Hadil] H.SABBAGH> ADA was more formalized.
+<[Dave] DHWEINSTEIN> ADA is also a monstrosity.
+<[Gary] GARY-S> I remember about 5 years ago Chuck Moore saying Standards were 
+a red-flag. If he had adhered to Standards there would be no Forth. Tha
+t sort of makes him chief of the joint chairs of non-standard committeedom
+<[Hadil] H.SABBAGH> Yes. " A horse built to government specifications."
+<[Gary] GARY-S> So was COBOL - talk about recommendations
+<[Wil] W.BADEN1> I LIKED Ironman.
+<[Hadil] H.SABBAGH> PS: I'm a grad student at NYU, so my education...
+<[Hadil] H.SABBAGH> has been biased towards ADA (and SETL).
+<[Kevin] APPERT> I maintain that if one were to implement floating point in an 
+appropriate fashion, and one were to find an application for it (I'm not
+sure I know of any except astronomy), the world will beat a path to your door,
+ and then...
+<[Kevin] APPERT> you will have a floating point standard.
+<[Hadil] H.SABBAGH> FP Applications:
+<[Hadil] H.SABBAGH> numerical analysis, e.g., n-body problem, fluid dynamics
+<[Hadil] H.SABBAGH> (my thesis topic), linear programming, matrix analysis, FFT,
+<[Hadil] H.SABBAGH> magneto-hydrodynamics, aerodynamics, etc....
+<[Dave] DHWEINSTEIN> Kevin: I disagree. We need to be able to get more people 
+using Forth, and to bid for contracts using Forth. And to do that we nee
+d coherent methods of dealing with certain things (i.e. files, floating point, 
+etc).
+<[Hadil] H.SABBAGH> These are all real applications written in FORTRAN
+<[Hadil] H.SABBAGH> and people like me would use Forth, if
+<[Kevin] APPERT> FFT is not an application, it is a tool.  There are more 
+applications for int. FFT's than floating point.
+<[Hadil] H.SABBAGH> we could.
+<[Hadil] H.SABBAGH> Also, standards lead to portable systems.
+<[Wil] W.BADEN1> Martin Tracy got married in July.  I supplied the moon for the 
+honeymoon.
+<[Gary] GARY-S> Hadil - what was the final wash on your 'first-born male' head 
+count the other night ? 100% ?
+<[Wil] W.BADEN1> In January he asked for the date of the full moon in July.
+<[Dave] DHWEINSTEIN> The point is, Kevin, I can write a floating point wordset 
+for myself when I need one. But I can't use it because I am only one pr
+ogrammer, and most of my...
+<[Hadil] H.SABBAGH> Yes, 100^
+<[Wil] W.BADEN1> I used the algorithm in Numerical Recipes translated to Forth.
+<[Dave] DHWEINSTEIN> ...employers are not willing to assume that I will always 
+be there.
+<[Hadil] H.SABBAGH> But I am not of European descent :-).
+<[Gary] GARY-S> I thought you were confessing to dropping your skivvies at the 
+wedding, Wil ! :-)
+<[Dave] DHWEINSTEIN> By having a standard (but not required) outer layer for 
+floating point, I can make sure that there will be other Forth programmer
+s who can understand my system.
+<[Gary] GARY-S> a shell ?
+<[Hadil] H.SABBAGH> Dave: also, it permits accurate numerical analysis of 
+roundoff.
+<[Wil] W.BADEN1> (Ya Hadil, can you find me a more efficient algorithm?)
+<[Dave] DHWEINSTEIN> The interface level. The words which define how floating 
+point is handled, andhat words are available.
+<[Hadil] H.SABBAGH> Algorithm for what. FFT?
+<[Wil] W.BADEN1> Age of the moon.
+<[Dave] DHWEINSTEIN> This means that I can be sure what F+ does, just as I now 
+know what + does.
+<[Hadil] H.SABBAGH> I don't know much about it. What did you use?
+<[Wil] W.BADEN1> See above. The first algorithm in Numerical Recipes.
+<[Hadil] H.SABBAGH>Im sorry, I missed it.  What problem does it solve?
+<[Wil] W.BADEN1> The age of the moon on any given date.
+<[Wil] W.BADEN1> It uses sines of sines.
+<[Hadil] H.SABBAGH> No, I don't know any algoriithms for it.
+<[Hadil] H.SABBAGH> I haven't studied that area.
+<[Wil] W.BADEN1> I will upload my program as an example of FP in Forth.
+<[Wil] W.BADEN1> (If I can remember where I left it.)
+<[Hadil] H.SABBAGH> I would be interested to see it. BTW
+<[Hadil] H.SABBAGH> I have discovered an O(N) algorithm for FFT.
+<[Hadil] H.SABBAGH> It is rather complicated, though.
+<[Hadil] H.SABBAGH> I may try to write it in Forth.
+<[Wil] W.BADEN1> Table driven?
+<[Hadil] H.SABBAGH> No, its another approach altogether.  The paper
+<[Hadil] H.SABBAGH> is actually about an O(N) algorithm for
+<[Hadil] H.SABBAGH> computing interactions in the n-body problem.
+<[Dave] DHWEINSTEIN> Worst case time?
+<[Hadil] H.SABBAGH> This can be adopted to solve the Discrete Fourier Transform.
+<[Hadil] H.SABBAGH> Recall that FFT is O(N log N).
+<[Gary] GARY-S> IF you get O(N) working in Forth I hope you will share it in 
+our library
+<[Hadil] H.SABBAGH> I will be happy to.
+<[Gary] GARY-S> thanks
+<[Hadil] H.SABBAGH> I wonder if there is much interest
+<[Hadil] H.SABBAGH> in numerical algorithms in Forth, in general.
+<[Dave] DHWEINSTEIN> Yes, there is.
+<[Hadil] H.SABBAGH> I have been thinking about implementing a Forth for the 
+CRAY-2.
+<[Kevin] APPERT> speaking of Charles Curley (we were a while ago), I wonder if 
+he is in a direct (no surcharge) area now.  He frequently called that o
+ut as his reason for staying off GEnie.  If so, he will probably have to find 
+another reason.
+<[Gary] GARY-S> Think a guest slot on GEnie would jar him loose Wil ?
+<[Dave] DHWEINSTEIN> Wooooooo. *Speed*.
+<[Hadil] H.SABBAGH> Dave: Yeah. And CELL SIZE = 8 bytes!
+<[Wil] W.BADEN1> Try.
+<[Hadil] H.SABBAGH> After my oral exam.
+<[Gary] GARY-S> gaot a number ?
+<[Gary] GARY-S> Good Luck, Hadil
+<[Hadil] H.SABBAGH> Thanx.
+<[Wil] W.BADEN1> No recent one. How about SIGForth?
+<[Kevin] APPERT> anybody seen Jax around?
+<[Wil] W.BADEN1> Numerical algorithms point up a weakness of Forth.  With FP 
+and lots of ...
+<[Gary] GARY-S> Wil/Kev, if either of you have Curley's phone number please 
+leave e-mail to GARY-S
+<[Wil] W.BADEN1> variables they can get messy.Gotcha.
+<[Kevin] APPERT> I don't at the moment, but I can get it with one level of 
+indirection.  Will do.
+<[Hadil] H.SABBAGH> Not necessarily.  The subcomputations
+<[Hadil] H.SABBAGH> can be decomposed easily.
+<[Hadil] H.SABBAGH> Also, you can always use locals !
+<[Wil] W.BADEN1> That's a good thing in profane languages also.
+<[Hadil] H.SABBAGH> Forth for CRAY will be difficult, since
+<[Hadil] H.SABBAGH> you want to take advantage of
+<[Hadil] H.SABBAGH> vectorization.  A vector stack, perhaps?
+<[Hadil] H.SABBAGH> Size isn't a problem: 4 Mega words (word = 8 bytes)!
+<[Kevin] APPERT> what would Chuck do?
+<[Gary] GARY-S> gives CELL a whole new meaning
+<[Wil] W.BADEN1> Locals as generally implemented don't help programming 
+applications. ...
+<[Wil] W.BADEN1> What is need is some form of modular variables, or 
+inter-definition scoping.
+<[Hadil] H.SABBAGH> I could even get a paper out of it :-).
+<[Gary] GARY-S> I thought someone had built a Forth on a CDC Cyber - but I 
+haven't a clue who
+<[Kevin] APPERT> hook a 3-key keyboard up to it, no doubt
+<[Dave] DHWEINSTEIN> Heh. You can get a paper out of almost anything 
+interesting.
+<[Dave] DHWEINSTEIN> Didn't Greg mention that on Cat 10?
+<[Hadil] H.SABBAGH> And even things uninteresting :-).
+<[Kevin] APPERT> and quite a few booring things
+<[Wil] W.BADEN1> (Greg Bailey?)
+<[Gary] GARY-S> seems like you're right
+<[Dave] DHWEINSTEIN> I think he might have mentioned it.
+<[Dave] DHWEINSTEIN> But my memory could be playing tricks on me.
+<[Kevin] APPERT> I am fairly sure there is a CRAY-1 fig-esque forth
+<[Wil] W.BADEN1> I did a Forth on a CDC 6600.
+<[Gary] GARY-S> Hadil - you might e-mail G.BAILEY1 and see if he knows about 
+the forth on cyber - that would give you a tremendous reference
+<[Dave] DHWEINSTEIN> Ahhh. Then you may be the one I was thinking of.
+<[Kevin] APPERT> do those folks have a users' group library?
+<[Hadil] H.SABBAGH> Thanx. I'll do that.
+<[Gary] GARY-S> 6600 and Cyber are a big step apart
+<[Hadil] H.SABBAGH> Yes. Cybers have vectorization.  As I recall...
+<[Hadil] H.SABBAGH> the CDC 6600 doesn't even
+<[Wil] W.BADEN1> (My 6600 Forth wasn't very good.)
+<[Hadil] H.SABBAGH> have a stack! It must be simulated .
+<[Gary] GARY-S> 6600 / 7600 didn't even like to do their own front end
+<[Hadil] H.SABBAGH> You can make  any vector machine
+<[Hadil] H.SABBAGH> behave like a scalar machine.
+<[Hadil] H.SABBAGH> The real challenge is to exploit the vector
+<[Hadil] H.SABBAGH> architecture.
+<[Gary] GARY-S> I left CDC when the first Cybers were being called Star-100
+<[Hadil] H.SABBAGH> (i.e., fast operations on vectors).
+<[Hadil] H.SABBAGH> CRAY machines do not vectorize indirect addressing very 
+well.
+<[Len] NMORGENSTERN> is here.
+<[Gary] GARY-S> early arrival
+<[Kevin] APPERT> hi Len
+<[Len] NMORGENSTERN> 38th anniversary. Just got home from a fine meal
+<[Kevin] APPERT> congratulations
+<[Hadil] H.SABBAGH> congrats.
+<[Len] NMORGENSTERN> Thanx
+<[Wil] W.BADEN1> Congrats.
+<[Dave] DHWEINSTEIN> Congratulations Len.
+<[Gary] GARY-S> 38th anniversary and you're on GEnie ?
+<[Len] NMORGENSTERN> Yep. Loyalty knows no bounds
+<[Len] NMORGENSTERN> (Misplaced loyalty, perhaps)
+<[Gary] GARY-S> My best wishes to your lady, and congrats to you
+<[Gary] GARY-S> silence is expensive folks
+<[Len] NMORGENSTERN> (I guess I stopped all conversation. Continue, folks)
+<[Hadil] H.SABBAGH> i've been talking too much.
+<[Gary] GARY-S> You've led a great conversation, Hadil - never apologize for 
+being of service
+<[Len] NMORGENSTERN> Re floating point: I think
+<[Dave] DHWEINSTEIN> True. And I really need to be moving on. So I will see 
+everyone in various places around the bitspace. Till next time...
+<[Len] NMORGENSTERN> it is a necessity for some applications. Since that 
+is true
+<[Len] NMORGENSTERN> it should be standardized
+<[Gary] GARY-S> well - any last thoughts for posterity ?
+<[Kevin] APPERT> floating point... Bah!  Humbug!
+<[Kevin] APPERT> :)
+<[Gary] GARY-S> Don't forget our guest on the 14th = Phil Koopman
+<[Gary] GARY-S> Should be a great guest
+<[Wil] W.BADEN1> Oh dear, I have a previous commitment.
+<[Hadil] H.SABBAGH> Yeah. me too. My oral exam.
+<[Hadil] H.SABBAGH> (Actually, celebrating afterwards).
+<[Gary] GARY-S> Koopman will have some noses tweaked before he leaves
+<[Len] NMORGENSTERN> How so?
+<[Gary] GARY-S> like Wil and Mitch and Chuck, Phil has some opinions and he 
+isn't afraid to express them
+<[Kevin] APPERT> good luck on your orals, Hadil.  I hope they use the right 
+orifice.
+<[Gary] GARY-S> that always makes for a better conference
+<[Hadil] H.SABBAGH> Whats right for them isn't right for me :-).
+<[Len] NMORGENSTERN> Good.
+<[Len] NMORGENSTERN> Hadil, also good.
+<[Len] NMORGENSTERN> Forth is what YOU make it.
+<[Kevin] APPERT> Gary, that's what Forth is about
+<[Hadil] H.SABBAGH> Anyway, I've gotta go. bye all.
+<[Gary] GARY-S> let's all go
+=== End of Steno notes. ===
+
+

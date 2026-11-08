@@ -1,0 +1,424 @@
+
+
+
+ Minutes of the July 28,1988 FIGGY BAR 
+Date: 07/28/88   Time: 22:35EDT
+Attendees:
+[[Gary] GARY-S]
+[[Jax is Back] VESTA]
+[[Rock] R.FRANZEN]
+[[Len] NMORGENSTERN]
+[[John] J.SCHOFFXX]
+
+Items discussed: and baby makes three, image processing, DEC 11-73 running an
+original pre-fig Forth, Asyst, Standards (do you have your basis ?)
+
+Minutes:
+<VESTA> is here.
+<[Jax] VESTA> hello?
+<[Jax] VESTA> foobar!
+<[Gary] GARY-S> hey jax
+<[Jax] VESTA> whats up gars
+<[Gary] GARY-S> sorry - I was across the old room
+<[Jax] VESTA> Salright ... could have been the NEW room ... :-)
+<[Jax] VESTA> haven't seen you on the well lately!
+<[Gary] GARY-S> we is it - any ideas you want to explore ?
+<[Jax] VESTA> already explored one TO THE MAX ...
+<[Jax] VESTA> baby born tuesday morning ... daughter Jelena Caroline Woehr
+<[Jax] VESTA> ...!!!
+<[Gary] GARY-S> all RIGHT !
+<[Jax] VESTA> All those walks into the sunset of the Rockies worked!
+<[Jax] VESTA> Born at home.
+<[Gary] GARY-S> how's the mother and ?
+<NMORGENSTERN> is here.
+<[Jax] VESTA> Resting, ok.
+<[Jax] VESTA> .
+<[Jax] VESTA> HI len.
+<NMORGENSTERN> Hi
+<[Gary] GARY-S> hey len
+<[Gary] GARY-S> jax - bout the well...
+<[Jax] VESTA> yes?
+<[Gary] GARY-S> I have been hitting it 18 hours per day (no exagerations...
+<[Jax] VESTA> excuses excuses ...
+<[Gary] GARY-S> till yesterday, so I haven't done anything including the well.
+<[Len] NMORGENSTERN> Why so busy?
+<[Gary] GARY-S> ok ?
+<[Jax] VESTA> OK
+<[Len] NMORGENSTERN>
+<[Gary] GARY-S> had three customers humping it - and field engineers are 
+dependent on customer activities..
+<[Gary] GARY-S> end of story
+<[Gary] GARY-S> did everyone hear - Mitch Bradley will be a guest in August ?
+<[Len] NMORGENSTERN> Jax, the Figgy last Sunday was very active! Yes
+<[Jax] VESTA> right
+<[Jax] VESTA> That beginner thing is right on.
+<[Gary] GARY-S> If your serious - maybe my not showing was the key.
+<[Jax] VESTA> That's the sort of stuff I get asked for at work all the time.
+<[Len] NMORGENSTERN> DNo, I think it's just a matter of...
+<[Jax] VESTA> Grown men ... forced to learn FORTH ... It's pathetic to watch 
+them cry ...
+<[Len] NMORGENSTERN> gaining momentu.
+<[Len] NMORGENSTERN> I also think that we shouldn't...
+<[Gary] GARY-S> about damn time I'd say !!!
+<[Len] NMORGENSTERN> emphasize the "novice" idea, but rather "intermediate".
+<[Len] NMORGENSTERN> .
+<[Jax] VESTA> Right ...
+<[Jax] VESTA> Noone wants to be a "novice"
+<[Len] NMORGENSTERN> Dave Weinstein has taken off!
+<[Jax] VESTA>
+<[Len] NMORGENSTERN>
+<[Jax] VESTA> .
+<[Len] NMORGENSTERN> He's left a lot of notes. That's very good!
+<[Gary] GARY-S> I'll change file 2 to read something besides novice...
+<[Gary] GARY-S> is intermediate the operative word ?
+<[Len] NMORGENSTERN> Wait a moment & see the one-time I am putting up tonigt. I 
+will...
+<[Len] NMORGENSTERN> upload it in a minute or so.
+<R.FRANZEN> is here.
+<[Jax] VESTA> rich, is it?
+<[Len] NMORGENSTERN>
+<[Jax] VESTA> ( R>FRANZEN
+<[Jax] VESTA> = rich?
+<R.FRANZEN> Rhi
+<[Jax] VESTA> what's new since (Sunday?)
+<[Gary] GARY-S> that's to you rich - what's new
+<[Len] NMORGENSTERN>             INTERMEDIATE FORTH PROGRAMMERS CONFERENCE
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN>                    SUNDAY, JULY 24, 8:30PM EDT
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> We are changing the focus of out Sunday conferences from 
+"novice"
+<[Len] NMORGENSTERN> to "intermediate". Recent attendees have hardly been rank
+<[Len] NMORGENSTERN> beginners. Some of them are starting to think for 
+themselves, and
+<[Len] NMORGENSTERN> are even putting up messages that disagree with ME! Come 
+and
+<[Jax] VESTA> How is Florida this month .. Rock.
+<[Rock] R.FRANZEN> hot & muggy. FL summer!
+<[Jax] VESTA> Summer, hell! It's that way in the Panhandle at Thanxgiving!
+<[Rock] R.FRANZEN> I'm new to this, so Im kinda slow.
+<[Jax] VESTA> When you are old ...
+<[Len] NMORGENSTERN> watch me put them in their ll beginners once.
+<[Jax] VESTA> you'll be slower.
+<[Gary] GARY-S> no prob - what do you do with Forth ?
+<[Rock] R.FRANZEN> do image processing programming (professionally)
+<[Len] NMORGENSTERN> Wow!
+<[Gary] GARY-S> can you say who for ?
+<[Jax] VESTA> what chips?
+<[Rock] R.FRANZEN> DBA Systems, DEC 11-73, stand-alone ancient FORTH
+<[Jax] VESTA> WOW!
+<[Jax] VESTA> A Moore project, maybe?
+<[Jax] VESTA> or poly?
+<[Rock] R.FRANZEN> no, George Dalke started it.  Ancester of PolyFORTH
+<[Rock] R.FRANZEN> SPIT = EMIT
+<[Jax] VESTA> ... hee hee!
+<[Gary] GARY-S> This is too neat ! are you using the Kitts peak word set ?
+<[Rock] R.FRANZEN> No, just what was in the original, plus years of isolation.
+<[Jax] VESTA> Ha ... I get a bunch of flak at work for using "funny" words... 
+SPIT=EMIT ...ha!
+<[Gary] GARY-S> I bet that would be an interesting kernel for this RT to look 
+at...
+<[Jax] VESTA> But proprietary, no doubt.
+<[Gary] GARY-S> can you upload it ? or do you even have comm on the DEC ?
+<[Rock] R.FRANZEN> As far as I know, kernal is PD
+<[Rock] R.FRANZEN> There is no modem on DEC.  It is fairly effecient, & I love 
+"pure" FORTH...
+<[Gary] GARY-S> I'm serious - can you upload it ?
+<[Jax] VESTA> metoometoometoo STANDALONE! RAH!
+<[Rock] R.FRANZEN> o.s, language, application, altogether.  No files, only 
+directories.
+<[Gary] GARY-S> We could use it for historical perspective
+<[Jax] VESTA> We could use it for old DEC's ... BTW, describe the hardware a 
+bit, please!
+<[Rock] R.FRANZEN> It's not really the original.  Many modernizing patches.
+<J.SCHOFFXX> is here.
+<J.SCHOFFXX> Evening, all.
+<[Len] NMORGENSTERN> Hi
+<[Rock] R.FRANZEN> 11-73 16 bit cpu, 8k cache, 500 MBlock disk, 1/2" tape.
+<[Rock] R.FRANZEN> Hi , J>
+<J.SCHOFFXX> Hi, Rock
+<[Gary] GARY-S> Who is j.schofxx
+<J.SCHOFFXX> c'est moi...
+<J.SCHOFFXX> John Schoffstall...
+<[Jax] VESTA> multi user, Rock
+<J.SCHOFFXX> Philly...
+<[Len] NMORGENSTERN> Use /NAM Jim or whatever. John that is
+<[Gary] GARY-S> They can't speak french in philly
+<[Jax] VESTA> Forth Board, J.S.
+<J.SCHOFFXX> SometiSure..
+<[Jax] VESTA> ...???
+<[Rock] R.FRANZEN> yes, but effectively disabled
+<[Jax] VESTA> why, Rock?
+<[Jax] VESTA> That's a fairly common name in Philly ...
+<[Jax] VESTA> Schoffstall.
+<[John] J.SCHOFFXX> Really?
+<[Rock] R.FRANZEN> I didnt do it.  Philosophy was when messing with 70 Mbyte 
+images,
+<[John] J.SCHOFFXX> Most relatives are lost or dead.
+<[Gary] GARY-S> Do you use Bob Dean's Drexel Hill BBS John ?
+<[John] J.SCHOFFXX> Anyway... any Asyst programmers here?
+<[Rock] R.FRANZEN> don't want two or more people making disk access inefficient.
+<[John] J.SCHOFFXX> Gary: no.  Have heard of it.
+<[Jax] VESTA> HOLY MOLEY 70 mb images of WHAT?? may we ask.
+<[Jax] VESTA> DId you go to school in Philly? Where?
+<[Rock] R.FRANZEN> LandSat, Medical, anything.
+<[John] J.SCHOFFXX> College in N.C., Med school at Chapel Hill, NC, residency 
+at MCP
+<[Gary] GARY-S> 623-4040 if you want to check it out
+<[Len] NMORGENSTERN> Rock, What does philosophy have to do with it?
+<[John] J.SCHOFFXX> On staff of MCP now, dstarting med research career...
+<[John] J.SCHOFFXX> -d
+<[John] J.SCHOFFXX> Or, rather, d -
+<[Len] NMORGENSTERN> I was a pathologist.
+<[Gary] GARY-S> Rock - how about it ? any chance you can upload the kernel ?
+<[Rock] R.FRANZEN> That was George Dalke's reason.  I never re-enabled because 
+need not there.
+<[John] J.SCHOFFXX> Len: what do you do now?
+<[Len] NMORGENSTERN> Retired. I play around with computers, especially Forth.
+<[Rock] R.FRANZEN> Uploading would be difficult, & cause political problems at 
+work
+<[John] J.SCHOFFXX> I have been trying to use Asyst for real-time data 
+acquistion...
+<[John] J.SCHOFFXX> ...using a Tecmar Lab Master A/D board.
+<[John] J.SCHOFFXX> Both were sorta inherited, in the lab when I arrived.
+<[Gary] GARY-S> Rock : ask around anyway - tell them it was requested by the 
+nicest little old lady in a blue chevy ...
+<[John] J.SCHOFFXX> I've never actually visited the Forth RT before...
+<[Rock] R.FRANZEN> John, what's Asyst
+<[Gary] GARY-S> or maybe a nefarous sysop on the GEnie BBS
+<[Jax] VESTA> Math package in Forth.
+<[John] J.SCHOFFXX> ...but got my copy of the Genie mag today, was lazily 
+paging thourgh
+<[John] J.SCHOFFXX> ...after dinner, and noticed that the FIG was on at 9:30.  
+Holy smokes it's...
+<[John] J.SCHOFFXX> 9:50, wonder if they're still there?  So, here I am.
+<[John] J.SCHOFFXX> Jax: right.
+<[Len] NMORGENSTERN> Come often!
+<[Gary] GARY-S> glad you are, too...
+<[Gary] GARY-S> first time ?
+<[John] J.SCHOFFXX> Lots of words for data manipulation...
+<[Jax] VESTA> Go ahead ... what is question ( dimly familiar)
+<[Rock] R.FRANZEN>  My first time too.
+<[John] J.SCHOFFXX> ...data acquisition, and graphing.
+<[John] J.SCHOFFXX> Len: thanks, I will.
+<[Gary] GARY-S> we don't structure theses FIGGY BARs - but you've got that 
+figured out, RIGHT ?
+<[John] J.SCHOFFXX> Uh... right.
+<[John] J.SCHOFFXX> I'm not familiar with the history/politics of Forth...
+<[Gary] GARY-S> any thoughts on the Standards effort ?
+<[Rock] R.FRANZEN> Could we just call them 'Newtons?
+<[Gary] GARY-S> John/Rock
+<[John] J.SCHOFFXX> ...and the topic of tonight's discussion posted on the door 
+makes NO...
+<[John] J.SCHOFFXX> ...sense to me, I'm afraid.
+<[Jax] VESTA> That's cause Gary posted it.
+<[Gary] GARY-S> That's not a topic - it's a throw out question
+<[Jax] VESTA> Throw it out.
+<[Gary] GARY-S> I seldom get an answer to those
+<[John] J.SCHOFFXX> <== rofl
+<[Jax] VESTA> Why is there air?
+<[Rock] R.FRANZEN> small, standardized core good.  Big committee project = 
+cobol, ADA
+<[Gary] GARY-S> this is NOT turning into a camel so far
+<[Len] NMORGENSTERN> Forth is chaotic and needs improved standard...
+<[John] J.SCHOFFXX> Len: why?
+<[Jax] VESTA> The standard is chaotic, and needs more Forth.
+<[Len] NMORGENSTERN> BUT Standards are a straightjacket. The dilemma will 
+ne\ver be resolved.
+<[Gary] GARY-S> Did anyone else get a copy of the current basis - interesting
+<[Len] NMORGENSTERN> I plan to.
+<[Rock] R.FRANZEN> FORTH is flexible, and will always remain that way.
+<[John] J.SCHOFFXX> In human languages, often the more standardization...
+<[Len] NMORGENSTERN> Flexible = chaos.
+<[John] J.SCHOFFXX> ...the less well they fare, and vice versa.  French vs. 
+English, for instance.
+<[Len] NMORGENSTERN> v. good pun.
+<[Gary] GARY-S> true Rock, but a core set is necessary and a test of the 
+projected word set absolutely necessary
+<[Rock] R.FRANZEN> chaos = noise.
+<[Rock] R.FRANZEN> noise = everything.
+<[John] J.SCHOFFXX> Rock: FORTH may be flexible because it has no powerful 
+defenders/friends
+<[Len] NMORGENSTERN> Forth programmers are the noisiest bunch around!
+<[Gary] GARY-S> Don't confuse standard with stagnate
+<[John] J.SCHOFFXX> Once a DEC takes an interest in it, on go the 
+straightjackets.
+<[Gary] GARY-S> spoken by a true learner of the law acording to Maynard, Mass
+<[Len] NMORGENSTERN> I dthink we desperately ned standards in floating point & 
+a few other places.
+<[Rock] R.FRANZEN> Gary, standard IS necessary.  It must only concern small 
+core.
+<[Rock] R.FRANZEN> Perhaps "standardized" extensions.
+<[Jax] VESTA> brb
+<[Jax] VESTA> has left.
+<[John] J.SCHOFFXX> Does anyone know how C is doing in this regard?
+<[Gary] GARY-S> why can you not upload jack ?
+<[Gary] GARY-S> do you know why he can't, len ?
+<[Rock] R.FRANZEN> C/Unix very popular in government/large OEM arena.
+<[Len] NMORGENSTERN> Byy its very nature, C is already rigidly standardized...
+<[Len] NMORGENSTERN> in areas where Forth is completely flexible.
+<[Len] NMORGENSTERN> brb= "be right back"
+<[Gary] GARY-S> back to standards - the current basis indicates a clear 
+understanding of the concerns of the Forth...
+<[Gary] GARY-S> community of applying the word 'Standard' too broadly...
+<[Gary] GARY-S> looks VERY good and it's still in development
+<[Rock] R.FRANZEN> Gary, are you on committee?
+<[Gary] GARY-S> It will not be a minimum word set, either
+<[Gary] GARY-S> No - but as Standards sysop on GEnie it would be pretty dumb 
+for me NOT to read...
+<[John] J.SCHOFFXX> Gary: if you
+<VESTA> is here.
+<[Gary] GARY-S> the progress reports - right ?
+<[John] J.SCHOFFXX> 'll forgive an elementary question:
+<[Gary] GARY-S> Please - do ask
+<[John] J.SCHOFFXX> What is the point of standardization?  Portability?
+<[Jax is Back] VESTA> Saleability.
+<[Len] NMORGENSTERN> To me portability...
+<[John] J.SCHOFFXX> Allowing one programmer to work more easily with different 
+products?
+<[Rock] R.FRANZEN> Acceptance
+<[Gary] GARY-S> compatibility, transportability, marketability
+<[Jax is Back] VESTA> Convincing the software buying world we don't have our 
+heads up our ***es
+<[Gary] GARY-S> that help
+<[Len] NMORGENSTERN> To me all of those things resolve down to one thing...
+<[John] J.SCHOFFXX> Rock: does FORTH *need* acceptance?
+<[Len] NMORGENSTERN> I should be able to take soneone's code and...
+<[Len] NMORGENSTERN> be able to convert it to my machine...
+<[Gary] GARY-S> yes !! among engineers who want a standard to rely on
+<[Jax is Back] VESTA> Moore says it doesn't need acceptance, he would be 
+happier if LESS people knew about it ...
+<[Jax is Back] VESTA> .
+<[Len] NMORGENSTERN> accurately and with a minimum of trouble.
+<[Rock] R.FRANZEN> to convince management to do major project in FORTH, yes.
+<[Len] NMORGENSTERN> Without that, we don't have acceptance, marketablitiy or 
+anything else.
+<[Len] NMORGENSTERN> I have said it!
+<[John] J.SCHOFFXX> I see.
+<[Gary] GARY-S> You BET ! Big time problems in some sectors even getting 
+management to consider Forth unless they can....
+<[John] J.SCHOFFXX> But you know, even C isn't that portable.
+<[Jax is Back] VESTA> RIGHT.
+<[John] J.SCHOFFXX> Especially with graphics oriented machines.
+<[Gary] GARY-S> find another programmer who can use this 'VERSION' !
+<[Jax is Back] VESTA> But they have better salesman.
+<[John] J.SCHOFFXX> Which looks to be about all the PC's, pretty soon.
+<[John] J.SCHOFFXX> <== occasionally forgets that there are computers that 
+AREN'T PCs
+<[Gary] GARY-S> Bell gave quadzillions of free copies to all the Computer Sci 
+depts in the world
+<[Jax is Back] VESTA> 40,000 actually.
+<[Gary] GARY-S> poetic license
+<[John] J.SCHOFFXX> Wow.  When?  60's, 70's?
+<[John] J.SCHOFFXX> <== missed out on his copy.
+<[Jax is Back] VESTA> 70's ... UNIX
+<[Jax is Back] VESTA> Now Uncle Sam is going to let  ***** $2 BILLION ****** in 
+contracts for Unix this year ... tracking medicar payments.
+<[Jax is Back] VESTA> ARGHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!
+<[Gary] GARY-S> snuffed a lot of PASCAL self-righteousness, but introduced 
+'C'ing problems
+<[John] J.SCHOFFXX> Jax: I concur.  IBM got that contract?
+<[Jax is Back] VESTA> IBM??? They'd MURDER Kernighan if they could find him. 
+About 1000 different companies are bidding.
+<[Gary] GARY-S> Just wait till they track a submarine with a big blue sonar - 
+sheesh
+<[Jax is Back] VESTA> Kernighan/Ritchie/Thompson proved that IBM was shtupping 
+the customer ... that you really *don't* need a BRAND NEW OPERATING SYS
+TEM every time you upgrade.
+<[Gary] GARY-S> did i go deaf - or did everyone quit at once ?
+<[Jax is Back] VESTA> I think they are breathing heavy about the 2 bill.
+<[Gary] GARY-S> Jack - how come you can't u/l ?
+<[Len] NMORGENSTERN> Jax I don't understand.
+<[John] J.SCHOFFXX> Gary: one of those empty regions in the middle of chaos.
+<[Jax is Back] VESTA> Has to do with EOL protocol. My comm program chokes.
+<[Rock] R.FRANZEN> Is could hear the crickets, though.
+<[Jax is Back] VESTA> Huh, Len?
+<[Len] NMORGENSTERN> When a new machine is built...
+<[Gary] GARY-S> yet you can Xmodem email ? wierd
+<[Len] NMORGENSTERN> shouldn't the OS be adapted to handle the new features?
+<[Jax is Back] VESTA> Xmodem and Ascii upload are two different things.
+<[Gary] GARY-S> thank you for that fine point
+<[Jax is Back] VESTA> Yes, len, the architecture changes, but UNIX marches on, 
+relatively coherently.
+<[Rock] R.FRANZEN> ever try interfacing pure FORTH with pure UNIX.  slow....
+<[Len] NMORGENSTERN> Why is that?
+<[John] J.SCHOFFXX> Rock: why?
+<[Gary] GARY-S> do ask Rock - I'd love to see that kernel in our library
+<[Rock] R.FRANZEN> The C programmer blames "serial i/o" on UNIX end.
+<[Jax is Back] VESTA> UNIX is kinda like FORTH in that it is a "virtual 
+machine" ... but one that needs about 2meg and a 40M hard, instead of 64 k and
+ one floppy like FOrth.
+<[Gary] GARY-S> UNIX is only virtual if you enjoy linking your life away
+<[Jax is Back] VESTA> UNIX covers about everything you could *want* from a 
+multi-user system ...
+<[Jax is Back] VESTA> then they just map it to the given hardware. Not a new 
+concept each time, you see.
+<[Rock] R.FRANZEN> We put our FORTH in ROM on the compact DFR-8000.  No disk, 
+only 16-bit dma to
+<[Rock] R.FRANZEN> outside world.
+<[John] J.SCHOFFXX> Asyst is the only FORTH I know... are there versions 
+without all...
+<[John] J.SCHOFFXX> ...variables being global?
+<[Jax is Back] VESTA> YOu use BSD and the C shell, you aren't drowning first 
+time you fall into the Korn shell, or System V
+<[Gary] GARY-S> given a choice between UNIX and MS-DOS, UNIX is MUCH preferred
+<[Jax is Back] VESTA> Yes, John.
+<[Jax is Back] VESTA> But classically, variables ARE global, that's a) what 
+vocabs are for, and
+<[John] J.SCHOFFXX> That's one my gripes about Asyst.
+<[Jax is Back] VESTA> b) where do you think langs like PASCAL that support 
+locals keep them? On teh STACK of course.
+<[Jax is Back] VESTA> Learn to use the STACK properly, you don't need locals.
+<[John] J.SCHOFFXX> Ahh.... dawns the light...
+<[Rock] R.FRANZEN> There are neat concepts for local variables, easy to 
+implement.
+<[Len] NMORGENSTERN> Somebody at Rochester...
+<[Jax is Back] VESTA> Right ... JForth on the Amiga has locals.
+<[Len] NMORGENSTERN> presented a system of...
+<[John] J.SCHOFFXX> I do, sorta, but never thought about it that way...
+<[Len] NMORGENSTERN> nnaming points n the stack as a sort of local vriable.
+<[Len] NMORGENSTERN> .
+<[John] J.SCHOFFXX> Hm.
+<[Len] NMORGENSTERN> It was recently uploaded here.
+<[John] J.SCHOFFXX> Sounds almost like the way you treat assembly on a 8087
+<[John] J.SCHOFFXX> I'll look for it.
+<[Jax is Back] VESTA> The key to Forth programming is being able to dcreate an 
+accurate stack diagram :
+<[Rock] R.FRANZEN> 2 ,CODE !LINE  512 , 512 ,  ( length width) ...
+<[Jax is Back] VESTA> : THIS-WORD ( addr n1 --- addr++ n2) FOO BLETCH ;
+<[Gary] GARY-S> We got a good review in Tracy's Forth column in DDJ this time - 
+take a bow Jax - two of the files (3 ?) were yours
+<[Len] NMORGENSTERN> I think it was Adin Tevet, from Israel.
+<[Jax is Back] VESTA> HUH??
+<[Jax is Back] VESTA> What issue?
+<[Gary] GARY-S> Mrtin Tracy, DDJ August - Forth column
+<[Gary] GARY-S> still with me ?
+<[Gary] GARY-S> he gave GEnie library hi marks
+<[Gary] GARY-S> a couple of the files he loved are courtesy of JAX
+<[Jax is Back] VESTA> hmm...
+<[Jax is Back] VESTA> Didn't get August issue ...
+<[Gary] GARY-S> so thanks Mr. WELL fair-witness
+<[Jax is Back] VESTA> I feel nervous ...
+<[Jax is Back] VESTA> Chess player ... you write an endgame study, they publish,
+ it gets "cooked" ...
+<[John] J.SCHOFFXX> I gotta look at those.
+<[Gary] GARY-S> He liked your INMOS TRABSPUTER cross -assembler and ARIEL I know
+<[Gary] GARY-S> Any last shots folks ?
+<[Gary] GARY-S> quittin' time
+<[Rock] R.FRANZEN> concerning what?
+<[Len] NMORGENSTERN> I gotta go. It's after 7:30 here/exit
+<[John] J.SCHOFFXX> Gang, thanks for the welcome.  I'm not in your league...
+<[Len] NMORGENSTERN> has left.
+<[John] J.SCHOFFXX> ...but it's been educational.  See ya again.
+<[Jax is Back] VESTA> bye bye ,,, gary, chekc your mail... later gang ...
+<[Gary] GARY-S> yes you are, Johnn
+<[Jax is Back] VESTA> visit the FORTH conf on the WELL
+<[Jax is Back] VESTA> (415) 332-6106 7-e-1
+<[Gary] GARY-S> John ! see leonard on Sunday - ok ?
+<[John] J.SCHOFFXX> Sure.  Will do.
+<[Gary] GARY-S> great - nite all
+<[John] J.SCHOFFXX> Bye...
+<[John] J.SCHOFFXX> has left.
+=== End of Steno notes. ===
+
+

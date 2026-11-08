@@ -1,0 +1,49 @@
+
+			      FORTH FOR THE TRS-80
+			       From the FIG Tree
+
+
+*** MODEL-4-FOVTH        27-JAN-84
+  PARENT=TRS-80               USAGE=681
+I've implemented MVP-FORTH on the Model 4.
+It runs under TRSDOS 6.x (using only it's sector I/O routines and Char I/O.)
+Contains many extensions: ie Laxen Editor, and utilities.
+Drop me a line if you want a copy!
+      E.J. McKernan IV
+      Datalog
+      Box 1401
+      E..ria, KS  66801
+      (316)-343-7526 home
+      (316)-342-2002 mobilfone of kansas (work)
+ 
+
+*** MODEL-I/III/IV-FORTH 21-MAR-84
+  PARENT=TRS-80               USAGE=623
+The Alternate Source (704 N. Pennsylvania Ave. Lansing, Mi. 48906
+is distributing The Alternate Forth for Models I, III and IV TRS-80s.
+It is a very nice implementation of Z-80 FIG-Forth 1.1 with many
+extensions.  The Model I version supports lowercase mods, double
+density mods, and high-speed clock mods.  Utilities include:
+Full-screen editor
+Assembler
+Decompiler
+Cross-reference
+Word search
+Forthdos (file manipulation, etc.  Written in high-level Forth!)
+PDRIVE (set up special disk parameters - double sided, etc.)
+Real-time clock support
+Oodles of other words, too!
+The Alternate Forth is $79.95 from The Alternate Source.
+This price includes Z-80 source code on disk!  A hacker's delight!
+(I should know, I added the lowercase and double density support
+to tht Model I version!)
+				     Paul Snively
+
+*** FORGOT...            21-MAR-84
+  QARENT=MODEL-I/III/IV-FORTH USAGE==98
+By the way, if you want The Alternate Forth for BOTH the Model I
+and III/IV, simrly add $10 to the price and have them ship
+both versions!
+                         `             Paul Snively
+
+

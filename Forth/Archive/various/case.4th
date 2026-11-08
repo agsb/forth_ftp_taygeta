@@ -1,0 +1,21 @@
+
+( Case Words )
+
+: <OF> OVER = IF DROP R> 2 + >R ELSE R> DUP @ + >R THEN ;
+
+: CASE ?COMP CSP @ !CSP 4 ;  IMMEDIATE
+
+: OF 4 ?PAIRS COMPILE <OF> HERE 0 , 5 ; IMMEDIATE
+
+: ENDOF 5 ?PAIRS COMPILE BRANCH HERE 0 , SWAP 2 [COMPILE]
+  THEN 4 ; IMMEDIATE
+
+: ENDCASE 4 ?PAIRS COMPILE DROP BEGIN SP@ CSP @ <> WHILE 2
+  [COMPILE] THEN REPEAT CSP ! ; IMMEDIATE
+
+( CASE   1 OF do something ENDOF {repeat as necessary} )
+( may do something if no case match ENDCASE )
+
+
+
+

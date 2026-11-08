@@ -1,0 +1,418 @@
+
+ 
+          ANSI X3J14 Forth Technical Proposal                 Page: 1 of 8
+          Title: Postpone-Compilation Macro Facility
+
+          Related Proposals:  A Synonym or Alias Facility  June 25, 1988
+                              Compatibility Packages       June 25, 1988
+
+          Keyword(s): Compiler layer, Macros, Control-       Proposal (x)
+             Structures, Compatibility, Execution speed,     Comment  ( )
+             Readability.
+
+          Forth Word(s): << >> COMPILE [COMPILE] LITERAL IMMEDIATE
+             SYNONYM MACRO END-MACRO IF IF-NOT CASE IS TO ASCII
+
+          ABSTRACT: A postpone-compilation macro facility is proposed for
+             the compiler layer.
+
+          PROPOSAL:
+
+               It is proposed to add to the standard in the compiler layer
+          the words << (postpone) and >> (end postpone) to provide Forth
+          with a generally useful postpone-compilation macro facility that
+          can be used, among other things, for the easy definition of new
+          or modified compiler words and control structures, the
+          compilation of in-line code for improved execution speed, the
+          improvement of clarity and readability of code, for writing
+          compatibility extensions to a standard system so it can accept
+          other dialects of Forth, and to provide conceptual clarity in the
+          complex interrelations of compile time and run time with COMPILE
+          [COMPILE] LITERAL and IMMEDIATE that are so difficult for
+          beginners to grasp.
+
+          Glossary entries:
+
+          >>       --             I                  "end-postpone"
+             A free-standing Forth word that marks the end of a stretch of
+             code whose compile-time action is to be postponed.  See << .
+
+          <<       --           C,I                      "postpone"
+             The normal compile-time action of the words and numbers
+             between << and >> is postponed until a word directly or
+             indirectly containing these words is compiled outside of a
+             << ... >> construction.  For example, writing
+
+             : IF  << ?BRANCH >> >MARK ;
+             : IF-CTRL  << 32 < IF >> ;
+
+             is equivalent to writing
+
+             : IF  ?COMP COMPILE ?BRANCH >MARK ; IMMEDIATE
+             : IF-CTRL  ?COMP 32 [COMPILE] LITERAL COMPILE < [COMPILE] IF ;
+               IMMEDIATE
+
+          ANSI X3J14 Forth Technical Proposal                 Page: 2 of 8
+          Title: Postpone-Compilation Macro Facility
+
+          DISCUSSION:
+
+          Description of action and use:
+
+               During compilation of the words between << and >> (a
+          "postpone stretch"), the word << (postpone) compiles immediate
+          words for later execution and compiles nonimmediate words and
+          numbers for later compilation.  Then, during compilation of code
+          outside of a postpone stretch, any word that contains a postpone
+          stretch in its definition (a "postpone word") is executed.  Each
+          immediate word in its postpone stretch is executed, each
+          nonimmediate word is compiled, and each single or double number
+          is compiled as a single or double literal.  This means that
+          nonimmediate code in its postpone stretch like DUP 37 = will be
+          compiled at this point, immediate words like IF , THEN , and LOOP
+          will compile their branches, immediate words like ." and ['] that
+          access the input stream at compile time will access the input
+          stream at this point, and nonimmediate words like EXPECT , CREATE
+          and ' (tick) that access the input stream at run time will be
+          compiled at this point to access the input stream when the word
+          being compiled is run.
+
+               Thus the postpone word IF-CTRL defined above compiles into
+          the dictionary the same code as would the definition using
+          COMPILE and [COMPILE] .  Then when IF-CTRL is written in a
+          definition outside of a postpone stretch it will compile the same
+          thing into the dictionary as would have been compiled had 32 < IF
+          been written in the definition instead.  Here the compile-time
+          action of the postpone stretch 32 < IF is postponed to the
+          compile time of the word containing IF-CTRL .
+
+              Postpone words may be nested inside of postpone stretches to
+          any depth of nesting.  During compilation of a postpone stretch,
+          any postpone words in it, being immediate, are compiled by << for
+          later execution thus postponing once again the compile-time
+          action of the words in their postpone stretches.  Then during
+          compilation of code outside of a postpone stretch, a postpone
+          word and any postpone words nested in it will execute their
+          compile-time actions in the normal order of execution of nested
+          words.  The result is that compiled in-line code is inserted into
+          the definition being compiled which will execute without any run-
+          time nesting or unnesting.
+
+               For example, the words
+
+             : L  << A B >> ;
+             : M  << C D >> ;
+             : X  << L M >> ;
+             : Y  X E ;
+
+          ANSI X3J14 Forth Technical Proposal                 Page: 3 of 8
+          Title: Postpone-Compilation Macro Facility
+
+          will compile the same final code as would the word
+
+             : Y  A B C D E ;
+
+          Here the compile-time action of the postpone stretches A B and C
+          D are postponed once when the definitions of L and M are compiled
+          and postponed once again when the definition of X is compiled. 
+          Their compile-time action is finally executed in the correct
+          sequence when the definition of Y is compiled.  Thus the
+          definitions of L , M, and X constitute a program that is
+          executed when the definition of Y is compiled.
+
+               Programs of postpone words need not, as here, compile simple
+          strings of definitions like A B C D .  They could take any other
+          appropriate compile-time action such as syntax checking,
+          translating notations as infix to postfix, or optimizing code.
+
+               Note that one cannot postpone the suspension of compilation
+          with [ ... ] inside a postpone stretch by << ... [ ... ] ... >> .
+          One should use << ... >> ... << ... >> instead.
+
+          Submitted by: Victor H. Yngve              Date: June 25, 1988
+          Address:  28 Crest Drive Dune Acres, Chesterton, IN 46304
+          Phone:    (219) 787-8340; (312) 702-8264
+
+          ANSI X3J14 Forth Technical Proposal                 Page: 4 of 8
+          Title: Postpone-Compilation Macro Facility
+
+          Implementation:
+
+               A forth-83 implementation is given below (from reference 3).
+
+          : <NUMBER> ( 0 0 addr -- ) ( Postpone Number Or Abort )
+            DUP 1+ C@ ASCII - = DUP >R      ( neg flag to return stack )
+              IF 1+ THEN                             ( 0  0  ad : nf )
+            CONVERT DUP C@ ASCII . = DUP >R ( doub ) ( lo hi ad : df nf )
+              IF CONVERT THEN C@ BL =     ( found? ) ( lo hi ff : df nf )
+              IF  R> R> SWAP >R             ( neg? ) ( lo hi nf : df )
+                  IF  DNEGATE  THEN                  ( lo hi : df )
+                    SWAP [COMPILE] LITERAL COMPILE [COMPILE] LITERAL R>
+                      IF [COMPILE] LITERAL COMPILE [COMPILE] LITERAL
+                      ELSE DROP
+                      THEN
+                  ELSE  1 ABORT" Not found "
+                  THEN  ;
+
+          : >>  ( -- ) 1 ABORT" Unpaired " ; IMMEDIATE ( End-Postpone )
+
+          : <<  ( -- ) ( Postpone )
+             ?COMP                        ( this word compile only )
+             COMPILE ?COMP                ( same for macro words )
+             IMMEDIATE                    ( compiled word immediate )
+             BEGIN
+               BL WORD FIND               ( search dictionary )
+               OVER ['] >> = NOT          ( not done? )
+             WHILE  DUP                   ( was word found? ) 
+               IF  1-                     ( was it nonimmediate? )
+                 IF COMPILE COMPILE THEN  ( for nonimmediate words only )
+                 ,                        ( postpone word )
+                 ELSE  0 ROT <NUMBER>     ( postpone number or abort )
+                 THEN
+             REPEAT  DROP DROP  ;  IMMEDIATE
+
+          The Forth-83 standard does not specify how double numbers in the
+          input stream are to be punctuated and handled.  In this
+          implementation a double number is compiled if it contains a
+          period either initially, medially, or finally, but no record of
+          the location of the period is preserved.  Otherwise a single
+          number is compiled.  It is proposed that any implementation
+          should treat the input of double numbers in the same way that the
+          outer (colon) interpreter does, and it is to be hoped that the
+          new standard will not be silent on this point.
+
+          Advantages, disadvantages, and typical usage:
+
+               I believe the << ... >> postpone-compilation macro construct
+          is the most generally useful and has the fewest restrictions of
+          any of the macro schemes so far proposed.
+
+               Compared with using macros constructed with COMPILE and
+          [COMPILE] , one does not have to remember which words in the
+          macro are immediate and which are not, and one does not have to
+          remember to add IMMEDIATE .  It is thus easier to use and less
+          error-prone.  Also it automatically handles the postponing of
+          compilation of numbers, a particularly difficult thing for
+          beginners to figure out how to do in a COMPILE-[COMPILE] macro,
+          especially when both single numbers and double numbers are
+          involved.  The resulting macro is shorter, more readable, and
+          uncluttered with repeated uses of COMPILE and [COMPILE] .  For
+          example, a macro to test whether the number on the stack
+          represents the ASCII code for a decimal digit is simply
+
+             : IF#  << DUP 47 > OVER 58 < AND IF >> ;
+
+          instead of
+
+             : IF#  COMPILE DUP 47 [COMPILE] LITERAL COMPILE >
+                    COMPILE OVER 58 [COMPILE] LITERAL COMPILE <
+                    COMPILE AND [COMPILE] IF ; IMMEDIATE
+
+          And the use of the << ... >> postpone-compilation macro construct
+          is easier to understand and easier to learn and to use for
+          beginners, thus making Forth more accessible to the programming
+          public.
+
+
+          ANSI X3J14 Forth Technical Proposal                 Page: 5 of 8
+          Title: Postpone-Compilation Macro Facility
+
+               Thus a major use of the << ... >> postpone compilation
+          construct is in programming new control structures.  For this
+          purpose its use is easy and clear enough to make their
+          definition and use a frequent occurrence.  For this reason the
+          inclusion of << and >> at the compiler layer would make
+          unnecessary the inclusion of additional special-purpose control
+          structures like IF-NOT because they can be simply defined by the
+          user as
+
+          : IF-NOT  << NOT IF >> ;
+
+          This may silence any clamor to include words like these in the
+          standard, useful though they are.  This is consonant with the
+          Forth philosophy of providing general-purpose tools from which
+          the user can easily construct his own special-purpose tools.  The
+          << ... >> postpone-compilation construct can easily be used to
+          implement a control structure even as complex as Eaker's CASE
+          statement, although a good case can be made for including it in
+          an extension word set:
+
+          VARIABLE OLD-DEPTH  DEPTH OLD-DEPTH !
+          : CASE    ?COMP OLD-DEPTH @ DEPTH OLD-DEPTH ! 4 ; IMMEDIATE
+          : OF      4 ?PAIRS << OVER = IF DROP >>       5 ;
+          : ENDOF   5 ?PAIRS << ELSE >>                 4 ;
+          : ENDCASE 4 ?PAIRS << DROP >>
+            BEGIN   OLD-DEPTH @ DEPTH = NOT WHILE << THEN >>
+            REPEAT  OLD-DEPTH ! ;
+
+          Note how readable the structure to be compiled is and how clearly
+          it stands out from the compiler security and nesting control
+          apparatus.
+
+               The << ... >> postpone-compilation construct can be used
+          for compiling in-line code to increase execution speed while
+          retaining the readability of properly named nested simple colon
+          definitions.
+
+               The << ... >> postpone-compilation construct can be used
+          where a simple colon definition would interfere with the return
+          stack, for example in accessing a loop index in a word embedded
+          in a colon definition:
+
+             : X  << ... I ... >> ;
+             : Y  ... DO ... X ... LOOP ... ;
+
+          Submitted by: Victor H. Yngve              Date: June 25, 1988
+          Address:  28 Crest Drive Dune Acres, Chesterton, IN 46304
+          Phone:    (219) 787-8340; (312) 702-8264
+ 
+          ANSI X3J14 Forth Technical Proposal                 Page: 6 of 8
+          Title: Postpone-Compilation Macro Facility
+
+               The << ... >> postpone-compilation construct can be used for
+          defining compiler words that can also be used at the console, for
+          example, the words ASCII and TO (sometimes called IS or -> ).
+
+             : IF-COMP  << STATE @ IF >> ;
+             : ASCII  BL WORD 1+ C@ IF-COMP << LITERAL >> THEN ;
+             : TO  ' >BODY IF-COMP << LITERAL ! >> ELSE ! THEN ;
+
+          Usage:   VALUE X
+                   25 TO X
+                   DEFER Y
+                   : Z  ... ;
+                   ' Z TO Y
+
+          Notice in the above that postpone-compilation macros have the
+          additional advantage of facilitating the factoring of
+          definitions, as with IF-COMP .  This can help to improve both
+          clarity of thought and readability.
+
+               Compared with the compile-and-CMOVE macros explored in
+          references 1 and 2, the << ... >> postpone-compilation macro
+          construct has a major advantage in that it may contain unpaired
+          compiler words like IF .  Another advantage is that it is not
+          restricted to implementations that compile relative addresses
+          after BRANCH and 0BRANCH rather than absolute addresses.  Another
+          advantage is that nested << ... >> constructs are expanded inline
+          only once at the end whereas compile-and-CMOVE macros are
+          expanded when first compiled and then CMOVEd, resulting in bulky
+          intermediate compiled definitions if they are nested more than
+          two deep.
+
+               In fact, definitions in the pattern of
+
+             : <name>  << ... >> ;
+
+          can be used everywhere in place of
+
+             MACRO <name> ... END-MACRO
+
+          with the only disadvantage that they cannot be tested from the
+          console without embedding it in a colon definition as
+
+             : TEST  <name> ;
+
+          Thus consider the following words which have been recoded from
+          the compile-and-CMOVE macros given in reference 1 page 15.
+
+             : D-   << DNEGATE D+ >> ;
+             : D0=  << OR 0= >> ;
+             : D=   << D-  D0= >> ;
+
+          These words will work while compiling and will compile in-line
+          code that avoids nesting and runs faster than the equivalent
+
+          ANSI X3J14 Forth Technical Proposal                 Page: 7 of 8
+          Title: Postpone-Compilation Macro Facility
+
+          colon definitions would.  But unlike the equivalent compile-and-
+          CMOVE macros, these words will not work from the console without
+          extra coding to make them state sensitive as illustrated above
+          with ASCII and TO .  It would be better to use the equivalent
+          colon definitions that run slower or CODE definitions that run
+          faster than the postpone-compilation macros.
+
+               However << ... >> postpone-compilation macro constructs can
+          replace compile-and-CMOVE macros everywhere in the most readable
+          recoding of the sieve benchmark given in reference 3 page 28. 
+          This produces an even more readable sieve implementation that
+          runs every bit as fast as the original coding without macros
+          because it compiles the same code.  With << ... >> in the
+          required word set in the compiler layer, the proper way to
+          program this benchmark in Forth would be a readable way.
+
+               Thus I do not recommend my compile-and-CMOVE macros for
+          inclusion in the standard.  The << ... >> postpone-compilation
+          macro construct is much more general and superior for use in all
+          but a few limited circumstances.
+
+               The << ... >> postpone-compilation macro construct can be
+          used, along with SYNONYM , in preparing compatibility packages so
+          that an implementation of the new standard would run Forth-83 or
+          other programs thus ensuring upward compatibility and
+          eliminating some powerful objections to the very idea of a new
+          standard.
+
+               The << ... >> postpone-compilation construct can be used to
+          implement conditional compilation as with
+
+             : X  TEST IF << Y >> ELSE << Z >> THEN ;
+
+          This will compile Y or Z depending on the outcome of TEST .  This
+          technique might be useful in compatibility packages, but it is
+          more generally useful.
+
+               Finally, it should be noted that including << and >> in the
+          compiler layer will tend to focus the attention of the Forth
+          community on the possibilities and benefits of postponing
+          compilation thus leading to a greater appreciation of the power
+          and flexibility of Forth.
+
+          Considerations:
+
+               The compiled definitions of << and >> are small, about 94
+          bytes including the error comments.  The above definition for
+          <NUMBER>  compiles to about 128 bytes, but presumably this could
+          be reduced if code from the colon compiler is utilized. 
+
+          ANSI X3J14 Forth Technical Proposal                 Page: 8 of 8
+          Title: Postpone-Compilation Macro Facility
+
+          Definitions containing << and >> take up the same space as
+          equivalent definitions with [COMPILE] , COMPILE , LITERAL , and
+          IMMEDIATE would with the addition of ?COMP , which is good
+          practice.  Source code using << and >> is considerably shortened. 
+          Compilation time may be reduced for this reason.  The compiled
+          code runs at the same speed.  Run time will be shortened over
+          colon definitions by the elimination of nesting and unnesting and
+          at the expense of compiled in-line code.  Compared to a colon
+          definition, a compiled definition with << ... >> requires 2 extra
+          bytes for ?COMP for each postpone stretch and two extra bytes for
+          COMPILE for each nonimmediate word.
+
+               This proposal does not involve any hardware or system
+          dependencies, it promotes application portability, it does not
+          have implications for multi-user environments, it does not affect
+          ROMability.  The construct is general-purpose.
+
+               This proposal was stimulated by my unhappiness with my
+          earlier compile-and-CMOVE macro facility and by an exchange of
+          letters and a phone call with Martin Tracy in October and
+          November of 1985.  The words << and >> were introduced in
+          reference 3.
+
+          References:
+
+          1.  V. Yngve, "Macros" Forth Dimensions VII/3:14-18.
+          2.  V. Yngve, "Benchmark Readability" Forth Dimensions
+              VII/4:16-19.
+          3.  V. Yngve, "Compiler Macros" Forth Dimensions VIII/3:25-30.
+
+          Submitted by: Victor H. Yngve              Date: June 25, 1988
+          Address:  28 Crest Drive Dune Acres, Chesterton, IN 46304
+          Phone:    (219) 787-8340; (312) 702-8264
+
+          Address:  28 Crest Drive Dune Acres, Chesterton, IN 46304
+
+

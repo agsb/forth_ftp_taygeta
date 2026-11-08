@@ -1,0 +1,262 @@
+
+
+
+Sub: Minutes of your RT Conference.
+     The FIGGY BAR of 28 April 1988. We
+     got the HAL newsletter, talked Dallas
+     Infomart, ANS TC and Rochester meets,
+     PC Pursuit -AND accessing ECFB with
+     PCP, ARIEL BBS in Forth, and the 
+     usual incredibly insightful chats.
+                
+Date: 04/28/88   Time: 22:43EDT
+Attendees:
+[[Jan] FIG]
+[DANMILLER]
+[[Gary] GARY-S] - meeting leader
+[L.BROTZMAN]
+[J.SHIFRIN]
+[[Leonard] NMORGENSTERN]
+[[Jax] VESTA]
+[D.BUCKOWSKI1]
+          
+Minutes:
+<[Jan] FIG> oh, were here
+<[Jan] FIG> ok
+<[Jan] FIG> is this really a party?
+<DANMILLER> oopen the wine
+<[Gary] GARY-S> ok - sorry about all that
+<[Jan] FIG> i alredy did
+<[Gary] GARY-S> did what
+<[Jan] FIG> open the wine
+<VESTA> is here.
+<DANMILLER>
+<DANMILLER> hi jax
+<[Gary] GARY-S> hey jax - just starting
+<[jax] VESTA> woof!
+<[jax] VESTA> hey dan ... hows parallel
+<[Gary] GARY-S> ok - anyone got a bone to pick
+<[jax] VESTA> have a big one with C users on WELL !
+<[Gary] GARY-S> got a subject ?
+<[Gary] GARY-S> ga jax
+<[jax] VESTA> The future of FORTH in parallel.
+<[jax] VESTA> .
+<[Gary] GARY-S> talking mpp ??
+<[jax] VESTA> talking mimd, simd, gapp ... u name she.
+<[Gary] GARY-S> or just parallel
+<[jax] VESTA> .
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> everyone get their call to Rochester?
+<[jax] VESTA> speak up Dr. Dan!
+<[Jan] FIG> hi leonard
+<[Gary] GARY-S> ga dan
+<[Leonard] NMORGENSTERN> Ih
+<[Leonard] NMORGENSTERN> That's Hi
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> ga dan
+<DANMILLER> just typjjust type or rais just type or rais hand first?
+<[Gary] GARY-S> does everyone know the conf protocol ?
+<DANMILLER> hi leonard is your wife  recovered?no
+<DANMILLER> no
+<[Gary] GARY-S> ok dan if you wanna talk just hit your CR - or !! <CR>...
+<DANMILLER> thanks
+<[Leonard] NMORGENSTERN> All ok here! Thanks
+<[Gary] GARY-S> if you get the floor ( I will say ga...name)...
+<[Gary] GARY-S> then try to remember to type ok so we will know...
+<[Gary] GARY-S> you know its your turn...
+<[Gary] GARY-S> type ... three dots at the...
+<[Gary] GARY-S> end if you have more to say...
+<[Gary] GARY-S> or type on a seperate line...
+<DANMILLER>
+<[Gary] GARY-S> a period or ga to tell us you are through.
+<[Gary] GARY-S> ga
+<[Gary] GARY-S> ga dan
+<DANMILLER> ok
+<DANMILLER> will upload ascii an article forth column pub today in hal pc
+<DANMILLER> check desc of 3 key input. good topic. here goes
+<DANMILLER> Copyright Daniel Miller April 88
+<DANMILLER> The following is the HAL PC Newsletter May Forth Column:
+<DANMILLER> HAL is the Houston Area League of PC Users Group
+<DANMILLER> and this is posted on BIX just for general interest although the
+<DANMILLER> content is probably old hat to BIX forthies...
+<DANMILLER> Forth Notes:
+<DANMILLER>      First, thanks to all who helped man the Forth Sig table at the
+<DANMILLER> HAL PC annual convention.  I will not list names for fear of leaving
+<DANMILLER> someone out.  But we all had a good time and put on a nice 
+presentation.
+<DANMILLER> We had  displays of Forth software and forth compilers, hardware
+<DANMILLER> systems and a Nasa video application coded in Forth.  This was a 
+significant
+<DANMILLER> amount of work for the volunteers involved.
+<DANMILLER>       The Forth sig now has a conference area on the HAL board
+<DANMILLER> Telcom 1.  This is the place to ask questions on how to get started,
+<DANMILLER> availablity of public domain compilers for the ibm pc, discussion of
+<DANMILLER> relative merits of commercial compilers and to find
+<DANMILLER> out something about Forth syntax and the various Forth textbooks.  
+There
+<DANMILLER> is a listing applications coded in Forth.
+<DANMILLER>      Some recent Forth developments include release of a super z8 
+microcomputer
+<DANMILLER> which supports instructions for fast forth and is available on 
+demonstrator
+<DANMILLER> a card for $88 and has an available Forth stand alone prom for 
+under $100.
+<DANMILLER> Other Forth processors include the Motorola F68hc11 controller cpu 
+which
+<DANMILLER> has an on chip a/d converter.  We have Forth Sig members doing forth
+<DANMILLER> commercial projects in Houston using these cpu's.
+<DANMILLER>      I have seen a parallel PC system in Silicon Valley using Forth 
+RISC chips
+<DANMILLER> capable of running 6 boards in a pc chassis with each board having 
+its own
+<DANMILLER> memory and capable of independent operation once initialized by the 
+host pc.
+<DANMILLER> Output can be directed to various windows on the pc screen which 
+can be
+<DANMILLER> dragged around by a mouse. Speed for integer operations and control 
+logic is
+<DANMILLER> fast and 6 board system can be purchased at a claimed cost per 
+board about
+<DANMILLER> half that of a transputer node.
+<DANMILLER>      Goddard Space Labs has a project programming a massively 
+parallel
+<DANMILLER> computer in Forth (MPP project). Is anyone in Houston connecting 
+cpu's
+<DANMILLER> directly with FIFO's and cross point switches? Is anyone here doing 
+any
+<DANMILLER> parallel development or neural networking.  Let us know on Telcom 
+one- join
+<DANMILLER> forth.
+<DANMILLER>      I also saw running atop the Coastal Ridge above Palo Alto 
+overlooking
+<DANMILLER> Half Moon Bay, a low cost prototype of a very
+<DANMILLER> interesting programming environment using only three keys.  These 
+keys are
+<DANMILLER> pressed in binary combination to select 7 items.  The key 
+combination is
+<DANMILLER> pressed and the computer recognizes the key combination when the 
+keys are held
+<DANMILLER> stable for a moment.   Since in Forth all words in a definition 
+except the
+<DANMILLER> first name are predefined, these can be quickly picked from pages 
+of the
+<DANMILLER> dictionary of defined words. The unit I saw used a one inch one 
+megabyte
+<DANMILLER> floppy disc and had one 4 by 6" card sitting on top of the drive.  
+The 3 keys
+<DANMILLER> plugged into the card and the cable to a Sony multisynch color 
+monitor plugged
+<DANMILLER> also into the card.  Color no less, and an integer and control 
+logic compute
+<DANMILLER> speed faster than an 80386 20 mhz machine.  My first thought was 
+hey this is
+<DANMILLER> crazy, how do you input names and addresses.  Well you could pick 
+each letter
+<DANMILLER> using three strokes of the keyboard or pick names from menus or 
+frequent
+<DANMILLER> letter combinations.  A little awkward.  But then, do all computers 
+use name
+<DANMILLER> or address type input?  What about control computers, things that 
+turn pumps
+<DANMILLER> on or off, or control rockets or steering mechanisms or robots.  
+These don't
+<DANMILLER> need any more than three key menu systems.  Then I thought of all 
+the people
+<DANMILLER> who can't type --a lot of important people- like my wife and most 
+of the rest
+<DANMILLER> of the world's population.  The machine began to have more appeal. 
+Besides its
+<DANMILLER> intended use as a programming station and a programming environment 
+it could
+<DANMILLER> have quite a bit of general purpose application. And it could be 
+mass produced
+<DANMILLER> inexpensively having very little actual silicon or metal contacts, 
+minimal
+<DANMILLER> power supply and yet is powerful, contains a programming and 
+application
+<DANMILLER> environment and pertinent to this column, runs Forth, "real fast." 
+Contact
+<DANMILLER> Computer Cowboys 410 Star Hill Road, Woodside, CA 94062 telephone 
+(415) 851
+<DANMILLER> 4362 for preproduction information and to express an interest.
+<DANMILLER>                                                 dlm
+<DANMILLER> ga
+<[jax] VESTA>
+<[jax] VESTA> how does he make his voice do that? :-)
+<[Gary] GARY-S> whoa ga jax
+<[jax] VESTA> .
+<[Gary] GARY-S> i dunno - tell me dan...
+<DANMILLER> ok
+<[Gary] GARY-S> that's neat , but why didn't you just put..
+<DANMILLER> i missed that. make his voice do what.  its
+<[Gary] GARY-S> it in the library under chapter news...
+<[Gary] GARY-S> huh ?
+<[Gary] GARY-S> ga
+<DANMILLER> ok
+<[Gary] GARY-S> ga dan
+<DANMILLER> will do but thought it'd be good to kick off discussion. ga
+<[jax] VESTA>
+<[Gary] GARY-S> ga jax
+<[jax] VESTA> That is much harder to do on an Amiga ...
+<[jax] VESTA> because it doesn't transmit CR's at end of line! But some 
+software ...
+<[jax] VESTA> allows translation of line-end protocols, like HANDSHAKE ...
+<[jax] VESTA> but how is parallel, Dan? ....
+<[jax] VESTA> any new toys? ...
+<[jax] VESTA> .
+<DANMILLER>
+<[Gary] GARY-S> say - dan you do know a topic..
+<DANMILLER> havent had
+<DANMILLER> ok ok
+<[Gary] GARY-S> near and dear is comming up May 4 ?
+<[Gary] GARY-S> ga dan
+<DANMILLER> we have parralel forth, 3 key input, may 4 32 bit forth chip, also 
+suggest
+<[Gary] GARY-S> dan - I am meeting moderator - jax is just being polite..
+<DANMILLER> rochester conf. who and what will be there.
+<[Gary] GARY-S> ga dan
+<DANMILLER> finished.
+<[Gary] GARY-S> did you read the interlace ?
+<[jax] VESTA>
+<[Gary] GARY-S> ga jax
+<[jax] VESTA> look at it this way ....
+<[jax] VESTA> at $5 an hour ....
+<[jax] VESTA> interlace is more chat for the bux! But harder for Len to edit! !!
+<[jax] VESTA> .
+<[Leonard] NMORGENSTERN> I
+<[Gary] GARY-S> jax - is sunday your gig ?
+<[Gary] GARY-S> ga len
+<[Leonard] NMORGENSTERN> ok
+<[Leonard] NMORGENSTERN> ATV0X1
+<[Leonard] NMORGENSTERN> ATDT836-5060
+<[jax] VESTA> he' thinks he lost it again! :-)
+<[Leonard] NMORGENSTERN> I did!
+<[jax] VESTA> Hey len, you're here!
+<[Gary] GARY-S> last time leonard gave us his whole script - neat huh?
+<[Leonard] NMORGENSTERN> My Mac comes tomorrow. I hope I won't have this 
+problem any more
+<[Leonard] NMORGENSTERN> . . . . .
+<[Gary] GARY-S> john hall - what about the videos
+<[Leonard] NMORGENSTERN> ga
+<[Gary] GARY-S> ga len
+<[Jan] FIG>
+<[Gary] GARY-S> ga janny
+<[Jan] FIG> hi its me, jan, not john, though we are friends
+<[Jan] FIG> john is not here
+<[Jan] FIG> ga
+<[jax] VESTA>
+<[Gary] GARY-S> ga dan
+<DANMILLER> g shaw is talking about another conference.  what do you guys think
+<DANMILLER> of a conference in texas next spring?
+<DANMILLER> ga
+<[Jan] FIG>
+<[Gary] GARY-S> sounds good to me - I'm in Arkansas
+<[Gary] GARY-S> ga jax
+<[jax] VESTA> yield to jan, then me.
+<[jax] VESTA> .
+<[Gary] GARY-S> ga jan
+<[Jan] FIG> after visiting infomart in dallas and seeing the oncome of their...
+<[Jan] FIG> automation area, and the fact that that they have free on-line
+<[Jan] FIG> ...
+<[Jan] FIG> information access to Compuserv and the Source (but not GEnie yet)..
+

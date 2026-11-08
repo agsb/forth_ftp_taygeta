@@ -1,0 +1,316 @@
+
+X3J14/89-016 Draft Minutes, X3J14 Meeting #10, October 25-28, 1989
+
+Doc. no:                                          X3J14/89-016
+                                                  November 9, 1989
+Minutes of X3J14 Meeting #10
+ANS Forth Technical Committee
+October 25-28, 1989, Greenbelt, Maryland
+
+CALL TO ORDER
+
+Bob Davis (NSWC) and Xan Gregg (CSI) were introduced.  Mr. Gregg will be
+     CSI's alternate.  Mr. Bradley, Mr. Berkey and Mr. Brown are now voting
+     members.
+18 voting members were present.  The attendance list is document 89-017.
+The unamended minutes of Meeting 9 were approved unanimously.
+
+ACTION ITEM REVIEW FROM MEETING #9
+
+Not many members filled out George's survey.
+The minutes of Meeting 9 were posted on GENIE.
+The location for Meeting 10 was selected.
+Many burning issue write-ups were received and included in the minutes.
+     Many people have attended one meeting and follow us by being included
+     on the mailing list.  This informs them of the issues before being
+     voted on.
+
+OLD BUSINESS
+
+The new corrected proposal log has been distributed.  It was suggested that
+     it would be easier to read with change bars.
+Mr. Shaw spoke to EuroFORML about ANS Forth.  The Europeans are interested
+     but feel they are missing information.  They need to know how to join
+     ANS X3J14 and how to participate.  Many would like to be observers.
+     He suggested that we include Forth, Inc.'s FAX number in the BASIS.
+     Mr. Shaw explained the "Fast track" method, and they liked it.
+We received a communique from Boston FIG via Gary Chanson.  They are
+     pleased that we are interested in their input.
+Mr. Forsley discussed including Chuck Moore's unofficial appendix when he
+     reprints the minutes from a former ANS X3J14 meeting in JFAR.  It was
+     agreed that for someone not following his comments with the then-
+     current BASIS that level of detail was unhelpful.  His remarks are
+     well summarized in the minutes.
+
+LOGISTICS COMMITTEE REPORT
+
+Mr. Brown volunteered to host the summer 1990 meeting in Canada.  The Chair
+     will check this with CBEMA.
+There was much discussion about holding a meeting in Boulder, Colorado.
+     Mr. Keene (by phone) strenuously objected to Boulder being the site of
+     an East Coast meeting.  A motion to exclude Boulder failed for lack of
+     a second.  A motion to remove our resolution about alternating
+     meetings between coasts also failed for lack of a second.  Mr. Forsley
+     moved that we consider mid-West sites for some remaining meetings.
+     This motion passed.
+
+1990 Schedule of meetings:
+Jan 24-27 San Diego, CA  Mr. Kelly, host
+May 22-26 Melbourne, FL  Mr. Hand (Harris) host
+Aug 21-25 Vancouver, BC  Mr. Brown, host
+Nov  7-10 Washington, DC Host to be determined
+
+DOCUMENTATION COMMITTEE REPORT
+
+BASIS 9 was adopted 15/0.
+The Chair reminded us that typos can be reported directly to Mr. Dickens;
+     all other changes require proposals to correct.
+There was considerable interest in continuing the concordance.  There was a
+     problem in producing the last concordance, but it has now been
+     corrected.
+
+RESEARCH COMMITTEE REPORT
+
+Mr. Nemeth submitted results of a survey conducted by Mr. Shaw.
+
+TECHNICAL COMMITTEE REPORT
+
+Mr. Bailey reported that we had 150 actionable proposals not subject to the
+     two-week rule.  He found seven discrepancies with the proposal log,
+     which are reflected below in Action on Technical Proposals.
+TSC apologizes for submitting TP-215 and TP-238 to the TC, which were
+     actually tabled in the TSC.  Both failed in the TC.
+
+INTERNATIONAL COMMITTEE REPORT
+
+Mr. Dorband cannot get NASA sponsorship.  The Chair will approach Mr. Shaw
+     to be the International Representative.  SMC actually does the
+     election.
+
+OTHER BUSINESS
+
+Mr. Keene appointed Mr. Nemeth to be his alternate at this meeting.  Mr.
+     Duncan appointed Mr. Tracy to be his.  The alternates were approved
+     15/0.  The Chair agreed to further research rules concerning
+     appointment of alternates.
+Mr. Shaw was not in attendance, but sent a list of votes on pending
+     proposals.
+In response to Mr. Kelly's comment regarding the MOSI standard, the Chair
+     appointed a working group consisting of Mr. Braithwaite (chair), Mr.
+     Kobziar and Mr. Egbert to study this, and establish liason with the
+     sponsoring IEEE committee.
+The Chair noted that a Mr. Kompass, a writer for Control Engineering
+     Magazine, would like to do a story on large Forth projects.  Members
+     are urged to contact him information on successful large projects
+     (more than 4-5 people):
+                    Edward J. Kompass
+                    Control Engineering
+                    802 453-2963
+The Chair further noted that Prentice-Hall has discontinued Thinking Forth.
+     Members who are concerned about this are encouraged to contact the
+     Chair or Prentice Hall.
+Mr. Hayes has written his first ANS Forth column for Forth Dimensions.
+The overdue mailing account is now $2000.  Members are urged to contribute
+     their share if they haven't already.
+
+ACTION ON TECHNICAL PROPOSALS
+
+TP#            Name                               Status         Action
+TP-4a          Restore the original ... NOT       passed 16/2
+TP-67          Local variables                    withdrawn
+TP-101         Multiple WHILE+s                   failed 1/12
+TP-107         Restoring the contents of SPAN     failed 0/17    ER letter
+TP-116         Control Structure                  withdrawn
+TP-166         File access word names             tabled
+TP-171         The right to assemble              failed 1/15
+TP-177         Immediate loop indices             failed 1/14
+TP-189         Local variables                    withdrawn
+TP-194c        Making PAD consistent              failed
+TP-209         Current block buffer               passed 18/0    AK letter
+TP-210         Global and locals                  postponed
+TP-224(a)      SCAN>                              TSC
+TP-224(b)a     SCAN                               passed
+TP-239         Deferred compilation               withdrawn
+TP-249         Named local variables              withdrawn
+TP-260         Findability after CODE             passed 15/0
+TP-263         The right to compile               failed 0/17
+TP-285a        VALUE                              passed 15/0
+TP-301         Fix VOCABULARY                     withdrawn
+TP-332a        Remove CONVERT Exception           passed 17/0
+TP-347         Omnibus T                          post proposal
+TP-348a        Omnibus W                          passed 17/0
+TP-349         Omnibus X1                         failed 0/18
+TP-350         Omnibus X2                         failed 0/18
+TP-355         Other wrap-around words            failed 0/18
+TP-356         Wrap-around arithmetic             failed 0/18
+TP-357         Circular DO and ?DO Parameters     failed 0/17
+TP-358         Wrap-around numbers                failed 0/17
+TP-359         The number circle                  failed 0/17
+TP-360         Omnibus R                          failed 0/17
+TP-361         AX Non-functional Division         failed 0/18
+TP-362         Omnibus K                          failed 0/18
+TP-363         New definitions of ... word        failed 0/17
+TP-366a        Post proposals                     passed 15/0
+TP-371a        Drop +colon definition+ term       passed 18/0
+TP-372a        Environmental Dependencies         passed 18/0
+TP-375         Add capability to files I          failed 1/16
+TP-376         Add capability to files II         failed 1/16
+TP-377         Add capability to files III        failed 1/16
+TP-378         Add capability to files IV         failed 1/16
+TP-379         Add capability to files V          failed 1/16
+TP-380         Add capability to files VI         failed 1/16
+TP-381         Add capability to files VII        failed 1/16
+TP-383         File word set                      failed 0/17    MB letter
+TP-385a        Environmental word set             passed 14/4
+TP-399a        Portability guide                  passed 17/0
+TP-400         CELL-                              failed 4/14
+TP-402a        Clarify IO-RESULT                  passed 17/0
+TP-403a        File access methods                passed 15/2
+TP-404a        File position maintainance         passed 17/1
+TP-412         NON                                failed 1/17
+TP-413         Definition of file                 failed 1/16    MT letter
+TP-414         Clarification of , and C,          failed 1/17    MT letter
+TP-417         Clarify EVALUATE                   failed 1/17    TD letter
+TP-418         Names for file operators           failed 2/15    LC letter
+TP-419a        Delete IO-RESULT                   passed 18/0    LC letter
+TP-420a        Clarification of file access       passed 16/1    MT letter
+TP-421a        Revise the definition of "line"    passed 17/0    MT letter
+TP-422         Delete "file mode"                 passed 17/1    MT letter
+TP-423         Definition of flow of execution    failed 1/16    MT letter
+TP-430.ca      NIP in future directions           failed 3/14
+TP-434         System Word Set                    withdrawn
+TP-437         /MOD                               failed 0/19
+TP-438         2's Complement                     failed 3/16
+TP-453         Memory allocation                  tabled
+TP-458         Definition of colon                withdrawn
+TP-460         Display definition                 passed 17/0
+TP-461a        FP Stack definition                passed 17/0
+TP-464         >IN                                withdrawn
+TP-466         Word naming conventions            withdrawn
+TP-467         Capitalization issues              withdrawn
+TP#            Name                               Status         Action
+TP-470         */MOD                              post proposal
+TP-473         2R@                                withdrawn
+TP-474         Current Block Buffer Definition    withdrawn
+TP-477         Branch specification definition    withdrawn
+TP-486         Equivalent execution               withdrawn
+TP-502a        Correct  [CHAR]                    passed 17/1
+TP-503         Remove I for Immediate             passed 17/1
+TP-504a        ( .( [                             passed 18/0
+TP-505a        POSTPONE                           passed 18/0
+TP-506         Remove BYTE+ and BYTES             failed 1/17
+TP-507a        SKIP>                              passed 15/3
+TP-508         Tutorial                           passed 17/0
+TP-509         Trig rationales                    post proposal
+TP-510         Appendix X  MOSI                   COMMENT
+TP-511         Division with true modulus         failed 0/19    BB letter
+TP-512a        Local Variables Again              passed 14/4
+TP-514         Remove impossible requirements     passed 18/0
+TP-518a        @EXECUTE                           passed 17/0
+TP-519a        CONTEXT and CURRENT...             passed 17/0
+TP-520         LOOP, not LOOP THEN                passed 14/4
+TP-521         Post proposals                     post proposal
+TP-523a        Change DIGITIZE to >NUMBER         passed 16/1
+TP-524         Comments on +Tutorial+ draft       COMMENT
+TP-525         Reinstate COMPILE and [COMPILE]    failed 1/16    LC letter
+TP-530         Make REPEAT obsolete               failed 1/15
+TP-531a        Grab bag                           passed 17/0
+TP-532         Add 2R@                            failed 5/12
+TP-534         Unlink control structures...       passed 17/0
+TP-535         Blocks never get block numbers     passed 17/0
+TP-536         Specify string compare byte order  passed 17/0
+TP-537a        Adjust tutorial to reflect...      passed 15/0
+TP-538         Replace ?KEY with KEY?             failed 2/15
+TP-546a        Colon is not a compiling word      passed 17/0
+TP-552a        >IN addresses bytes                passed 16/1
+TP-553a        Equality                           passed 17/0
+TP-554         Block word set is an option        failed 3/15
+
+We resolve that two new words will be made available:  SM/MOD and FM/MOD.
+     The divisor of words which return a remainder, i.e., /MOD */MOD MOD,
+     will be rewritten so that they can be based on any of these words
+     including UM/MOD. The division words that take a signed divisor will
+     allow SM/MOD or FM/MOD as their base.  Mr. Berkey will implement this
+     resolution with proposals at the next meeting.  Resolution passed
+     16/1.
+
+ACTION ITEMS
+
+1.   The Chair will check out a summer 1990 meeting in Canada with CBEMA.
+2.   The documentation committee will get BASIS to Mr. Bailey to produce a
+     concordance.
+3.   Mr. Tracy will bring past minutes to future meetings.
+4.   The Chair will ask Mr. Shaw to be our International Representative.
+5.   Mr. Braithwaite will draft a cover letter to send with copies of the
+     MOSI proposal to major vendors.  Mr. Braithwaite will call Mr. Kelly
+     and ask him strongly not to send his letter in until the working group
+     is done.  They will also notify IEEE that we are working on it.
+6.   All TC members should implement TP-512 as they see fit and report on
+     results.
+7.   The Chair will research and clarify the policy on designating
+     alternates and written votes.
+8.   The documentation committee will add former TC members to the list in
+     BASIS.
+
+BURNING ISSUES
+
+The following is the list of issues identified by members that prevents
+     adoption of BASIS as a dpANS, in descending order of urgency.
+
+Count     Issue                                   Magnet
+11        Division
+11        Inconsistencies of definitions
+9         Missing Appendices
+9         FP input and output
+6         Action of : on CURRENT and CONTEXT
+5         File input stream                       MB
+5         Structure of BASIS                      TD
+5         Environmental Interrogation
+5         Character set                           MN
+4         Byte char issues                        SE
+4         Data space                              AK
+4         Compilation                             LC
+3         Memory allocation                       MB
+3         What KEY returns
+3         Block compromise                        JB
+3         Error handling
+2         1's complement usage rules
+2         Floating point formats
+1         Multitasking
+1         HOST OS interface and MOSI
+
+Missing Appendices:
+
+Name                                    Magnet
+Rationale                               RB
+Forth-83 compatibility                  RB
+Forth-79 compatibility                  LF
+Guidelines for Implementors             MT
+
+Burning Issue Definitions:
+
+Data Space:  Review Basis for precise and consistent definitions of memory
+     which is addressable by a standard program, and for relationships,
+     such as between HERE and PAD that are constraints for a system
+     implementor.  There are a number of proposals to clear up this issue.
+     (AK)
+Multitasking and Host Operating System Interface:  What is our position on
+     the MOSI standard and to what degree do we want to standardize common
+     OS functions?  The standard now contains a very incomplete set, and a
+     committee has been assigned to provide recommendations at the next
+     meeting.  (AK)
+
+NEXT MEETING
+
+The next meeting is January 24-27, 1990, at the UC San Diego campus in San
+     Diego, California.  Mr. Kelly will be the host, and Dr. Wavrick will
+     be the faculty sponsor.  Accommodations will be off-campus.
+
+ADJOURNMENT
+
+The tenth meeting of the X3J14 ANS Forth Technical Committee was adjourned
+     at 6:00 P.M. on Saturday, October 28, 1989.
+
+Submitted by: Martin J. Tracy, Secretary.
+
+

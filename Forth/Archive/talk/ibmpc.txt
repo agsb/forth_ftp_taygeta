@@ -1,0 +1,31 @@
+
+			      FORTH FOR THE IBM PC
+			       From the FIG Tree
+										
+
+*** QUEST-4TH-BUGS       12-DEC-84-
+  PARENT=IBM-PC               USAGE=422
+We have been using the Quest Research Forth to develop commercial
+software. While the interprative version runs very nicely, we have
+found major problems in the Package Builder Utility which is necessary
+to create stand alone applications. The documentation on the PBU is very
+difficult to follow and the software is difficult to use. Many weeks of our
+developement time have been lost due to bugs in the PBU utility. The software
+support at Quest has been terrible. It is almost impossible to get them to a
+answer their phone. When they are informed of bugs in their code they have not
+been prompt in fixing them or returning phone calls. If anyone plans on using
+the Quest package to create software for resale I would strongly advise against
+it.
+                        Bob
+
+*** LMI-FORTH            27-APR-85
+  PARENT=IBM-PC               USAGE=265
+I am writting a laserdisk based training system using the LMI version of
+FORTH, both 16 and 32 bit implementations, and after reading the quest
+message, I just had to add this message.  The people at LMI are always
+helpful and never seem to miss a return call.  They are only able to
+provide tech support  9-12 am pst. but they also have a 5 pm to 9 am bbs.
+ are interested in talking forth or whatever i can be reached at
+(412) 257-0600 days, 563-3229 evens.  and I run a bbs at (412) 257-2375.
+
+

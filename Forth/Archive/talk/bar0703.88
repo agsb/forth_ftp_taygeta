@@ -1,0 +1,248 @@
+
+                
+ Minutes of the FIGGY BAR for July 3, 1988
+     
+ Items discussed: Mike (ALMOST) tells who will be distributing the APL 32 bit,
+                  chasing a hardware bug, VESTA boards (we'll talk about yours
+                  if you get on Board), Leonard prepares for the young lions
+             
+Date: 07/03/88   Time: 21:29EDT
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[M.NEMETH1]
+[[jax rampant] VESTA]
+[[Leonard] NMORGENSTERN]
+      
+Minutes:
+<[Dave] DHWEINSTEIN> Hiya Jen...nice hooters
+<[Dave] DHWEINSTEIN> (its the make Gary edit show)
+<GARY-S> HEY MIKE - LONG TIME
+<[Dave] DHWEINSTEIN> Did you get my response to your response to my reponse to 
+your response to my letter?
+<[Gary] GARY-S> Dave - get my reply yet ?
+<[Dave] DHWEINSTEIN> Yes.
+<[Gary] GARY-S> NTB - I sent it last nite
+<[Dave] DHWEINSTEIN> No word from Mitch. Started a new project. (I put Neural 
+Nets on hold for a bit to freshen my mind....looking at the same time
+<[Gary] GARY-S> Mike - any new news on APL ?
+<[Dave] DHWEINSTEIN> code gets nauseating...)
+<[Dave] DHWEINSTEIN> The 32bitter?
+<M.NEMETH1> I have two tenes Not realy
+<[Gary] GARY-S> what
+<[Dave] DHWEINSTEIN> Are you talking about the JHAPL 32 bitter
+<[Gary] GARY-S> yes
+<[Dave] DHWEINSTEIN> Where can I get one?
+<[Gary] GARY-S> Mike is the source to the source
+<M.NEMETH1>  The last news from apl was the !!
+<[Gary] GARY-S> 'scuse me - what does two bangs mean ?
+<M.NEMETH1> It look like the 32 bitter will soon be liecened ; Director of APl 
+has appoved.
+<[Gary] GARY-S> Mike - I should explain - we threw protocol out the window on 
+FIGGY's and just use it on the Formal conferences
+<[Dave] DHWEINSTEIN> Does this mean we can get our hot little hands on the 
+little silicon wafers?
+<[Dave] DHWEINSTEIN> <- wants one
+<[Dave] DHWEINSTEIN> And what is the estimated cost (single unit quantities)
+<[Gary] GARY-S> Has APL selected a licensee yet ?
+<[Dave] DHWEINSTEIN> (Please be Motorola....I have connections in Motorola)
+<[Gary] GARY-S> go MIKE
+<[Dave] DHWEINSTEIN> We interleave now.
+<M.NEMETH1> Also verNavy must give final approval  Yes there is a licensee.
+<[Dave] DHWEINSTEIN> Who?
+<[Gary] GARY-S> There are three questions up - who is the licensee or can you 
+tell yet
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> Hey Jack
+<[jax rampant] VESTA> foo.bar
+<[jax rampant] VESTA> fig.bar
+<[Dave] DHWEINSTEIN> rm foo.bar
+<[jax rampant] VESTA> ls -al dhweinstein
+<[Gary] GARY-S> Jack - we are trying to draw APL info out of Mike
+<[jax rampant] VESTA> get the tweezers!
+<[Dave] DHWEINSTEIN> Who is the licensee?
+<[Gary] GARY-S> comon Mike - give with some details P-l-e-e-e-e-e-z-e
+<[jax rampant] VESTA> what is apl aside from A Personal Language?
+<[Dave] DHWEINSTEIN> Johns Hopkins Applied Physics Lab
+<M.NEMETH1> I cannopt say yet First I must say I do not work at Apl But at nas..
+<[jax rampant] VESTA> Applied physics? like an enema or purgative?
+<[Gary] GARY-S> John Hopkins Applied Physics Lab (new 32 bitter)
+<[jax rampant] VESTA> oh... that's "physick".
+<[Dave] DHWEINSTEIN> Both TI and Motorola are in Austin...can you say if the 
+chip will possibly be produced in Austin (love them leading questions)
+<[jax rampant] VESTA> right ... when do I get my 32-bit Forth engine?
+<[jax rampant] VESTA> Put it right here --> [          ].
+<[Dave] DHWEINSTEIN> Jax...have you uploaded the ANS proposal yet?
+<[Gary] GARY-S> All I know Mike , is John said you would be the info conduit - 
+so spill forth
+<[jax rampant] VESTA> it's emailed to S.W.SQUIRES ...
+<[Dave] DHWEINSTEIN> I need it.
+<[jax rampant] VESTA> after being emailed accidentally to S.SQUIRES, another 
+GEnie user.
+<[Dave] DHWEINSTEIN> oops
+<[jax rampant] VESTA> What for, Dave?
+<[Gary] GARY-S> why did you not just upload it to the library ????
+<[jax rampant] VESTA> I didn't think things like that belong in the lib.
+<[Dave] DHWEINSTEIN> I am busy writing a 32bit FORTH (I am sick of the one I 
+have been using) and it might as well be ANS proposal (first kid on the 
+block with the new toy)
+<[jax rampant] VESTA> The lib should be for reality.
+<[jax rampant] VESTA> let's not confuse people with fantasy land.
+<[Gary] GARY-S> The library is for everyTHING forthy
+<M.NEMETH1> I do known who it is and I think many Forther Will reconize name.
+<[Dave] DHWEINSTEIN> I wants one...could you upload it now.
+<[Dave] DHWEINSTEIN> (the ANS rec)
+<[Dave] DHWEINSTEIN> Novix? Harris? Is it one of those two?
+<[jax rampant] VESTA> What do you think I am uploading? I am just uploading a 
+stupid proposal of my own.
+<[Gary] GARY-S> quite - Mike is FINALLY gonna tell
+<[jax rampant] VESTA> go mike.
+<[Dave] DHWEINSTEIN> I thought you had the Ansi Proposal...
+<[jax rampant] VESTA> No ... just a stupid proposal of my own!
+<[Dave] DHWEINSTEIN> Oh well...I'll just extend F79 to my wittle haht's content
+<[jax rampant] VESTA> Chalk one more up for teleconfusion.
+<M.NEMETH1> Good  guesses close I must say I got info for third source.
+<[Gary] GARY-S> I think Greg is going to post a copy of what's current with 
+Goofy
+<[jax rampant] VESTA> At least me know that the FCC will never tax this ... it 
+ain't much like communication.
+<[Dave] DHWEINSTEIN> Close....Harttronix?
+<[Dave] DHWEINSTEIN> (or something like that)
+<[Dave] DHWEINSTEIN> uhhhh....New Micros? Rockwell?
+<[Gary] GARY-S> NMI doesn't cast silicon
+<[Dave] DHWEINSTEIN> But they do get others to (like Motorola)
+<[Gary] GARY-S> They buy off the shelf just like Feierbach
+<M.NEMETH1> Actual I do not think the linecess is going to produce themself.
+<[Dave] DHWEINSTEIN> NMI has the schematics for the ultimate hand held FORTH 
+computer...their 68HC11 (with its own ROM mask) couple of capacitors, a w
+atch batery , a resistor, and a crystal
+<[Dave] DHWEINSTEIN> What price range are we talking...or do you know?
+<[Gary] GARY-S> MIKE are you gonna spill the beans or NOT
+<[Dave] DHWEINSTEIN> Gary...turn off the damn Stenographer first!
+<[jax rampant] VESTA> light bamboo splints under his input buffer.
+<[Gary] GARY-S> Would you like Randy D in a conference
+<M.NEMETH1> NO JOHN and Marty would get mad and they Host the local FIG.
+<[Dave] DHWEINSTEIN> Force him to use Pascal exclusively.
+<[Gary] GARY-S> Is that no spill or no Randy D
+<M.NEMETH1> No spill.
+<[Gary] GARY-S> NUTZ !
+<[Dave] DHWEINSTEIN> Can you even mention the approximate price range?
+<[jax rampant] VESTA> Good going, mike, I knew ya had it in ya.
+<[Gary] GARY-S> Ask John and Marty and let us know - there is a lot of interest 
+in that chip - OK Mike ???
+<[jax rampant] VESTA> You were asking this guy to predjudice the business 
+interests of two close friends ...
+<[Gary] GARY-S> No - I thought he was cleared to do so
+<M.NEMETH1> OK i will But i is still too early.
+<[Gary] GARY-S> That's why the last question
+<[jax rampant] VESTA> Anyway, don't let on like you want the chip or the 
+sonsabitches will raise the price.
+<[Gary] GARY-S> New silicon ain't cheap anyway
+<[Dave] DHWEINSTEIN> I may be able to afford the chip...but can I afford the 
+RAM...256kx1DRAM at $18.95 a pop?
+<[Dave] DHWEINSTEIN> 32kx8SRAM is only 10. And I like it better. Prices are 
+insane.
+<[Gary] GARY-S> be craetive - cut to 6116's
+<[Dave] DHWEINSTEIN> Chip count out the wazu!
+<[Gary] GARY-S> but look at all the plug experience you'd gain
+<[jax rampant] VESTA> I love free market capitalism! It's really socialism for 
+Motorola.
+<[Dave] DHWEINSTEIN> Roight!
+<[Dave] DHWEINSTEIN> This isn't free market capitalism. The whole problem came 
+about because of government interference and protectionism. Thanks Uncl
+e Sam.
+<[jax rampant] VESTA> They say the Japanese are happy with the new NO-DUMP 
+their profits are up per unit.
+<[jax rampant] VESTA> Right, dave, like I said ... put a free marketeer in the 
+WH and its socialism for the rich, capitalism for the rest of us.
+<[Gary] GARY-S> Lousey manufacturing and insider pricing helped the cause 
+immensely - right ?
+<[Gary] GARY-S>  RIGHT !
+<[Dave] DHWEINSTEIN> So put Ron Paul in office.
+<[Dave] DHWEINSTEIN> Kein probleme.
+<[jax rampant] VESTA> WHy not Roger Rabbit?
+<[Gary] GARY-S> You just never quit do you, dave ?
+<[Dave] DHWEINSTEIN> 'Cuz Ron Paul would be a good Prez.
+<[Gary] GARY-S> Polly Ana
+<[jax rampant] VESTA> We have a libertarian Flame Pit on the WELL.
+<[Dave] DHWEINSTEIN> Sue me...hey...I just made Chancellor of the Exchequor for 
+the Kingdom of Gryphonia.
+<M.NEMETH1> bye I should know after july 20.
+<M.NEMETH1> has left.
+<[Dave] DHWEINSTEIN> The opponent in the dictatorship election charged that 
+King Pablo the Perverse would raise taxes..so I was appointed....never get
+ a Libertarian to raise taxes.
+<[Gary] GARY-S> It would be easier to accept with some reality to support the 
+visions
+<[jax rampant] VESTA> Well, we chased another one away with our inanities.
+<[Dave] DHWEINSTEIN> So give 'em my addres...I'll answer them in email (my UUCP 
+address....juniper!olorin)
+<[Gary] GARY-S> Maybe he went to call John and Marty - hope so
+<[Dave] DHWEINSTEIN> I wants one oh them 32bitters.
+<[jax rampant] VESTA> On sunday night FORTHAJULY right, gary.
+<[Gary] GARY-S> Call them at APL urself
+<[Dave] DHWEINSTEIN> Weeelp. time for my to politicize. I'm off to 545.
+<[Dave] DHWEINSTEIN> has left.
+<[jax rampant] VESTA> They're probably out drinking beer and acting silly like 
+the rest of america.
+<[Gary] GARY-S> Just us JAX - wanna talk forth or what ?
+<[jax rampant] VESTA> Well, it's just you and me, Gary, and I ain't too sure 
+about you ... :-)
+<[Gary] GARY-S> you're using the Super 8 or what else at vesta
+<[jax rampant] VESTA> I had a weird bug the other dya
+<[jax rampant] VESTA> no SUPER8 at vesta, but using it at home consulting.
+<[Gary] GARY-S> vw's are like that
+<[jax rampant] VESTA> I have a vw, but this was the weirdest programming bug I 
+ever ran across.
+<[Gary] GARY-S> well........
+<[jax rampant] VESTA> Anyway, there was this word. COuldn't make it work. Hung 
+the system every time.
+<[jax rampant] VESTA> Tried its components interpretively, in order, one at a 
+time. Fine.
+<[jax rampant] VESTA> Run the word ... BYE BYE .
+<[jax rampant] VESTA> Damn!
+<[jax rampant] VESTA> SO ...
+<[jax rampant] VESTA> It turns out that there is a part of the word that does a 
+long ERASE.
+<[jax rampant] VESTA> 9CC0 7C0 0 FILL
+<[jax rampant] VESTA> so when the FILL ..
+<[jax rampant] VESTA> gets half way thru ...
+<[jax rampant] VESTA> It unsets *one single bit*, the high bit, of an address 
+in a Forth definition.
+<[Gary] GARY-S> you filled your program area
+<[jax rampant] VESTA> changing it from 9AFF to 1AFF.
+<[jax rampant] VESTA> No , i didn't ...
+<[jax rampant] VESTA> the address was NO WHERE NEAR the area being filled.
+<[jax rampant] VESTA> Maddening!
+<[jax rampant] VESTA> Turned out to be a shorted address line on the board!
+<[Gary] GARY-S> I'm laughing - wait
+<[jax rampant] VESTA> But all day long, you know? Ever try to convince a 
+hardware engineer that it's the hardware, not your program? Dig?
+<[jax rampant] VESTA> * ONE * * BIT * being set ...
+<[jax rampant] VESTA> foo.
+<[Gary] GARY-S> How'd you finally catch it ?
+<[jax rampant] VESTA> We missed a deadline on that one ( sorta).
+<[jax rampant] VESTA> Caught it by looking at it again and again.
+<[Gary] GARY-S> Was the board one-ofa-kind
+<[jax rampant] VESTA> Watching the D7 bit flip before&after ... yes, board was 
+a pirate of one of our designs.
+<[jax rampant] VESTA> Competitor 'fessed up and turned self in.
+<[jax rampant] VESTA> )(*&)#(*&$)(*@#&$)(*#@&
+<[jax rampant] VESTA>
+<[jax rampant] VESTA> .
+<[Gary] GARY-S> What chips do you use - ANYthing - or some you like
+<[jax rampant] VESTA> VESTA uses 8088/80188
+<[jax rampant] VESTA> THough we will design anything youwant to pay for.
+<[Gary] GARY-S> so you can downline from PC's ?
+<[jax rampant] VESTA> Some of our boards are DOS 2.1 compatible for convenience.
+<[jax rampant] VESTA> I write custom software for them & maintain the FORTH 
+system.
+<[Gary] GARY-S> Do you meta your code ?
+<[jax rampant] VESTA> I compose on the PC, download code upload image burn rom 
+OR metacompile, whatever is faster for the project.
+<[Gary] GARY-S> Is the forth still on the board or only the app
+<[jax rampant] VESTA> The boards have a resident FORTH, or the metacompiled app 
+takes its place.
+<[jax rampant] VESTA> THe VESTA idea ..
+<[jax rampant] VESTA> is to provide you with everything you need on one board ..
+

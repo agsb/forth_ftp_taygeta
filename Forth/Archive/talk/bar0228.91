@@ -1,0 +1,360 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 02/28/91   Time: 22:32EST
+
+    FIGGY BAR of 28 February 1991. Most of the discussion centered on how
+   to coordinate several programmers, organizing effort and obtaining good
+   results, then shifted to writing a parser in Forth to read and handle
+   dBase created .NDX files. Some discussion of Pygmy.
+
+Attendees:
+[GARY-S]
+[GILES]
+[[Len] NMORGENSTERN]
+[[doug] D.GARRETT]
+[[Dennis] D.RUFFER]
+[[Wil] W.BADEN1]
+
+Minutes:
+<GILES> is here.
+<NMORGENSTERN> is here.
+<GILES> THIS system is a REAL tattletale. (grin)
+<[Len] NMORGENSTERN> How so?
+<GILES> It tells everytime someone...
+<GILES> does ANYthing on open...
+<D.GARRETT> is here.
+<GILES> Whereas on CIS...
+<GILES> Len > u only get that info automatically in group.
+<GARY-S> So - how'd you like your first guest conference ?
+<GARY-S> That was to you Giles
+<[Len] NMORGENSTERN> The weather here is beautiful.
+<[Len] NMORGENSTERN> It's raining!
+<GILES> Me?  I LIKE a REAL 4th forum! (grin)
+<GARY-S> Is that with peanut hulls on the floor ?
+<GILES> There's a Forth forum on CIS, but is vendor run...very ...
+<GILES> much less happenin.
+<GARY-S> Nice artcle in the last FD, Len
+<[Len] NMORGENSTERN> Thanks, Gary
+<GILES> Hehehe > Gair
+<GARY-S> I participated in Don (et al) and the CIS Forth forum myself. Many 
+buck$ ago
+<D.RUFFER> is here.
+<GILES> <-- (Tryin 2 figure where th peanut hulls came from)
+<GARY-S> Because you said, "... a REAL Forth forum..." like some dudes say 
+"REAL tavern" <grin>
+<[Len] NMORGENSTERN> I used to log on frequently. Occasionally
+<[Len] NMORGENSTERN> there was v. good stuff there.
+<[doug] D.GARRETT> I captured the discussion to a text file.  When I finish 
+editting it, I'll give a copy to my MUMPS boss.  Some good points were mad
+e.
+<[doug] D.GARRETT> We have had our problems with co-ordinating programmers in 
+the shop.
+<[Len] NMORGENSTERN> Join the club!
+<[Dennis] D.RUFFER> Giles and Doug...we're working on getting that paper out to 
+you...but we need to find it first <grin>
+<GILES> Ooops! Hehehe
+<[doug] D.GARRETT> Thanks, I'll be looking forward to reading it.
+<GILES> Me 2.
+<GARY-S> Bess doesn't have a personal copy ?????
+<[Dennis] D.RUFFER> somehow...the last copy got sent out...and no one remembers 
+where the original is :(
+<GILES> <-- (Wonderin if Dennis read MY book on "Organizinng Urself")
+<GILES> Nah...if u HAD...
+<[Dennis] D.RUFFER> no, she doesn't know where it is either
+<GILES> U'da sent out th ORIGINAL! (grin)
+<[Dennis] D.RUFFER> Organizing....uh...you wrote a book???   I NEED IT BAD! :D
+<GARY-S> thay - are making fun of my sthpeetch ?
+<GILES> No...I think u already have MY system down pretty WELL. [HHehe
+<GILES>
+<[Len] NMORGENSTERN> I just had a thought.
+<[doug] D.GARRETT> Giles has a copyright and patent on it.  Everytime you 
+misplace something, you'll owe him royalties !
+<GARY-S> Have any of you read "The Mythical Man Month" always touted ny MPE in 
+their catalogs ? Interesting
+<[Len] NMORGENSTERN>  Programmers are hired to
+<[Len] NMORGENSTERN> do original work, or at least they should be.
+<[Len] NMORGENSTERN> Hence they are difficult to supervise. I wonder
+<[Len] NMORGENSTERN> how the studio bosses in Hollywood handled their
+<[Len] NMORGENSTERN> writers? There must be a lot written about that!
+<[Len] NMORGENSTERN>
+<GILES> Hahahaha! Good one, Doug!
+<[Dennis] D.RUFFER> studios don't "handle" their writters...they just make them 
+sign performance contracts :)
+<[doug] D.GARRETT> Hitchcock was reportedly very good at organizing his films.  
+...
+<[Len] NMORGENSTERN> Hmm.
+<[doug] D.GARRETT> But, consider the final product.
+<[Len] NMORGENSTERN> Well, the average program is about as original as the
+<[Len] NMORGENSTERN> average movie.
+<GILES> He'd jus givem NIGHTMARES, if they din do it HIS way.
+<[doug] D.GARRETT> One thing Dean mentioned that I took immediately to heart...
+<GILES> U work for Forth, Inc., Rite Dennis?
+<[Dennis] D.RUFFER> rite :)
+<[doug] D.GARRETT> was the requirement that all personnel  communicate in 
+writing.
+<[Wil] W.BADEN1> is here.
+<[doug] D.GARRETT> The owner/manager/chief-programmer I work for...
+<[doug] D.GARRETT> hi wil       I very bad about NOT writing important stuff 
+down.  Our verbal communications usually evaporate with time.
+<[Len] NMORGENSTERN> "A verbal contract isn't worth the paper it's written on"
+<[Len] NMORGENSTERN> Sam Goldwyn
+<[Dennis] D.RUFFER> yes doug...writting it down can create a very good 
+history/rational for a project
+<GARY-S> and help create an important audit trail
+<[Dennis] D.RUFFER> I'm forced to do it on a project where all our 
+communication is through email messages
+<GILES> It's also good for an argument w/ th WIFE. (grin)
+<[doug] D.GARRETT> We have a project version manager for any software changes...
+<[doug] D.GARRETT> but the reasons and rational for the changes are often 
+forgotten...
+<[Dennis] D.RUFFER> ah, but theres a warning there giles...people BELIEVE what 
+you put in writting
+<[Dennis] D.RUFFER> it can come back to haunt you later :(
+<GILES> Hehehe > Dennis
+<[doug] D.GARRETT> and all the other LITTLE things that go on are almost never 
+recorded.
+<[Len] NMORGENSTERN> Another thing: wrting things donw makes you think clearly
+<[Len] NMORGENSTERN> I've had lots of ideas that looked great until I started
+<[Len] NMORGENSTERN> writing them. Then I realized they were mud.
+<GILES> Good point, Len.
+<[doug] D.GARRETT> Another comment Dean made...
+<[doug] D.GARRETT> about organizing 15 programmers:  I don't have the quote in 
+front of me, but...
+<[doug] D.GARRETT> he said something to the effect that Politics & individual 
+initiative drove much of the project...
+<GILES> "Individuals & politics"
+<[doug] D.GARRETT> (or am I mis-quoting him?)...
+<GILES> No, that was it.
+<[Dennis] D.RUFFER> politics ALWAYS drives projects...the problem is getting 
+someone to signon to the "dirt"
+<[doug] D.GARRETT> Anyway, I figure it must be a bit like herding kittens, as 
+the dean of IU School of Business said to me once.
+<GARY-S> Let me repeat an earlier question ... has anyone else read "The 
+Mythical Man Month" touted in all of MPE's catalogs ? It is interresting and
+attacks this very problem in a humours sort of way
+<GILES> Brings a funny pic to mind. Hehehe
+<[doug] D.GARRETT> No, I havent read it
+<GILES> Not me.
+<[Dennis] D.RUFFER> I've read pieces, but never the whole thing gary
+<[Len] NMORGENSTERN> Have read excerpts.
+<[Wil] W.BADEN1> 15 years ago.
+<GARY-S> It's cheap ernough and an easy read -
+<[Wil] W.BADEN1> Amazing that it's still appropriate.
+<[doug] D.GARRETT> I didn't realize it's 15 years old.
+<[Dennis] D.RUFFER> amazing that the same "problems" are still with us
+<[Wil] W.BADEN1> Perhaps older.  1972-1976 timeframe.
+<[Len] NMORGENSTERN> It's a fact of life Dennis. The things you can solve
+<GARY-S> I'll be darned - the copyright _is_ 1975
+<GARY-S> I just looked
+<[Len] NMORGENSTERN> you solve. The things you can't stay around for years!
+<[Dennis] D.RUFFER> and people management is sure one we have not solved yet :(
+<[Len] NMORGENSTERN> When I was cleaning out my files before I retired
+<[Len] NMORGENSTERN> I found memos 20-30 years old about the same problems
+<GILES> <-- (Wants to b able to pay em enuff to do it MY way) (grin)
+<[Len] NMORGENSTERN> that were occupying me at time I retired.
+<[doug] D.GARRETT> Hmmm.... I'll remember that, Len.
+<[Dennis] D.RUFFER> :) -> giles, but do you want to get your money's worth?
+<GILES> Yup!
+<GILES> But u NEED to follow ONE paradigm.
+<[Dennis] D.RUFFER> then you still need to "manage" them...pay is not enough
+<GILES> Even if it's not th best possible.
+<GILES> True.
+<[Len] NMORGENSTERN> I have a good book by Wayne Babich called
+<[Len] NMORGENSTERN> Software Configuration Management. I found it
+<[Len] NMORGENSTERN> very informative, although I suspect that
+<[Len] NMORGENSTERN> experienced administrators know it all.
+<[Len] NMORGENSTERN>
+<[Dennis] D.RUFFER> the ONLY job of a manager is to figure out how to get 
+people to follow his/her lead
+<GILES> But bad management is harder than GOOD mngmt.
+<GARY-S> It is certainly practiced more
+<[Wil] W.BADEN1> How so, Giles?
+<[Dennis] D.RUFFER> That title sounds familar len...I may even have it
+<GILES> It is more work, Wil.
+<[doug] D.GARRETT> Yeah, but that's in the LONG RUN, Giles.
+<GILES> Not always...sometimes in SHORT run also.
+<[doug] D.GARRETT> Crisis-management technique (default technique in many 
+places)...
+<[Dennis] D.RUFFER> nonono giles...good management is easy...bad managers spend 
+all their time manageing and none on planning
+<[Len] NMORGENSTERN> Dennis, there was a double meaning there
+<[Len] NMORGENSTERN> when you said "get people to follow your lead"
+<[Len] NMORGENSTERN> You have to hire people that will follow your lead
+<[Len] NMORGENSTERN> AND you have to persuade them to do so!
+<GARY-S> You can sure see the effects of 6 day business plans <grin>
+<GILES> That's kinda what I said, Dennis.
+<[Dennis] D.RUFFER> the "will follow" and "persuade" just take good leadership 
+len :)
+<[doug] D.GARRETT> JUST and ONLY are 4-letter words, Dennis
+<[Dennis] D.RUFFER> you can lead a horse to water....
+<[doug] D.GARRETT> I tend to side with Len's statement...
+<GILES> So is "good".
+<[doug] D.GARRETT> I've had little luck in the past, hiring qualified people...
+<[Dennis] D.RUFFER> so is "lead"
+<[doug] D.GARRETT> and even less luck leading them properly.  I am NOT a good 
+manager...
+<GARY-S> Forth isn't - anyone got Forth "stuff" to discuss ?
+<[Dennis] D.RUFFER> takes some courses doug...CareerTrack has some excelent ones
+<[doug] D.GARRETT> and I admire...   hmmmm, Dennis
+<[Len] NMORGENSTERN> Yes. I have been looking for a parser to convert
+<[doug] D.GARRETT> I admire people who ARE good managers.
+<[Wil] W.BADEN1> Duznt Brooks say that managers shud take the "No Programming 
+Pledge?"
+<[Dennis] D.RUFFER> but aren't we talking Forth gary??   management is half the 
+battle :)
+<[Len] NMORGENSTERN> AN to RPN. I have several, including one I wrote myself
+<[Len] NMORGENSTERN> Do you know of any
+<[Len] NMORGENSTERN> (AN=algebraic notation)
+<[Len] NMORGENSTERN> By computer that is. It's easy with pencil and paper.
+<GARY-S> Wasn't  a parser in the last (previous) FD ?
+<[Dennis] D.RUFFER> I did oine way back in college len...in Fortran no less :)
+<GARY-S> I've seen one recently, I kknow
+<[Len] NMORGENSTERN> I want to get them together so I can study them on my
+<[Len] NMORGENSTERN> trip when I can't sleep.
+<GILES> Do u have all th rules laid out?
+<[Len] NMORGENSTERN> I think so.
+<GILES> What's th prize for th most compact version? (grin)
+<[Len] NMORGENSTERN> One problem is that - is a function (like NEGATE) in Forth
+<[Len] NMORGENSTERN> and also a binary arithmetic function.
+<[Dennis] D.RUFFER> NO!  that is why we now have 0= and INVERT
+<[Len] NMORGENSTERN> In BASIC?
+<[Dennis] D.RUFFER> oops..I see the delema now...sorry :)
+<GILES> Sshouldn b to big a prob...
+<[Len] NMORGENSTERN> More of a nuisance.
+<GILES> as long as th "before" & "after" r kept separate.
+<[Len] NMORGENSTERN> What I would like to do is take a DBASE expression,
+<[Len] NMORGENSTERN> similar to BASIC and convert it to a Forth expression,
+<[Len] NMORGENSTERN> which I would then compile into a Forth word.
+<GILES> That sounds a little more complicated than AN > RPN.
+<[Len] NMORGENSTERN> It is
+<GILES> So which do u want?
+<[Len] NMORGENSTERN> Well, the starting point is AN>RPN, so that is what
+<[doug] D.GARRETT> You say "take a DBASE expression", Len...  Is the DBASE 
+application already written?
+<[Len] NMORGENSTERN> I have looked up.
+<[Len] NMORGENSTERN> Actually, I want to analyze the expression
+<[Len] NMORGENSTERN> used for indexing in a DBASE .NDX file
+<GILES> Ok.  & u have all th aplicable rules of DBASE?
+<[Len] NMORGENSTERN> It is stored in the header of the index. When the file
+<GILES> Errr...in a table, I mean.
+<[Len] NMORGENSTERN> is opened I want to convert that expression into Forth.
+<[doug] D.GARRETT> ahhh
+<[Len] NMORGENSTERN> I have the rules. Whether "all" I can only hope so.
+<GILES> It's important to make sure...
+<GILES> u need some method to PROVE u do...
+<[doug] D.GARRETT> Is the goal to be able to access a .DBF and its .NDX file 
+from Forth?
+<[Len] NMORGENSTERN> Yes
+<GILES> otherwise, ur results cannot be prooved to be foolproof.
+<[Len] NMORGENSTERN> Giles, how do you prove something like that?
+<GILES> Analysis.
+<GILES> Put it in a table...
+<GILES> & check EVERY combination, or case.
+<GILES> It is key to th problem.
+<GARY-S> Len - for what it is worth, the 1982 Rochester conference had Database 
+design/management as it's theme - might be worth a browse of the proce
+edings
+<[Len] NMORGENSTERN> Thanks Gary.
+<[Len] NMORGENSTERN> Giles, I am trying to conceive of all the
+<GARY-S> The guy who is going to co-guest with Roy martens, Glen haydon has 
+done a lot of database design, too
+<[Len] NMORGENSTERN> sequences of fieldnames, literals, functions, arith ops etc
+<[Len] NMORGENSTERN> thjat would make a legal expression, but I don't
+<[Len] NMORGENSTERN> know how to PROVE that I have all of them.
+<[Len] NMORGENSTERN> Thanks again Gary.
+<GILES> Well, w/ a large enuff...
+<[Len] NMORGENSTERN> brb
+<GILES> body of examples, u'll get a feel for th possibilities...
+<GILES> & how to organize it...
+<GILES> then u cn start lookin for "exceptional" cases...
+<[Len] NMORGENSTERN> 100 bytes in the header of a .NDX file are reserved
+<[Len] NMORGENSTERN> for the "key expression"
+<GILES> & just dig at it til u C how to lay it out...
+<[Len] NMORGENSTERN> That's my plan
+<[doug] D.GARRETT> Do It is or is-not in ASCII, Len?
+<GILES> for exhaustiveness, w/o being redundant.
+<[doug] D.GARRETT> (ignore the leading "Do", please)
+<[Len] NMORGENSTERN> Yes. For example if you write INDEX FOO ON SYM1+ZIP TO 
+FOOINDX
+<[Len] NMORGENSTERN> The words "SYM1+ZIP" will be right there.
+<[doug] D.GARRETT> what about ...ON TRIM(NAME)... ?
+<[doug] D.GARRETT> same thing?
+<[Len] NMORGENSTERN> T
+<[Len] NMORGENSTERN> TRIM is not allowed in an index because
+<[Len] NMORGENSTERN> it does not yield a constant-length result.
+<[doug] D.GARRETT> ooops, I forgot.  Been a while since dBase programming days.
+<[Len] NMORGENSTERN> Lucky you. I have never dealt with such a frustrating
+<[Len] NMORGENSTERN> language.
+<GILES> Hehehe
+<GILES> Makes ya kinda appreciate 4th, eh?
+<[Len] NMORGENSTERN> It even makes you appreciate BASIC!!!!
+<GILES> Hahaha!
+<[doug] D.GARRETT> Well, I don't know that I'd make such a bold statement
+<GILES> But at LeAST not COBOL!! (chuckle)
+<[Len] NMORGENSTERN> I know some Forth programmers who admire COBOL.
+<[Len] NMORGENSTERN> Easy enough to learn. Very readable.
+<[doug] D.GARRETT> But the way it can sneak around with your variables can be 
+particularly frustrating
+<GILES> <-- (Afraid to comment on that) (grin)
+<GARY-S> If you use the ms-dos program 'Hot Line' for your dialer and want to 
+transfer a phone list to it, you discover REAL quick it was written in d
+Base.  All fields are set length (and location) ala NDX
+<[Len] NMORGENSTERN> Powerful enough for what is asked to do.
+<[Len] NMORGENSTERN> DBASE is NOT economical of disk storage, it is NOT fast
+<[doug] D.GARRETT> I found Foxbase preferable to Ashton-Tate's dbase-III...
+<[Len] NMORGENSTERN> Its access to files is VERY limited. Hence what
+<[Len] NMORGENSTERN> I am trying to do.
+<[doug] D.GARRETT> Foxbase was MUCH faster than A-T...
+<[doug] D.GARRETT> and it also had superior user-defined functions and 
+procedures
+<[Len] NMORGENSTERN> Isn't FOXBASE compiled?
+<GILES> Well, programming time is most important factor, usually.
+<GARY-S> is it relational ?
+<[doug] D.GARRETT> it can read ASCII .PRG files, Len, and run kinda as fast as 
+dBase...
+<[Len] NMORGENSTERN> FOXBASE is a DBASE clone. A few added features make
+<[Len] NMORGENSTERN> for more power. Both are relational.
+<[doug] D.GARRETT> and they provide a compiler to make a much faster object file
+<[doug] D.GARRETT> You can also get their runtime developers license (I did 
+several years ago)...
+<[doug] D.GARRETT> and distribute your object code and the runtime interpretter
+<[doug] D.GARRETT> But I reckon you oughta convert to Forth, rather than chase 
+down dBase alleys
+<[Len] NMORGENSTERN> Well, the idea is that there are a lot og DBASE programs
+<[Len] NMORGENSTERN> out there. If one could convert easily (not necessarily
+<[Len] NMORGENSTERN> mechanically) to Forth, you would have the base of
+<[Dennis] D.RUFFER> there are a lot of COBOL programs too, but does that mean I 
+want to translate them to Forth? ;)
+<[Len] NMORGENSTERN> (best that is) of all possible worlds.
+<[Len] NMORGENSTERN> Maybe it would be a good idea, Dennis.
+<[Dennis] D.RUFFER> maybe ;)
+<[Len] NMORGENSTERN> If it really made things better it would sell Forth!
+<GILES> It would keep u from havin to maintain COBOL programs, Dennis! (grin)
+<GARY-S> You do kknow MMS wrote their (A-T) RapidFile in Forth, don't you ?
+<[Len] NMORGENSTERN> Yes
+<[doug] D.GARRETT> Hmmm...
+<[Dennis] D.RUFFER> yes...last I heard they were looking for programmers to 
+maintain it
+<GARY-S> A-T or MMS
+<[Dennis] D.RUFFER> A-T
+<[Dennis] D.RUFFER> but then I also heard they were laying off people :(
+<GARY-S> Dickk had a couple of USSR expatriots, skilled in Forth, looking for 
+work - sounds like a pretty good fit
+<GILES> Oh, I meant to thiank u 4 pointin me to PYGMY, Len...
+<[Len] NMORGENSTERN> How do you like it?
+<GILES> It's just what I wanted....so easy to metacompile & all. (grin)
+<[Dennis] D.RUFFER> I knew someone who looked into the A-T deal...it was not 
+good..nor was it nessesarily permenant
+<GILES> It's GREAT!
+<[Len] NMORGENSTERN> Thanks for the info, Giles.
+<GARY-S> last shots - before I mail the notes ?????
+<GILES> Is Frank still around?
+<[Len] NMORGENSTERN> I have to download the newest version.
+<[Len] NMORGENSTERN> He sure is!
+<GARY-S> Yes - he just posted to the BBS two days ago
+<GILES> Well, I've gotta send im mail. (grin)
+=== End of Steno notes. ===
+
+

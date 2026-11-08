@@ -1,0 +1,81 @@
+
+Scr #   0
+ 0  ( fractal dragon curve  as implemented by t.a. coram
+ 1  
+ 2  this is a no-frills file of a non-recursive dragon curve.
+ 3  it will require a few modifications to run on your system.
+ 4  
+ 5  initt-graphics ( -- )  is your routine to set up graphics.
+ 6  
+ 7  draw ( x1,y1 x2,y2 -- ) draws a line between two points.
+ 8  
+ 9  adjust the initial value of length in find-length to scale
+10  your dragon.
+11  
+12  dragon values should be between 2 and 16 (even numbers).
+13  
+14  example:  16 dragon <cr>
+15  
+
+
+Scr #   1
+ 0  ( dragon curve - by todd a. coram last update 28jul86)
+ 1  ( look ma, no recursion! )
+ 2  variable length  variable x variable y  variable ox variable oy
+ 3  variable sn 25 allot     variable d     variable nc
+ 4  200 constant middle  ( middle of your screen )
+ 5  
+ 6  : sn@  sn + c@ ;  ( for array indexing.. )
+ 7  : sn!  sn + c! ;  ( for array indexing.. )
+ 8  : oldxy!  x @ y @  oy ! ox ! ;
+ 9  : oldxy@  ox @ oy @ ;
+10  
+11  : fill-array
+12     nc @ 1+  0 do 0 i sn! loop ;
+13  : find-length
+14     348 dup length !
+15     nc @ 1+ 1 do  2/ 2 +loop length ! ;
+
+
+Scr #   2
+ 0  ( dragon  page 2 )
+ 1  
+ 2  : find-d
+ 3     nc @ 1+ 1 do
+ 4           i sn@  i 1- sn@ = if 1 d -! else 1 d +! then
+ 5           d @ -1 = if 7 d ! else  d @ 8 =
+ 6                       if 0 d ! then then
+ 7      loop ;
+ 8  
+ 9  : find-xy
+10     d @  dup 0=  if length @ x +! else
+11          dup 2 = if length @ y +! else
+12          dup 4 = if length @ x -! else
+13          length @ y -!            then
+14          then then  drop ;
+15  
+
+
+Scr #   3
+ 0  ( dragon page 3)
+ 1  
+ 2  : xsearch#
+ 3     nc @  begin
+ 4             dup sn@ 2 <> if drop 0
+ 5                          else  dup 0 swap sn! dup dup 1- sn@
+ 6                                1+ swap 1- sn! 1- then
+ 7           dup 0= until drop ;
+ 8  
+ 9  : dragon ( nc -- )
+10     nc !  find-length  fill-array  middle x !  middle y !
+11     initt-graphics
+12     begin
+13       0 d !  find-d oldxy!  find-xy  x @ y @ oldxy@ draw
+14       nc @ sn@  1+ nc @ sn!  xsearch#
+15     0 sn@ 0 <> key? or until ;
+
+
+
+
+
+

@@ -1,0 +1,254 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+ 
+ Date: 11/17/88   Time: 21:48EST
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DWEINSTEIN]
+[[Jack Woehr] FIGCHAPTERS]
+[BJENNER]
+ 
+Items discussed: SigForth ACM is official, Unix and Forth, making big 
+                 cardboard boxes with NMI's little box
+Minutes:
+<[Dave] DHWEINSTEIN> It's Official! It's official!
+<[Gary] GARY-S> How long before I get my card !
+<[Gary] GARY-S> They cashed my check
+<[Dave] DHWEINSTEIN> 6-8 weeks
+<[Gary] GARY-S> I can stand that
+<[Dave] DHWEINSTEIN> They announced it!
+<[Dave] DHWEINSTEIN> Wheeeeeeeeeeeeeeeeeeeeeeeee!
+<[Dave] DHWEINSTEIN> (dances about the room)
+<[Gary] GARY-S> Wonder if ACM will retro a few CACM's ?
+<[Dave] DHWEINSTEIN> (realizes has enormous program do tomorrow that will not 
+get done...stoips dancing...frowns)
+<[Gary] GARY-S> I'd like the copy with the anouncement
+<[Dave] DHWEINSTEIN> It's only a paragraph or two, but it is the thought that 
+counts.
+<[Gary] GARY-S> Dave - explain for those who will be reading this in 1990
+<[Dave] DHWEINSTEIN> Someone will be reading *this* in 1990?
+<[Gary] GARY-S> What the hack - Jan 1989
+<[Dave] DHWEINSTEIN> (adopts narrator bass overtone) The ACM has formally 
+adopted SigFORTH as an official Special Interest Group, with all the powers,
+ benefits, and funny logos such as go with such a title. (legalese mode off)
+<[Gary] GARY-S> Think George would like to guest conference here to spread the 
+word ?
+<[Dave] DHWEINSTEIN> Ask him.
+<[Gary] GARY-S> Are you in communication with him ?
+<[Dave] DHWEINSTEIN> Not much.
+<[Gary] GARY-S> got a working number?
+<[Dave] DHWEINSTEIN> Send him a GEnie letter... g.shaw1
+<[Gary] GARY-S> still need the number if you've got it ...
+<[Gary] GARY-S> e-mail me
+<[Dave] DHWEINSTEIN> It's in the new CACM
+<[Gary] GARY-S> Which I don't have
+<[Dave] DHWEINSTEIN> It should be in a Library somewhere in Little Rock
+<[Gary] GARY-S> sigh
+<[Gary] GARY-S> You running under Unix ?
+<[Dave] DHWEINSTEIN> Or did they spend all the money on a football game?
+<[Dave] DHWEINSTEIN> err...team
+<[Gary] GARY-S> No - just that UALR is not that convenient to my home
+<[Gary] GARY-S> I thought you had the new CACM there - handy like
+<[Dave] DHWEINSTEIN> Naw, it's in my office.
+<[Dave] DHWEINSTEIN> On display...heh
+<[Gary] GARY-S> well - if you think about it e-mail me
+<[Gary] GARY-S> back to my Unix question
+<[Dave] DHWEINSTEIN> Shoot
+<[Dave] DHWEINSTEIN> (pulls on wizard's cap)
+<[Gary] GARY-S> do you use it on your home PC
+<[Dave] DHWEINSTEIN> No. I have a little Model 100, and an orphaned QL, neither 
+of which can run Unix (although the QL does Multitask)
+<[Gary] GARY-S> Interesting micros
+<[Dave] DHWEINSTEIN> (resists urge)
+<[Dave] DHWEINSTEIN> (awww....what the helll...you'll have to edit *anyway*)
+<[Gary] GARY-S> You know the ZX and 2068 had their OS's written in Forth, but I 
+don't think the QL does
+<[Dave] DHWEINSTEIN> I hate this assignment!
+<[Dave] DHWEINSTEIN> Nope, the QL is 32k of unbelievably tight hand optimized 
+assembly.
+<[Gary] GARY-S> Most don't know the others were written in Forth - by Steven 
+Vickers
+<[Dave] DHWEINSTEIN> Uhhh...considering Sincalir's reputation, I wouldn't use 
+that as a selling point for Forth... :-)
+<[Gary] GARY-S> There's a pretty neat Forth package for the QL - from the UK
+<[Dave] DHWEINSTEIN> This is an unbelievably weird assignment.
+<[Dave] DHWEINSTEIN> Yeah. But I may get a real machine next year. (I saw an 
+Amiga with 2.5 meg, monitor, two drives, for $800, but I didn't have the
+cash...it was used)
+<[Gary] GARY-S> Then it should be a natural for you ! :-)
+<[Dave] DHWEINSTEIN> Then I can get JForth
+<[Dave] DHWEINSTEIN> And the specs suck.
+<[Dave] DHWEINSTEIN> Sigh.
+<[Gary] GARY-S> I ask because Uni-Ops Books is selling some pretty powerful 
+Unix machines for good prices
+<[Dave] DHWEINSTEIN> sigh
+<[Gary] GARY-S> I wouldn't want to roll my own Forth on it (them) though
+<[Dave] DHWEINSTEIN> Naw. But if you have C, you can get Mitch Bradleys's Forth 
+written in C (ask Jax about it)
+<[Gary] GARY-S> why all the sighs ???
+<FIGCHAPTERS> is here.
+<[Dave] DHWEINSTEIN> This prgogram
+<[Dave] DHWEINSTEIN> Hulo...you keep finding new accounts Jax.
+<[Jack Woehr] FIGCHAPTERS> "program" ?
+<[Dave] DHWEINSTEIN> How is JForth 2.0?
+<[Dave] DHWEINSTEIN> Silly assignment that probably won't get done.
+<[Jack Woehr] FIGCHAPTERS> haven't seen it. Have Beta version, 1.3
+<[Jack Woehr] FIGCHAPTERS> Yes, I'm a one-man RT Support Network.
+<[Gary] GARY-S> Jax - tell me about Bradley's Forth under Unix
+<[Jack Woehr] FIGCHAPTERS> Where to begin ... :-)
+<[Jack Woehr] FIGCHAPTERS> What about Bradley's Forth under Unix? It is good.
+<[Dave] DHWEINSTEIN> (the beginning is a good spot Jax, it's traditional)
+<[Jack Woehr] FIGCHAPTERS> It reminds one more of an "emulator of the Forth 
+virtual machine" than Forth as We Know It, but it is a ...
+<[Jack Woehr] FIGCHAPTERS> heck of a shell!
+<[Gary] GARY-S> Chip dependent ? 68K I assume ?
+<[Jack Woehr] FIGCHAPTERS> nyet, tovarishch!
+<[Dave] DHWEINSTEIN> Nope. C code runs on anything with a C compiler.
+<[Jack Woehr] FIGCHAPTERS> is good portable (C)apitalist code.
+<[Jack Woehr] FIGCHAPTERS> I have it running on VAX 11/750.
+<[Dave] DHWEINSTEIN> (raises glass in toast to ACM)
+<[Gary] GARY-S> Well - I ask because someone is selling Unix machines fairly 
+reasonable
+<[Dave] DHWEINSTEIN> Be careful, see what it comes with. For example the AT&T 
+7300 does not even have a C compiler! You can get burned badly!
+<[Jack Woehr] FIGCHAPTERS> OH HEAVVINNS! THE UNIX "DEAL" from the SouthEast. 
+Somebody hold this guy's wallet till he calms down.
+<[Gary] GARY-S> Naw - I don't get in those dances
+<[Jack Woehr] FIGCHAPTERS> DO NOT buy it without the full backup for Unix & the 
+C Compiler. That should only set you back $1495
+<[Jack Woehr] FIGCHAPTERS> I looked into that. It was temptin.
+<[Jack Woehr] FIGCHAPTERS> but no.
+<[Jack Woehr] FIGCHAPTERS> PHBBBLLT!!!
+<[Dave] DHWEINSTEIN> !!!TLLBBBHP
+<[Jack Woehr] FIGCHAPTERS> You got it backwards as usual, Dave.
+<[Dave] DHWEINSTEIN> And, as usual, Jax, you can never look at anything from a 
+different point of view.
+<[Jack Woehr] FIGCHAPTERS> (-: oh yeah?
+<[Jack Woehr] FIGCHAPTERS> :-) see?
+<[Jack Woehr] FIGCHAPTERS> ^^^^^^^ More "Food Fight of Ideas"
+<[Jack Woehr] FIGCHAPTERS> Gary must have had a heart attack when i said 
+"$1495".
+<[Jack Woehr] FIGCHAPTERS> Hello?
+<[Gary] GARY-S> $595 for B
+<[Jack Woehr] FIGCHAPTERS> "B" ? no, BS.
+<[Gary] GARY-S> No - I'm reading ...
+<[Gary] GARY-S> get this...
+<[Jack Woehr] FIGCHAPTERS> I have got it.
+<[Jack Woehr] FIGCHAPTERS> That flyer.
+<[Jack Woehr] FIGCHAPTERS> I read it three months ago.
+<[Jack Woehr] FIGCHAPTERS> They still haven't sold them.
+<[Jack Woehr] FIGCHAPTERS> Makes you think, huh?
+<[Gary] GARY-S> $1150 for 7300, $595 for 10MB workstation, $495 for 'C'
+<[Jack Woehr] FIGCHAPTERS> right,,,, more like 2300
+<[Dave] DHWEINSTEIN> Without the C you have a useless machine.
+<[Jack Woehr] FIGCHAPTERS> you can get the thing w/ C for about 1495 I think, 
+if you get the right package.
+<[Dave] DHWEINSTEIN> And of course you cannot compile GCC without C.
+<[Gary] GARY-S> the workstation is NOT part of the 7300 deal - it's another 
+horse
+<[Jack Woehr] FIGCHAPTERS> The AT7300 is a great machine.
+<[Jack Woehr] FIGCHAPTERS> It should have sold better, except they saddled it 
+with Unix.
+<[Jack Woehr] FIGCHAPTERS> If it was easier to get docs for the ROM,
+<[Dave] DHWEINSTEIN> I know someone who has one and hates it.
+<[Jack Woehr] FIGCHAPTERS> It would be great JSR ForthStation.
+<[Jack Woehr] FIGCHAPTERS> Put JForth on it and F-L-Y.
+<[Jack Woehr] FIGCHAPTERS> ( 68010 ).
+<[Jack Woehr] FIGCHAPTERS> Woof!
+<[Gary] GARY-S> yes
+<[Jack Woehr] FIGCHAPTERS> It was a marketing mistake by AT&T
+<[Gary] GARY-S> this same place sells a 386 Unix machine
+<[Dave] DHWEINSTEIN> Huhuh...how much?
+<[Gary] GARY-S> Depends on the bundeling... yes they bundle
+<[Gary] GARY-S> Hell - get the catalog
+<[Gary] GARY-S> want the address ?
+<[Dave] DHWEINSTEIN> Naah...I don't hve the cash anyway
+<[Gary] GARY-S> Uni-Ops, 195 Mountain View Rd, Boonville, CA  95415-0650
+<[Gary] GARY-S> ph : 707/895-2050
+<[Dave] DHWEINSTEIN> Those two words pop up everywhere.
+<[Jack Woehr] FIGCHAPTERS> ????? The place in Georgia was cheaper.
+<[Gary] GARY-S> Who in GA -
+<[Dave] DHWEINSTEIN> #4C
+<[Dave] DHWEINSTEIN> disconnected.
+<[Jack Woehr] FIGCHAPTERS> What was their name, Dave? They are the people who 
+started that
+<[Jack Woehr] FIGCHAPTERS> oops.
+<[Jack Woehr] FIGCHAPTERS> I should have known.,
+<[Gary] GARY-S> Wonder what #4C means ?
+<[Jack Woehr] FIGCHAPTERS> Dave turns into a pumpkin every thrusday around this 
+time
+<[Gary] GARY-S> He came on early to puff about sigForth ACM
+<[Jack Woehr] FIGCHAPTERS> Oh, well, the people in GA wanted $595 for the 
+AT&T7300 + Unix, no backups
+<[Jack Woehr] FIGCHAPTERS> ~$1495 for a *real* system.
+<[Gary] GARY-S> No software, though
+<[Jack Woehr] FIGCHAPTERS> hmmm ... I may have their name @ work
+<[Jack Woehr] FIGCHAPTERS> foo.
+<[Gary] GARY-S> what did you just foo
+<[Jack Woehr] FIGCHAPTERS> Well, I guess that this has wound down early. Want 
+to turn the steno off ( that was just a general-purpose foo).
+<BJENNER> hi
+<[Jack Woehr] FIGCHAPTERS> what's hopping tonite, BJ?
+<[Gary] GARY-S> What's up Bjenner
+<BJENNER> just browsing, first time here
+<[Gary] GARY-S> You use Forth any ?
+<BJENNER> bread and butter
+<BJENNER> and you
+<[Jack Woehr] FIGCHAPTERS> what hardware/dialect
+<[Jack Woehr] FIGCHAPTERS> ..?
+<[Gary] GARY-S> B J - doin' what ? and welcome home
+<[Jack Woehr] FIGCHAPTERS> <<< real time control
+<BJENNER> pc/std bus/lmi/68hc11
+<[Jack Woehr] FIGCHAPTERS> sounds like a load of laughs. What Company?
+<BJENNER> solo
+<[Gary] GARY-S> What do you Simple To Design bus up to in ME ?
+<BJENNER> been fortunate; lots of things.  lately, a cardboard carton folder
+<BJENNER> which has been fun.  now 3 connected cpus and headed for 6
+<BJENNER> how about you ?
+<BJENNER> going to the rtc programmers' contest?
+<[Jack Woehr] FIGCHAPTERS> how did you settle on MC68HC11? Because there was an 
+STD board for that chip + Forth?
+<BJENNER> oh - nope.  the hc11 i'm using is on a single board, from new micros, 
+with
+<BJENNER> their forth onboard.  it's a handy little package for embedded 
+controller
+<[Gary] GARY-S> This for H Int'l ?
+<BJENNER> no, it's a chemical analyzer for a company in boston.
+<BJENNER> combo job; database / user interface on the pc,
+<[Jack Woehr] FIGCHAPTERS> I work at VESTA TECHNOLOGY in Denver. We make SBC's 
+based on 8088, 80188, 68000.
+<BJENNER> talking to the hc11 board in the analyzer
+<[Gary] GARY-S> I ask because there are some pretty serious paper handling 
+companies in Maine
+<[Jack Woehr] FIGCHAPTERS> ...& program same if customer so desires.
+<BJENNER> hello, vesta; i get mail and ads from you guys.  havn't bought yet, tho
+<BJENNER> yup, lots of paper companies; this box folder
+<[Jack Woehr] FIGCHAPTERS> yo! try our BBS @ 303 278 0364
+<BJENNER> is made by a company in nh,tho.  they ship int'l, which is fun
+<BJENNER> say again bbs #, please
+<[Jack Woehr] FIGCHAPTERS> <<< fingers under control now ....
+<[Gary] GARY-S> Well - it's good to have you here on GEnie -...
+<[Jack Woehr] FIGCHAPTERS> RCFB (303) 278-0364 300/1200 8-n-1
+<[Jack Woehr] FIGCHAPTERS> 24 hrs running PCBOARD
+<BJENNER> thanks.  nice being here.
+<[Gary] GARY-S> try to upload any non-proprietary goodies into the library...
+<[Gary] GARY-S> uploads are free time
+<BJENNER> bye for now; actually we're just browsing through
+<BJENNER> and the other here wants to look around.
+<BJENNER> i'll be back...
+<[Gary] GARY-S> well you are more than welcome - thanks for stopping by
+<[Jack Woehr] FIGCHAPTERS> later!
+<BJENNER> i'll look at the library here.
+<[Gary] GARY-S> please do
+<BJENNER> i usually check into the lmi bbs, though
+<BJENNER> bye for now
+<[Gary] GARY-S> Hi to Ray and Ron for me
+<[Gary] GARY-S> nice to get a new face occassionally - right ?
+<[Jack Woehr] FIGCHAPTERS> well, are we closing early tonite?
+<[Jack Woehr] FIGCHAPTERS> ( new face? you mean new font? :-)
+<[Gary] GARY-S> yes - before Genie screws the notes
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,273 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 07/12/90   Time: 22:32EDT
+   
+     The question of the night (in preperation for next weeks guest conference)
+     'Have you used the SC32 or SBC32 ?'. Other items discussed include NASA,
+     COSMIC,Kitts Peak VAX Forth,Johns-Hopkins,signed carry,+LOOP,LOOP,DIVIDE,
+     inverted borrow,STICKY BIT,FOR/NEXT
+
+Attendees:
+[GARY-S]
+[[Kevin] APPERT]
+[[Robert] R.BERKEY]
+[[Hail, Denver] JAX]
+
+Minutes:
+<[Kevin] APPERT> is here
+<GARY-S> did you see my notice just now ?
+<[Kevin] APPERT> didn't see anything on the door
+<GARY-S> I just posted it - to wit, have you used Silicon Composer's SBC32
+<[Kevin] APPERT> nope.  I know Jax had the hots for it a while back
+<GARY-S> George Nicol is next weeks guest
+<[Kevin] APPERT> is this the Silicon Composer's (APL) chip, or Harris?
+<GARY-S> APL
+<GARY-S> You 'just' missed George as a matter of fact
+<GARY-S> We have a BUSY August working
+<[Kevin] APPERT> I've heard great things about the APL chip.  I hope the design 
+has reached maturity
+<GARY-S> It is my understanding SC and J-H have done some nice clean-up
+<R.BERKEY> is here.
+<[Kevin] APPERT> I would guess mostly at the Johns-Hopkins end.   I don't think 
+Silicon composers has the resoures for didling on the silicon level.
+<[Robert] R.BERKEY> What new from Scott Squires?
+<GARY-S> Have not heard from Scott in  l-o-n-g time
+<GARY-S> Apparently the diddling was mostly done at the foundry
+<GARY-S> (mostek ?)
+<[Kevin] APPERT> I don't think it's Mostek
+<[Kevin] APPERT> maybe we can ask George...
+<GARY-S> sure - that would be a good question, plus the evolution since John 
+hayes and Marty Fraeman were guests
+<[Kevin] APPERT> is he still producing onsites (x-ray litho) or did he buy a 
+batch?
+<GARY-S> I really don't know, kevin
+<[Kevin] APPERT> I bet you could call them up and get their design for media 
+cost.  you paid for it, after all
+<GARY-S> How did I pay for it ?
+<[Kevin] APPERT> tax $
+<GARY-S> I pay for the street in front of my house too, but I bet I'd play hell 
+helping myself to a chunk of it
+<[Kevin] APPERT> you can get Kitt Peak Vax Forth for the cost of sending Kitt 
+Peak a blank tape
+<[Kevin] APPERT> (let me know if anybody wants to do that, by the way)...
+<[Kevin] APPERT> only at NASA do they want you to pay twice...
+<[Kevin] APPERT> once with tax dollars, and then again with lisence fees and so 
+on...
+<[Kevin] APPERT> if you want to use the technology you have already paid for.
+<GARY-S> Do you guys receive COSMIC tapes from NASA ?
+<[Kevin] APPERT> we use COSMIC NASTRAN...
+<[Kevin] APPERT> the most expensive 'public domain' software in history.
+<GARY-S> Is anything worth while in it ?
+<[Robert] R.BERKEY> Any features missing you'd like to see in the chips?
+<[Robert] R.BERKEY> I know I would like a signed carry bit.
+<GARY-S> Robert, which chip ? the SC32, RTX ? Both ?
+<[Robert] R.BERKEY> If someone were to get a copy, what would they have?
+<[Kevin] APPERT> yes, when it's a customer requirement that finite element 
+models be delivered in NASTRAN format, it's worthwhile (customer=NASA)
+<[Kevin] APPERT> I'd like them all to be cheaper, and available in 
+CLASS-S/Rad-hard etc.
+<[Robert] R.BERKEY> What's CLASS-S?
+<[Kevin] APPERT> space qualified
+<[Robert] R.BERKEY> Gary, a general question--any of the chips.
+<GARY-S> signed carry isn't a given ?
+<[Robert] R.BERKEY> For one, it's what +LOOP needs.  I think it's the XOR of the
+<[Robert] R.BERKEY> sign of the subtrahend and the carry.  The carry bit is 
+clearly an
+<[Robert] R.BERKEY> unsigned bit.
+<[Robert] R.BERKEY> The original Hayes design I thought was that way.
+<GARY-S> Obviously, I don't use the chip, but I'm amazed signed carry is not 
+present..
+<GARY-S> it was even available on the 8-bit general uP's
+<[Robert] R.BERKEY> What I'm thinking of has the same properties as overflow, 
+bit occurs
+<[Robert] R.BERKEY> at the transition between -1 and 0.
+<JAX> is here.
+<GARY-S> I understand carry
+<[Robert] R.BERKEY> For some reason I keep running into it--over and over.
+<[Robert] R.BERKEY> BASE LOOP /
+<[Robert] R.BERKEY> And it's not in the Intel 80x8x family.
+<[Robert] R.BERKEY> Which is why +LOOP implementations use the overflow bit.
+<[Hail, Denver] JAX> You shoulda seen the hail! Flooded my office, busted my 
+hatchback and did $1500 worth of body damage to my Mazda!
+<[Kevin] APPERT> are you insured?  when was this?
+<[Hail, Denver] JAX> On the 80196, the carry bit is inverted for borrow.
+<GARY-S> Saw a friend's Mazda after a trip through South Dakota hail, looked 
+like the test base at a ball-peen hammer factory
+<[Hail, Denver] JAX> Exactly, gars. It was yesterday, Kev, read this morning's 
+papers!
+<[Kevin] APPERT> BBC Newsreal didn't mention it
+<[Hail, Denver] JAX> Hail the size of baseballs. The biggest I saw was golfball 
+size.
+<GARY-S> Jax - did you ever play with SC32/SBC32, George Nicol is next week's 
+guest
+<[Robert] R.BERKEY> JAX do you see the borrow, or inverted carry as useful?
+<[Robert] R.BERKEY> I know this is something of confusion on 80x8x.
+<[Hail, Denver] JAX> I wrote an assembler for Sc32, SCASM.ZOO here on GEnie.
+<[Hail, Denver] JAX> John R. Hayes mailed me his (superior) assembler for it.
+<[Hail, Denver] JAX> Bob ...
+<[Hail, Denver] JAX> I am not the integer math wiz you are ... BUT!!!!!!!!!!!!!!
+!!
+<[Hail, Denver] JAX> I have checked out what you said about INTEGER MATH ...
+<[Hail, Denver] JAX> DIVIDE ...
+<[Hail, Denver] JAX> and you are right. 5 -3 / is *indeed -2 with a modulus of 
+2.
+<[Hail, Denver] JAX> ( um, did I get the modulus right? :-) )
+<[Robert] R.BERKEY> Since I haven't run into the inverted borrow, I don't know, 
+but I'd
+<[Robert] R.BERKEY> probably like it, although I might then want a reversed 
+subtract.
+<[Hail, Denver] JAX> 80196 has a STICKY BIT ... meaning ...
+<[Robert] R.BERKEY> 5 -3 / is  2 rem -1
+<[Hail, Denver] JAX> that during a shift a bit went into CARRY and left again ..
+<[Hail, Denver] JAX> helps in rounding.
+<[Robert] R.BERKEY> Er, -2 rem -1
+<[Hail, Denver] JAX> right.
+<[Robert] R.BERKEY> STICKY BIT sounds like something they use in floating point 
+processors.
+<[Hail, Denver] JAX> Same use .../
+<[Robert] R.BERKEY> STICKY GUARD and ROUND.
+<[Robert] R.BERKEY> What kind of rounding is it for?
+<[Hail, Denver] JAX> 80196 has instructions that help in implementing software 
+FP
+<[Hail, Denver] JAX> 1/2 bit rouding of A/D for instance.
+<[Hail, Denver] JAX> if you round 12 bits to eight, for instance ...
+<[Hail, Denver] JAX> and the carry bit is set and the sticky bit is set, you 
+know that it was >50% remainder.
+<[Hail, Denver] JAX> if carry is set, no sticky, it's 50% ...
+<[Hail, Denver] JAX> sticky, no carry, 50% > remainder > 0%
+<[Hail, Denver] JAX> no carry, no sticky, r == 0%
+<[Robert] R.BERKEY> So, you'd never see it in a single shift then?
+<[Hail, Denver] JAX> i think you have to reset it yourself if you want to use 
+it.
+<[Hail, Denver] JAX> with POPF or POPA.
+<[Hail, Denver] JAX> There's also a VT flag, oVerflow Trap.
+<[Hail, Denver] JAX> You reset it, if there is an overflow, it sticks set.
+<[Robert] R.BERKEY> I think a line got lost--sticky seems to be an imprecise 
+indicator.
+<[Hail, Denver] JAX> Helps in long calcs where all you want to know is if 
+overflow *ever* occurred.
+<[Hail, Denver] JAX> So Bob, what is most efficient way to implement DO LOOP on 
+such a 16-banger?
+<[Robert] R.BERKEY> LOOP is never a problem.  It's +LOOP .
+<[Hail, Denver] JAX> why is LOOP never a prob?
+<[Hail, Denver] JAX> And tell me about +LOOP
+<[Robert] R.BERKEY> because the carry bit detects end-of-loop.
+<[Robert] R.BERKEY> +LOOP is a signed increment, but carry is only detecting 
+unsigned
+<[Robert] R.BERKEY> increments.
+<[Hail, Denver] JAX> if you set up your base indices to be +8000
+<[Robert] R.BERKEY> The usual approach is to use the overflow bit.
+<[Hail, Denver] JAX> then carry detects a "" 1 +LOOP "" correctly, you say?
+<[Hail, Denver] JAX> which is what LOOP means, right?
+<[Hail, Denver] JAX> so V flag for detecting rolls past 0x8000?
+<[Robert] R.BERKEY> If that's not available I forget off of the top of my head, 
+but
+<[Robert] R.BERKEY> the code is in the 8080 F83.
+<[Hail, Denver] JAX> Never again! (8080) :-)
+<[Robert] R.BERKEY> The carry implementation is why the text for NEXT is 
+incorrect in BASIS.
+<[Hail, Denver] JAX> woof?
+<GARY-S> hmmm
+<[Hail, Denver] JAX> (reaching for BASIS
+<[Robert] R.BERKEY> They imply you must test for a result.
+<[Robert] R.BERKEY> A result of zero, which is usually less efficient, as 
+adding an increment
+<[Robert] R.BERKEY> of one will have already done the test.
+<[Robert] R.BERKEY> Or subtracting a one depending on how you implement it.
+<[Hail, Denver] JAX> "If the current (innermost) loop index is zero, discard 
+the loop control parameters and execute the words following NEXT. Otherwi
+se, decrement the index and execute the words between FOR and NEXT.
+<[Robert] R.BERKEY> Why is ANS insisting on  I  working with NEXT .
+<[Hail, Denver] JAX> Maybe the mistake ks in not specifying that NEXT counts 
+down?
+<[Robert] R.BERKEY> Yeah, I guess I could ignore that text and not be overly 
+worried.
+<[Hail, Denver] JAX> Wait, the text for FOR specifies.
+<[Hail, Denver] JAX> " ... Begin a loop which terminates based on control 
+paramters. The loop index begins at  u  and terminates based on the limit
+0   .
+<[Hail, Denver] JAX> Clear enough.
+<[Hail, Denver] JAX> What's the prob? Easy to implement.   I   is a compiler 
+word, anyway.
+<[Hail, Denver] JAX> On *most* modern micros ...
+<[Robert] R.BERKEY> The problem is implementing both FOR NEXT and DO LOOP on 
+one system.
+<[Hail, Denver] JAX> FOR ... NEXT makes *perfect* sense.
+<[Robert] R.BERKEY> But those two I's are not necessarily the same.
+<[Hail, Denver] JAX> I thought that at first, bob, but no biggus dealus.
+<[Robert] R.BERKEY> If the compiler is used, then you must play some games.
+<[Robert] R.BERKEY> It's doable, but since programmers don't like I with FOR 
+NEXT anyway,
+<[Robert] R.BERKEY> and other FOR NEXT programmers have already come up with -I 
+ , I don't
+<[Robert] R.BERKEY> understand why ANS rejected my proposal to not require I .
+<[Hail, Denver] JAX> : I STATE @ NOT ABORT" Compile only" DUP FOR-FLAG? IF 
+FOR-I ELSE DO-FLAG? IF DO-I ELSE ABORT" Loop Control Error" THEN THEN ; IMM
+EDIATE
+<[Robert] R.BERKEY> I thought maybe you were there and knew the discussion.
+<[Hail, Denver] JAX> ( forgot the TRUE before the second ABORT" )
+<[Hail, Denver] JAX> ( forgot the DUP before the DO-FLAG? )
+<[Robert] R.BERKEY> You still must save and restore the state of FOR-FLAG?
+<[Hail, Denver] JAX> NO!
+<[Hail, Denver] JAX> just don't use FFFF for every darn compiler control flag!
+<[Robert] R.BERKEY> You going to allow nested loops?
+<[Robert] R.BERKEY> FOR  I  DO   I LOOP I NEXT
+<[Hail, Denver] JAX> You generate a DO or FOR , use two *different* compiler 
+security flags than the BRANCH compiler security flag.
+<[Hail, Denver] JAX> FOR I DO I LOOP I NEXT would work just peachy.
+<[Robert] R.BERKEY> That requires another stack to hold the compiler security, 
+as
+<[Hail, Denver] JAX> NOPE!
+<[Robert] R.BERKEY> ANS allows programs to manage the parameter stack to some 
+extent.
+<[Hail, Denver] JAX> Look, every time you generate a DO ... LOOP, you have 
+tossed a compiler security flag on the stack (in many implementations).
+<[Robert] R.BERKEY> Maybe I'm missing something.  I'll take another look at 
+your comments.
+<[Hail, Denver] JAX> I'm just saying, use these security flags a bit more 
+cleverly.
+<[Hail, Denver] JAX> FFFF constant BRANCH-FLAG BFFF constant DO-FLAG 7FFF 
+constant FOR-FLAG.
+<[Hail, Denver] JAX> then your normal vanilla L&P style compiler security 
+*also* insures the correct   I   gets compiled.
+<[Hail, Denver] JAX> You might argue that this weakens compiler security  ...
+<[Hail, Denver] JAX> But *sheesh*, how "secure" is a -1 flag for a compiler 
+security flag, esp. when used by *every* control construct!?!?!?! :-)
+<[Hail, Denver] JAX> I mean, in some systems,   IF ... LOOP will compile!
+<[Hail, Denver] JAX> ((((( BOOM )))))
+<[Robert] R.BERKEY> I just noticed that FOR NEXT has "sys" on the stack.
+<[Hail, Denver] JAX> "buf of courz, m'sieu"
+<[Robert] R.BERKEY> That allows implementations some more options there, while
+<[Robert] R.BERKEY> disallowing branches out of FOR NEXT loops.
+<[Robert] R.BERKEY> DO LOOP is  "dest" so that means that there is only one item
+<[Hail, Denver] JAX> Well, that's a poor description of DO ... LOOP then.
+<[Robert] R.BERKEY> on the stack.
+<[Hail, Denver] JAX> There oughta be   SYS   there.
+<[Robert] R.BERKEY> Which means that DO LOOP security must go elsewhere.
+<[Hail, Denver] JAX> I'll try to remember to mention that at Vancouver.
+<[Robert] R.BERKEY> But if you make DO "sys" then you can't program
+<[Robert] R.BERKEY> DO   WHILE   LOOP   ELSE   THEN    ( add an UNLOOP 
+somewhere )
+<[Hail, Denver] JAX> the 11th commandment: ( after "thou shalt not pick ...) :
+<[Hail, Denver] JAX> THOU SHALT NOT UNLOOP!
+<[Hail, Denver] JAX>  :-)
+<[Robert] R.BERKEY> Huh? What wrong with UNLOOP ?
+<[Robert] R.BERKEY> Why does X3.J14 want I to be defined with FOR NEXT ?
+<[Robert] R.BERKEY> That another one of the points.
+<[Robert] R.BERKEY> JAX, a question I asked earlier--any features you'd like to
+<[Robert] R.BERKEY> see on the chips George Nichols will be discussing soon?
+<[Hail, Denver] JAX> excuse, I was discussing Gogol with my son!
+<[Robert] R.BERKEY> But not googol?
+<[Hail, Denver] JAX> My thoughts on SC32, etc. ....
+<[Hail, Denver] JAX> will be contained in my Sept. article for ESP magazine ...
+<[Hail, Denver] JAX> presuming they publish that article!
+<[Hail, Denver] JAX>  :-)
+<[Hail, Denver] JAX> What's up, GARS ... bwana mighty quiet tonite.
+<GARY-S> didn't care to interrupt an interesting exchange
+<GARY-S> Any last thoughts
+======= End of Steno notes ======
+
+

@@ -1,0 +1,446 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 01/04/90   Time: 22:48EST
+
+Attendees:
+[[Gary] GARY-S]
+[[Kevin] APPERT]
+[[Wil] W.BADEN1]
+[[Len] NMORGENSTERN]
+[[Doug] D.PHILIPS2]
+[[Virgil] V.STAMPS]
+[C.WEIMANN1]
+    Items discussed:'Cukoo's Egg' hacker book,eduforth >pygmy/tile/fpc, 
+    ForthNet,compression glitch,Zen tracking BASIS (?),BASIS on line <Ha!>, 
+    X3/J14, E.Rather conf,observer status,Chess door on RCFB,control 
+    constructs,loops,pseudo (A) stacks,closures,syntax,multitasking... 
+Minutes:
+<APPERT> is here.
+<[Gary] GARY-S> Hi Kev - just posting the notice
+<[Gary] GARY-S> just got in from the boonies
+<[Kevin] APPERT> just got home from work myself.  I usually get here a few min. 
+late
+<[Wil] W.BADEN1> is here.
+<[Kevin] APPERT> what boonies?  why?
+<[Gary] GARY-S> Arkansas does have some remote areas - they also have equipment 
+requiring service
+<D.PHILIPS2> is here.
+<[Gary] GARY-S> JUST got your e-mail, was glad to see the one from Ted
+<D.PHILIPS2> Yup.  Me too.
+<[Gary] GARY-S> sorry bout the semi-private conversation folks - has to do with 
+Doug's Usenet ports
+<[Doug] D.PHILIPS2> So what's up tonight?
+<[Kevin] APPERT> has anybody seen "Cookoo's Egg" (the book)  I'm most of the 
+way thru it.  I've found it entertaining.
+<[Wil] W.BADEN1> By whom?
+<[Gary] GARY-S> Doug - if you still have those post Ted's in 14-8 and Lee's in 
+14-6
+<[Kevin] APPERT> hold one, will.  I'll look
+<[Doug] D.PHILIPS2> Technojargon parse failure on message from Gary, please 
+respecify
+<[Kevin] APPERT> Clifford Stoll
+<[Wil] W.BADEN1> Subject?
+<[Gary] GARY-S> wot's it about ???
+<[Kevin] APPERT> oh, doug.  Why didn't you just say "message 42"?
+<[Kevin] APPERT> the internet hacker who raided LBL for a couple of years...
+<[Wil] W.BADEN1> Ah. I read a review.
+<[Kevin] APPERT> It was written up in ACM a while ago
+<[Doug] D.PHILIPS2> But I can't say Sylvester, George.
+<[Kevin] APPERT> nothing awe-inspiring technically, but enjoyable and very 
+human...
+<[Kevin] APPERT> the author has this guy dead to rights for about a year, but 
+can't get the authorities to cooperate.
+<[Gary] GARY-S> wil - how goes your eduforth project - or is that dead
+<FIGCHAPTERS> is here.
+<[Wil] W.BADEN1> I'm waiting to see outcome of pygmy, tile, fpc.
+<[Kevin] APPERT> are you compliant with the proposed ANSII standard, Jax?
+<[Doug] D.PHILIPS2> What we have here is a failure to communicate!
+<[jaX3J14] FIGCHAPTERS> Only when heated over a bunsen burner! ( Hi Wil)
+<[Gary] GARY-S> did you say tile ????
+<NMORGENSTERN> is here.
+<[Wil] W.BADEN1> (The orthographic regulator is broken.)
+<[Kevin] APPERT> what did the reviewer have to say about "Cuckoo's Egg", Wil?
+<[Gary] GARY-S> I'm serious wil - would you like me to post tile ?
+<[Wil] W.BADEN1> Just summarized the story, making the same point you did.
+<[Wil] W.BADEN1> Yes.
+<[Gary] GARY-S> It is 9 rather long files if I do not use Unix compression 
+formats (tar.Z)
+<[Wil] W.BADEN1> Jax, tell us your good news.
+<[jaX3J14] FIGCHAPTERS> Plane ticket bought to La Jolla!
+<[Gary] GARY-S> super !
+<[Kevin] APPERT> what is tile?
+<[jaX3J14] FIGCHAPTERS> <<< Expense account, too!
+<[jaX3J14] FIGCHAPTERS> Tile is a SUN-Forth
+<[Wil] W.BADEN1> Gary, I don't mind that.  What makes me unhappy is spending 1 
+1/4 hours down-
+<[Gary] GARY-S> tile is Mikael Patel's public domain f83 in C
+<[Wil] W.BADEN1> loading PERL and not being able to decompress.
+<[Wil] W.BADEN1> Gary, is TILE worth looking at?
+<[jaX3J14] FIGCHAPTERS> ((( jaxforgits ... what is PERL? )
+<[Gary] GARY-S> awk clone jax
+<[Len] NMORGENSTERN> Jax What's in San Diego, besides weather that's nicer than 
+Colorado in January?
+<[Gary] GARY-S> damn right it is, wil
+<[jaX3J14] FIGCHAPTERS> ANSI!
+<[Wil] W.BADEN1> Unix utility.
+<[Len] NMORGENSTERN> Aah!
+<[jaX3J14] FIGCHAPTERS> aha
+<[Gary] GARY-S> Dave ported it to BSD and it compiled without a glitch
+<[jaX3J14] FIGCHAPTERS> Tile or PERL?
+<[Gary] GARY-S> TILE
+<[jaX3J14] FIGCHAPTERS> Good, send me copy. I can't make the darn thing compile.
+<[Gary] GARY-S> PERL is Larry wall's AWK, SED clone
+<[Len] NMORGENSTERN> pmi, what does AWK stand for?
+<[jaX3J14] FIGCHAPTERS> Aho Weinberger Kernighan
+<[Gary] GARY-S> it's in the Unix RT (page 160) in both zoo and tar.Z formats jax
+<[Wil] W.BADEN1> Both my Mac de-arcers said file was corrupted.
+<[Gary] GARY-S> know why ? xmodem padding
+<[Gary] GARY-S> it'll still run
+<[Kevin] APPERT> awfully wobbley kode
+<[Len] NMORGENSTERN> Where do you get a de-arcer for the MAC. I have been
+<[Len] NMORGENSTERN> moving files to PC and back!
+<[Wil] W.BADEN1> Perl 1 had parts 01 and 02.
+<[Kevin] APPERT> my favorite is GREP (godawfull rediculous expession parser)
+<[Gary] GARY-S> xmodem pads to the next 128 (or 1K) increment and this makes 
+the CRC  check fail, but the file should still be good - filter it through 
+an editor, Wil
+<[Wil] W.BADEN1> There are 3 on GEnie.  The 2 that work are MacArc and ArcPop.
+<[jaX3J14] FIGCHAPTERS> just downloaded the PKZIP for Amiga! WOW!
+<[Len] NMORGENSTERN> Thanx, Wil
+<[jaX3J14] FIGCHAPTERS> Plitty Snezzy.
+<[Wil] W.BADEN1> The Mac ZOO dearcer duznt work (for me).
+<[jaX3J14] FIGCHAPTERS> Well, you gotta use it on ZOO files, Wil!
+<[jaX3J14] FIGCHAPTERS> Get my mail yet today?
+<[Wil] W.BADEN1> (I did.)
+<[Doug] D.PHILIPS2> Que Pasa?
+<[Gary] GARY-S> nada
+<[jaX3J14] FIGCHAPTERS> I think you are so succesful on the net they are about 
+to lynch you  :-)
+<[Gary] GARY-S> whom ?
+<[jaX3J14] FIGCHAPTERS> Doug
+<[Doug] D.PHILIPS2> Yes?
+<[Doug] D.PHILIPS2> To Where did you send the mail?
+<[jaX3J14] FIGCHAPTERS> To youm.
+<[Doug] D.PHILIPS2> On GEnie?
+<[jaX3J14] FIGCHAPTERS> uucp.
+<[jaX3J14] FIGCHAPTERS> about an hour ago.
+<[Doug] D.PHILIPS2> Aha, no, I haven't gotten it yet, but I've been busy 
+preparing
+<[Gary] GARY-S> sei!willet!dwp works for me- the others do NOT
+<[Doug] D.PHILIPS2> ForthNet article batches so I haven't been polling
+<[Doug] D.PHILIPS2> my neighbors regularly.
+<C.WEIMANN1> is here.
+<[Doug] D.PHILIPS2> BTW:  How recent is the ANS forth stuff in the GEnie 
+libraries?
+<[Gary] GARY-S> it's all dated
+<[jaX3J14] FIGCHAPTERS> Good question, Doug! Martin Tracy promised ZEN190 but 
+we are only up to ZEN160
+<[Kevin] APPERT> got a call from a fellow at my company today wanting t put 
+some ADA code in PROM.   I gave him a bit of a hard time about the probable 
+size.  He thought it would increase his perfomance at run time to have the 
+code in PROM...
+<[Doug] D.PHILIPS2> Is ZEN an implementation or a standard?
+<R.BERKEY> is here.
+<[jaX3J14] FIGCHAPTERS> Kevin ... <<laugh>>
+<[Len] NMORGENSTERN> I believe that Zen is Martin Tracy's attempt...
+<[Kevin] APPERT> it's great to know there are dedicated skilled professionals 
+working with ADA...
+<[Len] NMORGENSTERN> to write a Forth as small as possible that includes 
+everything...
+<[jaX3J14] FIGCHAPTERS> Hi C.WEIMANN1 ... how's Tom's River ... And Seaside Hts.
+?
+<[Len] NMORGENSTERN> in the latest draft standard.
+<[Kevin] APPERT> (i.e. those who don't know any better)
+<[Doug] D.PHILIPS2> So ZEN is supposed to be tracking the standard?
+<C.WEIMANN1> HI JAX TOMS RIVER IS FINE AND SEASIDE WAS GREAT ON NEW YEARS
+<[jaX3J14] FIGCHAPTERS> Yes, Doug, more or less.
+<[Len] NMORGENSTERN> I believe so.
+<[Gary] GARY-S> why are you shouting ?
+<[Kevin] APPERT> never fixed nona dem japaneese trans-miss-eons
+<[Doug] D.PHILIPS2> But is there a copy of the standard itself on line?
+<[Gary] GARY-S> NO !
+<[jaX3J14] FIGCHAPTERS> GOOD QUESTION DOUG.
+<[Wil] W.BADEN1> (Silence.)
+<[Doug] D.PHILIPS2> ARRRRRRRRRRRRRRGGGGGGGGGGGGGGG!!!!!!!!!!
+<[jaX3J14] FIGCHAPTERS>  /\/\/\/\/\/\/\ ask him
+<[Gary] GARY-S> leave it alone ! now you'll wind jax up again
+<[Kevin] APPERT> and me.  don't forget me.
+<[jaX3J14] FIGCHAPTERS> Can't, my mainspring is sprung, besides, I promised Wil 
+I'd be nice if they let me in the room without a leash.
+<[Gary] GARY-S> Ohhhh - all right , you can ask Kevin
+<[Doug] D.PHILIPS2> Don't tell me this is the ANS fear of losing income from 
+selling printed
+<[Doug] D.PHILIPS2> copy BS again!
+<[jaX3J14] FIGCHAPTERS> This guy is Psychic!
+<[Kevin] APPERT> no, they are 1) afraid somebody will modify it
+<[Gary] GARY-S> scares you, huh ?
+<[Kevin] APPERT> 2) don't want to do without the pritty formatting
+<[jaX3J14] FIGCHAPTERS> Spooky.
+<[Kevin] APPERT> 3) have their heads firmly inserted up their you know whats
+<[Doug] D.PHILIPS2> Same BS happening with X3J11.  Inexcusable, but somewhat 
+understandable.
+<[Doug] D.PHILIPS2> BTW:  Pardon my ignorance, but is X3J14 having public 
+reviews, and if so, how many have happened already?
+<[Gary] GARY-S> not yet
+<[Kevin] APPERT> what's x3j11, doug?
+<[Gary] GARY-S>'c'
+<[Doug] D.PHILIPS2> X3J11 is the ANS 'C' effort
+<[Wil] W.BADEN1> No, not yet.  ANS not yet decided.
+<[Kevin] APPERT> well, at least they don't have to try to standardize anarchy
+<R.BERKEY> I thought x3j11 was in 5 year hibernation.
+<[Doug] D.PHILIPS2> Is it decided in advance how many reviews there will be?
+<[Kevin] APPERT> until the complaints die down, Doug
+<[Kevin] APPERT> this could be a lloooooooooong time
+<[Doug] D.PHILIPS2> Or the committee gets good and tired.
+<[Kevin] APPERT> they have to answer ALL the questions, comments, and criticisms
+<[Kevin] APPERT> regardless of being tired or not
+<[Doug] D.PHILIPS2> Does X3J14 have observer status memberships?
+<[Kevin] APPERT> just show up
+<[Wil] W.BADEN1> Yes.
+<[Len] NMORGENSTERN> Anyone can attend the "technical subcommittee"
+<[Wil] W.BADEN1> But as Kev just said, just show up.
+<[jaX3J14] FIGCHAPTERS> We're planning on calling it "FORTH-99"
+<[jaX3J14] FIGCHAPTERS>  :-)
+<[Doug] D.PHILIPS2> How does one go about finding out how to apply for such ?
+<R.BERKEY> call Forth inc.
+<[Kevin] APPERT> how about FORTH 666 ?
+<[Doug] D.PHILIPS2> Show up is a bit unlikely, I was thinking more
+<[Len] NMORGENSTERN> Just show up, Doug, although it would be a good idea
+<R.BERKEY> it costs about $30 per quarter.
+<[Doug] D.PHILIPS2> along the lines of being able to read the minutes/transcript
+s.
+<[Len] NMORGENSTERN> to tell them in advance so they can send you documents, 
+etc.
+<[Doug] D.PHILIPS2> I didn't expect it would be free.
+<[Gary] GARY-S> Doug - be here the 18th and ask X3J14 chair, Elizabeth Rather 
+yourself ! :-)
+<[Len] NMORGENSTERN> The BASIS documents include all the changes to date, along 
+with
+<[Len] NMORGENSTERN> indications of problems, etc.
+<[Doug] D.PHILIPS2> Naw, I don't want to waste the chair's time on managerial 
+BS, would rather ask Technical Questions or just observe.
+<[Len] NMORGENSTERN> The meeting I attended was very free for all. Not formal, 
+except
+<V.STAMPS> is here.
+<[Len] NMORGENSTERN> in the voting itself.
+<[jaX3J14] FIGCHAPTERS> He means that Liz Rather will be here live on the 18th, 
+Doug.
+<[Gary] GARY-S> suit yerself
+<[Doug] D.PHILIPS2> I understand what he meant.
+<[jaX3J14] FIGCHAPTERS> Apropos de nada ... I am trying to put in a CHESS door 
+on RCFB so we can call in moves and play by telecom.
+<[Len] NMORGENSTERN> I remember the last time I played chess, Jax
+<[Kevin] APPERT> just don't cut a hole in a load-bearing partition, Jax
+<[jaX3J14] FIGCHAPTERS> that long ago?
+<[Len] NMORGENSTERN> My opponent & I were so bad that "the next to the last 
+mistake won"
+<[jaX3J14] FIGCHAPTERS> Right, Kevin,!
+<[jaX3J14] FIGCHAPTERS> Len, that's a plagiarism from Xavielly Tartakower!
+<[jaX3J14] FIGCHAPTERS> "The winner is the player who makes the next to the 
+last blunder!"
+<[Len] NMORGENSTERN> Really? Maybe subconcious!
+<[jaX3J14] FIGCHAPTERS> Everyone who has studied chess has read that one.
+<[jaX3J14] FIGCHAPTERS> Tartakower was the one-liner king of chess.
+<[Len] NMORGENSTERN> I have studied chess, but never came across it, Jax
+<[Kevin] APPERT> it assumes blunders are made by alternate players
+<[jaX3J14] FIGCHAPTERS> "All rook endings are drawn"
+<[Kevin] APPERT> what if you make the next-to-last , then the last
+<[Doug] D.PHILIPS2> Will, shall we discuss control constructs this time?
+<[jaX3J14] FIGCHAPTERS> You might blunder into a won position, Kevin!
+<[Wil] W.BADEN1> Go for it, Virg.
+<[Kevin] APPERT> then it's not a bug, it's a feature, Jax
+<[Wil] W.BADEN1> Virg, have you seen what I've done in 2nd ToolBox of Forth?
+<[Virgil] V.STAMPS> No, I'm not familiar with it .. tell me some.
+<[Wil] W.BADEN1> I might be wearying the others.
+<[Doug] D.PHILIPS2> Go for it Wil!
+<[Len] NMORGENSTERN> I'm interested, Wil
+<[Gary] GARY-S> go
+<[jaX3J14] FIGCHAPTERS> No! GA Wil.
+<[Robert] R.BERKEY> twood be hard
+<[Wil] W.BADEN1> I dont like repeating myself, but here goes...
+<[Wil] W.BADEN1> One of the things ..
+<[Wil] W.BADEN1> that impress me about forth
+<[Wil] W.BADEN1> is the close correspondence
+<[Wil] W.BADEN1> with its control flow words
+<[Wil] W.BADEN1> and flow charts.
+<[Wil] W.BADEN1> I think that it is important
+<[Wil] W.BADEN1> to maintain this.
+<[Wil] W.BADEN1> It is also
+<[Wil] W.BADEN1> important to
+<[Wil] W.BADEN1> keep peace with
+<[Wil] W.BADEN1> existing implementations
+<[Wil] W.BADEN1> of control flow in Forth.
+<[Wil] W.BADEN1> The biggest problem
+<[Wil] W.BADEN1> is that Forth control flow
+<[Wil] W.BADEN1> words must be defined
+<[Wil] W.BADEN1> independently of each other and
+<[Wil] W.BADEN1> of any other words.
+<[Wil] W.BADEN1> This means a method and understanding
+<[Wil] W.BADEN1> that is unlike anything in the profane languages
+<[Wil] W.BADEN1> where complete structures are defined in
+<[Wil] W.BADEN1> the syntax.
+<[Wil] W.BADEN1> Forth has no syntax other than "spell the same way
+<[Wil] W.BADEN1> you did last time."
+<[Wil] W.BADEN1> The traditionalists hold that
+<[Wil] W.BADEN1> one address is enough to specify
+<[Wil] W.BADEN1> a control flow word,
+<[Wil] W.BADEN1> and don't want
+<[Wil] W.BADEN1> the implementation
+<[Wil] W.BADEN1> cluttered with compiling security,
+<[Wil] W.BADEN1> etc.
+<[Wil] W.BADEN1> I have tried to find
+<[Wil] W.BADEN1> a ground that will satisfy every one.
+<[Wil] W.BADEN1> (Everyone fallen asleep?)
+<[Doug] D.PHILIPS2> Quicksand!  Is it my feable brain or
+<[Robert] R.BERKEY> It just occurs to me...
+<[Len] NMORGENSTERN> I'm still here
+<[Doug] D.PHILIPS2> are flowcharts incomprehensible once they spand
+<[Robert] R.BERKEY> since compiler security is for development...
+<[Virgil] V.STAMPS> Where do you have it published so we can study it?
+<[Doug] D.PHILIPS2> span more than about two levels of control?
+<[Robert] R.BERKEY> why aren't there switches to turn it on and off.
+<[Wil] W.BADEN1> I have close to 200 pages.
+<[Robert] R.BERKEY> One answer is that there is no benefit to having it off...
+<[Len] NMORGENSTERN> Worked!
+<[Robert] R.BERKEY> but if so then why do without it?
+<[Wil] W.BADEN1> 50 of which were published in Dr Dobbs 2nd Toolbox of Forth.
+<[Wil] W.BADEN1> I hold that compiler security is free with just one
+<[Wil] W.BADEN1> address on the stack.
+<[Wil] W.BADEN1> See reference just given or rationale in 1989 FORML.
+<[Wil] W.BADEN1> Len, have you uploaded that yet/
+<[Wil] W.BADEN1>   ?
+<[Doug] D.PHILIPS2> How hard core Why is Forth constrained to only two stacks? 
+ Wouldn't
+<[Len] NMORGENSTERN> Yes, I think it was called
+<[Doug] D.PHILIPS2> adding another stack simplify this issue, or is that
+<[Doug] D.PHILIPS2> blasphemy?
+<[Len] NMORGENSTERN> Pascal to Forth or something like that
+<[Wil] W.BADEN1> All three papers?
+<[Len] NMORGENSTERN> Doug, you can have as many stacks as you want!
+<[Len] NMORGENSTERN> Some call them "pseudo stacks" but really
+<[Len] NMORGENSTERN> "software stacks" would be a better term.
+<[Len] NMORGENSTERN> Three, Wil?
+<[Gary] GARY-S> A-stacks
+<[Doug] D.PHILIPS2> But are they the same "class" of citizen as the existing 
+ones?
+<[Len] NMORGENSTERN> Oh, you mean the short presentations. I can put them up 
+too.
+<[Len] NMORGENSTERN> A Forth word, once defined, ranks just as high (or low)
+<[Wil] W.BADEN1> 11 pages and 9 pages are short?
+<[Len] NMORGENSTERN> as any other Forth word, apart from considerations of
+<[Len] NMORGENSTERN> vocabulary, Doug.
+<[Wil] W.BADEN1> "Basis 9 Control Flow words (with rationale)"
+<[Wil] W.BADEN1> CRC Polynomials.
+<[Doug] D.PHILIPS2> Well, not really, after all the return stack is not just 
+another stack.
+<[Kevin] APPERT> unless you've run out of machine registers to use as stack 
+pointers, Len.
+<[Wil] W.BADEN1> I can upload plain text, but can't arc them.
+<[Len] NMORGENSTERN> Apologies, Wil, I thought you were asking me if I had put 
+up 3 papers!
+<[Doug] D.PHILIPS2> If you're going to overhaul the control flow of the inner 
+loop, then
+<[Doug] D.PHILIPS2> telling me that I can define my own software stack doesn't 
+quite cut it.
+<[Virgil] V.STAMPS> I'll see if I can get it from the news stand (Dr Dobbs)
+<[Len] NMORGENSTERN> Why not, Doug?
+<[Doug] D.PHILIPS2> The behaviour of the interpreter seems somehow more 
+fundamental than
+<[Doug] D.PHILIPS2> that, as it is defined by the use of the return stack.
+<[Wil] W.BADEN1> Virgil, it's a book published in 1988.
+<[Doug] D.PHILIPS2> I don't yet see how Wil can do anything truly new that 
+doesn't revamp
+<[Len] NMORGENSTERN> Doug, you are right with respect to the inner interpreter,
+<[Virgil] V.STAMPS> OK great!
+<[Len] NMORGENSTERN> which in most Forths consists of a short segement in 
+assembler.
+<[Len] NMORGENSTERN> Everything else is up to you.
+<[Len] NMORGENSTERN> (almost)
+<[Doug] D.PHILIPS2> Len, right, but not really.  If Wil is talking about 
+revamping
+<[Doug] D.PHILIPS2> the control constructs, how can that not effect the inner 
+interpreter,
+<[Doug] D.PHILIPS2> or, at least, add another level of interpretation?
+<[Len] NMORGENSTERN> Yes, it's like a jump in assembler: the instruction 
+pointer is changed.
+<[Wil] W.BADEN1> I don't want to revamp.
+<[Doug] D.PHILIPS2> Well, Wil, I got the impression that you wanted to go 
+beyound
+<[Doug] D.PHILIPS2> what Forth has now, without leaving it behind.  Perhaps I 
+misunderstood you.
+<[Wil] W.BADEN1> I want to standardize Forth controlflow.
+<[Len] NMORGENSTERN> But most of them do not use the return stack. (None that I 
+can think of right
+<[Wil] W.BADEN1> Yes, you have it.
+<[Len] NMORGENSTERN> now except DO ... LOOP
+<[Doug] D.PHILIPS2> Right!  Pardon my french, but what a crockiferous hack!
+<[Virgil] V.STAMPS> I like the 6809 with it's two stacks.
+<[Gary] GARY-S> start looking for a quitting place
+<[Len] NMORGENSTERN> Even that doesn't have to use the rerutn stack
+<[Len] NMORGENSTERN> (return)
+<[Doug] D.PHILIPS2> How is all this affected by multi-tasking?
+<[Doug] D.PHILIPS2> Aren't the constructs you need for that appropriate in a 
+single-task environment as well?
+<[Robert] R.BERKEY> Each task must have separate stacks and stack pointers.
+<[Doug] D.PHILIPS2> Each task must have its own context, as well as sharing 
+some global context.
+<[Doug] D.PHILIPS2> The question is whether or not something like DO...LOOP is 
+a form of
+<[Doug] D.PHILIPS2> other-taskness.
+<[Robert] R.BERKEY> I don't see how.
+<[Len] NMORGENSTERN> Interesting idea, Doug.
+<[Doug] D.PHILIPS2> That is, it has some state associated with it that is 
+independant of the
+<[Doug] D.PHILIPS2> state of the task that spawned it.  This is working its way 
+back around
+<[Doug] D.PHILIPS2> to closures/continuations again.  One of the things that 
+bugs me about
+<[Len] NMORGENSTERN> But, isn't that true of any flow of control construct, 
+even IF .THEN  ??
+<[Doug] D.PHILIPS2> DO...LOOP is the restrictions on access to the index 
+variable and the ways
+<[Doug] D.PHILIPS2> in which you can/can't abort it.
+<[Doug] D.PHILIPS2> If then isn't quite the same, because the state is inherent 
+in the fact that
+<[Robert] R.BERKEY> Right, there is something wrong with it.
+<[Len] NMORGENSTERN> That is a not a problem with DO LOOP, but with the
+<[Doug] D.PHILIPS2> you're executing in one particular place.  With a loop, you 
+also need to know
+<[Doug] D.PHILIPS2> which iteration you're on.
+<[Len] NMORGENSTERN> ususal Forth inmplementation of it. Sometimes you wish
+<[Len] NMORGENSTERN> that they would have used a third stack instead of the 
+return stack.
+<[Doug] D.PHILIPS2> Wil:  Do you propose to create a new set of control 
+construct words or to
+<[Doug] D.PHILIPS2> provide some downward compatability with the old ones?
+<[Robert] R.BERKEY> Loops seem somehow to trap code within them.
+<[Doug] D.PHILIPS2> Yes, just like closures
+<[Gary] GARY-S> gentlemen - I'm about to close officially
+<[Robert] R.BERKEY> Once trapped, it loses flexibility.
+<[Doug] D.PHILIPS2> Not necessarily.  But perhaps we should continue on Sunday 
+night?
+<[Len] NMORGENSTERN> A good topic for Sunday!
+<[Len] NMORGENSTERN> I will post it!
+<[Virgil] V.STAMPS> Good
+<[Wil] W.BADEN1> (There goes my Saturday night.)
+<[Gary] GARY-S> super - I will try to make this one !
+<[Doug] D.PHILIPS2> Wil:  I have Dr Dobbs Toolbook Volume II, I'll try to get 
+to your stuff by
+<[Doug] D.PHILIPS2> then.
+<[Len] NMORGENSTERN> I have it too.
+<[Virgil] V.STAMPS> I'll get it!
+<[Wil] W.BADEN1> I'll re-upload plaintext of Basis9 control flow words.
+<[Doug] D.PHILIPS2> Don't act so suprised, you weren't on any mercy mission 
+this time!
+<[Doug] D.PHILIPS2> I'll check the library tomorrow night!
+<[Wil] W.BADEN1> (Lots of luck.)
+<[Gary] GARY-S> doug - test going out as SOON as I hang up
+<[Doug] D.PHILIPS2> [Ok, will, when should I check for it?]
+<[Gary] GARY-S> g'nite all
+<[Gary] GARY-S> ..........****** poof *******
+=== End of Steno notes. ===
+
+

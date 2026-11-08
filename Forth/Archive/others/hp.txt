@@ -1,0 +1,84 @@
+
+			     FORTH ON HP COMPUTERS
+			       From the FIG Tree
+										
+
+*** HP                   22-OCT-84
+  PARENT=SYSTEMS              USAGE=367
+Has any one used the FORTH module for the HP-71B? Ifso, what is your
+opinion of it?? The module also sontains an Assembler (Hence the name
+FORTH/Assembly>  written in FORTH to allow extensions to the FORTH operating
+system (new primitives) and Language EXtension files (new keywords) to the
+Basic operating system. The module has the ability to use a Dumb-Terminal
+as the HP-71's keyboard and display devices with an HP-IL/rS232 Converter
+making it a suitable development system for application software.
+all internal documentation is avaliable for sale through Hewlett-Packard !
+
+*** HP110-FORTH          17=DEC-84
+  PARENT=HP                   USAGE=269
+There is an implementation of FORTH for the HP110 in the XA1 database of the
+Interex SIG on Compuserve.  Although I have not used it, other users seemed
+pleased.  Intend to download it after the first of the year; will report
+back here. (Note: fee is VERY reasonable)  More details to follow...
+Thanks for the Tree.                       -Wes Erickson
+
+*** NOTE-ON-71B-FORTH    10-MAR-85
+  PARENV=HP                   USAGE=197
+SOME COMMENTS ON HP71B FORTH/ASSEMBLER MODULE:  71B R:
+ NIBBLE
+-ORIENTED MACHINE WITH 20-BIT ADDRESSES.  FORTH ON 71 IS A 20-BIT
+IMPLEMENTATION.  SEVERAL NIBBLE WORDS ARE PROVIDED TO ADDRESS THIS
+CAPABILITY, SUCH AS NALLOT, N@, N!, ,NFILL,NMOVE,5+(INCR ADDR BY 5),
+5-(DECR ADDRESS BY 5).  FORTH BLOCKS OR SCREENS ON THE 71 ARE STANDARD
+TEXT FILES, AND CAN HAVE UP TO 96 CHARACTERS PER LINE, WITH AS MANY
+LINES AS YOU LIKE.   FULL FLOATING POINT OPERATOR USES NATIVE BASIC
+SYSTEM ROUTINE FOR EVALUATION OF ANY FORTH NUMBERS WiTH DECIMAL
+POINTS.  CONFORMS WELL WITH 83 STD.  IF YOU AREN'T INTERESTED IN THE
+ASSMMBLER, CONSIDER GETTING THE "TURBO-41" PACKAGE FROM EDUCALC
+(800-633-2252).  PLUG-IN ROM INCLUDES HP-71 EMULATOR AND TRANSLATOR
+FOR HP41 PROGRAMS, WITH ADDITIONAL FUNCTIONS, AND A  SIMILAR FORTH
+IMPLEMENTATION TO HP'S ROM.  COST IS 30$ LESS THAN HP ROM.  SEE DESCR IN
+CHHHU CHRONICLE, V2N1 JAN/FEB'85, ARTICLE BY WILLIAM WICKES, WHO
+PROGRAMMED THE MODULE.
+-SCOTT T. SCHAD, TULSA, OK.
+
+*** HPSERIES-80-FORTH
+  PARENT=HP                   USAGE=184
+In an upcoming issue probably May/June) of PROFESSMONAL COMPUTING
+magazine, for HP-pc user's, writer Don Person will be devoting his column
+to a letter I wrote concerning FORTH implementations for HPSeries-80
+computers.  The main FORTH (and almost the only one) used for series 80
+comes from the HP-User's Library, and has several drawbacks, notably
+its inability to load when there are enhancement ROMs (like the Advanced
+Programming or I/O ROMs) in the machine.  In response to my letter,
+Mr. Person contacted the original authors of the HP80-FORTH binary, and
+learned they had since CODED A ROM-BASED VERSION OF FORTH, WHICH COULD
+BE CARRIED IN A SERIES-80 EPROM MODULE.  Mz. Person obtained the code,
+and is considering burning-out some CHEAP FORTH EPROMS ($30), IF THERE
+IS SUFFICIENT INTEREST (READ "SUFFICIENT LETTERS" FOLKS...).  Person
+has already tried out a preliminary EPROM, and reports that it is fully
+COMPATIBLE WITH OTHER ADDED ENHANCEMENT ROMS.  IF YOU WOULD LIKE TO
+USE A ROM-BASED FORTH ON YOUR SERIES 80 COMPUTER, OR KNOW OF A SERIES
+80 USER WHO MIGHT BE INTERESTED, PLEASE CONTACT: DON PERSON, A GENTLE
+WIND, INC., BOX 3103, ALBANY, NY 12203---OR CALL (518-482-9023)--TO
+LET HIM KNOW THERE IS A MARKET FOR FORTH-EPROMS, AND THAT THERE ARE
+INDEED MANY HP USERS INTERESTED IN FORTH --Scott T. Schad, Tulsa, OK.
+
+*** HP80-4TH-FOLLOWUP    15-APR-85
+  PARENT=HPSERIES-80-FORTH    USA\T
+A further note on Forth for Hp 85,86,87 computers.  I have obtained the
+Forth eproms for the
+HP 86/87.  Both work fine and let you recover
+a lot of low memory.  Cost is $30 from Don Person, c/o PROFESSIONAL
+COMPUTING, Camden Communications Ins., P.O. Box 250, Camden, Maine
+zip: 04843.  The implementation is very standard FIG model, so you wil|
+probably want to order the Series 80 User's Library  for
+$50, in order to get the utility screens and some documentation.  Address
+is:  Hewlett-Packard Co., Series 80 User's Library,
+1000 N.E. Circle Blvd., Corvallis, OR  9736. Remember that this is not a
+plug-in ROM for the ROM drawer, but an eprom which must live in the
+series 80 eprom holder.  If you have trouble installing the eprom, contact
+Don Person, or me: Scott T. Schad, 3943 S. Delaware Pl., Tulse, OK 74105,
+(918)-747-0207.  Work phone: 742-0019.
+
+

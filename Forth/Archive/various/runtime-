@@ -1,0 +1,45 @@
+
+\                  Runtime Binding for F83
+\                written by David Weinstein
+\
+\   This simple pragma -- [runtime] -- (and its underlying word...(runtime) )
+\   allows programmers to bind a name to its function at runtime, instead of 
+\   compile time.
+\
+\   Example:
+\     : foo     ( -- )
+\          [runtime] do-foo ;
+\
+\   : do-foo beep ;
+\   foo   (beeeeeeeeepppppppp)
+\   : do-foo ." Hehehehe" cr ;
+\   foo
+\   Hehehehe 
+\   forget do-foo
+\   forget do-foo
+\   foo
+\   do-foo not found
+\
+\   (you get the idea)
+\
+\         --dave (9/15/88)
+: (runtime)     ( word-name-addr -- )
+                ( finds word-name and executes it if it exists, otherwise )
+                ( it aborts with an error message                         )
+        ( word ) find if
+                execute
+        else
+                ". abort" not found"
+        then
+        ;
+: [runtime]     ( -- )
+                ( input stream: <name> )
+                ( changes the binding of <name> to runtime instead of compile )
+                ( time                                                        )
+        [compile] [""]                  \ Compile <name> into the dictionary
+        compile (runtime)               \ and add the code to find and 
+                                        \ execute <name>
+        ;
+        immediate
+
+

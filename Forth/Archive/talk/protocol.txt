@@ -1,0 +1,52 @@
+
+GEnie announces new protocols to go live, effective Monday, July 25th!
+ 
+In response to the many requests for newer protocols, GEnie has implemented
+both YModem Batch and XMODEM 1K for all download libraries!  You will get
+a small menu from which you can select the download protocol after you
+tell GEnie you want to download.
+ 
+BEWARE!   Some terminal programs *say* they support YModem, when in reality
+it is only XMODEM 1K.  GEnie supports TRUE YModem, which requires that your
+terminal program also be able to support batch downloads.
+ 
+If for some reason you select YModem and your software balks, try XMODEM 1K,
+and see if that doesn't do the trick.  Of course, do let us know what you
+find out, too!  Software authors should be encouraged to label choices with
+the proper names.   [Smile]  Even many BBS systems make this same mistake,
+so do not always assume that just because it works on your local ACME BBS,
+you have YModem Batch!  Tell us all about any abnormal results or
+mildly amusing anecdotes on the Bulletin Board!
+ 
+YModem batch will also support just a single file transfer, when you browse,
+or it will support multiple files, by selecting the #6 Library menu command,
+Download.  If you want to test out batch, Browse first over the file
+descriptions, skipping over them.  Select which ones you want to download,
+writing down the filenumbers.  When you are ready, and have a disk with
+enough room in it (!), go back to the menu and choose #6, Download a File.
+At the prompt, you can specify the filenumbers you want, separated with a
+comma, and BINGO, YModem and GEnie and your software do all the rest of the
+work.  YModem will call your files on disk the same thing we have them here
+in the library!   [BEWARE some file names may not work on your machine, you
+will have to rename them after you sign off]
+ 
+If you are one of the few people that do not use half duplex on GEnie, but
+force an echo with a CTRL R when you login, you will find that using either
+of the new protocols will leave you typing blind when the transfer is
+finished.  If your software doesn't support local echo and you are forced
+into this, take a minute to go over to your GEnie settings and make sure
+the new item, HOST ECHO, is set to ON.  That should tell GEnie that when
+you come out of the transfer you need your echo back.  This really doesn't
+apply to most of our RoundTable users, since reliable software supports
+local echo already.
+ 
+We applaud GEnie's response to the many requests!  Hope you enjoy the 
+increased speed and highly improved ease of use of the new protocols.
+YModem Batch has me spoiled rotten...!
+ 
+I truly cannot think of anything else you will need to know about using
+these protocols.
+ 
+ Your FIG Sysops on GEnie
+
+

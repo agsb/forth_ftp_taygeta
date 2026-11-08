@@ -1,0 +1,436 @@
+
+Forth Interest Group
+Category 18,  Topic 90
+Message 2         Fri Sep 07, 1990
+GARY-S                       at 07:39 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: john@aplcen.apl.jhu.edu (John Hayes)
+ Newsgroups: comp.lang.forth
+ Subject: Compiling without :
+ Message-ID: <6487@aplcen.apl.jhu.edu>
+ Date: 6 Sep 90 04:10:07 GMT
+ Organization: Johns Hopkins University / Applied Physics Laboratory
+
+
+   Recently John Wavrik asked if it will be possible to write significant
+ programs in ANS Forth.  My answer is "yes".  As a committee member, this
+ is certainly one of my goals.
+  Towards that end, a new word was added (to the Core Extensions
+ Word Set) at the Vancouver meeting.  This new word, named START: (start-
+ colon), creates an execution token.  The glossary entry is:
+
+ ------------------------------------------------------------------------
+ START: "start-colon"    CORE EXT
+  ( -- w)
+  START: creates an execution token.  Information is added to the
+ end of the dictionary so that code compiled at the next dictionary
+ location will be associated with w.  This code can be executed later
+ by using w EXECUTE.
+ ------------------------------------------------------------------------
+
+  In other words, START: lets the programmer compile headerless
+ code fragments, store them in data structures, and execute them later.
+ Until now, the only way to compile Forth code was to use the syntax of
+ : (colon):
+  : <name>  ...  ;
+ START: gives the programmer greater control of the compiler.
+ The programmer now has more options for designing application specific
+ programming languages.
+
+  Let's look at an example suggested by Leonard Zettel.
+ Leonard wanted to know how to portably implement a word called
+ ME that returned the execution token of the currently executing
+ word.  The application of such a word is in event driven simulation.
+ An executing word can add itself to an event queue to execute
+ again at a certain time.  ME cannot be implemented to work with
+ : (colon).  But with START: we have the tools to build a variant
+ of : (colon):
+
+ variable last-token
+ : me  last-token @ postpone literal ; immediate
+ : sim:
+    create here 1 cells allot ( allocate space for token )
+    start: dup last-token ! ( make token and record )
+    swap ! ]   ( get ready to compile )
+    does> @ ;   ( default: return token )
+ : ;sim
+    postpone exit postpone [ ; immediate
+
+ Typical usage of sim: might be:
+ sim: checkthat   ...   if me 5 seconds queue-event then  ...  ;sim
+
+  In terms of common practice, the functionality of START: has
+ been in use for years.  Advanced Forth programmers can implement
+ START: on their systems by exploiting intimate knowledge of how the
+ system works.  However, on all Forth systems the implementation of START:
+ will be different.  For the first time, the function of START: has a
+ standard name and can be used in portable programs.
+
+  In my opinion, we have doubled ANS Forth's expressive power in
+ one stroke.  START: is an indispensable tool for writing application
+ specific programming languages, ostensibly one of Forth's great strengths.
+ In examining all the major programs I have written in Forth in the last
+ eight years, I found that they all used the equivalent of START:,
+ frequently as a cornerstone of the application.  In a subsequent posting
+ I will describe some of these examples.
+
+  I want to encourage everyone to implement START: and work with
+ it.  I especially want to encourage vendors to provide this word.
+ START: is in the Core Extensions, not Core (I proposed that it
+ reside in Core).
+
+  Any comments?
+
+                                         John R. Hayes
+                                         Applied Physics Laboratory
+                                         Johns Hopkins University
+----------
+Forth Interest Group
+Category 18,  Topic 90
+Message 3         Sat Sep 08, 1990
+GARY-S                       at 08:26 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: john@aplcen.apl.jhu.edu (John Hayes)
+ Newsgroups: comp.lang.forth
+ Subject: More on START:
+ Message-ID: <6499@aplcen.apl.jhu.edu>
+ Date: 7 Sep 90 15:21:12 GMT
+ Organization: Johns Hopkins University / Applied Physics Laboratory
+ Lines: 121
+       ^^^^^ split for ForthNet port - part a
+
+ In an earlier posting, I described a word, START:, that was added
+ to the Core Extensions Word Set of ANS Forth at the Vancouver
+ meeting.  The following is the discussion section of the proposal
+ for START:; it offers further motivation for standardizing START:.
+
+ I frequently want to compile Forth code fragments (code without a
+ head), save the code in a data structure, and later extract it for
+ execution.  Here is a real world example:  The Experiment Computer, a
+ part of Spacelab (a module that can be flown on the Space Shuttle),
+ sends commands to experiments in the shuttle's payload bay as a packet
+ containing a two digit command number.  In the Hopkins Ultraviolet
+ Telescope experiment we process these commands using this syntax:
+
+          0  CMD:     ...   code for command 0    ...     ;CMD
+          1  CMD:     ...   code for command 1    ...     ;CMD
+
+         99  CMD:     ...   code for command 99   ...     ;CMD
+
+ We chose this syntax because we didn't want to strain our brains
+ inventing 100 names and we didn't want to expend dictionary space
+ storing names that would never be used.  The nth command is executed
+ with DOCMD which takes n as a stack argument.
+
+ The problem described above is a specific instance of the general
+ problem of constructing headerless code fragments.  Attempting to
+ implement CMD:, etc. will reveal whether we can solve the general
+ problem.  An implementation that works on many systems is:
+
+  CREATE CMD-TABLE  100 CELLS ALLOT
+  : CMD:   ( N -- ) HERE SWAP CELLS CMD-TABLE + ! ] ;
+  : DOCMD  ( N -- ) CELLS CMD-TABLE + @ >R ;
+
+ This implementation has several problems.  In CMD: using HERE to find
+ the address of the subsequently compiled code is non-portable; some
+ systems separate code and data and HERE points to data.  In DOCMD
+ pushing the address of the code on the return stack and returning isn't
+ guaranteed to work; some systems do not use the return stack for return
+ addresses and some systems use a return address bigger than one cell.
+ Despite there problems, this is the most portable solution I am able to
+ find.
+
+ What we really need is to construct an execution token in CMD: and pass
+ this token to EXECUTE in DOCMD.  Unfortunately, there is no standard
+ way to construct an execution token except through :.  That's where
+ START: comes in.  START: creates an execution token such that code
+ subsequently compiled into the dictionary will be associated with the
+ execution token.  START: returns the execution token on the stack.
+----------
+Forth Interest Group
+Category 18,  Topic 90
+Message 4         Sat Sep 08, 1990
+GARY-S                       at 08:27 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: john@aplcen.apl.jhu.edu (John Hayes)
+ Newsgroups: comp.lang.forth
+ Subject: More on START:
+ Message-ID: <6499@aplcen.apl.jhu.edu>
+ Date: 7 Sep 90 15:21:12 GMT
+ Organization: Johns Hopkins University / Applied Physics Laboratory
+ Lines: 121
+       ^^^^^ split for ForthNet port - part b
+
+ With START: the definitions of CMD: and DOCMD become:
+
+         : CMD:   ( N -- ) START: SWAP CELLS CMD-TABLE + ! ] ;
+         : DOCMD  ( N -- ) CELLS CMD-TABLE + @ EXECUTE ;
+
+ START: is a general solution to the problem of creating headless code
+ fragments.  One of Forth's great strengths is that it allows the
+ programmer to create application specific languages.  The application
+ language is frequently a mixture of Forth code and application
+ constructs.  The language is implemented by storing Forth code as
+ fragments in a data structure.  To illustrate this, I have included
+ examples of four problems that require the functionality of START: to
+ implement portably.  The first three examples are from my own
+ programming experience and the last is a published example.
+
+ I have recently been working with an object-oriented programming system
+ implemented in Forth.  My syntax for declaring a class is:
+
+         parent-class SUB-CLASS> class
+                 LOCAL: X        \ instance variables
+                 LOCAL: Y
+
+                 METHOD: :DOTHIS  ...   ;METHOD
+                 METHOD: :DOTHAT  ...   ;METHOD
+         END>
+
+ METHOD: not only compiles method code, but must store the code's
+ execution token in a dispatch table in the class data structure.  The
+ dispatch table provides an efficient  way to do late message/method
+ binding.
+
+ A few years ago I wrote a user-extensible text editor.  The editor
+ provided a few, very powerful, very general editing commands and a way
+ to bind user-defined command to particular keystrokes.  Here are three
+ such commands ('d' deletes the current line, 'D' deletes to the end of
+ the line, and '^W' deletes the current word):
+
+         cmd d     |<- mark scrollcursor deleterange  endcmd
+         cmd D     drop mark ->| deleterange  endcmd
+         cntrl W   mark ->w deleterange  endcmd
+
+ In my embedded systems programming work, I have found the following
+ construct useful:
+
+         do: monitor-that-device  ... some code ...  ;do
+         monitor-that-device every 5 seconds doit
+
+ Do: constructs a data structure that, among other things, contains the
+ execution token of the following code.  The data structure is passed to
+ doit, which gives the structure to a time service process.
+
+ The final example is FORPS [Matheus, C. J. "The Internals of FORPS: a
+ FORth-based Production System, JFAR 4/1, pp.7-27] an expert system
+ shell.  The syntax for declaring a rule is:
+
+         RULE: rule-name      PRIORITY: n
+            *IF*   ... condition code ...
+            *THEN* ... action code ...
+            *END*
+
+ The data structure for each rule contains the execution tokens for the
+ condition code and the action code.  The condition code for every rule
+ is executed before deciding which rule's action code should be
+ executed.
+
+ In summary, Forth is at its best when designing application specific
+ programming languages.  This is frequently accomplished by constructing
+ headless code fragments.  Unfortunately, there is now no portable way
+ of doing this.  START: solves this problem.
+
+                                         John R. Hayes
+                                         Applied Physics Laboratory
+                                         Johns Hopkins University
+----------
+Forth Interest Group
+Category 18,  Topic 90
+Message 7         Sat Sep 15, 1990
+GARY-S                       at 08:27 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Comments on START:
+ Message-ID: <12658@sdcc6.ucsd.edu>
+ Date: 14 Sep 90 03:43:37 GMT
+ Organization: University of California, San Diego
+ Lines: 149
+       ^^^^^ split for ForthNet port - part a
+
+ John Hayes recently posted information on the new word START: and
+ asked for comments. I would like to show how two fairly common and 
+ substantial problems are solved with it.
+
+ For those using traditional Forth systems, the definition of
+ START: is
+            : START:  HERE  DOCOL  ,  ; 
+
+ Where DOCOL is the address of the inner interpreter. It can be 
+ defined by  ' : @  CONSTANT DOCOL.
+
+ I. [: and ;]
+    Late last year I posted code for this pair of words and gave 
+    examples of their use. They work like : and ;. They compile the 
+    code between them but they do not generate a header -- instead they 
+    return the CFA of the generated code. They are state smart.
+
+    The original use of these words was to make it easy to generate a 
+    family of special words which are obtained from a general word by 
+    changing the runtime environment (which may depend on executable as 
+    well as numerical parameters).
+
+               : SPECIAL  ( *  Runtime Environment *)
+                           [: ..special code 1 ;]
+                           [: ..special code 2 ;]
+                                .....
+                           n1 n2 ...  ( numerical parameters )
+                          ( *  End of Runtime Environment * )
+                           GENERAL-WORD ;
+
+    (Imagine, for example, a collection of sorting programs all derived 
+    from a general template by changing parameters describing the 
+    comparison function, how data items are exchange, how they are 
+    stored, etc.)
+
+    The code posted last year was this:
+
+    Blk # 1                        File: environs.blk
+      0.  \     Headerless code fragments                04Nov88jjw
+      1.  \   Use like : and ;  --  they return the cfa of the code
+      2.
+      3.  VARIABLE OSTATE      ' : @ CONSTANT DOCOL
+      4.  : <[:>   R> DUP @ >R  2+  ;
+      5.
+      6.  : [:   STATE @  DUP OSTATE !
+      7.            IF    COMPILE <[:>  ?>MARK  DOCOL ,
+      8.            ELSE  HERE DOCOL ,  !CSP ]    THEN ; IMMEDIATE
+      9.
+     10.  : ;]   OSTATE @
+     11.            IF    COMPILE EXIT ?>RESOLVE
+     12.            ELSE  ?CSP  COMPILE EXIT
+     13.                  [COMPILE] [             THEN ; IMMEDIATE
+     14.
+     15.
+
+     This code assumes a traditional Forth (indirect threaded code, IP sent 
+     to the return stack, HERE marks the start of code, etc.). Using START:
+     these words can be coded this.
+
+     : [:  STATE @ DUP OSTATE !
+           IF  POSTPONE FALSE  POSTPONE IF  START:
+           ELSE  START: ]  THEN  ;  IMMEDIATE
+
+     : ;]  POSTPONE EXIT   OSTATE @
+           IF  >R  POSTPONE THEN R>  POSTPONE LITERAL
+           ELSE  POSTPONE [  THEN ;  IMMEDIATE
+
+     Therefore this structure will be portable in the proposed ANSI 
+     Standards. (John Hayes gets the credit for suggesting the replacement 
+     of the inline handler <[:> by an IF .. THEN control structure). 
+----------
+Forth Interest Group
+Category 18,  Topic 90
+Message 8         Sat Sep 15, 1990
+GARY-S                       at 08:28 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Comments on START:
+ Message-ID: <12658@sdcc6.ucsd.edu>
+ Date: 14 Sep 90 03:43:37 GMT
+ Organization: University of California, San Diego
+ Lines: 149
+       ^^^^^ split for ForthNet port - part b
+
+ II. Inline Data Handlers
+
+    Some are disturbed by what they regard as the dual pre/postfix 
+    nature of Forth. There is a very simple rule for making sense of 
+    this:
+
+    RULE:  You know what the interpreter is going to do with a string.
+           If that's not what you want done, you must precede the 
+           string by a handler. 
+
+           (Simiarly numbers in a dictionary body which are not 
+           addresses to be executed are preceded by a handler.)
+
+    Here is an example from a system designed to handle very large
+    integers and rationals (BIGNUMS).
+
+    v%  123456789
+    dup v*  v. 15241578750190521  
+
+    q% 1/2  q% 1/3  q+ q. 5/6  
+    q% 1/2  q% 2/3  q* q. 1/3  
+
+    : pi  q% 355/113 ;  
+    pi q. 355/113  
+    v1 v.
+
+    vnum 20!  
+    : factorials  v1 21 1 do  i . 2 spaces
+                              i s>v v*
+                              dup v. cr
+                          loop  20! vmove  ;  
+
+    factorials
+    20! v. 2432902008176640000  
+    20! dup v* v. 5919012181389927685417441689600000000  
+
+    In this language integer operations are prefaced by v (v+, v. etc)
+    and rational number operations by q. v% and q% are handlers for 
+    these data types. The handler converts a string to a big integer.
+    When used in interpretation, a pointer to the data (in its 
+    converted form) is return to the stack. If used during compilation
+    the internal representation is stored in the dictionary preceded by 
+    a handler VLIT. This is precisely how traditional Forth handles its 
+    standard numerical types. Here are the definitions in tradition 
+    Forth.
+
+
+      4 : VLIT  R> DUP VSIZE + >R  ;
+      5 : V%  STATE @  IF  COMPILE VLIT  BL WORD VNUMBER
+      6                    HERE VSIZE ALLOT VMOVE
+      7                ELSE  BL WORD VNUMBER  THEN ;  IMMEDIATE
+
+    The same assumptions are made about how Forth works as are made 
+    above.
+
+    In this case, too, START: allows the handler V% to be defined 
+    portably in the proposed ANSI Standard.
+
+      2 : V%  STATE @
+      3       IF   POSTPONE FALSE   POSTPONE IF  START:  >BODY
+      4            BL WORD VNUMBER   VSIZE ALLOT
+      5            OVER VMOVE  >R   POSTPONE THEN  R>
+      6            POSTPONE LITERAL
+      7       ELSE  BL WORD VNUMBER   THEN  ;  IMMEDIATE
+
+  I think that there is some reason to be enthusiastic about John 
+ Hayes' efforts in getting this word accepted.
+
+  It would be excessive to claim that this solves all the major 
+ problems of designing application oriented programming languages. 
+ But it is fair to say that it provides ANSI Forth with a little more 
+ of the power that traditional Forth has.
+
+                                                   John J Wavrik 
+              jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                                   Univ of Calif - San Diego 
+                                                   La Jolla, CA  92093 
+----------
+
+

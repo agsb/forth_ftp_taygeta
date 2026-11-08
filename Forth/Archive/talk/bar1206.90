@@ -1,0 +1,233 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 12/06/90   Time: 22:24EST
+
+Attendees:
+[GARY-S]
+[[Dennis] D.RUFFER]
+[[Wil] W.BADEN1]
+[[Fred] F.SCHIFF]
+[[Robert] R.BERKEY]
+[JAX]
+
+  Items discussed include Apple Conference, Harris & RTX, Silicon Composers
+                 & SC32 (APL32), debugging, 83i96, Forth workstation, Amiga
+                 3000, 68008, Bill Muench, eForth, POSTPONE vs [COMPILE] 
+Minutes:
+<GARY-S> Hi Dennis - any thing shakin'?
+<D.RUFFER> I'm only fighting bugs these days :-(
+<GARY-S> \flu or computer ?
+<D.RUFFER> computer of course! <grin>
+<D.RUFFER> I fighting the PC's serial port interrupts (again)
+<GARY-S> int 15 is a little known problem child
+<D.RUFFER> little known, I've been fighting the thing for years
+<GARY-S> Next week is Bill Muench - I do hope a few show for him
+<D.RUFFER> do we hav a front door for it that I should be watching for?
+<GARY-S> I will set 5 this week-end
+<D.RUFFER> not that front door, GEnie's?
+<GARY-S> yes
+<GARY-S> I set it a month ago
+<D.RUFFER> ok, I'll watch for it.   Set to go off this weekend?
+<[Wil] W.BADEN1> is here.
+<D.RUFFER> are you going down to the Apple conf.
+<[Wil] W.BADEN1> No.
+<[Wil] W.BADEN1> I draw the line at that.
+<D.RUFFER> I was thinking of doing something for them this year
+<GARY-S> SURPRISE !! 0-*
+<D.RUFFER> why, is it just a bunch of nerds (like us)?
+<[Wil] W.BADEN1> What, Dennis?
+<D.RUFFER> There will be a GEnie booth of some sort
+<[Wil] W.BADEN1> You are the fifth person today to ask me if I was going.
+<D.RUFFER> hum, maybe you SHOULD go <grin>
+<GARY-S> See if you can't pry some of them off the Minitel clones
+<D.RUFFER> what clones???
+<GARY-S> Minitel
+<D.RUFFER> ah those :-)
+<[Wil] W.BADEN1> One person left a message at 9 am saying that since I wasn't 
+in the office, he woud meet me at the conference.
+<GARY-S> Like Prodigy and (Wil - what's the Apple heavy one ?)
+<D.RUFFER> well then wil, it's settled...You're going!
+<[Wil] W.BADEN1> Americal Online.
+<GARY-S> right
+<D.RUFFER> yes, there will be a bunch of them down there too
+<[Wil] W.BADEN1> No, I have *real work* to do.
+<D.RUFFER> too bad, I'm not sure quite yet either, sort of out of my league (if 
+you know what I mean :-)
+<F.SCHIFF> is here.
+<[Dennis] D.RUFFER> hiya Fred
+<R.ERKEY> is here.
+<[Fred] F.SCHIFF> Lo
+<[Dennis] D.RUFFER> hiya Robert
+<[Fred] F.SCHIFF> What are we talking about?
+<[Robert] R.BERKEY> hiya
+<[Wil] W.BADEN1> Hi Robert.
+<GARY-S> Wow - you're earlier than normal, Robert
+<[Robert] R.BERKEY> hehe, less than half an hour late. :)
+<[Dennis] D.RUFFER> not much of anything yet Fred
+<JAX> is here.
+<[Robert] R.BERKEY> well, we could talk about Fred, now that he's left.
+<[Dennis] D.RUFFER> it is fun to make it home by 6:30 out here ya know :-)
+<GARY-S> No chess tonite Jax ?
+<JAX> No, got home too late
+<[Dennis] D.RUFFER> too late for what jax?
+<JAX> Howdy Oll
+<JAX> Too late to drive back all the way to the Chess club.
+<[Dennis] D.RUFFER> ah, they'll miss ya <grin>
+<JAX> Not really, I kick butt too much.
+<[Dennis] D.RUFFER> somehow, that doesn't surprise me :-)
+<[Dennis] D.RUFFER> wil, what kind of people are down at that apple conf?  Any 
+Forthers?
+<[Wil] W.BADEN1> The Mac is a religion, like Forth, but Forth is not popular.
+<JAX> <<< debugging in another window, don't be surprised if DISCONNECT
+<[Dennis] D.RUFFER> so what do they talk about then (if not Forth) :-)
+<[Dennis] D.RUFFER> jack, I've got some files I need you to check for us also
+<GARY-S> call waiting ?
+<[Fred] F.SCHIFF> I'm back (had to check out Elfquest)
+<[Wil] W.BADEN1> Very few Mac programmers, very high percentange of women 
+members compared with other computer groups.
+<[Dennis] D.RUFFER> Elfquest???
+<[Fred] F.SCHIFF> comics books, never mind...its another reality
+<[Wil] W.BADEN1> But it's mostly the men who go to the conventions.
+<[Dennis] D.RUFFER> well, I can certainly understand (it WAS a comic book after 
+all :-)
+<GARY-S> Speaking of Forth - does anyone know what Larry (Forsley) is planning ?
+  he mentioned something about the RTX kill by Harris not being the last
+  dance
+<[Wil] W.BADEN1> I had 20 people out of 100 at my last meeting say they were 
+going to SanFrancisco fo Mac Expo in Januar.
+<[Dennis] D.RUFFER> what?  another kill is going to happen gary?
+<GARY-S> No - I gathered he plans to try to do something with the chip
+<GARY-S> This is ALL rumor
+<[Dennis] D.RUFFER> ah, now that WOULD be nice
+<GARY-S> Actually, Harris' decision may be a boon to George Nicol
+<[Dennis] D.RUFFER> but, I'm not convinced we even need the RTX, we did ok 
+before it (or any of the Forth chips came on the picture)
+<[Dennis] D.RUFFER> George should do really well
+<GARY-S> If you wanted a stovebolt chip with Forth on board there's still the 
+super-8
+<[Dennis] D.RUFFER> or at least better, does anyone know if he is making money 
+on the SC32 yet?
+<GARY-S> The last ads I saw were promoting the SBC32, not the SC32
+<[Dennis] D.RUFFER> yes, there are MANY ways to skin the cat, chuck's chips 
+(and there ofsprings) are not absolutely neccessary
+<[Dennis] D.RUFFER> what is the SBC32 then?
+<GARY-S> the single board add-in based on the SC32 as the engine
+<[Dennis] D.RUFFER> ok, that is what I though it might be
+<JAX> What's the word from FInc?
+<[Dennis] D.RUFFER> fighting bugs converting an application right now jack
+<JAX> Me too!
+<JAX> Just finishing up the first rev of Forth-83i96.
+<[Dennis] D.RUFFER> we might just be firing up that project too
+<JAX> I sqoze a 96-k Forth into a 64-k mem model.
+<[Wil] W.BADEN1> Jax, tell me again, r u hot for Atari or Amiga? Today's 
+computer column in LA Times had glowing rewiew of Video Toaster.
+<[Dennis] D.RUFFER> but that's not my bug, I back to fighting the PC's serial 
+port interrupts
+<JAX> Amiga man.
+<JAX> #*$&*#&$(*&(*#&$ 8250 ... :-)
+<[Wil] W.BADEN1> Thot so, that'z the one for Video Toaster.
+<[Dennis] D.RUFFER> yep, I agree completely :-)
+<JAX> Right.
+<[Robert] R.BERKEY> hmmm, my current problem is not the interrupts, but the 
+modem beyond them.
+<JAX> Amiga geting good reviews. Byte says it's better than a Sun for the money.
+<JAX> ( that's the 3000 ... jax hax a 1000)
+<[Dennis] D.RUFFER> that con be even harder robert
+<JAX> ( Son Ivan has a 500)
+<JAX> ( one 2000 at work, another on the way).
+<GARY-S> Amiga's biggest rap is from the computer media who insist on labeling 
+it as a graphics toy
+<JAX> It's a programmer's toy is what it is.
+<[Wil] W.BADEN1> LA Times sez Video Toaster for $1500 is every bit as good as 
+$100,000 studio equipment.
+<GARY-S> Has the Unix port been accepted ? How buggy ?
+<JAX> Amiga UNIX is now available they say. How buggy? I dunno.
+<GARY-S> is it Interactive's SysV R4 as reported
+<JAX> Supposed to be.
+<[Wil] W.BADEN1> (Gotta go -- wife expecting important call.  10 and counting.)
+<JAX> I dunno, I'm more interested in a Forth workstation, parallel proc.
+<[Dennis] D.RUFFER> seeya later wil
+<[Wil] W.BADEN1> has left.
+<JAX> May build one.
+<GARY-S> Amiga as a Forth workstation ? expand a bit
+<JAX> Got all these 68008's sitting around that we ain't gonna sell!
+<JAX> Use Amiga as terminal to a multiproc forth workstation.
+<GARY-S> If you can set up a chat it should be a gas
+<[Dennis] D.RUFFER> well, I've got to go and help my son cook (before he burns 
+himself), see ya all later
+<JAX> Well, maybe we'll build a new BBS that way! :-)
+<GARY-S> bye Dennis
+<JAX> bye
+<JAX> call me
+<JAX> .
+<[Dennis] D.RUFFER> as soon as something REAL happens jack :-)
+<GARY-S> Why the shelf full of 68008's ?
+<[Dennis] D.RUFFER> see ya all later..............................poof
+<[Dennis] D.RUFFER> has left.
+<GARY-S> Robert - anything on your mind ? You've been mighty quiet
+<JAX> Prototype. They run.
+<JAX> We sell 68000's ... 68008 too slow.
+<[Robert] R.BERKEY> not particularly.
+<[Robert] R.BERKEY> just wondering where Forth is going, where X3.J14 is going, 
+the usual.
+<JAX> LA is the answer!
+<GARY-S> Bill Muench will be our guest next Thursday if you guys want to 
+cuss/discuss eForth
+<[Robert] R.BERKEY> Plastics is the answer.
+<JAX> aha!
+<JAX> is 8051 eforth pd, shareware, or foobar?
+<[Robert] R.BERKEY> He knows a lot about the hardware chips, besides being 
+involved in eForth.
+<GARY-S> he also is responsible for Steve Robert's latest Winnebiko
+<GARY-S> the electronics, him and Bumgardner I would guess
+<GARY-S> Jax - it is my understanding any eForth is pd...
+<GARY-S> We need to get Ting to post some of the ports
+<GARY-S> Robert - re: X3 J14, have you been following the latest exchanges in 
+10-2 and 10-35 ?
+<[Robert] R.BERKEY> I've been skimming them, yes.
+<GARY-S> I wondered - I FIGURED THE STUFF ON POSTPONE WOULD ELICIT A RESPONSE 
+FROM YOU
+<GARY-S> sorry - didn't mean to shout
+<[Robert] R.BERKEY> I'm not sure what that would be.
+<[Robert] R.BERKEY> They've made [compile] less obsolete is all I've noticed.
+<GARY-S> That pleases you - right ?
+<[Robert] R.BERKEY> That's fine with me.
+<[Robert] R.BERKEY> The problem is that POSTPONE has been claimed to be a 
+substitute for both
+<[Robert] R.BERKEY> COMPILE and [COMPILE] .
+<[Robert] R.BERKEY>
+<GARY-S> That's where I expected some comment from you
+<GARY-S> reference to state smart
+<[Robert] R.BERKEY> As long as it's less than 100% compatible, then it's not a 
+substitute.
+<[Robert] R.BERKEY> Interestingly, I've heard of a technique that allows 
+COMPILE to be
+<JAX> What is it that [compile] can do that you can't do with POSTPONE?
+<[Robert] R.BERKEY> implemented by native code compilers.
+<GARY-S> There's going to be a lot of code the runs now, fail under X3 J14 
+without some serious prelude work
+<[Robert] R.BERKEY> jax, POSTPONE [COMPILE] is not the same as POSTPONE 
+POSTPONE .
+<[Robert] R.BERKEY> Mitch makes the interesting comment that COMPILE, does 
+everything that POSTPONE
+<JAX> No, but [COMPILE] FOOBAR is pretty much the same as either FOOBAR or 
+POSTPONE FOOBAR.
+<[Robert] R.BERKEY> does.
+<[Robert] R.BERKEY> The implementation for COMPILE is done with two passes, one 
+to create threaded
+<[Robert] R.BERKEY> code, and then it's the threaded code that is translated to 
+native code.
+<JAX> gotta go play a game o' cards with the youngun's. jaxoff!
+<JAX> has left.
+<[Robert] R.BERKEY> bye
+<[Robert] R.BERKEY> yep, there are many Forth-83 words that the committee no 
+longer directly supports.
+<GARY-S> Yeah - I know, too many
+<GARY-S> well - it's time anyway, unless you had something to add
+<[Robert] R.BERKEY> no, I'll be seeing you.
+<GARY-S> good nite
+=== End of Steno notes. ===
+
+

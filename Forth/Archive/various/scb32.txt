@@ -1,0 +1,208 @@
+
+
+
+ Minutes of the Special GEnie Forth RT Conference with George Nicol,
+ president of Silicon Composers. Dr. Nicol discussed his company's
+ SBC32 single board computer based on the 32 bit Forth engine created
+ at Johns-Hopkins Advanced Physics Lab.
+
+ Entire contents of this transcript copyright (c)
+ 1990 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 07/19/90   Time: 22:25EDT
+Attendees:
+[[george] FIGGUEST]
+[GARY-S]
+[[Dennis] D.RUFFER]
+[[Len] NMORGENSTERN]
+[[Robert] R.BERKEY]
+[[Alan] ATFURMAN]
+[[Doug] D.PHILIPS3]
+
+Minutes:
+<D.RUFFER> is here.
+<FIGGUEST> is here.
+<NMORGENSTERN> is here.
+<[george] FIGGUEST> Hello there
+<GARY-S> JUST got the notice posted
+<GARY-S> george - set /xec to end echo, look at /sta to know where I am...
+<GARY-S> any last questions ?
+<[george] FIGGUEST> no questions
+<R.BERKEY> is here.
+<[Alan F.] ATFURMAN>  is here
+<GARY-S> 2 minutes to show time
+<[Dennis] D.RUFFER> welcome Robert and Alen
+<[Alan F.] ATFURMAN> Gary: will e-mail right away
+<GARY-S> 1 minute
+<GARY-S> hey Robert - welcome to the meeting :-)
+<[Robert] R.BERKEY> hi
+<[Alan F.] ATFURMAN> Scuse me...
+<GARY-S> Mr. Berkey refers to FIGGY as his Forth chapter meeting <an honor for 
+us>
+<GARY-S> let's roll
+<GARY-S>    The GEnie Forth RoundTable is very pleased to welcome this ...
+<GARY-S>  evening's special guest, Dr. George Nicol, founder and president ...
+<GARY-S>  of Silicon Composers. He holds degrees in Mathematics and a ...
+<GARY-S>  doctorate in Systems Science from Portland State University. ...
+<GARY-S>  For the last twelve years, Dr. Nicol has worked in ...
+<GARY-S>  operations research and computer science. ...
+<GARY-S>  At the Lockheed Palo Alto Research Lab he developed a Forth ...
+<GARY-S>  based solar forecasting and image analysis system for the ...
+<GARY-S>  flight of Space Lab 2. ...
+<GARY-S>  Currently Dr. Nicol is managing the development of Forth ...
+<GARY-S>  based hardware and software at Silicon Composers. He is ...
+<GARY-S>  here tonight to discuss those developments in general and ...
+<GARY-S>  the SBC-32, single board computer in particular. ...
+<GARY-S>   - Please make welcome Dr. George Nicol.  ..
+<GARY-S>   .. .. .. .. .. ga George
+<[george] FIGGUEST> Silicon Composers, in business since 1986, specializes
+<[george] FIGGUEST> in hardware and software using Forth chips such as the
+<[george] FIGGUEST> 16-bit Harris RTX 2000, the 32-bit SC32 Forth Chip, and
+<[george] FIGGUEST> the NC4016.  We make single-board computers for stand
+<[george] FIGGUEST> alone use and for use in PCs as plug-in coprocessors.
+<[george] FIGGUEST> We also do custom board and software work.  Our newest
+<[george] FIGGUEST> product is the SC/FOX SBC32, a stand alone single board
+<[george] FIGGUEST> computer for the SC32 Forth Chip.  The SBC32
+<[george] FIGGUEST> is a small Eurocard size (100x160mm) board with up to 512K
+<[george] FIGGUEST> bytes of SRAM, 128K bytes of EPROM, a 56K baud serial port,
+<[george] FIGGUEST> and two fifty pin user application connectors.  It also
+<[george] FIGGUEST> comes with SC/Forth32, an interactive Forth based on the
+<[george] FIGGUEST> Forth83 Standard, in EPROM. (See the July/Aug '90 issue
+<[george] FIGGUEST> of Forth Dimensions, inside cover for additional details).
+<[george] FIGGUEST> If you have any questions about Silicon Composers or our
+<[george] FIGGUEST> products please feel free to ask. GAga
+<[Robert] R.BERKEY> I spoke with John Hayes this week.
+<[Robert] R.BERKEY> He indicates there are no current plans for more mods to
+                    the chip.
+<[Robert] R.BERKEY> That is the SBC32 design right?
+<[Robert] R.BERKEY> <no current resources>
+<[george] FIGGUEST> The SBC32 is the single board computer.  The SC32 is the 
+                    Forth Chip. Which do you mean?
+<[Robert] R.BERKEY> I am confused by the several sources of Forth chips.
+<[Robert] R.BERKEY> THere's one that Glen Haydon is involved with, for example.
+<[Robert] R.BERKEY> There's one in England that's 4 bit and BCD.
+<[Robert] R.BERKEY> I'm not sure which you are involved with.
+<[george] FIGGUEST> The SC32 Forth Chip is the 32-bit Forth chip developed at 
+                    the Johns Hopkins...
+<[george] FIGGUEST> University.  The SC32 is the chip we are discusinng here.
+<[Dennis] D.RUFFER> George, can you give any comparison between this chip and 
+                    Harris' new BINAR 32 bit chip?
+<[george] FIGGUEST> I haven't seen any benchmarks for the BINAR and I haven't 
+<[george] FIGGUEST> seen a spec sheet on it.  ...
+<[george] FIGGUEST> Anything in particular? 
+<[Len] NMORGENSTERN> For what kinds of applications is the SC32 now being used?
+<[george] FIGGUEST> Primarily embedded control applications.  ...
+<[george] FIGGUEST> Such as the satellite control application, communications, 
+                    encryption, ...
+<[Len] NMORGENSTERN> Can you tell us about
+<[Len] NMORGENSTERN> the encryption algorithm, or is it hush hush?
+<[george] FIGGUEST> The one being experimenting with is an RSA version. ...
+<[george] FIGGUEST> It's based on prime numbers. 
+<[Len] NMORGENSTERN> Thanx
+<GARY-S> Are you producing the SC32 in house ? xray litho ?
+<[george] FIGGUEST> The production of the SC32 is being subcontracted to a ...
+<[george] FIGGUEST> company called US2.
+<[Dennis] D.RUFFER> Can you tell us costs, how long it's been in production, 
+                    numbers sold (i.e how's it doing)?
+<[george] FIGGUEST> The chip has been in production for about a year. ...
+<[george] FIGGUEST> It's doing well, well enough that we're continuing to come 
+                    out with new
+<[george] FIGGUEST> development boards for it, like our new SBC32 single board 
+                    computer. 
+<GARY-S> How alike the original, J-H APL chip is the SC32 ?
+<[george] FIGGUEST> The version we're using is identical to version 3 of APL's 
+                    chip. 
+<[Dennis] D.RUFFER> how much are you selling your SBC32 for?
+<[george] FIGGUEST> The 8MHz 64K byte version of the SBC32 sells for $995.  
+                    Right now there is an ..
+<[george] FIGGUEST> introductory version for $695.
+<GARY-S> go ahead and finish your response to dennis, then jump on len's 
+         algorithm question :-)
+<[george] FIGGUEST> The SBC32 also comes with SC/Forth32 in EPROM.
+<[Len] NMORGENSTERN> I am curious about the RVS encryption. Is it reasonably 
+                     fast
+<[Len] NMORGENSTERN> The amount of computation is enormous, and some 
+                     implementations are painfully slow.
+<[george] FIGGUEST> The current version of the RSA code runs about 15 times 
+<[george] FIGGUEST> faster than a 20MHz 386 on the SC32 at 8 MHz.
+<GARY-S> do you also job shop, or market hardware only, George ?
+<[george] FIGGUEST> We market hardware, software, and do custom design and 
+                    production usually..
+<[george] FIGGUEST> for the Forth chip world.
+<GARY-S> You got a nice write up in the latest RTXpress from Harris on your Fox 
+         Box, it is apparently...
+<GARY-S> A RTX only box, is that correct ?
+<[george] FIGGUEST> Yes, the SC/FOX BOX is a stand alone computer for the RTX 
+                    2000 Forth chip.
+<D.PHILIPS3> is here.
+<[Dennis] D.RUFFER> yes, your FOX Box is nice, and we've used it on at least 
+                    one project that I know of....
+<[Dennis] D.RUFFER> You mentioned the SC32 running at 8 Mz, does it run at 
+                    faster speeds?
+<[george] FIGGUEST> Yes, on the SBC32 the SC32 runs at either 8, 10, or 12 MHz. 
+<[george] FIGGUEST> We just happened to be using an 8 MHz board for
+<[george] FIGGUEST> development. As a matter of fact we just got the benchmark
+                    (RSA) completed today.
+<[Dennis] D.RUFFER> this sounds as if your board is a new design.  How long 
+                    have you been in production with it?
+<[george] FIGGUEST> The SBC32 (for the SC32 32-bit Forth chip) was just 
+                    recently announced..
+<[george] FIGGUEST> in the July/Aug issue of Forth Dimensions. (See inside 
+                    front cover for details of the offer).
+<[Len] NMORGENSTERN> Do you mean one chip can run at several speeds, or
+<[Len] NMORGENSTERN> can be board be configured with any of 3 different chips?
+<[george] FIGGUEST> The SBC32 comes in three different speed configurations, 8, 
+                    10, and 12..
+<[george] FIGGUEST> The difference between the boards has to do with the RAM ...
+<[george] FIGGUEST> Clock, and CPU. The 12 MHz part can run at 8 MHz if you 
+                    wish.
+<GARY-S> What sort of development support does Silicon Composers offer a buyer 
+         of the SBC32 ?
+<[george] FIGGUEST> The SBC32 board comes complete with SC/Forth32 in EPROM,...
+<[george] FIGGUEST> a Shell editor, and utility files for a block editor, trig 
+<[george] FIGGUEST> functions and example programs.
+<[george] FIGGUEST> The SBC32 comes completely assembled, tested, and ready to 
+<[george] FIGGUEST> run. We also provide a very timely and attentive 
+                    engineering support. ..
+<[george] FIGGUEST> to assist customers with either board operation or their 
+                    application, ...
+<[george] FIGGUEST> hardware or software.  When a customer call comes to the 
+                    office...
+<[george] FIGGUEST> I try to pick up the phone first to see what the questions 
+                    are about...
+<[george] FIGGUEST> If I can not answer the question, I call an engineer or two 
+                    into my office ...
+<[george] FIGGUEST> and we put the speaker phone on and work with the customer 
+                    until ...
+<[george] FIGGUEST> every  one is happy.  Just about all of the calls are about 
+                    the customers' ...
+<[george] FIGGUEST> applications and how our products can best solve their 
+                    problems  ...
+<[george] FIGGUEST> That, for us, is the fun part of our job. 
+<[Len] NMORGENSTERN> How many of your purchasers are relatively new to
+                     Forth ?
+<[george] FIGGUEST> Most of our calls come from developers who have not used
+<[george] FIGGUEST> Forth, but they are very interested in the speed and 
+                    flexibility of the SC32.
+<[Dennis] D.RUFFER> do you have any plans for the extension connectors (i.e. 
+                    are you planning peripherals to plug into them)?
+<[george] FIGGUEST> Right now we have a prototyping ..
+<[george] FIGGUEST>  plug-on daughter board.  We are planning a memory (DRAM) 
+                    board...
+<[george] FIGGUEST> and a SCSI daughter board also.  If you have any request, 
+                    we are interested.
+<GARY-S> closing comments please george
+<[george] FIGGUEST> Thank you for your questions and your interest in Silicon
+<[george] FIGGUEST> Composers and our products.  I hope you continue to use
+<[george] FIGGUEST> Forth and will pass the good word to other developers.
+<[george] FIGGUEST> Thanks again.  George Nicol, President, Silicon Composers.
+<GARY-S>  Dr. Nicol on behalf of the GEnie Forth RoundTable,'Thank you'...
+<GARY-S>  for taking the time to discuss events at Silicon Composers ...
+<GARY-S>  with us this evening.
+<GARY-S>
+<GARY-S>  All may stay and chat, but this conference has officially ended.
+=== End of Steno notes. ===
+
+

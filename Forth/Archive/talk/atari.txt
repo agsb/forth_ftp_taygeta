@@ -1,0 +1,112 @@
+
+
+       Forth for the Atari
+	From the FIG Tree
+
+
+*** TURBO-4TH             6-JAN-85
+  PARENT=ATARI                USAGE=489
+Announcing turbo-4th for all Atari computers
+I have implemented a new version of
+fig FORTH for the Atari computers.
+It is compatible with the fig model
+and Team FORTH (which I wrote to/I-H,
+ all it turbo-4th because it is fast
+It is at least 2 times faster than
+other Atari FORTHs because it is not
+threaded, it is a true compiler.
+I have written a 96 page manual
+that attempts to completely describe
+everything, includes source listings!
+I intend to support this program, and
+if there are enough sales set up a
+turbo-4th bulletin board.
+The price is($25. plus your local
+Calif. sales tax (6 1/2% or 6%) plus
+$2.00 for handling (its a 3 ring binder)
+Send checks to:
+turbo-4th c/o Steven R. Calfee
+884 Cape Diamond Dr.
+San Jose, Cal. 95133
+
+*** TEAM-FORTH            6-JAN-8u
+  PARENT=ATARI                USAGE=477
+YOU CAN GET THE TWO TEAM FORTH DISKS
+by sending $5 to Bay Area Atari User group
+c/o John Cr...
+5886 Texas Ct.
+San Jose, Ca. 95120
+Also see turbo-4th message here.
+Steve Calfee
+
+
+*** TEAM-FORTH-RIP-OFF    9-FEB-85
+  PARENT=ATARI                USAGE=403
+I RECENTLY PURCHASED TEAM FORTH FROM
+ANTIC MAGAZINE.  WHAT A RIP-OFF! FOR
+$10.00 I GOT THE fig.FORTH DISK WITH
+PRACTACALY NO DOCUMENTATION. I HAVE
+ALREADY SPENT AN ADDITIONAL $20.00
+FOR "DISCOVER FORTH" BUt I GET THE
+FEELING I'M GOING TO HAVE TO BUY
+TURBO-FORTH OR SOME OTHER IMPLIMEN-
+TATION TO REALLY GET GOING.
+      CAUTION TO OTHER BEGINNERS,
+  DON'T BUY AN INFERIOR FORTH!
+
+*** MvP-FOR-ATARI        15-FEB-85
+  PARENT=TEAM-FORTH-RIP-OFF   USAGE=378
+I think MVP (Mountain View Press) might sell a Forth for the
+Atari ... i'd suggest getting a Forth '83 or Forth '79 model,
+if you are considering getting a ST (68000 atari) when it comes out,
+that's what will be avalable.
+
+*** NO-RIP-OFF            5-MAY-85
+  PARENT=ATARI                USAGE=280
+YOU GET WHAT YOU PAY FOR. $10.00
+AIN'T BAD, EVEN IF YOU CAN GET IT FROM
+A.B.A.C.U.S. OR BAAUG FOR $5.00. THE
+ANITIC TEAM FORTH DISK DOES HAVE SOME
+NICE THINGS. HOWEVER, TURBO-4TH. IS A
+MUCH BETTER DEAL.
+DAVE & DRAKE FROM K.C., CA
+
+*** O.S.ATARI            18-OCT-85
+  PARENT=ATARI                TSAGE=124
+I have QS forth with which I have never experimented much because, after being
+"turned on" by descriptions og the wonders of forth, I was "turned off" by the
+reality of the lack of compatibility to the great ATARI operating system.  I
+would like to try some thyng in forth but can't bring myself to part with the
+convenient ATARI file structures.  Is there a "fix" for this in the forth world?
+
+*** SURPRISED0           19-OCT-85
+  PARENT=O.S.ATARI            USAGE=121
+I don't know OS forth or the Atari machine, but I am surprised that you can't
+get your Forth to handle files. One of the powers of Forth is that you can
+write in assembler or   high-level according to your needs, and link thum all
+together in a natural way.
+When you mention "Atari File Structure", possibly you are talking about BASIC
+and not about operating system calls. In that case, your complaint is
+legitimate. When a BASIC is written for a given machine, many useful features
+are includy
+graphics, sound, etc., are also implemented if the computer has those features.
+It is regrettable that vendors will omit these from the Forth that
+they sell. There are two excuses: One is that Forth traditionally has used
+a virtual memory method of file handling (i. e. blocks), which has a lot
+of advantages. Second, writing a text-file handler is a lot of work and
+involves a number of arbitrary choices.
+There are exceptions. I just purchased Micromotion Master Forth for the IBM
+and it has facilities for block, text, and data files. There must be many
+others.
+You should write the maker of O.S.Forth to see whether they can help you.
+Meanwhile, some user of this board mqy be able to assist you.
+
+*** FORTH-RUN-BBS        29-DEC-85
+  PARENT=ATARI                USAGE= 50
+For those who don't mind calling Long Distanke, here is an Atari run BBS written
+in FORTH.
+          215-630-9149
+ 
+The sysop there wrote it.
+
+

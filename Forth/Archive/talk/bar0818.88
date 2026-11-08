@@ -1,0 +1,335 @@
+
+              
+ Minutes of FIGGY BAR Conference.
+ Date: 08/18/88   Time: 21:57EDT
+Attendees:
+[[Dave] DHWEINSTEIN]
+[[Gary] GARY-S]
+[[Still Jax] VESTA]
+[[Dennis] D.RUFFER]
+[M.WRIGHT12]
+[[len] NMORGENSTERN]
+              
+Items discussed : Roll your own Forth, zen Forth, ForthNet ( GEnie, xCFB's,
+the WELL {maybe Usenet} ), Infix with Forth, PCPursuit, Banner for Mitch
+       
+Minutes:
+<[Dave] DHWEINSTEIN> So...are you going to get the message for next weeks 
+meeting on the MAIN GENIE WIDE BANNER??!!??
+<[Dennis] D.RUFFER> who me?
+<[Gary] GARY-S> Dennis - you met a friend of mine in Leonard's FIGGY, Fun Fong.
+<[Dave] DHWEINSTEIN> (turns stereo up and pours self drinkj)
+<[Dave] DHWEINSTEIN> bbia
+<[Dennis] D.RUFFER> yes, he was interesting
+<[len] NMORGENSTERN> After everybody left, I got 1 interested party...
+<[len] NMORGENSTERN> who knows nothing about Forth...
+<[len] NMORGENSTERN> I hope I enticed him to come back.
+<[len] NMORGENSTERN> ,
+<[Gary] GARY-S> Let's talk a little about roll-your-own Forth tonite -    This 
+is a good group for that
+<[Dennis] D.RUFFER> let me get out my roller :-)
+<[Dave] DHWEINSTEIN> back
+<[Gary] GARY-S> Please do
+<[Dave] DHWEINSTEIN> (settles back and sips drink as we prepare for a rolling 
+party)
+<[Gary] GARY-S> Any one actually building from zero ala Lolliger ?
+<[Dennis] D.RUFFER> who's Lolliger?
+<[Gary] GARY-S> Jax - at Vesta ?
+<[Dave] DHWEINSTEIN> I have a partly finished kernel laying about somewhere 
+does that count?
+<[Still Jax] VESTA> Friend of mine is.
+<[Still Jax] VESTA> We meta.
+<[Dave] DHWEINSTEIN> Straight native JSR thread.
+<[Dennis] D.RUFFER> I've done it, but don't have to anymore
+<[Gary] GARY-S> From what kernel ? Proprietary ?
+<[Still Jax] VESTA> Friend of mine is on the team making a Forth chip.
+<[Still Jax] VESTA> Oh, our kernel is our proprietary romable form of L&P.
+<[Still Jax] VESTA> With extensions.
+<[Gary] GARY-S> Dave - That's the honest roll your own - how far along ?
+<[Dave] DHWEINSTEIN> (has never seen FORTH without extensions...)
+<[Dave] DHWEINSTEIN> Heh....partly in machine form...partly sketched out...long 
+since tabled...
+<[Still Jax] VESTA> Coming in VESTA Forth  Sept.88  ...  Debugger, Decompiler, 
+Full Screen Editor, ROMable self-booting overlays.
+<[Dave] DHWEINSTEIN> I don't have the time to write one from scratch...I have a 
+very nice Sun forth from Mitch...and am having a ball writing "high le
+vel language extensions"
+<[Gary] GARY-S> What did you use at ( can we say Allen ) DSennis
+<[len] NMORGENSTERN> Dave, do you know Martin Tracy's Zen Forth?
+<[Dennis] D.RUFFER> We used my version of L&P
+<[Dave] DHWEINSTEIN> No
+<[len] NMORGENSTERN> Absolute minimum!
+<[Dave] DHWEINSTEIN> Did you see the infix package spread out through Usenet 
+recently? Brilliant!
+<[Dennis] D.RUFFER> 4K Forth is Martin's
+<[Dave] DHWEINSTEIN> Three words and instant no loss of efficiency infix
+<[Still Jax] VESTA> Dave ... funnier than brilliant!
+<[Dave] DHWEINSTEIN> The idea was excellent.
+<[Still Jax] VESTA> Cute.
+<[Gary] GARY-S> The last real roll your own I did was for a Timex 1000 
+(Sinclair ZX-81) - strictly 79-standard
+<[Dave] DHWEINSTEIN> Whew....really "low" brow..err..level...
+<[Still Jax] VESTA> Infix is a neurotic habit more than a notation.
+<[Dave] DHWEINSTEIN> Yes..but it so wonderfully shows how easy it is to extend 
+forth...and so efficiently.
+<[Dave] DHWEINSTEIN> A great example of extending the compiler with a minimum 
+of effort.
+<[Dennis] D.RUFFER> gee, anyway we could get a copy?
+<[Still Jax] VESTA> To do something ridiculous.
+<[Dennis] D.RUFFER> I did an infix translater back in college
+<[Gary] GARY-S> Dick Ponntain did a super infix piece - I think in BYTE or DDJ 
+about three months ago
+<[Dave] DHWEINSTEIN> I can type them in now (from memory)...or upload a copy I 
+guess. (Modifie
+<[Dennis] D.RUFFER> I'd love to see one done in Forth
+<[Dave] DHWEINSTEIN> Here (hold):
+<[Dave] DHWEINSTEIN> : ) if execute else , then ; immediate
+<[Dave] DHWEINSTEIN> : infix create ' , immediate does> @ 0 ;
+<[Dave] DHWEINSTEIN> : imfix create ' , immediate does> @ -1 ;
+<[Dave] DHWEINSTEIN> infix defines non-immediate infix versions, imfix defines 
+immediate versions
+<[Dave] DHWEINSTEIN> (this is from memory...did I misremember, Jax?)
+<[Dave] DHWEINSTEIN> Example:
+<[Dave] DHWEINSTEIN> infic +( +
+<[Dave] DHWEINSTEIN> -c +x
+<[Dave] DHWEINSTEIN> : test 3 +( 5 ) . ;
+<[Dave] DHWEINSTEIN> or
+<[Dave] DHWEINSTEIN> imfix if( if
+<[Dave] DHWEINSTEIN> : test2 if( 3 5 = ) abort" bad math chip" then ;
+<[Dave] DHWEINSTEIN> or even nested
+<[Dave] DHWEINSTEIN> infix =( =
+<[Still Jax] VESTA> ( just came back. they are ALL immediate. The IMFIXX is for 
+the branch instructions.)
+<[Still Jax] VESTA> ( INFIX is for math operators)
+<[Dave] DHWEINSTEIN> : test3 if( 4 =( 4 ) -1 then ;
+<[Dave] DHWEINSTEIN> Yeah...my mistake...infix and imfix are both immediate 
+words.
+<[Dave] DHWEINSTEIN> imfix defines words which must be run as immediate, infix 
+defines words which are not to be *run* as immediate.
+<[Dave] DHWEINSTEIN> Simple and elegant.
+<[Dave] DHWEINSTEIN> (useless....but elegant)
+<[Still Jax] VESTA> but i think it is ...
+<[len] NMORGENSTERN> It's a good demonstration to prove to ...
+<[Still Jax] VESTA> : test2 if( 3 (= 5) then( ." bad math chip) ;
+<[len] NMORGENSTERN> the skeptic that RPN really IS isimpler.
+<[Still Jax] VESTA> RIGHT>
+<[Dave] DHWEINSTEIN> No Jax.
+<[Still Jax] VESTA> oops 5 0
+<[Dave] DHWEINSTEIN> The ) must be space seperated (it is a word, not a 
+delimiter)
+<[Still Jax] VESTA> i mean 5 )
+<[Still Jax] VESTA> I KNOW< SILLY!
+<[Dave] DHWEINSTEIN>
+<[Still Jax] VESTA> typo.
+<[Still Jax] VESTA> foo!
+<[Dave] DHWEINSTEIN> Heh
+<[Dennis] D.RUFFER> real qute!
+<[Dave] DHWEINSTEIN> I dont mkae ny typosa.
+<[Still Jax] VESTA> ( Laying in wait for DHW to make the TINY mistake)
+<[Dave] DHWEINSTEIN> My. I perfect am, mistakes no maketh I.
+<[Still Jax] VESTA> cute, right.
+<[Dennis] D.RUFFER> now now boys <grin>
+<[len] NMORGENSTERN> I'm never wrong....
+<[Dave] DHWEINSTEIN> -y +e
+<[Still Jax] VESTA> Once I thought I made a mistake, but I was wrong.
+<[len] NMORGENSTERN> If you can convince me that I am, I'll change...
+<[Dave] DHWEINSTEIN> (not a bug fix....an update)
+<[len] NMORGENSTERN> my mind, and then I will be right.
+<[Still Jax] VESTA> No, RPN makes more sense, both in classical math & espec. 
+in comp sci.
+<[Dennis] D.RUFFER> RPN makes sense to computers...
+<[Dave] DHWEINSTEIN> Yes it does....but this is an example of the beauty and 
+flexibility of FORTH (ghod...I sound like a preacher)
+<[Dennis] D.RUFFER> but we have been "trained" to use infix
+<[Still Jax] VESTA> you have .... in europe ... they do math like so:
+<[Still Jax] VESTA> 12
+<[Dave] DHWEINSTEIN> (Technical adjustments being made)
+<[Dennis] D.RUFFER> that was a good example of how simple the conversion can be
+<[Still Jax] VESTA> 12 +
+<[Still Jax] VESTA> __
+<[Still Jax] VESTA> 24
+<[Still Jax] VESTA> So it ain't so strange.
+<[Dave] DHWEINSTEIN> Even LISPish prefix makes more sense than infix
+<[Dave] DHWEINSTEIN> (technical adjustments completed)
+<[len] NMORGENSTERN> Polish notation began in Poland (obviously)...
+<[Dennis] D.RUFFER> LISPish?
+<[Still Jax] VESTA> (doesnt_make_sense Lisp Prefix)
+<[len] NMORGENSTERN> It was invented by a Logician named Lucasiewicz...
+<[Still Jax] VESTA> who lived, I think, in France?
+<[Still Jax] VESTA> or England?
+<[len] NMORGENSTERN> To formalize logic. He put the operator first.
+<[Still Jax] VESTA> ( he was dating her after work)
+<M.WRIGHT12> is here.
+<[len] NMORGENSTERN> Hi, M.
+<[Dave] DHWEINSTEIN> I have the late binding package *written*..but I haven;t 
+had time to test it yet.
+<[Dave] DHWEINSTEIN> (why is that bloody ; where the ' should be)
+<[len] NMORGENSTERN> Maybe you have a tic.
+<[len] NMORGENSTERN> :-)
+<[Dave] DHWEINSTEIN> What's that, I comma here U* ?
+<[len] NMORGENSTERN> It's dangerous your asterisk!
+<[Dave] DHWEINSTEIN>
+<[Dave] DHWEINSTEIN> And I am sitting on it...thank you very much
+<[Dave] DHWEINSTEIN> So...gary...*are* you going to get next Thursday's conf. 
+on the GEnie wide banner?
+<[Gary] GARY-S> I've got the word in and Laura says 'YES'
+<[Gary] GARY-S>  so, we'll see
+<[Dennis] D.RUFFER> well, are we talking about RPN or roll your own?
+<[Dave] DHWEINSTEIN> (rolling your own can get you arrested)
+<[len] NMORGENSTERN> Depends on what you put in it.
+<[Still Jax] VESTA> Is there really such a thing left ... Forth is pretty well 
+worked out. If I wanted to roll my own Forth ...
+<[Dennis] D.RUFFER> not if your carefull <sheepish grin>
+<[Dave] DHWEINSTEIN> (drinks drink and leafs that subject slone)
+<[Still Jax] VESTA> I would not use an assembler, I would write a cross 
+assembler in Forth on my
+<[Still Jax] VESTA> amiga.
+<[len] NMORGENSTERN> I have been starting something in my head, and that is...
+<[Dave] DHWEINSTEIN> -s +a
+<[Dennis] D.RUFFER> does anyone roll your own (Forth) from scratch anymore?
+<[Still Jax] VESTA> Friend of mine is.
+<[Still Jax] VESTA> He is working on the MISC Chip.
+<[Still Jax] VESTA> They are rolling own Forth for this new Forth engine.
+<[Dave] DHWEINSTEIN> for just that occasion.
+<[len] NMORGENSTERN> I have nothing to say!
+<[Dave] DHWEINSTEIN> Forth *is* a religion
+<[Gary] GARY-S> It is - and that's why we're here
+<[len] NMORGENSTERN> Deja vu!
+<[len] NMORGENSTERN> Deja vu all over again.
+<[Gary] GARY-S> Jax and I are promoting a Forth Net
+<[Still Jax] VESTA> YEAH ... where ya been!
+<[Gary] GARY-S> Care to hear more ?
+<[len] NMORGENSTERN> ga
+<[Dave] DHWEINSTEIN> sure
+<[Still Jax] VESTA> I want to hear where you been.
+<[Gary] GARY-S> Jax is sysop (fair-witness ) on the WELL
+<[Still Jax] VESTA> of the Forth conf only.
+<[Gary] GARY-S> I have set aside a p-d message area for collecting messages to 
+port here and hence the xCFB's
+<[Still Jax] VESTA> They are waiting for you to collect, mailman.
+<[Dave] DHWEINSTEIN> !!
+<[Gary] GARY-S> I have alerted the xCFB's of this and have asked for input
+<[Dave] DHWEINSTEIN> Will they be sent out on Usenet?
+<[Gary] GARY-S> I will either open a topic on GEnie for this or....
+<[Gary] GARY-S> go with establisheds topics
+<[Gary] GARY-S> comments ????
+<[Dennis] D.RUFFER> I'd either start a new cat, or a new library
+<[Dave] DHWEINSTEIN> Will it be echoed onto hthe Usenet?
+<[Dennis] D.RUFFER> sounds like something that could grow rather large
+<[Gary] GARY-S> JAX ?
+<[Still Jax] VESTA> hello?
+<[Gary] GARY-S> Dennis - then you already agree to tyhe seperate Cat ?
+<[Still Jax] VESTA> Not to echo to usenet. Just little ForthNet conf. or two. 
+or twelve.
+<[Dennis] D.RUFFER> certanly
+<[Still Jax] VESTA> We have room for multiple topics on well.
+<[Dave] DHWEINSTEIN> Why not echo? It would liven up the net! (not that ol' 
+Frase' hasn't done his fair share)
+<[Still Jax] VESTA> start category here: FORTHNET>
+<[Still Jax] VESTA> Oh F*** usenet.
+<[Dennis] D.RUFFER> I'd duplicate the structure here
+<[Dave] DHWEINSTEIN> (temper temper jax)
+<[Gary] GARY-S> Jax - I'll pick them up this week-end and get the Cat cooking 
+here - did you leave me mail on uploading on the WELL ???
+<[Still Jax] VESTA> Usenet is for people like ORR who want to make fun of Forht.
+<[len] NMORGENSTERN> Who's ORR?
+<[Still Jax] VESTA> yes, gary, and if you have trouble, get someone on line to 
+help.
+<[Dave] DHWEINSTEIN> Spies is like Orr????
+<[Gary] GARY-S> will do
+<[Gary] GARY-S> TNX
+<[Still Jax] VESTA> Fraser Orr is a mainframer from Scotland.
+<M.WRIGHT12> tell me about well
+<[Still Jax] VESTA> He is a charming fellow, and has livened up the USENET comp.
+lang.forth.
+<[Dave] DHWEINSTEIN> (actually he is using a Sun workstation....it sure isn't a 
+mainframe)
+<[Dave] DHWEINSTEIN> We need someone to argue with.
+<[Dave] DHWEINSTEIN> Only 12 meg.
+<[Dave] DHWEINSTEIN> and at most a SPARC
+<[Dave] DHWEINSTEIN> :-)
+<[Still Jax] VESTA> I enjoy the interaction with him. He provides an excuse for 
+me and dave and l. brotzman to extoll the virtues of forth.
+<[Dave] DHWEINSTEIN> And oh do we enjoy it.
+<[Gary] GARY-S> WELL is San Francisco based info system - strictly regional 
+and/or PCPursuitable
+<[Still Jax] VESTA> WIthout him comp.lang.forth would be dead for months at a 
+time.
+<[Still Jax] VESTA> The WELL is an international virtual community.
+<[Still Jax] VESTA> There is nothing like it in telecom!
+<[Dave] DHWEINSTEIN> Yes....but Juniper is so much cheaper... :-)
+<M.WRIGHT12> how do i get omn
+<[Gary] GARY-S> It IS a HELL of a gateway
+<[Still Jax] VESTA> It is "on-line california mellow"
+<[len] NMORGENSTERN> What's Juniper?
+<[Dave] DHWEINSTEIN> Jes' wait till austin makes PCP
+<[Dave] DHWEINSTEIN> The Austin Unix User's Group gateway
+<[Dave] DHWEINSTEIN> $15 year for non-students...$5 for students...unlimited 
+access and time.
+<[Gary] GARY-S> Is Austin scheduled ?
+<[Dave] DHWEINSTEIN> (non-root access that is)
+<[Still Jax] VESTA>
+<[Dave] DHWEINSTEIN> I dunno...I've been hearing rumors for some time
+<[len] NMORGENSTERN> Yes, I would like to make plans.
+<[Dave] DHWEINSTEIN> But I dunno
+<[Dave] DHWEINSTEIN> There are public gateways all over. Cleveland, Chicago, 
+Oakland, Houston, Dallas, Austin at least that I know of (and I am sure t
+here are many many more).
+<M.WRIGHT12> how bout houston
+<[Still Jax] VESTA> it is on PCP, M>W>
+<[Dave] DHWEINSTEIN> I think so. I have seen posts from "a flat near Montrose 
+by Houston"
+<[Dave] DHWEINSTEIN> But I am not sure.
+<[Dave] DHWEINSTEIN> Dallas does have one.
+<[Gary] GARY-S> Dallas is TXDAL
+<[Dave] DHWEINSTEIN> The problem would be getting in touch with them.
+<[Dave] DHWEINSTEIN> (the gateway)
+<[Dave] DHWEINSTEIN> What are the WELL's rates?
+<[Still Jax] VESTA> WELL ....
+<[Still Jax] VESTA> 415-332-6106 8-n-1 7-e-1
+<[Dave] DHWEINSTEIN> That is not what I meant Jax... :-)
+<[Still Jax] VESTA> $8/mo $3/hr
+<[Still Jax] VESTA> VAX 11/750 running BSD4.3
+<[Dave] DHWEINSTEIN> $8 per month + $3 per hour???????
+<[Still Jax] VESTA> Full access to Unix Op System.
+<[Dave] DHWEINSTEIN> Connect time or CPU time?
+<[Still Jax] VESTA> LOADED with Unix utils
+<[Gary] GARY-S> CPU
+<[Still Jax] VESTA> Connect time, dummy :-)
+<[Dave] DHWEINSTEIN> (every Unix syspem is loaded with utilities )
+<[Dave] DHWEINSTEIN> Whew...
+<[Still Jax] VESTA> Not all, not like the WELL.
+<[Gary] GARY-S> According to the message at sign-on you don't pay for that
+dead wait as PICO comes on
+<[Still Jax] VESTA> There is a Grateful Dead conf that fills a hard disk & 
+one/half.
+<M.WRIGHT12> I
+<[Still Jax] VESTA> ga M.W.
+<[len] NMORGENSTERN> brb
+<[Dave] DHWEINSTEIN> Heh. An eagle (550 meg drive?)
+<[Still Jax] VESTA> 80 meg
+<[Dave] DHWEINSTEIN> Oh.
+<[Dave] DHWEINSTEIN> 120 meg of deadheads?
+<[Still Jax] VESTA> yes
+<M.WRIGHT12> Is ther a file on WELL
+<[Dave] DHWEINSTEIN> whew
+<[Still Jax] VESTA> not here, i don't think. Do you want email, M.W.?
+<M.WRIGHT12> yes
+<[Still Jax] VESTA> ok, I will send you after the conf.
+<M.WRIGHT12> Thanks
+<[Still Jax] VESTA> ( JAX is  jax on the WELL, btw)
+<[Dave] DHWEINSTEIN> juniper!olorin
+<[Gary] GARY-S> GARY-S is gars
+<[Dave] DHWEINSTEIN> or olorin@walt.cc.utexas.edu
+<[Gary] GARY-S> any more , troops
+<[Dave] DHWEINSTEIN> Later gars....time for me to run.
+<M.WRIGHT12> has left.
+<[Still Jax] VESTA> jax@chariot.UUCP but N*O*T jax on BIX ... that is someone 
+else.
+<[Dennis] D.RUFFER> bye dave
+<[Dave] DHWEINSTEIN> (contemplates empty glass)
+<[Gary] GARY-S> Been a interesting conference - Thanks for the inputs !
+<[Dave] DHWEINSTEIN> And the interrupts
+=== End of Steno notes. ===
+
+

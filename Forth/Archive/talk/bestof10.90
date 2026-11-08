@@ -1,0 +1,200 @@
+
+                
+                    Best of GEnie..... October 1990
+          News from the GEnie Forth RoundTable by Gary Smith
+
+   Two expressions pop to mind as I realize how long it has been since I
+recapped GEnie Forth RoundTable Real Time guest conferences. The first
+is, "Time sure flies when you are having fun.". The second has something
+to do with posteriors, swamps, and alligators. These trips down memory
+lane are without doubt one of the more popular features of this column,
+and certainly they are among my favorite to present.
+  
+   I have said this before, but it bears repeating. We have really been
+graced with an array of guests with divergent views, but without exception
+all have been interesting and a delight to chat with. I would encourage you
+to participate in at least one of these. The guests generally appear one
+per month on the third Thursday except for the third quarter (October through
+December when they are moved to the second Thursday to avoid holiday 
+conflicts. If you are interested in knowing who might be scheduled to next
+appear this is posted iin the GEnie Forth RoundTable Bulletin Board in 
+Category 1, Topic 6 with the current invitee pre-announced in the door banner
+that greets users on entrance to the RoundTable each day.
+ 
+   Enough of that. We have a lot of catching up to do. This issue we will 
+focus on vists with Robert Smith, "Floored Division and Floating Point",
+Phil Koopman, "Stack Machines", Charles Curley, "A Minimalist View of Forth",
+and John D. Hall, "The Business of FIG".
+
+   As has become a standard format for these guest sessions I will recall
+only the guests opening remarks. These can be used quite accurately as a
+pseudo abstract of the conference. If you determine you want to follow the 
+discussion more closely, the complete transcripts are available for capture
+in Library 1 of the GEnie Forth RoundTable Software Libraries.
+
+  
+  Phil Koopman
+  September 1989
+  Senior Scientist, Harris Semiconductor
+
+    Some of the things I have found out about stack machines go against 
+ widely held (at least, outside the Forth community) ideas. For example
+ stack machines: don't need stacks bigger than 16 to 32 elements, need not
+ have a significant context switching time, and can cycle their clocks 
+ every bit as fast as (or perhaps faster than) RISC processors.  One thing
+ I run across continually is that folks confuse the requirements for real-
+ time embedded control with those of workstation environments. 
+    One of my professional goals is to understand more about Forth-derived
+ stack computers in order to help them gain acceptance in applications for
+ which they are well suited.  Stack machines seem to be superb at real-time
+ embedded control (although I still want to do more research to quantify 
+ this notion).  But, what about other application areas?  If stack machines
+ are the answer, what are the questions? ..
+  
+
+  Robert L. Smith
+  October 1989
+  Research Specialist, Lockheed Palo Alto
+
+   THANK YOU.  For floored division, it helps to focus on the modulus or
+ remainder rather than the quotient.  Most users use only positive argu-
+ ments, so floored or non-floored give the same results.  For almost all 
+ cases that I know of, if you have at least a negative numerator, you 
+ propbably should use floord division.
+      
+ For Floating Point:
+ (1) should Forth have it at all? and 
+ (2) If so, should it be in the Standard? And 
+ (3) IEEE floating point?
+
+
+  Charles Curley
+  November 1989
+  Neologist
+
+   Grief, after that lead-in..
+   I guess I see forth as a tool, and I like my tools to be simple and easy
+ to understand. A lathe is (conceptually) simple, and it does almost anything
+ one needs to do. So are wrenches, hammers, etc. I don't think there is such
+ a thing as a single tool do do everyting, so I like lot's of simple, semi-
+ custom tools. Hence minimal Forth.
+ That's all for a start.
+
+ <[Gary] GARY-S> Charles - your original non-standard committee is something
+ of a standard rejoiner do you still feel anti-standard?
+
+   Well, since no-one ever joined it, it can't be a <re->joiner <grin> but, 
+ yes, I do still think that standards get in the way more than they help.
+ Note that standards are not the same as models, which can be very useful.
+ I think Chuck said it best: standards are wonderful; everyine should have
+ one. I think that coding standards would be more useful than a language
+ standard, but try getting any two forth programmers to meet even miniimal
+ standards in coding. ...
+   I think that standards are too vague to be of any real use. They are too
+ open to interpretation and fudges. If they are too tight, the resultant
+ forth is useless for its natural applications, high speed & compact code 
+ stuff. If the're too lose, then you have no portability.
+ 
+
+  John D. Hall
+  December 1989
+  Programmer, Lockheed Palo Alto
+
+   Forth Interest Group was organized in 1978 and one of the first things
+ that was done was the formation of Forth Implementation Team lead by Bill
+ Ragsdale to build figForth and put it in the public domain.  Because fig-
+ Forth was implemented on many microprocessors based on a single model and
+ released with complete source listings, it became the defacto standard of
+ Forth.  The listing were made available for $15 and were extremely popular. 
+ To encourage extensions and modifications to Forth, the same people started
+ Forth Dimensions, FORML and the Forth Standards Team.  Many of these same
+ people wrote or encouraged others to write articles for Byte and the famous
+ Byte Forth issue was published in Oct of 1980.
+ 
+   Money was coming in faster than new uses for it could be found and sales
+ taxes were collected but no formal organization existed to pay the sales tax
+ and avoid any income tax.  At this time, FIG was only a loose confederation
+ of interested Forth users that were spread around the world, so a California
+ non-profit corporation, Forth Interest Group,Inc., was formed to centralize
+ the contacts, establish a central distribution point for Forth information
+ and establish the formal function of publishing Forth Dimensions and the
+ FORML proceedings and the distribution of these and the figForth listings. No
+ great thought was given to the other reasons for having a corporation.  It was
+ primarily to centralize the loose confederation of people and ideas and dis-
+ tribute contributed literature.  FIG was guided by a Board of Directors con-
+ sisting of Bill Ragsdale, Kim Harris, John James, Dave Kilbridge and Dave
+ Boulton.
+ 
+    The corporation wasn't the answer to the problems of organization, it took
+ people to make ideas happen. Organization ideas were and still are plentiful,
+ people to implement the ideas were not.  From the beginning business meetings
+ were held one evening a month on the Tuesday before the 4th Saturday of the
+ month.  Before the corporation, FIG and the Silicon Valley chapter were the
+ same and the planning for the Sat. meeting was finalized on the previous Tue.
+ As the corporation was formed, the corporation business meeting began to take
+ over the topics of the Tue. meeting until finally the Silicon Valley chapter
+ planning was split off to another night. Since actions took more time than
+ was available at the business meetings, committees were formed to plan and
+ guide activities as existing or new functions were needed.  FORML and Forth
+ Dimensions needed guidance.  FORML split into a conference and a convention. 
+ People around the world were forming group meetings and wanted to be kept
+ informed, so a chapter committee was formed.  Literature needed to be pub-
+ lished and new books and publications needed to be reviewed.  A publication
+ committee was formed.  Direct communication with the Forth community was
+ needed, so a connection to GEnie was established and a committee of sysops
+ was formed.  All of the literature needed to be distributed and orders needed
+ to be filled, so an outside organization was hired.  Money was being received
+ and distributed on a daily basis and this was more than the volunteer
+ treasurer could handle.  From the beginning, all of the functions of the FIG,
+ Inc were handled by a group volunteers with the help a few paid people such
+ as the editor of Forth Dimensions and Mountain View Press for distribution. 
+ When we saw our way clear enough, a management organization was hired to try
+ to tie all the office functions together to establish a central office for
+ mail distribution and phone under the direct control of FIG, Inc.
+ 
+  We are now at a point now where FIG, Inc, includes
+    1)  Editing, publication and Distribution of Forth Dimensions
+    2)  Production and convening the Annual FORML Conference
+    3)  Publication and distribution of the FORML Proceedings
+    4)  Production and convening the Annual Forth Convention
+    5)  Support and Sponsorship of the GEnie RoundTable
+    6)  Support and organization of approx 50 Chapters
+    7)  Distribution of over 90 publications
+    8)  Production and distribution of a growing disk library
+    9)  Membership enrollment of over 2000 members
+ 
+  FIG, Inc is governed by a 7 member Board of Directors:
+  Dennis Ruffer, John Hall, Terry Sutton, Mike Elola,
+  Robert Smith, Jack Brown, Wil Baden
+ 
+  Business is conducted by the Business Group including
+  the above and:
+  C.H. Ting, Jan Shepherd, Bob Barr, Marlin Ouverson,
+  Bill Ragsdale, Robert Reiling, Tom Zimmer and others
+  who are interested in the business of FIG
+ 
+    The growth of FIG was probably not as chaotic as I am remembering it, but
+ the organizing was driven by the needs that had to be filled rather than
+ with a planned structure and the organizing was done by those of us who are
+ technically competent in Forth but not necessarily in organizations.
+ 
+    Was FIG the answer for Forth?
+ 
+    Well, yes, if the question was how do we establish a central focal point
+ for Forth.  What we had done is created a "passive" organization, given it 
+ ability to reach out to the Forth community and made it financially self-
+supporting as long as there were enough people who were interested in Forth
+ and willing to support FIG.
+ 
+    What we had not done was create an "active" environment for "encouraging"
+ those who were interested in Forth, "instructing" those who were new to
+ Forth, "supporting the creativity" of people who were advancing Forth or even
+ "establishing the solid technical foundation" and background for the growth
+ of Forth use.
+ 
+    There are probably other things the FIG is not and should be.
+ 
+    We have the organization and it has the room for new directions.  How do
+ we now make it the organizational answer for Forth?
+
+

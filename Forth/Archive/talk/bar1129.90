@@ -1,0 +1,296 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 11/29/90   Time: 22:35EST
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[M.CHRISTOPH2]
+[D.RUFFER]
+[M.ZDANCEWIC1]
+[N.DAVIS6]
+
+   Items discussed include New Madrid fault, TCOM and F-PC updates, using 
+   F-PC and TCOM, using editors LOOK and SZ, file handling, Leonard's help
+   FIGGY's, Bill Muench conference, finding GEnie files, using stack handler.
+Minutes:
+<NMORGENSTERN> is here.
+<[Len] NMORGENSTERN> Did you get my suggestions for round table speakers?
+<[Gary] GARY-S> Yes, THANKS
+<[Gary] GARY-S> I haven't had a chance to follow up on any of them as yet
+<[Len] NMORGENSTERN> Of course!
+<[Gary] GARY-S> If things occur next week as predicted by Iben Browning it may 
+not matter <grin>
+<[Len] NMORGENSTERN> Oh, yes the earthquake predictor.
+<[Gary] GARY-S> He says the New Madrid will go on Tuesday
+<[Len] NMORGENSTERN> It is said that "Prediction is never difficult:
+<[Len] NMORGENSTERN> It is either easy or impossible." Goodhart's rule
+<[Gary] GARY-S> The New Madrid fault _will_ go again, of this there is zero 
+doubt, I just think it is ludicrous to predict 'when'
+<[Len] NMORGENSTERN> a. You are right, in the present state of knowledge.
+<[Len] NMORGENSTERN> b. It is useless to predict, even if accurate, unless you 
+                       have
+<[Len] NMORGENSTERN> a plan as to what to do if the prediction is right, and
+<[Len] NMORGENSTERN> c. an estimate of the relative costs of getting out vs
+<[Len] NMORGENSTERN> bearing the damage.
+<[Len] NMORGENSTERN> This problem comes up all the time in medicine, with
+<[Len] NMORGENSTERN> respect to screening procedures.
+<M.CHRISTOPH2> is here.
+<[Len] NMORGENSTERN> Not on such a massive scale, of course.
+<M.CHRISTOPH2> I live in ohio!
+<[Gary] GARY-S> I live in Arkansas
+<M.CHRISTOPH2> Youch!
+<[Len] NMORGENSTERN> Your problem is that your building construction is not
+<[Len] NMORGENSTERN> earthquake proof, as ours is, more or less.
+<[Gary] GARY-S> Very true - a LOT of brick facade structures - unanchored
+<[Len] NMORGENSTERN> No large modern building was damaged here.
+<[Len] NMORGENSTERN> Right, like Mexico City.
+<[Gary] GARY-S> Yes
+<[Len] NMORGENSTERN> Mike: I gave your name to John Peters. He is trying to
+<[Len] NMORGENSTERN> get up a library of TCOM routines, and will communicate
+<[Len] NMORGENSTERN> with you.
+<M.CHRISTOPH2> I love tcom.
+<[Len] NMORGENSTERN> He is former disk librarian for the Silicon Valley FIG 
+chapter.
+<M.CHRISTOPH2> I spoke with Tom Zimmer today
+<[Len] NMORGENSTERN> What's new with TCOM, Mike
+<D.RUFFER> is here.
+<M.CHRISTOPH2> Well i just received an update.  Some new things are the ability 
+to include a small forth nucleus to the com program for debug
+<[Len] NMORGENSTERN> What number is your update?
+<M.CHRISTOPH2> there are about 50 updates. It'll take a while to sift thru.  
+Many of my bug fixes have been added to FPC
+<M.CHRISTOPH2> Feels good to have helped alittle
+<[Len] NMORGENSTERN> A lot!!!
+<[Gary] GARY-S> Sounds like you made some rather significant contributions
+<M.CHRISTOPH2> well I use forth about 12 to 16 hours aday for the last 4 years, 
+i am finally learning a few things!
+<[Len] NMORGENSTERN> A common phenomenon in all kinds of learning, Mike
+<[Gary] GARY-S> In what capacity ?
+<[Len] NMORGENSTERN> For a long time, new knowledge makes you more and more
+<[Len] NMORGENSTERN> aware of what you don't know, and you feel as if
+<M.CHRISTOPH2> I still can't believe how powerful forth is.  I am a 
+professional programmer and have used forth nearly exclusively for about 4 years
+<[Len] NMORGENSTERN> you are going backwards. Finally, you pass that point!
+<M.ZDANCEWIC1> is here.
+<[Len] NMORGENSTERN> M., please set your first name. We like to be informal
+<M.CHRISTOPH2> That is so true.  I can not believe in over a year of use, not a 
+single bug has been reported.  The host is in use 24 hours a day 7 days
+a week at several places around the world. Not 1 bug!  It think it is weird
+<D.RUFFER> Hi M., now we have two.  Could both you M's set your names?
+<[Len] NMORGENSTERN> Use /nam xxx at the beginning of a line.
+<M.CHRISTOPH2> dont you?
+<D.RUFFER> Mike, are you sure they are using it then <grin>
+<[Len] NMORGENSTERN> Not weird, just good programming in a good language.
+<[Gary] GARY-S> I don't think it is wierd - I think it is phenominal
+<M.CHRISTOPH2> I cant believe some people beat up on forth for maintenance.  I
+<N.DAVIS6> is here.
+<M.CHRISTOPH2> My boss is very impressed.  We have part of the system in Unix/C 
+and there have been a "few" bugs there
+<[Len] NMORGENSTERN> M. Zdankewic, and N. Davis, how much Forth do you know?
+<M.CHRISTOPH2> but to be fair, there is alot more in the way of interupts 
+involved there
+<N.DAVIS6> hi
+<M.CHRISTOPH2> and that is always bug prone
+<N.DAVIS6> only a little
+<[Len] NMORGENSTERN> I run the Sunday conferences, and they are desinged
+<[Len] NMORGENSTERN> for learners.
+<[Mikez] M.ZDANCEWIC1> I've messed w/Forth from Vic-20, C-64, f83 and now F-PC
+<M.CHRISTOPH2> I am the sole "host" programmer at our company some of our 
+competitors have dozens doing what i do
+<[Len] NMORGENSTERN> Next Sun. 5:30 Pacific Time.
+<[Gary] GARY-S> Mike Christopher - Do you know Luther Huffman, also of Dayton ?
+<M.CHRISTOPH2> no i dont who is he
+<[Len] NMORGENSTERN> Mike z. Great!
+<[Mikez] M.ZDANCEWIC1> Any good help for file handling w/F-PC?
+<M.CHRISTOPH2> yea what do you need?
+<[Len] NMORGENSTERN> What is your problem?
+<[Mikez] M.ZDANCEWIC1> I'm trying to build a simple data base to put in a time 
+management app.
+<[Gary] GARY-S> Boy, did you log on at the right Time !! M. Chris is one of the 
+guys that helped debug the latest revision !
+<[Mikez] M.ZDANCEWIC1> Latest revision of what?
+<[Gary] GARY-S> F-PC
+<[Len] NMORGENSTERN> TCOM & FPC
+<M.CHRISTOPH2> I have entered the example from startinf forth and modified it 
+some. There is an example of a card file What part of database do you ne
+ed?
+<[Len] NMORGENSTERN> Hope he gets back
+<[Gary] GARY-S> Was it something I said ?
+<[Len] NMORGENSTERN> Magic! Maybe lightning!
+<[Len] NMORGENSTERN> Maybe just Genie.
+<M.CHRISTOPH2> Did you check out    picture" that i u/l
+<[Gary] GARY-S> M.C - do you use F-PC in your job or a commercial kernel ?
+<M.CHRISTOPH2> I use F-pc that i have custom tailored. I would never use a 
+forth without source.
+<M.ZDANCEWIC1> is here.
+<[Len] NMORGENSTERN> Welcome back!
+<[Gary] GARY-S> I heard that !!!
+<[Mikez] M.ZDANCEWIC1> Sorry guys, call waiting killed me!
+<[Len] NMORGENSTERN> Yep!
+<D.RUFFER> ah, that will get you every time mikez :-)
+<[Mikez] M.ZDANCEWIC1> What did I miss?
+<[Len] NMORGENSTERN> Mike C, can you answer Mikez's question about data base>
+<[Gary] GARY-S> not much - Mike C was telling you about a F-PC data base he 
+uploaded
+<M.CHRISTOPH2> I keep 5 separate versions of my kernel forth One fiull system, 
+one graphic system , one with the heads in expanded memory One tiny one
+ (barely even forth!) and a 386 specific version
+<[Gary] GARY-S> How tiny ? as small as the 15K eForth ?
+<M.CHRISTOPH2> You know, the stuff i did with htrof IS a powerful report 
+generator.  In a way the host is just a report generator.
+<[Mikez] M.ZDANCEWIC1> How can I find Mike C's data base
+<[Gary] GARY-S> use option 3 to browse the library with M.CHRISTOPH2 as 
+uploader or F-PC as keyword
+<M.CHRISTOPH2> I have not uploaded it for a while.  It is from the back of 
+starting forth with enhancements.  I originaly wrote it for F83 but it coul
+d be converted easy
+<M.CHRISTOPH2> or you could load block support into fpc and probably use it 
+without hardly any
+<[Mikez] M.ZDANCEWIC1> OK, I'll hunt for it.
+<M.CHRISTOPH2> changes. I added simple sorting to it and a few other goodies
+<M.CHRISTOPH2> the card file example that comes with fpc is a good starting 
+point too. What do you want?
+<[Gary] GARY-S> Why don't you post the revised goodies, Mike C ?
+<[Len] NMORGENSTERN> Yes, FPC has a file BLOCK.SEQ, I believe, that gives you
+<[Len] NMORGENSTERN> a full block system. Only one missing word, which is
+<[Len] NMORGENSTERN> CAPACITY that tells you the number of blocks in a file
+<[Len] NMORGENSTERN> and it is easy to add.
+<M.CHRISTOPH2> I will.  Tell me waht you want I have alot of stuff.  I have 
+some graphic routines that can handle large megabit virtual images too!
+<[Mikez] M.ZDANCEWIC1> I've had to figureure out all the file I/O w/F-PC, and 
+I've started a help file for myself.
+<[Gary] GARY-S> Post it all ! Uploads are free and there is a lot of interest 
+in the stuff you like to do
+<[Len] NMORGENSTERN> (As we all have!)
+<M.CHRISTOPH2> the file io in fpc is pretty powerful.
+<[Mikez] M.ZDANCEWIC1> Would anyone care to review it for me? It's only a 
+couple of pages...
+<M.CHRISTOPH2> sure
+<[Gary] GARY-S> at your convenience, of course <grin>
+<[Len] NMORGENSTERN> Mikez: I will prepare a little tutorial for Sunday, it's a
+<M.CHRISTOPH2> I have added color text supoport to fpc in graphic mode too
+<[Len] NMORGENSTERN> little too complicated to type in on line!
+<[Mikez] M.ZDANCEWIC1> I'm timid about uploading it, 'cause I don't know how 
+right it is.
+<[Len] NMORGENSTERN> Does it work?
+<[Len] NMORGENSTERN> If it does, it is right!
+<M.CHRISTOPH2> have at it.  Don't think that you would be the first person to 
+make a mistake!  I have the market cornered
+<[Gary] GARY-S> Actually Mikez, you're need is made to order for Len's Sunday 
+gathering (sorry if I'm being presumptious, Leonard)
+<[Mikez] M.ZDANCEWIC1> Yep - I had to discover READ-WRITE and
+<[Len] NMORGENSTERN> Yes, that is my plan. I will work up a short tutorial, and
+<[Mikez] M.ZDANCEWIC1> set my config.sys buffers up (I'm running dual floppy 
+laptop)
+<[Len] NMORGENSTERN> then we can discuss it online.
+<M.CHRISTOPH2> did you see how you can one shot it or set it to a desired state 
+permanently?
+<[Len] NMORGENSTERN> One trouble is that DOS 2.x and up require that open
+<[Mikez] M.ZDANCEWIC1> Len - I will mail you my stuff and tell you more about 
+my problems before Sunday
+<[Len] NMORGENSTERN> files be explicitly closed, or you run out of handles.
+<[Len] NMORGENSTERN> Good, MikeZ
+<N.DAVIS6> great ideas
+<M.CHRISTOPH2> I know. we have F-pc on networks and i had to tweek the editor 
+to close a file after it is edited because it would hold up access for o
+ther folks
+<[Mikez] M.ZDANCEWIC1> Yep - I flat ran out of handles. Also found the handle 
+stack is different than file opening and closing.
+<N.DAVIS6> i've got to go
+<[Len] NMORGENSTERN> Bye. Hope to see you Sunday!
+<M.CHRISTOPH2> I put a Closeall in my "bozo" quit loop
+<[Mikez] M.ZDANCEWIC1> Why would one use or not use the handle stack?
+<M.CHRISTOPH2> there are advantage to the stack if you are doing several file 
+and only need access to the TOS file. There are a lot of extra "nice" wo
+rds for the TOP of files
+<[Len] NMORGENSTERN> Len will tell all, or at least as much as he can in 1 hour
+<M.CHRISTOPH2> stack just like reg forth favors TOS
+<[Mikez] M.ZDANCEWIC1> disconnected.
+<[Len] NMORGENSTERN> The word GETLINE works only with a file that is on
+<[Gary] GARY-S> Hmmm - he needs to kill that 'call waiting' feature
+<[Len] NMORGENSTERN> the handle stack.
+<[Len] NMORGENSTERN> (I have a lot of work getting that prepared by Sun!!!!)
+<M.CHRISTOPH2> Separate handles are more flexible.  I am always doing overlays 
+and there are alot easire to use in that case.  There are special "buff
+ered" words
+<M.CHRISTOPH2> for the TOS
+<[Len] NMORGENSTERN> Exactly, Mike.
+<[Len] NMORGENSTERN> I wish they had not written it that way. I could change
+<[Len] NMORGENSTERN> it but it would be a lot of work, and I have not had a
+<[Len] NMORGENSTERN> real need for it yet.
+<M.CHRISTOPH2> file that are quite fast but you can simulate the same thing 
+with your own buffering on a separate handle.  I find that I only use the
+TOS files
+<M.CHRISTOPH2> when I want someone else to do the CRLF parsing for me.
+<M.CHRISTOPH2> or i am loading an overlay.
+<[Len] NMORGENSTERN> That is a frequent need, especially for file filters.
+<M.CHRISTOPH2> Yes but filters should quite definitely be done in tcom.  they 
+are tcoms forte.
+<[Len] NMORGENSTERN> I have one filter that was less than 2k bytes!
+<M.CHRISTOPH2> And PDQ i bet!
+<[Len] NMORGENSTERN> Fast!
+<[Len] NMORGENSTERN> BTW, I use SZ editor a lot. It lacks word wrap, and
+<M.CHRISTOPH2> I typically test my filters and do all initial conceptual work 
+in FPC then
+<M.CHRISTOPH2> port it to tcom.  It give the advantages of both worlds!
+<[Len] NMORGENSTERN> I am too lazy to add it. Do you have a version with that 
+feature>
+<M.CHRISTOPH2> Which feature
+<[Len] NMORGENSTERN> Word wrap. It is present in the FPC editor, but Tom left it
+<[Len] NMORGENSTERN> out of SZ, and I miss it!
+<M.CHRISTOPH2> I have written word wrapping for proportional fonts.  I am kind 
+of an expert at that particular topic!
+<[Len] NMORGENSTERN> It's funny, but people who write program editors seem to 
+think
+<[Len] NMORGENSTERN> that word wrap is not necessary. This applies to biggies 
+like
+<[Len] NMORGENSTERN> Word Perfect, among others.
+<[Len] NMORGENSTERN> It is essential for documentation.
+<M.CHRISTOPH2> It should be trivial to steal the version from SED and apply it 
+to SZ. Do you have SZ's Source
+<[Len] NMORGENSTERN> Trivial in principle. ONe of these days I will get around 
+to it.
+<M.CHRISTOPH2> Should be a drop in function, what's to do?
+<[Gary] GARY-S> December 13 , Bill M., co-author of eForth will be our guest. 
+He is a very interesting fellow to chat with, and I suspect that will be
+ evident in the conference. His topic title should give a clue to his sense of 
+humour.
+<M.CHRISTOPH2> Why do you use SZ instead of sed?
+<[Len] NMORGENSTERN> It is small fast & easy to use. Great for modifying batch 
+files
+<[Len] NMORGENSTERN> and stuff like that.
+<[Len] NMORGENSTERN> I have tied it into XTREE Pro Gold as its editor. Like
+<[Len] NMORGENSTERN> lightning, when compared to almost anything else.
+<[Len] NMORGENSTERN> I have given it to several people, and they are all amazed
+<[Len] NMORGENSTERN> at its speed, and its power, given its small size.
+<M.CHRISTOPH2> I have put a nice little shell around LOOK.COM  the shell may 
+not be that much But it shows an example of the warm fuzzy shells you can
+ wrap around little come files.
+<[Gary] GARY-S> What all do you do with this shell ? I'm quite interested
+<M.CHRISTOPH2> Nice talking to you Well, i have been wraping shells around DOS 
+command line programs.  I use the full power of FPC to ask for the para
+meters in a friendly way
+<M.CHRISTOPH2> and then I shell to that com or exe file with it's arcane 
+-vtaqzC type of "switches"
+<M.CHRISTOPH2> For Example, the one for Look.com open a window, describes what 
+look does.
+<M.CHRISTOPH2> Gets  the text to look for with full "line" edit text box
+<[Gary] GARY-S> That sounds like you've managed to create a powerful 
+programming tool that is also generally useful for more trivial tasks .... true 
+?
+<M.CHRISTOPH2> then asks for the file spec(s) in the same manner.  It then 
+redirects the output tpo a file and calls LOOK.COM.  then it throws you int
+o the editor looking at the redirected output of look.  Look tends to scroll 
+off the screemn
+<M.CHRISTOPH2> I use it on a variety of C programs to give them a friendly face.
+  I use it for alot of things.  It is nothing complex realy.
+<[Gary] GARY-S> Sure sounds convenient, though
+<M.CHRISTOPH2> It is.  It is more productive for peoiple that dont use it every 
+day
+<[Gary] GARY-S> We need to wrap this up shortly
+<M.CHRISTOPH2> ok I'll be chattin at ya later....
+=== End of Steno notes. ===
+
+

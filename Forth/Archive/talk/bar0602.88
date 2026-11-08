@@ -1,0 +1,446 @@
+
+
+               
+ Minutes of the 6/2/88 FIGGY BAR Conference.
+       
+ Items discussed : The seed is planted for Novice FIGGY, Leonard steps back
+  slower than the other sysops, MicroCornucopia, MVP, and the trials of 
+  B-tree construction.                 
+Date: 06/02/88   Time: 22:29EDT
+Attendees:
+[GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Kevin] APPERT]
+[HIGHC]
+[[jax] VESTA]
+[[mike] M.LONG4]
+            
+Minutes:
+<GARY-S> HI - I'm just posting the notice ...
+<GARY-S> I am going to interlace tonite also...
+<GARY-S> BRB
+<GARY-S> You staying around tonite ?
+<D.RUFFER> not if I can help it....
+<GARY-S> something I said ?
+<D.RUFFER> the garage sale starts tomorrow and...
+<D.RUFFER> I'm just sitting down to the keyboard...
+<D.RUFFER> I got an want ad to post, and...
+<D.RUFFER> i still need to check into work....
+<D.RUFFER> haven't worked all day, getting things around...
+<D.RUFFER> so need to do some calling...
+<D.RUFFER> if you don't mind?
+<D.RUFFER> .
+<GARY-S> It's your move :-)
+<D.RUFFER> by then :-)
+<D.RUFFER> has left.
+<APPERT> is here.
+<APPERT> wipe
+<GARY-S> hey Kev
+<APPERT> wipe
+<GARY-S> Dennis just split - he's getting a move underway
+<JAX> is here.
+<GARY-S> woof
+<[Kevin] APPERT> hi Gary, Jax
+<JAX> foobar!
+<GARY-S> no answer last night
+<JAX> just dropped in to say hi ...will be back in a half hour ... walking up a 
+hill and down again!
+<JAX> has left.
+<GARY-S> interesting wasn't it ?
+<GARY-S> roll out a subject Kevin
+<[Kevin] APPERT> yup. what's gnu
+<GARY-S> a anti-lope
+<DHWEINSTEIN> is here.
+<GARY-S> Still trying to manage two jobs at once...
+<GARY-S> other than that I'm not doing a thing !
+<[Dave] DHWEINSTEIN> Hey Gary...
+<[Kevin] APPERT> what are the two jobs?  hi Dave
+<GARY-S> Dave - I passed your name on to Donnal Walter
+<[Dave] DHWEINSTEIN> ...If you want to join ACM...go to the library, and check 
+the most recent "Communications of the ACM", there will be a membership
+ form inside.
+<[Dave] DHWEINSTEIN> Hey..
+<GARY-S> Senior Customer Engineer and the other is director for a foreign 
+corporation dealing in comic art for marketing/promotion
+<[Dave] DHWEINSTEIN> How about this to attract people.
+<[Kevin] APPERT> you not only subscribe to the Communications, but also their 
+code of ethics
+<[Dave] DHWEINSTEIN> A tuesday or wednesday night (or one of the Figgy's) for 
+people who want to learn FORTH (i.e. Q&A, hints, etc)
+<[Dave] DHWEINSTEIN> The code they have on the App. form doesn't look bad...
+just "working for the future" type BS
+<NMORGENSTERN> is here.
+<[Dave] DHWEINSTEIN> Hi Leonard
+<[Leonard] NMORGENSTERN> Hi all!
+<GARY-S> Leonard - I was just going to mention your name...
+<[Leonard] NMORGENSTERN> My ears were burning!
+<GARY-S> Dave just had a super idea made with you in mind...
+<GARY-S> interested ???
+<[Leonard] NMORGENSTERN> Always!
+<[Dave] DHWEINSTEIN> Yes
+<[Dave] DHWEINSTEIN> (I may regret that) :-)
+<GARY-S> Dave thinks a Q/A FIGGY for beginners is a good idea...
+<GARY-S> so do I ... if you run it.
+<GARY-S> .
+<[Leonard] NMORGENSTERN> ok
+<[Dave] DHWEINSTEIN> Pass the buck
+<[Leonard] NMORGENSTERN> I would definitely be intersted....
+<GARY-S> Leonard is damn good at that sort of thing and...
+<GARY-S> I admit to one and alll I am a hacker...
+<GARY-S> at code...any code.
+<[Leonard] NMORGENSTERN> But I will be away for util the endoof the month.
+<[Dave] DHWEINSTEIN> I hope that Ma Nature let's me stay on....one hell of a 
+big storm which has been spawning high winds, rain, and hail, and multipl
+e tornados is heading right at me
+<GARY-S> We just had that storm an hour ago ...:
+<GARY-S> fast rascal !
+<[Dave] DHWEINSTEIN> How far north are you from me...it is coming from the NW 
+to the SE across the state
+<[Leonard] NMORGENSTERN> We had it a week ago. Rain in June!
+<[Dave] DHWEINSTEIN> And only moving at 25-35 mph
+<GARY-S> Dave - I am in Little Rock
+<[Dave] DHWEINSTEIN> Maybe its its brother
+<GARY-S> same storm front
+<[Dave] DHWEINSTEIN> Ahh well...rent is paid...food is in fridge/freezer...no 
+need to go out
+<GARY-S> it is from a high pressure cell in Nebraska
+<GARY-S> Leonard - the time can hold if you think that is a good idea
+<[Leonard] NMORGENSTERN> I am agreeable.
+<[Leonard] NMORGENSTERN> .
+<[Dave] DHWEINSTEIN> Push it on that (impossible to avoid) GEnie promo sheet 
+right after logon.
+<GARY-S> sounds great to me
+<[Dave] DHWEINSTEIN> Heh. I remember the *first* time I tried to learn FORTH...
+<GARY-S> think we ought to promote it too...
+<GARY-S> what do you think ?
+<[Kevin] APPERT> Dave,  tell us a story?
+<[Leonard] NMORGENSTERN> The more publicity the better. We hae to show...
+<[Leonard] NMORGENSTERN> that we are doing things.
+<[Leonard] NMORGENSTERN> .
+<GARY-S> Dave - great idea - ...
+<[Dave] DHWEINSTEIN> I'll give you one chance to save yourself (and retract 
+that suggestion) before I start rambing on...
+<GARY-S> why did you take so long to post a wiunner ?
+<[Kevin] APPERT> .... about the first time you ... ?
+<[Dave] DHWEINSTEIN> Okk... Okkk
+<[Kevin] APPERT> once upon a time...
+<[Dave] DHWEINSTEIN> I knew Basic (didn't everyone), and had dabbled in z-80 
+assembly...then I started working on FORTH
+<[Dave] DHWEINSTEIN> It mildly fired my mind...and I was completely lost, 
+screamed maledictions upon anyone
+<[Dave] DHWEINSTEIN> whoo thought they could understand the language...on
+<[Dave] DHWEINSTEIN> Leo Brodie for making me think it was sooo easyy...etc
+<[Dave] DHWEINSTEIN> Then I dissected the Small-C compiler, and rewrote
+<[Dave] DHWEINSTEIN> parts of it, and played with its output, and got
+<[Dave] DHWEINSTEIN> heavily into low level stuff (Micro Cornucopia helped a 
+LOT!)
+<GARY-S> another Micro C  grad
+<HIGHC> is here.
+<[Dave] DHWEINSTEIN> After writing a stack intensive daemon for a Radio Shack 
+model 100 designed to work off the Keyboard/Clock interrupt...
+<GARY-S> Who is HIGHC
+<[Dave] DHWEINSTEIN> I tried FORTH again. It made sense.
+<[Dave] DHWEINSTEIN> End-Of-Story
+<[Leonard] NMORGENSTERN>
+<[Dave] DHWEINSTEIN> (I wouldn't reccomend that route for everyone....:-)
+<[Dave] DHWEINSTEIN> Reminds me...my Micro C subscription runs out after #42...
+got to renew
+<[Kevin] APPERT> what micro-c forth?
+<[Kevin] APPERT> kaypro?
+<GARY-S> MicroCornucopia Magazine - one of the few...
+<GARY-S> grass root mags left.
+<[Dave] DHWEINSTEIN> Best techno magaizne on the market
+<[Dave] DHWEINSTEIN> Even if they did drop FORTHwords
+<GARY-S> Arne went to Goddard
+<[Dave] DHWEINSTEIN> A poll showed approximately 12-20 of their users used  
+FORTH.
+<[Dave] DHWEINSTEIN> At least half of them were at the last SOG.
+<[Kevin] APPERT> what forth were you running Dave?
+<[Leonard] NMORGENSTERN> What's SOG?
+<GARY-S> Polls - NUTZ ! - I never replied to it
+<[Dave] DHWEINSTEIN> Hey Gary..let's start a bring back FORTHwords letter system
+<[Dave] DHWEINSTEIN> Semi Official Get Together
+<GARY-S> Semi-Official Group
+<[Dave] DHWEINSTEIN> (and a Kaypro 2/83)
+<[Dave] DHWEINSTEIN> Won't be able to make it this year.
+<[Dave] DHWEINSTEIN> Incliding food, a place to sty
+<[Dave] DHWEINSTEIN> transport, and time off from work...way too expensive
+<[Leonard] NMORGENSTERN> !
+<GARY-S> Dave - the trouble is no Arne to write it !
+<GARY-S> Do you want to ???
+<GARY-S> ga Leonard
+<[Leonard] NMORGENSTERN> Dave, the learning curve of Forth is different...
+<[Dave] DHWEINSTEIN> I don't hink I'm qualified. (And who has time?). Let's 
+drafy ARne
+<[Dave] DHWEINSTEIN> -y +t
+<[Leonard] NMORGENSTERN> from the one I learned inPsych 1...
+<[Leonard] NMORGENSTERN> You ave experienced it!
+<[Leonard] NMORGENSTERN> .
+<GARY-S> Arne is too involved to return - REALLY
+<[Dave] DHWEINSTEIN> My concept of the FORTH learning curve is either you can't 
+understand it and have aflat curve, or get
+<[Dave] DHWEINSTEIN> hooked and are trying everything in a matter of days/weeks 
+(defining words are SO MUCH FUN)
+<[Kevin] APPERT> it has a definite knee, or maybe several, and it keeps going 
+up.  There are always new things to learn about Forth
+<[Dave] DHWEINSTEIN> .
+<[Leonard] NMORGENSTERN> !
+<GARY-S> ga len
+<[Leonard] NMORGENSTERN> I am trying to write a B-tree, ;using Forth blocks...
+<[Leonard] NMORGENSTERN> as nodes. A small problem of addressing comes up...
+<[Leonard] NMORGENSTERN> Do you use block & offset or RAM addresses? ...
+<[Leonard] NMORGENSTERN> I made the inferior decision, and have to go back...
+<[Leonard] NMORGENSTERN> and redo much of my code....
+<[Leonard] NMORGENSTERN> Such a problem could never arise in most...
+<[Leonard] NMORGENSTERN> other languages.
+<[Leonard] NMORGENSTERN> ,
+<M.LONG4> is here.
+<[mike l] M.LONG4> hi all
+<[Leonard] NMORGENSTERN> Hi Mike!
+<[Dave] DHWEINSTEIN> Hey
+<GARY-S> hey mike
+<[Dave] DHWEINSTEIN> Best feeling in programming though, has
+<GARY-S> what was your solution, leonard ??
+<[Dave] DHWEINSTEIN> to be consulting, and having someone come to you with a 
+problem, which
+<[Dave] DHWEINSTEIN> you can solve, and solve well. Ego boost par excellance 
+(next best is tracking the
+<[Dave] DHWEINSTEIN> bug down to the section of code your
+<[Dave] DHWEINSTEIN> boss write)
+<[Dave] DHWEINSTEIN> wrote
+<[Dave] DHWEINSTEIN> .
+<[Leonard] NMORGENSTERN> I ended up using block-offset, converting to RAM 
+addresses...
+<[Leonard] NMORGENSTERN> as necessary.
+<[Leonard] NMORGENSTERN> ,
+<[Kevin] APPERT> you know the word VIRTUAL , Len?
+<[Leonard] NMORGENSTERN> Yep.
+<[Leonard] NMORGENSTERN> One problem is that RAM addresses move around...
+<[Leonard] NMORGENSTERN> as blocks are read in and out of buffers.
+<[Leonard] NMORGENSTERN> .
+<[mike l] M.LONG4> has left.
+<GARY-S> Mike Long - what's going on ?
+<GARY-S> any forth ?
+<[Dave] DHWEINSTEIN> No Mike.
+<GARY-S> Talk about good timing ?
+<[Leonard] NMORGENSTERN> Riddle: what is the answer to vertigo?
+<GARY-S> how do i do that ? I did the same thing with Dave a week ago
+<GARY-S> .
+<[Kevin] APPERT> I think the bespatent it!
+<[Dave] DHWEINSTEIN> Don't look down
+<[Kevin] APPERT> what, len?
+<[Leonard] NMORGENSTERN> The answer is: He vent dat-a-vay
+<GARY-S> vhere indeed
+<[Kevin] APPERT> gaaaaaaaa
+<[Dave] DHWEINSTEIN> kill -9 [Leonard]
+<[Leonard] NMORGENSTERN> A bun is the lowest form of wheat.
+<[Kevin] APPERT> oh gosh. a eunix-oid
+<[Dave] DHWEINSTEIN> That's how I makes my bucks.
+<GARY-S> I'll try my magic with HIGHC - who are you ?
+<[Dave] DHWEINSTEIN> (Come on Mavs)
+<[Kevin] APPERT> must be loading the washer, feeding the cat or going to the 
+bathroom
+<HIGHC> i AM JUST A NOVICE LISTENING IN FOR A FEW CRUMBS
+<[Dave] DHWEINSTEIN> Or al l of the above
+<[Leonard] NMORGENSTERN> You got 'em. At leat our jokes are crumby.
+<[Dave] DHWEINSTEIN> : CRUMBS ." Insert with stuffing seasoning " CR ;
+<GARY-S> HIGHC ( what is your name ) boy do we have a question for you ?
+<[Kevin] APPERT> welcome aboard, in any case High.
+<GARY-S> ready ??
+<HIGHC> BILL
+<[Dave] DHWEINSTEIN> $5 an hour...its not prime time
+<GARY-S> How would you like a FIGGY BAR geared to Novices with Q & A ?
+<HIGHC> THAT WOULD BE GREAT!
+<[Dave] DHWEINSTEIN> (We could test it tonight)
+<[Leonard] NMORGENSTERN> ok
+<GARY-S> Got your first client Leonard
+<[Dave] DHWEINSTEIN> (Beat L.A.! Beat L.A.!)
+<GARY-S>  care to pursue this line
+<[Kevin] APPERT> with only one victem? I think we have him outgunned. <grin>
+<[Dave] DHWEINSTEIN> Ask a question Bill.
+<HIGHC> GULP
+<[Leonard] NMORGENSTERN> In Forth , if there are 4 responders there are
+<[Leonard] NMORGENSTERN> 5 answers.
+<GARY-S> Leonard - this would be a good way to establish some sort of direction
+<GARY-S> ga len
+<[Kevin] APPERT> shall we play "worst code I ever saw" while he thinks of one
+<[Leonard] NMORGENSTERN> Yes
+<[Dave] DHWEINSTEIN> 76 CONSTANT ZERO
+<[Leonard] NMORGENSTERN> But -425 constant Zero would make sense, or...
+<[Kevin] APPERT> they do that all the time in metrology.  it's called an offset.
+ <grin>
+<[Dave] DHWEINSTEIN> or maybe...
+<[Leonard] NMORGENSTERN> whatever absolute zero is
+<[Leonard] NMORGENSTERN> .
+<[Dave] DHWEINSTEIN> : (@) @ ;
+<[Dave] DHWEINSTEIN> : (!) ! ;
+<[Dave] DHWEINSTEIN> : ! (@) ;
+<[Dave] DHWEINSTEIN> : @ (!) ;
+<[Kevin] APPERT> why?
+<GARY-S> I love Leonard's : DECOMPOSE  ROT ROT ROT ;
+<[Dave] DHWEINSTEIN> Just in the name of confusing people... :-)
+<[Leonard] NMORGENSTERN> I'll have to think about that.
+<[Leonard] NMORGENSTERN> I got DECOMPOSE from Mike Perry.
+<[Dave] DHWEINSTEIN> How about a word VERBOSE: which takes source code 
+definitions, and stores them
+<[Dave] DHWEINSTEIN> in a table, and performs macro-type substitution into the 
+final top level words and prints those out as your new source?
+<[Dave] DHWEINSTEIN> 45 screen definitions at the end?
+<[Dave] DHWEINSTEIN> .
+<[Kevin] APPERT> great if you are paid by the line of code
+<[Leonard] NMORGENSTERN> !
+<[Dave] DHWEINSTEIN> Design it write, and then use the "expanded" output to 
+give as "source code"
+<[Dave] DHWEINSTEIN> .
+<[Leonard] NMORGENSTERN> Seriously, I had a possibly useful idea the other week.
+..
+<[Dave] DHWEINSTEIN> Thought of something Bill?
+<HIGHC> I HAVE SEVERAL EASY ONES BUT I DON'T WANT TO ,
+<HIGHC> INSULT THE WIZARDS!!!
+<[Leonard] NMORGENSTERN> Nothing is easy until you know the answer!
+<[Dave] DHWEINSTEIN> Go ahead...ask away.
+<[Kevin] APPERT> just trolls he]
+<GARY-S> Roll something out - there is only one dumb question ....the unasked 
+one.
+<[Kevin] APPERT> here
+<[Dave] DHWEINSTEIN> <- only aq journeryman
+<[Dave] DHWEINSTEIN> -q
+<HIGHC> THERE SEEM XXX
+<[Leonard] NMORGENSTERN> There are also questions asked to show hou...
+<[Leonard] NMORGENSTERN> smart you are...
+<[Leonard] NMORGENSTERN>
+<[Leonard] NMORGENSTERN> Those are the really dumb ones.
+<[Leonard] NMORGENSTERN> .
+<HIGHC> THERE SEEM TO BE SO MANY VERSIONS AND STANDARDS,
+<HIGHC> WHERE DO YOU START??
+<[Dave] DHWEINSTEIN> !!
+<[Leonard] NMORGENSTERN> !
+<GARY-S> what is your computer ?
+<[Leonard] NMORGENSTERN> Ga Dave
+<HIGHC> IBM
+<[Dave] DHWEINSTEIN> I still use FORTH-79. But the beauty of FORTH is that
+<GARY-S> pick up a copy of F83 in our library
+<[Dave] DHWEINSTEIN> the moment you start working on anything of any size, you 
+have to write your own Lexicon. The
+<[Dave] DHWEINSTEIN> FORTH standard is so small, that almost anything
+<GARY-S> or buy LMI or Harvard Softworks F83 compatible
+<[Dave] DHWEINSTEIN> of note requires that you build a "mini-language"
+<[Dave] DHWEINSTEIN> of your own. That's what makes
+<[Dave] DHWEINSTEIN> FORTH different from other languages. (All
+<[Dave] DHWEINSTEIN> of this is of course strictly my opinion. Not the opinions 
+of my mind, or my computer)
+<[Dave] DHWEINSTEIN> .
+<[Leonard] NMORGENSTERN> I agree....
+<HIGHC> I'VE LOOKED AT F-83 AND FF.
+<[Dave] DHWEINSTEIN> !
+<[Leonard] NMORGENSTERN> F83 is  the place to start. Cheap, powerful, and...
+<[Leonard] NMORGENSTERN> lots of people can help you.
+<[Leonard] NMORGENSTERN> .
+<HIGHC> WITH FF I HAVE CONCERNS OF PORTABILITY
+<GARY-S> stay with F83 -- FF is good, but it will not help you...
+<GARY-S> in the world of Forth NOW
+<[Kevin] APPERT> what are you thinking of porting to, Bill?
+<[Dave] DHWEINSTEIN> FF still confuses the hell out of me from time to time..
+because I use F79 (heavily extended) all of the time.
+<HIGHC> AT THE MOMENT NOTHING ,
+<HIGHC> BUT WHY BUILD A LIBRARY THAT'S,
+<HIGHC> STUCK ON ONE MACHINE??
+<GARY-S> F83 is more easily transported than was Fig-Forth and that was why FF 
+was written
+<HIGHC> ALSO IF I CHOOSE F-83,
+<HIGHC> WHAT DO I USE FOR TUTORIALS??
+<GARY-S> also the ANS Forth Standard now being written uses F83 as a starting 
+base
+<[Dave] DHWEINSTEIN> <-- still using F79 anyway! :-)
+<GARY-S> There is a super F83 tutorial in the library
+<[Kevin] APPERT> gary isn't that the 83 standard, not F83 by Laxen and Perry!!!
+<[Dave] DHWEINSTEIN> Get "Starting FORTH" by Leo Brodie. It is the best way to 
+learn.
+<GARY-S> Good point Kevin - but confusing to a novice
+<[Leonard] NMORGENSTERN> !
+<[Dave] DHWEINSTEIN> After you've got the basics, get "Thinking FORTH" by the 
+same Author, it is an excellent style guide.
+<GARY-S> Forth: A Text and reference is also good
+<[Leonard] NMORGENSTERN> You should put up your questions on GENIE...
+<GARY-S> IF you get 'Starting Forth' get the Second Wdition !
+<[Leonard] NMORGENSTERN> I use them as starting points for small tutorial.
+<[Leonard] NMORGENSTERN>
+<[Dave] DHWEINSTEIN> The F83 version. Unless you use F79. In which case get the 
+1st edition.
+<HIGHC> WHAT IS THE FILE FOR THE F-83 TUTORIAL?
+<[Leonard] NMORGENSTERN> I'll look.
+<GARY-S> The best 79-Forth tutorial was Winfield's 'Complete Forth'
+<[Dave] DHWEINSTEIN> Haven't seen it. Is it better than Starting Forth rev 1.?
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> Hey Jax!
+<GARY-S> For 79 it is - by a long shot
+<[jax] VESTA> Hiya Dave &al
+<[Kevin] APPERT> rehi Jax
+<[jax] VESTA> What is scoop?
+<[Dave] DHWEINSTEIN> We are testing out a FIGGY Novice Q&A.
+<[Leonard] NMORGENSTERN> I see 242 F83Aides by a certain Gary Smith.
+<GARY-S> what i pick up my dog's gifts with
+<[Kevin] APPERT> did everybody see this article on parallel computing some
+<[Dave] DHWEINSTEIN> Current topic is where to start learning FORTH.
+<[Kevin] APPERT> deviate wrote for microtimes?
+<[Dave] DHWEINSTEIN> no
+<[jax] VESTA> With MVP Forth is the answer, Dave.
+<[Dave] DHWEINSTEIN> I say F79...but that is my personal bias.
+<[jax] VESTA> MVP is 79 Standard
+<[Dave] DHWEINSTEIN> I *like* F79.
+<GARY-S> Leonard - the one self prompting tutorial is by Bill Kilber
+<HIGHC> WHAT IS MVP??
+<[Kevin] APPERT> mountain view press
+<GARY-S> Mountain View Press
+<[jax] VESTA> Mountain View Press Forth
+<[Kevin] APPERT> seller of fine forth printed matter
+<[jax] VESTA> The "peoples' forth"
+<[jax] VESTA> Free Forth.
+<[Leonard] NMORGENSTERN> !
+<[jax] VESTA> If you get it off a BBS
+<GARY-S> Has anyone talked to Roy or Sari lately ?
+<[Kevin] APPERT> and a public domain version of forth: MVP forth
+<[jax] VESTA> like this one
+<[Leonard] NMORGENSTERN> Our unaimous opinion is very helpful! I think...
+<HIGHC> MUST COME FROM CALIF!!
+<[jax] VESTA> right, highc
+<[Dave] DHWEINSTEIN> Do we have a unanimous opinion?
+<[Leonard] NMORGENSTERN> that one should start with any one...
+<[Kevin] APPERT> you want the address of mountain view press?
+<[Dave] DHWEINSTEIN> If so..it is a first!
+<HIGHC> SURE!!
+<[Leonard] NMORGENSTERN> and learn it well, then try others. I still go for...
+<[Leonard] NMORGENSTERN> f83.
+<[Leonard] NMORGENSTERN> ,
+<[Kevin] APPERT> po box 4656
+<[Kevin] APPERT> mountain view, ca  94040
+<GARY-S> Bill (HIGHC) there are 3 versions of MVP on this BBS !
+<[Kevin] APPERT> the best source for books about Forth.
+<[jax] VESTA> but the fanciest was for IBM
+<[jax] VESTA> They also have an expert system called EXPERT-2.
+<HIGHC> THANKS KEVIN..
+<[jax] VESTA> I implemented it on Amiga but it was never released to my 
+knowledge.
+<[jax] VESTA> GLENN TENNEY did the Forth for the Amiga for MVP.
+<GARY-S> Again - has anyone talked to Roy or Sari Martens of MVP, lately ?
+<[jax] VESTA> Not in a year.
+<[Leonard] NMORGENSTERN> HighC,...
+<[jax] VESTA> Oh yeah, at convention last nov.
+<[Kevin] APPERT> Glenn is a superrior Forther
+<[Leonard] NMORGENSTERN> I will search the files and put up a note...
+<GARY-S> I used to sell through them - nice people
+<[jax] VESTA> He programs in C now.
+<[Leonard] NMORGENSTERN> with some of the beginners files.
+<[jax] VESTA> ( tenney)
+<[jax] VESTA> .
+<[Dave] DHWEINSTEIN> Hey..so do I...for my money. Gotta eat.
+<[Kevin] APPERT> yes, so I heard.  He wanted to eat.
+<[Dave] DHWEINSTEIN>
+<[jax] VESTA> I eat fine. I work in FORTH.
+<HIGHC> I WOULD APPRECIATE THAT VERY MUCH LEONARD>>>
+<[Kevin] APPERT> I enjoyed your article in MicroTimes, Jax.
+<[jax] VESTA> Thank you Kevin.
+<[jax] VESTA> when i wrote it ...
+<[jax] VESTA> i thought it was too rad ...
+<[jax] VESTA> but with the announcements that came out a week after i wrote it..
+

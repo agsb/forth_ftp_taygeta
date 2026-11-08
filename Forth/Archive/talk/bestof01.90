@@ -1,0 +1,364 @@
+
+
+                
+                    Best of GEnie..... January 1990
+          News from the GEnie Forth RoundTable by Gary Smith
+      
+  The X3/J14 ANS Forth Technical Committee charged with the task of writing
+the ANS Forth Standard has for some time discontinued official sanction of
+GEnie (or any other public information service) as repository of comment and
+feedback to their efforts. This does not mean there is no longer standards
+activity on the GEnie Forth RoundTable. Few things could be further from the
+truth. Comments are still being made and they are being monitored. By the
+time this makes print we will also have had Elizabeth Rather, X3/J14 chair
+as our guest in conference. Her topic being the X3/J14 ANS standards effort.
+The future of Forth is being debated. Are you denying yourself a voice in
+this most important event ? Read the following recently posted exchanges
+and if something strikes a chord of harmony - or disharmony - join in.
+ 
+ ------------
+
+ From: ROEDY GREEN  
+ Subj: IEEE floating point
+
+ IF you specify IEEE binary format, mainframers will simply have to
+ ignore you.  The overhead of converting to IEEE in F! would be enormoust
+ and silly.  If you don't specify IEEE format, the micro people will all
+ use it anyway because that is how the 80387 etc work.  So my vote goes
+ for leaving it out.  We might have a document on a data interchange
+ format where IEEE has a big role.  This is really outside the realm of
+ the Forth language though.
+
+   To: ROEDY GREEN
+ From: JACK BROWN
+ Subj: IEEE FP  
+
+ Since I have been the major proponent for the inclusion of IEEE you and
+ others may be interested in knowing that my ear has been bent after
+ listening carefully to several Forth people with mainframe and
+ minicomputer backgrounds.  I intend to withdraw my proposal to specify
+ IEEE binary format in favour of one which will specify a words to
+ convert a systems "internal floating point format" to the IEEE binary
+ format inorder to promote exchange of floating point data.
+ ---
+
+   To: ROEDY GREEN 
+ From: IAN GREEN  
+ Subj: Language of Forth Standard
+
+    On standards I can offer some assistance. First I suggest that 
+ reguardless of what the bums at any standards comittee have to say one 
+ thing I have NEVER seen for forth is a extended (or standard) 
+ Bachus-Naur form syntax definition for each word etc.
+    For example, in his book Programing in Modula-2, Wirth make several 
+ ommisions reguarding the way the language is supposed to work. He did 
+ however provide interspresed throughout the text and again in an 
+ Appendix provide the Bachus-Naur formal definition in absolute precise 
+ terms. Because I can understand EBNF I was able to simply refer to the 
+ syntax chart when I had a problem making a piece of code compile (now of
+ course I do not need the tables as I am quite proficient in that 
+ language).
+    My biggest stumbling block about Forth and many other languages for 
+ that mater is the lack of a formal definition. With a formal definition 
+ using EBNF it is possible to design an unambigious language standard. 
+ Now Modula-2 is only one of many very serviceable languages and I can 
+ also program in a variety of others, but I need the EBNF syntax charts 
+ if I am to make any head way. That combined with examples based on the 
+ syntax.
+
+   To: IAN GREEN 
+ From: ROEDY GREEN 
+ Subj: Language of Forth Standard
+
+ Given the simplicity of the grammar of Forth -- no precedence, only
+ space and a separator, strict nesting, I don't see the lack of BNF
+ as an important omission, except to welcome people with Wirthian 
+ language backgrounds.
+
+   To: IAN GREEN  
+ From: JERRY SHIFRIN
+ Subj: Language of Forth Standard
+
+ Actually, for reasons which are beyond me, CH Ting did do a BNF
+ for Forth. You can find it in his FORTH Notebook from Offete
+ Enterprises or in the 2/82 issue of Dr. Dobb's. As near as I can
+ tell, the BNF description of Forth should be something like:
+   <word> ::= (<non-blank character> ... )
+   <Forth program> ::= { <Forth program> [<word> ...]}
+ ---
+
+   To: JERRY SHIFRIN 
+ From: IAN GREEN
+ Subj: Language of Forth Standard
+
+    Yes that is the idea I was looking for. That and examples of code 
+ relative to the syntax charts.
+
+   <word> ::= (<non-blank character> ... )
+   <Forth program> ::= { <Forth program> [<word> ...]}
+
+
+     If you or someone has the complete BNF syntax for Forth (I am 
+ currently playing with L&Ps F83.COM). This I feel would go a long way 
+ towards clarifying the way the language works.
+
+ To be more in keeping with EBNF I would suspect that that Forth would 
+ be defined something like:
+
+ Program := { Word }            
+ Word := ":" Identifier { Word | Number } ";"
+  :          :
+  :          :
+
+ The problem is though I can write the syntax for a familiar language 
+ fairly easily Forth is not so easily figured out.
+
+
+   To: IAN GREEN 
+ From: JERRY SHIFRIN
+ Subj: LANGUAGE OF ANS FORTH 
+
+ Actually, Ian, the point I was trying to make is that Forth isn't
+ usually willing to sit still long enough for someone to develop a
+ detailed syntax. <grin>
+
+ By that I mean that every Forth token is eligible for
+ redefinition and may alter the syntax of itself and subsequent
+ string.  For example, Forth programs may redefine or add IF or DO
+ type control sructures, may redefine constants e.g.
+         99 CONSTANT 5                     \ 5 now means 99!
+ can even redefine existing functions in terms of themselves e.g.
+         : DUP DUP ." DUPing " . CR DUP  ;  \ Trace uses of DUP
+ and, in fact, can even redefine defining words like
+         : CONSTANT CREATE ! DOES> @ DUP .S  ;
+         : : : 1 #DEFS +! ;
+ which redefines colon in terms of itself and adds a little
+ counter.
+
+ So, while you could get a BNF description of typical usage, it
+ doesn't really define the language.
+ ---
+
+ From: ROEDY GREEN 
+ Subj: -LEADING -TRAILING 
+
+ I am concerned about the string chopping verbs -TRAILING and
+ SKIP.  There are really six different but related words.  The
+ c?1;0complete set need not be made part of the standard, but I think
+ they should be consistently named so that it would be easy to
+ add in the missing ones.  I think SKIP is a misleading name
+ bec?1;0cause it implies hopping over a unread record.  Here are my
+ proposed names -LEADING -LEADING<> -LEADING= -TRAILING
+ -TRAILING<> -TRAILING=
+
+ -LEADING ( addr1 +n1 -- addr2 +n2)
+
+ Trims off any leading blanks from a string.  The length may also
+ be 0 or 1, but not negative.  The address and character count
+ +n1 of a text string beginning at addr1 is adjusted to exclude
+ leading spaces. If +n1 is zero, then +n2 is also zero.  If the
+ entire string consists of spaces, then +n2 is zero. The length
+ n1 must be under 64K and the last character of the string must
+ be covered by Seg of addr.  Addr need not be canonical.  The
+ original string is unmolested.  c.f.  -LEADING= -LEADING<>
+ -TRAILING -TRAILING= -TRAILING<> SCAN SCAN<> pronounced
+ "dash-leading or minus-leading"
+
+ -LEADING<> ( addr1 +n1 char  -- addr2 +n2)
+
+ Trims off any leading characters from a string that do not match
+ char.  The length may also be 0 or 1, but not negative.  If +n1
+ is zero, then +n2 is also zero.  The length n1 must be under 64K
+ and the last char- acter of the string must be covered by Seg of
+ addr.  Addr need not be canonical.  The original string is
+ unmolested.  c.f. -LEADING -LEADING= -TRAILING -TRAILING=
+ -TRAILING<> SCAN SCAN<> pronounced "minus-leading-not-equal"
+
+ -LEADING= ( addr1 +n1 char  -- addr2 +n2)
+
+ Trims off any leading characters from a string that match char.
+ -LEADING is equivalent to BL - LEADING=.  The length may also be
+ 0 or 1, but not negative.  If +n1 is zero, then +n2 is also
+ zero.  The length n1 must be under 64K and the last char- acter
+ of the string must be covered by Seg of addr.  Addr need not be
+ c?1;0canonical.  The original string is unmolested.  c.f. -LEADING
+ -LEADING<> -TRAILING -TRAILING= -TRAILING<> SCAN SCAN<>
+ pronounced "minus-leading-equal"
+
+ -TRAILING ( addr +n1 -- addr +n2)
+
+ Trims off any trailing blanks from a string.  The length may
+ also be 0 or 1, but not negative.  The character count +n1 of a
+ text string beginning at addr is adjusted to exclude trailing
+ spaces. If +n1 is zero, then +n2 is also zero.  If the entire
+ string consists of spaces, then +n2 is zero. The length n1 must
+ be under 64K and the last character of the string must be
+ c?1;0covered by Seg of addr.  Addr need not be canonical.  The
+ original string is unmolested.  pronounced "dash-trailing or
+ minus-trailing"
+
+ -TRAILING<> ( addr +n1 char  -- addr +n2)
+
+ Trims off any trailing characters from a string that do not
+ match char.
+
+ -TRAILING= ( addr +n1 char  -- addr +n2)
+
+ Trims off any trailing characters from a string that match char.
+
+              ------
+
+   To: ROEDY GREEN 
+ From: JACK BROWN 
+ Subj: LEAVING OUT WORDS 
+
+ There used to be a controlled reference word set but that has been
+ eliminated and is not likely to be put back in as it was more like a
+ compromise trash bucket.  Words without enough support to get in the
+ standard were thrown into the Controlled word set supposedly either on
+ their way into or out of the standard next time round.  There are still
+ two other words sets for those words that cannot make it into the
+ standard. They are 13.0 Reserved Word Set is for inherently non portable
+ common usage words like .S , DUMP etc. and 14.0 Future Directions
+ word set which are candidates for inclusion in a future standard.
+ TUCK does not fit into either of these word sets.
+ To reserve the word TUCK it would have to be included in either the
+ the Core word set or Extended Core word set.
+ ---
+
+   To: ROEDY GREEN 
+ From: JACK BROWN  
+ Subj: WHAT WAS LEFT OUT
+
+ Thank you for uploading your comments on BASIS 10.  I will make sure
+ that the editors of basis are notified of some of the errors that you
+ have detected.  You have made some excellent points, however if you feel
+ very strongly that certain things should be changed you should consider
+ making a formal proposal.  Forms for doing this are available for
+ downloading.  Look for the file  ANSITPF.ZIP
+
+ Your comments are very likely to cause other members of the ANSI
+ Technical Committee to generate proposals to fix and clarify problems
+ that you have detected. But other ideas like your -TRAILING and related
+ words will probably require a proposal generated by yourself to make it
+ to the table for discussion.
+
+ I will be looking carefully at your comments when I am preparing my
+ proposals for the January meeting.
+ ---
+ 
+ From: ZAFAR ESSAK  
+ Subj: BASIS 10 FEEDBACK  
+
+ Well here goes, more feedback from another BC Forth enthusiast. 
+ Having spent an evening sitting around with a few others and discussing 
+ some of the concerns raised by a reading of BASIS the first realization 
+ is others can come up with some pretty good justifications for their 
+ positions, at least enough to justify having to place definitions in my 
+ "PRELUDE" to accommodate them. 
+
+ First, I too share Robert Berkey's wish that the FOR...NEXT looping 
+ construct used a word other than NEXT which seems to be at the heart of 
+ the Forth Inner Interpreter, at least conceptually. 
+
+ And then... 
+
+ 7.0020  "    "quote"  ( --adr,u) 
+
+     I don't know the complete history of this word but feel strongly 
+ that if it returned the address of the count it would be more useful. 
+ I realize this will break existing code but since this word has not 
+ been included in a previous standard it is appropriate to consider the 
+ stack effects and resulting usefulness.  I am also aware of a number of 
+ other Forth implementations that return the address of the count for 
+ this definition.  Before making a formal proposal I would like to hear 
+ what others think about this. 
+
+ 7.0790  BLK 
+ 7.0800  BLOCK 
+ 7.1790  LOAD 
+     Even though I find sequential file and Stream I/O more useful for 
+ editing source and my applications I read with interest the continued 
+ reference that "If BLK is zero, the input stream is being taken from 
+ TIB".  And for LOAD, "an exception exists if u is zero, or is not a 
+ valid block number." 
+
+     Personally, this has never bothered me and seemed to offer 
+ consistency when thinking of virtual memory, even as a beginner, namely 
+ that 0 implied console input and any number greater than 0 referred 
+ specifically to a BLOCK of virtual memory.  And then along came F83 
+ with it's definitions of virtual memory including the numbering of the 
+ first BLOCK as zero, which could be edited but could not be loaded. 
+ Whenever I asked people why this inconsistency all I got were 
+ rationalizations how it provided a great place for comments.  Now 
+ really a simple --> or ;S at the beginning of any BLOCK allows the 
+ placement of comments so why should I want to be restricted to one 
+ block of comments right at the beginning of the file; just to say "And 
+ the rest is silence."? 
+
+     But I am still not clear from BASIS 10 if BLOCKS will be numbered 
+ from 0 up or from 1. 
+
+   To: Zafar Essak
+ From:R.BERKEY [Robert] 
+ 
+ ZE>  ...feel strongly that if ( " ) returned the address of the
+ ZE> count it would be more useful.
+
+Yes, but address and length operands decouple the data structure from words
+that manage it, and allow one common, portable, general-purpose string
+descriptor.  SKIP and SCAN for example, must have address and length.  My
+preference is to have one common string descriptor in the standard, and
+another name for the single operand " .  Just last week I EDITALLed through a
+megabyte of application code and renamed each of the " to $" in preparation
+for adding the address and length " .
+
+
+
+ ZE> ... I got...rationalizations how (block 0) provided a great
+ ZE> place for comments.
+
+ The only Forth I've known that had blocks starting with 1 was my mistaken
+first attempt at a fig-FORTH.  The problem only appears with operating system
+Forth's, as boot or object code gets put in block 0 on the standalone systems.
+At Dysan, we kludged around the problem by storing -1 in BLK when block 0 was
+being interpreted.  Pygmy's approach in mapping file blocks onto one master
+set of block numbers has a certain elegance.
+
+ ZE>    But I am still not clear from BASIS 10 if BLOCKS will be
+ ZE> numbered from 0 up or from 1.
+
+Good point.  X3.J14 has deleted the Forth-83 specifications that there are
+known block numbers 0-31, with other available block numbers documented.  I'm
+hesitant to guess why.
+ 
+  To: Roedy Green
+From: R.BERKEY [Robert] 
+
+ RG> 7.0340 2>R
+ RG> Remove the editor's note on why DO parms are backwards...
+
+I agree, even if for a different reason.
+
+What the 2>R rationale doesn't quite say is that DO has been implemented on
+pre-1983 system's as:
+
+: DO   COMPILE 2>R ; IMMEDIATE
+
+with the parameter's for DO having been set long before this 1981
+implementation was noticed.
+
+Upon learning of 2>R , I at first thought that the parameters were backwards,
+a kludge to save a few bytes by not having a (DO) .  Later I realized that
+they aren't backwards.  Looking at how the numbers appear in memory, this
+version maintains the double number. Another way to describe this is that 2>R
+can be implemented using 2@ and 2! .
+
+If the rationale given in BASIS was the reason for this order of parameters
+now being standardized, I'd be opposed to it: because standardizing a word
+designed for obsolete loops that speed optimize on DO is standardizing
+garbage.
+
+Anyway, thanks for your comments about the 2>R rationale.
+
+

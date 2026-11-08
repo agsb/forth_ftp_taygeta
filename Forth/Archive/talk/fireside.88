@@ -1,0 +1,124 @@
+
+                       1988 FIG Convention
+                         Fire Side Chat
+                        by Charles Moore
+                    Reported by Dennis Ruffer
+ 
+     This report can not be considered a transcript of Chuck's
+talk, since I am merely attempting to reconstruct it from the
+notes I took during his talk.  I do hope however, that this
+report conveys the intent of his words, and that by reading this
+report, the rest of you can get a feeling for the current state
+of our industry.
+ 
+     It is not quite clear why this is called the "fire side"
+chat, since they have never had a fire.  Chuck wore his
+Australian hat, since he did not want to look too much like
+Einstein in the advertisements for this convention.  He got it at
+this last year's Australian Symposium.  In his travels, he finds
+it very remarkable that there is a community of interest in Forth
+around the world.
+ 
+     On November 19, 1968 the first Forth computer said OK.  It
+was an IBM 1130 computer located in a warehouse in Amsterdam, NY. 
+It was being designed as a pattern designer for carpets, but
+since its black and white display was totally inappropriate for
+the job, it was abandoned within a year.  It is very remarkable
+how similar that early Forth was to the Forth that we have today.
+ 
+     Chuck really enjoyed the "Real-Time Programmers Contest"
+that we had this year.  As he walked around the room, he noticed
+how everyone was using very interactive modular designs.  He
+wondered if the ones who used multiple windowed Forth found that
+those tools got in the way, or if the ones who did not have those
+tools missed them (he paused but there were no answers).  He
+suggests that scrolling the parameters for this project would
+work very nicely with his 3 key keyboard.  He was questioned if
+he would use the display techniques from the contest in his next
+computer, but laughing he said "no, it has a moving part and no
+color".  Although he did not enter this years contest, using the
+excuse that he had no computer to show off, he will try it next
+year.
+ 
+     Although he designed the Novix with a 16 bit "B" port that
+was intended to be a buss for interconnecting multiple CPU's, he
+has never seen the technique used.  So far, he has not seen
+anything that he could not do with just one Novix.  It is not
+clear what are computers, or what is software.  All you need is a
+couple of latches and shift registers.  Minimalist to the core. 
+He is working on another chip, but he is having to learn how to
+use workstations to enter the design.
+ 
+     Forth, Incorporated is a neat company, and the people are
+getting down to real programs.  However, they keep reinventing
+the wheel, doing the same applications over again.  CAD existed
+many years ago, but few remember how it was done.  The 300 foot
+telescope that crumbled in Green Bay, was written in Forth.
+ 
+     Forth should be under 4 K bytes, but he hasn't found a lower
+limit.  You don't need a neural net or adaptive program to
+balance a broom.  All you need is a clever programmer, but they
+are in short supply.  He urges the neural net people to show him
+something significant they have accomplished.  Just because you
+can not see the inner workings of a system does not mean that it
+is chaotic, but merely non-linear.
+ 
+     The ANSII standard effort is using a ridiculous amount of
+energy.  It behooves us all to see that it is a good standard. 
+It is not easy to standardize the ground work of Forth.  He
+considers the "little user" the mainstay of Forth, and they are
+not well represented.  For those who it affects (authors, etc.),
+they must make sure they are not disappointed.  "GET INVOLVED!"
+The future of Forth looks very promising.
+ 
+     He just got done with the Science Fiction book, "The
+Regiment", about a war being fought by mercenaries.  They don't
+really care if they are killed.  The goal is to fight well.  We
+tend to get too serious.  The reason Forth is spreading is that
+it is fun.  He recently saw a book about Forth in Russian, it's
+in short supply.  Starting Forth is being translated to Russian,
+and has already been translated in Portuguese.
+ 
+     1/2 to 1 billion dollars have been invested in Forth over
+the past 10 years.  Maybe some entrepreneur would like to invest
+1/2 a million more.  He will get good results.  Harris has
+invested more than anyone has to date, and they are doing us all
+a great service using the "F" word.  If they sell a lot of chips
+to people who don't care about Forth, they will help us a lot. 
+Despite the rumor of their demise, Novix is still in business,
+but they are for sale and still have chips in stock.
+ 
+     At this point, Chuck was done with his rambling notes, and
+he opened the discussion to questions from the floor.  Although I
+wasn't able to hear all the questions, the following are some of
+his thoughts that the questions brought out.
+ 
+     The high cost of RAM is only a temporary problem, and soon
+they will again tend toward zero.  However, people are not happy
+with the gigabyte operating systems, and they often forget the
+other extraneous cost of memory.  Memory will always be the
+highest cost item in a system.  Chuck believes in distributed
+systems, where each piece only takes 1 or 2 programmers.  Every
+large project is conceived by management.  His concept is to have
+all the programmers in the same room.  You will loose some effort
+in socializing, but you will also get the most work done.  He
+believes the documentation should be written in parallel with the
+programming and use the same interactive techniques.
+ 
+     What is Forth, a tool to use a machine, or to share
+algorithms?  Chuck suggested to the ANS committee that the
+standard be a publication standard, that might give us a more
+effective way to share programs, but people could not just type
+in the programs.  He noted that all the contestants were doing
+the same thing, each in his own way.  He invented something that
+he could just hack at his computer.  There is nothing that Forth
+can not do, and it is superior in every application.  It is
+impossible to define Forth, but it is that which we have in
+common.  He no longer wants his computer to understand his voice,
+since he found that he has nothing he wants to say to it.  He was
+filmed at this years Hackers Convention (because he had a red
+shirt on).  The reporters who were called in were from a local
+CBS station who called them all criminals.  He urges us all to
+boycott CBS to object to their biased opinions.
+
+

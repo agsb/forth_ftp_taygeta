@@ -1,0 +1,846 @@
+
+Forth Interest Group
+Category 18,  Topic 81
+Message 4         Fri Aug 10, 1990
+GARY-S                       at 06:54 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: Baden Permutations Algorithms
+ Message-ID: <12218@sdcc6.ucsd.edu>
+ Date: 9 Aug 90 05:57:01 GMT
+ Organization: University of California, San Diego
+ Lines: 161
+ ^^^^^^^^^^^ split for ForthNet port - part a
+
+ Wil Baden says,
+
+ > I'd like to see others' ideas of what the proper domain of Forth is.  
+ > I'm especially eager to hear from John Wavrik. 
+
+ This thread started with some postings related to generation of 
+ permutations. It inspired me to do some work in this area which, in 
+ my opinion, confirms the superiority of the Forth environment for 
+ developing and studying algorithms. If the algorithm is the data, 
+ Forth is a good language to use.
+
+ > Every language has areas of application in which it is superior, 
+ > even Basic, Cobol, and Ada.  I'm trying to discover just what is 
+ > Forth's domain of superiority. 
+
+ Forth has many facets. One of them is that it is a portable assembly 
+ language. As such, it can be used to create languages. In this light 
+ it is superior because it can adopt language features from other 
+ languages, as well as produce innovative features not currently found 
+ elsewhere. BASIC, for example, has admirable string handling features.
+ I've used for years a string package for Forth, originally suggested 
+ by John James many years ago. It adds BASIC-like string commands to 
+ Forth. For other applications one could add LISP-like storage 
+ management, PROLOG-like backtracking, etc. 
+
+ It is the low level definition of the language and the user's access 
+ to the implementation that is responsible for this particular facet of 
+ Forth. One can add new data handling mechanisms, control structures, 
+ etc. because the language provides the tools needed to build these 
+ things.
+
+ > There are algorithms envolving many variables and complicated 
+ > expressions for which Forth offers no advantage.  The determination 
+ > of the date of Easter by 10 quotients and remainders is such, 
+ > although of course it can be programmed in Forth as any algorithm 
+ > can be.  Local variables make Forth definitions into something like 
+ > Tiny C with postfix operators.  If vector operators are important 
+ > for an application, Forth is not the best language to program them. 
+ > Forth in these instances is a dancing dog. 
+
+ One of the things that is called into question here is "what is an 
+ algorithm?"  I have in mind a procedure whose steps I understand. If I 
+ want to generate all permutations of 1..n, I need an idea -- and then 
+ I express the idea as a procedure. Here is an idea:
+
+    Start with (1,...,n) and switch the last element with the 
+    first, then permute the first n-1 elements and switch it back.
+    Do the same swapping last with second, last with third, etc.
+
+ Here is Forth code to carry out this idea.
+
+   0 \   Permutations  --  generate permutations
+   1
+   2 : PERMS ( n -- )  RECURSIVE
+   3      DUP 1 = IF    PRINT-PERM
+   4              ELSE  DUP 1+ 1  DO
+   5                                 I OVER XCHG
+   6                                 DUP 1- PERMS
+   7                                 I OVER XCHG
+   8                              LOOP
+   9              THEN  DROP  ;
+  10
+  11 : PERMUTATIONS ( n -- )  DUP #ELEMENTS !
+  12      INIT-PERM   CR PERMS  ;
+
+ (The words PRINT-PERM, XCHG, etc. do what you think they do!) Does the 
+ Forth code clearly express the idea?  Is Forth a good language for 
+ expressing this kind of idea?  Is Forth a good language for testing 
+ ideas like this?  [P.S. experiments show when an idea is plausible -- 
+ and help to identify bad ideas. A proof is still needed to show that 
+ an idea works!] 
+
+ On the other hand, the word "algorithm" is also used for cookbook 
+ recipes. Wil Baden refers to the calculation of Easter. This is often 
+ given as a sequence of algebraic expressions to be calculated:
+
+           Y = year for calculation  (input )
+           G = ( Y mod 19 ) + 1
+           C = Y / 100  + 1
+           X = 3C / 4 -  12
+                etc.
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 8         Wed Aug 22, 1990
+GARY-S                       at 08:01 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: algorithms permutations Baden
+ Message-ID: <12353@sdcc6.ucsd.edu>
+ Date: 21 Aug 90 05:00:06 GMT
+ Organization: University of California, San Diego
+ Lines: 260
+       ^^^^^ split for Forthnet port - part a
+
+                          EXPRESSING ALGORITHMS
+
+ Wil Baden raised a general question about the proper domain of Forth. 
+ He presented an algorithm for generating permutations and asked 
+ whether Forth is a good language for discovering and implementing 
+ mathematical algorithms of this sort.
+
+ In this article, I'd like to present a Forth implementation of an 
+ algorithm for the permutation problem -- leaving the discussion of how 
+ it was discovered to a sequel. 
+
+ Terminology:  For the purposes of this article, a permutation of
+    a set is a rearrangement of its elements. A transposition is a 
+    permutation which interchanges two elements. An adjacent 
+    transposition interchanges two adjacent elements. If a set has n 
+    elements we will sometimes use 1 , ... , n-1 to refer to the 
+    adjacent transpositions -- j will be the adjacent transposition 
+    that switches the element in position j with the element in 
+    position j+1. 
+
+ Problem:  Given n, find a sequence of adjacent transpositions which 
+    when applied successively generate all permutations. Define a 
+    function  PERM  which depends on n (and also the state of the 
+    system) so that each call to PERM generates the next adjacent 
+    transposition.
+
+ Example:  If n = 3  then the sequence 1 2 1 2 1 2 generates
+         adj transpo         { 1 2 3 }  <-- starting arrangement   
+              1              { 2 1 3 }    
+              2              { 2 3 1 }    
+              1              { 3 2 1 }    
+              2              { 3 1 2 }    
+              1              { 1 3 2 }    
+              2              { 1 2 3 }    
+
+ I.
+ A solution to the problem was given as ALGORITHM 115 in the CACM 
+ (August 1962) by H. F. Trotter. Wil Baden independently discovered an 
+ algorithm generating the same sequence of adjacent transpositions and 
+ also converted Trotter's algorithm to Forth. Here is the transcription: 
+
+  10 CONSTANT Maxperm
+  CREATE P   Maxperm ALLOT   1 P C!
+  CREATE D   Maxperm ALLOT
+  : perm ( n -- i)
+     P C@ 
+     IF
+        0 DO (  )
+           0 P I + C!   1 D I + C!
+        LOOP
+        0 EXIT
+     THEN
+     0 ( n k) 1 ROT 1-
+     DO ( k)
+        D I + C@ P I + C+!
+        P I + C@ ( k q) DUP 
+        IF
+           DUP I > 0=
+              IF   + UNLOOP EXIT   THEN
+           DROP ( k)
+           -1 D I + C!
+        ELSE ( k q) DROP ( k)
+           1 D I + C!
+           1+
+        THEN
+     -1 +LOOP
+     1 P C!
+     1+ ;
+
+ If you lack : C+! ( n a -- ) DUP C@ +under C! ; 
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 9         Wed Aug 22, 1990
+GARY-S                       at 08:02 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: algorithms permutations Baden
+ Message-ID: <12353@sdcc6.ucsd.edu>
+ Date: 21 Aug 90 05:00:06 GMT
+ Organization: University of California, San Diego
+ Lines: 260
+       ^^^^^ split for Forthnet port - part b
+
+ II.
+ Here is an approach (which generates the same sequence) together with 
+ the underlying idea:
+
+ Idea (and proof):  Start with  {1 2 3 ... n} and apply the adjacent
+     transpositions 1,2,..,n-1. We see that the 1 migrates from left to 
+     right without disturbing the order of the other elements:
+     Example: 
+                 { 1 2 3 }
+              1  { 2 1 3 }
+              2  { 2 3 1 }
+     We call this the Ascending sequence. Notice that it generates all 
+     possible permutations in which 2..n are in a given order 
+     (initially in ascending order).
+
+        With 1 in the far right position, we apply the next adjacent 
+     transposition for n-1 elements to obtain a new arrangement of
+     2..n.
+
+        Now we use the Descending sequence  n-1,...,1 of transpositions 
+     to get 1 back to the left -- notice that, again, the order of the 
+     elements 2..n is not changed.
+
+        Finally we apply the next transposition for n-1 elements 
+     (noting that they are shifted one position to the right).              
+
+        The sequence to be generated consists of cycles of length 2n
+
+             1 2 3 .. n-1   X  n-1 .. 2 1  Y
+
+     Where X and Y are obtained by a recursive call to the function 
+     with n-1 as an argument.  We repeat these cycles until all 
+     permutations of 2,..,n have been generated and 1 has occupied all 
+     positions for each. 
+
+ We use the language construct  If( c1 e1  c2 e2 ... ck ek )If
+ Where the ci are non-destructive conditionals (they add a flag to the 
+ top of the existing stack). This construct finds the first ci which 
+ tests TRUE, executes the corresponding ei and exits the construct. 
+ Each ei is responsible for cleaning the stack -- the last conditional 
+ is often TRUE to clean the stack if all other conditions fail.
+
+ The state of the system is given by the position (0 < pos <= 2n) 
+ within the cycle. The position must be maintained for each n. Here 
+ is the code for the required function:
+
+      : Perm  ( n -- t )  DUP  2 =  \ terminal condition
+           IF    DROP  1
+           ELSE  DUP  Next-Pos  ( n pos )
+                 If(    <n?      Ascending       
+                        =n?      p(n-1)          
+                        <2n?     Descending      
+                        true     p(n-1)+1     )If
+           THEN  ;
+
+ Where, of course, we must explain the meaning of a few words 8-)
+
+ CREATE %Pos  20 CELLS ALLOT
+ : Perm-Init  %Pos 20 CELLS ERASE ;
+ : Next-Pos  ( n -- pos )  CELLS %Pos +  DUP @ 1+
+             DUP ROT !  ;
+ : 0Pos   ( n -- )  CELLS %Pos + 0 SWAP !  ;
+
+
+ \   Conditions:  ( n pos -- n pos flag )
+ \   Actions:     ( n pos -- t )
+
+ DEFER p
+ : <n?        2DUP > ;
+ : Ascending  SWAP DROP ;
+
+ : =n?        2DUP = ;
+ : p(n-1)     DROP 1- p ;
+
+ : <2n?        2DUP  SWAP 2* <  ;
+ : Descending  SWAP 2* SWAP -  ;
+
+ : p(n-1)+1    DROP DUP 0Pos 1- p 1+  ;
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 10        Wed Aug 22, 1990
+GARY-S                       at 08:03 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: algorithms permutations Baden
+ Message-ID: <12353@sdcc6.ucsd.edu>
+ Date: 21 Aug 90 05:00:06 GMT
+ Organization: University of California, San Diego
+ Lines: 260
+       ^^^^^ split for Forthnet port - part c
+
+ \                Main function
+ : Perm  ( n -- t )  DUP  2 =
+      IF    DROP  1
+      ELSE  DUP  Next-Pos  ( n pos )
+            If(  <n?      Ascending
+                 =n?      p(n-1)
+                 <2n?     Descending
+                 true     p(n-1)+1     )If
+      THEN  ;
+
+ ' Perm  IS p      Perm-Init
+
+                          ---------------------
+
+ The If( .. )If construct was introduced for a clean appearance (and to 
+ raise the question of the extent to which the proposed ANSI standard 
+ will support user-created language constructs). Here is the definition 
+ with IF .. ELSE .. THEN:
+
+ : Perm  ( n -- t )  DUP  2 =
+      IF    DROP  1
+      ELSE  DUP  Next-Pos  ( n pos )
+            <n?   IF    Ascending       ELSE
+            =n?   IF    p(n-1)          ELSE
+           <2n?   IF    Descending      ELSE
+                        p(n-1)+1     THEN THEN THEN
+      THEN  ;
+
+                          ---------------------
+
+ I feel that Forth expresses the algorithm as clearly as any language. 
+ Forth supports many writing styles -- in this example, the main word 
+ is written so that the logical flow stands out clearly. The stack 
+ manipulations take place in the auxilliary words where the desired 
+ outcome is so simple that their definitions can be easily understood. 
+ This alleviates one of the problems that Forth critics are quick to 
+ notice: the mixing of "SWAP DROP FLOP" stack manipulation in with the 
+ main definition makes code flow hard to understand.
+
+      : PERM2  ( n -- t )  RECURSIVE  DUP  2 =
+           IF    DROP  1
+           ELSE  DUP  CELLS %Pos +  DUP @ 1+
+                 DUP ROT !  
+                 2DUP >  IF   SWAP DROP        ELSE
+                 2DUP =  IF   DROP 1- PERM2    ELSE
+                 2DUP SWAP 2* <
+                         IF   SWAP 2* SWAP -   ELSE
+                 DROP DUP 0POS 1- PERM2 1+     THEN THEN THEN
+           THEN  ;
+
+ VERTICAL STYLE
+ A writing style that is becoming popular in Forth (perhaps because of 
+ the use of text files rather than blocks) is to write unfactored 
+ definitions vertically -- adding copious comments in an effort to 
+ compensate for the resulting lack of clarity. I have made an effort to 
+ reproduce this style here. Since I don't consider myself adept at 
+ this, perhaps someone can show us how to rearrange this code and 
+ improve the clarity. 
+
+      : PERM2  ( n -- t )  RECURSIVE
+           DUP  2 =
+           IF    DROP  1       \  Terminal 
+           ELSE  DUP
+                 CELLS %Pos +   \ get address in position array
+                 DUP @ 1+       \ increment position
+                 DUP ROT !      \ store new position
+                 ( n pos )       
+                 2DUP >  IF               \ pos < n
+                           SWAP DROP      ( pos) 
+                         ELSE
+                 2DUP =  IF                \ pos = n
+                           DROP 1- PERM2   \ recursive call with n-1
+                         ELSE
+                 2DUP SWAP 2* <  IF         \ pos < 2n
+                           SWAP 2* SWAP -   \ return t=2n-pos
+                         ELSE
+                 DROP                       ( n)
+                 DUP 0POS                   \ set position to 0
+                 1- PERM2                   \ recursive call with n-1
+                 1+                         \ shift position to right 
+                 THEN THEN THEN
+           THEN  ;
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 11        Wed Aug 22, 1990
+GARY-S                       at 08:04 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: algorithms permutations Baden
+ Message-ID: <12353@sdcc6.ucsd.edu>
+ Date: 21 Aug 90 05:00:06 GMT
+ Organization: University of California, San Diego
+ Lines: 260
+       ^^^^^ split for Forthnet port - part d
+
+ Footnote on execution speed:
+      PERM2 is 8% faster than Baden's transcription of Trotter's algorithm.
+      It is 20% faster than the factored version PERM. It is 8 times slower
+      than the 'C' version which Wil supplied in an earlier posting 
+      (high level Forth typically runs about 8 times slower than 'C' --
+      but Forth with selected words coded in assembly language runs 
+      faster).
+
+ Comment on Style:
+      Sometimes the word "efficiency" is used solely in terms of 
+      execution speed. Another view of "efficiency" takes into account 
+      the programmer's time and the usefulness of the ideas represented 
+      in the code. In some areas it is very useful to write code 
+      "efficiently" -- in the sense that it can be easily modified, 
+      that larger structures can be built from it, and that the ideas 
+      can be used by the author and others in future applications. 
+      Forth can be written clearly (and efficiently in this sense) 
+      but probably not by adopting the stylistic conventions of other 
+      languages. I think that Wil Baden's idea of starting some 
+      exchanges on the subject of Forth style is excellent.
+
+                                                   John J Wavrik 
+              jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                                   Univ of Calif - San Diego 
+                                                   La Jolla, CA  92093 
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 16        Thu Sep 06, 1990
+GARY-S                       at 07:34 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: discovering algorithms
+ Message-ID: <12534@sdcc6.ucsd.edu>
+ Date: 4 Sep 90 03:53:32 GMT
+ Organization: University of California, San Diego
+ Lines: 314
+       ^^^^^ split for ForthNet port - part a
+
+                         DISCOVERING ALGORITHMS
+
+ One of the most important features of Forth is that it has properties 
+ that make it ideally suited for experimental computing -- and hence 
+ for discovering algorithms and proofs of theorems. Some of the reasons 
+ that make Forth a good prototyping language also account for its 
+ excellence in developing algorithms. Forth is also one of the few 
+ languages that allows a great deal of flexibility in the introduction 
+ of new data types and operations on them. It is one of the few 
+ languages that provide an environment in which algorithms can be 
+ modified as easily as data. 
+
+ It is hard to write about the process of discovering algorithms. 
+ There are no standard rules or procedures. Sometimes an algorithm is 
+ the result of systematic hard work. Sometimes it is a matter of 
+ gaining enough experience with the subject matter until it becomes 
+ obvious. Mathematics is presented in such a theoretical way that few 
+ people outside the subject appreciate the amount of experimentation 
+ that goes in to the development of theory.
+
+ Wil Baden asked about the "Domain of Forth".  My claim is that the
+ domain of Forth includes the ability to write tools to help in the
+ discovery of algorithms -- and I'd like to give an example to show 
+ why.
+
+ I can't think of any better way to explain how Forth is useful in 
+ discovering algorithms other than to give an illustrated account 
+ showing how Forth was used to discover the solution to Wil Baden's 
+ permutation problem. 
+
+                               ---------- 
+
+ The permutation algorithm was a good test case. Most mathematicians 
+ are familiar enough with permutations (as algebraic objects) to work 
+ with the problem -- but may, as in my case, be unfamiliar with the 
+ combinatorial point of view needed to deal with this particular 
+ problem. (Combinatorics is the part of mathematics that deals with 
+ counting or listing things; Algebra is the part of mathematics that 
+ studies operations on sets).
+
+ I started this problem fairly ignorant. By the end the solution 
+ appeared so simple and clear that it should have been obvious at the 
+ start. What was lacking was some experience with this way of looking 
+ at permutations. In the old days this experience would have come from 
+ working with pencil and paper. Here it came from playing around with a 
+ Forth-based permutation system -- a lot faster and more fun. 
+
+ Step 1 - Build a Permutation "Calculator"
+
+ One of the primary tools for discovering algorithms is a means for 
+ gaining experience with the objects under study -- a means for 
+ exploring to test promising approaches and to rule out dead ends.
+ The Permutation "Calculator" is such a tool.
+
+     A permutation of {1 .. n} is, from an algebraic point of view, a 
+     mapping of the set {1 .. n} to itself which sends distinct 
+     elements to distinct elements. Permutations were represented as
+     arrays. The 0-th element of the array is the size, n. The jth 
+     element is the number to which j is sent. Permutations are 
+     multiplied by composition:  P1 * P2  is the map P1 followed by the 
+     map P2. Notation example: { 2 3 1 4 }  sends 1->2, 2->3, 3->1,
+     4->4. 
+
+     The calculator provides:
+         PERMUTATION  P    ( defining word -- P puts address on stack )
+         P*                ( Perm1 Perm2 -- Perm-product )
+         P/
+         PINVERT           ( Perm -- Perm-inverse )
+         P.                ( perm -- )  print permutation 
+         P=                ( Perm1 Perm2 -- flag )
+         { .. }            ( -- perm )  input permutation
+         PMOVE             ( Perm1 Perm2 -- )  copy Perm1 to Perm2
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 17        Thu Sep 06, 1990
+GARY-S                       at 07:34 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: discovering algorithms
+ Message-ID: <12534@sdcc6.ucsd.edu>
+ Date: 4 Sep 90 03:53:32 GMT
+ Organization: University of California, San Diego
+ Lines: 314
+       ^^^^^ split for ForthNet port - part b
+
+     Permutations are also represented in terms of their decomposition 
+     into cycles.
+
+     Example:  ( 1 2 3 ) sends 1->2, 2->3, 3->1  it permutes 1 2 3
+               cyclically.
+
+        C.                 ( perm -- )  print perm as product of cycles
+        (( .. ))           ( -- perm )  input cycle
+
+     The storage mechanism from JFAR vol 6 # 1 was introduced to allow 
+     permutations to be manipulated like integers. A transposition is
+     a cycle which consist of exactly two elements (equivalently, a
+     permutation which exchanges two elements and keeps everything
+     else fixed).
+
+     Calculator Examples:
+
+      1.  { 1 2 4 3 } { 4 3 2 1 } p* p. {  4 3 1 2 }
+
+            The first permutation sends 1->1, 2->2, 3->4, 4->3
+            The second sends            1->4, 2->3, 3->2, 4->1
+            So the product (first followed by second) 
+                                  sends 1->4, 2->3, 3->1, 4->2
+
+           Notice that { 2 3 1 4 } puts this permutation on the
+           stack (what is actually on the stack is the address
+           where the data is stored).
+
+           P* multiplies the top two elements and the stack and
+           puts the result on the stack.
+
+           P. prints the permutation on top of the stack.
+
+      2.  { 2 3 1 4 } dup pinvert p. {  3 1 2 4 }
+
+      3.  { 2 1 4 3 } c. (1 2 )(3 4 )
+
+      4.  (( 1 2 3 )) p. {  2 3 1 4 }
+
+ As is typical for Forth-based mathematical systems, the basic 
+ permutation system  was extended in a "middle out" fashion. The 
+ initial system provided the basic algebra of permutations (and I/O).
+ New features were added and old features refined as the need arose.
+
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 18        Thu Sep 06, 1990
+GARY-S                       at 07:35 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: discovering algorithms
+ Message-ID: <12534@sdcc6.ucsd.edu>
+ Date: 4 Sep 90 03:53:32 GMT
+ Organization: University of California, San Diego
+ Lines: 314
+       ^^^^^ split for ForthNet port - part c
+
+ Step 2.  Examine sequences of permutations
+
+ At this point Baden's problem became mixed with other problems 
+ involving sequences of polynomials. One is to produce permutations
+ in lexicographic order. To study this, we put the permutations into
+ lexicographic order (as an array) and then printed the permutations
+ and the quotients needed to get from one permutation to the next.
+ (If you can spot the pattern in the quotients, you will be able to
+ write the algorithm for generating the permutations lexicographically.)
+
+
+ : QUOTS  CR  #P 1-  0 DO  I P P.            ( print perm )
+                           I 1+ P  I P P/
+                           14 SPACES  C.     ( print quot indented )
+                       LOOP
+          #P 1- P P.  ;
+
+ load-3
+ quots
+ {  1 2 3 }
+               (2 3 )
+ {  1 3 2 }
+               (1 3 2 )
+ {  2 1 3 }
+               (2 3 )
+ {  2 3 1 }
+               (1 2 3 )
+ {  3 1 2 }
+               (2 3 )
+ {  3 2 1 }
+
+ load-4
+ quots
+ {  1 2 3 4 }
+               (3 4 )
+ {  1 2 4 3 }
+               (2 4 3 )
+ {  1 3 2 4 }
+               (3 4 )
+ {  1 3 4 2 }
+               (2 3 4 )
+ {  1 4 2 3 }
+               (3 4 )
+ {  1 4 3 2 }
+               (1 4 2 )
+ {  2 1 3 4 }
+               (3 4 )
+ {  2 1 4 3 }
+               (2 4 3 )
+ {  2 3 1 4 }
+               (3 4 )
+ {  2 3 4 1 }
+               (2 3 4 )
+ {  2 4 1 3 }
+               (3 4 )
+ {  2 4 3 1 }
+               (1 3 )(2 4 )
+ {  3 1 2 4 }
+               (3 4 )
+ {  3 1 4 2 }
+               (2 4 3 )
+ {  3 2 1 4 }
+               (3 4 )
+ {  3 2 4 1 }
+               (2 3 4 )
+ {  3 4 1 2 }
+               (3 4 )
+ {  3 4 2 1 }
+               (1 2 4 )
+ {  4 1 2 3 }
+               (3 4 )
+ {  4 1 3 2 }
+               (2 4 3 )
+ {  4 2 1 3 }
+               (3 4 )
+ {  4 2 3 1 }
+               (2 3 4 )
+ {  4 3 1 2 }
+               (3 4 )
+ {  4 3 2 1 }
+
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 19        Thu Sep 06, 1990
+GARY-S                       at 07:36 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: discovering algorithms
+ Message-ID: <12534@sdcc6.ucsd.edu>
+ Date: 4 Sep 90 03:53:32 GMT
+ Organization: University of California, San Diego
+ Lines: 314
+       ^^^^^ split for ForthNet port - part d
+
+ To facilitate further exploration the permutations for n=3,4,5,6 were
+ generated as virtual arrays. [Converting an in-memory array to a disk 
+ array involves a minor change in a defining word.]
+
+ Step 3.  Use a backtracking algorithm to find all solutions to
+          Baden's problem for n=3 and n=4. Look for nice patterns.
+
+ For n=3 there are only two adjacent transpositions ( 1 2 ) and
+         ( 2 3 ) we abbreviate these 1 and 2 [see earlier posting]. 
+         There are exactly two solutions to Baden's problem:
+         1 2 1 2 1 2  and  2 1 2 1 2 1
+
+         Where  1 2 1 2 1 2  means:  start with { 1 2 3 }
+         exchange the first two elements, then the second two,
+         repeat three times.
+
+         [In this case it is obvious that there can only be two
+         possible chains of adjacent transpositions -- but it is
+         not obvious that they generate all permutations.]
+
+         We experimented at this point with some possible 
+         generalizations to n=4. None of them worked (in particular
+         1 2 3 1 2 3 1 2 3 ...  is *not* the pattern for n=4.
+
+ For n=4 there are 344 chains of adjacent transpositions that generate 
+         all permutations (i.e. 344 solutions to Baden's problem). 
+         These were found by using a backtracking algorithm 
+         implemented with the permutation calculator of step 1. The 
+         problem is to explore a tree. At the root of the tree is the 
+         permutation { 1 2 3 }. There are branches to the three 
+         permutations (nodes) that can be obtained by applying the 
+         three possible adjacent transpositions. The same is true at 
+         every node (except that one transposition leads back to the 
+         previous node). The algorithm explores the tree and prints 
+         every path which generates all permutations.
+
+         soln 1:  1 2 1 2 1 3 1 2 1 2 1 3 1 2 3 2 1 2 1 2 3 2 1
+         soln 43: 1 2 3 1 3 2 1 3 1 2 3 1 3 2 1 3 1 2 3 1 3 2 1
+         soln 62: 1 2 3 2 3 2 1 2 1 2 3 2 3 2 1 2 1 2 3 2 3 2 1
+
+ Looking for patterns is a very human mathematical activity. It is not 
+ at all obvious what we (as humans) look for when we look for "nice" 
+ patterns. It would be a very interesting problem in artifical 
+ intelligence to instruct a computer to scan a collection of sequences 
+ like this and pick out those which seem most "useful". In particular,
+ the computer should see #62 as
+                 1 2 3  2  3 2 1  2  repeated
+ and #43 as
+                 1 2 3  1  3 2 1  3  repeated
+
+ [#43 and #62 were the "nicest" patterns found by eye]
+
+                       ---------------------------     
+
+ NOTE:  At this point there was enough information to solve Baden's 
+        problem. If only we had stopped to see what these sequences 
+        of transpositions do to the permutations (as we did later), the 
+        algorithm (and its proof) would have been clear. 
+
+        But the study was taken a step further:
+
+                       ---------------------------     
+
+ Step 4.  Look at permutations from a combinatorial point of view
+
+ Let Xn be the set of (a1,..,an) with 0 <= ai <= n-i
+ There are n! elements in Xn.
+----------
+Forth Interest Group
+Category 18,  Topic 81
+Message 20        Thu Sep 06, 1990
+GARY-S                       at 07:37 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Domain of Forth
+ Keywords: discovering algorithms
+ Message-ID: <12534@sdcc6.ucsd.edu>
+ Date: 4 Sep 90 03:53:32 GMT
+ Organization: University of California, San Diego
+ Lines: 314
+       ^^^^^ split for ForthNet port - part e
+
+ I had a telephone conversation with Wil Baden which informed me that 
+ he (and probably Trotter) considered permutations as associated with 
+ elements of Xn. I subsequently looked at the book
+
+          "Combinatorics for Computer Science"    
+             by  S. Gill Williamson
+           Computer Science Press  ISBN 0-88175-020-4
+
+ As it turns out, there are a variety of correspondences between the 
+ set Xn and the set of permutations of {1,..,n}. None of these seem to 
+ have anything to do with the algebraic structure of permutations -- 
+ but they do have something to do with listing the permutations in 
+ various orders. The permutation calculator was extended to include
+ include some of these correspondences. In particular we defined
+ >B and >W to use Baden's and one of Williamson's methods for 
+ obtaining an element of Xn from a permutation, and B> and W> for the
+ inverse maps. We also implemented a RANK function on the symbols in
+ Xn. Williamson gives a "method of adjacent marks" which produces a 
+ correspondence between symbols in Xn and permutations. If the 
+ symbols in Xn are arranged in lexicographic order, the corresponding
+ permutations are obtained from one another by adjacent transpositions.
+ This provides another (but more complicated) algorithm for solving 
+ Wil Baden's problem.
+
+ ==================================================================
+                      CONCLUSION
+ ==================================================================
+
+ What was done here is not easy to do in most languages: we were able 
+ to easily build what amounts to a special language for studying 
+ permutations -- and then use the language to develop an algorithm.
+
+ An important application area for Forth is experimental computing in 
+ mathematics. It's usefulness comes from its ability to support the 
+ definition of new data types and language features -- allowing the 
+ mathematician to make a laboratory to perform experiments. Forth is a 
+ good language for making mathematical laboratories.
+
+
+                                                   John J Wavrik 
+              jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                                   Univ of Calif - San Diego 
+                                                   La Jolla, CA  92093 
+----------
+
+

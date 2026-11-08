@@ -1,0 +1,328 @@
+
+Item    9714325                 89/01/30        10:01
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 01/29/89   Time: 21:45EST
+Attendees:
+[NMORGENSTERN]
+
+Minutes:
+<NMORGENSTERN> How's Chicago?
+<TA> hit is going pretty good so far.
+<NMORGENSTERN> What kind of work are you doing?
+<TA> programming and I am getting a headach with f-pc.
+<NMORGENSTERN> I just got it a couple of weeks ago & am looking at it now....
+<NMORGENSTERN> What's your problem?
+<TA> I am having disk writing problems (hwrite).
+<NMORGENSTERN> Let me look it up.
+<NMORGENSTERN> "Handle write", is that it?
+<TA> I am having problem with it writing a space at the end of the ...
+<TA> yes
+<TA> of the file.
+<NMORGENSTERN> Hmmm
+<NMORGENSTERN> Why can't you set up a 1-byte string with a space (BL)...
+<TA> when I try to write one byte before that and continue on it stops
+<NMORGENSTERN> and send it using adr 1 handle HWRITE?
+<TA> at the end of 300 bytes or so saying it will not write any more.
+<TA> I am using it as the second file and I send it handle 2
+<NMORGENSTERN> BRB I will get my DOS book.
+<TA> ok, I only write 120 bytes at a time with crlf at the end.
+<TA> and then I want to append another 120 bytes ect..
+<NMORGENSTERN> When you say handle 2...
+<NMORGENSTERN> do you mean standard output device, which is normally CON ??
+<NMORGENSTERN> .
+<TA> hold on for a second while I look at something.  .]
+<TA> I sent the pointer to the end of file and then ...
+<TA> I give buffer 120 file2 hwrite   ....file2 is constant for adr of file2.
+<TA> .
+<DHWEINSTEIN> is here.
+<NMORGENSTERN> Hi Dave.
+<[Dave&Friends] DHWEINSTEIN> Hullo
+<NMORGENSTERN> Have you had any experience with DOS file handles....
+<NMORGENSTERN> We have a problem that needs solution.
+<NMORGENSTERN> .
+<TA> not too much.
+<TA> .
+<[Dave&Friends] DHWEINSTEIN> Yes. I like FPC. I like F-PC. I like F-PC.
+<NMORGENSTERN> It is on F-PC!
+<[Dave&Friends] DHWEINSTEIN> What is the problem with DOS handles in F-PC?
+<NMORGENSTERN> TA (I don't remember his first name)
+	has a problem appending output...
+<NMORGENSTERN> to the end of the file. He will be back in a minute.
+<[Dave&Friends] DHWEINSTEIN> Hmmnn...that I haven't done.
+<TA> I try to write 120 bytes to a file and it sticks
+	an space byte (32) at the end.
+<TA> .
+<NMORGENSTERN> I know the general concept, but haven't actually used F-PC
+<NMORGENSTERN> Why 120 bytes?
+<[mitch] TA> it is for a formula and It is 120 bytes
+	long and the next one has ...
+<[mitch] TA> to be on the next line .
+<[mitch] TA> .
+<NMORGENSTERN> Do you have any ideas, Dave?
+<NMORGENSTERN> (my way of saying, I don't know. :-)
+<NMORGENSTERN> I guess that what you want is to send 120 bytes, then a CRLF...
+<NMORGENSTERN> but you are getting a blank in addition or instead.
+<NMORGENSTERN> .
+<[mitch] TA> I may break down and save everything in
+	memory and then write a complete file...
+<[mitch] TA> .... no the 120 byte array includes crlf
+	and it adds the sp on it.
+<[mitch] TA> .
+<NMORGENSTERN> In other words after the CRLF
+<NMORGENSTERN> .
+<[mitch] TA> yes      .
+<NMORGENSTERN> Let me check something.
+<NMORGENSTERN> .
+<[mitch] TA> I am using version 2 of f-pc.
+<[mitch] TA> .
+<NMORGENSTERN> How do you issue the CRLF?
+<[Dave&Friends] DHWEINSTEIN> has left.
+<NMORGENSTERN> Do you use the word CR?
+<[mitch] TA> no I did a C! of 0D 0A at the end 2 bytes of the buff.
+<[mitch] TA> .
+<NMORGENSTERN> How do you mean C! -- that moves into memory.
+<NMORGENSTERN> .
+<NMORGENSTERN> I get it, you move those bytes into the buffer! :-)
+<NMORGENSTERN> then send the whole package.
+<[mitch] TA> 13 buff 118 + c! ...
+<[mitch] TA> 10 buff 119 + c! ... then buff 120 handle2 hwrite.
+<[mitch] TA> .
+<NMORGENSTERN> That should work. Are you sending the
+	output to a printer or to a file?
+<NMORGENSTERN> .
+<[mitch] TA> to a disk file .
+<[mitch] TA> .
+<NMORGENSTERN> Very puzzling. Let me play with it ...
+<NMORGENSTERN> If I solve it, I will send you a message.
+<[mitch] TA> ok.  I am probably just store every line in mem then ...
+<[mitch] TA> .. write to the file the whole works.
+<[mitch] TA> .
+<NMORGENSTERN> That would be more efficient, but it shouldn't make any...
+<NMORGENSTERN> difference to the output.
+<APPERT> is here.
+<NMORGENSTERN> Kevin! Mitch here has a problem with F-PC...
+<NMORGENSTERN> Weren't you one of those who worked on its develpment?
+<NMORGENSTERN> .
+<[Kevin] APPERT> nope.
+<[Kevin] APPERT> I know a little about it
+<NMORGENSTERN> Are you familiar with DOS I/O?
+<[Kevin] APPERT> whats problem?
+<NMORGENSTERN> Let's see if I have it right....
+<NMORGENSTERN> He sets up lines of 120 bytes, the last 2 of which are...
+<NMORGENSTERN> CR and LF, that is 13 10...
+<NMORGENSTERN> Then he sends 120 bytes to a disk file...
+<NMORGENSTERN> and gets an extra space right afterwards...
+<NMORGENSTERN> Mitch, does that show up in the file as ASCII 32?
+<[mitch] TA> correct.
+<[mitch] TA> .
+<[Kevin] APPERT> reduce the count by one (size of write) and what happens
+<[Kevin] APPERT>    ?
+<[mitch] TA> I haven't tried that yet.
+<[mitch] TA> .
+<[Kevin] APPERT> are you sure you are counting off
+	the location of the cr/lf correctly?
+<[Kevin] APPERT> the first location  of your buffer is offset 0...
+<[mitch] TA> yes since the buff starts at 0 and I write to the ...
+<[mitch] TA> 120th byte.
+<[Kevin] APPERT> and the size of the write counts that as location 1
+<[Kevin] APPERT> I think that would produce the opp. effect, though
+<[mitch] TA> no it starts writing at the 0 offset.
+<[Kevin] APPERT> which do you write at offset 120 (decimal?)
+<[mitch] TA> there is something mentioned in the hlp files that...
+<[mitch] TA> mentions about segments... 13 in decimal.
+<[mitch] TA> .
+<NMORGENSTERN> If the buffer is 120 bytes...
+<NMORGENSTERN> then the start is byte 0 and the end is byte 119.
+<NMORGENSTERN> .
+<[mitch] TA> it is allotted 121 bytes
+<NMORGENSTERN> Is byte 0 a length byte?
+<[mitch] TA> and I tell it to write 120 bytes but crlf is in the file.
+<[mitch] TA> no.
+<[Kevin] APPERT> no, the forth word takes the length on the stack
+<[mitch] TA> is there any other seq. write words?
+<[Kevin] APPERT> I'd have to explore a bit to answer that
+<NMORGENSTERN> Try this...
+<NMORGENSTERN> buffer 130 dump
+<NMORGENSTERN> and see whether there is a blank right after the CR LF...
+<[Kevin] APPERT> have you tried numbering the characters,
+	writing out the numbered buffer, and seeing exactly how many you have written?
+<NMORGENSTERN> that you are sending.
+<[mitch] TA> I will when I get a chance don't have access at moment.
+<[Kevin] APPERT> good luck
+<NMORGENSTERN> I find I/O very puzzling!
+<NMORGENSTERN> especially printers.
+<NMORGENSTERN> But also file I/O etc. We are burdened...
+<[Kevin] APPERT> I like block.  I understand block.
+	 I can explain it in about 5 min.
+<[mitch] TA> you cannot write to much seq. if you start before...
+<NMORGENSTERN> with the history of obsolete machines such as the teletype.
+<[mitch] TA> the end of the file.
+<NMORGENSTERN> A question:
+<NMORGENSTERN> When DOS positions itself at the end of a file...
+<NMORGENSTERN> does it go the the current end or 1 past the end?
+<NMORGENSTERN> that shoule be "to the"
+<[mitch] TA> I dont have an ibm so .....
+<[mitch] TA> I cannot answer that.
+<[mitch] TA> .
+<NMORGENSTERN> All DOS machines should be compatible at that level, I think.
+<NMORGENSTERN> .
+<[mitch] TA> I only wish.  I use two different forths and sometimes...
+<[mitch] TA> it dirves me up the wall.  I implemented $" for f-pc...
+<[mitch] TA> because I had it on the other and no way of putting a...
+<[mitch] TA> string addr and count on the stack.
+<[Kevin] APPERT> I usually diddle this sort of thing
+	untill it works.  That's what forth is for.
+<[Kevin] APPERT> I gotta scoot
+<NMORGENSTERN> What is $"
+<NMORGENSTERN> Bye Kevin
+<[Kevin] APPERT> nice meeting you , Mitch
+<[mitch] TA> bye
+<[Kevin] APPERT> has left.
+<[mitch] TA> it is...
+<[mitch] TA> ex:   $" hello there" would leave an adr and count....
+<[mitch] TA> on stack that you can do from console.
+<[mitch] TA> it comes in handy.
+<[mitch] TA> .
+<NMORGENSTERN> How does it differ from " "
+<NMORGENSTERN> .
+<[mitch] TA> " works in colon definition only.
+<NMORGENSTERN> Got it.
+<[mitch] TA> at least that is what i think I found out.
+<NMORGENSTERN> You are right. " "  ." " etc. are only within colon defs.
+<[mitch] TA> And when you do test with strings it comes in really handy.
+<NMORGENSTERN> F83 has .(   ) which will print a contained string.
+<[mitch] TA> thanks....it drove me up the wall for a while.
+<[mitch] TA> do want to print just store in a temp buff and put adr c on stack
+<[mitch] TA> .
+<[mitch] TA> but that is nothing like this disk file problem though.
+<NMORGENSTERN> FF-PC also has .( )  They output immediate
+<[mitch] TA> I had spent 5 hours on it.
+<NMORGENSTERN> Right, very puzzling. As I say, I will play with it...
+<NMORGENSTERN> & see what I can come up with.
+<[mitch] TA> the formulas cannot have a space on the first char.
+<NMORGENSTERN> What operating system do you use?
+<[mitch] TA> I need to speed it up anyway so I will write to a 32k buff.
+<[mitch] TA> at work it is 3.? and 3.3 for when I am emulating.
+<NMORGENSTERN> I have 3.2
+<[mitch] TA> here at home.
+<[mitch] TA> woops it is dos 3.2 here at home and probably at work to.\
+<[mitch] TA> I dont pay too much attention to that.
+<NMORGENSTERN> It shouldn't make any difference. The handle system started...
+<[mitch] TA> if this keeps up I may go back to c.
+<NMORGENSTERN> with DOS 2.0 and I don't think it has changed much.
+<NMORGENSTERN> Try dumping your buffer and counting bytes.
+<NMORGENSTERN> I'll bet a miscount is sneaking in somewhere.
+<[mitch] TA> I will.  what the diff between v3 and v2 of f-pc.
+<[mitch] TA> I have to have an exact count or the formula is no good!!
+<NMORGENSTERN> The latest version is 2.25, which is
+	what I have. I got it from Ting 2 weeks ago.
+<NMORGENSTERN> They have decided that will be IT! for a while.
+<[mitch] TA> what is the improvements?
+<NMORGENSTERN> I doubt there will Don't know -- I suspect
+	none in the area of I/O...
+<NMORGENSTERN> which tend to relate pretty directly...
+<NMORGENSTERN> to the DOS system.
+<NMORGENSTERN> .
+<[mitch] TA> ok.  since I have to pay for d/l it I didn't bother yet.
+<[mitch] TA> .
+<NMORGENSTERN> Wait, if you can. There are always minor bug fixes, etc. etc...
+<NMORGENSTERN> in even the best programs.
+<NMORGENSTERN> .
+<[mitch] TA> I know but I dint feel it worth it yet since I am paying for it..
+<[mitch] TA> my company wants me to use C but are letting me us f-pc.
+<[mitch] TA> .
+<[mitch] TA> boy I am mispelling left and write....ment use not us.
+<[mitch] TA> .
+<NMORGENSTERN> I'll upload E-Mail to report my progress
+<NMORGENSTERN> .
+<[mitch] TA> ok.  I might sit down tonight and write a little code.
+<NMORGENSTERN> I have to be leaving soon. The
+<[mitch] TA> I am having a little problem with abort. but I don't need it yet.
+<NMORGENSTERN> Nice thing about Forth is that it links easily to assembler.
+<NMORGENSTERN> I'd like to talk about that, because error handling is...
+<[mitch] TA> yup.  things just have not gone right today.
+<NMORGENSTERN> probably the most difficult problem in any computer language...
+<NMORGENSTERN> ABORT" is primive. It just starts over....
+<NMORGENSTERN> primitive, that is...
+<NMORGENSTERN> More sophisticated handling rapidly gets into advanced areas...
+<NMORGENSTERN> What is your specific problem?
+<[mitch] TA> it works everywhere else execpt at one place .
+<NMORGENSTERN> Are you using ABORT" or ABORT  ??
+<[mitch] TA> abort"
+<NMORGENSTERN> Remember it requires a flag on the stack.
+<[mitch] TA> yes I put one on there and it still didn't work.
+<NMORGENSTERN> Strange.
+<[mitch] TA> I am tring to find it now I think I switch to quit.
+<NMORGENSTERN> Try putting .S in just before you call it to see what the stack 
+was at that moment.
+<NMORGENSTERN> .
+<[mitch] TA> I will
+<NMORGENSTERN> QUIT doesn't reset the stack, but ABORT" does.
+<[mitch] TA> just a temp fix.
+<[mitch] TA> it was in a begin while loop and if statement.
+<[mitch] TA> it was only for if you selected the wrong file to convert
+<NMORGENSTERN> DOS distinguishes between CON the console and start over
+<NMORGENSTERN> Watch out for ABORT" in an IF statement!. Normally...
+<NMORGENSTERN> it doesn't need one....
+<[mitch] TA> I may take it out then.
+<NMORGENSTERN> That is, if you write IF ABORT" Goofup " ..... THEN...
+<NMORGENSTERN> wyou will not get the desired effect.
+<[mitch] TA> the if that is.  I used if -1 abort"    jflsjf" then ....
+<[mitch] TA> .
+<NMORGENSTERN> You could use ?DUP tHAT SHOULd work!
+<[mitch] TA> I will. do you have the assembly commands for f-pc?
+<NMORGENSTERN> No but I have F-PC technical reference manual in addition...
+<NMORGENSTERN> to the User's manual.
+<NMORGENSTERN> The assembler is on disk, I believe.
+<[mitch] TA> I dont have either manual.  well I need to get going.
+<NMORGENSTERN> Me, too. ...
+<[mitch] TA> I want to thank you for your time and trouble.  send
+<NMORGENSTERN> Hope I have been helpful & I will...
+<NMORGENSTERN> get bactto you.
+<[mitch] TA> some email to ta sometime.
+<[mitch] TA> ok, thankssssssssssssss!!!!!!!!!!!!!!!!!!!!!!
+<NMORGENSTERN> Right. You leave first. I hve to close down.
+<NMORGENSTERN> .
+<[mitch] TA> bye for now.
+<[mitch] TA> has left.
+=== End of Steno notes. ===
+Note sent Monday Jan 30
+TA
+FIGSYSOPS$
+F-PC I/O
+  I actually used F-PC for the first time today to try to duplicate your 
+problem. I tried your method of using C! to insert 13 10 in positions 118 and 
+119 of the buffer, then used
+    adr 120 handle HWRITE to send it to the file. 
+   (It is not necessary to reposition the pointer, as this is done 
+automatically by DOS.) After writing a couple of lines, I finished off with a 
+control-Z and closed the file. Next, I exited, and examined the file with 
+Norton Utilities. It all looked ok.
+ I wonder if your problem might be in reading the file. Lines terminated with 
+CRLF are read with LINEREAD ( -- adr len). This uses an internal buffer, and 
+returns the address. The documentation reads, slightly edited, "Read one line 
+from the current file, buffered by INBUF ... When switching to a new file, use 
+     0.0 handle MOVEPOINTER
+to reset the file pointer to the beginning of the file, and execute IBRESET so 
+the next LINEREAD will cause a read from the disk file. The read line length 
+is limited to 250 bytes. Lines read with LINEREAD are terminated with a LF 
+byte (10)'
+ 	The assembler is called PASM. It is an integral part of F-PC and is well 
+documented in the manual. The latest version is "frozen" at 2.25. The manual 
+can be obtained from the Forth Interest Group. I saw it mentioned in my 
+Forth Dimensions that just arrived today. The cost is $75 for the Users' 
+manual, the technical manual, and all the source files on 4 disks filled 
+almost solid with .ARC files. If you are doing serious programming in F-PC I 
+strongly advise you to purchase it. A bargain for power!
+*S
+
+
+

@@ -1,0 +1,240 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 07/25/91   Time: 22:39EDT
+ 
+ Open FIGGY BAR of 25 July 1991. Items discussed include Forth for
+ microwave/RF power controller apps, more on AnsForth, chipForth vs
+ LMI, comments regarding Ray Duncan, Wil Baden remains on FIG board
+ till November elections, the reason he stepped down, the job market,
+ Ting & Baden to visit China, comments regarding Elizabeth Rather,
+ MVP revival.
+
+Attendees:
+[GARY-S]
+[[MIKE] M.KELLY36]
+[[Wil] W.BADEN1]
+[L.STONE6]
+[[Perry] P.MITCHELL9]
+
+Minutes:
+<M.KELLY36> is here.
+<M.KELLY36> Hi ...
+<GARY-S> WHERE is Erial ?
+<M.KELLY36> Not THE Gary Shandling
+<GARY-S> hardly
+<M.KELLY36> New Jersey ( Garden State )
+<M.KELLY36> (cough)
+<GARY-S> but where in NJ
+<GARY-S> near Wildwood ?
+<M.KELLY36> 20 min sse of Philly
+<GARY-S> ahh
+<M.KELLY36> Wildwood is by the shore.
+<GARY-S> are you a Forth user/programmer/what ?
+<[MIKE] M.KELLY36> All of the above
+<GARY-S> do you program professionally ?
+<[MIKE] M.KELLY36> yep. gimmee a minute to type it all in, ok?
+<[MIKE] M.KELLY36> We use Forth as the controlling software for a family of RF 
+and microwave
+<[MIKE] M.KELLY36> power supplies used in the semiconductor, ICP and coating 
+fields.
+<GARY-S> can you say for who ?
+<[MIKE] M.KELLY36> ( shhh ) RF Plasma Products Inc. of Voorhees, N.J. a 
+subsidiary of Plasma Therm.
+<GARY-S> Interesting - I wasn't aware any uwave mfr used Forth.
+<[MIKE] M.KELLY36> A bit facetious, but I do realize that some users of Forth 
+have told me that their use of Forth is proprietary.
+<GARY-S> This is your nickle and apparently you are the only customer tonight - 
+got asnything you want to discuss ?
+<[MIKE] M.KELLY36> Who are you ?
+<GARY-S> I am Gary Smith - one of the FIG SysOps - the one who started 
+ForthNet (with considerable help) and maintains it now
+<[MIKE] M.KELLY36> I've been following the BASIS discourse for a couple of 
+months now on the ForthNet.
+<[MIKE] M.KELLY36> Pretty interesting stuff.
+<GARY-S> Then you've seen my name a time or two
+<[MIKE] M.KELLY36> Yep.
+<GARY-S> The defer and EKEY discussions are especially busy right now
+<[MIKE] M.KELLY36> I've been using Forth for 7 years or so but have only become 
+interested in the rest of the Forth community lately.
+<GARY-S> You see a lot of that maverickism (?) in Forth - moreso than in other
+languages, except perhaps APL
+<[MIKE] M.KELLY36> A couple of the Standard players are familiar to me. I've 
+used both FORTH Inc.
+<[MIKE] M.KELLY36> and LMI products  ( as well as a FIG Forth originally ).
+<GARY-S> Bess Rather is VERY invloved, serving as chair....
+<GARY-S> Ray Duncan is totally removed from the process
+<[MIKE] M.KELLY36> I call in to Vesta's BBS and have typed to Jax periodically.
+<GARY-S> Vesta is quite involved as I am sure you are aare
+<[MIKE] M.KELLY36> Why is R Duncan a bystander?
+<GARY-S> Ray invested a LOT of manhours bringing LMI into F83 compliance...
+<GARY-S> and doesn't have the immediate need for an official seal of 
+Standardization...
+<GARY-S> that FORTH Inc does. He has taken a wait-and-see stance as a result
+<[Wil] W.BADEN1> is here.
+<GARY-S> Wil Baden - Mike Kelly, Mike Kelly - Wil Baden
+<[MIKE] M.KELLY36> MVP Wil?
+<[Wil] W.BADEN1> (Mike, F83X.)
+<GARY-S> Mike programs uwave pwr/sup controllers in Forth - there's an app you 
+don't encounter daily
+<[Wil] W.BADEN1> But a good application for Forth.
+<GARY-S> I'd say so
+<[MIKE] M.KELLY36> I just spent two months converting an application from FORTH 
+Inc chipFORTH to LMI's platform.
+<[Wil] W.BADEN1> Mike, what were the stumbling stones?
+<[MIKE] M.KELLY36> " Philosophical " differences mostly but a few were ...
+<[MIKE] M.KELLY36> 1) No QUIT loop in pFORTH.
+<[MIKE] M.KELLY36> 2) No WIDTH variable in LMI.
+<[Wil] W.BADEN1> No QUIT loop?
+<[MIKE] M.KELLY36> 3) Reversed ASSEMBLER and assorted ASSEMBLER differences.
+<[MIKE] M.KELLY36> FORTH Inc. farmed out the job ( to U.K ) and THEY made the 
+decision that the
+<[MIKE] M.KELLY36> 8096 applications that were likely to be encountered 
+wouldn't need one ( too
+<[MIKE] M.KELLY36> small in scope ).
+<L.STONE6> is here.
+<GARY-S> The open FIGGY BARs are about anything in Forth you want to talk about,
+ with no rules of order - jump in anytime you have something to say
+<[MIKE] M.KELLY36> LMI does not yet have multitasking support for the 8096 
+metacompiler.
+<GARY-S> Curious - what chip before ? 8051 ?
+<[MIKE] M.KELLY36> 8096/7
+<GARY-S> Hi urself - come on in
+<L.STONE6> this is my first time, what is this all about
+<[MIKE] M.KELLY36> Wil, I gotta tell ya this. When I first was cutting my teeth 
+on a FIG kernel ...
+<[MIKE] M.KELLY36> we had a copy of MVP Forth and had a problem with something 
+or other. We called
+<[MIKE] M.KELLY36> you up and you helped us thru it. That was about 6 years ago.
+ Thanx
+<[Wil] W.BADEN1> Thanks for remembering.
+<GARY-S> Wil - still flattening out at your place ?
+<[Wil] W.BADEN1> Yeah. Have you heard about ASCOM?
+<[MIKE] M.KELLY36> Anyway ... there are many differences ... although the 
+PROVIDED diagnostics in
+<[MIKE] M.KELLY36> an LMI package make it our choice for now.
+<GARY-S> I know LMI provides good support, too
+<[Wil] W.BADEN1> I would have gladly accepted LMI Forth as is for ANS Forth.
+<GARY-S> Apparently that would have pleased Boston FIG,too
+<[Wil] W.BADEN1> Ray Duncan is a remarkable person.  Did you know he is still a 
+practicing physician?
+<[MIKE] M.KELLY36> I haven't read the BASIS yet ( ordered ) but I agree. A nice 
+package ( once the multitasking support is hashed out ). He is very bu
+sy with WINFORTH.
+<GARY-S> neonatologist
+<[MIKE] M.KELLY36> Type THAT 5 times fast.
+<[Wil] W.BADEN1> Gary, I'm glad Unisys sold us when they did.  They laid off 10,
+000 yesterday.
+<[MIKE] M.KELLY36> Who WERE you ?
+<[Wil] W.BADEN1> I have worked for Doelz Networks, which was bought from the 
+vulture capitalists\
+<[MIKE] M.KELLY36> Who did Unisys sell, Wil?
+<[Wil] W.BADEN1> by Timeplex, the ONLY division of Unisys that was making money.
+<[Wil] W.BADEN1> So Unisys sold Timeplex to Ascom and Mercedes Info. Technology.
+<[MIKE] M.KELLY36> Where are you located?
+<[Wil] W.BADEN1> Irvine CA.
+<[MIKE] M.KELLY36> And you Gary...
+<GARY-S> I'm a Field Service Engineer for a electro-mech process controller mfr
+<GARY-S> DataCard Corp
+<GARY-S> privately held by Herbert Quandt family
+<[MIKE] M.KELLY36> California ?
+<GARY-S> HDQ in Minneapolis
+<[Wil] W.BADEN1> But seriously, folks...\
+<[Wil] W.BADEN1> I would like it to be known that\
+<[Wil] W.BADEN1> my resignation from the FIG Board of Directors\
+<[Wil] W.BADEN1> doesn't take effect until the end of November.
+<GARY-S> and .....
+<[Wil] W.BADEN1> Then the nominations will be considered and a replacement made.
+<[Wil] W.BADEN1> One week from today I will be in China with Dr.Ting.
+<[MIKE] M.KELLY36> Guess I better become a FIG member then ,
+<[Wil] W.BADEN1> For 3 1/2 weeks.
+<GARY-S> FIG could certainly use your influence, Mike.
+<[MIKE] M.KELLY36> Pshaw ...
+<GARY-S> ie: FIG needs the active support and input from users in the real world
+<GARY-S> Wil - For the record, I regret your pending absence. No embellishment.
+I've always admired your integrity.
+<[Wil] W.BADEN1> Thanks.
+<[Wil] W.BADEN1> My reason for resigning is that the executive officer 
+performed a certain\
+<[Wil] W.BADEN1> act against the official recommendation of the board.
+<[MIKE] M.KELLY36> Who is the exec of FIG , Wil?
+<GARY-S> John Hall
+<[MIKE] M.KELLY36> What did he do ?
+<GARY-S> Without taking sides, I do believe John acted in good faith...
+<GARY-S> I also believe your resignation verifies what I said about your 
+integrity
+<[Wil] W.BADEN1> Thanks, Gary.
+<[Wil] W.BADEN1> He made an appointment that the Board had deliberated and 
+recommended against.
+<[MIKE] M.KELLY36> Was it his decision to make or the Board's?
+<[MIKE] M.KELLY36> And whom did he appoint to what post ?
+<[MIKE] M.KELLY36> Talk about out of touch.
+<GARY-S> Not entirely - you have spoken to (or typed to) the appointee
+<[Wil] W.BADEN1> advised against it.
+<GARY-S> Mike - it is a matter of record, so this is silly...
+<GARY-S> John re-appointed Jack Woehr (jax) as figchapters chair
+<[MIKE] M.KELLY36> ... after Jax blasted FIG publicly ...?
+<GARY-S> yes
+<[Wil] W.BADEN1> I just wanted to say that I'll be attending Figgy Bars again.
+<[Wil] W.BADEN1> (After I get back from China.)
+<GARY-S> Thank you for that.
+<[MIKE] M.KELLY36> I look forward to typing to you Thursdays and Sundays then 
+Wil.
+<[Wil] W.BADEN1> Not until September.
+<GARY-S> Leonard Morgenstern is host SysOp on Sunday. I get the Thursday 
+madhouse
+<[MIKE] M.KELLY36> FORWARD in the monthly sense ...
+<GARY-S> excuse me - I thought that was a collective look forward
+<[Wil] W.BADEN1> Anyway I wanted people to be clear that I am still on the 
+board.\
+<[Wil] W.BADEN1> Until November.
+<GARY-S> It is a matter of record now ;-)
+<[MIKE] M.KELLY36> Who else is on the Board?
+<[Wil] W.BADEN1> John Hall, Mike Elola, C.H.Ting (V.P), Dave Petty (Boston)
+<[MIKE] M.KELLY36> Guess I could just pay my dues ... join ... and save y'all a 
+lot of typing by reading about it in Forth Dimensions.
+<[Wil] W.BADEN1> (two more)
+<[MIKE] M.KELLY36> Elizabeth ?
+<[Wil] W.BADEN1> Jack Brown
+<GARY-S> Robert Smith, Jack Brown
+<[Wil] W.BADEN1> Not Elizabeth!
+<[MIKE] M.KELLY36> Sorry , strike a nerve ?
+<[Wil] W.BADEN1> Robert Smith is no longer.
+<[Wil] W.BADEN1> This year he is active in the Association of Theater Organists,
+ who are
+<[Wil] W.BADEN1> having a convention in S.Francisco.
+<[Wil] W.BADEN1> -- a member of the Board.
+<GARY-S> Dennis Ruffer !
+<[Wil] W.BADEN1> Yes, Dennis. (My face is red.)
+<GARY-S> Of all the people for _me_ to overlook
+<GARY-S> The lead SysOp here <grin>
+<[Wil] W.BADEN1> Elizabeth does Forth, not "Forth".
+<GARY-S> I'm going to skewer the notes - any comments
+<[Wil] W.BADEN1> This is a historic moment.  This is only the second time in 20 
+years I have used\
+<[MIKE] M.KELLY36> Forth, not " Forth " ...???
+<[Wil] W.BADEN1> an exageration mark in prose.
+<GARY-S> so recorded 25 July 1991 AD
+<[Wil] W.BADEN1> She calls anything that is not polyForth, "Forth".
+<P.MITCHELL9> is here.
+<[Wil] W.BADEN1> See her postings.
+<GARY-S> That's true
+<[MIKE] M.KELLY36> You mean in quotes ALL the time ...?
+<[Wil] W.BADEN1> I posted two comments to Cat.7, Topic 17, yesternight.
+<[MIKE] M.KELLY36> I think I read them on the Net this A.M.
+<[Wil] W.BADEN1> Except referring to polyForth and ANS Forth.
+<[Wil] W.BADEN1> Or she may mean public domain "Forth".
+<[Wil] W.BADEN1> Anyway FIG does "Forth" not Forth.
+<[Wil] W.BADEN1> I like Elizabeth.  She is so very sane.
+<[MIKE] M.KELLY36> I hear MVP has been resurrected ... sort of.
+<GARY-S> By Glen haydon - more than sort of
+<GARY-S> Don't look for the return of big ads, but MVP is definitely in business
+<[MIKE] M.KELLY36> Baby's up ... gotta go ... type to you Sun. or next Thurs ( 
+or in Sept. )!!!
+<GARY-S> I'm closing shop officially - you can hang around and chat as long as 
+you wish
+=== End of Steno notes. ===
+
+

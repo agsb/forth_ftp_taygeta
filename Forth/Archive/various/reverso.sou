@@ -1,0 +1,24 @@
+
+\ reverso.src ... reverse the bits of a byte in Forth
+\ jack woehr jax@well JAX on GEnie
+\ placed in the public domain
+hex
+\ easier to deal in hex 
+create masque
+	1 c, 2 c, 4 c, 8 c, 10 c, 20 c, 40 c, 80 c,
+\ typical 8 bit bitmask 
+: mask \ index --- mask
+	mask + c@ ;
+\ 0 mask returns 1, 1 mask returns 2, etc. 
+: >stack \ byte --- bit0..bit7
+	8 0 do dup i mask and swap loop drop ;
+\ turn a byte in to eight flags on the stack 
+: <stack \ bit7..bit0 --- reversed-byte
+	0 8 0 do swap if i mask or then loop ;
+\ turn the eight flags back into a byte, but turned around 
+: reverso \ byte --- etyb
+	>stack <stack ;
+\ reverse a byte 
+decimal
+
+

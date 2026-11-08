@@ -1,0 +1,558 @@
+
+                
+                     Best of GEnie..... August 1991
+          News from the GEnie Forth RoundTable by Gary Smith
+  
+  If you thought discussion regarding the pending Forth Standard was 
+waning, think again ! Several issues still remain unresolved and bear
+some serious thought before the book is closed and the seal is waxed
+on dp ANS Forth. One of the more unresolved of these issues is that 
+of address alignment. Please read the exchanges captured 20 June 1990
+from ForthNet ports off RIME and Usenet comp.lang.forth and GEnie Forth
+RoundTable participants in Category 10, Topic 25.
+
+   I have begun this discussion with a proposal presented by Jack Woehr 
+regarding problems that are unique to implementers of embedded Forth
+systems. This proposal alone amplifies the X3J14 Technical Committee's
+task. It is not enough to make a set of rules. They must also consider
+how those rules affect a variety of platforms, not the least of which
+is embedded systems.
+   
+   Read, discover, participate.
+
+Category 10 Forth Standards
+ ************
+Topic 25        Thu Nov 19, 1987
+GARY-S [Gary]                at 23:12 EST
+Sub: ANS TC Magnet for Tick, >BODY, ['],etc 
+
+ANS - Tick, >BODY, ['], etc Discussions about the ANS Forth Standard for Tick,
+>BODY, [']..... Magnet:   Charles Keane
+ ************
+ ------------
+Category 10,  Topic 25
+Message 15        Mon Dec 31, 1990
+JAX                          at 20:35 PST
+ 
+  Dennis ---
+
+  Could you possibly print this out and drop it in the X3J14 hopper?
+  Thank you very nicely. =jax=
+
+  ------------------------------------------------------------------
+
+ X3J14 Proposal                January 1, 1991                        Page 1
+of 1
+
+ Title: ROM-based Systems Quibble with >BODY
+
+ Words: >BODY CREATE DOES> ENVIRONMENT?
+
+ Abstract:
+
+         >BODY as defined in BASIS14 may benefit from redefinition
+         with an eye to portability between mixed RAM/ROM and RAM-only
+         systems.
+
+ Proposal:
+
+ 8.1.0550 -- >BODY
+         In conjunction with 5.3.2 "Addressable Memory" this construct
+ and the underlying concepts of PFA appear to be ambiguous for ROMmed
+ creatures of CREATE which contain address tokens in their PFA.
+
+         Propose: "a-addr is the parameter field associated with the
+         execution token w of a word defined via CREATE. The contents
+         of this address may be constant data, such as an address token
+         to memory where the data which makes the CREATEd word useful
+         is stored (as is often the case in a ROMmed system), or such
+         data itself (as is typically the case in a RAM-only system).
+         If there is any question as to which is the case, a Standard
+         program should compare the token returned by >BODY with the
+         token returned by EXECUTEing the CREATEd word itself."
+
+ The counter argument could be brought that the above technique
+ would not work for CREATE ... DOES>. In such case another CREATE
+ construct could be examined by a Standard program to determine what
+ sort of PFAs CREATE creates. In any event, it is hard to imagine a
+ truly portable Standard program that would want access to the internals
+ of a CREATE ... DOES> word via >BODY. It would be safer in such cases
+ simply to create some data structure that was more easily manipulable
+ and then write a colon definition that performed the desired action
+ upon it.
+
+ Alternatively, perhaps a query string could be defined for the
+ ENVIRONMENT? construct (8.1.1345) which could inform the Standard
+ program as to whether CREATE words contain data or address pointers in
+ their PFA's.
+
+ Submitted by:
+         Jack J. Woehr                        Voice: (303) 422-8088
+         Vesta Technology Inc.                FAX: (303) 422-9800
+         7100 W. 44th Ave, Suite #101        BBS: (303) 278-0364
+         Wheat Ridge, CO        80033                jax@well.UUCP JAX on
+GEnie
+
+ ------------
+Category 10,  Topic 25
+Message 16        Sat Feb 09, 1991
+GARY-S                       at 06:11 EST
+ 
+                 
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM
+ Subject: When to ALIGN
+ Message-ID: <9102041440.AA19033@ucbvax.Berkeley.EDU>
+ Date: 4 Feb 91 07:46:23 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV
+ Organization: The Internet
+
+ In general, you don't need to ALIGN before @ and !, but instead when
+ using `,' (comma) after `C,'.  It's usually used when creating data
+ structures.
+
+ Mitch Bradley, wmb@Eng.Sun.COM
+ ------------
+Category 10,  Topic 25
+Message 17        Sun Feb 17, 1991
+GARY-S                       at 09:12 EST
+ 
+                 
+  PORTED FROM UseNet =>
+              ------
+
+ From: UNBCIC@BRFAPESP.BITNET
+ Subject: ALIGN
+ Message-ID: <9102151416.AA00926@ucbvax.Berkeley.EDU>
+ Date: 14 Feb 91 20:27:00 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: UNBCIC%BRFAPESP.BITNET@SCFVM.GSFC.NASA.GOV
+ Organization: The Internet
+
+ > > ...when you <BUILDS things, you need to align it.  And, if the word
+ > > DOES> nothing, the user will have to use ALIGN before @ and ! too.
+ >Actually, that's not true, if the system implementor did things right.  The
+ >last word-aligned system I used automatically ALIGNed before every CREATE.
+ >This forced the parameter field to an even address (which was required for
+ >thread of a colon definition).So, DOES> always returned an aligned address,
+ >and the user didn't have to worry about it.
+
+ >Strings compiled in-line were always padded to an even number of bytes;this
+ >required a small bit of additional logic in run time code which advances
+ >the IP over the string, but it was invisible to the user.  (In-line byte
+ >parameters were forbidden, no great loss.)
+
+ 1) I think the loss of the ability to compile bytes is a great loss.
+ 2) How about
+ : DATA CREATE ALLOT ( NAME ) , ( AGE ) ;
+ 15 30 DATA NAME_1
+
+ Just putting 15 won't work. SPARCs have 4-bytes alignement restriction too,
+ for example. And on and on. And RECORD structures ARE VERY USEFUL.
+
+                               (8-DCS)
+ Daniel C. Sobral
+ UNBCIC@BRFAPESP.BITNET
+ ------------
+Category 10,  Topic 25
+Message 18        Sat Mar 02, 1991
+B.RODRIGUEZ2 [Brad]          at 22:23 EST
+ 
+ > 1) I think the loss of the ability to compile bytes is a great
+ > loss.
+
+Well, in the system I was speaking of, you didn't lose that ability.
+Structures had no alignment restrictions other than _starting_ at a word
+boundary.  Which means that yes, if you were careless, you could create a
+structure which would lead to an addressing violation.
+
+What was lost was the ability to, for example, compile a BRANCH with a one-
+byte offset ("in-line" parameter).  This was because the thread needed to
+maintain word-alignment.  You didn't lose any capabilities with this
+restriction, just some micro-optimizations of memory usage.
+
+- Brad
+ ------------
+Category 10,  Topic 25
+Message 19        Sat May 04, 1991
+GARY-S                       at 06:19 EDT
+ 
+                     
+  PORTED FROM UseNet =>
+              ------
+
+ From: Mitch.Bradley@ENG.SUN.COM
+ Subject: Addressability of data space
+ Message-ID: <9105021405.AA15589@ucbvax.Berkeley.EDU>
+ Date: 2 May 91 04:20:25 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch.Bradley%ENG.SUN.COM@SCFVM.GSFC.NASA.GOV
+ Organization: The Internet
+
+ > The troublesome clause from BASIS13 is from section 5.3.2.  It clearly
+ > states:
+ >
+ > "...it is an exception if a Standard Program addresses memory other
+ >  than:
+ >  in dictionary space regions:
+ >    from the address provided by a CREATEd word or HERE to the end of
+ >    the region generated by consecutive allocations ( , C, ALLOT
+ >    ALIGN ) made without intervening definitions or deallocations
+ >    ( FORGET );
+ >  [rest of this section is about non-dictionary space]"
+ >
+ > This means that if you build a defined word with CREATE (or a word like
+ > DEFER which uses CREATE), say  CREATE FOO  , you can use the address
+ > returned by FOO.  Period.  Nowhere does it say you can tick FOO for its
+ > parameter field address, and this clause is carefully worded such that
+ > anything not explicitly
+ > permitted is forbidden.
+ >
+ > Has this clause been fixed in the latest BASIS?
+
+ Basis 15 says pretty much the same thing (it's now section 5.4).
+
+ I believe that this text is logically correct.  The text says that memory
+ at that address is addressable.  It does not, and indeed cannot, enumerate
+ all the possible ways of putting that address on the stack.  For example,
+ one could do the following:
+
+         CREATE FOO  1 C,  2 C,  3 C,  4 C,  5 C,  HERE
+         CONSTANT XYZZY
+         7 XYZZY 5 - C!
+
+ The point is, section 5.4 says that the memory address provided by a
+ CREATEd word and by HERE is addressable, and that other memory addresses
+ are not addressable.  It does NOT say that executing the CREATEd word
+ is the only way of calculating that same address.
+
+ However, since this section has already been misunderstood, I would
+ like to hear suggestions for how to improve the wording.  I find that
+ writing extremely precise English text is a very challenging task.
+
+ By the way, here's what Basis 15 says about >BODY :
+
+ 8.1.0550  >BODY                 "to-body"               CORE
+          ( w -- a-addr )
+
+         a-addr is the data field address corresponding to the execution
+         token w of a word defined via CREATE .
+
+         See also: 5.4 Addressable Memory
+
+ The rationale box says:
+
+         a-addr is the address that HERE would have returned had it been
+         executed immediately after the execution of the CREATE that
+         defined w.
+
+ Mitch.Bradley@Eng.Sun.COM
+ ------------
+Category 10,  Topic 25
+Message 20        Sat May 04, 1991
+GARY-S                       at 06:19 EDT
+ 
+                  
+  PORTED FROM UseNet =>
+              ------
+
+ From: wbrown@beva.bev.lbl.gov (Bill Brown)
+ Subject: Re: Addressability of data space
+ Message-ID: <12734@dog.ee.lbl.gov>
+ Date: 2 May 91 15:41:51 GMT
+ References: <9105021405.AA15589@ucbvax.Berkeley.EDU>
+ Reply-To: wbrown@beva.bev.lbl.gov (Bill Brown)
+ Organization: Lawrence Berkeley Laboratory, Berkeley
+ X-Local-Date: Thu, 2 May 91 08:41:51 PDT
+
+ Seems I recall hearing somewhere that somebody offers, or at least once
+ upon a time offered, an 8052 with a version of Forth in on-board ROM.
+ Does anybody know if it's still available, and if it is who sells it
+ and for how much. I was sure that I had the details somewhere, however
+ if I do I must have put it in a _REALLY SAFE PLACE_!
+
+ My interest is triggered by an article in the May '91 issue of
+ _Elektor Electronics USA_ which has to do with an 8032/8052
+ single board computer project.  It mentions using an 8052 with BASIC
+ in ROM, and at first glance it looks like it would make a neat
+ Forth gadget, assumming that the Forth version of the 8052 is available.
+
+ Disclaimer:  These opinions are my own and have     |
+     nothing to do with the official policy or the   |  -bill
+     management of L.B.L, who probably couldn't      |   wlbrown@lbl.gov
+     care less about employees who play with trains. |
+ ------------
+Category 10,  Topic 25
+Message 21        Sun May 05, 1991
+B.RODRIGUEZ2 [Brad]          at 10:09 EDT
+ 
+Okay, I have a copy of BASIS15 now.
+
+According to BASIS13, your example
+ >  CREATE ...  HERE CONSTANT XYZZY
+ would not necessarily work, because nothing equated the address returned by
+CREATEd words to the address returned by HERE.
+
+The first key addition in BASIS15 was section 5.4.1, which states (among other
+things) that "HERE always identifies the beginning of the next region to be
+allocated."
+
+The second key addition was the rationale note in >BODY that you quoted
+(although I don't know if the rationale note carries the same weight as the
+text of the standard itself).
+
+At any rate, you've answered my question -- the problem was fixed in BASIS15.
+
+BTW, I found the section in BASIS13 perfectly understandable, Mitch. It's just
+that there was a difference betweeen what it said, and what everyone assumed. 
+Thanks (to you or whoever) for elucidating this in BASIS15.
+
+Brad Rodriguez        | brad%candice@maccs.uucp      (God willing)
+ B.RODRIGUEZ2 on GEnie | brad%candice@maccs.dcss.mcmaster.ca
+ "Shoes for industry!" | bradford@maccs.dcss.mcmaster.ca  (archaic)
+
+ ------------
+Category 10,  Topic 25
+Message 22        Sun May 19, 1991
+GARY-S                       at 06:19 EDT
+ 
+                  
+  PORTED FROM UseNet =>
+              ------
+
+ From: wsbusup4@rwa.urc.tue.nl (Jan Stout)
+ Subject: I.2.4 Alignment Problems
+ Keywords: BASIS15 ALIGN ALIGNED
+ Message-ID: <596@rc6.urc.tue.nl>
+ Date: 16 May 91 12:36:23 GMT
+ Sender: news@rc6.urc.tue.nl
+ Organization: Eindhoven University of Technology, The Netherlands
+
+ B15>I.2.4 Alignment Problems
+ B15>    ...
+ B15>    An implementor of ANS Forth can handle these alignment restrictions
+ B15>    in one of two ways. Forth memory access words (@,!,+!,etc) could be
+ B15>    implemented in terms of smaller width access instructions which have
+ B15>    no alignment restrictions.
+ B15>    ...
+ B15>    Although this conceals hardware ugliness from the programmer, it is
+ B15>    inefficient.
+ B15>    An alternative implementation of ANS Forth could define each memory
+ B15>    access word using the native instructions that most closely match
+ B15>    the word's function.
+ B15>    ...
+ B15>    In this case responsibility for giving @ a correctly aligned address
+ B15>    devolves on the programmer.
+ B15>    A portable ANS Forth program must assume the worst case and use the
+ B15>    alignment operators described below.
+ B15>    ...
+
+ The fundamental issue raised in Forth implementations on machine
+ architectures with alignment restrictions, is whether to aim for maximum
+ space efficiency (solution 1) or to aim for maximum speed efficiency
+ (solution 2).
+ Dependent on the kind of application either of the solutions may result in
+ better performance of a particular application.
+ This suggests that the programmer (or even the user!) of the final
+ application is best suited to make the space vs. speed decision.
+ However B15 leaves the decision to the implementor of the Forth system.
+
+ Big deal?!
+
+ Well, yes ... because in order to let the implementor make that decision B15
+ supplies him with 2 Core Words (ALIGN & ALIGNED) that must be used by
+ portable ANS Forth programs.
+ Besides breaking existing code (already mentioned by MB) this 'solution'
+ places the alignment-burden on ALL PROGRAMMERS, including those that do not
+ use alignment restricted hardware. Unfair would be the least to call this;
+ in order to let some ppl have the advantage of a speedier Forth, all the
+ rest should suffer from ALIGNment indigestion.
+
+ But should we then force implementors to chose the first solution?
+
+ In priciple yes, but this sounds worse than it actually is:
+
+ My suggestion would be for Forths on aligned machines to both implement the
+ space as well as the speed efficient versions of the memory access words.
+ Furthermore when dealing with the speed efficient words the character unit
+ should be cell-size so every operator would keep addresses aligned.
+
+ Different wordlists should be used for the two kinds of definitions; the
+ space efficient words could e.g. be kept in SMALL, whereas their speed
+ efficient counterparts would reside in FAST.
+ Now when a program is ported from a non-aligned to an aligned environment,
+ the programmer can first select the appropriate versions by executing SMALL
+ or FAST, resulting in either small or fast compiled code.
+
+ I'm sorry for LZ because he had to enter the whole Alignedness into the
+ basis document , but I would be even more sorry if hardware patches like
+ ALIGN(ED) would enter the standard.
+ For after all who knows in X years alignment restrictions may no longer be
+ relevant, but because some ppl in the 90s thought they were, Forthers are
+ still aligning their datastructures.
+
+ Jan Stout,
+ wsbusup4@urc.tue.nl
+ ------------
+Category 10,  Topic 25
+Message 23        Thu Jun 06, 1991
+GARY-S                       at 06:22 EDT
+ 
+                  
+  PORTED FROM UseNet =>
+              ------
+
+ From: Mitch.Bradley@ENG.SUN.COM (Mitch Bradley)
+ Subject: Address alignment
+ Message-ID: <9106041905.AA18462@ucbvax.Berkeley.EDU>
+ Date: 4 Jun 91 17:34:20 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch Bradley <Mitch.Bradley%ENG.SUN.COM@SCFVM.GSFC.NASA.GOV>
+ Organization: The Internet
+
+ In a threaded code implementation, the penalty for arbitrary-alignment @ 
+ and ! operators is relatively small.
+
+ In an optimized native-code system, where you are really pushing for speed,
+ the situation is somewhat different.  @ and ! are often expanded in-line on
+ those systems, and peephole optimization can frequently combine the access
+ with nearby calculation steps and/or arithmetic and logical operators.  The
+ requirement for arbitrary alignment support makes this much more difficult,
+ and the compiler is considerably less likely to succeed in generating
+ excellent code.
+
+ I ran into this problem when I wrote a translator program that would convert
+ 68000 binary code into SPARC binary code.  68000's are 2-byte aligned, and
+ SPARC's are 4-byte aligned.  The alignment problems made the generated
+ SPARC code much worse in the general case, and caused me to go to a lot of
+ trouble to get the translator to guess about actual alignment at compile 
+ time.
+
+ My experience with Forth programmers is that many of them want to be able
+ to get the most out of their hardware, and are willing to go to a bit of
+ extra programming effort to get it (e.g. by adding ALIGNED at judicious
+ ------------
+Category 10,  Topic 25
+Message 24        Sat Jun 15, 1991
+GARY-S                       at 06:35 EDT
+ 
+                    
+  PORTED FROM UseNet =>
+              ------
+
+ From: Mitch.Bradley@ENG.SUN.COM
+ Subject: Alignment
+ Message-ID: <9106130702.AA06673@ucbvax.Berkeley.EDU>
+ Date: 13 Jun 91 05:27:23 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch.Bradley%ENG.SUN.COM@SCFVM.GSFC.NASA.GOV
+ Organization: The Internet
+
+ > Hmmm...  reading Robert Berkey's comments, I'm beginning to believe that
+ > _all_ existing Forth code will be rendered nonconforming by the BASIS.
+
+ In a sense, this is correct.  However, I think a better way to look at it
+ is as follows:
+
+ ANS Forth will not magically make existing code portable.  Existing code
+ will most likely continue to run on the same systems that it currently
+ runs on.  Existing code that assumes arbitrary alignment is current not
+ portable to implementations that do not choose to "hide" hardware alignment
+ restrictions (a significant percentage of Forth implementations for such
+ hardware).
+
+ Mitch.Bradley@Eng.Sun.COM
+ ------------
+Category 10,  Topic 25
+Message 25        Thu Jun 20, 1991
+GARY-S                       at 06:03 EDT
+ 
+                  
+  PORTED FROM UseNet =>
+              ------
+
+ From: UNBCIC@BRFAPESP.BITNET
+ Subject: Align
+ Message-ID: <9106190432.AA02430@ucbvax.Berkeley.EDU>
+ Date: 18 Jun 91 19:03:00 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: UNBCIC%BRFAPESP.BITNET@SCFVM.GSFC.NASA.GOV
+ Organization: The Internet
+
+ Sorry for the garbage... Anyway,
+
+ => Date: Mon, 17 Jun 91 19:37:47 GMT
+ => From: Rob Sciuk
+ =><news-server.csri.toronto.edu!torsqnt!geac!maccs!innovus!rob@UUNET.UU.NET>
+ => Subject: RE: Memory Management/PIC
+ => Elizabeth points out that any standard defining word should take care
+ => to align words, (bodies, headers, and fields contained therein) on
+ => appropriate boundaries.  Further, `ALLOT' and `,' should align on
+ => CELL boundaries, and `C,' should ensure that the next invocation of
+ => `HERE', `ALLOT', `,' etc. will utilize a CELL boundary appropriate
+ => to the processor [mine].
+
+ C, should ensure that the next invocation of HERE, ALLOT... will utilize a 
+ CELL boundary?!?!?!?!??!?!?!? It's better live with a slow @ and ! than with
+ this! We have only two options:
+    1) Throw an overhead upon HERE, ALLOT...; 
+    2) Make C,ALLOT a CELL, thus actings a comma.
+
+ Another thing, if ALLOT and HERE return always an aligned address, it's 
+ better make this very clear in the standard, or Structure Wordsets (wich 
+ are very commom) will be source of lots of errors. I wouldn't like an 
+ ALLOT that aligns, but, then, you can never satisfy everyone.
+
+                               (8-DCS)
+ Daniel C. Sobral                           Errare Humanum Est...
+ UNBCIC@BRFAPESP.BITNET                     ...Perseverare Autem Diabolicum
+ UNBCIC@FPSP.FAPESP.ANSP.BR
+ --------------------------------------------------------------------------
+ No one, but me, is responsible for the above message.
+ ------------
+Category 10,  Topic 25
+Message 26        Fri Jun 21, 1991
+GARY-S                       at 06:01 EDT
+ 
+                   
+  PORTED FROM UseNet =>
+              ------
+
+ From: nick@sw.stratus.com (Nicolas Tamburri)
+ Subject: Re: Align
+ Message-ID: <6217@lectroid.sw.stratus.com>
+ Date: 19 Jun 91 14:10:18 GMT
+ References: <9106190432.AA02430@ucbvax.Berkeley.EDU>
+ Sender: usenet@lectroid.sw.stratus.com
+ Organization: Stratus Computer, Inc.
+
+ Daniel C. Sobral write:
+ >C, should ensure that the next invocation of HERE, ALLOT... will utilize a
+ >CELL boundary?!?!?!?!??!?!?!?
+
+ Good.  It wasn't just me who thought this was a lousy idea. I was wondering
+ how C, would ever accomplish this,  short of always allocating enough
+ bytes to end up on a CELL boundary.  But then how do you pack bytes with
+ successive "C,"s (sp?).
+
+ I'm always hesitant of posting to this group,  having read publications
+ by many of the other posters, it is hard for me to think of myself as a
+ peer.  For example,  I assume there must be something I don't understand
+ about all these ALIGNment issues.  Haven't we been living with ALIGN on
+ 68Ks for a decade now?  I've always assumed that the implementation was
+ pretty straight forward:  ALLOT assures that the address generated for the
+ variable being alloted is appropriate to the size of the variable,allocating
+ extra bytes to make it so.  Of course, this assumes the size is a 'natural'
+ size for the processor, usually bytes, longs etc.  For 'unnatural' records,
+ you had to align things manually.  Is there something new I'm missing?
+
+ BTW:  Alignment to a CELL boundary is not necessarily sufficient, depending
+ on the processor.  For example, the i860 requires address alignment to be
+ MOD(size of variable), or there is a very high performance penalty on memory
+ accesses.  
+ ------------
+
+

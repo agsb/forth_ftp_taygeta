@@ -1,0 +1,47 @@
+
+Ashton-Tate has recently released RapidFile, a data management
+package for the IBM PC. This is noteworthy because it's a major
+product from a major vendor and was written in Forth. The
+following is excerpted from Ashton-Tate's 3/87 issue of
+TechNotes:
+-----------------------------------------------------------------
+TechNotes: Why is RapidFile written in FORTH?
+
+Mark McDonough (developer): I'll tell you the story. When I told
+my professors that I wanted to implement the QBE [IBM's Query By
+Example] concept on a PC, I was told it was not possible. Knowing
+that it couldn't be done, I went out to find a genius that would
+know how to push the PC to its limits. I found that genius in Tom
+Dowling [of Miller Microsystems].
+
+Tom claimed, and has since proven time and again, that FORTH was
+as easy to program in as other high level languages and that its
+programs run almost as fast as assembler programs. FORTH programs
+also compile into a very small space. We could not have fit
+RapidFile onto one disk and in 256K of RAM if it were written in
+C.
+
+TN: We understand that the flexibility of FORTH really came in
+handy when designing RapidFile.
+
+Steve Allin (product manager): Yes, FORTH is very tailorable. It
+allowed us to make substantial changes to the design. It is very
+close to being a prototyping language where you can make major
+changes much more easily than in standard programming languages,
+which would have required substantial rewrites. RapidFile went
+through several versions before its release and it couldn't have
+gone through all that if it hadn't been written in FORTH.
+
+MM: Having gone through two publishers before arriving at
+Ashton-Tate, RapidFile began to resemble a sprawling Victorian
+mansion built with several competing designs. Steve took
+RapidFile's "rooms" and rearranged them into a unified whole. We
+couldn't have done that kind of rearranging without FORTH. We
+were also able to do all that with only three programmers: Tom
+Dowling for the major database work, Bent Schmidt-Nielsen for the
+word processor and system issues, and Dave Fristrom of Eastgate
+Systems for the interface programming. By using FORTH, we were
+able to rearrange RapidFile until it was just the way we wanted
+it.
+
+

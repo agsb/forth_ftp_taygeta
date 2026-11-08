@@ -1,0 +1,263 @@
+Welcome to the Object-orinted 32-bit Forth System.
+
+Copyright (C) Zs¢t‚r, Andr s 1995,1996
+
+Version 0.8.2 08/January/1996.
+
+Bugfixes and TIME&DATE .
+
+
+The OOF package contains a Virtual 8086 Monitor (called Virtual Mode
+Interface = VMI) and a Forth system running in 32-bit protected mode
+(called OOF) with all the source code, some documentation and a few examples.
+Although many ANSI FORTH programs will run on the OOF system especially
+in the STANDARD mode OOF *IS NOT* an ANSI compliant Forth.
+(OOF only provides the majority of the words required by the ANSI Standard.)
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+      (You should find a copy of the GNU General Public Licence
+       in the file COPYING.)
+
+			    NO WARRANTY
+
+  11. BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
+TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
+PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
+REPAIR OR CORRECTION.
+
+  12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,
+INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING
+OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED
+TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY
+YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER
+PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+(The author's note: Because the Forth source code contains pieces which
+are not really original [available in the common Forth litterature] I
+feel I am fair only if I do not restrict their use in any way.
+So hereby I give my users the permission to use definitions from my Forth
+source code [the contents of .SCR and .4TH files] outside the OOF package
+but the package as a whole is still subject to the terms of
+GNU General Public License.)
+
+   --------------- System requirements and basic setup ----------------
+
+ The program was designed to run on a 486 DX machine. In the present
+form it is usable on a 386 machine (even without a numeric Co-processor but
+in that case some floating point words will freeze the system while others
+simply don't do anything; you need at least a 387 to run the floating
+point words, but please be remainded, that most of those words have never
+been tested on anything but a 486).
+You will need some memory above the 1st megabyte
+(usually 486 PCs come with at least 4 MB so you will have plenty
+of space -- I do not know what is the minimal suitable memory size).
+This program will NOT run on a 80286 (80186, 8086, 8088, etc.) machine.
+You need an MS-DOS (the program was tested under MS-DOS 5.00 and 6.22
+but other versions might do as well [>4.00 ?]). (Any success/failure report
+about it would be appriciated.)
+You *MUST NOT* run the HIMEM.SYS driver nor any EMM or DPMI server on your
+machine when you try to start the Virtual Mode Interface (VMI.EXE).
+OOF will run ONLY under VMI.
+You can make a batchfile to start these programs automatically just like
+Start.bat :
+
+@ECHO OFF
+VMI                       <- Start Virtual Mode Interface.
+Boot                      <- Push "Boot-Up"+CRLF to the keyboard buffer.
+OOF Setup.SCR             <- Start OOF with a screen file name.
+OFF                       <- Turn OFF the Virtual Mode Interface.
+
+(A prototype of this file is provided with the program.)
+
+First you should make a full version of the program by the folloving steps:
+
+Start                     <- Runs the start.bat file. Essentially
+                             it will start the VM Interface and then
+                             run the forth system using the Setup.SCR
+                             screen file. The forth system will execute
+                             the Boot-Up command and build a usable
+                             version of itself (compile additional
+                             words from the .4th source files).
+6 LOAD                    <- Writes the memory image of the Forth system
+                             to the file TMP.BIN .
+Bye                       <- Leaves the FORTH system.
+MK 4th                    <- Creates the executable 4th.EXE .
+
+After these steps your system is ready for use.
+You can execute it by entering the following two commands:
+
+VMI                       <- Starts the VM Interface.
+4th Setup.SCR             <- Starts the FORTH system.
+
+Inside the FORTH system you can access the blocks only if they are previously
+loaded into the memory. You can do that by executing the FORTH word BOOT.
+If you modify the contents of some blocks you must execute UPDATE and then
+FLUSH to save them to disk file. (The screen editor will automatically
+execute an UPDATE if you modify the contents of a block with it.)
+Whenever you leave the system with BYE a FLUSH will be automatically
+executed.
+After leaving the FORTH system you can turn off VMI (and release the
+memory occupied by it) by executing the OFF.COM program.
+No source for that, I have written OFF.COM using DEBUG and it contains
+the following instructions:
+
+0100 B86035        MOV  AX,3560     ; Read Int 60H vector.
+0103 CD21          INT  21
+0105 8CC0          MOV  AX,ES
+0107 09C3          OR   BX,AX
+0109 7405          JZ   0110        ; Exit if vector is zero.
+010B B80080        MOV  AX,8000     ; VMI Back to Real Mode command.
+010E CD60          INT  60
+0110 CD20          INT  20
+
+
+The Boot.COM program also does not have any source code, it contains the
+following instructions:
+
+0100 BB1901        MOV  BX,0119     ; String's address.
+0103 B405          MOV  AH,05       ; Push byte to Keyboard Buffer.
+0105 33C9          XOR  CX,CX
+0107 8A0F          MOV  CL,[BX]     ; First/Next character.
+0109 0AC9          OR   CL,CL       ; Exit if Zero.
+010B 7407          JZ   0114
+010D 43            INC  BX          ; The address of the next character.
+010E 53            PUSH BX          ; Save address.
+010F CD16          INT  16          ; Keyboard Services.
+0111 5B            POP  BX          ; Restore address.
+0112 EBEF          JMP  0103        ; Again.
+0114 B8004C        MOV  AX,4C00     ; Exit to DOS.
+0117 CD21          INT  21
+0119               DB   'Boot-Up',0DH,00H <- use the 'e' command in debug
+                                             to modify this.
+
+   --------------------- The Virtual Mode Interface -----------------------
+
+ The Virtual Mode Interface is a program that switches your CPU to the
+protected mode and runs DOS a on Virtual 8086 machine. The entire conven-
+tional memory is the territory of DOS. Your Forth (when you start it) runs
+above the first megabyte and occupies all the memory [above the 1st megabyte].
+Your code and data segments are mapped to the same physical space so you
+will see something very similar to a traditional FORTH system.
+The interrups are serviced in the Virtual 8086 machine so you can use
+any TSR programs, device drivers and the like as you wish (unless they
+try to switch to protected mode). You are advised to boot them BEFORE you
+run VMI but some of them might work on the top of VMI (just don't get
+confused when you start cleaning them from the memory).
+VMI was designed and sketched for running ONLY ONE program at a time.
+No multitasking facilities are provided. The purpose was to provide a
+big flat memory space, safety and robustness improved by protected mode.
+
+(The operating systems connections in OOF are so few that
+porting to another environment, such as Windows NT or OS/2 must be easy.
+I am not planning to do this porting myself, I do not use Windows NT or OS/2,
+actually I do not even have either one.
+A more advanced version of OOF is being developed for Linux but not ready
+yet for release. When it will be ready for a test I will post in on
+taygeta.com .)
+
+
+   ------------- About This Implementation Of Forth -------------------
+
+ OOF does not use any threading; it generates machine code. The header of
+each word has a CFA and a CCFA. The address stored at a particular word's
+CFA is the address of the routine to be executed in interpretation mode
+while the address stored at the CCFA of the word is the address of the
+routine to be executed when the word is being compiled into a definition.
+(By default the latter is a routine that compiles a call to the former.)
+The Top Of Stack (TOS) is buffered in a register (EAX) to reduce the
+stack manipulation. The EBX register is the Object Pointer and the ESI is
+the VMT Pointer. The ESP register is the DATA STACK Pointer and the
+EBP is the RETURN STACK Pointer. The ECX register is the stack pointer
+used to store local variables. The EDI register contains the PFA (or >BODY)
+address of the word when it is processed by the interpreter or they are
+being compiled. (The "run time" routines must not use this register but
+the compile time routines can depend on it.) The EDX register is free
+for use. (Important only if you are planning to do something in machine
+code.)
+The Floating Point Stack is implemented by using the FPU register stack so
+it has only 8 (eight) elements. Beware of deep nesting. Some routines
+need more elements inside the Floating Point Stack than one might
+guess -- at least temporarily -- and the stack overflow error might be silent
+for a while.
+
+In reality the most important issue was to make the system run and to keep
+it simple and robust so no optimization is performed by the compiler.
+(Some optimizations would be quite safe and should be done but
+for the moment I definitly don't have time.)
+So don't be surprised if a 0= IF sequence (should be three instructions)
+compiles into seven instructions ending in a 32-bit conditional jump to a
+a target address only a few bytes away.
+(It is still faster than threaded code and when the memory is measured in
+megabytes space saving is the last thing to worry about.)
+
+   ----------------------- Blocks and files ------------------------
+
+ - Does OOF support textfiles?
+ - The answer is no but by some magic yes. Actually it supports only
+blocks, but there are a few special ones which can be used to implement
+source code in text files. Also the words (Boot) and (Flush) [in the SYS
+vocabulary] provide some means of rudimentary file I/O. A kind of interface
+is provided in the SETUP.SCR file for loading and saving files so that the
+source of the rest of the extensions can be ordinary ASCII text.
+(See BLOCK in the OOF.DOC file for details.)
+          The ANSI Standard FILE wordset is not implemented.
+
+
+   --------------------------- Changes to come ---------------------------
+
+ The most important change that might affect application programming is
+the possible change in the vocabulary structure. A vocabulary should
+be an object belonging to a class (so other than the original structures
+e.g.: separate name space can be implemented if the need arises).
+The main drawback is that >NAME and NAME>EXEC would not work for every
+possible parameter (e.g.: a name might have been already deleted from
+the vocabulary but the CFA still exists). To avoid the conflict the user
+should check if these words return zero which indicates failure.
+ Changes will be made to comply more and more to the ANSI
+standard (of course in OOF mode 100% compatibility will never be achieved
+because of the different concepts; but the STANDARD mode hopefully will
+cover bigger part of the standard).
+ The floating point coversion routines (especially REPRESENT) are very
+ugly (a lot of patches). They should be rewritten in a more understandable
+format.
+What I definitly don't want to implement is a ANSI compliant FILE wordset.
+(Too much OS dependent stuff and I can do almost everything in memory and
+save the memory areas in files.)
+
+For suggestions, remarks, personal abuse, etc. you can contact me via
+e-mail: h9290246@hkuxb.hku.hk or via ordinary mail:
+Zs¢t‚r Andr s
+Dept. of Chemistry
+The University of Hong Kong
+Pokfulam Rd.
+Hong Kong
+(The addresses are valid until mid 1996. Afterwards I don't know where
+shall I find a job. For changes try to get
+the updated versions of the program from taygeta.com .)
+
+So Good Luck!
+
+                                           Zs¢t‚r Andr s
+                                           ------
+                                           The author of the program.

@@ -1,0 +1,88 @@
+
+Date: 02-03-87(07:06)Number: 5364   (Deleted)
+  To: ALL                            Refer#: NONE
+From: JOHN MUCHOW                      Read: (N/A)
+Subj: COCO FORTH                     Status: PUBLIC MESSAGE
+
+Jerry,
+   I just wanted to say hello, I'm very impressed with your board.  a 
+member of this board, Paul Gray, heard of my desire to try and implement 
+FORTH on my Tandy CoCo2 and recommended the ECFB for information on 
+software that might exist for it.  I know almost nothing about Forth but 
+I am very interested in using it as it seems ideal for implementation in 
+a robotics environment.  I'm anxious to begin poking around so I'll say
+goodbye.
+                                         John
+                
+
+Date: 02-10-87 (17:40)               Number: 5436
+  To: JOHN MUCHOW                    Refer#: 5364
+From: BOB HAWKINS                      Read: YES
+Subj: COCO FORTH                     Status: PUBLIC MESSAGE
+
+I have a commercial FORTH for my CoCo, Armadillo ColorForth (I think 
+they've been out of business for a couple of years now). I don't use
+it much now that I have an Amiga, but if you want to talk about Forth
+on the CoCo, I'll be willing. I did hack around some with it, wrote my
+own screen editor and so on, and got to know a fair amount about the 
+internals (though how much I remember is another story).
+                                                                                                         
+
+Date: 02-16-87 (01:54)               Number: 5481
+  To: BOB HAWKINS                    Refer#: 5436
+From: JOHN MUCHOW                      Read: YES
+Subj: COCO FORTH                     Status: PUBLIC MESSAGE
+
+Bob,
+   Thanks for your reply.  So far I've gotten nowhere in my search for a 
+Forth package for my CoCo2.  I'll check around for that Armadillo 
+ColorForth.
+   What that Forth disc or cassette based?  Not knowing a lot about 
+Forth, I'm not sure what questions to ask.  Were you happy with 
+Armadillo's implementation?  Is there a public domain Forth for the 
+CoCo2 anywhere?
+   Thanks for any help you can give.                John
+                                                                              
+
+Date: 02-16-87 (08:05)               Number: 5485
+  To: JOHN MUCHOW                    Refer#: 5481
+From: BOB HAWKINS                      Read: NO
+Subj: COCO FORTH                     Status: PUBLIC MESSAGE
+
+The Armadillo Forth was both disk and cassette based. The cassette 
+version used a chunk of high memory (size and location user-adjustable)
+as ram disk, to simulate five to eight or so screens. You saved and 
+loaded the ram disk by CSAVEM/CLOADM'ing that region of memory. If you 
+have 64K, the whole upper 32K could be used as ram disk (but you can't
+CSAVEM it because the ROM has to switched in to do that; it's scratch
+memory). The disk version formats a disk for screens; basically, it puts
+a big direct-access file on the disk, where each record is one screen, 
+1024 bytes. The cassette "virtual screens" ram disk is also supported
+in the disk version, which is real nice; you can hack away on RAM 
+screens, which is fast and doesn't screw up permanent disk screens,
+then transfer to disk when you get something worth saving.
+ It is a fig-FORTH with minimal extensions for the CoCo, i.e. no 
+interface to graphics or sound (sound is easy to add, not graphics).
+It works well, however.
+     Spectrum projects used to advertise a Colorforth. I don't know if
+they still sell it. It was about $30.00. If you can't find anything,
+I'd be willing to sell you my package for, say, $10.00 (I'll include
+a bunch of programs, like my full-screen editor). I haven't used it
+since I got my Amiga. Let me know if you find a CoCo Forth still
+available, just to satisfy my curiousity.
+     (PS. Armadillo does not have an assembler. It does support CODE
+words, but you have to comma in machine code, not assembly.)
+                                
+
+Date: 02-16-87 (08:28)               Number: 5486
+  To: BOB HAWKINS                    Refer#: 5485
+From: BOB HAWKINS                      Read: YES
+Subj: COCO FORTH                     Status: PUBLIC MESSAGE
+
+That got to be a long message. I just wanted to add that I don't think
+I have the cassette-only version any more. But the disk version has 
+everything the cassette version does; it just takes up a few K more
+of your RAM.
+
+
+

@@ -1,0 +1,538 @@
+
+                
+                     Best of GEnie..... April 1991
+          News from the GEnie Forth RoundTable by Gary Smith
+
+  If you have been sleeping under a rock for the last couple of months you
+may not be aware that the last BASIS document produced by the X3J14 ANS
+Technical Committee has, in fact, been decreed the review standard. [ Only
+if you were sleeping under a boulder the last couple of years could you not
+have been aware that a ANS Standard Forth was being drafted. In that case
+go back to sleep. ] If you are interested in what the proposed standard
+contains you can get your very own copy from Forth Vendor's Group, c/o
+FORTH, Inc., 111 N. Sepulveda, Manhattan Beach, CA  90206 for the princely
+sum of $10.00. 
+  
+  If you conclude this ends discussion of the proposed standard you have been
+sleeping under the Rock of Gibraltar ! There has been a torrent of discussion
+that seems to increase daily. The following exchanges concern primarily the
+ALSO/ONLY debate, and messages were gleaned from the week prior to the drafting
+of this article. This very brief look at but one area of discussion should make
+it abundantly clear there is a lot of pro and con still to be debated.
+  
+   I must clarify something before proceeding to the exchanges. These messages
+were captured on GEnie, but obviously contain comments from Usenet newsgroup
+comp.lang.forth as well as RIME/pc-board Forth message base. This is because
+this discussion rages on all branches of Forthnet, of which the GEnie Forth
+RoundTable is but a part. It would be quite impossible to seperate contributing
+members and maintain any sense of coherency. You can participate by responding
+on any branch, as well. If you lack access to Usenet and your RIME BBS does not
+carry the xCFB Forth message base originating on The Grapevine we cordially
+invite you to do join in on the GEnie Forth RoundTable.
+  
+   Now, on to the discussion regarding ALSO/ONLY and GET/SET-ORDER with a side
+glance at strings and portability.
+
+ ************
+Topic 2         Sun Aug 16, 1987
+GARY-S                       at 17:13 EDT
+Sub: ANS FORTH TECHNICAL COMMITTEE
+
+This topic is for discussion of the ANS FORTH Technical Committee and  their
+recommendations/actions; and your reactions.  >> Please note : points raised
+in this topic will be relayed to the committee.
+ ************
+ ------------
+Category 10,  Topic 2
+
+Doug Philips writes:
+
+> ...what I really really want is a way to write Forth code that will
+ > run on more than one Forth and more than one processor....
+ > Portability is my main interest in this ANSI process.
+
+Interesting.  I've had relatively little trouble porting applications from
+processor to processor.  It's moving from "standard" to "standard" that gives
+me headaches.
+
+To Mitch Bradley, in reply to my && and || query:
+ B.RODRIGUEZ2 on GEnie | brad%candice@maccs.dcss.mcmaster.ca
+
+ ------------
+
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.pgh.pa.us (Doug Philips)
+ Subject: Re: ANS FORTH TECHNICAL COMMITTEE
+ Message-ID: <2381.UUL1.3#5129@willett.pgh.pa.us>
+ Date: 21 Feb 91 01:11:14 GMT
+ References: <2359.UUL1.3#5129@willett.pgh.pa.us>
+ Organization: (n.) to be organized.  But that's not important right now.
+
+ [mIn <2359.UUL1.3#5129@willett.pgh.pa.us>,
+  B.RODRIGUEZ2 [Brad] writes:
+ > Doug Philips writes:
+ >
+ > > ...what I really really want is a way to write Forth code that will
+ >  > run on more than one Forth and more than one processor....
+ >  > Portability is my main interest in this ANSI process.
+ >
+ > Interesting. I've had relatively little trouble porting applications from
+ > processor to processor.  It's moving from "standard" to "standard" that
+ > gives me headaches.
+
+ Ok, perhaps I should be a bit more explicit.  I was thinking of PC versus
+ Unix (Sun, Apollo, etc).  PC-Forths versus C-Unix Forths.  Since there is
+ no wide spread defacto standard, switching from processors implies (or so
+ I tried to assume) switching between standards.
+
+ -Doug
+ ---
+ Preferred:  dwp@willett.pgh.pa.us Ok:  {pitt,sei,uunet}!willett!dwp
+ ------------
+
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM (Mitch Bradley)
+ Subject: Portability problems
+ Message-ID: <9102211447.AA20609@ucbvax.Berkeley.EDU>
+ Date: 20 Feb 91 19:29:33 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch Bradley <wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV>
+ Organization: The Internet
+
+ > Interesting.  I've had relatively little trouble porting applications from
+ > processor to processor.  It's moving from "standard" to "standard" that
+ > gives me headaches.
+
+ The differences between standards don't cause me too much trouble; the
+ problems that bother me the most are coping with things that I have
+ to deal with but which neither FIG-Forth, Forth-79, nor Forth-83
+ bothered to address at all. Specifically files, floating point, 32-bit
+ machines, memory allocation, strings, and error handling.
+
+ In the areas where previous standards differ, there is a small finite number
+ of possibilities, and it is fairly easy to make a few redefinitions to
+ cope with the 2 or 3 possibilities.  The exception is vocabularies, where
+ the previous standards differed so widely that the only portable thing
+ to do is to not use them!
+
+ In the areas that previous standards totally ignored, the range of
+ variation across implementations is much greater, from "no solution at
+ all" to "a set of words that works on this particular vendor's system
+ but no other".
+
+ That is why I am enthusiastic about ANS Forth, whose extension wordsets
+ addresss the issues that concern me most.  Even if the ANS Forth
+ extension wordsets are not 100% perfect, they are very very useful.
+ In my opinion, with the exception of strings, the extension wordsets
+ are all good enough that it's probably counterproductive to tweak them
+ any further.
+
+ Mitch Bradley
+ ------------
+
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM (Mitch Bradley)
+ Subject: Processors and Standards
+ Message-ID: <9102212035.AA02778@ucbvax.Berkeley.EDU>
+ Date: 21 Feb 91 17:59:49 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch Bradley <wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV>
+ Organization: The Internet
+
+ > Ok, perhaps I should be a bit more explicit.  I was thinking of PC versus
+ > Unix (Sun, Apollo, etc).  PC-Forths versus C-Unix Forths.  Since there is
+ > no wide spread defacto standard, switching from processors implies (or so
+ > I tried to assume) switching between standards.
+
+ This is an excellent point, but I would come to a slightly different
+ conclusion; you don't need to switch between standards, as Forth-83
+ derivatives exist in both environments.
+
+ Rather, when you move to any "workstation class" machine, or indeed any
+ machine based on a 680x0 (Macintosh, Atari ST, Amiga), you start getting
+ into "uncharted territory" as far as existing standards are concerned.
+ In these kinds of environments:
+
+         Source code in BLOCKs makes little sense
+         32-bit addressing is the name of the game
+         The existence of the operating system cannot be ignored
+           (leading to problems with the traditional Forth memory model,
+           and also providing market requirements for access to
+           OS features)
+         Hardware alignment restrictions sometimes apply
+         C is a viable, useable, and ubiquitous development environment,
+           and Forth has to be competitive with it to succeed
+
+ The Forth 83 standard does not address these issues.  Successful Forth
+ implementations in these environments have addressed these issues,
+ but without the guidance of a standard, there has been great divergence.
+
+ In the last 2 or 3 years, even the PC world has begun to face the same
+ issues (because of Turbo-C, 386 chips, cheap megabit RAM chips, and
+ Windows 3).
+
+ Mitch
+ ------------
+
+ From: chip@tct.uucp (Chip Salzenberg)
+ Subject: Re: ANS FORTH TECHNICAL COMMITTEE
+ Keywords: ANS Forth
+ Message-ID: <27B97A54.62EC@tct.uucp>
+ Date: 13 Feb 91 17:41:39 GMT
+ Organization: Teltronics/TCT, Sarasota, FL
+
+ In article <2295.UUL1.3#5129@willett.pgh.pa.us>, RAY DUNCAN writes:
+ > We strongly support the proposals to delete ONLY/ALSO (I proposed this
+ > myself some time back, but my proposal was voted down).
+
+ Could someone enlighten me as to the evil of ONLY/ALSO?
+ --
+ Chip Salzenberg at Teltronics/TCT     <chip@tct.uucp>, <uunet!pdn!tct!chip>
+  "I want to mention that my opinions whether real or not are MY opinions."
+              -- the inevitable William "Billy" Steinmetz
+ ------------
+
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 02-19-91 (09:28)              Number: 1249 of 1262 (Echo)
+   To: GARY SMITH                    Refer#: 1225
+ From: RAY DUNCAN                      Read: NO
+ Subj: ANS FORTH TECHNICAL COMMI     Status: PUBLIC MESSAGE
+ Conf: FORTH (58)                 Read Type: GENERAL (+)
+
+   Chip Salzenberg writes:
+   >"Could someone enlighten me as to the evil of ALSO/ONLY."
+
+ First of all, it was never a part of the Forth-83 standard.  It was
+ appended to the standard as an "experimental word set" as a political
+ ploy -- to keep Bill Ragsdale (one of the founders of FIG) happy.
+
+ Second of all, ALSO/ONLY was apparently originally conceived of as a
+ "Forth-like" (i.e. stack-like) way to control search order, but the
+ realization of the concept was brain-damaged.  To wit: there are ways to
+ push things onto the search order stack but no way to pop them off; no
+ way to interrogate what is currently in the search order stack; no way
+ to rearrange the search order stack except by dumping the whole thing
+ and starting over; and so on.
+
+ Third of all, ALSO/ONLY is completely incompatible with at least two of
+ the commercial Forth systems with the largest installed bases (Forth
+ Inc. and LMI).  It seems sort of silly to me to put something into the
+ ANSI Forth draft standard --- which is supposed to be founded on
+ concensus and common practice --- which will totally break the code of
+ thousands of serious Forth programmers and CANNOT be mechanically
+ edited/translated from old to new.
+
+ NET/Mail : LMI Forth Board, Los Angeles, CA (213) 306-3530
+ <<<>>>
+ ------------
+ ************
+Topic 14        Thu Nov 19, 1987
+GARY-S [Gary]                at 22:56 EST
+Sub: ANS TC Magnet for Vocabularies and :
+
+ANS - Vocabularies and : Discussions about the ANS Forth Standard for
+Vocabularies. Magnet:   John Stevenson
+ ************
+ ------------
+
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 02-08-91 (09:19)              Number: 1083 of 1110 (Echo)
+   To: CRAIG TRELEAVEN               Refer#: 1067
+ From: RAY DUNCAN                      Read: NO
+ Subj: ALSO/ONLY                     Status: PUBLIC MESSAGE
+ Conf: FORTH (58)                 Read Type: GENERAL (+)
+
+    Craig Treleaven writes:
+
+    >Whats wrong with ALSO/ONLY.  ...  A Forth vocabulary with 1500+
+    >words is not my idea of easy to use.
+
+ It's not my idea of easy to use either.  I have nothing against
+ vocabularies, just the brain-damaged ALSO/ONLY scheme.
+
+ NET/Mail : LMI Forth Board, Los Angeles, CA (213) 306-3530
+ <<<>>>
+ ------------
+
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 02-10-91 (17:41)              Number: 1111 of 1116
+   To: RAY DUNCAN                    Refer#: 1083
+ From: CRAIG TRELEAVEN                 Read: NO
+ Subj: ALSO/ONLY                     Status: PUBLIC MESSAGE
+ Conf: FORTH (58)                 Read Type: GENERAL (+)
+
+ Ray Duncan writes:
+ -> [...]  I have nothing against
+ -> vocabularies, just the brain-damaged ALSO/ONLY scheme.
+
+   Sorry, I still don't understand what is wrong with ALSO/ONLY?  It
+ seemed to me to be a nice way to control the search order.  Words could
+ be grouped into as many vocabularies as necessary and the search order
+ set to only search the relevant ones.
+
+ Craig
+
+ PCRelay:CRS -> RelayNet (tm)
+ 4.10a14        Canada Remote Systems * Toronto, Ontario
+ <<<>>>
+ ------------
+
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM (Mitch Bradley)
+ Subject: Brain damage
+ Message-ID: <9102121518.AA24028@ucbvax.Berkeley.EDU>
+ Date: 10 Feb 91 23:48:58 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch Bradley <wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV>
+ Organization: The Internet
+
+ >    >SET-ORDER can be done portably in ANS FORTH
+ >
+ > Only if everyone implements *ALL* the extension word sets.  In our own
+ > case, I can definitely promise you that LMI will *NOT* implement the
+ > extension words that it considers brain-damaged, which definitely
+ > includes ALSO and ONLY.
+
+ GET/SET-ORDER was invented in order to resolve the conflict between the
+ proponents of run-time search order specification and those who consider
+ ALSO/ONLY to be brain-damaged.  (ALSO/ONLY indeed has some serious
+ technical flaws; nevertheless, it is useful.)
+
+ I believe that the design of GET/SET-ORDER addresses the problems with
+ ALSO/ONLY, while being simpler than ALSO/ONLY.  Indeed, GET/SET-ORDER
+ was originally proposed as a "fix" for the most fundamental flaw of
+ ALSO/ONLY.  Then I realized that it is sufficiently powerful that
+ ALSO/ONLY can be easily implemented in terms of GET/SET-ORDER.  John
+ Hayes and I have figured out how to implement a few other popular
+ search order schemes in terms of GET/SET-ORDER.  From what Martin
+ Tracy has told me of LMI's search order mechanism, I believe it can
+ be expressed in terms of GET/SET-ORDER as well.
+
+ The SEARCH ORDER "base" wordset now contains GET/SET-ORDER and a few
+ related words (GET/SET-CURRENT , WORDLIST, and FORTH-WORDLIST).  ALSO/ONLY
+ has been banished to the SEARCH ORDER EXTENSION wordset.
+
+ I would be interested to learn of other wordsets that LMI considers to
+ be brain-damaged, and why.  (Don't bother mentioning the strings wordset;
+ everybody in the world seems to have different and mutually-incompatible
+ ideas about what should be in that particular wordset, so I expect that
+ it will remain brain-damaged).
+
+ Mitch
+ ------------
+
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM
+ Subject: Problems with ALSO/ONLY
+ Message-ID: <9102151422.AA01056@ucbvax.Berkeley.EDU>
+ Date: 14 Feb 91 22:46:40 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV
+ Organization: The Internet
+
+ Disclaimer: I don't dislike ALSO/ONLY; I use them every day.  But they
+ do have some problems:
+
+ 1) There is no standard way to save the existing search order, set the
+    search order to a particular value, and later restore the search order.
+
+ 2) In the common implementations, it is easy to get in a situation where
+    the same vocabulary is searched twice.  This is an implementation problem,
+    not a specification problem, and it's only bad effect is slower
+    compilation, but some people criticise it anyway.
+
+ 3) A program has no standard way of knowing how many vocabularies it can
+    add to the search order before the search order data structure overflows
+    and the system crashes.
+
+ 4) Many people think that the behavior of the search order as a "funny
+    stack" (where the execution of a vocabulary *replaces* the top of the
+    stack) is screwy.
+
+ 5) There is no portable way of testing what is in the search order.
+
+ 6) There is no portable way of removing a particular vocabulary from the
+    search order.
+
+ Basically, with ALSO/ONLY as described in Forth 83 (as an experimental
+ wordset), you could set the search order to a particular value, but that
+ is all.  Anything else that you wanted to do required knowledge of exactly
+ how it was implemented.
+
+ I would be interested to hear of other problems that I may have missed.
+
+ Mitch Bradley, wmb@Eng.Sun.COM
+ ------------
+
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM
+ Subject: Search order user interfaces
+ Message-ID: <9102131533.AA07080@ucbvax.Berkeley.EDU>
+ Date: 13 Feb 91 05:36:42 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV
+ Organization: The Internet
+
+ I hereby propose a "search order user interface" contest.
+
+ Background:
+
+ Because there is a lot of Forth community support for ALSO/ONLY, it
+ has remained in ANS Forth.  Because there is a fair amount of opposition
+ to it, it has been "banished" to the SEARCH ORDER EXT wordset (i.e. the
+ "extension" portion of the optional SEARCH ORDER wordset), so it is sort
+ of "doubly optional".
+
+ The base portion of the optional SEARCH-ORDER wordset contains a set of
+ "primitive tools" for constructing run-time search orders.  Those tools are:
+
+         WORDLIST  ( -- wid )
+                 Creates a new wordlist and returns its "wordlist id" wid.
+                 You can give it a name with CONSTANT, or you can use
+                 WORDLIST inside the CREATE portion of a CREATE .. DOES> word.
+
+         FORTH-WORDLIST  ( -- wid )
+                 Wordlist id for the Forth wordlist.
+
+         GET-ORDER  ( -- widn .. wid1 n )
+                 Returns the number of wordlists in the current search
+                 order, and their "wordlist ids".  wid1 is the wordlist
+                 that is searched Forth.
+
+         SET-ORDER  ( widn .. wid1 n -- )
+                 Sets the search order so that the n wordlists
+                 widn .. wid1 will be searched (wid1 first).  If n is
+                 -1, sets the search order to the implementation-defined
+                 minimum search order, containing at least these words.
+
+         GET-CURRENT  ( -- wid )
+                 Returns the wordlist id of the compilation wordlist
+                 (where new definitions are created).
+
+         SET-CURRENT  ( wid -- )
+                 Sets the compilation wordlist to the wordlist "wid".
+
+ From these primitives, various search order "user interfaces" may be
+ readily constructed, including ALSO/ONLY,  FIG-Forth, Forth-79, and
+ polyForth vocabulary mechanisms.
+
+ Contest:
+
+ Design your own "user interface wordset" (as in ALSO/ONLY) for
+ specifying search orders.  Hopefully, it should be buildable on
+ top of GET/SET-ORDER (if not, tell us the crucial deficiency of
+ GET/SET-ORDER).  Tell us what is good about it.  Convince us that
+ it is not "brain damaged".
+
+ The prize:
+
+ There is no prize, other than the chance that other people like it
+ and will think you are a hot-shot.
+
+ Mitch Bradley, wmb@Eng.Sun.COM
+ ------------
+
+  PORTED FROM xCFB's =>
+              ------
+
+ Date: 02-19-91 (09:20)              Number: 1248 of 1262 (Echo)
+   To: GARY SMITH                    Refer#: 1205
+ From: RAY DUNCAN                      Read: NO
+ Subj: ANS TC MAGNET FOR VOCABUL     Status: PUBLIC MESSAGE
+ Conf: FORTH (58)                 Read Type: GENERAL (+)
+
+ Thank you, Mitch, for exactly summarizing my objections to ALSO/ONLY.
+
+ In LMI Forth systems, FIND uses a three-level search order:
+    CONTEXT->CURRENT->FORTH
+ However, we also have a building block word (find) that is called by
+ FIND and can search an arbitrary string of vocabulary threads - from one
+ to many.  So it is very easy to implement other schemes for search order
+ control in LMI Forths and in fact the ALSO/ONLY scheme can be layered on
+ top of our systems in 1 or 2 screens of code.
+
+ NET/Mail : LMI Forth Board, Los Angeles, CA (213) 306-3530
+ <<<>>>
+ ------------
+
+  PORTED FROM UseNet =>
+              ------
+
+ From: wmb@MITCH.ENG.SUN.COM (Mitch Bradley)
+ Subject: Re: Re-inventing the wheel
+ Message-ID: <9102211533.AA22502@ucbvax.Berkeley.EDU>
+ Date: 21 Feb 91 00:20:47 GMT
+ Sender: daemon@ucbvax.BERKELEY.EDU
+ Reply-To: Mitch Bradley <wmb%MITCH.ENG.SUN.COM@SCFVM.GSFC.NASA.GOV>
+ Organization: The Internet
+
+ > I'm bothered a little by the rationale for the use of WORDSET in lieu
+ > of VOCABULARY; what I heard of of the reasons given for the change there
+ > simply didn't seem to be enough for my liking...
+
+ If the word VOCABULARY exists in the standard, then the upgrade path
+ for several important commercial implementations is made considerably
+ more difficult.  In particular, polyForth, LMI Forth, MacForth, and
+ MVP Forth all have the word VOCABULARY in different forms.  Any definition
+ of VOCABULARY that you choose will break at least 3 of those 4 systems.
+
+ This seems like a strong argument to me.  Those systems represent many
+ thousands of Forth programmers between them.
+
+ > Not to mention the forms of signed division (We now need the code for
+ > both forms in the dictionary instead of one- or so I understand it to
+ > be);
+
+ Remember, the code *doesn't have to be in the dictionary*.  It just has
+ to be available.  It could even be a paper listing that the user could
+ type in, defining, for instance, FM/MOD in terms of SM/MOD or UM/MOD .
+
+ > they both give incorrect answers in the third quadrant (both numbers
+ > negative...) the MOD part of /MOD for either algorithm is NEGATIVE when
+ > it should be positive (which is mathematically wrong...).
+
+ Is it?  Knuth Vol. 1, Page 38, says:
+
+         if  y < 0 , then  0 >=  x mod y  >  y
+
+ Also see Robert Berkey's excellent discussion of division in the
+ proceedings of the 1982 FORML conference.
+
+ Mitch Bradley, wmb@Eng.Sun.COM
+ ------------
+
+   Closing comment:
+   
+   There is going to be a dpANS Forth. You are running out of opportunity and
+time to help create the model. I might add I have deliberately scheduled some
+conference guests with diverse views of what the final product should look
+like. The point is this: If you do not partake of the opportunity to impact
+the shape of 'our' language it will NOT be because you were denied access to
+the process.  Gary
+
+    __         _  Gary Smith           * ... uunet!ddi1!lrark!glsrk!gars  *
+   / _' _   _ (_' P. O. Drawer 7680    * GEnie Forth RT  &  Unix RT SysOp *
+  /__/ (_|_/ '._) Little Rock,AR 72217 *   voice phone  :  501-227-7817   *
+  ---------------        - U. S. A. -  *   group 3 fax  :  501-228-9374   *
+
+
+
+

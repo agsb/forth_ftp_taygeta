@@ -1,0 +1,230 @@
+
+"I pray daily that more of my fellow-programmers may find the means of
+freeing themselves from the curse of compatibility."
+
+Here are excerpts from Edsger W. Dijkstra's Turing Award Lecture, "The
+Humble Programmer," (c) 1972, Association for Computing Machinery, Inc.
+(Permission to republish, but not for profit, all or part of this
+material is granted by permission of the Association for Computing
+Machinery, provided proper reference is made.) Fifteen years later his
+comments on IBM architecture, subroutines, Fortran, LISP, Algol, PL/I,
+and APL, are still pertinent. The Forth community will find his
+prediction of "a great future for very systematic and very modest
+programming languages" interesting. Note that his criticism of Fortran's
+"DO loop" also applies to Forth's "DO loop" and "FOR NEXT loop"
+
+.... Then, in the mid sixties something terrible happened: the computers
+of the so-called third generation made their appearance. The official
+literature tells us that their price/performance ration has been one of
+the major design objectives. But if you take as "performance" the duty
+cycle of the machine's various components, little will prevent you from
+ending up with a design in which the major part of your performance goal
+is reached by internal housekeeping activities of doubtful necessity.
+And if your definition of price is the price to be paid for the
+hardware, little will prevent you from ending up with a design that is
+terribly hard to program for: for instance the order code might be such
+as to enforce, either upon the programmer or upon the system, early
+binding decisions presenting conflicts that really cannot be resolved.
+And to a large extent these unpleasant possibilities seem to have become
+reality.
+
+When these machines were announced and functional specifications became
+known, many among us must have become quite miserable; at least I was.
+It was only reasonable to expect that such machines would flood the
+computing community, and it was therefore all the more important that
+their design would be as sound as possible. But the design embodied such
+serious flaws that I felt that with a single stroke the progress of
+computing science had been retarded by at least ten years; it was then
+that I had the blackest week in the whole of my professional life.
+Perhaps the most saddening thing now is that, even after all those years
+of frustrating experience, still so many people honestly believe that
+some law of nature tells us that machines have to be that way. They
+silence their doubts by observing how many of these machines have been
+sold, and derive from that observation the false sense of security that,
+after all, the design cannot have been that bad. But upon closer
+inspection, that line of defense has the same convincing strength as the
+argument that cigarette smoking must be healthy because so many people
+do it....
+
+The reason that I have paid the above attention to the hardware scene is
+because I have the feeling that  one of the most important aspects of
+any computing tool is its influence on the thinking habits of those who
+try to use it, and because I have reasons to believe that that influence
+is many times stronger than is commonly assumed. Let us now switch our
+attention to the software scene....
+
+In the beginning there was the EDSAC in Cambridge, England, and I think
+it quite impressive that right from the start the notion of a subroutine
+library played a central role in the design of that machine and of the
+way in which it should be used. It is now [1972] nearly 25 years later
+and the computing scene has changed dramatically, but the notion of
+basic software is still with us, and the notion of the closed subroutine
+is still one of the key concepts in programming. We should recognize the
+closed subroutine as one of the greatest software inventions; it has
+survived three generations of computers and it will survive a few more,
+because it caters for the implementation of one of our basic patterns of
+abstraction. Regrettably enough, its importance has been underestimated
+in the design of the third generation computers, in which the great
+number of explicitly named registers of the arithmetic unit implies a
+large overhead on the subroutine mechanism. But even that did not kill
+the concept of the subroutine, and we can only pray that the mutation
+won't prove to be hereditary.
+
+The second major development on the software scene that I would like to
+mention is the birth of FORTRAN. At that time this was a project of
+great temerity, and the people responsible for it deserve our great
+admiration. It would be absolutely unfair to blame them for
+short-comings that only became apparent after a decade or so of
+extensive usage: groups with a successful look-ahead of ten years are
+quite rare! In retrospect we must rate FORTRAN as a successful coding
+technique, but with very few effective aids to conception, aids which
+are now so urgently needed that time has come to consider it out of
+date. The sooner we can forget FORTRAN ever existed, the better, for as
+a vehicle of thought it is no longer adequate: it wastes our brainpower,
+and it is too risky and therefore too expensive to use. FORTRAN's tragic
+fate has been its wide acceptance, mentally chaining thousands and
+thousands of programmers to our past mistakes. I pray daily that more of
+my fellow-programmers may find the means of freeing themselves from the
+curse of compatibility.
+
+The third project I would not like to leave unmentioned is LISP, a
+fascinating enterprise of a completely different nature. With a few very
+basic principles at its foundation, it has shown a remarkable stability.
+Besides that, LISP has been the carrier for a considerable number of, in
+a sense, our most sophisticated computer applications. LISP has jokingly
+been described as "the most intelligent was to misuse a computer." I
+think that description a great compliment because it transmits the full
+flavor of liberation: it has assisted a number of our most gifted fellow
+humans in thinking previously impossible thoughts.
+
+The fourth project to be mentioned in ALGOL 60. While up to the present
+day FORTRAN programmers still tend to understand their programming
+language in terms of the specific implementation they are working
+with--hence the prevalence of octal or hexadecimal dumps--while the
+definition of LISP is still a curious mixture of what the language means
+and how the mechanism works, the famous Report on the Algorithmic
+Language ALGOL 60 is the fruit of a genuine effort to carry abstraction
+a vital step further and to define a programming language in an
+implementation-independent way. One could argue that in this respect its
+authors have been so successful that they have created serious doubts as
+to whether it could be implemented at all! The report gloriously
+demonstrated the power of the formal method BNF, now fairly known as
+Backus-Naur-Form, and the power of carefully phrased English, at least
+when used by some-one as brilliant as Peter Naur. I think that it is
+fair to say that only very few documents as short as this have had an
+equally profound influence on the computing community. The ease with
+which in later years ALGOL and ALGOL-like have been used, as an
+unprotected trademark, to lend glory to a number of sometimes hardly
+related younger projects is a some-what shocking compliment to ALGOL's
+standing. The strength of BNF as a defining device is responsible for
+what I regard as one of the weaknesses of the language: an
+over-elaborate and not too systematic syntax could now be crammed into
+the confines of a very few pages. With a device as powerful as BNF, the
+Report on the Algorithmic Language ALGOL 60 should have been much
+shorter. Besides that, I am getting very doubtful about ALGOL 60's
+parameter mechanism: it allows the programmer so much combinatorial
+freedom that its confident use requires a strong discipline from the
+programmer. Besides being expensive to implement, it seems dangerous to
+use.
+
+Finally, although the subject is not a pleasant one, I must mention
+PL/I, a programming language for which the defining mechanism is of a
+frightening size and complexity. Using PL/I must be like flying a plane
+with 7,000 buttons, switches, and handles to manipulate in the cockpit.
+I absolutely fail to see how we can keep our growing programs firmly
+within our intellectual grip when by its sheer baroqueness the
+programming language--our basic tool, mind you!--already escapes our
+intellectual control. And if I have to describe the influence PL/I can
+have on its users, the closest metaphor that comes to my mind is that of
+a drug. I remember from a symposium on higher level programming
+languages a lecture given in defense of PL/I by a man who described
+himself as one of its devoted users. But within a one-hour lecture in
+praise of PL/I, he managed to ask for the addition of about 50 new
+"features," little supposing that the main source of his problems could
+very well be that it contained already far too many "features."  The
+speaker displayed all the depressing symptoms of addiction, reduced as
+he was to the state of mental stagnation in which he could only ask for
+more, more, more.... When FORTRAN has been called an infantile disorder,
+full PL/I, with its growth characteristics of a dangerous tumor, could
+turn out to be a fatal disease....
+
+... The tools we are trying to use and the language or notation we are
+using to express or record our thoughts are the major factors
+determining what we can think or express at all! The analysis of the
+influence that programming languages have on the thinking habits of
+their users, and the recognition that, by now, brainpower is by far our
+scarcest resource, these together give us a new collection of yardsticks
+for comparing the relative merits of various programming languages. The
+competent programmer is fully aware of the strictly limited size of his
+own skull; therefore he approaches the programming task in full
+humility, and among other things he avoids clever tricks like the
+plague. In the case of a well-known conversational programming language
+I have been told from various sides that as soon as a programming
+community is equipped with a terminal for it, a specific phenomenon
+occurs that even has a well-established name: it is called "the
+one-liners." It takes on of two different forms: one programmer places a
+one-line program on the desk of another and either he proudly tells what
+does and adds the question, "Can you code this in fewer symbols?"--as if
+this were of any conceptual relevance!--or he just says, "Guess what it
+does!" From this observation we must conclude that this language as a
+tool is an open invitation for clever tricks; and while exactly this may
+be the explanation for some of its appeal, viz. to those who like to
+show how clever they are, I am sorry, but I must regard this as one of
+the most damning things that can be said about a programming language.
+Another lesson we should have learned from the recent past is that the
+development of "richer" or "more powerful" programming languages was a
+mistake in the sense that these baroque monstrosities, these
+conglomerations of idiosyncrasies, are really unmanageable, both
+mechanically and mentally. I see a great future for very systematic and
+very modest programming languages. When I say "modest," I mean that, for
+instance, not only ALGOL 60's "for clause," but even FORTRAN's "DO loop"
+may find themselves thrown out as being too baroque. I have run a little
+programming experiment with really advanced volunteers, but something
+quite unintended and quite unexpected turned up. None of my volunteers
+found the obvious and most elegant solution. Upon closer analysis this
+turned out to have a common source: their notion of repetition was so
+tightly connected to the idea of an associated controlled variable to be
+stepped up, that they were mentally blocked from seeing the obvious.
+Their solutions were less efficient, needlessly hard to understand, and
+it took them a very long time to find them. It was a revealing, but also
+shocking experience for me. Finally, in one respect one hopes that
+tomorrow's programming languages will differ greatly from what we are
+used to now: to a much greater extent than hitherto they should invite
+us to reflect in the structure of what we write down all abstractions
+need to cope conceptually with the complexity of what we are
+designing....
+
+As an aside I would like to insert a warning to those who identify the
+difficulty of the programming task with the struggle against the
+inadequacies of our current tools, because they might conclude that,
+once our tools will be much more adequate, programming will no longer be
+a problem. Programming will remain very difficult, because once we have
+freed ourselves from the circumstantial cumbersomeness, we will find
+ourselves free to tackle the problems that are now well beyond our
+programming capacity.
+
+You can quarrel with my [next] argument, for it is not so easy to
+collect experimental evidence for its support, a fact that will not
+prevent me from believing in its validity. Up till now I have not
+mentioned the word "hierarchy," but I think that it is fair to say that
+this is a key concept for all systems embodying a nicely factored
+solution. I could even go one step further and make an article of faith
+out of it, viz. that the only problems we can really solve in a
+satisfactory manner are those that finally admit a nicely factored
+solution. At first sight this view of human limitations may strike you
+as a rather depressing view of our predicament, but I don't feel it that
+way. On the contrary, the best way to learn to live with our limitations
+is to know them. By the time that we are sufficiently modest to try
+factored solutions only, because the other efforts escape our
+intellectual grip, we shall do our utmost to avoid all those interfaces
+impairing our ability to factor the system in a helpful way. And I can
+not but expect that this will repeatedly lead to the discovery that an
+initially untractable problem can be factored after all. Anyone who has
+seen how the majority of the troubles of the compiling phase called
+"code generation" can be tracked down to funny properties of the order
+code will know a simple example of the kind of things I have in mind.
+The wider applicability of nicely factored solutions is [the] last
+argument for the technical feasibility of the revolution that might take
+place in the current decade....
+
+

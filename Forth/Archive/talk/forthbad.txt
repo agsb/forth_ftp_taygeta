@@ -1,0 +1,111 @@
+
+==============================================================================
+Forth vs. other languages.                                    by Rich Kulawiec 
+==============================================================================
+
+There are severe problems with Forth that prevent it from being much more than
+an interesting (failed) exercise in threaded-interpretative language design.
+
+It is (1) compact, (2) modifiable at runtime, (3) extensible and (4) hard to
+read.  Some of these are also features/flaws of other languages, depending on
+your viewpoint. However, I'd like to point out the following:
+
+1. Forth is a lot harder to read than even Lisp or APL; at my former employer,
+where we used Forth in real-time control and number-crunching applications,
+we called it a "write-only" language.
+
+2. There are many incompatible implementations of Forth, and even
+implementations from the same vendor behave radically different on
+different processors.
+
+3. The debugging support is non-existent.
+
+4. The primitive set of operators is *very* large; and it is not orthogonally
+constructed; the names are not even *close* to mnemonic; and many operators
+have uncontrollable side effects outside the modules in which they are used.
+
+5. Forth is not structured, typed, or anything like that.  When
+using Forth, you may forget anything you learned from Software Tools, or
+Elements of Programming Style, or Niklaus Wirth, or, roughly speaking,
+the last 15 years of evolution in programming techniques.
+
+And now, I'd like to quote another article that appeared at the time:
+
+> From: libes@nbs-amrf.UUCP
+> Subject: Forth for AI?  NO!
+> Date: Sun, 22-Jan-84 19:54:16 EST
+> 
+> Forth for AI?  Don't make me laugh.  Here's Forth's really bad points: 
+> 
+> 1) Manipulating programs as data in Forth is difficult.  Also
+> impractical, since it has no garbage collection.  You can't expect to
+> service high-priority interrupts if you've just run out of space!
+> (Forth's primary use is for real-time control.) 
+> 
+> 2) Can't pass arguments explicitly.  You must pass information by
+> putting it on the stack.  Since I pushed the 2nd arg at line 6 and then
+> used the stack to do something else, what are the odds that at line 23,
+> I can push the 3rd arg on the stack and then call that function with
+> confidence?  Reading code, trying to find out what the arguments are, is
+> like counting parens in Lisp, except now imagine that every atom in the
+> list manipulates the count of ('s and )'s! 
+> 
+> 3) Forward referencing (including recursion) is not normal and must be
+> done by manipulating compiled code.  Bye-bye portability. Indeed, I have
+> never seen anyone write a recursive Forth routine (although it can be
+> done).  Bye-bye AI. 
+> 
+> 4) Code is generated as you type (or load) in Forth source.  Hence you
+> lose all possible benefits of a good compiler, i.e. type-checking,
+> optimization, etc.  As for syntax checking, forget it.  The syntax of
+> the language is so simple, almost every combination of Forth words is
+> syntactly correct (although meaningless).  If you mistyped that last
+> word, you'll find out at run-time. 
+> 
+> 5) Scoping, name-space rules are terrible.  For example, it is impossible to
+> write a subroutine that uses variables that are *guaranteed* to be local.
+> (How can you ever be confident about your code?) 
+> 
+> 6) The emphasis on Forth is on speed at the cost of everything else. For
+> example, if you can keep track of all data by storing it on the stack,
+> great, but if you have to use a variable (no less a structure) you start
+> losing efficiency.  Using a variable in Forth is akin to using those
+> features in PL/I that are great but really slow the runtimes down.  And
+> Forth simply isn't fast to begin with. Any decent compiler can do better
+> (then "threaded-code"). 
+> 
+> 7) The only messages from the system are "ok", "?" (meaning "I don't
+> know that word") and "stack empty".  (It might check stack-full and some
+> others, but these are the only msgs I've ever gotten.)  This is very
+> consistent with the Forth philosophy (see 6.) but really unhelpful.
+> Debugging note: If Forth encounters a word it doesn't know, the stack is
+> popped.  Since the only other error is when the stack is empty, it is
+> impossible to tell where you died by looking at the stack! 
+> 
+> 8) I hesitate to criticize any language for being unreadable, since I
+> really like APL, which is also unreadable but in a different sense. 
+> Forth is like Lisp but without parens.  Its very hard to figure out what
+> the functions, args and bindings are without reading the entire
+> subroutine from the beginning and knowing type info about every word.
+> And even if you do, glancing at a random line that is manipulating the
+> stack doesn't tell you at all what is on the stack.  To know this, you
+> also have to understand the function of every word. 
+> 
+> I could go on, but I think you get the idea by now.  (No, not that I
+> hate Forth!)  Forth has its good points, but none of them make it a
+> practical language; most of them are for intellectual stimulation
+> only.  Given a task and my choice of languages, I would never choose
+> Forth.  You shouldn't either.
+>
+> Don Libes
+
+In summary (speaking for myself, not Don), I strongly recommend that you avoid
+Forth.  If I were you, I'd resort to using assebly language first; you'll
+have a better chance of producing debuggable, robust, and maintainable code.
+
+
+Rich Kulawiec pur-ee!rsk purdue-!rsk rsk@purdue-asc.arpa rsk@asc.purdue.edu
+
+
+
+

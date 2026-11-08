@@ -1,0 +1,215 @@
+
+
+Date: 11-22-86(01:35)Number: 4363   
+  To: ALL                            Refer#: NONE
+From: RAY DUNCAN                       Read: (N/A)
+Subj: NOVIX CHIP                     Status: PUBLIC MESSAGE
+
+Today I received an interesting Novix Chip single board computer from 
+Klaus Flesch of Forth Systeme Angelika Flesch in West Germany.  It is 
+built on a single Eurocard and requires only +5 volts. It includes the 
+Forth ROM, static RAM, serial port controller, etc.  Fully assembled and
+tested, ready to plug in, it costs only $300.  This is a price 
+breakthrough for people wanting to experiment with the Novix chip!
+This is a professionally designed and built board and you don't have to 
+waste weeks fiddling with it to get it to work --- just hook up five 
+volts, run a ribbon cable to your IBM PC serial port, put the little 
+terminal program that comes on an MS-DOS disk into your IBM PC, and 
+program away!
+For those of you who are interested, you can call Klaus Flesch direct at 
+Country code 49  7651 1665
+You can dial direct as follows (if you have AT&T) 011 49 7651 1665
+Or you can write to Klaus at
+Forth Systeme Angelika Flesch
+Postfach 1226
+D-7820 Titisee-Neustadt
+WEST GERMANY
+They can UPS RED a board to you and get it to you in 3 or 4 days from 
+Europe, though the shipping will cost you about $40.
+                                    
+
+Date: 11-22-86 (13:32)               Number: 4374
+  To: RAY DUNCAN                     Refer#: 4363
+From: PAUL GRAY                        Read: YES
+Subj: NOVIX CHIP                     Status: PUBLIC MESSAGE
+
+Can I assume then that it would operate on most any computer with RS232?
+Where does disk storage go off the Novix machine or the terminal 
+machine?   --- Paul
+                                                                                                 
+
+Date: 11-23-86 (02:19)               Number: 4386
+  To: PAUL GRAY                      Refer#: 4374
+From: RAY DUNCAN                       Read: YES
+Subj: NOVIX CHIP                     Status: PUBLIC MESSAGE
+
+No disk storage, this is a single board computer but you can download
+source to it over the serial line.  I imagine you could hook up any 
+terminal at all to it, the  PC is just handy for editing source code 
+locally and then downloading it to the Novix board.
+                                                                                                                           
+
+Date: 11-23-86 (15:11)               Number: 4399
+  To: ALL                            Refer#: NONE
+From: JOE BROWN                        Read: (N/A)
+Subj: MORE ON NC4000                 Status: PUBLIC MESSAGE
+
+     I have received volumes 1 and 2 of "More on NC4000" by Ting.  The 
+first volume is about 25 pages and is composed of copies of various 
+threads from the NC4000 users group bulletin board.  Most of the items 
+are dated before Jan. 1986.  There is some information concerning the 
+bit patterns of various instructions, but most of the information is 
+also given in Tings other work ( Footsteps in an Empty Valley ).
+     The second volume is about 3 times longer, and has more 
+applications type information.  There is a decompiler and various memory 
+decoding schemes.  On the whole, it is worth the $12.00.  ( Volume 1 was 
+$10.00 )
+  
+
+Date: 11-23-86 (15:23)               Number: 4400
+  To: ALL                            Refer#: NONE
+From: JOE BROWN                        Read: (N/A)
+Subj: NOVIX CASE                     Status: PUBLIC MESSAGE
+
+     The following code is about the least complicated addition of the 
+CASE construct to the cmForth vocabulary.  It is based on the Eaker Case 
+statement, but there is no compiler security.  ( this is true of the 
+other control words ( if, else,... ) in cmForth.  This screen should be
+added after screen 30, and needs the compiler words
+  
+    COMPILER
+   : CASE 0 :          ( LEAVE FENCE ON STACK )
+    HEX
+    : OF   8E50 , ( OVER )   COMPILE =  \ IF   8E10 , ;
+    : BITOF 8E50 , ( OVER )    8210 ,   \ IF   8E10 , ;
+   OCTAL
+    : ENDOF   \ BEGIN  130000 , SWAP \ THEN ;
+   HEX
+    : ENDCASE  COMPILE DROP
+      BEGIN
+        ?DUP
+        WHILE \ THEN
+      REPEAT ;
+   DECIMAL
+   FORTH
+  
+  Notes :
+    The above works, but I can't type  ( should be ; not : after 0 in 
+CASE ).  BITOF is used to test for specific bits being on.  The hex word 
+8210 is the code for AND.  The symbol '\' is a synonym for [compile] and 
+is defined in my version of cmForth, although it isn't shown in the Ting 
+books.  Other codes used are   8E10 = drop and octal 130000 is the 
+unconditional branch ( for ELSE ).  The actual target location of the 
+branch is fixed up in the loop which is part of the ENDCASE  word.
+     I am about 90 % finished doing a decompiler which goes through the
+entire vocabulary.  If there is any interest, I can provide copies of 
+the code or figure out some way to upload it.  I have found that 
+decompiling the results of the 'smart compiler` is a sure way to get 
+impressed with both the NC4000 and the amount of elegence which can be 
+crammed into 2k words of code.
+                                                                           
+
+Date: 11-25-86 (21:46)               Number: 4436
+  To: ALL                            Refer#: NONE
+From: JOE BROWN                        Read: (N/A)
+Subj: NOVIX WORDS                    Status: PUBLIC MESSAGE
+
+     Jerry, I'm not sure where this should go.  Let me know if there is
+a better place.  The following is a definition of 'WORDS' for the Novix
+nc4000 ( in particular, with the cmForth delivered with the forthkit. )
+ There is a version given in Ting's book, but it uses the delivered 
+value of WIDTH = 2, and prints the width of the word followed by the 
+first two characters.  I have changed WIDTH  to 8 ( which as I've said 
+before, doesn't cost too much memory), and was interested in the 
+locations rather than word length.  In addition, the following formats 
+the words in columns.  In mu system, the following screens are loaded 
+without the smart compiler, so shifts are done with / rather than the 
+times.
+  
+    SCR 2
+VARIABLE NPLINE
+: FORTH 1 CONTEXT ! ;
+: COMPILER 2 CONTEXT ! ;    ( GIVES NAMES TO THE VOCAB THREADS )
+: N0 CR 0 NPLINE ! ;
+: N+ 1 NPLINE +! NPLINE @ 3 > IF N0 THEN ;   ( FOR COLUMN COUNT )
+ 
+: CMIT 127 AND 
+       >R 31 127 I WITHIN IF R> ELSE R> DROP 46 THEN EMIT ;
+      ( FOR NON-ASCII CHARACTERS )
+  
+: NTYPE ( ADDR W -- )  ( PRINT NAME WITH MAX OF W CHARACTERS )
+    >R DUP 6 U.R SPACE
+       2* DUP C@ 31 AND I MIN DUP R> SWAP - SPACES
+       1 - FOR 1 + DUP C@ CMIT NEXT DROP ;
+   ( SCR 3 )
+: .ID ( A -- A' ) ( TAKES LINK ADDR, PRINTS NAME LEAVING NEW LINK ADDR )
+    1 @+ 8 NTYPE 4 SPACES ;
+   ( @+ TAKES AN ADDRESS AND OFFSET, LEAVES (ADDRESS) ADDRESS+1 )
+  
+: WORDS N0 CONTEXT DUP @ - @ 
+        BEGIN  .ID N+ DUP @ 0= UNTIL DROP ;
+   
+     Notes: The two vocabulary threads are pointed to by the two words 
+before the location of CONTEXT.  Thus, the phrase " CONTEXT DUP @ - @ "
+gets the contents of the CONTEXT thread.  The word "WORDS" is called by
+vocab WORDS where "vocab" is either FORTH or COMPILER.
+                                               
+
+Date: 11-27-86 (23:23)               Number: 4455
+  To: RAY DUNCAN                     Refer#: 4363
+From: SYSOP                            Read: YES
+Subj: NOVIX CHIP                     Status: PUBLIC MESSAGE
+
+Ray, any chance of you becoming Klaus Flesch's US distributer for their
+Novix board? It sounds a lot easier to make work than Chuck's Computer 
+Cowboy's kit and the price is right! I'd be very interested in a copy if 
+it were available without hassling overseas distribution.
+                                                                                                            
+
+Date: 12-02-86 (00:33)               Number: 4484
+  To: ALL                            Refer#: NONE
+From: DANIEL MILLER                    Read: (N/A)
+Subj: NOVIX 6000                     Status: PUBLIC MESSAGE
+
+I uploaded a file called NC6000 whch is composed of crude notes
+from chip designer Bob Murphy and co designer John Ribble both now
+with the spinoff company QSD.  They have been contracted to develop
+the NC6000.   I also have the NOVIX preliminary data sheet descriYing
+the instructions and o>code format and register file.  Cantact me if
+you need more specifics.
+                  
+
+Date: 12-02-86 (03:32)               Number: 4493
+  To: SYSOP                          Refer#: 4455
+From: RAY DUNCAN                       Read: YES
+Subj: NOVIX CHIP                     Status: PUBLIC MESSAGE
+
+Yes we are interested in being a distributor for Klaus Flesch's board, 
+but probably won't do it until we have a Metacompiler target ready for 
+the Novix chip.  We don't want to get into the hardware business unless
+we can support it with our own software tools...  But if you want a 
+single board from Klaus I can certainly get it for you, just call us up
+& place an order or give me the word... no problem at all.
+                                                                                                
+
+Date: 02-08-87(22:34)Number: 5420   
+  To: ALL                            Refer#: NONE
+From: SYSOP                            Read: (N/A)
+Subj: NOVIX STUFF                    Status: PUBLIC MESSAGE
+
+I thought I'd save Dan Miller the trouble and upload some of his recent
+comments on the Novix chip from BIX:
+ 
+==========================
+forth/news #162, from dmiller, 629 chars, Fri Dec 26 18:39:50 1986
+--------------------------
+TITLE: computer cowboys
+Chuck has upgraded the forthkit.  It now is called fk3 and has a 
+Eurocard connector on one end and sports a Maxim rs-232 chip.
+The maxim chip is interesting since from a 5v input it generates
+its own +-10 volt standard rs-232 line voltages as well as buffering
+the input and output.  The memory space is also larger with 32k on board.
+( if you piggyback memory chips like in the ibm at you can get 256 k on board)
+You can still put it in your pocket!  bixmail me if you need addr or number.
+I have one ordered and being assembled now by a friend in California and
+would be happy to answer any questions.

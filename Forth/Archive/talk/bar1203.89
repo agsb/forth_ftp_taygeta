@@ -1,0 +1,431 @@
+
+Item    0604986                 89/12/04        10:00
+
+From:   STENO.POOL                      RTC Stenographer Pool
+
+To:     NMORGENSTERN                    N. Leonard Morgenstern
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 12/03/89   Time: 21:31EST
+Attendees:
+[[Len] NMORGENSTERN]
+[[Gary] GARY-S]
+[[Hadil] H.SABBAGH]
+[[JAX.BLKHEAD] FIGCHAPTERS]
+[[Dave] OLORIN>]
+
+Minutes:
+<[Len] NMORGENSTERN> Jennifer Marlowe has come from the steno pool.
+<APPERT> is here.
+<[Len] NMORGENSTERN> Hi
+<[Kevin] APPERT> hi Len
+<[Len] NMORGENSTERN> Kevin, I am using my Mac this time.
+  What machine do you use?
+<[Kevin] APPERT> Atari ST
+<[Len] NMORGENSTERN> Aah. I need a good com program
+<[Kevin] APPERT> had enough of Mirror?
+<[Kevin] APPERT> write one
+<[Len] NMORGENSTERN> Mirror is excellent. The problem is in my PC
+<[Len] NMORGENSTERN> I cannot upload, many errors, etc.
+<[Kevin] APPERT> oh?
+<[Len] NMORGENSTERN> I thought it might be a bad line
+<[Len] NMORGENSTERN> but after 2 days of frustration,
+  I finally set up my Mac with
+<[Kevin] APPERT> same modem w/ Mac?
+<[Len] NMORGENSTERN> Red Ryder
+<[Len] NMORGENSTERN> Yes same modem
+<[Len] NMORGENSTERN> Ran just fine.
+<[Kevin] APPERT> what kind of PC?
+<[Len] NMORGENSTERN> It is not Mirror, because when the PC works,
+<[Kevin] APPERT> what kind sureal board?
+<[Len] NMORGENSTERN> it works just fine. I t just doesn't work very often
+<OLORIN> is here.
+<[Len] NMORGENSTERN> The computer is a cheapo clone
+<[Len] NMORGENSTERN> Hi Dave!
+<[Dave] OLORIN> Hullo
+<[Kevin] APPERT> hi Dave
+<[Len] NMORGENSTERN> Do you have a ac, Dave?
+<[Len] NMORGENSTERN> Mac that is
+<[Dave] OLORIN> (has F-PC 3.5 partly unpacked -- making it
+  fit onto floppies always takes work)
+<[Dave] OLORIN> Nope. Sure don't.
+<[Len] NMORGENSTERN> My computer won't handle the quad density 5" disks
+<[Len] NMORGENSTERN> I have to get it on DD disks
+<[Kevin] APPERT> like the paths and stuff, Dave?
+<[Kevin] APPERT> did you get a copy of George Smiley's graphics
+  package with it?
+<[Dave] OLORIN> Yeah. And TCOM looks *real nice*. Of course
+  if he redid the kernel too much I'm going to be immersed for a week getting
+  OOFORTH working again.
+<[Dave] OLORIN> I think so. I downloaded it from the library here.
+<[Len] NMORGENSTERN> <Len is going to try something.
+  Go ahead, & don't be surprised.
+<[Kevin] APPERT> oops.  MARK Smiley!
+<[Kevin] APPERT> there where no real "break the code" type changes...
+<[Len] NMORGENSTERN> This is an upload test
+<[Kevin] APPERT> tom was constrained from mod of the CASE
+  statement because it changed the stack picture, in fact
+<[Len] NMORGENSTERN> <worked>
+<[Dave] OLORIN> Except that I took advantage of some *really
+  internal* structures. If those got changed it's 5 days to find out
+  what's different and 2 days to patch INTERNALS.SEQ to ignore it.
+<[Len] NMORGENSTERN> What did you have to change in the internals, Dave?
+<H.SABBAGH> is here.
+<[Len] NMORGENSTERN> Hi Hadil
+<[Hadil] H.SABBAGH> Hi Len.
+<[Len] NMORGENSTERN> What have you been doing lately?
+<[Hadil] H.SABBAGH> I'm trying to publish a paper on some stuff
+<[Dave] OLORIN> I didn't change the internals at all.
+  INTERNALS.SEQ is the module in OOFORTH which abstracts out
+  the implementation details. If the threading or dictionary changes
+  of F-PC got changed, I need to make INTERNALS.SEQ reflect
+  that. (Hopefully it will just work the first time)
+<[Hadil] H.SABBAGH> I'm working on.
+<[Len] NMORGENSTERN> Dave W. is talking about having to rewrThanx, Dave
+<[Hadil] H.SABBAGH> Hi Dave, Kev.
+<[Kevin] APPERT> hi
+<[Dave] OLORIN> Hi Hadil
+<[Len] NMORGENSTERN> ga Hadil
+<[Kevin] APPERT> I don't think any of that was chaned, Dave
+<[Hadil] H.SABBAGH> Oh nothing. I'm glad to be able to hear Dave "live".
+<[Dave] OLORIN> (phffewwww) (wipe brow) Good. (grin)
+<[Dave] OLORIN> Nahhh...this is pre-recorded. (grin)
+<[Kevin] APPERT> Ting would have killed Tom.  He dislikes having
+  to redoo the docs
+<[Hadil] H.SABBAGH> I'm still working on porting OOFORTH to HS/FORTH.
+<[Len] NMORGENSTERN> It's too soon anyway, except for fixing
+  bugs & a few necessities
+<[Len] NMORGENSTERN> !
+<[Hadil] H.SABBAGH> INTERNALS.SEQ helped a lot, but
+<[Dave] OLORIN> Hows that coming? Any questions about the internals?
+<[Hadil] H.SABBAGH> Vocs are inherently non-portable.
+<[Hadil] H.SABBAGH> As soon as I finish my paper, I'll have more time.
+<[Hadil] H.SABBAGH> And also a few ideas for extensions.
+<[Len] NMORGENSTERN> Where will you publish it?
+<[Dave] OLORIN> Ah. I need to put a warning code on all
+  of my code: "******* I USE VOCABULARIES A GREAT DEAL ********".
+  But Vocs should be pretty portable.
+<[Hadil] H.SABBAGH> Journal of Computational Physics.
+  I'm sure you have a subscription :-).
+<[Hadil] H.SABBAGH> Dave: Yes, except you try to hide voc names.
+<[Hadil] H.SABBAGH> This is a little different in HS/FORTH, which does
+<[Dave] OLORIN> Yeah. I sure do. A Vocabulary is a word like
+  any other...or should be.
+<[Hadil] H.SABBAGH> byzantine things with 80x8x segmentation.
+<[Hadil] H.SABBAGH> E.g, HS/FORTH links a voc name to the ONLY vocabulary.
+<[Hadil] H.SABBAGH> But I agree with you Dave.
+<[Dave] OLORIN> Hmmnn...that's...peculiar. So you can't HIDE a vocabulary?
+<[Kevin] APPERT> in re your topic, Len, is it a good idea
+  to stimulate interest ?
+<[Hadil] H.SABBAGH> Not exactly.  It has a word VOC-LINK,
+  so you do something like
+<[Hadil] H.SABBAGH> VOC-LINK LPA <BEHEAD> (Haven't checked this,
+  of course).
+<[Hadil] H.SABBAGH> OTOH, I won't need any stuff from INTERNALS.SEQ, since
+<[Hadil] H.SABBAGH> HS/FORTH has very powerful forward ref stuff.
+<[Hadil] H.SABBAGH> Now, if I could only _understand_ it...
+<[Dave] OLORIN> Only two of the words in INTERNALS.SEQ are
+  forward ref. The others refer to creating and modifying dictionary
+  entries and such.
+<[Hadil] H.SABBAGH> Well, I better re-read that stuff,
+  and try to understand it.
+<[Hadil] H.SABBAGH> Mind if I ask you questions in the BBS?
+<[Len] NMORGENSTERN> ga Hadil
+<[Hadil] H.SABBAGH> ga
+<[Dave] OLORIN> Not at all.
+<[Dave] OLORIN> I'd love to see the package get ported to other Forths.
+<[Hadil] H.SABBAGH> Chill. (<- Bronxese for "OK").
+<[Kevin] APPERT> as if
+<[Dave] OLORIN> In that case the weather outside is very ok. (grin)
+<[Hadil] H.SABBAGH> Here too.
+<[Hadil] H.SABBAGH> BTW, re: tonite's topic.
+<[Len] NMORGENSTERN> I think that F-PC has not been out long enough for
+<[Len] NMORGENSTERN> everybody to get familiar with it. It would be too
+<[Kevin] APPERT> high 60's -70's here today
+<[Hadil] H.SABBAGH> One way to rekindle interest in Forth is to push OO stuff.
+<[Len] NMORGENSTERN> frustating to make any but the most necessary
+<[Hadil] H.SABBAGH> Forth is the only _existing_ language that can be
+<[Dave] OLORIN> (slap) Not fair!
+<[Hadil] H.SABBAGH> extended to support full OO programming.
+<[Len] NMORGENSTERN> changes.What happened
+<[Len] NMORGENSTERN> <My computer burped>
+<[Len] NMORGENSTERN> ga all, I will watch. I am having problems
+<[Kevin] APPERT> in the words of St.Silicon: " Has your data been saved?"
+<[Hadil] H.SABBAGH> Dave: what was the slap for?
+<[Len] NMORGENSTERN> <learning to upload from a DA>
+<[Kevin] APPERT> me, nice weather
+<[Dave] OLORIN> Not you...Kevin.
+<[Dave] OLORIN> Although this weather does give me an excuse
+  to keep a roaring fire in the fireplace....
+<[Len] NMORGENSTERN> Cold here not 50 miles from you Kevin. 36F this AM
+<[Hadil] H.SABBAGH> That's cold?  18F here + wind chill = 2F!
+<[Len] NMORGENSTERN> I know, I know (Nebrasksa born)
+<[Hadil] H.SABBAGH> Neb! Well, that's _serious_ chilliness.
+<[Len] NMORGENSTERN> Let's talk about Forth.
+<[Dave] OLORIN>
+<[Len] NMORGENSTERN> I want to throw out an idea to see what you think of it
+<[Dave] OLORIN> Roight. What about it?
+<[Len] NMORGENSTERN> At Asilomar, there was a Finnish student
+  who presented a nice paper.
+<[Len] NMORGENSTERN> He was asked how he got interested in Forth
+<[Len] NMORGENSTERN> He said he read about it in Brodie,
+  which was in his library.
+<[Len] NMORGENSTERN> John Peters said, Why don't we give Brodie to libraries?
+<[Len] NMORGENSTERN> I think it's a great idea!
+<[Len] NMORGENSTERN> What do you all think?
+<[Hadil] H.SABBAGH> I agree.  Better still, put PD Forth on new machines.
+<[Dave] OLORIN> I agree as well.
+<[Hadil] H.SABBAGH> I.e., give disks to Computerland to give to their clients.
+<[Len] NMORGENSTERN> Another good idea, but mayThere is
+  a matter of expense. If every local Fig group
+<[Len] NMORGENSTERN> would give a dozen books to local libraries,
+  that is less than $100
+<[Len] NMORGENSTERN> per year or two.
+<[Hadil] H.SABBAGH> True.
+<[Len] NMORGENSTERN> But giving out lots of disks may run
+  into money. It would have to be
+<[Len] NMORGENSTERN> explored!
+<[Kevin] APPERT> sounds like an invitation to a lawsuit,
+  unless you put a warning label on it: Warning, This computer
+  language may be hazerdous to your pre-conceptions"
+<[Len] NMORGENSTERN> I will talk to out local librarian next week
+<[Hadil] H.SABBAGH> Unfortunately, it won't have as great an impact.
+<[Len] NMORGENSTERN> I know her personally & she may be
+  able to give advice on how to go about it
+<[Len] NMORGENSTERN> ga Hadil
+<[Hadil] H.SABBAGH> Reason Forth is not used: project managers hate it.
+<[Hadil] H.SABBAGH> I think there are a lot of programmers who
+  _like_ Forth
+<[Dave] OLORIN> Hmmmnn.... we have *2* very large PC companies
+  in Austin (Dell and Compuadd). I'll see whaty they think
+  about distributing F-PC with it. (i.e. "You can add another
+  programming language to the list of bundled software at NO COST TO YOU")
+<[Len] NMORGENSTERN>  A good idea, Dave!
+<[Hadil] H.SABBAGH> but won't stick their necks out.
+<[Kevin] APPERT> Len, as I mentioned before, unsolicited material
+  arriving a libraries often arrvies in the trash, or at
+  the home of the librarian!  there should be some vetting
+<[Len] NMORGENSTERN> I sympathize with the project managers, actually
+<[Len] NMORGENSTERN> Managing a software project is no
+  easy job & would be 2* as hard
+<[Len] NMORGENSTERN> if you aren't familiar with the langugae.
+<[Hadil] H.SABBAGH> No. I think they _are_ familiar with the language,
+<[Len] NMORGENSTERN> Kevin: I think we would have to approach
+  to library board, or whoever.
+<[Hadil] H.SABBAGH> and have rejected it, for the most part.
+<[Len] NMORGENSTERN> You ar right, that unsolicited material
+  is not the way to do it.
+<[Dave] OLORIN> Ah well...I'm off to the next RTC in the list this eve. 'night
+<[Len] NMORGENSTERN> Hadil, why od you think that is?
+<[Kevin] APPERT> just about dinner time.  gotta go.  'night all
+<[Hadil] H.SABBAGH> By Dave.
+<[Len] NMORGENSTERN> Bye all
+<[Dave] OLORIN> has left.
+<[Kevin] APPERT> has left.
+<FIGCHAPTERS> is here.
+<[Len] NMORGENSTERN> Hi Jax
+<[Hadil] H.SABBAGH> Hi Jax.
+<[JAX.BLKHEAD] FIGCHAPTERS> Hi gang!
+<[Len] NMORGENSTERN> We were takling about the idea of
+  stiumlating interest in Forth
+<[Hadil] H.SABBAGH> Len: there is very little standardaization.
+<[JAX.BLKHEAD] FIGCHAPTERS> Give 'em electorshock! that'll stimulate 'em.
+<[Len] NMORGENSTERN> by putting Forth books in libraries
+<[Hadil] H.SABBAGH> I think the _best_ way to stimulate interest is to
+<[JAX.BLKHEAD] FIGCHAPTERS> Forth books? are there any?
+<[Hadil] H.SABBAGH> support SIGForth.
+<[Len] NMORGENSTERN> and it was suggested here to bundle it
+  with new computers
+<[Len] NMORGENSTERN> .
+<[Hadil] H.SABBAGH> A lot of computer types are ACM members.
+<[Hadil] H.SABBAGH> .
+<GARY-S> is here.
+<[Len] NMORGENSTERN> That is being done. Going slow but steady.
+<[Len] NMORGENSTERN> Hi Garyt
+<[Hadil] H.SABBAGH> Hi Gary, Jax.
+<[Gary] GARY-S> hi
+<[Len] NMORGENSTERN> Gary, that is
+<[JAX.BLKHEAD] FIGCHAPTERS> Four time zones represented!
+<[JAX.BLKHEAD] FIGCHAPTERS> ( type /STA )
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> Yah, and the bronx, too!
+<[JAX.BLKHEAD] FIGCHAPTERS> THat's in its *own* time zone ... :-)
+<[JAX.BLKHEAD] FIGCHAPTERS> ( 1890 )
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Len] NMORGENSTERN> Strangely, my time zone is central on
+  my Genie account!
+<[Hadil] H.SABBAGH> The boro that time forgot :-)
+<[Gary] GARY-S> That's not a time zone Hadil, that's a time warp :-)
+<[Hadil] H.SABBAGH> (Actually, that's Staten Island...)
+<[JAX.BLKHEAD] FIGCHAPTERS> How many Bronxers does it take
+  to change a lightbulb?
+<[Hadil] H.SABBAGH> Depends on how many burnt-out bulbs they
+  brought with them.
+<[Len] NMORGENSTERN> <chuckle>
+<[JAX.BLKHEAD] FIGCHAPTERS> "Hey, F*** you, none o' ya damn bizness!!!"
+<[JAX.BLKHEAD] FIGCHAPTERS> How many Bronxers who have moved
+  to california does it take to change a lightbuld?
+<[Hadil] H.SABBAGH> Actually, its "Hey F** you, none o' YO damn bidness!"
+<[JAX.BLKHEAD] FIGCHAPTERS> "It's STILL none o ya damn bizness,
+  but have a nice day!"
+<[Gary] GARY-S> Heck, I can't resist asking - why the BLKHEAD
+  notation Jax ? Owning up to what we all suspect ?
+<[Hadil] H.SABBAGH> Yux.
+<[JAX.BLKHEAD] FIGCHAPTERS> I can't keep a secret from you, Gary! :-)
+<[Hadil] H.SABBAGH> Jax: so _you're_ the guy insisting to
+  keep BLOCKs in the standard...
+<[JAX.BLKHEAD] FIGCHAPTERS> Oh, yes, I think blox are neet.
+<[JAX.BLKHEAD] FIGCHAPTERS> Especially in embedded systems with disks.
+<[Hadil] H.SABBAGH> So are pterodactyls, but you don't see them around.
+<[JAX.BLKHEAD] FIGCHAPTERS> Forth is primarily an operating system,
+  people tend to forget that.
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Gary] GARY-S> Did you see the net news item on j-forth ?
+<[JAX.BLKHEAD] FIGCHAPTERS> net? nyet.
+<[Len] NMORGENSTERN> <Len prefers blocks, having used them
+  both extensively
+<[Gary] GARY-S> Forth is a total environment
+<[JAX.BLKHEAD] FIGCHAPTERS> Kind of like a digital hot tub, right Gary?
+<[Hadil] H.SABBAGH> C'mon guys. You're worried about Forth's
+  acceptance in the world,
+<[JAX.BLKHEAD] FIGCHAPTERS> not me.
+<[Gary] GARY-S> Trouble is everyone wants a Borland version
+  so they can glide right in <sigh>
+<[Hadil] H.SABBAGH>
+<[Len] NMORGENSTERN> ga Hadil
+<[JAX.BLKHEAD] FIGCHAPTERS> Forth is accepted in my world
+  because it's simply the fastest way to solve embedded control problems.
+<[Hadil] H.SABBAGH> but you want every programmer to start from scratch!
+<[JAX.BLKHEAD] FIGCHAPTERS> Look, text files are fine.
+  Fat forths are fine. Turbo Forth is fine.
+<[JAX.BLKHEAD] FIGCHAPTERS> Block is a neat concept and
+  is not contradicted by host operating systems.
+<[Hadil] H.SABBAGH> Gary: why not? Its much easier to develop an IE
+<[Hadil] H.SABBAGH> for Forth than it is for C!!
+<[JAX.BLKHEAD] FIGCHAPTERS> This all reminds me of the Creationists ...
+<[Len] NMORGENSTERN> pmi, what's IE
+<[Gary] GARY-S> No Hadil, I am not one of those 'that's the
+  way I had to do it, so that's the way the rest should do it ' types...
+<[Gary] GARY-S> I just think there comes a time..
+<[Hadil] H.SABBAGH> IE <- Integrated Environment.
+<[JAX.BLKHEAD] FIGCHAPTERS> Who say that Evolution XOR the Bible ...
+<[Len] NMORGENSTERN> thanks
+<[JAX.BLKHEAD] FIGCHAPTERS> but I don't see the contracdiction.
+<[JAX.BLKHEAD] FIGCHAPTERS> Text + BLOCK can live in same system ...
+<[JAX.BLKHEAD] FIGCHAPTERS> BLOCK is VM for Forth.
+<[Gary] GARY-S> when folks should accept what Forth is
+  on its own merits and quit trying..
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Gary] GARY-S> to model it into a version of C or Pascal or
+  Fortran or Mumps
+<[Gary] GARY-S> .
+<[Hadil] H.SABBAGH> I disagree.  A good support environment is
+  as important as the
+<[Hadil] H.SABBAGH> language itself.  F-PC is popular because
+  of the environment
+<[Hadil] H.SABBAGH> .
+<[Gary] GARY-S> here we go again - we had this argument Thursday
+<[Hadil] H.SABBAGH> OK. Sorry.
+<[Len] NMORGENSTERN> I agree partiaIly & don't think the
+  argument will ever end
+<[Len] NMORGENSTERN> There are too many good (and bad)
+  arguments on both sides!
+<[Gary] GARY-S> I don't say you or F-PC are wrong - I
+  just say F-PC is not (at least, not now) right for me
+<[JAX.BLKHEAD] FIGCHAPTERS> ZIMMER is great but WHAT A
+  NUT to waste all that energy on DOS. Hope he can port it to OS/
+<[Gary] GARY-S> os/2 ? that dead fish
+<[JAX.BLKHEAD] FIGCHAPTERS> Don't be silly. Barring a
+  Great Depression, OS/2 will be here within a year.
+<[Hadil] H.SABBAGH> That's real consistent Jax :-). You
+  want a 1-bit processor with OS/2 :-).
+<[JAX.BLKHEAD] FIGCHAPTERS> OS/2 makes an IBM into an Amiga.
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Gary] GARY-S> Not with hand packed asm it won't
+<[Len] NMORGENSTERN> <Len announces that he will have to
+  leave promptly at 6:30 tonight>
+<[Hadil] H.SABBAGH> Len, you're 3 hours late! :-)
+<[JAX.BLKHEAD] FIGCHAPTERS> I mean, for my money, OS/2
+  can go jump in a lake. My next machine will be M88000 or
+  something like that. I'm just telling you what you DOS-heads
+  are going to have to face up to! :-)
+<[Len] NMORGENSTERN> PST
+<[JAX.BLKHEAD] FIGCHAPTERS> It's not polite to whisper in public, Len!
+<[Gary] GARY-S> If OS/2 is made portable (mounted on C
+  or Forth or whatever) then it might work, but why ?
+  There's Unix if you want portable multi-user,multi-tasking
+<[JAX.BLKHEAD] FIGCHAPTERS> DOS is the dinosaur. Not Forth.
+<[Hadil] H.SABBAGH> Well, its all moot anyway, since UN*X
+  is going to be the next industry std.
+<[Hadil] H.SABBAGH> (So my inside srcs at IBM tell me).
+<[Len] NMORGENSTERN> IBM!!!!!!!????????
+<[JAX.BLKHEAD] FIGCHAPTERS> You can criticise the stupidity of
+  OS/2 all you want. The fact is that you can have any kind
+  of model T you want as long as it's black. You get OS/2
+  or you get UNIX. If you were a single user corporate site,
+  which you YOU want to deal with. I mean, really.
+<[JAX.BLKHEAD] FIGCHAPTERS> Unix for single users? Give me
+  a break. I help maintain UNIX systems. No way.
+<[JAX.BLKHEAD] FIGCHAPTERS> It's OS/2 for the single user IBM slave of the 
+future.
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[JAX.BLKHEAD] FIGCHAPTERS> Besides, OS/2 is actually pretty good.
+<[Len] NMORGENSTERN> If software is designed to sell hardware,
+<[Len] NMORGENSTERN> Then no wonder IBM is supporting UNIX
+  and OS/2, both giant systems
+<[Len] NMORGENSTERN> .
+<[JAX.BLKHEAD] FIGCHAPTERS> It's not a question of "giant systems" Len ...
+<[JAX.BLKHEAD] FIGCHAPTERS> It's that multitasking + GUI is here.
+<[JAX.BLKHEAD] FIGCHAPTERS> OS/2 is the IBM Blue way to achieve that.
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Gary] GARY-S> If you look around you may notice IBM is
+  putting as much effort into A/IX as OS/2
+<[Hadil] H.SABBAGH> Yah. My IBM src told me that they are
+  going to really push A/IX, since
+<[JAX.BLKHEAD] FIGCHAPTERS> Of course; AIX is a minicomputer multiuser
+  solution. IBM's big dollars have ALWAYS been in big, multiuser systems.
+<[Hadil] H.SABBAGH> they own it outright. Microsoft is
+  just too unreliable for their tastes.
+<[JAX.BLKHEAD] FIGCHAPTERS> But if you want a single user
+  GUI multitasking system, you get OS/2.
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Gary] GARY-S> Carn/Mell Mach is making Unix even more attractive
+  - especially with x-winbdow support
+<[JAX.BLKHEAD] FIGCHAPTERS> Unix is wonderful. The single user
+  doesn't need it.
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[Hadil] H.SABBAGH> RE GUIs: Read the EOF column in Nov. Computer Language.
+<[Hadil] H.SABBAGH> Bruce Tonkin blasts GUIs.
+<[Len] NMORGENSTERN> I have to leave now. Gary, save this
+   & upload it to
+<[Len] NMORGENSTERN> me if there is anything interesting. Thanks
+  Ninety percent of the politicians give the other ten percent
+<[Ha dil] H.SABBAGH> Jax, am I boring you?
+<[JAX.BLKHEAD] FIGCHAPTERS> No, I mean, blasting GUI's.
+  Cheap talk. They work,when designed correctly.
+<[Hadil] H.SABBAGH> No, no. His premise is that they're overhyped.
+<[JAX.BLKHEAD] FIGCHAPTERS> EVERYTHING in our industry is overhyped.
+<[Hadil] H.SABBAGH> There are far few installations than the ads suggest.
+<[Hadil] H.SABBAGH> Of course, he COMPLETELY ignored the Mac universe.
+<[JAX.BLKHEAD] FIGCHAPTERS> Right. And Amiga, which is
+  the BEST GUI available.
+<[Hadil] H.SABBAGH> Also, I don't think Windows is "designed
+  correctly"  as you put it.
+<[JAX.BLKHEAD] FIGCHAPTERS> No, it's a DOS hack. But OS/2 PM isn't bad.
+<[JAX.BLKHEAD] FIGCHAPTERS> Amiga is the paradigm.
+<[JAX.BLKHEAD] FIGCHAPTERS> .
+<[JAX.BLKHEAD] FIGCHAPTERS> Columnists just blow smoke out
+  their ears likethat when they don't have anything to write.
+<[Hadil] H.SABBAGH> Well guys. I've gotta go.  Need to
+  polish my asbestos suitfor the next RTC :-)
+<[JAX.BLKHEAD] FIGCHAPTERS>  :-)
+<[Gary] GARY-S> hahaha
+<[Hadil] H.SABBAGH> has left.
+<[Gary] GARY-S> me too
+<[JAX.BLKHEAD] FIGCHAPTERS> Well, Good Night CHet
+<[Gary] GARY-S> nite David
+
+

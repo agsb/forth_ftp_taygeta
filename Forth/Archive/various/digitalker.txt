@@ -1,0 +1,141 @@
+
+ ( Digitalker      1982?  Scott Squires  GEnie S.W.SQUIRES  )
+
+\ There used to be a voice sythesizer board sold for the Apple or
+\ computers with a parallel port called Digitalker.  
+\ This may still be available for all I know. 
+\ I used it on a Z-80 S100 Forth-79 system. 
+\ The board had a ROM of a fixed set of available words.
+
+\ Below are the definitions for words available as well as a way to deal
+\ with numbers.  A separate vocabulary was used since some of the words
+\ conflicted with normal Forth words.
+
+\ SPEAK outputs the number on the stack to the digitalker parallel port
+\ SPEAK# speaks the number on the stack, ie. 'one hundred twenty three' 
+
+\ The names are defined as specific code# outputs.
+\ If I were writing this today I'd probably define-
+\  : SAY   ( n SAY <name>  )     \ compile time, like a constant
+\          ( <name>    | speaks name )   \ run time
+\   create ,  does>  @ speak ;
+
+\ Example-   88 SAY GREAT  would create GREAT which would say 'GREAT'
+\ when executed.
+
+\ This is another example of something much more useful in Forth than
+\ other languages.  The words can be typed as a sentence or used in
+\ a defined sentence just like English making the definitions easy to read.
+\ No more thinking about the actual code#s.  
+\ The interaction allowed experimentation for the best phrasing.
+
+
+VOCABULARY TALK     TALK DEFINITIONS  
+
+  
+: SPEAK ( code# for digitalker --- | says it )                    
+     11 pout                       \ output data
+       begin 11 pin 1 and until    \ wait until ready
+    255 10 pout   0 10 pout ;      \ strobe it
+
+  
+: AGAIN     58 speak ;  : AMPERE     59 speak ;  : AND       60 speak ;
+: AT        61 speak ;  : CANCEL     62 speak ;  : CASE      63 speak ;  
+: CENT      64 speak ;  : HIGH.BEEP  65 speak ;  : LOW.BEEP  66 speak ;  
+: 20DELAY   67 speak ;  : 40DELAY   68 speak ;  : 80DELAY   69 speak ;  
+: 160DELAY  70 speak ;  : 320DELAY   71 speak ;  : CENTI     72 speak ;  
+: CHECK     73 speak ;  : COMMA      74 speak ;  : CONTROL   75 speak ;      
+: DANGER    76 speak ;  : DEGREE     77 speak ;  : DOLLAR    78 speak ;     
+: DOWN      79 speak ;  : EQUAL      80 speak ;  : ERROR     81 speak ;
+: FEET      82 speak ;  : FLOW       83 speak ;  : FUEL      84 speak ;  
+: GALLON    85 speak ;  : GO         86 speak ;  : GRAM      87 speak ;  
+: GREAT     88 speak ;  : GREATER    89 speak ;  : HAVE      90 speak ;       
+: HIGH      91 speak ;  : HIGHER     92 speak ;  : HOUR      93 speak ;
+: IN        94 speak ;  : INCHES     95 speak ;  : IS        96 speak ;        
+     
+
+( digitalker  vocabulary cont. )                               
+: IT        97 speak ;  : KILO       98 speak ;  : LEFT      99 speak ;    
+: LESS     100 speak ;  : LESSER    101 speak ;  : LIMIT    102 speak ;     
+: LOW      103 speak ;  : LOWER     104 speak ;  : MARK     105 speak ; 
+: METER    106 speak ;  : MILE      107 speak ;  : MILLI    108 speak ;      
+: MINUS    109 speak ;  : MINUTE    110 speak ;  : NEAR     111 speak ;     
+: NUMBER   112 speak ;  : OF        113 speak ;  : OFF      114 speak ;
+: ON       115 speak ;  : OUT       116 speak ;  : OVER     117 speak ;   
+: ()       118 speak ;  : PERCENT   119 speak ;                  
+: PLEASE   120 speak ;  : PLUS      121 speak ;  : POINT    122 speak ;     
+: POUND    123 speak ;  : PULSES    124 speak ;  : RATE     125 speak ;     
+: RE       126 speak ;  : READY     127 speak ;  : RIGHT    128 speak ; 
+: SS       129 speak ;  : SECOND    130 speak ;  : SET      131 speak ; 
+: SPACE    132 speak ;  : SPEED     133 speak ;  : STAR     134 speak ;      
+: START    135 speak ;  : STOP      136 speak ;  : THAN     137 speak ;       
+: THE      138 speak ;  : TIME      139 speak ;  : TRY      140 speak ;        
+  
+
+ ( digitalker  vocab. cont. )                                   
+: UP       141 speak ;  : VOLT      142 speak ;  : WEIGHT   143 speak ;
+: ZERO      31 speak ;  : HUNDRED    28 speak ;  : THOUSAND  29 speak ;    
+: O         46 speak ;   
+                             
+
+ ( digitalker  numbers )   
+
+\ numbers for digitalker use the lower code#s for 1 to 19
+\ zero, tens, hundreds, and thousands are special cases    
+                             
+: BELOW.TWENTY  ( n -- | speaks the positive number below 20 )
+                (        handles teens and zero )
+    ?dup  if  speak  else  zero then ; 
+               
+: TENS  ( n -- n1  | speaks the positive number in increments of 10 )
+        (       'twenty', 'thirty', etc. and leaves the remainder n1 )
+    10 /mod  2 -  20 +  speak ; 
+                                
+: TENS.RANGE  (  n   -- | speaks the positive number between 99 and 0)
+    dup 19 > 
+        if tens dup 0=  
+            if drop exit then      \ exit if exactly a tens increment    
+        then   
+      below.twenty ; 
+                                        
+: HUNDREDS.RANGE  ( n -- | speaks the positive number between 999 and 0)
+    dup 99 > 
+        if 100 /mod tens.range hundred   dup 0= 
+            if drop exit then    \ exit if exactly a hundreds increment  
+        then     tens.range ;  
+               
+: THOUSANDS.RANGE   ( n --  | speaks the positive number )
+                    (        between 999999 and 0)
+        dup 999 > 
+            if 1000 /mod  hundreds.range         
+              thousand dup 0= 
+                if drop exit then    \ exit if exactly a thousands increment  
+            then     hundreds.range ;  
+  
+: SPEAK#   ( n -- | speaks the number )
+        dup 0<    
+             if  minus abs then   \ say 'minus' then covert to absolute
+                thousands.range ; 
+
+
+FORTH     FORTH DEFINITIONS                                         
+
+
+\ examples of usage
+
+TALK   \ place in talk vocabulary
+
+: RATE.PULSES   ( #pulses -- )  ( 'rate of' n 'pulses' )
+        rate of   speak#   pulses ; 
+                      
+: STOP.INCHES  ( inches\fraction -- ) 
+               ( 'stop at' n 'point' n1 'inches please')
+     swap    stop at   speak#  point   speak# inches please ;  
+                                                                
+FORTH   \ return to Forth vocabulary                                           
+                     
+
+                                                                
+
+
+

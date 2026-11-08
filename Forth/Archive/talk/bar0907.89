@@ -1,0 +1,222 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 09/07/89   Time: 22:12EDT
+
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[Dave] DHWEINSTEIN]
+     
+    Items discussed: Question of nite'Do Usenet feeds enhance ForthNet',Still
+    no ACM newsletter for some, TCJ #39/40,1 Oct=SIGForth abstracts deadline,
+    SIGForth submissions address,Phil Koopman conference 14 Sept,real-time
+    programming,sorts,X3/J14 nearing beta,algorithm gotchas.
+Minutes:
+<NMORGENSTERN> is here.
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Hullo
+<[Dave] DHWEINSTEIN> Answer: Yes. Of course it is.
+<[Gary] GARY-S> it is a GOOD evening Mr. Dave
+<[Len] NMORGENSTERN> What is the question?
+<[Dave] DHWEINSTEIN> Yep. This has been a very good week, for that matter.
+<[Gary] GARY-S> Are the interests of ForthNet served by the addition of Usenet 
+feeds
+<[Len] NMORGENSTERN> Tell us! It's good to hear that someone is doing well!
+<[Dave] DHWEINSTEIN> I think so.
+<[Dave] DHWEINSTEIN> Got a raise!
+<[Gary] GARY-S> That is the question, Len
+<[Len] NMORGENSTERN> 2*0=0
+<[Dave] DHWEINSTEIN> Len: That is *real* close to the state of affairs.
+<[Gary] GARY-S> Hmmm, I'm in compatible company
+<[Len] NMORGENSTERN> "Your time is your own. You can come any time you want
+<[Len] NMORGENSTERN> before 8 and leave any time you want after 5"
+<[Gary] GARY-S> Like nudists - no status symbols to worry about
+<[Dave] DHWEINSTEIN> Actually I've found nude beaches to be much more calm and 
+relaxing than textile beaches.
+<[Gary] GARY-S> In Tejas ?
+<[Dave] DHWEINSTEIN> Yep. I live up by the Highland Lakes.
+<[Dave] DHWEINSTEIN> All sorts of places...some clothing optional...some which 
+are "not officially" clothing optional.
+<[Len] NMORGENSTERN> I didn't have any hunting clothes, so I had to go hunting 
+bare
+<[Dave] DHWEINSTEIN> Len: You know my boss!
+<[Gary] GARY-S> What is the current discussion this Sunday, Len
+<[Len] NMORGENSTERN> I have committed myself to giving a talk at "Forth Day" 
+Nov. 4
+<[Len] NMORGENSTERN> (Takes the place of annual convention)
+<[Len] NMORGENSTERN> on converting from Pascal to Forth
+<[Gary] GARY-S> expound, please
+<[Len] NMORGENSTERN> I want lots of jokes. If you can't inform them, at least 
+leave them
+<[Len] NMORGENSTERN> a joke to remember!
+<[Len] NMORGENSTERN> So I want some computer aphorisms, experiences, etc, and 
+jokes too
+<[Len] NMORGENSTERN> to use in the talk.
+<[Gary] GARY-S> Dave - latest TCJ project - this is free ad time
+<[Dave] DHWEINSTEIN> New one should be arriving Any Day Now.
+<[Len] NMORGENSTERN> I got 39, I believe. It did not have your coluon.
+<[Dave] DHWEINSTEIN> Next one is an overview of Object Oriented Forth (the 
+suite will be freely available before it goes to print)
+<[Dave] DHWEINSTEIN> #39 got pushed back to #40. #40 has two columns in it.
+<[Len] NMORGENSTERN> (pant pant -- eagerly awaiting copy)
+<[Gary] GARY-S> I STILL Do not have the ACM Sig-Forth newsletter after promises 
+twice from ACM !!!!!!!!!
+<[Dave] DHWEINSTEIN> The one I am working on now will probably end up as an 
+overview of the ANS Basis.
+<[Dave] DHWEINSTEIN> Gary: Call them and say nasty things. :-)
+<[Gary] GARY-S> I have
+<[Gary] GARY-S> I even have an official 'we will do better' letter, but no 
+newsletter
+<[Dave] DHWEINSTEIN> (Of course I have to order my copy of the Basis and 
+download all of Cat 10 first but...)
+<[Len] NMORGENSTERN> Gary I have 2 copies, will send you 1
+<[Gary] GARY-S> That's nice Len, and I refuse to refuse, BUT it won't resolve 
+the real problem
+<[Dave] DHWEINSTEIN> After that...I dunno. Possibly some applications (maybe 
+neural nets if I can find my sources again).
+<[Len] NMORGENSTERN> Will send it. I think I got 2nd for participating at Austin
+<[Gary] GARY-S> You better have LOTS of disk space and time if you plan to grab 
+all of Cat 10
+<[Dave] DHWEINSTEIN> I'll be getting it in chunks.
+<[Dave] DHWEINSTEIN> (It's not so much the disk space as the bill :-) )
+<[Gary] GARY-S> Thanks, Len... I do appreciate
+<[Dave] DHWEINSTEIN> Reminder: Deadline for abstracts for SIGForth '90 is Oct 1 
+1989!
+<[Dave] DHWEINSTEIN> Get those papers in.
+<[Gary] GARY-S> sent to who/where
+<[Len] NMORGENSTERN> I will attend, d.v.
+<[Dave] DHWEINSTEIN> Howard Harkness
+<[Dave] DHWEINSTEIN> 3316 Vine Ridge
+<[Dave] DHWEINSTEIN> Bedford, TExas 76021
+<[Gary] GARY-S> And while we are posting notices : next week - here on the 
+GEnie Forth RoundTable, Phil Koopman will make us all stack architecture wi
+zzards. 9:30 Eastern in room 2, Thursday 14 Sept
+<[Dave] DHWEINSTEIN> Looking forward to it.
+<[Gary] GARY-S> Phil promised a lot of software goodies, since the audience 
+will have more non-hardware types
+<[Dave] DHWEINSTEIN> But will they be handing out beta copies of the 4001 for 
+all attendees? :-)
+<[Len] NMORGENSTERN> What is 4001?
+<[Gary] GARY-S> sure - just reach in your terminal and take yours now
+<[Gary] GARY-S> 32 bit Harris RTX
+<[Len] NMORGENSTERN> Thanx.
+<[Dave] DHWEINSTEIN> (cuts hands on shards of monitor screen)
+<[Gary] GARY-S> Put one back
+<[Dave] DHWEINSTEIN> Heh.
+<[Len] NMORGENSTERN> Maalzel's machine: a chess playing automaton of 100 years 
+ago or so
+<[Len] NMORGENSTERN> had lost both legs & could fit inside.
+<[Len] NMORGENSTERN> It had a real man inside, a wounded Polish officer who
+<[Gary] GARY-S> Phil does not agree with all of the J-H APL approach - could 
+make for interesting discussion if someone pushes right buttons <hint-hin
+t>
+<[Dave] DHWEINSTEIN> Len: Sort of like the ultimate expert system shell. Passes 
+the input across a link to a guru, and passes the response back to the
+ user. :-)
+<[Gary] GARY-S> The only representative I will speak to is Jan Ludaswezech 
+(re-incarnate, of course)
+<[Len] NMORGENSTERN> is ther a good source to learn the rudiments of real-time
+<[Len] NMORGENSTERN> programming? About 2/3 of our talks here are on hardware
+<[Len] NMORGENSTERN> and I don't even know what they are talking ABOUT, much
+<[Len] NMORGENSTERN> less what they are saying.
+<[Gary] GARY-S> Len - that would be an excellent question for Phil
+<[Len] NMORGENSTERN> I will ask it.
+<[Gary] GARY-S> good
+<[Gary] GARY-S> He sure should know resources
+<[Gary] GARY-S> Happened to recall a computer joke of sorts, Len
+<[Len] NMORGENSTERN> ga
+<[Len] NMORGENSTERN> Isn't the bubble sort the joke of sorts?
+<[Dave] DHWEINSTEIN> (wince)
+<[Gary] GARY-S> This is in reference to AT&T's (lack) of marketing ability with 
+some pretty darn good machines...
+<[Gary] GARY-S> If they were Kentucky Fried Chicken, they would call themselves.
+..
+<[Gary] GARY-S> 'HOT DEAD CHICKEN'
+<[Dave] DHWEINSTEIN> Or even ''HOT DEAD FOWL''
+<[Len] NMORGENSTERN> Right.
+<[Dave] DHWEINSTEIN> (''Hot, Dead, Fowl''?)
+<[Gary] GARY-S> I see a lot of talk about doing divides with shifts...
+<[Gary] GARY-S> I wonder how many have discovered that can also result in 
+surprise sign changes.
+<[Gary] GARY-S> :-)
+<[Dave] DHWEINSTEIN> Heheheh. Sure can.
+<[Len] NMORGENSTERN> Either a bad algorithm, or a limited one used where it 
+should
+<[Dave] DHWEINSTEIN> (Unless you roll it off and out and ignore what you slough 
+off)
+<[Len] NMORGENSTERN> not have been used.
+<[Gary] GARY-S> It's easy to forget bullet-proofing till that first wing-shot, 
+Len :-)
+<[Len] NMORGENSTERN> An error check is never valid unless you can test every 
+possible
+<[Len] NMORGENSTERN> case. Sometimes mathematical proofs will do that for you, 
+but often
+<[Len] NMORGENSTERN> you have to rely of "thorough" testing & hope.
+<[Dave] DHWEINSTEIN> An error check is never valid. :-)
+<[Len] NMORGENSTERN> rely on, that is
+<[Dave] DHWEINSTEIN> (Bugs strike a deal with the testing code and wait until 
+release)
+<[Gary] GARY-S> hahahaha
+<[Len] NMORGENSTERN> You have to visualize every possible situation
+<[Len] NMORGENSTERN> Sometimes it's hard to visualize the common situations
+<[Gary] GARY-S> I have had the unpleasant experience of having them hit months 
+after code has cooled and source buried in a corner
+<[Dave] DHWEINSTEIN> If ever a bug free program is run on a bug free operating 
+system on top of bug free hardware, the Universe as we know it will com
+e to an end. :-) (paraphrased from either the Tao or the Zen of Programming).
+<[Len] NMORGENSTERN> It never occurs to you that your program will be used in 
+that way.
+<[Dave] DHWEINSTEIN> Sort of like computer hardware. It runs on smoke. If you 
+let the smoke out. It sops running. :-)
+<[Dave] DHWEINSTEIN> +t
+<[Len] NMORGENSTERN> (Witness the first release of Microsoft Word)
+<[Len] NMORGENSTERN> For the Mac
+<[Dave] DHWEINSTEIN> Users will always do things that the programmer never 
+intended. That's why we have Beta testers.
+<[Gary] GARY-S> We sent a smoke re-injector as a tech-tip once and discovered 
+just how humorless corporate documentation centers can be
+<[Dave] DHWEINSTEIN> Hehehehehehehehehh.
+<[Dave] DHWEINSTEIN> (Has mental picture of an MIS chief trying to jump start 
+an ailing drive with a stogie)
+<[Gary] GARY-S> It wasn't a damn bit funny at review time
+<[Len] NMORGENSTERN> Calvin Trilling says that satire is difficult to write
+<[Len] NMORGENSTERN> because it is hard to imagine something so bizarre
+<[Len] NMORGENSTERN> that it won't come to pass.
+<[Dave] DHWEINSTEIN> I'll bet. Do ties cut off blood to the humor center of the 
+brain?
+<[Len] NMORGENSTERN> Tom Lehrer quit comedy. "In a world where Henry
+<[Gary] GARY-S> Forth stuff - did you review the minutes you re-packed len ?
+<[Len] NMORGENSTERN> Kissinger can get the Nobel Peace Prize, there is no room 
+for satire."
+<[Dave] DHWEINSTEIN> (Lehrer also quit comedy to avoid paying money to Werner 
+von Braun)
+<[Len] NMORGENSTERN> You mean, did I read them? Yes I did
+<[Gary] GARY-S> any comments
+<[Len] NMORGENSTERN> Not very informative. The BASIS document is the thing to 
+read.
+<[Gary] GARY-S> do you get the sense less and less is being accomplished ?
+<[Len] NMORGENSTERN> Yes, but they have gone through most of the issues
+<[Len] NMORGENSTERN> and resolved many of them.
+<[Len] NMORGENSTERN> They hope they are coming down to the wire
+<[Dave] DHWEINSTEIN> Ah well...I'm going to move on. See y'all later.
+<[Gary] GARY-S> Oh - I agree, My point is, it seems time for a test release is 
+drawing near
+<[Len] NMORGENSTERN> They were talking about 2 more meetings, Washington in Oct,
+ and ??? in Jan
+<[Len] NMORGENSTERN> Then the draft goes out. It may have to be redone.
+<[Len] NMORGENSTERN> if there are too many criticisms.
+<[Len] NMORGENSTERN> (That happened to Fortran, according to Wil Baden)
+<[Gary] GARY-S> C and Fortran sure were, why should we be the exception ?
+<[Dave] DHWEINSTEIN> has left.
+<[Len] NMORGENSTERN> We are Less likely to be than they were.
+<[Gary] GARY-S> Sure has been more opportunity for public input
+<[Gary] GARY-S> Disappointing response to that opportunity in my view
+<[Gary] GARY-S> Len - just us, wanna close shop for the nite ?
+<[Len] NMORGENSTERN> Yes,
+<[Gary] GARY-S> My sincere wishes for good news.
+<[Gary] GARY-S> g'nite
+=== End of Steno notes. ===
+
+

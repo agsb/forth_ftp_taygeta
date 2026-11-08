@@ -1,0 +1,160 @@
+
+    -----# Participants #-----
+
+<GARY-S> 
+<[Dave] OLORIN> 
+
+    -----# Room 1 #-----
+
+<GARY-S>	** is here.
+<OLORIN>	** is here.
+<OLORIN>	Evening, folks Hiya, Gary.
+<[Dave] OLORIN> ** was <OLORIN>.
+<GARY-S>	Hey Dave - howz it going in snowy Denver
+<[Dave] OLORIN> Snowy? Not really snowy any more. Mostly melted. Denver
+		doesn't keep snow for long (and my particular bailiwick only
+		did get around 5 inches)
+<GARY-S>	Not bad then
+<[Dave] OLORIN> Eastern Metro Area got up towards 2 feet... But then, I don't
+		live there. :-) Did look impressive though. :-)
+<GARY-S>	You are aware comment on dpANS closes next month
+<[Dave] OLORIN> (nod) Gary, I haven't written any Forth code in almost two
+		years. I don't really feel competent to comment on the dpANS
+		proposals.
+<GARY-S>	just pointing out _stuff_
+<[Dave] OLORIN> I just don't have the time to go over all the arguments (I
+		have one deadline just finished and a truly evil deadline
+		coming up mid-end of next week). (grin) Yeah. I figure any
+		comments I might make are as likely to cause harm or confusion
+		as to help any. Besides, if I do go back to forth in a few
+		years, I'll be able to whine and complain. :-)
+<GARY-S>	This may interest you, considering the machine you bought at
+		an auction...
+<[Dave] OLORIN> Oh?
+<GARY-S>	Do you get IBM System Journal?
+<[Dave] OLORIN> Nope.
+<GARY-S>	They are giving away copies of their pc mountable APL
+<[Dave] OLORIN> Hmmmmnnnn.
+<GARY-S>	APL2 is the handle and these are "educational demo copies"
+<[Dave] OLORIN> Interesting. I haven't even really used the 5110 much. Well,
+		the disk unit makes a nice computer table, and the 5110 is
+		under the couch, oh yes, and a few of the 8" disk boxes make
+		handy stuff containers. :-) But it is a neat toy. "Why mah
+		genuwine Ah Bee Emm cost more 'n 15 thousand dollars new"
+<GARY-S>	Does the 5110 parse right to left?
+<[Dave] OLORIN> (Saw one person in the Want ads selling a Tandy 6000 system at
+		a "sacrifice" of 7,500 on the grounds it cost 25+ new) Don't
+		know. I resisted the urge to call and laugh. :-)
+<GARY-S>	Interesting conversation piece I guess
+<[Dave] OLORIN> (yep) Once we get bigger space, it'll be up and running. PC,
+		5110, Altair...
+<GARY-S>	Are you even associated with ACM SigForth any more ?
+<[Dave] OLORIN> Don't think so. I never did renew my ACM membership, so I
+		don't think I am.
+<GARY-S>	Hmmm - I just got their newsletter today. Thae are calling for
+		papers The '92 ACM SigForth bash is in Kansas City....
+<[Dave] OLORIN> Kansas or Missouri?
+<GARY-S>	guest speakers include Chuck Moore, Mitch Bradley, Richard
+		Haskell, Larry Forsley, Paul Snow... Missouri
+<[Dave] OLORIN> I noticed that there are Referreed Papers now.
+<GARY-S>	Lookks more serious than the San Antonio one
+<[Dave] OLORIN> Didn't make it to the San Antonio one.
+<GARY-S>	They will have tutorials - hands on - with ShBoom and Sun:
+		Open Boot That's March 5-7
+<[Dave] OLORIN> Nice. Did they get the price on that ShBoom single board
+		(credit card sized) at the $300 single unit price they'd
+		talked about?
+<GARY-S>	Next week here - Greg Bailey is going to speak on the merits
+		of dpANS Forth
+<[Dave] OLORIN> (nod) I'll try to be here. Don't know for sure though.
+		Deadline troubles.
+<GARY-S>	In a message I ported from LMI, Ray Duncan already has
+		declined to follow the Sytandard if adopted
+<[Dave] OLORIN> (*Ouch*) Why!!?? That will either split the community, destroy
+		the standard, or destroy LMI (or all of the above)
+<GARY-S>	Randy Dumse has a new NMI board out - don't know a damn thing
+		about it Ray says he can't destroy his customer's code base so
+		he won't
+<[Dave] OLORIN> (sigh) Two track release? Alternative vocabularies? Besides,
+		if Customer's are using older versions to keep up with their
+		code base, that's fine. If they want to write new code, it'll
+		be easier to get programmers who know ANS FORTH (assuming the
+		standard and the language survive for a few years)
+<GARY-S>	Wil Baden, for one has said the committee should have canned
+		LMI's urForth. Who knows.
+<[Dave] OLORIN> I can sympathize with code base problems. This deadline hell
+		I'm in involves porting a beta product to the newest release
+		of the language.. which is decidedly not backwards compatible
+		in key areas. It's a headache... but its worth it.
+<GARY-S>	Geeze Obviously, the standard has some strong - and vocal -
+		proponents
+<[Dave] OLORIN> In essence, some functionality left, lots more was added, and
+		the Windows classes are *NOT* backwards compatible. It is not
+		a pleasant experience (and one, which, unfortunately, because
+		of that, I've been sliding on while dealing with other
+		outstanding deadlines, leaving me with a caffeine IV and a lot
+		of work... :-) )
+<GARY-S>	I can sympathize - I've had those marathon work weeks - that
+		become endless
+<[Dave] OLORIN> The worth part is, in two weeks there is a major conference,
+		and the clients have to be happy and have it enough in advance
+		to have worked with it. Worth should be worst.
+<GARY-S>	Who set that up - your marketing people?
+<[Dave] OLORIN> I can't slide this one past Friday the latest. Ummm.. no...
+		actually... I did. Just had more things added to my plate in
+		the intervening time. Which took the time I had.
+<GARY-S>	Isn't that standard proceedure?
+<[Dave] OLORIN> Yeah. Always is.
+<GARY-S>	You pretty much totally doing windows now?
+<[Dave] OLORIN> No. Windows code, and lots and lots of mainframe code.
+<GARY-S>	in assembler
+<[Dave] OLORIN> Once I get the 1.30 Beta Release out I switch to another
+		project entirely. Nahhh, a language called TAL (Tandem
+		Applications Language)
+<GARY-S>	I've heard of it, but don't know squat about it. I have bank
+		customers, many of whom use Tandem because of their fault
+		tolerance
+<[Dave] OLORIN> That's why we use it. We have the largest network of Public
+		Access Catalogs for libraries in the world. And two of the
+		Mainframes and the core of the network get moved to a
+		completely new site this weekend. (Entire office is moving...
+		makes me very glad I have no operations responsibilities)
+<GARY-S>	ahh - same search and database proceedures Moves seldom go
+		anywhere near like plan
+<[Dave] OLORIN> Heh. Of course not. Plans call for no more than 24 hours of
+		downtime. I'll believe that when I see it.
+<GARY-S>	I hope you have someplace off site you can work
+<[Dave] OLORIN> Heh. Here. I've been working from home for 2+ weeks now. Keeps
+		me out of the way (and gives me a 386 to play with)
+<GARY-S>	Wanna do a private pool on actual down time
+<[Dave] OLORIN> Heh. (grin) 48 hours is my guess.
+<GARY-S>	That would have been mine, too, so I'll say 44 just for the
+		sake of the bet
+<[Dave] OLORIN> Hmmmnnnnnnnnn... Kathie and I will be headed Austin way in
+		February. If we can stop through Little Rock on the way... Why
+		don't we get together for lunch or a few drinks.
+<GARY-S>	If you go to any other auctions and you see them dumping Sun
+		3's cheap call me collect <grin>
+<[Dave] OLORIN> Heh. I will.
+<GARY-S>	Who the hack is Kathie?
+<[Dave] OLORIN> Fiance. (grin)
+<GARY-S>	really - been keeping that quiet enough. Congrats
+<[Dave] OLORIN> Thanks!
+<GARY-S>	Please do call. If I'm here I'd love to see you.
+<[Dave] OLORIN> Great! You take care. I need to head off. See you next Tuesday
+		or Thursday!
+<GARY-S>	I'd offer a bed but my Mother-in-law is convalescing in it -
+		broken hip
+<[Dave] OLORIN> Ouch. No problem. We're going to try to make the trip to
+		Austin in one leg.
+<GARY-S>	Do call, regardless!!!
+<[Dave] OLORIN> Give my best to everyone!
+<[Dave] OLORIN> ** has left.
+<GARY-S>	g'nite
+
+ | 
+ | This listing was generated by LRTC Version 1.00
+ | (C)opyright by Hartmut W. Malzahn, 1991. All rights reserved.
+ | 
+
+

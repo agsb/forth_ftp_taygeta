@@ -1,0 +1,202 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 04/27/89   Time: 22:40EDT
+
+Attendees:
+[[Gary] GARY-S]
+[[Milton] M.FABERT]
+[[W.WEDMORE]
+[[Jack of BCIT] J.BROWN11]
+[[jax] FIGCHAPTERS]
+[[len] NMORGENSTERN]
+[[Dave] DHWEINSTEIN]
+[[Kevin] APPERT]
+  
+Items discussed include: Pascal style records in Forth w/ variants, Parallel 
+                         processing and multitasking with RTX's, Cannon Cat,
+                         JFAR still NOT delivered (Larry - get real !),Jobs -
+                         Betts researching in Forth in Colorado, NeXt UNIX/
+                         Sun OS, columns and rewrites, newcommer looking for
+                         286 goodies, Tutorial restart, ForthNet expands,
+                         need arrises to coordinate via SysOp assn,kudos to
+                         Shifrin,data directed multi processing
+Minutes:
+<[Gary] GARY-S>
+<M.FABERT> is here.
+<J.BROWN11> is here.
+<[Gary] GARY-S> welcome jack
+<M.FABERT> Is that Jerry Brown!
+<J.BROWN11> HI GARY
+<[Gary] GARY-S> Better - Jack of BCIT ??
+<[Gary] GARY-S> Think you're up to interlacing yet, Jack ?
+<[Jack of BCIT] J.BROWN11> Yes it is I
+<[Jack of BCIT] J.BROWN11> Interlacing?
+<[Gary] GARY-S> Milt is involved in Forth on a more practical level
+<[Milton] M.FABERT> oh oh, gotta go, kid just woke up.
+<[Milton] M.FABERT> has left.
+<[Gary] GARY-S> Just us jack - so I will explain
+<[Gary] GARY-S> Interlacing is the 'everyone typing at once' that drove you 
+<[Jack of BCIT] J.BROWN11> so
+<DHWEINSTEIN> is here.
+<[Gary] GARY-S> The reason we do that on informal evenings is to permit as much 
+messaging...
+<[Gary] GARY-S> as possible, but admittedly it is tough to get use to
+<[Gary] GARY-S> Dave - next column is ????
+<[Jack of BCIT] J.BROWN11> sorry, I'm using Qmodem and was trying to change my 
+settings.
+<[Dave] DHWEINSTEIN> Gary. Second article is an implementation of pascal style 
+records...right down to allowing easy variant records.
+<[Gary] GARY-S> ooo, nice
+<[Dave] DHWEINSTEIN> And its 80% done. I'm going to not have to rush at a dead 
+line. The r=writing is also *much* better.
+<[Gary] GARY-S> did you get the last one in on time
+<[Dave] DHWEINSTEIN> Yep. It got in on time. I'm not all the fond of the 
+writing. It felt rushed and hodge podge. But its getting better.
+<M.FABERT> is here.
+<[Gary] GARY-S> Trust me - there is always something you wish you could rewrite
+<[Dave] DHWEINSTEIN> Yep.
+<[Gary] GARY-S> how's the kid milt ?
+<[Jack of BCIT] J.BROWN11> I am going for supper, will check back in 30 min or 
+so.
+<[Dave] DHWEINSTEIN> Cannon Cat is Forth right?
+<[Jack of BCIT] J.BROWN11> has left.
+<[milton] M.FABERT> she has more ways of putting of going to sleep than i ....
+<[milton] M.FABERT> have of putting off documenting.
+<[Gary] GARY-S> Milt - I was trying to get you to introduce your activities to 
+Jack
+<[Gary] GARY-S> want to now ?
+<[Gary] GARY-S> forget it - Jack is gone
+<[milton] M.FABERT> Among others things I'm using the Harris RTx for a NASA 
+project
+<[milton] M.FABERT> too late.
+<[Gary] GARY-S> sorry - I enjoy it myself
+<[Dave] DHWEINSTEIN> Gary...is the Cat done in Forth? If so, how do you get to 
+the Forth layer?
+<[Dave] DHWEINSTEIN> Milt...any forth on Magellan?
+<[milton] M.FABERT> I have know idea.
+<[Gary] GARY-S> sure would be a natural
+<[milton] M.FABERT> but Johns Hopkins U. has been
+<[Gary] GARY-S> isn't that what the APL FRISC chip was developed for ?
+<[milton] M.FABERT> using forth for NASA projects.
+<[Gary] GARY-S> great minds, milt
+<[Gary] GARY-S> :-)
+<[Dave] DHWEINSTEIN> Oh gary. The implementation also allows nested variant 
+records.
+<[Gary] GARY-S> Do you deal with John hayes or Marty Fraeman ?
+<[Gary] GARY-S> what was your question on 'CAT' about Dave
+<[Dave] DHWEINSTEIN> Is it done in Forth. If so, can you get access to the 
+Forth layer. If so, how?
+<[Dave] DHWEINSTEIN> The Cannon Cat. I thought its software was Forth.
+<[Gary] GARY-S> It is
+<[Dave] DHWEINSTEIN> Can you get access to the Forth layer, or is it a sealed 
+system?
+<FIGCHAPTERS> is here.
+<[Dave] DHWEINSTEIN> Ho Jax
+<[Gary] GARY-S> The last I heard the inner interpreter was hidden and any 
+evidence of a Forth heritage was also
+<[jax] FIGCHAPTERS> hi all
+<[milton] M.FABERT> EXcuse my ignorance,  what is the Cannon CAt?
+<[Dave] DHWEINSTEIN> Oh well. I saw one used today, and if I could have used 
+Forth with it.
+<[jax] FIGCHAPTERS> dedicated word processor
+<[jax] FIGCHAPTERS> cheap, programmed in Forth.
+<[milton] M.FABERT> oh
+<[Dave] DHWEINSTEIN> A vertical system. Essenstially a dedicated word processor 
+with telcom and spreadsheet capabilities.
+<[Dave] DHWEINSTEIN> But not Forth programmable apparently.
+<[jax] FIGCHAPTERS> SEAL
+<[Dave] DHWEINSTEIN> (So whats it good for then)
+<[Gary] GARY-S> like I said, Forth is hidden from view,though
+<[Dave] DHWEINSTEIN> They could have at least left a backdoor for us.
+<[jax] FIGCHAPTERS> topic for tonite was what to do to encourage people to 
+participate?
+<[Dave] DHWEINSTEIN> Free online time?
+<[jax] FIGCHAPTERS> services on line.
+<[Gary] GARY-S> Just a reminder VP-Planner+ does not shun their Forth ancestory 
+and they (the craetors) will be here May 11 - MARK YOUR CALENDARS !!!!
+<[jax] FIGCHAPTERS> ANYBODY GET JFAR V,ii YET ??????????????????????????????????
+??????????
+<[Gary] GARY-S> Hell NO !
+<[jax] FIGCHAPTERS> Somebody posted on Usenet ...
+<[Dave] DHWEINSTEIN> JFAR V, ii. I saw that in February.
+<[jax] FIGCHAPTERS> asking for Larry's address.
+<[jax] FIGCHAPTERS> Ok, D.W., where is it?
+<[Dave] DHWEINSTEIN> Larry had bunches. See what happens when you don't go to 
+conferences. :-)
+<[jax] FIGCHAPTERS> I WENT to a conference. in 1987 !!! paid my subscription 
+there.
+<[jax] FIGCHAPTERS> FORSLEY I WANT MY DAMN MAGAZINE.
+<[Dave] DHWEINSTEIN> Well you didn't go to the right ones. :-). I don't know. 
+They had just come back from the printers and "were going to be right in
+ the mail"
+<[jax] FIGCHAPTERS> ( have i expressed myself clearly).
+<[Gary] GARY-S> Can this not be brought up at the FIG officer's meeting ?
+<[jax] FIGCHAPTERS> Why?
+<[jax] FIGCHAPTERS> What does FIG have to do with JFAR?
+<[milton] M.FABERT> Whats the theme this issue in JFAR?
+<[Dave] DHWEINSTEIN> I *feel* like an eclectic hacker tonite. Fastfood wine and 
+fresh fruit.
+<[Dave] DHWEINSTEIN> Late.
+<[jax] FIGCHAPTERS> probably "desktop publishing in Forth" >>> :-)
+<[Gary] GARY-S> I realize they have zero control, but they might carry more 
+clout than my bitching obviously has NOT
+<[jax] FIGCHAPTERS> FIG has no business bitching JFAR.
+<[jax] FIGCHAPTERS> But the SUBSCRIBERS do.
+<[jax] FIGCHAPTERS> bitch bitch bitch!
+<[Gary] GARY-S> What is Betts up to - do you know, Jax ?
+<[jax] FIGCHAPTERS> Yes.
+<[Gary] GARY-S> so tell
+<[jax] FIGCHAPTERS> no tell.
+<[jax] FIGCHAPTERS> go work for him and find out.
+<[milton] M.FABERT> Maybe no one is applying much research to forth, jax.
+<[jax] FIGCHAPTERS> right, uncle milty!
+<[jax] FIGCHAPTERS> anyway ..
+<[jax] FIGCHAPTERS> he has announced the contents of V,ii and V,iii ...
+<[Dave] DHWEINSTEIN> Hey...I may get a new "primary" job soon.
+<[Dave] DHWEINSTEIN> Still Unix though.
+<[jax] FIGCHAPTERS> the sumbeech just wont cough up for postage!
+<[Gary] GARY-S> doin what dave
+<[jax] FIGCHAPTERS> I BUHLEEV they are all printed.
+<[milton] M.FABERT> Larry is afraid he'll lose his job if cold fusion works.
+<[Dave] DHWEINSTEIN> There is a job opening in Austin for a NeXT administrator 
+on a mid-sized NeXT network.
+<[milton] M.FABERT> so he's saving stamps.
+<[jax] FIGCHAPTERS> If cold fusion works, larry must have fused to his chair.
+<[milton] M.FABERT> what was wrong with the previous administrator?
+<[Dave] DHWEINSTEIN> Nothing. They haven't gotten the cubes yet.
+<[Gary] GARY-S> Dave - that could be a VERY interesting job - you should jump 
+on it if only for the experience
+<[Dave] DHWEINSTEIN> New post. I'm going to give it a shot.
+<[Dave] DHWEINSTEIN> The problem is that competition will be fierce. Ah well, I 
+can but try.
+<[jax] FIGCHAPTERS> good luck DHW
+<[Dave] DHWEINSTEIN> I've played with the NeXT. It is a gorgeous machine.
+<[Dave] DHWEINSTEIN> Thanks Jax.
+<[jax] FIGCHAPTERS> You c-programming traitorous wretch! :-)
+<[Dave] DHWEINSTEIN> Hehehehhehehehehehehehehehehehh. I keep my Forth 
+credentials on my brag sheet.
+<[Dave] DHWEINSTEIN> Alongside my Unix/C credentials.
+<[jax] FIGCHAPTERS> bring up Forth on NExT
+<[jax] FIGCHAPTERS> jax is angling towards the SC32.
+<[Dave] DHWEINSTEIN> No sooner said than done. NeXTs will run Sun-3 binaries 
+out of the box, and Mitch Bradley has a 680x0 Forth for Unix. No problem.
+<[milton] M.FABERT> How bout a the SC32 as a coprocessor card on the NeXT?
+<[Dave] DHWEINSTEIN> Be interesting. Bet you'll see an i860 coprocessor first 
+though.
+<[jax] FIGCHAPTERS> HARRIS has been calling around asking people if they can 
+interview them about what they would wish to see in the 32-bit RTX
+<[Dave] DHWEINSTEIN> (yet another pretty technotoy)
+<[jax] FIGCHAPTERS> You bet!
+<[jax] FIGCHAPTERS> But RISC is obviously the wave of the Fyoocher, it fits 
+into parallel more efficiently.
+<[Gary] GARY-S> What is that crock on the Well about show me x number in use 
+before it's real ?
+<[jax] FIGCHAPTERS> The SC32 is not Harvard, but it is RISC.
+<[jax] FIGCHAPTERS> Like I said, gary, on the Well ...
+<[milton] M.FABERT> more support for parrallel on the 32 RTX would be 
+appreceated.
+<[jax] FIGCHAPTERS> If you say to me "C is better because more people use it" ..
+

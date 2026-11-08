@@ -1,0 +1,85 @@
+Hi forthians,
+
+Here is FROTH, an experimental work around the FORTH language. Even, you
+know already forth language, you should consider the manual which comes
+with the software. Many differences between FORTH and FORTH (some changes,
+new things).
+
+You will find the complete manual (about 120 pages) on disk, see the text
+file MANUAL.TXT (the manual is a document to be edited by MS-WinWord).
+
+FROTH is *not* a commercial product and not a shareware. FROTH is public
+domain (freeware), code and source. You can copy it, give it, distribute
+it as you want (BBS, CD, ...). If you are a Forth related organization,
+please, try to support the product instead of the author (installation
+problem, ...).
+
+You might understand that this is an involving product. You might ask
+to the author (by email) what is the last version number release.
+
+
+Here are the list of things not implemented in the current version
+------------------------------------------------------------------
+
+froth:
+- some graphics definitions
+- some strings definitions
+- serial definitions
+- Trace manager: messages browsing
+- struct ... endstruct
+- multiple active context vocabularies
+- Conditionnal compilation (ie: #if ... #else ... #endif)
+
+
+frosted (built-in editor):
+- all find/replace functions
+- macros
+- horizontal scrolling (author use 132x43 mode, so it's not urgent, sorry...)
+- split/join line (author use cut/copy/paste scrap...)
+- specify jokers (*?) into filenames to load (no browsing into files list)
+
+
+That's a lot of things which are not implemented... But, if I wait all things
+are made and bug free, you would not have this version.
+
+
+Do not forget to use in line help under froth interpret:
+        USE word
+
+and inside FROSTED, the built-in editor:
+        5 (numeric keyboard)
+gives you sone help for all available editor commands.
+
+
+The examples    (into the directory \FROTH|EXAMPLES)
+------------
+
+matches.fth     A sample game: 21 matches, the one which take the last loose.
+nim.fth         Another matches game.
+life.fth        Conway's game, in graphics mode (640 x 480), fast!
+rnd.fth         Test the random generator.
+threads.fth     Test the threads functionnality.
+gtest.fth       Test the dot/line/box graphics functions.
+hangman.fth     The popular hangman game.
+trace.fth       How to use the trace manager ?
+vocs.fth        About vocabularies (see manual/tutorial).
+threshol.fth    An arcade game (not endded).
+thr_thrl.fth
+thr_spru.fth
+
+
+Last thing.
+----------
+
+Call FROTH -?
+  or FROTH /?
+to have some informations about command line parameters.
+
+
+Have a nice trip inside forth language !
+
+[Oliver SINGLA]
+
+
+PS. Create \FROTH\TEMP directory, it's used by FROSTED if files
+    are swapped from buffers to disk.

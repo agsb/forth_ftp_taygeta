@@ -1,0 +1,262 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+  The question of the night, "There has been a lot of activity on ForthNet
+  regarding Object Oriented Programming/Object Oriented Forth. Do you have
+  an interest in these discussions ? Why ? Why not ?" occupied the brunt
+  of this FIGGY. Also discussed was Dick Miller's 'To dos or not to dos'
+  conference on 9/20/1990 and a possible BIG surprise at that time. Forth
+  vs C from the programmers' and managers' perspectives.
+
+Date: 09/13/90   Time: 22:27EDT
+Attendees:
+[GARY-S]
+[[Robert] R.BERKEY]
+[[Len] NMORGENSTERN]
+[[Larry] LDAWSON]
+
+Minutes:
+<R.BERKEY> is here.
+<NMORGENSTERN> is here.
+<[Robert] R.BERKEY> Lot's of activity on OOP to be sure, but the details
+<[Robert] R.BERKEY> escape me since I haven't used it.
+<[Len] NMORGENSTERN> I think that the problem with OOP is that
+<[Len] NMORGENSTERN> everyone is trying
+<[Len] NMORGENSTERN> to develop a complete system, ;with inheritannce
+<[Len] NMORGENSTERN> and all the goodies. If you are willing to put up with
+<[Len] NMORGENSTERN> limitations, OOP is easy to implement and can be very 
+useful
+<GARY-S> I posted a 'back to OOP basics' message last night that should hit 
+the Net tomorrow
+<[Robert] R.BERKEY> It seems to make for a good discussion topic.
+<GARY-S> Certainly a controversial one
+<GARY-S> Dave Weinstein is in the process of creating a very good OOF 
+implementation
+<[Robert] R.BERKEY> I've brought up a couple of OOP's in the past year, ...
+<[Robert] R.BERKEY> but I don't really understand them.
+<[Robert] R.BERKEY> They seem to be closely related to both the topics of 
+vocabularies,
+<[Robert] R.BERKEY> and custom compilers.
+<[Len] NMORGENSTERN> I know that vocabularies are juggled a lot
+<[Len] NMORGENSTERN> by some OOP systems, but do they have to be?
+<[Robert] R.BERKEY> One of the systems hand built a linked list of strings in 
+block buffers.
+<GARY-S> They aren't that different from standard heierarchial languages at 
+first blush, till inheritance and dynamic binding kick in
+<[Len] NMORGENSTERN> I have been toying with a system that is similar to George
+<[Len] NMORGENSTERN> Shaw's that uses multiple code fields. It isn't elegant
+<[Len] NMORGENSTERN> and powerful, but rather weak and dirty, but I can
+<[Len] NMORGENSTERN> see where it would be valuable, and cheap in memory
+<[Len] NMORGENSTERN> requirements and run-time speed.
+<[Robert] R.BERKEY> One of my bigger software agonies is global variables.
+<[Len] NMORGENSTERN> I propoesed a systme of local "things" in the Pascal sense
+<[Len] NMORGENSTERN> at Austin last year.
+<[Robert] R.BERKEY> Perhaps I could use OOP to bring those variables under 
+control.
+<[Len] NMORGENSTERN> I don't see how OOP would do that.
+<[Robert] R.BERKEY> I'm not sure.
+<[Len] NMORGENSTERN> What you have to do is gimmick the search order
+<[Len] NMORGENSTERN> so that a list of words is searched first. That lise
+<[Len] NMORGENSTERN> list is easily changeable.
+<[Len] NMORGENSTERN> My system suffered from the defect that it would not
+<[Len] NMORGENSTERN> handle recursion, but if you can live with that, it should 
+work/
+<[Robert] R.BERKEY> I wonder if efficiency is an OOP barrier.
+<[Robert] R.BERKEY> With dynamic binding there might be considerable overhead.
+<[Len] NMORGENSTERN> Agreed, but you should avoid dynamic binding unless 
+absolutely necessary
+<[Len] NMORGENSTERN> If it is necessary you have to put up with the late 
+binding.
+<[Len] NMORGENSTERN> you have to suffer the penalty.
+<[Len] NMORGENSTERN> (was that clear? I had a strong ale for dinner tonight(
+<[Robert] R.BERKEY> (no problem)
+<[Robert] R.BERKEY> One nuisance with variables is--is it a CVARIABLE or is it 
+a variable.
+<[Robert] R.BERKEY> Does this one need @ or C@ .
+<[Len] NMORGENSTERN> This is where OOP helps.
+<[Robert] R.BERKEY> If I understand OOP, I can say something like XVARX FETCH
+<[Robert] R.BERKEY> And XVARX takes care of using the right FETCH operation.
+<GARY-S> That seems right, Robert
+<[Len] NMORGENSTERN> In Forth it's easier to do it in reverse. You have 3 
+methods
+<[Len] NMORGENSTERN> for variables (more if you want to be fancy) TO ADR_OF and 
+@
+<[Len] NMORGENSTERN> Fetch is the default. Then you define FOO as essentially a 
+VALUE
+<[Len] NMORGENSTERN> FOO puts its contents on the stack
+<[Len] NMORGENSTERN> TO FOO stores the top of the stack in FOO
+<[Len] NMORGENSTERN> ADR_OF foo puts its address on the stack (like a variable)
+<[Len] NMORGENSTERN> You can have values 2values Cvalues, strings, FP all
+<[Len] NMORGENSTERN> using the same set of operators.
+<LDAWSON> is here.
+<GARY-S> Larry - you came in the middle of a good OOP overview
+<[Robert] R.BERKEY> That seems clear enough. ...
+<[Len] NMORGENSTERN> Not hard to set up, either.
+<[Robert] R.BERKEY> Now, how do I update the display of a variable on the 
+display whenever
+<[Robert] R.BERKEY> the variable changes?
+<[Len] NMORGENSTERN> Interesting question
+<[Robert] R.BERKEY> (That's reported to be in BBL, by the way.)
+<[Len] NMORGENSTERN> You would have to alter the action of TO to
+<[Len] NMORGENSTERN> do that. In prinicple it doesn't look hard.
+<[Len] NMORGENSTERN> (famous last words!)
+<[Len] NMORGENSTERN> "They couldn't hit an elephant at this distance"
+<[Len] NMORGENSTERN> Last words of General Sedgwick, Civil War
+<GARY-S> While we have this moment of silence ...
+<GARY-S> let me interject that next Thursday will be a guest conference...
+<GARY-S> with Dick Miller and a possible BIG surprise
+<GARY-S> .
+<GARY-S> Dick's topic will be 'To DOS or not to DOS"
+<[Len] NMORGENSTERN> DOS is like Mt. Everest. It's there.
+<[Len] NMORGENSTERN> And it won't go away.
+<GARY-S> You can run Forth native, though.
+<[Robert] R.BERKEY> MMS is a standalone system.
+<[Len] NMORGENSTERN> You can and you should when it is advantageous to do so.
+<[Len] NMORGENSTERN> How does MMS handle DOS files?
+<GARY-S> and it has been succesfully employed commercially
+<[Len] NMORGENSTERN> If I create a file with a spreadsheet program in DOS
+<[Robert] R.BERKEY> I guess that's a question for next week.
+<[Len] NMORGENSTERN> and want to analyze it in Forth, how would I do it in MMS
+<GARY-S> Gooood question for Richard :-) hold that thought
+<GARY-S> Ashton-Tate's RapidFile is a MMS product
+<[Len] NMORGENSTERN> I knew it was written in Forth, but I didn't know it was 
+MMS
+<GARY-S> It says so (in tiny letters) right on the box
+<[Len] NMORGENSTERN> Good advertising for the language.
+<GARY-S> Dick avows it took humongous arm-twisting to get the notice posted
+<[Len] NMORGENSTERN> I can believe it!
+<GARY-S> There _really_ is a Forth-a-phobia
+<[Len] NMORGENSTERN> People who use Forth sometimes are afraid to admit it.
+<[Len] NMORGENSTERN> There is a social stigma!
+<GARY-S> back to OOP/OOF --- Dave's OOF project is on hold again, as he moves 
+and takes on a new employer
+<[Len] NMORGENSTERN> Has Dave found a job yet. He had 2 prospects the last
+<[Len] NMORGENSTERN> time he was on.
+<GARY-S> yes
+<[Len] NMORGENSTERN> Where?
+<GARY-S> The one he wanted in Denver
+<[Len] NMORGENSTERN> Good. He will like it there, I think.
+<[Len] NMORGENSTERN> They say Forth programmers are "religious" about the 
+language
+<[Len] NMORGENSTERN> But C is worse. I have heard many tales about successful 
+Forth programs
+<[Len] NMORGENSTERN> that were rewritten in C because of the conviction that 
+anything
+<[Len] NMORGENSTERN> is better done in C!
+<[Robert] R.BERKEY> Then the move to C was successful in those cases. (?)
+<[Robert] R.BERKEY> I've heard some tales of where the conversion to C didn't 
+make it.
+<[Len] NMORGENSTERN> Sometimes. Whether succussful or not, it cost a lot of
+<[Len] NMORGENSTERN> time and effort!
+<GARY-S> The argument is that C is easier to maintain
+<[Len] NMORGENSTERN> That is probably true. C programmers are plentiful
+<GARY-S> This may be true in terms of availability of C programmers versus 
+Forth programmes
+<[Robert] R.BERKEY> That was what one company did intentionally.
+<[Robert] R.BERKEY> Code first in Forth, and then convert to C.
+<[Robert] R.BERKEY> The company president described Forth as the Marines, and C 
+as the Army.
+<GARY-S> I think everyone knows General Electric did with DELTA
+<[Len] NMORGENSTERN> Actually it makes sense.
+<[Len] NMORGENSTERN> What about Delta, Gary.
+<GARY-S> After LISP became too cumbersome it was codeed succesfully in Forth, 
+then recoded a few years later in C
+<GARY-S> There is also a fear factor at work here...
+<GARY-S> Managers say    1 - I can't read it...
+<GARY-S>             and 2 - If my Forth guru goes I am dead
+<GARY-S> comment ?
+<[Len] NMORGENSTERN> I have to sympathize. A manager can't manage unless he/she
+<[Len] NMORGENSTERN> has a good feel for what is going on. Experience has 
+taught them
+<[Len] NMORGENSTERN> how to evaluate the work of a C programmer, but they are 
+never
+<[Len] NMORGENSTERN> sure about a Forth programmer
+<GARY-S> There is also the "opinion' which many of us are guilty of 
+perpetuating - that Forth programmers are mavericks
+<[Robert] R.BERKEY> Some people would rather walk from coast to coast,
+<[Robert] R.BERKEY> and others would prefer to first build a bicycle, and then 
+ride across
+<[Robert] R.BERKEY> the country.
+<[Robert] R.BERKEY> It easy for managers to understand walking (!)
+<[Len] NMORGENSTERN> I think there is truth in it, but "maverick" is the
+<[Len] NMORGENSTERN> wrong word. You have to have a strong opinion of the worth
+<[Len] NMORGENSTERN> of what you are doing and of yourself to stick with
+<[Len] NMORGENSTERN> something as unpopular as Forth.
+<[Len] NMORGENSTERN> .
+<[Robert] R.BERKEY> And if their programmer building the bicycle doesn't get it 
+working,
+<[Robert] R.BERKEY> the walkers win the race.
+<[Len] NMORGENSTERN> A good thought.
+<[Robert] R.BERKEY> I think there's contention concerning creativity.
+<[Robert] R.BERKEY> Forth encourages creativity.
+<GARY-S> hmmm - all this bicycle analogy. How close do you live to Steve 
+Roberts ? :-)
+<[Robert] R.BERKEY> (naw, just off the cuff remarks!)
+<[Robert] R.BERKEY> (he's somewhere here in the Bay)
+<[Len] NMORGENSTERN> I'm not sure, Bob. Conventioonal languages are very
+<[Len] NMORGENSTERN> restrictive, and you have to use a lot of ingenuity to
+<[Len] NMORGENSTERN> get things done. Forth is freer and hence easier to use.
+<[Len] NMORGENSTERN> Of course, that very ease of programming leads
+<[Robert] R.BERKEY> Manager's like definable paths to experimental ones.
+<[Len] NMORGENSTERN> you to try things you might not think of in C.
+<[Robert] R.BERKEY> I can't really say since I haven't programmed in C.
+<GARY-S> Forth programmers tend to do things "their own way". C programmers are 
+more apt to follow general gudelines, or pull a library routine.
+<[Robert] R.BERKEY> BASIC I found to be comparatively repetitious.
+<[Len] NMORGENSTERN> I look on C Fortran BASIC Pascal and others
+<[Len] NMORGENSTERN> as dialects of one language.
+<GARY-S> They are all definitely proceedural
+<[Len] NMORGENSTERN> Forth APL and Lisp are REALLY different.
+<GARY-S> You can't even write APL with a standard keyboard !
+<[Len] NMORGENSTERN> It was Bill Ragsdale, I think, who said that the trouble 
+with Forth
+<[Len] NMORGENSTERN> is that it is so flexible that it doesn't impose a style.
+<GARY-S> That is true, no matter who said it
+<[Len] NMORGENSTERN> (The Talmud says that he is blessed who tells a thing
+<[Len] NMORGENSTERN> in the name of him who said it.)
+<GARY-S> You got your blessing coming then !
+<[Len] NMORGENSTERN> I try!
+<GARY-S> I personally find it more gratifying to give credit where it is due, 
+anyway.
+<[Len] NMORGENSTERN> We all hear things, and many years later repeat them,
+<[Len] NMORGENSTERN> thinking they are original.
+<[Len] NMORGENSTERN> Musicians have to guard against that, especially.
+<[Len] NMORGENSTERN> Also writers.
+<[Robert] R.BERKEY> I've heard that's a problem for writers of children's tales.
+<GARY-S> There's a motivational speaker who's name escapes me (Kevin somebody)..
+<GARY-S> that says the first time he says, 'so-and-so told me"..
+<GARY-S> the second time he says, 'I once heard..."
+<GARY-S> the third time he says, "As I have always said..."
+<[Robert] R.BERKEY> hahaha
+<GARY-S> Kevin Roberts - that's who
+<[Robert] R.BERKEY> They heard some story as a child, and then rediscover it as 
+an
+<[Robert] R.BERKEY> adult writer.
+<[Len] NMORGENSTERN> My former secretary was (is) a talented writer. She sent a
+<[Len] NMORGENSTERN> children's story to a publisher. They returned it unopened,
+<[Len] NMORGENSTERN> saying that they have so much trouble with lawsuits, that 
+it is
+<[Len] NMORGENSTERN> easier for them to hire their writers!
+<[Robert] R.BERKEY> (I don't know why hired writers would be any freer of the 
+problem)
+<[Robert] R.BERKEY> (Less people involved in the lawsuit, maybe!)
+<[Len] NMORGENSTERN> The company can demonstrate, if sued, that they didn't 
+steal
+<[Len] NMORGENSTERN> the idea.
+<[Len] NMORGENSTERN> At least it is easier to prove.
+<[Len] NMORGENSTERN> A poor writer may submit a story using an old plot
+<[Len] NMORGENSTERN> and think it is original. Later if something even slightly
+<[Len] NMORGENSTERN> similar is published they will claim that their idea was 
+stolen.
+<[Len] NMORGENSTERN> And children's stories are so simple that there is
+<[Len] NMORGENSTERN> likely to be repetition of themes and plots.
+<[Len] NMORGENSTERN> .
+<GARY-S> any last Forth thoughts for the steno ?
+<[Robert] R.BERKEY> be seeing you, then.
+<[Len] NMORGENSTERN>  has run out of ideas.
+<GARY-S> Next week - Dick Miller
+=== End of Steno notes. ===
+
+

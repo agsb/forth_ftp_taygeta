@@ -1,0 +1,299 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 02/04/88   Time: 22:13EST
+Attendees:
+[[Dennis] D.RUFFER]
+[[Paul@ICOM] PSNIVELY]
+[[Dave@utexas] DHWEINSTEIN]
+
+Minutes:
+<PSNIVELY> is here.
+<[Paul@ICOM] PSNIVELY> Gee, really crowded here tonight, huh?
+<[Dennis] D.RUFFER> Hi Paul
+<[Paul@ICOM] PSNIVELY> Hello, Dennis!
+<[Paul@ICOM] PSNIVELY> Are things usually hopping like this?  ;-)
+<[Dennis] D.RUFFER> yeh, doesn't seem like any is intereested tonight
+<[Paul@ICOM] PSNIVELY> That's too bad... :-(
+<[Dennis] D.RUFFER> usually we have a couple of people
+<[Dennis] D.RUFFER> but never a crowd
+<[Paul@ICOM] PSNIVELY> I'm interested... especially if someone's written a 
+<[Paul@ICOM] PSNIVELY> decent Macintosh FORTH...
+<[Paul@ICOM] PSNIVELY> yet.
+<[Paul@ICOM] PSNIVELY> Yeah, well, we're all a bunch of religious fanatics, 
+<[Paul@ICOM] Psnively> remember?
+<[Paul@ICOM] PSNIVELY> The Sikhs of the industry.
+<[Dennis] D.RUFFER> a Mac Forth huh
+<[Dennis] D.RUFFER> do you need public domain?
+<[Paul@ICOM] PSNIVELY> Yes.  I just ordered my upgrade to MacFORTH Plus... used 
+<[Paul@ICOM] Psnively> MACH 2 for a long time.
+<[Paul@ICOM] PSNIVELY> Well, that would be preferable... something like F83, 
+<[Paul@ICOM] Psnively> for Macintosh.
+<[Dennis] D.RUFFER> Scott just enumerated the ones we have here
+<[Paul@ICOM] PSNIVELY> What, FORTH systems?
+<[Paul@ICOM] PSNIVELY> None for Macintosh that I've seen.
+<[Dennis] D.RUFFER> I really can't tell you much more
+<[Paul@ICOM] PSNIVELY> S'all right.
+<[Dennis] D.RUFFER> since I'm a PC man myself
+<[Paul@ICOM] PSNIVELY> I'm not holding my breath.  I'd write one, if I had time.
+<[Paul@ICOM] PSNIVELY> Yes, PC is much easier to write for than Macintosh...
+<[Paul@ICOM] PSNIVELY> Which is why there are several PC FORTHs.
+<[Dennis] D.RUFFER> Ah but that will all change soon with OS/2
+<[Paul@ICOM] PSNIVELY> Heh.  OS/2, by all published reports, is a mess.
+<[Paul@ICOM] PSNIVELY> You need extended to do anything useful...
+<[Paul@ICOM] PSNIVELY> And they're saying no Presentation Manager until NEXT 
+<[Paul@ICOM] Psnively> year...
+<[Paul@ICOM] PSNIVELY> Doesn't really matter, though... FORTH will ALWAYS be 
+<[Paul@ICOM] Psnively> first language up on...
+<[Paul@ICOM] PSNIVELY> most architectures.
+<[Dennis] D.RUFFER> yes it is a mess...
+<[Dennis] D.RUFFER> cause everyone needs to learn a new interface...
+<[Paul@ICOM] PSNIVELY> Mac OS is BECOMING a mess.
+<[Paul@ICOM] PSNIVELY> The interface is the least of the problems.
+<[Paul@ICOM] PSNIVELY> Incompatibility with everything before is big problem...
+<[Dennis] D.RUFFER> I've heard about the re-write of Mac OS
+<[Paul@ICOM] PSNIVELY> WHICH rewrite
+<[Dennis] D.RUFFER> seems like nothings sacred :-)
+<[Paul@ICOM] PSNIVELY> I've heard the rumors, too.  So far I haven't seen any 
+<[Paul@ICOM] Psnively> evidence.
+<[Paul@ICOM] PSNIVELY> Thank God.  Some of Mac's concepts are really weak.
+<[Dennis] D.RUFFER> I doubt you will until after Os/2 ext.
+<[Paul@ICOM] PSNIVELY> I disagree; the changes aren't THAT far off.
+<[Paul@ICOM] PSNIVELY> In other words, Apple won't wait and react to OS/2.  IBM 
+<[Paul@ICOM] Psnively> reacts.
+<[Paul@ICOM] PSNIVELY> As OS/2 is a reaction to Macintosh.
+<[Dennis] D.RUFFER> I'll bet they aren't early like IBM is being
+<[Paul@ICOM] PSNIVELY> That depends upon what form they take.  For example, I 
+<[Paul@ICOM] Psnively> expect one more rev...
+<[Paul@ICOM] PSNIVELY> of MultiFinder before the commit that stuff to silicon.
+<[Paul@ICOM] PSNIVELY> Er, THEY commit...
+<[Paul@ICOM] PSNIVELY> Although most people seem satisfied with MF the way it 
+<[Paul@ICOM] Psnively> is...
+<[Paul@ICOM] PSNIVELY> As long as their software evolves to support it.
+<[Dennis] D.RUFFER> ah but can it do multi-processors?...
+<[Dennis] D.RUFFER> I'd say yet this year...
+<[Dennis] D.RUFFER> IBM will let go of some of the details of OS/3
+<[Paul@ICOM] PSNIVELY> Multi-processors are a tricky issue on any machine, the 
+<[Paul@ICOM] Psnively> Mac II in particular.
+<[Paul@ICOM] PSNIVELY> With NuBus, any card can be the master on the bus...
+<[Dennis] D.RUFFER> for the 386, with multi-proc, and user
+<[Paul@ICOM] PSNIVELY> Which is good... they had to respond to Mac II.
+<[Dennis] D.RUFFER> yes both NuBus and MultiChan can do it, but...
+<[Paul@ICOM] PSNIVELY> Besides, it's always been easier to get tech info out of 
+<[Paul@ICOM] Psnively> IBM than most...
+<[Paul@ICOM] PSNIVELY> companies...
+<[Dennis] D.RUFFER> which will get there first, I bet IBM
+<[Paul@ICOM] PSNIVELY> What do you mean?  I can get coprocessor card for II now 
+<[Paul@ICOM] Psnively> that gives me...
+<[Paul@ICOM] PSNIVELY> 286/MS-DOS in a Mac window.
+<[Dennis] D.RUFFER> can both run at same time, and share resources?
+<[Paul@ICOM] PSNIVELY> Yes.  IBM/Mac files on hard disk, cut and paste between 
+<[Paul@ICOM] Psnively> DOS/Mac OS.
+<[Dennis] D.RUFFER> is this multi-processor, or in-active windows?
+<[Paul@ICOM] PSNIVELY> What do you mean?
+<[Dennis] D.RUFFER> can you do two applications at the same time?
+<[Paul@ICOM] PSNIVELY> Without MF, one Mac, one DOS, as I understand it.
+<[Paul@ICOM] PSNIVELY> With MF, several Mac, one DOS.
+<[Dennis] D.RUFFER> ah 1 DOS, and can they share a file?
+<[Paul@ICOM] PSNIVELY> OS/2 will be running on Mac II before any other machine.
+<[Paul@ICOM] PSNIVELY> Depends upon whether the applications are multi-user.
+<[Dennis] D.RUFFER> except for PS/2....are the hooks in the OS to support it?
+<[Paul@ICOM] PSNIVELY> Not except for PS/2 even!
+<[Dennis] D.RUFFER> how can you say that, I can buy OS/2 today
+<[Paul@ICOM] PSNIVELY> Huh?  Mac file system has always supported write 
+<[Paul@ICOM] Psnively> access/read access difference..
+<[Paul@ICOM] PSNIVELY> and, since HFS, has supported locked byte ranges.
+<[Paul@ICOM] PSNIVELY> Exactly... and I can put it on my Mac II.  The AST 
+<[Paul@ICOM] Psnively> coprocessor existed before...
+<[Paul@ICOM] PSNIVELY> PS/2.
+<DHWEINSTEIN> is here.
+<[Paul@ICOM] PSNIVELY> Hi, DHWEINSTEIN!
+<[Dennis] D.RUFFER> ok, sounds like a quible over seconds to me
+<[Paul@ICOM] PSNIVELY> :-)
+<[Dennis] D.RUFFER> Hi Dave
+<[Paul@ICOM] PSNIVELY> Dunno... I remember being at developer's meeting when 
+<[Paul@ICOM] Psnively> PS/2 was announced.
+<[Dave@utexas] DHWEINSTEIN> Helo
+<[Paul@ICOM] PSNIVELY> It was kinda funny.
+<[Dave@utexas] DHWEINSTEIN> +l
+<[Paul@ICOM] PSNIVELY> In the sense that here we were, Mac developers, hearing 
+<[Paul@ICOM] Psnively> about IBM...
+<[Dave@utexas] DHWEINSTEIN> Its Badly Made?
+<[Paul@ICOM] PSNIVELY> adopting the interface... also, IBM fell five points 
+<[Paul@ICOM] Psnively> that day, and Apple...
+<[Paul@ICOM] PSNIVELY> went up 7.5.
+<[Paul@ICOM] PSNIVELY> Dave, no not badly made at all!  Just took '386 to make 
+<[Paul@ICOM] Psnively> decent architecture.
+<[Dennis] D.RUFFER> I saw that too, interesting indeed! :-)
+<[Dave@utexas] DHWEINSTEIN> I don't even like the '386.
+<[Dennis] D.RUFFER> but do we HAVE to like it?
+<[Paul@ICOM] PSNIVELY> At least with '386 you have the potential for a linear 
+<[Paul@ICOM] Psnively> address space...
+<[Paul@ICOM] PSNIVELY> Dennis, well, depends upon what you write and how.
+<[Dave@utexas] DHWEINSTEIN> So use a 68030
+<[Dennis] D.RUFFER> not in OS/2 Paul
+<[Paul@ICOM] PSNIVELY> Dave, I do!  I'm a Mac developer.
+<[Dave@utexas] DHWEINSTEIN> Or a Cray
+<[Dave@utexas] DHWEINSTEIN> When is A/UX coming out?
+<[Paul@ICOM] PSNIVELY> Dennis, sure, they finally have a linear system...
+<[Paul@ICOM] PSNIVELY> incompatible with all the old stuff... unless you wanna 
+<[Paul@ICOM] Psnively> give up protected mode.
+<[Dennis] D.RUFFER> anybody know where I can get a laptop Cray?
+<[Paul@ICOM] PSNIVELY> Dave, your guess is as good as mine.
+<[Dave@utexas] DHWEINSTEIN> Is it even out of Beta Test?
+<[Paul@ICOM] PSNIVELY> Dennis, sure.  Get a laptop Mac II with about 5 
+<[Paul@ICOM] Psnively> transputer cards.
+<[Paul@ICOM] PSNIVELY> Dave, you mean IN beta?  Definitely.
+<[Dave@utexas] DHWEINSTEIN> Naw...out of Beta...I know that its in Beta...
+<[Paul@ICOM] PSNIVELY> Well, if it were OUT, it'd be SHIPPING.
+<[Dave@utexas] DHWEINSTEIN> Not necessarily...ther is a leetle lag time... :-)
+<[Paul@ICOM] PSNIVELY> Not MUCH.
+<[Paul@ICOM] PSNIVELY> I know they have hard disks at the ready... :-)
+<[Dave@utexas] DHWEINSTEIN> I heard that Siemens is now getting ready to 
+<[Dave@utexas] DHWEINSTEIN> mass-produce a 1.4 gig vertical mount SCSI
+<[Dave@utexas] DHWEINSTEIN> drive (two 770 meg platters)
+<[Paul@ICOM] PSNIVELY> I dislike OSes that require their own 80 meg HD.
+<[Paul@ICOM] PSNIVELY> Great!  I could use one!  :-)
+<[Dennis] D.RUFFER> amen Paul
+<[Dave@utexas] DHWEINSTEIN> What about systems with over 8 gig of hard drives 
+<[Dave@utexas] DHWEINSTEIN> (ok...the drives take up a LOT of space...)
+<[Paul@ICOM] PSNIVELY> The largest system I use that I actually LIKE is Common 
+<[Paul@ICOM] Psnively> Lisp.
+<[Dave@utexas] DHWEINSTEIN> I am learning common lisp...
+<[Paul@ICOM] PSNIVELY> Dave, we're obviously not talking micro...
+<[Paul@ICOM] PSNIVELY> Dave, ain't it a gas?
+<[Dave@utexas] DHWEINSTEIN> CDC Cyber 830
+<[Paul@ICOM] PSNIVELY> Byte published a gem of a recursive-descent parser.  NO 
+<[Paul@ICOM] Psnively> assignments!
+<[Paul@ICOM] PSNIVELY> Yeah.  See, I HATE minis and mains.
+<[Dave@utexas] DHWEINSTEIN> And..if all goes well...I should be working on it. 
+<[Dave@utexas] DHWEINSTEIN> I love big machines.
+<[Paul@ICOM] PSNIVELY> Argh.
+<[Paul@ICOM] PSNIVELY> If it ain't personal, it ain't a computer.
+<[Paul@ICOM] PSNIVELY> Except Cray.  On there, you THINK you've got it all to 
+<[Paul@ICOM] Psnively> yourself!  :-)
+<[Dennis] D.RUFFER> If I can't throw it against the wall
+<[Dave@utexas] DHWEINSTEIN> Can't wait to work on the supercomputers (maybe as 
+<[Dave@utexas] DHWEINSTEIN> soon as this month) (fingers crossed, hair crossed,
+<[Dave@utexas] DHWEINSTEIN> [genie censor engag
+<[Dave@utexas] DHWEINSTEIN> ed] crossed)
+<[Paul@ICOM] PSNIVELY> Hee hee hee!
+<[Paul@ICOM] PSNIVELY> Yeah, around here, we all bow down to U of I... and the 
+<[Paul@ICOM] Psnively> Cray.
+<[Dave@utexas] DHWEINSTEIN> Another really like the Sun Workstations... (and 
+<[Dave@utexas] DHWEINSTEIN> the HP 9000s are very nice as well)
+<[Dave@utexas] DHWEINSTEIN> Is there an implementation of X-Windows for the Mac?
+<[Paul@ICOM] PSNIVELY> Yes, Sun is cool... only non-user-hostile UNIX system 
+<[Paul@ICOM] Psnively> around...
+<[Paul@ICOM] PSNIVELY> Is there an implementation of UNIX for the Mac?
+<[Dennis] D.RUFFER> Sun uses Forth too
+<[Paul@ICOM] PSNIVELY> NeWS is under development for Mac II, though.
+<[Paul@ICOM] PSNIVELY> Oh, sure, FORTH'll run on anything.
+<[Paul@ICOM] PSNIVELY> But what's the ENVIRONMENT like?
+<[Dave@utexas] DHWEINSTEIN> The job I may be getting is modifiying UNIX 
+<[Dave@utexas] DHWEINSTEIN> (Berkely 4.2) to be much more friendly on on
+<[Dave@utexas] DHWEINSTEIN> one of the New Supercomputers
+<[Paul@ICOM] PSNIVELY> "Are you a good FORTH, or a bad FORTH?"
+<[Paul@ICOM] PSNIVELY> Making UNIX friendly is a life-long ambition.
+<[Dave@utexas] DHWEINSTEIN> I am at a point of being able to only put 20-45 
+<[Dave@utexas] DHWEINSTEIN> minutes of work a day in on my own projects.
+<[Dave@utexas] DHWEINSTEIN> I didn't say user friendly.
+<[Paul@ICOM] PSNIVELY> Doesn't that suck?
+<[Dave@utexas] DHWEINSTEIN> UNIX is programmer friendly. Screw the end user!
+<[Paul@ICOM] PSNIVELY> Oh.  Well, UNIX is ALREADY programmer-friendly.
+<[Paul@ICOM] PSNIVELY> Dave, precisely.  Which is why it's essentially a 
+<[Paul@ICOM] Psnively> useless OS.
+<[Paul@ICOM] PSNIVELY> That is, without extensive sugaring for the user.
+<[Dave@utexas] DHWEINSTEIN> I know...just adding all sorts of great little 
+<[Dave@utexas] DHWEINSTEIN> functions, tinkering with the OS...all sorts of
+<[Dave@utexas] DHWEINSTEIN> good stuff.
+<[Dave@utexas] DHWEINSTEIN> I don't CARE ABOUT THE END USER!!!
+<[Dave@utexas] DHWEINSTEIN> <- Programmer Chauvinist Pig
+<[Paul@ICOM] PSNIVELY> Dave, a horrendous attitude for a programmer to take.
+<[Dennis] D.RUFFER> a new use of PCPs
+<[Dave@utexas] DHWEINSTEIN> Not if you plan on doing systems/scientific work
+<[Paul@ICOM] PSNIVELY> Dave, you and Todd Squires... both in dire need of 
+<[Paul@ICOM] Psnively> enlightenment...
+<[Paul@ICOM] PSNIVELY> Dave, even then... you have users who want something 
+<[Paul@ICOM] Psnively> THEY understand, can use...
+<[Paul@ICOM] PSNIVELY> without grief.
+<[Dave@utexas] DHWEINSTEIN> Maybe thatis one of the reasons I like FORTH so 
+<[Dave@utexas] DHWEINSTEIN> much...my kind of user interface (you can't
+<[Dave@utexas] DHWEINSTEIN> modify it if you don't know FO
+<[Dave@utexas] DHWEINSTEIN> RTH, and when you can modify it...you like it
+<[Dave@utexas] DHWEINSTEIN> already)
+<[Paul@ICOM] PSNIVELY> I may have a user who's an expert video producer...
+<[Paul@ICOM] PSNIVELY> But doesn't know BEANS about computers...
+<[Dave@utexas] DHWEINSTEIN> Besides...UNIX (especially the C Shell) is so 
+<[Dave@utexas] DHWEINSTEIN> wonderfully flexible
+<[Paul@ICOM] PSNIVELY> FORTH allows you to build whatever user interface you 
+<[Paul@ICOM] Psnively> want...
+<[Paul@ICOM] PSNIVELY> KORN shell is better, I think...
+<[Dave@utexas] DHWEINSTEIN> Especially if you don't want one
+<[Paul@ICOM] PSNIVELY> And sure, it's flexible.
+<[Paul@ICOM] PSNIVELY> Sure, you can always give 'em access to QUIT... if you 
+<[Paul@ICOM] Psnively> wanna be sadistic...
+<[Dave@utexas] DHWEINSTEIN> <- is sadisitc
+<[Paul@ICOM] PSNIVELY> I LIKE systems with embedded languages.  I wanna be able 
+<[Paul@ICOM] Psnively> to MOLD and EXTEND.
+<[Dave@utexas] DHWEINSTEIN> sadistic even. You must like the TI Explorer...
+<[Paul@ICOM] PSNIVELY> That's why I love Lisp machines.  Lisp is ALWAYS THERE, 
+<[Paul@ICOM] Psnively> lurking underneath...
+<[Paul@ICOM] PSNIVELY> (Not very
+<[Paul@ICOM] PSNIVELY>  FAR underneath)..
+<[Paul@ICOM] PSNIVELY> HA!
+<[Paul@ICOM] PSNIVELY> Exactly!
+<[Dave@utexas] DHWEINSTEIN> The windowing environment on the Explorer is 
+<[Dave@utexas] DHWEINSTEIN> incredibly slow for ONE VERY GOOD REASON!
+<[Paul@ICOM] PSNIVELY> Explorer is cool, as is Symbolics, as is Xerox D-class 
+<[Paul@ICOM] Psnively> stuff...
+<[Paul@ICOM] PSNIVELY> Poor design?
+<[Dave@utexas] DHWEINSTEIN> Only one of the programmers on its development used 
+<[Dave@utexas] DHWEINSTEIN> it with more than one window at a time...the
+<[Dave@utexas] DHWEINSTEIN> microcoders and systems s
+<[Dave@utexas] DHWEINSTEIN> hell people didn't...
+<[Dave@utexas] DHWEINSTEIN> :-)
+<[Paul@ICOM] PSNIVELY> Yeah, fools all.
+<[Paul@ICOM] PSNIVELY> Too bad Apple patented regions.
+<[Dave@utexas] DHWEINSTEIN> <- has to run. Work calls
+<[Dave@utexas] DHWEINSTEIN> has left.
+<[Paul@ICOM] PSNIVELY> The only REALLY good system is NeWS.
+<[Paul@ICOM] PSNIVELY> OK, later.
+<[Paul@ICOM] PSNIVELY> Oh, well...
+<[Dennis] D.RUFFER> well gee
+<[Paul@ICOM] PSNIVELY> A true programming psychopath.  Remind me not to try to 
+<[Paul@ICOM] Psnively> use his software.
+<[Paul@ICOM] PSNIVELY> :-)
+<[Dennis] D.RUFFER> that was interesting stuff   Agreed :-)
+<[Dennis] D.RUFFER> anybody who doesn't like users!
+<[Paul@ICOM] PSNIVELY> Anytime anyone says "forget the end user..."
+<[Paul@ICOM] PSNIVELY> Exactly!
+<[Paul@ICOM] PSNIVELY> :-)
+<[Paul@ICOM] PSNIVELY> Well, guess I'd better go play Devil's Advocate 
+<[Paul@ICOM] Psnively> somewhere else...
+<[Dennis] D.RUFFER> remember he gets to read this also
+<[Paul@ICOM] PSNIVELY> Fine... I tell my working associate Todd the same thing..
+<[Dennis] D.RUFFER> after I post the transcript
+<[Paul@ICOM] PSNIVELY> Yes, I understand...
+<[Paul@ICOM] PSNIVELY> Like most programmers, I'm opinionated and unapologetic 
+<[Paul@ICOM] Psnively> about it.
+<[Dennis] D.RUFFER> ok were we talking about anything important?
+<[Paul@ICOM] PSNIVELY> Not especially.  I think I'll be moving on...
+<[Paul@ICOM] PSNIVELY> Waiting for MacFORTH Plus... :-)
+<[Dennis] D.RUFFER> ok, I catch you later....
+<[Paul@ICOM] PSNIVELY> Take it easy!
+<[Dennis] D.RUFFER> have you taken the survey?
+<[Paul@ICOM] PSNIVELY> Yup!  Hope someone else comes along...
+<[Paul@ICOM] PSNIVELY> No, not yet.
+<[Dennis] D.RUFFER> ok thanks for coming
+<[Paul@ICOM] PSNIVELY> Sure... I just LOVE a good argument!  :-)
+<[Paul@ICOM] PSNIVELY> Heh, heh.
+<[Paul@ICOM] PSNIVELY> Bye!
+<[Dennis] D.RUFFER> hope to have more next week
+<[Paul@ICOM] PSNIVELY> Yeah!
+<[Paul@ICOM] PSNIVELY> has left.
+=== End of Steno notes. ===
+
+

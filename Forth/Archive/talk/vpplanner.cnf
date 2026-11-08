@@ -1,0 +1,83 @@
+
+ Minutes of the Special Guest RT Conference
+     on the GEnie Forth RoundTable.
+
+Date: 05/11/89   Time: 22:31EDT
+Attendees:
+[GARY-S]
+[[Jack] J.BROWN11]    
+[[Jax] FIGCHAPTERS]
+[[milton] M.FABERT]   ___
+[[Kent & Jim] PRESS20]   \  The guests:
+[[doug] PRESS21]          > Creators of VP-Planner+
+[[chris] PRESS26]________/  (c) Stephenson Software    
+[DANMILLER]
+[[Len] NMORGENSTERN]
+[[Don] D.GOLDING]
+[[Wil] W.BADEN1]
+
+Minutes:
+<GARY-S>  Before we begin tonight's conference I need to remind...
+<GARY-S>  everyone this is a formal conference. ...
+<GARY-S>  That means no interlacing. Request a turn to speak by typing...
+<GARY-S>  !! <CR> or /RAI <CR>. I will keep a list and call on whoever ...
+<GARY-S>  is next.    PLEASE follow these simple rules: ...
+<GARY-S>  PLEASE make your first response ok <CR> (so we know you know)...
+<GARY-S>  Then, keep your lines short, ending incomplete thoughts  ...
+<GARY-S>  three dots (...) and ending your question/statement with ga <CR>
+<GARY-S>                         thank you.
+<GARY-S>
+<GARY-S>  The GEnie Forth RoundTable is very pleased to welcome...
+<GARY-S>  as this evening's special guests, Jim Stephenson...
+<GARY-S> founder of Stephenson Software, Vancouver, BC...
+<GARY-S> Kent Brothers, Senior Analyst and Director, ...
+<GARY-S> and Doug Lankshear, Assembler and Forth programmer. ...
+<GARY-S>  (the other team member, Chris, could not join us as planned)...
+<GARY-S> this MAY be modified I am now advised...
+<GARY-S> Collectively they are creators of VP-Planner+, ...
+<GARY-S> the superb business management system coded in Forth. ...
+<GARY-S> It is with pleasure I welcome tonight's special guests.
+<[Kent & Jim] PRESS20> First, a short blurb about VP-Planner for those who may 
+not know it...
+<[Kent & Jim] PRESS20> VP-Planner is a spreadsheet/database program for the IBM 
+PC
+<[Kent & Jim] PRESS20> best known for its Lotus 1-2-3 compatible spreadsheet
+<[Kent & Jim] PRESS20> linked with powerful dBASE and multidimensional data file
+<[Kent & Jim] PRESS20> handling capabilities.  It was initially developed in 
+Forth
+<[Kent & Jim] PRESS20> by Jim Stephenson, Dave Mitchell, and Kent Brothers of
+<[Kent & Jim] PRESS20> Vancouver, Canada, and was first released in September 
+1985
+<[Kent & Jim] PRESS20> by Paperback Software of Berkeley, CA.  VP-Planner Plus,
+<[Kent & Jim] PRESS20> released in October 1987, added more database features,
+<[Kent & Jim] PRESS20> 1-2-3 release 2 compatibility, background/priority
+<[Kent & Jim] PRESS20> recalculation, and multi-step undo.  The product has been
+<[Kent & Jim] PRESS20> translated into more than 10 languages and is sold
+<[Kent & Jim] PRESS20> world-wide.  Further development on as-yet-unannounced
+<[Kent & Jim] PRESS20> features continues.  The development team now also 
+includes
+<[Kent & Jim] PRESS20> Doug Lankshear, Rick Falck, Bob Tellefson, and Chris 
+Worsley. ...
+<[K&J] PRESS20> Jim, Kent, Doug, and Chris have joined the conference this
+<[K&J] PRESS20> evening to share ideas and answer questions about either
+<[K&J] PRESS20> VP-Planner or the Forth development system.  The Forth system
+<[K&J] PRESS20> has the following characteristics:
+<[K&J] PRESS20>
+<[K&J] PRESS20>   1. direct threaded with NEXT coded in-line;
+<[K&J] PRESS20>   2. top-of-stack in BX register;
+<[K&J] PRESS20>   3. compiler words and headers in separate area of memory;
+<[K&J] PRESS20>   4. text in separate area for foreign language translation;
+<[K&J] PRESS20>   5. colon bodies separated from machine code;
+<[K&J] PRESS20>   6. hybrid colon/assembly words;
+<[K&J] PRESS20>   7. local variables and subwords;
+<[K&J] PRESS20>   8. overlays;
+<[K&J] PRESS20>   9. extensive Forth-level breakpoint/trace facility;
+<[K&J] PRESS20>  10. IEEE 64/80-bit software floating point & 80x87 support.
+<[K&J] PRESS20>
+<W.BADEN1> is here.
+<GARY-S> great - questions ?
+<[shhh!] FIGCHAPTERS> As I suppose you characters know ...
+<[shhh!] FIGCHAPTERS> you have the most famous PC Software package written in 
+Forth to your credit ...
+<[shhh!] FIGCHAPTERS> Those considering a project in Forth might want to know ..
+

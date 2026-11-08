@@ -1,0 +1,347 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 06/28/90   Time: 22:32EDT
+
+Attendees:
+[GARY-S]
+[[Kent] K.PETERSON5]
+[[Len] NMORGENSTERN]
+[[Kevin] APPERT]
+[[Wil] W.BADEN1]
+[[ESPer!] JAX]
+   Items discussed: Guest conference suggestions/nominees, Cannon Cat, cheap
+                    laptops, problems with Hubble, X3/J14, FIG Nominees,
+                    Embedded Systems Programming
+Minutes:
+<K.PETERSON5> is here.
+<GARY-S> Thanks for the fun with Pygmy stuff you posted
+<[Kent] K.PETERSON5> Glad you enjoyed it.
+<GARY-S> You asked last week, before the guest conference went...
+<GARY-S> formal, how we kept up with the threads..
+<GARY-S> I'd like to warn you, interlaced threads are the normal on these open 
+Figgy's
+<GARY-S> That way there's more conversation for the buckk
+<[Kent] K.PETERSON5> I've gotten more of the hang of it now.
+<NMORGENSTERN> is here.
+<GARY-S> You almost got my macro tonite :-)
+<[Len] NMORGENSTERN> Oh?
+<APPERT> is here.
+<GARY-S> I was up in NW AR again today, just got back
+<[Len] NMORGENSTERN> Where, Gary?
+<[Wil] W.BADEN1> is here.
+<GARY-S> Harrison
+<[Len] NMORGENSTERN> Will have to look at a map.
+<GARY-S> Wil Baden - you and Ray seem to have a debate in progress :-)
+<[Wil] W.BADEN1> I don't think so.  I agree with him.
+<[Len] NMORGENSTERN> Ray Duncan?
+<GARY-S> Does anyone get the queasy feeling a 'real' standard is NOT the intent,
+ but rather a rubber stamp ??????
+<GARY-S> Or am I out of line
+<GARY-S> don't everyone speak at once
+<GARY-S> hmmm - glad that was a popular question
+<GARY-S> Any guest suggestions
+<[Len] NMORGENSTERN> Any standard is a "real" standard...
+<[Len] NMORGENSTERN> In the sense that it will have a great influence.
+<[Kevin] APPERT> Alan Furman (anything he wants to talk about will probably be 
+interesting)
+<GARY-S> I agree - but alan has refused or put me off about a half-dozen times
+<GARY-S> I agree he would make a good guest
+<[Kevin] APPERT> ah well, such is life
+<[Kevin] APPERT> Chuck M. ?   ( anything he ... )
+<GARY-S> Chuck has been on - and made it clear he was not thrilled with 
+interactive conferencing. The one here and one on CompuServe were his limit.
+<[Kent] K.PETERSON5> How about Leo Brodie? What is he up to these days?
+<GARY-S> Trying to salvage book sales now that 'Thinking Forth' has been pulled
+<[Kevin] APPERT> been reduced to pawning the family ghosts?
+<[Kevin] APPERT> Shaw?   ( A.C.M. as a topic, or just "how it feels to be as 
+wonderfull as I")
+<GARY-S> Did you not attend George's conference, kev
+<[Len] NMORGENSTERN> George Shaw has been on.
+<[Kevin] APPERT> musta been on travel
+<[Kevin] APPERT> what did he talk about?
+<GARY-S> I've got George Nicol and Bill Ragsdale scheduled for July, August 
+respectively
+<GARY-S> Shaw discussed ACM
+<GARY-S> How about Glen Haydon or Dick Miller ?
+<[Kent] K.PETERSON5> I think either of those two would have something 
+interesting.
+<[Wil] W.BADEN1> Martin Tracy, John Hayes, Marty Fraeman, Greg Bailey.
+<[Kevin] APPERT> Rick Van Norman, or somebody from Harris in re RTX x000
+<GARY-S> Hayes and Fraeman we've had - Martin and Bailey are both excellent 
+suggestions
+<GARY-S> Phil Koopman was on for Harris
+<GARY-S> enough of that - open floor
+<GARY-S> Forthisms ???
+<[Len] NMORGENSTERN> George Shaw may like to discuss the new ShBoom chip.
+<[Kent] K.PETERSON5> Dr. Ting?
+<GARY-S> Rick would be good, though
+<[Len] NMORGENSTERN> I don't know if it is developed enough.
+<GARY-S> Ting's been on - bought a modem just for that purpose
+<GARY-S> Is George involved with shboom ???
+<[Kevin] APPERT> yup
+<[Len] NMORGENSTERN> He has done much of the Forth design
+<GARY-S> Thanks
+<[Kent] K.PETERSON5> Did Canon ever release the Lap Cat?
+<GARY-S> Do any of you have political ambitions ? - there are nominations open 
+for FIG Board of Directors
+<[Len] NMORGENSTERN> I have had my share! School Board for 11 years
+<[Len] NMORGENSTERN> President of our Temple.
+<[Kevin] APPERT> put me down for "head anarchist"
+<GARY-S> You think you can unseat Curley ?
+<[Len] NMORGENSTERN> Why should one want to?
+<GARY-S> Kevin just made a proclamation for Charles Curley's role as chief 
+anarchist
+<[Kevin] APPERT> with all the promotion the did on the original cat, I'm 
+suprised that Cannon is still interested at all
+<[Len] NMORGENSTERN> I believe that failure to promote the cat
+<[Len] NMORGENSTERN> was Canon's decision, not Raskin's.
+<[Kevin] APPERT> yes, failure to promote was cannonical
+<[Kevin] APPERT> how about Raskin as guest?
+<GARY-S> Did you read what Raskin had to say about it ? wow !!!
+<[Len] NMORGENSTERN> I get ulcer pains just thinking about the days when I
+<[Len] NMORGENSTERN> was  "pillar of the community"
+<[Len] NMORGENSTERN> (Third pillar on the left)
+<[Kevin] APPERT> where did you read, Gary?
+<[Kent] K.PETERSON5> Kevin, booo hiss!
+<GARY-S> Jerry Shifrin just posted excerpts if you want to catch up (4-7)
+<[Kevin] APPERT> cat 4, topic 7?
+<GARY-S> I'd love to get Raskin - know where I can reach him by phone ?
+<GARY-S> yes - cat 4, top 7
+<[Kevin] APPERT> what's the name of his firm, "information appliance" ?  should 
+be in phone book
+<[Len] NMORGENSTERN> I believe he lives in Pacifica, which is near SF. (415 
+area code)
+<[Kevin] APPERT> palo alto or mountain view or some such for his office?
+<GARY-S> Isn't that John Bumgardner's outfit ?
+<[Len] NMORGENSTERN> (All 415)
+<[Len] NMORGENSTERN> By the way, Jeff was quoted in the latest
+<[Len] NMORGENSTERN> issue of Sci.American.
+<[Kevin] APPERT> isn't he there also?
+<[Kevin] APPERT> talking about cat, len?
+<GARY-S> I think I have John's number - so that problem is solved
+<GARY-S> brb
+<GARY-S> kevin - I lied regarding the Raskin excerpt. It is Cat 2, Topic 11, 
+Message 63
+<[Kevin] APPERT> invite John also same time or seperately
+<GARY-S> John and Terry Homes were part of the Steve Roberts conference
+<[Kevin] APPERT> anybody interested in the Atari portfolio?
+<GARY-S> sure
+<GARY-S> too small a memory
+<[Len] NMORGENSTERN> No. It was a philosophical discussion on whether
+<[Len] NMORGENSTERN> computers do/have/can attain/etc. intelligence.
+<[Len] NMORGENSTERN> Quote of the day: An intellectual is someone who is
+<[Len] NMORGENSTERN> educated beyond his mental capacity.
+<[Kevin] APPERT> what does it start with?  you can get ram plug-in.  anybody 
+know what size?
+<[Kevin] APPERT> it looks good as a replacement for something like the Casio or 
+Sharp 'pocket organizers'
+<[Len] NMORGENSTERN> I would like a simple, cheap, small comupter that
+<[Len] NMORGENSTERN> can do simple word processing, comm, and a few other 
+things.
+<[Len] NMORGENSTERN> Is the portfolio worth buying?
+<[Kevin] APPERT> not for word processing, too small a keyboard.  it's a pocket 
+machine
+<GARY-S> runs dos 2.11, comes with 1/2 meg
+<[Len] NMORGENSTERN> (I suspect Toshiba 1000, available for about 750-800 is 
+better for the money.
+<[Kent] K.PETERSON5> I'm on a T1000 right now. Best money I ever spent.
+<GARY-S> I'm an ex-submariner. I wouldn't waste spit on anything Toshiba
+<[Len] NMORGENSTERN> Radio Shack has a portable at about the same price, if you
+<[Len] NMORGENSTERN> watch the ads.
+<[Kevin] APPERT> the cheepest machine like that is trs80 model 102 (I think 
+model # is right)  I use a trs80 /100 laptop as a carry-round terminal to
+test serial lines.
+<[Len] NMORGENSTERN> How much is the 102?
+<GARY-S> Frankly, my Epson px-8 does fine for a walk-around totable word 
+processor
+<[Kevin] APPERT> couple 'o' hundred, Len.  no internal disk, I think 80 x 8 lcd,
+ not DOS or PC compatible
+<[Kent] K.PETERSON5> I think the 102 is 40*8 for screen size
+<[Kevin] APPERT> I think that's the 100, not sure, Kent
+<[Kevin] APPERT> you can buy an early model Grid for 7 or 800 at San Jose 
+computer, brand new
+<[Len] NMORGENSTERN> That had a v. good reputation for its day.
+<[Kevin] APPERT> flat black Magnesium case, rugged, qualified for use on 
+Shuttle flight deck
+<[Kent] K.PETERSON5> I've got a TRS catalog right here. the 102 is 40*8. You 
+might be thinking of..
+<[Kent] K.PETERSON5> their new WP. It's black & has an 80*8 screen
+<[Kevin] APPERT> ok thanks. what model is new one?  laptop?
+<GARY-S> Tandy owns grid now, by the way
+<[Kevin] APPERT> radio shack parts on the shuttle!
+<[Kent] K.PETERSON5> WP-2. Lists at $349, but I think they've already had it on 
+sale.
+<GARY-S> and only a 200% mark-up :-)
+<[Kevin] APPERT> we in the aerospace industry have learned to give the hardware 
+away and charge double for the paperwork
+<[Len] NMORGENSTERN> In an information society, goods are cheap
+<[Kevin] APPERT> the customer hasn't caught on yet, he keeps asking for more 
+paper
+<[Len] NMORGENSTERN> and information including paperwork, is expensive.
+<[Len] NMORGENSTERN> He's ASKING for more paper??? Must be insane.
+<GARY-S> Kev - are you guys involved in trying to fix the Hubble ? Geez - a 
+bazillion dollar telescope you can't focus
+<[Kevin] APPERT> my company, yes, nobody I know is currently working space 
+telescope ops, however
+<[Kevin] APPERT> not as uncommon a mistake as you might think.  the europeans 
+just put up a telescope in Chile with the same problem: wrong figure on
+the mirror.
+<[Len] NMORGENSTERN> I look on it as an inevitable nuisance!
+<[Kevin] APPERT> the govt' is the customer to us, Len, not us he
+<GARY-S> Why do I have a suspicion the one in Chile may be a tad easier to get 
+to for repairs ?
+<[Len] NMORGENSTERN> Beautifully made to the wrong specs, apparently.
+<[Kevin] APPERT> Lockheed offered to test for just this problem at the bargin 
+rate of a couple of hundred million, and were politely declined
+<GARY-S> Figures
+<[Len] NMORGENSTERN> On McNeill Lehrer, that was mentioned, although not
+<[Len] NMORGENSTERN> the company name. 100 Megabucks was the figure quoted.
+<[Kevin] APPERT> Lockheed was the contractor for assembly, integration, and test
+<GARY-S> Hell, Bush is trying to give that much away (read his lips)
+<[Kevin] APPERT> oops, Sub-contractor I should have said
+<[Kevin] APPERT> what he really said was "no gnu taxis" and there is not a 
+single gnu-drawn cart in the country
+<[Kevin] APPERT> and he aims to keep it that way
+<GARY-S> The veep is planning a trip to Arkansas. You know, the guy that 
+impersonates Howdy Doody and syas all those Chris Schenkleisms
+<[Kevin] APPERT> Mark Russel says the democrats want to burn the flag and...
+<[Kevin] APPERT> the republicans want to burn the constitution
+<GARY-S> Sorry I steered us away from Forth..
+<[Len] NMORGENSTERN> Capitalists believe in the opression of man by man.
+<[Len] NMORGENSTERN> Socialists believe the other way around.
+<GARY-S> back to the subject at hand
+<GARY-S> Any thing Forthish before quitting time ?
+<[Len] NMORGENSTERN> I have a story.
+<GARY-S> go
+<[Len] NMORGENSTERN> A great story about my friend Dr. Sylvan Stool
+<[Len] NMORGENSTERN> (yes that was his real name)
+<[Len] NMORGENSTERN> When he was an intern, the child of the
+<[Len] NMORGENSTERN> chief of staff, a SOB neurosurgeon fell out
+<[Len] NMORGENSTERN> of the family car & was brought to the hospital.
+<[Len] NMORGENSTERN> Every staff physician was called in . Finally
+<[Len] NMORGENSTERN> Daddy got there. He asked, "Is the urine ok?"
+<[Len] NMORGENSTERN> Nobody had thought to order it.
+<[Len] NMORGENSTERN> Very important, as it is a test for internal bleeding.
+<[Len] NMORGENSTERN> Daddy turns to
+<[Len] NMORGENSTERN> Sylvan and says, "Stool, you are now in charge of this 
+case"
+<[Len] NMORGENSTERN> (There is a moral here that may relate to Hubble)
+<JAX> is here.
+<[ESPer!] JAX> Late tonite, Kev ...
+<[Kevin] APPERT> ESPer?
+<[ESPer!] JAX> finishing my Sept. ESP article
+<[Len] NMORGENSTERN> Sci Fi slang for a person with extrasensory powers
+<[Kevin] APPERT> embedded systems pervesion, of course
+<[ESPer!] JAX> (ESP == Embedded Systems Programming)
+<[ESPer!] JAX> Interview CM for article, too!
+<[Kevin] APPERT> what did he say?
+<[ESPer!] JAX> So there Kev ("PHLLLBTT!!!")
+<[ESPer!] JAX> He said he is going to replace his three key keypad ...
+<[ESPer!] JAX> with a trumpet, same number of keys, more interesting in 
+computer room.
+<[Kevin] APPERT> chuckle
+<GARY-S> That's funny
+<GARY-S> Curiosity becons - have you had any nomination sheets returned yet Jax 
+<[ESPer!] JAX> Nomination ... none by mail, but all those who said they will 
+circulate same are in Europe, so don't expect them till later in July.
+<[ESPer!] JAX> S'alright ... my wife could join FIG, my son ... :-)
+<[Len] NMORGENSTERN> Why not a trombone. No keys and an infinite number of 
+notes.
+<[ESPer!] JAX> Harry Truman: "I won my first election because I had more 
+relatives than the other guy."
+<[Len] NMORGENSTERN> I can pick my nose but I can't pick my relatives.
+<GARY-S> Why don't you get Charles Curley and Kevin Appert as running mates. 
+Anarchy should stir things up, but good !!!!
+<[Kevin] APPERT> not an infinite number of ansi-approved notes, Len.
+<[Len] NMORGENSTERN> No Even temper has been standard since 17th century.
+<[ESPer!] JAX> That's not a bad idea, gars.
+<[ESPer!] JAX> call it the "Reform or Foobar" ticket.
+<GARY-S> It'd damn sure break the mold.
+<[Len] NMORGENSTERN> Every note is a little out of tune so that you can play in 
+any key.
+<[Len] NMORGENSTERN> Similar to the goal of ANSI.
+<GARY-S> Thank you Len - you're late, but I see you echo my feelings
+<[ESPer!] JAX> Did Wil see my USENET reply to his ANSI message?
+<[ESPer!] JAX>  :-)
+<GARY-S> It was ported in
+<[Wil] W.BADEN1> How recent? What's id?
+<[ESPer!] JAX> hmmm...
+<GARY-S> So were Ray Duncan's comments
+<[ESPer!] JAX> it was about "IF ANS Forth is new language, is it worth anyone's 
+attention" or something like that.
+<[ESPer!] JAX> You said, "Forth doesn't have to change completely every time 
+Forth programmers get together".
+<GARY-S> In response to the - 'and nobody cared...' thread
+<[ESPer!] JAX> I replied "The empirical evidence doesn't support that 
+conclusion." :-)
+<[Wil] W.BADEN1> Then no. I saw Ray's tonite.
+<[Len] NMORGENSTERN> It doesn't have to but it's more fun if it does!!
+<[Kevin] APPERT> we were nominating figgie-bar-wienie-roast guests, Jax.  any 
+thoughts?
+<[ESPer!] JAX> Greg Bailey
+<[Len] NMORGENSTERN> Do you have to be crazy to be a psychiatrist?
+<[Len] NMORGENSTERN> No but it helps (Old joke)
+<GARY-S> There's two for Greg
+<GARY-S> I have to split - Len you want to pick up the steno and forward the 
+notes ?
+<[Len] NMORGENSTERN> I can do that.
+<[ESPer!] JAX> Chuck said something interesting about ANSI that didn't make it 
+into my article ...
+<[Wil] W.BADEN1> Jax, I don't understand your reply.
+<[ESPer!] JAX> ( Wil, I meant that every time Forth programmers meet, it DOES 
+change, so the evidence is that apparently it has to change! small joke)
+<[Wil] W.BADEN1> (Ah.  I thought you were disagreeing.)
+<[ESPer!] JAX> Not really ... remember what I said two years ago: "If X3J14 
+says, 'Oyez, Oyez, F83 is now standard, only not restricted to 16 bits' I'll
+be happy."
+<[Kent] K.PETERSON5> JAX, what was Chuck's ANSI comment?
+<[ESPer!] JAX> Oh, I asked him ...
+<[ESPer!] JAX> "Ken Thompson of AT&T (author of UNIX) was asked ...
+<[ESPer!] JAX> "What would you change about UNIX if you could do it over again, 
+and he said ...
+<[ESPer!] JAX> "'I'd spell    creat()  as create()' ...
+<[ESPer!] JAX> So what would you change about Forth if you could start again?"
+<[ESPer!] JAX> And Chuck said, "Well, I *have* changed Forth, it has always 
+been for me what I want it to be ...
+<[ESPer!] JAX> "Only now that ANSI is going to cast it in iron ...
+<[ESPer!] JAX> " what they are really casting is the way I did things over a 
+decade ago ...
+<[ESPer!] JAX> " that other people picked up on back then ...
+<[ESPer!] JAX> " so I wish I had done it more like I do it now instead of 
+having the older ...
+<[ESPer!] JAX> " approaches frozen into the Standard". ( this is not exact 
+quote).
+<[Len] NMORGENSTERN> The whole idea of a standard is to be frozen.
+<[Kent] K.PETERSON5> That's why I like Pygmy. It has more of the CM flavor to 
+it.
+<[Wil] W.BADEN1> Chuck walked out of ANSI becuz it wudn't make FOR...NEXT 
+required.
+<[Len] NMORGENSTERN> A lot of good points in Pygmy, but too idiosyncratic for 
+my taste.
+<[Len] NMORGENSTERN> Am struggling with its peculiarities on the other machine 
+right now.
+<[ESPer!] JAX>  ??? But I thought eventually FOR ... NEXT did make it in ???
+<[Kent] K.PETERSON5> I guess I'm just an ideosyncratic guy.
+<[Len] NMORGENSTERN> I think it did.
+<[Wil] W.BADEN1> That was 1988.  And the operative word is "required."
+<[ESPer!] JAX> we're all idios, kent, some of us are just more syncratic than 
+others :-)
+<[Wil] W.BADEN1> Len, "afk" is a nice distinction for what you did.
+<[Len] NMORGENSTERN> What is afk?
+<[Wil] W.BADEN1> Away from Keyboard (but still attached)
+<[Len] NMORGENSTERN> I did leave for a few minutes, then just watched.
+<[Wil] W.BADEN1> That's what AFK is for.
+<[Len] NMORGENSTERN> I will remember the acronym, Wil
+<[Wil] W.BADEN1> BRB is I'm disconnecting temporarily, logically or physically.
+<[Len] NMORGENSTERN> Well, many are cold but few are frozen (an original 
+Spoonerism)
+<[Len] NMORGENSTERN> I think we should part. We are degenerating into bad puns.
+<[Wil] W.BADEN1> (Speak for yourself, Len.)
+<[Len] NMORGENSTERN> You leave first, I have to close down.
+<[Wil] W.BADEN1> has left.
+=== End of Steno notes. ===
+
+

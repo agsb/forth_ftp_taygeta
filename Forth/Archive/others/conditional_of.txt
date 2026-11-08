@@ -1,0 +1,64 @@
+
+\ developed by Perry L. Mitchell
+
+\ A conditional case statement, revised to allow stack manipulation
+\ inside OF...ENDOF and OTHERWISE...ENDCASE. However, anything that used
+\ the old case structure will need to be modified.
+
+\ The otherwise statement is *required* for this implementation. Do *not*
+\ perform any stack manipulation outside of the specified statements. If you
+\ need access to the value passed to the case statement, fetch the contents
+\ of the case_test_value variable. It isn't used internally, but is provided
+\ for that purpose. Be forwarned: the case_test_value variable will not work
+\ with nested case statements!!
+
+\ Example (signum function) follows.
+
+\ : sgn ( n -- result )
+\   case 0< ?of -1 endof
+\	 0   of  0 endof
+\	 otherwise 1
+\   endcase ;
+
+variable case_test_value
+
+: case
+  ?comp csp @ !csp if_flag
+  compile dup compile case_test_value compile !
+  compile dup ; immediate
+
+: of
+  if_flag ?pairs
+  compile = compile 0branch
+  here OptimizeOFF
+  compile drop
+  if_flag ; immediate
+
+: ?of
+  if_flag ?pairs
+  compile 0branch
+  here OptimizeOFF
+  compile drop
+  if_flag ; immediate
+
+: endof
+  [] else
+  compile dup ; immediate
+
+: otherwise
+  compile 2drop ; immediate
+
+: endcase
+  if_flag ?pairs
+  begin sp@ csp @ = 0=
+  while if_flag [] then
+  repeat
+  csp ! ; immediate
+
+\ ****************************************************************************
+\
+\				END OF FILE!!!!
+\
+\ ****************************************************************************
+
+

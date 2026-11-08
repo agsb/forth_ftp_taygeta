@@ -1,0 +1,240 @@
+
+                 Forth Reduced Instruction Set Computers
+
+                              John R. Hayes
+
+                            Martin E. Fraeman
+
+          Johns Hopkins University / Applied Physics Laboratory
+
+       1.  Introduction
+
+            This note describes three 32 bit  Forth  microprocessor
+       chips  we  have  designed over the past couple of years.  We
+       call  our  chips  FRISCs  (Forth  Reduced  Instruction   Set
+       Computers).   We  will  briefly describe FRISC 1 and 2 which
+       have nearly identical architectures.  We will then  describe
+       in more detail our latest design, called FRISC 3.
+
+            All three chips are fully 32 bits with 32  bit  address
+       and  32  bit  data busses.  They are word addressed, i.e. no
+       bytes.
+
+       2.  FRISC 1 and 2
+
+            FRISC  1  and  2  have  two  instruction   formats,   a
+       subroutine  call  and  a user-defined microcode instruction.
+       The msb of the instruction  determines  its  type.   A  zero
+       indicates  that  the  remaining 31 bits are the address of a
+       subroutine to call.  The call executes in one cycle.  A  one
+       in  the  msb indicates that the 31 bits are a microcode word
+       that directly controls the  resources  of  the  chip's  data
+       path.    The   microcode   word  can  represent  most  Forth
+       primitives (e.g. dup, over, +, <, 0=,  etc.)  and  the  data
+       path   can  execute  most  primitives  in  a  single  cycle.
+       Primitives that  must  access  memory  take  two  cycles  to
+       execute.    These   include   branch,  ?branch,  @,  !,  and
+       (literal).
+
+            Both FRISC 1 and 2 have two on-chip stack caches.   The
+       stack  cache  gives the programmer the illusion of having an
+       arbitrarily large  stack  of  on-chip  registers.   A  stack
+       caching   algorithm  guarantees  that  the  top  four  stack
+       elements are always present in the cache.  Accessing a stack
+       is  equivalent  to  accessing  a  register and thus provides
+       single cycle execution of the primitives.
+
+            FRISC  1  was   the   first   implementation   of   the
+       architecture  just described.  Full custom design techniques
+       were used.  The chip was built using MOSIS'  4  micron  CMOS
+       Silicon  on  Sapphire  (SOS)  process.   When the chips were
+       received  from  MOSIS  we  discovered  that  a  design  rule
+       violation  had disastrously effected yield.  However, enough
+       partially  functional  chips  were  found  to   verify   the
+       correctness  of the design.  One chip worked well enough for
+
+                                  - 2 -
+
+       us to run a Forth system on it.
+
+            Unfortunately, we were not able fix our mistake because
+       MOSIS discontinued their SOS process.  So, we re-implemented
+       the design in a scalable bulk CMOS  process  and  had  chips
+       built at 3 microns.  These chips function perfectly but at a
+       disappointing 1MHz clock rate (we had predicted 3MHz).
+
+       3.  FRISC 3
+
+            Early in 1987  we  acquired  a  new  design  tool,  the
+       Genesil  silicon  compiler  from  Silicon  Compiler Systems.
+       This more sophisticated tool would allow us to  tackle  more
+       complex  architectures.   In  May  we  started  work  on  an
+       improved architecture.
+
+            The FRISC 3 architecture inherits  many  features  from
+       FRISC  1 and 2 including the single cycle call and microcode
+       instruction and the two on-chip stack caches.  A  number  of
+       features   have   been  added  including  a  new  load/store
+       instruction format, single cycle branch, return bit (similar
+       to Novix NC4016), multiply and divide steps, and an improved
+       stack caching algorithm.  The new load/store instruction has
+       addressing modes that capture many Forth programming idioms.
+       For example, if foo is a variable in the low  64  kwords  of
+       address  space,  foo  @  can  be  represented  with a single
+       instruction.  Some forms of this load/store format allow  16
+       bit  literals  to  be pushed on the stack in one cycle.  The
+       following paragraphs describe FRISC 3 in some detail.
+
+       3.1  FRISC 3 Data Path
+
+            In addition to the stack caches there are  four  global
+       utility  registers in the data path.  Two of these registers
+       are dedicated to the stack caching algorithm but  the  other
+       two may be used as a system designer sees fit.  For instance
+       they could be used to implement an  additional  stack  or  a
+       frame pointer for a traditional language such as C.
+
+            The ALU provides  the  expected  logic  and  arithmetic
+       functions.   A  single bit left shifter on the input side of
+       the ALU and single bit  right  shifter  on  the  output  are
+       available  for  multiplication and division steps.  A single
+       condition code flag (FL)  is  provided.   The  flag  can  be
+       loaded  with  one of sixteen ALU conditions or the shift out
+       bit from one of the shifters.  Subsequently,  the  flag  can
+       control  a conditional branch or be fed into the ALU's carry
+       input for doing multiprecision arithmetic or be read onto  a
+       bus yielding a 32 bit 0 or -1 truth value.
+                                  - 3 -
+
+            There are several other elements in the  datapath  that
+       need mention.  First is the presence of a register that when
+       read always returns the value  zero  (Zero).   Second  is  a
+       program  counter (PC).  Finally, there is a processor status
+       word (PSW) that contains the state of the  interrupt  system
+       and the stack caches.
+
+       3.2  FRISC 3 Instruction Set Architecture
+
+            The  FRISC  3  instruction  set   consists   of   eight
+       instruction   types.    There   are   three   control   flow
+       instructions, four load/store instructions, and a  microcode
+       instruction.   All  FRISC  3  instructions are 32 bits wide.
+       Each of these three instruction categories is  reflected  in
+       the following three instruction formats:
+
+        +--------+----------------------------------------------+
+        | Type:3 |                  Address:29                  |
+        +--------+----------+------+------+---------+-----------+
+        | Type:3 | Return:1 | R1:4 | R2:4 | Stack:4 | Offset:16 |
+        +--------+----------+------+------+---------+-----------+
+        | Type:3 | Return:1 | R1:4 | R2:4 | Stack:4 |   ALU:16  |
+        +--------+----------+------+------+---------+-----------+
+
+       The three most significant bits (msbs)  of  the  instruction
+       determine  its  type and the interpretation of the remaining
+       29 bits.
+
+            The control flow instructions  are  call,  branch,  and
+       conditional  branch.  The destination is an absolute address
+       embedded in the instruction.  The conditional branch will be
+       taken if the flag is 0.
+
+            The upper sixteen bits  of  the  load/store  and  micro
+       instructions  have the same format.  In both formats, the R1
+       field selects a source register, R2  selects  a  destination
+       register,  and  Stack  selects any combination of pushing or
+       popping the parameter and return stacks.  The  Return  field
+       can  cause the top of the return stack to be loaded into the
+       program  counter  and  provide  the  address  of  the   next
+       instruction.    With   a  micro  instruction  the  operation
+       performed on R1 is selected by the ALU field and the  second
+       operand  is  always  TOS.   With load/store instructions the
+       operation is always addition and the  second  operand  comes
+       from the Offset field.
+
+            The four load/store instructions are load, store,  load
+       address  low (lal), and load address high (lah).  A register
+       transfer level notation summarizes their operation:
+                                  - 4 -
+
+          load:                           *(R1 + Offset) -> R2
+          store:                          *(R1 + Offset) <- R2
+          load address low (lal):         R1 + Offset -> R2
+          load address high (lah):        R1 + Offset*2^16 -> R2
+
+       The offset is a sixteen bit unsigned number.  The *  denotes
+       an  address  computation  so,  for  a load instruction, R1 +
+       Offset is the address of data  to  be  loaded  into  R2.   A
+       single  addressing  mode,  register indirect plus offset, is
+       provided.  Degenerate cases of this  addressing  mode  yield
+       other  useful  modes.  Setting the offset to zero produces a
+       register indirect mode.  Setting R1  to  the  zero  register
+       allows absolute addressing in the bottom 64kwords of address
+       space..
+
+            The load address instructions are degenerate  loads  in
+       that an address is computed but no data is fetched.  Instead
+       the address is saved in R2.  The lah instruction is  similar
+       to  lal  except that the offset is shifted left sixteen bits
+       before being added to R1.  The primary  use  for  these  two
+       instructions  is  the construction of literals.  Sixteen bit
+       literals can be produced by a single lal instruction.    Any
+       32  bit literals can be constructed by an lah followed by an
+       lal.
+
+            The micro instruction is the workhorse of the processor
+       since  it  is  used  to  implement most of Forth's primitive
+       operations.  All micro instructions consist of an  operation
+       performed  on  R1 and TOS with the result stored in R2.  The
+       ALU field selects the operation performed.  This  field  has
+       two  formats,  one  for doing arithmetic or logic operations
+       and one for doing shift, multiply, or divide steps:
+
+                 +-------+--------+-----------+-------+--------+-----------+
+       arith:    | Sel:1 | Bsrc:1 | ALUcond:4 | Cin:2 | Flag:1 |  ALUop:7  |
+                 +-------+--------+-----------+-------+--------+-----------+
+       shift:    | Sel:1 | Bsrc:1 | ALUcond:4 | Cin:2 | Flag:1 | Shiftop:7 |
+                 +-------+--------+-----------+-------+--------+-----------+
+
+            The following table shows how  the  FRISC3  instruction
+       set implements a number of Forth primitives.  The last entry
+       is the innermost loop of the (infamous) sieve after  it  was
+       run  through a metacompiler with a peephole optimizer.  This
+       illustrates how multiple Forth primitives can be packed into
+       one FRISC3 instruction.
+                                  - 5 -
+
+       +-----------------------+-----------------------------------------+
+       | dup                   | tos + 0 -> tos  pushp                   |
+       +-----------------------+-----------------------------------------+
+       | over                  | sos + 0 -> tos  pushp                   |
+       +-----------------------+-----------------------------------------+
+       | >r                    | tos + 0 -> tor  popp pushr              |
+       +-----------------------+-----------------------------------------+
+       | r>                    | tor + 0 -> tos  popr pushp              |
+       +-----------------------+-----------------------------------------+
+       | 1+                    | tos + 1 -> tos                          |
+       +-----------------------+-----------------------------------------+
+       | 0=                    | tos nopb  Z ->fl-> tos                  |
+       +-----------------------+-----------------------------------------+
+       | +                     | tos bplusa czero -> tos  popp           |
+       +-----------------------+-----------------------------------------+
+       | <                     | tos bminusa cone  NxorV ->fl-> tos popp |
+       +-----------------------+-----------------------------------------+
+       | exit                  | return popr                             |
+       +-----------------------+-----------------------------------------+
+       | @                     | *(tos + 0) -> tos                       |
+       +-----------------------+-----------------------------------------+
+       | !                     | *(tos + 0) <- tos  popp                 |
+       |                       | popp                                    |
+       +-----------------------+-----------------------------------------+
+       | begin                 |                                         |
+       |    dup size < while   | zero + 8190 -> tos pushp                |
+       |                       | sos bminusa cone  LT ->fl  popp         |
+       |                       | ?br forward                             |
+       |    0 over flags + !   | *(tos + a[flags]) <- zero               |
+       |    over +             | sos bplusa czero -> tos                 |
+       | repeat                | br back                                 |
+       +-----------------------+-----------------------------------------+
+
+

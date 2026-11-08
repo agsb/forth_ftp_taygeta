@@ -1,0 +1,23 @@
+=====================================================================
+          File: glforth-r18.txt
+       Authors: Gerald Wodni ( Programmer - Maintainer )
+              : Daniel Abouakil ( Artist, Debugging - inactive )
+              : Norbert Sattler ( Artist, Debugging - inactive )
+          Date: 2008
+   Description: 3D Demo Engine for gforth
+              : Read Me file
+=====================================================================
+                            GLForth r18
+=====================================================================
+
+This is a 3D demo that was created as an OpenGL engine for the gforth
+programming language.
+
+The original code can be found at:
+
+  www.complang.tuwien.ac.at/anton/lvas/stack-abgaben/07w/glforth/
+
+=====================================================================
+Timothy Trussell <tgtrussell@hotmail.com>                  02/05/2010
+=====================================================================
+

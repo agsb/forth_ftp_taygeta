@@ -1,0 +1,39 @@
+
+  UNARC_2.Scr is intended to be a replacement (upgrade) to UNARC.Scr.
+  ( you'll need to see UNARC.txt and/or UNARC1.txt for further info )
+
+    The major revisions included in UNARC_2 are :
+
+    1. Compression types 4 (Huffman encoding) and 9 (PKARC, modified
+       Lempel-Zev encoding) are now supported.
+
+    2. All the occurrences of 'VARIABLES: ... ;END' and
+       'CONSTANTS: ... ;END' have been removed to make for less
+       editing on your part.
+
+    3. The comments in the code (yes, I know there aren't enough)
+       have been upgraded a little bit.
+
+
+  I have no plans to carry this project any further except, perhaps,
+  in the form of a magazine article.  The most important reason for
+  doing it, at all, was to stop the public debate as to whether or
+  not it could be done.  It's fairly difficult to convince the world
+  that you have a better mouse trap when 'those in the know' can't
+  convince themselves that it catches mice.
+
+    If it can't be done in FORTH, it probably can't be done.
+
+    If it can be done, it can probably be done better in FORTH.
+
+
+  That's all the preaching I care to do.  The real point is, I hope
+  someone 'out there' can put this to use - the code isn't that
+  difficult - perhaps the philosophy isn't, either.
+
+                            - Ric Shepard
+                              P.O. Box 1344
+                              Kodiak, Alaska  99615
+                              (907) 486-4076
+
+

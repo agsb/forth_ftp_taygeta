@@ -1,0 +1,314 @@
+
+
+ Minutes of the special guest RT Conference
+ featuring Tom Almy, Electrical Engineer at
+ Tektronix, Inc.   Contents Copyright (c)
+ 1990, GEnie Forth RoundTable. Released for
+ duplication and redistribution in whole or
+ in part, provided all origination credit is
+ included.
+
+  Sub: Minutes of guest RT Conference.
+  
+  Guest: Tom Almy, Tektronix, Inc.
+  Topic: 'User Interface for non-Forth Users'
+
+Date: 05/17/90   Time: 22:26EDT
+
+Attendees:
+[[Tom Almy] FIGGUEST]
+[[paul] P.THUTT]
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[John W] J.WAVRIK1]
+[[Dennis] D.RUFFER]
+[[Kevin] APPERT]
+[[IRVING] I.MONTANEZ]
+[[Wil] W.BADEN1]
+
+Minutes:
+<[paul] P.THUTT> Haven't seen you since FIG chapter went to Corvallis
+<GARY-S> Any last moment questions, Tom ?
+<[Tom Almy] FIGGUEST> No, I'm ready
+<GARY-S> Until we go formal you will see the interlacing (party-line) exchanges 
+         I discussed..
+<NMORGENSTERN> is here.
+<J.WAVRIK1> is here.
+<GARY-S> Dr. John and Len, welcome
+<[Len] NMORGENSTERN> Hi Gary, Glad you weren't flooded out.
+<D.RUFFER> is here.
+<GARY-S> 1 minute, folks
+<D.RUFFER> ah, I see they got the name change on that account <smile>
+<GARY-S> Dennis, thanks to you and Tom for the name fix !!!
+<GARY-S> 1/2 minute
+<APPERT> is here.
+<GARY-S> Let's roll....
+<GARY-S>
+<GARY-S>    The GEnie Forth RoundTable is very pleased to welcome this ...
+<GARY-S>  evening's special guest, Tom Almy, an Electrical Engineer ...
+<GARY-S>  for Tektronix, Inc. in Beaverton, Oregon the past 17 years. ...
+<GARY-S>  Mr. Almy's involvement with Forth began in 1980, using MMS  ...
+<GARY-S>  Forth on a TRS-80. In 1982 he wrote a Integrated Circuit CAD ...
+<GARY-S>  program in Forth on the TRS-80, which is still in use in a ...
+<GARY-S>  revised form on 80386 I-clones. ...
+<GARY-S>  There are about a dozen users of the current edition, none ...
+<GARY-S>  of whom are particularly computer literate. ...
+<GARY-S>
+<GARY-S>  Mr. Almy has also written a commercial Forth for the Z-80, ...
+<GARY-S>  as well as Native Code Compilers for Forth for ...
+<GARY-S>  Z-80, 80x86 and 80386 processors. ...
+<GARY-S>  His subject for tonight's GEnie Forth Guest Conference ...
+<GARY-S>  is 'User Interfaces for non-Forth Users', which his CAD  ...
+<GARY-S>  program makes ample use of. ...
+<GARY-S>   - Please make welcome Tom Almy ...
+<GARY-S>   .. .. .. .. .. ga Tom
+<I.MONTANEZ> is here.
+<[Tom Almy] FIGGUEST> I have a deep concern with keeping Forth so that the 
+                      "average" person (one who is not computer literate)..
+                      can make use of the PRIDE CAD program without going 
+                      nuts! or having to get ahold of me for each little 
+                      problem..
+<[Tom Almy] FIGGUEST> I also have taught forth classes to over 100 people..
+<[Tom Almy] FIGGUEST> And have seen where they have difficulties..
+<[Tom Almy] FIGGUEST> Major changes in my system, some of which are being 
+                      adopted..
+<[Tom Almy] FIGGUEST> No Screen files..
+<[Tom Almy] FIGGUEST> Better number formats..
+<[Tom Almy] FIGGUEST> "To" variables..
+<[Tom Almy] FIGGUEST> All words, control strucgtures work in interpret state..
+<[Tom Almy] FIGGUEST> so that one doen't need to be concdred about being in..
+<[Tom Almy] FIGGUEST> a colon definition..
+<[Tom Almy] FIGGUEST> graceful aborts on errors..
+<[Tom Almy] FIGGUEST> easy access to host os.
+<[Tom Almy] FIGGUEST> The net result is that these mainly scientists with 
+                      little background..
+<[Tom Almy] FIGGUEST> with programming are able to write simple forth programs 
+                      and issue commands without problems..
+<[Wil] W.BADEN1> is here.
+<[Len] NMORGENSTERN> What commands are you talking about, typically?
+<[Tom Almy] FIGGUEST> The most obvious is the printing function .". Why should 
+                      one have to use .(? ..
+<[Tom Almy] FIGGUEST> But I go alot further in allowing all control structures 
+                      such as IF..
+<[Tom Almy] FIGGUEST> BEGIN.. CASE.. by going into compile state when these 
+                      words are found by the interpreter..
+<[Tom Almy] FIGGUEST> I keep track of the nesting and when the outermost 
+                      structure is finished then I execute the compiled code,..
+<[Tom Almy] FIGGUEST> and then toss it out!..
+<[Tom Almy] FIGGUEST> This operation is much like the early Forth-like system, 
+                      STOIC..
+<[Tom Almy] FIGGUEST> Which compiled all code into a compile buffer..
+<[Tom Almy] FIGGUEST> It didn't have an interpret state, but behaved as though 
+                      it did since..
+<[Tom Almy] FIGGUEST> the user interface did look alot like Forth.
+<[John W] J.WAVRIK1> I guess the question is:  when you are writing a system 
+                     for a...
+<[John W] J.WAVRIK1> non-Forth user  do you use Forth to make an interface that 
+                     does not..
+<[John W] J.WAVRIK1> require programming or are you trying to bring programming.
+                     to the "average user"
+<[Tom Almy] FIGGUEST> The users of my CAD program do write simple forth 
+                      programs..
+<[Tom Almy] FIGGUEST> It is true that most of their "CODE" consists of commands 
+                      which are
+<[Tom Almy] FIGGUEST> executed once to generate a piece of mask layout..
+<[Tom Almy] FIGGUEST> but they use looping structures to place arrays of 
+                      objects..
+<[Tom Almy] FIGGUEST> If they had to place all there loops in colon defintions, 
+                      which..
+<[Tom Almy] FIGGUEST> they othyerwise don't tend to need..
+<[Tom Almy] FIGGUEST> then they would simply get confused..
+<[Tom Almy] FIGGUEST> Don't forget, these people have trouble with BASIC or 
+                      PASCAL, which to..
+<[Tom Almy] FIGGUEST> us would seem ultra-simple. (Not to belittle them, their 
+                      skills lie in
+<[Tom Almy] FIGGUEST> other areas -- they don't want to learn the 
+                      ideosyncracies of a computer language.
+<D.RUFFER> Tom, it sounds like your CAD program...
+<D.RUFFER> uses a TTY style interface, and the Forth...
+<D.RUFFER> interpreter (with a few fixups like you mentioned)...
+<D.RUFFER> works pretty good.  However, I was wondering...
+<D.RUFFER> if you have ever had to get into a more...
+<D.RUFFER> graphics oriented interface.
+<D.RUFFER> with pull down menus and windows support?
+<[Tom Almy] FIGGUEST> well there is more to it than a simple TTY interface..
+<[Tom Almy] FIGGUEST> There is a graphic editor for the design..
+<[Tom Almy] FIGGUEST> The editor has "pop up" windows, which are easier to use, 
+                      according to my user community..
+<[Tom Almy] FIGGUEST> There is als a help facility.  From within the graphic 
+                      editor..
+<[Tom Almy] FIGGUEST> you can get help on the graphic edotor commands..
+<[Tom Almy] FIGGUEST> Outside the graphic editor, many commands will produce 
+                      "usage"..
+<[Tom Almy] FIGGUEST> messages if they are not given arguments, or are given 
+                      wrong arguments..
+<[Tom Almy] FIGGUEST> I make use of magic numbers on the stack to make sure the 
+                      more complex..
+<[Tom Almy] FIGGUEST> commands have all args present and in the right order so 
+                      that I can give an error message if they are not..
+<[Tom Almy] FIGGUEST> Also, there is a menuing interface for those that are 
+                      scared off of command
+<[Tom Almy] FIGGUEST> lines. When the program starts you can say "MENU" (there 
+                      is a message..
+<[Tom Almy] FIGGUEST> to that effect) and then you have a menu driven interface.
+                      It even has memory of the last command arguments for quick 
+                      recall.
+<[Tom Almy] FIGGUEST> (the graphic editor menus pop up with the cursor on the 
+                      last selection as well).  When you use the menu interface..
+<[Tom Almy] FIGGUEST> you are shown what the command line style command would 
+                      be..
+<[Tom Almy] FIGGUEST> so that you can learn the command line interface while 
+                      you are using..
+<[Tom Almy] FIGGUEST> the menus.  I found out that most users start with the 
+                      menus..
+<[Tom Almy] FIGGUEST> but quickly drop them after learning the commands..
+<[Tom Almy] FIGGUEST> Even in the graphic editor each command can also be given 
+                      from a single..
+<[Tom Almy] FIGGUEST> keystroke so once you learn the keystrokes you don't need 
+                      the menus at all.  Again most users use the keystrokes..
+<[Tom Almy] FIGGUEST> I'm so busy with other things *I* can't remember the 
+                      comands myself (!). and always use the menus.
+<GARY-S> quick question - is this no pain Forth a commercial or p.d. product ? 
+       (it might make a contender for the edu-forth project Wil is undertaking)
+<[Tom Almy] FIGGUEST> Every thing I have done would be easy to put into any 
+                      Forth system..
+<[Tom Almy] FIGGUEST> The PRIDE system is currently built on top of LMI 
+                      UR/Forth 386..
+<[Tom Almy] FIGGUEST> (It needs 32 bit integers, there is no problem with space)
+                      The alterations to the number conversion (which I haven't 
+                      discussed all the error handling, etc., can be made by 
+                      simply providing new routines to the existing vectored 
+                      routines. ..
+<[Tom Almy] FIGGUEST> There was no need to go back to the kernel source, which 
+                      I don't have anyway.I see no reason why these things 
+                      couldn't have been done in F-PC, to use an example of a 
+                      pd system.
+<D.RUFFER> I think I see how you are doing it, but correct me..
+<D.RUFFER> if I'm wrong....
+<D.RUFFER> when you go into menu mode, you use cursor control keys...
+<D.RUFFER> to move the menu selection item?....
+<D.RUFFER> that is the simplest way, but I've had to play...
+<D.RUFFER> with EXPECT when I've doen some systems...
+<D.RUFFER> that way, I could have menus and command mode...
+<D.RUFFER> active at the same time...
+<D.RUFFER> Have you played with that type of approach?...
+<D.RUFFER> also, have you ever messed with mouse support?
+<[Tom Almy] FIGGUEST> The menu mode is text based..
+<[Tom Almy] FIGGUEST> The first character of the menu item is unique and BOLD 
+                      faced..
+<[Tom Almy] FIGGUEST> That key is struck.  At lower levels, sometimes expect is 
+                      used but it is modified so that hitting the Escape key 
+                      will cause a return to the top menu.  Also hitting 
+                      Ctrl-Break will cause a return to the main menu no mater 
+                      what is running at the time, providing of course you are
+                      using the menu system!..
+<[Tom Almy] FIGGUEST> The graphic editor uses the mouse.  It is the only way to 
+                      go for this application.  The interface code has to pick 
+                      up either keystroke commands or mouse button presses..
+<[Tom Almy] FIGGUEST> while of course moving the display cursor if the mouse 
+                      moves..
+<[Tom Almy] FIGGUEST> and updating the coordinates at the bottom of the display.
+<[Tom Almy] FIGGUEST> The users say that this system runs much faster than any 
+                      others they..
+<[Tom Almy] FIGGUEST> have used.  A tribute to Forth.  It can even do all of 
+                      this and..
+<[Tom Almy] FIGGUEST> rubber-band animate objects on a PC/XT class machine..
+<[Tom Almy] FIGGUEST> (of course not with the current 386 code, but with an 
+                      earlier version).
+<[Len] NMORGENSTERN> How much user interaction did you have while.,.
+<[Len] NMORGENSTERN> you were developing the program?
+<[Tom Almy] FIGGUEST> LOTS!..
+<[Tom Almy] FIGGUEST> My office is right in the midst of the user community..
+<[Tom Almy] FIGGUEST> even though my manager's office (where I would normally 
+                      be near) was several hundred feet away!..
+<[Tom Almy] FIGGUEST> Proximity to the user community is very important!..
+<[Tom Almy] FIGGUEST> When I first started this program I was a user of it 
+                      myself which is better than not knowing anything about
+                      the needs.
+<[Tom Almy] FIGGUEST> but I had a real user within a year..
+<[Tom Almy] FIGGUEST> (We ar talking about 1982, here.  This program has been..
+<[Tom Almy] FIGGUEST> honed for many years, and it is still being improved).
+<[John W] J.WAVRIK1> ok
+<[John W] J.WAVRIK1> Ever try an interface in which Forth is used to write...
+<[John W] J.WAVRIK1> a simple problem-oriented user language?
+<[Tom Almy] FIGGUEST> Not a meta language, which I assume you mean (ie a 
+                      language written..
+<[Tom Almy] FIGGUEST> in Forth which creates (DOES>?) words that the 
+                      application uses)..
+<[Tom Almy] FIGGUEST> But I have done some work with object oriented Forth, 
+                      where Forth words
+<[Tom Almy] FIGGUEST> represent complicated, sometimes dynamic structures..
+<[Tom Almy] FIGGUEST> These are used in Pride to represent routing cables..
+<[Tom Almy] FIGGUEST> There would be no way to do this in a traditional 
+                      language..
+<[Tom Almy] FIGGUEST> and one would have to result to Smalltalk to get 
+                      sufficient power..
+<[Tom Almy] FIGGUEST> and I would't want to subject these folks to the 
+                      Smalltalk programming..
+<[Tom Almy] FIGGUEST> language, and it is too dificult to modify it to user 
+                      needs..
+<[Tom Almy] FIGGUEST> We also use Forth in some interfacing applications where 
+                      words are written
+<[Tom Almy] FIGGUEST> specific to the task, but *everybody* does that!  I 
+                      suppose that would be a problem-oriented language!
+<GARY-S> Dr. wavrik - you have a follow-up ? ga
+<[John W] J.WAVRIK1> Actually I had something simpler in mind...
+<[John W] J.WAVRIK1> I was impressed years ago with the ease with which MINITAB 
+                     could be..
+<[John W] J.WAVRIK1> used.  This is a statistics package.  Command lines look 
+                     like..
+<[John W] J.WAVRIK1>    ADD column C1 to column C2 and put the result in C3
+<[John W] J.WAVRIK1> looks like English...
+<[John W] J.WAVRIK1> The trick is that the first word is a command word..
+<[John W] J.WAVRIK1> most of the other words are noise...
+<[John W] J.WAVRIK1> All you really need is  ADD C1 C2 C3...
+<[John W] J.WAVRIK1> I tried this in Forth for an application and then dropped 
+<[John W] J.WAVRIK1> it when I went on to other things..
+<[John W] J.WAVRIK1> I was curious whether the idea of creating...
+<[John W] J.WAVRIK1> an artificial mini-language was ever explored...
+<[John W] J.WAVRIK1> by others in Forth who do write commercial programs..
+<[John W] J.WAVRIK1> (I don't)..
+<[Tom Almy] FIGGUEST> The conciseness..
+<[Tom Almy] FIGGUEST> of Forth is appreciated here..
+<[Tom Almy] FIGGUEST> No one minds having to do arithmetic on the stack..
+<[Tom Almy] FIGGUEST> after all, it is just like their (HP) calculators which 
+                      are prevalent around here..
+<[Tom Almy] FIGGUEST> I suppose there would be opposition when in places where..
+<[Tom Almy] FIGGUEST> infix calculators are the norm..
+<[Tom Almy] FIGGUEST> And these people know mathematics  and don't minde concise
+<[Tom Almy] FIGGUEST> expressions. I don't think they would appreciate the 
+                      extra typing of the English sentences..
+<[Tom Almy] FIGGUEST> In the graphics editor they like the simple commands..
+<[Tom Almy] FIGGUEST> there is never more than two layers of menus, and the 
+                      menus alternate rather than being heirarchical..
+<[Tom Almy] FIGGUEST> Other systems give them confusing sets of heirarchies 
+                      that may or may..
+<[Tom Almy] FIGGUEST> not match the heirarchy of their mind sets.
+<GARY-S> Closing remarks please, Mr. Almy
+<[Tom Almy] FIGGUEST> Well..
+<[Tom Almy] FIGGUEST> The time has flown, and I hardly had a chance to talk 
+                      about all I have done..
+<[Tom Almy] FIGGUEST> The result is that these users have no fear of using 
+                      Forth..
+<[Tom Almy] FIGGUEST> Managers of course still do..
+<[Tom Almy] FIGGUEST> But they are happy with the results..
+<[Tom Almy] FIGGUEST> Namely the designers are able to create masks for IC's, 
+                      hybrids, whatever their job..
+<[Tom Almy] FIGGUEST> in short time..
+<[Tom Almy] FIGGUEST> using a program that runs on a relatively inexpensive 
+                      system with little training.
+<[Tom Almy] FIGGUEST> I have found that this system is good for playing around 
+                      in..
+<[Tom Almy] FIGGUEST> Since the changes represent *extensions* rather than 
+                      drastic..
+<[Tom Almy] FIGGUEST> surgery to Forth, existing programs will run..
+<[Tom Almy] FIGGUEST> and I have a more bullet proof environment,..
+<[Tom Almy] FIGGUEST> convenient DOS access, etc.
+<GARY-S>  Tom, on behalf of the GEnie Forth RoundTable,'Thank you'...
+<GARY-S>  for your views on an area many Forth (and other) programmers ...
+<GARY-S>  tend to overlook, the program's presentation to the user.
+<GARY-S>
+<GARY-S>  All may stay and talk, but this conference has officially ended.
+=== End of Steno notes. ===
+
+

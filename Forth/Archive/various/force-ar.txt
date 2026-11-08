@@ -1,0 +1,89 @@
+
+    The following is a sub-article about the new Harris Forth engine called
+Force.  It is taken from an article entitled" EMBEDDED SYSTEMS MANIPULATE
+DISTRIBUTED TASKS" from Computer Design, Sept. 1, 1987.  The main article is
+written by Ron Wilson, Senior Editor, and covers multi-processors, cache
+systems and design trade-offs of powerful microprocessors in real-time control.
+Within this are a few sub-articles describing specific chips.  One of these
+is by David G. Williams, Marketing Development Manager, Harris Semiconductor.
+   
+   This article is copyright 1987 by COMPUTER DESIGN, which is published by the
+Advanced Technology Group of PennWell Publishing Company.  Subscriptions are
+free to qualified subscribers (918) 831-9401.
+  
+   Uploaded by Scott Squires, Sept. 13, 1987.  GEnie address: S.W.SQUIRES
+  
+       A TOOLSET FOR REAL-TIME EMBEDDED PROCESSOR CONTROL SYSTEMS
+  
+"    Designing a microprocessor into an embedded real-time control system has
+always had its own set of problems.  The use of off-the-shelf single-board
+computers is most likely unacceptable due to the size or form-factor
+constraints and application-specific requirements that may differ greatly from
+the features available on a general-purpose board.
+    The use of a single-chip microcontroller can solve the size/form-factor
+contraints of a system, but the general-purpose nature of most controllers,
+coupled with generally low performance levels of less than 1 Mips, will
+eliminate these devices from many real-time applications.  Bit-slice-based
+designs have been a popular choice, mostly because they can operate much
+faster than can general-purpose microprocessors and single-chip
+microcontrollers.  Designing a bit-slice processor involves writing
+application-specific microcode, however, and the hardware design will also be
+a nonportable design.
+    Furthermore, since the microcode is written at a machine level, programming
+will take longer, resulting in a combined hardware/software development cycle
+that significantly exceeds that of a general-purpose processor using a high-
+level language compiler.  And microcode is inherently more difficult to
+maintain and upgrade than is a structured high-level language.
+    Designers of real-time control systems need a set of tools that exhibit
+characteristics of both general-purpose and bit-slice processors.  In a robotic
+application, for example, the embedded processor needs to control a robot arm
+in three axes.  This operation can involve complex arithmetic calculations that
+could easily outstrip the performance capabilities of a general-purpose
+processor.  At the same time, there should be a way to interactively control
+the robot arm during software development.  This would be done by using a high-
+level language that can be executed interpretively during product development
+and subsequently be compiled in the finished product for maximum speed and
+compactness.
+	A set of hardware/software tools that can meet these goals is in the final
+stages of development at Harris Semiconductor (Melbourne, FL).  The core
+processor for this toolbox is a Forth-optimized reduced-instruction-set
+computing engine called Force, which is targeted at the 10- to 20-Mips
+performance range with peak execution rates expected to exceed 30 Mips.
+    Forth, a high-level language designed for embedded-processor real-time
+control applications, lets the system designer rapidly integrate software with
+hardware in an efficient and interactive development environment.  A Forth
+software development system--consisting of an operating system, a compiler, an
+editor, a linker/loader, a debugger and utilities--is so compact (typically
+4 kwords of code) that it can usually fit into the memory space of the
+end-user system during software development.  This results in a highly
+efficient and interactive development environment that can cut software-
+development time significantly over traditional software-development methods.
+    Traditional software-development systems typicaly consist of an operating
+system, an assembler, a linker/loader, a high-level language, a debugger and
+utilities.  Each of these involves loading a separate program, each with its
+own syntax and user manual that require a substantial amount of time to learn
+and master.
+    Developing software using this approach involves an interactive cycle.
+The source-code file must be edited and then assembled or compiled.  The
+object code that's generated must be linked with a linkage editor program,
+which generates an executable image for the loader.  Then the program must be
+run under the interactive symbolic debugger, which provides some interaction
+to the programmer during the test phase.  If there's an error, the programmer
+must return to the first step.
+    Forth provides these separate development programs in one integrated
+package with only its own syntax.  The Force processor is optimized for Forth
+and results in a synergistic hardware/software team that has the speed of bit-
+slice and RISC processors but has the software-development efficiency of an
+interactive high-level language.
+    Other elements of the Force toolbox include a standard-cell library of
+close to 200 cells (ranging from TTL 7400 series primitives to macro cells as
+sophisticated as a less-than-50-ns 16 x 16 parallel hardware multiplier) and
+a desktop computer-aided engineering system.  Combined with Harris/SDA software,
+this results in a complete front-to-back design system that makes possible
+single-chip, real-time control processors that can outperform both bit-slice
+and RISC processor-based designs.  The design steps involved in designing a
+product on this CAE system are schematic capture, simulation/test vector
+generation, place and route, design rule check, fault grading and pattern tape
+generation."
+
+

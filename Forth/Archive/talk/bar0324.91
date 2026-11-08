@@ -1,0 +1,353 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 03/24/91   Time: 20:38EST
+Attendees:
+[[glen] FIGGUEST]
+[[Dennis] D.RUFFER]
+[[Brad] B.RODRIGUEZ2]
+[[doug] D.GARRETT]
+[JAX]
+[GILES]
+[[IRV] I.MONTANEZ]
+[[Wil] W.BADEN1]
+[[Len] NMORGENSTERN]
+[MARLIN.O]
+
+Minutes:
+<I.MONTANEZ> is here.
+<[IRV] I.MONTANEZ> GREETINGS TO ALL
+<JAX> UNC is in what city? (PMI)
+<[glen] FIGGUEST> chapel hill nc
+<[Dennis] D.RUFFER> greetings Irving and all
+<JAX> pardon my questions, i name you in a monograph, just wanted
+                    to ID you a bit!
+<W.BADEN1> is here.
+<[glen] FIGGUEST> gee thanks ...
+<[Dennis] D.RUFFER> hiya wil
+<[Wil] W.BADEN1> Hi Dennis
+<[Dennis] D.RUFFER> we'll wait just a bit longer for stagglers
+<[Wil] W.BADEN1> Glen, Brad, Doug, Jax, Giles, and Irv.
+<JAX> What was your major, Glen, and how did it turn into comp
+                    sci in "real life"?
+<NMORGENSTERN> is here.
+<MARLIN.O> is here.
+<[glen] FIGGUEST> physics to zoology to medicine to pathology and
+                    playing ...... with instrumentation ... o
+<[IRV] I.MONTANEZ> hi len
+<[Dennis] D.RUFFER> well...even marlin...wow! <grin>
+<MARLIN.O> Wow!
+<JAX> I guess we will hear tonight how you got mixed up with the
+                    rowdy crew at MVP :-)
+<[glen] FIGGUEST> could be ... o
+<[Dennis] D.RUFFER> ok, it looks like we've got a crowd...shall
+                    we begin?
+<JAX> How is WISC doing?
+<[glen] FIGGUEST> I am taking it over as a division of my Epsilon
+                    Lyra, Inc. ... o
+<[Dennis] D.RUFFER> why don't we save that question for a bit
+                    jack... and ask it formally <grin>     ok?
+<JAX> well, the steno  is on ... :-)
+<[Dennis] D.RUFFER>... Time to come to order folks!...here are
+                    the "rules"......... Only one person will
+                    have the floor at any time, please...... do
+                    not "talk" while someone else has the
+                    floor...... To request the floor, type: !! or
+                    /raise.  I will be...... keeping a list and
+                    calling on those who want to talk...... in
+                    the order that they requested it...... I will
+                    indicate that you have the floor by
+                    typing:...... "ga your name".  When I do, you
+                    should immediately...... enter "ok" so that
+                    we know that you are still there...... Then,
+                    you can compose your question or
+                    comment...... Remember to put "..." at the
+                    end of continuation lines...... When you are
+                    done, type "ga" so that I know when to......
+                    call on the next person...
+
+<[Dennis] D.RUFFER> And now that we know the "rules"...... The
+                    GEnie Forth RoundTable is very please to
+                    welcome...... this evening's special guest
+                    speakers:......... Roy Martens, president of
+                    Mountain View Press with...... Glen Haydon,
+                    author of MVP Forth...... "MVP is Alive
+                    and...well ?"...
+
+<[Dennis] D.RUFFER>            (MVP in the 1990's Forth Market)
+
+<[Dennis] D.RUFFER> MVP was one of Forth's original vendors and
+                    the...... publications wheel-horse for two
+                    decades, but has had...... a difficult go as
+                    market trends and programmer needs......
+                    change.  This conference will look very
+                    closely at...... the dynamics of this new
+                    order....... ga glen
+<[glen] FIGGUEST>   Thank you for inviting Mountain View Press.
+                    We ...... are alive but changes are in store.
+                    Roy has sold ...... his home and is moving to
+                    San Francisco. He is ...... taking an
+                    appartment April 1....
+                       We have agreed for me to take over
+                    Mountain View ...... Press. As some of you
+                    know, Phil Koopman, has taken ...... a new
+                    job which requires him to divest himself of
+                    ...... WISC Technologies.
+                       Epsilon Lyra is my company. I am bringing
+                    WISC ...... Technologies in as a Division.
+                    Roy and I agree to ...... doing the same with
+                    Mountain View Press.  ......   I plan on
+                    carrying the public domain versions of ......
+                    Forth which I have included in my new Edition
+                    of ...... All About Forth: Fig, MVPFORTH,
+                    F83 and F-PC. I  ...... will also carry
+                    available documentation.  ......   We will
+                    also carry professional implementation ......
+                    from vendor who will make appropriate
+                    distributor's ...... agreements.
+                       For the present we will keep the same
+                    mailing ...... address and phone numbers.
+                    ......   We look forward to continuing our
+                    support of... Forth users.  ...   o   ......
+                    ... over
+<[Dennis] D.RUFFER> thanks glen...gotta remember the "ga" at the
+                    end <smile>... ga jack
+<JAX> Glen, ...... everybody's grandmother has a chip idea these
+                    days ...... SHBOOM is somewhat stalled ......
+                    RTX is dying ...... MISC is still "two months
+                    away : -) "... what is WISC going to do to
+                    buck the trend?... .... (. == ga)
+<[Dennis] D.RUFFER> ga glen
+<[glen] FIGGUEST> That remains to be seen. The transfer is not
+                    complete. ...... I just last week got the
+                    first patent. I have pc boards, ...... kits,
+                    and assembled board for the CPU 16 and I have
+                    crates... with the CPU 32 on boards as well
+                    as second generation... silicon on a dozen or
+                    so running boards.   ga
+<JAX> [AYes, but how to *sell* them?... .
+<[Dennis] D.RUFFER> did that need a reply jack?
+<JAX> Gist of the question!... How are we marketing this baby?
+<[Dennis] D.RUFFER> then ga glen if you want to take it?
+<[glen] FIGGUEST> I  would like to know - any suggestions ???
+                    ...... I am talking with nitches which need
+                    these capabilities. ..... Anyone wanting to
+                    learn our technique with the CPU 16 ...... we
+                    can make a reasonable arrangement.   ga
+<[Dennis] D.RUFFER> ga giles
+<GILES> Ok, Thx Dennis...... Glen, how bout a lite description of
+                    WISC...... for those of us unfamiliar w/
+                    it?... ga
+<[Dennis] D.RUFFER> ga glen
+<[glen] FIGGUEST> It is really Forth in hardware.  An interface
+                    to a PC ..... feeds to a single central bus.
+                    Then the stacks, ALU etc. ...... can be
+                    latched to the bus.  Microcode can be loaded
+                    in ...... the same way. The board can the be
+                    operated in single ...... steps to be sure
+                    that it is all working. The control can...
+                    kernel will have to loaded to microcode
+                    first. ...... How much more do you want now
+                    ??? ... ga
+<[Dennis] D.RUFFER> ok...glen...
+<GILES> Is this just for IBM compats? ga
+<[glen] FIGGUEST> The design requires only about 10 access ports.
+                    It ...... could be done on any system.  We
+                    have developed it ...... to run a a PC
+                    platform as a hose for I/O service. ..... We
+                    have thought but not had the time to develop
+                    other ...... platforms. After all there are a
+                    few PCs which should ../.... be put to some
+                    use. .... ga
+<GILES> Ok..Thx, Glen. GA
+<[Dennis] D.RUFFER> ok...... ga glen...and please explain the
+                    initials WISC for those who don't know
+<[glen] FIGGUEST> What  Writable Instruction Set Computer ... ga
+<[Dennis] D.RUFFER> yes thanks!... ga brad
+<[Brad] B.RODRIGUEZ2> ok...... 2 queries glen...... query 1: for
+                    what did you receive a patent? ...... query
+                    2: what special capabilities of the WISC
+                    would lead... me to choose it over another
+                    CPU...... for my application?  ga
+<[Dennis] D.RUFFER> ga glen
+<[glen] FIGGUEST> The patents are for the interface and operation
+                    of stacks ...... to a single bus in our
+                    configurations. ...... The CPU32 has the
+                    capability of doing a NEXT with ...... no
+                    cycles. It is pipelined in the microcode with
+                    ...... the last microcycle of the previous
+                    instruction.  ...... there is no program
+                    counter but rather a next... instruction
+                    counter which is selected on the last ......
+                    microcode of the preceeding instruction.
+                    Essentially ...... a subroutine call with no
+                    time for the call or return. ...... It
+                    depends on what you want if it will do you
+                    any good. ...... It is really taking the
+                    Forth emulation a step closer ...... to the
+                    hardware. ... ga
+<[Dennis] D.RUFFER> ga jack
+<JAX> Glen ...... a) is WISC applicable to realtime control
+                    ...... b) do you have prelim literature or a
+                    programmers' manual to sell for the
+                    curious?... c) do you plan an SBC based on
+                    this chip?... go... .
+<[Dennis] D.RUFFER> ga glen
+<[glen] FIGGUEST> ok ...... Real time control can go about as
+                    fast as any technique ...... It is much like
+                    Forth itself. Embedded applications. ......
+                    Yes we have manual with drawings and the
+                    operation source ...... code for sale. In my
+                    usual way, nothing is hidden. You ......
+                    should have a chance at it. You might find an
+                    application  ...... we have not identified.
+                    ... ga
+<[Dennis] D.RUFFER> ga irving
+<[IRV] I.MONTANEZ> ok..... What are your views on the ANSI
+                    STANDAR EFFORT FOR FORTH...... AND will you
+                    incorporate into your hardware when it is
+                    established?..ga
+<[Dennis] D.RUFFER> ga glen
+<[glen] FIGGUEST> ok ...... last first ...... you can put
+                    anything you want into the microcode. The
+                    ...... microcode is brain dead when it is
+                    turned on and must ...... be loaded. There is
+                    even microcode for other languages ......
+                    which have been written.  ... Standard... You
+                    can't standardize a natural language. I
+                    understand ...... the need of some vendors,
+                    but that is not the market that ...... I a
+                    interested in. I have better things to do.
+                    We will ...... see when the standard is
+                    adopted and then we will see what ...... use
+                    is made of it. It will be easy enough to add
+                    the changes ...... when there are
+                    applications requiring them. ... ga
+<[Dennis] D.RUFFER> ok...the floor is open...... ga brad
+<[Brad] B.RODRIGUEZ2> ok...... another WISC query:  two
+                    actually...  how many MIPS,... and how much
+                    $$$ for one?  ga
+<[glen] FIGGUEST> ok ...... I don't know just how you can measure
+                    the MIPS. Whose MIPS ...... less ...... I hit
+                    the wrong key and got lost but am back.
+                    ...... It depends on the implementation. What
+                    technology is ....... used in the silicon. We
+                    have thought that we could ...... get the
+                    second generation design to run 20 mh or
+                    better. ...... The goal is to direct to
+                    processor thru put. The bottle- ...... neck
+                    is still memory access. Take that down to
+                    less than ..... 20 ns and you will have
+                    something.  Microcode can run ...... multiple
+                    instructions. Sieve gets a 2x speed up by
+                    making ...... the do loops a single
+                    microinstruction. You can't do ...... that
+                    with other processors.
+                     Documentation: CPU 16  $50. Bare boards,
+                    code on disk and ...... documentation $250.
+                    ...... CPU 32 Documentation $100. The crates,
+                    chips and running ...... boards are
+                    negotiable. ... ga
+<[Dennis] D.RUFFER> ok...... Glen what are the plans for MVP
+                    Forth...any updates in the works?... ga glen
+<[glen] FIGGUEST> As we have discussed and you see from this, we
+                    are in a ...... transition phase. We will
+                    have to consolidate and set ...... up the
+                    business in a new location. ...... I have a
+                    capable desk top publishing system with
+                    800x800 ...... dot output in over 100 fonts.
+                    I plan to improve the ...... several
+                    publications and update others. I am revising
+                    ...... my Forth Guide.  I would like to see
+                    some other ...... public domain
+                    implementations of Forth which have ......
+                    different platforms and perhaps a Forth 32 to
+                    run ...... on the P... C. There is much that
+                    can be done.  I would also ...... like to
+                    strengthen the relation with Fig. ...... Have
+                    you any suggestions?   .... ga
+<[Dennis] D.RUFFER> ok...... have you looked at eforth or zen for
+                    any ideas?... BTW the floor is open guys...
+                    ga glen
+<[glen] FIGGUEST> ok ...... Only superficially. I have had a
+                    number of other ...... things to consider. I
+                    would be happy to include ...... those
+                    implementations in our product lines. ......
+                    I would like too have the full source code
+                    ...... available with any implementation.
+                    ...... That is what will really make things
+                    go. ...... The main interest in MVP Forth is
+                    that there ...... is absolutely nothing
+                    hidden. That will give ...... a fo9undation
+                    for people to build on. It is ...... better
+                    than a standard. Each to his own but ......
+                    with plenty of suggestion so that he does not
+                    ...... have to reinvent the wheel.  ... ga
+<[Dennis] D.RUFFER> ok...any other questions guys?... then, do
+                    you have some closing comments glen?
+<JAX> What else is Glen writing these days?
+<[Dennis] D.RUFFER> ok jack ga glen
+<[glen] FIGGUEST> ok ...... I am writing a selection of essays
+                    and putting ...... them out in a group of
+                    occasional papers under >>>... HINDSIGHT.
+                    There are a number of other things to ......
+                    do when one is retired. I have really more to
+                    do ...... than ever, but I only have to
+                    answer to myself. ...... That changes ones
+                    whole thought process. ... ga
+<[Len] NMORGENSTERN> <<says AMEN to that!
+<[Dennis] D.RUFFER> ok, finally comments?
+<[glen] FIGGUEST> ok ...... I hope that I will get some inputs to
+                    make MVP ...... take up the slack in the
+                    available implementations ......
+                    documentation, applications etc. I will be
+                    able ...... to package things in attractive
+                    products and I ...... hope to have things
+                    well edited. I would like to ...... work some
+                    more with my suggestion of a new text ......
+                    style of source code. Several people are now
+                    ...... using it. They seem to like it. See
+                    FD.... I have tried loading MVPFORTH and the
+                    system ...... crashes.  The other
+                    implementations in the ...... library have
+                    problems. I have discussed the ......
+                    problems with BYE, LIMIT, the assembly errors
+                    ...... and added to the now stable for 8
+                    years assembler ...... source and kernel,
+                    some application I use to use ...... block in
+                    files and to compile text source. The  ......
+                    modifications I add to MVPFORTH are
+                    documented in ...... such a file.  Enough ...
+                    Thank you for having me ...... tonight. ...
+                    ga
+<[Dennis] D.RUFFER> thank YOU glen...... one final
+                    request...could you post a business address?
+<MARLIN.O> Yes, thanks Glen!
+<[glen] FIGGUEST> ok ...... It will stay at the same box in
+                    Mountain View for the ...... present and the
+                    number will remain the same. ...... I will
+                    have to decide just what to do in the future.
+                    ...... I guess thats it. ... ga
+<[Len] NMORGENSTERN> Glen, Thanks for a fine conference. You are
+                    ...... taking on several very ambitious
+                    projects, and we all..... wish you well....
+                    ga
+<[Dennis] D.RUFFER> do you have that address handy for the
+                    transcript glen?
+<[glen] FIGGUEST> Actually no.  And I don't remember it. I go by
+                    Roy's ...... ohome and call him at home. That
+                    is how green I am ...... right now. I will
+                    get it for you Dennis.  ... ga
+<[Dennis] D.RUFFER> ok, then I'll look it up and add it during
+                    the editing... again, on behalf of the Forth
+                    Interest Group...... thank you for joining us
+                    tonight...... we really appreciate your time
+<GILES> U're really GOOD at this, Glen (Answerin Qs). (griN) Thx
+                    for comin!
+<[Dennis] D.RUFFER> all are welcome to stay and chat, but this
+                    RTC is officially concluded!
+=== End of Steno notes. ===
+
+

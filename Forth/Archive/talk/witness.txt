@@ -1,0 +1,376 @@
+
+
+-------------------------
+Newsgroup comp.lang.forth
+-------------------------
+
+Article 324 of 330, Fri 12:47.
+ Subject: Re: Can I get a witness?
+Summary: I'm almost in the same boat as the original author
+From: thomson@utah-cs.UUCP (Richard A Thomson)
+Path: pixar!ucsfcgl!ucbvax!agate!ig!uwmcsd1!tut.cis.ohio-state.edu!ut-sally!uta
+h-cs!thomson
+Organization: University of Utah CS Dept
+Newsgroups: comp.lang.forth
+Date: 26 Feb 88 20:47:26 GMT
+Reply-To: thomson@cs.utah.edu.UUCP (Richard A Thomson)
+
+In article <22028@tis.llnl.gov> paik@ati.tis.llnl.gov (Yunki Paik) writes:
+-In article <267@hudson.acc.virginia.edu> pmy@vivaldi.acc.Virginia.EDU
+-(Pete Yadlowsky) writes:
+->When will I get this religious experience [of FORTH] I keep hearing about? 
+
+-As an ex-fanatic, my advice would be: don't.
+-I think that the complete control that Forth gives you over the machine
+-(you ARE operating system) casts the spell.
+-But, you become too opinionated, and often unwilling to learn about others.
+-In fact, there are few Forth devotees who know other than Forth. :-)
+-
+-Yunki Paik
+
+I understand the phenomenon Yunki is talking about.  People do seem to become
+addicted to the stuff that is FORTH.  On the Amiga, though there is a tendency
+to use what has been done before due to the approach of shared libraries.  I
+have MultiFORTH for the Amiga and it support libraries very well.  Sometime
+soon I hope to get around to writing interface code for the arp.library
+(AmigaDOS Replacement Project Library) which will give me access to printf(),
+etc. as if I were using C.  Perhaps people who learn FORTH right after BASIC
+don't see any need for other languages, but they do have their place.  Just
+as FORTH has its place.  The problem with developing in other languages (at
+least so far on the Amiga) is that you need beaucoup resources in order to
+be productive.  (There is a thread in comp.sys.amiga addressing this through
+incremental compilers.)
+
+One appealing thing about FORTH is its elegance, simplicity and compactness
+for implementation on most microprocessors.  My opinion is that FORTH is
+preferable for small micros, especially (8-bit) embedded ones.  Here you
+can have a small ROM/PROM/EEPROM containing the kernel, and you can
+prototype your software in RAM, with the ROM providing for downloading over
+a serial line.  It is possible, with the correct hardware, to have a fully
+functioning micro running in just 3 chips using this method with FORTH.  Of
+course the micro doesn't do anything really interesting because its not
+connected to the real world except through your serial line.  Its much
+easier to port FORTH to a new micro compared to C or any other ``high-level''
+language.
+
+As far as the Amiga goes, I'd be glad to start some kind of mailing list for
+FORTH hackers on the Amiga if there is sufficient interest.  Again, I chose
+FORTH (after experimenting with C) because I had a limited configuration Amiga
+(512K, two floppies) that made developing in C excruciatingly slow.  With
+FORTH, things are nice and quick.  Unfortunately now I don't have the time to
+do any significant development :-(.  Well, I didn't mean to be this long, but
+you get my point.
+
+                                                        Rich Thomson
+
+Article 325 of 330, Thu 12:33.
+ Subject: Can I get a witness?
+From: pmy@vivaldi.acc.virginia.edu (Pete Yadlowsky)
+Path: pixar!ucsfcgl!ucbvax!pasteur!ames!hao!gatech!mcnc!uvaarpa!hudson!vivaldi!
+pmy
+Organization: University of Virginia, Charlottesville
+Newsgroups: comp.lang.forth
+Date: 25 Feb 88 20:33:55 GMT
+Sender: news@hudson.acc.virginia.edu
+Reply-To: pmy@vivaldi.acc.Virginia.EDU (Pete Yadlowsky)
+
+
+
+Dear Forth-ers,
+
+Allow me to introduce myself: I'm an Amiga owner who has a C compiler and
+an Amigized, subroutine-threaded forth called JForth (nice forth, by the
+way). My native tongue is C. I find myself drawn to the simplicity,
+extensibility, immediacy and structural elegance of the forth environment...
+BUT...I find I can't express myself in it nearly as easily as I can in C.
+Several reasons:
+
+1) zillions of "words" to memorize, as opposed to a small, powerful 
+   set of keywords.
+
+2) lack (in most implementations) of local variables. (JForth does 
+   support these, actually, but I haven't played with them yet)
+
+3) lack of syntax, readability. I've been considering writing a lisp-like
+   parser for it:  ' a b + c * d - ' becomes (- (* c (+ a b)) d)
+   At least one can see precisely the relationship of operands to operators.
+
+4) all the stack gymnastics involved. It seems like I spend more time
+   trying to remember what's where on the stack than on any other aspect
+   of forth program development.
+
+5) isolationism; it's too integrated. I'd like to be able to produce
+   binary objects and libraries that can be called from other languages.
+   How about stand-alone applications that don't have the entire dictionary
+   tagging along? Forth's threaded nature makes these things difficult,
+   though not impossible. On the other side of the coin, it'd be nice to
+   be able to load, link and call external binaries from forth.
+
+I'm not bashing forth, not a'tall. I realize that facility with any language
+is an acquired skill. What I'm trying to do is resolve this love-hate
+relationship I have with forth. I would like to get to know it better, but
+I'm repulsed by some of its awkward (in my view) aspects. I just don't feel
+that I can write anything "serious" in forth. So, my question
+to forth devotees (especially those who also speak C) is, how does one
+develop facility with this odd, fascinating language? Practice, I know,
+but how does one get past the weirdness and into the land of Productivity?
+When will I get this religious experience I keep hearing about? Thanks.
+
+        - Pete
+
+
+
+Peter M. Yadlowsky
+Academic Computing Center
+University of Virginia
+pmy@vivaldi.acc.virginia.EDU
+
+Article 326 of 330, Fri 09:28.
+ Subject: Re: Can I get a witness?
+From: kaz@cadovax.UUCP (Kerry Zimmerman)
+Path: pixar!ucsfcgl!ucbvax!hplabs!sdcrdcf!trwrb!cadovax!kaz
+Organization: Contel Business Systems, Torrance, CA
+Newsgroups: comp.lang.forth
+Date: 26 Feb 88 17:28:58 GMT
+Reply-To: kaz@cadovax.UUCP (Kerry Zimmerman)
+
+In article <267@hudson.acc.virginia.edu> pmy@vivaldi.acc.Virginia.EDU (Pete Yad
+lowsky) writes:
+>
+>Dear Forth-ers,
+>
+>Allow me to introduce myself: I'm an Amiga owner who has a C compiler and
+>an Amigized, subroutine-threaded forth called JForth (nice forth, by the
+>way). My native tongue is C. I find myself drawn to the simplicity,
+>extensibility, immediacy and structural elegance of the forth environment...
+>BUT...I find I can't express myself in it nearly as easily as I can in C.
+>Several reasons:
+>
+>1) zillions of "words" to memorize, as opposed to a small, powerful 
+>   set of keywords.
+>
+>2) lack (in most implementations) of local variables. (JForth does 
+>   support these, actually, but I haven't played with them yet)
+
+I use Mult-Forth for the Amiga, myself.  It has local variables, which
+I believe are similiar to the implementation in JForth.  At first I
+avoided their use, but have changed my mind.
+
+FORTH is most readable when each word is very small and does only one
+specific thing.  Therefore, most words will not need local variables
+because there won't be too much on the stack to keep track of with
+ordinary stack operations.  But, for interfacing with the Amiga OS,
+where lots of structures and the like have to be interfaced, and the OS
+routines take lots of arguments, using local variables can make Forth
+easier to use and much more readable.  
+
+> 
+>3) lack of syntax, readability. I've been considering writing a lisp-like 
+>   parser for it:  ' a b + c * d - ' becomes (- (* c (+ a b)) d) 
+>   At least one can see precisely the relationship of operands to operators.  
+
+> 
+I personally would find this syntax distastful.  I believe part of the
+trick to making Forth readable is good use of white-space and indentation.
+Your example becomes much more readable like this:
+        a b +   c *   d -
+You might want to check out Leo Brodies' Thinking Forth for more ideas
+on making Forth readable.
+
+>4) all the stack gymnastics involved. It seems like I spend more time 
+>   trying to remember what's where on the stack than on any other aspect 
+>   of forth program development.  
+> 
+Usually this is an indication that your words are too long -- they try
+to do too much.  Factor the words into smaller chunks.  Use the ordinary
+and local variables if you must.  These things should eliminate the 
+gymnastics.
+
+>5) isolationism; it's too integrated.  I'd like to be able to produce 
+>   binary objects and libraries that can be called from other languages.  
+>   How about stand-alone applications that don't have the entire dictionary 
+>   tagging along? Forth's threaded nature makes these things difficult, 
+>   though not impossible. On the other side of the coin, it'd be nice to 
+>   be able to load, link and call external binaries from forth.  
+> 
+We have been discussing this area in CSI's forum on CompuServe.  I
+understand that JForth will be coming out with a Meta Compiler soon
+to allow smaller binaries to be created.  Until then, we have to live
+with the large binaries.
+
+Sometimes I use Forth to prototype my project and redo it in C later if
+size is critical.
+
+>I'm not bashing forth, not a'tall. I realize that facility with any language
+>is an acquired skill. What I'm trying to do is resolve this love-hate
+>relationship I have with forth. I would like to get to know it better, but 
+>I'm repulsed by some of its awkward (in my view) aspects. I just don't feel 
+>that I can write anything "serious" in forth. So, my question 
+>to forth devotees (especially those who also speak C) is, how does one 
+>develop facility with this odd, fascinating language? Practice, I know, 
+>but how does one get past the weirdness and into the land of Productivity?  
+>When will I get this religious experience I
+keep hearing about? Thanks.  
+
+I find that Forth is something you either love or hate.  Not too much
+in between.  I have found it to be a great environment where I am my
+most productive and creative.  Hope you find this to be so too.
+
+
+Kerry Zimmerman
+#  {ucbvax,decvax}!trwrb!cadovax!kaz  Contel Business Systems 213-323-8170
+A difference between an amateur and a professional, 
+is that a professional has the right tools.
+
+Article 327 of 330, Fri 05:08.
+ Subject: Re: Can I get a witness?
+From: paik@ati.tis.llnl.gov (Yunki Paik)
+Path: pixar!ucsfcgl!ucbvax!pasteur!ames!lll-tis!ati.tis.llnl.gov!paik
+Organization: Lawrence Livermore National Laboratory, Livermore CA
+Newsgroups: comp.lang.forth
+Date: 26 Feb 88 13:08:01 GMT
+Sender: nobody@tis.llnl.gov
+Reply-To: paik@ati.tis.llnl.gov (Yunki Paik)
+
+In article <267@hudson.acc.virginia.edu> pmy@vivaldi.acc.Virginia.EDU (Pete Yad
+lowsky) writes:
+>
+>When will I get this religious experience [of FORTH] I keep hearing about? 
+>
+
+As an ex-fanatic, my advice would be: don't.
+I think that the complete control that Forth gives you over the machine
+(you ARE operating system) casts the spell.
+But, you become too opinionated, and often unwilling to learn about others.
+In fact, there are few Forth devotees who know other than Forth. :-)
+
+---
+Yunki Paik
+INTERNET: paik@ati.tis.llnl.gov  UUCP:{ames,ihnp4,lll-crg,mordor}!lll-tis!paik
+---
+
+Article 328 of 330, Fri 22:13.
+ Subject: Re: Can I get a witness?
+From: jbn@glacier.STANFORD.EDU (John B. Nagle)
+Path: pixar!ucsfcgl!ucbvax!pasteur!ames!eos!aurora!labrea!glacier!jbn
+Organization: StanfortXmiversity
+Newsgroups: comp.lang.forth
+Date: 27 Feb 88 06:13:21 GMT
+Reply-To: jbn@glacier.UUCP (John B. Nagle)
+
+In article <5292@utah-cs.UUCP> thomson@cs.utah.edu.UUCP (Richard A Thomson) wri
+tes:
+>It is possible, with the correct hardware, to have a fully
+>functioning micro running in just 3 chips using this method with FORTH. 
+
+     With the MC68HC11, one can do it with only one chip, plus an external
+crystal and power supply.  512 bytes EEPROM, 256 bytes RAM, and a FORTH
+interpreter in on-chip ROM.  One can plug in up to 64K of external RAM/ROM,
+but it is actually possible to write very small programs entirely on the
+base chip.
+
+     Still, having worked in this environment for some months, I'd much
+rather have a good C compiler and a cross-link debugger.  Data structures
+are fundamental to modern programming, and Forth lacks them.  It's like
+being back in the FORTRAN era.  I suppose that one could implement an
+object-oriented programming package through defining words, but it would
+probably generate slow code unless extensive effort went into its 
+development.
+
+                                        John Nagle
+
+Article 329 of 330, Fri 11:52.
+ Subject: Re: Can I get a witness?
+Summary: comments from a C-er
+From: lee@ssc-vax.UUCP (Lee Carver)
+Path: pixar!ucsfcgl!ucbvax!pasteur!ames!hao!gatech!bloom-beacon!mit-eddie!uw-be
+aver!fluke!ssc-vax!lee
+Organization: Boeing Aerospace Corp., Seattle WA
+Newsgroups: comp.lang.forth
+Date: 26 Feb 88 19:52:43 GMT
+
+Being primarly a C programmer, my opinion below may be of limited
+helpfulness and accuracy, but I would like to defend FORTH and
+threaded languages in general.
+
+> 1) zillions of "words" to memorize, as opposed to a small, powerful 
+>    set of keywords.
+
+What about the zillions of C libary routines you have memorized?
+Like fopen, strcpy, and isascii, not to mention printf, fprintf,
+vfprintf, ect.
+
+> 2) lack (in most implementations) of local variables. (JForth does 
+>    support these, actually, but I haven't played with them yet)
+
+The idea is that you don't need local variables.  Put every thing on
+the stack.  I suspect that you are writing fairly long routines (ok
+C style, poor FORTH style).
+
+> 3) lack of syntax, readability. I've been considering writing a lisp-like
+>    parser for it:  ' a b + c * d - ' becomes (- (* c (+ a b)) d)
+
+Personnally, I like this idea.  (Aren't there any threaded
+interpretters of LISP out already?).  Since you like LISP, with
+regard to (2), good threaded code (FORTH) is a lot like good LISP
+code - no local variables, short routines.
+
+> 4) all the stack gymnastics involved. It seems like I spend more time
+>    trying to remember what's where on the stack ...
+
+In the vein (1), think about all the C parameter sequences you have
+memorized, like puts takes the FILE* last, and fprintf takes the
+FILE* first.
+
+> 5) isolationism; it's too integrated. I'd like to be able to produce
+>    binary objects and libraries that can be called from other languages.
+
+This is a problem, at least with the FORTHs I've toyed with.  My
+understanding is that it was originally developed for bare hardware:
+no file system, no screen driver, etc.  {BEGIN-RANT}  The continued
+use of 'screens' to hold FORTH code is stupid.  Heirarchical file
+systems are completely adequate for the required services.
+{END-RANT}
+
+> When will I get this religious experience I keep hearing about? Thanks.
+
+You got to think about it differently.  Its more like lisp
+programming.
+
+{DISCLAIMER: My employer is not responsible for my opinions.}
+
+Article 330 of 330, Sun 19:59.
+ Subject: Amiga FORTH Mailing List
+Keywords: Amiga, FORTH, Mailing List
+From: thomson@utah-cs.UUCP (Richard A Thomson)
+Path: pixar!ucsfcgl!ucbvax!husc6!ut-sally!utah-cs!thomson
+Organization: University of Utah CS Dept
+Newsgroups: comp.lang.forth,comp.sys.amiga
+Date: 29 Feb 88 03:59:09 GMT
+Reply-To: thomson@cs.utah.edu.UUCP (Richard A Thomson)
+
+I am interested in forming a mailing list for FORTH programmers/experimenters
+on the Amiga.  I have a basic understanding of FORTH and have written some
+small programs, but I would like to see examples of others' code, etc.  Having
+found no source for this kind of material so far, I am proposing to start a
+mailing list for people interested in discussing specifically this topic.
+
+I hope that we can solve each other's problems through discourse as well as
+observe examples of others' solutions coded in FORTH.   Discussions about
+particular nuisances/features of either JFORTH or Multi-Forth (which I have)
+are welcome.
+
+Most of all, I think all programmers benefit from studying the work of others.
+This should be even more the case for FORTH since some of us have a hard time
+getting our mindset geared-up to think as a stack machine.  I think the recent
+posting about FORTH bears this out.
+
+Anyone interested should send me (thomson@cs.utah.edu) their e-mail address,
+and I will propogate out the mailing list as a mail alias, or set up some kind
+of mail feed similar to the transputer mailing list.  (I don't know how to
+do this yet...)  Any comments or suggestions are of course welcome!
+
+                                        Rich Thomson
+                                        thomson@cs.utah.edu
+
+

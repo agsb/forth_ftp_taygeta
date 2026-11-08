@@ -1,0 +1,322 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 03/07/91   Time: 22:28EST
+  
+ Items discussed include SigForth ACM, GEnie conf in news,Forth on the 80196,
+ EMCS and EMACS, polyForth update, obtaining info,insight into Yerks (x-Neon),
+ other OOF, pre-figFORTH (78) Forths, programming for ms-Windows
+
+Attendees:
+[GARY-S]
+[[Dennis] D.RUFFER]
+[GILES]
+[[Wil] W.BADEN1]
+[JAX]
+[D.GARRETT]
+  
+Minutes:
+<D.RUFFER> is here.
+<GILES> is here.
+<GILES> Find th original of th Rather article, Dennis?
+<[Dennis] D.RUFFER> yes, I found it, but haven't checked if it has been mailed 
+yet...It is in one of the early JFAR's
+<GILES> Ahso. (smile)  So maybe SOON then.
+<GARY-S> Did you notice, my conference with Jef raskkin is one of the feature 
+articles in the current SigForth ACM newsletter ?
+<[Dennis] D.RUFFER> yes soon, no gary, but congrats anyways :)
+<GILES> No...don get ACM.
+<GILES> When was it, Gary?
+<GARY-S> Dennis , did you ever call Paul Frenger about running a topic on here 
+- that would be good synergism
+<GARY-S> The conference or the article, Giles ?
+<GILES> CO.
+<[Dennis] D.RUFFER> ah Paul Frenger was who again?
+<[Wil] W.BADEN1> is here.
+<GARY-S> secretary SigForth ACM
+<[Dennis] D.RUFFER> ah yes..I thought the name was familuar, but no, haven't 
+called him yet :(
+<GARY-S> Do you not agree ?
+<JAX> is here.
+<[Dennis] D.RUFFER> have you sent me his phone number gary?
+<GARY-S> Giles - the Raskin conferrence was Oct 17, 1990
+<[Dennis] D.RUFFER> yes, I agree they should have a presence here...if he is 
+willing to do it
+<GARY-S> He asked at one point
+<GILES> Ahso.  Is it n th lib?
+<GARY-S> yes - Giles - in Lib 1
+<JAX> Dennis ... you play with the 80196 yet?
+<GILES> Thx.
+<GILES> Me?  Don kno what it IS. (grin)
+<[Dennis] D.RUFFER> no jack, don't have authority to open that product yet :(
+<JAX> ( I can just see Gary down at the pool hall in Little Rock ... his 
+friends saying, "You won the *what* ???") :-)
+<GILES> Hehehe
+<GARY-S> I wouldn't bend across a table after saying "the FIGGY"
+<[Wil] W.BADEN1> <-- Laffin.
+<GILES> Hahahaha
+<[Dennis] D.RUFFER> LMAO
+<JAX> Dennis ... we have one customer who is using LMI Forth on it already ... 
+better hurry up!
+<[Dennis] D.RUFFER> can only work on one product at a time right now jack :(
+<JAX> What are you working on?
+<GILES> 196 a 4th chip?
+<JAX> EMACS?
+<JAX> ( Giles ... it is Intel 80C196 microcontroller, VEDDY NICE for Forth.
+<[Dennis] D.RUFFER> that's one of them, but also updating polyFORTH
+<JAX> Oh, right ... >64
+<GILES> Ahso...thx. (grin)
+<JAX> Keep at it.
+<GARY-S> EMACS in 4th ? - really ?
+<[Dennis] D.RUFFER> just about got it done :)
+<JAX> Not *that* emacs ...
+<JAX> they stole the name :-)
+<[Dennis] D.RUFFER> nonono not EMACS, but EMCS..a process control language
+<JAX> It's pretty neat though ... at ANS they showed us their EMACS 
+obj-oriented pForth controller networking system.
+<GARY-S> Well - you can bet I won't be the last to make that connection with 
+that name
+<[Wil] W.BADEN1> Dennis, when will Yerk be made available?
+<[Dennis] D.RUFFER> I try not to use the eeemacs name, but spell the leters out 
+to avoid confusion :)
+<JAX> Floor foreman walks up to the computer ... clicks the mouse on a process .
+.. that process shuts down and all the processes that feed into it kno
+w to hold back ...
+<[Dennis] D.RUFFER> Yerk????  what's that wil?
+<[Wil] W.BADEN1> Gary, Mitch did emacs in Forth 6 or more years ago.
+<JAX> It's a way (in effect) to organize massive indusrial control projects 
+under a graphic metaphor will all levels running the same language.
+<[Wil] W.BADEN1> Oh no, did my 3 hour upload go astray?
+<GARY-S> That's true - I even have it wil- just forgot
+<JAX> IZ VOS A YERK?
+<[Dennis] D.RUFFER> ooooh...that YERK, yes, I'll download and check it tonight
+<JAX> Chto eto?
+<[Wil] W.BADEN1> The new name for Neon, now public domain.
+<GILES> Can u use it w/o a GUI, Jax?
+<[Dennis] D.RUFFER> It will be available later tonight (hopefully) or tomorrow
+<JAX> Aha. Right. Forgot. I got it off a FTP server myself and chucked it!
+<[Wil] W.BADEN1> 875 K source, 1 1/2 meg documentation.
+<GARY-S> Been folowing the Neon - Yerks discussion in c.l.f
+<JAX> Giles ... yes. Dennis, hop in here anytime ... after all, you *work* for 
+these people!
+<GILES> Great, Dennis!  How big?
+<[Dennis] D.RUFFER> ah, you need help? :D
+<[Wil] W.BADEN1> Is there much more than what reached here?  What's the gist?
+<GARY-S> Have they really cleaned up some of Neon's bugs ?
+<JAX> No, you pretty much read the whole discussion.
+<[Dennis] D.RUFFER> yes it is BIG giles >1meg for anything usefull
+<[Dennis] D.RUFFER> right now it is only on a 68K with a VT340 graphics traminal
+<[Dennis] D.RUFFER> but we are porting it to 386 on a PC
+<GARY-S> Need to light a new fire under Dave Weinstein - the oof he was 
+developing was _much_ tighter
+<GILES> Woof!
+<[Wil] W.BADEN1> Excellent Mac toolbox support.
+<[Dennis] D.RUFFER> this is a lot more than just oof gary...
+<[Dennis] D.RUFFER> it controls an entire assembly line process..
+<[Dennis] D.RUFFER> with oo thechniques for all process communication
+<GILES> U talkin about Neon/Yerk...or EMCS?
+<GARY-S> That was a reference to Neon, Dennis
+<GILES> Errr....that was 4 Dennis.
+<[Dennis] D.RUFFER> oh confused by the dual conversations again :)
+<JAX> Right ... we're all getting caught in the crossfire!
+<JAX> But nonetheless ...
+<[Wil] W.BADEN1> (Mea culpa.)
+<JAX> these are fundamentally the same subject ...
+<JAX> the utility ...
+<JAX> of the obj-oriented programming metaphor in Forth.
+<JAX> .
+<GARY-S> You can't bitch Jax - you are the one who first insisted on interlaced 
+FIGGY's
+<[Dennis] D.RUFFER> yes, we have been experimenting with oo in polyFORTH
+<[Dennis] D.RUFFER> it is certainly interesting, but adds some "rules"
+<JAX> Not bitching! I luv it!
+<[Dennis] D.RUFFER> that can make life "fun"
+<GILES> Say...could I get a current pForth glossary, Dennis?
+<GILES> Hehehe > Jax
+<[Dennis] D.RUFFER> a glossary giles???  we haven't made one of those for YEARS 
+:)
+<JAX> Just type WORDS and hit shift-* :-)
+<[Dennis] D.RUFFER> doesn't work in pF jack <grin>
+<GILES> What do they give in FI classes?
+<GARY-S> lectures
+<[Dennis] D.RUFFER> they give out a workbook and Starting Forth
+<GILES> Nothing approaching a glossary?
+<[Dennis] D.RUFFER> there is a pocket reference guide, if that is what you mean
+<GILES> Ok!  I'll TAKE it!  How much?
+<GILES> (grin)
+<D.GARRETT> is here.
+<[Dennis] D.RUFFER> I'll check for you giles and send it with the article (if 
+its free)
+<GILES> Swell! (grin) Thx!
+<[Dennis] D.RUFFER> hiya doug
+<D.GARRETT> Hi, Dennis
+<GILES> It includes things like PAUSE, no?
+<[Dennis] D.RUFFER> yes, it says that PAUSE pauses <smile>
+<GILES> (chuckle)
+<GILES> Maybe they're tryin to avoid a PD pF! (grin)
+<[Dennis] D.RUFFER> a pd pF...they came close at one time...called picoFORTH
+<GILES> Hmmmph...they wanted to CHARGE me 4 it. (grin)
+<GILES> Paid $25 for "Using Forth"...which wasn't too bad.
+<[Wil] W.BADEN1> In 1982 I did sycoForth. "syco" is a Greek prefix like "poly" 
+and means fig.
+<[Dennis] D.RUFFER> oops, just checked my pocket guide giles...no PAUSE that I 
+could find :)
+<GILES> What th Greek for 4th? (grin)
+<[Wil] W.BADEN1> tessero
+<[Wil] W.BADEN1> is the root.
+<GARY-S> Is "Using Forth" that self paced course Kim Harris co-authored ?
+<GILES> Figures, Dennis.
+<[Dennis] D.RUFFER> I like it wil, you've got to be a little syco to use Forth 
+<grin>
+<JAX> so a sycophant is a FIG-master?
+<GARY-S> no a Forther who like peanuts
+<[Wil] W.BADEN1> fig-show-er
+<[Dennis] D.RUFFER> I don't think Using Forth had anything to do with Kim, but 
+I could be wrong
+<GILES> It was Forth, Inc's Forth manual at that time, Gair.
+<[Dennis] D.RUFFER> we called it Confusing Forth <smile>
+<[Dennis] D.RUFFER> before I worked for them that is <grin>
+<GILES> Hehehehe
+<GILES> I also have th Radio Observatory manual.
+<[Dennis] D.RUFFER> huh giles, the pocket ref seems to be pretty old (scanning 
+through it) you still want it?
+<GILES> Had this funny DEC code in it. (chuckle)
+<GILES> Whas th (C)?
+<[Dennis] D.RUFFER> 1982
+<GILES> Guess not.  Thx anyway, tho. (grin)
+<[Dennis] D.RUFFER> I'll see if we have something more recent tomorrow..ok?
+<GILES> Swell!  errr...
+<GARY-S> I have the manual from Cal/Tech's Owens valley observatory - very 
+interesting
+<GILES> try to find th NEAREST thing to a glossary, can u?
+<GARY-S> The language HAS CHANGED !!!
+<GILES> Thas it! (grin)
+<[Dennis] D.RUFFER> I'll try, but we just can't keep up with the amount of 
+stuff we are adding these days :)
+<[Wil] W.BADEN1> That hapns to livin languages.
+<JAX> gotta run!
+<[Dennis] D.RUFFER> seeya later jack
+<GARY-S> Seemed to have a Algol flavor -
+<JAX> gnite all
+<GILES> Have FUN, Jax!
+<GARY-S> adios Jax
+<JAX> Oh , I *do*, Giles, I *do*!
+<JAX> has left.
+<[Dennis] D.RUFFER> so wil, have you had a chance to play with yerk yet?
+<[Wil] W.BADEN1> Yes.  it's prety good.
+<[Wil] W.BADEN1> It seems to be a good way ...
+<[Wil] W.BADEN1> for someone familiar with Forth ...
+<[Wil] W.BADEN1> to use the Mac toolbox.
+<[Dennis] D.RUFFER> have they added much to it since its neon days?
+<[Wil] W.BADEN1> It's definitely Mac oriented.
+<[Wil] W.BADEN1> According to Loewenstein, yes.
+<[Wil] W.BADEN1> I had Neon, but nevr got into it.
+<[Wil] W.BADEN1> Very easy to put up menus, controls, etc.
+<[Dennis] D.RUFFER> Is the full system there wil, include low level words?
+<[Wil] W.BADEN1> MacForth is 50 percent faster, but the interface is harder.
+<[Wil] W.BADEN1> The full system.
+<[Wil] W.BADEN1> Complete source.
+<[Wil] W.BADEN1> Kernel, classes, etc.
+<[Wil] W.BADEN1> Glossaries, tutorial, assembler.
+<[Dennis] D.RUFFER> good, I need examples of it for models for WIN Forth
+<GILES> "WIN"?
+<[Wil] W.BADEN1> WIN Forth?
+<[Dennis] D.RUFFER> just some R&D we are playing with :)
+<GILES> Window?
+<[Dennis] D.RUFFER> only WIN I know about giles
+<[Dennis] D.RUFFER> been reading the SDK docs for the past week or so
+<GILES> How bout "LOSE"? (chuckle)
+<D.GARRETT> Shux, gentlemen, but I must fly.  Gotta cook dinner, then sweat in 
+the MUMPS factory tonite, checking the pulses of 10 medical clinics.
+<[Wil] W.BADEN1> The author, Chuck Duff, did Actor, which I expect has 
+comparable classes.
+<[Dennis] D.RUFFER> good luck doug, have a good night :)
+<GILES> Hehehe...ok, Doug...have FUN...c ya NX time!
+<[Dennis] D.RUFFER> yes I know wil, that is why I want to see what he started 
+with <grin>
+<D.GARRETT> I'll be back.  Got a real Forth to play with on my computers.  Good 
+nite.
+<D.GARRETT> has left.
+<[Dennis] D.RUFFER> they are real big in the windows world now with Actor
+<GILES> I wonder why "Actor"?
+<[Wil] W.BADEN1> Huh, Giles?
+<[Dennis] D.RUFFER> it was more of a scripting type language at first giles
+<GILES> Th name...wonder where it came from.
+<[Dennis] D.RUFFER> actors read scripts...get it? :)
+<GILES> Ahso...thx, Dennis
+<GARY-S> It borrowed heavily from lessons learned in the making of Neon, though
+<GILES> Hehehe
+<[Dennis] D.RUFFER> yes, those are the lessons I need help with right now
+<GARY-S> Would it not be worth a call to Duff ?
+<[Dennis] D.RUFFER> maybe, but I need to do a LOT more homework first <grin>
+<GARY-S> Yeah - it'd be embarassing to not even know the questions to ask :-)
+<GILES> GMTA
+<[Dennis] D.RUFFER> GMTA????
+<GARY-S> what is GMTA ?
+<GILES> Great Minds Think Alike...I was about to say th SAME thing.
+<GARY-S> so do dull ones - think alike
+<[Wil] W.BADEN1> What languages let you define windows interactively?
+<GILES> (chuckle)
+<[Dennis] D.RUFFER> ah, yes...I am just now learning the language of windows
+<GILES> I wouldn kno. Hehehe
+<GARY-S> C must
+<[Wil] W.BADEN1> Don't you hav to compile first?
+<[Dennis] D.RUFFER> I'm hoping we can do that wil, but so far, doesn't look easy
+<[Wil] W.BADEN1> MacForth and Yerk do.
+<[Dennis] D.RUFFER> in C, everything is pre-compiled and linked and resource 
+allocated
+<[Dennis] D.RUFFER> yes, that is why I need to look at how they did it
+<GARY-S> There are interpreted C's - besides on unix you can prototype with 
+shell scriptsd first and they are 100% interactive
+<[Dennis] D.RUFFER> there are no interpreted window C's gary, and windows sure 
+ain't unix
+<GILES> Xwindow?
+<[Wil] W.BADEN1> Not interpretively, but interactively.
+<GARY-S> You haven't seen much X on SUNs I take it - they lookk pretty damn 
+windowy
+<[Dennis] D.RUFFER> I haven't figured out how to dynamically call in a WIN DLL 
+yet
+<[Dennis] D.RUFFER> it appears to determine what to use at load time
+<GILES> Then there's OS9.
+<[Dennis] D.RUFFER> Xwindows does do windows..pretty nicely even...but it 
+wasn't done by microsoft
+<[Dennis] D.RUFFER> they are the ones who designed the tools for WIN
+<GILES> Neither was Unix...originally. (grin)
+<GARY-S> I am not a Bill gates/ms fan
+<GILES> Awwww!
+<[Dennis] D.RUFFER> I don't like what they provide for tools in WIN much either 
+gary :(
+<GARY-S> I'll bet that's true !!!
+<GILES> <-- (Woulda liked to've made Gate's money. (grin)
+<[Dennis] D.RUFFER> everything is a call to a named procedure...nobody but LINK 
+knows the actual addresses
+<GARY-S> maybe you can determine why it is so buggy, Dennis :-)
+<[Dennis] D.RUFFER> the complexity alone is going to make it full of bugs
+<[RAID] GILES> Someone call ME?
+<[Wil] W.BADEN1> I think Yerk is slower than MacForth becuz addresses (for @ 
+and !) are relativ to A3, while in MacForth they are absolute.
+<GILES> (That works a LOT better on CIS cb) (grin)
+<[Dennis] D.RUFFER> that would do it wil, but not by 50% IMHO
+<GARY-S> That would make sense
+<[Wil] W.BADEN1> My test was a number cruncher that may hav weyted it.
+<GARY-S> It's real easy to weight ANY benchmarkk test, so you can't be sure - 
+maybe Neon/yerk just doen't like to crunch
+<[Dennis] D.RUFFER> ok wil, that would mean a lot of memory fetches, thus using 
+a lot of indirection off of A3
+<GILES> <-- (Dodgin lowflyin sends)
+<[Dennis] D.RUFFER> aw, you're getting to good at this giles...you catch 
+everything :)
+<GILES> (grin)
+<[Wil] W.BADEN1> 68 seconds in C; 97 seconds in MacForth, 137 seconds in Yerk, 
+on Mac Plus.
+<GARY-S> I'm going to mail the notes - any last words for posterity ?
+<[Wil] W.BADEN1> 1/3 that on 68020.   3 seconds on Sun.
+<GILES> -
+<GARY-S> low ball - you win !
+<[Dennis] D.RUFFER> :)  no sides
+<GILES> No CHeATIN, Gair!
+=== End of Steno notes. ===
+
+

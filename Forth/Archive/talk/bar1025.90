@@ -1,0 +1,289 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+ Date: 10/25/90   Time: 22:48EDT
+
+  The question of the night "What do you think of the changes in ForthNet ?
+  Do you even care ?" This prompted a discussion of the recent (dramatic)
+  changes in the connectivity of this support resource. Other items discussed
+  include implementing strings in Forth, hardware prototyping mag tape 
+  controllers, management reluctance to accept Forth.
+
+Attendees:
+[[Gary] GARY-S]
+[[LEN] NMORGENSTERN]
+[[bill] B.CLARK10]
+[[Dave] OLORIN]
+[[Robert] R.BERKEY]
+[[Wil] W.BADEN1]
+
+Minutes:
+<NMORGENSTERN> is here.
+<B.CLARK10> is here.
+<[bill] B.CLARK10> what's up?
+<[Len] NMORGENSTERN> brb, all. I have to look up something.
+<[Gary] GARY-S> Just chatting - any comment on tonight's question ?
+<[bill] B.CLARK10> ForthNet?
+<[Dave] OLORIN> is here.
+<[Gary] GARY-S> yeah
+<[Gary] GARY-S> Hey dave - care to comment on ForthNet ?
+<[bill] B.CLARK10> hi Dave,    I'm only dimly aware of ForthNet.
+<[Len] NMORGENSTERN> Hi Dave Long time no hear from!!!
+<[Dave] OLORIN> Hmmmnnnn. I haven't been doing anything at all in Forth since
+SigFORTH (I have to call Art to drop out of TCJ, I just don't have the time)
+<R.BERKEY> is here.
+<[Wil] W.BADEN1> is here.
+<[Len] NMORGENSTERN> Hi all, a big crowd!
+<R.BERKEY> Say, Gary, I finally found out what  :)  means...
+<R.BERKEY> it's an abbreviation for  :-)
+<[Gary] GARY-S> right
+<[Gary] GARY-S> By the way, Dave our guest Nov 15 is Allan Furman - talking 
+about SigForth
+<[Len] NMORGENSTERN> Dave, have you started your new job yet?
+<[Dave] OLORIN> Been on the job for more than a month.
+<[Wil] W.BADEN1> Dave, tell us about your new job.
+<[Gary] GARY-S> Anyone want to write a Forth column in a grass-roots magazine ? 
+Dave is vacating such a position
+<[Wil] W.BADEN1> Bill, do you know about LA FIG and OC FIG?
+<[bill] B.CLARK10> I've been to OC fig, not LA fig
+<[Len] NMORGENSTERN> (for strangers to California OC=Orange County
+<[Wil] W.BADEN1> Was I at the OC FIG meeting?  If so, when was it?
+<[Dave] OLORIN> It's all in C++ so far, with some work being done n TAL in the 
+future.
+<[Wil] W.BADEN1> TAL ??
+<[bill] B.CLARK10> I remember seeing you down there a couple of years maybe 3 
+ago
+<[Len] NMORGENSTERN> What is TAL
+<[Dave] OLORIN> A dedicated language for Tandems.
+<[Len] NMORGENSTERN> Thanx
+<[Gary] GARY-S> I would think the Tandems are running a BSD derivitive
+<[Dave] OLORIN> New Tandems are running Unix. Old Tandems aren't. :-)
+<[Wil] W.BADEN1> I rembember that one from the early 70's.
+<[Gary] GARY-S> Last request - any comments on the changes in ForthNet ?
+<R.BERKEY> Gary, is there really any change yet?
+<[Gary] GARY-S> this week-end - yes !
+<[Wil] W.BADEN1> So long as the info keeps rolling along...
+<R.BERKEY> Or is it more a matter of concern as to what might happen in the 
+future.
+<[bill] B.CLARK10> what's FortNet, sorry
+<[Wil] W.BADEN1> Gary, please epitomize the changes.
+<[Gary] GARY-S> ECFB goes down this week-end. OLIS folded up. There is some 
+reluctance among the pc-boards to move to Grapevine. Jack Brown may skewer
+BCFB.
+<[Len] NMORGENSTERN> pmi What is GrapeVine?
+<[Gary] GARY-S> the new xCFB hub
+<[Len] NMORGENSTERN> Thanx
+<[Wil] W.BADEN1> Is there still a usenet connection?
+<[Gary] GARY-S> yes - but that is the only segment remaining in tact.  Doug and 
+I handle that.
+<R.BERKEY> I seem to recall there is now another Forthnet link in Britain.
+<[bill] B.CLARK10> Oh!
+<[Gary] GARY-S> Was - it has been spotty from day one
+<[Wil] W.BADEN1> Then we're in good shape.  You can't argue against the economy.
+<[Gary] GARY-S> Lance also may kill the connection from oz
+<[Gary] GARY-S> I really think sustained operation needs the input from the 
+xCFB's
+<R.BERKEY> I still don't understand how Grapevine changes anything.
+<[Gary] GARY-S> That is what is in serious jeopardy
+<[Gary] GARY-S> The recalcitrance of the other xCFB SysOps
+<[Gary] GARY-S> Jack Brown is taking a sabattical and so far no one is willing 
+to replace him in his absence
+<[Gary] GARY-S> I think we are seeing the accumulative effect of burn-out, too
+<[Len] NMORGENSTERN> We all like to think we are infinite, but
+<[Len] NMORGENSTERN> we soon find there are limitations.
+<[Gary] GARY-S> Oh well  - time will tell, and this is killing other 
+conversations
+<[Gary] GARY-S> Forth stuff, anyone ?
+<[Dave] OLORIN> Only that OOFORTH 3.0 is on indefinite hold.
+<[Wil] W.BADEN1> Who's for FORML this year?
+<[Gary] GARY-S> ANS TC - want to tear into it, Robert ?
+<[Len] NMORGENSTERN> I will be there with one paper and possibly two
+<[Robert] R.BERKEY> I've been looking at string parameters.
+<[Len] NMORGENSTERN> I am very interested in strings.
+<[Robert] R.BERKEY> Wil suggested a while back two names for the end of 
+strings, er address.
+<[Len] NMORGENSTERN> I have tried to write a decent set of operators, and
+<[Len] NMORGENSTERN> always bog down.
+<[Robert] R.BERKEY> end and limit, where limit is end plus one.
+<[Robert] R.BERKEY> The DO loop naturally takes a string with initial address 
+and limit.
+<[Gary] GARY-S> implemented with ALLOT ?
+<[Robert] R.BERKEY> Limit seems to always be more useful than End.
+<[Robert] R.BERKEY> But at the same time, Initial Limit seems to go hand in 
+hand with
+<[Robert] R.BERKEY> Initial Count
+<[Len] NMORGENSTERN> Can't you use BOUNDS    ??? a l BOUNDS  limit origin
+<[Robert] R.BERKEY> That's pretty much the end of the comment.
+<[Robert] R.BERKEY> Right, BOUNDS converts and Initial Count to Initial Limit.
+<[Len] NMORGENSTERN> The big problems I have involve concatenation. How
+<[Len] NMORGENSTERN> to you "add" two strings together?
+<[Len] NMORGENSTERN> (I mean the syntax, not the actual runtime code)
+<[Robert] R.BERKEY> I don't have to do it often.
+<[Robert] R.BERKEY> That always an issue, it's hard to solve complex problems 
+without
+<[Robert] R.BERKEY> specific cases.
+<[Len] NMORGENSTERN> Well, I developed a system similar to DOS strings
+<[Len] NMORGENSTERN> byte 1 is maximum length, byte 2 is current length
+<[Len] NMORGENSTERN> and the rest is the string itself.
+<[Len] NMORGENSTERN> I don't really like it, but it will do all the things
+<[Len] NMORGENSTERN> that you hve in BASIC
+<[Len] NMORGENSTERN> But not really smooth.
+<[Robert] R.BERKEY> I'm presently got a sort of string stack that's really a 
+linked list...
+<[Robert] R.BERKEY> string link  string link.
+<[Robert] R.BERKEY> Concatenating is pretty easy with that.
+<[Len] NMORGENSTERN> Where do you store the strings? In the dictionary  space?
+<[Robert] R.BERKEY> Because just moving the link up allows more characters to 
+be added to the string.
+<[Robert] R.BERKEY> Above the dictionary, where PAD is.
+<[Wil] W.BADEN1> You are all missing what the problem is really about ...
+<[Len] NMORGENSTERN> How do you handle garbage collection?
+<[Wil] W.BADEN1> dynamic storage allocation and de-allocation.
+<[Robert] R.BERKEY> I don't have the need to garbage collect.
+<[Gary] GARY-S> malloc in Forth, Wil ?
+<[Wil] W.BADEN1> Sure, it's part of LMI's system.
+<[Gary] GARY-S> really ?
+<[Len] NMORGENSTERN> Do they have a built-in string system, or did you write it 
+yourself?
+<[Wil] W.BADEN1> More than a year ago I uploaded a 6-line implementation.
+<[Len] NMORGENSTERN> Here on Genie?
+<[Wil] W.BADEN1> Yes, Len.
+<[Len] NMORGENSTERN> I will look it up
+<[Wil] W.BADEN1> It's a message, not a file.
+<[Len] NMORGENSTERN> Oh. Do you remember the category/topic?
+<[Wil] W.BADEN1> In F83X I used + to catenate strings, ! to store.  Inheritance 
+was given by the vocabulary.
+<[Wil] W.BADEN1> Sorry, Len.
+<[Len] NMORGENSTERN> I have F83X, & will look for it.
+<[Wil] W.BADEN1> Interesting, + was not commutative.
+<[Len] NMORGENSTERN> It isn't in BASIC, etc, either.
+<[Wil] W.BADEN1> I'm not advocating malloc for standard Forth.  The 
+implementation is application dependent.
+<[Len] NMORGENSTERN> Does the allocation/deallocation make it slow?
+<[Gary] GARY-S> I was being a bit cheeky
+<[Wil] W.BADEN1> You don't need dynamic allocation for toasters.
+<[Len] NMORGENSTERN> F-PC has it.
+<[Robert] R.BERKEY> Dynamic allocation, Len?
+<[Wil] W.BADEN1> A circular string buffer is usually good enuf.
+<[Len] NMORGENSTERN> No, but you could allocate memory for a string
+<[Gary] GARY-S> Toasters ))))
+<[Len] NMORGENSTERN> and then when you no longer need it, you could deallocate
+it
+<[Wil] W.BADEN1> I wudnt use FPC in a toaster either.
+<[Len] NMORGENSTERN> This would handle garbage collection, needed when you
+<[Len] NMORGENSTERN> are changing the length of strings frequently.
+<[Len] NMORGENSTERN> (It might be slow, however.)
+<[Len] NMORGENSTERN> Otherwise you would get cluttered with abandoned pieces of 
+strings.
+<[Wil] W.BADEN1> What kind of application are you considering, Len?
+<[Len] NMORGENSTERN> None, to me it is an important programming problem
+<[Gary] GARY-S> Garbage slows system response worse than the time it takes to 
+collect and the discard stuff
+<[Len] NMORGENSTERN> that I would like to be able to solve, if I ever need it.
+<[Robert] R.BERKEY> As I think about it the system I have does lots of string 
+manipulations,
+<[Robert] R.BERKEY> but it's all handled on a special case basis, and there 
+doesn't seem
+<[Len] NMORGENSTERN> What system, Bob?
+<[Robert] R.BERKEY> to be a need for a general solution.
+<[Robert] R.BERKEY> It's test equipment used for testing long distance 
+telephone lines.
+<[Wil] W.BADEN1> Estimate the amount of storage you'l need, double it, multiply 
+by the number of decades you'v been programming, and round up to a power
+of 2.
+<[Robert] R.BERKEY> Strings are sent and received over a modem.
+<[Len] NMORGENSTERN> Ah
+<[Wil] W.BADEN1> Right on, Robert.
+<[Robert] R.BERKEY> An interesting problem is "reading" the strings that are 
+received back.
+<[Len] NMORGENSTERN> Then, you don't know in advance how long the string will 
+be.
+<[Robert] R.BERKEY> One of the programmers discovered that reading the strings 
+starting at the
+<[Len] NMORGENSTERN> I had not thought about that problem!
+<[Robert] R.BERKEY> end was the best for that particular equipment.
+<[Robert] R.BERKEY> Sounds like a job for a vocabulary.
+<[Robert] R.BERKEY> or, lots of vocabularies.
+<[Len] NMORGENSTERN> Granted that the 31-character limit on Forth words is 
+arbitrary,
+<[Robert] R.BERKEY> That's sort of what they implemented, with discrete DOES> 
+structures.
+<[Len] NMORGENSTERN> but could Forth dictionary handle these strings?
+<[Robert] R.BERKEY> Yes, Len, they would work.  However, this system has no 
+classical interpreter...
+<[Robert] R.BERKEY> so any vocabulary structures are "to be implemented".
+<[Len] NMORGENSTERN> Sounds like a very interesting challenge!!!
+<[Robert] R.BERKEY> The string matching is done in high level, so using well 
+built vocabularies
+<[Gary] GARY-S> Jump in anytime, Bill
+<[Robert] R.BERKEY> would have some advantages.
+<[bill] B.CLARK10> just how much string manipulation is threre in a modem 
+tester?
+<[Robert] R.BERKEY> Um, the modems are communicating with a remote test device.
+<[Robert] R.BERKEY> The remote test devices can measure things like resistance, 
+hook up to
+<[Robert] R.BERKEY> different circuits, etc.
+<[Robert] R.BERKEY> On the other side of the data flow is a data base computer, 
+as well as
+<[Robert] R.BERKEY> the user's terminal.
+<[bill] B.CLARK10> Ah!,  do the remote testers really need to send strings or 
+can they send junst codes?
+<[bill] B.CLARK10> (just codes)
+<[Robert] R.BERKEY> So there are really four devices at any one time that are 
+sending and
+<[Robert] R.BERKEY> receiving strings of various forms.
+<[Robert] R.BERKEY> The communication protocols with the remote test devices 
+come in several
+<[Robert] R.BERKEY> varieties.
+<[Robert] R.BERKEY> One of them is simple codes, while others are English-like 
+protocols,
+<[Robert] R.BERKEY> so that user's with just a terminal can also "talk" to the 
+devices, as
+<[Robert] R.BERKEY> well as interpret the data stream coming over the modem.
+<[Robert] R.BERKEY> ::USR:: DC 1 AP 100 TEST
+<[Robert] R.BERKEY> might be an (albeit phoney) example of a message sent or 
+received.
+<[bill] B.CLARK10> um.      haven't used forth seriously recently, just 
+assembler, but I have a new project to do and I'm thinking of forth, of course
+ the bod--- boss wants it in 'C',    so have any BASIC or 'C' like string 
+handling extensuions been made to forth?
+<[Wil] W.BADEN1> There are several.
+<[Robert] R.BERKEY> Well, that's just it, here's a Forth system with many 
+solutions to the
+<[Robert] R.BERKEY> various string issues, yet the Forth per se has no 
+centralized string handling capability.
+<[Robert] R.BERKEY> Just lots of specific solutions to specific problems.
+<[bill] B.CLARK10> my task needs to be up and running yesterday so forth seems 
+a natural
+<[bill] B.CLARK10> but no one else here knows forth, when I leave they're stuck.
+<[Robert] R.BERKEY> A Catch 22, but there's the prototype in Forth and convert 
+to whatever solution.
+<[bill] B.CLARK10> I guess they can always learn
+<[bill] B.CLARK10> the prototype would be the final solution
+<[bill] B.CLARK10> it's a one of a kind test fixture for tape controllers
+<[Robert] R.BERKEY> What's the processor?
+<[bill] B.CLARK10> 68020
+<[bill] B.CLARK10> 20 MHz
+<[bill] B.CLARK10> nice
+<[Robert] R.BERKEY> yep, Nice!
+<[Robert] R.BERKEY> Can you run the test application from a remote computer?
+<[bill] B.CLARK10> do you know of a good/any 8--- 68000 forth  on genie
+<[bill] B.CLARK10> and.....     remote um... an interesting idea.
+<[Robert] R.BERKEY> Remote meaning 2 feet away, hahaha.
+<[bill] B.CLARK10> I guess so. I could link a PC to the cpu cards serial port
+<[bill] B.CLARK10> and just have some simple monitor code in the 68020 cpu
+<[bill] B.CLARK10> ummmm... flexibility .     it's definitely woth.. worth 
+considering.
+<[Robert] R.BERKEY> Oh, I'm sure there are 68000 Forth's here, I just don't 
+know much about them.
+<[Gary] GARY-S> There are a couple specifically for mounting on C and a couple 
+of native code 68K Forths in the library, plus a F83
+<[Robert] R.BERKEY> F83 was first done on the 68K and Mitch Bradley also has a 
+68K forth.
+<[bill] B.CLARK10> I have a modified FIG forth I did 7-8 years ago
+<[bill] B.CLARK10> but the new stuff F83... seems so mush easier to use
+<[bill] B.CLARK10> I'll scan the software lib after this meeting then.
+<[Robert] R.BERKEY> I'm heading out, see you all later.
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,398 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 06/22/89   Time: 22:28EDT
+
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Kevin] APPERT]
+[[Old Sod] FIGCHAPTERS]
+       
+ FIGGY BAR of 22 June 1989. The evening question was, "Is Forth becomming a 
+           Embedded Controller Language ONLY ?". This dominated the conference.
+           Also: SIGFORTH ACM, Ada required by gov,32 bit chips,Single Boards,
+           Macro Assm vs Metacomp Forth kernels.   The shame of the PRC.
+Minutes:
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Answer to question: Hell NO!
+<[Dave] DHWEINSTEIN> DId you get my letter?
+<[Gary] GARY-S> Yep - two person RT is a BIG risk
+<[Gary] GARY-S> I know - push it with a proviso we are seeking a third with 
+strong edu background
+<[Dave] DHWEINSTEIN> Ok. No problem. I'll rewrite the proposal and have it out 
+tonight!
+<[Gary] GARY-S> brb
+<APPERT> is here.
+<[Dave] DHWEINSTEIN> Hullo Kevin
+<[Kevin] APPERT> hi
+<[Kevin] APPERT> embeded controllers only?  who says?
+<[Dave] DHWEINSTEIN> My answer to that was a resounding "Hell NO!"
+<[Kevin] APPERT> me too
+<[Kevin] APPERT> counter-examples are legion
+<[Dave] DHWEINSTEIN> Actually I tend to use Forth as a way of learning about 
+new programming technniques and honing my skills (my Forth paying jobs are 
+unfortunately few and far between).
+<[Gary] GARY-S> Obviously I pushed the right button with tonight's question - 
+about time
+<[Dave] DHWEINSTEIN> Current project is a Smalltalk model Object Oriented 
+extension complete with multiple inheritance. And it shouldn't cause that mu
+ch of a performance hit (i.e. ok for anything not absolutely time critical)
+<[Kevin] APPERT> Forth is the programming tool most likely to find it's way 
+into any new computing field!  It's used for more different kinds of thing
+s than any other language
+<[Dave] DHWEINSTEIN> The nice thing is that the Smalltalk model of 
+object<--message (i.e. you tell a model to do xxx to itself) merges splendidly 
+with
+ the Forth ideal of "noun modifier verb" coding style!
+<[Gary] GARY-S> The question arose because of all the encroachment into 
+otherwise Forth domains by C and Smalltalk and Pascal
+<[Dave] DHWEINSTEIN> Gary: I've seen realtime work done in Forpran!
+<[Gary] GARY-S> Forpran ?
+<[Dave] DHWEINSTEIN> (for that matter I've seen it done in Cobol)
+<FIGCHAPTERS> is here.
+<[Dave] DHWEINSTEIN> Fortran. My fingers aren't performing up to par tonight.
+<[Dave] DHWEINSTEIN> Hullo Jax
+<[Control] FIGCHAPTERS> Have some filthy tea!
+<[Gary] GARY-S> 'scuse - filthy tea ???
+<[Control] FIGCHAPTERS> ( Bill Haydon Quoting Control in Le Carre's _Tinker 
+Tailor Soldier Spy_)
+<[Control] FIGCHAPTERS> I thought the topic toinght was Control.
+<[Control] FIGCHAPTERS> He is a character in Le Carre's books.
+<[Dave] DHWEINSTEIN> >Fwapp<
+<[Gary] GARY-S> you have very strange bends of thought (?)
+<[Kevin] APPERT> as always, we are out of control, Jax
+<[Smiley] FIGCHAPTERS> You just noticed?
+<[Dave] DHWEINSTEIN> (bent into pretzels)
+<[Smiley] FIGCHAPTERS> Zotz ...
+<[Gary] GARY-S> So - what is Forth's future, prognosticators you
+<[Smiley] FIGCHAPTERS> Gary Betts of ANSI said to me ..
+<[Smiley] FIGCHAPTERS> "Dinosaurs became extinct ....
+<[Smiley] FIGCHAPTERS> "but we still have chickens ...
+<[Smiley] FIGCHAPTERS> "If Forth dies ...
+<[Smiley] FIGCHAPTERS> "The last thing to go will be standalone controller 
+projects"
+<[Dave] DHWEINSTEIN> Forth isn't going to die! (Sound of diehard)
+<[Smiley] FIGCHAPTERS> Of course not.
+<[Smiley] FIGCHAPTERS> It's only imbeciles that think that.
+<[Kevin] APPERT> we still have turkeys, also, QED
+<[Smiley] FIGCHAPTERS> Remember what Ron Reagan's producer said about his movie 
+career ?
+<[Kevin] APPERT> what?
+<[Smiley] FIGCHAPTERS> He said ...
+<[Smiley] FIGCHAPTERS> " There were lots of better actors ...
+<[Smiley] FIGCHAPTERS> but Ronald Reagan always showed up on time, sober, with 
+his lines ready."
+<[Smiley] FIGCHAPTERS> Forth is like that.
+<[Gary] GARY-S> Embedded Systems is the current stronghold - does that 
+represent the last <==devil's advocate
+<[Gary] GARY-S> well ... is it
+<[Kevin] APPERT> better languages then forth?
+<[Kevin] APPERT> I have not seen one yet
+<[Gary] GARY-S> is it the last shot
+<[Smiley] FIGCHAPTERS> Look ....
+<[Smiley] FIGCHAPTERS> If you want to get a bunch of college-graduated drudges .
+..
+<[Smiley] FIGCHAPTERS> and lock them in a big project ...
+<[Smiley] FIGCHAPTERS> and pay peanuts ....
+<[Smiley] FIGCHAPTERS> You do it in C.
+<[Dave] DHWEINSTEIN> If I knew a better language than Forth I'd be using it as 
+my language of choice.
+<[Dave] DHWEINSTEIN> Use Modula, Pascal, or Ada!
+<[Dave] DHWEINSTEIN> :-)
+<[Smiley] FIGCHAPTERS> Or ada, Mod2 or Pasc.
+<[Smiley] FIGCHAPTERS> right dave.
+<[Smiley] FIGCHAPTERS> But if you want cutting edge creatvitity, it's Forth.
+<[Kevin] APPERT> the problem with doing that is that there is no way to insure 
+reliability!
+<[Smiley] FIGCHAPTERS> C comes along afterwards like the road crew to lay the 
+asphalt for the superhiway.
+<[Kevin] APPERT> the biggest advantage of forth is in the testing of modules
+<[Gary] GARY-S> God help us - DOD is proscribing Ada - have you even seen the 
+Ada user's guide(s) <VOLUMESssssssssss>
+<[Dave] DHWEINSTEIN> What about those of who are semi-college-graduated 
+(graduation delayed due to a silly desire for an education rather than being a
+ number)?
+<[Smiley] FIGCHAPTERS> So, the gov't. rules out creativity. This is perhaps big 
+news?
+<[Dave] DHWEINSTEIN> (If it weren't for the need to have a degree to get most 
+jobs with decent pay in this field...)
+<[Smiley] FIGCHAPTERS> Forth programmers want to carry their shells on their 
+backs.
+<[Gary] GARY-S> It condems gov projects to moprasses of morasses - and we do 
+need gov productivity
+<[Smiley] FIGCHAPTERS> If you are going to be computer-zen-priest, you can't 
+complain about the fleshpots being closed to you!
+<[Kevin] APPERT> you can't legislate morality, economy, or software reliability!
+  tell this to the politicians
+<[Smiley] FIGCHAPTERS> Look, the way our gov't has been running, I would be 
+satisfied with a little LESS productivity.
+<[Dave] DHWEINSTEIN> I want to have my Zen and fleshpots too!
+<[Dave] DHWEINSTEIN> (grin)
+<[Smiley] FIGCHAPTERS> That's why you're a C programmer.
+<[Smiley] FIGCHAPTERS> C programmers have better job prospects ...
+<[Dave] DHWEINSTEIN> I resent that implication. C pays the rent.
+<[Kevin] APPERT> we have a law in this state (ca) which tells insurance 
+companies what to charge
+<[Smiley] FIGCHAPTERS> in general ...
+<[Dave] DHWEINSTEIN> (And then some. Unix/C prorgammers get the highest 
+salaries in this industry)
+<[Smiley] FIGCHAPTERS> but a good Forth programmer, where you need Forth, can 
+just about write the ticket.
+<[Kevin] APPERT> if they can ever figure out how to inforce it, how are they 
+going to have any insurance companies in this state?
+<[Dave] DHWEINSTEIN> Unfortunately due to an education in progress...they get 
+away with paying me a good deal *less* than the going rate.
+<[Smiley] FIGCHAPTERS> I wasn't implicating, dave ... you said it ... "C pays 
+the rent".
+<[Gary] GARY-S> Thanks to all the help Dave has NOT received for his TJC column 
+he has graciously elected to load his code into the library - thanks D
+ave
+<[Smiley] FIGCHAPTERS> It's probably time to nationalize the insurance 
+companies, then sell them back to private industry in 15 years!
+<[Dave] DHWEINSTEIN> It beats being morally right and living under a bridge. If 
+I could get a steady Forth job in Austin I'd leap. (If you are reading
+ this and want to hire a Foerprogrammer in the Austin area...)
+<[Smiley] FIGCHAPTERS> Good swindle, Britain has pulled it a few times.
+<[Smiley] FIGCHAPTERS> Dave, that's the point.
+<[Smiley] FIGCHAPTERS> Forth programmers are right and broke.
+<[Smiley] FIGCHAPTERS> "Wide is that path leading to destruction" and it's 
+jammed with C programmers.
+<[Smiley] FIGCHAPTERS> If you want a Forth job, come work for me in COlorado.
+<[Dave] DHWEINSTEIN> What we need is to do what many of the people in other 
+languages do. True remote programmers. If Steve Roberts can do remote work
+ from a bicycle...
+<[Dave] DHWEINSTEIN> My mother and sister would be thrilled (another excuse to 
+come and ski). And I must admit the idea is tempting. But I not only ne
+ed to eventually get a degree (and just signed another year lease)...I really 
+don't want to move Austin.
+<[Dave] DHWEINSTEIN> (There are decided disadvantages to falling in love with 
+the place you live)
+<[Smiley] FIGCHAPTERS> That is coming, Dave ... it just ain't quite here yet. I 
+did remote programming for a while. But I found that there is plenty t
+o do in-house too.
+<[Dave] DHWEINSTEIN> Now if Vesta would have remote work done...
+<[Smiley] FIGCHAPTERS> We have contract programmers.
+<[Smiley] FIGCHAPTERS> We just need an in-houser now.
+<[Kevin] APPERT> has anybody else gotten vol1, #1 of SIGFORTH newslette of ACM
+<[Gary] GARY-S> no
+<[Smiley] FIGCHAPTERS> Besides, you could use exposure to some professional 
+Forth programmers, Dave.
+<[Smiley] FIGCHAPTERS> It's like C ...
+<[Dave] DHWEINSTEIN> Not yet. I just got the form requesting I sign the 
+permissions for the Paper Prints today.
+<[Smiley] FIGCHAPTERS> It don't really come overnight.
+<[Gary] GARY-S> It is starting to challenge Forsley's record for on-time 
+delivery
+<[Kevin] APPERT> I just got mine today
+<[Dave] DHWEINSTEIN> Jax: I know.
+<[Old Sod] FIGCHAPTERS> I didn't get my Sig FOrth NL, but I got the Editor last 
+week :-)
+<[Old Sod] FIGCHAPTERS> Chuck Curley dropped by.
+<[Dave] DHWEINSTEIN> OooooOOOOOOoooo. Then mine will be coming. Soon. Yeah!!! 
+(thrills and excitement). I'm still waiting for ACM to send me the $%^#$
+<[Gary] GARY-S> Did my comment about Dave slide right past you two >?
+<[Kevin] APPERT> says "spring 89"   equinox was yesterday, when was Larry only 
+1 day late?
+<[Old Sod] FIGCHAPTERS> no, the SOLSTICE ... equinox was months ago.
+<[Old Sod] FIGCHAPTERS> Who Knows FACTS about ...
+<[Kevin] APPERT> ooops, all the solar scientists are out of town!  solstice is 
+right
+<[Old Sod] FIGCHAPTERS> the new CHUCK CHIP.
+<[Old Sod] FIGCHAPTERS> ..???
+<[Dave] DHWEINSTEIN> (eyes rivet on the screen) (wipes drool off of keyboard) 
+the new CHUCK CHIP! Speak!
+<[Old Sod] FIGCHAPTERS> I'm asking.
+<[Gary] GARY-S> Chuck - I tried to call him tonight - guess he's in Rochester
+<[Old Sod] FIGCHAPTERS> Who saw ESP for July?
+<[Dave] DHWEINSTEIN> Oh. I thought you had something. Ahh well.
+<[Dave] DHWEINSTEIN> Not me.
+<[Old Sod] FIGCHAPTERS> I have a need for a Forth chip.
+<[Old Sod] FIGCHAPTERS> Forth is rather prominent in July ESP.
+<[Gary] GARY-S> Silicon Comp and harris sells lots of them Jax
+<[Dave] DHWEINSTEIN> Good.
+<[Old Sod] FIGCHAPTERS> Poof! Want 32-banger. Chuck Chip or New RTX or SC32 for 
+jax!
+<[Old Sod] FIGCHAPTERS> ( not necc. in that order).
+<[Dave] DHWEINSTEIN> I thought the SC32 was available already.
+<[Gary] GARY-S> so - call Harris, SC or Comp Cowboy
+<[Old Sod] FIGCHAPTERS> Called Comp. Cowboys. Short on info.
+<[Old Sod] FIGCHAPTERS> In negot. with SC>
+<[Old Sod] FIGCHAPTERS> RTX calls us once a week.
+<[Gary] GARY-S> What is 32 bit project ?
+<[Old Sod] FIGCHAPTERS> 32-bit Forth Singleboard.
+<[Old Sod] FIGCHAPTERS> Nobody builds 'em more economical than VESTA.
+<[Gary] GARY-S> ask a stupid question
+<[Dave] DHWEINSTEIN> Nice.
+<[Old Sod] FIGCHAPTERS> Nice and useful and cheap that's us.
+<[Gary] GARY-S> Loaded question Jax
+<[Gary] GARY-S> Who does Vesta consider their prime competitor(s)
+<[Dave] DHWEINSTEIN> What we really need is a full scale Forth workstation 
+project. But unlike the dedicated Lisp workstations (i.e. TI Explorer) it'l
+l probably need to run a major operating system (i.e. Unix in this day and age),
+ at least as an option.
+<[Old Sod] FIGCHAPTERS> We don't really have many competitors.
+<[Gary] GARY-S> isd NMI ?
+<[Old Sod] FIGCHAPTERS> In the vector sum of reliability, useability and 
+development environment,
+<[Gary] GARY-S> Inner Access ?
+<[Old Sod] FIGCHAPTERS> we occupy a fairly unique niche.
+<[Gary] GARY-S> SC ?
+<[Old Sod] FIGCHAPTERS> Not really ...
+<[Gary] GARY-S> do any of them
+<[Old Sod] FIGCHAPTERS> You see ...
+<[Old Sod] FIGCHAPTERS> we are not in the market in general to provide ...
+<[Old Sod] FIGCHAPTERS> the most doctrinally correct boards ...
+<[Old Sod] FIGCHAPTERS> we produce ....
+<[Old Sod] FIGCHAPTERS> well-designed, economical development engines that 
+HAPPEN to have Forth on them ....
+<[Old Sod] FIGCHAPTERS> because that is the best way to provide Development-
+World-On-A-Board.
+<[Old Sod] FIGCHAPTERS> We are a Forth house ...
+<[Old Sod] FIGCHAPTERS> but only because there is no other way to do what we 
+want ...
+<[Old Sod] FIGCHAPTERS> Our latest price list features ...
+<[Old Sod] FIGCHAPTERS> $99 complete single-board computers w/A2d, I/o, etc ...
+<[Old Sod] FIGCHAPTERS> ( resident language extra).
+<[Old Sod] FIGCHAPTERS> We can't be beat by too many shops.
+<[Old Sod] FIGCHAPTERS> In addition,
+<[Old Sod] FIGCHAPTERS> VESTA has full design capabilities ...
+<[Gary] GARY-S> Don't get too commercial
+<[Dave] DHWEINSTEIN> That is a kit, right. (Tries to picture $99 A&T).
+<[Old Sod] FIGCHAPTERS> engineering CAD and programming services.
+<[Old Sod] FIGCHAPTERS> No, it is not a kit ... it's an SBB-88 with 8 k Ram.
+<[Old Sod] FIGCHAPTERS> You asked why we didn't consider the others competition 
+...
+<[Dave] DHWEINSTEIN> $99 A&T!!! (impressed look)
+<[Old Sod] FIGCHAPTERS> we are not exactly in the same business ...
+<[Old Sod] FIGCHAPTERS> We sell the off-the-shelf stuff ...
+<[Old Sod] FIGCHAPTERS> but in house we have a LOT of project and design years 
+of experience.
+<[Kevin] APPERT> non_sequitor:  anybody know any good arguments for writing 
+forth in MACRO-assembler?  (I feel it's not a really great idea, myself)
+<[Gary] GARY-S> There are none - really except it is just easier to write Forth 
+in Forth soon afetr docol
+<[Dave] DHWEINSTEIN> Write Forth as macros and run it through the assembler? Or 
+write a Forth which has a large part of the language done in assembly
+rather than through bootstrapping?
+<[Old Sod] FIGCHAPTERS> It's easier to metacompile Forth than to write Forth, 
+believe me.
+<[Old Sod] FIGCHAPTERS> It's really just a case of easy.
+<[Old Sod] FIGCHAPTERS> The argument for doing FIG that way ...
+<[Kevin] APPERT> there are several friends who arn't sold on metacompilers, 
+they think they are too hard to understand
+<[Dave] DHWEINSTEIN> But a fully native Forth (especially if smart enough to do 
+inline substitution for some operations) should run faster.
+<[Old Sod] FIGCHAPTERS> was it was a way to spread Forth rapidly to a variety 
+of architectures before there was much transportability.
+<[Old Sod] FIGCHAPTERS> You can metacompile as fast a Forth as you can assemble.
+<[Kevin] APPERT> there are no good books, and they can't seem to pick it up by 
+example
+<[Old Sod] FIGCHAPTERS> The metacompiler IS hard to understand.
+<[Dave] DHWEINSTEIN> Jax: Agreed.
+<[Old Sod] FIGCHAPTERS> But so are C compiler internals.
+<[Dave] DHWEINSTEIN> (also agreed)
+<[Old Sod] FIGCHAPTERS> Once you "get" it ...
+<[Old Sod] FIGCHAPTERS> The metacompiler is a LOT easier than assembler.
+<[Old Sod] FIGCHAPTERS> really.
+<[Dave] DHWEINSTEIN> Its just a matter of the learning curve. Once you know it, 
+you can't understand why you didn't before.
+<[Old Sod] FIGCHAPTERS> you just have to take the hurdle.
+<[Old Sod] FIGCHAPTERS> If you want to learn metacompiler ...
+<[Old Sod] FIGCHAPTERS> Buy polyFORTH or LMI.
+<[Dave] DHWEINSTEIN> (unfortunately phrases like that are never helpful to 
+people on the wrong side of the curve)
+<[Dave] DHWEINSTEIN> (grin)
+<[Old Sod] FIGCHAPTERS> Or just learn on your own.
+<[Old Sod] FIGCHAPTERS> But if you want to learn with SUPPORT ....
+<[Old Sod] FIGCHAPTERS> Buy pF or LMI.
+<[Kevin] APPERT> pF = $3K?
+<[Old Sod] FIGCHAPTERS> si.
+<[Gary] GARY-S> I hear a lot of comments to the contarary, but Ting's books 
+help - a lot
+<[Old Sod] FIGCHAPTERS> 3k+
+<[Old Sod] FIGCHAPTERS> I learned it from a) TING's book + F83 b) Appelman's 
+A4th for the Amiga.
+<[Old Sod] FIGCHAPTERS> ( also some from pFII).
+<[Kevin] APPERT> one of my favorite arguments against is VIEW (pF = LOCATE).  
+very difficult to do with assembler not meta
+<[Old Sod] FIGCHAPTERS> Against what?
+<[Dave] DHWEINSTEIN> VIEW is wonderful except on F-PC. I cannot fit all the 
+sources on the proper drive  (and hard drives are *expensive* for this box)
+<[Old Sod] FIGCHAPTERS> Oh, assembler.
+<[Dave] DHWEINSTEIN> (Practical problem)
+<[Kevin] APPERT> I think Ting was the one who said that the one big disservice 
+of FIG was the assembler method, gave too many people the wrong idea
+<[Old Sod] FIGCHAPTERS> BUT ...
+<[Old Sod] FIGCHAPTERS> The FIG method spread Forth to the VAX.
+<[Old Sod] FIGCHAPTERS> There are STILL ...
+<[Old Sod] FIGCHAPTERS> about six FIG Forths circulating for VAX/VMS!
+<[Old Sod] FIGCHAPTERS> I even have on RCFB ...
+<[Old Sod] FIGCHAPTERS> a FIG Forth for a NEC minny.
+<[Old Sod] FIGCHAPTERS> Those were the glory days of FIG.
+<[Old Sod] FIGCHAPTERS> The crystal ball is cloudy these days.
+<[Kevin] APPERT> well I never Meta-compiler I didn't like.
+<[Old Sod] FIGCHAPTERS> A_A_A_A_A_R_R_R_G_G_G_H_H_H_H XXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXX
+<[Dave] DHWEINSTEIN> ??
+<[Old Sod] FIGCHAPTERS> He started this WHOLE TOPIC JUST TO MAKE THAT JOKE>
+<[Old Sod] FIGCHAPTERS> STRING HIM UP
+<[Old Sod] FIGCHAPTERS> ( anybody got any string? )
+<[Kevin] APPERT> no, there are no strings in Forth
+<[Dave] DHWEINSTEIN> " This is a String "
+<[Dave] DHWEINSTEIN> Maybe not in _your_ implementation. I put strings in.
+<[Dave] DHWEINSTEIN> (grin)
+<[Kevin] APPERT> just ask any detractor
+<[Gary] GARY-S> Ron Braithwaite's string handler works GREAT
+<[Kevin] APPERT> there have actually been more string articles, utilities, etc. 
+for forth than any other language ... pick one
+<[Gary] GARY-S> Just a reminder to make next Thursdays guest conference with 
+Tom Zimmer
+<[Kevin] APPERT> oooooooooooooo! I can hardly weight!
+<[Old Sod] FIGCHAPTERS> I'd love to talk to Zimmer here ... he never returns a 
+phone call!
+<[Gary] GARY-S> HE will be here next Thursday
+<[Dave] DHWEINSTEIN> Ah well...I need to run. The GEnie clock is ticking...
+<[Dave] DHWEINSTEIN> Later.
+<[Gary] GARY-S> Good time tonight - thanks
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> How far down the road from you is Bett's operation , Jax
+<[Old Sod] FIGCHAPTERS> Boycott PRC Products!
+<[Gary] GARY-S> say what
+<[Old Sod] FIGCHAPTERS> Down with Deng and Li.
+<[Kevin] APPERT> Joe Isuzu has been hired by the PRC as Forign Press Relations 
+minister
+<[Gary] GARY-S> What products are on the shelf I might buy ?
+<[Old Sod] FIGCHAPTERS> I thought it was Goebbels they hired?
+<[Old Sod] FIGCHAPTERS> Tea, mostly ... all the tea in China!
+<[Kevin] APPERT> filthy tea?
+<[Old Sod] FIGCHAPTERS> Isn't it funny how Old Communists and Old Fascists all 
+end up about the same?
+<[Gary] GARY-S> I saw a piece on TV decrying the obscenity of Life magazines 
+BRA cover ...
+<[Gary] GARY-S> to my mind what is obscene is old men in China executing 
+children to preserve their power
+<[Old Sod] FIGCHAPTERS> Obscenity ... HAH! I see more than that each weekend at 
+the beach.
+<[Kevin] APPERT> is this a link?  (like Monty Python?)
+<[Old Sod] FIGCHAPTERS> Hey the gov't here ran a train over Brian Wilson and 
+nobody went to jail.
+<[Old Sod] FIGCHAPTERS> Fascism is as Fascism does.
+<[Old Sod] FIGCHAPTERS> Remember Orwell?
+<[Old Sod] FIGCHAPTERS> His prognostication was that the three SuperStates 
+would end up with essentially the same system ...
+<[Gary] GARY-S> so he was off by ten years
+<[Old Sod] FIGCHAPTERS> just with different names.
+<[Old Sod] FIGCHAPTERS> CHina is backwards and going backwards ...
+<[Gary] GARY-S> 1992 is comming - read Nostradamus
+<[Kevin] APPERT> social security numbers, they told us, would not be used as 
+identifying numbers!  they are going to start tatooing them on in a coupl
+e of years
+<[Old Sod] FIGCHAPTERS> USSR is backwards and going forwards ...
+<[Old Sod] FIGCHAPTERS> AMerica is WAY FORWARDS but sneeaking backwards.
+<[Kevin] APPERT> they already require them for children to get in to first grade
+<[Gary] GARY-S> this is a wrap
+=== End of Steno notes. ===
+
+

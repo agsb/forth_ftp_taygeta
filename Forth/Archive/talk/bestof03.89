@@ -1,0 +1,269 @@
+
+
+                
+                      Best of GEnie..... March 1989
+          News from the GEnie Forth RoundTable by Gary Smith
+
+  One of the 'Best of GEnie' columns to garner the most interest appeared in
+the September/October 1988 (Volume X,Number 3) issue of 'Forth Dimensions'. I
+think this is more than understandable, since that column featured the Real
+Time Conferences on the GEnie Forth RoundTable. We  ARE  interested in the
+thoughts and philosophies of our fellow Forthers.
+  To recap briefly that column: I discussed Leonard Morgenstern's excellent
+Sunday night FIGGY BAR which addresses fundamental Forth coding issues. I must
+repeat, Leonard's knowledge and style make this a most pleasant opportunity
+to expand on your ability to write Forth code. Thursday night is the regular
+FIGGY BAR where I attempt to maintain some sense of order amidst mayhem. No
+rule is the rule here as long as topics pertain to Forth. Some wonderful
+discussions result despite the din. One which quickly comes to find centered
+on VMS (Virtual Mass Storage) for F-PC (Zimmer and associates excellent F-83
+for PC's). The exchanges were wonderful.
+  The stars of the Real Time Conferences are our special guests. Guests and
+their topics since that September/October 'Forth Dimensions' include Mitch 
+Bradley ("Forth in a Unix environment", August 1988), Larry Forsley ("Forth 
+and the Future", October 1988), Dr. C.H.Ting ("Forth and Zen", October 1988),
+and Larry Forsley ("Forth in Publications", December 1988). I will conclude 
+this conference series in the next issue with conferences featuring George 
+Shaw, Mike Perry, Randy Dumse and Wil Baden. 
+  It should be clear, if you are not participating in these conferences you
+are missing out on a lot of Forth knowledge and insight. As before, I will
+feature the guests' opening remarks for their respective conferences.             
+
+Mitch Bradley 
+Staff Engineer with Sun Microsystems and Owner of Bradley Forthware
+August 1988
+
+  <[Mitch] PRESS16> Sun Microsystems: Leading supplier of technical 
+workstations, has grown to $1 billion annual sales in 6 years. I've been 
+there since 1982 (employee #50, now over 7500 employees). Bradley Forthware: 
+My home company.  Supplies Forth for 680x0 machines (Atari ST, Macintosh, Sun, 
+others) and  SPARC machines (Sun, single board).
+  Past Use of Forth at Sun:
+  - "Unofficial" bringup standalone diagnostics.
+  - A small number of Unix-based tools.
+  Current Forth work at Sun:
+  - Developing new Forth-based firmware for Suns; will probably become the 
+    standard firmware shipped with Suns sometime in the future.
+  - Forth is used as an interactive monitor and as a CPU-independent language
+    for "plug-in" boot drivers (not Unix drivers; they're still written in C)
+  My (perhaps) controversial beliefs:
+  - Forth needs to "grow up".
+  - The "minimalist" Forth philosophy is responsible for Forth's relative lack 
+    of success.
+  - Screens suck.
+  - Forth's portability problems are due to disregard of reality.
+  - C has its advantages
+  - Forth chips are no big deal.
+               
+Larry Forsley
+Director of the Institute for Applied Forth Research
+October 1988
+  <[larry] PRESS9> Forth and the Future. First, what is the future of 
+computing ? Procedural languges, non-procedural languages, expert systems,
+neural networks, artifical intelligence?
+  Perhaps where we're heading for is augmented intelligence where the computer 
+is an amplifier. Ah, convergence between Forth and the Future. Chuck Moore 
+speaks of Forth as an amplilifier for good and bad programmers and applications
+alike.
+  What is Forth ?  Who is Forth for ? What does Forth do best ? What do we 
+want to do with it ?  and a paradox... Forth is like the Tao. It is a way 
+which is realized when followed. Its fragility is its strength. Its simplicity
+is its direction. 
+  Given all this I propose some trends I've observed and wish discussion upon.
+Unlike UNIX/C, Forth hasn't hit well with academia without students growing up 
+to be employed like their parents. We lack Reagonomics as an economic engine.
+Without that engine, the military doesn't want us eilther. If the military 
+doesn't want us, we're not real; or unlike well fed physicists, and more like 
+hungry biologists. This community has kept its minds clean, but hasn't yet had
+opportunity.
+  
+Dr. C. H. Ting
+Software Engineer with Maxtor 
+October 27,1988
+
+  <[ting] PRESS17> Thank you, Gary. Let me start by quoting Dr. Lin Yu-Tang,
+a famous Chinese modern writer, "A man's speech should be like girls' skirts.
+None preferred. If have to, the shorter the better.
+  <[Gary] GARY-S> read the file PREZEN2.TXT are requested to do so to receive 
+full benefit of Dr. Ting's topic intent.
+  The notes follow:
+Welcome to this Zen and Forth Conference.
+
+What I like to focus on tonight is the religious aspect of Forth.
+Zen is the religious development in China which had many similary
+charisteristics with Forth.  I would like to use it to open up
+our discussions.
+
+Zen stresses simplicity.  Enlightment is not as complicated as
+traditional Budhism lead you to believe.  It is not in the documentation.
+It is not in the established practices.  It is in yourself.  You have
+it already.  But you have to discover it yourself.  It is also an
+expierence, which can only be passed from mouth to mouth, and from
+heart to heart, not by books or written words.  It became an oral
+tradition.
+
+Forth is the Zen of computing.
+
+Background of Zen in China
+
+The background of Zen was hundreds of years of Budhism spread into
+China from India.  Tons or literatures were translated, most of
+them were badly translated that only the priesthood could make
+sense out of them.  Lots of temples and monasteries were established.
+Millions were lead to believe that they could attain enlightment
+and a better second life by certain practices and rituals.
+
+The Zen masters found that the best way to attain enlightment was
+not through study of literature, not through established rituals,
+but by ridding off foreign things in oneself.  Meditation, hard
+physical labor, occasional loud noise, and sometimes a sharp blow
+on the head would precipitate the enlightment.
+
+Zen became very successful in China and Japan because it basically
+integrated the essense of Budhism and Toaism.  Much of the more
+foreign Hinduism influences were diluted so that it grew more
+naturally in the Chinese environment.  It became the principal
+philosophy in Far East dealing with meaning of life and provided a
+framework that individuals could find happiness and satisfaction
+in life.
+
+Similarities between Zen and Forth
+
+*  They presented their subjects in the simplest ways, stripping away
+   all the irrelevant elements preventing understanding of the essense
+   of the subjects.  Simplicity is the most common trait.
+*  They had to break away from massive establishments overloaded with
+   church, documentation, practices, and unfortunated, money.
+*  Enlightment is not derived from established church, documentation,
+   practices, or money.
+*  Enlightment does require personal effort.  When personal effort
+   reaches a critical mass, enlightment usually comes in a flash.
+*  They both started as oral traditions.  Documentations were considered
+   untrustworthy, dangerous, and superfluous.
+*  They attracted feverish, and loyal followers, as well as oppositions
+   of similar intensity.
+*  They became fragmented as individuals perceived their own brands of
+   truth.  Standards committees were organized to iron out differences,
+   but never quite succeeded.
+
+
+Religious Experience in Forth Programmers
+
+The most intense form of religious experience is enlightment in
+Zen and Budhism, re-birth of a Christian, commitment to a marriage,
+etc.
+
+Most Forth programmer had very similar experience, which convinced
+them the righteousness of Forth.  It generally happens after the
+completion of a substantial project, the full understanding of
+INTERPRET, figuring out what DOES> does, or when he sees 'ok' from
+the system he's building.  Prior to it, he generally has had spent
+a couple of months trying figure out why Forth works or why his Forth
+does not work.
+
+Casual Forth users, like taking a course in Forth, generally do not
+have the intense study and exploring period to warrant the enlightment.
+Most of them drift away at the next wind.
+
+Let's open up the floor and see how many people share similar
+experience.  I am particularly interested in at which stage you
+attained enlightment, if you do.
+
+The next question is: Is this experience transferable to other
+people?  Is this Forth desease contageous?
+
+It seemed that Forth was contagious in '77-'80 period due to
+the explosive growth of FIG.
+
+It also seems that it is not contagious now.  Anybody care to
+comment?
+
+Why Forth is Right?
+
+Why Forth is right, and why all other computer languages are
+wrong?  It is because Forth is the essense of computing.  Then
+what is computing?
+
+Man created this machine, somewhat in his own image, logically.
+He tried, but not quite succeeded.  Because he is too complicated
+to be cloned by mechanical or electronic media.  He wanted this
+machine, he called it computer, to do something useful; that is,
+things he would have to do himself otherwise.  They include doing
+lots of additions, multiplications, logic operations, piloting an
+airplane, or guiding a missile.  Because the machine is of lesser
+'intelligence', it must be given precise, unanbiguous instructions.
+
+The essense of computing is to give this machine precise,
+unabiguous instructions.  Why Forth is right?  Because it is the
+best vehicle to construct and to deliver to this machine precise,
+unambiguous instructions.
+
+
+Forth consists of a set of instructions, we call words,
+which Man can use to make the Machine to do what he desired
+of the Machine within the capability of the Machine.  This is true
+for all other languages.  But Forth delivers the instructions
+directly to the machine (it interprets), and new instructions
+can be constructed freely from existing instructions (it compiles).
+
+In Forth, Man is not programming the Machine.  He is designing
+a new Machine by adding new instructions to it, so that the
+Machine becomes a closer clone to his image.  Forth is right
+because it allows the Machine to grow to be like its master.
+
+The Forth syntax is simple because the Machine understands it
+best, and it is not difficult for the Man to learn and use it.
+The Man gets the best satisfaction if he means what he says, because
+the Machine does exactly what he says.  Simple syntax does not
+means weak syntax.  As Forth syntax fully supports the classical
+control structures and modularity touted by the proponents of
+modern structured porogramming.
+
+I like Bach's music, but I cannot play.  So I programmed my
+computer to play his music for me.  To program it became
+very tedious, because I had to enter every note to build a
+whole piece.  I gave my computer a scanner so it scans the
+music and converts the score to notes that it can then play
+for me.  The computer reads the music, very similar to the
+way I read the music.  It writes out the notes to a file, just
+like what I would have written them.  I cloned a part of myself
+in my computer.  You can do it in any language, but Forth
+let me do it in the shortest time.  The computer grows steadily,
+like a child, but only one word at a time.
+
+Larry Forsley
+Owner of DashFind Associates..
+and Publisher of the Journal of Forth Applications and Research.
+December 1988
+  
+  <[larry] PRESS14>  Thank you. Forth is going on towards 20 years. For the 
+first several, it was totally an oral tradition. Forth, Inc. published some 
+early manuals. Two papers appeared in the IEEE and Astronomy literature, and 
+all was silence until Forth Dimensions, FORML Conferences, the Journal of 
+Forth Application and Research, Rochester Conference Proceedings. Then 
+Dr. Dobbs and the big one... Byte Magazine, 1980 and their first language 
+issue, which  happened to be on Forth.
+  As of two years ago, when last I counted, there were about 2,000 references
+to Forth in the literature. But are we writing what we're doing more than 
+before? Are we writing to ourselves or to a larger group?
+  Early on, Elizabeth Rather worried that the Journal would take good authors 
+away from the 'open' literature.  Did that happen?  Who reads about Forth in 
+Dobbs?
+  And, what about textbooks.  Even with Brodie, Winfield, Haydon, Kelly and 
+Spies, Pountain why isn't there a suitable college level text that ties Forth
+into the rest of computing?
+
+  <[Gary] GARY-S> Larry - I know you were approached on this. Will you please 
+for once and for all respond to the non-performance of JFAR this year. Where 
+is it? What are your plans to make good on purchased volumes, and when ?
+    
+  <[larry] PRESS14> Thanks for the chance to respond.  JFAR V 2 will be going 
+to the printers in about 2 weeks.  Just before Christmas.  It has papers by
+Dress (neural nets), Grossman (a solver for f(x)=0), Noble (on the death of 
+Fortran), Roye (exception handling), Feucht (LISP and a new number system),
+and a bit more. We have been held up converting to an electronic system. We 
+now use Ventura Publisher and have found the transition very painful. JFAR 
+V 3 and V 4 papers are now being processed. I expect volume V to be finished 
+by June 89.
+
+

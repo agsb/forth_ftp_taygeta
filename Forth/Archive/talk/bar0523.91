@@ -1,0 +1,303 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 05/23/91   Time: 22:27EDT
+Attendees:
+[GARY-S]
+[[bob] R.CAVANAUGH]
+[[ddJAX] JAX]
+[[Len] NMORGENSTERN]
+
+  Open FIGGY BAR of 23 June 1991. Items discusssed include good initial
+  reaction to Upper Deck Forth, Why ANSI Forth ?, Forth print resources,
+  Forth's lousey acceptance at University C/S departments, comparing C
+  to Forth for prototyping - score a point for interactive programming,
+  some-not-so good things about Forth, MVP Forth reprised. 
+
+Minutes:
+<R.CAVANAUGH> is here.
+<C.MORAVETZ1> is here.
+<R.CAVANAUGH> Hi. this is my first time at the Figgy Bar. What is happening 
+tonight?
+<GARY-S> Open FIGGY BARs are largely just that - totally open, name your own 
+poison
+<GARY-S> Welcome - you're the first and second customers - any (FORTH) axes to 
+grind ?
+<[Cliff] C.MORAVETZ1> Forth axes? No.
+<R.CAVANAUGH> I have a plug if it is OK.  I just purchased Upper Deck Forth for 
+the PC V2.00 and so far I have been really impressed.  A lot of bang f
+or the buck
+<GARY-S> You are the first UPPER DECK user I have heard from - glad to know 
+they have a good product
+<GARY-S> Why don't you give a brief synopsis of the product (ie: JSR, ITL how 
+threaded... etc)
+<[Cliff] C.MORAVETZ1> Anyone have news about the ANSI standard effort?
+<[Cliff] C.MORAVETZ1> The FIG guest last week didn't have much good to say 
+about it.
+<[bob] R.CAVANAUGH> I was on Usenet today, and downloaded a synopsis, but 
+haven't read it yet
+<GARY-S> Cliff - that is precisely why I asked Brad to appear. I wanted some 
+thought provoking comments
+<[Cliff] C.MORAVETZ1> I had one thing to say, but it seemed like things were 
+too busy.
+<GARY-S> No, Bob, I mean give us an overview of Upper Decck Forth
+<[bob] R.CAVANAUGH> Sorry, lag caught me.  Upper Deck is direct threaded, case 
+sensitive.  Next is inline.  The editor is brought in dynamically so it
+ does not take any application code space, it has mouse support, color display, 
+and lots of the same words as F83
+<[bob] R.CAVANAUGH> Also Gary, the support is excellent so far.  I am porting C.
+ Lindley's windowing package, and there are a few quirks to the segmen
+ted architecture.  Peter Graves was very helpful on the phone, and after about 
+10 min we just started "chewing the rag" about Forth in general.
+<GARY-S> Say it now Cliff - that's what these open bars are all about
+<[Cliff] C.MORAVETZ1> What I can't figure out is why ANSI? It seems to me...
+<[Cliff] C.MORAVETZ1> that the Forth standards team did well enough before.
+<GARY-S> Bob - any opinion on how hard it would be to port F83/F-PC etc 
+applications to UDF ?
+<GARY-S> Cliff - ANSI _IS_ the official sanction some vendors need for 
+contracct jobs - that's why
+<[Cliff] C.MORAVETZ1> The magic four letters $peak!
+<GARY-S> DoD for instance has decreed _any_ non-Ada language MUST be Standard - 
+either IEEE or ANSI
+<GARY-S> Is the support line 24 hours Bob ?
+<[bob] R.CAVANAUGH> As far as porting F83, shouldn't be too much hassle.  F-PC 
+handles the stack differently so you would have to be careful, especial
+ly with code words.  Don't know about 24Hrs, I called this afternoon about 1700 
+PST
+<GARY-S> sounds like solid support
+<GARY-S> any bugs thgat you can't live with ?
+<[Cliff] C.MORAVETZ1> June bugs!
+<GARY-S> soon :-)
+<[bob] R.CAVANAUGH> cliff- I work on DoD projects, and so far we have been able 
+to use "C" (not forth <sigh> ), and our complier is ANSI.  Projects co
+ming down the pipe will probably require ADA <gag>.
+<GARY-S> _or_ if non-Adad, they must have the ANSI or IEEE seal of approval !
+<[Cliff] C.MORAVETZ1> I read just last night about the difficulty of running 
+Ada under Unix...
+<[bob] R.CAVANAUGH> As far a bugs, none that I have been able to find, though 
+pse remember guys I got the demo two weeks ago and the main system today
+.  I am going to put it through its paces this weekend though ;-)
+<[Cliff] C.MORAVETZ1> There's some real problems there.
+<GARY-S> GEEEZ ! - who would want too ?????? GAGGGGG
+<GARY-S> Bob - I will really be interested in your comments
+<GARY-S> Can you post some in the Bulletin Board ? If not next Thursdays FIGGY 
+will be good
+<[Cliff] C.MORAVETZ1> The government wants to!!
+<[bob] R.CAVANAUGH> Gary- the last thing that I read was that the TC is really 
+close to submitting the strawman.  Do you have any newer information?
+<GARY-S> I think that is accurate, Bob, but I have no confirming information
+<JAX> is here.
+<[Cliff] C.MORAVETZ1> Hi Jax. Read your article in DDJ.
+<GARY-S> Jaxon - how you ?
+<[bob] R.CAVANAUGH> Jax - Hi! If you didn't get my mailing, I wanted to congrat 
+on the two articles in ED and DDJ. Nice stuff!
+<NMORGENSTERN> is here.
+<[ddJAX] JAX> Thanx Bob, I did ... didn't you give me some code, too?
+<[Len] NMORGENSTERN> Hi all
+<[Cliff] C.MORAVETZ1> When was the ED article, Jax?
+<[bob] R.CAVANAUGH> Jax- no, I don't think so
+<[ddJAX] JAX> Cliff -- I think Bob means ESP.
+<GARY-S> I _just_ got in a few minutes before the FIGGY
+<[Len] NMORGENSTERN> Well, I was (more than) a few after!
+<[Cliff] C.MORAVETZ1> I didn't know ESP was a MAGAZINE :)
+<[Len] NMORGENSTERN> (Embedded systems programming)
+<GARY-S> Jax - understand you and Dave W. finally met
+<[bob] R.CAVANAUGH> Embedded systems programming may 1991 pg38 to be precise ;-)
+<[ddJAX] JAX> << -- looking up Bob's letter.
+<[bob] R.CAVANAUGH> For some reason I keep thinking the mag is "Embedded 
+Design".  Brain must be going...
+<[ddJAX] JAX> Aha, yes, you expressed the thought (widely shared) that DDJ was 
+turning into a "C" rag.
+<GARY-S> Bob - since UDF is Direct Threaded I would imagine it is faster than 
+many Forths
+<GARY-S> IT IS a C rag
+<[ddJAX] JAX> They are actually quite eager to dig into the fertile fields of 
+embedded control, and thus, into FOrth.
+<[Cliff] C.MORAVETZ1> So what if it is a C rag?
+<[ddJAX] JAX> They see what a success ESP has been, and are willing to learn 
+from their own "children" as it were!
+<[Len] NMORGENSTERN> It used to cover more ground than it does now, Cliff
+<[bob] R.CAVANAUGH> gary- the benchmark advertised is 10 interations of the 
+Sieve on a 4.77 PC in 38 seconds.  I haven't tried it on my 386
+<GARY-S> I prefer ESP - and will stay with them
+<[ddJAX] JAX> ESP is a great magazine because it knows what it is.
+<GARY-S> That certainly sounds respectible, but sieve times are deceptive - as 
+Don Colburn proved many years ago
+<[ddJAX] JAX> That is typical of the large chain of Miller Freeman publications 
+(now including "Guitar Player" and "Keyboard" magazine).
+<[ddJAX] JAX> They keep focused on their real audience.
+<[ddJAX] JAX> .
+<GARY-S> Miller-Freeman gutted a few on the way, too, I think Tyler should get 
+the credit
+<[bob] R.CAVANAUGH> cliff- don't get me wrong; I like C, but I think that Forth 
+is a much better candidate for embedded processing.  I am required to
+use C at work on the deliverable product, but I find Forth _invaluble_ for 
+testing purposes, and I can't help wondering if it wouldn't shorten the deb
+ug cycle if we had it resident in our product.  I would like forth to get more 
+than "what is that?"
+<[ddJAX] JAX> What is your product?
+<GARY-S> Bob - are you aware of the houses that prototype in Forth ?
+<[bob] R.CAVANAUGH> jax- real-time communication processing in digital data 
+links.
+<[Cliff] C.MORAVETZ1> What kind of data protocol, Bob?
+<[bob] R.CAVANAUGH> gary - You know, I didn't even hear about forth until a 
+friend of mine at work rolled his own and used it in debugging monitor.  I
+ didn't even see it once at college, which I think is a sad state of affairs.
+<[Len] NMORGENSTERN> Indeed it is!
+<[ddJAX] JAX> Gary is right, Tyler is a slick operator. Tyler has a lot of 
+*taste* and taste is what makes an editor.
+<[bob] R.CAVANAUGH> cliff- Unfortunately, the DoD doesn't like us to get too 
+specific
+<GARY-S> Very sad - also abundantly "normal" of most University C/S departments
+<[Len] NMORGENSTERN> Do you have a Forth Interest Group in Salt Lake-Prove?
+<[Len] NMORGENSTERN> (Provo, that is)
+<[Cliff] C.MORAVETZ1> I keep hearing this lament now and then...
+<[Cliff] C.MORAVETZ1> Why is Forth so unpopular?
+<[Len] NMORGENSTERN> Lack of "critical mass," Cliff
+<[Cliff] C.MORAVETZ1> Well, isn't partly do to the fact that Forth is...
+<[bob] R.CAVANAUGH> I however, am trying to end-run this.  I gave a friend of 
+mine F-PC which he is teaching to his kids in Boy Scouts instead of BASI
+C.  If I can get enough people interested in his troop we may have a little 
+kernel of "true believers"...Len, I do not know of any chapter here.  I re
+ally only know about three forth programmers, of which yrs trly is one.  I have 
+been a member of Fig for 2 yrs, just so I can stay current with the la
+nguage. Well, I do like deserts
+<[Cliff] C.MORAVETZ1> exceptionally unconventional?
+<GARY-S> It is non-traditional and instructors can't confine the student's 
+usage once the student grasps the assembler - to - High Level reach of Fort
+h
+<[Len] NMORGENSTERN> (brb -- someone at the door)
+<[bob] R.CAVANAUGH> I had plenty of classes in assembler which could have been 
+taught in forth.
+<GARY-S> You do understand College professors prefer a controlled environment - 
+and Forth isn't that ! ???
+<[Cliff] C.MORAVETZ1> It seems that Forth is ending up in the same kind of 
+situation as APL...
+<[Cliff] C.MORAVETZ1> A few true believers, and ignored by the mainstream.
+<[bob] R.CAVANAUGH> Besides, L Brodie's _Thinking Forth_ gave me some of the 
+best ideas for design in any language!.  I think it should be required re
+ading for C/S degrees!!
+<[Len] NMORGENSTERN> (Out of print, I believe)
+<GARY-S> Both APL and Forth are often referred to in negative ways in the same 
+breath by people whose minds end with Pascal bubble sorts
+<[bob] R.CAVANAUGH> Hear Hear! And most of them run software departments
+<GARY-S> "Thinking Forth" _is_ out of print - damn shame, too
+<[ddJAX] JAX> Dave Weinstein was at an auction with me last week (as Gary 
+mentioned) and bought an old IBM 5010 APL machine!
+<[Cliff] C.MORAVETZ1> Well, for those of you I've met with here before...
+<[Cliff] C.MORAVETZ1> I see serious defects with Forth. Don't care to go into 
+it now though!
+<[Cliff] C.MORAVETZ1> I like to hang out here because I find you guys 
+interesting.
+<GARY-S> please do Cliff - that is a perfect use of this time
+<[bob] R.CAVANAUGH> Cliff- I don't think that anybody here would argue that 
+some part (of any flavor) has its drawbacks.  Don't sweat it.
+<[Cliff] C.MORAVETZ1> Well, I think I spent about 2 1/2 hours talking to Len 
+about it one night.
+<[Len] NMORGENSTERN> I remember!
+<[Cliff] C.MORAVETZ1> Let's try something different...
+<[bob] R.CAVANAUGH> However, I have yet to find an enviroment where I can 
+exercise hardware so quickly and freely.  For me, it has a great many plusse
+s.  Minuses yes, but then, we could be forced to use ADA...
+<[Cliff] C.MORAVETZ1> Instead of me complaining about Forth, and you guys...
+<GARY-S> How about some key points and see if anyone has reasonable rebuttals
+<[bob] R.CAVANAUGH> what do you want to discuss?
+<[Len] NMORGENSTERN> (Nothing is ever so bad that something else couldn't be 
+worse, Bob)
+<[bob] R.CAVANAUGH> Amen, len
+<[Cliff] C.MORAVETZ1> complaining about other languages, What do you guys think 
+are the defects..
+<[Cliff] C.MORAVETZ1> of Forth?
+<[Cliff] C.MORAVETZ1> Is Forth so great that you can't see any warts?
+<[Len] NMORGENSTERN> Forth requires rigid discipline with respect
+<[Len] NMORGENSTERN> to naming, structuring and documentation
+<[Len] NMORGENSTERN> It is so pwerful that you can dig yourself
+<[Len] NMORGENSTERN> into a deep hole very quickly.
+<GARY-S> No - it is difficult to manage as a group profect language, it tends 
+to be cryptic without judicious commenting...
+<GARY-S> but the freedom to wrap the language around your project instead of 
+the other way around is damn hard to ignore
+<[bob] R.CAVANAUGH> When I first started with the language, the total lack of 
+DOS support. You had to write your own file handlers, and I could not go
+ from an editor like PE to L&P's line editor.  It kept me from really picking 
+up the language for several years.  Every time I had an application, it
+was easier and cheaper to use my C compiler
+<[bob] R.CAVANAUGH> Should I use multiple one lines?
+<[ddJAX] JAX>
+<[ddJAX] JAX> Right now I am working in MVP Forth! Talk about the "bad old 
+days" :-)
+<[bob] R.CAVANAUGH> I also think the way good syntax looks is the most elegant 
+and readable code I have seen
+<[bob] R.CAVANAUGH> ex: turn on led 5 seconds turn off led
+<GARY-S> Direct hardware access is not a shabby thing to have either
+<[Cliff] C.MORAVETZ1> Well, direct hardware access is very doable with C. Not 
+interactive, tho.
+<[bob] R.CAVANAUGH> Also, if the programmer is careful, code _can_ be portable 
+(for Forth-83)
+<[bob] R.CAVANAUGH> cliff- You have hit it on the head for me
+<GARY-S> Then - the real decision is presonal preference. Thank goodness for 
+that !
+<[bob] R.CAVANAUGH> I have spent hours testing on a portable
+<[bob] R.CAVANAUGH> and running back and forth to the main machine to change 
+one line
+<[bob] R.CAVANAUGH> of testing code.  I can just forget and recompile at the
+<[bob] R.CAVANAUGH> bench with forth
+<GARY-S> I personally hate to recompile for EACH code segment debug
+<[bob] R.CAVANAUGH> What about the time you forget to initialize that last 
+little pointer and the stepper motor scraped across the platen?
+<GARY-S> That is also why many Unix programmers program in Shells instead of 
+'C', the interactive environment is a smooth singing sirene
+<[Len] NMORGENSTERN> pmi, what is Shells
+<[bob] R.CAVANAUGH> Though I must admit, Borland C products are a nice tool for 
+some applications. Their debugger is hard to beat
+<[ddJAX] JAX> There are three great things about Forth vs C in Embedded Systems:
+<[ddJAX] JAX> 1) Forth is cheaper
+<GARY-S> Shells = interactive command interpreters in Unix
+<[ddJAX] JAX> 2) the Forth environment is simpler ..( i do Forth on an XT with 
+two floppies, C on a 386 networked to a 286)
+<[bob] R.CAVANAUGH> That assumes you have the resources and Unix platform
+<[ddJAX] JAX> 3) You don't have to come up with all the faked data sets at 
+compile time, you can just interpretively dump them on the stack at run tim
+e.
+<[ddJAX] JAX> .
+<[bob] R.CAVANAUGH> we have a diagnostic display for our systems written in 
+Forth.  I can
+<[bob] R.CAVANAUGH> look directly at memory real time, and write colon 
+definitions to
+<[bob] R.CAVANAUGH> make the changes I want at the system on the fly. Jax is 
+right. We use
+<[bob] R.CAVANAUGH> Chordata 4.77 pc clones for "portable" testing.  They work 
+fine under forth
+<[bob] R.CAVANAUGH> P.S jax- ours is a mod to MVP. I agree with you 100%!
+<[bob] R.CAVANAUGH> Well guys, I have to sign off.  This was my first time and 
+its a lot of fun. See you all soon - Bye
+<[Cliff] C.MORAVETZ1> So often when Forth is touted, it's always the embedded 
+applications...
+<[ddJAX] JAX> The big problem is I used MVP a long time ago and forgot a lot of 
+things!
+<[Len] NMORGENSTERN> See you again Bob.
+<[Cliff] C.MORAVETZ1> that are the showcase.
+<[bob] R.CAVANAUGH> has left.
+<[ddJAX] JAX> bye bob
+<[Cliff] C.MORAVETZ1> Bye, Bob.
+<GARY-S> In defense of Glen Haydon, MVP was a class act when written, and well 
+supported
+<[ddJAX] JAX> Oh yes, and portable.
+<[ddJAX] JAX> But one gets spoiled by modern Forth tools!
+<[ddJAX] JAX> Glen is still staunch in support of MVP ...
+<GARY-S> All life marches on - it's a rule, you kknow <grin>
+<GARY-S> Let's wrap this one up
+<[ddJAX] JAX> but he promises he is going to give serious consideration to MVP 
+ANS-Forth when the time comes.
+<[Cliff] C.MORAVETZ1> How about modern data processing? I mean the big dual IBM 
+4090 installation.
+<[ddJAX] JAX> .
+<[Cliff] C.MORAVETZ1> Like the kind where you have 5 billion records!
+<GARY-S> Several insurance companies do their actuary work on such machines 
+using Forth !
+<GARY-S> I'm closing the notes and splitting folks
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,91 @@
+
+Forth Dimensions Index - Volume 8
+
+V08 I01 P005 Letter - A Synonym for fig-Forth by Gene Thomas 
+V08 I01 P006 Letter - MacForum: World Wide...and Still Growing by Ward McFarland 
+V08 I01 P007 Letter - Grandfather's DO LOOP by Len Zettle 
+V08 I01 P006 Editorial - Calls for Papers by Marlin Ouverson 
+V08 I01 P008 Interrupt-Driven Serial Input by John S. James 
+V08 I01 P014 Fast Fixed-Point Trig by Johann Borenstein 
+V08 I01 P021 CASE Conversion in KEY by David W. Harralson 
+V08 I01 P022 Select, Ordered, Perform by Wil Baden 
+V08 I01 P023 TI 99/4A ISR Installation by Gene Thomas 
+V08 I01 P025 Moore Chats on CompuServe by   
+V08 I02 P005 Letter - Saddled With Benchmarks by Terry Noyes 
+V08 I02 P005 Letter - Public-Domain Floating Point by Phil Koopman 
+V08 I02 P005 Letter - Dictionary Magic by Gene Thomas 
+V08 I02 P006 Letter - A Screen in the Dark by Ramer W. Streed 
+V08 I02 P008 Letter - Conditional Teaching by John J. Wavrik 
+V08 I02 P009 XMODEM Tutorial by John S. James 
+V08 I02 P021 On-Line Documentation by John J. Wavrik 
+V08 I02 P025 Forth Resources via Modem by Gary Smith 
+V08 I02 P027 Forth Source Formatter by John Konopka 
+V08 I02 P030 Dual-CFA Definitions by Mike Elola 
+V08 I03 P005 Letter - What Forth Can Learn From C by Rich Kevin O'Brien 
+V08 I03 P005 Letter - Teaching Forth: Testing TESTIT by Gene Thomas 
+V08 I03 P008 Letter - When New Becomes Obsolete by Doug Lurie 
+V08 I03 P009 Letter - Terminal TI by Glenn Davis 
+V08 I03 P010 Letter - Multiple LEAVEs by Relay by Chester H. Page 
+V08 I03 P011 Editorial - Hackles and Hopes by Marlin Ouverson 
+V08 I03 P012 Forth Systems With a Segmented Memory Model by Richard Wilton 
+V08 I03 P015 The Point Editor by Brooks Breeden 
+V08 I03 P025 Synonyms and Macros, Part 4: Compiler Macros by Victor H. Yngve 
+V08 I03 P031 Shuffled Random Numbers by Leonard Zettle 
+V08 I03 P032 The Multi-Dimensions of Forth by Glen B. Haydon 
+V08 I03 P036 Stack Numbers by Name by Melvin Rosenfeld 
+V08 I04 P005 Letter - Fast SEARCH for F83 by Bill Zimmerly 
+V08 I04 P005 Letter - Natural Word Usage by James C. Brakefield, M.S.E.E. 
+V08 I04 P006 Letter - Leaky Sieve by Stephen Brault 
+V08 I04 P006 Letter - Leaky Sieve by Terry Noyes 
+V08 I04 P006 Letter - Seeing is Believing by Gene Thomas 
+V08 I04 P008 Letter - Student Roots by R.L. Davies 
+V08 I04 P009 Letter - Multiple LEAVESs by Relay by Chester H. Page 
+V08 I04 P010 Letter - MMS Upgrade Offer by A. Richard Miller 
+V08 I04 P012 Editorial - Conventions by Marlin Ouverson 
+V08 I04 P013 Dual-CFA Definitions, Part Two by Mike Elola 
+V08 I04 P017 Simple File Query by Edward Petsche 
+V08 I04 P028 A Forth Standard? by Glen B. Haydon 
+V08 I04 P034 Windows for the TI 99/4A by Blair MacDermid 
+V08 I04 P037 Getting Started with F83 by Greg McCall 
+V08 I04 P039 Batcher's Sort by John Konopka 
+V08 I05 P005 Letter - A Tale of Recursion by Denis Lambert 
+V08 I05 P006 Letter - On-Line Docs for fig-Forth by Ron Braithwaite 
+V08 I05 P007 Letter - F83 Compiles Text by Alberto Pasquale 
+V08 I05 P009 Editorial - A Sense of Place by Marlin Ouverson 
+V08 I05 P010 Practical Considerations for Floating-Point by Richard Wilton 
+V08 I05 P013 Screenless Forth by Carl A. Wenrich 
+V08 I05 P015 Tracking the Beast by Nathaniel Grossman 
+V08 I05 P023 A Simple Translator: Tinycase by Allen Anway 
+V08 I05 P024 Classes in Forth by Vince D. Kimball 
+V08 I05 P029 The Ultimate CASE Statement by Wil Baden 
+V08 I05 P034 National Forth Convention '86 by   
+V08 I06 P004 Letter - Words, Required & Controlled by David Nye 
+V08 I06 P004 Letter - Test Your Assertions by Norman L. Hills 
+V08 I06 P006 Letter - Out of Ireland by Richard Rooney 
+V08 I06 P009 Letter - F1...F5 for F83 by Frans Van Duinen 
+V08 I06 P009 Letter - An Alias for Synonyms by Mitch Bradley 
+V08 I06 P031 Letter - Antecedent Sieve by Don Colburn 
+V08 I06 P012 The Bresenham Line-Drawing Algorithm by Phil Koopman, Jr. 
+V08 I06 P018 Unsigned Division Code Routines by Robert L. Smith 
+V08 I06 P019 DOS File Disk I/O by Charles G. Wilcox 
+V08 I06 P028 7,776 Limericks by Nathaniel Grossman 
+V08 I06 P032 Inverse Video and TI-FORTH by Richard Minutillo 
+V08 I06 P034 State of Standard by Marlin Ouverson 
+V08 I06 P038 FORML `86 in Review by   
+V08 I06 P040 Checksum More by Len Zettel 
+
+Presented for your enjoyment by:
+  The Forth Interest Group
+  P.O. Box 8231
+  San Jose, CA 95155
+  (408) 277-0668
+  GEnie ID: FIG
+
+This complete volume, membership to FIG, which includes the current volume
+of Forth Dimensions, and other valuable references to the Forth language
+can be purchased from FIG.  Orders can be mailed to the above address,
+VISA or Master Card orders may be placed by phone, or electronically
+on the GEnie Information Service.  Call or write for our latest
+prices, or download our catalog from GEnie.
+
+

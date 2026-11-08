@@ -1,0 +1,521 @@
+
+=================================================================
+
+                     The Forth Vendors Group
+                Standard Floating Point Extension
+
+        Copyright (C) 1985 by Ray Duncan and Martin Tracy
+               (this was published in DDJ in 1985)
+
+
+Introduction
+
+The Forth Standards Team, in its recent release of the Forth-83 
+Standard, concerned itself only with the core of the language.  
+No attempt was made to introduce standardization in such areas as 
+floating point, the interface to host operating systems, 
+graphics, or file management. It is our feeling that these topics 
+can no longer be ignored, otherwise Forth has little chance to 
+become widely accepted as a programming  language and find usage 
+in a broader range of applications.
+ 
+The Forth Vendors Group has decided to take the initiative by 
+creating and adopting the  "FVG Standard Floating Point 
+Extension".   The document was written by Martin Tracy of 
+Micromotion and Ray Duncan of Laboratory Microsystems, based on 
+input from several vendors including Talbot Microsystems, Rising 
+Star, Dysan, Miller Microsystems, and Creative Solutions.
+
+The FVG Standard Floating Point Extension is intended to serve 
+chiefly as a guide for implementors, and is a minimum functional 
+description including command and function names and a few new 
+data types. Although this FVG Standard Extension  is not binding 
+on any of the FVG members, we expect that most of the major 
+vendors will be modifying their existing floating point packages 
+to conform with it.  It will be submitted to the next meeting of 
+the Forth Standards Team (expected to be in 1987) for 
+consideration as part of the next Forth Standard.
+
+Forth application programs which perform floating point 
+operations should  follow the guidelines laid out in the "FVG 
+Standard Floating Point Extension" and reference only names and 
+functions described in that document. Such programs should then 
+be portable without changes to the various floating point 
+implementations created by the different vendors.
+
+Micromotion has written a Forth-83 implementation of this FVG 
+Standard Floating Point Extension and will license it to 
+interested vendors for a small yearly fee.  Machine code versions 
+for the 6502, 8086, and 68000 are currently available. 
+Micromotion may be contacted at 12077 Wilshire Blvd., Suite 506, 
+Los Angeles, California 90025.  (The Software Floating Point 
+extension sold by Laboratory Microsystems is a derivation of 
+Martin's implementation and is sold under license.) 
+
+=================================================================
+
+
+                       Forth Vendors Group
+                Standard Floating Point Extension
+
+
+
+1.0  Syntax of Floating Point Numbers
+
+If the floating point extension word set has been overlaid onto a 
+83-Standard Forth system, a string of the following form will be 
+compiled or interpreted as a real number:
+
+                nnnn.nnnExx
+
+The "E" signifier is mandatory to force the conversion of a real 
+number.  The presence of numeric digits before or after the "E" 
+is not required by this specification but may be mandatory in 
+some implementations.  A "-" sign may precede both the mantissa 
+and the exponent, a leading "+" sign is also permissible on the 
+exponent. A decimal point is optional and occur anywhere in the 
+mantissa.  For example, all of the following numbers are legal:
+
+                -.0001E5
+                100.0E+0
+                1000.E-15
+
+The word FNUMBER may be used by application programs to convert 
+strings into real numbers. The current system BASE is assumed to 
+be DECIMAL whenever floating point numbers are being converted or 
+displayed.  If it is not, the results are undefined.
+
+
+
+2.0  Display of Floating Point Numbers
+
+Two primitive display operations are always available:  F. which 
+adjusts the position of the decimal point and prints the number 
+without an exponent, and E. which prints the number in 
+exponential notation.  More complex output formatting 
+capabilities may be present in some systems and are described in 
+the Optional Floating Point Words glossary.
+
+
+
+3.0  Floating Point Stacks
+
+Floating point implementations differ in that some have a 
+separate floating point stack while others keep all integer and 
+real numbers on the same parameter stack.  This proposed 
+extension does not concern itself with the relative benefits or 
+disadvantages of either type.  The source or destination of a 
+real number argument is always the floating point stack, if 
+separate stacks exist.
+
+
+4.0  Portability
+
+To ensure portability of an application it is important that the 
+programmer not take advantage of his knowledge of the physical 
+format of real numbers.  The floating point variants of the 
+memory access and stack operators should be used in all cases for 
+real numbers, even when they happen to coincide with other Forth 
+operators.  For example, if the system supports a 32-bit real 
+number format, FDUP and 2DUP would have the same effect --- but 
+FDUP should be used for the sake of portability.
+
+
+
+5.0  Floating Point Glossary
+
+The proposed floating point extension word set is described below 
+in the standard glossary format. The symbols indicate the order 
+in which input parameters have been placed on the stack. Three 
+dashes "---" denote the execution point; any parameters left on 
+the stack are listed. In this notation, the top of the stack is 
+to the right. Symbols include:
+
+        addr    memory address
+
+        b       eight bit byte (upper 8 bits zero or ignored)
+        r,r1    floating point number (length is impl. dependent)
+        f       boolean flag, 0=false, -1=true
+        n       16 bit signed integer
+        u       16 bit unsigned integer
+        d       32 bit signed integer
+        du      32 bit unsigned integer
+
+
+=================================================================
+
+
+Required Floating Point Arithmetic Operators
+
+
+
+F+              r1  r2  ---  r3                                 
+        Floating point addition, leave the sum of r1 plus r2.
+
+F-              r1  r2  ---  r3                                 
+        Floating point subtraction, leave the difference of r1 
+        minus r2.
+
+F*              r1  r2  ---  r3                                 
+        Floating point multiplication, leave the product of r1 
+        and r2.
+
+F/              r1  r2  ---  r3                                 
+        Floating point division, leave the quotient of r1 divided 
+        by r2.
+
+F**             r1  r2  ---  r3                        
+        Leave the value of r1 raised to the power r2, i.e. r1^r2.
+
+FABS            r  ---  [r]                                     
+        Leave the absolute value of real number.
+
+FNEGATE         r  ---  -r                                      
+        Change the sign of a real number.
+
+FSQRT           r1  ---  r2                            
+        Floating point square root.
+
+FMAX            r1  r2  ---  rmax                      
+        Leave the larger of two real numbers.
+
+FMIN            r1  r2  ---  rmin                      
+        Leave the smaller of two real numbers.
+
+
+
+Required Floating Point Transcendental Functions
+
+
+FLOG            r1  ---  r2                                            
+        Log to the base 10.
+
+FLN             r1  ---  r2                                     
+        Log to the base e.
+
+FALOG           r1  ---  r2                                     
+        Leave the value of 10 raised to the power of r1.
+
+FALN            r1  ---  r2                                     
+        Leave the value of e raised to the power of r1.
+
+FSIN            r1  ---  r2                                     
+        Leave the sine of r1.  Input argument is in radians.
+
+FCOS            r1  ---  r2                                     
+        Leave the cosine of r1.  Input argument is in radians.
+
+FTAN            r1  ---  r2                                     
+        Leave the tangent of r1. The tangent of 90 or 270 degrees 
+        returns the largest real number representable in the 
+        implementation's binary format.
+
+FASIN           r1  ---  r2                            
+        Arc-sine, valid for -1 <= r1 <= 1. Returns result in 
+        range -pi/2 to pi/2 radians. 
+
+FACOS           r1  ---  r2                            
+        Arc-cosine, valid for -1 <= r1 <= 1. Returns result in 
+        range 0 to pi radians.
+
+FATAN           r1  ---  r2                            
+        Arc-tangent, valid for all real r1. Leaves result in 
+        range -pi/2 to pi/2 radians.
+
+
+
+Required Floating Point Logical Operators
+
+
+The logical operators will regard two real numbers as equal if 
+they differ only by a small amount.  This "fuzz factor" is 
+related to the magnitude of the real numbers and is 
+implementation dependent.
+
+
+F0=             r  ---  f                                       
+        True if floating point number equal to zero. The real 
+        number is removed from the floating point stack, and the 
+        flag is left on top of the Forth parameter stack.
+
+F0<             r  ---  f                                       
+        True if floating point number less than zero. The real 
+        number is removed from the floating point stack, and the 
+        flag is left on top of the Forth parameter stack.
+
+F=              r1  r2  ---  f                                  
+        True if floating point number r1 is equal to floating 
+        point number r2. The real numbers are removed from the 
+        floating point stack, and the flag is left on top of the 
+        Forth parameter stack.
+
+F<              r1  r2  ---  f                                  
+        True if floating point number r1 is less than floating 
+        point number r2. The real numbers are removed from the 
+        floating point stack, and the flag is left on top of the 
+        Forth parameter stack.
+
+
+
+Required Floating Point Stack Operators
+
+
+FDROP           r  ---                                          
+        Discard floating point number on top of stack.
+
+FDUP            r  ---  r  r                                    
+        Duplicate floating point number on top of stack.
+
+FOVER           r1  r2  ---  r1  r2  r1                         
+        Copy second floating point number on stack to top of 
+        stack.
+
+FSWAP           r1  r2  ---  r2  r1                             
+        Interchange two floating point numbers on top of stack.
+
+FROT            r1  r2  r3  ---  r2  r3  r1                     
+        Bring the third floating point number to top of stack.
+
+
+
+Required Real Number Handling
+
+
+FLOAT           d  ---  r
+        Convert a signed double integer into its real number 
+        equivalent, removing the double integer from the Forth 
+        parameter stack and leaving the result on the floating 
+        point stack.
+
+FIX             r  ---  d
+        Convert a floating point number to the nearest signed 
+        double integer equivalent, removing the real number from 
+        the floating point stack and leaving the double integer 
+        result on the Forth parameter stack.  The direction of 
+        rounding when a real number lies exactly halfway between 
+        two integers is implementation dependent. Underflow gives 
+        a zero result, overflow is an error condition and the 
+        value of the resulting double integer is undefined.  
+        Example:  2.7E0 FIX will return the double integer 3.
+
+INT             r  ---  d
+        Truncate a floating point number to a signed double 
+        integer, (round it toward zero), removing the real number 
+        from the floating point stack and leaving the result on 
+        the Forth parameter stack. Underflow gives a zero result, 
+        overflow is an error condition.    Example:  2.7E0 INT 
+        will return the double integer 2.
+
+F!              r  addr  ---                                    
+        Store a floating point number from the floating point 
+        stack, at the address which is on the top of the Forth 
+        parameter stack.
+
+F@              addr  ---  r                                    
+        Fetch a floating point number to the top of the floating 
+        point stack, from the address that is on top of the Forth 
+        parameter stack.
+
+FCONSTANT       r  ---          (compilation)                   
+                ---  r          (execution)                     
+        A defining word used in the form: 
+               r FCONSTANT cccc 
+        When FCONSTANT is executed, it creates the definition 
+        cccc with its parameter field initialized to the value r. 
+        When cccc is later executed, the value r is left on top 
+        of the floating point stack.
+
+
+
+Required Real Number Handling, continued
+
+
+FVARIABLE       ---             (compilation)                   
+                ---  addr       (execution)                     
+        A defining word used in the form:
+                FVARIABLE  cccc
+        When FVARIABLE is executed, it creates the definition 
+        cccc with its parameter field explicitly uninitialized. 
+        When cccc is later executed, the address of the parameter 
+        field is left on the stack, so that a F@ or F! operation 
+        may access this location.
+
+
+
+Required Floating Point Number Display
+
+
+E.              r  ---
+        Display r in exponential form.  The mantissa contains the 
+        maximum number of significant digits allowed by the 
+        floating point data format,  and the exponent is 
+        explicitly displayed even if it is zero.  A trailing 
+        blank follows.  If the current system base is not 
+        decimal, an error condition exists.  For example, in the 
+        Micromotion implementation 12345.67E2 E. will display
+                .1234567E-07
+
+F.              r  ---                                          
+        Display r on the currently selected output device in 
+        fixed point form, i.e. the location of the decimal point 
+        is adjusted as necessary so that no exponent need be 
+        displayed. The number of digits specified by the most 
+        recent execution of the word PLACES are printed to the 
+        right of the decimal point.  A trailing blank follows. 
+        For example, 4 PLACES 1.2345E02 F. will display as
+                123.4500
+
+PLACES          n ---
+        Set the default number of digits which will be printed to 
+        the right of the decimal point by the F. operator.
+
+
+
+
+=================================================================
+
+
+                Optional Floating Point Commands 
+
+The Optional words have the same relationship to the proposed 
+Floating Point Extension as Controlled Reference Words have to 
+the core 83-Standard; that is, if the function is available in 
+the system it should have the name and stack effect described 
+below.
+
+
+
+Optional Floating Point Transcendental Operations
+
+FSINH           r1  ---  r2                            
+        Hyperbolic sine.
+
+FCOSH           r1  ---  r2                            
+        Hyperbolic cosine.
+
+FTANH           r1  ---  r2                            
+        Hyperbolic tangent.
+
+FASINH          r1  ---  r2                            
+        Inverse hyperbolic sine.
+
+FACOSH          r1  ---  r2                            
+        Inverse hyperbolic cosine.
+
+FATANH          r1  ---  r2                            
+        Inverse hyperbolic tangent.
+
+PI              --- r                                  
+        Leave the real number "pi" on the stack, represented         
+        with the maximum precision possible in the implementa
+        tion's binary floating point format.
+
+
+
+Optional Floating Point Logical Operators
+
+F0>             r  ---  f                              
+        True if floating point number greater than zero. The real 
+        number is removed from the floating point stack, and the 
+        flag is left on top of the Forth parameter stack.
+
+F>              r1  r2  ---  f                         
+        True if floating point number r1 is greater than floating 
+        point number r2. The real numbers are removed from the 
+        floating point stack, and the flag is left on top of the 
+        Forth parameter stack.
+
+
+
+Optional Floating Point Display Words 
+
+Suggested error handling for floating point display:  if an 
+overflow occurs during conversion for output, fill the display 
+field with asterisks (the "*" character). If an underflow occurs 
+during conversion, fill the display field with the character "U".
+
+E.R             r n1 n2 ---
+        Display r on the currently selected output device  in 
+        exponential form with n1 digits to the right of the 
+        decimal point, right justified in a field of width n2.  
+        If the current system base is not decimal, an error 
+        condition exists.  For example:  1.234E0 5 12 E.R will 
+        display
+                bb.12340E-01
+        (where each "b" character denotes an ASCII blank). 
+
+F.R             r n1 n2 ---
+        Display r on the currently selected output device in 
+        fixed point form with n1 digits to the right of the 
+        decimal place, right justified in a field of width n2.  
+        Numbers which cannot be represented within the given 
+        field width are printed in exponent form.   If the 
+        current system base is not decimal, an error condition 
+        exists. Example:  1.2345E2 4 12 F.R will display
+                bbbb123.4500
+        (where each "b" character denotes an ASCII blank).
+
+
+
+Optional Miscellaneous Real Number Handling
+
+FNUMBER         addr --- r
+        Addr points to a counted string that is converted to a 
+        real number.  The result is left on the floating point 
+        stack.  If the syntax of the string is not correct for a 
+        floating point number, an error condition exists and the 
+        value of the result is undefined.  
+
+PACK            d n --- r
+        Collapse a signed double integer mantissa and a signed 
+        single integer power of 10 into the corresponding real 
+        number data format.  Implementation dependent.
+
+UNPACK          r --- d n
+        Convert a real number into a signed double integer 
+        corresponding to the mantissa and a signed single integer 
+        power of 10.  Implementation dependent.
+
+F#BYTES         --- n
+        Constant leaving the number of bytes in a real number as 
+        it is represented on the floating point stack.  
+        Implementation dependent.
+
+F#PLACES        --- n
+        Constant leaving the maximum number of significant digits 
+        when a real number is converted to its decimal ASCII 
+        equivalent for display.  Implementation dependent.
+
+
+
+Optional Error Handling for Real Number Operations
+
+At minimum, the following error indicators should be available 
+for inspection by the application program:  
+        overflow, 
+        underflow, 
+        divide  by zero,  
+        output conversion overflow,  
+        output conversion underflow, 
+        attempted logarithm of zero, 
+        attempted logarithm of number less than zero, 
+        attempted square root of a number less than zero, 
+        arcsin/arccos of argument outside the legal domain. 
+
+
+FPSTAT          --- addr
+        Addr points to an array of bits which contains error 
+        indicators for real number operations.  The number of 
+        flag bits and their significance is implementation 
+        dependent.
+
+FPERR           r1 n --- r2
+        Should be a deferred or vectored word to allow 
+        installation of altered error handling by the user.  r1  
+        is the result of a real number operation and n indicates 
+        an error type. Sets an appropriate flag in FPSTAT and 
+        returns the real number r2 which may or may not be the 
+        same as r1, depending on the implementation and type of 
+        error.
+
+

@@ -1,0 +1,808 @@
+
+Forth Interest Group
+Category 18,  Topic 85
+Message 1         Mon Jun 11, 1990
+GARY-S                       at 06:42 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 1 of 11
+ Title:    Data Structure.
+
+ Related proposals: none
+ Keywords: Data Structure,  RECORD: ENDRECORD FIELD          
+      ENTRIES FILLER GROUP SEGMENT REDEFINE ENDREDEF         
+      LEN LEN> ENTRY ENTRY>
+ Proposal of new words.
+ Abstracts: The proposed words define a data structure.  The
+ highest level of a structure is called RECORD.  The simplest
+ element of a structure is called FIELD.  The complex
+ elements of a structure are GROUP and SEGMENT.
+      A data structure allows to access an element of the    
+ structure by name to obtain the element address and length.
+
+ Proposal:
+
+      RECORD:   "record-colon"           D         STRUCTURE
+      RECORD: <record-name>
+           Create a dictionary entry for <record-name>.
+
+      Compilation semantics:
+           ( -- a 0 )
+           a is the BODY address of the dictionary entry.
+           0 is the displacement of the next element of the
+ record.  The displacement is increased by other structure
+ words and is moved as the record length to BODY of the
+ <record-name> by ENDRECORD .
+      Execution semantics for <record-name>:
+           ( -- n )
+           where n is the length of the record that is set up
+ by ENDRECORD .
+
+      Example:
+
+      RECORD:  NAME
+           20   FIELD     LAST-NAME
+           15   FIELD     FIRST-NAME
+           15   FIELD     MIDDLE-NAME
+      ENDRECORD
+
+      50
+      NAME
+      \ both lines leave on the stack
+      \ the length of record NAME
+
+
+      FIELD                              D         STRUCTURE
+      FIELD <field-name>
+      Compilation semantics:
+           ( n1 n2 -- n3 )
+           where: n1 is the displacement of the field in     
+                     bytes,
+                  n2 is the length of the field in bytes
+                  n3 equals n1 + n2 , i.e. the displacement  
+                     of the next field of the record.
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 2         Mon Jun 11, 1990
+GARY-S                       at 06:43 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 2 of 11
+ Title:    Data Structure.
+
+           Create a dictionary entry for <field-name>.
+           The BODY of the dictionary entry consists of the  
+           two following parameters:
+           - the length of the field in bytes,
+           - the field displacement from the
+             beginning of the record in bytes
+
+      Execution semantics of <field-name>:
+           ( a1 -- a2 )
+           where: a1 is usually the address of the beginning
+                     of the record
+                  a2 is a1 + the field displacement, i.e.
+                     the record field address.
+      Place on the stack the record field address and move   
+      the <field-name> BODY address into a user variable.
+      The user variable will be used by words LEN and ENTRY
+      to access the length of the field.
+
+      Note: the FIELD can be used to define other structure  
+      definition  words.  For example:
+      : SINGLE ( n1 -- n2 )  ALLIGNED  1  CELLS  FIELD  ;
+      : DOUBLE ( n1 -- n2 )  ALLIGNED  2  CELLS  FIELD  ;
+      SINGLE and DOUBLE define structure elements for single
+      and double numbers respectively.
+      SINGLE and DOUBLE must be followed by a <field-name>.
+      The execution semantics of <field-name> specified with
+      SINGLE or DOUBLE is equivalent of that specified by    
+      FIELD.
+
+      Example:
+
+      RECORD:  NAME
+           20   FIELD     LAST-NAME
+           15   FIELD     FIRST-NAME
+           15   FIELD     MIDDLE-NAME
+      ENDRECORD
+
+      RECORD:  FAMILY
+      NAME      FIELD     HUSBAND
+      NAME      FIELD     WIFE
+      ENDRECORD
+
+      CREATE  NAME-AREA
+      NAME  ALLOT                   \ allocate 50 bytes
+      CREATE  FAMILY-AREA
+      FAMILY  ALLOT                 \ allocate 100 bytes
+
+      NAME-AREA  20 +
+      NAME-AREA  FIRST-NAME
+      \ both lines leave on the stack
+      \ address of FIRST-NAME field
+
+
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 3         Mon Jun 11, 1990
+GARY-S                       at 06:43 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 3 of 11
+ Title:    Data Structure.
+
+      NAME-AREA  35 +         15
+      NAME-AREA  MIDDLE-NAME  LEN   
+      \ both lines leave on the stack
+      \ address and length of MIDDLE-NAME field
+
+      FAMILY-AREA  20  +                15
+      FAMILY-AREA  HUSBAND  FIRST-NAME  LEN
+      \ both lines leave on the stack
+      \ address and length of HUSBAND's FIRST-NAME field
+
+      FAMILY-AREA  50  +  20  +      15
+      FAMILY-AREA  WIFE  FIRST-NAME  LEN
+      \ both lines leave on the stack
+      \ address and length of WIFE's FIRST-NAME field
+
+
+      ENTRIES                                      STRUCTURE
+           ( n1 n2 -- n3 )
+           where: n1 is the displacement of the next element
+                     of the record before ENTRIES is         
+                     executed,
+                  n2 is the number of times the last defined
+                     element occurs consecutively in the     
+                     record.
+                  n3 is the displacement of the next element
+                     in the record after ENTRIES is          
+                     executed.It equals n1 plus the length of
+                     the last defined element multiplied by  
+                     n2-1 .
+           Provide in the structure space for n2-1 more of   
+                     the last defined elements.
+      Example:
+
+      RECORD:  ACCOUNT
+      20   FIELD     OCCUPATION
+      4    FIELD     INCOME    12   ENTRIES
+      ENDRECORD
+
+      CREATE  ACCOUNT-AREA  ACCOUNT  ALLOT
+      \ allocate 68 bytes for an ACCOUNT record
+
+      ACCOUNT-AREA  20 +
+      ACCOUNT-AREA  INCOME
+      \ both lines leave on the stack
+      \ address of INCOME field for JANUARY,
+      \ i.e. the 0-th entry
+
+      ACCOUNT-AREA  20 +  11  4  *  +
+      ACCOUNT-AREA  INCOME  11  ENTRY
+      \ both lines leave on the stack
+      \ address of INCOME field for DECEMBER
+      \ i.e. the 11-th entry
+
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 4         Mon Jun 11, 1990
+GARY-S                       at 06:44 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 4 of 11
+ Title:    Data Structure.
+
+
+      FILLER                                       STRUCTURE
+           ( n1 n2 -- n3 )
+           where: n1 is the displacement of the next element
+                     of the record
+                  n2 is the length of an unnamed area of the
+                     record
+                  n3 is the displacement of the next field   
+                     in the record that equals n1 + n2 .
+           Provide space for unnamed field of n2 bytes in the
+           structure.
+           Note: FILLER is a synonym of + .
+
+      Example:
+
+      RECORD:  PRINT-LINE
+           20   FIELD     LAST-NAME
+           2    FILLER         \ space between columns
+           15   FIELD     FIRST-NAME
+           2    FILLER         \ space between columns
+           15   FIELD     MIDDLE-NAME
+           26   FILLER         \ unused space
+      ENDRECORD
+
+      CREATE  PRINT-AREA  PRINT-LINE  ALLOT
+      \ allocate 80 bytes
+
+      PRINT-AREA  22 +
+      PRINT-AREA  FIRST-NAME
+      \ both lines leave on the stack
+      \ address of FIRST-NAME field in PRINT-AREA
+
+
+      GROUP                              D         STRUCTURE
+
+      ' <name> GROUP <group-name>
+           Compilation semantics:
+                ( n1 w -- n1 )
+           where: n1 is the displacement of the next element
+                     of the record
+                  w  is the execution token for a previously
+                     defined element in the record such as   
+                     field, group or segment.
+      Create a dictionary entry for <group-name>.
+      The BODY of the entry consists of the two parameters:
+           - the group length that is calculated as n1 minus
+           the displacement of the previously defined record
+           element,
+           -  the group displacement from the beginning of   
+           the record that equals the displacement of   the  
+           previously defined record element.
+
+      Execution semantics of <group-name>:
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 5         Mon Jun 11, 1990
+GARY-S                       at 06:45 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 5 of 11
+ Title:    Data Structure.
+
+           ( a1 -- a2 )
+           where: a1 is usually the address of the beginning
+                     of the record
+                  a2 is the record group address that equals
+                     a1 + the group displacement.
+
+      Example:
+
+      RECORD:  EMPLOYEE
+           2    FIELD     EMPLOYEE-NUMBER
+           20   FIELD     LAST-NAME
+           15   FIELD     FIRST-NAME
+           15   FIELD     MIDDLE-NAME
+      ' LAST-NAME    GROUP     FULL-NAME
+      ENDRECORD
+
+      CREATE  EMPLOYEE-AREA1  EMPLOYEE  ALLOT
+      CREATE  EMPLOYEE-AREA2  EMPLOYEE  ALLOT
+      \ allocate 52 bytes for each record
+
+      EMPLOYEE-AREA1  2+  EMPLOYEE-AREA2  2+  50  CMOVE
+      EMPLOYEE-AREA1  FULL-NAME
+      EMPLOYEE-AREA2  FULL-NAME  LEN  CMOVE
+      \ both CMOVE copy FULL-NAME
+      \ from EMPLOYEE-AREA1 to EMPLOYEE-AREA2
+
+
+      SEGMENT                            D         STRUCTURE
+
+      ' <name1>  ' <name2>  SEGMENT  <segment> <adjustment>
+           Compilation semantics:
+           ( n1 w1 w2 -- n2 )
+           where: n1 is the displacement of the next element
+                     of the record,
+                  w1 and w2 are the execution tokens of      
+                     elements of a previously defined record,
+                  n2 is the displacement of the next field in
+                     the record after SEGMENT is executed.
+           Create dictionary entries for <segment> and       
+           <adjustment>
+           The body of <segment> consist of the following    
+           two parameters:
+           - the length of segment that is calculated as the
+           difference between displacements of <name2> and   
+           <name1> elements in a previously defined record   
+           specified with execution tokens w2 and w1 plus the
+           length of <name2> element,
+           - the displacement of the field that equals n1.
+
+           The body of <adjustment> consist of only one      
+           parameter:
+           - the displacement adjustment of elements within  
+           the segment that is calculated as the difference  
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 6         Mon Jun 11, 1990
+GARY-S                       at 06:46 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 6 of 11
+ Title:    Data Structure.
+
+           between n1 and the displacement of <name1> element
+           specified with execution token w1 .
+
+      The <segment> is used to provide the address and the   
+      length of the segment within the record.
+
+      Execution semantics of <segment>:
+           ( a1 -- a2 )
+           where: a1 is usually the address of the beginning
+                     of the record
+                  a2 is the record segment address, i.e.
+                     a1 + the segment displacement.
+
+      The <adjustment> is used to provide displacement       
+      adjustment to the address of an element within the     
+      segment and is usually followed by the <name> of an    
+      element within the segment. Together they provide the  
+      address of the element.
+
+      Execution semantics of <adjustment>:
+           ( a1 -- a2 )
+           where: a1 is usually the address of the beginning
+                     of the record
+                  a2 is a1 + the displacement adjustment of  
+                     the segment fields which is the only    
+                          parameter of <segment2>.
+
+      Execution semantics of <adjustment> <name> :
+           ( a1 -- a2 )
+           where: a1 is usually the address of the beginning
+                     of the record
+                  a2 equals a1 plus  the displacement        
+                     adjustment of the segment
+                     plus the <name> displacement from       
+                     the beginning of the record where <name>
+                     is defined.
+
+      Example:
+
+      RECORD:   DATE
+      2    FIELD     CENTURY
+      2    FIELD     YEAR
+      2    FIELD     MONTH
+      2    FIELD     DAY
+      ENDRECORD
+
+      RECORD:   INVOICE
+      4    FIELD     AMOUNT
+      ' YEAR  ' DAY       SEGMENT   DATE-TO-PAY  DATE-ADJUST
+      ENDRECORD
+
+
+
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 7         Mon Jun 11, 1990
+GARY-S                       at 06:47 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 7 of 11
+ Title:    Data Structure.
+
+      \ DATE-TO-PAY displacement is 4 bytes
+      \ DATE-TO-PAY length is 6 bytes
+      \ i.e. 6 ( DAY displacement )
+      \ - 2 ( YEAR displacement ) + 2 ( YEAR length ) .
+      \ DATE-ADJUST displacement adjustment equals 2 bytes,
+      \ i.e 4 ( displacement of DATE-TO-PAY )
+      \ minus 2 ( displacement of YEAR )
+
+      CREATE  INVOICE-AREA  INVOICE  ALLOT
+      \ allocate 10 bytes for INVOICE record
+
+      INVOICE-AREA  6 +                 2
+      INVOICE-AREA  DATE-ADJUST  MONTH  LEN
+      INVOICE-AREA  2 +          4 +    2
+      \ all the tree lines leave on the stack
+      \ address and length of MONTH field in INVOICE record
+
+      INVOICE-AREA  4 +          6
+      INVOICE-AREA  DATE-TO-PAY  LEN
+      \ both lines leave on the stack
+      \ address and length of DATE-TO-PAY field
+      \ in INVOICE record
+
+
+      REDEFINE                                     STRUCTURE
+      ' <name>  REDEFINE
+           ( w -- n )
+           where: w  is the execution token for a previously
+                     defined record element such as field,   
+                     group or segment,
+                  n  is the displacement of the redefined    
+                     element from the beginning of the       
+                     record.
+      Redefine a part of the structure starting from <name> .
+
+      Example:
+
+      RECORD:   DATE
+           2    FIELD     YY/            \ date as YY/MM/DD
+           2    FIELD     /MM/
+           2    FIELD     /DD
+      ' YY/     REDEFINE                 \ redefine format of
+           2    FIELD     MM/            \ date as MM/DD/YY
+           2    FIELD     /DD/
+           2    FIELD     /YY
+                ENDREDEF
+      ' YY/     REDEFINE                 \ redefine format of
+           2    FIELD     DD/            \ date as DD/MM/YY
+                ENDREDEF
+      ENDRECORD
+      \ total length of record DATE is 6 bytes
+      \ DATE specifies 3 different date formats:
+      \ YY/MM/DD, MM/DD/YY, DD/MM/YY
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 8         Mon Jun 11, 1990
+GARY-S                       at 06:48 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 8 of 11
+ Title:    Data Structure.
+
+
+      CREATE  DATE-AREA  DATE  ALLOT     \ alloc 6 bytes
+
+      \ DATE-AREA  2+
+      \ DATE-AREA  /MM/
+      \ DATE-AREA  /DD/
+      \ all the tree lines leave on the stack
+      \ the same address
+
+
+      ENDREDEF                                     STRUCTURE
+           ( n1 n2 -- n3 )
+           where: n1 is the total length of the record       
+                     elements defined before the paired      
+                     REDEFINE was executed,
+                  n2 is the maximum displacement of the      
+                     redefined elements before the           
+                     EDNREDEF is executed.
+                  n3 is the maximum of n1 and n2, i.e. the   
+                     displacement of the next element in the
+                     record.
+      End redefining the structure and continue defining it  
+      using the bigger displacement from the beginning of the
+      record or the previous redefined part.
+
+      Note: ENDREDEF is a synonym of MAX .
+
+      Example:  see REDEFINE .
+
+
+      ENDRECORD                                    STRUCTURE
+           ( a n -- )
+           where: a is the address of the BODY of            
+                     <record-name> defined by RECORD
+                  n is the total length of all previously    
+                     defined elements in the record.
+      Move length n to the address a and terminate the       
+      definition of the structure.
+
+      Example:  see RECORD: .
+
+
+      LEN                                          STRUCTURE
+           ( -- n )
+           Place  on the stack the length parameter of the   
+           last executed <field-name> , <group-name> or      
+           <segment-name>
+
+      Example:  see FIELD .
+
+
+      LEN>      "len-of"                           STRUCTURE
+      LEN>  <name>
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 9         Mon Jun 11, 1990
+GARY-S                       at 06:49 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 9 of 11
+ Title:    Data Structure.
+
+           ( -- n )
+      Where <name> is <field-name> , <group-name> or
+      <segment-name> following LEN> .
+      Place the length parameter of the following <name> on  
+      the stack.
+      A result is unpredictable if LEN> is not followed by   
+      <field-name> , <group-name> or <segment-name>.
+
+      An exception exists if <name> not found.
+
+      Example:
+
+      RECORD:  PARTS
+      10   FIELD     SHORT-NAME
+      20   FIELD     LONG-NAME
+      ENDRECORD
+
+      CREATE  PARTS-AREA  PARTS  ALLOT   \ allocate 30 bytes
+
+      \ If LONG-NAME is missing use SHORT-NAME instead:
+      PARTS-AREA  LONG-NAME  C@  BL  =   \ LONG-NAME missing?
+      IF  PARTS-AREA  SHORT-NAME         \ SHORT-NAME address
+          PARTS-AREA  LONG-NAME          \ LONG-NAME address
+          LEN>  SHORT-NAME               \ SHORT-NAME length
+          CMOVE
+      THEN
+
+
+      ENTRY                                        STRUCTURE
+           ( a1 n -- a2 )
+           where: a1 is usually the address of the 0-th entry
+                     of the last executed record element,
+                  n  is the entry number of the last executed
+                     record element
+                  a2 is the address of the n-th entry of the
+                     element in the record
+                     a2 equals a1 + ( n * len ) where len is
+                     the length of the last executed element.
+      Increase the address by the length of n entries of the
+      last executed structure element such as field, group or
+      segment.
+
+      Note: ENTRY is meaningful only for record elements     
+           specified with ENTRIES.
+
+      Example:  see  ENTRIES .
+
+      ENTRY>    "entry of"                         STRUCTURE
+      n  ENTRY>  <name>
+           ( a1 n -- a2 )
+           where: a1 is the address of the first
+                     ( 0-th entry ) record element,
+                  n  is entry number of the following   
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 10        Mon Jun 11, 1990
+GARY-S                       at 06:49 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 10 of 11
+ Title:    Data Structure.
+
+                     element <name>
+                  a2 is the address of the n-th entry of the
+                     element in the record that equals
+                     a1 + n * length of the element.
+      Increase the address by the length of n entries of the
+      following structure element <name>.
+
+      Note: ENTRY> is meaningful only for record elements    
+           specified with ENTRIES or <record-name>.
+
+      Example:
+
+      RECORD:  PAYROLL
+           2    FIELD     SALARY    12   ENTRIES
+      ' SALARY  GROUP     YEAR      5    ENTRIES
+      ENDRECORD
+      \ The PAYROLL record stores data on employee salary
+      \ for every month
+      \ during first five years of employment
+
+      CREATE  PAYROLL-AREA
+      PAYROLL        \ record length 120 = ( 2 * 12 * 5 )
+      20 *  ALLOT    \ space for 20 records
+
+
+      PAYROLL-RECORDS  SALARY
+           \ the address of the SALARY field
+           \ for January of the first employment year
+           \ in the first record
+
+      PAYROLL-RECORDS  SALARY  4  ENTRY
+           \ the address of the SALARY field
+           \ for May of the first employment year
+           \ in the first record
+
+      PAYROLL-RECORDS  SALARY  4  ENTRY
+      1  ENTRY>  YEAR
+           \ the address of the SALARY field
+           \ for May of the second employment year
+           \ in the first record
+
+      PAYROLL-RECORDS  SALARY  4  ENTRY
+      1  ENTRY>  YEAR
+      2  ENTRY>  PAYROLL
+           \ the address of the SALARY field
+           \ for May of the second employment year
+           \ in the third record.
+
+
+
+ Discussion:
+
+
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+----------
+Forth Interest Group
+Category 18,  Topic 85
+Message 11        Mon Jun 11, 1990
+GARY-S                       at 06:50 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: dwp@willett.UUCP (Doug Philips)
+ Newsgroups: comp.lang.forth
+ Subject: ANSI X3J14 Forth Technical Proposal (Data Structure)
+ Message-ID: <1134.UUL1.3#5129@willett.UUCP>
+ Date: Sun, 10 Jun 90 23:15:27 EDT
+ Organization: Latest link in the ForthNet chain.  (Pgh, PA)
+
+ ANSI X3J14 Forth Technical Proposal           Page 11 of 11
+ Title:    Data Structure.
+
+      Structure is a necessary for any language including    
+      Forth and should be included in the standard.
+      The proposed structure words are powerful enough to be
+      used as a standard.
+
+ [White space elided -dwp]
+
+ Submitted by: Boris Bibershtein
+ Date: May 21, 1990.
+ Address: 53 Mintwood Drive, North York, ON Canada  M2M 3A6
+ Phone: (416) 223-6603
+
+ ---
+ Preferred: willett!dwp@hobbes.cert.sei.cmu.edu OR ...!sei!willett!dwp
+ Daily: ...!{uunet,nfsun}!willett!dwp   [in a pinch: dwp@vega.fac.cs.cmu.edu]
+----------
+
+

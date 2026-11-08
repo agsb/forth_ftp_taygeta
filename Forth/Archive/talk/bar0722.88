@@ -1,0 +1,357 @@
+
+                
+ Minutes of the FIGGY BAR RT Conference.
+                  
+Date: 07/21/88   Time: 21:38EDT
+Attendees:
+[[Dave] DHWEINSTEIN]
+[[Gary] GARY-S]
+[[Jax Rampant] VESTA]
+W.FEDERICI                   
+[[Alan F] ATFURMAN]
+[[len] NMORGENSTERN]
+           
+Items discussed: Interservice confusion, Wellens are more Forthy thanks to ECFB
+                 (again)(still), pulling Forth off internet, front-ending  
+                 GEnie's f77 with Forth
+          
+Minutes:
+<[Dave] DHWEINSTEIN> Hello
+<VESTA> is here.
+<[Gary] GARY-S> question came up at our chapter meeting ...
+<[Dave] DHWEINSTEIN> Hey Jax...got yer letter
+<[Dave] DHWEINSTEIN> yes?
+<[Gary] GARY-S> WHY Multi-user Forth
+<[Dave] DHWEINSTEIN> Why?
+<[Jax Rampant] VESTA> VVHY NOTT?
+<[Dave] DHWEINSTEIN> Essactly
+<[Gary] GARY-S> been a lot of talk about it lately and no-one has demonstrated 
+any advantages
+<[Dave] DHWEINSTEIN> Oh..I just got Mitch Bradley's PD F83
+<[Dave] DHWEINSTEIN> Shared environement
+<[Jax Rampant] VESTA> Will tell advantage ...!
+<[Jax Rampant] VESTA> SO That you can manipulate the same sets of files without 
+running back and forth ...
+<[Dave] DHWEINSTEIN> bad pun
+<[Jax Rampant] VESTA> with disks, or tooling with some smarmy network.
+<[Jax Rampant] VESTA> I wish about DAILY that we had a multiuser FORTH.
+<[Dave] DHWEINSTEIN> smarmy?
+<[Jax Rampant] VESTA> smarmy.
+<[Jax Rampant] VESTA> On multi programmer projects, you need a multiuser system.
+ I prefer FORTH.
+<[Dave] DHWEINSTEIN> I figured out how to make his multitasking FORTH mutiluser.
+..just have na bothered....because it's a multi-user OS anyeay
+<[Gary] GARY-S> I passed around vesta info at the chapter meeting
+<[Jax Rampant] VESTA> Good, I have a vesta'ed interest in that sort of thing.
+<[Dave] DHWEINSTEIN> I own (or am buying) a VESPA, is that close enough? :-)
+=== End of Steno notes. ===
+           
+Date: 07/21/88   Time: 22:34EDT
+         
+Minutes:
+<[Jax Rampant] VESTA> Good, now we have a minyan.
+<[Dave] DHWEINSTEIN> Hell...bring Jen back...she's built better
+<[Gary] GARY-S> Arkansas Spark and Fizzle !!! Power Glitch killed me.
+<[Dave] DHWEINSTEIN> Your fault..you live there
+<[Jax Rampant] VESTA> DOn't drink it if you don't like it.
+<[Gary] GARY-S> I was asking - are you still critical of this RT 
+(EDITED COMMENT)
+<W.FEDERICI> is here.
+<[Dave] DHWEINSTEIN> I love that logic...that's why no one else scam's off what 
+I jdrink
+<[Jax Rampant] VESTA> You shouldn't put things like that in the record, besides,
+ I didn't bad mouth it, I said the WELL was more
+<[Jax Rampant] VESTA> user friendly.
+<[Jax Rampant] VESTA> WHich is true.
+<[Jax Rampant] VESTA> .
+<[Dave] DHWEINSTEIN> Agreed....and my UUCP site is Sys V. Even AT&T is more 
+friendly than this piece of shinola writtn in f77 (and you can put that in
+ the record).
+<[Gary] GARY-S> I just objected to your reference that we were struggling to 
+stay afloat - I still do
+<[Jax Rampant] VESTA> You said it ... I didn't.
+<[Jax Rampant] VESTA> It's in a FIGGY bar somewhere.
+<[Jax Rampant] VESTA> .
+<[Dave] DHWEINSTEIN> Hello W
+<[Gary] GARY-S> anywho - anything to report on your wellen activities in 
+support of Forth ?
+<W.FEDERICI> HI
+<W.FEDERICI>
+<[Dave] DHWEINSTEIN> Is wellen like VAXen, only different?
+<[Dave] DHWEINSTEIN> :-)
+<[Jax Rampant] VESTA> We may try to network  with -CFB ... Hi, Federici!
+<[Gary] GARY-S> unixin
+<W.FEDERICI> Any multitasking  gurus here?
+<[Dave] DHWEINSTEIN> Yep. I may change from the C-Shell to /walt/cs/stu/olorin/f
+orth/forth as my default shell
+<[Dave] DHWEINSTEIN> For what...pure Forth or captured?
+<[Jax Rampant] VESTA> Anyway, Gary, PROFESSIONALLY I ( yes) ENCOURAGE EVERY 
+CLIENT WHO CALLS FOR FORTH HELP TO SIGN ON GENIE>
+<[Dave] DHWEINSTEIN> Or just general?
+<W.FEDERICI> Either, but thinking of  the coop. type
+<[Jax Rampant] VESTA> That includes VALMONT INDUSTIRES INCORPORATED, IBM, 3M 
+and others.
+<[Dave] DHWEINSTEIN> What operating system, or does it matter? And what is the 
+question?
+<[Gary] GARY-S> I'm serious - any news you want to pass on here ? - you know 
+this gets ported to the x CFB's
+<[Dave] DHWEINSTEIN> You said the I word, Jax.
+<[Jax Rampant] VESTA> I'm serious.
+<W.FEDERICI> Wondering about possibly using Forth for some process control.
+<[Jax Rampant] VESTA> Anyway, the ...
+<[Dave] DHWEINSTEIN> As in...FORTH as the master job..controlling other jobs?
+<[Jax Rampant] VESTA> oops, did someone say PROCESS CONTROL?
+<[Jax Rampant] VESTA> Anyway, we hope to make the internationally famous WELL 
+and international ...
+<[Jax Rampant] VESTA> FORTH browsing spot also.
+<[Gary] GARY-S> that's what Forth does best !!!
+<W.FEDERICI> The question is, can a process control program which needs quick 
+response be conbimed with a terminal task, without some kind of preempti
+on?
+<[Jax Rampant] VESTA> We will have files on line shortly, in no small part due 
+to the magnaminity ...
+<[Dave] DHWEINSTEIN> Process, not physical control, Gar. As in, jobs in a 
+multitasker, not a robot arm
+<[Dave] DHWEINSTEIN> Please repeat..overtyped on the line
+<[Jax Rampant] VESTA> of JERRY SHIFRIN, of ECFB.
+<[Jax Rampant] VESTA> Also, if you want to try a lightweight FORTH under UNIX, 
+just go to ...
+<[Jax Rampant] VESTA> the WELL Forth Conference and type    cforth      !
+<[Gary] GARY-S> You do know we take the position that the GEnie Forth RT is 
+entirely public domain ?
+<[Dave] DHWEINSTEIN> No! It doesn't even support does!
+<[Jax Rampant] VESTA> Federici ... try to be more specific!
+<[Dave] DHWEINSTEIN> Don't use cforth!
+<[Jax Rampant] VESTA> Gary ... yes, thank you for mentioning it, but ...
+<[Jax Rampant] VESTA> you should know that the WELL *doesn't*.
+<[Jax Rampant] VESTA> You are supposed to *ask* before reposting parts of confs 
+elsewhere, ask the
+<[Jax Rampant] VESTA> individuals involved.
+<[Dave] DHWEINSTEIN> Get F83 from Mitch Bradley (PD version). Available for 
+anonymous FTP from manendo.jpl.nasa.gov (128.149.16.2)
+<[Jax Rampant] VESTA> But you have my permission to reproduce anythig I post in 
+the FORTH conf ( in context).
+<W.FEDERICI> Consider a simple program which has to check a transducer input at 
+least everymillisec or so.  A terminal user could define or use some w
+ord which grabs the processor, unless we have preemption,.l. no?
+<[Gary] GARY-S> The only goodie I moved was yours - did you object ?
+<[Jax Rampant] VESTA> Not at all.
+<[Gary] GARY-S> thanks
+<[Jax Rampant] VESTA> DH ... email it to me UUENCODE.
+<[Dave] DHWEINSTEIN> You'd be best to be interrupt driven.
+<[Jax Rampant] VESTA> RIght.
+<[Dave] DHWEINSTEIN> Email...the whole damn thing? 980k of tarred and 
+compressed? Like hell
+<W.FEDERICI> That's my thinking, just wondered if I miss3ed something.
+<[Dave] DHWEINSTEIN> Pull it across yerself...I don't even have it tarred and 
+compressed anymore...its a big mama. I don't have disk space to do that!
+<[Jax Rampant] VESTA> But you can do a TEST IF PAUSE ELSE DON"T PAUSE THEN if 
+that is what you are thinking.
+<[Jax Rampant] VESTA> so to speak.
+<[Jax Rampant] VESTA> DH ... where did you say I find this goodie?
+<[Jax Rampant] VESTA> DId not get your arcane reference.
+<[Dave] DHWEINSTEIN> Every millisec? If it's time important...preempt! Don't go 
+round-robin
+<W.FEDERICI> I'd like to keep it "safe" for the process control, in case the 
+"user" does something untoward.
+<[Dave] DHWEINSTEIN> See what you get for not reading comp.lang.forth, it was 
+posted there!
+<[Jax Rampant] VESTA> I don't know how to use USENET yet. I can get at it, but 
+am kinda busy.
+<NMORGENSTERN> is here.
+<[Jax Rampant] VESTA> Now at least I have a host account!
+<[Dave] DHWEINSTEIN> FTP as user "anonymous", password "guest" to the site 
+manendo.jpl.nasa.gov . Its in the directory /pub as /pub/f83.tar.Z
+<[Dave] DHWEINSTEIN> Hello Leonard
+<[Jax Rampant] VESTA> Where is "file storage" in USENET.
+<[Jax Rampant] VESTA> I don't understand the process. YOu should email me & 
+explain step by step ...
+<[Dave] DHWEINSTEIN> Its not as a file...just the info on where to get it from. 
+Use FTP (if you can)...
+<[Gary] GARY-S> I was thinking of offering my services as a Forth fair witness 
+(host) but I thought it would pose a conflict of interest with GEnie -
+agree jaxen ?
+<[Dave] DHWEINSTEIN> Do you have an account on the Internet?
+<[Jax Rampant] VESTA> heo to wind into it. What is FTP?
+<[Dave] DHWEINSTEIN> File Transfer Program
+<[Dave] DHWEINSTEIN> (or is Well UUCP only?)
+<[Jax Rampant] VESTA> Well, Please email explan, dave. Then I will try to 
+decode it at leisure.
+<[Gary] GARY-S> well can internet
+<[Jax Rampant] VESTA> Anyway, gar, not sure on that last point you raised.
+<[Dave] DHWEINSTEIN> Ok. (quick UNIX tutorial)
+<[Jax Rampant] VESTA> By email ... let's stick to FORTH here.
+<[Gary] GARY-S> ask at your end - then i will ask here
+<[Jax Rampant] VESTA> Though I appreciate it.
+<[Dave] DHWEINSTEIN> Its a "how to get FORTH isn't it?"
+<[Jax Rampant] VESTA> Yes.
+<[Jax Rampant] VESTA> True.
+<[Dave] DHWEINSTEIN> Ok. Siddown an' shaddup for a minute
+<[Dave] DHWEINSTEIN> :-)
+<[Dave] DHWEINSTEIN> Buffers On
+<[Gary] GARY-S>  sittin' and shuttin' !!!
+<[Dave] DHWEINSTEIN> (Type from UNIX prompt)
+<[Dave] DHWEINSTEIN> ftp manendo.jpl.nasa.gov
+<[Dave] DHWEINSTEIN> (if you get a site not found error, type "ftp 128.149.16.2"
+<W.FEDERICI> has left.
+<[Dave] DHWEINSTEIN> When ftp prompts you for your user name, type "anonymous"
+<[Dave] DHWEINSTEIN> When it prompts you for a password, type "guest"
+<[Dave] DHWEINSTEIN> When it gives you the prompt, type "type binary" (to allow 
+binary transfer)
+<[Dave] DHWEINSTEIN> Then type "cd /pub"
+<[Dave] DHWEINSTEIN> Now, I am assuming that you started this from wherever you 
+want to put the FORTH (where in the directory structure, that is)
+<[Jax Rampant] VESTA> right
+<[Dave] DHWEINSTEIN> So ype "get f83.tar.Z"
+<[Dave] DHWEINSTEIN> type even
+<[Dave] DHWEINSTEIN> This could take quite a while, it depends on how fast a 
+connection you have
+<[Dave] DHWEINSTEIN> Once you have the file (it will tell you), type "bye" or 
+"quit"
+<[Jax Rampant] VESTA> wait
+<[Dave] DHWEINSTEIN> Ok
+<[Jax Rampant] VESTA> three lines up you said >type even
+<[Jax Rampant] VESTA> was that "type 'even""?
+<[Jax Rampant] VESTA> .
+<[Dave] DHWEINSTEIN> At one point (the first command), you type, "type binary" 
+to set the ftp into binary mode. Did I say "type even" or something?
+<[Jax Rampant] VESTA> after >type "get f83.tar.Z"
+<[Jax Rampant] VESTA> .
+<[Dave] DHWEINSTEIN> Ok. The steps after "get f83.tar.Z"...
+<[Dave] DHWEINSTEIN> wait for the file to transfer. Then type "bye" or "quit"
+<[Jax Rampant] VESTA> does this run under BSD4.3 on VAX 11/750
+<[Dave] DHWEINSTEIN> Now that you are in the Unix shell, type "uncompress f83.
+tar.Z"
+<[Jax Rampant] VESTA> right
+<[Dave] DHWEINSTEIN> It should...but you have the source...and all the makefiles
+<[Jax Rampant] VESTA> right .. and compiler access!
+<[Dave] DHWEINSTEIN> so it hould be no problem to port
+<[Jax Rampant] VESTA> thank you.
+<[Jax Rampant] VESTA> Gary ... let's get back to the discussion of FORTH confs .
+.. is or is not ...
+<[Dave] DHWEINSTEIN> Now that you have it uncompressed, type "tar -xf f83.tar" 
+and wait for it to unarchive...
+<[Jax Rampant] VESTA> FIG struggling with its GEnie venture
+<[Dave] DHWEINSTEIN> And them browse through the created directories.
+<[Dave] DHWEINSTEIN> What striggling? Did I miss something?
+<[Jax Rampant] VESTA> repeat, dave, i thought you were done How
+<[Jax Rampant] VESTA> do you unarchive?
+<[Gary] GARY-S> it is NOT strugging - neitherm is it a profit center
+<[Dave] DHWEINSTEIN> You type "tar -xf f83.tar". Be sure you have enough disk 
+space (3 meg tops), and be sure that you tranfered everything across in
+binary mode.
+<[Dave] DHWEINSTEIN> Its archived and squashed...and stull 980k!
+<[Dave] DHWEINSTEIN> still
+<[Dave] DHWEINSTEIN> .
+<[Jax Rampant] VESTA> Ok, I must have misunderstood what you were saying a few 
+weeks back.
+<[Jax Rampant] VESTA> I thought you said ...
+<[Jax Rampant] VESTA> That GEnie was bugging FIG that usage was too low.
+<[Jax Rampant] VESTA> .
+<[Gary] GARY-S> I remeber distinctly what you are refering to now - shall I 
+recant or recount ?
+<[Dave] DHWEINSTEIN> Recant Recant! Or we can burn you at the Cobol!
+<[Jax Rampant] VESTA> Re explain.
+<[Gary] GARY-S> The GEnie Forth RT is NOT a profit center and neither is it 
+losing it's ass...
+<[Gary] GARY-S> it is close to break-even at times...
+<[Dave] DHWEINSTEIN> THat's right Gary...or we *will* tie you down, make you 
+write bad checks, and maintain 20 year old Cobol code on a Honeywell unde
+r Pick!
+<[Gary] GARY-S> so what ? it is all volunteer and was never intended to be a 
+big...
+<[Gary] GARY-S> money maker but not a money loser either...
+<[Dave] DHWEINSTEIN> Uhoh...I jes thought of something velly bad!
+<[Dave] DHWEINSTEIN> Well is a VAXen?
+<[Gary] GARY-S> what the question was raised about was the 3 sysops and 2 
+helpers as the only guests at a conference...
+<[Gary] GARY-S> that is NOT how to run a conference.
+<[Gary] GARY-S> explained enough????
+<[len] NMORGENSTERN> !
+<[Dave] DHWEINSTEIN> Is well a VAXen?
+<[Gary] GARY-S> go len
+<[len] NMORGENSTERN> Slight change in subject...
+<[len] NMORGENSTERN> George Shaw suggested that we advertise the novice...
+<[Dave] DHWEINSTEIN> !!!!!!!!!!
+<[len] NMORGENSTERN> conferences on other BBS's
+<[len] NMORGENSTERN> We could probably do it on ECFB, etc...
+<[len] NMORGENSTERN> But there would be objections from the commercial boards...
+<[Jax Rampant] VESTA> or on the new, enlarged Forth conference on the WELL, len
+<[Gary] GARY-S> hey jax - post a note on well about leonard's novice FIGGY's on 
+sunday , ok ?
+<[len] NMORGENSTERN> Do you agree?
+<[Jax Rampant] VESTA> which is commercial, but groovy.
+<[Dave] DHWEINSTEIN> You could also try to get it on the main banner.
+<[Jax Rampant] VESTA> it *is* on the main banner.
+<[Dave] DHWEINSTEIN> I have met FORTHers on GEnie who do not know that this RT 
+exists.
+<[Gary] GARY-S> do that len - leave a banner to laura
+<[Dave] DHWEINSTEIN> The GEnie wide main banner
+<[Jax Rampant] VESTA> Anyway, gary, one question ...
+<[Jax Rampant] VESTA> has FIG learned to read its email yet?
+<[Gary] GARY-S> geeze - i can't answer that - I leave all my comments directly 
+to JDHALL
+<[Jax Rampant] VESTA> Glenn Tenney told me when the subject of electronic FIG 
+was broached ...
+<[Jax Rampant] VESTA> he lobbied for the WELL.
+<[Jax Rampant] VESTA> and lost.
+<[Jax Rampant] VESTA> .
+<[Gary] GARY-S> I read that comment on the well
+<[len] NMORGENSTERN> I live 25 miles from Sausalito, where the WELL is...
+<[Gary] GARY-S> The Well can not compete with GEnie geographically - in that 
+respect i don't see how it could have hoped for selection
+<[len] NMORGENSTERN> and I con't reach them without a toll...
+<[len] NMORGENSTERN> far more than $5 per hour.
+<[Jax Rampant] VESTA> true ... I understand the problem
+<[Jax Rampant] VESTA> but there are advantages too. But you know MY solution ...
+<[Jax Rampant] VESTA> FIG conf in FORTH on a FORTH parallel mainframe.
+<[Dave] DHWEINSTEIN> But the GEnie interface is something out of the dark days. 
+Why not use something based on FYI software. That'd be fitting...after
+ all...everythign FY doews is written in a heavily dialect of CONVERS!
+<[Jax Rampant] VESTA> ...!!
+<[Gary] GARY-S> yeah - but it is NOT for everybody - I assure you
+<[Dave] DHWEINSTEIN> doews - does
+<[Jax Rampant] VESTA> GEnie is a good temporary soluting
+<[Dave] DHWEINSTEIN> FY - FYI
+<[Jax Rampant] VESTA> but let's not get complacent!
+<[Gary] GARY-S> whatever happened to the Forth front-end project ?
+<[Dave] DHWEINSTEIN> Forth front-end project
+<[Dave] DHWEINSTEIN> ????
+<[Jax Rampant] VESTA> Withered on vine. Nobody interested.
+<[Gary] GARY-S> ask jaxen
+<[Jax Rampant] VESTA> That's the problem about dealing with GEnie ...
+<[Gary] GARY-S> dennis was, I was , sounds like Dave is...
+<[Jax Rampant] VESTA> It takes a lot of decision making to get to try anything.
+<[Dave] DHWEINSTEIN> WHAT IS IT??!!??!!??!!
+<[Jax Rampant] VESTA> On the WELL, I have compiler access
+<[Jax Rampant] VESTA> On GEnie, I have shit-list access.
+<[Jax Rampant] VESTA> And my name is moving up.
+<[Jax Rampant] VESTA> ,,,:-)
+<[Dave] DHWEINSTEIN> WHat the hell are you talking about? Patching GEnie?
+<[Gary] GARY-S> That's not GEnie - that's life in corporate America - that's 
+why the Japanese are forging ahead
+<[Dave] DHWEINSTEIN> Yes...but is their forge hot enough to make the torso?
+<[Jax Rampant] VESTA> Dave ... a FORTH "sampler" under FORTRAN for the FIG conf.
+<[Dave] DHWEINSTEIN> Twisted....very twisted....but would it mean that we get 
+access to the GEnie code? To fiddle with?
+<[Jax Rampant] VESTA> They gave us a list of about fifteen steps we would have 
+to follow to do it.
+<[Dave] DHWEINSTEIN> (FORTH captured under f77...shudder)
+<[Jax Rampant] VESTA> Each one requeres more than two people's approval!
+<[Dave] DHWEINSTEIN> And aren't the RTs written in C (that was my 
+understandoing)
+<[Jax Rampant] VESTA> You got me.
+<[Gary] GARY-S> I still think the flavor is ForTran IV
+<[Jax Rampant] VESTA> IAnyway, if anyone wants to clear out the red tape, I 
+might get interested
+<[Dave] DHWEINSTEIN> The main system is f77, with RTs written in C...that was 
+my info as of yesterday or the day beofre.
+<[Jax Rampant] VESTA> again ...
+<[Dave] DHWEINSTEIN> Give me the access....I'll work on it.
+<[Jax Rampant] VESTA> but otherwise, who has the time? I'm a programmer, not a 
+stock broker.
+<[Gary] GARY-S> do I hear any professional students volunteering ?
+<[Jax Rampant] VESTA> You should hear the demo convention.
+<[Dave] DHWEINSTEIN> Do I hear the sounds of cash (or free access). I barely 
+have time to sleep. And I spend 8-12 hrs a day before the keyboard anyway
+

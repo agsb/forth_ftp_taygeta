@@ -1,0 +1,145 @@
+
+( MENU WORDS                           MAY 20,1988
+HEX
+
+VARIABLE MENU-VECTOR
+
+: NORMAL-IO
+   [ ' GETKEY CFA ] LITERAL 
+   MENU-VECTOR !
+;
+
+VOCABULARY MENU IMMEDIATE
+MENU DEFINITIONS
+
+: LIST_OPTION ( CFA INDEX ... / List option in a menu
+   2* 4 + + @ 2- NFA ID. SPACE ;
+
+: RANGE_CHECK ( ADD ... MAX ADD   / Determine upper limit
+   DUP 
+   BEGIN 
+      DUP @ FEB6 = NOT 
+   WHILE 2+ 
+   REPEAT 
+   SWAP
+;
+
+: LIST_OPTIONS ( MAX ADD ... MAX ADD / List options ) 
+   2DUP
+   DO I OVER - 2/ CR . SPACE
+      I @ 2- NFA ID. 2 
+   +LOOP 
+;
+
+: DO_N ( MAX ADD N ...  EXECUTE NTH WORD IN MENU
+  2* + SWAP 
+  OVER - 0> ( over range check )
+  IF @ EXECUTE ELSE DROP THEN 
+;
+
+: PROMPT ."  Press key" ;
+
+: MENU-INPUT ( Get a value from 0 to n -- vectored)
+   MENU-VECTOR @ EXECUTE
+;
+
+FORTH DEFINITIONS
+
+: MENU ( DEFINES A MENU )
+       ( USE:
+       (   MENU NAME W1 W2 W3 ... WX ; )
+       (   when NAME is executed the ID's of 
+       (     W1 ... WX  are displayed, 
+       (     a key is read and the corresponding
+       (     word is executed )
+   MENU 
+   <BUILDS [ EC48 , ] [COMPILE] ] 
+   DOES>
+      DUP 8 - NFA CR CR ID. PROMPT
+      RANGE_CHECK LIST_OPTIONS 
+      MENU-INPUT CR
+      DUP 0< NOT ( under range check )
+      IF DO_N ELSE DROP THEN
+;
+
+
+: Exit_this_menu DROP -1 ;
+
+
+
+
+
+
+
+( sample of the use of a menu )
+
+( Diagnostics Support Words             Oct 26,1988
+(    separate vocabulary to provide board level checks
+
+HEX
+
+VOCABULARY DIAGNOSTICS IMMEDIATE
+DIAGNOSTICS DEFINITIONS
+
+( assert chip select at an address until key press )
+: CS ( Address ...  )
+   BEGIN DUP C@ DROP ?TERMINAL UNTIL KEY 2DROP ;
+
+: U1_Chip_Select 1000 CS ;
+: U5_Chip_Select 8000 CS ;
+: U6_Chip_Select C000 CS ;
+
+( verify ability to read and write to block of addresses )
+: READ ( N HI LO ... )
+    DO I C@ OVER = NOT
+       IF ." Error at address " I . ABORT THEN
+    LOOP DROP
+;
+
+: WRITE ( hi, lo address ... )   
+   100 0 DO 
+      2DUP TUCK - I FILL
+      2DUP I -ROT READ
+      I CR . ." TESTS COMPLETED "
+      ?TERMINAL IF KEY DROP LEAVE THEN
+   LOOP 2DROP
+;
+
+: Write_U1 ( test 32k of ram in U1 socket )
+   8000 100 WRITE
+;
+
+: Write_U5 ( test 8K of ram in smart socket )
+   A000 8000 WRITE
+;
+
+: Write_U6 ( test 8K of ram in last socket )
+   E000 C000 WRITE
+;
+
+: U1 Write_U1 ;
+: U5 Write_U5 ;
+: U6 Write_U6 ;
+
+
+MENU TESTS
+U1_Chip_Select
+U5_Chip_Select 
+Write_U1 
+Write_U5 
+TIME.
+Exit_this_menu 
+;
+
+FORTH DEFINITIONS
+
+: TESTS
+   NORMAL-IO
+   DIAGNOSTICS
+   BEGIN 
+      0
+      TESTS
+   UNTIL
+;
+
+

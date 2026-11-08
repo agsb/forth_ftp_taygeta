@@ -1,0 +1,247 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 06/15/89   Time: 22:30EDT
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[[Jax] FIGCHAPTERS]
+[C.TING]
+
+ Items discussed: RCFB, StarLink, Austin Multiuser Forth BBS, Zimmer conf. 6/29,
+                  Chinese word processor, the tragedy of Beijing, RTX, SC32, 
+                  Building a four RTX parallel platform, SIMD vs MIMD
+Minutes:
+<DHWEINSTEIN> is here.
+<FIGCHAPTERS> is here.
+<[Gary] GARY-S> How goes rocky mounmtain high
+<[Jax] FIGCHAPTERS> the bbs?
+<[Gary] GARY-S> yep
+<[Jax] FIGCHAPTERS> still chariot so far.
+<[Gary] GARY-S> are you guys aware of StarLink
+<[Dave] DHWEINSTEIN> StarLink??
+<[Jax] FIGCHAPTERS> .. A??
+<[Gary] GARY-S> Tymnet's answer to PC-Pursuit
+<[Jax] FIGCHAPTERS> $$.$$ ??
+<[Dave] DHWEINSTEIN> Not yet. Sprecht tsu uns!
+<[Gary] GARY-S> more cities - including Austin and Little Rock
+<[Dave] DHWEINSTEIN> (I know...I know...I don't use YIVO transliteration...sue 
+me)
+<[Jax] FIGCHAPTERS> ( nor yivo grammar!)
+<[Dave] DHWEINSTEIN> Oooooooh. That would make Austin Dial-In-Able. And Austin 
+will have a Forth conference.
+<[Gary] GARY-S> sign up one time of $25 (I think) plus flat 1.50/hour usage
+<[Dave] DHWEINSTEIN> (On a local Multiuser BBS)
+<[Dave] DHWEINSTEIN> (Sue me....bad influence of di bubba and a few hours of 
+German)
+<[Jax] FIGCHAPTERS> I'm spending less time telecomming and more time 
+maintaining my own BBS.
+<[Dave] DHWEINSTEIN> (A Multiuser BBS written in the CONVERS dialect of Forth)
+<[Gary] GARY-S> They tend to do that don't they (occupy time)
+<[Dave] DHWEINSTEIN> How bad is the packet delay?
+<[Jax] FIGCHAPTERS> tymnet is notorious
+<[Gary] GARY-S> I have not used it
+<[Dave] DHWEINSTEIN> Ahh.
+<[Jax] FIGCHAPTERS> *Whose* BBS written in Forth>
+<[Dave] DHWEINSTEIN> The BBS in question is Flight. It runs on =M=C=D VIII from 
+FYI.
+<[Jax] FIGCHAPTERS> What is an MCD VIII ?
+<[Gary] GARY-S> call 800-343-7304 for the on-line dog and pony show ala-StarLink
+<[Dave] DHWEINSTEIN> (And is in fact run in part by FYI which is an Austin 
+company).
+<[Dave] DHWEINSTEIN> Multiuser BBS system. Chat, databases, and conferences.
+<[Dave] DHWEINSTEIN> (512) 794-8511
+<[Jax] FIGCHAPTERS> Intel? MC ? what CPU?
+<[Dave] DHWEINSTEIN> Err. FLight's Phone Number: (512) 794-8511
+<[Dave] DHWEINSTEIN> Runs on PC compatibles.
+<[Dave] DHWEINSTEIN> It is a great BBS (good user base, good discussions, etc).
+<[Dave] DHWEINSTEIN> Part for pay (the CB section), part free (BBS). Soon and 
+eventually to have some for pay conference groups. (Including Forth in t
+he COmputer Tech bundle)
+<[Gary] GARY-S> What is CONVERS dialect of Forth ? 83 ?
+<C.TING> is here.
+<[Jax] FIGCHAPTERS> Howdy Dr. Ting!
+<C.TING> hi..
+<[Gary] GARY-S> Jax - will you post the Zimmer announcement on Well and RCFB
+<[Dave] DHWEINSTEIN> Nope. It broke off a while back. The implentation is FYI's 
+own.
+<[Dave] DHWEINSTEIN> Hullo Dr. TIng.
+<[Jax] FIGCHAPTERS> Will capture next time gary.
+<[Gary] GARY-S> Dr. Ting - Hi
+<[Gary] GARY-S> Thanks
+<[Dave] DHWEINSTEIN> It has a lot of features which have worked back to Forth 
+(streams not blocks, direct threading, etc).
+<[Dave] DHWEINSTEIN> Unfortunately due to market constraints they are moving 
+over to C. (They have limited programmer time and want to be able to lice
+nse source).
+<[Gary] GARY-S> dtl ? that's a switch - so many are opting for token threading 
+now
+<[Dave] DHWEINSTEIN> Anyway...should I prod them for a guest conference here????
+?
+<[Dave] DHWEINSTEIN> On CONVERS and the software they have done.
+<[Dave] DHWEINSTEIN> ????
+<[Gary] GARY-S> Not if they are going to abandon Forth, no
+<[Dave] DHWEINSTEIN> Maybe how and why they have made the decision?
+<[Jax] FIGCHAPTERS> Dr. Ting ... do you still sell Chinese WP's?
+<[Gary] GARY-S> No Dave - the RTC's have been and should be for those in 
+support of Forth
+<[Dave] DHWEINSTEIN> Ok.
+<C.TING> Jax...Yes.  I have a version for PC. Called Kuo-Chiao Chinese System.
+<[Gary] GARY-S> This is the Forth RT, not corewars
+<[Jax] FIGCHAPTERS> Is that the same one I bought a copy of a year and a half 
+ago? In basic with the number keys?
+<C.TING> Jax.  If you brought it from me, yes.
+<[Jax] FIGCHAPTERS> ( Is "Kuo-Chiao" names, or with the tones would I find it 
+has a literal meaning?)
+<[Jax] FIGCHAPTERS> Ok, I gave that one to my Father-in-law who is going for 
+doctorate.
+<[Jax] FIGCHAPTERS> Still same price?
+<C.TING> Jax.  Still the same price.  Kuo is 'nation' and chiao is 'tall tree'.
+<[Dave] DHWEINSTEIN> (Sigh). Time for me to run. Later
+<[Gary] GARY-S> Dr Ting - you may be interested in Tom Zimmer's Conference on 
+the 29th since you have something of a vested interest in the popularity
+ of F-PC
+<[Gary] GARY-S> Dave - look for the bios and we'll get this going asap
+<C.TING> Gary.  Definitely.
+<[Dave] DHWEINSTEIN> Gary: I'll have the final proposal at you as soon as the 
+bios get in!
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> He , like you , is not active on telecomm so it is an honor to 
+present his views
+<C.TING> Sorry that I have not kept in contact.  I am trying to follow what is 
+happening in Beijing.
+<[Jax] FIGCHAPTERS> ok, i found Kuo(2) but Chiao? (chiao(1)?)
+<[Gary] GARY-S> Nothing nice I can tell you
+<[Jax] FIGCHAPTERS> Are you reading USENET about china?
+<[Jax] FIGCHAPTERS> Plenny stuff there!
+<[Gary] GARY-S> Can you imagine the paranoia that now sweeps the country ?
+<C.TING> Jax.  I am just barely getting use to Genie.
+<[Jax] FIGCHAPTERS> USENET has students posting in both english and pinyin.
+<[Jax] FIGCHAPTERS> Friend (american) has son in Dalien!
+<[Jax] FIGCHAPTERS> He modems in daily!
+<C.TING> Please help.  Write to your congressmen to cut off trade with China.
+<[Jax] FIGCHAPTERS> "Same difference" as we say here ... no americans in china, 
+no trade.
+<[Gary] GARY-S> Will that solve the loss of human life and resource of youth ?
+<C.TING> Nothing can replace the loss.  If we don't show the concern, more will 
+be lost.
+<[Jax] FIGCHAPTERS> Our gov't has already cut off military exchanges ...
+<[Jax] FIGCHAPTERS> even Soviet is expressing concern ...
+<[Jax] FIGCHAPTERS> I cannot imagine ....
+<[Jax] FIGCHAPTERS> that China wishes to return to the era ...
+<[Jax] FIGCHAPTERS> of being an international pariah ...
+<[Jax] FIGCHAPTERS> besides ...
+<[Jax] FIGCHAPTERS> duo1 xing2 bu4 yi4 bi4 zi4 bi4 ..."too many evil deeds ruin 
+the doer" ...
+<[Jax] FIGCHAPTERS> this can't go on long. The old generation there is in their 
+80's ...
+<[Jax] FIGCHAPTERS> and they will have to woo back their college-educated youth 
+studying abroad. ...
+<C.TING> The Communist leaders are more concerned about their own skins.  We 
+should not make it any easier for them.
+<[Jax] FIGCHAPTERS> change will come quickly.
+<C.TING> Sorry.  Let's get back to Forth.
+<[Jax] FIGCHAPTERS> All our thoughts are with the students. We will all express 
+our concern to congreesmen ... right gary?
+<[Gary] GARY-S> We have room for such statements occassionally - those will 
+stand inedited
+<[Jax] FIGCHAPTERS> Has anyone gotten to "play" with the SC32?
+<C.TING> Jax.  I have touched one and used it slightly.  mighty fast.
+<[Gary] GARY-S> Has the SC32 added any enhancements or is it pretty much the 
+J-H FRISC3
+<C.TING> Dr. S. Y. Tang got SFSU to buy one SC32 for him...
+<[Jax] FIGCHAPTERS> Did he build board or buy bus card?
+<[Gary] GARY-S> Do either of you know ?
+<[Jax] FIGCHAPTERS> I only have docs for SC32 ... we were thinking of building 
+SBC based on SC32.
+<C.TING> It is SC32 card from Silicon Composers.
+<[Jax] FIGCHAPTERS> Nice card.
+<[Jax] FIGCHAPTERS> Forth on it ok?
+<C.TING> The Forth is 83-Standard.  Very comfortable....
+<C.TING> Dr. Tang is developing multiple precesion math Package for it...
+<C.TING> He may use it to do decryption experiments.
+<C.TING> I am implementing the same on RTX.
+<[Jax] FIGCHAPTERS> I wanted to build a desktop computer based on four forth 
+engines of some type in parallel.
+<C.TING> Jax.  That's exactly what I am doing now.  I got a project from Harris 
+to build....
+<C.TING> a four RTX system to speed up my very fast Continuous Fourier 
+Transform algorith...
+<C.TING> to analyze real time signal to 1KHz.
+<C.TING> However, it will not be a general purpose workstation.
+<[Jax] FIGCHAPTERS> That's interesting ... it seems that as the era of Parallel 
+Computing emerges, the makers of specialty chips will have to rethink
+their business ... DSP perhaps could be handled more congenially in parallel 
+than in a custom chip.
+<[Jax] FIGCHAPTERS> Are you still VAXing these days?
+<C.TING> The hard part is the interprocessor communication.
+<C.TING> No VAX anymore! Not even if disguised as microVAX.
+<[Gary] GARY-S> HOW do you allocate jobs ?
+<[Jax] FIGCHAPTERS> How are you handling the interproc communications?
+<C.TING> I wanted to build a system along the SIMD line...
+<C.TING> Single-Instruction-Multiple-Datapath...
+<C.TING> But it is very difficult.  For the time being, I will broadcast input 
+to all ....
+<C.TING> Processors and get results back on a data bus.
+<[Jax] FIGCHAPTERS> Have you seen the many implementations of Transputer (c) 
+systems?
+<C.TING> I cannot afford the transputers.  Serial communication seems the most 
+logic...
+<C.TING> way to connect high power processors.
+<[Jax] FIGCHAPTERS> The most interesting feature ...
+<[Jax] FIGCHAPTERS> is that several implementations of multi-xputer systems ...
+<[Jax] FIGCHAPTERS> allow dynamic reconfiguration of the grid via software! 
+Suddenly ...
+<[Jax] FIGCHAPTERS> under program control, your SIMD can become a MIMD, a 
+pipeline, whatever.
+<[Gary] GARY-S> After many revisions the CUBE still loses data
+<C.TING> I do not have much affinity to MIMD structures.  SIMD is much easier 
+to...
+<C.TING> think and to program, while very powerful for specific problems.
+<[Jax] FIGCHAPTERS> On the other hand, I confess a taste for PARLOG-type setups.
+<[Jax] FIGCHAPTERS> which is *quite* MIMD.
+<[Gary] GARY-S> elaborate please
+<[Jax] FIGCHAPTERS> Parallel Prolog is being mapped to many hardware setups 
+these days.
+<[Gary] GARY-S> tnx
+<[Jax] FIGCHAPTERS> Hardware prolog processors are in the pipeline for 
+foundrying.
+<[Jax] FIGCHAPTERS> Very interesting field.
+<[Gary] GARY-S> just proves Boole really did have a good idea
+<C.TING> I am thinking of a structure to solve matrix problems.  Many identical 
+processors...
+<C.TING> are linked to gether to process columns and rows of data...
+<[Gary] GARY-S> APL seems to do pretty darn good with Matrices
+<C.TING> This is clearly a SIMD problem.
+<[Jax] FIGCHAPTERS> APL, Gary, offers nice *syntax* for matrix problems ...
+<[Jax] FIGCHAPTERS> solution is still computationally cpu-consuming!
+<[Jax] FIGCHAPTERS> I hear that NASA is reprogramming the MPP in C! Arrgh!
+<[Gary] GARY-S> It does do a nice job - if you can find zeta keyboards
+<C.TING> Jax.  These are dreams.  Need money and time.
+<[Gary] GARY-S> Is this straight skinny or scuttlebutt !!!
+<[Jax] FIGCHAPTERS> Ars longa vita brevis.
+<[Jax] FIGCHAPTERS> But *really* would like to bring up a desktop parallel 
+forth workstation!
+<C.TING> Translation, please.
+<[Jax] FIGCHAPTERS> "Art endures, but life is short"
+<C.TING> Thank you.
+<[Gary] GARY-S> MPP - fact or rumor
+<[Jax] FIGCHAPTERS> rumour
+<[Jax] FIGCHAPTERS> maybe fact
+<C.TING> MPP talks C, FORTRAN and Forth.
+<[Gary] GARY-S> sigh
+<[Jax] FIGCHAPTERS> (What happened to MPP Pascal?)
+<C.TING> Donknow.
+<[Jax] FIGCHAPTERS> (Mentioned in JFAR some years back)
+<[Gary] GARY-S> Any Forthisms for posterity before I send Jennifer and her 
+notepad packing ?
+<C.TING> The Silicon Composers did a good job in bussing their RTX boards...
+<C.TING> as many cards as you can afford.
+<[Gary] GARY-S> bitbuss, VME, multi ... ????
+<[Jax] FIGCHAPTERS> They are a fine team.
+<[Jax] FIGCHAPTERS> ( AT bus).
+<[Gary] GARY-S> tnx
+=== End of Steno notes. ===
+
+

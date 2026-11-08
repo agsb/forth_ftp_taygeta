@@ -1,0 +1,391 @@
+
+                
+                     Best of GEnie..... April 1990
+          News from the GEnie Forth RoundTable by Gary Smith
+  
+  One of the most common questions asked on the GEnie Forth RoundTable Bulletin
+Board, if not THE very most common, is, "What Forth should I get for my (fill 
+in here with computer/chip/application) ?". This is not an unreasonable query,
+even from a seasoned Forth programmer or user when one considers there were
+145 files posted in Library 4 'Public Domain and Sample Systems' the evening
+I was writing this column. Expect one or two additions by the time this piece
+is delivered to your mailbox. While that means there are many offerings to
+filter through for the one that might best serve your needs, it also means
+there is probably a kernel available for your needs. Keep in mind this does 
+not include the splendidly supported products provided by systems vendors and
+embedded board and programmed chip vendors.
+  First let's examine some specific requests and the responses they solicited.
+Then I will close this with a sampler of some of the public domain kernels
+available in the library, including some rather unique ones.
+
+ ************
+Topic 7  Messages dealing with the 'Which Public Domain Kernel ???' question.
+
+ ************
+ ------------
+ ALEX KOZAK -
+ re: 8080 FIGFORTH 
+
+ ak>    I'm looking for an 8080 figFORTH with source in CP/M ASM 
+
+  Alex, there are two kernels on GEnie (which I know are also available
+ on xCFB's) you may wish to consider :
+
+ GEnie # 1418 - FORTHLIB.ARC is a 79-Standard kernel modeled after
+                            Glen Haydon's "All About Forth"
+
+ GEnie #  701 - UNI4TH80.ARC is Uniforth's public domain (sampler)
+                            but quite complete
+
+  If neither of these meets your needs I can upload to GEnie (and 
+   it will be ported to the xCFB's if you can't get on GEnie) a
+   public domain fig-Forth written for a Kaypro II you should be
+   able to run as-is on your Ozzie. I had to massage it some to
+   get it to go on a Bondwell-12, but I don't think you will have
+   the same problem with your O-1.
+      Gary
+ ------------
+ From: BEN COMBEE 
+ Subj: Forth for the IBM  
+
+ Do you know about a good public domain Forth for an IBM XT compatible
+ that either comes or has available words to access EGA graphics? I have
+ used F83 (dated rather a ways back) but did not like it's interface.
+
+ Also, does anyone know of a good interactive tutorial for Forth that
+ will run on the same system?  I have seen similar programs for Turbo
+ Pascal and the other "in" languages. While I have read both editions of
+ Starting Forth, I still am having problems getting anything done.
+
+ Ben Combee
+ ------------
+   To: BEN COMBEE          
+ From: SYSOP (ECFB/SHIFRIN)    
+
+ You may be interested in checking out Tom Zimmer's F-PC. It's
+ built on F83, is text file based,  and has numerous extensions
+ including a number for EGA and VGA graphics. Look for
+ FPC225-1.ZIP thru FPC225-5.ZIP. If you can't find it locally,
+ you're welcome to login here to download it. You can also order
+ the base system from the author for $25.
+
+ BC>Also, does anyone know of a good interactive tutorial for Forth that
+ BC>will run on the same system?
+
+ The two Forth boards and GEnie have an online tutorial based on
+ this implementation. It's too big to network, but you're welcome
+ to stop by and download the lessons or participate in that
+ conference. Good luck!
+ ------------
+ From: BOB BILESKI  
+ Subj: WHAT FORTH  
+
+ I would like to start learning forth by picking a system that is current
+ and I can grow with. After downloading a number of forths I felt f88 by
+ Zimmer was as close to a friendly language as I've seen. I've read that
+ FPC225 is better because it is based on zimmers forth. I guess at this
+ point I'm totally baffled by the millions of forths available as well as
+ the number of extensions and fixes. Should I start with FPC225, f88,
+ TIL, Harvard, LMI, F83, F83X, Zimmers etc........ Should I use one from
+ the BBS or can I purchase a forth and all the attachments from one
+ source. I spoke to Ofette about the FPC225 (total package) and all I
+ really came away with is "very, very good. send check. $75. You'll like
+ very much". I give up. Perhaps you can advise what system would be the
+ best long term forth to purchase. Does anyone sell forth diskettes and
+ tutorials so I can minimize by BBS phone chages. I suppose this vast
+ amount of unstructured forth products makes many shy away from this
+ language. Maybe I'm missing something. I'd appreciate any info you might
+ give me......
+ Thanks
+ ------------
+   To: BOB BILESKI         
+ From: STEVE PALINCSAR     
+
+ Bob, what forth to get should be in part determined by what you want it 
+ for, what you intend to do with it, and the state of your budget.  For 
+ example, LMI & Harvard Softworks, to name only two, both have excellent,
+ very complete products suitable for professional level work, at 
+ corresponding prices.  With either of these systems, you'll get a fine 
+ product [actually, LMI has a number of fine products, both 16 & 32 bit, 
+ for both DOS & OS/2].  There are any number of public domain forths out 
+ there, as you've discovered, some of which have a lot of features, but 
+ all of which seem to have a chaos of versions, incompatible extensions, 
+ etc.  There are systems that fit into about 4K, and there are systems 
+ that seem to take about 400K.  I think some of Jerry's text files here 
+ including which4th might be of help to you... but the most important 
+ thing is to decide what you want to do with it.  If it's presently 
+ learning something about the language, to get a feel for it, you might 
+ want to start with a fairly simple (and limited) public domain system.  
+ Unless, of course, 400+ dollars is a mere bagatelle...
+ ------------
+   To: STEVE PALINCSAR  
+ From: BOB BILESKI     
+
+  I see what you mean. I originally wanted to use Forth for an embedded
+ controller project. After downloading a number of forths I realized that
+ romming a forth kernel is not as easy as I was led to believe. I think I
+ will use the FPC forth for my learning process at this time. As for the
+ controller I'll use use the Intel 80c52 Basic microcontroller, it has
+ all the eprom burning, machine calls etc. that I need built in. As far
+ as being slower than forth won't be a problem. I looked at ZEN forth but
+  couldn't find docs to get me going. Perhaps I really need to learn what
+ I'm doing before I can make any intelligent decisions in regards to
+ using forth for control projects(non commercial).
+ ------------
+From: DANMILLER
+ 
+also check pygmy for an 8088 version of cmforth which is a good  minimal
+system for embedded control. pygmy translated by f. sergeant is available on
+genie.    <dan> includes a small metacompiler to generate  code.  cmforth for
+the rtx is romable. pygmy includes notes on regeneration. <dan>
+ ------------
+From: GARY-S  
+
+ >Does anyone have a public-domain x386, x286, or 680xx Forth system that they
+ >could easily (emphasize easily) send me over the network to run on either
+ >kind of Sun workstation?  Thanks in advance!
+
+  Sun work station => unix => Mitch Bradley's cForth. 
+
+  easy solution. send  $50 to P O Box 4444, Mt.View CA 94040
+    Gary
+ ------------
+From: ERIC THERKELSEN  
+
+ UC like what I've seen of FORTH (F83, and the Inner Access S8), and
+ intend to make it my principal language for in-house projects (and
+ out-house if I can sell it).  Can anyone recommend a Forth package for
+ the PC (MSDOS) that:
+
+ - has a fairly complete set of extensions for string handling, file
+   access, and math, including floating point;
+
+ - is more or less in the main stream - that is, whose extensions aim
+   more or less in the direction that Forth seems to be headed;
+
+ - has been around long enough to be stable and has a good user base;
+
+ Wish list:
+
+ - allows pre-compiled function libraries;
+
+ - interfaces to the hardware either via DOS functions (rather than
+   using the ROM-BIOS services), or via redefinable words so it will
+   run on the Z100 as well as AT-compatibles.
+
+ - internals available, metacompiler, etc. I don't want to HAVE to use
+   these, but I like to be able to if necessary. Also they're fun to
+   play with late at night.
+
+ Any help anyone can give me in this would be greatly appreciated.
+
+ ------------
+   To: ERIC THERKELSEN 
+ From: STEVE PALINCSAR        
+
+ HS/Forth will do all that you ask, including being able to use 
+ precompiled C libraries.  It includes a metacompiler, includes all the 
+ string functions described in Kelly & Spies' Forth: a Text and 
+ Reference, and is as solid and complete a system as you could wish for.
+ ------------
+   To: BEN COMBEE 
+ From: STEVE PALINCSAR
+
+ Ben, if you're looking for a public domain Forth for the PC that has 
+ more pizzazz than F83, F-PC is your logical choice.  BTW, the most 
+ recent version of F83 _is_ about a 1984 date.  You can get F-PC from the
+ Forth Interest Group or from CH Ting's Offette Enterprises or direct 
+ from Tom Zimmer, I believe, if you can't find a BBS that has it.
+ ------------
+             
+  PORTED FROM uucp =>
+              ----
+   Looking for versions of Polack's FPT-F83.ARC and F83 that run together.
+ I would like an 8087 interface in forth. I tried F-PC and the program
+ was too big to load on my 256k Sanyo MBC 555 (IBM compatible) machine
+ with two 360k drives.
+                                      -- Jina Chan  
+
+ To: well!gars@LLL-WINKEN.LLNL.GOV sphinx@milton.u.washington.edu
+ Subject: Re:  8087 interface
+
+ We are currently trying to port forth archives to Simtel20. I think
+ F83 is already there. I am going to post your inquiry and my reply
+ to ForthNet for confirmation. 
+    Gary    uunet!swbat!texbell!ark!lrark!glsrk!gars  <- my own unix sys
+ ------------
+ From: STEPHEN MINTON  
+ Subj: F83 (L&P) CP/M VERSION
+
+ I am in need of downloading the latest available version of F83 (L&P)
+ for CP/M (I have 1.00).  Where would I find this, and was it updated
+ to 2.10 like the PC version?   Thanks!
+ ------------
+From:GARY-S 
+ To: STEPHEN MINTON  
+
+    There are several upgraded L&P F-83's available on GEnie and the CFB's
+    for CP/M users. They did not follow the 2.10 version notation, but have
+    such additons as full screen editors and alphabetized word lists. You 
+    may prefer to look at the silicon valley fig (John Peters) disks posted
+    on GEnie and the CFB's and roll your own. There is also the Australian
+    M-20 you may wish to consider. It accepts text files.
+     Gary
+ ------------
+ From: SCOTT ROBERTS          
+ Subj: FORTH SOURCE FOR 8088 
+
+    Does anyone know of a forth system that would be suitable for storing
+ in ROM of a controller based on the intel 8088? If I could get an
+ assembler source listing, etc I could modify it to suit my system. 
+ Thanks in advance, Scott Roberts
+ ------------
+   To: SCOTT ROBERTS      
+ From: JERRY SHIFRIN       
+
+ You might want to look into the ZenForth files available on the
+ CFB's/GEnie and perhaps even get in touch with Martin Tracy
+ (their author).  I understand that Zen has been successfully
+ ROM'd into various environments.
+ ------------
+ From: IAN GREEN  
+ Subj: CMFORTH
+
+    Anybody seen a cmForth system for DOS? I currently only have F-83 in 
+ my tools directory and would like a copy of cmForth to fiddle with.
+
+ Ian Green
+ ------------
+ 
+  A brief look at some of the kernels posted to library 4 will satisfy most
+all that there is likely a public system available for your computer. It is
+but a modem call away. Some of the files for various computers include the
+following :
+ *********************************
+Number: 1710  Name: POCKET4.SIT Address: C.HEILMAN 
+
+Description:
+This Macintosh Stuffit file contains the PocketForth vers. 4 application
+and Deck Accessory.  Also includes a number of extensions source code files.
+ ---------------------------------
+ *********************************
+Number: 1647  Name: MX20.ARC Address: L Collins
+
+Description:
+Text based Forth for CP/M from Lance Collins MM FORTH 
+ ---------------------------------
+ *********************************
+Number: 1596  Name: GSFORTH.BQY Address: D.M.HOLMES
+
+Description:
+This contains the main file in the Apple GS Forth Demo Package. 
+ ---------------------------------
+ *********************************
+Number: 1541  Name: STFORTH.ARC Address: ECFB 
+
+Description:
+FORTH-83 version 1.0 for Atari ST distributed by the San Leandro computer club
+ ---------------------------------
+ *********************************
+Number: 1846  Name: PURPLE.FORTH.BQY Address: J.PURPLE
+
+Description:
+FIG for the APPLE II series. This file has been compressed using an Apple 
+specific compression technique.
+ ---------------------------------
+
+  Variety is also everpresent as evidenced by this incomplete list of ms-dos
+specific files. Note, I didn't even bother with the fig, L&P F-83 and UniForth
+sampler.
+ *********************************
+Number: 900  Name: BBL.ARC Address: GREEN.ECFB
+
+Description:
+This is Roedy Green's unique gift to the Forth world. It is a very fast 32-bit
+public domain ( except for military use ) Forth that uses multiple pointers.
+ ---------------------------------
+ *********************************
+Number: 1964  Name: F-PC35-1.ZIP Address: D.RUFFER 
+
+Description:
+This is version 3.5 of Tom Zimmer's F-PC for MS DOS computers. F-PC is a turbo
+like environment for ms-dos Forth users. F-PC comes with an amazing array of
+support files.
+    F-PC is easily the banner system for the Maxi-Forth proponents. Gary
+ ---------------------------------
+ *********************************
+Number: 1939  Name: PYGMY12.ARC Address: F.SERGEANT
+
+Description:
+Here is Pygmy Forth version 1.2.  It is faster, more accurate, and more
+compatable.  It automatically sets up for COLOR or MONOCHROME monitors.
+Turnkey is much easier with DEFER'd BOOT.  As always, it includes full source
+code, assembler, meta-compiler & documentation & STARTING FORTH compatability
+file.
+   Pygmy is representative of the Minimalist approach. Gary
+ ---------------------------------
+  
+  The arguments from those running Unix and Unix-like environments that there
+were no good Forth's available for them vanished sometime back with Alan 
+Pratt's public domain cForth and Mitch Bradley's supported CFORTH-83. Here are
+two more recent entries for that arena.
+ *********************************
+Number: 2003  Name: BOTFTH68.ARC Address: GARY-S
+
+Description:
+botForth is another effort at a clean universal minimal Forth kernel. This
+is the 2/90 port to MC68k uP's. There are no associated Makefiles.
+ ---------------------------------
+ *********************************
+Number: 1944  Name: TILE Address: GARY-S
+
+Description:
+Mikael Patel's public domain f83 - written in unix shells. 
+ ---------------------------------
+  
+  Language is not necessarily, either. Witness these German and Russian Forth
+versions.
+ *********************************
+Number: 1576  Name: VOLKS4TH.ARC Address: K Schleisiek
+
+Description:
+Documentation for this is in German, so it's pretty hard for me to tell
+you anyting about it, except that it's for a PC.  Here is the Copyright:
+Die Programme und die zugehrigen Quelltexte knnen frei verwendet werden. 
+Das beinhaltet die Weitergabe und Nutzung der Programme und gilt 
+selbstverstndlich auch fr Applikationen, die auf volksFORTH aufgebaut 
+sind.  Das Handbuch unterliegt dem Copyright 
+(c) 1985 - 1988 Klaus Schleisiek, Ulrich Hoffmann, Bernd Pennemann, 
+                Georg Rehfeld und Dietrich Weineck.
+ ---------------------------------
+ *********************************
+Number: 1737  Name: ASTRO4TH.ARC Address: D.RUFFER
+
+Description:
+AstroFORTH, from Russia, is a software development system for design 
+software of different kinds.  AstroFORTH includes the FORTH-83 language 
+standard, extended by a number of service procedures and software packages, 
+providing users with additional facilities.  AstroFORTH may be used on 
+IBM PC XT/AT compatible personal computers, equipped with the i8086/i8088 
+microprocessors.  The system operates under the control of the MS DOS O/S.
+For the system to work one needs 128K main memory, a floppy/hard disk drive,
+a color/monochrome display controller and (if required) a printer.
+ ---------------------------------
+  
+  I will end this session with evidence it would be difficult to imagine a
+computer environment there is not a Forth for. An argument has raged about
+the Forth-like qualities of PostScript, Adobe System's defacto graphics
+system. There are many features of PostScript that smack strongly of a Forth
+heritage. In answer to the arguments Mitch Bradley created a skelital version
+of Forth in... yep ! PostScript.
+ *********************************
+Number: 1995  Name: PSFORTH.02.90
+
+Description:
+In response to messages from Doug Philips regarding why 'PostScript does
+NOT qualify as Forth', Mitch Bradley produced this very minimal Forth
+kernel entirely in PostScript lexicon. It is by no means a full system,
+but does contain the seed elements to write a full kernel from.   
+ ---------------------------------
+
+

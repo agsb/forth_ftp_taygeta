@@ -1,0 +1,149 @@
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 08/01/91   Time: 22:25EDT
+   
+  Open FIGGY BAR of 1 Aug 1991. Items discussed include the case sensitivity
+  debate (one vote cast for insensitive, one cast for a switch), power
+  supplies for RF, ACM SigForth with Irv Montanez at the helm - a possible
+  topic area in the GEnie Forth RT, accelerators - circular and linear.
+
+Attendees:
+[GARY-S]
+[[IRV] I.MONTANEZ]
+[[Mike] M.KELLY36]
+
+Minutes:
+<I.MONTANEZ> is here.
+<M.KELLY36> is here.
+<[IRV] I.MONTANEZ> HI GARY ITS GOOD TO BE ABLE TO TALK TO YOU AGAIN
+<GARY-S> Mike - meet Irv; Irv <-> Mike
+<[Mike] M.KELLY36> Yo
+<[Mike] M.KELLY36> Not THE Gary Shandling ...
+<GARY-S> Mike - we played that game before - still not Shandling ;-)
+<[IRV] I.MONTANEZ> I started to say that I have been very busy and not able log 
+on unfortunely
+<[Mike] M.KELLY36> Where are you out of Irv ?
+<GARY-S> Have either of you been tracking the Case sensitive issue ? Care to 
+cast a vote ?
+<[IRV] I.MONTANEZ> I haven't
+<[Mike] M.KELLY36> FOR case sensitivity ... Gary , you a sysop chez UNIX ?
+<GARY-S> yes
+<GARY-S> Matter of fact I am accessing GEnie via my Unix box, Mike
+<[IRV] I.MONTANEZ> what are we talking about
+<[Mike] M.KELLY36> What have you been busy with, Irv ?
+<GARY-S> Irv - there is a VERY heated argument whether ANSForth should be case 
+sensitive or case insensitive (case blind)
+<GARY-S> any opinion ?
+<[IRV] I.MONTANEZ> What deoes the majority think?
+<GARY-S> cast your vote and we will let everyone know
+<[IRV] I.MONTANEZ> of the case sensitive issue?
+<GARY-S> A poll is just now being taken
+<GARY-S> Mitch Bradley is taking the poll but I am gathering votes on GEnie and 
+RIME
+<[IRV] I.MONTANEZ> My vote is for not having case sensitivity.
+<GARY-S> your vote is counted - thank you
+<[Mike] M.KELLY36> why ?
+<GARY-S> 'why' who ?
+<[IRV] I.MONTANEZ> BECAUSE ITS EASIER FOR ME TYPE THIS WAY THAN this Way.
+<[IRV] I.MONTANEZ> espcially in electronic conversations. .ga
+<GARY-S> I am an avowed minimalist, but I am leaning toward Lee Brotzman's 
+unofficial proposal to include a case switch
+<GARY-S> There's just too damn much 79 and 83 code out there with case 
+sensitive code
+<[Mike] M.KELLY36> Tough. But I also favor the switch OPTION.
+<GARY-S> It really stinks to add bells and whistles, but it stnks more to throw 
+away all those man months/years of decent code
+<[IRV] I.MONTANEZ> Mike to answer an earlier question, I am located at 
+Brookhaven National Lab in Upton, New York//
+<[Mike] M.KELLY36> Doin' what Irv ?
+<[IRV] I.MONTANEZ> Managing a trememdous amount of Physics data...
+<[Mike] M.KELLY36> I think we sell to you.
+<[IRV] I.MONTANEZ> Possibly?
+<[Mike] M.KELLY36> We make RF and microwave power supplies.
+<[IRV] I.MONTANEZ> We sure use them in our accelerator.
+<[Mike] M.KELLY36> Small world.
+<[IRV] I.MONTANEZ> We have a new Booster project where a considerable number of 
+new supplies are being utilized.
+<[IRV] I.MONTANEZ> We are probably a good customer of your products.
+<[Mike] M.KELLY36> What frequencies and wattage requirements.
+<[IRV] I.MONTANEZ> I,ll put you in contact with the engineer of the project if 
+you really want specs.
+<[Mike] M.KELLY36> Sure ...'
+<[Mike] M.KELLY36> If we aren't selling to you  ...  we should be.
+<[IRV] I.MONTANEZ> Give me a call at (516) 282-2540 at your convienience 
+tommorrow and I have the information for you.
+<[Mike] M.KELLY36> Ok.
+<[IRV] I.MONTANEZ> Gary are you aware that I was recently elected ACM SIGForth 
+chair?
+<GARY-S> I read that somewhere - in the newsletter I think. ATTA BOY !
+<[IRV] I.MONTANEZ> Thank you.
+<[IRV] I.MONTANEZ> I have been looking for volunteers who may want to play an 
+active role in running SIGForth.
+<GARY-S> Time for a plug Irv. We will provide a place ...
+<GARY-S> here in the Forth RT for ACM SigForth stuff, but you will have to 
+provide someone to maintain it.
+<[IRV] I.MONTANEZ> I will search for a candidate and contact you when I have 
+selected him.
+<GARY-S> We had said as  much to Paul F. but nothing came of it
+<[IRV] I.MONTANEZ> Paul I believe memtioned it to me a while back but I guess 
+its slipped by both of us since we have been very busy.
+<GARY-S> and ---- it must be noted that goodies posted here get distributed on 
+RIME and Usenet, giving you a target you _need_
+<[IRV] I.MONTANEZ> BY the way I wish to extend my congratulations to you Gary 
+for the well desererved Figgy award you receive.
+<GARY-S> Thank you - I honestly feel others are more deserving, but it was a 
+nice stroke
+<GARY-S> It's on my ego wall, looks good too ;-)
+<[IRV] I.MONTANEZ> You have really contributed a significant amount of your 
+time and enery running the fig board and you truly deserved it .
+<GARY-S> When is the next call for papers for ACM SigForth conference ?
+<[IRV] I.MONTANEZ> I am sorry that you couldn't come to our SIGForth conference 
+earlier this year.  I met Leonard Morgenstern and was very impressed.
+ The next conference is in Kansas City , Missouri on March 5-7, 1992.
+<[IRV] I.MONTANEZ> I hope that you will be able to attend.
+<[IRV] I.MONTANEZ> You too Mike
+<GARY-S> The other hot topic in ANSForth is the elimination of derfer, and 
+several state-smart words
+<[Mike] M.KELLY36> Do you code Gary ( pardon the naiveness ) ?
+<GARY-S> Not like I once did - so currently I would have to reply - not really
+<[Mike] M.KELLY36> How big is your accelerator, Irv ?
+<[IRV] I.MONTANEZ> It consists of over 200 magnets and we spend aproximetely 4 
+million a month when we run it.
+<[Mike] M.KELLY36> Length ... Stanford ?
+<[IRV] I.MONTANEZ> A lot I am looking for my data sheet with the exact 
+specifications so as not to mislead you with the wrong data.
+<[Mike] M.KELLY36> Is it circular ( Texas planned ) or linear ?
+<[IRV] I.MONTANEZ> Its circular and about 1/2 mile in diameter
+<[IRV] I.MONTANEZ> The one in Texas is considerabley larger and with require 
+many power supplies.
+<[IRV] I.MONTANEZ> The accelerator in Texas if it is ever built will certainly 
+provide considerable opportunities for vendors to sell their wares.  At
+present the projected cost is about 8 billion dollars, realistically it will 
+probably cost 12 billion.
+<[Mike] M.KELLY36> No opinions here on the use of DEFER or state smart words. 
+Sometimes I think ( because of the different Forth requirements for 
+individuals ) that people are programming in a different language than I am.
+<[Mike] M.KELLY36> We address the small fringe user as well as the large user. 
+Small becomes large occasionally.
+<[Mike] M.KELLY36> Will " I'M NOT GARY SHANDLING " appear in the highlights of 
+8/1/91 on the Net?
+<GARY-S> yes - it will <grin>
+<[IRV] I.MONTANEZ> The Alternating Gradient Synchrotron (ags) can accelerate 
+protons to energies of up to 33 billion electron volts(gev).  It has a 
+half-mile circumfernce and 240 magnets.
+<[Mike] M.KELLY36> Can ... and ( unlike Texas ) does ?
+<GARY-S> In a couple of weeks Will should be back on Thursday nights with word 
+on his and Ting's China envoy
+<[IRV] I.MONTANEZ> Mike are you an ACM or IEEE member?
+<[Mike] M.KELLY36> No , sorry ( not even FIG ) .  Been approached but never 
+signed on.
+<GARY-S> Unless you two enjoy paying for dead air, let's close the FIGGY for 
+tonight
+<[IRV] I.MONTANEZ> ok
+<[IRV] I.MONTANEZ> goodnight to you both!
+=== End of Steno notes. ===
+
+

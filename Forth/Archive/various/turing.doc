@@ -1,0 +1,57 @@
+
+		Documentation for the Turing Machine simulator
+	   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	This Turing machine simulator is an embedded language written in Forth. 
+It defines the following (user level) words for Turing machine programming:
+	state ( -- )
+	      ( input stream: <name> )
+	This creates a state variable in the vocabulary, which has no rules
+	associated with it, and by default moves right across the tape
+	left ( -- -1) 
+	This is a movement constant
+	right ( -- 1)
+	Also a movement constant
+	moves ( direction -- )
+	this word, when used in conkunction with a direction, forces
+	the state or rule defined immediately before it to move in the
+	given direction
+	-> ( -- )
+	Semantically nil. I find that it makes turing machine code easier to
+	read
+	rule ( starting-state pattern-char replacement-char new-state -- )
+	This produces a rule associated with the starting state. When the
+	Turing machine is in this state, it will look for pattern-char in
+	the "tape". When it finds this character it will replace it with
+	replacement-char, and change state to new-state. By default, it
+	will then move the tape in the direction start-state generally moves.
+	However, a rule may have a different movement direction from its
+	state's standard. This is done by following the word rule with the
+	<movement-direction> moves phrase.
+	halt ( -- nil )
+	this is a constant state which signals the simulator to stop.
+	tm-simulator ( starting-state -- )
+		     ( input stream: tape-string for simulation)
+	This is the loop about the tm-kernel which does the simulation.
+	Using the Turing Machine simulator (a code example):
+    This code figures out whether or not a string of X's is even or odd.
+(code starts here)
+\ Define states for counter
+state even right moves
+state odd right moves
+\ Constants for pattern matching
+ascii X constant X
+ascii E constant E
+ascii O constant O
+ascii % constant %   ( turing machine standard notation for end of tape)
+\ Rule tables
+even X -> X odd rule	\ if we hit an X in even state, switch to odd state
+odd X -> X even rule	\ if we hit an X in odd state, switch to even state
+even % -> E halt rule	\ if we hit EOT in even state, say so and stop
+odd % -> O halt rule	\ if we hit EOT in odd state, say so and stop
+\ Simulation
+even tm-simulator @XXXXYYXXYXYXYXbXXX%
+(code ends)
+Dave Weinstein
+July 30, 1988
+
+

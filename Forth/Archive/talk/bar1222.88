@@ -1,0 +1,299 @@
+
+     
+ Minutes of the FIGGY BAR RT Conference.
+        
+Date: 12/22/88   Time: 22:37EST
+        
+Items Discussed: Hand-held nuclear detection in Forth, new F-PC manuals, 
+                 ROM/ROMmable Forths, Vesta, Inner Access, NMI, SC32 & RTX, 
+                 linking to forthers world wide, ACM conference update
+Attendees:
+[[Gary] GARY-S]
+[[Ken] K.BUTTERFIEL]
+[[Len] NMORGENSTERN]
+[[Jax] FIGCHAPTERS]
+[C.TING]
+[[Dave] DHWEINSTEIN]
+
+Minutes:
+<K.BUTTERFIEL> is here.
+<[Gary] GARY-S> Are you REALLY from Los Alamos ?
+<K.BUTTERFIEL> hi gary , I'm new at this so i'll be a little slow until i get 
+the hang if it.
+<K.BUTTERFIEL> Yes I am from ' the mesa of DOOM' as newsweek called it.
+<[Ken Butterfi] K.BUTTERFIEL> I don't like systems that shorten my name!!!
+<[Gary] GARY-S> I ask because I'm a native New Mexican living in Arkansas...
+<[Gary] GARY-S> my parents/brothers are still in Albuquerque
+<[Ken Butterfi] K.BUTTERFIEL> I went to school in Alb. at UNM.  Where are you 
+an ARkansaw?
+<[Gary] GARY-S> Little Rock
+<[Gary] GARY-S> I went to NMSU
+<[Gary] GARY-S> do you work at the lab
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> hey Len
+<[Len] NMORGENSTERN> Hi there
+<[Ken Butterfi] K.BUTTERFIEL> I work in the lab as a Physisist, but I do all of 
+may programming in FORTH.
+<[Len] NMORGENSTERN> Hello.
+<[Gary] GARY-S> well - where have you been ? This is the Forth place !
+<[Len] NMORGENSTERN> No it is el loco primero -- the first place!
+<[Gary] GARY-S> By the way - as folks show up here messages will start 
+interlacing
+<[Gary] GARY-S> mil gracias
+<[Len] NMORGENSTERN> De nada
+<[Gary] GARY-S> so what do you do in forth, ken
+<[Ken Butterfi] K.BUTTERFIEL> I build nuclear detection instruments that are 
+portable and battery operated.
+<[Gary] GARY-S> from scratch ? NMI 100 sq boards, what ?
+<[Ken Butterfi] K.BUTTERFIEL> We started with nmi 100 sq boards, and sometimes 
+prototype with them, but we build our own circuit boards and have them
+printed in house.
+<[Len] NMORGENSTERN> pmi (pardon my ignorance) what is nmi?
+<[Ken Butterfi] K.BUTTERFIEL> the processor we have used most is the m68HC11 
+with max forth in rom on board the chip
+<[Gary] GARY-S> Randy Dumse's New Micros Inc
+<[Gary] GARY-S> Forth - FIG, F83, 79 ?
+<[Ken Butterfi] K.BUTTERFIEL> Randy claims it is 83 standard but it is pretty 
+close ti fig with conversions to 83 in places.
+<[Len] NMORGENSTERN> Thanks
+<[Gary] GARY-S> I meant your own forth in ROM
+<[Ken Butterfi] K.BUTTERFIEL> Sorry, I meant we use Randy's MAxA-FORTH which 
+comes in ROM.
+<[Gary] GARY-S> thanks - it's a good package
+<[Gary] GARY-S> Jon Bryan uses it at Sandia also
+<[Ken Butterfi] K.BUTTERFIEL> I have talked to Jon I think, He wrote an 
+accelerometer package I believe.
+<[Gary] GARY-S> you're right - do you have a chapter at los alamos ?
+<[Ken Butterfi] K.BUTTERFIEL> We don't have a chapter at LA. There is one in 
+Albquerque, but I avoide the city whenever possible.
+<[Len] NMORGENSTERN> I have never used a ROMable Forth & have some questions.
+<[Gary] GARY-S> I asked because FIG has a new chapter coordinator in the name...
+<[Gary] GARY-S> of Jax (FIGCHAPTERS in e-mail) and we are trying...
+<[Gary] GARY-S> to get as many as possible in touch with Jax...
+<[Gary] GARY-S> via e-mail.. he and I are..
+<[Gary] GARY-S> both reacable on Usenet..
+<[Ken Butterfi] K.BUTTERFIEL> Len, ask away, Gary what is usenet?
+<[Len] NMORGENSTERN> I assume that a ROMable Forth...
+<[Gary] GARY-S> UUCP user network - it is tied into Internet (TCP/IP) (arpanet) 
+that you have at LA
+<[Len] NMORGENSTERN> runs on a PC or whatever, and then metacompiles into...
+<[Len] NMORGENSTERN> a small image that can be burned into ROM.
+<[Gary] GARY-S> You are the user here ken..
+<[Gary] GARY-S> ga
+<[Ken] K.BUTTERFIEL> MAX-FORTH is a full interpreter running in 4k of ROM.  The 
+way I use it is to compile into ram on top of the existing kernal.  I
+soter variables in a separate region of memory that will remain ram in the 
+final system.
+<[Ken] K.BUTTERFIEL> The whole package is compiled and I copy out the program 
+section into a ROM at the same address that the Ram occupied.
+<[Gary] GARY-S> len ?
+<[Len] NMORGENSTERN> I see. Then it REALLY is a ROM based Forth...
+<[Len] NMORGENSTERN> and not merely a Romable one.
+<[Ken] K.BUTTERFIEL> Yes,  in 4K complete with disk capability but no assembler,
+  That takes another 4K and has to exist outside of the rom built into
+ the chip.  The smallest package I have built has one chip, the processor, a 
+crystal a resitor 2 caps and a detector.  I takes 20 ma or 6 ma if the pr
+ocessor is in a wait for interrupt state.
+<[Len] NMORGENSTERN> Thanks
+<[Gary] GARY-S> ken - let me suggest you break up your longer...
+<[Gary] GARY-S> messages into segments with the three dots...
+<[Gary] GARY-S> indicating more to come..
+<[Ken] K.BUTTERFIEL> Sounds good to me...
+<[Len] NMORGENSTERN> You have answered my question...
+<[Len] NMORGENSTERN> A related one is something that was asked...
+<[Len] NMORGENSTERN> last Sunday...
+<[Len] NMORGENSTERN> Is there a Forth that will give small files on disk...
+<[Len] NMORGENSTERN> What I mean is, like a Romable, but on disk rather than in 
+ROM....
+<[Len] NMORGENSTERN> I hope that's clear.
+<[Ken] K.BUTTERFIEL> There used to be a FORTH for the PET (comodore)...
+<[Ken] K.BUTTERFIEL> That could save words above FENCE and reload back to the 
+same address...
+<[Ken] K.BUTTERFIEL> Is this any help   ga
+<[Len] NMORGENSTERN> I have MicroMotion (Martin Tracy's commercial product)...
+<[Len] NMORGENSTERN> that has overlays. ...
+<[Gary] GARY-S> Len, Vesta has a Forth that will do exactly as you ask..
+<[Gary] GARY-S> if I understand jax correctly and..
+<[Gary] GARY-S> so does feierbach at Inner Access.
+<[Len] NMORGENSTERN> That's not quite. Thanks. I will mention those to the 
+person who asked.
+<[Len] NMORGENSTERN> Overlays can be small, but the Forth that uses them...
+<[Len] NMORGENSTERN> is not necessarily so.
+<[Gary] GARY-S> Both those houses specialize in several varieties of Controller 
+boards..
+<[Gary] GARY-S> with ROM Forth AND ROMable Forth..
+<[Gary] GARY-S> to your specs.
+<[Len] NMORGENSTERN> Thanks again.
+<[Gary] GARY-S> Ken - if you need to /want to reach me via arpa my address is 
+well!gars@lll-crg.arpa
+<[Gary] GARY-S> Usenet addresses are gars@well.UUCP  or gars@wet.UUCP
+<[Gary] GARY-S> we are trying to link to as many forthers as possible
+<[Ken] K.BUTTERFIEL> I don't know my arpanet address, but i will try to ...
+<[Ken] K.BUTTERFIEL> get it.  I don't use the large LA computers much...
+<[Ken] K.BUTTERFIEL> I don't trust a computer I can't cary!  ga
+<[Gary] GARY-S> I heard that and those Mainframes are heavy !
+<[Gary] GARY-S> anyway please pass the word if it occurrs to you and 
+opportunity presents itself..
+<[Gary] GARY-S> with my appreciation.
+<[Len] NMORGENSTERN> We're getting into a Cray Area here.
+<[Ken] K.BUTTERFIEL> I will do that.. By the way Semore Cray hand delivered the 
+1st machine...
+<[Ken] K.BUTTERFIEL> but he needed a flatbed semi. ga
+<[Gary] GARY-S> I was at CDC when Seymore said the 7600 was his last 
+little/slow machine...
+<FIGCHAPTERS> is here.
+<[Gary] GARY-S> he wasn't just kidding !
+<[Len] NMORGENSTERN> Hi Jax
+<[Gary] GARY-S> Jax - ken at Los Alamos is going to e-mail me on arpa - I will 
+pass thye address on to you
+<[Jax] FIGCHAPTERS> Hi len....
+<[Jax] FIGCHAPTERS> Ken, are you a member of a FIG Chapter?
+<[Ken] K.BUTTERFIEL> Not a local chapter just the national. ga
+<[Jax] FIGCHAPTERS> Hmmm I have compiled a list ...
+<[Jax] FIGCHAPTERS> of FIG Chapters that I can reach by email.
+<[Jax] FIGCHAPTERS> I tried it out last week .........
+<[Jax] FIGCHAPTERS> and it worked fine .
+<[Gary] GARY-S> Did you mail me ?
+<[Jax] FIGCHAPTERS> Do you want to be on the Chapter mailing list?
+<[Len] NMORGENSTERN> How does one reach it, Jax?
+<[Jax] FIGCHAPTERS> Len, I have three lists:
+<[Ken] K.BUTTERFIEL> It may be that the best way to reach me will be on GENIE.
+<[Gary] GARY-S> Why do you think I sent all those addresses to you ?
+<[Jax] FIGCHAPTERS> 1) net 2) GEnie 3) xCFB
+<[Gary] GARY-S> I'm chapter coordinator in CAFIG !
+<[Jax] FIGCHAPTERS> If I want *you* Gary, I know where to find you!
+<[Jax] FIGCHAPTERS> Ok, gar, you are on, I'll mail you here on GEnie.
+<[Gary] GARY-S> That doesn't mean I don't want the mailings
+<C.TING> is here.
+<[Len] NMORGENSTERN> Hi Ting!
+<[Jax] FIGCHAPTERS> The good Forth Doctor!
+<C.TING> hi len
+<[Gary] GARY-S> Well hello Dr. Ting !
+<[Ken] K.BUTTERFIEL> Hi Ting, ken butterfield here, I met you at FORMAL.
+<[Gary] GARY-S> Your conference has been accessed quite a bit - so thanks again
+<[Jax] FIGCHAPTERS> Dr. Ting, perhaps you can answer a question
+<C.TING> hi, ken.  I was trying to split my window so I can see what's goining 
+on.
+<[Ken] K.BUTTERFIEL> use a baseball.. it worked when i was a kid.
+<C.TING> Jax, go ahead.
+<[Jax] FIGCHAPTERS> The Christians have christmas @ the solstice, the romans 
+had saturnalia @ soltice, the muslims jews and hindus observed solstice .
+.. is there a chinese Solstice festival?
+<C.TING> Jax.  We wait for the Lunar New Year.
+<[Jax] FIGCHAPTERS> Thank you.
+<[Gary] GARY-S> This is open conversation - anyone can jump in
+<[Gary] GARY-S> try to stay on Forth
+<C.TING> Folks, I want to make an announcement..
+<[Gary] GARY-S> ga
+<[Ken] K.BUTTERFIEL> Is'nt the Lunar new year harder to measure than the 
+shortest day?
+<C.TING> F-PC is finally out.  It is frozen at Version 2.25.
+<C.TING> I have the revised User's Manual and the Technical Reference manual 
+for sale.
+<[Ken] K.BUTTERFIEL> I downloaded f-pc last weekend.  was that 2.25??
+<[Jax] FIGCHAPTERS> Is this now a commercial system, of is it still uploadable?
+<[Gary] GARY-S> Dr. Ting - post your address and prices
+<C.TING> Ken, we wanted to make it available.
+<C.TING> F-PC diskette set (4 disks) $25.
+<[Gary] GARY-S> Ken - you got 2.15 / 2.25 will be on GEnie later
+<C.TING> F-PC User's Manual, 2nd Edition $20.
+<C.TING> F-PC Technical Referrence Manual, $30.
+<DHWEINSTEIN> is here.
+<C.TING> Order from Offete Enterprises, 1036 South B Street, San Mateo, CA 
+94402...
+<C.TING> Tel (415) 574-8250
+<[Dave] DHWEINSTEIN> Hullo y'all
+<C.TING> ga
+<[Gary] GARY-S> hey Dave
+<[Gary] GARY-S> how goes ACM
+<C.TING> Tom Zimmer promised not to change it.
+<[Dave] DHWEINSTEIN> Hey. Goin' ok. Looks like I have become the Austin social 
+planning director for the conf. :-)
+<[Jax] FIGCHAPTERS> Has Dr. Nichols shown the proto-board for the SC32? I 
+called Silicon COmposers the other day and nobody answered the phone!
+<[Gary] GARY-S> ga ting
+<C.TING> SC32 is not ready for sale yet.  They will have to build more chips.
+<C.TING> It is not clear who will build it for them.
+<[Gary] GARY-S> Jax - a question came up earlier about ROM Forth vis-a-vie 
+ROMmable Forth. Did I err when I said Vesta deals with both ?
+<[Jax] FIGCHAPTERS> Our Forths are all Rommed and all Rommable.
+<[Jax] FIGCHAPTERS> Though of course we can metacompile on the PC for our 80x88 
+boards.
+<[Gary] GARY-S> Len care to explore ?
+<[Len] NMORGENSTERN> No, that is the information I need. Thanks
+<[Jax] FIGCHAPTERS> Metacompile on Amiga for our 68008 boar.
+<[Jax] FIGCHAPTERS> (board).
+<[Jax] FIGCHAPTERS> .
+<[Gary] GARY-S> any one !
+<C.TING> Jax, will you send me information on your ROM Forth, please.
+<[Jax] FIGCHAPTERS> Sure thing!
+<[Jax] FIGCHAPTERS> I have Offete press address, ok?
+<C.TING> Thanks.  I am working on an 80188 board, which can use a good Forth in 
+ROM.
+<[Jax] FIGCHAPTERS> We have an 80188 with ROM forth ourselves.
+<C.TING> Jax,  Offete's address is fine.
+<[Jax] FIGCHAPTERS> Is this a product, or are you just making this for yourself?
+<[Gary] GARY-S> Ken - you may be interested to know Randy Dumse will be a 
+conference speaker here on February 9
+<C.TING> Jax, this is a job at Maxtor. but I don't think Maxtor will pay for it.
+<[Jax] FIGCHAPTERS> Aha! Well, our Forth is derived from L&P, with extensions, 
+some kinda neat.
+<C.TING> I converted the F83 meta compiler to compile 8080 ROM Forth...
+<C.TING> It could be used to ROM 80188, but I am kind of lazy now.
+<[Jax] FIGCHAPTERS> The thing about our Forth is that it presupposes ...
+<[Jax] FIGCHAPTERS> a rather IBM-like BIOS underneath, which we also wrote for 
+our boards ...
+<[Jax] FIGCHAPTERS> our 68008 board will have ...
+<[Jax] FIGCHAPTERS> 32-bit standalone indirect-threaded Forth, no BIOS planned 
+as yet.
+<[Ken] K.BUTTERFIEL> Thanks Gary I am interested.  Has anyone tried a Harris 
+RTX yet?
+<[Dave] DHWEINSTEIN> Dan Miller has, but he's not here today.
+<[Gary] GARY-S> Any one here ? I know Dan Miller has, Ken. He can be e-mailed 
+here as DANMILLER
+<[Dave] DHWEINSTEIN> Who will be coming to the ACM conference this February?
+<[Len] NMORGENSTERN> I probably
+<[Gary] GARY-S> I wish
+<[Dave] DHWEINSTEIN> Come on gary...you live in Little Rock, its not that far.
+<[Foxy Loxy] FIGCHAPTERS> Not I!
+<[Ken] K.BUTTERFIEL> I burned my travel time at FORMAL and the forth conference
+<[Gary] GARY-S> I am the only field engineer for 600 miles in any direction, 
+though
+<[Dave] DHWEINSTEIN> Do you get new travel time at the beginning of the year, 
+or the fiscal year?
+<[Ken] K.BUTTERFIEL> I get it when I can talk my way into it, but I used all my 
+chips.
+<[Gary] GARY-S> I think that's to you ken
+<[Dave] DHWEINSTEIN> Ahhhh. Oh well.
+<[Gary] GARY-S> it's witching hour - last shots anyone ?
+<[Len] NMORGENSTERN> Can the ear detect the difference between the sound
+<[Len] NMORGENSTERN> of one hand clapping and the sound of no hand clapping?
+<C.TING> and a RTX cmForth...
+<[Ken] K.BUTTERFIEL> Enjoyed It KB
+<[Len] NMORGENSTERN> Thanks for a good conference, Gary.
+<[Jax] FIGCHAPTERS> What about RTX cmForth?
+<[Gary] GARY-S> e-mail me ken
+<[Dave] DHWEINSTEIN> Come on down to Austin. Remember, the air is clear, the 
+grass is green, and the music is astounding.
+<[Gary] GARY-S> thanks len
+<[Len] NMORGENSTERN> has left.
+<[Ken] K.BUTTERFIEL> I'll try to Gary.
+<C.TING> Jax, there is a cmForth for RTX.  Anyone interested?
+<[Gary] GARY-S> g'nite folks and thank you all very much
+<[Jax] FIGCHAPTERS> Interested, yes. I have a Novix ...
+<[Ken] K.BUTTERFIEL> I am very interested in an cmFORTH for rtx
+<[Dave] DHWEINSTEIN> <- could use any sort of Forth chip, but can't afford even 
+the old ones, much less a new one.
+<[Jax] FIGCHAPTERS> and am going to RTX Seminar in Denver in Jan.
+<C.TING> Mr. Bladh in Sweden sent me the cross compiler from NC to RTX.
+<[Jax] FIGCHAPTERS> To publish?
+<C.TING> It will appear on the next issue of 'More on NC4000' next January.
+<[Jax] FIGCHAPTERS> INtriguing!
+<[Jax] FIGCHAPTERS> I have an order out for Fast ROMs ...
+<[Jax] FIGCHAPTERS> so that I can upgrade from the original cmForth ...
+<[Jax] FIGCHAPTERS> to the later version. ...
+<[Jax] FIGCHAPTERS> are there an;y particularly tricky parts ...
+<[Jax] FIGCHAPTERS> in compiling the latter from the earlier?
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,386 @@
+
+
+
+
+
+     Doc. no.  90-006
+           May 28, 1990
+
+
+
+                         Draft Minutes of X3J14 Meeting #12
+                            ANS Forth Technical Committee
+                         May 22-26, 1990, Melbourne, Florida
+
+
+
+     CALL TO ORDER
+
+     Larry Forsley was acting chair and Jim Rash was acting secretary until Ms.
+     Rather and Mr. Tracy arrived at the meeting.
+
+     Mr. Braithwaite has resigned because he has accepted a position in
+     Zimbabwe.  Mr. Rible, Mr. Woehr, and Mr. Zettel are now voting members.
+     Mr. Ruffer was present as the Forth, Inc. alternate.
+
+     Mr. Egbert is now employed by the same company as Mr. Betts, and is
+     therefore ineligable to vote in the TC.
+
+     Minutes of the last meeting were approved unanimously.  Meeting agenda
+     approved unanimously.  The attendance list is document 90-007.
+
+     Thanks were expressed to Harris Semiconductor Corp. for their excellent
+     meeting site and to Mr. Hand for his committed support.
+
+     Mr. Colburn was concerned that we develop a metric to say when we are
+     finished.  He requested clarification of the term "producer's
+     organization."
+
+
+     ACTION ITEM REVIEW
+
+       1. Not all implementors have implemented locals.  Mr. Tracy and Mr. Hayes
+          have done so.
+
+       2. Mr. Rash is the acting secretary.
+
+       3. Mr. Braithwaite has submitted a technical proposal.
+
+       4. The Fall meeting will be November 7-10 in Detroit.  Mr. Zettel has
+          offered to host.
+
+       5. Status unknown.  Mr. Forsley has completed the Forth-79 appendix.
+
+       6. Postponed.
+
+
+     LOGISTICS COMMITTEE REPORT
+
+     The next meeting is in Vancouver on August 21-25, 1990.  Mr. Brown is the
+     host.  An information packet has been sent out.  The hotel is 2 blocks from
+     the meeting room and costs $70 Canadian.  Bed and breakfasts can be found
+
+
+
+X3J14/90-006 Draft Minutes, X3J14 Meeting #12, May 22-26, 1990, Page 1
+
+
+
+
+     for ($30-40).  Mr. Brown recommends that you make travel arrangements early
+     because it is tourist season in Vancouver.
+
+     Mr. Zettel offered to host the Fall meeting in Detroit.  A motion to to
+     this effect was passed unanimously.  Subsequently, Mr. Nemeth objected and
+     asked to move the November meeting back to the Washington, DC area.  The
+     host would be Mr. Rash or Mr. Nemeth.  This motion passed 16/2.
+
+
+     DOCUMENTATION COMMITTEE REPORT
+
+     A motion to approve BASIS 11 passed unanimously.  Mr. Colburn will head
+     this committee and will delegate functions as needed to other members of
+     the technical committee.  Mr. Zettel will be document editor.
+
+     Mr. Colburn moved to reaffirm our statement of work by publishing it at the
+     start of BASIS.  This motion passed 16/1.
+
+     Mr. Forsley will ask the Institute for Applied Forth Research for
+     permission to divert any monies received from the Forth Standards Team to
+     the purchase or rental of IBM equipment for use by the documentation
+     committee.
+
+
+     TECHNICAL COMMITTEE REPORT
+
+     The Technical Committee announced its intention to empty the burning issues
+     list of all technical issues at this meeting.  80 proposals were available
+     to be acted upon at the start of the meeting.
+
+
+     INTERNATIONAL COMMITTEE REPORT
+
+     Mr. Shaw will not be able to accept the position as International
+     Representative.  Ms. Rather asked for a volunteer.and read the job
+     description.
+
+
+     OTHER BUSINESS
+
+     Mr. Tracy resolved that we take accepted practice more into account.  This
+     resolution was passed 10/6.
+
+     There was a great deal of discussion about our charter.  Some felt that our
+     statement of work was imprecise and contradictory.  Ms. Rather commented
+     that CBEMA says we can make reasonable changes in our scope of work by
+     submitting the changes and the projected impact on our schedule for their
+     approval.
+
+     Mr. Koopman, Senior Scientist at Harris Semiconductors, spoke to the
+     committee about his joint proposal with Mr. Hand (TP-729).  He would like
+     to eliminate the requirement for a separate floating-point stack.  It is
+     expensive to build such a stack into a Forth engine.  There was much
+     discussion about this.  A recommendation was sent to the technical
+     subcommittee to make TP-729 work.
+
+
+
+
+X3J14/90-006 Draft Minutes, X3J14 Meeting #12, May 22-26, 1990, Page 2
+
+
+
+
+     Mr. Bailey resolved that we publish our schedule of remaining meetings as a
+     press release to SIGForth, purchasers of BASIS, CBEMA, Vendors list, the
+     Press, BBS's, Forth- Standards Team members, Conference Chairs of Rochester
+     and Asilomar, and others.  We would also send free copies of BASIS 12 to
+     the 30 or so vendors with over 200 customers.  A MS Word version would be
+     posted on electronic bulletin boards for distribution.
+
+     Mr. Colburn noted that both Creative Solutions and GENIE stand to make a
+     small profit on this.  The resolution passed 12/2.
+
+     Mr. Woehr moved that we send a letter of thanks to Harris for its
+     outstanding facilities, and that we mention its helpful representatives by
+     name.  The motion passed.
+
+     Mr. Forsley announced that the Institute for Applied Forth Research would
+     be willing to pay Charles Moore's outstanding bill out of funds received
+     from the Forth Standards Team.
+
+     Ms. Rather pointed out that we need volunteers for appendices F & G, and
+     for the Guidelines for implementors.  Mr. Bailey volunteered to develop an
+     outline for this chapter, with help from Mr. Tracy.
+
+     There was much discussion about whether to handle document distribution
+     through X3.  It was decided that it is more effective and timely to
+     continue distribution through FORTH, Inc.  Mr. Colburn and Mr. Forsley
+     moved that we identify the person who has helped the most with this session
+     and that we buy them dinner.  The motion passed, and Mr. Rible and Mr.
+     Hayes were taken to dinner.
+
+     Tentative Final Schedule
+
+       1. Technical work done 5/90
+
+       2. Correction, doc. restructure 8/90, 11/90
+
+       3. Final pats, 2/91
+
+       4. Vote dpANS, 3-4/91 (mail ballot)
+
+       5. dpANS to X3 5/91
+
+       6. Publ dpANS 11/91 - 4 mos. review.
+
+       7. Respond to review 3/92.
+
+     Mr. Colburn pointed out that these meetings are very expensive.  He
+     suggested that by hiring a technical writer to work on BASIS between
+     meetings, we might reduce our schedule by one meeting (11/90 or 2/91).  Mr.
+     Tracy offered to be the technical writer for one week (40 hours) at his
+     lowest professional rate ($40 per hour) for the initial assignment of
+     producing BASIS 12.  This cost will be paid by the Forth Vendors Group and
+     divided among the committee members.  A motion to this effect was passed.
+     Mr. Zettel and Mr. Stevenson will review BASIS when it is complete.
+
+     The chair accepted with great regret the resignation of Mr. Nemeth.  She
+     thanked him on behalf of the committee for his outstanding work.
+
+
+
+X3J14/90-006 Draft Minutes, X3J14 Meeting #12, May 22-26, 1990, Page 3
+
+
+
+
+     ACTION ON TECHNICAL PROPOSALS
+
+       TP-193    Clean Up Separation of Dict. and Data failed 0/17
+       TP-210    Globals and Locals                    withdrawn
+       TP-266    STRING                                withdrawn
+       TP-306    SNAP Table of Contents                failed 0/13
+       TP-315A   2/                                    passed 17/0
+       TP-321A   D2/                                   passed 17/0
+       TP-368    Interpreting String Literals          withdrawn
+       TP-373A   Number Definition                     passed 16/0
+       TP-387    Compiling From Text Files             failed 0/13  LF letter
+       TP-388    FP number Output Conversion           failed 0/17  JB letter
+       TP-389    FP number Output Conversion           failed 0/17  JB letter
+       TP-405    Division                              failed 0/17
+       TP-406    Multiplication and Division           failed 0/17
+       TP-408A   Number Types                          passed 16/0
+       TP-415    CHAR Change the Name to ASCII         failed 0/13  MT letter
+       TP-425    Stream I/O                            failed 0/13  JB letter
+       TP-450.1A SHIFT                                 passed 17/0  JW letter
+       TP-451    Explicit Number Base                  failed 0/13
+       TP-459    String Definitions                    failed 0/13
+       TP-463    Address Token Definition              failed 0/17
+       TP-469    Putting Things in Their Places        failed 0/13
+       TP-471    Add some See Also's                   post proposal
+       TP-482    Receive Definition                    post proposal
+       TP-493A   Parsing With Non-Blank Characters     passed 17/0
+       TP-499    Division is Not Portable              failed 0/17
+       TP-501A   Make 2/ and D2/ Arithmetic            passed 17/0
+       TP-516    Interpreting Control Structures       failed 0/13
+       TP-517A   Interpret Quote                       passed 15/2
+       TP-522    BOUNDS                                failed 0/13
+       TP-545    Remove Data Memory                    withdrawn
+       TP-555A   Missing Definition of Number          passed 18/0
+       TP-568    Son of Right to Compile               failed 0/17
+       TP-569.3  CATCH and THROW                       passed 16/2
+       TP-581    Number Definition                     withdrawn
+       TP-582    Define Bit Definition                 passed 16/0
+       TP-584A   Signed Definition                     passed 17/1
+       TP-585A   Signed Definition                     passed 18/0
+       TP-588A   Dictionary Data Space                 passed 17/0
+       TP-601    New FP Literal Syntax                 failed 0/13  GB letter
+       TP-605    LOADing From Text Files               failed 0/16  MB letter
+       TP-612A   Suffix to Distinguish Floored...      passed 17/0  LZ letter
+       TP-613    Provide Access to Underflow           failed 0/18  LZ letter
+       TP-614    Exception Stack with Toggling         failed 0/18  LZ letter
+       TP-615    Fixups for BASIS                      post proposal
+       TP-617    Simplifiy DOES>                       withdrawn
+       TP-623    Colon                                 withdrawn
+       TP-628    Add SP!                               failed 0/13  MT letter
+       TP-634    Parsenips                             failed 0/16
+       TP-635    Cell Pair                             withdrawn
+       TP-639    Byte                                  withdrawn
+       TP-640A   KEY and XKEY                          passed 14/1
+       TP-642    Interpret -- Multi-Line Comments      passed 17/1
+       TP-643A   Interpret -- Delimiters               passed 16/1
+       TP-644    Read-Ahead in Text Files              failed 0/16
+       TP-645A   Drawing the Line                      passed 18/0
+
+
+X3J14/90-006 Draft Minutes, X3J14 Meeting #12, May 22-26, 1990, Page 4
+
+
+
+
+       TP-650    Fix COUNT                             passed 15/0
+       TP-651    I Miss My Bits                        withdrawn
+       TP-653    Add @ and ! Into Stacks ...           failed 0/13  LF letter
+       TP-655A   DOUBLE Division Compromise Res        passed 17/0
+       TP-656A   Fix Division                          passed 17/0
+       TP-660A   Minor Remarks on BASIS                passed 14/0  JB letter
+       TP-661    NOT Restored...                       failed 0/13
+       TP-662A   ?TRIM                                 passed 17/0  MB letter
+       TP-664A   Floating-Point to Text String         passed 19/0
+       TP-666    Hide Counted String Details           withdrawn
+       TP-667A   Remove CONVERT                        passed 14/3
+       TP-669A   Miscellaneous                         passed 17/0
+       TP-671    Show Loop Return Stack Restrictions   passed 14/0
+       TP-672    Remove Locals                         withdrawn
+       TP-677    Remove Locals from ANS Forth          mail ballot
+       TP-679    Keep BASIS Gender Neutral             passed 15/0  JR letter
+       TP-681    Fix the Numbering of BASIS 11         passed 15/0  JR letter
+       TP-684    Delete Sexist Pronouns                passed 15/0
+       TP-687    Revise Definition of Byte             failed 0/13
+       TP-689    Revise Definition of 4.0710           withdrawn
+       TP-691A   Revise Def. of 5.3.3, Return Stack    passed 13/2
+       TP-692    Delete @EXECUTE                       post proposal
+       TP-693    Modify Definition of CONVERT          failed 0/13
+       TP-694A   Modify Definition of "join"           passed 15/0
+       TP-696    Correct Execution Semantics of ?do    passed 17/0
+       TP-697A   Correct Compilation Stack Diagram     passed 16/0
+       TP-700    Change Definition of #TIB             failed 0/13
+       TP-701    Delete BLOCK-FILE...                  failed 0/13
+       TP-702    Modify Definition of CODE             failed 1/14
+       TP-711    Replace FAR-IN and FAR-OUT            failed 0/13
+       TP-712    Revise Definition of HOLD             passed 15/0
+       TP-713    Delete 7.1690 I'                      withdrawn
+       TP-719A   Eliminate Bytes                       passed 16/1
+       TP-720    MOSI                                  passed 17/0
+       TP-721A   Revised Parsnips                      passed 13/3
+       TP-722A   Fix ups for BASIS 11                  post proposal
+       TP-723    Alignment Fix Ups                     passed 17/0
+       TP-724A   Improve Wording in Glossary           passed 15/0
+       TP-725    Fix CREATE                            passed 16/1
+       TP-726    Foolish Consistency                   passed 15/0
+       TP-727    Foolish Consistency (literals)        passed 15/0
+       TP-728A   ( and .( are Broken                   passed 17/0
+       TP-730    Addendum                              passed 16/1
+       TP-730A   Environmental Interrogation           passed 17/2
+       TP-733    A Variable is Not its Contents        passed 16/0
+       TP-734A   Shift Arithmetic                      passed 17/0
+       TP-735    Re-simplify DOES>                     passed 16/0
+       TP-736A   Clarify RAM and ROM                   passed 13/0
+       TP-746    Context-Free Hex Numerals             failed 0/13
+       TP-748    Don't Specify I for FOR               failed 0/13
+       TP-750    INVERT is a Mask Operator **          post proposal
+       TP-753A   Allow 1                               passed 16/1
+
+
+
+
+
+
+
+X3J14/90-006 Draft Minutes, X3J14 Meeting #12, May 22-26, 1990, Page 5
+
+
+
+
+     BURNING ISSUES
+
+       Issue                       Magnet(s)
+
+       Multiprogramming            JS AK* GS
+       Cleanup                     All
+       Restructuring/Final form    AK All
+       FP stack                    JB GB
+       Word Sets                   JRi* MT* ER GB JS
+       Division                    JH
+       Word Name Conflicts         DC* GB ER
+       Relocatability Rules        DC
+       Input stream                GS* MT
+       Orphans                     LF*
+       Appendices                  ER
+
+     Magnets with an asterisk (*) will generate proposals.
+
+
+     ACTION ITEMS
+
+       1. All implementors will implement locals.
+
+       2. Mr. Ruffer will look for a volunteer to write the comparison to Forth-
+          83.
+
+       3. In the TP-612 letter to Dr. Spialter, Mr. Zettel will mention that we
+          are using his notation.
+
+       4. Mr. Rash will talk to Kate McMillan at CBEMA (202) 626-5742 about
+          whether our current BASIS format is sufficient for a dpANS.
+
+       5. Mr. Tracy will contact Mr. Zettel and explain about the change in the
+          production of BASIS.
+
+       6. Mr. Tracy will contact CBEMA to see what kind of copyright notice is
+          necessary for BASIS distribution in electronic form.
+
+       7. Mr. Forsley will write the scheduled press release.  Ms. Rather will
+          send this release to the appropriate places.
+
+       8. The Forth Vendors Group will send Mr. Moore's bill to Mr. Forsley.
+
+      10. Mr. Ruffer will post BASIS 12 on GENIE when it is ready.
+
+      11. The chair will write Harris Semiconductors, thanking them for the use
+          of their excellent facilities and for Mr. Hand's outstanding help.
+
+      12. Mr. Bailey will draft a proposal to resolve the locals issue, which
+          the Chair will send out as a letter ballot.
+
+
+     Adjournment
+
+     There being no further business, the meeting was adjourned.
+
+
+
+
+X3J14/90-006 Draft Minutes, X3J14 Meeting #12, May 22-26, 1990, Page 6
+

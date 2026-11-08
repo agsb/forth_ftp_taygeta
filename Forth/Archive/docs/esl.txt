@@ -1,0 +1,191 @@
+
+
+       ENGLISH AS A SECOND LANGUAGE FOR FORTH PROGRAMMERS
+
+     There is a difference between spelling a word and saying a
+word.  In normal communication  we  do  not  ess-pee-ee-ell-ell
+words.   Likewise  we  do  not  normally pronounce punctuation.
+(Period.)  Sometimes it is  necessary  to  spell  for  complete
+understanding   but  comprehension  is  generally  easier  when
+natural language is spoken.
+
+     A language may also have special signs & symbols which are
+normally  "said",  e.g.,  "&"  and  "#" are normally pronounced
+"and" & "number".  Spelling often has very little  relationship
+to  the  pronunciation,  e.g.,  "lb"  is  "pound"  &  "cwt"  is
+"hundredweight".
+
+     Forth is
+
+     "a language of natural English words and signs using
+     machine  oriented  syntax for command and control of
+     machines".
+
+     The  so-called  natural pronunciation of Forth words given
+in the Forth-79 and  Forth-83  standard  documents  are  mostly
+spellings.  Experience has shown that Forth programs are easier
+to teach and understand when natural English words are used for
+the special signs.
+
+     An obvious example of this is "#".  The standard documents
+give  "sharp"  as  its natural pronunciation.  This is patently
+wrong.  The musical sharp sign is similar to it but  different.
+The semantics of all occurrences of "#" in standard Forth words
+are connected with numbers.  "#" should be  said  "number"  and
+spelled "number-sign".
+
+     The standard specification of "@" is "value at <address>".
+It makes more sense to say "value" than "fetch"  when  we  read
+it.   Likewise  "!"  reads  better  as "set", which is what the
+function is called in other high-level  languages.   E.g.,  the
+body of the definition of "DEFINITIONS"
+
+          CURRENT @ CONTEXT !
+
+reads naturally as
+
+          current value context set
+
+This says What it does, not How it does it.  This  agrees  with
+the  Forth-83  standard document, which says that "descriptive"
+names are to be preferred to "procedural" names (section 4).
+
+     Reflection leads to "add"  as  the  meaning  of  "+!".   A
+fragment of code
+
+          0 #LINE !   1 #PAGE +!
+
+reads naturally as
+
+          zero number-line set   one number-page add
+
+     The so-called natural pronunciation of the apostrophe  "'"
+is   given   as  "tick"  in  the  Forth-83  standard  document,
+ignoring  descriptive and procedural names.  A better word  for
+this is "address".  This also works well in compounds: from the
+Perry Line-Editor read
+
+     'START   'LINE   'CURSOR   'FIND
+
+as
+
+     address-start  address-line  address-cursor  address-find
+
+     "compile-time-address"  is a better name for  "[']".   In
+general say "compile-time-name" for "[name]".
+
+     The function  of  the  dot  or  period  "."  in  Forth  is
+"display".   The  Forth  word  spelled  "dot-quote"  is used to
+display a message; the Forth word spelled "ABORT-quote" is used
+to abort with a message.  They should be said "display-message"
+and "abort-message", which are perfect descriptions.
+
+     Forth has three  common  conventions  for  names  within
+parentheses.
+
+     "(name)" is the default value of a vectored word.  E.g.,
+
+          (CR)   (KEY)
+
+     "(name)" is used by "name".  E.g.,
+
+          (.)
+
+     "(name)" is compiled by "name".  E.g.,
+
+          (.")   (ABORT")   (LOOP)
+
+     Notice that the third case is a subset of the second.
+
+     All these uses can be covered by "primitive".
+
+     (CR)          primitive CR
+     (KEY)         primitive key
+     (.)           primitive display
+     (.")          primitive display message
+     (ABORT")      primitive abort message
+     (LOOP)        primitive loop
+
+     ","  is  used to lay down values in the dictionary, and we
+say "lay" or "lay down" or "build" for this function.
+
+     Just  as  Forth  is  said  to  have  been  discovered, not
+invented, so the foregoing words were discovered in  the  order
+given.  Having come so far, we would like to go the rest of the
+way.
+
+     "[" is used to initiate interpretation, but "INTERPRET" is
+a word in the controlled word-set.  We pronounce it "evaluate".
+
+     A stumbling stone in  learning  Forth  is  the  difference
+between "]", "COMPILE", and "[COMPILE]".
+
+     If  we  think  of  "]"  as  "construct"  we  have a way to
+distinquish "]" from the other two.  "COMPILE" will "compile" a
+defined word into the dictionary;   "]"  will  do  whatever  is
+necessary  to  "construct"  the  dictionary,  including defined
+words, literal values, logical structures, and anything else.
+
+   "[COMPILE]"  is  "compile-time  compile",  which  accurately
+describes  what it does, compile the next word as a single word
+at compile-time, not run-time.
+
+     Some examples to show how this hangs together.
+
+     : ASCII  ( -- c ) BL WORD COUNT 1- ABORT" ?"
+        STATE @ IF [COMPILE] LITERAL THEN ; IMMEDIATE
+
+     "Define   ASCII  BL  word  count  one-minus  abort-message
+question-mark  state   value   if  compile-time-compile literal
+then.  Immediate."
+
+     Note that punctuation  was  not  pronounced.   Punctuation
+can be spelled when necessary for comprehension.
+
+     From  the  preceding  paragraph  we  see how "(" should be
+pronounced, i.e., "note".  Likewise ".(" is "display-note".
+
+     From an integer-ascii conversion definition:
+
+     ... [ ASCII A 10 - ] LITERAL ...
+
+     "... evaluate ascii A 10 minus construct literal ..."
+
+     The prefix "C" is  used  in  Forth  to  show  byte-related
+operations.   Just  as  "cwt"  is pronounced "hundredweight" so
+"C@", "C!",  and  "C,"  have  the  pronunciation  "byte-value",
+"byte-set", and "byte-lay(down)".
+
+     How about "possibly" or "maybe" for the question mark when
+it is part of a word, e.g., "maybe DUP" for "?DUP" ?
+
+     We  can say "define" for ":" as we did above.  The ";" can
+be silent punctuation, or we can use the  Eastern  "already" or
+Western  "y'know"  until some-one has a better suggestion.
+
+     Here  is  a  summary of the suggested pronunciations.  Can
+you think of any others?
+
+     #               number
+     @               value
+     !               set
+     +!              add
+     '               address
+     [']             compile-time address
+     .               display
+     ."              display message
+     ABORT"          abort message
+     (name)          primitive name
+     ,               lay down, or lay
+     [               evaluate
+     ]               construct
+     [COMPILE]       compile-time compile
+     (               note
+     .(              display note
+     ?...            maybe ..., or possibly ...
+     :               define
+     ;               already, or y'know.
+
+                             FINIS
+
+

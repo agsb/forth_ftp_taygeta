@@ -1,0 +1,233 @@
+
+      
+         
+ Minutes of the FIGGY BAR RT Conference.
+             
+Date: 10/13/88   Time: 21:56EDT
+          
+Attendees:
+[[Gary] GARY-S]
+[[Jax] VESTA]
+[[Kevin] APPERT]
+[[Dave] DHWEINSTEIN]
+[[len] NMORGENSTERN]
+        
+Items discussed: ACM SIGForth, RCFB, Ting in conf, Microcornucopia Fig-Forth,
+                 VESTA packs some tight F-83
+Minutes:
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> Ting is coming! Ting is coming!
+<[Dave] DHWEINSTEIN> wheeeeeeeeeeeeeeeeeeeeee!
+<[Gary] GARY-S> Hey  Dave - you're right !
+<VESTA> is here.
+<[Dave] DHWEINSTEIN> Hey Jax
+<[Jax] VESTA> foobar!
+<[Gary] GARY-S> Dave - there is NO SIGForth on the app
+<[Dave] DHWEINSTEIN> In a good mood Jax?
+<[Dave] DHWEINSTEIN> Gary...we just became an official Sig. We haven't even 
+been announced yet.
+<[Dave] DHWEINSTEIN> So it is not on the application.
+<[Gary] GARY-S> so what the hell do I do - pencil it in
+<[Dave] DHWEINSTEIN> The only people who are members are the people who wrote 
+in to support its forming. The announcement should be in the Communicati
+ons of the ACM for this month.
+<[Jax] VESTA> brb
+<[Dave] DHWEINSTEIN> Join ACM and then join the Sig later.
+<[Jax] VESTA> if i were editing this conf on Unix ...
+<[Jax] VESTA> I would type:
+<[Dave] DHWEINSTEIN> (rm *)
+<[Jax] VESTA>    $ rm forth.conf
+<[Gary] GARY-S> Dave - Can the SIG not be jotted in on the App ?
+<[Dave] DHWEINSTEIN> I don't think so. Hold yer britches Gary. It'll be on the 
+new Application once they announce us. You're not even supposed to know
+ we exist yet! :-)
+<[Gary] GARY-S> send a new app then
+<[Dave] DHWEINSTEIN> It should be in the next issue of Communications of the 
+ACM (and on the new application)
+<[Jax] VESTA> gary -- we may get more disk space for the Forth conference on 
+the WEll, which would allow me to upload the Forth Tutorial, arced
+<[Gary] GARY-S> Jax - you're running a vapor-board. RCFB doesn't exist
+<APPERT> is here.
+<NMORGENSTERN> is here.
+<[Jax] VESTA> Gary, I don't know what your problem is; I have logins from 
+Germany, VIrginia,
+<[Gary] GARY-S> Pull it off here - I have already zapped the extraneous BS
+<[Jax] VESTA> ...BC, Alberta, California, New YOrk ...
+<[Dave] DHWEINSTEIN> Kevin! Have you seen the new Micro Cornucopia yet? Someone 
+is having trouble with the FigForth for the Kaypro...they need help ba
+dly
+<[Dave] DHWEINSTEIN> Its in the CP/M Notes ection of issue 43
+<[Jax] VESTA> What are you saying, gary
+<[Gary] GARY-S> Have you read my exact repro on the GEnie BBS Kev
+<[Jax] VESTA> ..?
+<[Kevin] APPERT> no, dave
+<[Dave] DHWEINSTEIN> They are having trouble with pad and type...
+<[Kevin] APPERT> have they sent an inquiry to Robert Bumala, the fellow whose 
+address is on it?
+<[Gary] GARY-S> Kev - I put the entire message on the BBS - you'll find it there
+<[Dave] DHWEINSTEIN> I don't think so. They wrote into Micro Cornucopia, who 
+published the letter
+<[Dave] DHWEINSTEIN> disconnected.
+<[Kevin] APPERT> where, again dave?
+<[Gary] GARY-S> I am saying (Jax) copy it off here instead of NCFB
+<[Jax] VESTA> Why? It's free from ECFB.
+<[Gary] GARY-S> True
+<[Jax] VESTA> Here I have to pay!
+<[Jax] VESTA> PS What problem are you having connecting?
+<[Kevin] APPERT> oops, dave just took a hit
+<[Gary] GARY-S> Kev - you are prominently mentioned in the letter
+<[Kevin] APPERT> oops, what do they say?
+<[Gary] GARY-S> Busy and/or no ring
+<[Jax] VESTA> Well, it *is* busy a lot.
+<[Jax] VESTA> One line.
+<[Jax] VESTA> Our customers use it.
+<[Gary] GARY-S> Go to the BBS and read it - I think it's in Cat 3
+<[Kevin] APPERT> ok. brb
+<[Kevin] APPERT> has left.
+<[Jax] VESTA> I just didn't want to allow the impression to continue ...
+<DHWEINSTEIN> is here.
+<[Jax] VESTA> that you gave in your comment above ...
+<[Dave] DHWEINSTEIN> urggghh
+<[Jax] VESTA> that RCFB is "a vapor board"
+<[Dave] DHWEINSTEIN> (flaking PS)
+<[Jax] VESTA> It is not; ...
+<[Jax] VESTA> it is the corporate BBS of VESTA TECHNOLOGY which helps fund 
+GEnie FIG RT ...
+<[Jax] VESTA> by my continued presence.
+<[Jax] VESTA> .
+<[Gary] GARY-S> I'll try again - I am hoping it might provide the missing link 
+for ForthNet - what do you think
+<[Len] NMORGENSTERN> Aside from that, Jax, you make things interesting!
+<[Dave] DHWEINSTEIN> hahahahhahahahah
+<[Jax] VESTA> ForthNet in January.
+<[Jax] VESTA> .
+<[Gary] GARY-S> Jax - I don't understand FN in Jan ... wha ???
+<[Jax] VESTA> Forthnet in Jan...
+<[Jax] VESTA> I will join the ECFB NCFB BCFB in January.
+<[Gary] GARY-S> Oh... ok .. I sure would like to see software start doing some 
+of this porting
+<[Jax] VESTA> right. what to do.
+<APPERT> is here.
+<[Dave] DHWEINSTEIN> re Kevin
+<[Gary] GARY-S> Did you find it Kev
+<[Kevin] APPERT> nope.  seaarched for Kaypro... no luck
+<[Kevin] APPERT> will look again later.
+<[Len] NMORGENSTERN> brb
+<[Len] NMORGENSTERN> exit
+<[Gary] GARY-S> you all go on - I'll look in my files Kev
+<[Dave] DHWEINSTEIN> Gary! Send in your Micro C survey card from this issue 
+demanding a Forth column again!
+<[Gary] GARY-S> brb..
+<[Dave] DHWEINSTEIN> has left.
+<[Len] NMORGENSTERN>
+<[Len] NMORGENSTERN> It's raining & the neighbor is having electrical problems
+<[Jax] VESTA> Is your neighbor electric?
+<[Len] NMORGENSTERN> No, The repairmen just came & he went back.
+<[Jax] VESTA> They took your neighbor back because he had electric problems? 
+Odd ...!
+<[Jax] VESTA> Hope he was under warantee!
+<[Len] NMORGENSTERN> He was sparking with his wife.
+<[Kevin] APPERT> does he have a processor on board?  what language is your 
+neighbor programmed iin?
+<[Jax] VESTA> ( Len's slang reveals his august stature)
+<[Gary] GARY-S> Sorry Kev - It's Category 2, Topic 5 , Message 78
+<[Len] NMORGENSTERN> It shows how old I am.
+<[Kevin] APPERT> check, will look later.  thanks gary
+<[Jax] VESTA> I didn't say that :-)
+<[Gary] GARY-S> It's all about you and Bumella
+<[Kevin] APPERT> that was years ago...
+<[Gary] GARY-S> Yeah - I know
+<[Jax] VESTA> Liked the characterization of the Figgy Bar as "a foodfight of 
+ideas!"
+<[Kevin] APPERT> I think this guy might have the only working Kaypro in the 
+universe.
+<[Len] NMORGENSTERN> Kevin, it just goes to show...
+<[Gary] GARY-S> I haven't used that kernel in a l-o-n-g time as you note in the 
+closing comment
+<[Len] NMORGENSTERN> that your sins will come back to haunt you.
+<[Len] NMORGENSTERN> brb
+<[Len] NMORGENSTERN> has left.
+<[Gary] GARY-S> Any code I publish I just use Jax' name - saves this sort of 
+prob, Kev
+<[Kevin] APPERT> I wonder if chuck still gets mail about Kitt Peak Proto-Forth, 
+from the late Jurasic period?
+<[Gary] GARY-S> I have the Owen's Valley Guide - I think it was generation 1.
+0001A
+<[Kevin] APPERT> I put my address on that code... it said " 4FA7 Hex "
+<[Kevin] APPERT> :)
+<[Gary] GARY-S> You were hexxed all right !
+<[Gary] GARY-S> It is still interesting to look at that old Owen's Valley Guide.
+ The guys were something else
+<[Kevin] APPERT> The Kitt Peak Primer is as far back as I go.
+<[Gary] GARY-S> Is anyone still on here ???
+<[Jax] VESTA> woof
+<[Gary] GARY-S> Owen's Valley is immediately after Kitt's Peak
+<[Kevin] APPERT> "on" not me ... just say no
+<[Kevin] APPERT> or maybee
+<[Gary] GARY-S> I'm gonna have to split a little early and go get someone at 
+the airport
+<[Kevin] APPERT> have you heard about the new quayle resteraunt?  no problem 
+getting in if you have your dad call and make the reservation.
+<[Gary] GARY-S> Back to Forth- PLEASE
+<[Kevin] APPERT> anybody use the New Micros processor board?
+<[Gary] GARY-S> Jon Bryan does a LOT, Kev
+<[Kevin] APPERT> whom art he, praytell?
+<[Gary] GARY-S> Does anyone know why Randy sold Forsley -FIND and why Larry 
+bought it ?
+<[Jax] VESTA> One of the BIG PROBLEMS in FOrth today ...
+<[Jax] VESTA> is matching programmers with jobs.
+<[Jax] VESTA> THere are jobs that go begging ...
+<[Jax] VESTA> Forth projects planned that never come off ...
+<[Jax] VESTA> while in other cities prog;rammers sit and wait for calls.
+<[Jax] VESTA> If I ever get involved with FIG at the organizational level...
+<[Jax] VESTA> they are going to get actively involved in human resource work.
+<[Jax] VESTA> .
+<[Jax] VESTA> PS in the last 15 minutes ...
+<[Gary] GARY-S> You should have been anyway !
+<[Gary] GARY-S> I really regret the decline of Forth in Astronomy - That is 
+inexcusable.
+<[Kevin] APPERT> but C is so much better for real time controll work (quote 
+from astronomy-person)
+<[Jax] VESTA> C is so unfit for realtime control work.
+<[Jax] VESTA> You need lots of feedback to develop on a test board.
+<[Kevin] APPERT> no kidding.  Why do they torture themselves with it?
+<[Jax] VESTA> It is &*very*& hard to figger out where the bugs are.
+<[Jax] VESTA> When you have just designed a new piece of test hardware.
+<[Gary] GARY-S> The problem is tons of memory - people who can call in 
+libraries are considered programmers...argh
+<[Jax] VESTA> I dunno how they get by with out the interpretive level.
+<[Jax] VESTA> BUT >>>>>>>>!!!
+<[Kevin] APPERT> faorite utterance of ADA programmer I met once:
+<[Jax] VESTA> VESTA OFFERS AN INTERPRETIVE C DEBUGGER ON ITS BOARDS!
+<[Jax] VESTA> SO if you MUST have C.
+<[Jax] VESTA> VESTA is ready!
+<[Kevin] APPERT> "Interactive, why do you need interacive ?"
+<[Jax] VESTA> DATALIGHT C has the C-THRU ROM debugger configured for VESTA 
+boards.
+<[Jax] VESTA> You use Microsoft C and C-thru Rom in our ROMMed kernel.
+<[Kevin] APPERT> shall I mail you my buffer, if you have to go, Gary?
+<[Gary] GARY-S> please
+<[Jax] VESTA> BUT VESTA FORTH-83+ IS one of the best resident development 
+environments available on SBC's anywhere.
+<[Jax] VESTA> I know cause I helped write it!
+<[Kevin] APPERT> how big is your F83 in rom, Jax?
+<[Kevin] APPERT> I crammed a z-80 version into 8K
+<[Kevin] APPERT> just like the good old days
+<[Jax] VESTA> 24k ...
+<[Jax] VESTA> with assembler, full screen cursor-control ANSI editor ...
+<[Jax] VESTA> floating point ..
+<[Gary] GARY-S> sending source to all your buddies ?
+<[Kevin] APPERT> descended from Laxon & Perry?
+<[Jax] VESTA> Laxen & Perry compatbile ...
+<[Jax] VESTA> AND >>>
+<[Jax] VESTA> featuring ...
+<[Jax] VESTA> HOSTED mode that lets it use your PC as a dumb-terminal 
+disk-server a la
+<[Jax] VESTA> Super8/Novix ....
+<[Jax] VESTA> AND
+<[Jax] VESTA> Self-booting ROMMED overlays.
+<[Jax] VESTA> .
+<[Gary] GARY-S> g'nite all
+=== End of Steno notes. ===
+
+

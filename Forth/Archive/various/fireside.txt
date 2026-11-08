@@ -1,0 +1,171 @@
+
+                    Chuck Moore's Fireside Chat
+                       1987 Forth Convention
+   
+Notes by Scott Squires    S.W.SQUIRES on GEnie
+[ As usual Chuck was full of unusual ideas mixed with tongue in cheek.  I've 
+tried to record these as accurately as possible and hope that at least the 
+concepts are correct.] 
+   
+There are two attitudes about Forth in the Forth community-
+   1.  It's about to die.
+   2.  It's all set to take off.
+  
+Chuck didn't know which is true but it doesn't actually matter.
+   
+He uses Forth.  Maybe it would be more useful if other people didn't use it 
+Chuck smiles.  
+  
+He can't concieve of a sucessful SDI ('Star Wars') given the complexities.
+It's impossible to check out and a problem could kill everyone.  Ben Bova
+has written a book called 'Millenium' that covers a lot of this.
+   
+It takes a succesful Forth attitude.  He hasn't seen any new compelling 
+reasons to persuade people to use Forth.  He and the Forth community have
+been providing the reasons for a long time.
+  
+He's not sure any longer about what Forth is.  Originally he created it as
+an interface to the computer so he could solve problems.  Now he wants it
+as an interface to the problem with the computer just being an incidental.
+He could make a new computer fairly easily now so that's almost as flexible
+as the software.  This changes the tradeoffs profoundly.  
+   
+With his new 3 key keyboard he's come up with some new ideas, some of them 
+just in the last few days.  Forth doesn't need an interpreter or compiler.  
+It's possible to just use a decompiler.  To him a disk is just a non-volatile 
+backup store of the object code.  There would be no blocks or buffers.  These 
+are things he had always thought were a part of Forth.  Now he's busy removing 
+more and more of Forth and isn't sure of what will be left.  Somebody 
+suggested that it might be like the smile of the Chesire cat from Alice in 
+Wonderland.  Chuck thinks it might be the illusion of Forth.  He's not worried 
+about conflicts as long as it's fun.  
+  
+How are people going to be programming in 20 years? 1000 years?
+There are two ideas about what it will be like:
+  1. Mine (Chuck's)
+  2. Everyone else
+  
+We should figure out how they'll be doing it in 1000 years and start doing that
+now so we're ahead.
+  
+Most people think there won't be any programmers in 1000 years.  He doesn't 
+think that's true especially since he's heard that same thing for the past 20 
+years.  A programmer is one who understands the problem, not necessarily the 
+one who does the coding.  It would be fun to shape complex machines.  
+   
+Some people think the computers of the future will be neural nets.  The most 
+difficult thing about neural nets is training them, not programming them.  You 
+need to spend your time coaxing these machines when you really want to just 
+tell them what to do.  People are going to want loyal and faithful machines; 
+slaves if you will that  do exactly what they are told.  You never really know
+what a  machine has learned.  You can't trust a machine like that.
+  
+It's thought that programming tools will be so powerful you won't need
+programmers.  This isn't true.
+  
+It's easier to write in Forth than other languages but not a magnitude
+easier.  Instead of being difficult as with other languages it makes it
+possible.  Computers will be put to more complex tasks in the future.
+  
+What should a programmer be doing a 1000 years from now?  
+What kind of interface?  Probably brain waves.
+How many parallel channels? Well it would be controlling a very high 
+resolution screen display with full 3D color and sound.  Several channels 
+would be modulating but there would probably be three main channels.  This 
+makes it close to the three key keyboard like on his latest system.   
+(Everyone laughs.)   The programmer would be laying down...no...make that
+floating.  Yeah, that's it.  Chuck smiles to himself at the thought.  Now
+will this programmer be dealing with files or screens?  Audience laughs.
+  
+You won't need to deal with source code.  This idea just came to him in the 
+last few days.  You'll just do a memory dump or decompile to see the code.  
+Source code is bulky.  In the past he resisted saving the object code because 
+he couldn't see having to take care of maintenance of both the object and 
+source code.  That would have been redundant.  Instead the source code was 
+recompiled very quickly each time it's needed.  He had completely overlooked 
+the opposite idea of saving the object code and not the source code.  
+   
+He never found a pretty printer he liked.  They always seem to format the code
+differently than he would.  His source code format is inconsistant.  Some 
+times he wants an IF statement at the start of a line, sometimes at the end, 
+or he wants something spaced differently.  'Of course I'm always right', 
+laughs Chuck.  It will never decompile and indent like he'd like it to but now
+that most of his definitions are only one line long indenting doesn't matter.  
+ 
+One of features of blocks is that it allows a specific grouping of words.  
+Decompiling can't do that.  Typically though you'll probably only need to 
+decompile one word at a time.
+  
+Comments and stack effects won't be in the object code but they are necessary. 
+He'll probably put these in shadow blocks on the disk.  Every word could have 
+a pointer to related comments on the disk.
+  
+You would be able to walk up to any computer and see what programming is 
+running and how it works.  
+1.  It doesn't matter what computer it is the process is the same if there
+    is a smart decompiler.
+2.  It doesn't matter how it got there.  If it were done in 'C' it would still
+    decompile to Forth.
+3.  Forth would unify the representation of the computer.
+4.  You can look at the program even if supplier hasn't given you access.  The
+    concept of proprietary would have a new meaning.  The Forth community is
+    a bit like terrorist group.  Maybe each person could decompile a program.
+    More laughs.
+5.  You could change a program while it's running.  His new machine writes 
+    directly to the CRT.  It has a variable for the number of pixels per line 
+    and a variable for the number of lines.  If he changes these while the 
+    program is running he now has to go back to the source code and change it 
+    there.  If there were no source code you would be decompiling the latest 
+    version with the correct information.  
+  
+Changes to a program would probably make it larger.  To make changes you might 
+have to relocate words or remove words in the middle thereby leaving holes.
+Most debugging is done at the end of the dictionary so this may not be a 
+problem.
+  
+The Novix was the first CPU he seriously tried to write a full compiler for.
+Forth and the Novix chip are not as ideal together as he'd like.  To truely
+optimize you need to look back 3 or 4 words.  DUP is a prefix in Forth but
+on the Novix it's a suffix.  All of these problems go away with the compiler.
+Because you're writing true inline Forth all changes could be optimized and
+that leads to more compact code.
+  
+To go from one machine to another you would decompile the object code to
+produce the source code.  The target machine would compile this source code
+in it's own format.  This is similar to the idea of metacompiling but implies
+that compiling is only needed when going between machines.
+  
+Someone from the audience mentions that the RTL (Forth variant language) has 
+flags in the object code to tell what type of data structure it is ( i.e.  IF, 
+
+WHILE, BEGIN, etc.  ) Chuck thought that Wil Baden's diagram system presented 
+at last years FORML might be used as part of the decompiling.  This is a 
+'pleasant flowchart' where it wouldn't matter exactly what word was used to 
+generate the structure as long as result of the structure was clear.  
+  
+Other languages could be decompiled to Forth and perhaps it could optimize the 
+decompiling to produce good Forth code and not just a step by step decompiling 
+of programs written without Forth in mind.  
+   
+He would be willing to change his programming style to conform to the tools. 
+   
+At one time he pushed for the ['] word.  Since the Novix he hasn't used it
+at all and says that he's changed mind.
+  
+His objections to the mouse is the coordination required.
+   
+Three key keypad:
+ 1.  Color coded keys ( Red, Green, Blue ).  Selects the word or item with 
+     that color.  
+ 2.  It provides a limit or bound so there isn't any need to check for limits.
+ 3.  Seven choices are possible.  Seven things is the limit the brain can 
+     store and refer to at one time.  
+ 4.  A key always points to a Forth word.
+  
+The menus started out as a tree structure but that was restrictive.  Now he
+uses cross referencing and a web structure.  Any menu can point to any other
+menu.  You can go back all the way anytime because this uses the Novix chip 
+which uses a circular Return stack.
+
+
+

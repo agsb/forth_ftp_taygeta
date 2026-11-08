@@ -1,0 +1,221 @@
+
+Forth Interest Group
+Category 18,  Topic 91
+Message 3         Mon Aug 06, 1990
+GARY-S                       at 07:18 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Style
+ Message-ID: <12149@sdcc6.ucsd.edu>
+ Date: 3 Aug 90 03:49:06 GMT
+ Organization: University of California, San Diego
+ Lines: 165
+       ^^^^^  split for ForthNet port - part a
+
+ Wil Baden has started a discussion of Forth style. I dug out the 
+ following example which I once used in a Forth course. The task is 
+ simple enough that it can be easily understood -- and difficult enough 
+ so that style matters. It was chosen so that the issue would be coding 
+ (rather than improvement in algorithm, knowledge of math, etc.)
+
+ TASK:  Write a program in which the computer uses binary search to 
+        guess a user's "secret" number.  The user thinks of a secret 
+        number, an integer from 1 to 100. The computer makes a guess 
+        to which the user must respond by typing LOW, HIGH or RIGHT. 
+        This is repeated until the computer guesses the number.
+
+ I don't remember what version of Forth we were using when this was 
+ written -- but it shouldn't matter unless you plan to actually run it. 
+
+ We used the following words from a string package (all strings are 
+ counted with a 1-byte count and are represented by their address):
+
+ $VARIABLE    ( n -- )  defining word for string variables.
+              <n> $VARIABLE X  allocates storage for a counted string 
+              of length n. When X executes the address of the string is 
+              put on the stack.
+
+ $"           ( -- $addr ) the following text up to a delimiting " is 
+              stored as a counted string. The address of the string is 
+              put on the stack.
+
+ IN$          ( -- $addr ) accept a string from the keyboard until <cr>.
+              The input is stored as a counted string whose address is 
+              put on the stack.
+
+ $COMPARE     ( $1 $2 -- -1|0|1 ) compares counted strings. Returns -1 
+              if $1 comes before $2 in lexicographic order, 1 if it 
+              comes after, and 0 if the strings are equal.
+
+ $!           ( $ addr -- ) copy counted string at address $ to addr.
+              Typical usage  $" HELLO" X $!  where X is a string 
+              variable.
+----------
+Forth Interest Group
+Category 18,  Topic 91
+Message 4         Mon Aug 06, 1990
+GARY-S                       at 07:19 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Style
+ Message-ID: <12149@sdcc6.ucsd.edu>
+ Date: 3 Aug 90 03:49:06 GMT
+ Organization: University of California, San Diego
+ Lines: 165
+       ^^^^^  split for ForthNet port - part b
+
+ Here is a solution to the problem which shows why some people think 
+ Forth is a write-only language: 
+
+ ( GUESSING GAME PROGRAM                                 1  )
+ 10 $VARIABLE A
+ :  GO  BEGIN 0 101 BEGIN  2DUP + 2/  DUP  CR ." I GUESS "  . CR BEGIN 
+ ." IS THAT HIGH, LOW, OR RIGHT " IN$ A $! A $" HIGH" $COMPARE  0=  IF 
+ SWAP DROP 0 1 ELSE A $" LOW" $COMPARE 0= IF ROT DROP  SWAP  0 1 ELSE A 
+ $" RIGHT" $COMPARE 0= IF CR ." I  GOT IT!!" DROP DROP DROP BEGIN CR ." 
+ PLAY AGAIN (Y OR N)" KEY DUP 78 = IF DROP  1  1 1 1 ELSE 89 = IF 0 1 1 
+ 1 ELSE 0 THEN  THEN  UNTIL ELSE CR 0 THEN THEN THEN UNTIL UNTIL UNTIL ; 
+
+ ( Why spend hundreds of dollars for a program to obfuscate your source 
+ code?  You can do it yourself for less in Forth! )
+
+ Actually, something like this can be done in any language. I did it by 
+ removing the indentation from the following program. The following is 
+ bad style also. It is a transcription to Forth of a program which the 
+ student originally wrote in Pascal (this stuff comes from several 
+ years back when Pascal was the "in" language). I don't think this is 
+ what Wirth had in mind when he invented Pascal -- but it seems typical 
+ of the way many people write Pascal and 'C': 
+
+ ( GUESSING GAME PROGRAM                                 2A )
+ 10 $VARIABLE ANSWER
+ : GAME   BEGIN 0 101
+           BEGIN  2DUP + 2/  DUP
+                  CR ." I GUESS " .  CR
+                BEGIN  ." IS THAT HIGH, LOW, OR RIGHT "
+                       IN$  ANSWER $!
+                       ANSWER $" HIGH" $COMPARE 0=
+                       IF   SWAP DROP 0 1
+                       ELSE ANSWER $" LOW" $COMPARE 0=
+                         IF   ROT DROP SWAP 0 1
+                         ELSE  ANSWER $" RIGHT" $COMPARE 0=
+                             IF CR ." I GOT IT!!"  DROP DROP
+                                DROP
+                                BEGIN CR ." PLAY AGAIN (Y OR N)"
+                                      KEY DUP 78 =    -->
+
+ ( GUESSING GAME PROGRAM                                 2B )
+                                      IF   DROP 1 1 1 1
+                                      ELSE  89 =
+                                         IF  0 1 1 1
+                                         ELSE 0
+                                         THEN
+                                      THEN
+                                UNTIL
+                            ELSE  CR 0
+                            THEN
+                         THEN
+                       THEN
+                UNTIL
+           UNTIL
+         UNTIL ;
+
+ [I notice in reproducing it that the programmer forgot to deal with the 
+ case in which the user types in something other than HIGH, LOW or 
+ RIGHT.] 
+----------
+Forth Interest Group
+Category 18,  Topic 91
+Message 5         Mon Aug 06, 1990
+GARY-S                       at 07:20 EDT
+ 
+             
+  PORTED FROM UseNet =>
+              ------
+
+ From: ir230@sdcc6.ucsd.edu (john wavrik)
+ Newsgroups: comp.lang.forth
+ Subject: Style
+ Message-ID: <12149@sdcc6.ucsd.edu>
+ Date: 3 Aug 90 03:49:06 GMT
+ Organization: University of California, San Diego
+ Lines: 165
+       ^^^^^  split for ForthNet port - part c
+
+ The guessing game program is logically more complex than it might 
+ first appear. You might want to see what you can do with it before 
+ reading the code below. 
+
+ =======================================================================
+
+
+ ( GUESSING GAME PROGRAM                                 3A )
+ VARIABLE LL   VARIABLE HH   ( low and high for current range )
+ VARIABLE GG                 ( current guess )
+
+ : GUESS  CR  ." I guess "
+         LL  @  HH  @  + 2/     ( guess  midpoint  of  range  )
+         DUP    GG   !    .     ( and store guess  )
+         ." is that LOW, HIGH, or RIGHT" ;
+
+ : START  0 LL !  101 HH !  GUESS  ;
+
+ :  HIGH    GG @ HH !  GUESS   ;  ( take lower half of  range )
+ :  LOW     GG @ LL !  GUESS   ;  ( take upper half of  range )
+ :  RIGHT   CR ." Wow, I got it!!"  ;
+
+ In this version, the complexity of nested control structures has been 
+ elminated by factoring. The Forth interpreter has been made part of 
+ the game (LOW and HIGH are not strings decoded by the program -- but 
+ are now Forth words). The low and high bounds and the guess were put 
+ in variables rather than left on the stack: if the user puts in a bad 
+ response, the Forth interpreter will trap the error -- but also will 
+ clear the stack. Putting the numbers in variables allows the game to 
+ continue after an error. 
+
+ While I won't claim that this version is the ultimate, I do feel that 
+ someone can read the code and understand what is going on. I do not 
+ feel this is true of either of the earlier versions.
+
+ ======================
+
+ To Wil Baden and others who may be interested in this:
+
+     I recently was asked by someone why I was using Forth to do work 
+ in Computer Algebra rather than Scheme or a Computer Algebra system 
+ (like MACSYMA, Maple, Mathematica, etc). I answered that, among other 
+ things, I feel that it is easier to write clear code in Forth. To 
+ prove my point, I found a computer algebra project for which I have 
+ code written "by the masters" (by Ableson and Sussman^2 in Scheme, and 
+ by David Stoutemyer in MuSIMP -- the implementation language for the 
+ MuMATH computer algebra system he created). In both cases the authors 
+ were explaining to students how to do the project -- so I must assume 
+ they tried to make their work a model of clarity. I think that the 
+ improvement of the Forth version over the other is substantial. The 
+ difference would be visible to anyone who knows the three languages 
+ and a bit about symbol manipulation. [The comparison is too long to 
+ post, but I would be willing to email it -- and I would welcome 
+ detailed comments by others who are interested in using Forth in 
+ mathematics] 
+
+    I believe that, potentially, Forth can be quite clear -- just as I 
+ think, potentially, that Forth can be quite portable. In both cases 
+ the barriers are not in limitations of the language. 
+
+                                                   John J Wavrik 
+              jjwavrik@ucsd.edu                    Dept of Math  C-012 
+                                                   Univ of Calif - San Diego 
+                                                   La Jolla, CA  92093 
+----------
+
+

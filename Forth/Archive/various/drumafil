@@ -1,0 +1,179 @@
+
+\        File Handle Package for Druma Forth-83
+\             -----------------------
+\
+\        Written by David Weinstein -- 5/29/89
+\          Copyright David Weinstein 5/29/89
+\
+\        License:
+\          The holder of this copy of the file
+\          package is granted full license to
+\          use this source for all purposes, both
+\          private and commercial, and to freely
+\          distribute the same with no fee, so long
+\          as credit is given to the author. 
+\
+\
+\ Usage:
+\   All operations revolve around the file HANDLE. The HANDLE
+\   in this case is a data structure with the following structure:
+\
+\     Offset:  0          2
+\          |-------------|---------------------------------------|
+\          | DOS Handle  | Filename (64 bytes + 0 terminator)    |
+\          |-------------|---------------------------------------|
+\
+\   A word defined by the HANDLE defining word leaves its address
+\  (i.e. ^handle) on the stack when executed.
+\
+\  The word >PATHNAME is used to place a path (usually defined with the
+\  word " ) in the handle.
+\
+\  The rest of the words are pretty much straightforward:
+\
+\       fopen ( mode ^handle -- fl )
+\               Open the file whose pathname is in handle and
+\               place either the error code or DOS handle in the
+\               handle. The flag determines whether or not an error
+\               has occurred (i.e. FALSE == No Error )
+\
+\       fclose ( ^handle -- error-code fl )
+\               Close the given file, leaving the error-code on the stack
+\               and whether or not an error occurred.
+\
+\       fread   ( ^buffer bytes ^handle -- #bytes|error fl )
+\               Read in bytes from the open file into the buffer, and
+\               leave either the number of bytes read or the error code
+\               on the stack, along with the flag determining whether or
+\               not an error occurred on the top.
+\
+\       fwrite  ( ^buffer bytes ^handle -- #bytes|error fl )
+\               Write bytes number of characters from the buffer into
+\               the file referenced by handle, leaving either the number
+\               of bytes written or the error code on the stack along with
+\               the error status as a flag.
+\
+\       fpos    ( 32b-offset mode ^handle -- 32b-offset fl )
+\               Move the pointer into the given file by offset
+\               bytes. Mode determines whether it is an absolute move,
+\               relative to the current position, or relative to the end
+\               of the file. The new file pointer position is left on the
+\               stack, as well as an error flag. If an error is found, then
+\               the low word of the offset is the error code.
+\
+
+\ File Open Mode Constants
+0 constant read-only
+1 constant write-only
+2 constant read-write
+
+\ File Position Mode Constants
+0 constant absolute
+1 constant relative-to-pos
+2 constant relative-to-EOF
+
+
+: handle        ( <name> | -- )
+                ( Runtime: -- ^handle )
+        create 67 allot ;
+
+: >pathname     ( ^string len ^handle -- )
+        2+ ( ^handle --> point to filename )
+        over over + ( calculate the terminator location )
+        0 swap c!   ( and store the terminator )
+        swap cmove  ( and copy the pathname )
+        ;
+
+newbasis hex
+
+code fopen      ( mode ^handle -- fl )
+                ax      pop     ( put mode in al )
+        3D #    ah      mov     ( put open command in ah )
+        bx      dx      mov     ( copy ^handle to dx )
+        2  #    dx      add     ( point dx to the filename )
+                ds      push    ( Copy ES into DS )
+                es      push
+                ds      pop
+                21      int
+                ds      pop     ( Restore DS )
+        ax es: 0 [bx]   mov     ( copy the handle into the structure )
+                        lahf    ( Check for error )
+        1 #     ah      and
+        ah      al      mov
+        ax      bx      mov     ( And push the error flag on the stack )
+                        clc
+                        next
+end-code
+
+code fclose     ( ^handle -- error-code fl )
+        3E #    ah      mov     ( Set close command )
+    es: 0 [bx]  bx      mov     ( Get the handle )
+                21      int
+                ax      push    ( Save the error code )
+                        lahf    ( Check for error flag )
+        1 #     ah      and
+        ah      al      mov
+        ax      bx      mov     ( Push the error flag )
+                        clc
+                        next
+end-code
+
+code fread      (  ^buffer bytes ^handle -- #bytes|error fl )
+        3F #    ah      mov     ( Set read command )
+                cx      pop     ( #Bytes )
+                dx      pop     ( ^Buffer )
+     es: 0 [bx] bx      mov     ( Handle )
+                ds      push    ( Load ES into DS )
+                es      push
+                ds      pop
+                21      int
+                ds      pop
+                ax      push    ( Save #bytes read or error code )
+                        lahf    ( Save error flag )
+        1 #     ah      and
+        ah      al      mov
+        ax      bx      mov
+                        clc
+                        next
+end-code
+
+code fwrite     ( ^buffer bytes ^handle -- #bytes|error fl )
+        40 #    ah      mov     ( Set write command )
+                cx      pop     ( #Bytes )
+                dx      pop     ( ^Buffer )
+     es: 0 [bx] bx      mov     ( Handle )
+                ds      push    ( Load ES into DS )
+                es      push
+                ds      pop
+                21      int
+                ds      pop     ( Restore DS )
+                ax      push    ( Save #bytes read or error code )
+                        lahf    ( Save error flag )
+        1 #     ah      and
+        ah      al      mov
+        ax      bx      mov
+                        clc
+                        next
+end-code
+
+code fpos       ( 32b-offset mode ^handle -- 32b-pos fl )
+                ax      pop     ( Put the mode in al )
+        42 #    ah      mov     ( Set the move file pointer command )
+                cx      pop     ( Put the high order of the offset in cx )
+                dx      pop     ( Put the low order of the offset in dx )
+     es: 0 [bx] bx      mov     ( Put the handle in bx )
+                21      int     ( Make the DOS call )
+                ax      push    ( Save the low order position or error code)
+                dx      push    ( Save the high order position )
+                        lahf    ( Save the error flag )
+        1 #     ah      and
+        ah      al      mov
+        ax      bx      mov
+                        clc
+                        next
+end-code
+
+oldbasis
+
+
+

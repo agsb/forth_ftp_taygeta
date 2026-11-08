@@ -1,0 +1,323 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 01/21/88   Time: 21:41EST
+Attendees:
+[[Dennis] D.RUFFER]
+[[Kevin] APPERT]
+[[Dave] DHWEINSTEIN]
+[[jack woehr] JAX]
+<MPWEINSTEIN> Just lurking
+
+Minutes:
+<D.RUFFER> hello again
+<[Dave] DHWEINSTEIN> BTW: the '!!' is also the UNIX C-Shell "repeat" command
+<APPERT> hi jenni, ( yes I know she;'s not real )
+<D.RUFFER> also hello kevin
+<[Dave] DHWEINSTEIN> !!
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> Topic: Threading techniques when you have more than 64k
+<[Dave] DHWEINSTEIN> (sound good?) ga
+<[Dennis] D.RUFFER> good topic, go ahead and start if off  ga
+<[Dave] DHWEINSTEIN> Well. The UNIX systems I am using...
+<[Dave] DHWEINSTEIN> have way more than 64k...
+<[Dave] DHWEINSTEIN> but the F79 standard only has single precision
+<[Dave] DHWEINSTEIN> addresses. So, the threading technique
+<[Dave] DHWEINSTEIN> I have devised (but not yet implemented)...
+<[Dave] DHWEINSTEIN> is to thread with 32 bit pointers to
+<[Dave] DHWEINSTEIN> the directory (nfa) and have
+<[Dave] DHWEINSTEIN> the directory be a linked list outside of the
+<[Dave] DHWEINSTEIN> 64k FORTH space. Everything threads except primitives
+<[Dave] DHWEINSTEIN> (which are in VOCABULARY 0) which have their cfa directly 
+<[Dave] DHWEINSTEIN> executed (they have NO pfa)
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> interresting idea, I think that is the usual...
+<[Dennis] D.RUFFER> I assume you want over 64K address space...
+<[Dennis] D.RUFFER> in a linear mode....
+<[Dennis] D.RUFFER> not segmented.   Is that right?   ga
+<[Dave] DHWEINSTEIN> Yes. the 64k is a linear segment
+<[Dave] DHWEINSTEIN> ...but the system has no segments
+<[Dave] DHWEINSTEIN> (a Sun 2). ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> let me get this right then...
+<[Dennis] D.RUFFER> you want to have a 64K dictionary....
+<[Dennis] D.RUFFER> with code field addresses pointing...
+<[Dennis] D.RUFFER> up to memory above this....
+<[Dennis] D.RUFFER> That sound right?   ga
+<[Dave] DHWEINSTEIN> Sorry. I guess I wasn't clear. The directory entries
+<[Dave] DHWEINSTEIN> are in a linked list outside of the 64k. The
+<[Dave] DHWEINSTEIN> nodes (after the primitives) are added and released as 
+<[Dave] DHWEINSTEIN> needed using the UNIX standard allocate/free functions
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> yk
+<[Dennis] D.RUFFER> what would be in the 64K?   ga
+<[Dave] DHWEINSTEIN> The user defined words.
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> could you explain what you mean by...
+<[Dennis] D.RUFFER> directory entries?   ga
+<[Dave] DHWEINSTEIN> The directory entry contains the name(16 char)
+<[Dave] DHWEINSTEIN> the name length, the vocabulary, whether or not it is 
+<[Dave] DHWEINSTEIN> immediate, the cfa, and the pfa 9and
+<[Dave] DHWEINSTEIN> a link to the next entry)
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> this is VERY simular to how I have done my F83 for the PC..
+<JAX> is here.
+<[Dave] DHWEINSTEIN> hey jax
+<[jack woehr] JAX> Hey ...
+<[Dennis] D.RUFFER> hi Jack, I was explaining...
+<[Dennis] D.RUFFER> that my F83 for the PC....
+<[Dennis] D.RUFFER> was simular to what Dave wants to do...
+<[Dennis] D.RUFFER> on a Sun 2...
+<[Dennis] D.RUFFER> I also have what you call directory entries....
+<[Dennis] D.RUFFER> above my 64K, that contain name...
+<[Dennis] D.RUFFER> view pointers to source...
+<[Dennis] D.RUFFER> and link fields...
+<[Dennis] D.RUFFER> my name goes as long as it is...
+<[Dennis] D.RUFFER> always garenteeing that I have 1 space...
+<[Dennis] D.RUFFER> at the end of the name....
+<[jack woehr] JAX> Have you seen f83s
+<[Dennis] D.RUFFER> I use 16 byte segments since I have a PC...
+<[Dennis] D.RUFFER> ga   raise your hand for next  (!!)
+<[Dennis] D.RUFFER> ga?
+<[Dennis] D.RUFFER> ga kevin
+<[Dave] DHWEINSTEIN> !!
+<[Kevin] APPERT> the technique you are describing...
+<[Kevin] APPERT> is on which has been around for a while...
+<[Kevin] APPERT> I've always heard it called 'seperated heads'
+<[Kevin] APPERT> and there are several descendants of F93 kicking around ...
+<[Kevin] APPERT> which  use this technique .
+<[Kevin] APPERT> ga
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> I was just wondering what the ratio of
+<[Dave] DHWEINSTEIN> people who use FORTH 79 is to those who
+<[Dave] DHWEINSTEIN> use FORTH 83?
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ga jack
+<[jack woehr] JAX> Sorry about the bad manners! The only realtime conference I 
+<[jack woehr] JAX> have attended
+<[jack woehr] JAX> is amiga, which is as chaotic as Amiga itself :-) F*#S is 
+<[jack woehr] JAX> SVFIG's seperated
+<[jack woehr] JAX> head oops ( f83s) FORTH like you describe, works pretty neat
+<[jack woehr] JAX> you can save forth with or without the heads, makes
+<MPWEINSTEIN> is here.
+<[jack woehr] JAX> for more program space ... but makes dictionary dumps, my 
+<[jack woehr] JAX> favorite debug
+<[jack woehr] JAX> tool kinda iffy ... ga
+<[Dennis] D.RUFFER> ga kevin
+<[Kevin] APPERT> I think many more 83 std...
+<[Kevin] APPERT> 'cause work of Laxen/Perry w/ F83
+<[Kevin] APPERT> and others' descendants.  no cheap 79 std (exc. Mt View Press, 
+<[Kevin] APPERT> perhaps)
+<[Dave] DHWEINSTEIN> !!
+<[Kevin] APPERT> ga
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> The FORTH system I am writing is F79. I don't use F83.
+<[Dave] DHWEINSTEIN> ga
+<MPWEINSTEIN> Just lurking, dave
+<[Dennis] D.RUFFER> ga jack
+<[jack woehr] JAX> F79 was kinda neat, but it was limited in a lot of ways, such
+<[jack woehr] JAX> as 1-based numbering, instead of zero-based. Besides, I have 
+<[jack woehr] JAX> a 32-banger
+<[jack woehr] JAX> and as soon as JFORTH came out, bye-bye MVP!!!
+<[jack woehr] JAX> ga
+<[Dave] DHWEINSTEIN> !!
+<[Dennis] D.RUFFER> ga kevin
+<[Kevin] APPERT> yes, limited, but at least the devide did what you expected. ga
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> Again, since I don't use F83
+<[Dave] DHWEINSTEIN> I can't really compare thetwo
+<[Dave] DHWEINSTEIN> but I am expanding the language
+<[Dave] DHWEINSTEIN> way away. I have
+<[Dave] DHWEINSTEIN> a few of my favorite features in v1.0
+<[Dave] DHWEINSTEIN> but I'll add most extensions
+<[Dave] DHWEINSTEIN> once the system is working
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ga kevin
+<[Kevin] APPERT> how can you not expand the language , Dave?
+<[Kevin] APPERT> ga
+<[Dave] DHWEINSTEIN> !!
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> Let me rephrase that.
+<[Dave] DHWEINSTEIN> The kernel will include
+<[Dave] DHWEINSTEIN> versions of my favorite types
+<MPWEINSTEIN> has left.
+<[Dave] DHWEINSTEIN> of extensions
+<[Dave] DHWEINSTEIN> rather than forcing people
+<[Dave] DHWEINSTEIN> who aren't used to FORTH
+<[Dave] DHWEINSTEIN> to add their own. Of cours
+<[Dave] DHWEINSTEIN> ethey can if they want to. ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> well Dave, I've done this seperate head thing....
+<[Dennis] D.RUFFER> with F83, but could work...
+<[Dennis] D.RUFFER> equally as well in F79....
+<[Dennis] D.RUFFER> one advantage I have with F83 tho....
+<[Dennis] D.RUFFER> is the vocabularies are built...
+<[Dennis] D.RUFFER> into the linkage system...
+<[Dennis] D.RUFFER> so I don't need vocabulary pointers in the head...
+<[Dennis] D.RUFFER> I was really amaized...
+<[Dennis] D.RUFFER> that I gain at least 1/6th of the...
+<[Dennis] D.RUFFER> dictionary back.
+<[Dennis] D.RUFFER> ga jack
+<[jack woehr] JAX> How many people here have experienced JSR forths?
+<[jack woehr] JAX> ga
+<[Dave] DHWEINSTEIN> !!
+<[Dennis] D.RUFFER> not me!   ga dave
+<[Dave] DHWEINSTEIN> Are you talking about Macro/Substitution threading FORTHs?
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ga jack
+<[jack woehr] JAX> On the Amiga, Delta Research's JForth is JSR threaded. That
+<[jack woehr] JAX> is every definition compiles down to ...
+<[jack woehr] JAX> Motorola code, either in-line expansion ...
+<[Dave] DHWEINSTEIN> !!
+<[jack woehr] JAX> or a JSR/BSR to the CFA of the called word.
+<[jack woehr] JAX> Inline expansion length is programmer-controllable
+<[jack woehr] JAX> It sounds simple, and it is simple
+<[jack woehr] JAX> but is also A LOT different from address threading!
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> M/S threading is blindingly fast (and
+<[Dave] DHWEINSTEIN> very well adapted to the 68xxx). However
+<[Dave] DHWEINSTEIN> it cannot be uused when writing "portable" FORTHs. In fact
+<[Dave] DHWEINSTEIN> there is a request up on USENET
+<[Dave] DHWEINSTEIN> for a FORTH written in C
+<[Dave] DHWEINSTEIN> because of the portability
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ga kevin
+<[Kevin] APPERT> there are a few FORTHs written in C...
+<[Kevin] APPERT> the one I'm familiar with is Mitch Bradley's.  What is !!, 
+<[Kevin] APPERT> Dave? ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> yes file # 52 right here is Forth in C
+<[Dennis] D.RUFFER> ga jack
+<[Dave] DHWEINSTEIN> !!
+<[jack woehr] JAX> It would be neat to have a decent UNIX forth, have the oldie 
+<[jack woehr] JAX> from ECFB but it is s*l*o*w guess it's the curse of UNIX...
+<[jack woehr] JAX> Onward to the day of wide-spread ...
+<[jack woehr] JAX> standalone FORTH environments! gotta eat din-dins, how long 
+<[jack woehr] JAX> does this
+<[jack woehr] JAX> go on ??? may be back ...
+<[Dave] DHWEINSTEIN> Hold on one sec JAX
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> I have that Alan Pratt implementation also. It is a kludge.
+<[Dave] DHWEINSTEIN> I am working on a FORTH-79 in C under UNIX. It is partly
+<[Dave] DHWEINSTEIN> completed (the stack functions are there and
+<[Dave] DHWEINSTEIN> I am debugging the math library now)
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> any last thoyught jack?   ga jack
+<[jack woehr] JAX> That's great, dave, love to see it ...
+<[jack woehr] JAX> anytime ( jax@well.UUCP, well!jax@lll-crg.arpa) ...
+<[jack woehr] JAX> will check in about 45 mins if the gang
+<[jack woehr] JAX> here is still partyin' ... later
+<[jack woehr] JAX> has left.
+<[Dennis] D.RUFFER> ga kevin
+<[Kevin] APPERT> I was about to tell Jack about Mitch's FORTHs, ...
+<[Kevin] APPERT> native mode 68000 implementation descended from F83...
+<[Kevin] APPERT> and the fastest known C implementation...
+<[Kevin] APPERT> I personaly feel FORTH is best implemented in FORTH, not C.
+<[Kevin] APPERT> there isn't a good reason to implement in C. (ports using 
+<[Kevin] APPERT> Meta-compilation
+<[Kevin] APPERT> are just as fast to do and don't have the handicaps of C 
+<[Kevin] APPERT> implementations.
+<[Kevin] APPERT> ga
+<[Dennis] D.RUFFER> ok
+<[Dave] DHWEINSTEIN> !!
+<[Dennis] D.RUFFER> I'm sorry kevin, I did that wrong....
+<[Dennis] D.RUFFER> I ment to just send you...
+<[Dennis] D.RUFFER> a message saying I'd let Dave go first....
+<[Dennis] D.RUFFER> instead I made you miss him...
+<[Dennis] D.RUFFER> sorry!   ga dave
+<[Dave] DHWEINSTEIN> I am writing it in C as that is the best language
+<[Dave] DHWEINSTEIN> for it on the systems I have access to.
+<[Dave] DHWEINSTEIN> Also, what restrictions of C implementations?
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ok
+<[Kevin] APPERT> s  l   o   w   , clumsy, big,
+<[Kevin] APPERT> and all the other objections to C as a language
+<[Kevin] APPERT> it is never the best, espicially for writing FORTHs
+<[Kevin] APPERT> to get his C version to work fast, Mitch had to do this 
+<[Kevin] APPERT> god-awaful
+<[Kevin] APPERT> token table thing, and it still isn't any where near a good
+<[Kevin] APPERT> native implementation for speed. ga
+<[Dave] DHWEINSTEIN> !!
+<[Dennis] D.RUFFER> ga dave
+<[Dave] DHWEINSTEIN> Hand optimized assembly will always
+<[Dave] DHWEINSTEIN> end up being faster. However
+<[Dave] DHWEINSTEIN> when working in a large networking system
+<[Dave] DHWEINSTEIN> (i.e. I have multiple system accounts)
+<[Dave] DHWEINSTEIN> and trying to get people to use FORTH, it takes to long
+<[Dave] DHWEINSTEIN> to get or write
+<[Dave] DHWEINSTEIN> a native mode FORTH for every
+<[Dave] DHWEINSTEIN> system.
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ok
+<[Kevin] APPERT> 68000, vax and wat else?
+<[Kevin] APPERT> ga
+<[Dave] DHWEINSTEIN> Sun II. Sun III. HP workstations. Zerox workstations. 
+<[Dave] DHWEINSTEIN> Dec-20. (those are the
+<[Dave] DHWEINSTEIN> ones for which I have accounts)
+<[Dave] DHWEINSTEIN> ga
+<[Kevin] APPERT> there are FORTH for all of those
+<[Dave] DHWEINSTEIN> !!
+<[Dave] DHWEINSTEIN> disconnected.
+<[Kevin] APPERT> oops
+<[Dennis] D.RUFFER> where'd Dave go?
+<[Kevin] APPERT> killed by the phone company?
+<[Kevin] APPERT> \or call waiting?
+<[Dennis] D.RUFFER> it was just you two...
+<[Kevin] APPERT> or maybe just pissed off
+<[Dennis] D.RUFFER> shall we wait to see if he comes back?
+<[Kevin] APPERT> what does !! mean?
+<[Kevin] APPERT> yes, wait a couple
+<[Dennis] D.RUFFER> !! means you want to talk...
+<[Dennis] D.RUFFER> an alternative to /raise command
+<[Dennis] D.RUFFER> ga
+<[Kevin] APPERT> I toh
+<[Kevin] APPERT> oh
+<[Kevin] APPERT> ga
+<[Dennis] D.RUFFER> well you got anything to talk about?
+<[Dennis] D.RUFFER> ga
+<[Kevin] APPERT> does your F83 descendant
+<[Kevin] APPERT> use handles for file I/o?
+<[Dennis] D.RUFFER> ok
+<DHWEINSTEIN> is here.
+<[Dennis] D.RUFFER> it uses handles and is fully...
+<[Kevin] APPERT> he's back!
+<[Dennis] D.RUFFER> network compatable...
+<[Dave] DHWEINSTEIN> Call waiting
+<[Dennis] D.RUFFER> yep ga dave
+<[Dave] DHWEINSTEIN> What I was saying is...
+<[Dave] DHWEINSTEIN> the U of Texas CS department does not have
+<[Dave] DHWEINSTEIN> a FORTH course, or FORTH implementations,
+<[Dave] DHWEINSTEIN> if I want FORTH on these
+<[Dave] DHWEINSTEIN> systems its "roll your own"
+<[Dave] DHWEINSTEIN> and I don't have time to write a native interpreter
+<[Dave] DHWEINSTEIN> for each one
+<[Dave] DHWEINSTEIN> ga
+<[Dennis] D.RUFFER> ok
+<[Kevin] APPERT> well good luck.  don't these guys have PC's?
+<[Dave] DHWEINSTEIN> !!
+<[Kevin] APPERT> Ive had a lot of luck getting FORTH from the user group of any 
+<[Kevin] APPERT> machine I can think of.
+<[Dennis] D.RUFFER> when your done type ga....
+<[Kevin] APPERT> ga
+<[Dave] DHWEINSTEIN> I can't stand a PC. I'd much rather work under UNIX. or 
+<[Dave] DHWEINSTEIN> even TOPS.
+<[Dave] DHWEINSTEIN> ga
+<[Kevin] APPERT> I'd rather work under FORTH, than any conventional
+<[Kevin] APPERT> operationg system. ( but I'm aware that the rest of the world
+<[Kevin] APPERT> thinks this is rather excentric.
+<[Kevin] APPERT> shall we wrap it up?
+<[Dave] DHWEINSTEIN> Yeah
+<[Kevin] APPERT> night, guys
+<[Dennis] D.RUFFER> Thanks for comeing both of you
+<[Dave] DHWEINSTEIN> : BYE ." /bye " CR ;
+<[Kevin] APPERT> has left.
+<[Dave] DHWEINSTEIN> BYE
+<[Dave] DHWEINSTEIN> has left.
+
+

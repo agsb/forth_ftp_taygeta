@@ -1,0 +1,21 @@
+=====================================================================
+          File: 3ddemo.txt
+       Authors: Victor M. <samsaga2@gmail.com>
+          Date: ?
+   Description: 3D Demo for gforth
+              : Read Me file
+=====================================================================
+                               3DDemo
+=====================================================================
+
+This is a 3D demo that was created for gforth of a textured spinning
+box in 3D space.
+
+The original code can be found at:
+
+          http://platypus3d.googlecode.com/svn/trunk/
+
+=====================================================================
+Timothy Trussell <tgtrussell@hotmail.com>                  02/05/2010
+=====================================================================
+

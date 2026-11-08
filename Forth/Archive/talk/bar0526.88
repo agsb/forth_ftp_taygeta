@@ -1,0 +1,491 @@
+
+          
+      
+           
+Sub: Minutes of your RT Conference.
+    The FIGGY BAR for 26 May 1988 -
+ Forth controllers, ACM Forth SIG, second rate Texas Barbeque, and first
+rate Texas hotels; and Forth in conference ... at Rochester,NY  and at 
+the Drum in Austin,TX
+                 
+Date: 05/26/88   Time: 22:29EDT
+Attendees:
+[[Gary] GARY-S]
+[[Dave] DHWEINSTEIN]
+[DANMILLER]
+[[Kevin] APPERT]
+[[leonard] NMORGENSTERN]              
+Minutes:
+<[Gary] GARY-S>
+<DHWEINSTEIN> is here.
+<[Dave] DHWEINSTEIN> <Bamph>
+<[Gary] GARY-S> Dave - you're the first customer - welcome
+<[Dave] DHWEINSTEIN> Thank you. Since this is the FIGGY ''BAR''...I'll be right 
+back (beer run on the fridge)
+<[Dave] DHWEINSTEIN> (pop)
+<NMORGENSTERN> is here.
+<[Gary] GARY-S> hey len
+<NMORGENSTERN> Hi!
+<[Dave] DHWEINSTEIN> Aaaahhh
+<[Dave] DHWEINSTEIN> Hello
+<[Gary] GARY-S> dave - what happened to you and the other Ft Valley troop 
+Sunday ?
+<[Dave] DHWEINSTEIN> Sorry. Had to have a quick chat...and as I was running on 
+stored power at the time, I didn't have enough power to hold the phone
+line.
+<[Gary] GARY-S> thought we had offended or something ?
+<[Gary] GARY-S> ga
+<[Dave] DHWEINSTEIN> Naaawww...
+<[Gary] GARY-S> any opinions on the question
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Thursday. There are a hell of a lot of RTCs on Sunday
+<[Dave] DHWEINSTEIN> ga
+<[Leonard] NMORGENSTERN> Hello, Dave. !
+<[Gary] GARY-S> thanks - ur vote recorded
+<[Gary] GARY-S> ga len
+<[Dave] DHWEINSTEIN> !!
+<[Leonard] NMORGENSTERN> There are some who can't make it Thursday...
+<[Leonard] NMORGENSTERN> But can do so on Sunday...
+<[Leonard] NMORGENSTERN> I suggest alternating Thur & Sun...
+<[Leonard] NMORGENSTERN> If we have conferences only on odd days...
+<[Leonard] NMORGENSTERN> it won't be too hard to keep in mind.
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> You missedthis discussion Sunday - I am just tabbing...
+<[Gary] GARY-S> a survey for Dennis.
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Side topic. Is there any Neural Net code out in the 
+library? I am working
+<[Dave] DHWEINSTEIN> on a simple Hopfield model right now. (real simple -- one 
+layer neural net)
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> there is one i know of but cant remember the title...
+<[Gary] GARY-S> do you leonard ?
+<[Gary] GARY-S> ga len
+<[Leonard] NMORGENSTERN> I'll look in the listings & be back in a moment.
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> mean while dave...
+<[Gary] GARY-S> I have a chapter member here very interested in..
+<[Gary] GARY-S> neural nets if you would like to..
+<[Gary] GARY-S> exchange info with him .
+<[Gary] GARY-S> ga
+<[Leonard] NMORGENSTERN> !
+<[Leonard] NMORGENSTERN> I see 896 Neural-Net.TXT
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> dave >????
+<[Dave] DHWEINSTEIN> Thanx
+<[Gary] GARY-S> what about my question
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> It sounds interesting.
+<[Gary] GARY-S> leave an address fof you for me in e-mail
+<[Dave] DHWEINSTEIN> How can I get in touch (I am just starting working with 
+the little suckers)
+<[Gary] GARY-S> did you read ?
+<[Dave] DHWEINSTEIN> Any news on the JH APL 32-bit chip, and when it would be 
+available for the public?
+<[Gary] GARY-S> Mike Nemeth left an update in hardware topic...
+<[Gary] GARY-S> about 4 days ago - maybe a little longer
+<[Dave] DHWEINSTEIN> Ok
+<[Dave] DHWEINSTEIN> (Oh, I think I saw that)
+<[Gary] GARY-S> that's the latest
+<[Gary] GARY-S> Mike works with JH APL and will be posting updates from 
+time-to-time
+<[Gary] GARY-S> what are you doing with neural nets ?
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Just playing around. My ''real world'' work is C 
+programming on a UNIX based Minisuper.
+<DANMILLER> is here.
+<DANMILLER> hi
+<DANMILLER> .
+<[Leonard] NMORGENSTERN> Hi
+<[Dave] DHWEINSTEIN> hi
+<[Gary] GARY-S> can we get some non-proprietary code in the library ?
+<[Gary] GARY-S> dave
+<[Dave] DHWEINSTEIN> The Neural Net stuff. Sure. Once it works. If it works. :-)
+<[Gary] GARY-S> super -
+<[Gary] GARY-S> dan any news you wanna share - we were...
+<[Gary] GARY-S> talking about neural nets and J-H APL 32-bitter
+<[Gary] GARY-S> ga dan
+<DANMILLER> thanks.  no.
+<DANMILLER> .
+<[Leonard] NMORGENSTERN> !
+<[Gary] GARY-S> ga len
+<[Leonard] NMORGENSTERN> The other day Dan asked about matrix multiplication...
+<[Leonard] NMORGENSTERN> in Forth. I couldn't find anything. Do you know of any?
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> not off-hand ...
+<[Dave] DHWEINSTEIN> !!
+<[Gary] GARY-S> did the letters APL bring that up ?
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> I seem to remember several Matrix articles in previous 
+DDJs.. Check back issues (I have no idea where)
+<[Dave] DHWEINSTEIN> ga
+<DANMILLER> !!
+<[Gary] GARY-S> have you looked in bibliography of forth dan ?
+<[Gary] GARY-S> ga dan
+<DANMILLER> leonard did look in bib forth for me. thanks.  I found a very 
+concise
+<DANMILLER> article in personal engineering in C and will convert it to forth 
+as soon
+<DANMILLER> as I get a chance.  not much to it if you have a guide of debugged 
+logic to
+<DANMILLER> follow to save pain.   <dan> ga .
+<[Gary] GARY-S> has jax contacted you, dan ?
+<[Gary] GARY-S> ga dan
+<DANMILLER> also Gauss is a forth derived matrix package but too 
+sophisticated for
+<DANMILLER> what I need. and yes I'll be giving jax paper for him at rochester
+<DANMILLER> on the fifteenth. ga .
+<[Dave] DHWEINSTEIN> !!
+<[Gary] GARY-S> super - I thought you wouldnt mind
+<[Gary] GARY-S> ga dave
+<APPERT> is here.
+<[Dave] DHWEINSTEIN> WIll there be any transcripts from the conference or 
+(wishful thinking) perhaps an RTC from the conference? Somehow my office doe
+sn't qualify this as a ''business'' expense?
+<DANMILLER> dave, can you give us a brief summary of your background i. thanks.
+<[Gary] GARY-S> they usually make it to the services, but not in whole or 
+quickly
+<[Gary] GARY-S> ga dave
+<DANMILLER> scott squires already posted the rochester conference
+<DANMILLER> .
+<[Dave] DHWEINSTEIN> CS Student (Undergrad) at The Universioty of Texas 
+(learned more fiddling around than from classes), and a system programmer
+<DANMILLER> abs!
+<[Dave] DHWEINSTEIN> at a research wing of the UT system (UNIX and an Alliant 
+FX/8)
+<[Dave] DHWEINSTEIN> ga
+<DANMILLER> are you in texas?
+<DANMILLER> ga
+<[Dave] DHWEINSTEIN> Yes
+<DANMILLER> where?
+<[Dave] DHWEINSTEIN> Austin
+<DANMILLER> If we have a conference on ACM sig for forth which hotel should we 
+use?
+<DANMILLER> emembassy suites?? ga .
+<[Dave] DHWEINSTEIN> Actually...my favorite is the Driskill. It is an old and 
+beautiful building right on
+<[Dave] DHWEINSTEIN> Sixth street in the heart of Austin. (Can be seen in the 
+upcoming movie ''Heartbreak Hotel'' or some other such name)
+<[Dave] DHWEINSTEIN> Very very nice place to stay. How many people are you 
+expecting?
+<[Gary] GARY-S> ga dan
+<DANMILLER> wwho knows? 30? target for next spring if we can or fall if we can't
+<DANMILLER> .
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Well..we had over 4-500 (plus a film crew) for a Science 
+fiction convention earlier this month. I'd say 30'd fit (and can I get i
+n...or should I join the local ACM chapter first)...
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> any more TEXAS jammin Dan ?
+<[Gary] GARY-S> ga dan
+<DANMILLER> see acm topic on genie for details. join acm first but no problem 
+getting in anyway.
+<DANMILLER> .
+<[Gary] GARY-S> dave ?
+<[Dave] DHWEINSTEIN> WHich ACM topic?
+<[Dave] DHWEINSTEIN> ga
+<DANMILLER> Gary do you know the category ant topic?
+<[Gary] GARY-S> anythi
+<[Dave] DHWEINSTEIN> !!
+<[Gary] GARY-S> no - but we can check -,do you mind again leonard ?
+<DANMILLER> category 5 topic three
+<DANMILLER> !
+<[Gary] GARY-S> thanks dan
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> This may be the lever I need to browbeat the CS dept. into 
+starting a FORTH class...
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> I sure hope so
+<[Gary] GARY-S> any comment kevin ?
+<[Dave] DHWEINSTEIN> This conference is next spring?
+<[Dave] DHWEINSTEIN> (sorry)
+<DANMILLER> Q
+<DANMILLER> !
+<[Dave] DHWEINSTEIN> (no more speaking out of turn) !!
+<[Gary] GARY-S> ga dan
+<[Kevin] APPERT> hi
+<DANMILLER> date not set. george shaw is coordinating. seems well along.
+<DANMILLER> contact him for more details. his phone number is in the message in
+<[Leonard] NMORGENSTERN> !
+<[Dave] DHWEINSTEIN> !!
+<DANMILLER> cat 5 topic 3 or give me a call 713 363 3140
+<DANMILLER> .
+<[Gary] GARY-S> ga len
+<[Leonard] NMORGENSTERN> George Shaw is on Genie: addresss GSHAW1...
+<[Leonard] NMORGENSTERN> or maybe it's G.SHAW1
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> ga dave
+<DANMILLER> !
+<[Dave] DHWEINSTEIN> Anybody passing through Austin for this (or any other) 
+conference who needs a place to crash (before after or during) is welcome
+over here. (If you can stand the mess)
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> Dave - dont make your lines so lng...
+<[Gary] GARY-S> break them with three dots...
+<[Gary] GARY-S> ok
+<[Gary] GARY-S> ga dan
+<DANMILLER> ! thanks.  its g.shaw1.  request permission ...
+<DANMILLER> to dump his messages right now to dave.  dave can you ..
+<DANMILLER> set your capture program on.  is it ok gary?. ga .
+<[Gary] GARY-S> ga dan
+<[Dave] DHWEINSTEIN> I have about 10k free... ok by me.
+<DANMILLER> ready dave?
+<DANMILLER> ga
+<[Dave] DHWEINSTEIN> ready
+<DANMILLER> From Genie Fig bbs.
+<DANMILLER> **********
+<DANMILLER> Topic 3         Tue Mar 22, 1988
+<DANMILLER> G.SHAW1                      at 06:19 PST
+<DANMILLER> Sub: A SIGForth is starting in ACM - Help!
+<DANMILLER> A SIG for Forth is starting in ACM.  This will give Forth 
+professionals a
+<DANMILLER> resource for support in selling and using Forth professionally.  
+Activity is
+<DANMILLER> needed to make it successful.  Look here for info...
+<DANMILLER> **********
+<DANMILLER> ----------
+<DANMILLER> Category 5,  Topic 3
+<DANMILLER> Message 1         Tue Mar 22, 1988
+<DANMILLER> G.SHAW1                      at 06:21 PST
+<DANMILLER> -
+<DANMILLER> I'm in the process of starting a SIG for Forth within ACM (SIGForth)
+.  ACM
+<DANMILLER> membership will not be required to join.  A sister effort will 
+start in IEEE
+<DANMILLER> later this year.  I need help on several fronts:
+<DANMILLER> -
+<DANMILLER>      1) Officers for the SIG.  Chairman, Vice-chairman and
+<DANMILLER>      Sec/Treas.  I'm willing to chair or vice-chair, but I need
+<DANMILLER>      more bodies to run it.  Candidates must be or become ACM
+<DANMILLER>      members to be officers.  You must also be a computer
+<DANMILLER>      professional to be a voting member (programmer, Dp manager,
+<DANMILLER> -
+<DANMILLER>      etc).  The work load is not great, but you must be sure you
+<DANMILLER>      have the time and will do what you've agreed to do.
+<DANMILLER> -
+<DANMILLER>      2) Advertising/announcing the existence of the SIG.  We'd
+<DANMILLER>      love to co-op or ride in a vendor's mailing.  ***Vendors***
+<DANMILLER>      contact me asap.  Announcements at FIG chapter is needed.
+<DANMILLER>      Etc.
+<DANMILLER> -
+<DANMILLER>      3) We need help collecting and analyzing information
+<DANMILLER>      collected/to be collected from our projects (see SIGFORTH
+<DANMILLER>      file).  Call me so I can connect people with similar
+<DANMILLER>      interests.
+<DANMILLER> -
+<DANMILLER>      4) We need material for our newsletter.
+<DANMILLER> -
+<DANMILLER>      5) We need *****members****!!!  Send me your name and address
+<DANMILLER>      so that we can notify you when the SIG is underway.
+<DANMILLER> -
+<DANMILLER>      6) I'm trying to get the creating paper work wrapped up by
+<DANMILLER>      the end of March.  As much input ASAP so I can finish the 1st
+<DANMILLER>      year budget would be appreciated.  If nothing else, let me
+<DANMILLER>      know if you would become a member so I can project a member
+<DANMILLER>      count.
+<DANMILLER> -
+<DANMILLER>      7) We're planning on holding a conference in Texas (probably
+<DANMILLER>      Austin) next February.  Would you attend?  Would another
+<DANMILLER>      location in that region be better.  Please let us know.
+<DANMILLER> -
+<DANMILLER>      8) I need petitions from voting ACM members stating "I
+<DANMILLER>      support the formation of a SIG for Forth (SIGForth) within
+<DANMILLER>      ACM to promote the use of Forth professionally" with their
+<DANMILLER>      ACM# and signature.  As many as possible ASAP.
+<DANMILLER> -
+<DANMILLER> Please call me at (415) 276-5953 or contact me on GEnie if that is 
+more
+<DANMILLER> convenient.  My mailing address is PO Box 3471, Hayward, CA 
+94540-3471.  This
+<DANMILLER> SIG is for us, by us.  I appreciate your support.
+<DANMILLER> -
+<DANMILLER>    George Shaw
+<DANMILLER> ----------
+<DANMILLER> Message 2         Thu Mar 24, 1988
+<DANMILLER> DANMILLER                    at 18:38 CST
+<DANMILLER> -
+<DANMILLER> How about "The Generation of High Speed, High Performance 
+Applications" as a
+<DANMILLER> conference topic?  To include high speed forth engine applications 
+and
+<DANMILLER> high performance software techniques. <dan>
+<DANMILLER> -
+<DANMILLER> ----------
+<DANMILLER>
+<DANMILLER> thats all ga
+<DANMILLER> .
+<[Gary] GARY-S> what now ?
+<[Gary] GARY-S> kevin.... leonard
+<[Dave] DHWEINSTEIN> !!
+<[Kevin] APPERT> !
+<[Gary] GARY-S> dave...dan
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Got it. Thanks. I'll go ahead and get involved as soon as 
+9the end of the month...
+<[Dave] DHWEINSTEIN> blues are over (money?? what money??)
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> ga kevin
+<[Kevin] APPERT> the orig...
+<[Kevin] APPERT> topic was input on ...
+<[Kevin] APPERT> what day for the bar...
+<[Kevin] APPERT> I prefer Thursday...
+<[Kevin] APPERT> do more people show up SUN?... This is ...
+<[Kevin] APPERT> a great Iidea...
+<[Kevin] APPERT> I enjoy it a lot.
+<[Kevin] APPERT> .
+<[Gary] GARY-S> thanks - i'll pass on your vote and comments...
+<[Gary] GARY-S> we don't have your vote, comments, dan
+<[Gary] GARY-S> ga dan
+<DANMILLER> no vote ...
+<DANMILLER> catch em as catch can ...
+<DANMILLER> my sched ridiculous but getting better. ga .
+<[Gary] GARY-S> kevin - one comment, so i am not appearing to force one...
+<[Gary] GARY-S> specific decision...
+<[Gary] GARY-S> leonard has proposed split days...
+<[Gary] GARY-S> ie 1/3 thur,,,,and 2/4 sunday ..
+<[Gary] GARY-S> or some such mix.
+<[Gary] GARY-S> does that make a difference in your opinion ?
+<[Gary] GARY-S> ga kevin
+<[Gary] GARY-S> kevin ??
+<[Gary] GARY-S> new subject....
+<[Kevin] APPERT> oops...
+<[Kevin] APPERT> mindingi the barbacue...
+<DANMILLER> !
+<[Kevin] APPERT> I prefer the same day, but..
+<[Kevin] APPERT> wouldn't object too strongly.
+<[Kevin] APPERT> .
+<[Gary] GARY-S> who all is going to rochester
+<[Gary] GARY-S>  ga dan
+<DANMILLER> i got ticket to go to rochester. ...
+<[Dave] DHWEINSTEIN> !!
+<[Dave] DHWEINSTEIN> Do wish lists count?
+<[Dave] DHWEINSTEIN> ga
+<DANMILLER> was going to ask kevin if appert was last name or company name.
+<DANMILLER> .
+<[Gary] GARY-S> ga dave
+<[Kevin] APPERT> last name...
+<[Kevin] APPERT> there is an Appert Co...
+<[Leonard] NMORGENSTERN> !
+<[Kevin] APPERT> run by Kurt Appert...
+<[Kevin] APPERT> (no relation)...
+<[Kevin] APPERT> a very competent P.Circ. House.
+<[Kevin] APPERT> .
+<[Gary] GARY-S> now - ga dave
+<[Dave] DHWEINSTEIN> Do wish lists (for Rochester) count? [Who would think that 
+people would wish to go to Rochester?]
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> ga len
+<[Leonard] NMORGENSTERN> I will be at Rochester
+<[Leonard] NMORGENSTERN> .
+<DANMILLER> !
+<[Gary] GARY-S> ga dan
+<DANMILLER> texas chit chat again.
+<DANMILLER> ...
+<[Dave] DHWEINSTEIN> Ready.
+<[Dave] DHWEINSTEIN> :-)
+<DANMILLER> by the way texas makes the best barbeque sauce don't we?
+<DANMILLER> ...
+<[Gary] GARY-S> bs
+<[Gary] GARY-S> second best maybe
+<[Dave] DHWEINSTEIN> Naturlich
+<[Dave] DHWEINSTEIN> Your outnumbered Gary.
+<[Gary] GARY-S> i have the room key
+<[Leonard] NMORGENSTERN> !
+<DANMILLER> dave, if you want to get your hands on rtx-2000  would you want to 
+drive over one weekend?
+<[Gary] GARY-S> ga kevin
+<DANMILLER> could stay here. I'm in conroe. tx outside houston.
+<DANMILLER> .
+<[Dave] DHWEINSTEIN> <- No vehicle. Would come over though. How far are you 
+from Austin.
+<[Dave] DHWEINSTEIN> Hmmnn. Need to see about getting that Motorcycle.
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> ga leonard
+<DANMILLER> II go to san anto/help
+<[Leonard] NMORGENSTERN> If we're degenerating into barbecue sauxe...
+<[Dave] DHWEINSTEIN> Degenerating!!!!???!!!!
+<[Leonard] NMORGENSTERN> I'd like to bring up my favorite topic...
+<[Leonard] NMORGENSTERN> Examples of bad Forth code. Do you have any?
+<[Leonard] NMORGENSTERN> QUIT
+<[Leonard] NMORGENSTERN> 1
+<[Leonard] NMORGENSTERN>
+<[Dave] DHWEINSTEIN> Naturally. I;ve written them.
+<[Dave] DHWEINSTEIN> :-)
+<[Leonard] NMORGENSTERN> Whoops wrong keyQUIT
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> lets not open all the wounds
+<[Dave] DHWEINSTEIN> !!
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> Every time I forget all of my old (good) habbits,
+<[Dave] DHWEINSTEIN> the code I write (and the disgusting nature of it), 
+chastises me. Of course, the lost time is unnerving...
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> I did learn about recursion by corrupting the hell out of...
+<[Gary] GARY-S> a return stack !
+<[Dave] DHWEINSTEIN> !!
+<[Gary] GARY-S> ga dave
+<[Kevin] APPERT> !
+<[Dave] DHWEINSTEIN> I've never understood the lack of recursive call ability 
+in many FORTHS...its such a usefull tool, and with almost no overhead in
+ FORTH.
+<[Dave] DHWEINSTEIN> ga
+<[Gary] GARY-S> ga kev
+<[Leonard] NMORGENSTERN> !
+<[Kevin] APPERT> I'm not aware of a FORTH which doesn't have...
+<[Kevin] APPERT> recursion.  It's turned off so you...
+<[Kevin] APPERT> don't shoot yourself...
+<[Dave] DHWEINSTEIN> !!
+<[Kevin] APPERT> in the foot. (grin)
+<[Kevin] APPERT> .
+<[Gary] GARY-S> ga len
+<[Leonard] NMORGENSTERN> Same comment as Kevin's
+<[Leonard] NMORGENSTERN> .
+<[Kevin] APPERT> !
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> I've seen a PD FORTH (can't even remember which one) with 
+no explicit recursion, and without a word like MYSELF...
+<[Dave] DHWEINSTEIN> I am a big boy. Iknow how to use recursion. Give me the 
+gun...
+<[Dave] DHWEINSTEIN> Even PASCAL allows recursion. ga
+<DANMILLER> USE
+<[Gary] GARY-S> ga kevin
+<[Kevin] APPERT> all you have to do...
+<[Kevin] APPERT> is find out how...
+<[Kevin] APPERT> the word is hidden...
+<[Kevin] APPERT> from dictionary searches...
+<[Kevin] APPERT> during compilation and turn that off...
+<[Kevin] APPERT> usually some variant of LATEST SMUDGE or LATEST REVEAL...
+<[Kevin] APPERT> will do it ( oh,...
+<[Kevin] APPERT> why do I have this feeling i've loaded...
+<[Kevin] APPERT> the gun for him?) {grin}
+<[Dave] DHWEINSTEIN> !
+<[Gary] GARY-S> ga dan
+<[Kevin] APPERT> !
+<DANMILLER> ga .
+<[Gary] GARY-S> ga dave
+<[Dave] DHWEINSTEIN> After my stint with LISP...I don't think I could hurt 
+myself w/ recursion.
+<[Dave] DHWEINSTEIN> brb
+<[Gary] GARY-S> ga kevin
+<[Leonard] NMORGENSTERN> !
+<[Kevin] APPERT> the rumor I heard once...
+<[Kevin] APPERT> in my youth is...
+<[Kevin] APPERT> about a code fragment...
+<[Kevin] APPERT> like:
+<[Kevin] APPERT>  '['] WORDNAME LITERAL EXECUTE ...
+<[Kevin] APPERT> of course equiv. to WORDNAME...
+<[Kevin] APPERT> <grin>
+<[Kevin] APPERT> .
+<[Gary] GARY-S> any other post-graduate wisdom ?
+<[Leonard] NMORGENSTERN> That's a good one Kevin
+<[Leonard] NMORGENSTERN> .
+<[Gary] GARY-S> we are close to the witching hour - any other goodies ?
+<[Gary] GARY-S> then thanks - guys
+<[Leonard] NMORGENSTERN> A good conference!
+<[Gary] GARY-S> dan - keep me posted on the austin meet
+<[Gary] GARY-S> the ozarks arent that far away
+<[Leonard] NMORGENSTERN> : DECOMPOSE  ROT ROT ROT ;
+<[Leonard] NMORGENSTERN> has left.
+=== End of Steno notes. ===
+
+

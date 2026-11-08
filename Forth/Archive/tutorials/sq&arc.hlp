@@ -1,0 +1,261 @@
+
+
+      ALL ABOUT ARCHIVES, LIBRARIES and SQUEEZED FILES
+
+Some  of the files in the FIG RoundTable Software Libraries  have 
+been  compressed  or  combined into libraries  by  using  one  or 
+another  of  the  standard public domain  utilities  that  either 
+SQueezes, LiBRaries or ARChives files. 
+
+This  transformation  is  performed  to  compress  the  files  to 
+minimize download time, and/or combine several related files into 
+a single easily-managed file.  You cannot use or run any of these 
+files  without  first  transforming them back to  their  original 
+state.
+ 
+These  processed files are specially named with a  filetype  (the 
+last  3  letters of a filename after the '.' that signifies  the 
+transformation. These are:
+ 
+              .ARC   for files archived with ARC.EXE
+              .LBR   for files libraried with LU.EXE or NULU.COM
+              .?Q?   for squeezed files with SQ.COM.
+ 
+The following is a list of files from other RoundTables on GEnie.  
+The file numbers are current as of Aug 15, 1987.  By the time you 
+read  this listing the most current version may have changed,  so 
+go  to  the suggested RoundTable and search  using  the  keywords 
+"ARCHIVE","ARC","SQUEEZE","LIBRARY" to find the latest version.
+ 
+
+
+                       WHERE TO FIND THEM:
+  
+     If  you  do  not have the program to extract the  files  you 
+want,  you  will need to get them from the RoundTable   for  your 
+specific  machine.   Visit  these  Roundtables and  pick  up  the 
+programs and documentation that you need.  There will probably be 
+many  other  useful utilities that you can use as well.   To  get 
+there from the "<P>revious or <H>elp" prompt. Type Mxxx where xxx 
+is the Roundtable page or type the ID for the Roundtable (usually 
+the name of your machine).
+   
+    Recommended reading:
+     For  everyone  interested  in the  compression  and  library 
+utilities,  read  the ARC sections of the Commodore or  Amiga  RT 
+"New  Member Survival Kit", file #3517 "ARC&LBR.DOC  from 
+the IBM RT and file #3000 "-FILES.INF" from the CP/M RT.
+
+
+    For each machine type, get these files:
+
+----------------------------------------------------------------
+ 
+ IBM or compatables:
+       The  IBM RoundTable is on page 615.   Use m615 or use  IBM 
+       and select menu item 1 (IBM PC RT).
+   
+ General:
+   #3517 - ARC&LBR.DOC
+       This  is  the  IBM RT documentation and  is  a  very  good 
+       explanation of the entire techniques of ARCing,  SQueezing 
+       and libraries. Everything you wanted to know.
+ .ARC:
+   #3472 - ARC520.COM
+       Use  this  to  unARC  and ARC files.   This  is  the  most 
+       compatable  method of ARCing.   Other  machines  generally 
+       will  be  able to unARC these files.   It is  slower  than 
+       PKARC  but  more compatable.   This is an executable  file 
+       that   will   unARC  itself  and   produce   ARC.EXE   and 
+       ARC documentation.
+   #4589 - PKX35A35.EXE
+       Use  this  only to unARC files that will  not  unARC  with 
+       ARC520.  All .ARC files in the FIG RT should be compatable 
+       with  ARC520,  but  some may have slipped by  the  sysops.  
+       PKARC  can  create "squished" files that are  incompatable 
+       with programs on other CPU's.   Please do not upload files 
+       to the FIG RT that have been ARCed with PKARC!
+
+ .xQx:
+   #43   - NUSQ110.COM
+       Use  this  to  unSQueeze files with the  .xQx  extensions.  
+       They  have been squeezed with SQPC.COM from an IBM  system 
+       or  from  SQ.COM from a CP/M system.   This  is  a  common 
+       squeezing technique from CP/M systems.
+
+ .LBR:
+   #960  - LUE220.COM
+       Use this to extract individual files from the library .LBR 
+       files.   The  files contained may still have to be further 
+       extracted  with NUSQ.   The IBM version of the LU  program 
+       does not unsqueeze.
+
+----------------------------------------------------------------
+
+ CP/M:
+       The CP/M RoundTable is on page 685.  Use m685 or use CPM.
+   
+ General:
+   #3000 - -FILES.INF
+       This  is  the  CP/M RT documentation and is  a  very  good 
+       explanation of the entire techniques of ARCing,  SQueezing 
+       and libraries. Everything you wanted to know.
+ .ARC:
+   #3757 - UNARC16.COM
+       Use this to unARC files for Z80 processors.
+   #3756 - UNARCA16.COM
+       Use this to unARC files for 8080/8085 processors.
+   #2312 - UNARC.DQC
+       This is documentation for UNARC.  The CP/M utility is used 
+       only  for  unARCing.   There is no utility to  create  ARC 
+       files.   For  creating  and uploading  libraries  use  the 
+       NULU151.COM.
+
+ .xQx:
+   #4    - USQ120.COM
+       Use  this  to  SQueeze and unSQueeze files with  the  .xQx 
+       extensions.
+
+ .LBR:
+   #764  - NULU151.COM
+       Use this to extract individual files from the library .LBR 
+       files.   This utility also allows unSQueezeing .xQx  files 
+       in the library file.
+
+----------------------------------------------------------------
+
+ APPLE:
+       The  APPLE  RoundTable is on page 645.   Use m645  or  use 
+       APPLE.
+   
+ .ARC: Use this to ARC and unARC files.
+   #1998 - ARC.SOURCE1.BNY   PART 1 OF 2.  SOURCE CODE FOR ARC
+   #1999 - ARC.SOURCE2.BNY   PART 2 OF 2.  SOURCE CODE FOR ARC.
+   #2000 - ARC.TEXT.BNY      NOTES ON ARC.
+   #2278 - PROARC.BNY        ProARC - Archival program
+   #1934 - THE LIBRARIAN.BNY ProDOS, MSDOS & CP/M ARC program
+
+----------------------------------------------------------------
+
+ MAC:
+       The MAC RoundTable is on page 605.  Use m605 or use MAC.
+   
+ .ARC:
+   #3971 - MACARC V0.03
+       Use this to unARC files.
+
+----------------------------------------------------------------
+
+COMMODORE:
+       The Commodore RoundTable is on page 625.   Use m625 or use 
+       COMMODORE and select 1 (Commodore RT).
+   
+ General:
+       From the "New Member Survival Kit", read "Help with ARC".  
+       While  you are there read the other help file.   They  are 
+       really valuable.
+
+ .ARC:
+   #2586 - ARC 2.30   
+       Use this to unARC and ARC files. 
+   #3362 -                 Documentation for the Commodore ARC
+   #2587 - ARC230.8   Version 2.30 for those with 80 col BI cards.
+       See  the  ARC230.LOG  file for an extensive  list  of  the 
+       modifications and improvements!
+
+ .xQx:
+   #690  - SQZ/UNSQ.LBR
+       Use  this  to  unSQueeze files with the  .xQx  extensions.  
+       They  have been squeezed with SQPC.COM from an IBM  system 
+       or  from  SQ.COM from a CP/M system.   This  is  a  common 
+       squeezing technique from CP/M systems.
+
+ .LBR:
+   #1142 - LIBRARY-128 V1.3A
+       Use this to extract individual files from the library .LBR 
+       files.   The  files contained may still have to be further 
+       extracted with UNSQ.  The COMMODORE version of the Library 
+       program does not unsqueeze.
+
+----------------------------------------------------------------
+
+AMIGA:
+       The  AMIGA  RoundTable is on page 555.   Use m555  or  use 
+       AMIGA.   
+
+ General:
+       From the "New Member Survival Kit",  read "Help with ARC".  
+       While  you are there read the other help file.   They  are 
+       really valuable.
+
+ .ARC:
+   #1726 - ARC23.ARC  
+       Use this to unARC and ARC files.
+   #2087 - UnARC
+       Use this to unARC #1726 ARC23.ARC
+
+ .LBR:
+   #1142 - LIBRARY-128 V1.3A
+       Use this to extract individual files from the library .LBR 
+       files.  
+----------------------------------------------------------------
+
+ATARI:
+       The  ATARI  RoundTable is on page 475.   Use m475  or  use 
+       ATARI and select 2 (Atari ST RT).
+   
+ .ARC:
+   #1271 - ARC.TTP  
+       Use this to unARC and ARC files.
+   #1298 - ARC.ARC
+   #1272 - ARC.HLP
+       These are help and documentation file for ARC.TTP.
+   #1834 - ARC HELP
+       Documentation for the ATARI ARC.
+
+ .LBR:
+   #1223 - DELIB.TTP
+       Use this to extract individual files from the library .LBR 
+       files.  
+
+----------------------------------------------------------------
+
+ ATARI 8 BIT:
+       The  ATARI  RoundTable is on page 665.   Use m665  or  use 
+       ATARI and select 1 (Atari 8 bit).
+   
+ .ARC: Use this to ARC and unARC files.
+   #1909 - ARC12.ARC         ARC compressor 8 bit
+   #2098 - ARCBAT21.ARC      Creates .BAT file for ARCing files
+   #1957 - ARCQUEST.ARC      ANSWERS TO ARC QUESTIONS
+   #1908 - ARCX12.COM        ARC extractor
+
+----------------------------------------------------------------
+
+ TI:
+       The TI RoundTable is on page 575.  Use m575 or use TI.
+   
+ .ARC:
+   #29   - ARC51.COM   
+       Use this to ARC and unARC files.
+
+----------------------------------------------------------------
+
+ TANDY/RADIO SHACK:
+       The  TANDY  RoundTable is on page 635.   Use m635  or  use 
+       TANDY.
+   
+ .ARC: Use this to ARC and unARC files.
+   #320  - ARC VERSION 5.12  ARC.EXE UPDATE
+   #1519 - ARC4V102/CMD      ARC.COM version 01.02.00.
+   #148  - ARC5.EXE          Archive 5.0 Utility for MSDOS and T2
+   #173  - ARC512.EXE        ARCHIVE UTILITY
+   #778  - ARCHIVE1/CMD      ARCHIVE PROGRAM FOR THE MODEL 1
+   #772  - ARCHIVE3/CMD      ARCHIVE PROGRAM FOR LDOS 5.1.X
+   #774  - ARCHIVE3/DOC      ARCHIVE PROGRAM FOR LDOS 5.1.X
+   #836  - ARCHIVE4/CMD      ARCHIVE PROGRAM FOR TRSDOS 6.2.X
+   #837  - ARCHIVE4/DOC      ARCHIVE PROGRAM FOR TRSDOS 6.2
+
+   #836  - ARCHIVE4/CMD      ARCHIVE PROGRAM FOR TRSDOS 6.2.X
+
+

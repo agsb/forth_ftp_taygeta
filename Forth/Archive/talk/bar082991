@@ -1,0 +1,168 @@
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 08/29/91   Time: 22:17EDT
+Attendees:
+[GARY-S]
+[[jax4th - RSN] JAX]
+[[Wil] W.BADEN1]
+[[MIKE] M.KELLY36]
+
+  FIGGY BAR of 29 August 1991. Primarily a recount by Wil Baden of
+  his and C. H. Ting's trip to the People's Republic of China for
+  the 3rd annual All-China Forth Conference. Some views expressed
+  regarding some Forth dialects.
+  
+Minutes:
+<GARY-S> Open FIGGY BAR now in session.
+<JAX> is here.
+<[jax4th - RSN] JAX> I have COHERENT running on a scruffy AT next to me right 
+now.
+<GARY-S> I suppose you noticed I followed your suggestion and got Paul Thomas
+<[Wil] W.BADEN1> is here.
+<[jax4th - RSN] JAX> Triumph of the Wil!
+<GARY-S> Hey Wil, How was ROC ?
+<[Wil] W.BADEN1> hi gary, jax.
+<[Wil] W.BADEN1> I dunno, I didn't go there.
+<[Wil] W.BADEN1> I went to the mainland.
+<GARY-S> How was that ???
+<[Wil] W.BADEN1> PRC.
+<[Wil] W.BADEN1> Fabulous.
+<M.KELLY36> is here.
+<[jax4th - RSN] JAX> In the classical sense?
+<[jax4th - RSN] JAX> .
+<[Wil] W.BADEN1> I was the only non-native speaker of Chinese.
+<GARY-S> Wil - what was the purpose of you and Ting's trip ?
+<[Wil] W.BADEN1> The 3rd All-China Forth Conference.
+<[Wil] W.BADEN1> Also we went to Hangzhou Inst. of Elec. Eng. \
+<[Wil] W.BADEN1> Ministry of Aerospace (= Chinese NASA) \
+<[Wil] W.BADEN1> Bao Shan Steel Mills\
+<[Wil] W.BADEN1> Shanghai Technical University\
+<[Wil] W.BADEN1> to lecture on Forth and answer questions.
+<[Wil] W.BADEN1> Impressions:\
+<[Wil] W.BADEN1> China is right to be concerned about the one-child family.\
+<[Wil] W.BADEN1> I have never seen such obnoxious children.
+<[jax4th - RSN] JAX> ( did Wil pick up that slant in China? :-) )
+<[Wil] W.BADEN1> 7-up or the equivalent has become the most popular beverage.
+<[MIKE] M.KELLY36> Eye see whay you mean,
+<[Wil] W.BADEN1> Best of all, my wife and I were invited into the homes of five 
+different families\
+<[Wil] W.BADEN1> for talk and a so-called simple meal of 15-16 dishes.\
+<[Wil] W.BADEN1> They asked what we thought about "June 4th" incident, about 
+Deng, etc.
+<[Wil] W.BADEN1> Computers are at the 80286 stage in even the largest 
+institutions.
+<[jax4th - RSN] JAX> That's cause that's what it's legal to export.
+<[Wil] W.BADEN1> We would be taken into an air-conditioned building, change 
+shoes to sandals,\
+<[Wil] W.BADEN1> and then into a room with 4-5 286's.
+<[Wil] W.BADEN1> I heard of one or two 386's or 486's total, but didn't see any.
+\
+<[Wil] W.BADEN1> They know what a Macintosh is, but nobody we met has seen one.
+<[Wil] W.BADEN1> In 21 days we had 33 banquets.
+<[Wil] W.BADEN1> But we ate breakfast at mom & pop stores on the street.
+<[Wil] W.BADEN1> Traffic lights are not rules, but suggestions if you don't 
+have a better idea.
+<[Wil] W.BADEN1> On TV I saw a CAD/CAM lesson and a Turbo Prolog lesson.
+<[Wil] W.BADEN1> We didn't know about USSR until the day before we come home.
+<GARY-S> Your view of the acceptance of Forth and other computer languages
+<[Wil] W.BADEN1> Our audience asked: what is the difference between Forth and C;
+\
+<[Wil] W.BADEN1> how does Forth compare with RISC machines,\
+<[Wil] W.BADEN1> what will be the future of computing languages.
+<[Wil] W.BADEN1> Qouting myself, "Forth is best for dedicated applications 
+running on\
+<[Wil] W.BADEN1> environments with limited resources."\
+<[Wil] W.BADEN1> They see the point of that.
+<[Wil] W.BADEN1> .
+<[Wil] W.BADEN1> Because of the floods the conference had only 40 present.
+<[MIKE] M.KELLY36> Was there any wind of the executions that took place 
+recently?
+<[Wil] W.BADEN1> At the steel mill we had close to a hundred.
+<[Wil] W.BADEN1> There were 16 from ROC for the conference.  This was a big 
+thrill for them\
+<[Wil] W.BADEN1> as it was the first time on the mainland.
+<[Wil] W.BADEN1> Only Ting, his uncle, I, and my translator went to the 
+engineering dog 'n pony shows.
+<[Wil] W.BADEN1> The day before we left the streets had 3 times as many people, 
+lined (or heaped)\
+<[Wil] W.BADEN1> up in the streets.  The buses coudn't move and the whole city 
+was deadlocked.
+<[Wil] W.BADEN1> \
+<[Wil] W.BADEN1> A company was offering stock for sale, 50 yuan a share, 50 
+shares maximum\
+<[Wil] W.BADEN1> and "everybody" wanted some.
+<[Wil] W.BADEN1> .
+<[Wil] W.BADEN1> It's watermelon season in China, and every one is crazy for it.
+\
+<[Wil] W.BADEN1> For sale on every street and in every alley.\
+<[Wil] W.BADEN1> Mrs. Ting & Mrs. Baden alternately vied with showing how good 
+they were at\
+<[Wil] W.BADEN1> choosing watermelon (The Chinese name is "western melon"), and 
+we would\
+<[Wil] W.BADEN1> refrigerate and share before going to bed.
+<[Wil] W.BADEN1> It's also eel season and we had eel in one form or another 
+twice a day\
+<[Wil] W.BADEN1> for the first two weeks.
+<[Wil] W.BADEN1> .
+<[MIKE] M.KELLY36> c'mon i'm eating here ...
+<[Wil] W.BADEN1> 80 percent of food at banquets is sea (or lake) food.
+<[Wil] W.BADEN1> Mike, eat first, then ask what it is.  It's delicious.\
+<[Wil] W.BADEN1> We had it prepared about ten different ways.
+<[Wil] W.BADEN1> Some times you don't have to ask -- it's obvious when you have 
+baby whole sparrows.
+<[MIKE] M.KELLY36> with or without brains ...?
+<[Wil] W.BADEN1> We had shrimp or crayfish, cooked whole, eyes, legs, feelers, 
+as often as eel.
+<[MIKE] M.KELLY36> Jax, any chance of seeing wheels application code example 
+for the I2C serial interface. The EmbSys BBS is not very well maintained.
+<[Wil] W.BADEN1> (You pick up the sparrow by the middle, bite off and spit the 
+head onto \
+<[MIKE] M.KELLY36> Yo Jax !!!
+<[jax4th - RSN] JAX> Mike I think it will be on RCFB shortly.
+<[jax4th - RSN] JAX> Actually, it already is.
+<[Wil] W.BADEN1> the table, then put the rest of the sparrow or shrimp in your 
+moutch, mush it around, spit out the rest on the table.
+<[Wil] W.BADEN1> )
+<[MIKE] M.KELLY36> Thanks, Ill look for it there.
+<[jax4th - RSN] JAX> It's an old Vesta appnote: TINYLBK.ZIP
+<[MIKE] M.KELLY36> Can I ( non Vesta-ite ) get it ?
+<[jax4th - RSN] JAX> yes, it's there to download
+<[MIKE] M.KELLY36> Great.
+<[jax4th - RSN] JAX> disconnected.
+<GARY-S> Did you use any Forth systems while in China ? Model ? etc
+<[Wil] W.BADEN1> We used F-PC and eForth.
+<[Wil] W.BADEN1> Shanghai Jiao Tong University has F83 already.
+<[Wil] W.BADEN1> We left FPC at all the institutions.
+<GARY-S> In English or Chinese characters
+<[Wil] W.BADEN1> English.
+<GARY-S> Why FPC ?????
+<[Wil] W.BADEN1> That's what Ting brought.
+<GARY-S> You just said he also had eForth
+<[Wil] W.BADEN1> I didn't see him leave it, but I expect that he gave it to 
+SJTU.
+<GARY-S> 'I understand the underlying reasons, but I would have made different 
+choices
+<[Wil] W.BADEN1> Me too.
+<GARY-S> nuff said there - it's good that gifts could be left
+<[Wil] W.BADEN1> But then I think that there is something unForth-like about 
+FPC.
+<GARY-S> I would concur
+<[Wil] W.BADEN1> It does show the universality of Forth -- I was able to 
+demonstrate Forth\
+<[Wil] W.BADEN1> with it, without ever having actually used it before.
+<GARY-S> That is certainly one of the models I suspect being eyed by the X3J14 
+TC - of course PolyFORTH too
+<GARY-S> You said it was F83, did you have benefit of a full screen editor ?
+<[MIKE] M.KELLY36> Nite all.
+<[MIKE] M.KELLY36> has left.
+<GARY-S> Mike - thanks for coming - hope
+<[Wil] W.BADEN1> FPC, not F83.  Ting showed me how to get in and out of the 
+editor.
+<GARY-S> I thought you were speaking then of the F83 at the University, sorry
+<[Wil] W.BADEN1> Well, I've driven every one off.
+<GARY-S> I have lightening here, too, so how about an exit ;-)
+=== End of Steno notes. ===
+
+

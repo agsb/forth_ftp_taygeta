@@ -1,0 +1,197 @@
+
+
+Sub: Minutes of FIGGY BAR RT Conference.
+
+Date: 12/20/90   Time: 22:26EST
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[Wil] W.BADEN1]
+[JAX]
+
+  Items discussed include forthcoming conference guests Kelly, Haydon and 
+  Martens, and Sanderson, and potential future guests, SUN SPARC's Forth 
+  bootrom, adding workstations to a SUN cluster, Zen Forth, EDITORS !,
+  Forth Dimensions, JFAR.
+
+Minutes:
+<NMORGENSTERN> is here.
+<NMORGENSTERN> Just we two. It's a little early.
+<[Gary] GARY-S> Guess you saw I followed up on some of your guest suggestions 
+<NMORGENSTERN> Yes. I think Guy Kelly will be excellent!
+<[Wil] W.BADEN1> is here.
+<[Wil] W.BADEN1> Sorry I missed last week -- User Group Board meeting.
+<[Gary] GARY-S> I'm looking forward to all three guest meetings
+<[Wil] W.BADEN1> Yes, so am I.
+<[Gary] GARY-S> We already know Glen Haydon calls them like he sees them
+<[Gary] GARY-S> Guy and Dean should both provide some perspectives we have not 
+seen
+<NMORGENSTERN> Wil, was there anyone else at Asiomar that you think
+<NMORGENSTERN> would make a good conference guest?
+<[Wil] W.BADEN1> Several, but let me sleep on it.
+<[Gary] GARY-S> Think I will try to get Charlie Johnsen for the one right after 
+MVP. There is room to look at chip offerings in light of Harris' decisions
+<[Wil] W.BADEN1> Richard Haskell gave three outstanding presentations: Teaching 
+Forth in a Required Course;
+<[Wil] W.BADEN1> Implementing E-Forth,
+<[Wil] W.BADEN1> and a program to bet on horse races.
+<NMORGENSTERN> Idea: Frank Sargent won the Harris contest. You could sound him 
+out
+<NMORGENSTERN> about a conference on that, but, from talking to him, my guess 
+is that
+<NMORGENSTERN> he wouldn't. BUT maybe some of the others might.
+<[Gary] GARY-S> Do either of you have a number for Dr. haskell - all I know is 
+U/Mich, Rochester
+<NMORGENSTERN> Oakland College, Rochester, Michigan.
+<[Gary] GARY-S> I've had Frank - and I sort of hesitate to repeat on guests
+<NMORGENSTERN> I agree, anyway not quite so soon.
+<[Gary] GARY-S> I would REALLY like to have a few more lady guests
+<NMORGENSTERN> Did they announce a runner-up to the Harris contest?
+<[Wil] W.BADEN1> Didn't Rob Chapman win (also?) ?
+<NMORGENSTERN> The only women I know in Forth are Eliz. Rather and Terry Sutton.
+<NMORGENSTERN> don't know if Terry is still programming Forth.
+<[Gary] GARY-S> Wait till you see the note I post tomorrow from Koopman
+<NMORGENSTERN> (Also Mrs. Miller--I don't remember her first name.
+<[Gary] GARY-S> She declined to participate when Dick was a guest
+<[Wil] W.BADEN1> (And Linda Web.)
+<[Gary] GARY-S> Linda Web ?
+<[Wil] W.BADEN1> (An in joke.)
+<[Gary] GARY-S> Expand a bit
+<[Wil] W.BADEN1> Robert LaQuey has some extraordinary ideas and loves to 
+expound on them.
+<NMORGENSTERN> Yes, very vocal!
+<[Gary] GARY-S> Phone numbers ?????
+<NMORGENSTERN> (The joke is that Linda Web is one of Wil's pseudonyms when
+<NMORGENSTERN> he is in a joking mood)
+<[Wil] W.BADEN1> Try FIG office?
+<NMORGENSTERN> My Asilomar proceedings are in the back room.
+<[Gary] GARY-S> I thought there was also a Lori Chavez associated with Palo 
+Alto Shipping
+<NMORGENSTERN> Has Mitch Bradley been a conference guest? Every Sun SPARC
+<NMORGENSTERN> has an embedded Forth. An installed base of 200000!!!!!
+<[Gary] GARY-S> Yes Mitch has and has also declined a repeat
+<[Gary] GARY-S> His topic was Forth and Unix
+<NMORGENSTERN> Yes, I remember now.
+<[Wil] W.BADEN1> We added 10 new workstations on the week-end and the 
+installation had us ...
+<[Gary] GARY-S> I have even had Linda Web it seems
+<[Wil] W.BADEN1> go into "new command mode" to get the prom version number.
+<[Wil] W.BADEN1> Of course, Forth wasn't mentioned.
+<[Gary] GARY-S> How easy is it to communicate with the SPARC bootrom Forth ?
+<[Wil] W.BADEN1> Very easy if you want to do it ...
+<JAX> is here.
+<[Wil] W.BADEN1> but you don't want to do so.
+<NMORGENSTERN> Why not, Wil?
+<[Wil] W.BADEN1> It's really just for bringing up the system and debugging.
+<NMORGENSTERN> But couldn't it be used in a "regular" way>
+<[Wil] W.BADEN1> FunctionKey 1 and A gives you the prompt
+<[Gary] GARY-S> Mitch claims it's a full kernel sans mass storage
+<[Wil] W.BADEN1> Enter b for boot, c to continue, n for new command mode.
+<[Wil] W.BADEN1> To get out type go.
+<[Gary] GARY-S> 'go' not 'bye' interesting
+<[Wil] W.BADEN1> It's very extensive.
+<[Wil] W.BADEN1> 'go' goes back to UNIX.
+<[Gary] GARY-S> Mitch also advises they are teaching a Forth cram class to a 
+LOT of folk
+<[Len] NMORGENSTERN> Good!!!
+<[Gary] GARY-S> It will also be in tomorrow's Usenet port
+<[Wil] W.BADEN1> There is mass storage.  You can clobber anything.
+<[Gary] GARY-S> That's a lousey plan - especially with Unix
+<[Wil] W.BADEN1> That's why I said that you don't want to get into the boot 
+Forth.
+<[Gary] GARY-S> Think I'd develop a tic knowing the Forth was there yet 
+untouchable
+<[Wil] W.BADEN1> Think of it as universal hardware controller.
+<[Wil] W.BADEN1> It doesn't matter what CPU or peripherals you have; the boot 
+prom can handle them all.
+<[Gary] GARY-S> I presume it has some tables and mask bits ?
+<[Wil] W.BADEN1> huh?
+<[Gary] GARY-S> I presume the periphs are controlled in part with tables and 
+masking
+<[Wil] W.BADEN1> The Forth is tokenized so that it's the same on all platforms.
+<[Wil] W.BADEN1> I don't know the details, but presume it's done by issuing 
+appropriate Forth words with symbolic names for the devices.
+<[Gary] GARY-S> Back to the add-ons. How smoothly did the 10 worksations 
+add in ?
+<[Wil] W.BADEN1> We took the week-end to do it, and the users were using it 
+Monday.
+<[Wil] W.BADEN1> Some path's had to be re-defined.
+<[Gary] GARY-S> That's pretty smooth - networks can be a bitch
+<[Wil] W.BADEN1> rc.local, fstab, and one other had to be touched up on monday.
+<[Wil] W.BADEN1> When I want something done right, I ask someone else to do it.
+<JAX>  :-)
+<[Len] NMORGENSTERN> The trick is to ask the right person!
+<[Wil] W.BADEN1> (We hired a consultant for the week-end.)
+<[Gary] GARY-S> I doubt that
+<[Len] NMORGENSTERN> Precisely!
+<[Wil] W.BADEN1> This week is very strange -- I've had two Monday's and one 
+Friday already.
+<[Wil] W.BADEN1> I'm not going to learn vi; a screen editor is fine for 
+creating programs, but ...
+<[Wil] W.BADEN1> for editing existing files, I will use ed and sed.
+<[Len] NMORGENSTERN> pmi, what's vi?
+<JAX> arf arf arf
+<[Gary] GARY-S> I frankly don't know how you can use Unix without vi or emacs
+<JAX> Why did Forth never realize full potential of EDITOR vocab?
+<[Gary] GARY-S> full screen Unix editor - one of Bill Joy's gifts
+<JAX> talk about a "programmable macro language" ... woof!
+<JAX> Nothing like F R X U O etc.
+<[Wil] W.BADEN1> Sun work stations have WIMP text editors.
+<[Gary] GARY-S> They ALL have ed, ex and vi
+<JAX> Wil, you wrote what to my (limited) knowledge is the best Forth screen 
+editor ever. Has anyone surpassed it yet? Are you ever going to release t
+he update you were working on?
+<[Wil] W.BADEN1> I have no plans at present.  (Thanks for the kind words.)
+<JAX> Are you ever going to let anyone look at your update?
+<JAX> <<< still uses the Congenial Editor!
+<[Wil] W.BADEN1> It's essentially the version in Zen 1.1.
+<JAX> will have to check that out ... I don't examine the DOS software as well 
+as I should.
+<JAX> BTW has anyone gotten a FORTH Dimensions in the last three months?
+<JAX> .
+<[Len] NMORGENSTERN> I have, regularly
+<[Wil] W.BADEN1> I got one today.
+<JAX> aha, maybe mine will come soon.
+<JAX> widdle bit late, huh?
+<[Gary] GARY-S> My last was Vol. XII No. 4
+<JAX> When 4D comes late I'm always afraid FIG finally went broke and no one 
+told us!
+<JAX>  :-)
+<[Gary] GARY-S> Shades of JFAR ?
+<JAX> That's different. He *never* kept a publishing schedule! :-)
+<[Gary] GARY-S> Didn't keep me as a subscriber, either
+<JAX> (( Larry must be doing ok, IFAR picked up FVG tab for several outstanding 
+outstanding sumes).
+<JAX> s.b., "sums"
+<[Len] NMORGENSTERN> FVG?
+<[Gary] GARY-S> Forth vendor Group
+<[Len] NMORGENSTERN> Thanx
+<[Len] NMORGENSTERN> (Have to leave a little early. Thanks all )
+<JAX> just checked RCFB for Zen 1.1 ... is that the same as ZEN1_10.ZIP ?
+<[Gary] GARY-S> jax - how bout porting the 8051 eForth to GEnie ?
+<JAX> don't you have it yet?
+<[Wil] W.BADEN1> It's the version Jack Brown uploaded.
+<[Gary] GARY-S> hmm - stupid me
+<JAX> I'm working on porting eForth to 80196!
+<[Wil] W.BADEN1> Two disks.
+<JAX> I'll chekkit out, Wil.
+<[Gary] GARY-S> It never occurred to me - sorry. I've got a few other things 
+occupying the few living brain cells I have
+<[Wil] W.BADEN1> No Jax. 1.1 is not 1.10.
+<[Gary] GARY-S> It's getting near the witching hour - any killer closures ?
+<JAX> aha ... so 1.1 is a more recent cut? or older?
+<[Wil] W.BADEN1> Older.
+<[Wil] W.BADEN1> It's my extensions to 1.0.
+<JAX> SBC916 with Vesta Forth-83i96 RULES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<[Wil] W.BADEN1> It's the Forth I've used since 1986.
+<JAX> Ok, I'll have to make sure RCFB is equipped with it.
+<[Wil] W.BADEN1> on PC.
+<JAX> aha
+<[Wil] W.BADEN1> ECFB does(did) have it.
+<JAX> I may have it somewhere!
+<[Gary] GARY-S> Grapevine and GEnie do now
+<JAX> I have a LOT of ZENxxx.xxx entries.
+<JAX> will have to examine more closely.
+=== End of Steno notes. ===
+
+

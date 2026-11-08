@@ -1,0 +1,552 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 02/22/90   Time: 23:07EST
+
+Attendees:
+[[Dave] OLORIN]
+[[Gary] GARY-S]
+[[Kevin] APPERT]
+[[Doug] D.PHILIPS3]
+[[Wil] W.BADEN1]
+[[Len] NMORGENSTERN]
+[[Milton] M.FABERT]
+[[Xaj] FIGCHAPTERS]
+[[Jim] JTITTSLER]
+
+  Items discussed include ACM SigForth Dallas conference, and lots and lots
+                  about Object Oriented Forth. Multiple inheritance, messages,
+                  stack as object..
+Minutes:
+<APPERT> is here.
+<OLORIN> is here.
+<[Dave] OLORIN> Hullo!
+<[Gary] GARY-S> Did you guys get the ???
+<[Kevin] APPERT> what ???
+<[Dave] OLORIN> I did.
+<[Dave] OLORIN> Want my honest answer?
+<[Gary] GARY-S> Is ROW COL really the best way to address screen locations ?
+<[Dave] OLORIN> "I don't do screen interfaces." (grin)
+<[Gary] GARY-S> Is that a 'no comment' kev
+<D.PHILIPS3> is here.
+<[Kevin] APPERT> how 'bou&[I typed 'how about r-theta' and my term. emulator 
+swallowed it
+<[Kevin] APPERT> I think it's being critical
+<[Dave] OLORIN> No. Not R-theta.
+<[Gary] GARY-S> what ?
+<[Dave] OLORIN> It is trying to protect your image by eating oddball ideas.
+<[Kevin] APPERT> what image?
+<[Gary] GARY-S> oddball ideas ARE his character !!!
+<[Wil] W.BADEN1> is here.
+<[Kevin] APPERT> oddball ideas are why we're here!
+<[Gary] GARY-S> Doug,Wil care to respond to the query
+<[Kevin] APPERT> :)
+<[Wil] W.BADEN1> Yes.  No.
+<[Doug] D.PHILIPS3> Is it a matter of name only, or also one of concept?
+<[Gary] GARY-S> thanks
+<[Dave] OLORIN> Actually, I could care less about screen addressing. I get paid 
+for speed, pure and simple (and yes folks -- it is possible, even in C
+). That and code clarity.
+<M.FABERT> is here.
+<NMORGENSTERN> is here.
+<[Kevin] APPERT>  what are the choices, Gary?
+<[Doug] D.PHILIPS3> Yow is getting thick in here!
+<[Gary] GARY-S> Good point, Doug. Is mem map, screen map passe'
+<[Wil] W.BADEN1> Screen addressing is an application problem, not system 
+problem.
+<[Dave] OLORIN> Hullo Len! How was your trip back from Dallas?
+<[Len] NMORGENSTERN> Very nice. Stopped to see my uncle 98 yrs old & still 
+going strong!
+<[Len] NMORGENSTERN> May I be so at 68
+<[Gary] GARY-S> Are one of you SIG ACM attendees going to post a brief to the 
+library ?
+<[Doug] D.PHILIPS3> How well attended was it (the whole thing)?
+<[Len] NMORGENSTERN> about 30 persons
+<[Gary] GARY-S> is anyone entering the Harris construct contest ?
+<[Dave] OLORIN> <----
+<[Doug] D.PHILIPS3> No.
+<[Dave] OLORIN> I'm trying to work out a nice model for parallel Forth so I can 
+get them to send me 4 boards! (grin)
+<[Dave] OLORIN> George did a presentation on the Sh-Boom (including a 50 mip, 1 
+meg credit card sized board)
+<[Gary] GARY-S> wil - try 2400 again - you are spitting garbage
+<[Wil] W.BADEN1> NHoK^R
+<[Doug] D.PHILIPS3> Wil is speaking in tongues!
+<[Wil] W.BADEN1> has left.
+<[Gary] GARY-S> The question of the night is a spin-off from BASIS discussions 
+(don't gag kevin) take any direction you want with any real Forth stuff
+<[Dave] OLORIN> New version of OOFORTH coming out in the near future. (Revision 
+3.0)
+<[Len] NMORGENSTERN> Dave presented a new version of his OOP
+<[Len] NMORGENSTERN> A very good presentation, Dave!
+<[Dave] OLORIN> Featuring: restrictions on ancestors and ancestral instance 
+variables removed, orders of magnitude faster (method lookup is now O(1) i
+nstead of O(lots)).
+<[Len] NMORGENSTERN> Multiple inheritance.
+<[Dave] OLORIN> Explicit early binding allowed. Object creation support. Real 
+documentation (maybe)
+<[Dave] OLORIN> Only one change made to the way the system looks (the word 
+CONTINUE-WITH has a change in functionality)
+<[Doug] D.PHILIPS3> Do you have constructors and destructors?
+<FIGCHAPTERS> is here.
+<[Gary] GARY-S> Dave - why did you opt for the model you are using
+<[Dave] OLORIN> No. Objects are created on the Forth heap. But support for 
+building your own object constructors is added.
+<[Dave] OLORIN> All of the innards (just about) have been ripped out and are 
+being rebuilt.
+<[Dave] OLORIN> (10 minutes bouncing ideas off of Larry Forseley and I now have 
+a whole new method lookup structure).
+<[Dave] OLORIN> Gary: the switch to a table structure provides greatly 
+increased speed, reduces code complexity, and makes a few new features possible
+<[Wil] W.BADEN1> is here.
+<[Dave] OLORIN> The only cost is that the word CONTINUE-WITH has a slight 
+change in functionality. It becomes early binding.
+<[Wil] W.BADEN1> How's this?
+<[Doug] D.PHILIPS3> Better.
+<[Dave] OLORIN> Also, the order in which initializers work is also changed.
+<[Gary] GARY-S> You had Ada, Smalltalk,prolog as models - why the route you 
+took ?
+<[Dave] OLORIN> Ada is single inheritance and is lousy.
+<[Dave] OLORIN> Prolog is not object oriented, although dialects of it are.
+<[Gary] GARY-S> true - it is really a boolean operator
+<[Dave] OLORIN> This model is closest to Smalltalk. I like the Smalltalk model, 
+so the Smalltalk paradigm (including ideas such as messages which are
+not necessarily OOPS) is basically used.
+<[Doug] D.PHILIPS3> Are messages (method selectors) themselves objects?
+<[Dave] OLORIN> The implementation details have changed radically (it goes from 
+a LISP like system of linked lists to method tables and unification te
+chniques).
+<[Doug] D.PHILIPS3> Are class descriptions also objects?
+<[Dave] OLORIN> No. This is a hybrid system. Messages are in fact Forth words...
+<[Dave] OLORIN> which know how to get the information from an object and 
+execute the proper methods.
+<[Dave] OLORIN> Classes are in fact Forth defining words (which although they 
+bear distinct resemblences to objects, are not).
+<[Gary] GARY-S> parent/child ?
+<[Dave] OLORIN> It is a hybrid system. It has the advantages of OOP, without 
+the drawbacks of the pure model (i.e. Smalltalk creates 500k+ of garbage
+per second)
+<[Len] NMORGENSTERN> Dave, you corrected a mistaken idea I had. I always
+<[Dave] OLORIN> Forth defining words are a cripple sort of object, with a 
+parent child relationship, and only a single method.
+<[Gary] GARY-S> You still have garbage - are you collecting it
+<[Len] NMORGENSTERN> thought that messages were an essential part of OOP
+<[Dave] OLORIN> Nope. No garbage as such. The lookup is done with hybrid 
+techniques. The message selection is standard Forth.
+<[Dave] OLORIN> Messages are a really neat idea and work *extremely* well with 
+OOP and very well with Forth (they conform to the "noun verb" style), b
+ut they are not intrinsic. (Just look at C++)
+<[Gary] GARY-S> Hmm - that would seem to give speed - does it really
+<[Dave] OLORIN> I don't know. The guts of OOFORTH are spilled out all over the 
+floor while I rework the entire implementation (just about).
+<[Len] NMORGENSTERN> That's progress, Dave.
+<[Gary] GARY-S> Doug asked about inheritance . ...
+<[Doug] D.PHILIPS3> Are you doing the kernel over to use objects, or just for 
+object support?
+<[Dave] OLORIN> It is faster than a pure system. Oh, one correction. If you 
+take advantage of the explicit polymorphism facility (modifying an existin
+g class to change its objects), you create garbage which is uncollected.
+<[Milton] M.FABERT> Dave, I've been out of town for awhile.  Will OOFORTH ....
+<[Dave] OLORIN> Inheritance is multiple (now with now restrictions). There are 
+no kernel changes whatsoever.
+<[Milton] M.FABERT> be available to the rest of us?
+<[Dave] OLORIN> It's already up (in version 2.1) in the Library.
+<[Milton] M.FABERT> thanks!
+<[Gary] GARY-S> What about this revision - will you also post it ?
+<[Dave] OLORIN> OOFORTH is (and has been) "almost" Public Domain. You can do 
+whatever you want with or to it, so long as you don't claim that you wrot
+e the base platform.
+<[Doug] D.PHILIPS3> If messages are actually words, they must be of a 'DEFER'ed 
+or vectored kind then?
+<[Dave] OLORIN> The revision goes out to the world as soon as I get it finished.
+<[Dave] OLORIN> No. Messages are not deferred at all. Messages expect that 
+there is
+<[Dave] OLORIN> a pointer to an object on the top of the stack (objects by 
+default leave their
+<[Dave] OLORIN> address on the stack -- it's their runtime action).
+<[Gary] GARY-S> What if the stack is empty ?
+<[Dave] OLORIN> With that information, a message uses its unique number to look 
+itself up in the object's class' method table, and it executes whateve
+r it should do.
+<[Doug] D.PHILIPS3> So how do you handle two different classes that have the 
+same message defined?
+<[Dave] OLORIN> Stack underflow and things break.
+<[Dave] OLORIN> If they are both parents of the same class?
+<[Dave] OLORIN> The more recent definition wins.
+<[Doug] D.PHILIPS3> You have some explicit disambiguation rules, or is it 
+implicit in the ordering?
+<[Dave] OLORIN> "More recent" is determined by the order in which you inherit 
+from your parents.
+<[Dave] OLORIN> That's the neat thing that comes out of the conference (and the 
+reason for the rewrite).
+<[Doug] D.PHILIPS3> I've always wondered how that would break a more distant 
+superclasses use of its own version of that message.
+<[Dave] OLORIN> Each class has two key tables associated with it. One is a 
+table of methods, with the address (for EXECUTE) of their action, and the c
+lass # (unique) of the class it was inherited from.
+<[Dave] OLORIN> The other (indexed by class#) is the offset in the current 
+class of the start of the given classes instance variables (this part gets
+tricky), and a pointer to the class private vocabulary.
+<[Dave] OLORIN> The really neat thing is that because of the way this works, 
+all you have to do when you inherit from a class is unify its versions of
+ these two tables with your versions! (Overlaying when possible, so long as you 
+don't overlay "No Method" on top of anything else)
+<[Dave] OLORIN> This means that the method table and class usage table of any 
+given class is the unification of its methods and those *of all of its a
+ncestors (order dependent on the order they were inherited from)*.
+<[Doug] D.PHILIPS3> So that once any class defines a particular message, its 
+offset is/isn't always fixed?
+<[Dave] OLORIN> Not quite.
+<[Dave] OLORIN> It is possible that the order in which I declare the classes I 
+inherit from will affect my functionality.
+<[Dave] OLORIN> If Class FOO and Class BAR both define a function or method BAZ,
+ then the class I inherit from *last* is the functionality I inherit for 
+ message BAz.
+<[Dave] OLORIN> The table of offsets is the offset into the *current 
+object/class* that the instance variables for any method which comes from that 
+cl
+ass will lie in.
+<[Doug] D.PHILIPS3> I got that.  What I wonder is how BAZ, as a forth word, 
+finds its execution vector
+<[Dave] OLORIN> Simple, it looks it up in the table of the class of the object 
+it is dealing with.
+<[Doug] D.PHILIPS3> if it isn't a defered or delayed word.
+<[Dave] OLORIN> It is bound at runtime to its functionality.
+<[Doug] D.PHILIPS3> So each message has a unique (16bit?) ID and does a search?
+<[Dave] OLORIN> Yes and no.
+<[Dave] OLORIN> Each object has a unique CELL wide ID. In version 2.1, it does 
+a linear search down trees of methods and classes and such (Slloowwwwww).
+<[Dave] OLORIN> In version 3.0 it does a quick table look up, sets a few system 
+variables and stacks, and executes.
+<[Doug] D.PHILIPS3> So you basically fold the tree into one table for each 
+class?
+<[Dave] OLORIN> Essentially, yes.
+<[Doug] D.PHILIPS3> So if BAZ inherits from FOO, and you redefine FOO????
+<[Dave] OLORIN> No!
+<[Dave] OLORIN> FOO has a table of its methods.
+<[Doug] D.PHILIPS3> You can't redefine FOO?
+<[Dave] OLORIN> This table is the unification of any methods FOO defines, as 
+well as any methods defined by FOOs ancestors.
+<[Doug] D.PHILIPS3> (I got that each class has its own table...)
+<[Dave] OLORIN> Well, you can, but things get *real weird*. I had to cancel 
+some polymorphism code for the upgrade.
+<[Doug] D.PHILIPS3> But if you change the class FOO, then BAZ may try to 
+manipulate itself in a now NON-FOO way.
+<[Xaj] FIGCHAPTERS> That seemed to be the way the dice rolled last time. But 
+Let Me Tell Yoo that it was  still controversial ... X3J14 has not heard
+last of.
+<[Dave] OLORIN> Right. Things will break.
+<[Doug] D.PHILIPS3> But its not like the standard dictionary redefinition, 
+since objects contain pointers back to their class descriptions?
+<[Dave] OLORIN> Version 2.1 supports full polymorphism. You change FOO, and BAZ 
+will change.
+<[Dave] OLORIN> Version 3.0 does not.
+<[Doug] D.PHILIPS3> Version 2.1 had only single inheritence?
+<[Dave] OLORIN> Right. An object is nothing more than a pointer to its class 
+followed by space for instance variables.
+<[Dave] OLORIN> No, Version 2.1 is multiple inheritance.
+<[Doug] D.PHILIPS3> Right.
+<[Doug] D.PHILIPS3> Do you have 'class' variables and 'pool' variables too?
+<[Dave] OLORIN> But if BAZ is a class, and FOO is an ancestral class of BAZ, 
+and you *change Foo*, things break in 3.0. So you can't change FOO.
+<[Dave] OLORIN> No. There are stacks which hold instance-base values, and 
+pointers to the current object.
+<[Doug] D.PHILIPS3> Is there a way to build 'variable' message selectors (i.e. 
+not fixed at compile time?)
+<[Dave] OLORIN> (2.1 is in the library, and 3.0 is not anywhere near stability 
+yet)
+<[Dave] OLORIN> I'm not sure I follow you. In 2.1, all messages are bound at 
+run time. In 3.0, all but a specialization case of messages are bound at
+run time.
+<[Doug] D.PHILIPS3> You had said that messages were regular forth words?
+<[Dave] OLORIN> You can also do anything to a message you do to any other Forth 
+word. If you want a table of messages, which you then select from at r
+un time, you can do that.
+<[Dave] OLORIN> Messages are regular Forth words. All of your Forth tricks work 
+fine, so long as you make sure they have an object^ waiting for them o
+n the stack.
+<[Dave] OLORIN> If there isn't one, things will break in truly creative ways.
+<JTITTSLER> is here.
+<[Len] NMORGENSTERN> (If you are lucky your system will crash)
+<[Gary] GARY-S> Hi Jim
+<[Doug] D.PHILIPS3> If I understand right you have:  Object Message          
+NOT Object Message SEND?
+<[Dave] OLORIN> Right!
+<[Dave] OLORIN> If "File" is an object, and "Open" is a message, the code is 
+"File Open", not "File Open Send" (that gets obtuse)
+<[Doug] D.PHILIPS3> Gotcha.  Sounds neat.
+<[Dave] OLORIN> I've had lots of fun with it. Objects are a really nice concept.
+<[Doug] D.PHILIPS3> If classes aren't real objects, then there is only one kind 
+of object instantiator?
+<[Len] NMORGENSTERN> As you pointed out, Dave, we use up our good
+<[Len] NMORGENSTERN> words in a specific context. Now we can use "OPEN" for
+<[Len] NMORGENSTERN> files and other things, too.
+<[Doug] D.PHILIPS3> Dave, have you in place some sort of lookup caches, or can 
+that be added in later?
+<[Dave] OLORIN> Nope. You have access to the underlying word MAKE-OBJECT (at 
+least in 3.0 -- in 2.1 you have to use knowledge of the mechanism). Creat
+ing objects is easy. An object is a record with two fields, a pointer to a 
+class, and a region of space for the instance variables.
+<[Dave] OLORIN> No. There is no message/method caching. You need to look it up 
+each time.
+<[Dave] OLORIN> This can be done with the CONTINUE-WITH function (in a really 
+hacked up sort of way) in 3.0
+<[Doug] D.PHILIPS3> So each class can define its own peculiar object 
+instantiating 'methods'?
+<[Dave] OLORIN> Ahhh.
+<[Dave] OLORIN> There is an initialization method which can be defined for each 
+class (and a class inherits its ancestors initialization methods).
+<[Dave] OLORIN> By default a class creates objects on the stack. You can create 
+Forth words which take a location and a class name and create an objec
+t there. For that matter, you can hack up the definition of Class and make it 
+put them somewhere else.
+<[Doug] D.PHILIPS3> But does the syntax look like ' params-for-new-object-on-sta
+ck Class-Name Instantiate ' or how does it look?
+<[Dave] OLORIN> Looks like: params-for-new-object Class-Name New-Object-Name
+<[Doug] D.PHILIPS3> New-Object-Name?  ack.  If the object is created 'on the 
+stack' do you mean that a pointer to it is left on the stack, or that 'it
+' is on the stack?
+<[Dave] OLORIN> No no no. New-Object-Name is not a method name, it is the name 
+of the Forth word you wish to create, and the object is created in the
+Forth heap like any other Forth word.
+<[Dave] OLORIN> Classes are *not* methods. Classes are Forth defining words.
+<[Doug] D.PHILIPS3> Gack.  How hard would it be do something like:
+<[Doug] D.PHILIPS3> Params-for-initializing-instance-of-class-X X Foo !
+<[Len] NMORGENSTERN> Dave, didn't you say at Dallas that the action of an 
+object is
+<[Len] NMORGENSTERN> to put its address on the stack?
+<[Dave] OLORIN> Right. The action of an object is to put a class on the stack.
+<[Len] NMORGENSTERN> Thanx
+<[Dave] OLORIN> Newly created objects are initialized *then and there*.
+<[Dave] OLORIN> What is the ! for?
+<[Dave] OLORIN> It's:
+<[Doug] D.PHILIPS3> Yes, I realize that they are init'ed.  What I'm wondering 
+is how you do arrays of objects if the class-name is a defining word.
+<[Dave] OLORIN> params-for-initializing-instance-of-class-x X Foo
+<[Dave] OLORIN> You use the word MAKE-OBJECT (v. 3.0 and included for that 
+purpose)
+<[Doug] D.PHILIPS3> If the class name just takes and inits a new object and 
+leaves it address on the stack, isn't that a better factoring?
+<[Doug] D.PHILIPS3> that is, leaves the address of the new object on the stack.
+<[Doug] D.PHILIPS3> Why should I have to use  a different set of words 
+depending on where I'm going to put the object?
+<[Dave] OLORIN> Make object takes the address (body) of a class, and the 
+address to create the new object in, and any initialization parameters, and m
+akes it.
+<[Dave] OLORIN> Because the action of a class is to define a new object. 
+Objects in this system are (in general) named.
+<[Dave] OLORIN> The action of MAKE-OBJECT (which is a word called by Class' 
+DOES> portion) is to make a new object.
+<[Doug] D.PHILIPS3> I don't care where the object exists, I just want to have 
+an array of object pointers (objects, in essence) without having to name
+ them first.
+<[Len] NMORGENSTERN> In other words, a class is a defining word, am I correct, 
+Dave?
+<[Dave] OLORIN> *Yes*. A Class is a defining word.
+<[Doug] D.PHILIPS3> Arg.
+<[Dave] OLORIN> If you don't want to name them, use MAKE-OBJECT.
+<[Dave] OLORIN> Classes create named objects. MAKE-OBJECT creates anonymous 
+objects. It's that simple.
+<[Doug] D.PHILIPS3> Why should there be duality.  Esp. if the name of the class 
+is going to have to be 'ticked' to get make object to work.  very messy.
+<[Len] NMORGENSTERN> Dave, I think that what Doug wants is a way to create a 
+headerless
+<[Len] NMORGENSTERN> defining word to create class bodies and leave their 
+address on
+<[Len] NMORGENSTERN> the stack for later insertion into an array.
+<[Len] NMORGENSTERN> Can that be done?
+<[Dave] OLORIN> Change the code then. I've been working in R&D for too long. If 
+you don't like the functionality of CLASS, then change it.
+<[Xaj] FIGCHAPTERS> Dave, a comment from the sidelines: I went object-oriented 
+for a while with ODE in JForth, but found myself increasingly drawn bac
+k to solving problems with CREATE DOES> and the simpler and more direct syntax 
+of Forth. I would *like* to think that Forth is growing and that your w
+ork represents that, but it is possible that OOP methods are an attempt to fix 
+a deficiency in conventional langs that Forth already rectifies for us!
+<[Dave] OLORIN> It is fully commented code, and I like to think it is readable 
+Forth.
+<[Dave] OLORIN> Don't think so Jax. CREATE DOES> only gives me one method. If I 
+want more than one, I need to start writing words which tick my define
+d word and yank out information.
+<[Dave] OLORIN> I wrote this package because I was tired of FileOpen, 
+WindowOpen, PortOpen, etc.
+<[Doug] D.PHILIPS3> Why did you choose that particular level of factoring?  It 
+is only one more word ( ! ) to do it my way, and it seems, to me, to be
+ cleaner.?
+<[Dave] OLORIN> There isn't one more word. What if I have lots of multiple 
+items to initialize with? ! only stores a cell.
+<[Dave] OLORIN> What if the initialization is not just a blank copy, but 
+actually has to do something?
+<[Doug] D.PHILIPS3> I didn't parse that.  All the '!' does is move the object 
+pointer to the object just created into a memory location (if that is wh
+at needs to be done with it).
+<[Dave] OLORIN> Ohhhhhhh. That was what you meant.
+<[Doug] D.PHILIPS3> Len, I see what you were saying... Yes, that is what I'm 
+asking!
+<[Doug] D.PHILIPS3> Dave, yes.  It would seem to me that separating the object 
+creation from a 'word' CREATE binding would be a better factoring?
+<[Dave] OLORIN> I find that somewhat ugly and awkward when creating named 
+objects. And I sstill need MAKE-OBJECT if I want to create an object anywher
+e but HERE.
+<[Xaj] FIGCHAPTERS> Thank you Dave for a most enlightening exposition of your 
+exciting work!
+<[Xaj] FIGCHAPTERS> Goodnight all!
+<[Doug] D.PHILIPS3> Gary, I've got a capture log going, if you're worried about 
+losing anything.
+<[Dave] OLORIN> Your version still puts it on the top of the Forth heap, but 
+makes me name it. MAKE-OBJEC!T is more powerful than that.
+<[Dave] OLORIN> MAKE-OBJECT allows me to put it in other locations (like a 
+memory managed area, etc).
+<[Doug] D.PHILIPS3> My version doesn't make you name anything but classes.  
+What you do with instance pointers is your business.
+<[Dave] OLORIN> (Hold)
+<[Gary] GARY-S> I'm not, I just may not be personally in attendance through-out
+<[Dave] OLORIN> Here is the problem.
+<[Dave] OLORIN> My version of CLASS creates an object on the Forth heap and 
+names it.
+<[Dave] OLORIN> Your version of CLASS creates an object on the Forth heap and 
+leaves its address on the stack.
+<[Dave] OLORIN> You don't want to have a seperate syntax for creating anonymous 
+objects.
+<[Dave] OLORIN> But you will still need MAKE-OBJECT to create an object 
+*anywhere* but at HERE.
+<[Doug] D.PHILIPS3> Yes.
+<[Doug] D.PHILIPS3> Well, how about one of the two next things:
+<[Dave] OLORIN> So you still have a split syntax.
+<[Dave] OLORIN> But the easiest answer is this
+<[Doug] D.PHILIPS3> a)  Make user specify location of object (but then this 
+requires some way to know size of objects)
+<[Dave] OLORIN> If you would like to change CLASS in that manner, feel free.
+<[Doug] D.PHILIPS3> b) Allow for class specific 'constructor' which is passed 
+size of object and leaves addr on stack.
+<[Dave] OLORIN> The source code is freely available.
+<[Doug] D.PHILIPS3> What is still easiest?
+<[Dave] OLORIN> Also, there is a BB topic on this subject.
+<[Dave] OLORIN> All of the hooks are there. It shouldn't take more than a line 
+or two of changes to do what you want.
+<[Doug] D.PHILIPS3> Did you just start it?  I haven't seen anything about this 
+in my FOrthNet ports.
+<[Gary] GARY-S> Cat 3, Top 41
+<[Doug] D.PHILIPS3> I'm curious to know how you arrive at a particular 
+factoring.
+<[Dave] OLORIN> It's been in the BB since version 2.0 went into the Library. 
+(Version 1.0 was never released -- 2.0 is a cleaned up and portable 1.0)
+<[Gary] GARY-S> Started last March
+<[Doug] D.PHILIPS3> In particular, why defining words are mostly so messy.
+<[Doug] D.PHILIPS3> Gary, must not be any activitly lately, it doesn't show up 
+in my scans.
+<[Dave] OLORIN> I sat down and decided on a syntax.
+<[Dave] OLORIN> (Well first I decided on features)
+<[Gary] GARY-S> The new 'Best of GEnie ' column I just posted is a clean 
+extraction of the Topic if you want the heart of it, Doug
+<[Dave] OLORIN> Then I sketched out an implementation. My Forth code is written 
+in multiple passes, factoring, trimming, tightening , etc.
+<[Dave] OLORIN> The result is (I like to think) cleanly factored code. Your 
+objection seems to be to the syntax.
+<[Dave] OLORIN> Forth syntax is a matter of choice. If you don't like the 
+syntax (and related semantics), that can be changed with no changes to the u
+nderlying mechanism.
+<[Doug] D.PHILIPS3> I'm curious as to why the two different syntax'es instead 
+of one.  IN particular, do you merely ' the class name to pass it to mak
+e-object?
+<[Dave] OLORIN> If you don't like the syntax I feel comfortable with -- please 
+feel free to change it.
+<[Dave] OLORIN> No... you use the word 'BODY (defined in the INTERNALS.SEQ 
+module). This varies from system to system, but it returns the body field o
+f a word rather than the code field.
+<[Dave] OLORIN> In F83 systems it is simply:   : '
+<[Dave] OLORIN> : 'body   ( <name> |  -- pfa )
+<[Doug] D.PHILIPS3> So using make-object is not built upon system independant 
+words, but the dependency shows through to users?
+<[Dave] OLORIN>    ' >body ;
+<[Dave] OLORIN> Wrong! 'BODY is an abstraction of system dependent mechanisms.
+<[Doug] D.PHILIPS3> Ah!
+<[Dave] OLORIN> There is no standard way to get the PFA of a Forth word from 
+its name.
+<[Doug] D.PHILIPS3> Right.
+<[Dave] OLORIN> Anything in the INTERNALS module is system dependent. The 
+functionality of the words defined there is system independent.
+<[Doug] D.PHILIPS3> Anyway, MAKE-OBJECT is visible to user (or is supposed to 
+be) because of experiances with 2.1?
+<[Dave] OLORIN> That is the whole idea. Theoretically, changing INTERNALS and 
+the PRELUDE file should be all that is needed to port to another system.
+<[Dave] OLORIN> Right. I've had people asking about arrays of objects. So 
+MAKE-OBJECT is factored out and declared as useful.
+<[Dave] OLORIN> The information is there in 2.1 if you want to be cozy with the 
+implementation.
+<[Doug] D.PHILIPS3> Ok.  Why did you not have only 1 object-creating word?  Is 
+the class name a defining word purely for conveniece?
+<[Dave] OLORIN> Actually, MAKE-OBJECT came after CLASS (in fact, it does not 
+exist as such in 2.1, but its functionality can be duplicated fairly easi
+ly).
+<[Doug] D.PHILIPS3> Right, but for 3.X, CLASS uses MAKE-OBJECT?
+<[Dave] OLORIN> Right!
+<[Doug] D.PHILIPS3> Ok!
+<[Doug] D.PHILIPS3> Is there a way to find out how much memory to allocate for 
+an instance?
+<[Dave] OLORIN> (Ok -- where'd I put the pick)
+<[Doug] D.PHILIPS3> And a way to find out the class of an object and whether or 
+not it understands a particular message?
+<[Dave] OLORIN> Plug: ACM SIGForth '90 proceedings will have a paper on 3.0 
+(obviously still being written since 3.0 is still being written). An overv
+iew on OO, and details of the implementation.
+<[Doug] D.PHILIPS3> Ok.  What does Jim/Gary want to talk about?
+<[Dave] OLORIN> The class of an object can be checked with a simple DUP @
+<[Dave] OLORIN> And there are words for checking info about objects and classes.
+<[Doug] D.PHILIPS3> (Last second aside.  Dave, those words act like messages to 
+a meta-class, but that's a new can o' worms)
+<[Dave] OLORIN> Yep. They are a hybrid implementation of the Smalltalk 
+"SuperClass".
+<[Doug] D.PHILIPS3> Gotcha.  Now.  Really.  What do Jim/Gary want to talk about?
+<[Jim] JTITTSLER> I've just been listening.  I've been using the Smalltalk/V 
+implementation on my PC lately and having some fun with it.
+<[Jim] JTITTSLER> I've not played with OOF.
+<[Doug] D.PHILIPS3> Jim, do you have a PC, XT, AT?  ???
+<[Jim] JTITTSLER> PC/AT at home (Atari PC4), PC/AT386 (Atari PC5) at work.
+<[Doug] D.PHILIPS3> Did you pick /V over /V286 for economic or other reasons?
+<[Jim] JTITTSLER> Well... I'm using /V286 if you want to get picky about it.
+<[Doug] D.PHILIPS3> Ah, ok, just curious (as there is supposedly more than just 
+performance differences).
+<[Jim] JTITTSLER> I meant it in the generic sense.
+<[Jim] JTITTSLER> I've enjoyed it because it gives me the same sense of 
+"prototyping" that I enjoy
+<[Jim] JTITTSLER> with Forth... with a "pretty" user interface that is easily 
+extensible.
+<[Dave] OLORIN> Write a Forth in Smalltalk! (grin) After all, with Mitch 
+Bradley's Forth in Postscript out there, anything is possible.
+<[Doug] D.PHILIPS3> CM wrote one in Fortran!
+<[Jim] JTITTSLER> Why bother... the goal is to prototype or hack together a 
+piece of code... I'm not particularly wedded to the Forth syntax (although
+ it really does seem that Smalltalk
+<[Jim] JTITTSLER> went out of its way to be obtuse)
+<[Doug] D.PHILIPS3> Obtuse?  Compared to Forth or the profane languages?
+<[Jim] JTITTSLER> Good point.
+<[Doug] D.PHILIPS3> Dave, have you ever used a smalltalk system, or did you go 
+by 'book learnin'?
+<[Dave] OLORIN> Never played with smalltalk. I set myself down with OOPSLA '86 
+and a whole bunch of magazines.
+<[Dave] OLORIN> When I see a nice new theory idea, I study it, implement it in 
+Forth, and try it out.
+<[Doug] D.PHILIPS3> What about the 'Books'?
+<[Dave] OLORIN> 'Books'?
+<[Doug] D.PHILIPS3> (I have them at work, the titles are roughly:  
+'SmallTalk-80: <X>' where <X> is
+<[Doug] D.PHILIPS3> a) The Language and its Implementation
+<[Doug] D.PHILIPS3> b) (Something about interfaces, I don't recall).
+<[Doug] D.PHILIPS3> c) Bits of History, Words of Advice.
+<[Doug] D.PHILIPS3> ,
+<[Dave] OLORIN> Never did get around to them. I just used all of the articles 
+(technical and otherwise) about Smalltalk and other OOPs.
+<[Doug] D.PHILIPS3> I find that I go back to the 'Bits of History' book a lot 
+more than any others.
+<[Doug] D.PHILIPS3> It has notes from several different teams that actually 
+implemented a system
+<[Doug] D.PHILIPS3> and what kinds of things tripped them up, what worked as 
+efficiency hacks, etc.
+<[Gary] GARY-S> that should be a wrap for all
+<[Doug] D.PHILIPS3> (Ok Gary, I'll call it quitzzzzzzz...)
+<[Doug] D.PHILIPS3> Just say the word.
+=== End of Steno notes. ===
+
+

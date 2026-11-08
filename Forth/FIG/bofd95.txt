@@ -1,0 +1,112 @@
+This report of the first meeting of FIG's new Board of Directors will
+appear in the January issue of Forth Dimensions.  - Brad Rodriguez
+------------------------------------------------------------------------
+
+New Faces, Fresh Approaches in New FIG Board
+A Report of the Board Meeting Nov. 27-28, 1995
+Elizabeth D. Rather
+
+The new FIG Board of Directors elected by the membership last spring has
+elected a new slate of officers and adopted new policies for 1996.
+Skip Carter, elected to the board by an overwhelming 92% of voting
+members, will become the new President.  Jeff Fox will be Vice
+President, Mike Elola will continue as Secretary, and Andrew McKewan
+will assume accounting responsibilities as Treasurer.
+
+Major policy changes include a revised membership program, opening of
+advertising privileges to companies with products that may not be
+directly Forth-related, adjustments in shipping charges for books and
+software, expanded programming job referrals, and substantially improved
+electronic services.
+
+The Board considers its top priority to be ending the deficit financing
+of the past few years by increasing revenues and cutting expenses, in
+order to continue to provide a high level of member services.  To this
+end, the Board evaluated the three major activities of FIG:  publication
+and distribution of Forth Dimensions, sales of books and software, and
+the annual FORML conference.  In each case, strategies were developed to
+increase revenues and reduce expenses without significant loss of
+service.  As a result, the 1996 budget adopted by the Board includes a
+significant allocation for "outreach" (actions designed to increase
+awareness of Forth in general and membership in particular) and a small
+surplus to cover contingencies.
+
+The most immediate impact on members will be an increase in dues,
+effective March 1, 1996, from $40/year to $45.  This modest increase is
+the first in several years.  Renewals and new subscriptions received
+prior to March 1 will be at the previous rate.  International mailing
+charges were also increased to $15 to cover actual costs.  Student rates
+remain unchanged.
+
+New membership categories were also established:  Corporate memberships,
+at $125/year, include five copies of each issue of Forth Dimensions and
+other benefits; Library memberships, also at $125, include a complete
+set of issues for the year sent in a single package at the end of the
+year plus a copy of the FORML Proceedings, in addition to regular bi-
+monthly issues.
+
+In the product arena, an analysis of shipping and handling costs led to
+a revised shipping fee schedule which will be effective immediately (see
+the price list in this issue).  Other pricing issues will be evaluated
+over the course of the year.
+
+The overall budget for production of Forth Dimensions and general
+services will be reduced significantly, by allocating more
+responsibility to volunteers, finding lower-cost alternatives for some
+services, and in some cases reducing hours.  Although it is hoped that
+less expensive production alternatives for Forth Dimensions may be
+found, it was pointed out that the major costs for this are in the labor
+for editing, formatting and layout, production and related activities.
+The Board considered electronic publication of Forth Dimensions as a
+possible cost-saving alternative.  However, unless paper production is
+discontinued altogether, production of a separate electronic edition
+actually increases editorial costs significantly, for a negligable
+reduction in postage and printing.  A recent survey of FIG members
+indicates that about 75% do not yet use on-line services regularly.
+The Board also voted to extend advertising priviledges in Forth
+Dimensions to all firms with products of interest to FIG members.  The
+previous policy limited advertising to Forth-related products.  The new
+policy is expected to offer significantly increased advertising
+revenues.
+
+The programmer job referral service recently implemented by Frank Hall
+in the FIG office will be formalized and expanded.  Any member in good
+standing may list his availability on the job market; such a listing
+will appear in the FIG Worldwide Web page for one month, and will be
+distibuted to all inquiring companies.  In addition, the job seeker may
+send a self-addressed stamped envelope and get a list of all current job
+openings.  Currently approximately 30 programmer and job listings are
+registered in the FIG office.  In addition, corporate members offering
+programming services may be listed in Forth Dimensions.
+
+As the Board recognizes the critical importance of good communication
+within the growing segment of the Forth community having access to
+online services, the Internet services provided by Skip Carter at
+taygeta.com will be expanded.  A special "domain" has been set up for
+FIG, and addresses have been set up for communicating with various
+officers and departments in FIG; for details, see the President's Letter
+in this issue.  Brad Rodriguez will officially represent FIG on the
+newsgroup comp.lang.forth.  Additional planned enhancements will be
+announced as they are implemented.
+
+Individual Board members have also assumed responsibility for various
+aspects of FIG operation, as follows:
+
+Chapter relations	Jeff Fox
+Education               Al Mitchell and Nick Solntseff
+Electronic services	Brad Rodriguez and Skip Carter
+FORML                   John Hall (Bob Reiling, manager)
+Forth Dimensions        Elizabeth Rather (Marlin Ouverson, editor)
+Office Management	John Hall (Frank Hall, office manager)
+Outreach                Al Mitchell
+Products (books and software)   Mike Elola (Frank Hall, sales and shipping)
+
+Those presently having operational responsibility in these departments,
+such as Frank Hall in the FIG office and Marlin Ouverson at Forth
+Dimensions, will continue as before under the oversight of the
+responsible Board member.
+
+The new Board unanimously wishes to extend a vote of thanks to John Hall
+for his dedicated service as President of FIG for the last several
+years.
+

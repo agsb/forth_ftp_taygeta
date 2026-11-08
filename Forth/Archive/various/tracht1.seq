@@ -1,0 +1,178 @@
+
+\ TRACH1.SEQ     BCD MULTIPLICATION USING TABLE LOOKUP  by Jose Betancourt
+/*  While in solitary confinement during imprisonment in a concentration
+camp, Jakow Trachtenberg ( 1888-? ), developed methods of mentally
+performing high speed arithmitic.  This helped to maintain his sanity in
+that monstrous captivity.
+    His method is presented in The Trachtenberg Speed System of Basic
+Mathematics by Ann Cutler and Rudolph McShane, Doubleday, 1962.
+    As an experiment, his method of mentally multiplying multi-digit
+numbers is used here to multiply unpacked BCD.  To multiply string $1 and
+$2, enter $1 $2 $*.  The result is stored in array PROD.   For example:
+
+CREATE $1 ," 123456789123456789123456789123456789123456789123456789123456789"
+CREATE $2 ," 11"
+answer is:  1358024680358024680358024680358024680358024680358024680358024679
+
+Try that on your calculator!   Note:  This application uses my local
+variable extention to F-PC.  This is found in file PFO-001.SEQ.
+*/
+
+: |   ;  IMMEDIATE      \ null definition used to clarify structure.
+                        \ adapted from G. Hawkins.
+
+CREATE PROD      HERE 128 DUP ALLOT ERASE   \ product buffer
+CREATE MULTC     HERE 128 DUP ALLOT ERASE   \ multiplicand, max 64 digits.
+CREATE MULTR     HERE 64  DUP ALLOT ERASE   \ multiplier.
+
+CREATE UNIT_TABLE     HERE 120 DUP ALLOT ERASE \ unit multiply table.
+CREATE TENS_TABLE     HERE 120 DUP ALLOT ERASE \ tens multiplication table.
+
+
+: GETC     ( adr offset --- byte )    + C@  ;  \ byte vector fetch.
+
+: UNIT*    ( multr multc -- n )   2*  UNIT_TABLE +  @  GETC  ;
+: TENS*    ( multr multc -- n )   2*  TENS_TABLE +  @  GETC  ;
+
+: UNITPART     ( n --units )   10 MOD ;
+: TENPART      ( n ---tens )   10 /MOD  NIP ;   \ NIP is OVER DROP
+
+: $>DIGITS      ( $addr ) \ convert $ at adr to digits
+    COUNT   OVER + SWAP
+    DO   I C@   48 -  I C!   LOOP  ;
+
+: $MOVE>     ( source$  dest )  OVER  C@  1+ CMOVE ;
+
+: $>BUFFERS     ( $multc $multr )  \ move strings to work buffers.
+    MULTR  $MOVE>     MULTC  $MOVE>    MULTC $>DIGITS   MULTR $>DIGITS  ;
+
+: SETUP     (  $multc  $multr--- len.multc  #mpc  #mpr  adr.mpc  adr.mpr  )
+    2DUP  $>BUFFERS       PROD 128 ERASE
+    L(  $mpc  $mpr \ length addr #mpc #mpr )  \ create stack frame.
+    L $mpc C@  IS #mpc       \   number of digits in multiplicand.
+    L $mpr C@  IS #mpr       \   number of digits in multiplier.
+    L #mpc  L #mpr +  IS length       \ max length of product.
+    ( right align multiplicand in MULTC buffer. )
+    L length  MULTC 1+   +  L #mpc -  IS addr  \ start of multc in MULTC.
+    MULTC 1+  L addr  L #mpc  CMOVE>    \ slide multc to right.
+    MULTC  L addr  MULTC -  ERASE       \  clear left hand side of multc.
+    L length 1-    L #mpc   1-  L #mpr 1-  MULTC 1+  MULTR 1+
+    S( # 5 )    \ leave parameters on top of stack.
+;
+
+\ * algorithim  *
+
+: MULT*      L( >mpc $mpc $mpr #mpc #mpr psum length \ num )  \ inner loop.
+    0   L #mpr     \ for each multr digit.
+    DO    I  L $mpr  GETC    IS num
+    |     L >mpc   L $mpc   GETC     L num    UNIT*
+    |     AT psum  +!    \ add to partial sum.
+    |     ++ >mpc      L >mpc   L length >   \ used all digits in multc ?
+    |     IF   LEAVE
+    |     |  ELSE  L >mpc   L $mpc   GETC   L num  TENS*
+    |     |  |     AT psum +!   \ add to partial sum.
+    |     THEN    -1
+    +LOOP     L psum      S( partialsum  )
+;
+
+: $*   ( $multc $multr---- adr.product )      \   do string multiplication.
+    SETUP 0 0 0   L( length #mpc #mpr $mpc $mpr  psum carry >prod )
+    0  L length    DUP IS >prod   ( for each pos in prod starting at right)
+    DO    I  L $mpc L $mpr   L #mpc L #mpr  00  L length
+    |     MULT*    ( partialsum ) \ multiply using each digit of multiplier.
+    |     L carry +  IS psum           \ new partialsum.
+    |     L psum TENPART   IS carry    \ new carry.
+    |     L psum   UNITPART            \  new product digit.
+    |     L >prod   PROD   +   1+  C!  \ save digit.
+    |     --  >prod    -1
+    +LOOP
+    ( ASCII .  PROD  L length  +  2+  C! \ delimit with decimal )
+    PROD   S( product.adrs )
+;
+
+/*   The factoring of these two words is not too good.  MULT* requires too
+many input arguments.  This results in $* having to pass all of these
+parameters, which takes up valuable time.   Using the stack more efficiently
+would avoid this.  But, using more stack juggling and smaller definitions
+would have required a slower programming cycle and greater run-time
+nesting.  Further, a change in the algorithim or data structure may have
+made such stack finesse useless.
+*/
+
+: marker  ;     \  tables initialization  --------------------------------
+
+\  Illyfe vector....array for multiplication lookup table
+\ Form:  { |2addr0|2addr1|...|2addr9|0*0...0*9|1*0...1*9|.....|9*0|..9*9| }
+\          |<--- 20 bytes ------>   |      <----  arrays ------>        |
+
+: fill_array     (  position   cfa.part   num --- newposition )
+    L(  >position vpart num )
+    10  0 DO
+          |    L num I *  ( product )  GO vpart ( unit or ten part )
+          |    L >position  C!  \ store it.
+          |    ++  >position    \ next position.
+          LOOP
+          L >position    S(  newposition )  ;
+
+: fill_table    ( cfa.part  cfa.array )  \ vectored function.
+    L( vpart vadr \  >pos )   GO vadr   20 + is >pos ( start at first array )
+    10  0
+    DO
+    |    L >pos   I 2*  GO vadr   +  !    \ set pointer.
+    |    L >pos   L vpart I  fill_array   \ create array.
+    |    IS >pos                          \ new address.
+    LOOP    S() ;
+
+' UNITPART   ' UNIT_TABLE     fill_table    \  fill unit table.
+' TENPART    ' TENS_TABLE     fill_table    \  fill tens table.
+
+FORGET marker     \  forget table filling words. ---------------------------
+
+\   A simple test.
+
+CREATE $1  ," 234"
+CREATE $2  ," 846"
+
+: TEST     $1 $2  $*   BEEP    80 DUMP  ;  \ answer should be 197964.00
+
+
+/*  diagram of the UT multiplication of 234 and 846 during the 0 * 6 step.
+
+               |---------------------------------|
+               |    |------------------------|   |
+               |    |    |---------------|   |   |
+               |    |    |\              |   |   |
+               |    |\   |  \            |   |   |
+               |\   |  \ U    T          |   |   |
+               |  \ U    T               |   |   |
+               U    T                    |   |   |
+      0   0    0    2    3    4     *    8   4   6
+      -------------------------
+      1   9    7    9    6    4
+               |
+               \/
+               7= (6 U* 0)+(6 T* 2)+(4 u* 2)+(4 T* 3)+(8 U* 3)+(8 T* 4)
+
+ If the index finger represents the unit and the middle the tens, multiplying
+is just moving the fingers to the right and adding up the partial products.
+A partial product is either a Unit or Tens product.  A unit is formed by
+multiplying two digits and only keeping the unit digit of the product.
+Likewise for the Tens product.
+        With concentration (!), very large numbers can be multiplied mentally
+without having to write down the tedious shifted products as taught in
+school.  An example cited in the book is of a young boy multiplying a 10
+digit number by a 12 digit number in 70 seconds. The program presented here
+does the same problem in about 62mS on a PC-AT.
+*/
+
+/*   RESULT OF EXPERIMENT
+Like all BCD operations this too is slow.  However, this method though useful
+to do "mental" multiplication and to motivate school students, is not
+too good as a computer method since it must perform more multiplications (
+table lookups ) compared to the long multiplication taught in school.  In
+the above example 29 table look-ups must be done versus 9 by the other
+method.  Perhaps there is a way to modify this string multiplication method
+for more efficiency.  How would it be on parallel hardware?
+*/
+
+

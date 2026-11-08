@@ -1,0 +1,274 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 02/19/89   Time: 21:15EST
+
+Attendees:[[Jax] FIGCHAPTERS]
+          [[Dennis] D.RUFFER]
+          [[Dave] DHWEINSTEIN]
+          [[Kevin] APPERT]
+          [R.BERKEY]
+
+Minutes:
+
+<[Dennis] D.RUFFER> ok, I think that did it <grin>  now, Dave, would you
+          repeat what you said about the conf for the record?
+
+<[Dave - Conf] DHWEINSTEIN> The conference was a great success. The
+          papers were interesting and well presented.  The proceedings
+          will be a worthy inclusion in any Forth library.  (And,
+          speaking for the record) Thanks to all who attended and to all
+          those who wrote papers, whether or not they were able to
+          attend.
+
+<[Dennis] D.RUFFER> can you give us a quick run down on what was
+          presented?  Will the proceedings be in electronic Form???
+          <hoping>
+
+<[Dave - Conf] DHWEINSTEIN> Papers included finite state automata,
+          mutltitaskers (many and elegant), error handling, interrupts
+          and interrupt handling, virtual memory without support
+          hardware, local words,  Forth applications, and Forth control
+          methods.
+
+<[Dennis] D.RUFFER> How soon do you anticipate getting the proceedings
+          out?
+
+<[Dave - Conf] DHWEINSTEIN> The proceedings will be published by the ACM
+          in 3 or 4 months (hopefully).  And of course, the computer
+          with 17 megs of PD software to copy from was a ncie idea.
+
+<[Dennis] D.RUFFER> Let FIG know, and I'm sure they will carry it (if
+          that is allowed)
+
+<[Dave - Conf] DHWEINSTEIN> (I have a whole bunch of goodies on disk
+          now)  It will be sold by the ACM itself.
+
+<[Dennis] D.RUFFER> I thought that was the case :-(
+
+<[Dave - Conf] DHWEINSTEIN> And it looks like next year's conference
+          will be in the Dallas-Ft. Worth area.
+
+<[Dennis] D.RUFFER> 17Megs on whose computer?
+
+<[Dave - Conf] DHWEINSTEIN> Dan brought his computer, and Warren Bean
+          brought the programs.  Everything from the original F83 to
+          FPC2.25  And everything in between. Plus things like Fifth,
+          Pistol, Sixth, and even (surprise) SmallTalk.
+
+<[Dennis] D.RUFFER> anything new that we don't have here?
+
+<[Dave - Conf] DHWEINSTEIN> Possibly. I don't think GEnie has F-PC 2.25
+          yet. I haven't even unarced it (it looks bigger then F-PC 2.15
+          which I am using now).
+
+<[Dennis] D.RUFFER> could you maybe upload it when you get a chance?
+
+<[Dave - Conf] DHWEINSTEIN> I'll try.
+
+<[Dennis] D.RUFFER> great!  Ok, what else we want to talk about tonight?
+
+<[Dave - Conf] DHWEINSTEIN> Hmmn. I dunno.
+
+<[Dennis] D.RUFFER> it's supposed to be a tutorial, is there anything I
+          know that you guys don't <grin> (I doubt it).
+
+<APPERT> is here.
+
+<[Jax] FIGCHAPTERS> Talk about Tuesday Board Meeting.
+
+<[Dave@Home] DHWEINSTEIN> Hi Kevin.
+
+<[Dennis] D.RUFFER> again Jack, tuesday is NOT a board meeting
+
+<[Kevin] APPERT> hi Dave, all
+
+<[Dennis] D.RUFFER> Hi Kevin
+
+<[Kevin] APPERT> hello Dennis  Jax making trouble again? :)
+
+<[Dennis] D.RUFFER> Jack the Tuseday before the 4th Saturday of every
+          month is the FIG BUsiness group meetings.   There they take
+          care of the "real" business end of FIG
+
+<[Jax] FIGCHAPTERS> Woof. Ok. WHen do i get to chat with board
+          electronically.
+
+<[Dennis] D.RUFFER> whenever we have the retreat.  Date has not been set
+          yet :-(
+
+<[Jax] FIGCHAPTERS> Everyone on my international mail list is waiting
+          for some news!
+
+<[Dennis] D.RUFFER> I wish I had some new to tell them  But we are all
+          sort of hanging in limbo right now
+
+<[Dave] DHWEINSTEIN> The JFAR's are printed and out! The Rochester
+          Proceedings are done! Alles is gut!
+
+<[Dennis] D.RUFFER> You were right when you said we had no direction
+          right now  JFAR IS OUT???? what a surprise :-)
+
+<[Dave] DHWEINSTEIN> Yep.
+
+<[Jax] FIGCHAPTERS> I guess that's my news. "FIG is in Limbo"
+
+<[Dennis] D.RUFFER> Was Larry there and handing them out Dave?
+
+<[Dave] DHWEINSTEIN> Someone at the conf asked where Larry was. I said,
+          "He'll be here when the JFAR get's here". Five minutes later
+          he showed up with Box under arm.
+
+<[Kevin] APPERT> anybody have any strong feelings about overflow
+          handeling
+
+<[Dave] DHWEINSTEIN> Yep. I have the Rochester proceedings in my hot
+          little hands right now.
+
+<[Dennis] D.RUFFER> you mean in math ops Kevin?
+
+<[Kevin] APPERT> ?yup
+
+<[Dennis] D.RUFFER> Larry had the Rochester proceedings at the FIG
+          Convention  What do you want to do with the overflows Kevin?
+
+<[Kevin] APPERT> not something Forth does much about, in my expeeience
+
+<[Jax] FIGCHAPTERS> gnite all ... next stop sausalito ... dennis, let me
+          know if FIG Board wants to chat ... Dave, talk to me on RCFB.
+          gnite kev
+
+<[Jax] FIGCHAPTERS> has left.
+
+<[Kevin] APPERT> 'night Jax  oops, too slow
+
+<[Dennis] D.RUFFER> me too
+
+<[Dave] DHWEINSTEIN> Aren't you glad you're name is not Salman Rushdie?
+
+<[Kevin] APPERT> as I was saying...
+
+<[Dennis] D.RUFFER> what do you want to do with overflows Kevin?
+
+<[Kevin] APPERT> who?
+
+<[Dennis] D.RUFFER> the guy who wrote Satanic verses
+
+<[Dave] DHWEINSTEIN> Salman Rushdie. Author of "The Satanic Verses"  Who
+          has an 8 million dollar price on his head.
+
+<[Kevin] APPERT> it's a big whole in the language, near as I can tell
+
+<[Dennis] D.RUFFER> Mohamid is not too happy right now <grin>
+
+<[Dave] DHWEINSTEIN> Time for me to move on as well.
+
+<[Kevin] APPERT> oh, him.  The eye-at-hole-a  has sold a lot of books
+          for him
+
+<[Dave] DHWEINSTEIN> has left.
+
+<[Dennis] D.RUFFER> bye Dave???
+
+<[Kevin] APPERT> the two things you can do with overflows are setting a
+          flag and an "abort" sort of thing...
+
+<R.BERKEY> is here.
+
+<[Kevin] APPERT> perhaps making note of where you came from which is not
+          a bad thing... hi R.
+
+<[Dennis] D.RUFFER> hi bob, we're talking about overflows
+
+<[Kevin] APPERT> for any abort or interrupt to do  I just said you can
+          set a flag or abort, I have not seen a whole lot of either
+          done ever  16 bit arithm. is easy to overflow in many problems
+
+<[Dennis] D.RUFFER> to do something about it Kevin, we would have to
+          have an error mechanism, which we are lacking also
+
+<[Kevin] APPERT> I disagree.  Abort has always been good  for me  some
+          of my aborts know where they come from...
+
+<[Dennis] D.RUFFER> it sounds like a design problem Kevin, if the number
+          will overflow, you should use 32 bit ops
+
+<[Kevin] APPERT> how do you know in advance???  everybody makes mistakes
+
+
+<[Dennis] D.RUFFER> you "think" it through  or  when it fails you "fix
+          it" <grin>
+
+<[Kevin] APPERT> it's nice to have a little something to fall back on
+          some of my code only has the opertunity to fail in low earth
+          orbit
+
+<[Dennis] D.RUFFER> there are a lot of "nice" things we could add to
+          Forth, but would it still be forth when we got done?
+
+<R.BERKEY> There are probably a lot of "nice" things we should be adding
+          routinely,  but we still don't know about!
+
+<[Kevin] APPERT> you are welcome to add whatever you want, that's the
+          great part about forth
+
+<[Dennis] D.RUFFER> there are those who would disagree Bob
+
+<R.BERKEY> disagree?
+
+<[Dennis] D.RUFFER> some people only "need" the minimal Forth
+
+<[Kevin] APPERT> the other thing about aborts that I have seen, in
+          addition to knowing where  they where when they bombed out...
+          is one which returns there after it does some attempt at fix-
+          up
+
+<R.BERKEY> Kevin,  Colburn and Schleisiek wrote papers in the 1983 FORML
+          about error trapping.
+
+<[Kevin] APPERT> somebody gave a talk about that at silicone valley fig
+          a year or so back  don't recall seeing it, R.  I'll have a
+          look
+
+<[Dennis] D.RUFFER> I've seen a lot of stuff done with errors, but
+          little that I could use in an application.  Most of it was for
+          the programmer, to give him hints about how to fix the
+          problem.
+
+<R.BERKEY> A manager once told me, get rid of all of the ABORT" s,
+          unless you really  want a system programmer to be consulted.
+
+<[Kevin] APPERT> most forth code is ment to be used by the guy who
+          wrote it
+
+<[Dennis] D.RUFFER> I disagree Kevin, most Forth code is embeded in
+          turnkeyed applications where everything is custom and bears
+          little resemblence to Forth once it is done.
+
+<[Kevin] APPERT> It's hard to get out of that mindset into writing
+          something ...  maintainable or usable by somebody you have
+          never met.  oops dinners ready.  gnight all
+
+<[Kevin] APPERT> has left.
+
+<[Dennis] D.RUFFER> again too late
+
+<R.BERKEY> It'swell, i think I shall follow
+
+<[Dennis] D.RUFFER> it's been that way all night  thanks for droping by
+          Bob
+
+<R.BERKEY> I've left some messges for you in the standardss conference
+
+<[Dennis] D.RUFFER> I'll give them a look, and probably reply (as usual
+          :-)
+
+<R.BERKEY> bye
+
+<R.BERKEY> has left.
+
+=== End of Steno notes. ===
+
+

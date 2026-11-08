@@ -1,0 +1,361 @@
+
+ Minutes of the FIGGY BAR Conference
+   Date: 25/06/89  at  19:30 CDT
+          
+Attendees:
+[D.RUFFER]  
+[[Dave] DHWEINSTEIN]
+[[Kevin] APPERT]
+[[Steno] FIGCHAPTERS]
+[[Gary] GARY-S]
+[R.PEPIN2]
+  Items disscussed: Forth thread hashing scheme,metacompiling,need for advanced
+                    text/reference,YACC is/is not heart of C,disecting F-PC,
+                    Connecticut chapter, CP/M F83
+                    ** with thanks to jax for capture and pre-edit
+Minutes:
+<D.RUFFER> there are 8 pointers as I said
+<[Dave] DHWEINSTEIN> (I'm asking because I use enormous numbers of
+vocabularies)
+<D.RUFFER> each vocabulary does a hash scheme on the first letter of
+<D.RUFFER> the name to determine which "thread" to use.
+<[Kevin] APPERT> is here.
+<[Kevin] APPERT> hi Jax, Dennis, Dave
+<D.RUFFER> then, when you define a new vocabulary....
+<D.RUFFER> you tell it the offset within the threads
+<D.RUFFER> thus a word starting with a in FORTH, uses the first thread
+<D.RUFFER> but the same word in EDITOR uses the second thread
+<D.RUFFER> this gives a farely equal distribution to the hash tables...
+<D.RUFFER> and make it very simple to follow the threads
+<D.RUFFER> you understand Dave?
+<[Dave] DHWEINSTEIN> Yes.
+<[Dave] DHWEINSTEIN> I just don't like the idea of a limit on the number of
+vocabularies.
+<D.RUFFER> yes, it has been that way since I can remember, but it does work
+<D.RUFFER> yes, not having more is a pain, sometimes, but you get used to it
+<grin>
+<[Steno] FIGCHAPTERS> Dennis ...
+<[Dave] DHWEINSTEIN> Heh. It'd kill most of my code. I use a module system
+which is built around vocabularies. 
+<[Steno] FIGCHAPTERS> is it not so that pF is one of the most portable Forths
+around?
+<D.RUFFER> yes, I can run the same polyForth on many processors
+<D.RUFFER> almost all the utilities are the same or similar
+<[Kevin] APPERT> portable in the sense that they have many implementations
+from 1802 to vax
+<D.RUFFER> I was even able to pick up 68K poly with no trouble
+<[Steno] FIGCHAPTERS> What is the threading scheme in 68k pF?
+<[Kevin] APPERT> not in the sense that they agree with everybody else's idea
+of what forth should be
+<D.RUFFER> the thread works the same in ALL poly's
+<D.RUFFER> Poly is portable among itself.  That is as much as you can hope for
+right now
+<[Steno] FIGCHAPTERS> No JSR Forths?
+<[Kevin] APPERT> did we give Jenni the night off?
+<D.RUFFER> no, jack can't call jenni, but has agreed to conduct this for me
+<[Kevin] APPERT> JSR in pF? nope
+<D.RUFFER> I have company right now, and need to leave soon
+<[Dave] DHWEINSTEIN> Regarding Thursdays convo...
+<[Dave] DHWEINSTEIN> I've been digging through the Metacompiler and source for
+F-PC. I can see...
+<[Dave] DHWEINSTEIN> ...where people could get confused.
+<D.RUFFER> well, while you guys discuss it, I need to sign off
+<[Kevin] APPERT> as I said, it would be nice if there were an "advanced topics
+in forth"
+<[Dave] DHWEINSTEIN> Bye Dennis
+<D.RUFFER> feel free to stay as long as Jack can keep you entertained
+<[Kevin] APPERT> textbook. night Dennis
+<D.RUFFER> good night, and have fun <grin>
+<D.RUFFER> poof
+D.RUFFER> has left.
+<[Kevin] APPERT> but I guess that the current assumptions are 
+<[Kevin] APPERT> 1) it wouldn't sell (limited audience)
+<[Dave] DHWEINSTEIN> Inside F-83??
+<[Kevin] APPERT> 2) I own that (propriatary information)
+<[Kevin] APPERT> 3) you either have it or you don't
+<[Kevin] APPERT> I don't think there is a clear...
+<[Kevin] APPERT> explanation of metacompilation in Inside, is there?
+<[Dave] DHWEINSTEIN> Dunno. I don't have a copy. 
+<[Steno] FIGCHAPTERS> Yes there is.
+<[Kevin] APPERT> there is also Cassidy's book "Meta-Forth" in which ...
+<[Kevin] APPERT> he gives the source for a meta 8080 fig-Forth do-it-yourself
+kit...
+<[Kevin] APPERT> and a couple of pages of explanation, but it has confused
+more people than it has helped, I fear
+<[Steno] FIGCHAPTERS> Metacompilation isn't easy ...
+<[Kevin] APPERT> I guess the biggist reason for "meta-phobia" is the learning
+curve...
+<[Steno] FIGCHAPTERS> If Forth were more commonly in use ...
+<[Steno] FIGCHAPTERS> there would be scads of books about it ...
+<[Steno] FIGCHAPTERS> but every metacompiler is different.
+<[Steno] FIGCHAPTERS> And there is already a book about "a metacompiler" ...
+INSIDE F-83.
+<[Steno] FIGCHAPTERS> Also ...
+<[Kevin] APPERT> and a corrolary that the FIG versions demonstrate you can
+produce a Forth with stone knives and bearskins
+<[Steno] FIGCHAPTERS> _Footsteps in an Empty Valley_ about the cmForth meta.
+<[Dave] DHWEINSTEIN> The problem is the same one Forth has had for too
+long...too much knowledge in the form of an oral history rather than a written
+record.
+<[Kevin] APPERT> well, some people like there assemblers with the opcode
+first, exactly the opposite of the way god intended it
+always a disadvantage that Forth has been oral.
+<[Steno] FIGCHAPTERS> That is not always a disadvantage that Forth has been
+oral.
+<[Kevin] APPERT> oops, there above should be their
+<[Kevin] APPERT> how do you mean, Jax
+<[Steno] FIGCHAPTERS> Well, look around you ...
+<[Steno] FIGCHAPTERS> Are you or are you not surrounded by some very
+insightful Forth programmers ...
+<[Steno] FIGCHAPTERS> who have had to do it themselves ....
+<[Steno] FIGCHAPTERS> Honestly, 
+<[Steno] FIGCHAPTERS> I meet a lot of C programmers whose wits have been
+dulled ...
+<[Steno] FIGCHAPTERS> by being spoon fed. They start to think ...
+<[Kevin] APPERT> argument 3) above .  I call it "the right stuff".
+<[Steno] FIGCHAPTERS> that life OWES it to them.
+<[Dave] DHWEINSTEIN> Yeah. The Forth learning curve (and relative lack of
+written learning aids) puts hair on your chest. Which it takes from your HEAD!
+<[Steno] FIGCHAPTERS> Quite frankly, I knew nothing about Forth three years
+ago, and I have written my own metacompilers since. So it is not that big a
+deal, You just look at the source and the examples and peruse the literature
+and it comes.
+<[Dave] DHWEINSTEIN> Just look at F-PC. I've been using it (albeit not
+fulltime as I have to work) for 6 months, and I still don't know its every
+nook and cranny.
+<[Steno] FIGCHAPTERS> The hardest thing, in my mind, is UM/MOD.
+<[Kevin] APPERT> why is that, Jax 
+<[Kevin] APPERT>      ?
+<[Dave] DHWEINSTEIN> It is a matter of how much time you have to immerse
+yourself in the material. Unfortunately because of the work involved, we often
+lose many people who are interested in, but not yet converted to, the
+language.
+<[Steno] FIGCHAPTERS> Well, I have only had one programming job in the last
+three years that wasn't FOrth, so I have had that time, lucky I guess ...
+UM/MOD <[Kevin] APPERT> let them eat BASIC
+<[Steno] FIGCHAPTERS> UM/MOD because YOU go code a 64-by-32 divide in 68000
+asm!
+<[Dave] DHWEINSTEIN> Hehehehehehehehehehehehh. 
+<[Kevin] APPERT> oh.  I plagarize that sort of thing when possible.
+<[Steno] FIGCHAPTERS> I'm just telling you what gave ME the most trouble.
+<[Steno] FIGCHAPTERS> It wasn't the metacompiler, belive me!
+<[Steno] FIGCHAPTERS> The metacompiler is the highest of all high-level apps
+you can code in Forth.
+<[Kevin] APPERT> oh, I see. I didn't get the point that it was that and not
+the Meta
+<[Steno] FIGCHAPTERS> Forth is a great HLL.
+<[Steno] FIGCHAPTERS> It's the asm parts that get tricky! You are committing
+yourself at the fundamental level to an element that will pervade your entire
+Forth concept.
+<[Dave] DHWEINSTEIN> The fact that Forth can compile itself is not in and of
+itself any significant characteristic. Most languages are capable of compiling
+themselves.
+<[Steno] FIGCHAPTERS> I didn't mean it was "significant" ... it's just that in
+metacompilation ...
+<[Steno] FIGCHAPTERS> you use "every trick in the book" .
+<[Kevin] APPERT> did we have a topic tonight? (iff so, I feel obligated to
+type a few words about it)
+Roll your own.
+<[Steno] FIGCHAPTERS> Roll your own.
+<[Kevin] APPERT> not since college
+<[Kevin] APPERT> :)
+<[Dave] DHWEINSTEIN> Ah well...my $3 is almost up...
+<[Kevin] APPERT> I think the signifigant thing, Dave...
+<[Dave] DHWEINSTEIN> Yes?
+<[Kevin] APPERT> is not that Forth compiles itself...
+<[Kevin] APPERT> but how many Forthers get involved...
+<[Kevin] APPERT> at the level of producing new...
+<[Kevin] APPERT> Forths in this fashion...
+<[Dave] DHWEINSTEIN> Very true. There are probably more Forth implementations
+than there are Forth programmers.
+<[Kevin] APPERT> how many C programmers write C compilers...
+<[Kevin] APPERT> (YACC?  YECH!)
+<[Steno] FIGCHAPTERS> Good point ...
+<[Kevin] APPERT> tee-hee
+<[Steno] FIGCHAPTERS> how many years does a C programmer study ...
+<[Steno] FIGCHAPTERS> before s/he can explain YACC CC and UNIX ...
+<[Dave] DHWEINSTEIN> It took me 2 weeks to learn C, Jax.
+<[Kevin] APPERT> could you write a parser to compile C in that time, Dave?
+<[Steno] FIGCHAPTERS> I learned Forth in about that time, Dave ... knowing the
+language is like saying "I can speak French"
+<[Steno] FIGCHAPTERS> You don't understand C as she is spoke if you don't
+understand YACC.
+<[Dave] DHWEINSTEIN> No. But then, I couldn't compile Forth in that time
+either.
+<[Steno] FIGCHAPTERS> YACC is at the heart of the modern C compiler.
+<[Steno] FIGCHAPTERS> How long have you been studying C, dave?
+<[Dave] DHWEINSTEIN> YACC is not C. In fact, dealing with many many thousands
+of lines of C code on a regular basic, I never see YACC code.
+<[Dave] DHWEINSTEIN> "Studying". I've programming in C on and off for about 4
+years.
+<[Steno] FIGCHAPTERS> Yes, but imagine writing the parser for   cc   without
+it?
+<[Kevin] APPERT> C = yet another over-complex parser
+<[Dave] DHWEINSTEIN> Never "studied" the language since I learned the syntax.
+well, dave, in many ways ...
+<[Steno] FIGCHAPTERS> well, dave, in many ways ...
+<[Dave] DHWEINSTEIN> cc is a very primitive compiler. 
+<[Steno] FIGCHAPTERS> you are much more typical of the professional programmer
+...
+<[Steno] FIGCHAPTERS> than the rest of us are ....
+<[Steno] FIGCHAPTERS> so we should examine the way you view things for
+pointers ...
+<[Kevin] APPERT> the bastard descendant of an over-sexed macro-stamping
+assembler!  a lot like bliss in that respect
+<[Steno] FIGCHAPTERS> since the Forther's curse is to be perenially out of
+touch with reality!
+<[Kevin] APPERT> chuckle
+<[Dave] DHWEINSTEIN> Well...I find it interesting that 99% of the Forth code I
+write is language extensions.
+<[Dave] DHWEINSTEIN> Since I have relatively little control over the C code I
+write ("We need this yesterday!"), I use Forth to explore.
+<[Steno] FIGCHAPTERS> The classic advice about Forth is: ....
+<[Steno] FIGCHAPTERS> First you write an application-specific language in
+Forth, then you write your application.
+<[Dave] DHWEINSTEIN> It gives a different mindset. I.E. I've been interested
+in Smalltalk style object oriented programming. So I designed some syntax, and
+I'm busy writing a Forth extension for it. (Should be working in a week or
+two).
+<[Dave] DHWEINSTEIN> (Some of the implementation specific details are the
+reason I'm hip deep in the F-PC source code)
+<[Kevin] APPERT> all there is in Forth is language extensions...
+<[Steno] FIGCHAPTERS> The thing to remember about F-PC ...
+<[Steno] FIGCHAPTERS> is that it is a beautiful suit of clothes tailored to a
+hunchbacked troll.
+<[Kevin] APPERT> chuckle.  why do you say that, Jax?
+<[Steno] FIGCHAPTERS> Because ...
+<[Dave] DHWEINSTEIN> Hmmnn....lemme guess...you aren't fond of segmented
+architecture are you Jax?
+<[Dave] DHWEINSTEIN> (needless to say I agree...segments drive me mad)
+<[Steno] FIGCHAPTERS> the two aspects, the two SALIENT aspects of F-PC ...
+<[Steno] FIGCHAPTERS> are a) the "Turbo-like" development environment ...
+<[Kevin] APPERT> "segments are for earthworms" (Dr. Alen Furman)
+<[Steno] FIGCHAPTERS> and b) the internals, custom-designed for the
+brain-damaged Intel architecture.
+<[Steno] FIGCHAPTERS> F-PC is beautiful, but you have to ask yourself ...
+<[Kevin] APPERT> just think how much trouble it would be, if there were no
+hardware segments, to add them in software!  (just kidding folks)
+<[Steno] FIGCHAPTERS> "What if these guys had devoted all that energy to
+something genuinely useful?"
+<[Steno] FIGCHAPTERS> Like a PD multiuser Forth for 80386 protected mode.
+<[Dave] DHWEINSTEIN> It is useful, Jax. It is a rich environment with which to
+introduce the language. And that is very important.
+<[Dave] DHWEINSTEIN> As for a 386 protected mode Forth...I don't have a
+#^$%$#%$%^ 386. :-)
+<[Steno] FIGCHAPTERS> And it is much more confusing in its internals than F83.
+<[Kevin] APPERT> there are too many IBMPC,XT,AT clones out there for F-PC not
+to be usefull
+<[Steno] FIGCHAPTERS> I say, let's punish the Chinese and ship the damn things
+to *them*! :-)
+<R.PEPIN2> is here.t
+<[Dave] DHWEINSTEIN> Hullo R.
+<[Kevin] APPERT> hi, R.
+<[Dave] DHWEINSTEIN> Naw...give them Ada!
+<[Kevin] APPERT> new to Forth?  
+feel of F-PC can attract newusers to Forth.
+<[Steno] FIGCHAPTERS> Though of course, you guys are right in that the "cozy"
+feel of F-PC can attract newusers to Forth.
+<[Steno] FIGCHAPTERS> .
+<[Kevin] APPERT> give them ADA on intel chips!
+<[Steno] FIGCHAPTERS> R.P. ... give us a /NAM!
+<R.PEPIN2> hello all
+<[Dave] DHWEINSTEIN> I think it will. It is a very good environment for
+learning the language, and it provides full source for those who want to learn
+more.
+I<[Dave] DHWEINSTEIN> I've been pushing it as the way to learn Forth. 
+<[Steno] FIGCHAPTERS> It may be the way to learn to USE Forth , but if you
+want to understand internals, you're really better of starting with F83.
+<[Dave] DHWEINSTEIN> And it is being used "In the Real World". If I remember
+correctly, it is being used at the Baltimore Sun (along with the RTX 2000).
+<[Kevin] APPERT> or maybe even FIG!
+<[Steno] FIGCHAPTERS> No, FIG is kludgy and difficult to understand compared
+to F83.
+<[Kevin] APPERT> what do they do with it at the Sun, Dave?
+<R.PEPIN2> do any of you operate on amiga 
+<[Dave] DHWEINSTEIN> Well I've been wading through its internals...and they
+aren't ALL that bad (but then I've been wading through the heart of the Unix
+kernel so my opinion of what is and is not _that_ bad is skewed).
+<[Steno] FIGCHAPTERS> Right here, bro.
+<[Steno] FIGCHAPTERS> Amiga spoken here.
+<[Dave] DHWEINSTEIN> It is in category 11 (Jobs). They are using it for
+typesetting I believe.
+<R.PEPIN2> i run f83 on cpm
+<[Kevin] APPERT> perhaps, but it is simple (FIG) and does not have things like
+a hashed, threaded dictionary to get in the way 
+<[Steno] FIGCHAPTERS> But the source is in asm.
+<[Steno] FIGCHAPTERS> Yes, R.P?
+<R.PEPIN2> i have joined th national fig group but do not know of any chapters
+in CT yet
+<[Kevin] APPERT> nope, there is 6502 source in the installation manual, and
+8080 source in Cassidy's book, in Meta
+<[Steno] FIGCHAPTERS> Connecticut?
+Call Charles C<R.PEPIN2> yeah
+<[Kevin] APPERT> and Charles Curley may be convinced to sell you a FIG-oid
+forth source for 68000
+<[Steno] FIGCHAPTERS> Call Charles Krajewsi, (203) 344-9996
+<[Steno] FIGCHAPTERS> Central Connecticut FIG.
+<[Dave] DHWEINSTEIN> Ah well. The great GEnie bill in the sky says its time to
+head for home. See y'all Thursday.
+<R.PEPIN2> thanx i have that name rom the forth interest bok but no
+<[Kevin] APPERT> bye , Dave
+<GARY-S> is here.
+<[Steno] FIGCHAPTERS> Let me look again.
+<[Dave] DHWEINSTEIN> (stops in mid-logoff)
+<[Steno] FIGCHAPTERS> Hang tough, RP. while I check my files.
+<[Kevin] APPERT> hi Gary
+<[Gary] GARY-S> hi kev
+<[Kevin] APPERT> he has a bastard file, a crosscut file, a shoemakers' file..
+<[Dave] DHWEINSTEIN> A bibliophile
+<[Steno] FIGCHAPTERS> You're in my bastard file, Kev! 
+<[Steno] FIGCHAPTERS> ... :-)
+<[Steno] FIGCHAPTERS> anyway, you say RP, that Chuck K. don't Forth no more?
+that's the latest I have, I can check and email you later.
+<[Steno] FIGCHAPTERS> that's the latest I have, I can check and email you
+later.
+<[Kevin] APPERT> thanks!  we are all judged in the end by the quality of the
+people we offend
+<[Steno] FIGCHAPTERS> Harry S. Truman on his enemies: "I wouldn't be without
+them".
+<R.PEPIN2> are you haiare can you offer anyi sem to be walking on your talk
+<[Steno] FIGCHAPTERS> no, you aren't it's just the GEnie display. Just type.
+<[Steno] FIGCHAPTERS> It doesn't fire off on our screens till you hit <CR>
+<R.PEPIN2> nonsense talk that tiok i am having tronloading files from genie
+<[Gary] GARY-S> I just realized this ship has no captain 
+<[Kevin] APPERT> you need a terminal emulator with split screen
+<[Steno] FIGCHAPTERS> I resemble that remark!
+Yo<[Dave] DHWEINSTEIN> Yep. Jax is taking Jennifer's role.
+<[Steno] FIGCHAPTERS> You are having trouble downloading?
+<R.PEPIN2> yes i am runing on cpm with a m7-1650 terminal prog
+<[Kevin] APPERT> so you can watch us babel and type at the same time.
+aha.
+<[Dave] DHWEINSTEIN> Ok. This time I do need to head off. See y'all in time
+for the Thursday RTC asked about Amiga.
+<[Gary] GARY-S> No Leonard I presume
+<[Steno] FIGCHAPTERS> what about Amiga? You asked about Amiga. That is much
+easier to handle downloading.
+<[Kevin] APPERT> type /name Bob or something , R.
+<[Dave] DHWEINSTEIN> He's on vacation
+<[Gary] GARY-S> cp/m with m7 also super easy
+<R.PEPIN2> the aa is mons machine - donouch
+<R.PEPIN2> this is irish i think
+<[Steno] FIGCHAPTERS> RP, you had better sneak in there and use the Amiga ...
+you'll grow hair on your palms if you use CP/M too long!
+<[Gary] GARY-S> what is your prob with modem 7
+<[Dave] DHWEINSTEIN> has left.
+<[Gary] GARY-S> I'm not on long tonight so speak now or sit on it
+<[Steno] FIGCHAPTERS> So what did Charles Krajewski say when you called him
+about Connecticut FIG
+<[Steno] FIGCHAPTERS> hi gary.
+<R.PEPIN2> modem 7 does not answer doemodem 7 o answer at his number lately
+<[Kevin] APPERT> 'tis good to see you, Gary
+<R.PEPIN2> this is good by for now thanx for help i will check on chapter
+<[Steno] FIGCHAPTERS> aha. disconnected or just rings, no answer?
+<[Steno] FIGCHAPTERS> I will check up on this.
+<R.PEPIN2> has left.
+[Steno] FIGCHAPTERS> Anybody have any closing shots
+<[Steno] FIGCHAPTERS> I am going to shut down my capture.
+<[Kevin] APPERT> nope
+<[Gary] GARY-S> bye
+__________________________<end>_______________________________________________
+
+

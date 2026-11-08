@@ -1,0 +1,305 @@
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 03/23/89   Time: 22:31EST
+
+Attendees:
+[[Gary] GARY-S]
+[[Len] NMORGENSTERN]
+[[KAOS] APPERT]
+[[robert] R.BERKEY]
+[L.FORSLEY]
+
+ Items discussed: NCFB being killed, Rochester Conf June 20-25, Sergei Baranoff
+                  is Rochester lead guest,Forth in the Eastern Bloc,Forth in
+                  print,COBOL overview,DDJ,TCJ,ESP,BYTE panned,Standards
+Minutes:
+<NMORGENSTERN> is here.
+<[Len] NMORGENSTERN> Hi GaryF10 to re-enter menu
+<[Gary] GARY-S> Len, how are you tonite ?
+<[Gary] GARY-S> Why did I just get macro'd ?
+<[Len] NMORGENSTERN> Fine but I'm having macro problems I got a newc
+<[Len] NMORGENSTERN> com file & am trying to set it up. It is Mirror III
+<[Len] NMORGENSTERN> an upgrade of Mirror II.
+<[Len] NMORGENSTERN> ...It's convenient but complicated.
+<[Gary] GARY-S> Now the whole world knows F10 is your menu function :-)
+<[Len] NMORGENSTERN> Yep.
+<[Len] NMORGENSTERN> It puts my stuff in one window & Genie's in another...
+<[Gary] GARY-S> Have you looked at the BBS tonite - couple of surprises
+<[Len] NMORGENSTERN> so they don't interleave.
+<[Len] NMORGENSTERN> I downloaded but haven't read it yet...
+<[Gary] GARY-S> Don is killing NCFB on the 31st
+<[Len] NMORGENSTERN> Did he give a reason?
+<[Gary] GARY-S> Lack of activity
+<[Len] NMORGENSTERN> A good reason. A tragic one, but a good one.
+<[Gary] GARY-S> Read 14.2.242 for more details
+<[Len] NMORGENSTERN> Will do
+<[Gary] GARY-S> Larry is holding Rochester June 20-25
+<[Len] NMORGENSTERN> Right. It changes my plans. I attend my 50th...
+<[Len] NMORGENSTERN> high school reunioon June 7-10..
+<[Len] NMORGENSTERN> & had planned to go from there to Rochester..
+<[Len] NMORGENSTERN> Will now spend a week sightseeing.
+<[Len] NMORGENSTERN> 2 weeks that is!
+<[Gary] GARY-S> His lead-horse is Sergei Baranoff - interesting ?
+<[Len] NMORGENSTERN> Yes indeed. Baranoff is a famous name in physiology...
+<[Len] NMORGENSTERN> I wonder if he is a descendent?
+<[Gary] GARY-S> This one is famous in Forth ! ...
+<[Gary] GARY-S> no one has sold more copies of a single volume.
+<[Len] NMORGENSTERN> Larry told us some of this in Austin, especially...
+<[Len] NMORGENSTERN> they book that sold 100000 copies!
+<APPERT> is here.
+<[Len] NMORGENSTERN> Hi Kevin
+<[Gary] GARY-S> First run it sold 100,000
+<[KAOS] APPERT> hi all
+<[Gary] GARY-S> Hey Kev
+<[Gary] GARY-S> We were just talking about NCFB comming down and Rochester 
+moving up
+<[KAOS] APPERT> comming down?
+<[Gary] GARY-S> Yeah - Don says he's not getting the accesses
+<[Len] NMORGENSTERN> It's hard when you have to access by toll...
+<[Len] NMORGENSTERN> These private boards are fine when you have a local..,
+<[Len] NMORGENSTERN> concentration of users, but no good when they are...
+<[Len] NMORGENSTERN> scattered.
+<[Gary] GARY-S> I did look at his user log, and I'm the 5th highest user !
+<[KAOS] APPERT> what about Rochester?
+<[Gary] GARY-S> IF I don't see some activity on Wetware (Bay area #753-5265) I 
+am going to pull the Forth Conf there, too
+<[Len] NMORGENSTERN> Who's wetware? I guess they are in this region...
+<[Len] NMORGENSTERN> but I haven't heard of them.
+<[Gary] GARY-S> Tell your friends in the San Francisco area a resource is 
+comming down if there are no accesses.
+<[Gary] GARY-S> Wetware Diversions 415/753-5265 - UNIX BBS
+<[Len] NMORGENSTERN> I'll try them & see what's cooking.
+<[Gary] GARY-S> g Forth and tell me what you think of a really slick kernel get 
+function
+<[Gary] GARY-S> back to Kev -....
+<[Gary] GARY-S> Rochester Conf June 20-25 with Sergei Baranoff as lead guest
+<[KAOS] APPERT> who's he?  (really, I don't know)
+<[Gary] GARY-S> Wrote the first Forth text book in Russia and sold 100,000 
+copies in the first run...
+<[Gary] GARY-S> making him the hottest Forth author anywhere.
+<[Kevin] APPERT> gaaaaaa
+<[Gary] GARY-S> The announcement is in 5.2.95
+<[Len] NMORGENSTERN> At Austin, Larry expressed the opinion that Forth will be 
+popular in Russia for the same reasons it was
+<[Len] NMORGENSTERN> in the US 10-15 years ago: Limited computer resources.
+<[Len] NMORGENSTERN> If memory is hard to get, Forth is good. When you can 
+afford
+<[Len] NMORGENSTERN> to throw it around, you get wasteful!
+<[Gary] GARY-S> I know the eastern bloc countries sure wanted to buy my stuff 
+when I ran HAWGWild
+<[Len] NMORGENSTERN> That's interesting. Did the US restrict you from selling 
+it?
+<[Gary] GARY-S> Sure
+<[Kevin] APPERT> really?
+<[Gary] GARY-S> BIG 'SURE'
+<[Len] NMORGENSTERN> I wonder if all this activity over there..
+<[Gary] GARY-S> The Rochester Theme is Industrial Automation
+<[Kevin] APPERT> what was the mechanisim of the restriction?
+<[Gary] GARY-S> sorry len ga
+<[Len] NMORGENSTERN> no you ga I'm having a small problem here.
+<[Gary] GARY-S> It was just made abundantly clear computer code to eastern bloc 
+nations was verbotten...
+<[Gary] GARY-S> Ray Duncan has also noted this restriction on BIX and somewhere 
+else.
+<[Len] NMORGENSTERN> I wonder if all this activity over there..
+<[Len] NMORGENSTERN> will be good for Forth. There is a mentality here that
+<[Len] NMORGENSTERN> thinks that if the Russians are doing something, we have to
+<[Len] NMORGENSTERN> do it here.
+<[Kevin] APPERT> who told you?  did some large guys in black suits drop by?
+<[Gary] GARY-S> Not unless it becomes public knowledge
+<[Gary] GARY-S> no - a very pointed one page letter
+<[Kevin] APPERT> would you send me a hard copy, for personal chuckles?
+<[Kevin] APPERT> there was a story...
+<[Kevin] APPERT> about a fellow who wrote...
+<[Gary] GARY-S> If I still have it - when I trashed HWS, I also trashed most 
+files
+<[Kevin] APPERT> various govt. agencies...
+<[Kevin] APPERT> espe. the Navy about...
+<[Kevin] APPERT> underwater radar...
+<[Kevin] APPERT> the Navy expresssed predictable apathy...
+<[Kevin] APPERT> until the day it turned out...
+<[Kevin] APPERT> the Russians were working on it....
+<[Kevin] APPERT> they gave the guy all the money he could use at that point...
+<[Kevin] APPERT> several years later....
+<[Kevin] APPERT> they asked a defector about the Russian program...
+<[Kevin] APPERT> since they were having no success of their own...
+<[Kevin] APPERT> and he said "oh yes, that turned out to be a dead end in very 
+short time"
+<[Kevin] APPERT> why were you working on it at all then? they asked...
+<[Gary] GARY-S> haha
+<[Len] NMORGENSTERN> The technique is called "disinformation"
+<[Kevin] APPERT> because there was so much correspondence in your files, we 
+thought you were...
+<[Kevin] APPERT> working on it", he answered.
+<[Gary] GARY-S> I can tell you my letter made mention of fines,imprisonment or 
+both
+<[Kevin] APPERT> the underwater radar specialist lost his funding.
+<[Len] NMORGENSTERN> I was reading a history of the Rothschild family
+<[Len] NMORGENSTERN> They had their own courier system. Some of their
+<[Len] NMORGENSTERN> messengers were artists at getting intercepted when
+<[Len] NMORGENSTERN> they wanted to be.
+<[Kevin] APPERT> yup, has anyone...
+<[Kevin] APPERT> read "Turing... The Enigma" ?  ...
+<[Kevin] APPERT> speaking of history...
+<[Kevin] APPERT> I have a copy...
+<[Kevin] APPERT> but have not gotten around to it yet...
+<[Kevin] APPERT> been deadly busy!
+<[Gary] GARY-S> Leonard - anymore whizbang history surprises ?
+<[Gary] GARY-S> Your Conestoga story gets a lot of 'Oh sure...' comments :-)
+<[Kevin] APPERT> Kevin Appert
+<[Kevin] APPERT> Org 91-20   B255
+<[Kevin] APPERT> Lockheed
+<[Len] NMORGENSTERN> ATV0X1
+<[Len] NMORGENSTERN> ATDT836-5060
+<[Kevin] APPERT> 3251 Hanover St.
+<[Kevin] APPERT> Palo Alto, CA  94304
+<[Len] NMORGENSTERN> %More problems!
+<[Len] NMORGENSTERN> The Conestoga wagons had a peculiar eccentric wheel.
+<[Gary] GARY-S> Real happy with your new comm program are you, leonard ?
+<[Kevin] APPERT> (both of you guys are putting something in the mail to me and 
+it seemed easier than /sen twice)
+<[Len] NMORGENSTERN> The top rim stood out from the wagon a foot or so
+<[Len] NMORGENSTERN> so the mud didn't foul the whole wheel! Written up
+<[Len] NMORGENSTERN> in Scient.Amer. some years ago.
+<[Len] NMORGENSTERN> A very important thing in American History.
+<[Len] NMORGENSTERN> Most of the settlement of Ohio to the Missisippi used them
+<[Len] NMORGENSTERN> before the railroads took over.
+<[Gary] GARY-S> I notice Jax has a article in the works for ESP and Dave's TCJ 
+column starts soo...
+<[Len] NMORGENSTERN> ESP???
+<[Gary] GARY-S> this with ACM should generate some interest in somewhat virgin 
+territory..
+<[Gary] GARY-S> wouldn't you think ?
+<[Len] NMORGENSTERN> The more action the better.
+<[Kevin] APPERT> Especilllay Silly Pervisions (Jax should fit right in! ;)
+<[Gary] GARY-S> Embedded Systems Programming - Miller Freeman rag (Computer 
+Language)
+<[Len] NMORGENSTERN> The more action the better.
+<[Len] NMORGENSTERN> Thanx
+<[Gary] GARY-S> Harris dominated the first couple of issues with their RTX
+<[Kevin] APPERT> was it worth the subscription cost, do you feel?
+<[Gary] GARY-S> So far - I know it is surperior for my purposes to Byte (argh) 
+and DDJ (big dissappointment lately)
+<[Len] NMORGENSTERN> Yes, DDJ used to be one of my favorites, but lately..
+<[Len] NMORGENSTERN> I find it almost useless for me.
+<[Kevin] APPERT> Byte?  Barf!
+<[Gary] GARY-S> I'm dropping both as soon as my subs expire
+<[Len] NMORGENSTERN> The communications of the ACM has some good algorithms...
+<[Len] NMORGENSTERN> now and again.
+<[Gary] GARY-S> Byte is just a promo
+<[Kevin] APPERT> Dr. Dobbs can't seem to find anything but windows to talk about
+<[Gary] GARY-S> That's Swaine's doing
+<[Kevin] APPERT> you like prime numbers, Len?
+<[Len] NMORGENSTERN> Thjere is a similarity between BYTE and the pathology...
+<[Len] NMORGENSTERN> journals. The scientific stuff is interesting, but..
+<[Len] NMORGENSTERN> some of the most important stuff is the ads for new..
+<[Kevin] APPERT> has anyone else subscribed to "Circuit Cellar Ink " ?
+<[Len] NMORGENSTERN> equipment. The trouble with BYTE is that it is
+<[Len] NMORGENSTERN> out of balance!
+<[Len] NMORGENSTERN> Hardware is not my "thing".
+<[Gary] GARY-S> I did - another disappointment
+<[Kevin] APPERT> I rather enjoy it.  Steve C. taught me about 1488's and 1489's 
+...
+<[Kevin] APPERT> and then later about MAX-232's...
+<[Gary] GARY-S> Kev - did you ever find the time to polish your terminal 
+emulator for uploading ?
+<[Kevin] APPERT> and all sorts of other usefull stuff.
+<[Kevin] APPERT> not very likely with two instruments shipping in the next 2 
+months at work...
+<[Kevin] APPERT> I should not really be here!
+<[Gary] GARY-S> I find the BBS more interesting than the Mag
+<[Kevin] APPERT> there is not a lot of call for ATARI ST material, also Gary.  
+Maybe I'll work...
+<[Len] NMORGENSTERN> Hi Bob
+<[Gary] GARY-S> How did the re-write of code at the last minute go, or are you 
+still suffering through that management snafu ?
+<[Kevin] APPERT> on an IBMPC version. (using FPC?)
+<[robert] R.BERKEY> hi
+<[Gary] GARY-S> hey - robert , welcome aboard
+<[Kevin] APPERT> still in process.  there is a walk thru on the 30'th ...
+<[Kevin] APPERT> on the modular level...
+<[Kevin] APPERT> with a bunch of non-programmers...
+<[Gary] GARY-S> That's awful close to April Fool's !
+<[Kevin] APPERT> should be a lot of fun!
+<[Gary] GARY-S> Robert - thanks for raising some good standards points
+<[Kevin] APPERT> the instrument manager wants to feel he is in control, I guess
+<[robert] R.BERKEY> Gary, I just read Wil's comments.  I'll be looking more at 
+them.
+<[Gary] GARY-S> I'm just glad to see some substance back in the discussions
+<[Len] NMORGENSTERN> Right. No lack of action on this board!
+<[Gary] GARY-S> Last ad - please do pass the word to get involved with the 
+forth.conf (any bay area forthers at 753-5265)
+<[robert] R.BERKEY> is that a GEnie node?
+<[Gary] GARY-S> no - that's wetware diversions unix bbs I am also fairwitness on
+<[Len] NMORGENSTERN> George Shaw made an interesting point at a local meeting
+<[Len] NMORGENSTERN> He says that nowhere but in Forth do hardware problems
+<[Len] NMORGENSTERN> make a difference in standards. What other language would
+<[robert] R.BERKEY> I'm now  back up in the Bay area.
+<[Len] NMORGENSTERN> argue about 1's and 2's complement machines?
+<[Len] NMORGENSTERN> .ake a difference in standards. What other language would
+<[Len] NMORGENSTERN> argue about 1's and 2's complement machines?
+<[Len] NMORGENSTERN> .
+<[Kevin] APPERT> languages don't argue, people argue!
+<[Len] NMORGENSTERN> In what other langugge, that should read.
+<[Kevin] APPERT> we are headed for a language designed by comittee (sp?)...
+<[Len] NMORGENSTERN> Yes.
+<[Gary] GARY-S> well - I need the activity, so tell some folks to get involved 
+- It will be even less restrictive than GEnie simply because it is not
+a major service provider, Robert...That does NOT men drop GEnie
+<[Kevin] APPERT> and look where that got COBOL, ADA, ...
+<[Gary] GARY-S> Not as long as Chuck Moore is around, Kev
+<[Len] NMORGENSTERN> Cobol is still very popular.
+<[Len] NMORGENSTERN> A very good language in its niche!
+<[Kevin] APPERT> Chuck got disgusted and dropped out of voting membership...
+<[Gary] GARY-S> Le3n has Grace Hopper's photo over his bed !
+<[Kevin] APPERT> now only inputting as a consultant...
+<[Kevin] APPERT> and how he puts up with any involvement...
+<[Len] NMORGENSTERN> Who is Grace Hopper. Maybe I would want it over (or under) 
+my bed!
+<[Gary] GARY-S> Yeah - Iread his comments - They make a sharp point
+<[Kevin] APPERT> at all is anybody's guess...
+<[Gary] GARY-S> Grace is Cobol's Elizabeth Rather
+<[Len] NMORGENSTERN> Thanx
+<[Kevin] APPERT> these guys are subordinating the desemination of the basis 
+document...
+<[Gary] GARY-S> She is now Admiral Grace Hopper
+<[Kevin] APPERT> to having bold face and italics in the draft...
+<[Gary] GARY-S> COBOL was a Navy product
+<[Kevin] APPERT> somebody explain this to me.
+<[Len] NMORGENSTERN> Not everything the military does is poorly or inefficently 
+done.
+<L.FORSLEY> is here.
+<[Kevin] APPERT> COBOL has a lot of fans
+<[Gary] GARY-S> The TC claims we are getting a more public BASIS than any 
+previous draft
+<[robert] R.BERKEY> Kevin, you influenced my opinion about basis
+<[Len] NMORGENSTERN> If there is an able person behind the project it is 
+sometimes done well
+<[Len] NMORGENSTERN> Hi Larry
+<L.FORSLEY> hello
+<[robert] R.BERKEY> a couple of weeks ago, but I havent' seen your comments in 
+Cat 10.
+<[Kevin] APPERT> in what direction, Robert?
+<[robert] R.BERKEY> putting it on GEnie.
+<[Gary] GARY-S> I've already posted the notice everywhere Larry
+<[Len] NMORGENSTERN> Sorry, I must leave -- just when it's getting good!
+<L.FORSLEY> thank you.
+<[Kevin] APPERT> as I said, I really hace not the time to be even here right 
+now!  I looked ...
+<[Gary] GARY-S> It was now or ... maybe never. You know why.
+<L.FORSLEY> has left.
+<[Kevin] APPERT> around in the ANSI cat, got disgusted and left.
+<[Kevin] APPERT> that was odd.
+<[Gary] GARY-S> That was normal
+<[robert] R.BERKEY> disgusted? in what sense?
+<[Kevin] APPERT> what was that about with Larry?
+<[Gary] GARY-S> It is closing time, though  - any last shots ?
+<[Kevin] APPERT> 1's complement?  things like that
+<[Kevin] APPERT> 'night all
+<[Kevin] APPERT> has left.
+<[robert] R.BERKEY> xD{_lpkOq}i}iby
+<[robert] R.BERKEY> has left.
+=== End of Steno notes. ===
+
+

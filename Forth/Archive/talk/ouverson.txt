@@ -1,0 +1,434 @@
+
+
+
+ Minutes of a special GEnie Forth RoundTable Conference with Marlin
+ Ouverson, editor of 'Forth Dimensions'.
+ Marlin exchanges views with attendees, offers his thoughts about
+ Forth (past, present and future) and presents his 'wish list' for
+ article submissions and reader input.
+   
+ There is also a brief overview of the upcoming Boulder X3J14 TC
+ meeting by Jack Woehr. This meeting should create dpANS Forth.
+
+ Entire contents of this transcript copyright (c)
+ 1991 GEnie Forth RoundTable. The contents may be
+ freely copied and distributed in whole or in part
+ provided origination credit is included.
+
+Date: 07/18/91   Time: 22:32EDT
+
+Attendees:
+[GARY-S]   <-- SysOp moderator
+[MARLIN.O] <-- Special guest, Marlin Ouverson
+[[Len] NMORGENSTERN]
+[[Wil] W.BADEN1]
+[[Brian] B.SUTTON1]
+[E.RATHER]
+[JAX]
+[S.WHEELER]
+ 
+<MARLIN.O> P.S. My system has been crashing infrequently due to (presumed)
+heat
+<MARLIN.O> prostrations. If that happens tonite (knock on wood) I will l
+og right back on.
+<GARY-S> what are you running on ?
+<MARLIN.O> Mac SE, lg. screen, minor acceleration, SyQuest, etc.
+<GARY-S> You might consider mounting a dc fan on the power supply - 
+available at Radio Shack
+<MARLIN.O> Hadn't thought about adding another, but it might help!
+<GARY-S> I've done that on a couple of confusers - just make sure the
+ airflow helps exhaust heat _away_ from both the ps and the memory
+<NMORGENSTERN> is here.
+<[Wil] W.BADEN1> is here.
+<[Wil] W.BADEN1> Hi Len, Gary, Marlin.
+<GARY-S> 3 minutes to conf start
+<GARY-S> brb - entertain one another
+<[Wil] W.BADEN1> Gee, I'm atypically early.
+<[Len] NMORGENSTERN> A riddle: Who said "Men may come and men may go..
+<[Len] NMORGENSTERN> but I go on forever"?
+<[Len] NMORGENSTERN> Answer: Elizabeth Taylor
+<[Wil] W.BADEN1> Where are you living now, Marlin?
+<MARLIN.O> Lancaster, up in the desert.
+<MARLIN.O> I have sand drifts on my floor!
+<[Wil] W.BADEN1> (Amused chuckles.)
+<[Brian] B.SUTTON1> is here.
+<GARY-S> 1 minute
+<[Wil] W.BADEN1> Do you know the head of the Flat Earth Society?
+<MARLIN.O> No, is he out here, too?
+<[Wil] W.BADEN1> HQ in Lancaster.
+<MARLIN.O> Well, one look at the area would tell you why...
+<MARLIN.O> flat as a billiard table surrounded by mts.
+<[Wil] W.BADEN1> Look him up; should be interesting.
+<[Wil] W.BADEN1> Ask anyone in town.
+<GARY-S> You have apparently never been to Kansas
+<GARY-S> NOW THAT'S FLAT
+<MARLIN.O> (Amused chuckles)
+<E.RATHER> is here.
+<GARY-S> let's have a conference
+<GARY-S>
+<GARY-S>     The GEnie Forth RoundTable is pleased to welcome as ...
+           tonight's guest, Marlin Ouverson, editor of 'Forth
+           Dimensions', FIG's print vehicle and voice.
+         Marlin Ouverson was about the last "old guard" editor of ...
+         Dr. Dobb's Journal, when microcomputers were still ...
+         revolutionary and that magazine a real pioneer. Related ...
+         work involved him in computer literacy issues and in ...
+         training for non-profits and the disadvantaged. Post- ...
+         DDJ, Roy Martens and Kim Harris persuaded Marlin to ...
+         interview with the Forth Interest Group. Eight years ...
+         later, he is still editing Forth Dimensions. ....
+        
+<GARY-S>  Please join me in a hearty welcome to our guest, Marlin Ouverson.
+            .. .. .. .. .. ..     ga Marlin
+         
+<MARLIN.O> Eight years...time flies, whether you are dodging
+           deadlines or having fun, or both!
+           
+           I want to point out here that I do not speak for
+           the Forth Interest Group. I have never been on
+           FIG's Board of Directors (though they patiently
+           listen to my I/O). Since I'm a paid, independent
+           contractor, that's how it should be.
+           
+           And I disavow any Forth expertise of my own, because
+           the real Forth experts--you who are here tonight,
+           the readers of Forth Dimensions, the FORML crowd,
+           Forth vendors, etc.--can speak for themselves and
+           form their own technical opinions/conclusions.
+           I just try to publish an honest representation of
+           all your voices, and to meet as many of your needs
+           as my limited time and FIG's limited budget allow.
+          
+           FD authors know that I respect their work, that I do
+           not shoot down their ideas, but try to expose them to
+           our readers in their best possible light. And FD
+           readers know I am their ally--far from censoring or
+           propagandizing, I welcome diversity and innovation.
+          
+           What we need in our pages now is more people willing
+           to take the time to reveal their insights, question
+           convention, pose questions, and share experiences--
+           programmers interested enough in their work to write
+           about it, and/or interested enough in the next Forth
+           generation to teach it what they have learned.
+          
+<MARLIN.O> Now, what questions or comments would you like
+           to discuss during the time remaining tonight?
+             
+<GARY-S> In the meantime - editorial aside you do have a keen perch from
+         which to make some observations about Forth and FIG...
+         any points at this time ?
+               
+<MARLIN.O> Some people who saw Forth's public intro. when BYTE
+           published its famous Forth issue ("scooping" me at
+           DDJ by a month!) would never have believed that it
+           would still be a viable language in today's
+           environments & market.
+           
+           Equally, some of the 'fanatic Forthers' would have
+           been shocked to learn that it has not become
+           THE preeminent language--not even for a while,
+           like Pascal and BASIC.
+            
+           But neither is Forth going to die. It's too useful
+           in too many situations. Whether it will ever be a
+           hot shelf item is irrelevant, unless you have the
+           resources and skill to develop a market where none
+           now exists.
+          
+           Some feel that the Forth 'edge' contributes much
+           to their personal and corporate profits. But they
+           are often afraid (wrongly, I think) that disclosing
+           their use of Forth would help their competitors.
+           So Forth's public image may not benefit from some
+           of its successes.
+          
+           Bottom line: Waiting for Forth to become a huge
+           success in order to be one yourself...
+                  ...well, you get the point.
+          
+<JAX> is here.                
+<[Wil] W.BADEN1> What do you feel the "next generation" of Forth 
+          will be like?
+     
+<MARLIN.O> Technically, ANS Forth will have a greater impact than 
+          its detractors would like to believe. And you all will
+          undoubtedly contribute to Forth's evolution.
+               
+           But in terms of success...
+           Forth's success will be measured mainly by the
+           success of the person using it. Someone in a small
+           Forth shop with innovative products and good
+           marketing, sales, and support, probably thinks
+           highly of Forth.
+           
+           But the solo programmer without the entrepreneurial
+           skills, time, staff, and budget that contribute to
+           any venture's success? When his sole client hasn't
+           paid up and the health insurance premium is due, he
+           may not think much of the Forth business.
+           
+           Neither FIG nor Forth Dimensions can make a mass
+           market for Forth. But substantially greater
+           penetration will come, if it comes at all, when
+           people see:
+              a. more real Forth-based solutions, and
+              b. the exploration, growth, and excitement
+                 that come with the whole Forth gestalt.
+            
+           (The qualities that made the early microcomputing
+           scene so vital--the Luke Skywalker aspect, if you
+           will--probably are better cultivated with Forth than
+           with any other computing language.)
+          
+           I would like to see FD do a better job of reporting on 
+           some of the Forth successes--products, systems, and companies.
+               
+<E.RATHER> What do you know about your readership?  Size, level
+           of Forth experience, etc.?
+              
+<MARLIN.O> Less than we should, especially when it comes to
+           convincing advertisers they should be in our book.
+            
+<E.RATHER> ??
+  
+<MARLIN.O> Level of expertise? Sometimes waves of beginners besiege us
+           with questions about how to load screens... probably that is
+           after some p.d. Forth got a press release in the popular
+           press and people got a mystery product they had no understanding
+           of.
+        
+           More often, we have intermediate skiil folks who are not that
+           interested in many of the internecine squabbles of various factions.
+           To serve them best, we need articles with practical approaches.
+           But we also need enough sophisticated Forth to enliven our 
+           veterans and to keep their interest and enthusiasm "in the circle" 
+           with the rest of us.
+             
+<[Brian] B.SUTTON1> Marlin, I've often toyed with the idea of submitting
+            some articles to FD; but am reluctant to invest the amount of
+            time to put together something that may or may not be what you're
+            looking for....
+        
+            Is there any mechanism in place to, say upload an abstract
+            to get maybe a conditional statement of interest? 
+       
+<MARLIN.O> Sure, Brian.
+           What the publishing world calls a Query Letter is a great idea.
+           Upload it to me here or mail it to FIG. If need be, I will even
+           pass it by our technical reviewers before indicating our interest
+           in your subject.
+           
+<[Brian] B.SUTTON1> Great -- thanks! ga
+     
+<GARY-S> I would _strongly_ urge use of GEnie - it is instant communication
+         - and precisely one of our reasons for going to a public forum
+       
+<[Len] NMORGENSTERN> Do you have any particular editorial policy
+                     concerning the selection of aritcles?
+               
+<MARLIN.O> Let's see... in terms of content/subject/etc. no.
+           The trouble when trying to write for ANY magazine is reading
+           the editor's mind several months in advance of
+           when he/she knows (if ever) what his/her mind is!
+           
+           But I can tell you some general things here that might help
+           those who are wondering what we like to receive.
+          
+           The Forth community is very diverse. In our 40
+           or so pages, we need variety in subject matter
+           and skill level. And the quality of the magazine
+           improves when more readers write for it, so
+           please participate!
+           
+           What do we need? Articles about the things that
+           interest and involve YOU the most. Among a hundred
+           specific topics you might think of,
+           consider those that:
+             -show learners how to build an application by
+              putting modules together, writing some and
+              adapting others.
+             -show Forth in leading contemporary settings
+              (e.g., MIDI and music synthesis, real-time,
+              virtual reality and defense research, Sun
+              workstations, 68030/40, '386 protected mode, etc.).
+             -talk about Forth as a workhorse language in a
+              typical small programmers' shop, doing mundane
+              (i.e., widely available) work very well.
+             -explain how an ANS Forth will or will not
+              affect you.
+             -describe a hardware project from design specs and
+              coding through testing, revision, and production.
+             -"Live-and-learn" stories--how you finally managed
+              to finish that Forth project in spite of x, y, and
+              z. We all learn from our mistakes, but if you share
+              some of yours with us, hopefully we won't have to
+              make the same ones!
+             -engage your fellow Forth experts in a dialog or
+              challenge.
+             -etc. etc. etc...
+           
+<MARLIN.O> Those are some general observations.
+           I hope more vendors will get their staffs to write (hint, hint,
+           and thereby increase the technical level while, at the same time,
+           knoitting our community more closely together.
+           
+<[Wil] W.BADEN1> There are four forums for Forth articles -- Do you see
+           them as competitive or filling special areas of interest?  
+        
+<MARLIN.O> I do not see them as competitive. In some ways, they each fill
+           special niches. Additionally,
+           in our "market segment" if you will, there isn't room for us
+           to be stepping on each other's toes: we need to be standing
+           on one another's shoulders, which is the theme of a FIG 
+           promotion I designed this year for vendors who want to publicize
+           FIG to their customers.
+        
+<E.RATHER> Marlin, returning to the issue of who your readers are,
+           I'd like to suggest a survey, maybe just a tear-out page.  It
+           would be a big help to you, your prospective authors,
+           and of course prospective advertisers as well.  Have you tried
+           anything like that?
+               
+<MARLIN.O> Our past attempts at info. gathering are very well aged
+           by now, Elizabeth. I agree with you--a new survey has been on
+           my mind recently.
+           I think it is a good idea, and am sure FIG would be interested
+           in doing one. It will have to be designed for ease of tabulation,
+           etc. and might only be mailed to a representative sampling of the
+           membership
+           ... but I will definitely pursue the project since you have now
+           egged me on to it!
+            
+<[Len] NMORGENSTERN> To what extent does FD solicit articles?
+                     If you do not, do you think you should?
+      
+<S.WHEELER> is here.
+<MARLIN.O> Good question.
+           I'd say that we do some soliciation of particular articles, and
+           most of those do happen, sooner or later.
+           I am VERY willing to do the solicitation, but almost always rely
+           on some FIG member or Chapter to recommend the author and subject
+           to me.
+           It is far more likely that we will get a good suggestion from
+           someone like yourself, who learns about something and is excited
+           by it, than if I sit in the back room and toss out random article
+           ideas. So, even someone (unlike yourself, Len) who does not write
+           for FD personally can still contribute to its contents by referring
+           us to an author or important topic.
+      
+<E.RATHER> Just a follow-up -- a tear-out sheet in FD is cheap in that there
+           are no special mailing costs, and reaches everyone. Per-cent return
+           is low, and somewhat self-selecting, but it's better
+           than nothing.  Surveys are hard to write -- every time we do
+           one which isn't often eenough either, there are things I wish I 
+           had asked.
+           To change the subject, how can we help you more wrt. ANS Forth?
+      
+<MARLIN.O> Yep. And BTW, Bess, I'd like input from vendors on the kind of
+           questions vendors would find useful -- such as my suspicion that
+           while most of our readers are not known as big purchasers,
+           they probably do a lot of product (i.e., system) recommending ...
+          
+           About ANS Forth,
+           1. Keep me posted when we get to dpANS.
+           2. TC members know better than just about anyone the more
+              controversial decisions they are making.
+           
+           It will help if they anticipate a little bit and offer
+           the rationale behind those controversial decisions to our readers.
+
+           3. Remember that I am not against or for ANS Forth, as an editor.
+
+           I can see some potential advantages, which do not obliterate the
+           views of the "loyal opposition." So I would like FD to be conducive
+           to discourse without becoming a battlefield. That means, I
+           encourage substantive debate in our pages so that the entire 
+           membership can feel included and understand some of the process.
+           That the decisions were indeed debated and weighed, not made
+           arbitrarily.
+           I see that as part of FD's job to the community, but the material
+           must come FROM the community.
+      
+           I feel good, on the whole, about all the work that is being done.
+           I look forward to having the most involved parties explain their
+           views to me so that I can better understand the final result.
+     
+<[Wil] W.BADEN1> Marlin, did you know that Forth Dimensions was quoted 
+           extensively in the Manchester Guardian, Yorkshire, UK, in March?
+ 
+<MARLIN.O> Not a bit! tell me... 
+
+<[Wil] W.BADEN1> They copied the entire "programming is like sex because"
+           article in their computer column. It was picked up from their by
+           a company in UK for their newsletter; got back to Canada, where 
+           someone posted it on Genie.
+     
+<MARLIN.O> Maybe it will have to be an annual FORML mission to provide
+           adequately lurid copy for the popular press to pick it up.
+       
+<E.RATHER> Folks interested in dpANS should try to get to the Boulder
+           meeting 7/30 (details from JAX).  How well did we do in the
+           rationales in BASIS, Marlin?
+
+<MARLIN.O> It will help a lot              
+ 
+<GARY-S> ga Brian - you have the last question from the floor
+
+<[Brian] B.SUTTON1> What is the current membership/circulation? 
+
+<MARLIN.O> Okay, Brian. To tell the truth, I don't know exactly--FIG 
+           provides the print run to the printer. It is currently under 2,000,
+           safe to say, though we think that those 2000 readers are the key 
+          people in the Forth world.
+   
+<[Brian] B.SUTTON1> okay, thanks. 
+<GARY-S> Jax has a short preview of Boulder if it's ok with you Marlin
+
+<MARLIN.O> ga jax!
+    
+<JAX> It's in the nineties fahrenheit here in Colorado flatlands
+      But in the evenings it is in the sixties and pleasant ...
+      The massive US Dept of Commerce complex in Boulder, home of one of
+      the world's atomic clocks ...
+      and the tiny but dedicated Colorado FIG team ...
+      are hosting meeting 18 of the X3J14 TC ...
+      This meeting will likely prove a significant milestone in the 5-year
+      (so far) effort ...
+      to provide professional Forth with a standard acceptable to the 
+      comp sci & business world in that my straw poll says BASIS 17 has made
+      dpANS results will be officially announced , for yea or for nea, at that
+      meeting ...
+      and (hopefully) celebrated at the BBQ on Flagstaff scheduled for Thurs.
+      evening of meeting week (8/1/91)  C U There.
+      Contact me @ Vesta if you show up and are baffled &| bewildered.
+        
+<GARY-S> Closing remarks please, Marlin.  ...
+                    
+<MARLIN.O> Ok, a final :apologia":
+           My editing philosophy, especially for non-profits,
+           is to let readers shape the magazine's content and
+           general direction, and to avoid introducing
+           technical biases of my own into the magazine.
+            
+           I respect the many voices of the oft-polarized
+           Forth world; each deserves a fair hearing, and is
+           part of the dynamic that has kept Forth a technically
+           significant force despite its relatively small numbers.
+            
+           I want the publication's design and editing standards
+           to support the quality, clarity, and substance of its
+           content, for it to speak clearly to new readers
+           (and potential Forth proponents) while ably serving
+           those who have been with us from the beginning.
+           
+           That is the balancing act; we waver from one side
+           of that line to the other, at times. Hopefully,
+           it averages out to everyone's collective benefit.
+           
+ GARY-S> Marlin , this has honestly been one of my more enjoyable 
+         conferences. On behalf of the GEnie Forth RoundTable, Thank you.
+<GARY-S> This conference is officially closed.
+===== END OF STENO NOTES =====
+
+

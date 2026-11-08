@@ -1,0 +1,342 @@
+
+
+From: garys@BYTECOSY
+Date: Sat, 12 Mar 88 16:44:54 EST
+To: pwasson@BYTECOSY
+Subject: QUANS TEXT
+       
+Phil,
+  I would like to place your QUANS explanation in the GEnie library with
+your permission ( and appropriate credit ).
+Gary
+            
+Memo #22413
+From: pwasson
+Date: Sat, 12 Mar 88 18:24:07 EST
+To: garys
+Subject:  QUANS TEXT
+        
+You are certainly free to use it.  I got it from the West Coast Forth
+Board. 
+
+Phil
+          
+==========================
+forth/long.messages #36, from pwasson, 10111 chars, Sat Mar  5 23:53:15 1988
+There is/are comment(s) on this message.
+--------------------------
+TITLE: QUANs
+    There has been some discussion about QUANs in forth/lab (starting at #141)
+recently.  Forth beginners may find the following helpful:
+                                  - Phil Wasson
+
+
+    The following screens cover specialized variables and
+related words such as QUAN, TO, AT, IS, and VALUE.
+These screens were originally written by Martin Tracy
+(MicroMotion) as a handout to the L.A. FIG group in 1984.
+                                  - Scott Squires
+
+SCR#   0
+\ IS & TO solutions    Chuck Moore                22JUN84 MJT
+It all started at the Catalina standardization meeting (1978),
+when Chuck Moore suggested the first "TO" solution.
+The problem was that moving data between variables and the
+stack resulted in inefficient and unreadable constructs like:
+
+     X @ Y @ + Z !
+
+instead of
+
+     X Y + TO Z
+
+Chuck Moore's suggestion was investigated and elaborated on by
+Paul Bartholdi (Observatoire De Geneve, Switzerland) in
+Forth Dimensions  Vol 1 (4 & 5)   1978/79.
+
+SCR#   1
+\ IS & TO solutions    Bartholdi                22JUN84 MJT
+\ Bartholdi's implementation, if it were written in Forth-83,
+\ would look something like this:
+
+VARIABLE %VAR  \ this switch is set 0 to store and -1 to fetch.
+
+\ for readability:
+0 CONSTANT FALSE   -1 CONSTANT TRUE
+
+: ON    ( addr --)   TRUE  SWAP ! ;
+: OFF   ( addr --)   FALSE SWAP ! ;
+
+: TO    ( --)
+\ simply turns the %VAR switch on.
+\ See the new definition for VARIABLE on the following screen.
+   %VAR ON ;
+
+
+SCR#    2
+\ IS & TO solutions    Bartholdi  (continued)   22JUN84 MJT
+\ VARIABLEs now have to be smarter.
+
+: VARIABLE
+   CREATE  ( --)        ( creates a normal VARIABLE body)
+     0 ,
+   DOES>  %VAR @        ( checks the TO switch)
+     IF   ( n --)       ( If the variable was preceded by TO)
+        !  %VAR OFF     ( n is stored into the variable and )
+                        ( %VAR is reset.)
+     ELSE  ( -- n)      ( If the variable was not preceded by TO )
+       @                ( the variable acts just like a CONSTANT.)
+     THEN  ;
+
+\ VARIABLE could be written as easily in machine code.
+
+
+SCR#    3
+\ IS & TO solutions    Bartholdi  (continued)      22JUN84 MJT
+\ Here is TO in action:
+
+VARIABLE X   VARIABLE Y   VARIABLE Z
+  3 TO X       4 TO Y
+
+ X X *  Y Y *  +  TO Z    ( Z is set to 25)
+
+
+SCR#    4
+\ IS & TO solutions    Bartholdi  (continued)       22JUN84 MJT
+The "TO" solution was used widely in Europe and especially
+at the University of Utrecht.   Nevertheless, there are
+several problems with this solution.  One is that the address
+of a variable is not easily available.  For example, to add
+7 to the value of Z ( defined on the previous screen), you
+would need to use
+
+     7  ' Z  >BODY  +!
+or
+     7  Z +  TO Z
+
+instead of
+
+     7  Z +!
+
+
+SCR#    5
+\ IS & TO solutions    Bartholdi  (continued)       22JUN84 MJT
+Various extensions to the "TO" solution were proposed, such as
+
+    AT Z
+
+to obtain the address of Z and
+
+    7  +TO Z
+
+to add 7 to the value of Z.
+
+Furthermore, the %VAR switch must be checked at run-time, which
+slows execution speed.  Since either @ or ! is executed inside
+the defining VARIABLE word, this TO will always be slower than
+the equivalent explicit @ and ! operations.
+
+
+SCR#    6
+\ IS & TO solutions    Rosen                        22JUN84 MJT
+At the same time that Bartholdi published his "TO" solution,
+George Lyons suggested that a variable might have two code field
+addresses (cfa's) -- one for the @ and one for the ! operation
+(Forth Dimensions  Vol 1 [5] 1979)
+The text interpreter could then make the decision as to which
+cfa to compile or execute.
+
+At the 1982 FORML conference, Evan Rosen (Valpar, International)
+presented his implementation, using three cfa's for the three
+most common data operations:
+
+   fetching: pushing data to the stack from memory
+   storing:  popping data from the stack to memory
+   pointing: pushing the address of data to the stack
+
+
+
+SCR#    7
+\ IS & TO solutions    Rosen                        22JUN84 MJT
+Rosen used the defining word QUAN instead of VARIABLE.
+A QUAN has this internal structure:
+
+            -------
+     nfa & | name &
+     lfa   | link
+            -------
+     cfa0  | ^code0  -- like a CONSTANT   -- the default action
+            -------
+     cfa1  | ^code1  -- like a VARIABLE ! -- selected by TO
+            -------
+     cfa2  | ^code2  -- like a VARIABLE   -- selected by AT
+            -------
+     pfa   | value
+            -------
+
+
+SCR#    8
+\ IS & TO solutions    Rosen ( continued)           22JUN84 MJT
+Unlike the simpler Bartholdi routines, TO and AT must be
+state-smart compiler words.  Since in an indirect-threaded-code
+(ITC) Forth the code field must always point to machine-code,
+a run-time subroutine must be written for each of the three
+data actions.  Because the parameter field is at a different
+distance from each code field, only the run-time subroutine
+for a variable (code2) functions unchanged.
+
+The Forth-83 standard specifies that only the normal cfa can
+be compiled in the address stream.  It furthermore requires
+that the ' ("tick") word must return the pfa of a word, where
+data is normally stored.  For these reasons, the QUAN concept
+does not meet the current (1983) standard.  However, the
+following implementation of QUAN will run on several Forth-83
+systems.
+
+
+SCR#    9
+\ IS & TO solutions    Rosen ( continued)           22JUN84 MJT
+\ Here are the run-time subroutines for the code field of QUAN.
+\ They are written in MicroMotion Masterforth 6502 assembler.
+
+CODE code0   ( -- n)
+\ like constant,  but the pfa is four bytes further away.
+    6 # LDY  W )Y LDA  PHA  INY  W )Y LDA   PUSH JMP  END-CODE
+
+CODE code1   ( n --)
+\ like variable !, but the pfa is two bytes further away.
+    4 # LDY  BOT    LDA  W )Y STA
+        INY  BOT 1+ LDA  W )Y STA       POP JMP  END-CODE
+
+CODE code2   ( n --)
+\ this is the run-time code for a variable.
+    CLC  W LDA  2 * ADC  PHA  TYA  W 1+ ADC  PUSH JMP  END-CODE
+
+
+SCR#   10
+\ IS & TO solutions    Rosen ( continued)           22JUN84 MJT
+: TO
+\ compiles the 2nd cfa (code1) of the QUAN that follows.
+   STATE @
+   IF      (   --)    ( compiling)     ' 2+ ,
+   ELSE    ( n --)    ( interpreting)  ' 6 + !
+   THEN  ;    IMMEDIATE
+
+: AT
+\ compiles the 3rd cfa (code2) of the QUAN that follows.
+    STATE @
+    IF       ( -- addr) ( compiling)    ' 4 + ,
+    ELSE     ( --)      ( interpreting) ' 6 +
+    THEN  ;  IMMEDIATE
+
+
+SCR#   11
+\ IS & TO solutions    Rosen ( continued)           22JUN84 MJT
+\ NOTE: USING -2 ALLOT to replace the first code field (code0)
+\ isn't Forth-83 standard either.  A less elegant but more
+\ correct ;CODE  could be used instead.
+
+: QUAN
+\ defines the three-headed QUAN.
+    CREATE  ( --)   -2 ALLOT
+       [ ' code0 >BODY ] LITERAL ,
+       [ ' code1 >BODY ] LITERAL ,
+       [ ' code2 >BODY ] LITERAL ,
+       ( the body:)  0 ,  ;
+
+
+SCR#   12
+\ IS & TO solutions    Rosen ( continued)           22JUN84 MJT
+\ QUANs work like this:
+
+QUAN X   QUAN Y   QUAN Z
+3 TO X   4 TO Y   X X *  Y Y *  +  TO Z
+
+: SETZ  ( x y --)
+\ stores the sum of the squares of x and y into z.
+     DUP *  SWAP DUP *  +  TO Z ;
+
+
+SCR#   13
+\ IS & TO solutions    Rosen ( continued)           22JUN84 MJT
+The QUAN solution can be extended to any words with multiple
+actions selected by special prefixes (such as TO).
+For example, a double-number DQUAN could be easily defined and
+could use the same prefixes (AT and TO) as a single QUAN.
+Rosen suggested a VECT defining word for vectored execution.
+Klaus Schleisiek (Universitaet Dortmund, Germany) generalized
+this even further [J] of Forth Ap & Res  Vol 1[2] 1983), using
+a grammar for defining defining words suggested by Bill
+Ragsdale (FORML 1983).
+
+The generality of the QUAN solution is, however, somewhat of
+an illusion, since carefully crafted machine-code subroutines
+must be written for each code field.  Furthermore, the QUAN
+solution does not meet the Forth-83 standard and must be
+adjusted for each Forth implementation.
+
+
+SCR#   14
+\ IS & TO solutions    Laxen/Perry/Tracy            22JUN84 MJT
+Henry Laxen and Mike Perry, in their public-domain FORTH-83
+(No Visible Support, 1984), used the
+word IS as an alternative to the TO solution.  Martin Tracy
+(Mastering Forth, Brady, 1984) further enhanced the IS solution
+with the defining word VALUE.
+
+The IS soultion takes advantage of the fact that in many Forth
+applications the @'s greatly outnumber the !'s.  In other words,
+the data value is used more often than it is changed.  Like the
+original TO solution, the default action of a data object is to
+leave its value on the stack.  IS is used to change the value
+when necessary.
+
+
+SCR#   15
+\ IS & TO solutions    Laxen/Perry/Tracy  (cont.)   22JUN84 MJT
+\ The defining word VALUE is used to create a data object which
+\ leaves its value on the stack.
+
+: VALUE
+    CREATE   ( n --)  ,
+    DOES>    ( -- n)  @  ;
+
+\ Notice that this is a possible definition of CONSTANT.
+\ However, the Forth-83 standard expressly forbids changing the
+\ value of a constant.  Furthermore, if code is to be ROMable,
+\ a metacompiler might decide to put CONSTANTs in ROM and
+\ VALUEs in RAM.
+
+
+SCR#   16
+\ IS & TO solutions    Laxen/Perry/Tracy  (cont.)   22JUN84 MJT
+
+: IS   ( n --)
+\ stores n into body of the word that follows.
+    STATE @
+    IF     ( compiling)   ' >BODY [COMPILE] LITERAL  COMPILE !
+    ELSE   ( interpreting) ' >BODY !
+    THEN  ;  IMMEDIATE
+
+\ IS can be further optimized by writing a run-time routine
+\ to be compiled by IS.  This routine stores n into the body
+\ of the word which follows in the address stream.
+\ However, there is no way in the Forth-83 standard of
+\ determining this address.
+
+
+SCR#   17
+\ IS & TO solutions    Laxen/Perry/Tracy  (cont.)   22JUN84 MJT
+\ Here is IS in action:
+
+3 VALUE X    4 VALUE Y   0 VALUE Z
+
+X X * IS X    Y Y * IS Y   X Y + IS Z
+
+: SETZ  ( x y --)
+\ stores the sum of the squares of the x and y into z.
+    DUP *  SWAP DUP *  +  IS Z ;
+
+\ Since IS stores into the pfa of a word, it can be used to
+\ set VALUEs, VARIABLEs, execution vectors, and so on.
+\ IS is simple, effective, and meets the Forth-83 standard.

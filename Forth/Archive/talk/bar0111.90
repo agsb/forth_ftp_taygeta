@@ -1,0 +1,708 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 01/11/90   Time: 22:02EST
+
+Attendees:
+[[Bess] PRESS16]
+[[Dennis] D.RUFFER]
+[[Doug] D.PHILIPS2]
+[[Dave] OLORIN]
+[GARY-S]
+
+Minutes:
+
+<D.RUFFER> ok, I'll be leader I guess
+
+<[Doug] D.PHILIPS2> Go for it.
+
+<[Hadil] H.SABBAGH> I am looking for Aladdin-like software for the Mac.
+
+<[Doug] D.PHILIPS2> Hows it going with FPC3.5 (if that isn't too painful to
+                    ask)?
+
+<D.RUFFER> Hadil, Aladdin Inc, is working on a Mac version, but may be a
+                    little while before they get it done
+
+<[Hadil] H.SABBAGH> BRB
+
+<PRESS16> is here.
+
+<[Doug] D.PHILIPS2> Administrativia:  What does /BLANK,/XBLANK really do?
+
+<[Hadil] H.SABBAGH> Hi Dennis.This isn't so bad now.
+
+<[Dennis] D.RUFFER> uh, I think they add blank line
+
+<[Doug] D.PHILIPS2> Hi!
+
+<[Dennis] D.RUFFER> Welcome Elizabeth
+
+<[Bess] PRESS16> hi
+
+<[Hadil] H.SABBAGH> Hi. Elizabeth. You're talking next week, right?
+
+<[Bess] PRESS16> right (by the way, real name is Elizabeth Rather)
+
+<[Dennis] D.RUFFER> I posted her bio in the Bulletin Board, if your
+                    interested
+
+<[Hadil] H.SABBAGH> M400
+
+<[Doug] D.PHILIPS2> Elizabeth, when you upload the 20page highlights
+
+<[Hadil] H.SABBAGH> M605
+
+<[Doug] D.PHILIPS2> could you also include info on how to get a copy
+
+<[Bess] PRESS16> ask dennis
+
+<[Hadil] H.SABBAGH> Oops. Sorry about that...
+
+<[Doug] D.PHILIPS2> of the BASIS.  I ported your message that contained its
+                    cost over to comp.lang.forth, but your message didn't
+                    say how to order the basis. ga
+<[Dennis] D.RUFFER> it's ready to go, and I will upload it tonight
+
+<[Doug] D.PHILIPS2> Great!
+
+<[Bess] PRESS16> send chk for $10 to Forth Vendors Group c/o me at FORTH,
+                    Inc... 111 N. sepulveda blvd, manhattan beach CA, 90266
+
+<[Dennis] D.RUFFER> I will also mention the address,
+
+<[Doug] D.PHILIPS2> Thanks Dennis.
+
+<[Dennis] D.RUFFER> do you need it in a BB message also so it gets ported?
+
+<[Doug] D.PHILIPS2> H (Spaz!)  No, i can down load it and make it into a
+                    message.  Everyday when I check the BB for new stuff, I
+                    also check the library for new stuff, so if its
+                    appropriately labeled, I'll grab it. ga
+
+<[Dennis] D.RUFFER> ok, I'll append the address to the summary what we
+                    going to talk about tonight, or should I just make
+                    something up?
+
+<GARY-S> is here.
+
+<[Bess] PRESS16> what are you going to want to talk about next week?  I can
+                    study hi gary
+
+<[Doug] D.PHILIPS2> Hi Gary Has anyone played with Pygmy 1.2 yet?
+
+<[Hadil] H.SABBAGH> Hi. Gary (Might as well...)
+
+<[Bess] PRESS16> what is it?
+
+<[Dennis] D.RUFFER> Pygmy is a CMForth for the PC written by Frank Sargent
+
+<[Hadil] H.SABBAGH> It's Frank Sargent's PD Forth for PCs
+
+<[Doug] D.PHILIPS2> Thanks, it was on the tip of my tongue.
+
+<[Hadil] H.SABBAGH> Just got MacForth+. Extremely cool.
+
+<GARY-S> BIG PHONE line probs - sorry folks
+
+<[Dennis] D.RUFFER> yes, latest update works on all monitors (haven't heard
+                    any complaints :-)
+
+<[Doug] D.PHILIPS2> Has anyone modified a PC forth to work when...
+
+<[Hadil] H.SABBAGH> Still waiting for the standard...
+
+<[Doug] D.PHILIPS2> the PC is being accessed via COM1 (modem)???
+
+<[Hadil] H.SABBAGH> So I can write HadilForth :-)
+
+<[Doug] D.PHILIPS2> [This seems like its going to be my 2nd project.]
+
+<[Dennis] D.RUFFER> the PCMODEM stuff that I have posted can be set up as a
+                    remote terminal if that is what you are talking about
+
+<[Doug] D.PHILIPS2> Well, what I want to do is modify pygmy so that it
+
+<[Bess] PRESS16> We can use modem, COM1 or other serial as extra users on a
+                    PC...
+
+<[Hadil] H.SABBAGH> Don't know anything about Pygmy...
+
+<[Doug] D.PHILIPS2> uses 'standard input and standard output'
+
+<[Bess] PRESS16> We teach classes w/ 16 users on serial muxes
+
+<[Doug] D.PHILIPS2> instead of accessing the console/keyboard all the time.
+
+<[Hadil] H.SABBAGH> But you'll have to vector KEY and EMIT to use standard
+                    io
+
+<[Doug] D.PHILIPS2> ga That's what I suspected.
+
+<[Dennis] D.RUFFER> no, you can't go into DOS, but all of Forth is
+                    available
+
+<[Hadil] H.SABBAGH> Blox too, no doubt (Sigh......)
+
+<[Doug] D.PHILIPS2> It looks like project 2a is going to be adding streams
+                    to pygmy
+
+<[Dennis] D.RUFFER> you can set up DOS to do it with the CTTY command in
+                    DOS
+
+<[Doug] D.PHILIPS2> then project 2b can do revectoring of KEY/EMIT
+
+<[Hadil] H.SABBAGH> Streams shouldn't be too hard via INT 21H.
+
+<GARY-S> NOW the Unix/Forth group is caloring for an emacs type editor
+
+<[Dennis] D.RUFFER> for streams, check out Martin Tracy's EVAL code it does
+                    it using the existing BLOCK interface
+
+<[Doug] D.PHILIPS2> Where do I find this 'EVAL code?
+
+<[Hadil] H.SABBAGH> Gary: Yah. Not a bad idea, for Forth.
+
+<GARY-S> TOO BIG, Hadil
+
+<[Dennis] D.RUFFER> in the library, I think it might be called STREAMS.ARC
+
+<[Hadil] H.SABBAGH> What do you mean?
+
+<[Doug] D.PHILIPS2> I'll poke about there abit, anything else I should look
+                    for? Gary:  Naw, emacs isn't that big! Or, it doesn't
+                    have to be, anyway.
+
+<[Dennis] D.RUFFER> depends on what you want Doug :-)
+
+<GARY-S> The source is 100K ! I've written 6k Forth kernels !
+
+<[Doug] D.PHILIPS2> Well, examples of forth code that interface with DOS
+                    files would be useful!
+
+<[Hadil] H.SABBAGH> The emacs KERNEL isn't that big... All the source is
+                    written in LISP; kernel...
+
+<[Dennis] D.RUFFER> search for FILE keyword
+
+<[Hadil] H.SABBAGH> Is the LISP interpreter.
+
+<[Doug] D.PHILIPS2> And there are only about 10billion variants of emacs to
+                    consider Dennis: Ok.
+
+<[Bess] PRESS16> The FILES wordset in BASIS should be a good beginning. Chk
+                    it out.
+
+<[Doug] D.PHILIPS2> Will have to order BASIS first!  ;-)
+
+<[Bess] PRESS16> :-)
+
+<[Dennis] D.RUFFER> we don't have a public domain example of it yet
+
+<[Hadil] H.SABBAGH> How many incarnations of BASIS after this?
+
+<[Bess] PRESS16> God knows
+
+<[Doug] D.PHILIPS2> Just keep revising that document till everyone is too
+                    tired to care anymore :-)
+
+<[Bess] PRESS16> we hoped we'd be done by now.
+
+<[Hadil] H.SABBAGH> Well, I'll wait, I guess.
+
+<[Dennis] D.RUFFER> is there a official cut off point?
+
+<[Doug] D.PHILIPS2> It's amusing to read back issues of F.D. and see 'done'
+                    dates.
+
+<[Bess] PRESS16> no.  exhaustion by participant's?
+
+<[Hadil] H.SABBAGH> Dennis: One cutoff point is when... EVERYBODY's code is
+                    broken :-)
+
+<[Doug] D.PHILIPS2> Its really tempting to ask stuff that should wait till
+                    next week, esp. since I'll have to miss then :-(
+
+<[Dennis] D.RUFFER> tonight's notes will get posted also
+
+<[Bess] PRESS16> oh, fire away.  I need the practice
+
+<[Doug] D.PHILIPS2> Well, I'm curious as to how it was decided that it was
+                    appropriate to consider an ANSI std. for Forth?
+
+<[Dennis] D.RUFFER> are we still there Bess is having technical
+                    difficulties brb
+
+<[Bess] PRESS16> people havepeople have been talking bout it since 84.  in
+                    86 we said why wait
+
+<[Hadil] H.SABBAGH> Well, gotta go. G'nite all. has left.
+
+<[Bess] PRESS16> it seemed as though things were stabilazing around forth83
+                    but it had problems that needed fixing particularly
+                    cell size dependency, etc. ga
+
+<[Doug] D.PHILIPS2> AhAh.  And how many/who approached ANSI?  I'e not
+                    gotten far enough back thru the back issues of F.D. to
+                    catch the beginning.  Is it documented there? ga
+
+<[Bess] PRESS16> about 12 people incl. LMI, CSI, IBM, MCI, Chuck, Greg B.,
+                    Martin T., others... met at FORTH, inc in oct 6 and
+                    decided to submit a proposal to ASI. ga
+
+<[Doug] D.PHILIPS2> Ok.  Is it just coincidence that the 'C' standard was
+                    happening about the same time?  ga
+
+<[Dennis] D.RUFFER> some of it is in 4D, ther comments are here in the
+                    standards library, and still more in Rochester
+                    proceedings
+
+<[Bess] PRESS16> no, C had been meeting 5 yrs already.
+
+<[Dennis] D.RUFFER> Is the C standard done yet?
+
+<[Bess] PRESS16> yes, just got the final notice today.
+
+<GARY-S> lord yes
+
+<[Dennis] D.RUFFER> 5 years huh <smile>
+
+<[Doug] D.PHILIPS2> Its almA long and winding road...
+
+<[Bess] PRESS16> Took them 7 by the time they were done, and when they
+                    started...
+
+<GARY-S> People joke about Forth-99 , maybe it ain't all that funny
+
+<[Doug] D.PHILIPS2> Prophetic perhaps.
+
+<[Bess] PRESS16> they said they were just going to republish K&R.
+
+<[Doug] D.PHILIPS2> You don't know the POWER of the Dark Side. Do you have
+                    any feel for the difference in size between the forth
+                    and C committees, in terms of raw numbers of
+                    participants?
+
+<GARY-S> IF they had simply removed K&R ambiguities...
+
+<[Bess] PRESS16> RE dark side--FORTRAN 8x is out for public review,...
+
+<GARY-S> but it didn't work that way
+
+<[Bess] PRESS16> and there have been over 1,000 pages of comment, all of
+                    which... the poor committee has to respond to.
+
+<[Doug] D.PHILIPS2> And have any lessons been learned from the C effort
+                    that might save yens some grief?
+
+<GARY-S> not as loong as ANSI is the affiliation
+
+<OLORIN> is here.
+
+<[Bess] PRESS16> yes, try to keep it simple.  So many folks want us to
+                    invent... the perfct language.  That will take 100 yrs.
+
+<[Dennis] D.RUFFER> hi dave
+
+<[Dave] OLORIN> Hullo
+
+<[Dennis] D.RUFFER> and it probably wouldn't be Forth by then
+
+<[Doug] D.PHILIPS2> Yes, X3J11 got burned on the Trigraph stuff.  I assume
+                    that X3J14 isn't
+
+<[Bess] PRESS16> Sorry, have to go.  Been fun.  CU next week
+
+<[Doug] D.PHILIPS2> going to touch something like that at all!
+
+<GARY-S> THink how long we've been reinventing English :-}
+
+<[Bess] PRESS16> has left.
+
+<GARY-S> X3/J14 has some hot spots that will keep the pot boiling just as
+                    vigorously
+
+<[Dennis] D.RUFFER> and a bunch of antagonists too
+
+<[Doug] D.PHILIPS2> Has a position been  taken about levels of standard.
+                    (The term I want is eluding me)
+<[Dennis] D.RUFFER> Yes, there is statments to that effect in the basis
+
+<[Dave] OLORIN> What is the status of an ''electronic BASIS''?
+
+<GARY-S> zip
+
+<[Doug] D.PHILIPS2> layers peX3J11 decided to avoid that for various
+                    reasons... did X3J14 consider those, or should I wait
+                    until I can read the BASIS?
+
+<[Dennis] D.RUFFER> under discussion even now
+
+<[Doug] D.PHILIPS2> [I was under the impression that ANSI was firm about
+                    electronic publication, is that true? ]
+
+<[Dennis] D.RUFFER> there is firm and then there is firm, I can't say much
+                    more right yet
+
+<[Dave] OLORIN> (suddenly a deathly silence falls over the room)
+
+<[Dennis] D.RUFFER> I can tell you that editing the basis summary was a
+                    real pain
+
+<[Doug] D.PHILIPS2> Well, has anyone heard from Wil after last sundays
+                    foray?
+
+<[Dennis] D.RUFFER> no, did he go away mad?
+
+<[Doug] D.PHILIPS2> You mean deciding what to highlight, or the process
+                    itself?
+
+<[Dennis] D.RUFFER> I mean getting rid of the highlighting
+
+<[Doug] D.PHILIPS2> No, just tired.  I get the impression he's not a fast
+                    typist.
+
+<[Dennis] D.RUFFER> they use many special fonts and other word processing
+                    tricks that just do not translate to ASCII
+
+<[Doug] D.PHILIPS2> You mean you didn't write  a little forth programt o do
+                    it? :-) :-)
+
+<[Dennis] D.RUFFER> what I ended up with was not near as pretty, but it is
+                    pure ASCII no streams in PolyForth, remember <grin>
+
+<[Doug] D.PHILIPS2> Ga!  Bit Bangers!  I want to write unix-like stream
+                    tools!
+
+<[Dennis] D.RUFFER> I have word processors that do a much better job than I
+                    could ever do with a program
+
+<[Doug] D.PHILIPS2> ([I don't want to duplicate the programs, just the
+                    style.]
+
+<GARY-S> oooo- doug , let's tell Peter to post his code !
+
+<[Dave] OLORIN> (be back soon)
+
+<[Dave] OLORIN> has left.
+
+<[Doug] D.PHILIPS2> Who is Peter?
+
+<GARY-S> de Silva the wolf
+
+<[Doug] D.PHILIPS2> I asked him to post the 'vi' code, but got no answer.
+                    Or do you mean something else?
+<GARY-S> that's it !
+
+<[Doug] D.PHILIPS2> ga We'll see.  He doesn't like the GEnie influx, so I
+                    don't know how well
+
+<GARY-S> The forth editor with vi syntax
+
+<[Doug] D.PHILIPS2> he likes me.
+
+<[Dennis] D.RUFFER> the GEnie flux debate should have been appeased by the
+                    seperate cat
+
+<GARY-S> We are starting to get some good two-way traffic on both ends
+
+<[Doug] D.PHILIPS2> (NO, GEnie -> comp.lang.forth).
+
+<[Dennis] D.RUFFER> are you posting the whole thing Doug?
+
+<[Doug] D.PHILIPS2> Finally!  I donGod No!  I had sort out the useful stuff
+
+<GARY-S> J Wavrik replied to you and F.Sergeant replied to the SQRT query
+                    with a header
+
+<[Doug] D.PHILIPS2> and dump the rest on the floor.
+
+<[Dennis] D.RUFFER> actually, only the usenet cat really should be ported
+                    now that we've done that that was the intention
+
+<GARY-S> Dennis - Doug is porting to Usenet - the cat 18 doesn't help him
+
+<[Doug] D.PHILIPS2> I cross posted the bio on Elizabeth because I thought
+                    it was an interesting bit of history.
+
+<OLORIN> is here.
+
+<[Doug] D.PHILIPS2> what about Wavrik?
+
+<GARY-S> Wavrik responede on Usenet to ForthNet points
+
+<[Dennis] D.RUFFER> I thought that was one of the reasons for cat 18, was
+                    to cut down on the noise going out to usenet
+
+<[Doug] D.PHILIPS2> Rotate 180 degrees.
+
+<GARY-S> I left e-mail on ECFB for jerry to seperate it there, too - sure
+                    hope he does
+
+<[Dennis] D.RUFFER> hum, must have been my mistaken impression
+
+<[Doug] D.PHILIPS2> Query:  Are linked lists something that down much in
+                    Forth, or are they a sign that you're not thinking 'in
+                    forth' yet? 'that down' -> 'that are done'
+
+<GARY-S> not very forthish
+
+<[Dennis] D.RUFFER> the dictionary is just one big linked list
+
+<GARY-S> forth is a linked dictionary echo - echo - echo
+
+<[Dennis] D.RUFFER> but it only has thread in one direction
+
+<[Doug] D.PHILIPS2> But for user data structures?
+
+<[Dennis] D.RUFFER> I've used them when they are appropriate
+<[Doug] D.PHILIPS2> If you wanted to keep around the equivalent of a 'set',
+                    is there a trick commonly used in forth?
+
+<[Dennis] D.RUFFER> the capability exists in PolyForth's DBMS also a set of
+                    what
+
+<[Doug] D.PHILIPS2> (A set of integers)
+
+<[Dave] OLORIN> I've got them in my bag of tricks. I use them when I need
+                    them.
+
+<GARY-S> In your pile of Forth Dimensions - read the INteger Method
+
+<[Dennis] D.RUFFER> put them into a structure (ie CREATE) and let the
+                    dictionary keep track of them
+
+<[Doug] D.PHILIPS2> Dennis, I'm not quite following you yet. Gary:  Any
+                    idea which volume, or...even... issue? (volume would
+                    help )
+
+<[Dennis] D.RUFFER> CREATE INTEGERS 1 C, 2 C, 3 C, 4 C, etc
+
+<GARY-S> Doug - I think I see your direction, check out the Integer Method
+                    and Quans BRB
+
+<[Dennis] D.RUFFER> I don't think I'm following what you want to do yet
+                    Doug
+
+<[Doug] D.PHILIPS2> BRB?  (I dunno know what the means)
+
+<[Dennis] D.RUFFER> Be Right Back not me Gary
+
+<[Doug] D.PHILIPS2> Dennis:  I want to keep several 'sets' of integers, be
+                    able to add and delete individual items on the fly. In
+                    'C', I use a linked structure of 'min,max' ranges to
+                    keep the set ga
+
+<[Dennis] D.RUFFER> I guess I'm missing the purpose do you want to ssociate
+                    them together?
+
+<[Doug] D.PHILIPS2> AhA!  The purpose!
+
+<[Dave] OLORIN> Doug: For a set of integers,min,max can become inefficient.
+                    What is the range in integer values? Dennis: I
+                    understand what he is talking about.
+
+<[Doug] D.PHILIPS2> 16 bits
+
+<[Dave] OLORIN> Doug: What about a bit-field for the sets?
+
+<[Dou] D.PHILIPS2> But negatives not allowed.
+
+<[Dave] OLORIN> Ouch. You are using the full range?
+
+<[Doug] D.PHILIPS2> No! What I'm using them for is to keep track of
+
+<[Dave] OLORIN> What is the range of the integers which you are using?
+
+<[Doug] D.PHILIPS2> which netnews articles I've read, out of the entire
+                    available set of articles.  Since I expire news after
+                    about 4 days,
+
+<[Dave] OLORIN> Ahhhh. A Forth netnews reader?????
+
+<[Doug] D.PHILIPS2> YES!
+
+<[Dennis] D.RUFFER> sounds like a bit field to me
+
+<[Doug] D.PHILIPS2> I haven't gotten much over 1,000-2,000.
+
+<[Dennis] D.RUFFER> what is the range of values?
+
+<GARY-S> Sorry - I can't find it
+
+<[Dave] OLORIN> Ok. Let's assume a maximum value of 4000, use bitfields.
+
+<[Doug] D.PHILIPS2> S'Ok.  Just 2 more years of purgatory to do. I don't
+                    want to assume any maximum.  I want to be able
+
+<[Dennis] D.RUFFER> yes, simply turn on bits for the ones you have read
+
+<[Doug] D.PHILIPS2> to expire news and not have to reset the article
+                    counts.
+
+<[Dave] OLORIN> What you want to do is create a structure which has 4000
+                    bits of free space in it. (Probably 4096 because it is
+                    a power of two).
+
+<[Doug] D.PHILIPS2> Which is a *big* pain.
+
+<[Dave] OLORIN> Then you initialize all bits to zero, and set those bits
+                    which you have read.
+
+<[Doug] D.PHILIPS2> I know how to use bit fields, but I don't think that
+                    that approach
+
+<GARY-S> I posted a bit mask almost in the beginnings of the library
+
+<[Doug] D.PHILIPS2> is necessarily extensible.
+
+<[Dennis] D.RUFFER> it is not, but now I see what you need I just don't
+                    know an easy way to do it
+
+<[Dave] OLORIN> Now. It isn't extensible. It has a fixed limit.
+
+<[Doug] D.PHILIPS2> There is more that I do.  I also scan each group for
+                    unread articles, and I make up a set for article
+                    numbers that all have the same subject (subject
+                    threads). I also need to count how many items are in my
+                    sets, so I can display how many articles are unread
+                    about 'ForthNet:  The final chapter'
+
+<[Dave] OLORIN> Ok. Multiple sets isn't much of a problem.
+
+<[Dennis] D.RUFFER> you do need to create some linked lists
+
+<[Doug] D.PHILIPS2> That's what I thought.  I don't know that I want to use
+                    'ALLOC' and tie up all that dictionary space,
+
+<[Dave] OLORIN> To handle counts, you probably want to just have a count
+                    field. (Makes doing a size order(1) rather than
+                    order(n) )
+
+<[Dennis] D.RUFFER> VARIABLE TOP    CREATE MEMBER  TOP @  HERE TOP !  ,
+
+<[Doug] D.PHILIPS2> And the linked lists I use now can collapsed as the
+                    holes get filled in.  Free space can get messy. And
+                    when I'm done with each newsgroup, I reset all the
+                    subject thread pointers and start over for the next
+                    group.
+
+<[Dennis] D.RUFFER> is the data in a database?
+
+<[Doug] D.PHILIPS2> The only threads that don't get freed are those that
+                    keep track of the articles actually read.
+
+<[Dave] OLORIN> Doug: You need a memory manager other than the "cheap
+                    screw" heap manager that Forth uses. There is (I
+                    believe) one coming out in thenext issue of _The
+                    Computer Journal_.
+
+<[Doug] D.PHILIPS2> The data is in text files.  I have an index file which
+                    gives me 'lseek' offsets to the start of the articles
+                    and also contains the seek offset to the subject line
+                    and the length of the article in lines. I'm probably
+                    going to redo some of that when I move to the
+
+<[Dennis] D.RUFFER> You can do what you want by creating the structure on
+                    disk, but you need some dbm tools to do it.  I don't
+                    know of any in the pd
+
+<[Doug] D.PHILIPS2> If I can have a seekable stream package (I know, I
+                    know, roll your own), I can do that.  The other thing I
+                    might do is grab another DOS segment to put my lists
+                    into.  Of course, I'm open to alternative
+                    representations that achieve the same effect.  ga
+
+<[Dennis] D.RUFFER> streams won't buy you much since the database would
+                    probably be fixed length indices
+
+<[Doug] D.PHILIPS2> Streams by me seeking around in the file that has the
+                    text of the news in it. 'by'->'buy '
+
+<[Dennis] D.RUFFER> Yes, streams will help there
+
+<[Doug] D.PHILIPS2> So, is this off the wall to be wanting to do in forth?
+                    Have I taken an approach to the problem which precludes
+                    an easy forth solution? ga
+
+<[Dennis] D.RUFFER> I can do what you want in PolyForth, but the tool is
+                    not pd
+
+<[Dave] OLORIN> Not at all. Forth will work fine. And if you are using F-
+                    PC, it already has a full stream library.
+
+<[Doug] D.PHILIPS2> I'm not using F-PC at the moment, but I do have it.
+                    I'm using pygmy,
+
+<[Dave] OLORIN> (And I have placed a minimal stream package for Druma Forth
+                    in the library)
+
+<[Dennis] D.RUFFER> has anyone done a database in it yet? in F-PC that is
+
+<[Dave] OLORIN> Not that I know of.
+
+<[Doug] D.PHILIPS2> since I'm a bit overwhelmed by F-PC.  Of course, I
+                    might try to steal the stream package from F-PC.
+
+<[Dave] OLORIN> F-PC is a very nice package.
+
+<[Dennis] D.RUFFER> you might also check out ABUNDANCE it is a VERY nice
+                    database system in Forth
+
+<[Doug] D.PHILIPS2> Abudance is in the library here?
+
+<[Dennis] D.RUFFER> yes an older version that is
+
+<[Doug] D.PHILIPS2> I don't think I want a full blown database system.  I
+                    want to keep the news articles in plain text files so
+                    that I can edit them with various tools, and let my
+                    uucp (UULINK) software deal with them. I just want to
+                    create these auxillary indecies into them.
+
+<[Dennis] D.RUFFER> you need to talk with Bob Schemmel he has the same
+                    desires for a modem package
+
+<[Dave] OLORIN> Doug: F-PC will do what you want. And it isn't nearly as
+                    frightening as it seems. (BTW: The hypertext help in
+                    3.5 is nice, too)
+
+<[Doug] D.PHILIPS2> Hypertext SchmyperText! Hypertext is too often an
+                    excuse for not doing the right organization! (Personal
+                    opinion, of course :-)
+
+<[Dennis] D.RUFFER> Bob Schemmel (R.SCHEMMEL1) has been doing a bunch of
+                    thinking about the same kind of things
+
+<[Doug] D.PHILIPS2> Actually, Hypertext is good for REFERENCE manuals, but
+                    too often a hyperlinked
+
+<GARY-S> Can we continue this later ?
+
+<[Doug] D.PHILIPS2> reference document is considered good enough.
+
+<[Dennis] D.RUFFER> well folks, it's getting late and I haven't eaten
+                    supper yet
+
+<[Dave] OLORIN> I need to head out. Bye. has left.
+
+<[Dennis] D.RUFFER> can I go home yet?
+
+<[Doug] D.PHILIPS2> Ja.  Next week is taken, how about sunday night?
+
+<GARY-S> let's kill the cat ********** poof has left.
+
+<[Dennis] D.RUFFER> just be there and bring it up Doug take the wizards by
+                    the horns :-)
+
+<[Doug] D.PHILIPS2> Que Pasa?
+
+<[Dennis] D.RUFFER> bring up your need next Sunday, and I'm sure it will
+                    get some discussion for now, I'm calling it a night
+
+<[Doug] D.PHILIPS2> Ciao. has left.
+
+=== End of Steno notes. ===
+
+

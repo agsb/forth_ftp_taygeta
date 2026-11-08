@@ -1,0 +1,231 @@
+
+( Networks of Neurons     Robert E. La Quey   FORML 87 )
+The following is source code presented by Robert La Quey
+at the FORML conference in November, 1987.  This was
+released into the public domain so that people could become
+familar with neural nets and how they could be done.
+
+I've written it up in block sections groupings as it was 
+presented in the paper.  The shadow blocks are included at the 
+end but relate 1 to 1 with the source code blocks.
+
+For more info see Mr. La Quey's paper when the FORML
+proceedings become available.
+   -Scott Squires    GEnie S.W.SQUIRES
+
+
+
+( Notes on the code                         rel  11/01/87)
+Because the weights are equal for each input the problem 
+can be scaled so that no multiplication is required.  Thus 
+the ON value is given by the max number allowed divided by 
+I/L.  For purposes of this simulation I have built a byte 
+oriented simulator with I/L = 8 so that ON = 32 ( 256/8 ).  
+
+I suspect that the choice of equal weights does not 
+involve any true loss of generality.  By connecting an 
+output to several computing elements we can obtain results 
+equivalent to the use of weighted inputs.  
+
+The connection matrix contains an element# for each input 
+of each element.  I use byte cells and hence have allowed 
+for 256 elements.  The connection matrix uses #L I/L * = 
+2048 bytes.  
+( Notes on the code                         rel  11/01/87)
+
+One quickly becomes impressed with how slow the IBM PC is.  
+This type of simulation is computationally intensive.  
+There are #L I/L * (here 2048) operations per step, i.e.  
+essentially one operation per connection, in the inner 
+loop.  Thus one quickly loses interactivity and those of 
+us with short spans of attention lose interest.  
+
+The Chuck Chip is fast enough to allow useful experiments.  
+
+
+
+
+
+
+( Neural Network Data Structure             rel 04/02/87 )
+
+   64       CONSTANT #L          ( # of elements         )
+    8       CONSTANT I/L         ( Input/element         )
+  256 I/L / CONSTANT NON         ( Neuron has fired      )
+    0       CONSTANT NOFF        ( Neuron has not fired  )
+    3       CONSTANT THOLD       ( # inputs reqd to fire )
+THOLD NON * CONSTANT GAMMA
+
+        VARIABLE STEP#
+
+CREATE >CM   #L  I/L * ALLOT     ( Connection Matrix     )
+
+: CM  ( el# in# -- addr )  SWAP I/L * + >CM ;
+
+
+( Neural Network Data Structure            rel 04/02/87 )
+
+VARIABLE >OLD       VARIABLE >NEW
+  CREATE BUF0 #L ALLOT   CREATE BUF1 #L ALLOT
+
+: START  ( -- )                         ( BUF0 is Input  )
+  0 STEP# !  BUF0 >OLD !  BUF1 >NEW ! ; ( BUF1 is Output )
+  START
+
+: NEXT  ( -- )
+ 1 STEP# +! >OLD @ >NEW @ >OLD ! >NEW ! ; ( Swap I/O Buffers)
+
+: INPUT  ( el# -- addr )   >OLD @ + ;
+: OUTPUT ( el# -- addr )   >NEW @ + ;
+
+: QUIET  #L 8 DO 0 I INPUT C! 0 I OUTPUT C! LOOP ;
+( Neural Network Simulator                  rel 04/02/87 )
+
+: CONNECT     ( el# el# in# -- )  CM C! ;
+: DISCONNECT  ( el# in# --     )  CM DUP C@ NEGATE SWAP C! ;
+: CONNECTION  ( el# in# -- el# )  CM C@ ;
+
+DEFER DISPLAY   ' NOOP IS DISPLAY
+
+: NEURUN  ( el# -- )   ( Runs a single neuron )
+  0 SWAP I/L 0 DO  DUP I CONNECTION INPUT C@ ROT + SWAP LOOP
+    SWAP GAMMA - 0> IF NON ELSE NOFF THEN  SWAP OUTPUT C! ;
+
+: NEURUNS #L 8 DO I NEURUN LOOP ; ( Runs the Neural Network )
+
+: THINK ( #steps -- ) QUIET 0 DO NEURUNS DISPLAY NEXT LOOP ;
+
+( Neural Network  Network Interface            rel 04/02/87 )
+
+CREATE BIT
+   1 ,   2 ,   4 ,   8 ,   16 ,   32 ,   64 ,    128 ,
+
+: IS-NET-INPUT  ( ch -- )
+   8 0 DO
+      DUP 7 I - 2* BIT + @ AND IF NON ELSE NOFF THEN DUP
+      I INPUT C! I OUTPUT C!
+      LOOP DROP ;
+
+: NET-OUTPUT-IS  ( -- ch )
+  0 8 0 DO
+   #L 8 - I + OUTPUT C@ NON = IF 7 I - 2* BIT + C@ + THEN
+     LOOP ;
+
+( Neural Network  Connection Matrix            rel 04/02/87 )
+
+   DEFER CONNECTOR
+
+: GM  #L 8 -  8      ( GM for Grey Matter )
+    DO I I/L 2/   0
+        DO DUP 8 RANDOM SWAP I CONNECT LOOP
+         I/L I/L 2/
+        DO DUP DUP CONNECTOR SWAP I CONNECT LOOP DROP
+    LOOP
+    #L DUP 8 -
+    DO I I/L 0 DO DUP DUP CONNECTOR SWAP I CONNECT LOOP DROP
+    LOOP ;
+
+: RR DROP #L RANDOM ;  : GREY-MATTER ['] RR IS CONNECTOR GM ;
+
+( Neural Network  Portable Character Display rel 04/02/87 )
+: ?CR ( n -- ) 16 MOD 0= IF CR THEN ;
+: .ON ( n -- ) NON = IF ASCII 1 ELSE ASCII 0 THEN EMIT ;
+
+: .STATE DO I ?CR I OUTPUT C@ .ON LOOP ;
+
+: .NET-INPUT  CR 8        0 .STATE ;
+: .NET-OUTPUT CR #L DUP 8 - .STATE ;
+: .NETWORK    CR #L       0 .STATE ;
+
+: .CON ( el# -- ) CR DUP . CR I/L 0
+     DO DUP  I CM C@ 4 .R  SPACE LOOP DROP ;
+: .CONS CR ." Connections " #L 0 DO I .CON LOOP;
+
+: .NET CR STEP# @ . CR .NET-INPUT CR .NETWORK CR .NET-OUTPUT ;
+   ' .NET IS DISPLAY
+( Neural Network Data Structure             rel 04/02/87 )
+
+ #L is the number of computing elements (neurons) in the 
+ network. Each computing element has I/L inputs/element.  
+
+ The output of the computing element is scaled so the product 
+ I/L NONN * = max range = 256 here.  
+
+ THOLD is the threshold number of inputs.  When more than  
+ THOLD inputs are = NONN the computing element fires ...  and 
+ sets its output to = NONN.  
+
+ The Connection Matrix describes the network.  For each input 
+ of each computing element of the Connection Matrix contains 
+ the number of the computing element connected to that input.  
+
+( Neural Network Data Structure            rel 04/02/87 )
+
+The buffers BUF0 and BUF1 contain the current and previous
+values of the computing element outputs.  At each step in the
+computation the current output is used as input, the previous
+output is overwritten, and then the buffers are swapped in
+preparation for the NEXT step.
+
+QUIET puts zeros (NOFF) into the holding registers.  This
+corresponds to a quiescent network with no initial thoughts.
+Perhaps this is an example of the ZEN notion of NO MIND.
+
+Exercise for the student:
+
+What is the sound of one neuron clapping?
+
+( Neural Network Simulator                  rel 04/02/87 )
+
+We will need to CONNECT elements to specific inputs.  Also to 
+DISCONNECT them.  (Note DISCONNECT DISCONNECT does nothing) 
+Given an element# and an input# CONNECTION returns the 
+element# that is connected to that specific input.  
+
+NEURUN is the basic simulator.  It simply evaluates the total
+input weight by summing the inputs and compares it with the
+threshold. If the threshold is exceeded NON is put into the
+output register else NOFF is placed in the output register.
+
+NUERUNS just does it for all of the neurons except for 0 thru 
+7 which are reserved to input data from the external world.  
+
+THINK begins from a state of NO MIND and computes.
+( Neural Network  Network Interface            rel 04/02/87 )
+
+IS-NET-INPUT  ( ch -- )
+maps an 8 bit item on the stack from the world external to the 
+Neural Network onto the holding registers for the computing 
+elements numbered from 0 to 7.  Thus as far as the network is 
+concerned the outside world just looks like the output of 
+neurons 0 thru 7.  These elements do not change state as the 
+network computes but simply hold the input character.  
+
+NET-OUTPUT-IS  ( -- ch )
+maps the output of the last 8 computing elements (neurons)
+onto the stack.
+
+
+
+( Neural Network  Connection Matrix            rel 04/02/87 )
+
+This screen shows one of an infinity of ways of specifying a
+Connection Matrix.
+
+For this particular choice:
+
+    a) inputs 0 thru 3 are driven by randomly chosen elements
+       from the outside world.
+
+    b) inputs 4 thru 7 are driven by randomly chosen elements
+       from the internal world by the network.
+
+Each element is connected to the outside world (like a 
+retina?) and also to the internal world of the network.  
+
+( Neural Network  Display                       rel 04/02/87 )
+These names provide a simple display system which should be
+portable to a wide variety of computers.
+
+
+

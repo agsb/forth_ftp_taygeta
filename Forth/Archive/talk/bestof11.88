@@ -1,0 +1,318 @@
+
+
+                
+                      Best of GEnie..... November 1988
+          News from the GEnie Forth RoundTable by Gary Smith
+
+  I have already devoted one column to efforts of the X3/J14 Technical
+Committee, their task of defining the future structure of a ANS Standard
+Forth, and input to that effort on GEnie. The working draft of X3/J14 is
+BASISn where n is the current level. I had commented briefly on some notable
+differences between BASIS4N and BASIS5 - very briefly. A week later Bob Berkey
+literally dissected  BASIS5 by verse and line. The following message from Bob
+Berkey and Greg Bailey's rebuttal serve to reflect the nature of both 
+better than anything I might say to induce your participation in this
+endeavor. Please read this exchange, make notes as you agree or disagree, 
+and put them on GEnie in Category 10 for all to benefit from.  
+
+Category 10,  Topic 2
+Message 124       Sun Oct 09, 1988
+R.BERKEY                     at 09:39 PDT
+ 
+Notes, comments, reactions and opinions--after 24 hours with BASIS5
+ . Page  Note
+ . p. 2  The Forth 77 and Forth 78 documents are no longer "pertinent". p. 3 
+But parsing can be delimited by a string or a set of strings, and
+      doesn't have to throw away leading delimiters.  Suggest that the
+      parsing concept here be called "word parsing."  Parsing that
+      only looks for a single trailing delimiter could be called
+      "delimiter parsing".
+ . p. 4  "address, compilation" has become "compilation token" and
+      "execution token".  I like the use of "compilation token", because
+      "compilation address" in 83 was a misnomer.
+ . p. 5  character.  character sets are now implementation defined, and not
+      necessarily ASCII.  Wow this is a really biggie.  It's not possible
+      right now for a program to know what characters are in the
+      character set.  Numbers can be detected with CONVERT , but that's
+      about it.  It appears that output has new restrictions--can't
+      print addresses or bit-masks.
+ . p. 42 now that a char is implementation defined,   ASCII char   is a
+      misnomer.  If I am on an EBCDIC system will   ASCII .   give me the
+      value of an EBCDIC "." (as BASIS5 now states)?  From my viewpoint
+      either the implementation defined character set needs to go or
+      ASCII  and [ASCII]  should go.
+ . All   Propose that whenever a phrase from the Definitions of Terms is
+      used that it be italicized.  This would help in recognizing the
+      intent of the language.  The typesetting looks great.  One
+      exception, I'd like to see the Forth words without justification.
+      Also, I find that Forth words without a trailing space are hard to
+      syntactically distinguish from following punctuation.  In fact it
+      might be more correct and useful to have the "word name"
+      definition specify that a word name includes a trailing space--I
+      hope to develop a proposal or a paper on this.
+ . All   The word "cell" is back!  In 79 it meant a 16-bit word.  It took a
+      vacation during Forth-83, and is now back as 16 or more bits.
+      But, has this word been dormant long enough for its former meaning
+      not to cause confusion?  I doubt it.
+ . p. 44  BLOCK  is no longer in the required word set.  Give me a 100
+      squared with a terminal and I will be able to have an ANS standard
+      Forth!  Since FILE words are also not required, a Standard Program
+      no longer has a mass storage capability.
+ . p. 16  Variables can not be ticked (').  Don't know why. p. 19  PARSE  does
+      not appear in the glossary.
+ . p. 24  This is the page with stack parameter abbreviations.
+      Things are starting to get hairy.  The wrap-around number type (w)
+      has been eliminated from the standard along with the arbitrary
+      bits number type (8b, 16b, 32b).  A new number type, unspecified,
+      has been added, but using the old label w.  Oh no, DON'T REUSE THE
+      OLD "w" WITH A NEW DEFINITION.!!!!  FIND ANOTHER LETTER!!!!!!!!!!!
+      What's wrong with "x"?
+ .
+      The confusion of the 83 "w" and the BASIS5 "w" is pointless and I
+      trust the committee will change it, but the deeper change involved
+      is technically a dynamite issue.  Any of the words in 83 that had
+      wrap-around numbers have, from the programmer's viewpoint, been
+      radically altered.
+ .
+      Take +  for example.  In BASIS5 it has a stack of ( n1 n2 --n3 ).
+      n has a range of -32767 to 32767 or larger.  In 83 any input to
+      +  ( w1 w2 --w3 ) produces a known output.  The BASIS5 +  allows the
+      program to use fewer than half of these combinations--$7FE,002
+      compared to $1,000,000 if you are counting.
+ .
+      Oh no, I'm not believing this.  LOOP  is back to a sort of 79
+      definition.  This must be just a mistake.  Musn't it?  Maybe not,
+      what with consideration for overflow on a one's complement
+      machine.  Yet, now that I look further at the semantics under DO , I
+      see that   w DUP DO ... LOOP   will execute at least 65,536 times.
+      The two ideas seem contradictory so no doubt more changes are
+      coming here.
+ .
+      Here's another implication with the lost "w", Forth can no longer
+      detect a carry.  The idea is to use D+  instead of +  to add two
+      numbers, and if the top of the stack is non-zero, a carry has
+      occurred.
+ . p. 24  addr is now a data type rather than a number type.  This has
+      yet-to-be-discovered implications.  char, bit-mask, and r (real)
+      are also new data types.  Specification is needed to know
+      what input, arithmetic, logical, and output operators, etc., can
+      be used with what data types.
+ . p. 28  " ("quote")  New word compiles a string.  It leaves addr and
+      count.  Good.  CONVERT  (with a new name) should also have addr and
+      count.  One proposal is to use a new name:
+              NUMBER?  ( adr count -- flag )
+ . p. 3   ( )   ABORT" "   .( )   and   ." "   will produce
+      unexpected behavior.  Only "  (quote) has survived the capacity to
+      handle a null string.  I think this is a bad change.  ABORT" "  I
+      use regularly, and the other three cases make Forth look flaky
+      and/or unreliable.
+ . p. 56  FIND  This word still refers to compilation address, which phrase
+      is no longer in the definition of terms.  Should have been changed
+      along with   '  [']  EXECUTE  and  >BODY  to execution token(?)
+ . p. 42  Code and data are separated in the 1983 standard.  , "comma"
+      ALLOT  and HERE  are properties of the program, that the system
+      can borrow during compilation if desired.  COMPILE  can ignore
+      HERE .
+ .
+      D2*  and 2*  are an interesting pair, D2*  is a logical
+      shift, and 2*  is an arithmetic shift.  Does this mean something?
+ .
+      And, if you said to yourself "d-2-times" and "d-times" as you read
+      that last sentence, they are now "d-2-star" and "d-star".  First
+      they told me its "star", then they said in 1980 (Forth-79) that
+      its "times".  So for eight years I've tried to use "times" and now
+      I am supposed to go back to "star".  I assume Forth, Inc. is
+      involved in this because they let Brodie publish those cutesy and
+      memorable pictures in his book with the non-standard names.  Hmmm,
+      come to think of it one of his more memorable pictures was
+      "slash", and now I see that "divide" has not been changed, just
+      "times".  So this is yet a third name for  */  and  */MOD (?!?) .
+ .
+      As I think about how I pronounce these words I find there is a
+      dichotomy between "star-slash" and "times-divide".
+ .
+      D2*                                  always "d-2-times"
+      2*                                   always "2-times"
+      UM*                                  always "u-m-times"
+      *        sometimes  "star"           sometimes "times"
+      */       more often "star-slash"     than "times-divide"
+      */MOD    more often "star-slash-mod" than "times-divide-mod"
+      D2/      usually  "d-2-slash"
+      UM/MOD   usually  "u-m-slash-mod"
+ .
+      Is that a pattern?  I guess I learned it one way early on and
+      still don't have it switched over.  It appears to me that there
+      are two sets of pronunciations in general use.  Personally, I'd
+      rather not see the standard pronunciations changed.  There is an
+      alternative, however, which may seem radical, but also fits our
+      world--TWO pronunciations in BASIS6, Brodie and 79-Standard.  But
+      a third and new pronunciation?  I hope that doesn't last.
+ .
+      And another naming decision from 79 has been overturned.  The
+      pictured numeric words are no longer "sharp" but "number-sign".
+      As in  <# "less-number-sign".
+ . p. 69  new word:  UNDO p. 32-68  new words:   <=  <>  >=   0<=  0<>  0>=   
+      U<=  U>=  U>
+      Nine new words in the controlled reference section
+ . p. 34  new words:          2>R  2R>
+      The last two concern me because they are not the same as
+               R> R>    and   >R >R  .
+      The above potential bug needs to be covered in the
+      rationale.
+ . p. 62  NEGATE is the radix-complement.
+       NOT is the radix-minus-one's complement.
+      Some of us don't know what these mean, these concepts need to be
+      in the definition of terms.
+ . p. 66  SP@  deleted from the controlled word set.  What was wrong with
+      leaving this word controlled?
+ .
+      I sense that another organization, like the contributors to this
+      board, could take up the cause of collecting commonly used names,
+      so as to avoid needless duplication of names, and miscommunication
+      that results from one name coming to have two slightly different
+      meanings.  A good example of this is the long fetch with segment
+      word used on the 80x86.  Propose that SP@  be the first word in a
+      new Topic here.
+ .
+      I've been trying to figure out how to run a Forth-83 program using
+      a BASIS5 system.  In a worst case one could implement the
+      arithmetic/logical functions using 16 bytes to represent register
+      bits.  But probably it could be done with byte slices.
+ .
+      Implementation-requirement-removal proposals:
+      (1) Leave the function of BLK = 0 as implementation dependent.
+      The older rule makes using block and buffer on a file system most
+      inconvenient.
+      (2) Remove the implementation requirement that : (colon) sets the
+      compilation vocabulary.  I believe that this behavior is only for
+      programmers with a line editor who would forget to manually switch
+      out of the EDITOR  with its   I   word. .
+ .
+      One pattern is clear from BASIS5, the committee is working to
+      remove implementation requirements and specifications.  While
+      reducing the functional capacity of a Standard Program, the number
+      of Forth implementations that could meet the standard has been
+      increased.  At the same time that running a Forth-83 Standard
+      Program on a generic BASIS5-Forth Standard System has become
+      functionally impractical, the committee is allowing that Forth-83
+      Standard Systems are maximally supported.
+
+
+ ------------
+Category 10,  Topic 2
+Message 125       Sun Oct 09, 1988
+G.BAILEY1                    at 12:48 PDT
+ 
+Howdy, Bob!  Let me be the first to thank you very much for your brief (har)
+remarks on your first reading of BASIS5.  If your second is as fruitful, we
+need to get your input into usable form.  The next meeting is too soon to get
+proposals in that would meet the two week rule, but if you have some time
+between now and then I would request that you get the less argumentative of
+them on paper and into Martin's hands anyway.  We have not been two-weeking
+things introduced at the meetings unless really called for.
+   Proposals that clearly correct ambiguities or awkwardnesses of language
+without having any technical implications have been called "post" and are
+generally passed to the documentation committee without debate.  Any such
+would be welcome at any time.
+   Issues of notation choice or implication that may have been overlooked
+could be simply pointed out, as you have already done, or specific solutions
+could be formulated (as you have also done).  As a general comment your
+posting is already very useful, but if you have specific solutions that might
+be debatable I would suggest formulating each as a proposal.
+   In both of these areas, it might be useful for you or anyone else who
+wishes to take the trouble to think about the editorial aspects of the
+document to coordinate with Ted Dickens who may be reached at (213) 477-7287. 
+He chairs the documentation committee and would likely be willing to compare
+notes on things his group may already be planning to propose.
+   AS A MATTER OF PERSPECTIVE ON BASIS5:  Extensive editorial changes were
+necessary to beat our working document into the shape required by ANSI style. 
+Rather than wrangle out endless detailed proposals, the documentation
+committee offered to produce a massively edited document that would presumably
+take less effort to complete than would the original.  We accepted this offer,
+and BASIS4N, the immediate predecessor to BASIS5, resulted.  It was adopted
+"warts and all" with the understanding that it had problems.  You have been
+noticing some of the warts.  The most risky part of Ted's work was that it was
+not supposed to have technical impact.  However some of the changes
+undoubtedly had such impact.  For example, I had proposed that we delete the
+requirement for null strings, but the support for this proposal did not
+represent a strong consensus so the proposal has been committed.  Thus Ted's
+committee was NOT given authorization to delete this requirement, and it
+should still be there. Likewise the technical implications of the stack
+notation changes have not been subjected to deliberation by the committee as a
+whole except in a few cases when we have been working on specific words.  No
+doubt there are unintended effects.
+   Since there are known or suspected warts, proofreading for them is very
+useful.  Please continue to do so.
+   I'd like to chat about a couple of selected points you raised just for fun.
+   Wil Baden had proposed the words CHAR and [CHAR] which were amended to be
+ASCII and [ASCII] (TP88-114) before adoption.  He had been specifically
+interested in pursuing the decoupling from the ASCII character set. The
+committee was not quite ready to fully support this decoupling at that time. 
+We have, through the definitions of address units, and the words CELL+ , CELLS
+, BYTE+ , and BYTES  admitted to the possibility of storage allocation
+exceeding 8 bits.  However "byte" as data is still defined as an assembly of 8
+bits, "character" is still "a single-byte value" and the definition of
+"character" still references 2.1 (Referenced Standards) which consists of
+ASCII. I do not recall voting on the words "implementation defined" there, and
+in fact this seems to have been an editorial (!) change.  Suggest that you
+submit a proposal that forces this issue; we need one.
+   I hope it isn't too soon to use the term "cell" again.  For gosh sake it's
+been more than half a decade and will be nearly a full one before this thing
+has a pretty binding to wear.  I'd like to be able to use the term again
+within my own lifetime...
+   Wrap around numbers are an interesting concept on a one's complement
+computer.  Put simply they don't work that way.
+   However, this doesn't mean that your code is broken.  YOUR CODE HAS ALWAYS
+HAD A DEPENDENCY ON TWO'S COMPLEMENT HARDWARE IF YOU USE SUCH NUMBERS; HENCE
+IT HAS ALWAYS BEEN BROKEN RELATIVE TO RUNNING ON A ONE'S COMPLEMENT MACHINE. 
+It will still run just fine on the type of hardware that the technique depends
+on.  What is missing here is some good prose to express what we are trying to
+say.  There is absolutely nothing wrong with writing code that inherently
+Rdepends on a particular ALU type or even cell width (like 0< to test high bit
+of a boolean mask).  This merely means that the application uses techniques
+that are hardware dependent, and the last thing Forth should do is to forbid
+people to exploit the hardware they have to work with.  However as soon as one
+starts doing so he is writing code that is HARDWARE DEPENDENT and should
+happily admit it. All we are trying to do here is to clarify what you can do
+that is NOT hardware dependent and call a spade a spade.  Since there are many
+such dependencies in conventional usage of the same set of operators for
+dealing with the various data types (pairs versus doubles; numbers versus
+flags versus boolean masks) there is clearly much work left to be done.
+   The key thing about the "contractions" 2* and 2/ is that we inherited them
+from FORTH-83 defined as shifts, so they are not in fact contractions at all,
+at least at present.  The definition of 2* as an "arithmetic" left shift has
+always given me a chuckle since if one is going to insist on two's complement
+hardware there is of course no need to make the distinction. On the other hand
+one who uses this definition for 2* on a 1's complement machine to manipulate
+bits he will be surprised to find that the arithmetic left shift is and must
+be CIRCULAR.  Unless the committee is willing to change this we will need to
+add controlled reference words that guarantee specific bit oriented shifting
+operations.
+   How to pronounce our favorite words is almost as good as counting angels
+for consuming debate time.  I am hoping that the committee can avoid getting
+Xbogged down in this relatively irrelevant nonsense until the important part of
+the document makes sense.
+   SP@ was deleted because its existence directly conflicts with existing
+Forth hardware, such as the Novix and Harris chips.  To the extent that
+programmer portability is important, dependency on stack addressing techniques
+forms habits that simply don't work and cannot be reasonably implemented on
+such hardware.  Even though a word is merely "controlled" it is quite often
+the case that implementors are effectively forced to support everything in the
+book.  If it can be shown that a word cannot be reasonably implemented on
+hardware DESIGNED to run Forth, then that word is an excellent candidate for
+the silent treatment.
+   Finally, In reference to your remark about trying to figure out how to run
+a Forth-83 program on a BASIS5 system:  I don't know about you, but most of my
+systems are nearly BASIS5 so they would probably run reasonably well.  If you
+have arithmetic that depends on a 16-bit ALU, you will have a problem.  In my
+own experience conversion to a 32-bit or larger machine has not led to much of
+this.  However I will admit that you may have some difficulty in transporting
+some code that depends on 16-bit 2's complement byte addressing to many of the
+world's architectures howEVER you do it.  One way to deal with the problem is
+to assert that you don't plan on using such equipment... then you don't have a
+problem any more.  If instead you plan on such broad portability, then you
+(like all the rest of us) will probably need to clean up your act a little
+bit.  We all play fast and loose with data types!
+   Thanks again --- Greg B.
+
+

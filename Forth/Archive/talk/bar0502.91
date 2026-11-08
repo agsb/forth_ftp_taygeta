@@ -1,0 +1,303 @@
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 05/02/91   Time: 22:38EDT
+Attendees:
+[GARY-S]
+[[Dennis [i] D.RUFFER]
+[[Cliff] C.MORAVETZ1]
+[[Wil] W.BADEN1]
+[[Len] NMORGENSTERN]
+[[John] JDHALL]
+[[Dan] D.POPE7]
+[JAX]
+      
+  Open FIGGY BAR with some surprises ! Wil Baden resigns FIG Board on-line,
+  FIG President, John Hall comments on same. Other items of interest include
+  HS Student Forth vs MasterForth, next meeting of X3J14, SUN boot-ROM, FIG
+  chapter in Southern Michigan, Yerk (Neon reborn), Forth used for data 
+  acquisition, death of VP-Planner.
+
+Minutes:
+<D.RUFFER> is here.
+<D.RUFFER> hiya gary
+<GARY-S> notice on door = Welcome tro another open FIGGY BAR. B.Y.O.B. (Bring 
+Your Own Belly-aches). Your Forth-tender is Gary.
+<GARY-S> Hi Dennis
+<C.MORAVETZ1> is here.
+<GARY-S> Cliff
+<GARY-S> Buenos Noches
+<[Cliff] C.MORAVETZ1> Buon giorno!
+<D.RUFFER> humm, we seem to be a little slow tonight :(
+<[Wil] W.BADEN1> is here.
+<[Wil] W.BADEN1> Hi Gary, Dennis. Glad to meet you Cliff.
+<GARY-S> Go for it
+<[Cliff] C.MORAVETZ1> Who is supposed to go for what?
+<GARY-S> The floor is open - someone take advantage
+<D.RUFFER> sorry cliff, some background chit chat is overwheliming at the 
+moment :)
+<[Cliff] C.MORAVETZ1> Have any of you guys met me before? I've joined in ...
+<NMORGENSTERN> is here.
+<D.POPE7> is here.
+<[Cliff] C.MORAVETZ1> I thought there was only 1 pope.
+<D.POPE7> greetings. first time lurker.
+<JDHALL> is here.
+<D.RUFFER> d.pope could you tell us your first name?
+<D.POPE7> Dan
+<D.RUFFER> type /name Dan then :)
+<[Len] NMORGENSTERN> Hi John!
+<D.POPE7> Flint Michigan
+<D.RUFFER> hiya John, wil was here...he'll be back
+<[John] JDHALL> Hello, everyone and Gary.
+<GARY-S> D.POPE7 type /nam First name
+<D.RUFFER> ah, how's good old Flint doing these days Dan?
+<GARY-S> ie: /nam Dave or Don or...
+<GARY-S> Thanks Dan
+<D.RUFFER> thank you Dan...makes it easier :)
+<GARY-S> Who wants to talk about Forth ??????????
+<GARY-S> Lets party
+<D.RUFFER> what's that? :)
+<[Len] NMORGENSTERN> First let me ask Dan: How much Forth do you know?
+<D.RUFFER> Forth...not partying <grin>
+<[Len] NMORGENSTERN> (A fool and his money are some party)
+<[Dan] D.POPE7> Very little.  Just learning with student version of HS/Forth.
+<GARY-S> How do you like HS Forth ?
+<[Dan] D.POPE7> So far quite well.  Got frustrated trying to get PD system 
+together.
+<[Len] NMORGENSTERN> What's PD ???
+<[Dennis] D.RUFFER> Cliff, you are from Michigan too...where is Berrien springs?
+<GARY-S> Have you needed to call Jim and company for support ? If so how were 
+they ?
+<[Dan] D.POPE7> Public Domaine ??
+<[Len] NMORGENSTERN> Thanx
+<[Cliff] C.MORAVETZ1> Near Benton Harbor / St. Joe
+<[Cliff] C.MORAVETZ1> North of Niles.
+<[Cliff] C.MORAVETZ1> PD: Pretty Deficient.
+<[Dennis] D.RUFFER> ah, I know that area, I'm from Kazoo (a few years ago)
+<[Dan] D.POPE7> Actually trying to learn Forth and MS-DOS at same time.  Most 
+experience on Apple //.
+<GARY-S> Quite a change, then
+<[Cliff] C.MORAVETZ1> What is this? All the programmers with all the words have 
+nothing to say?
+<[Len] NMORGENSTERN> Dan, The Sunday conferences are slanted more towards
+<[Len] NMORGENSTERN> beginners than this on. Hope you can come then.
+<[Len] NMORGENSTERN> 8:30 Eastern time, every Sunday eve
+<GARY-S> Why did you not go with one of the Apple Forths ? Just curious
+<[Dan] D.POPE7> OK. Didn't know there was Sunday cnf. What time?
+<GARY-S> Len offers a super forum for questions Dan - I highly recommend you 
+check in next Sunday
+<[Dennis] D.RUFFER> but don't go away anyways Dan or Cliff.  We are a little 
+pre-occupied at the moment, but it is not normally this quiet :)
+<GARY-S> It isn't the rats nest these Thursday FIGGY's are
+<[Dan] D.POPE7> i do have Master Forth for A2 but HS/Forth has much better 
+editor and documentation and it's time to move on to MS_DOS
+<[Len] NMORGENSTERN> Send me EMail with specific questions if you have them.
+<[Dan] D.POPE7> I'll try to make it Sunday
+<GARY-S> Master Forth is a decent product, so I certainly appreciate your views.
+ That makes HS sound pretty solid.
+<[Dennis] D.RUFFER> so...a little tid bit of news...
+<[Dennis] D.RUFFER> Elizabeth is off to Sun Microsystems tomorrow....
+<[Dennis] D.RUFFER> the X3J14 TC is meeting (at least) one more time...
+<[Dennis] D.RUFFER> there will be (at least) one more go around on BASIS.
+<GARY-S> Why SUN, besides Mitch is there
+<[Dennis] D.RUFFER> that was the next scheduled meeting place
+<[Len] NMORGENSTERN> Countrywide rotation. I guess it's the turn of the Bay area
+<[Dennis] D.RUFFER> yes, they had planned it in case the forward to SPARC was 
+not succesful
+<GARY-S> SUN Boot-ROM is rapidly becomming the most widely distributed embedded 
+Forth system in existance - such a strange twsit
+<[John] JDHALL> Also if there was a NO vote!
+<[Len] NMORGENSTERN> 200 K systems out there!!
+<[John] JDHALL> I think Bob Berkey probably voted aginst.
+<[Dennis] D.RUFFER> does anyone know what Berkey wants?
+<[Dennis] D.RUFFER> can he be bribed? :)
+<GARY-S> John - I think the
+<[John] JDHALL> A no vote requires an answer.
+<GARY-S> lacking a better term, open President's office will help FIG. I want 
+to thankk you.
+<[John] JDHALL> Thanks for the encouragement!
+<GARY-S> I wonder how many of the nay-sayers will read FD though
+<[John] JDHALL> It seems many do!
+<[Dan] D.POPE7> Is there still a FIG chapter in South East Michigan ?
+<[John] JDHALL> But seriously, I think it will help also and I am trying...
+<GARY-S> That _is_ "our"  print forum
+<[Cliff] C.MORAVETZ1> I don't know, Dan
+<[Dennis] D.RUFFER> no Dan...was there _ever_ one there?
+<[John] JDHALL> to heal any wounds that are still open without opening others.  
+...
+<[John] JDHALL> I am not sure that is possible!
+<[Len] NMORGENSTERN> Detroit/Ann Arbor is the only one listed. Is that close 
+enough?
+<[Dennis] D.RUFFER> only 3-4 hours away Len :)
+<[Wil] W.BADEN1> is here.
+<[Cliff] C.MORAVETZ1> Maybe for Dan, but is a major distance for me.
+<[Dennis] D.RUFFER> rehi wil
+<[Dan] D.POPE7> 40 minutes from me.
+<GARY-S> Hi again  Wil
+<[Cliff] C.MORAVETZ1> High, Wil
+<[Wil] W.BADEN1>
+<[Len] NMORGENSTERN> The chapter chairman is Bill Walters 313 731-9660
+<[Len] NMORGENSTERN> or 314 861-6465 (eves)
+<[Dennis] D.RUFFER> Cliff, living in Kalamazoo is what convinced me that we 
+_needed_ to be on GEnie :)
+<[Cliff] C.MORAVETZ1> John, somehow I missed the subject you are discussing...
+<[Dan] D.POPE7> OK. Thats my area code - I'll call him.
+<[Cliff] C.MORAVETZ1> could you explain.
+<[John] JDHALL> We were talking about the President's letter in Forth 
+Dimensions.
+<[Wil] W.BADEN1> Hi all/sen 2 John did not try to dissuade me.
+<[Cliff] C.MORAVETZ1> The FIG president?
+<[John] JDHALL> Yes, for the moment that is me.
+<GARY-S> Wil has requested the floor for an announcement
+<GARY-S> ga wil
+<[Wil] W.BADEN1> Attention, please. I have an important announcement....For the 
+better health and prosperity of the Forth Interest Group...I resign from
+the FIG Board of Directors....Attention, please. I have an important 
+announcement....
+<[Wil] W.BADEN1> For the better health and prosperity of the Forth Interest 
+Group...For the better health and prosperity of the Forth Interest Group
+...
+<[Wil] W.BADEN1> I resign from the FIG Board of Directors....
+<[Wil] W.BADEN1> I have looked forward to and enjoyed these twice-a-week 
+gatherings...
+<[Wil] W.BADEN1> and will miss them....
+<[Wil] W.BADEN1> Health, Joy, and Peace.
+<[Wil] W.BADEN1> has left.
+<[John] JDHALL> Wil and Dennis had informed me of Wil intention...
+<GARY-S> I do wish an explanation had accompanied such an announcement !
+<[Len] NMORGENSTERN> Same here!
+<[John] JDHALL> I have reappointed Jack Woehr as the Chapter Coordinator...
+<[John] JDHALL> As the president, that is my perogative (sp?) and Wil was not 
+happy...
+<[John] JDHALL> with my decision.  Others of the Board of Directors were!
+<[John] JDHALL> Dennis?
+<[Dennis] D.RUFFER> yes?
+<[Dennis [i]] D.RUFFER> are you asking if _I_ and happy with your decision John?
+<[John] JDHALL> What do any of you think about my decision?
+<[Cliff] C.MORAVETZ1> I don't know enough about the people to have an opinion.
+<GARY-S> I will reserve comment, except to note Wil's exodus is a loss.
+<[Dennis [i] D.RUFFER> agree full heartidly gary ;(
+<[Cliff] C.MORAVETZ1> What is the bone of contention?....
+<[Len] NMORGENSTERN> Jack's heart is in the right place and his intentions
+<[Len] NMORGENSTERN> are good, but he can be very difficult sometimes
+<[Cliff] C.MORAVETZ1> Or is that something too sensitive to be discussed?
+<[Dan] D.POPE7> HELP: How do I turn Capture on with ALADDIN?
+<[John] JDHALL> It is a loss and he has help over the years?
+<[Dennis [i] D.RUFFER> Dan hit Esc then A :)
+<[Dan] D.POPE7> M160;1
+<GARY-S> This will be in a transcript no later than Saturday anyway Dan - look 
+for BAR0502.91
+<[Dan] D.POPE7> Thanks
+<GARY-S> Why are you trying to go to the Unix RT Dan ?
+<[Dan] D.POPE7> don't want to exit. don't know how that happened. new to Genie 
+and aladdin
+<[John] JDHALL> Can I tell you about Yerk Forth?  Not to change the subject.
+<[Dennis [i] D.RUFFER> ah, then you did an A in the Unix RT page of Aladdin (I 
+know that one :)
+<[Cliff] C.MORAVETZ1> Isn't Yerk Forth a version used in Sweden? :)
+<[Dennis [i] D.RUFFER> Yerk is a Mac Forth (originally Neon)
+<GARY-S> No- Yerk is Neon  reprised and cleaned up
+<[Cliff] C.MORAVETZ1> OIC
+<[Dennis [i] D.RUFFER> how's it work John?
+<[John] JDHALL> Yerk stands for Yerkes as in Yerkes Observatory at U of Chicago.
+<GARY-S> It is the original Object Oriented Language written in Forth, but as 
+Neon lacked garbage collection
+<[John] JDHALL> Bob Lowenstein got permission to put Yerk in the public domain..
+<[John] JDHALL> Yes, it was formarly called Neon.  he has brought the version 
+up....
+<GARY-S> His group were using it at the Observatory and thought their version 
+desreved   wider distribution
+<[John] JDHALL> from 2.2 to now 3.3.2.  He ia an astronomer at Yerkes and the 
+Flying Observatory
+<[John] JDHALL> that flies out of Moffet field in CA.  ...
+<GARY-S> Apple users "should" get a copy
+<[John] JDHALL> I have talked to him and he uses it for all of his observing.   
+...
+<[John] JDHALL> As an example, U of Chicago has a "remote" observatory in New 
+Mexico...
+<[John] JDHALL> and a couple of weeks ago over New Zealand...
+<[John] JDHALL> he disn't have anything to observe on the plane, so thru modem 
+and ...
+<[John] JDHALL> internet he was able to control the NM observatory and get 
+pictures which...
+<[John] JDHALL> he compressed and transmitted to the plane.  All this done in 
+Yerk and all...
+<[John] JDHALL> this communication occured in less than 15 minutes.  He has a 
+compression...
+<D.POPE7> is here.
+<[John] JDHALL> technique that can compress  and effectively transmit at 37.?K 
+bytes per sec. ..
+<[John] JDHALL> He does all the programming himself.
+<[Len] NMORGENSTERN> Just the kind of thing Forth is good at!
+<[Cliff] C.MORAVETZ1> Forth sure is used for a lot of data aquisitioning...
+<[Cliff] C.MORAVETZ1> Why isn't Forth used for something like account payable?
+<[John] JDHALL> It is a Forth with Objects and Classes.
+<GARY-S> It is - and insurance actuary tables
+<GARY-S> There are just other tools in wider distribution, and you don't get 
+paranoid about programmer  maintenance
+<[Len] NMORGENSTERN> Someone has to write it, Cliff. One of the best
+<GARY-S> Ashton-Tate's Rapid File is          written in MMS Forth
+<[Len] NMORGENSTERN> spreadsheets was written in forth, and was so good
+<[Len] NMORGENSTERN> that Lotus scuttled it.
+<[Len] NMORGENSTERN> (What Lotus wants, Lotus gets)
+<[Dan] D.POPE7> I teach middle school general science and LOGO (and Basic when 
+forced to). Love Logo. Forth seems similar. Would like to teach Forth s
+omeday.
+<[Cliff] C.MORAVETZ1> Is that the real reason why it got scuttled?
+<GARY-S> VP Planner was too intuitive Len -      Heck, normal people could use 
+it <sigh>
+<[Len] NMORGENSTERN> I doubt that Lotus would have gone after it if it
+<[Len] NMORGENSTERN> were not so successful.
+<GARY-S> One of the most skilled Forth programmers I know started in Logo, and 
+he totallly agrees with your assessment, Dan
+<[Cliff] C.MORAVETZ1> What company made the spreadsheet that got scuttled?
+<JAX> is here.
+<GARY-S> Stephenson Software in British Columbia
+<[Len] NMORGENSTERN> Regret that I have to leave. Hope to see you all Sunday!
+<[Cliff] C.MORAVETZ1> IC: Using the word "scuttled" made it sound like Lotus 
+created it.
+<JAX> Hello all.
+<[Cliff] C.MORAVETZ1> Hi Jax
+<[Len] NMORGENSTERN> has left.
+<[Dennis [i] D.RUFFER> hiya jack
+<JAX> How's Fene^tres, Dennis?
+<JAX> Hi Cliff.
+<[John] JDHALL> Hello, Jack.
+<JAX> Hell JD
+<JAX> oops
+<[Dennis [i] D.RUFFER> Fene^tres????
+<JAX> Hello!
+<JAX> ( == Fr. "windows"
+<[Cliff] C.MORAVETZ1> In other words Gary, Lotus went after another company 
+because the...
+<[Dennis [i] D.RUFFER> ah, bitting me every chance it gets :)
+<[Cliff] C.MORAVETZ1> other companies' product was too much like 1-2-3?
+<JAX> (((speaking of windows, jax4th is assembling in another window)))
+<[Dennis [i] D.RUFFER> some day jack...some day :)
+<[John] JDHALL> It was a 1-2-3 clone.  It had other features, but it was ment 
+to be a clone ...
+<[Cliff] C.MORAVETZ1> Is Jax5th in a bottle? :)
+<[John] JDHALL> like many feel 1-2-3 originally was a clone of Visicalc.
+<JAX> no, after JAX4TH it's probably going to be JAXLOG
+<[Cliff] C.MORAVETZ1> I use a 1-2-3 clone called ASEASYAS. It works great! ...
+<[Cliff] C.MORAVETZ1> It's also written in Turbo Pascal.
+<[John] JDHALL> There were others that Lotus was after, Forgot the names.
+<[Dennis [i] D.RUFFER> jack, to answer your question, pF is running _in_ 
+Windows...
+<[Dennis [i] D.RUFFER> but still not running _under_ Windows :(
+<[Dennis [i] D.RUFFER> if you know what I mean :)
+<JAX> Like, "the mouse is living under the cat"
+<JAX>  ... you call that living? :-)
+<[Dennis [i] D.RUFFER> I'm running on a 9600 baud terminal connected to my AT...
+no, it is _not_ living yet.
+<[Cliff] C.MORAVETZ1> ZZZZ
+<JAX> Everything about DOS is a pain these days.
+<JAX> It's like a 50-year old lady who is pregnant.
+<GARY-S> Guys - I'm closing the steno - get in any last shots, now
+<[Cliff] C.MORAVETZ1> Pow!
+<[Dennis [i] D.RUFFER> oh sorry, didn't mean to disterb you Cliff :)
+<JAX> You don't know if the next generation is going to be born ...
+<JAX> or if the old gal is going to bust first.
+=== End of Steno notes. ===
+
+

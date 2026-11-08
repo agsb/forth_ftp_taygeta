@@ -1,0 +1,141 @@
+
+
+
+Some observations on the sacred cows of FORTH:
+---------------------------------------------
+By Don Colburn  October 16,1987
+
+
+Behold three sacred cows:
+
+The 16-bit pit.  
+    "16 is enough, everything worth doing can be done with 16 bits"
+    "more than 16 bits is wasteful of both speed and memory"
+	"True programmers can matrix multiply on the stack in their heads anyway"
+	"So what if all new computers in the last 3 years are shipped with 
+        more than 256k bytes of RAM?  That is only to make other programming
+        appear useful"
+
+The best OS is no OS.
+   "if it is not written in Forth, it is not worth using"
+   "Operating systems are written by people who could'nt make a living
+      programming applications"
+   "Operating system programmers are escapees from a home for the criminally
+      insane. They derive intense sadistic pleasure from devising system calls
+      that do everything except what you need.  They intentionally order 
+      arguments on the stack such that the most common sequences of calls
+      require the maximum amount of work by the application programmer."
+   "Operating systems have a lot of bugs.  I simply cannot depend upon such
+       sloppy work when I will be putting my name on the final product"
+   "Real Programmers don't use mice"
+   "Why should I adapt my way of thinking to some arbirtary user interface
+      handed down by someone else?"
+        
+The file block  
+    "blocks are more productive" 
+    "Humans can better associate code chunks with 3-digit integers"
+    "Blocks are more transportable"
+    "I never saw a file system worthy of use"
+    "Anything that they can do with files I can do by writing a couple
+		of blocks of code"
+    "What would you suggest I edit files with? ....  hmmmm...  why does that
+       sound a lot like the 'Compile...Link...Crash  method of programming?"
+    "there exist no decent interactive file editing tools"
+    "blocks conserve precious memory space and are faster than reading and
+	 writing a whole file"
+
+
+some of my thoughts in these areas:
+===================================
+
+    Just like most other Forth system implementors, I can trace the vestages 
+of these beliefs through the evolution of my products.  Perhaps I've been a 
+little more fortunate in that I made the decision to pursue the 68000 in 
+early 1979. This forced me to come to terms with these well-held beleifs
+in a very direct manner a couple of years ago ago.
+
+The 16-bitness issue was clairified for me in 1982 when HP started shipping 
+68000 based products.  None had less than 128k bytes.  Although our original 
+product offering was a 16-bit implementation, we quickly converted to a full 
+32-bit system to meet a clear market demand.  No one that I know using a 
+32-bit implementation on a machine with 32-bit data paths would prefer 
+anything else.  
+
+The OS issue was clarified in december 1983 when we received a prototype 
+Macintosh.  Rather than the trivial CP/M or MSDOS type of operating 
+environment (which I had supported as early as 1977 in a CP/M based product) 
+this was a large, full featured environment which, although the 
+implementation was incomplete, the vision of the user interface was clearly 
+specified.  I thought that I'd devised some pretty sophisticated window based 
+graphics systems on the earlier 68000 hardware, however simply delving into 
+the internals of Bill Atkinson's QuickDraw environment showed the trivial
+level of my earlier approaches. I guess that one of the toughest parts of
+being an adult is to recognize and applaud the virtues of a clearly superior
+approach.
+
+Those without Macintosh expirence, particularly those with only Amiga or 
+Atari ST expirence will find this a bit difficult to beleive, as both of 
+these systems do not represent the completed vision that does Macintosh.  
+This is not to depreciate the value of these machines, each provides a true 
+value for differing uses, however both do so at the far greater expense of 
+the application programmer than the Macintosh.  (for example, many Atari ST 
+forth programmers dislike mice due to poor performance.  Most Macintosh Forth 
+programmers love using the mouse. The difference is not the mouse hardware,
+rather the system software interface.)   
+
+The blocks vs Files issue took a lot longer for me to resolve in my own mind.  
+After scraping away a thick crust of prejudice on my part favoring blocks, I 
+finally saw that it came down to a question of tools.  Using blocks, simple 
+systems can easily incorporate high-quality, progrgramming-directed, 
+interactive editing and compiling tools.  Using Files, there is a quantum 
+leap in the sophistication of the needed tools, particularly for text 
+editing.  Without a seamless interactive development environment, reasonable 
+people may well differ over the value of compilation of text files.  
+
+We have seen an overwhelming preference for compilation of text files once 
+these more sophisticated tools become available.  As an example, the MacForth 
+Sibley editor allows multi-window editing, compilation of selection ranges 
+directing the output back to the editor window, inclusion of files to any 
+depth, Very fast, interactive file and folder search operations and a wide 
+range of programming shortcuts such as finding the first occurance of a word 
+in the current file by double clicking on the word with the option key 
+depressed.  The file interface allows inclusion of text files to any depth, 
+and comprehensive IO re-direction of input, output, error and debug text 
+streams.   
+
+A typical programming session now occurs within an untitled scratchpad 
+window.  As a definition evolves, it can be edited, and selectively loaded 
+until fully tested.  A test case is simply a line on the window which may be 
+selected and, by pressing the enter key, executed.  Keystrokes are reduced to 
+editing changes or modifying the test parameters without the need to re-type 
+the line.  Actual test code, including the returned results, may be 
+"commented out" within the text file for future compatibility testing.  The 
+"scratchpad" session may, of course, be saved, and restored, or the final 
+definition may be cut and pasted into another file.  
+
+Perhaps, however, the most compelling advantage of text files is the 
+unshackling of the text stream from the block boundries.  This encourages 
+approprioate in-line documentation, as well as examples of usage.  It is my 
+feeling that much of the unwarranted criticism of Forth as a "write-only" 
+language has been primarily due to the block boundry text limitations.  
+Unlimited file inclusion, and access to latter generation OS file grouping 
+methods (directories or folders) provide for all the advantages that I 
+previously found in earlier block systems.
+
+A further area that has taken major strides in recent years is the inclusion 
+of "local variable" and "structure" defining words.  These facilities can 
+provide for both significant performance and readability advantages over more 
+traditional " @&!" operations.  While I was initially suspicious of these 
+methods, I've grown to favor them in everyday practice.
+
+
+In Summary, In Forth, as in Life, one should base firmly held opinions on the 
+results of actual experience, rather than dark fears or hearsay evidence.  
+I've been as suprised as anyone at the results that we have acheived with 
+this latest generation of "personal workstation" computers.  As Forth 
+programmers, we have a unique edge in that interactive tools provide results 
+earlier and of higher quality than other, more traditional approaches.  By 
+using the machine to assist us in our development efforts, even better and 
+faster results are possible 
+
+

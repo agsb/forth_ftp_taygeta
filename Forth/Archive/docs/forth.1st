@@ -1,0 +1,220 @@
+
+                            Forth Class #1
+
+
+ Topics: Forth in general
+        Stack operators
+
+                         Forth in general
+
+
+ Forth's structure:
+
+          Data Stack: Forth uses this automatically for every
+     operation.  Any number entered at the keyboard interactively,
+     will be placed here.  It is used to hold temporary numbers
+     or addresses of words.  During program execution, it is much
+     faster to use and will conserve memory, as opposed to
+     defining a local variable as in other languages.  It it also
+     used to pass data between words.
+
+          Return Stack: This stack is used to keep track of Forth's
+     "return" path after execution of a word is completed.  It is also
+     used for keeping track of loop parameters such as number of times
+     through the loop.  This stack can be very usefull in storing
+     temporarily items from the Data Stack when things get too crowded
+     there.  It cannot be used during looping, and cannot be used to pass
+     data between words ( if you use it, you will find out what a
+     " system crash" means.
+
+          Dictionary: This is where Forth remember's the words you
+     teach it.  When you ask it to execute a word, it looks at the
+     last one added first, it searches " backwards! " through the
+     dictionary.
+
+
+ Modes of operation:
+
+          Interactive: Words can be executed by simply typing
+     them in at the keyboard.  Typing numbers will put them on
+     the Data stack.  New words can be added " defined " into the
+     dictionary as decribed below " Defining new words ".
+
+          Compiling: New words are compiled into the dictionary
+     from files stored on disk called " Screen files".  Afer
+     editing a screen, simply " LOAD " it in, more on this
+     later.
+
+
+ Defining new words:
+
+          You can define new words interactively, or by compiling
+     them into the dictionary.  Define a new word by using the
+     word " : " colon, to begin the definition, and the word " ; "
+     semi-colon, to end it.  This is called a " Colon definition ".
+     The word immediately following the " : " is the new word you
+     wish to define.
+
+          When you execute your new word, the words which follow,
+     will be in turn executed, from left to right. You can
+     consider each word as a separate " Subroutine ".
+
+          : NEW-WORD 1ST-WORD 2ND-WORD 3RD-WORD ;
+
+     * Note: some words such as looping words, can only be used
+       within a colon definition. *
+
+
+ Data stack maliputations:
+
+          The Data stack works just like a stack of plates.  If
+     you place a new plate on the stack, it will be the first one
+     to be removed.  Since the Data stack is where the action is
+     in Forth, it is very important to keep track of what is on
+     it and how the data is aranged.
+
+          Forth programmers keep track by always!!! making a
+     Stack diagram next to the new word they are defining.
+     For Example:
+
+          : NEW-WORD ( first# second# -- first# second# )
+              1ST-WORD 2ND-WORD 3RD-WORD ;
+
+     The parenthesis surounding the stack diagram causes Forth to
+     disregard these words, otherwise Forth would try to compile
+     them.
+
+     We read the stack diagram from left to right.  The items on
+     the left of the " -- " are what NEW-WORD expects on the
+     stack before execution and the numbers on the right are put
+     on the stack by NEW-WORD after execution.  It is as if you
+     were typing at the keyboard: " first# " then " second# ".
+     The two dashes " -- " tell us that the remaining items are
+     left on the stack after execution.  Any other numbers that
+     were on the stack before NEW-WORD was executed, and not
+     used by NEW-WORD, will be pushed down if more numbers are
+     put on the stack after execution than was consumed.
+
+     You may notice that if our NEW-WORD does not use any numbers
+     from the stack, the stack result on the right, looks the
+     same way as our stack diagram on the left which is before
+     execution.
+
+     When we are putting items on the stack, we always " push "
+     them on top of the stack. This in turn pushes all other
+     items down by one.
+
+          top of stack -->  second#      (______)  top plate
+                            first#    ___(______)__
+
+ * NOTE: Forth uses blanks to tell where a word starts and stops.
+ Any character may be used in a new word including Forth's words
+ with additional characters tacked on.  I will use the following
+ format to show a Forth word with its corresponding stack diagram
+ and if a " - " is used within a word, the whole phrase is
+ considered one Forth word! *
+
+ FORTH-WORD  ( stack-diagram )
+
+
+                          Forth Words
+-----------------------------------------------------------------
+
+ .      ( n1 n2 n3 -- n1 n2 )
+
+    " Dot " will display on the screen the top most item on the
+     stack.  It will consume it ( pop the item ) thus moving the
+     rest of the items up one notch.
+
+                 1 2 3 . [ret] 3 ok
+
+ * Note: for the above example, we type 1 2 3 ( a space between
+   each item ), and hit the ENTER or RETURN key, Forth says ok...  *
+
+
+ DROP   ( n1 n2 n3 -- n1 n2 )             before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___2___)
+                                         (___2___)   (___1___)
+                                         (___1___)
+
+      * drop top item ...removes it *
+
+
+ SWAP   ( n1 n2 n3 -- n1 n3  n2 )         before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___2___)
+                                         (___2___)   (___3___)
+                                         (___1___)   (___1___)
+
+     * swap or exchange the top two items *
+
+
+ DUP    ( n1 n2 n3 -- n1 n2 n3 n3 )       before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___3___)
+                                         (___2___)   (___3___)
+                                         (___1___)   (___2___)
+                                                     (___1___)
+
+     * duplicate top item *
+
+
+
+
+ OVER   ( n1 n2 n3 -- n1 n2 n3 n2 )       before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___2___)
+                                         (___2___)   (___3___)
+                                         (___1___)   (___2___)
+                                                     (___1___)
+
+     * duplicate second item *
+
+
+ ROT    ( n1 n2 n3 -- n2 n3 n1 )          before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___1___)
+                                         (___2___)   (___3___)
+                                         (___1___)   (___2___)
+
+     * rotate the third item to the top of the stack, push the
+       other items down *
+
+
+ NIP    ( n1 n2 n3 -- n1 n3 )             before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___3___)
+                                         (___2___)   (___1___)
+                                         (___1___)
+     * drop the second item *
+
+
+ TUCK   ( n1 n2 n3 -- n1 n3 n2 n3 )       before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___3___)
+                                         (___2___)   (___2___)
+                                         (___1___)   (___3___)
+                                                     (___1___)
+
+     * copy the top item to the third position, push lower items *
+
+
+ ROT    ( n1 n2 n3 -- n2 n3 n1 )          before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___1___)
+                                         (___2___)   (___3___)
+                                         (___1___)   (___2___)
+
+
+ UNDER+  ( n1 n2 n3 -- n1+n3 n2 )         before       after
+                                         ---------   ---------
+                      top of stack -->   (___3___)   (___2___)
+                                         (___2___)   (__1+3__)
+                                         (___1___)
+
+     * add the top item with the third item, leaving the second
+       item as the top item, and the sum of the first and third
+       as the second item
+
+

@@ -1,0 +1,139 @@
+
+                 Unstructured Forth Programming
+                 ------------------------------ 
+
+              Copyright (C) 1985 by Richard Wilton
+                  Laboratory Microsystems Inc.
+                         P. O. Box 10430
+                    Marina del Rey, CA 90295
+
+       (originally appeared in DDJ, January 1985, page 86)
+
+
+One of the features of Forth is that it is a "structured" 
+language.  This means that Forth programs are written in 
+variously sized chunks which fit together like a Chinese box 
+puzzle.  This is  in contrast to "unstructured" FORTRAN or BASIC 
+programs, which are written in variously sized chunks which fit 
+together like the noodles on a plate of spaghetti.  This is what 
+makes "structured" programming languages such as FORTH so much 
+superior to "unstructured" languages such as FORTRAN.
+
+Nowadays FORTRAN has acquired roughly the same status among 
+recent computer science graduates as Middle English or Aramaic.  
+Nevertheless, there are still some of us around who not only 
+remember what FORTRAN is, but have actually written programs in 
+it.  In fact, there are still a few people who think that "FORTH" 
+is just an abbreviation for IBM's FORTRAN 4 (H) compiler.
+
+Let's face it:  despite the universal scorn heaped upon it by 
+"modern" structured programming disciples, good old FORTRAN has 
+its strong points.  In fact, in certain situations, the 
+obligatory structured nature of FORTH makes elegant programming 
+impossible.  What FORTH programmer doesn't long for a simple, 
+unstructured, unconditional GOTO every once in a while?  Who 
+doesn't wish that the nice, straightforward arithmetic IF, which 
+can be expressed so concisely in FORTRAN or in two or three 
+machine instructions, was somehow built into FORTH?  For that 
+matter, wouldn't it be nice every once in a while to be able to 
+fall back on that old FORTRAN standby, the computed GOTO?
+
+Of course it would!  It is the purpose of this little article to 
+fill in the gaps in the pristine structure of FORTH, to repair 
+the glaring omissions we've just mentioned, and to restore a 
+little unstructured sanity to the deeply-nested, block-structured 
+world of the dedicated FORTH hacker.  Note:  all examples are 
+written in Forth-83.  Fig-Forth and Forth-79 users will have to 
+adjust the "tick" and ROLL references accordingly.
+
+
+The GOTO statement
+
+     : GOTO ( cfa --- ) R> DROP EXECUTE ;
+
+This little gem of a definition expects the code field address of 
+a FORTH definition on the stack.  You'll note, however, that 
+control passes unconditionally to that definition.  This 
+eliminates the need for leaving status flags, return codes, and 
+other assorted garbage on the data stack.  Using GOTO also makes 
+it easy to extract yourself from those messy BEGIN-WHILE-REPEAT's 
+and IF-ELSE-THEN's you've nested ten deep.
+
+
+The Arithmetic IF Statement
+
+     : AIF ( cfa_A cfa_B cfa_C  n --- )
+          ?DUP 0= 
+          IF    ROT 
+          ELSE  0> 
+                IF   ROT ROT 
+                THEN 
+          THEN  2DROP GOTO ;
+
+The arithmetic IF statement is obvious in concept:  transfer 
+control to point A if n is negative, to point B if it's zero, and 
+to point C if it's positive.  This is the sort of thing you do 
+all the time in assembly language:
+
+                   OR    AX,AX
+                   JS    POINT_A
+                   JZ    POINT_B
+         POINT_C:  
+
+But just try to express that succinctly in FORTH:
+
+                   DUP 0< IF   ['] POINT_A 
+                          ELSE 0= IF   ['] POINT_B
+                                  ELSE ['] POINT_C
+                                  THEN
+                          THEN
+                   EXECUTE
+
+Pretty clumsy, right?  Now here's the elegant solution, which is 
+concise and straightforward because it ignores the dogma of 
+block-structuring:
+
+     : EXAMPLE ( n --- )
+               [']  POINT_A   
+               [']  POINT_B   
+               [']  POINT_C   
+               3 ROLL   AIF  ;
+
+
+The Computed GOTO Statement
+
+As a final example, we implement FORTRAN's familiar 
+
+     GOTO (x1,x2,x3,...,xn),i
+
+a control statement so elegant that it was copied almost verbatim 
+by the creators of BASIC.  Making it work in FORTH requires 
+setting up a table of code field addresses in advance.  Then you 
+simply index the table and GOTO the right address.
+
+     : CGOTO ( cfa_table  n --- )  2* + @ GOTO ;
+
+The utility of using CGOTO, rather than a viper's nest of IF-
+ELSE-THEN's or CASE statements, is obvious to any competent 
+programmer and is not worth belaboring here.
+
+The more astute reader might observe at this point, "But what 
+about statement numbers?"  Well, folks, if you think about it for 
+a moment, you'll realize that statement numbers make good sense 
+in FORTH.  For one thing, numbered statememts would make it easy 
+to do "source-directed" editing, thus eliminating the need for 
+those clumsy, space-wasting screen files.  Also, silly 
+philosophical debates about the "proper" names for FORTH 
+definitions would be unnecessary if FORTH definitions were 
+numbered instead of named.
+
+By now it should be obvious how much can be gained by writing 
+unstructured FORTH programs.  No doubt further improvements could 
+be obtained by incorporating elements of PL/1 or even COBOL into 
+FORTH.
+
+Of course, such improvements must be left as an exercise for the 
+reader.  We're too busy adapting the syntax of FORTH to fit onto 
+80-column punched cards.
+
+

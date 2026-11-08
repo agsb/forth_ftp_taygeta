@@ -1,0 +1,57 @@
+
+The following is from the 3/5/87 issue of Electronic Design
+-----------------------------------------------------------------
+
+            Advanced environment moves Forth to Fifth
+
+Engineers and programmers building real-time control systems for
+a fast-turnaround application need a flexible, highly interactive
+programming language that delivers tight code. For many, the
+Forth programming language has filled that niche. A new
+implementation of that language, Fifth, combines Forth with an
+advanced programming environment. Developed by Click Software,
+Fifth runs on an IBM PC or a compatible.
+
+Rather than a replacement for Forth, Fifth supplements Forth, a
+virtual machine, by adding new structures and tools for Forth
+program development. Moreover, its 32-bit implementation compares
+favorably in speed with many 16-bit Forths. With 32 bits, it
+removes the worry of mapping an application onto the Intel
+microprocessor segmented architecture. With Fifth, the full 640
+kbytes of PC memory is available to the programmer. A linker or
+other external mechanisms are not needed to map programs onto the
+PC.
+
+A Forth-like system, Fifth combines an incremental compiler, an
+internal assembler, an application editor, and an interactive
+execution environment. Unlike Forth, it uses a tree structure to
+hold its modules (words). Rather than simple precedence and
+global scoping, access to modules -- scope -- is defined by a
+path through the module tree [figure not included].
+
+Fifth does not follow the standard Forth implementation model of
+threaded code. Instead, its primitive modules are coded in
+assembly, and accessed with indirect tokens -- a 32-bit pseudo
+address. Unlike most Forths, users cannot alter the system
+primitives; they can, however, substitute other definitions in
+the directory tree.
+
+With one keystroke, a programmer can create a turnkey application
+for direct execution. All unused modules and text descriptions
+are stripped from the code, minimizing its memory requirements.
+For example, an application that simply prints one line will take
+up a little over 2 kbytes.
+
+The software package runs on an IBM PC XT, AT, or a compatible
+with PC-DOS or MS-DOS 2.0 or greater. It requires only one floppy
+disk drive and at least 128 kbytes of RAM. The program can be
+configured to run from a hard disk and works with the newer DOS
+file handles and file pathnames.
+
+Fifth 2.5 is available at a cost of $150. It comes with a 30-day
+unconditional guarantee and phone support.
+
+Click Software; P.O. Box 10162; College Station, TX 77840. (409)
+696-5432.
+
+

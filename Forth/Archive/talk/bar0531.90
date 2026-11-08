@@ -1,0 +1,338 @@
+
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 05/31/90   Time: 22:34EDT
+
+  The question of the night: "Did you use Forth today ? This week ? Another
+                              OS or language ? Comments..."
+  Other items discussed: Mike Ham's Easter date, the BASIS, X3/J14 (esp. the
+  adoption of Bradley's CATCH/THROW instead of Morgenstern's NETS), Pygmy.
+                      
+Attendees:
+[GARY-S]
+[[Len] NMORGENSTERN]
+[[Kevin] APPERT]
+[Wil] W.BADEN1]
+[[Dave] OLORIN]
+[[ANSI-jax] JAX]
+[[Dennis] D.RUFFER]
+
+Minutes:
+<NMORGENSTERN> is here.
+<APPERT> is here.
+<[Wil] W.BADEN1> is here.
+<GARY-S> How about it - did you use Forth today ? This week ? comments ...
+<[Wil] W.BADEN1> Yes. I have.
+<[Kevin] APPERT> yup.  I used FPC's FLOOK facility several times today to look 
+up phone numbers
+<[Wil] W.BADEN1> I match algorithms in profane languages with Forth.
+<[Len] NMORGENSTERN> Yes, I have been reading about ISAM in my data base book
+<[Len] NMORGENSTERN> and am trying to program it in Forth.
+<[Kevin] APPERT> I also used an atomated teller.  does this count?
+<[Wil] W.BADEN1> I also have two answers to Mike Ham's question about Easter.
+<GARY-S> sure Kev - I'm easy
+<[Len] NMORGENSTERN> What question, Wil?
+<GARY-S> That's an interesting poser
+<[Wil] W.BADEN1> Date of Easter.
+<GARY-S> Mike answered it himself Wil - have you, seen his answer ?
+<[Wil] W.BADEN1> I have a version in F83X and Zen 1.1
+<GARY-S> Post them, please wil
+<[Wil] W.BADEN1> Let me look. (I thought he used a table.)
+<GARY-S> he did
+<[Wil] W.BADEN1> No fair.
+<GARY-S> you used a pure algorithm ?
+<[Wil] W.BADEN1> A slick way is to use UM/MOD 10 times.
+<[Wil] W.BADEN1> Yes.
+<GARY-S> How interesting
+<GARY-S> UM/MOD 10 TIMES ????????
+<OLORIN> is here.
+<[Kevin] APPERT> I did a fit check on the skins of a rocket payload whose 
+computer will fly Forth and interact in flight
+<[Dave] OLORIN> Answer: Nope.
+<[Dave] OLORIN> I haven't had time to work in Forth since SIGForth.
+<GARY-S> D. Long asked about OOF again Dave
+<[Dave] OLORIN> I finally have a breather at work as we wait for development 
+software. I should be able to get back to work on it this weekend/week.
+<[Dave] OLORIN> I have not had  the time to even look at any Forth code in 
+*months*.
+<[Dave] OLORIN> New (sliding) release date for 3.0 is June 15th.
+<[Dave] OLORIN> (I have to relearn my code)
+<[Len] NMORGENSTERN> What 3.0, Dave
+<GARY-S> OOF
+<[Len] NMORGENSTERN> Thanx
+<[Dave] OLORIN> 3.0 is the upgrade I described at SIGForth. (The paper for 
+which I need to write) (sigh)
+<[Len] NMORGENSTERN> I remember that you got a hot idea, and were programming 
+far into that night, Dave.
+<[Dave] OLORIN> Right. I just have never had time to finish implementing 
+everything. So with a little time to reaquaint myself with the code... I shou
+ld be able to finish.
+<GARY-S> Wil, will you be posting your answers in the BB ?
+<[Wil] W.BADEN1> Yes.
+<[Wil] W.BADEN1> Do you want Pascal and C too?
+<GARY-S> No - not unless you think the code is germaine
+<JAX> is here.
+<[ANSI-jax] JAX> What has 20 heads, speaks Forth and disagrees with itself 
+constantly and acerbicly?
+<[Len] NMORGENSTERN> Ans. Jack Woehr
+<[ANSI-jax] JAX> CLose.
+<[Dave] OLORIN> Multiprocessing RTX project?
+<[ANSI-jax] JAX> Getting cold.
+<[Dave] OLORIN> comp.lang.forth
+<[ANSI-jax] JAX> Nope
+<[Len] NMORGENSTERN> I am sure that Jack wants us to say
+<[Len] NMORGENSTERN> ANSI
+<[Len] NMORGENSTERN> (There I said it)
+<[ANSI-jax] JAX> Well, X3J14 specifically.
+<[ANSI-jax] JAX> But it's great fun. Sorta like a week-long SVFIG meeting. 
+Total immersion, if ya know what I mean.
+<[Kevin] APPERT> "a Committe is the only known form of life with multiple 
+stomachs and no brain" (A fictional character of Robert A. Heinein)
+<[Len] NMORGENSTERN> Yes, I was at Stanford & know what you mean
+<[Len] NMORGENSTERN> The idea that a committee can't do anythin right
+<[Len] NMORGENSTERN> is a canard. A good committee with good leadership
+<[Len] NMORGENSTERN> can do some marvellous things.
+<[ANSI-jax] JAX> For instance ... John Hayes (FRISC3 == SC32 forth chip "daddy")
+ ...
+<[ANSI-jax] JAX> John Rible of NOVIX ...
+<[ANSI-jax] JAX> Don Colburn ...
+<[ANSI-jax] JAX> Liz Rather, the third Forth programmer ever ...
+<[Dave] OLORIN> Then it's not a committee. It's one person with a crowd to 
+share the blame.
+<[ANSI-jax] JAX> For a "junior" Forther like JAX, it's like going to grad 
+school.
+<[ANSI-jax] JAX> Dennis Ruffer was there.
+<[Len] NMORGENSTERN> You hit the problem, Dave. If the aim of the committee is
+<[Len] NMORGENSTERN> to get something done, they often do. If the aim is to 
+spread
+<[Len] NMORGENSTERN> the blame, they succeed in that, too.
+<[ANSI-jax] JAX> Well, once you are there ON the committe, the problem is more 
+practical and less theoretical.
+<[ANSI-jax] JAX> I had one or two concerns, and the things that were IMPORTANT 
+to me, I got.
+<[Len] NMORGENSTERN> What were they, Jax?
+<[ANSI-jax] JAX> Clarification of the ROM/RAM discipline ( BASIS11 A.2) ...
+<[ANSI-jax] JAX> And getting one of Mitch Bradley's more absurd strokes of 
+genius dismissed without debate.
+<[Len] NMORGENSTERN> Which stroke?
+<[ANSI-jax] JAX> Oh, he wrote ..
+<[ANSI-jax] JAX> that since it is "only about 200 bytes" per control structure .
+..
+<[ANSI-jax] JAX> to make ALL CONTROL STRUCTURES WORK IN INTERPRETIVE MODE ...
+<[ANSI-jax] JAX> that such should be written IN THE CORE that ALL CONTROL 
+STRUCTS work interpetively.
+<[ANSI-jax] JAX> Call that "outlawing ROM systems."
+<[Len] NMORGENSTERN> Mitch is confusing a thing that would be very nice to have
+<[Len] NMORGENSTERN> with something that ought to be required.
+<[ANSI-jax] JAX> Mitch Bradley is a good buddy and certainly quite a FORTH 
+overachiever ...
+<[ANSI-jax] JAX> with 300,000 installations of his FCode SUNs.
+<[ANSI-jax] JAX> Nothing to sneeze at.
+<[ANSI-jax] JAX> Yes, Len , he does that all the time.
+<[ANSI-jax] JAX> He is one of the "worst offenders" at sticking "neat ideas" in 
+the BASIS.
+<[ANSI-jax] JAX> THough I agree with him a lot of the time ...
+<[ANSI-jax] JAX> I had to disagree with inserting CATCH ... THROW in the CORE.
+<[ANSI-jax] JAX> ( PS .... he won that one!)
+<[Len] NMORGENSTERN> Too bad, I have a better system
+<[Wil] W.BADEN1> Shame it's not portable.
+<[Len] NMORGENSTERN> I call it "NETS"
+<[ANSI-jax] JAX> Len .. that was argued by us agin' Mitch's proposal.
+<[ANSI-jax] JAX> Wil ... yes but try and convince them.
+<[Wil] W.BADEN1> Shame neither is portable.
+<[ANSI-jax] JAX> There were only 4 or 5 votes against when it passed.
+<[Len] NMORGENSTERN> Sad. CATCH ... THROW is very kludgey, in my opinion.
+<[ANSI-jax] JAX> I think it's NEAT. But it doesn't belong in the STANDARD.
+<[ANSI-jax] JAX> Mitch doesn't always catch that distinction!
+<[ANSI-jax] JAX>  :-)
+<[ANSI-jax] JAX> To me, ANS Forth means THREE THINGS:
+<[ANSI-jax] JAX> 1) A portable program cannot hack the dictionary!
+<[ANSI-jax] JAX> 2) Data space is separate from code space and mixed ROM/RAM 
+systems now can be portable!
+<[ANSI-jax] JAX> 3) If this passes, every working Forth programmer with 20 
+years left in his/her career is worth instantly about $100,000 more.
+<[Dave] OLORIN> Can I get mine in advance?
+<[Dave] OLORIN> (grin)
+<GARY-S> Amortized over 20 years...
+<[Len] NMORGENSTERN> Do you think that the ANSI standard will be THAT 
+beneficial, Jax?
+<[ANSI-jax] JAX> Economically, yes.
+<[ANSI-jax] JAX> That's my out-of-thin-air figger.
+<[Len] NMORGENSTERN> $5K per year is not a lot, but every bit helps.
+<[ANSI-jax] JAX> It's like being able to write "BIODEGRADABLE" on a box of 
+laundry soap. It may be all psychological, but it will help us market our s
+kills.
+<[ANSI-jax] JAX> ANS Forth will not replace my pet Forth.
+<[Kevin] APPERT> are you moved to San Francisco, or just never told GEnie you 
+moved away, Jax?
+<[ANSI-jax] JAX> It will just be one more arrow in my quiver.
+<GARY-S> Who's complaining - I cxan sure use a 5K bonus - why do you think it 
+will be that good ?
+<[ANSI-jax] JAX> Because I price projects all day.
+<[Len] NMORGENSTERN> Genie is slow about changing addresses, Kevin.
+<[ANSI-jax] JAX> When I can say "ANS Forth" I'll raise my rates by that much.
+<[ANSI-jax] JAX> And make it stick!
+<[Len] NMORGENSTERN> More important, do you think it will increase the 
+number of Forth projects,
+<[ANSI-jax] JAX> ( GEnie *charges* to change your logo! Poo! Jax no pay! Him 
+still mythically in San Francisco.
+<[Len] NMORGENSTERN> as well as the price per project?
+<[ANSI-jax] JAX> Yes and Yes.
+<[ANSI-jax] JAX> Len, In embedded systems ...
+<[ANSI-jax] JAX> the pricey projects ...
+<[ANSI-jax] JAX> are scheduled by managers DESPERATE for some standards!
+<[ANSI-jax] JAX> .
+<[ANSI-jax] JAX> If you think ...
+<[ANSI-jax] JAX> that "if you've seen one Forth, you've seen ... one Forth!" ...
+<[ANSI-jax] JAX> You should see the world of control programming in general.
+<[ANSI-jax] JAX> To most project managers .
+<[ANSI-jax] JAX> No two projects are alike.
+<[Kevin] APPERT> most scheduling is based on "how long did this take last time 
+we did it or something similar"
+<[ANSI-jax] JAX> and "well guys, what language, chip, board, and development 
+system do we have to buy *this* time.
+<[Kevin] APPERT> how do they ever bid anything if they have no idea how long it 
+will take?
+<[ANSI-jax] JAX> It's damn hard. I do it every week.
+<[ANSI-jax] JAX> You do what you do in Forth.
+<[ANSI-jax] JAX> You break it down into manageable chunks, make an estimate and 
+multiply by 3!
+<[ANSI-jax] JAX>  :-)
+<[Kevin] APPERT> I heard PI more often
+<[Wil] W.BADEN1> That's 3 factorial, isn't it?
+<[ANSI-jax] JAX> I use integer Forth, it rounds :-)
+<[Kevin] APPERT> it gives it that pseudo-scientific flavor
+<[Kevin] APPERT> floating point is the work of the devil, that's why 8087 chips 
+run so hot!
+<[Len] NMORGENSTERN> Pi is 355/113 accurate to about 1 foot in the 
+circumference of the earth!
+<[Kevin] APPERT> we be good, we be fine, 3.14159
+<[ANSI-jax] JAX> my wife says, 3.141592653589793238462643383279
+<D.RUFFER> is here.
+<[ANSI-jax] JAX> (she memorized that in High School)
+<GARY-S> What a marvelous use of her mind
+<[Kevin] APPERT> your wife is accurate, as I wasted my own time in similar 
+fashion
+<[ANSI-jax] JAX> The best part of the X3J14 meeting ...
+<[Wil] W.BADEN1> Now I even I would celebrate in rhymes inapt the great 
+immortal Syracusan, rivaled nevermore, who is his wondrous lore passed on befo
+re gavem men his
+<[Wil] W.BADEN1> guidance how to circles mensurate.
+<[ANSI-jax] JAX> was when Gary Betts and his wife went out on the beeach and 
+came back after seeing a turtle lay her eggs.
+<[Len] NMORGENSTERN> (refrains from punning about ANSI laying an egg.)
+<[ANSI-jax] JAX> Ansi laid no eggs. Not that productive.
+<[ANSI-jax] JAX>  :-)
+<[ANSI-jax] JAX> Really, we are just about ready to propose dpANS.
+<[Dennis] D.RUFFER> ah, we did handle about 107 proposals though
+<[ANSI-jax] JAX> It is FAT but pretty workable.
+<[ANSI-jax] JAX> ( handle or manhandle? :-) )
+<[ANSI-jax] JAX> Vesta has no problems. We can live with pretty much all of it.
+<GARY-S> Seems an opportune time to plug Frank Sergeant's upcomming Conference 
+on 21 June (all you EVER wanted to know about pygmy)
+<[Dennis] D.RUFFER> some were not quite what the author had written <grin>
+<[Len] NMORGENSTERN> I have been using Pygmy. Mostly, I like it.
+<GARY-S> Pygmy - excellent minimalist Forth
+<GARY-S> I must admit I had a bit of trouble getting started with Pygmy
+<GARY-S> calling by proceedure..
+<[Kevin] APPERT> pygmy runs on?
+<GARY-S> PC's
+<GARY-S> I-clones
+<[Kevin] APPERT> available here?
+<[Dennis] D.RUFFER> of course!
+<[Len] NMORGENSTERN> Gary, what exactly do you mean "calling by procedure?
+<GARY-S> you bet ! This IS the release site
+<[ANSI-jax] JAX> It's like Niclaus Wirth says ...
+<[ANSI-jax] JAX> In Europe, they call him "Nik-laus Veert" ...
+<GARY-S> Lack of better terms, len - Frank's rather unique way of loading, etc
+<[ANSI-jax] JAX> in America, they call him "Nickles Worth" ...
+<[Kevin] APPERT> don't say of course.  for all I know he (ugh!) charges money 
+for the thing!
+<[ANSI-jax] JAX> I.e., in Europe, he's called by name, in America, by value! :-)
+<[Len] NMORGENSTERN> File 1939, Kevin
+<[Len] NMORGENSTERN> 1939 PYGMY12.ARC              X F.SERGEANT   891230   
+ 78120     59   4
+<[Len] NMORGENSTERN>       Desc: lean, fast Pygmy Forth for MSDOS
+<GARY-S> pygmy started out as a pc based cm-forth...
+<GARY-S> but has since develpoed its own persona
+<[Kevin] APPERT> thanks Len
+<GARY-S> I think you'll like it Kev
+<GARY-S> any last words of wisdom before we secure this meeting of the FIGGY 
+chapter ?
+<[ANSI-jax] JAX> Support ANS Forth! It's sagging in the middle.
+<[Dennis] D.RUFFER> get your last comments into the ANS TC soon!
+<[Len] NMORGENSTERN> Important: GEnie charges prime rates according to
+<[Len] NMORGENSTERN> where your account is located, not where you are located.
+<[ANSI-jax] JAX> Seriously folks, take our standard ... please!
+<GARY-S> They should have gone electronic from the start !
+<[Len] NMORGENSTERN> Important if you are travelling.
+<[Dennis] D.RUFFER> they want to get the dpANS out by 1992!
+<[Dennis] D.RUFFER> ah yes Len, I'm still on eastern time :-)
+<[ANSI-jax] JAX> Dennis, we ARE GOING TO PUT BASIS ONLINE!
+<[ANSI-jax] JAX> As you know!
+<[ANSI-jax] JAX> Hear that gang?
+<GARY-S> True Len, I signed up on Eastern Time :-)
+<[Dennis] D.RUFFER> yes, as soon as BASIS 12 is released
+<[ANSI-jax] JAX> Hallelujah, huh?
+<[Dennis] D.RUFFER> I'm working on the copyright notice now
+<GARY-S> So soon ? <sarcasm>
+<GARY-S> Actually, that is EXCELLENT news.
+<[ANSI-jax] JAX> You'll need Microsoft WORD [TM] to read it ...
+<[ANSI-jax] JAX> but there we have it. Online at last.
+<[Dennis] D.RUFFER> yes, thank you very much for making the motion Jax
+<[Wil] W.BADEN1> This is as far as I got.
+<[Wil] W.BADEN1> : golden# ( year -- n) 19 MOD ( n) 1+ ;
+<[Wil] W.BADEN1> : centuryterm ( year -- n)
+<[Wil] W.BADEN1>    100 / ( n)  DUP >R    4 /
+<[Wil] W.BADEN1>    R@ 11 + 8 * 25 / +    R> - ;
+<[Wil] W.BADEN1> : paschalfullmoon ( year -- marchDay)
+<[Wil] W.BADEN1>
+<[Wil] W.BADEN1> Sorry.
+<[Wil] W.BADEN1>
+<[ANSI-jax] JAX> I see that we have a judeo-xtian lunar calc going on here, but 
+what is that which is being calculate, Wil?
+<[Wil] W.BADEN1> I'll upload it.  I just checked -- it still works.
+<GARY-S> Mike Ham's Easter search
+<[Len] NMORGENSTERN> Date of Easter, Jax. Not of great importance
+<[Len] NMORGENSTERN> to us non-Easter-observers.
+<[Len] NMORGENSTERN> The calculation of the date of Passover is equally 
+complicated
+<[Wil] W.BADEN1> Do you have an algorithm for Pesach?
+<GARY-S> You can use the algorithm for other moon calculated events
+<[ANSI-jax] JAX> Think, Len, that Pesach is easier calc.
+<[Len] NMORGENSTERN> I have seen one written in North Star BASIC
+<[ANSI-jax] JAX> I have a chumosh with all the tables, it cycles in 28 years.
+<[Len] NMORGENSTERN> Actually it converts any date in the Hebrew calendar to
+<[Len] NMORGENSTERN> to Gregorian and vice versa.
+<[ANSI-jax] JAX> There is some trick in the easter calc, forget what exactly, 
+that makes it more tricky than passover.
+<GARY-S> no Chinese or Islamic cross reference ?
+<[ANSI-jax] JAX> Islamic even funnier calendar!
+<[Wil] W.BADEN1> Yes, Jax.
+<[Len] NMORGENSTERN> Not that I have seen, Gary.
+<[ANSI-jax] JAX> What is extra trick in Easter calc?
+<[ANSI-jax] JAX> I mean, extra compared to simple lunar month intercalation in 
+Jewish (Babylonian) calendar.
+<[Wil] W.BADEN1> For one, they make sure that it never falls on Pesach.
+<[ANSI-jax] JAX> Aha. I always thought that was on purpose!
+<[Wil] W.BADEN1> Right.
+<[Len] NMORGENSTERN> Usually, Easter is the first Sunday after the first day of 
+Passover,
+<[Len] NMORGENSTERN> but if the latter falls on Sunday it is the following week.
+<[Wil] W.BADEN1> First Sunday STRICKTLY after the full moon.
+<[Len] NMORGENSTERN> I can't remember an exception, but don't know if
+<[Len] NMORGENSTERN> that occurs every time.
+<[Len] NMORGENSTERN> The first of the month in the Hebrew calendar is
+<[Len] NMORGENSTERN> always a new moon. Passover is the 14th of Nissan.
+<[Wil] W.BADEN1> Depends how close Jewish Calendar is to actual full moon.
+<[Len] NMORGENSTERN> hence is always a full moon.
+<[Len] NMORGENSTERN> It is always so, since they add extra days to the months
+<[Wil] W.BADEN1> So what's the algorithm?
+<[Len] NMORGENSTERN> to force it to be so. Also a leap month 7 times every 19 
+years
+<[Len] NMORGENSTERN> to keep it in synch with the solar calendar.
+=== End of Steno notes. ===
+
+

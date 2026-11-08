@@ -1,0 +1,53 @@
+
+E       
+ Minutes of FIGGY BAR RT Conference.
+        
+ Date: 02/23/89   Time: 22:28EST
+Attendees:
+[GARY-S]
+[[xaJ] FIGCHAPTERS]
+[[milt] M.FABERT]
+[[Kevin] APPERT]
+[[Dave] DHWEINSTEIN
+   Items discussed: VP PLANNER team in conference,stack overflow,JForth 2.0 
+                    Professional review, FIG roadshow,Next SigForth ACM in
+                    Big D,ACM Forth newsletter,Micro C and no forth column
+                    policy,RSX bug,ORION in repair,Appleman recommended
+Minutes:
+<GARY-S> Jax - hanging around tonite ?
+<M.FABERT> is here.
+<[xaJ] FIGCHAPTERS> huh? not too long.
+<GARY-S> por que ?
+<[xaJ] FIGCHAPTERS> My little girl is awake and playful.
+<GARY-S> Hard to argue with that
+<[xaJ] FIGCHAPTERS> might stay logged in and walk away from the computer from 
+time to time.
+<GARY-S> How are things in Virginia - wet ?
+<M.FABERT> very - and slushy
+<GARY-S> That's pretty typical throughout the South ???
+<[Kevin] APPERT> is here.
+<M.FABERT> bizaar weather - it was 70 here a couple of days ago.  18 inches of 
+snow last SAT!
+<GARY-S> Looks like the guys that wrote VP PLANNER will be doing a conference 
+soon
+<[Kevin] APPERT> hi all. your backwards, Jax
+<[Kevin] APPERT> you are (oops)
+<M.FABERT> Thats Jax in RPN!
+<[Kevin] APPERT> haven't they converted VP PLANNER to C yet?
+<GARY-S> Kev - any more thought to your overflow article ? we can toss it 
+around if you want
+<[Kevin] APPERT> I am not in a position to do any serious work on it
+<[Kevin] APPERT> at the moment, but I would enjoy some input
+<GARY-S> why are you doing a formal raise Jax ?
+<[xaJ] FIGCHAPTERS> I have some neat Forth topics tonite.
+<[Kevin] APPERT> i think he just had a network erection
+<[xaJ] FIGCHAPTERS> <<<<< he beg yo' pardon????? <<<
+<GARY-S> lets play with Kev's article a moment then see what is on your mind - 
+fair?
+<[Kevin] APPERT> if you can call this a network
+<[xaJ] FIGCHAPTERS> it's a net but it don't always work.
+<[Kevin] APPERT> the premise is that forth doesn't genrally...
+<[Kevin] APPERT> handle exceptions the most promenent case of which in ...
+<[Kevin] APPERT> my mind at the moment is arithmetic exceptions like overflow.
+<[Kevin] APPERT> there are two things I have naively identified as appropriate..
+

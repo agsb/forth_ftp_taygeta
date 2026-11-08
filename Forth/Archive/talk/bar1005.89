@@ -1,0 +1,314 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+
+Date: 10/05/89   Time: 22:31EDT
+Attendees:
+[[Gary] GARY-S]
+[[Wil] W.BADEN1]
+[[mike] M.MELLEN1]
+[[Craig] W.TRELEAVEN]
+[I.MONTANEZ]
+[D.SHILLAM]
+[D.RUFFER]
+[[Jax] FIGCHAPTERS]
+[[Dave] D-WEINSTEIN]
+
+  Items discussed: The question of the nite 'Floored/truncated/both ?' 
+                   created a major discussion. Also MacForth vs MACH2,
+                   a plug for TCJ's Forth effort, and next weeks guest
+                   RTC with Bob Smith.
+
+Minutes:
+<[Wil] W.BADEN1> is here.
+<[Gary] GARY-S> hellooo stranger
+<[Wil] W.BADEN1> Hi gary. Welcum home.
+<[Gary] GARY-S> tnx - heckofa nice break
+<[Wil] W.BADEN1> I'm glad to meet you thus alone.
+<[Gary] GARY-S> and....
+<[mike] M.MELLEN1> is here.
+<[Wil] W.BADEN1> I hav a regular 2nd thursday board meeting.
+<[Wil] W.BADEN1> PLEASE tell Bob Smith how disappointed I am that I can't catch 
+him.
+<[Gary] GARY-S> was there a reason you can't curtail or cut short ? you are one 
+of those I was sure would participate in this one
+<[Gary] GARY-S> hi mike:
+<[mike] M.MELLEN1> howdy, all
+<[Wil] W.BADEN1> Hi Myk.
+<[Gary] GARY-S> Mike I haven't been back on Harris' BBS because of telco costs
+<[Wil] W.BADEN1> The discussion goes on during dinner, 6:30 Pacific time on.
+<[mike] M.MELLEN1> I'm not sure what the BBS is up to these days. I'm not with 
+Harris any more.
+<[Gary] GARY-S> geeze - right during the conference
+<[Gary] GARY-S> still in Forth?
+<[Wil] W.BADEN1> Yeah.  That's why I haven't made them the past 3-4 months.
+<[mike] M.MELLEN1> When the boss isn't looking (they like C and the "U" word)
+<[Gary] GARY-S> I sure hate to see YOU of all people miss this one !!! damn wil
+<[Gary] GARY-S> not damn wil, but ... damn !, wil
+<[Wil] W.BADEN1> Actually I agree with almost anything Bob Smith says.
+<[Gary] GARY-S> Unix is NOT a vulgarity with me, Mike
+<[Wil] W.BADEN1> I wud be happy with any of 3 options.
+<[Gary] GARY-S> tonites question ?
+<[Wil] W.BADEN1> A. Waffle, but warn of lack of portability.
+<[Wil] W.BADEN1> B. Choose Truncating, and provide /MODULO (Bob's proposal.)
+<W.TRELEAVEN> is here.
+<[Wil] W.BADEN1> C. Canonize Flooring.
+<[Wil] W.BADEN1> Hi Craig.
+<[Craig] W.TRELEAVEN> Howdy
+<[Gary] GARY-S> thanks for the response wil, care to respond to the question, 
+mike ? craig ?
+<[mike] M.MELLEN1> Truncating is much easier to do in hardware.
+<[mike] M.MELLEN1> And the hardware for truncating lends itself to flooring. 
+Not vice versa
+<[Gary] GARY-S> I'd call that a vote for wil's B option, truncate with floored 
+option, true ???
+<[mike] M.MELLEN1> Da.
+<[mike] M.MELLEN1> That's based on input from Harris designers who had to do it 
+for the RTX.
+<[Gary] GARY-S> care to voice an opin craig ?
+<[Craig] W.TRELEAVEN> Mom said, when you don't know anything, don't say 
+anything...
+<[mike] M.MELLEN1> One of them is now bald. She wasn't when the project started.
+<[Craig] W.TRELEAVEN> But that hasn't stopped me in the past!
+<[Gary] GARY-S> Matter of fact (mike) there will be a Unix RT starting by next 
+month on GEnie
+<[Wil] W.BADEN1> Bob Berkey called me last Saturday and we spoke for four hours.
+<[mike] M.MELLEN1> I said They like Unix. I know just enough about it to be 
+dangerous.
+<[Wil] W.BADEN1> He said that I'm paronoid about Forth 83.
+<[Gary] GARY-S> are you ? is he ?
+<[Wil] W.BADEN1> I reminded him that I had implemented 2 or 3 implementations.
+<[Wil] W.BADEN1> I have used floored division since 1983.
+<I.MONTANEZ> is here.
+<[Craig] W.TRELEAVEN> Will, aren't you a Mac user?
+<[Gary] GARY-S> I did a FIG and a 79-Standard, 79 was easier, maybe because I 
+had done fig first
+<FIGCHAPTERS> is here.
+<[Wil] W.BADEN1> I hav been rash enuf to say that I think that
+<[Wil] W.BADEN1> (To Craig -- Yes.)
+<[Gary] GARY-S> I think Berk would make a good conf guest too.
+<[Wil] W.BADEN1> "The framers of Forth 83 were irresponsible and arrogant."
+<[Gary] GARY-S> I've been trying to get his new bay area phone number, can you 
+e-mail it to me wil ?
+<[Craig] W.TRELEAVEN> I've been thinking about getting either Macforth or Mach2.
+<D.SHILLAM> is here.
+<[Craig] W.TRELEAVEN> any opinions??
+<D.SHILLAM> no
+<[Gary] GARY-S> jax - is Lori still with Palo Alto Shipping ?
+<[Jax] FIGCHAPTERS> Working my way thru BASIS 9 courtesy of the Committee to 
+Shut Jax Up, Greg Bailey, co-chairman.
+<[Jax] FIGCHAPTERS> Lori?
+<[Wil] W.BADEN1> Re Macintosh: Every year I change which one I use.
+<[Jax] FIGCHAPTERS> Lori?
+<[Jax] FIGCHAPTERS> Palo Alto is Mach 2.
+<[Gary] GARY-S> is that not her name - lori chavez
+<[Jax] FIGCHAPTERS> JForth is Burke, Haas, Donovan, King.
+<[Jax] FIGCHAPTERS> I'll say one thing about the BASIS ...
+<[Craig] W.TRELEAVEN> I'd like to Mac interface stuff -- is one better than the 
+other?
+<[Wil] W.BADEN1> Sorry Gary, try skimming floored division topic in Cat 10.
+<[Craig] W.TRELEAVEN> Hm, missed the word "do", up there
+<[Gary] GARY-S> why ?
+<[Jax] FIGCHAPTERS> It would be a full time job commenting on that sucker ... I 
+am compiling a commentary for the perusal of whoever concerned.
+<[Jax] FIGCHAPTERS> One thing the TC needs and lacks ...
+<[Wil] W.BADEN1> Mach2 has a marvelous toolbox interface.
+<[Jax] FIGCHAPTERS> an English teacher on the Committee! :-)
+<[Wil] W.BADEN1> MacForth is easier but all the names hav been changed.
+<[Craig] W.TRELEAVEN> Oww
+<[Wil] W.BADEN1> Mach2 is a pain with programs over 32k (and it gets up fast 
+with ..
+<[Wil] W.BADEN1> 4 bytes per JSR.
+<[Wil] W.BADEN1> Mach2 is 300k, MacForth is 120k, PocketForth is 6k.
+<[Craig] W.TRELEAVEN> PocketForth is a little spartan
+<[Wil] W.BADEN1> MacForth has the "Sibley editor" which is much like MPW shell.
+<[Craig] W.TRELEAVEN> I've been playing w/Mitch Bradley's Forthmacs on the ST
+<[Wil] W.BADEN1> I sent the sysop for Mach2 e-mail on June 30, and havn't heard 
+back.
+<[Wil] W.BADEN1> There has been no activity on Mach2 BB.
+<[Craig] W.TRELEAVEN> You mean they may have 'turned turtle'?
+<[Wil] W.BADEN1> I have been using Mach2 for the past year and am about to go 
+back to MacForth.
+<[Wil] W.BADEN1> Well, I can't get no support.
+<[Craig] W.TRELEAVEN> Gee, that sounds like a song
+<[Gary] GARY-S> for a geriatric Rolling Stone :-)
+<[Wil] W.BADEN1> MacForth is Colburning Forth and unlike anybody else's.
+<[Wil] W.BADEN1> Gary, do you know any Mach2 products?
+<[Gary] GARY-S> not really, but I do know Wayman has not responded to e-mail 
+from me either
+<[Craig] W.TRELEAVEN> Could they be at a show, or something?
+<[Wil] W.BADEN1> For three months?
+<[Gary] GARY-S> could - but I don't know of any shows, do you ?
+<[Craig] W.TRELEAVEN> I think I'll call and ask for product info
+<[Wil] W.BADEN1> Actually I can think of only 4 things that were irresponsible 
+in Forth83.
+<[Craig] W.TRELEAVEN> MacForth sent me some nice glossies, but little tech info
+<[Gary] GARY-S> Maybe they have just abandoned the GEnie RT and are still in 
+business, I don't want to be guilty of starting a rumor
+<[Gary] GARY-S> please let us know craig
+<[Craig] W.TRELEAVEN> Will do!
+<[Jax] FIGCHAPTERS> Wil, how come the BASIS says that JSR Forth doesn't posess 
+COMPILE ? Not true.
+<[Wil] W.BADEN1> "true", NOT, LEAVE, division.
+<[Wil] W.BADEN1> All part of the clarification.  I can't remember where I saw 
+that, but ...
+<[Craig] W.TRELEAVEN> Opps, better run.  Thanx for the Mac info
+<[Craig] W.TRELEAVEN> has left.
+<[Wil] W.BADEN1> it's a rationale, not to be part of the standard.
+<[Jax] FIGCHAPTERS> It ain't truth, though.
+<[Wil] W.BADEN1> Gary, wud u poll the newcomers on the question?
+<[Gary] GARY-S> sure - wil is interested in your response to tonite's question
+<D-WEINSTEIN> is here.
+<[Gary] GARY-S> jax - only you have not responded
+<[Dave] D-WEINSTEIN> Hullo
+<[Wil] W.BADEN1> Hi dave.
+<[Gary] GARY-S> answer the question dave
+<[Dave] D-WEINSTEIN> What question?
+<[Gary] GARY-S> floored/truncated/both ?
+<[Dave] D-WEINSTEIN> Both. I like my options open.
+<[Wil] W.BADEN1> How?
+<[Jax] FIGCHAPTERS> Both. Standard leaves it implementation-specific.
+<[Gary] GARY-S> There have been two votes for truncated with floored option
+<[Dave] D-WEINSTEIN> (assumes CS pose) "But sir, that is an implementation 
+problem, and this is a question of theory and design" (ditches pose) (Sorry
+...prolonged exposure to CS lectures)
+<[Gary] GARY-S> so - would you implement truncated and make floored the option 
+as the hardware jockeys prefer ?
+<[Jax] FIGCHAPTERS> who's complaining about the '83 way?
+<[Wil] W.BADEN1> I'm no longer sure.
+<[Jax] FIGCHAPTERS> If it ain't broke ... :-)
+<[Gary] GARY-S> jax - will you make it to Bob's conf or are you still chessing 
+that nite
+<[Dave] D-WEINSTEIN> (Business hat on)
+<[Jax] FIGCHAPTERS> Not chessing.
+<[Jax] FIGCHAPTERS> Maybe.
+<[Dave] D-WEINSTEIN> TCJ Wants YOU!
+<[Jax] FIGCHAPTERS> Working late a lot lately.
+<[Dave] D-WEINSTEIN> (write subscribe write write write subscribe write)
+<[Jax] FIGCHAPTERS> Reading BASIS. I may run out of ink on this one.
+<[Dave] D-WEINSTEIN> (end subliminal messages)
+<[Gary] GARY-S> try to get you and steve on if only for opening comments
+<[Dave] D-WEINSTEIN> (Business hat off)
+<[Jax] FIGCHAPTERS> Parts of BASIS 9 are sublime.
+<[Wil] W.BADEN1> What is the Forth community? How many Flooring systems vs. 
+Truncating.
+<[Wil] W.BADEN1> What is the $ value of Flord vs trunking applications.
+<[Gary] GARY-S> There is still a lot of fig and pre-fig systems in use wil - 
+more than you might believe
+<[Jax] FIGCHAPTERS> It should be invisible in an *application*, nyet?
+<[Wil] W.BADEN1> Before 1983 no body was flooring. It wasn't broke. It didn't 
+need to be fixed.
+<[Jax] FIGCHAPTERS> So why mess again?
+<[Gary] GARY-S> not true - if you are using for servo/stepper movement the 
+negative divisions can make a BIG difference trun vs floored
+<[Dave] D-WEINSTEIN> Ah well...I'm just dropping in and out. See y'all later on.
+<[Gary] GARY-S> bye dave
+<[Dave] D-WEINSTEIN> has left.
+<[Jax] FIGCHAPTERS> BASIS 9: "An implementation shall clearly document which 
+negative case behaviour 9flooring or rounding-down) is the default and sh
+all provide a clearly documented mechanism whereby the other behavior shall be 
+available to the programmer" ... I can live with that.
+<[Gary] GARY-S> I will say this - Dave's editor Art Carlson called me last nite 
+and he is damn serious about serving the Forth community in TCJ
+<[Wil] W.BADEN1> No, you can't.
+<[Jax] FIGCHAPTERS> po'quoi, mon am' ?
+<[Wil] W.BADEN1> What that was meant to say is
+<[Wil] W.BADEN1> a system can have either one mode or the other at any time
+<[Gary] GARY-S> jax - i'm a little surprised you are taking this position 
+working with embedded systems as you do - you DO have a vested (no pun) inte
+rest in the final wash
+<[Wil] W.BADEN1> But that duzn't let u take a floored routine from Bob and 
+truncating
+<[Jax] FIGCHAPTERS> I could care less. If the system I have lacks what I want, 
+I'll implement it myself.
+<[Wil] W.BADEN1> routine from Greg and use both in one program.
+<[Gary] GARY-S> have you added truncated division to a floored system ?
+<[Jax] FIGCHAPTERS> Not necessarily , but it ain't ruled ourt right?
+<[Jax] FIGCHAPTERS> you just write MY-/ and MY-UM/MOD, etc.
+<[Wil] W.BADEN1> If what-you-quoted remains it will be a post proposal to warn .
+<[Gary] GARY-S> It sure appears easier to add floored to a truncated system - 
+any comment wil ?
+<[mike] M.MELLEN1> has left.
+<[Wil] W.BADEN1> "a portable program must not rely on the results of divsion 
+when
+<[Wil] W.BADEN1> one of the operans is negative."
+<[Jax] FIGCHAPTERS> ahem.
+<[Wil] W.BADEN1> Gary, that's B.
+<[Jax] FIGCHAPTERS> interesting point.
+<[Gary] GARY-S> option B - i presume you mean :-)
+<[Jax] FIGCHAPTERS> so leave it floored. It's the standard since 1984 and the 
+majority of apps are written that way.
+<[Wil] W.BADEN1> It MAY be that flooring IS the most common now.
+<[Gary] GARY-S> since 1984, most are
+<[Wil] W.BADEN1> (Thanx, Gary.)
+<[Wil] W.BADEN1> I wish I had some solid figures.
+<[Gary] GARY-S> that leaves only 15+ years of truncated prescedence
+<[Jax] FIGCHAPTERS> There has probably been more Forth written in the last four 
+years than in the 12 before that.
+<[Gary] GARY-S> and a LOT of post 1984 was hybrid 79/83
+<[Jax] FIGCHAPTERS> Incidentally, JForth is not floored. They agree with the 
+anti-floorers.
+<[Gary] GARY-S> I am NOT anti-floored, I am pro-truncated
+<[Wil] W.BADEN1> Unless it can be shown that a preponderance of systems are 
+flooring, I think ...
+<D.RUFFER> is here.
+<[Wil] W.BADEN1> that Bob Smith's proposal is the best compromise
+<D.RUFFER> Hello Gary, Wil, Jax
+<[Jax] FIGCHAPTERS> hi dennis
+<[Gary] GARY-S> I think it is the only valid solution
+<[Wil] W.BADEN1> (See u saturday, Dennis?)
+<[Gary] GARY-S> hi dennis - vote truncated/floored/both ? which order if both
+<D.RUFFER> satureday or is it sunday?
+<[Wil] W.BADEN1> Gary, wud u see if WE at least hav a consensus?
+<[Gary] GARY-S> just did wil
+<[Jax] FIGCHAPTERS> There SHOOR IZ a lot of work to do on that BASIS befor it 
+is a complete Standard proposal.
+<[Wil] W.BADEN1> (DaR - sat.))
+<D.RUFFER> I vote truncated
+<[Gary] GARY-S> that's a concensus, wil
+<[Jax] FIGCHAPTERS> RUFFER SELLS OUT!
+<[Jax] FIGCHAPTERS>  :-)
+<D.RUFFER> tried to call you wil, yes I will come down
+<D.RUFFER> sent you email with questions
+<D.RUFFER> SELL OUT?
+<D.RUFFER> truncated is all I've ever used (almost)
+<[Jax] FIGCHAPTERS> truncated is the pF way, n'est-ce pas?
+<D.RUFFER> I've never found a need for negative arguments in /
+<[Jax] FIGCHAPTERS> I *like* floored. But I don't really care.
+<[Wil] W.BADEN1> "Signed division is rare, obscure, and makes people unhappy." 
+RB.
+<D.RUFFER> why do you like floored, or was thqt aleady discussed?
+<[Jax] FIGCHAPTERS> agreed.
+<[Gary] GARY-S> last call for cheap shots gents
+<[Wil] W.BADEN1> I'v shot my wad (for tonite).
+<[Jax] FIGCHAPTERS> Because division is a reidiculous math operation and 
+flooring at least gives it some regular contours.
+<D.RUFFER> ah, because it's nice :-)
+<[Wil] W.BADEN1> But u havnt implemented it?
+<D.RUFFER> but do you have a use for it?
+<[Gary] GARY-S> that's why i say leave the option for flooring in but leave the 
+system truncated
+<[Jax] FIGCHAPTERS> I too have no use for negative division.
+<D.RUFFER> thought so <grin>
+<[Jax] FIGCHAPTERS> It's used in signal processing.
+<[Gary] GARY-S> and in some motion systems
+<[Jax] FIGCHAPTERS> I've done it, but floored or truncated makes little 
+difference.
+<[Jax] FIGCHAPTERS> It's all mostly the same.
+<[Wil] W.BADEN1> Bob S
+<[Jax] FIGCHAPTERS> The nice thing about Forth is that the Standard can be 
+safely ignored in the privacy of one's own home, unlike the Georgia sodomy
+statutes.
+<[Wil] W.BADEN1> Bob S's proposal is truncating with flooring /MODULO.
+<[Gary] GARY-S> will - do try to make it if possible and e-mail me berkey's new 
+phone #
+<[Wil] W.BADEN1> I dont think I hav it, gary, but I'l look.
+<[Gary] GARY-S> NOT the old Carlsbad one - Dennis, Janny never answered
+<[Wil] W.BADEN1> DaR, BTW, tell me your phone so I dont hav to look it up.
+<[Gary] GARY-S> let's go home folks
+<[Wil] W.BADEN1> gnite oll.
+<[Jax] FIGCHAPTERS> bye
+<[Wil] W.BADEN1> has left.
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,150 @@
+
+
+
+
+
+
+
+
+
+
+                           PROMOTING FORTH
+
+                          By Michael J Nemeth
+
+                          Glenndale, Maryland
+
+
+Forth for many reasons has not had a fair chance at being a widely accepted 
+language. I do not intend to directly address those reasons here, but wish 
+instead to relate my experiences establishing and running Goddard Space Flight 
+Centers' (GSFC) Forth Users Group and the ideas I have derived from this for  
+promoting Forth.  
+
+
+The Goddard Forth Users Group (GFUG) is an association of people using or 
+interested in Forth. GFUG has no formal ties to any other organizations here at
+Goddard or on the outside. It is open to the public but oriented towards  
+Goddard users. Meetings are once a month on no set day but at noon. Meeting 
+notices are posted in Dateline Goddard and The East Coast Forth Bulletin board 
+((703) 442-8695). GFUG's purpose is the dissemination and exchange of 
+information about Forth. GFUG maintains a library of Public Domain Forth  
+systems and aids, a membership listing  with an interest/expertize cross  
+reference for referral and a small library of printed material including a  
+periodical reference.
+
+In its short existence, since May 1986, GFUG has sponsored or arranged for the
+ following events: The visit of Charles Moore, creator of Forth and 
+inventor/designer of the Novix microprocessor to Goddard; the manning of a 
+Forth interest Group table at the University of Maryland Computerfest; and the 
+Engineering Collaquia lecture by Lawrence Forsley of the University of  
+Rochester scheduled for January 26, 1987. 
+
+The Goddard Forth Users Group was started in May of 1986 on a very informal   
+basis at the suggestion of Jim Rash of NASA. Starting with a few names from   
+each of us and a meeting time and place, I discovered a daisy chain effect;  
+each person I called knew of others using Forth at GSFC. Our first meeting was 
+attended by about twenty people. While meetings now average only 15 people,  
+some attending are representing a group. Size also varies with the topic of the
+ meetings. This is comparable to the Potomac FIG (which averages higher-20 to 
+30?) but is significant as our meetings are held at lunch hour.
+
+
+
+                    Promoting Forth: for the Forth User
+
+This is my first suggestion for promoting Forth, form a lunch time group at   
+work. I suggest a public announcement on a bulletin board or newsletter or you 
+may discover that the daisy chain effect will work for you too. Also, if a    
+group is formed, keep using the public announcement method for calling   
+meetings. This keeps Forth in the limelight . Since I usually have a featured  
+speaker or topic for a meeting, posting public announcement shows the general 
+public the utility of Forth (AI, parallel processors, databases etc.). In  
+setting aside some time to talk about Forth even a small group can be of value,
+ as one often gets tied up in their own work, thus missing much of value. My  
+second suggestion is to have a good Public Domain Forth available to give to   
+interested people even if you use a commercal Forth. While vendors might think 
+this objectionable, I contend eventually the user will buy a Forth. Next, be   
+honest in promoting Forth. Forth is not for all, nor is it always the optimum  
+solution and is not itself problem free. In general magazines seem heavily C  
+oriented now; however, they occasionally print Forth articles. Please show your
+ interest, even a postcard to a magazine may make a difference (note: some 
+magazines provide such postcards). If publishers do not know Forth articles are
+ appreciated, they will be less likely to publish more. 
+
+                   Promoting Forth: for the Vendor
+
+I very seldom see new product announcements for Forth products in the media.   
+Many carry a "What's New" section, yet there is no listing for Forth products  
+even though there is an ad for a new Forth product in that very issue. I do not
+ believe the cost is so great that a paragraph describing your new product  
+could not be sent to many. Forth Dimensions is a good place (see for FIG       
+section.) Since the MS/DOS/80nxx machine is so popular and there is a popular  
+Public Domain Forth available, instead of cursing L&P F*# how about supporting 
+it for your implementation. To have a F83 compatiblity mode (word) would be a  
+very big selling point for me. Lastly, here at Goddard we have a training and  
+demo center. Vendors typically come to show a product and leave it on loan for 
+a month. I have yet to convince a Forth vendor to do this.
+
+                  Promoting Forth: for the local FIG chapter
+
+The most rewarding experience for me so far has been the running of the Forth  
+Interest Group table at the University of Maryland's Computerfest. I was     
+totally surprised at the interest in Forth and learned much of interest from   
+other Forth users. Not only was this a great way to promote Forth, but a money 
+maker. Public Domain software was sold a $4.00 a diskette for a total of 56    
+dollars, more than covering the cost of the table (35 dollars). My next        
+suggestion for the local FIGs is to post their meeting notices in the paper. 
+Many papers offer this as a free service. Also, once or twice a year actual    
+advertising may be worthwhile as part of a membership drive. Another good place
+ to post notices is at your local colleges and university; this also aids in   
+promoting Forth. Cooperate with other types of user groups. Many times the     
+Forths they provide are several years old and, therefore, may give a very poor 
+impression of Forth. Lastly, the local FIG can aid in supporting Forth in the  
+media by producing a form letter. I dislike writing letters but would be       
+willing to send in a form letter supporting an article.
+
+                  Promoting Forth: for FIG 
+
+I have many suggestions and proposals for FIG. The first and most important, as
+ it would help FIG be able to carry-out the others, is a structure membership  
+fee. Many companies pay, or partially pay, for professional membership.        
+Therefore, I propose a corporate rate of 60 dollars, or double the individual 
+rate. Part of the gain could be used to support a student rate of 20 dollars.  
+The rest of the gain can now be used to support other projects. In line with   
+this, I suggest an annual membership drive where sample copies of Forth        
+Dimension could be sent free to colleges and Universities. If Forth is to make 
+ gains, the learning institutions are a critical area. This leads to my next   
+idea, a list of college level courses on or including Forth to be compiled by  
+FIG. It is not always easy at quick glance to find such courses. For example   
+Mahlon Kelly's Forth based course at the University of Virginia is titled      
+"Microcomputers in the Sciences". Another list which could be done by FIG is   
+one of all available Forths and where they can be obtained. We have all heard  
+that Forth is used for arcade games, databases, wordprocessors and so on but I 
+ would like a definitive list of actual product names. In this same vein, Jerry
+ Shifrin of the East Coast Forth Bulletin board has on his board bios of "     
+Expert Users of Forth ". Carrying this one step further, I would like to see a 
+book(?) of Who's Who in Forth. Not only is this useful but just being "listed" 
+could aid the listee in his job, hence promoting Forth. Perhaps related to this
+ is the giving of a "person(s) of the year" award by FIG. Logically this could 
+be done at the Forth national convention. Speaking of conventions, while there 
+is the Rochester Forth Conference in the northeast and the Forth national      
+convention in the west, could not both FIG and the Institute for Applied Forth 
+Research sponsor regional conferences? Or perhaps use different locations all  
+around the country (Canada too, please) each year for the events. Partially    
+coupled to this is my idea for special interest groups (SIGs) within FIG, since
+ these might hold their own conventions. These SIGs would be in addition to FIG
+ membership and could cost extra. They should be listed in the same form. In   
+fact, there does currently exist a FIG sponsered SIG; FORML. I would like to   
+see a "What's New" section in Forth Dimension and perhaps reviews. Again, Forth
+ Dimension might be a logical place for form letters supporting articles in    
+other publication, although this would entail coordination, probably with the  
+author, far in advance.                                                        
+                                                                               
+@In the general programming community, Forth is under utilized and little      
+known. Yet Forth is powerful and rich in valuable concepts. I have found many  
+of Forth's concepts to be an aid in my work in general. I feel everyone can 
+benefit from learning about Forth. Hence this article, I hope will aid in      
+promoting Forth.                                                               
+
+

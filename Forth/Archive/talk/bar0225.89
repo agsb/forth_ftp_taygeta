@@ -1,0 +1,664 @@
+
+Sub: Minutes of your RT Conference.
+
+>From Steno: Jennifer Marlowe
+
+Date: 02/25/88   Time: 21:33EST
+Attendees:
+[[Dennis] D.RUFFER]
+[[jack woehr] JAX]
+[[Gary] GARY-S]
+[[Paul@ICOM] PSNIVELY]
+[[bill] WC.COLEMAN]
+[M.HAWLEY]
+
+Minutes:
+<JAX> is here.
+<JAX> woof
+<[Dennis] D.RUFFER> well hi jack
+<[jack woehr] JAX> howdy dennis
+<[Dennis] D.RUFFER> your early tonight!
+<[jack woehr] JAX> been playing with my super8!
+<[jack woehr] JAX> whaT TIME did you get here
+<[Dennis] D.RUFFER> how's it working?
+<[jack woehr] JAX> just fine ... great device.
+<[jack woehr] JAX> poor man's forth engine
+<[jack woehr] JAX> some people have been a little cavalier about S8 on the WELL
+<[jack woehr] JAX> It ain't fancy enough.
+<[jack woehr] JAX> But it suits process control just fine
+<[jack woehr] JAX> which is what I do, anyway! And it is more ammo to resist
+<[jack woehr] JAX> the pressure ...
+<[jack woehr] JAX> to switch to C, wash my mouth out!
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> tell me more jack, what's the clock speed?
+<[jack woehr] JAX> 19200 clock. doubly nested 1 million DO LOOP in 13.75 
+<[jack woehr] JAX> seconds/24 for 8088
+<[jack woehr] JAX> .
+<[jack woehr] JAX> people keep asking if its the Z8 ...
+<[jack woehr] JAX> kind of but almost 200 more registers than the Z8, higher 
+<[jack woehr] JAX> clock ,. ..
+<[jack woehr] JAX> and it has those three beutiful machine instructions:
+<[jack woehr] JAX> ENTER EXIT NEXT
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> just guessing does ENTER do a nest....
+<[Dennis] D.RUFFER> EXIT do an unnest, and NEXT do that too?
+<GARY-S> is here.
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX>
+<[jack woehr] JAX> ENTER in pseudocode:
+<[Gary] GARY-S> HOLLA !
+<[jack woehr] JAX> sp <- sp-2  ( that's the system stack, the forth return 
+<[jack woehr] JAX> stack, unlike 8088
+<[jack woehr] JAX> @sp <- ip ip <- pc pc <- @ip ip <- ip + 2
+<[jack woehr] JAX> got that?
+<[jack woehr] JAX> ga
+<[jack woehr] JAX> hey gar
+<[Gary] GARY-S> WOT IS JACKL
+<[Dennis] D.RUFFER> hi gary, let me study that jack
+<[jack woehr] JAX> anyway, ENTER starts a colon def, EXIT ends one, NEXT ends a 
+<[jack woehr] JAX> code def
+<[Dennis] D.RUFFER> ok
+<[Gary] GARY-S> Did I already miss the super-8 overview?
+<[jack woehr] JAX> check out the topic in cat 4
+<[Dennis] D.RUFFER> nope just the neet stuff
+<[Gary] GARY-S> Hey - it'z only 3 minutes late
+<[Dennis] D.RUFFER> sorry, I just got Jack talking early
+<[jack woehr] JAX> easy to do!!!
+<[Gary] GARY-S> no prob - wass Jennifer typing ?
+<[Dennis] D.RUFFER> yep!
+<[Gary] GARY-S> I'll read about it
+<[jack woehr] JAX> dennis ... what is word from ****FORTH?
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> I believe ENTER would be DOCOLON...
+<[Dennis] D.RUFFER> EXIT would be UNNEST...
+<[Dennis] D.RUFFER> and NEXT is the same, at least for F83
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX> pretty much so
+<[jack woehr] JAX> except
+<[jack woehr] JAX> ENTER EXIT NEXT are machine instructions here.
+<[jack woehr] JAX> so very fast by comparison
+<[jack woehr] JAX> with standard f83
+<[jack woehr] JAX> although ...
+<[jack woehr] JAX> S8 Forth is indeed metacompiled from ( god bless 'em) Laxen 
+<[jack woehr] JAX> & Perry.
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> from F83, well I'll be...
+<[Dennis] D.RUFFER> I wonder if Mike knows?...
+<[Dennis] D.RUFFER> speaking of Mike Perry, as anybody heard from him?
+<[Dennis] D.RUFFER> he was supposed to be showing up here soon.
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX> Not I since I accidentally called him over an old posting ..
+<[jack woehr] JAX> from Berkeley fing
+<[jack woehr] JAX> oops for Berkeley FIG, shoud hav e been
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> I saw him at FORML, and he said...
+<[Dennis] D.RUFFER> he only had "about 20-30 bugs left" in V3...
+<[Dennis] D.RUFFER> he was going to do some testing here....
+<[Dennis] D.RUFFER> but I just wondered if anyone had heard/seen him lately.
+<[Dennis] D.RUFFER> anyway, tell us more about the 8 jack...
+<[Dennis] D.RUFFER> what type of I/O do you get?
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX> ok
+<[jack woehr] JAX> f0rty i/o pins grouped in 5 programmable 8 bit ports
+<[jack woehr] JAX> uart on board the chip
+<[jack woehr] JAX> ( full duplex)
+<[jack woehr] JAX> 325 regs
+<[jack woehr] JAX> 27 interrupt sources
+<[jack woehr] JAX> 16 interrupt vectors
+<[jack woehr] JAX> 8 interrupt levels
+<[jack woehr] JAX> $4.95 a piece in lots of a hundred!
+<[jack woehr] JAX> that's what jax calls I/O :-)
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> yeh!
+<[Dennis] D.RUFFER> how many pins is the package...
+<[Dennis] D.RUFFER> and what do you do with 325 regs...
+<[Dennis] D.RUFFER> or is that your stack?
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX>
+<[jack woehr] JAX> actually, if you want, you can split the 256 lower regs ...
+<[jack woehr] JAX> into four return stacks for four tasks ...
+<[jack woehr] JAX> 48 pin or 68 pin
+<[jack woehr] JAX> can address 64 k internal memory
+<[jack woehr] JAX> and 64 k additional external ;mem
+<[jack woehr] JAX> you guessed it ... S8 forth is designed around internal
+<[jack woehr] JAX> but you can get at external if you want to bad enough.
+<[jack woehr] JAX> one feature of the super8 that Forth locks you out of, 
+<[jack woehr] JAX> though ...
+<[jack woehr] JAX> the hardware IP is utilised in a conflicting fashion by the 
+<[jack woehr] JAX> " fast interrupt"
+<[jack woehr] JAX> system, as a pointer to the vector for the fast interrupt ,,,
+<[jack woehr] JAX> ss o this feature is not available from FORTH, jaxthinx, as 
+<[jack woehr] JAX> he understands
+<[jack woehr] JAX> the literchoor.
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> hum
+<[Dennis] D.RUFFER> what cind of "work around" could we think of?
+<[Dennis] D.RUFFER> the IP is a pointer to the int vector?
+<[Dennis] D.RUFFER> so you have to leave it pointed to...
+<[Dennis] D.RUFFER> vector tables all the time...
+<[Dennis] D.RUFFER> or when you expect an interupt?
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX>
+<[jack woehr] JAX> This conflict has nothing to do with ordinary interrupts ...
+<[jack woehr] JAX> It is just that ..
+<[jack woehr] JAX> Zilog offers in the Super 8 a special hi-speed interrupt 
+<[jack woehr] JAX> that takes almost
+<[jack woehr] JAX> 1/2 the clocks of normal int processing ...
+<[jack woehr] JAX> it is called, appropriately enough, a " fast interrupt"
+<[jack woehr] JAX> and the Super8 Manual (c) 198 Zilog says on page 3-7
+<[jack woehr] JAX> " The IP can also be used in the fast interrupt processing 
+<[jack woehr] JAX> mode ... It can ..
+<[jack woehr] JAX> either be use for interrupt processing or imaginary machine 
+<[jack woehr] JAX> processing ( FORTH)
+<[jack woehr] JAX> _but not for both at the same time_ "
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<PSNIVELY> is here.
+<[Dennis] D.RUFFER> how is this "fast int" triggered on the S8?
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX> " Any one of the eight interrupt levels ...
+<[jack woehr] JAX> " can be programmed to use ( fast interrupts) by loading the 
+<[jack woehr] JAX> fast interrupt ...
+<[jack woehr] JAX> select filed of the System Mode register ( R222) with the 
+<[jack woehr] JAX> level number ...
+<[jack woehr] JAX> and setting the fast interrupt enable bit." s8 manual
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> welcome Paul, Jack is giving us...
+<[Dennis] D.RUFFER> an excelent tutorial on the Super 8...
+<[Dennis] D.RUFFER> and we are trying to work out...
+<[Dennis] D.RUFFER> how to use the "fast interrupt"...
+<[Dennis] D.RUFFER> it sounds like that could be used...
+<[Paul@ICOM] PSNIVELY> Pardon my ignorance, but what's the Super 8?
+<[Dennis] D.RUFFER> as a fast vectored executer...
+<[Dennis] D.RUFFER> The Super 8 is a ZILOG processor...
+<[Dennis] D.RUFFER> right Jack?
+<[Dennis] D.RUFFER> ga
+<[jack woehr] JAX> Correct, Dennis ... from the people who brought you the Z80.
+<[jack woehr] JAX> You could always push the IP somewhere & execute code during 
+<[jack woehr] JAX> an interrupt
+<[jack woehr] JAX> service interval, but you would have to restore it before 
+<[jack woehr] JAX> executing NEXT
+<[jack woehr] JAX> since the inner interpreter is designed around these fixed 
+<[jack woehr] JAX> machine instructions,
+<[jack woehr] JAX> and not around a software emulation of them.
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ga paul
+<[Paul@ICOM] PSNIVELY> Doesn't the whole "inner interpreter" concept go bye-bye 
+<[Paul@ICOM] PSNIVELY> on a FORTH processor?
+<[Paul@ICOM] PSNIVELY> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> not really on this...
+<[Dennis] D.RUFFER> at least it sounds like...
+<[Dennis] D.RUFFER> the S8 is maintainting the IP in hardware...
+<[Dennis] D.RUFFER> I don't think it really is like...
+<[Dennis] D.RUFFER> a "classical" Forth engine....]
+<[Dennis] D.RUFFER> but I think jack could explain that better.
+<[Dennis] D.RUFFER> can you shed any light jack?
+<[Dennis] D.RUFFER> ga
+<M.HAWLEY> is here.
+<[jack woehr] JAX> The super8 has been a real eye opener, dennis ...
+<[jack woehr] JAX> It actually is pretty much a "classical" Forth engine...
+<[jack woehr] JAX> Whereas the Novix is sort of an innovation by comparison ...
+<[jack woehr] JAX> The fertile mind of Cowboy didn't go to sleep in 1972 when 
+<[jack woehr] JAX> he invented Forth ...
+<[jack woehr] JAX> and as he himself says ...
+<[jack woehr] JAX> " forth is to me and approach more than a language"
+<[jack woehr] JAX> but the Super8 implementation is better described ...
+<[jack woehr] JAX> in the Zen-like words of the Manual on page 3-7:
+<[jack woehr] JAX> " A threaded-code langauge may be considered ...
+<[jack woehr] JAX> " to have created a higher level imaginary machine ...
+<[jack woehr] JAX> " within the actual hardware machine ..."[A
+<[jack woehr] JAX> " for comparison purpose, the IP is to the imaginary machine 
+<[jack woehr] JAX> " as the Program Counter is to the actual hardware machine"
+<[jack woehr] JAX> FORTH is a dream, jaxthinx ... something we approach 
+<[jack woehr] JAX> parabolically ...
+<[jack woehr] JAX> The Super 8 is one version of that dream, the novix is 
+<[jack woehr] JAX> another, perhaps
+<[jack woehr] JAX> better, but ...
+<[jack woehr] JAX> THE SUPER 8 IS CHEAP AND EASY TO PROGRAM
+<[jack woehr] JAX> !!!!!!!!!!!!!!!!!! :-)
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> I think that clears that up :-)
+<[Dennis] D.RUFFER> ga paul, sorry, almost forgot
+<[Paul@ICOM] PSNIVELY> S'ok!  Jack, thanks for the insights...
+<[Paul@ICOM] PSNIVELY> It's occurred to me many times that, philosophically, 
+<[Paul@ICOM] PSNIVELY> FORTH and Lisp are...
+<[Paul@ICOM] PSNIVELY> very similar (and I happen to love them both).
+<[Paul@ICOM] PSNIVELY> Both encourage abstraction that can best be described as 
+<[Paul@ICOM] PSNIVELY> "metalinguistic."
+<[Paul@ICOM] PSNIVELY> That is to say, Lisp and FORTH are not languages that 
+<[Paul@ICOM] PSNIVELY> you write programs in...
+<[Paul@ICOM] PSNIVELY> They are languages that you write languages in.
+<[Paul@ICOM] PSNIVELY> I find them both very flexible and powerful, albeit in 
+<[Paul@ICOM] PSNIVELY> some cases for different reasons.
+<[Paul@ICOM] PSNIVELY> BTW, I got MacFORTH Plus K3.53 recently... VERY nice!  
+<[Paul@ICOM] PSNIVELY> VERY Lispish in terms of its user interface and even
+<[Paul@ICOM] PSNIVELY> with stuff like Phrases and Relative Chains.
+<[Paul@ICOM] PSNIVELY> ga
+<[jack woehr] JAX>
+<[jack woehr] JAX> agree they are langs you write langs in.
+<[jack woehr] JAX> interesting to note ...
+<[jack woehr] JAX> that LISP was a big "underground" hit ...
+<[jack woehr] JAX> when Cowboy was a young programmer ... er, oops, youngER 
+<[jack woehr] JAX> programmer :-)
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> does that mean we have another ten years...
+<[Dennis] D.RUFFER> to go before people think we're "great" too?
+<[Dennis] D.RUFFER> ga paul
+<[Paul@ICOM] PSNIVELY> *GRIN*  Could be, Dennis...
+<[Paul@ICOM] PSNIVELY> An interesting thing to note about Lisp is that it 
+<[Paul@ICOM] PSNIVELY> encourages good program development by providing
+<[Paul@ICOM] PSNIVELY> LOTS of tools...
+<[Paul@ICOM] PSNIVELY> Source-level debugging, tracing, definition tracking...
+<[Paul@ICOM] PSNIVELY> The MIT hackers created all of this stuff YEARS ago.
+<[Paul@ICOM] PSNIVELY> Problem was, you needed a great CPU and LOTS of RAM/disk 
+<[Paul@ICOM] PSNIVELY> space to use it!
+<[Paul@ICOM] PSNIVELY> FORTH evolved from being a very small, simple kernel...
+<[Paul@ICOM] PSNIVELY> To being something that can also support source-level 
+<[Paul@ICOM] PSNIVELY> debugging, tracing, definition tracking (LOCATE)...
+<[Paul@ICOM] PSNIVELY> As the hardware to support that became more widely 
+<[Paul@ICOM] PSNIVELY> available.
+<M.HAWLEY> has left.
+<[Paul@ICOM] PSNIVELY> Again, it amazes me how much MacFORTH Plus resembles the 
+<[Paul@ICOM] PSNIVELY> Lisp system that I use (from a tool/functional
+<[Paul@ICOM] PSNIVELY> standpoint).
+<[Paul@ICOM] PSNIVELY> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> yes, I think Don Colburn has seen what is needed...
+<[Dennis] D.RUFFER> on the Mac, that stuff has been possible...
+<[Dennis] D.RUFFER> it is starting to be usable on the PC...
+<[Dennis] D.RUFFER> but, still not many other Forth vendors...
+<[Dennis] D.RUFFER> have seen the need to provide this...
+<[Dennis] D.RUFFER> integrated "tool kit"....
+<[Dennis] D.RUFFER> Forth always has been "minimal"...
+<[Dennis] D.RUFFER> and the transition to "maximal" will be difficult...
+<[Dennis] D.RUFFER> however, I'm looking forward to it...
+<[Dennis] D.RUFFER> I've seen the environments that can be had...
+<[Dennis] D.RUFFER> Haven't seen Mac Forth, but the stuff that...
+<[Dennis] D.RUFFER> Microsoft has created for C is pretty impressive...
+<[Dennis] D.RUFFER> should we/can we compete with that stuff?
+<[Dennis] D.RUFFER> ga paul
+<[Paul@ICOM] PSNIVELY> Sure we can/should, Dennis...
+<[Paul@ICOM] PSNIVELY> MacFORTH Plus goes a LONG way towards doing so!
+<[Paul@ICOM] PSNIVELY> And I agree re: environments: why should Smalltalk and 
+<[Paul@ICOM] PSNIVELY> Lisp have all the good ones?
+<[Paul@ICOM] PSNIVELY> We have some POWERFUL building blocks...
+<[Paul@ICOM] PSNIVELY> The revolution started once we got away from the "FORTH 
+<[Paul@ICOM] PSNIVELY> as OS" mentality that kept us out of our machine's
+<[Paul@ICOM] PSNIVELY> native operating systems...
+<[jack woehr] JAX> boo hiss!
+<[Paul@ICOM] PSNIVELY> Once we had real OS support, we found that we could DO 
+<[Paul@ICOM] PSNIVELY> things to interact with our encironment better...
+<[Paul@ICOM] PSNIVELY> Er, environment...
+<[Paul@ICOM] PSNIVELY> Jack, raise your hackles, did I?
+<[jack woehr] JAX> woof!
+<[jack woehr] JAX> Standalone is the Mainstream.
+<[jack woehr] JAX> ga
+<[Paul@ICOM] PSNIVELY> Still and all...
+<[Paul@ICOM] PSNIVELY> Jack, that's nonsense.  For FORTH it's history, but 
+<[Paul@ICOM] PSNIVELY> FORTH can be much more than an OS replacement.
+<[Paul@ICOM] PSNIVELY> And SHOULD be, in my opinion.
+<[Paul@ICOM] PSNIVELY> For one thing, you can't "replace" an OS that's in ROM 
+<[Paul@ICOM] PSNIVELY> (Macintosh).
+<[Paul@ICOM] PSNIVELY> In the Macintosh's case, you don't want to anyway.
+<[Paul@ICOM] PSNIVELY> I LIKE being able to write FORTH programs that interact 
+<[Paul@ICOM] PSNIVELY> well with non-FORTH programs!
+<[Paul@ICOM] PSNIVELY> I LIKE having a REAL text editor!
+<[Paul@ICOM] PSNIVELY> I LIKE being able to do what I could do in C or Pascal, 
+<[Paul@ICOM] PSNIVELY> only better/faster!
+<[Paul@ICOM] PSNIVELY> ga
+<[Dennis] D.RUFFER> *ok
+<[Dennis] D.RUFFER> yes paul, so do I, but...
+<[Dennis] D.RUFFER> there is the "other" side...
+<[Dennis] D.RUFFER> and jack makes a valid point for them...
+<[jack woehr] JAX> will make!
+<[Dennis] D.RUFFER> but Forth can be both...
+<[Paul@ICOM] PSNIVELY> I agree. guys... but for too long that's ALL FORTH was!
+<[Gary] GARY-S> !!
+<[Dennis] D.RUFFER> ga gary, go at it!
+<[Gary] GARY-S> Please note - there is also a return to minimal systems...
+<[Gary] GARY-S> re - Martin Tracy's Zen Forth. So there..
+<[Gary] GARY-S> really is both ends of a spectrum...
+<[Gary] GARY-S> only coverable in Forth.
+<[Gary] GARY-S> ga
+<[Dennis] D.RUFFER> ga paul
+<[Paul@ICOM] PSNIVELY> I agree and understand, but allow me to state my 
+<[Paul@ICOM] PSNIVELY> preference for large extensible systems with LOTS
+<[Paul@ICOM] PSNIVELY> of tools (e.g. Smalltalk) to minimalist systems.
+<[Paul@ICOM] PSNIVELY> It IS nice to start with a basic kernel, then add tools 
+<[Paul@ICOM] PSNIVELY> as source code as you see fit... then snapshot...
+<[Paul@ICOM] PSNIVELY> Which is PRECISELY what I've done with my MacFORTH 
+<[Paul@ICOM] PSNIVELY> system (started as 64K, snapshot is about 200K).
+<[Paul@ICOM] PSNIVELY> And then, when you turnkey your program... out goes the 
+<[Paul@ICOM] PSNIVELY> unused code... and you have a 100K application or
+<[Paul@ICOM] PSNIVELY> whatever..
+<[Paul@ICOM] PSNIVELY> I like being able to CHOOSE my large, high-powered 
+<[Paul@ICOM] PSNIVELY> environment.  FORTH offers that, but also offers the
+<[Paul@ICOM] PSNIVELY> minimal to those who want it.
+<[Paul@ICOM] PSNIVELY> ga
+<[Gary] GARY-S> I have to agree...
+<[Gary] GARY-S> the zip in meta compilers are great...
+<[Gary] GARY-S> just pointing out there are different strokes.
+<[Gary] GARY-S> ga
+<[Dennis] D.RUFFER> ga paul
+<[Paul@ICOM] PSNIVELY> LSure and begorrah, Gary and Jack!  Never meant to imply 
+<[Paul@ICOM] PSNIVELY> otherwise!
+<[Paul@ICOM] PSNIVELY> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> I think there will be more of this...
+<[Dennis] D.RUFFER> contention between the sides...
+<[Dennis] D.RUFFER> Forth is GREAT as a minimal system!
+<[Dennis] D.RUFFER> but it is also GREAT in a large environment...
+<[Dennis] D.RUFFER> in the large system however...
+<[Dennis] D.RUFFER> it is just another one of the many tools...
+<[Dennis] D.RUFFER> we have in out tool kit...
+<[Dennis] D.RUFFER> which also means we don't just use Forth...
+<[Dennis] D.RUFFER> which is not true in the "minimal" system...
+<[Dennis] D.RUFFER> In other words...
+<[Dennis] D.RUFFER> the people who like it big...
+<[Dennis] D.RUFFER> want it to work with/like the rest of the world...
+<[Dennis] D.RUFFER> but minimalists like it as tradtional Forth...
+<[Dennis] D.RUFFER> ie block files, and Forth as the OS.
+<[Dennis] D.RUFFER> ga paul
+<[Gary] GARY-S> !!
+<[Paul@ICOM] PSNIVELY> Where was I...
+<[Paul@ICOM] PSNIVELY> Oh, yes.  I definitely DON'T use "just FORTH."  I'm 
+<[Paul@ICOM] PSNIVELY> polylingual...
+<[Paul@ICOM] PSNIVELY> I use whatever I think fits the job...
+<[Paul@ICOM] PSNIVELY> But "minimal FORTH" is just too isolated-feeling for me..
+<[Paul@ICOM] PSNIVELY> When I was working on the TRS-80, I had a FORTH that was 
+<[Paul@ICOM] PSNIVELY> non-TRS-DOS based... and therefore was basically
+<[Paul@ICOM] PSNIVELY> useless to me (for what I did).
+<[Paul@ICOM] PSNIVELY> It was also doggy slow!  The Z-80 SUCKS as a FORTH 
+<[Paul@ICOM] PSNIVELY> engine (no 16-bit indirect relative addressing mode,
+<[Paul@ICOM] PSNIVELY> one hardware stack).
+<[Paul@ICOM] PSNIVELY> Anyway, I like FORTH's flexibility (again, like Lisp)...
+<[Paul@ICOM] PSNIVELY> BTW, in the Lisp world, the same conflict exists (Scheme 
+<[Paul@ICOM] PSNIVELY> is minimal, Common Lisp is maximal).
+<[Paul@ICOM] PSNIVELY> ga
+<[Dennis] D.RUFFER> ga gary
+<[Gary] GARY-S> Make no mistake about this - We as a community are going to 
+<[Gary] GARY-S> have to address the...
+<[Gary] GARY-S> of the engineer and/or user who wants...
+<[Gary] GARY-S> tools no a job of programming, so Paul is dead right...
+<[Gary] GARY-S> in that respect. There  will also always be the program hacker.
+<[Gary] GARY-S> ga
+<[Dennis] D.RUFFER> ok
+<[Dennis] D.RUFFER> I think we have to address...
+<[Dennis] D.RUFFER> the "just another tool" philosophy...
+<[Dennis] D.RUFFER> if we are going to gain more user acceptance...
+<[Dennis] D.RUFFER> it is very hard to commit totally to Forth....
+<[Paul@ICOM] PSNIVELY> I'd go so far as to call it impossible.
+<[Dennis] D.RUFFER> and requires more "thought" than if it is just there...
+<[Dennis] D.RUFFER> as another tool, well then it is easier...
+<[Dennis] D.RUFFER> you can "sneak it in" when the need is there...
+<[Dennis] D.RUFFER> and then the "needs" WILL grow.
+<[Dennis] D.RUFFER> ga paul
+<[Paul@ICOM] PSNIVELY> OK...
+<[Paul@ICOM] PSNIVELY> Um, has anyone other than me noticed the most important 
+<[Paul@ICOM] PSNIVELY> thing (to me, anyway)...
+<[Paul@ICOM] PSNIVELY> About both Lisp and FORTH?
+<[Paul@ICOM] PSNIVELY> I'll tell you what I think it is...
+<[Paul@ICOM] PSNIVELY> Both are environments which encourage programming as an 
+<[Paul@ICOM] PSNIVELY> extension of the language...
+<[Paul@ICOM] PSNIVELY> That is, take a look at a Lisp program, like Notecards.  
+<[Paul@ICOM] PSNIVELY> It runs on a Lisp machine.  It's extensible...
+<[Paul@ICOM] PSNIVELY> you add to it by writing more Lisp.
+<[Paul@ICOM] PSNIVELY> Look at the way most FORTH programmers write.  They get 
+<[Paul@ICOM] PSNIVELY> something running, and usually allow customization
+<[Paul@ICOM] PSNIVELY> by writing more FORTH (or some metalanguage).
+<[Paul@ICOM] PSNIVELY> ga
+<[Dennis] D.RUFFER> ga jack
+<[jack woehr] JAX> Ok, paul, you just undid your whole earlier argument :-) ...
+<[Paul@ICOM] PSNIVELY> How so?
+<[jack woehr] JAX> When you mentioned Notecards on a Lisp machine
+<[jack woehr] JAX> that's the whole point
+<[jack woehr] JAX> we will never impress the "world" until ...
+<[Paul@ICOM] PSNIVELY> I don't understand...
+<[jack woehr] JAX> we "maximize our own eonvironment ...
+<[jack woehr] JAX> ( by the way, go ahead and interlace, paul ...)
+<[jack woehr] JAX> to provide the services ,say, that Unix provides ...
+<[Paul@ICOM] PSNIVELY> UNIX--gag!
+<[jack woehr] JAX> we are just like cripples leaning on C text editors ( do it 
+<[jack woehr] JAX> myself,)  ...
+<[jack woehr] JAX> yes, gag, unix ... think how neat it would be ..
+<[jack woehr] JAX> it had been written in FORTH!!!
+<[jack woehr] JAX> That's what's coming ...
+<[jack woehr] JAX> Parallel & parallel Forth are comeing ...
+<[jack woehr] JAX> We might as well admit that we have ...
+<[jack woehr] JAX> the most flexible and extensible programming environment 
+<[jack woehr] JAX> that is ...
+<[jack woehr] JAX> currently extant .    ...
+<[jack woehr] JAX> We should get dwon to brass tacks & write the toools ...
+<[jack woehr] JAX> that will make Forth second to none.
+<[jack woehr] JAX> Since it fundamentally is superior, extracting the problem ..
+<[jack woehr] JAX> of the overhead inherent in subroutine calls ...
+<[jack woehr] JAX> which is being solved, thanx to people like Novix & Zilog ...
+<[jack woehr] JAX> hows that for "unnesting" the conversation :-) ga
+<[Dennis] D.RUFFER> ga paul
+<[Paul@ICOM] PSNIVELY> Hee hee hee...
+<[Paul@ICOM] PSNIVELY> FORTH is AMONG the most flexible, extensible, etc... 
+<[Paul@ICOM] PSNIVELY> extant.
+<[Paul@ICOM] PSNIVELY> Smalltalk is as much so, Lisp lags only a bit.
+<[jack woehr] JAX> Forth is a more compact model tho
+<[Paul@ICOM] PSNIVELY> I agree that FORTH can be a great environment, large or 
+<[Paul@ICOM] PSNIVELY> small...
+<[Paul@ICOM] PSNIVELY> Oh, definitely, Jack.
+<[Paul@ICOM] PSNIVELY> Smalltalk is easily the largest system I use; Common 
+<[Paul@ICOM] PSNIVELY> Lisp is a distant second.
+<[Paul@ICOM] PSNIVELY> So let's MAKE those tools... make FORTH more 
+<[Paul@ICOM] PSNIVELY> popular/acceptable to the masses...
+<[Paul@ICOM] PSNIVELY> But those masses will want FORTH to be on top of an 
+<[Paul@ICOM] PSNIVELY> existing OS (unless you DO write the OS in FORTH...
+<[Paul@ICOM] PSNIVELY> but it'll have to have functions like OSes as we
+<[Paul@ICOM] PSNIVELY> know them today).
+<[Paul@ICOM] PSNIVELY> I like being able to mold, melt, and shape...
+<[Paul@ICOM] PSNIVELY> You can't do it with Pascal or C.
+<[Paul@ICOM] PSNIVELY> You can with languages on the "lunatic fringe" 
+<[Paul@ICOM] PSNIVELY> (Smalltalk, Lisp, FORTH, etc.)
+<[Paul@ICOM] PSNIVELY> ga
+<[Dennis] D.RUFFER> ga jack
+<[jack woehr] JAX> It would be easy to write a graphic OS on top of Forth
+<[Paul@ICOM] PSNIVELY> Valdocs?  *GRIN*
+<[jack woehr] JAX> but I would like to drift a bit if I may to the topic of 
+<[jack woehr] JAX> Object Oriented
+<[jack woehr] JAX> Seems to me that part of the thrust of Object Oriented is to 
+<[jack woehr] JAX> "cure" a
+<[jack woehr] JAX> "problem" that C created::: ie, the unmanageablitlity of 
+<[jack woehr] JAX> data objects past
+<[jack woehr] JAX> a certain size ...
+<[jack woehr] JAX> the kind of monsters
+<[jack woehr] JAX> necessary to do good grafix progs.
+<[jack woehr] JAX> Forth lets its objects ...
+<[jack woehr] JAX> be much more manageable ...
+<[jack woehr] JAX> inherently since their very nature is that they are 
+<[jack woehr] JAX> "permeated"
+<[jack woehr] JAX> with executable code. ...[A
+<[jack woehr] JAX> One night I was up programming late and I got this brilliant 
+<[jack woehr] JAX> "idea"
+<[jack woehr] JAX> I conceived this ultimate data object,,, it would contain 
+<[jack woehr] JAX> others
+<[jack woehr] JAX> and execute them etc etc ... realised that i had ...
+<[jack woehr] JAX> reinvented the colon definition.
+<[jack woehr] JAX> THIS is the fundamental advantage FORTH has over others like 
+<[jack woehr] JAX> C
+<[Gary] GARY-S> re: mention of ValDocs above - it is being rewritten in 'C' ! 
+<[Gary] GARY-S> (gag)
+<[Paul@ICOM] PSNIVELY> Gary, I know!  Ugh!
+<[jack woehr] JAX> it is object oriented before C knew what street "objects" 
+<[jack woehr] JAX> lived on ...
+<[jack woehr] JAX> Plus it is visible to the programmer so s/he can optimise ...
+<[jack woehr] JAX> ga
+<[Dennis] D.RUFFER> ok
+<[Paul@ICOM] PSNIVELY> It's STILL nowhere near Smalltalk or Lisp in "object 
+<[Paul@ICOM] PSNIVELY> oriented" power.
+<[jack woehr] JAX> who says
+<[Dennis] D.RUFFER> jack, I think you are right, Forth is the best!
+<[Dennis] D.RUFFER> however......
+<[Paul@ICOM] PSNIVELY> I do, from experience.
+<[jack woehr] JAX> have you seen ODE
+<[Paul@ICOM] PSNIVELY> Not ODE.
+<[jack woehr] JAX> JForth object oriented
+<[Dennis] D.RUFFER> it WILL NOT WIN being so arrogant!
+<[jack woehr] JAX> by plburk
+<[Gary] GARY-S> by whom ?
+<[Paul@ICOM] PSNIVELY> Lisp is the best object-oriented environment because of 
+<[Paul@ICOM] PSNIVELY> its dynamic storage management.
+<[jack woehr] JAX> like any small persecuted beast ...
+<[jack woehr] JAX> FORTH must be feisty!!
+<[jack woehr] JAX> GRRR go tell your project manager ...
+<[Gary] GARY-S> who has this ODE ?
+<[Paul@ICOM] PSNIVELY> Jack, you sound more like Gloria Steinem than a 
+<[Paul@ICOM] PSNIVELY> programmer.
+<[jack woehr] JAX> FORTH or I walk. ODE is in JForth ...
+<[jack woehr] JAX> My hair is longer than hers ...
+<[jack woehr] JAX> No foolin"!
+<[Paul@ICOM] PSNIVELY> FORTH could benefit from dynamic memory allocation.
+<[jack woehr] JAX> ODE examples include JAXBOXES.ARC in our library
+<[jack woehr] JAX> JForth HAS dynamic mem alloc
+<[Paul@ICOM] PSNIVELY> Oh?  No dictionary?
+<[jack woehr] JAX> your problem is you bought a Mac! :-)
+<[Paul@ICOM] PSNIVELY> How is that a problem?
+<[jack woehr] JAX> Yes dictionary. Yes mem allloc
+<[Paul@ICOM] PSNIVELY> I'm talking about why Lisp is better than FORTH for OOP.
+<[jack woehr] JAX> That's a side issue! all non-forth engines are kludgy. FOrth 
+<[jack woehr] JAX> is kludgy. Moore is right
+<[Paul@ICOM] PSNIVELY> Well, if it still has a dictionary, then the dynamic 
+<[Paul@ICOM] PSNIVELY> memory management is useless.
+<[jack woehr] JAX> all computers are good for is laser mosquitoo zappers
+<[jack woehr] JAX>
+<[Dennis] D.RUFFER> Yeh Jack! :-)
+<[jack woehr] JAX> It has a dictionary AND it has dynamic mem alloc.
+<[jack woehr] JAX> You should examine standalone systems al little bit
+<[jack woehr] JAX> Lots of them do the same thing
+<[Paul@ICOM] PSNIVELY> Yes, fine.. but unless the dictionary has magically 
+<[Paul@ICOM] PSNIVELY> become a dynamic entity, then it's wasted.
+<[jack woehr] JAX> they always have loose memeory it isn't wasted IF IT IS THE 
+<[jack woehr] JAX> OS !!!!
+<[jack woehr] JAX> Besides you can shitcan headers anytime
+<[Paul@ICOM] PSNIVELY> In other words, if I redefine a word, then I want ALL 
+<[Paul@ICOM] PSNIVELY> words in the dictionary that use that word to use the
+<[Paul@ICOM] PSNIVELY> new definition.
+<[jack woehr] JAX> then vector your words
+<[Paul@ICOM] PSNIVELY> I don't want to have to worry about that explicitly.
+<[jack woehr] JAX> !!!!&&!
+<[jack woehr] JAX> Then program in C
+<[Paul@ICOM] PSNIVELY> Yeah, I know... DEFERRED/IS...
+<[Dennis] D.RUFFER> now jack no swearing :-)
+<[Paul@ICOM] PSNIVELY> C???  No, no, no...  Lisp.
+<[jack woehr] JAX> Lisp is neat but inefficient. Unless it is standalone on a 
+<[jack woehr] JAX> Lisp box Like FOrth
+<[Paul@ICOM] PSNIVELY> I can create an object, create objects that inherit from 
+<[Paul@ICOM] PSNIVELY> it, change the parent...
+<[Paul@ICOM] PSNIVELY>  the new stuff!
+<[Paul@ICOM] PSNIVELY> Jack, not on a 5 meg Mac II it isn't inefficient!
+<[jack woehr] JAX> That'Or on an Amiga either ... but think ...
+<[jack woehr] JAX> what a FORTH parallel box could do!
+<WC.COLEMAN> is here.
+<[jack woehr] JAX> If the AMiga were a FORTH box ...
+<[Paul@ICOM] PSNIVELY> I've seen Common Lisp on a transputer system, thanks...
+<[jack woehr] JAX> You would have the grafix prims from the command line 
+<[jack woehr] JAX> interface!
+<[jack woehr] JAX> FORTH is just a BETTER environment.
+<[Paul@ICOM] PSNIVELY> Jack, I'm not convinced.
+<[jack woehr] JAX> And the Better becomes the Best standalone
+<[Dennis] D.RUFFER> ok
+<[Paul@ICOM] PSNIVELY> FORTH and LISP are both roughly equal.
+<[Dennis] D.RUFFER> well is this getting us anywhere?
+<[Dennis] D.RUFFER> it's getting VERY late!
+<[Paul@ICOM] PSNIVELY> Dennis, the exposition of ideas and opinions ALWAYS gets 
+<[Paul@ICOM] PSNIVELY> you somewhere.
+<[Paul@ICOM] PSNIVELY> Yeah, I must go... g'night, y'all!
+<[jack woehr] JAX> also just plain bs is fun too
+<[jack woehr] JAX> :-)
+<[Paul@ICOM] PSNIVELY> Jack, indeed, as we've proven amply tonight!  :-)
+<[Dennis] D.RUFFER> ok but it is late for us EST folks
+<[Paul@ICOM] PSNIVELY> Right!  G'night!
+<[jack woehr] JAX> erhardt? here
+<[Gary] GARY-S> It was fun !
+<[Dennis] D.RUFFER> can we call this to a close?
+<[jack woehr] JAX> I'm swapping out to virtual :-)
+<[Paul@ICOM] PSNIVELY> See y'all later!  Thanks, Dennis, Jack, Gary!
+<[Gary] GARY-S> has left.
+<[Dennis] D.RUFFER> good night all, thanks for comeing
+<[jack woehr] JAX> thanx guyz
+<[Paul@ICOM] PSNIVELY> <--- Totally UNreal.
+<[Paul@ICOM] PSNIVELY> has left.
+<[jack woehr] JAX> has left.
+<[Dennis] D.RUFFER> well WC coleman, when'd you come in?
+<WC.COLEMAN> Just a couple of minutes ago...wanted to see what everyone was up 
+<WC.COLEMAN> to.
+<[Dennis] D.RUFFER> well you must have gotten a terminal full :-)
+<[bill] WC.COLEMAN> True enough!
+<[Dennis] D.RUFFER> can I do you out of anything..or can I go to bed?
+<[bill] WC.COLEMAN> Naw, go on. I was just browsing....see 'ya.
+<[Dennis] D.RUFFER> thanks for stoping by
+<[Dennis] D.RUFFER> catch us again next week...
+<[bill] WC.COLEMAN> No problem....next time I'll try to be on time! :-)
+<[Dennis] D.RUFFER> starting at 9:30 pm Q-5~
+<[Dennis] D.RUFFER> or whenever you get there <grin>
+<[bill] WC.COLEMAN> I made it last week anyway!
+<[bill] WC.COLEMAN> Quick question...
+<[Dennis] D.RUFFER> That's right, I knew I've seen you before :-)
+<[Dennis] D.RUFFER> go ahead
+<[bill] WC.COLEMAN> Is Commodore ARC compatible with PC ARC?
+<[Dennis] D.RUFFER> yes it is
+<[Dennis] D.RUFFER> if you have the right one...
+<[Dennis] D.RUFFER> check out file , can't remember the name right now...
+<[bill] WC.COLEMAN> I have that forth system Y'all wanted me to upload but the 
+<[bill] WC.COLEMAN> screens are stored in relative files...can be a problem!
+<[Dennis] D.RUFFER> I'm not sure what your talking about "relative files"?
+<[bill] WC.COLEMAN> Commodore relative files. Hmmm think of them as wierd 
+<[bill] WC.COLEMAN> random files.
+<[Dennis] D.RUFFER> and Blazin Forth doesn't use them right?
+<[bill] WC.COLEMAN> Blazin' uses straight random....sectors are computed from 
+<[bill] WC.COLEMAN> the screen #.
+<[Dennis] D.RUFFER> classic problem. Forth takes over!
+<[Dennis] D.RUFFER> not much you can do, except design the correct interface...
+<[bill] WC.COLEMAN> Relative files work ok, just hard to transfer.
+<[Dennis] D.RUFFER> you might even be able to meta compile your interface into 
+<[Dennis] D.RUFFER> the complete system...
+<[bill] WC.COLEMAN> I still wish I could dig up some low-level source. <<sigh>>
+<[Dennis] D.RUFFER> but it is difficult, how much Forth did you say you knew?
+<[bill] WC.COLEMAN> I wouldn't call myself an expert but I can hold my own when 
+<[bill] WC.COLEMAN> necessary! <<grin>>
+<[Dennis] D.RUFFER> well Gary was going to send you a disk...
+<[Dennis] D.RUFFER> when you get that, you should be on your way...
+<[bill] WC.COLEMAN> He did! I sent it back after I copied them.
+<[Dennis] D.RUFFER> well then upload them to the board!
+<[bill] WC.COLEMAN> But the screens don't go low enough. I need LOW LEVEL. : 
+<[bill] WC.COLEMAN> definition, etc.
+<[Dennis] D.RUFFER> others may like to see them too
+<[bill] WC.COLEMAN> They're the ones with the relative files!
+<[bill] WC.COLEMAN> I'll get it I just have to make sure they'll survive the 
+<[bill] WC.COLEMAN> transfer.
+<[Dennis] D.RUFFER> ok sounds good...
+<[Dennis] D.RUFFER> the ARC should be compatable,
+<[bill] WC.COLEMAN> Hmmm...didn't you say you were going to bed? <<grin>>
+<[Dennis] D.RUFFER> and I can ARC them if you put them up
+<[bill] WC.COLEMAN> You have to have the right version or you will make a mess!
+<[Dennis] D.RUFFER> yes I did, do you have anything else... I have the right 
+<[Dennis] D.RUFFER> version!
+<[bill] WC.COLEMAN> And I can't upload them until they are ARC'ed.
+<[Dennis] D.RUFFER> I even have it in Forth
+<[bill] WC.COLEMAN> Will it do Commodore relative files???
+<[Dennis] D.RUFFER> upload them as text, or binary.
+<[Dennis] D.RUFFER> I will ARC them as is, and someone with a Commodore
+<[Dennis] D.RUFFER> should be able to unARC them and go.
+<[bill] WC.COLEMAN> I think I have the right version....I've just been busy in 
+<[bill] WC.COLEMAN> my RT (I just got them a couple of days ago)!
+<[Dennis] D.RUFFER> no problem, I'm busy too...
+<[Dennis] D.RUFFER> In fact I've got 2 disks of stuff to upload when I find my 
+<[Dennis] D.RUFFER> next round toit <grin>
+<[bill] WC.COLEMAN> Well I'll let you go....'night....see you next week.
+<[bill] WC.COLEMAN>  <<grin>>
+<[Dennis] D.RUFFER> bye bye
+<[bill] WC.COLEMAN> has left.
+
+

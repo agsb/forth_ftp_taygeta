@@ -1,0 +1,119 @@
+
+BULLETIN 2:  THE PC4000                                3/4/87
+
+    SILICON COMPOSERS' (formerly Software Composers) PC4000 is a
+combined co-processor/memory expansion plug-in board designed to run
+concurrently in PCs, XTs and many desktops and compatibles. It uses the
+Novix NC4000 FORTH engine running at 4MHz as its CPU, and runs FORTH
+code as its machine language from on-board RAM.  A Forth sieve on the
+PC4000 runs 75 times faster than a Forth sieve on the 4.77 MHz PC/XT.
+The PC4000's 512K bytes of on-board dynamic RAM can be jumper selected
+for PC memory expansion of 128K, 384K, or 512K bytes.  The PC and
+PC4000 operate concurrently and share a minimum of 16K bytes of PC4000
+memory for communications.
+      *  Novix NC4000 Forth Engine with 4 MHz guaranteed operation
+      *  The 3/4 length (9.75"x4.2") PC4000 board plugs into PC,
+         XT and many PC compatibles and desktops
+      *  Shares bus and 16K bytes of communication space with PC
+      *  512K bytes of on-board 256Kx18 bit, parity-checked DRAM
+      *  Save a slot -- use PC4000 memory for expanding PC memory
+         by either 128K, 384K, or 512K bytes (jumper selectable)
+      *  Four 112K byte banks of memory using NC4000 X2, X3 lines
+      *  Four data/return stack sets of 512 bytes each
+      *  Store and load code through PC -- no on board PROM!
+More (Y),N,NS? 
+      *  PC4000 direct memory access to PC disks, I/O, or
+         memory-to-memory transfers
+      *  PC4000 READY line suspends PC when Novix and PC access
+         same memory simultaneously
+      *  When Novix is idle, PC runs at full speed
+      *  Multiple PC4000 cards can plug into the PC
+      *  Novix automatically resets at power-up and within one
+         clock cycle begins operation under PC control
+      *  Optionally, the PC4000 can generate interrupts to the
+         PC using any of the 6 jumper-selectable PC interrupts
+      *  40-pin user experimentation bus: 16-bit B-port, 5-bit X-port,
+         WEB, +/-5 volts, +/-12 volts, ground, BR/W, D0-D4, Reset, NVCLK
+      *  Software included: PCX Comm in F83 and cmForth with editor,
+         demonstration programs, and 24 hour customer support BBS
+      *  Assembled and tested with 90-day warranty and User Manual
+      *  Compatible with the Novix NC5000 when available
+      *  OEM pricing available
+
+PC4000 CPU
+    The PC4000 has as its CPU the Novix NC4000 Forth engine, the
+revolutionary Forth-in-silicon chip that has the throughput of a bit-
+slice processor combined with the advantages of coding in a powerful
+high level language.  Its internal parallel data paths and use of four
+More (Y),N,NS? 
+separate data busses allow as many as five Forth instructions to be
+permitted in one machine cycle.
+    Much of the NC4000's speed results from its lack of archaic
+internal microcode.  Each bit of an instruction read by the NC4000
+turns the transistors on and off.  There is no cumbersome, time-
+consuming translation from machine language to microcode to
+transistors. This elegant architecture, combined with one cycle calls
+and zero cycle returns, make the NC4000's throughput competitive with
+any production CPU in the market today.  The PC4000 is designed to be
+compatible with both the NC5000 and the NC4000A Novix processors.
+
+DATA AND RETURN STACKS
+    To facilitate the use of the NC4000's dedicated data and return
+address pins for the data and return stacks, the PC4000 uses CMOS RAM
+chips seperate from the PC4000's main DRAM memory to service these
+functions.  Each CMOS stack chip-pair provides 2K bytes of available
+stack memory.  The 2K bytes are partitioned into four 256 word stacks.
+Software is provided in cmForth to allow for bank/stack switching.
+
+PC4000 EXPANSION BUS -- J1
+    The jumpers provided by the J1 are intended to facilitate the
+extension of the B-port to the outside world and to promote
+experimentation.  All of the B-Port data lines, as well as the D0 thru
+More (Y),N,NS? 
+D4 lines and necessary control signals, are presented so that the user
+can adapt the PC4000 board to many specialized applications.
+
+BUS ARBITER
+    The Bus Arbiter reads the control signals coming from the PC and
+coordinates the access of the PC to the user-selected shared memory
+space.  The use of custom programmable logic chips facilitates this
+function while keeping the chip count to a minimum.
+
+MUX (MULTIPLEXERS)
+    The MUX section of the block diagram, taking its cues from the Bus
+Arbiter, selects either the Novix address signals or the PC address
+signals to be presented to the DRAM'S address lines, thus allowing the
+same memory location to have separate Novix and PC addresses.
+
+DRAM (DYNAMIC RAM)
+    The DRAM portion of the block diagram represents 512k bytes of on-
+board RAM.  While 16k of DRAM is always reserved for shared memory
+addresses to allow the PC4000 and the PC to communicate, additional on-
+board RAM can also easily be assigned as shared memory.  This feature
+allows the PC4000 board to function as additional memory for a PC.  In
+order to provide this flexibility the DRAM is buffered from both the
+Novix and PC address, data, and control lines.  The appropriate set of
+More (Y),N,NS? 
+signals can then be applied to the chips at the appropriate times.
+This buffering is provided by the MUX, Novix buffer, PC Buffer, and the
+Bus Arbiter sections of the block diagram.
+
+BUFFERS
+    Each of the two buffers in the block diagram can either pass or
+block data.  The Bus Arbiter choreographs the data flow to and from the
+DRAM according to which CPU is accessing the memory.  Each access of
+memory by one of the CPUs is transparent to the other.
+
+SOFTWARE
+    Available software includes SCForth, cmForth, PCX, and Delta-C.
+SCForth, sold separately and based on the Forth-83 standard, is an easy
+to use Forth development language for building applications.  cmForth,
+written by Chuck Moore, the inventor of Forth and the Novix micro-
+processor, is a compact, public domain language used by many NC4000
+programmers.  cmForth is included with the PC4000.  PCX, included with
+the PC4000, is a Forth (F83) MSDOS based program for communicating
+with the PC4000.  Delta-C, sold separately, is an extended Small-C
+language that translates C code into Forth.
+ing NC4000 X2, X3 lines
+
+

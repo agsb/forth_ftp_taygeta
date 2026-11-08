@@ -1,0 +1,163 @@
+
+FILE MANAGEMENT IN F-PC
+Leonard Morgenstern
+FIggy tutorial Dec 2 1990
+
+	The following material was used for a tutorial at the North Bay Forth Interest
+Group. I hope it is clear -- at the original presentation, I was able to explain
+ambiguities during the presentation.
+
+	F-PC uses DOS handles, introduced with DOS 2.1. They add power, and the
+programmer need not worry so much about details. One starts with an ASCIIZ  string,
+meaning a legal DOS path and file name terminated with a zero (null) byte. There is a
+DOS function to open the file and return a 16-bit number called a handle. DOS sets a
+limit to how many files can be open at one time. When done with a file, always
+explicitly close it, or you may run out of handles.
+
+	F-PC's orientation is towards text and data. Blocks are available as an add-on.
+The basic word for file manipulation in F-PC is HANDLE, which creates an area to hold
+the ASCIIZ string, the handle proper, and certain other data. Then the file can be
+opened, accessed, and closed. This RrawS method has a set of 30 different operations,
+and is well suited for handling record-oriented data. For example:
+
+HANDLE FOOHANDLE			\ create the handle
+FOOHANDLE !HCB A:FOOFILE.DTA	\ !HCB gets file name & path from input into handle.
+See note 1
+FOOHANDLE HOPEN			\ open the file specified by the handle. See note 2
+PAD 20 FOOHANDLE HREAD	\ read 20 characters into memory at PAD
+FOOHANDLE HCLOSE			\ close the file. See note 2.
+
+Note 1. To move a string in memory into a handle, use $>HANDLE ( a h -- ) where a is a
+counted string. Example: FOOSTRING FOOHANDLE $>HANDLE
+Note 2. HOPEN and HCLOSE put a DOS error code on the stack. Zero signifies no error.
+For simplicity, I have omitted the necessary error-handling.
+	
+
+	F-PC provides a handle-stack, designed to permit loading of one file from
+another, and well suited to handling ASCII files in general. The stack can hold 5 handles
+with the RcurrentS one on top. Any of the 30 words referred to above can be used with
+the handle-stack, and there are about 30 others that work only with it. For example:
+
+SEQHANDLE ( -- a )	\ Return address of current handle.
+hSEQUP ( -- )		\ Step up one level; if there is an open file on the new level, it
+will be closed automatically. The new level becomes current.
+SEQDOWN ( -- ) 		\ Close file on current level & step down to previous level.
+
+	Words that specifically access SEQHANDLE include:
+
+LINEREAD ( -- a )		\ Return an address that has the next line as a counted
+string. A line is terminated by a LF ($0A). I omit some important details about
+initializing the internal buffers, etc.
+
+SEEK ( dp -- )		\ Move file pointer to position represented by 32 bit number
+
+CLOSE ( --)			\ Close current file
+A practical example that can be compiled with TCOM
+
+/* Split a large file into chunks
+	A file may be too big to be handled by your word processor. This program will
+cut it into chunks of 40k bytes. The program requests the name of the input file, and a
+1-6 letter prefix for the output files(s). If the output prefix is FRAG, then the chunks
+will be named FRAG00, FRAG01, etc. In a lot of places, I simply dropped the error
+return after various handle actions. So far I have had no disasters.
+*/
+
+: FILLBUF  ( adr len -- )
+/*  A general-duty utility that gets input from keyboard as count-string into buffer
+EXPECT in F-PC allows a lot of editing!  Note spelling!  (FILLBUFF already exists)
+*/
+SPAN @ >R #TIB @ >R >IN @ >R		\ Save things on return stack
+OVER 1+ SWAP EXPECT			\ Use EXPECT to get input at adr+1
+SPAN @ SWAP C!				\ Set count byte
+R> >IN ! R> #TIB ! R> SPAN !  ;		\ Restore stuff
+
+: APPEND ( adr char -- )
+ \ Append char to memory string
+ 	OVER COUNT + C!
+	DUP C@ 1+ SWAP C! ;
+
+40 ARRAY NAMEBUFFER
+HANDLE OUTFILE 
+HANDLE INFILE
+
+: GET_PREFIX  ( handle -- )
+\ Get output file prefix from keyboard & put it in handle along with 2 zero digits.
+
+	NAMEBUFFER DUP 40 FILLBUF			\ Get file name from kybd
+	DUP ASCII 0 APPEND	DUP ASCII 0 APPEND		\ Append two zero
+digits
+	SWAP $>HANDLE ;					\ Insert it in the handle
+
+: INCREMENT_SUFFIX ( handle -- )
+	HANDLE>EXT 1- DUP  C@ ASCII 9 =			\ Is last digit of prefix a
+9?
+		IF DUP 1- DUP C@ 1+ SWAP C!		\ If so increment previous
+		  ASCII 0 SWAP C!				\  and append a 0
+		ELSE DUP C@ 1+ SWAP C!			\ Otherwise, simply increment
+		THEN ;
+
+: OPEN_EXISTING_FILE ( handle -- f  [ true = ok ])
+\ Request file name & try to open. If ok, then flag is true.
+	DUP
+	NAMEBUFFER DUP 40 FILLBUF			\ Get file name into NameBuffer
+	SWAP $>HANDLE					\ Insert into handle
+	HOPEN 0= ;						\ Open it.
+
+: CLOSE_FILES    INFILE HCLOSE  OUTFILE HCLOSE 2DROP ;
+
+VARIABLE COUNTER
+
+: PIECE1 ( adr -- )
+/* PIECE1 is factored out because TCOM will not jump longer than 127 bytes (Not true:
+I did not know about the command LONG_BRANCH)
+*/
+
+	 OUTFILE HWRITE DROP			\ Write segment from buffer
+	46 EMIT					\ Put dot to screen 
+	1 COUNTER +!
+	COUNTER @ 40 MOD 0= IF CR THEN		\ & make new line every so often
+	COUNTER @ 20 >=				\ After 40 k close file & open a new
+one
+		IF      OUTFILE HCLOSE DROP
+			COUNTER OFF  CR
+			OUTFILE INCREMENT_SUFFIX
+			OUTFILE HDELETE DROP
+			OUTFILE HCREATE DROP
+			OUTFILE WRITE-ONLY HOPEN DROP
+		THEN  ;
+
+
+: SPLIT-FILE
+	." File splitter utility. The input file will be split into segments of 40k " CR CR
+
+/*
+This is the file splitter. F-PC provides a default extension that will be used if none is
+supplied. When you are compiling, this is set to "SEQ" but you can change it. See Line 2
+of program
+*/
+	INFILE CLR-HCB OUTFILE CLR-HCB			\ Clear the handles
+	"    "  DEFEXT 1+ SWAP CMOVE			\ Set default extension to blanks
+
+	BEGIN CR ." Input file :  "
+		READ-ONLY INFILE OPEN_EXISTING_FILE	\ Open input file
+		DUP 0= IF ." Does not exist." BEEP CR THEN
+	UNTIL							\ Repeat until successful
+
+\ Open the first output file. Note: if a file by the same name exists, it will be erased 
+	CR ." Type output file spec. with path, 1-4 characters. (no dot!)  "
+	OUTFILE GET_PREFIX  OUTFILE HDELETE DROP
+	OUTFILE HCREATE DROP   OUTFILE WRITE-ONLY HOPEN DROP
+	COUNTER OFF            CR
+
+\ Read 2k bytes at HERE. HREAD returns the number of bytes read, ready to send on
+	BEGIN
+		HERE DUP 2048 INFILE HREAD DUP 0<>
+	WHILE
+		PIECE1
+	REPEAT
+	CLOSE_FILES  CR ." DONE " 2DROP ;
+
+
+
+
+

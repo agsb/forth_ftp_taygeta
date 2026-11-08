@@ -1,0 +1,222 @@
+
+Real Time Forth Conference, 10-26-88
+Host: Gary Smith      Speaker: C. H. Ting
+
+ZEN AND FORTH                              by C. H. Ting
+
+
+Welcome to this Zen and Forth Conference.
+
+Before we start, let me quote first from Lao-Tze:
+
+        Those who know do not speak;
+        Those who speak do not know.
+
+Isn't it great to be a speaker?
+
+
+I.   INTRODUCTION
+
+
+What I like to focus on tonight is the religious aspect of Forth.
+Zen is the religious development in China which was a synthesis of
+Buddhism and Taoism.  Its history and development had many
+charisteristics similar to Forth.  I would like to use it to open up
+our discussions.
+
+Zen stresses simplicity.  Enlightenment is not as complicated as
+traditional Buddhism lead us to believe.  It is not in the canons.
+It is not in the churches or temples.  It cannot be conveyed by words.
+It is not in the established practices.  It is in yourself.  You have
+it already.  But you have to discover it yourself.  It is also an
+expierence, which can only be passed from mouth to mouth, and from
+heart to heart, not by books or written words.  It became an oral
+tradition.
+
+Forth is the Zen of computing.  It forges the lightest but tightest
+union between a Man and a Computer.  Anything and everything
+superfluous to this union are stripped away so that the Computer
+becomes a natural extension of the Man.
+
+
+II.   ZEN IN CHINA
+
+
+The background of Zen was hundreds of years of Buddhism spread into
+China from India.  Buddhism started in India in 6 century BC,
+contamporary to Lao-Tze and Confucius.  It was gradually brought
+to China through trade routes in the first century AD and blossomed
+in the 4th century.  Massive translation of Buddhist canons was
+undertaken at the height of Tang Dynasty with govermental supports
+starting 400 AD.  Tons of literatures were translated, most of
+them were badly translated that only the priesthood could make
+sense out of them.  Lots of temples and monasteries were established.
+Millions were lead to believe that they could attain enlightenment,
+personal freedom and happiness, and a better second life by certain
+practices and rituals.
+
+Zen was introduced to China by an Indian master Bodhidharma, who
+arrived Canton in 520 AD.  His teaching of mediatation and
+subsequent enlightenment was passed orally through six Masters
+and became a major sect of Buddhism in China in 6th-7th centuries.
+It was brought to Japan at that time and became the only form
+of Buddhism in Japan.
+
+The Zen masters found that the best way to attain enlightenment was
+not through study of literature, nor through established rituals,
+but by ridding off foreign things in oneself.  Meditation, hard
+physical labor, occasional loud noise, and sometimes a sharp blow
+on the head would precipitate the enlightenment if all the
+background understanding were in place.
+
+Zen became very successful in China and Japan because it basically
+integrated the essense of Buddhism and Toaism.  Much of the more
+foreign Hindhu influences were eliminated so that it grew more
+naturally in the Chinese environment.  It became the principal
+philosophy in Far East dealing with meaning of life and provided a
+framework that individuals could find happiness and satisfaction
+in life.
+
+
+III.   SIMILARITY BETWEEN ZEN AND FORTH
+
+
+*  Both are countercurrents to the prevailing concepts and
+   practices.
+
+*  Simplicity is the most common trait between Zen and Forth.
+   Truth is always simpler than facts.  Stripping away
+   all the irrelevant elements and truth will shine by itself.
+
+*  They had to break away from massive establishments overloaded with
+   organizations, documentation, practices, and unfortunated, money.
+
+*  Enlightenment is not derived from established organization,
+   documentation, practices, or money.
+
+*  Enlightenment does require personal effort.  When personal effort
+   reaches a critical mass, enlightenment usually comes in a flash.
+
+*  They both started as oral traditions.  Documentations were considered
+   untrustworthy, dangerous, and superfluous.
+
+*  They attracted feverish, and loyal followers, as well as oppositions
+   of comparable intensity.
+
+*  They became fragmented as individuals perceived their own brands of
+   truth.  Standards committees were organized to iron out differences,
+   but never quite succeeded.
+
+
+IV.   FORTH AS RELIGIOUS EXPERIENCE
+
+
+The most intense form of religious experience is enlightenment in
+Zen and Buddhism, re-birth of a Christian, commitment to a marriage,
+and the understanding of the Forth inner interpreter.
+
+Most Forth programmer had this religious experience, which convinced
+them the righteousness of Forth.  It generally happens after the
+completion of a substantial project, the full understanding of
+INTERPRET, figuring out what DOES> does, or when he sees 'ok' from
+the system he's building.  Prior to it, he generally has had spent
+a couple of months trying to figure out why Forth works or why his Forth
+does not work.
+
+Casual Forth users, like taking a course in Forth, generally do not
+have the intense study and exploring period to warrant enlightenment.
+Most of them drift away at the next wind.
+
+There are several questions I would like to post to our audience:
+
+*  Does everyone here experience this Forth enlightenment?
+
+*  At which stage did you attained enlightenment, if you did?
+
+*  Is enlightenment necessary to be a good Forth programmer?
+
+*  Does enlightenment handicap a programmer such that he will not
+   advance (or retard) to other real computer languages?
+
+*  Does enlightenment handicap the Forth community because each
+   Forth programmer is enlighted in a different way?
+
+*  Is this experience transferable to other people?  Or is this
+   Forth desease contageous?
+
+*  It seemed that Forth was contagious in '77-'80 period due to the
+   explosive growth of FIG.  It also seems that it is not contagious
+   now.  Why?
+
+*  Is there any special trait which makes a person susceptible to
+   the Forth enlightenment?  Like the first-born in a family?
+
+
+V.   CONCLUSION--WHY FORTH IS RIGHT
+
+
+Let me risk against Lao-Tze's advice and bare my ignorance.
+
+Why Forth is Right?
+
+Why Forth is right, and why all other computer languages are
+wrong?  It is because Forth is the essense of computing.
+
+Then what is computing?  Where is its essence?
+
+Man created this Machine, somewhat in his own image, logically.
+He tried, but not quite succeeded, because he is too complicated
+to be cloned by mechanical or electronic media.  He wanted this
+Machine, he called it Computer, to do something useful; that is,
+things he would have to do himself otherwise.  They include doing
+lots of additions, multiplications, logic operations, doing dishes,
+doing laundry, piloting an airplane, or guiding a missile.
+Because the Machine is of lesser 'intelligence', it must be given
+precise, unambiguous instructions.
+
+The essense of computing is to give this Machine precise,
+unambiguous instructions.  Why Forth is right?  Because it is the
+best vehicle to construct and to deliver to this Machine precise,
+unambiguous instructions.
+
+Forth consists of a set of instructions, we call words,
+which Man can use to make the Machine to do what he desired
+of the Machine within the capability of the Machine.  This is true
+for all other languages.  But Forth delivers the instructions
+directly to the machine (it interprets), and new instructions
+can be constructed freely from existing instructions (it compiles).
+
+In Forth, Man is not programming the Machine.  He is designing
+a new Machine by adding new instructions to it, so that the new
+Machine becomes a closer clone to his image without physically
+changing the Machine.  Forth is right because it allows the
+Machine to grow to be more like the Man.
+
+The Forth syntax is simple because the Machine understands it
+best, and it is also easy for the Man to learn and use it.
+The Man gets the best satisfaction if he means what he says, because
+the Machine does exactly what he says.  Simple syntax does not
+means weak syntax.  As Forth syntax fully supports the classical
+control structures and modularity touted by the proponents of
+modern structured porogramming.
+
+I like Bach's music, but I cannot play.  So I built an instruction
+set in my Machine to play Bach's music for me.  To program it became
+very tedious, because I had to enter every precise, unambiguous
+note to build a whole piece.  I gave my Machine a scanner so it
+can scan the music and converts the score to notes that it can then
+play for me.  The Machine reads the music, very similar to the
+way I read the music.  It writes out the notes to a file, just
+like what I would have written them.  I cloned a part of myself
+in my Machine.  Although I can do it in any language, Forth
+let me do it in the shortest time.  The Machine grows steadily,
+like a child.  It grows smoothly and without pain, because it
+only has to grow one word at a time.
+
+Forth is right, because it gives us the power and the personal
+satisfaction of designing and building computers to our own
+liking and our own likeness.
+
+Enough of my mumbling.  Let's talk.
+
+

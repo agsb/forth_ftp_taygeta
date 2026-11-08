@@ -1,0 +1,338 @@
+
+This file has been downloaded from the Computer Language Magazine SIG
+on CompuServe.
+  
+GUIDES.ESP                25-Jun-88 14878              10
+ 
+    Keywords: WRITERS CONTRIBUTORS AUTHORS GUIDES GUIDELINES EMBEDDED SYSTEMS
+    PROGRAMMING ESP
+     
+    Brief writers' guidelines for Embedded Systems Programming magazine, a
+    launch from the publishers of Computer Language. Includes lists of columns
+    and article topics. Questions? Contact editor J.D. Hildebrand at (415)
+    995-2436, via CIS (76701,32) or on the Computer Language authors' BBS:
+    (415) 882-9915.
+     
+    
+ 
+EMBEDDED SYSTEMS PROGRAMMING
+WRITERS' GUIDELINES
+
+Embedded Systems Programming is a technical forum for discussion of design,
+coding, debugging, prototyping, and integration issues in the field of embedded
+microprocessor-based systems. The magazine is a monthly technical resource
+(with the emphasis on "technical") designed to make professional software
+engineers more competent in their work and more knowledgeable about their
+field. All sizes of embedded systems are covered, from 4-bit microcontroller
+applications to huge parallel processing projects and RISC-based systems.
+  
+While the magazine's clear focus is on programming--including machine code
+issues, optimization, portability, assembly techniques, and high-level
+languages--hardware issues are of great importance to the readers. Effective
+coding for embedded systems requires in-depth knowledge of microprocessors and
+other silicon components. Therefore, hardware-oriented articles are accepted,
+provided they are written from the programmer's perspective.
+ 
+Embedded Systems Programming manuscripts are reviewed by a technical editor and
+one to three technical referees. After receiving their comments, the editors
+make a decision to accept the piece as is, return it for revision, or reject
+it. The process can take four to eight weeks or longer. Comments from referees
+will be forwarded to the author.
+  
+Manuscripts may comprise up to three parts: a written essay; relevant code; and
+diagrams, graphs, and tables. Length can range from about 1,500 to 4,000 words,
+depending solely on subject matter.
+ 
+The author should keep several criteria in mind when writing an article:
+ 
+o The main point may be unique to a certain microprocessor, development
+  environment, or application area, but the underlying lessons should be
+  applicable within a broader range of reader environments.
+   
+o Our readers are experienced, competent professionals. While they may not be
+  familiar with your specialty or the specific techniques described in your
+  article, you can be sure that they are familiar with general programming
+  concepts, technical terminology, and hardware issues. Don't talk down to the
+  reader!
+   
+o Concrete examples, including source code and schematic diagrams, if relevant,
+  should be used liberally to illustrate points made in the text.
+   
+Try to make the article interesting and lively. Start off with an anecdote,
+description of a problem that the information in your article will solve, or
+another type of catchy lead. The tone of the first few paragraphs of your
+article determines to a large degree whether or not your piece will be read. On
+the other hand, your most important contribution to the magazine is your
+technical knowledge. We have a raft of editors who will work with you on style
+and presentation.
+ 
+ One way or another, the first three paragraphs should convey:
+ 
+ o What will be learned if the piece is read all the way through.
+   
+ o Why the subject is important.
+   
+ o How this information can be used.
+   
+The best way to submit an unsolicited manuscript is to mail a hard copy plus
+DOS-formatted 5.25-inch disk to the editor. An alternative is to upload it to
+the private authors' BBS: (415) 882-9915. The BBS is an important resource;
+it's the most effective means of communicating with the editors, a convenient
+medium for submitting text, and a source of valuable information like writers'
+guidelines, lists of desired articles, and editorial calendars.
+ 
+Include a brief biography with your article.
+ 
+After the article has been edited it will be sent to you in galley form for a
+final check. This is your chance to catch any technical errors that may have
+crept in during the editing cycle.
+ 
+Checks for articles and reviews are mailed with complimentary copies of the
+magazine as soon as the issue has been printed. Embedded Systems Programming's
+standard rates are approximately $100 per page, but this varies widely
+according to a number of factors.
+ 
+Our policy is to publish only original material. However, sometimes conference
+proceedings or articles that have been published in small-circulation magazines
+or newsletters will be accepted. Please let the editors know if your article
+has already been published.
+ 
+A first-rights copyright assignment for the author to sign will be sent out
+with the check. Authors retain liberal rights to material published.
+ 
+Feel free to call the editors with ideas or to submit an outline or proposal
+via BBS or CompuServe (76701,32). We're always interested in hearing from you!
+ 
+EDITORIAL NEED AND FOCUS
+ 
+There are a number of changes in the embedded systems world that require more
+practical and technical information on programming than is currently available.
+As the microprocessors and microcontrollers being programmed by software
+engineers grow more powerful, so does the task of programming them grow more
+complex:
+ 
+o Many of the problems associated with embedded systems hardware are now being
+  solved using advanced programming techniques.
+   
+o Electrical engineers are graduating with much greater software programming
+  skills--especially in higher-level languages like C and Ada. The use of C for
+  embedded systems development is estimated to rise from 32% of all programs in
+  1987 to 43% in 1989.
+   
+o The Department of Defense is growing more adamant in its requirement that all
+  mission-critical software be written in another high level lanquage, Ada. Use
+  of Ada in embedded programs will increase from 3% in 1987 to 17% by 1989.
+   
+o The average length of embedded systems programs is increasing steadily, from
+  13,000 lines in 1985 to about 21,000 lines in 1987. This figure will increase
+  another 62 percent over the next two years to over 32,000 lines per
+  application by 1989.
+   
+All of this points toward the increasing need for in-depth technical
+information on embedded development from the software perspective. Currently,
+no other publication is supplying this information. Programming magazines deal
+almost exclusively with software developed for business applications and the
+electronics publications look at embedded systems only from the hardware
+perspective. The electronic magazines run press releases and news write-ups of
+embedded systems, but offer no hands-on information to increase productivity.
+ 
+Also, the electronics magazines offer product comparisons based on
+manufacturers' literature and interviews with vendor marketing communications
+publicists, rather than hard-core reviews of the products by independent
+experts in the field. These reviews, a backbone of the microcomputer and
+software development magazines, would be a first in the electronics field and
+establish high credibility with readers and advertisers alike.
+ 
+In sum, the design engineer/embedded systems programmer is finding the ability
+to manipulate software increasingly important. Embedded Systems Programming
+will bring the practical, in-depth editorial style of Computer Language, AI
+Expert, UNIX Review, and Database Programming & Design to a new segment of
+developers whose need for that information is real and growing.
+ 
+We have conducted in-depth interviews with a number of embedded systems
+programmers and vendors in an attempt to ascertain the seriousness of the need
+for information in this market, and to identify what aspects of the task should
+be addressed within the scope of the new magazine's editorial focus. A number
+of trends emerged:
+ 
+o Although embedded systems developers are responsible for writing code, many
+  do not consider themselves primarily programmers. They may hold job titles
+  like electronic engineer, software engineer, or product manager. Vendors of
+  embedded systems development tools say 10 to 20 percent of their customers
+  have extensive hardware training but have never written programs before.
+   
+o Editorial must be concerned with hardware issues as well as software.
+  Substantive coverage should be devoted to particular classes of
+  microprocessors such as the emerging RISC technology. Further, hardware
+  devices such as in-circuit emulators, EPROM burners, and remote debuggers are
+  of significant concern to embedded software developers.
+   
+o Embedded systems development requires skills not normally exercised or
+  addressed in conventional programming, including verification, non-intrusive
+  debugging, and profiling to make sure that each line of code has been
+  executed and debugged. These unique aspects of the programming task would
+  comprise the meat of the editorial contents.
+ 
+All of the interview subjects agreed that there was a need for the magazine.
+Electronics magazines cover software development sporadically--only once or
+twice a year. Software development magazines like Computer Language cover the
+topic only slightly more often, but not in sufficient depth to appeal to
+professional embedded system developers.
+ 
+MONTHLY COLUMNS AND DEPARTMENTS
+  
+Real Time: Embedded systems developers have a high need for information about
+industry trends and achievements. Information about today's developments helps
+programmers anticipate what will be demanded of them tomorrow. This expanded
+"From the Editor" section will include news and analysis relevant to embedded
+systems developers.
+  
+When in ROM: This monthly column will deal with programming issues for low-end
+processors and microcontrollers. Issues include limited RAM space, programming
+microcontrollers, PLM, assembly, Forth, and hand optimization. This column will
+be written by Ray Duncan.
+  
+Embedded by Design: This column will deal with large systems, CASE tools, C,
+Ada, high-level languages, source-to-machine code translation, concurrency,
+scheduling, and some aspects of integration. Programming strategies for RISC
+chips will be found in this philosophical yet practical column.
+  
+Programmer's Sourcebook: Whether you're using C, Ada, Forth, or assembly
+language, writing an embedded application requires in-depth knowledge about
+programming. This tutorial column will concentrate on algorithms, presenting
+plug-and-play routines with explanation of how they work and directions on how
+to incorporate them in the readers' own programs. Event scheduling,
+multitasking, interrupt priorities, low-level optimization.
+  
+At the Bench: This column will provide information about embedded systems
+hardware to programmers. It will explain how and why to use various support
+chips such as floating-point math coprocessors and DSPs.
+  
+Reviews: Reviews of hardware (in-circuit emulators, debuggers, logic analyzers)
+and software (Ada compilers, C libraries, CASE tools) form an integral part of
+Embedded Systems Programming's editorial mission. These will be unique in this
+publishing market. Each issue will feature a product wrap-up comparing all of
+the leading products in a given category; these will be keyed to the editorial
+calendar.
+ 
+EDITORIAL CALENDAR
+  
+Issue   Theme                 Product Focus
+ 
+NOV 88  Debugging             Debugging Tools
+  
+FEB 89  Algorithms &          Assemblers and
+        Productivity          Support Tools
+  
+MAR 89  Scheduling & Tasking  In-Circuit Emulators
+  
+APR 89  High-Level            C Compilers
+        Languages
+  
+MAY 89  Programming           CASE Tools
+        Methodologies
+  
+JUN 89  Digital Signal        Forth
+        Processing
+  
+JUL 89  Prototyping           ROM Programmers
+  
+AUG 89  RISC                  Microprocessors
+  
+SEP 89  Real-Time             Real-Time OSs
+        Programming
+  
+OCT 89  Embedded Systems      Ada Compilers
+        and Ada
+  
+NOV 89  Integration           Logic Analyzers
+  
+DEC 89  Optimization          Microprocessor Development
+                              Systems
+  
+PROSPECTIVE ARTICLE TITLES
+  
+ 12 Elusive Scheduling Bugs
+ A C-to-Ada Source Code Translator
+ A Low-Overhead Trig Function Library
+ A Message from the Outside: Interpreting DSP Messages
+ A Nonintrusive Machine-Level Execution Profiler
+ Adaptable Start-Up Routines for the Z80
+ Anticipating Interrupts
+ Automated Code Generation: The State of the Art
+ Benchmarks for Embedded Systems
+ Capturing and Restoring Machine State Data
+ CASE: Toward Executable Models
+ Code Length vs. Code Optimization: When Less is More
+ Communicating with Support Chips
+ Concurrency and Tasking in Ada
+ Controlling Concurrency
+ Conversion to a High-Level Language: Is the Process Too Costly?
+ Converting to RISC: Six Trouble Spots
+ Data Abstraction in Pascal
+ Delegation Strategies: When and How to Use Support Chips
+ Design and Analysis for Real-Time Systems
+ Design Methodologies for Concurrent Processes
+ Does RISC Have a Place in ESP?
+ Doling Out Time Slices: When is Too Little Too Much?
+ Download Diagnostic Code With Your Application
+ Downsizing Applications for Low-End Microprocessors
+ Drivers for High-Throughput Devices
+ Effective Register Use With RISC-based Systems
+ Effective Register Use with the 80386
+ Efficiency Techniques for Using RISC Registers
+ Embedding ANSI C
+ Embedding APL
+ Enhancing Forth's Reusability
+ Enhancing Throughput via Virtual Parallel Processing
+ Error Diagnosis with Logic Probes
+ Error Recovery Routines
+ Extending Assembly Language
+ Fast Block Memory Moves
+ Flow-Control Extensions for Forth
+ Fortran and Instrument Control
+ Four-Bit Algorithms
+ From DFD to DoD: CASE Tools and Ada
+ Huge Arrays and RISC
+ Huge Memory Models
+ Hurry Up and Wait: The New Real-Time Paradigm
+ Juggling Periodic and Event-Driven Tasks
+ Living with Limited Memory
+ Machine-Level Control in Ada
+ Maintaining Assembly Language
+ Make or Buy: When is a Commercial Executive Good Enough?
+ Maximizing Reentrancy Under QNX
+ Memory Management and Forth
+ Motion-Control Algorithms for Industrial Applications and
+ Robotics
+ Multitasking and the 680x0
+ Packages for Portability--Ada Black Boxes for Multiple Processors
+ Pipelining Strategies for DSPs
+ Preemptive Optimization: Streamlining High-Level Languages
+ Product Review: 12 In-Circuit Emulators
+ Real-Time Extensions: A Forth Library
+ Reconciling Scheduled and Event-Triggered Tasks
+ Reinventing the Array
+ Reusing Ada Source Code
+ ROMable Adas
+ Rumor Central: Multiple-Pass Cross Compilation
+ Scaling Back the C Function Library
+ Scaling Down Modula-2
+ Six Algorithmic Solutions to Input Data Overflow
+ Small Overhead Self-Diagnostic Routines
+ Speed vs. Bandwidth: Throughput Alternatives
+ Superoptimized C
+ Testing the Prototype
+ The Future of POSIX
+ UNIX-based Cross Compilers
+ User Interfaces Without Keyboard or Screens
+ Verbose Forth
+ Virtual ICE--A Software-Based Emulator
+ What Emulators Don't Emulate
+ When Single-Stepping Won't Do: Debugging Concurrent Tasks
+ When to Stop Optimizing
+ Will Ada Make it?
+ Write Your Own Executive
+ Writing Interrupt Service Routines
+
+

@@ -1,0 +1,305 @@
+
+
+
+
+ Minutes of FIGGY BAR RT Conference.
+
+Date: 07/26/90   Time: 22:37EDT
+  
+   Items discussed: Chuck Moore and his appearance at Berkley chapter meeting,
+                    What is Forth's proper domain, RPN and Forth, language
+                    consistancy.
+
+Attendees:
+[NMORGENSTERN]
+[[Wil] W.BADEN1]
+[[Robert] R.BERKEY]
+[GARY-S]
+[[Larry] LDAWSON]
+[[Move me!] JAX]
+
+Minutes:
+
+<NMORGENSTERN> What do we want to talk about?
+<[Robert] R.BERKEY> Len, how did it work out when Charles Moore talked at the 
+Berkeley  fig meeting.
+<NMORGENSTERN> You mean a couple of months ago?
+<[Robert] R.BERKEY> yes
+<NMORGENSTERN> We had about a dozen attendees, which is good for us
+<NMORGENSTERN> He gave it as a sort of rehersal for his talk at Rochester
+<NMORGENSTERN> I thought it went well.
+<NMORGENSTERN> Why do you ask?
+<[Robert] R.BERKEY> Interested in the response to his being there.
+<NMORGENSTERN> He wasn't as controversial as he sometimes is. It was
+<NMORGENSTERN> largely factual.
+<[Robert] R.BERKEY> Makes for a good meeting, in any case.
+<NMORGENSTERN> Yes. He is a brillant guy, no doubt.
+<GARY-S> Wil - I was going to post your question as the question of the nite - 
+it isn't too late to discuss it
+<[Wil] W.BADEN1> Which question?
+<GARY-S> Wil has asked - what is the proper domain of Forth ?
+<GARY-S> responses please
+<[Wil] W.BADEN1> Oh yes.  I'm very interested in what people have to say.
+<[Len] NMORGENSTERN> Infinite
+<[Wil] W.BADEN1> That's not so, Len.
+<[Len] NMORGENSTERN> (accurately, you are right. But I like to think so)
+<[Robert] R.BERKEY> Forth goes where no man has gone before.
+<GARY-S> I keep seeing some try to put it in a Embedded system ONLY - that's 
+patent bs
+<[Wil] W.BADEN1> All languages are equal, given enough time and space.
+<GARY-S> Wil, I recall you saying Forth is the pathfinder - I like that analogy
+<[Wil] W.BADEN1> Right, but we don't need any Kit Carson's in 1990.
+<[Wil] W.BADEN1> -- or Leatherstocking.
+<GARY-S> the APL in satellites seems to argue that point
+<[Wil] W.BADEN1> Yes.  That is a frontier.
+<[Robert] R.BERKEY> The whole field of computers is rapidly evolving.
+<[Robert] R.BERKEY> I think we are pioneers in a very real sense.
+<[Len] NMORGENSTERN> It is one of CM's faults that he looks upon himself as 
+leatherstocking.
+<GARY-S> Forth also seems quite adept at large switch matrices
+<[Wil] W.BADEN1> I left out what is the greatest appeal of Forth to many....
+<[Wil] W.BADEN1> The ability to do it all yourself.
+<[Robert] R.BERKEY> Even for conventional applications like accounting...
+<[Robert] R.BERKEY> Forth is useful when new technology comes along. ...
+<[Robert] R.BERKEY> Like a new video display.
+<[Wil] W.BADEN1> When you don't know the technology Forth is great.
+<GARY-S> Are any of you aware that Forth is quite often used to drive insurance 
+actuarial programs ?
+<[Len] NMORGENSTERN> Never heard of that, Gary!
+<[Wil] W.BADEN1> Tell us about it, Gary.
+<[Len] NMORGENSTERN> How is it done?
+<[Wil] W.BADEN1> Forth seems like a great language for 
+<[Wil] W.BADEN1> "exploratory data analysis" a la Tukey.
+<[Wil] W.BADEN1> To be used by the system, not by the user.
+<GARY-S> Mitch points to the fact Forth will reside in the ROM of every SUN for 
+the forseeable future
+<[Robert] R.BERKEY> Feedback is essential to systems.  and
+<GARY-S> There is quite a few Forth programmers employed in the East to 
+maintain and develop Forth actuary programs. ..
+<GARY-S> You have to admit it is good at driving tables rather quickly
+<[Robert] R.BERKEY> Forth is adaptable to being able to respond to feedback.
+<[Wil] W.BADEN1> Enough blue sky.  Let's try to be definite.
+<[Wil] W.BADEN1> "If it can't be measured, it doesn't exist."
+<GARY-S> How much more definitive can you get than the examples I just gave ?
+<[Robert] R.BERKEY> "blue sky"?  Is feedback "blue sky?"
+<LDAWSON> is here.
+<[Wil] W.BADEN1> Those are particular applications.  What characterizes them?
+<GARY-S> table driven search routines for one
+<[Wil] W.BADEN1> Why is Forth better than other languages for that?
+<GARY-S> Canadian Telephone switching
+<[Wil] W.BADEN1> What edge does Forth have over C in these areas?
+<GARY-S> I see a common thread in that many of these applications would have 
+formerly been managed in ASM
+<[Wil] W.BADEN1> Ok, maybe we're getting warmer.
+<[Wil] W.BADEN1> C, Forth, and Macro Assembly Language are all "mid level 
+languages."
+<[Robert] R.BERKEY> Forth is said to be 10x faster than assembler to do 
+programming.
+<GARY-S> Why don't you just spit out where you're trying to go with this, Wil ?
+<[Robert] R.BERKEY> But I don't know how or if that has been quantified.
+<[Wil] W.BADEN1> I don't know where I'm going.
+<GARY-S> ok - fair enough
+<[Wil] W.BADEN1> I'm trying to learn.
+<[Wil] W.BADEN1> "Mid level" may be a key point, however.
+<[Robert] R.BERKEY> I like Forth for assembler work, because I need only code 
+the
+<[Robert] R.BERKEY> interesting parts in assembler.
+<[Wil] W.BADEN1> Then to you Forth is a linker of assembler routines?
+<GARY-S> C and Forth both parade as meta languages, the difference is Forth is 
+quicker to develop with, and less of a team sport
+<[Len] NMORGENSTERN> I look on that as an important aspect of Forth, too.
+<[Robert] R.BERKEY> Not that "Forth is" but that that's an aspect of Forth.
+<[Wil] W.BADEN1> "team sport" -- right on.  You can learn Forth with a system 
+and a book or two. ...
+<[Len] NMORGENSTERN> C, Pascal,
+<[Robert] R.BERKEY> I knew one Forth programmer who spent most of his time in 
+the assembler.
+<[Wil] W.BADEN1> For C one book is enough, but you need companions to explain 
+fine points.
+<GARY-S> Jim Titsler made a vivid point of Forth as a prototyper - it is 
+amazing how many shops that is true in
+<[Wil] W.BADEN1> ga, Len.
+<[Len] NMORGENSTERN> BASIC all are rigid & enforce a style. Forth is so
+<[Len] NMORGENSTERN> flexible that it does not do so, and that makes
+<[Len] NMORGENSTERN> it difficult to use in team situations.
+<[Wil] W.BADEN1> Basic and C are not at all rigid.
+<[Len] NMORGENSTERN> You can change + to - in Forth.
+<[Len] NMORGENSTERN> You can't get more flexible than that.
+<[Wil] W.BADEN1> This is a good thing?
+<[Wil] W.BADEN1> You can change + to - in C++.
+<[Len] NMORGENSTERN> Not necessarily, but we are talking about flexiblity.
+<[Robert] R.BERKEY> Adaptability is a good thing.
+<GARY-S> Yes - it is good to have adaptability
+<GARY-S> wow - robert great minds or vacuous
+<[Robert] R.BERKEY> say again?
+<JAX> is here.
+<[Robert] R.BERKEY> adaptable to great minds or vacuous ones?
+<GARY-S> They say great minds think alike and so do empty ones - we both 
+responded with adaptability at the same time
+<[Move me!] JAX>  :-)
+<[Robert] R.BERKEY> (meaning both)
+<[Robert] R.BERKEY> gotcha
+<GARY-S> I was asking which you thought we represented :-)
+<[Wil] W.BADEN1> I believe that ONE reason why it took so long to get an answer 
+to the permutation problem is the difficulty in solving it "arithmetic
+ally" rather than "algebraicallly."
+<[Len] NMORGENSTERN> What do you mean by that, Wil?
+<[Move me!] JAX> Yet Moore maintains that Forth is a great language for 
+symbolic computations!
+<[Move me!] JAX> (I asked that question on Chuck's roundtable)
+<[Len] NMORGENSTERN> (Presented at last Asilomar conf)
+<[Len] NMORGENSTERN> Wavrik has created an equation solver in Forth.
+<GARY-S> Do you have a copy len ?
+<[Len] NMORGENSTERN> I think I kept the original draft. brb.
+<[Len] NMORGENSTERN> Yes, I have it. Will send it, as I either have
+<[Len] NMORGENSTERN> or will soon get the proceedings
+<[Move me!] JAX> (((Did everyone hear about the new Object Oriented Language?)))
+<[Move me!] JAX> ((( It's called ADD 1 TO COBOL :-) :-) )))
+<GARY-S> Isn't that RPG-II ?
+<[Larry] LDAWSON> Unbalanced ))
+<[Move me!] JAX> No, :-) is a metachar, the shell swallows it.
+<[Move me!] JAX> Did you hear about Stan Kelley Bootle's proposal for what   
+malloc(0) should do?
+<[Wil] W.BADEN1> Well, that ends our discussion.  Bye.
+<GARY-S> Geeze - I'm sorry wil left - we were getting back on track
+<GARY-S> Want to continue ?
+<GARY-S> back to the question at hand - what is Forth's domain ?
+<[Move me!] JAX> RealTime, mostly.
+<[Move me!] JAX> RealTime is the commercially succesful domain of Forth.
+<GARY-S> This can hardly be considered an unbiased opin, jax :-)
+<[Robert] R.BERKEY> MMS doesn't agree.
+<[Move me!] JAX> Mitch Bradley tried to argue by using his SUN boot proms as 
+example ...
+<[Move me!] JAX> But that in effect is a realtime application inside a Sun.
+<[Robert] R.BERKEY> They note that they have 20 MMS chapters of users.
+<GARY-S> Dick Miller is one of our upcoming guests - should get the other
+ side of this coin with change, then
+<[Robert] R.BERKEY> Their systems are standalone on the PCs.
+<[Move me!] JAX> Look, the rest of the Forth world keeps whining that Forth is 
+drying up ...
+<[Move me!] JAX> I'm just telling you where it is *not* drying up.
+<GARY-S> August is a BIG promo month around here
+<[Robert] R.BERKEY> Dick likes the idea of intuitive simplicity for Forth.
+<GARY-S> Let me do this right for the record ...
+<GARY-S> Ragsdale 8/16, Haydon 8/23, Miller 9/20
+<[Robert] R.BERKEY> ah
+<[Len] NMORGENSTERN> Athletics vs Boston 12.2
+<[Len] NMORGENSTERN> (sorry bad pun)
+<GARY-S> Those are three very interesting gentlemen
+<GARY-S> and totally unique
+<[Len] NMORGENSTERN> I heard Miller talk at Rochester 2 yrs ago.
+<[Move me!] JAX> My BBS, the REALTIME CONTROL & FORTH BOARD ...
+<[Move me!] JAX> Will be OFFLINE for about THREE DAYS 7/28 -7/31
+<[Move me!] JAX> Just thought I'd say it here.
+<[Len] NMORGENSTERN> I just learned about assembler macros in Forth!
+<[Larry] LDAWSON> I'm still trying to get past the simple interpreter level.
+<[Len] NMORGENSTERN> I am trying to do Wil's data compression algorithm, and 
+they
+<[Robert] R.BERKEY> One of the reasons why I went back to postfix in F-PC.
+<[Len] NMORGENSTERN> may be useful
+<[Len] NMORGENSTERN> Why do you prefer postfix, excpet for the fact
+<[Len] NMORGENSTERN> that they resemble Intel mnemonics?
+<[Robert] R.BERKEY> Postfix, if I'm understanding, is the Forth, Inc. way, 
+rather
+<[Robert] R.BERKEY> than the Intel way.
+<[Robert] R.BERKEY> Maybe that stands for prefix mnemonics.
+<GARY-S> Why would you want to use infix in Forth ?
+<[Len] NMORGENSTERN> Oh, got them mixed up. F83 uses, for axample AX BX MOV
+<[Len] NMORGENSTERN> Intel would say, MOV BX AX
+<[Larry] LDAWSON> I use RPN on my calculator, it's easy to learn & to use.
+<[Len] NMORGENSTERN> F-PC gives you an option either way.
+<[Larry] LDAWSON> Why not in programming too?
+<[Robert] R.BERKEY> Yes, but it's a nuisance to move code back and forth
+<[Robert] R.BERKEY> between the two.
+<[Len] NMORGENSTERN> Uniformity is a good reason! It doesn't affect me, since
+<[Len] NMORGENSTERN> I have used almost no ASM
+<GARY-S> Why do you prefer the pre(in) fix  pattern, or did I misunderstand ?
+<[Len] NMORGENSTERN> I find MOV BX AX very artificial, and have to keep 
+juggling it in my head
+<[Robert] R.BERKEY> The F83 fix, whichever that is, allows passing arguments as
+<[Robert] R.BERKEY> parameters.
+<[Len] NMORGENSTERN> AX BX MOV is more natural.
+<[Len] NMORGENSTERN> (F83 does it that way & I MUCH prefer it)
+<[Larry] LDAWSON> The former, however goes way back.
+<[Larry] LDAWSON> It was used, for instance, in Autocoder.
+<[Len] NMORGENSTERN> True. Autocoder for the 1401 used it!
+<GARY-S> I would think the AX BX MOV would be easier to correlate to the rest 
+of Forth syntax
+<[Len] NMORGENSTERN> It is.
+<[Larry] LDAWSON> I agree.
+<[Robert] R.BERKEY> I wonder why placing the registers after the mnemonic 
+caught on early?
+<[Len] NMORGENSTERN> I suspect it was simpler for the assembler in those 
+primitive days
+<[Len] NMORGENSTERN> By the time they became more flexible, it convention had 
+stuck.
+<[Len] NMORGENSTERN> In 1401, MOV was a single letter, and the two parameters 
+could be assembled
+<[Len] NMORGENSTERN> as they were read.
+<GARY-S> "Because that's the way we've always done it." is a LOUSEY reason
+<[Len] NMORGENSTERN> No, it is often a good reason. If people are used to it, 
+don't
+<[Len] NMORGENSTERN> change it unless there is a GOOD reason.
+<[Len] NMORGENSTERN> to change.
+<[Len] NMORGENSTERN> Are you going to make all those Germans move their verbs
+<[Len] NMORGENSTERN> to the middle of the sentences?
+<[Larry] LDAWSON> To the middle move the verbs!
+<[Len] NMORGENSTERN> Ha!
+<GARY-S> You're reaching pretty far afield there Mr. Morgenstern. :-)
+<[Len] NMORGENSTERN> No!!!
+<[Len] NMORGENSTERN> Forth is a language in which linguistic analogies
+<[Len] NMORGENSTERN> often apply.
+<[Larry] LDAWSON> Or, in Autocoder: move to the middle the verbs.
+<[Len] NMORGENSTERN> You can call variables, etc. nouns, actions are verbs
+<[Len] NMORGENSTERN> control structures are phrases, and colon defs. are 
+sentences.
+<GARY-S> Forth is certainly purer (despite arguments to the contrary) than most 
+spoken languages that develop inconsistancies from general usage
+<[Len] NMORGENSTERN> Compile-time and run-time actions are like tenses!
+<[Len] NMORGENSTERN> Forth is inconsistent, too just like natural languages.
+<[Robert] R.BERKEY> It took pidgin English about 15 years to become a native 
+language.
+<[Len] NMORGENSTERN> This minute you forward-reference into the input stream 
+you are
+<[Len] NMORGENSTERN> breaking the Forth order.
+<[Len] NMORGENSTERN> We should really say 'FOO VARIABLE instead of VARIABLE FOO
+<GARY-S> Because of its math linkage I maintain it almost has to be purere
+<[Len] NMORGENSTERN> Stoic had a syntax like that.
+<[Len] NMORGENSTERN> (I don't object. I think that VARIABLE FOO is much 
+superior )
+<[Robert] R.BERKEY> Moore claimed that postfix <names> produced much 
+simplification..
+<GARY-S> I'm now treading into Robert's domain - comments Mr. Math
+<[Robert] R.BERKEY> but I've always wondered about that.
+<[Robert] R.BERKEY> I'm not a mathematician.
+<[Len] NMORGENSTERN> (I don't know math from a hole in the ground)
+<[Robert] R.BERKEY> In fact, I'm curious as to what is meant by "its math 
+linkage".
+<GARY-S> You seem to have picked up the mantle of division watchdog
+<[Robert] R.BERKEY> My perspective on that comes from programming needs, rather 
+than
+<[Robert] R.BERKEY> any mathematical specifics.
+<[Robert] R.BERKEY> But I don't think it's coincidence that the experience of
+<[Robert] R.BERKEY> mathematicians is related to the needs of programming.
+<GARY-S> Computer languages are usually closely allied with math manipulation - 
+that is the link I was refering to - and Math forces some degree of 
+consistancy
+<[Len] NMORGENSTERN> Pascal, BASIC etc. were based on algebraic notation,
+<[Len] NMORGENSTERN> which required parentheses. Forth, with its RPN is cleaner.
+<[Len] NMORGENSTERN> Parentheses can be added as an option, but are not REQUIRED
+<GARY-S> Jan Ludacievtz (or something like that -  the Polish logician) would 
+agree
+<[Larry] LDAWSON> Lukasciewicz
+<[Len] NMORGENSTERN> Right. He put the operator first. When it was adapted for
+<[Len] NMORGENSTERN> computation, it was reversed.
+<[Larry] LDAWSON> Load the registers, then compute.
+<[Len] NMORGENSTERN> Yes. By doing so, you always have a result in front of you
+<GARY-S> Think we better close the bar - last call
+<[Len] NMORGENSTERN> although it may be a partial result. With algegraic
+<[Len] NMORGENSTERN> notation you often have just ops on the stack waiting to 
+be used.
+<[Len] NMORGENSTERN> Yes, I hve to leave soon. BYE & thanks for a good conf.
+<GARY-S> I enjoyed tonight !
+=== End of Steno notes. ===
+
+

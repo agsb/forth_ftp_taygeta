@@ -1,0 +1,255 @@
+
+
+ Minutes of the FIGGY BAR RT Conference.
+   
+Date: 02/02/89   Time: 22:25EST
+Attendees:
+[[Gary] GARY-S]
+[[Ken] K.BUTTERFIEL] and John Pratt
+[[Jax is back] FIGCHAPTERS]
+[[Kevin] APPERT]
+    
+Items discussed: National lab(s) management, C and Forth, Forth on VAX, Randy
+                 Dumse conference 2/9/89,x3/j14 revisited,JFAR re-visited(?)
+Minutes:
+<[Ken] K.BUTTERFIEL> Hi Gary, I'm calling from Santa Barabara.
+<[Ken] K.BUTTERFIEL> I have a guest, John Pratt.
+<[Gary] GARY-S> Sorry I'm late Ken, the LR node was dead
+<[Gary] GARY-S> Hey John , welcome
+<[Ken] K.BUTTERFIEL> He is interested in seeing a real time conference in 
+action.
+<[Gary] GARY-S> so far we're it
+<[Gary] GARY-S> Ken - did you get my ARPA e-mail re: Randy
+<[Ken] K.BUTTERFIEL> Can we get as much action as last thursdy's vms discusion??
+<[Gary] GARY-S> with just us :-) I doubt it
+<[Ken] K.BUTTERFIEL> No, I haven't logged into home base this week.
+<[Gary] GARY-S> Well - this is your reminder - next Thur is Dumse night
+<[Ken] K.BUTTERFIEL> Yes, it is on the very top of my list.  In fact I told 
+Randy when he was talking, he was unaware.
+<[Ken] K.BUTTERFIEL> Santa Barabara has a cold spell this evening after a 
+beautiful morning.
+<[Ken] K.BUTTERFIEL> It is too cold to swim!
+<[Gary] GARY-S> That's where you are !
+<[Gary] GARY-S> I was trying to make the name ring a bell and connect it with 
+Los Alamos
+<[Ken] K.BUTTERFIEL> Univ. of Calf. runs Los Alamos and several other labs.
+<[Gary] GARY-S> Sandia ?
+<[Ken] K.BUTTERFIEL> We love to visit this one in particular.
+<[Ken] K.BUTTERFIEL> Not Sandia, that is Bell labs!
+<[Gary] GARY-S> Back - way back when I was with CDC I think we had one each of 
+everything CDC made at Los Alamos
+<[Ken] K.BUTTERFIEL> Lawrence Livermore, Lawerence Berkley, ect.
+<[Ken] K.BUTTERFIEL> I remember all of the 6600, 7600 cyber series , now only 
+one cyber left as a commo node!
+<[Gary] GARY-S> I would sure love to get on with one of those - hauling trash 
+if necessary
+<[Ken] K.BUTTERFIEL> In fact the first Cray 1's are being removed to make room 
+for faster machines
+<[Gary] GARY-S> Staying with Cray ?
+<[Ken] K.BUTTERFIEL> So far, but the computer div stays up with the world and 
+look closely at the Japanese developments as well.
+<[Gary] GARY-S> Seymore & company build a pretty good box - I'd hate to see the 
+Japanese usurp us there
+<[Ken] K.BUTTERFIEL> It was close on the last call as I understand it.
+<[Ken] K.BUTTERFIEL> John tells me CDC lost money the last 2 quarters, mostly 
+on super computers.
+<[Gary] GARY-S> Especially if you're doing a lot of paralel distributed 
+processing you need all the universe a computer can supply and then some
+<[Ken] K.BUTTERFIEL> Where are all of the San Francisco folks tonight, the 
+49ers have stopped playing.
+<[Gary] GARY-S> I have no idea where anyone is - the storm may be killing us
+<[Gary] GARY-S> I could access via Los Angeles node all the time, but not here 
+in Little Rock
+<[Ken] K.BUTTERFIEL> What is a regional node?  Is each a computer with a DDS?
+<[Gary] GARY-S> Have you been following the
+<[Ken] K.BUTTERFIEL> dds-- Digital data services
+<FIGCHAPTERS> is here.
+<[Gary] GARY-S> Everywhere GEISCO has business services there is DDS
+<[Gary] GARY-S> That's why they use distributed access, not packet switching
+<[Ken] K.BUTTERFIEL> Are the local nodes PDP 11 size machines, vaxes or what.
+<[jax is back] FIGCHAPTERS> vaxen.
+<[Gary] GARY-S> true
+<[jax is back] FIGCHAPTERS> ( envy ... i would like to have *one* of them! )
+<[Gary] GARY-S> Ken has a guest - John Pratt
+<[Ken] K.BUTTERFIEL> They make nice foot warmers under your desk on cold days.
+<[jax is back] FIGCHAPTERS> Hi Ken Hi John
+<[Ken] K.BUTTERFIEL> John has bout 4 of the critters for our group at work.
+<[jax is back] FIGCHAPTERS> Do they have Forth on them?
+<[Gary] GARY-S> That is the sort of remark you might expect from someone who is 
+up-grading from a dinky little Cray-1
+<[jax is back] FIGCHAPTERS> poo - cray - je me'emmerde d'ennui .. :-)
+<[Ken] K.BUTTERFIEL> I don't program computers I can't carry.  So I have not 
+put FORTH on them.
+<[Ken] K.BUTTERFIEL> Don't pin the c-div priorities on me!
+<[jax is back] FIGCHAPTERS> Pick a FORTH up off the Net!
+<[Gary] GARY-S> back to Randy - you must be one that talked to him about the 
+conference
+<[jax is back] FIGCHAPTERS> When are we going to start carrying hi-end Forths 
+here on GEnie FIG RT, gars?
+<[Gary] GARY-S> Upload one and it'll be the first, Jax
+<[jax is back] FIGCHAPTERS> do we already have the fig VAXFORTH from ECFB?
+<[Ken] K.BUTTERFIEL> Is there one for the VAX?  I know some versions exist, but 
+FORTH,INC implementations rather then public domain.
+<[jax is back] FIGCHAPTERS> There's lots, ken.
+<[jax is back] FIGCHAPTERS> THere are at least three FIG FORTHs for the VAX in 
+circulation.
+<[Gary] GARY-S> Wait
+<[Ken] K.BUTTERFIEL> Where? Where? from John and Ken
+<[jax is back] FIGCHAPTERS> There is a CForth ( new ) and an old CFORTH ( ugh ).
+<[jax is back] FIGCHAPTERS> The expert is Mitch Bradley. Are you VMSers or 
+UNIXites?
+<[Gary] GARY-S> as in John Pratt ?
+<[Ken] K.BUTTERFIEL> Correct on John Pratt... We use VMS until DEC does away 
+with it some time soon I suspect.
+<[jax is back] FIGCHAPTERS> Well there should be a slightly unsatisfactory file 
+called VAXFORTH in the
+<[jax is back] FIGCHAPTERS> library here ...
+<[jax is back] FIGCHAPTERS> since everything on ECFB except the logon screen ...
+<[Gary] GARY-S> file # 134
+<[jax is back] FIGCHAPTERS> has been lightfingered to our lib.
+<[jax is back] FIGCHAPTERS> Otherwise ...
+<[jax is back] FIGCHAPTERS> there are many more modern attempts ...
+<[Ken] K.BUTTERFIEL> DEC is converging VMS toward UNIX through POSIX
+<[jax is back] FIGCHAPTERS> floating around the USENET ...
+<[jax is back] FIGCHAPTERS> and if you have a C Compiler and will work at it ...
+<[Ken] K.BUTTERFIEL> What is USENET?
+<[Kevin] APPERT> VMS is going down the tubes...
+<[Gary] GARY-S> Well port the things here turkey !!!!
+<[jax is back] FIGCHAPTERS> there is a nice CForth from Bradley, but don't 
+think a full VMS version exists currently, could be wrong.
+<[Ken] K.BUTTERFIEL> Hi Kevin.
+<[Kevin] APPERT> it takes up 30% more of the computer than it used to
+<[jax is back] FIGCHAPTERS> USENET is an international "BBS" of email for Unix.
+<[Kevin] APPERT> more money for less computer
+<[Kevin] APPERT> hi Ken
+<[jax is back] FIGCHAPTERS> Hi Kev what's shaking aside from the ground where 
+you are?
+<[Gary] GARY-S> kev - welcome
+<[Gary] GARY-S> you were asking ken - this is a BIG part of last weeks VMS 
+discussion
+<[Gary] GARY-S> Jax - answer please
+<[Kevin] APPERT> I heard at one time (I think) that "forth in c" was ported to 
+Vax ... don't know if that was Unix or VMS or both.
+<[jax is back] FIGCHAPTERS> huh? what was cuestio'n, se~nor?
+<[Gary] GARY-S> Why don't you port the kernels here ??>???
+<[jax is back] FIGCHAPTERS> To Bradley's CForth?
+<[jax is back] FIGCHAPTERS> Am I allowed to?
+<[Gary] GARY-S> the PD kernels on UseNet
+<[Ken] K.BUTTERFIEL> C and UNIX are the ususal pair,  VMS and FORTRAN are the 
+corresponding pair
+<[jax is back] FIGCHAPTERS> I guess so ... right, the $50 is for the docs, 
+right?
+<[jax is back] FIGCHAPTERS> There are these pointers floating around for 
+anonymous ftp's ... WELL doesn't have ftp, not on internet.
+<[Gary] GARY-S> Come to think of it - that's true but I would want to ask Mitch 
+first
+<[Ken] K.BUTTERFIEL> C does exist on VMS however.
+<[jax is back] FIGCHAPTERS> Well, i have no doubt that if you contact Bradley
+<[jax is back] FIGCHAPTERS> ( wmb@sun.com )
+<[jax is back] FIGCHAPTERS> he will know what you need.
+<[Gary] GARY-S> I'll just call him
+<[jax is back] FIGCHAPTERS> Bradley ForthWare, box 4444 Mountain View CA 94040
+<[Gary] GARY-S> I have his phone number(s)
+<[Kevin] APPERT> I've always loved that box number :)
+<[jax is back] FIGCHAPTERS> Think it's coincidence? :-)
+<[Gary] GARY-S> The zip looks good too
+<[Ken] K.BUTTERFIEL> It can't be!
+<[Kevin] APPERT>  it gives me a warm fuzzy feeling
+<[Ken] K.BUTTERFIEL> Zips are coincidence
+<[Kevin] APPERT> somebody's brain musta kicked in for a min. down at the post 
+office on the box#
+<[jax is back] FIGCHAPTERS> you can request those things, specially if you know 
+the Postmaster.
+<[Gary] GARY-S> You can't have a brain and work there
+<[Kevin] APPERT> Mitch didn't request it, he just got it!  largess, I guess
+<[jax is back] FIGCHAPTERS> Hey, anybody got any suntan oil? It ran up all the 
+way to 10 degrees F. today in Denver.
+<[Gary] GARY-S> You don't like it that warm move to Billings or Juneau
+<[jax is back] FIGCHAPTERS> It's colder than Ronnie's frontal lobe out there!
+<[jax is back] FIGCHAPTERS> Juneau ... 60 below ... it's even to cold for FORTH 
+there .
+<[Ken] K.BUTTERFIEL> back and forth
+<[Gary] GARY-S> get your JFAR ?
+<[jax is back] FIGCHAPTERS> WHAT????????????????????????????????????????????????
+??????????????
+<[jax is back] FIGCHAPTERS> Are they out?
+<[Gary] GARY-S> no - just asking
+<[jax is back] FIGCHAPTERS> I went back and read the conf.
+<[jax is back] FIGCHAPTERS> He said they were going to be at the printers' 
+before Xmas.
+<[jax is back] FIGCHAPTERS> I think we has been fibbed at again.
+<[jax is back] FIGCHAPTERS> Which is what i said all along and everybody said i 
+was too critical.
+<[jax is back] FIGCHAPTERS> Of course, ....
+<[Kevin] APPERT> Forth is at South Pole station, there is nothing to cold for 
+Forth!!! :)
+<[Ken] K.BUTTERFIEL> JFAR is the Rochester conf. proc.???
+<[Gary] GARY-S> I think this should be taken up at some serious level - like 
+the upomming FIG board meeting
+<[jax is back] FIGCHAPTERS> maybe Forseley is Orthodox, in which case Xmas is 
+in January ...
+<[jax is back] FIGCHAPTERS> I came to his conference ( you got that about right,
+ Ken, it's sopposed to be other things, too, a regualar scholarly jour
+nal of FORTH ) ...
+<[Ken] K.BUTTERFIEL> Thanks
+<[jax is back] FIGCHAPTERS> and denied that they had been saying "at the 
+printers" for months.
+<[jax is back] FIGCHAPTERS> You shouldn't get me started like that, Gary!
+<[Gary] GARY-S> I'm wasting an hour of my PCP time tonight
+<[Kevin] APPERT> you shouldn't take that stuff.
+<[Kevin] APPERT> PCP?
+<[Gary] GARY-S> not Angel dust - PCPursuit, you ninny
+<[Kevin] APPERT> on CB?
+<[Kevin] APPERT> what's PCPursuit?
+<[Gary] GARY-S> Telenet disguised as Jesse James
+<[jax is back] FIGCHAPTERS> the answer to your question on RCFB ...
+<[jax is back] FIGCHAPTERS> is "Ask Erik Fair ... he's one of the net.gods ... 
+mail fair(@well).
+<[Gary] GARY-S> is this in ref to my Usenet BBS question ?
+<[jax is back] FIGCHAPTERS> Right.
+<[Gary] GARY-S> gotcha
+<[jax is back] FIGCHAPTERS> Usenet is governed by the net.gods
+<[jax is back] FIGCHAPTERS> Erik Fair, fair@well , is one of the net.gods .
+<[Gary] GARY-S> Kev - PCP is a service offered by Telenet that lets you access 
+several big...
+<[Kevin] APPERT> Chuck M. was at the silicon valley monthly meeting.  He 
+basicly said the standarrd sucks.
+<[Kevin] APPERT> (the ansi standard as it now stands)
+<[Gary] GARY-S> cities for 25.00 now $30.00/month and then log-on to the BBS's 
+in that city
+<[jax is back] FIGCHAPTERS> I tend to agree with chuck-san
+<[jax is back] FIGCHAPTERS> the vendors have locked themselves in a closet.
+<[jax is back] FIGCHAPTERS> but chuck would say it no matter what, i suspect.
+<[Gary] GARY-S> Chuck has ALWAYS been anti-standard..
+<[jax is back] FIGCHAPTERS> Right, nonstandard is standard with him :-)
+<[Kevin] APPERT> I agree also.
+<[Gary] GARY-S> his quote is 'if I had followed standards there would be no 
+Forth."
+<[Kevin] APPERT> but Chuck is not ANTI, he is just NON!
+<[Gary] GARY-S> I'll accept that
+<[jax is back] FIGCHAPTERS> The grizzled old pioneer geticulates widely before 
+the incredulous young schoolchildren.
+<[jax is back] FIGCHAPTERS> did weinstein drop by tonight?
+<[Gary] GARY-S> The argument depends on your audience
+<[Gary] GARY-S> no he did NOT
+<[Kevin] APPERT> 1's complement arithmitic, though?  thats a bit much.
+<[jax is back] FIGCHAPTERS> He was by two weeks ago.
+<[jax is back] FIGCHAPTERS> he was wrestling with MSDOS.
+<[Gary] GARY-S> last week, too
+<[jax is back] FIGCHAPTERS> ( or was that last week on SUnday )
+<[Gary] GARY-S> he started the VMS discussion last week and it was a dandy 
+conference
+<[jax is back] FIGCHAPTERS> <<< was ill and missed it.
+<[Kevin] APPERT> we are going to get a language designed by comm-itty
+<[jax is back] FIGCHAPTERS> gotta go!
+<[jax is back] FIGCHAPTERS> gnite all.
+<[Gary] GARY-S> might as well kill it kev
+<[Kevin] APPERT> and if we have to use a language...
+<[Kevin] APPERT> designed by comm-itty...
+<[Kevin] APPERT> we might as well use ADA.  At least there's some money in it!
+<[Kevin] APPERT> 'night
+<[Kevin] APPERT> has left.
+<[Gary] GARY-S> or PL/1
+=== End of Steno notes. ===
+
+

@@ -1,0 +1,607 @@
+
+            
+ Minutes of The FIGGY BAR of 1 Sep 1988
+Date: 09/01/88   Time: 22:39EDT
+        
+Attendees:
+[[Gary] GARY-S]
+[[Dennis] D.RUFFER]
+[[Steve] S.GELLER]
+[[Kevin] APPERT]
+[[Dave] DHWEINSTEIN]
+[DMCCLELLAN3]
+[[chris] C.KOVACS1]
+[[Dennis] D.RUFFER]
+[[Actually jax] VESTA]
+[[larry] L.FORSLEY]
+[DRMIKE]
+[[Lee] L.BROTZMAN]
+     
+Items discussed: Standards inactivity, non-posting of TC Basis,comp.lang.forth
+                 on Usenet,infant ForthNet on GEnie/well/xCFB,FIG-L on BitNet,
+                 new Denver Forth BBS,JFAR,Issy and REPTL,Block vs Text.
+                 GEnie Forth RT short term Guest conference line-up=round 2 of
+                 Mitch Bradley, Larry Forsley and {maybe} C.H.Ting
+           
+Minutes:
+<S.GELLER> is here.
+<S.GELLER> has left.
+<[Gary] GARY-S>
+<APPERT> is here.
+<[Kevin] APPERT> hi Gary, Jenni (grin)
+<[Gary] GARY-S> Kev - how are you ?
+<[Kevin] APPERT> not bad, and you?
+<[Gary] GARY-S> good
+<[Gary] GARY-S> had a brief drop in - drop out before you but so far we're it
+<[Kevin] APPERT> it's not time yet
+<[Gary] GARY-S> I know
+<[Gary] GARY-S> any subject near and dear you want hit on ?
+<[Kevin] APPERT> disapointing how little comment there is in the ANSI standard 
+area
+<[Gary] GARY-S> It runs in spells
+<[Kevin] APPERT> I was a little puzzled when I heard the basis document is not 
+posted
+<[Gary] GARY-S> There have been some excellent proposals - there could (should) 
+be MANY more
+<[Kevin] APPERT> I guess when it gets to that stage, things are pretty well 
+cast in jello
+<[Gary] GARY-S> I have asked - Dennis has asked
+<[Gary] GARY-S> at this point the position is absolute
+<[Gary] GARY-S> nothing is forever, though
+<[Gary] GARY-S> You can get a copy for $5.00 from Forth, Inc
+<[Gary] GARY-S> Did you read the notice ?
+<[Kevin] APPERT> and then it changes 15 min later?  no thanks
+<[Kevin] APPERT> that was one of the arguments against posting it...
+<[Kevin] APPERT> I confess I didn't understand...
+<[Kevin] APPERT> why it wasn't an argument in FAVOR of posting it, so you 
+could keep up
+<[Kevin] APPERT> with the changes.
+<[Gary] GARY-S> You won't get an argument from me....
+<DHWEINSTEIN> is here.
+<[Kevin] APPERT> hi dave
+<[Gary] GARY-S> Again, did you read the notice on the door tonight ?
+<[Dave] DHWEINSTEIN> Just a sec ago I did...
+<[Kevin] APPERT> reminds me of the monty python bit "I came here for an 
+argument"
+<[Gary] GARY-S> go for it !
+<[Gary] GARY-S> Kev wants the Basis posted - any argument there ?
+<C.KOVACS1> is here.
+<[Dave] DHWEINSTEIN> Put that puppy up!!!!!!!
+<[Kevin] APPERT> < does not want it enough to work to achieve it!!!
+<[Dave] DHWEINSTEIN> You been following comp.lang.forth, gary?
+<[Gary] GARY-S> We can't , but this will serve as an argument to Forth Inc and 
+the ANS TC
+<[Dave] DHWEINSTEIN> I WANT THAT PUPPY ONLINE! ('nuff said)
+<[Gary] GARY-S> some - on the well
+<[Dave] DHWEINSTEIN> heh
+<[Dave] DHWEINSTEIN> What do you think of our ol' buddy Frase?
+<[Gary] GARY-S> That's better Chris
+<[Kevin] APPERT> hi Chris
+<[Dave] DHWEINSTEIN> hey chris
+<[chris]  C.KOVACS1> That make me more officail
+<[Gary] GARY-S> Dave - I am more concerned with substance - would you call that 
+substantive ?
+<[Dave] DHWEINSTEIN> What...do you think putting it up is substance? Hell yes! 
+I *want* to see it! (ghod that would look funny out of context... :-) )
+<[Gary] GARY-S> Chris - in case you did not know Thursday night FIGGY BAR is 
+free form as long as it's Forth related (usually )
+<[Kevin] APPERT> maybe this would make a good pole question?
+<[Dave] DHWEINSTEIN> Forth related....I thought this was the C RT???
+<[Gary] GARY-S> I was talking about comp.lang.forth Dave
+<[Dave] DHWEINSTEIN> :-)
+<[Dave] DHWEINSTEIN> heh
+<[chris]  C.KOVACS1> Thanks Gary.. I wanted to pop in and see what's happening.
+<[Dave] DHWEINSTEIN> Ohh...substantive...naw...but a lot of fun
+<[Gary] GARY-S> jump in
+<[Dave] DHWEINSTEIN> Us vs. Fraser Orr...
+<L.FORSLEY> is here.
+<[Gary] GARY-S> It is pointless is what it is and it gives an enormous forum to 
+Fraser I would rather deny him
+<[Gary] GARY-S> Larry, private msg comming - what about my guest inquiry
+<L.FORSLEY> Sorry, I just realized the ovesight when I read the mail.  yes I 
+would be pleased too.
+<S.GELLER> is here.
+<[Gary] GARY-S> leave me e-mail with a number and time to call you to arrange 
+for the press pass
+<[Dave] DHWEINSTEIN> Me...I'm trying to master a piece and follow this also
+<[Dave] DHWEINSTEIN> Ohh...how can I yell at Mahlon?
+<[Kevin] APPERT> hi steve, you upstairs?
+<S.GELLER> yup
+<[Kevin] APPERT> do a /name Steve
+<D.MCCLELLAN3> is here.
+<[Dave] DHWEINSTEIN> Gary...how do I yell at Mahlon?
+<[Gary] GARY-S> why'd you split so quick earlier, steve ?
+<[Gary] GARY-S> via BIX - he isn't on here yet
+<[Dave] DHWEINSTEIN> Damn...we haven't had a new JFAR since 1,1 87
+<[Gary] GARY-S> tell Larry - not Mahlon and Larry is here
+<D.MCCLELLAN3> DOES ANYONE KNOW WHEN DENNIS WILL BE ON LINE
+<[Gary] GARY-S> not really - I saw your e-mail
+<D.RUFFER> is here.
+<[Gary] GARY-S> there's your answer
+<[Gary] GARY-S> You have a caller Dennis
+<[Dennis] D.RUFFER> hello?
+<D.MCCLELLAN3> DENNIS HOW DO I SEN A PRE-WRITTEN LETTER TO YOU??
+<[Dave] DHWEINSTEIN> (one of these days I'll get these low notes to come out of 
+this damn thing right)
+<[Gary] GARY-S> You gat it Mac !
+<[Dennis] D.RUFFER> how about going private dave?
+<D.MCCLELLAN3> YO , TO ANOTHER ROOM?
+<[Dennis] D.RUFFER> type /pri 8, or never mind I will
+<VESTA> is here.
+<[Kevin] APPERT> hi Jax
+<[Actually Jax] VESTA> hi
+<[Dave] DHWEINSTEIN> Hey Jax!
+<[Dave] DHWEINSTEIN> Having fun Fraser baiting?
+<[Actually Jax] VESTA> It's great ... he is a boon to Forth!
+<[Actually Jax] VESTA> Hi Larry!
+<[Actually Jax] VESTA> Gary ... what is happening to ForthNet?
+<[Kevin] APPERT> Is there a quick version of this Fraser story... I feel left 
+out
+<[Actually Jax] VESTA> Fraser is a Scot at U Edinburgh on comp.lang.forth on 
+USENET>
+<[Actually Jax] VESTA> He raises hell against Forth, keeps topic alive.
+<[Dave] DHWEINSTEIN> Fraser Orr is a CS type in Glascow...and is the Forth 
+opponent on comp.lang.forth
+<[Dave] DHWEINSTEIN> It was dead before he started in...
+<[Gary] GARY-S> I was just gonna ask you that same question - I posted Scott's 
+and Dennis' responses on the well and nada !
+<[Actually Jax] VESTA> Keep shlepping it around.
+<[Actually Jax] VESTA> You Heard It First On GEnie: ...
+<[Actually Jax] VESTA> There is going to be a NEW Forth Board, apparently ...
+<[Gary] GARY-S> That's all I can do for now - we'll get it rolling
+<[Actually Jax] VESTA> Coming Soon: The Yet-To-Be-Named Forth Board, hosted by .
+..
+<[Actually Jax] VESTA> VESTA TECHNOLOGY INC. and the DENVER FORTH INTEREST 
+GROUP.
+<[Actually Jax] VESTA> .
+<L.FORSLEY> Hello gang.  I'm new at this.  Just getting used to the comands
+<[Kevin] APPERT> "yet-to-be-named" huh? kinda catchy.
+<[Gary] GARY-S> pcpursuitable ? too - how nice
+<[Dave] DHWEINSTEIN> has left.
+<[Actually Jax] VESTA> Have several ideas.
+<[Actually Jax] VESTA> Yes PCPursuit.
+<L.FORSLEY> handle
+<[Actually Jax] VESTA> larry ... try /nam Whatever
+<[Steve] S.GELLER> has left.
+<[Gary] GARY-S> are you gona tie in with NCFB and ECFB ?
+<[Actually Jax] VESTA> Not sure yet.
+<[Actually Jax] VESTA> Depends on how hard it is.
+<[Actually Jax] VESTA> Besides, it is now NCFB/ECFB/BCFB
+<[Actually Jax] VESTA> .
+<[Gary] GARY-S> call it rocky beach forth board :-)
+<[Actually Jax] VESTA> Mountain Oyster Forth BOard.
+<[Gary] GARY-S> damn rocky
+<[Actually Jax] VESTA> MoFoBoard for short.
+<L.FORSLEY> sounds like Vesta in Colorado.  WhWho's Steve?
+<[Actually Jax] VESTA> Right.
+<L.FORSLEY> How's Steve?
+<[Actually Jax] VESTA> Steve is fine; Steve is also fine. Steve, on the other 
+hand, might be coming to work with us too.
+<[Actually Jax] VESTA> There are three Steve's at VESTA.
+<[Actually Jax] VESTA> You know Steven Sarns.
+<L.FORSLEY> Life's croded.
+<[Actually Jax] VESTA> This is his account.
+<L.FORSLEY> Yes.
+<[Actually Jax] VESTA> He sends his regards; he contacted you via -FIND
+<[Kevin] APPERT> your name's not steve then?  you don't mind if we call you 
+steve...?
+<L.FORSLEY> We corresponded when he was looking for someone
+<[Actually Jax] VESTA> Right.
+<[Actually Jax] VESTA> I am jack woehr.
+<L.FORSLEY> Kevin, are you still with Lockheed?
+<[Actually Jax] VESTA> JAX is my account.
+<[Actually Jax] VESTA> .
+<[Kevin] APPERT> yes
+<L.FORSLEY> Back to jax.  I got your mail.  My you move around.
+<[Actually Jax] VESTA> right.
+<L.FORSLEY> Are you getting the Journal ok?
+<[Actually Jax] VESTA> Not since november of last year.
+<[Actually Jax] VESTA> Where is V,ii?
+<[Actually Jax] VESTA> now you've got it!
+<[Gary] GARY-S> Larry - I got 5/1 a week ago ! (??)
+<[larry] L.FORSLEY> Well, if you got Vol 5 1, you've got the latest offe the 
+press.
+<[Actually Jax] VESTA> The way I count it, you are going to have to issue two 
+in October just to keep even!
+<[larry] L.FORSLEY> Close to the truth.  We're trying out electronic publishing
+<[Gary] GARY-S> This is in regard to my e-mail to you . I posted that the day 
+before 5/1 arrived
+<[Actually Jax] VESTA> One in Sept., too!
+<[larry] L.FORSLEY> but, it's about as expensive and time consuming as type 
+setting.
+<[larry] L.FORSLEY> However, I have hopes that this will eventually pay off.
+<[Actually Jax] VESTA> More so. By the time you learn the package, the hardware 
+is out of date.
+<[larry] L.FORSLEY> This year's Proceedings
+<[Kevin] APPERT> what flavor hardware/software, Larry?
+<[Gary] GARY-S> Are you using postscript ?
+<[larry] L.FORSLEY> is being used with VentuVentura Publisher.
+<[larry] L.FORSLEY> Yes, we're using Postscript for output with a 1200 dpi
+<[Gary] GARY-S> good plan
+<[larry] L.FORSLEY> laser printer.  Happened to be written in Forth too.
+<[larry] L.FORSLEY>
+<[larry] L.FORSLEY>
+<[larry] L.FORSLEY>
+<[larry] L.FORSLEY> Anyone got any gripes about the Journal they wish to pass 
+on?
+<[Actually Jax] VESTA> Yeah ... WHERE IS IT? :-)
+<[Dennis] D.RUFFER> hi larry, I'm back, you appologizing again <grin>
+<[larry] L.FORSLEY> Besides its "timlieness"
+<[larry] L.FORSLEY>
+<[Actually Jax] VESTA> Timelessness is more like it :-)
+<[Actually Jax] VESTA> Gives one a sense of eternity ...
+<[Actually Jax] VESTA> .
+<[larry] L.FORSLEY> It has a certain timeless quality, doesn't it
+<[Actually Jax] VESTA> But it is the best publication in Forth.
+<[Actually Jax] VESTA> I like some of the nuttier articles too.
+<[larry] L.FORSLEY> No paper before it's time?  (but what about in time?)
+<[Actually Jax] VESTA> You get some weird ones in fractured English from Europe.
+<[Kevin] APPERT> nuttier , Jax?
+<[larry] L.FORSLEY> If you like nutty, wait until you see Noble this issue.  Oh,
+ you like the European ones.
+<[larry] L.FORSLEY> Have pitty on me
+<[Actually Jax] VESTA> also that guy trying to push his rehashed STOIC .. 
+Isreal Ureli & REPTIL.
+<[larry] L.FORSLEY> Rieks Joosten was my student for 6 months in the states.
+<[larry] L.FORSLEY>
+<[Actually Jax] VESTA> ..!!!
+<[Actually Jax] VESTA> That must have been a story.
+<[larry] L.FORSLEY> Issy has Marmite as an excuse, I think.  Ever hear of a 
+vegamite sandwich from Austrailia?
+<[Actually Jax] VESTA> OH GASP!!!
+<[Actually Jax] VESTA> Not one of THOSE types?
+<[larry] L.FORSLEY> Yes, the yeast got to him.
+<[Actually Jax] VESTA> Have you noticed that most Australian programmers ... 
+are jewish?
+<[larry] L.FORSLEY> However,
+<[larry] L.FORSLEY> you should notice that Issy's talks have a certain quality
+<[Kevin] APPERT> anybody remember the rope-and-pully based computer we talked 
+about?
+<[larry] L.FORSLEY> lacked by many of us.  Humor.
+<[larry] L.FORSLEY> Hi Dennis.Q
+<[Actually Jax] VESTA> Right. Also, I get the feeling he believes computers are 
+sentient. I do to.
+<[Actually Jax] VESTA> too.
+<[Actually Jax] VESTA> .
+<[Dennis] D.RUFFER> I've grown to enjoy Issy's talks on Reptile
+<[larry] L.FORSLEY> Anyone know w about John Peers these days?
+<[Dennis] D.RUFFER> how many years has he n=been doing them?
+<[larry] L.FORSLEY> Issy?  about 4
+<[chris]  C.KOVACS1> Does anyone have any FILEIO SAMPLES FOR F83 /PCDOS?
+<[Dennis] D.RUFFER> haven't heard a thing from Jon P.
+<[Actually Jax] VESTA> d.mcclellan ... jump right in.
+<[Actually Jax] VESTA> must have fallen asleep on his <CR> key.
+<[Dennis] D.RUFFER> all sorts of them in the library chis
+<[larry] L.FORSLEY> Chris, if you're intertrested, Norm Margolous at MIT has 
+some super F83 file I/O
+<[Dennis] D.RUFFER> DAVE TELL JOHNATHAN TO GO TO BED <GRIN>
+<[larry] L.FORSLEY> Idon't know about the availability.  If you buy the Cellular
+<[Gary] GARY-S> why are you banging the return key , D.McClellan ?
+<[Kevin] APPERT> Chris, look at any recent contribution by Zimmer in the 
+library.
+<[Actually Jax] VESTA> his kid.
+<[larry] L.FORSLEY> Automata Board from Stystems Concepts in SF
+<D.MCCLELLAN3>
+<[larry] L.FORSLEY> It's great.
+<[Actually Jax] VESTA> Hi johnathan
+<[chris]  C.KOVACS1> Thanks Larry and Gary.
+<D.MCCLELLAN3> BYE
+<D.MCCLELLAN3>
+<D.MCCLELLAN3>
+<D.MCCLELLAN3>
+<D.MCCLELLAN3>
+<[Dennis] D.RUFFER> bye bye dave :-) see ya later (rather type at ya :-)
+<D.MCCLELLAN3>
+<D.MCCLELLAN3> BYE
+<[Gary] GARY-S> d.mc type /exi
+<[Actually Jax] VESTA>
+<D.MCCLELLAN3>
+<[chris]  C.KOVACS1> I wont to write some capturing programs for work for 
+paparellel in/ rs-232, etc..
+<[Actually Jax] VESTA> real conversation stopper.
+<D.MCCLELLAN3>
+<[Actually Jax] VESTA>
+<D.MCCLELLAN3> has left.
+<[larry] L.FORSLEY> Anyone know about  the Asyst Conference in Rochester in 
+Ocotober
+<[Actually Jax] VESTA> On what hardware Ck
+<[Actually Jax] VESTA> he did. he's gone.
+<[chris]  C.KOVACS1> Jax - on IBM pc f83..
+<[Actually Jax] VESTA> What to capture.
+<[Actually Jax] VESTA> c.k.
+<[Actually Jax] VESTA> .
+<[larry] L.FORSLEY> flies
+<[Actually Jax] VESTA> files.
+<[larry] L.FORSLEY> sticky paper is cheaper than computers
+<[Actually Jax] VESTA> flies, what's the diff?
+<[Dennis] D.RUFFER> files? getting back to reality
+<[chris]  C.KOVACS1> Jax- pplot files, data files, etc..
+<[larry] L.FORSLEY> well, circular file I guess is the same
+<[Actually Jax] VESTA> files, flies, flies, files... my how the files flie!
+<[larry] L.FORSLEY> Anyone coming to the Asyst Conferecne?
+<[larry] L.FORSLEY> I'll sweeten the pot
+<[Actually Jax] VESTA>
+<[Actually Jax] VESTA> generated with what?
+<[Dennis] D.RUFFER> FILE21.ARC contains F83 file stuff
+<[larry] L.FORSLEY> It's written in /Forth
+<[Actually Jax] VESTA> peripherals.
+<[Actually Jax] VESTA> ..?
+<[Actually Jax] VESTA> .
+<[Kevin] APPERT> zimmer has a public domain forth with files built  in, I don't 
+know if it's posted.
+<L.BROTZMAN> is here.
+<[Dennis] D.RUFFER> sure is
+<[Actually Jax] VESTA> F-PC is on ECFB too.
+<[larry] L.FORSLEY> I've used Zimmer's and it's excellent
+<[Actually Jax] VESTA> Also by mail from TING.
+<[Dennis] D.RUFFER> called FF.ARC
+<[larry] L.FORSLEY> But big
+<[Kevin] APPERT> there are later ones than FF
+<[larry] L.FORSLEY> Dennis, I neveer could get the Allen stuff to boot.
+<[Dennis] D.RUFFER> I just don't have them yet :-(
+<[Actually Jax] VESTA> Chris ... what generates the data? Peripherals on the 
+serial port/ parallel port?
+<[Kevin] APPERT> Zimmer is the sole author in the FORTH OF THRE MONTH CLUB
+<[Dennis] D.RUFFER> sorry, never heard of it :-)
+<[Actually Jax] VESTA> Not so sole anymore. Lot's of easy riders along these 
+days.
+<[Dennis] D.RUFFER> must be some unsupported version larry <grin>
+<[Actually Jax] VESTA> You SJ people... why can't you get TING on line here?
+<[larry] L.FORSLEY> ah.
+<[Kevin] APPERT> he has been forced (with a gun to his head) to stabilize FPC
+<[Dennis] D.RUFFER> he hates modems!
+<[Actually Jax] VESTA> Well, give him a free one!
+<[chris]  C.KOVACS1> Jax- Mostly serial data such as 906/907 calcomp files, but 
+some special parallel data but using a custom parallel hardware..
+<[larry] L.FORSLEY> Anyone hear about Peers and Novix these days?
+<[Dennis] D.RUFFER> actually I think he has one, just doesn't know anything 
+good to do with it
+<[Kevin] APPERT> find one made in Tiwan
+<[Actually Jax] VESTA> Chris ... do you know how to open ser port/par port on 
+PC/XT/.AT
+<[Actually Jax] VESTA> ..?
+<[Actually Jax] VESTA> GET TING ON AS GUEST HERE>
+<[Dennis] D.RUFFER> you mean you don't jax?
+<[larry] L.FORSLEY> Do you mind talking to the hardware directly?
+<[larry] L.FORSLEY> Ignoring DOS?
+<[chris]  C.KOVACS1> Jax- That's the easy part..  I just need to get some help 
+on the file io end of things.
+<[Actually Jax] VESTA> Yes I thought Crhris was asking
+<[Kevin] APPERT> read article in Forth Dimensions on Serial Ports  and 
+Interrupts
+<[Actually Jax] VESTA>
+<[Actually Jax] VESTA> Why not just use BLOCK?
+<[Kevin] APPERT> xxx oops James
+<[Actually Jax] VESTA> If you insert CR?LF's and ^Z at the end, anything can 
+read it.
+<[Kevin] APPERT> by John James.  He even saves the data to a file!
+<[Actually Jax] VESTA> just use the words Forth gives ya!
+<[Actually Jax] VESTA> Or you can write your own file interface ... it is not 
+hard, given the
+<[Actually Jax] VESTA> source to F83.
+<[Actually Jax] VESTA> BLOCK *is* a Host File Interface in F83.
+<[Dennis] D.RUFFER> if you can write to a printer, you can write to a file in 
+MSDOS
+<[Actually Jax] VESTA> But why *f* around? What is inadequate about BLOCK?
+<[Kevin] APPERT> here it is ,  Volume viii, no 1, chris.
+<[chris]  C.KOVACS1> I just need to get some more experiance with using BLOCK 
+and the other forth IO words..
+<[Gary] GARY-S> nice work, kevin
+<[Kevin] APPERT> Interrupt Driven Serial Input" was the title.
+<[larry] L.FORSLEY>
+<[Actually Jax] VESTA> well, 1 BLOCK fetches the Bsecond BLOCK of the open file 
+into a buffer and returns that buffer's address on the stack.
+<[larry] L.FORSLEY> Well gang, Imust go pack for the upcoming holiday
+<[chris]  C.KOVACS1> Jax, That sounds too easy, hi.
+<[Actually Jax] VESTA> From that address you can write chars to offsetts 0-1023 
+and UPDATE and SAAVE-BUFFERS.
+<[Gary] GARY-S> don't forget to e-mail me larry !
+<[Dennis] D.RUFFER> see ya larry, give me call sometime <grin>
+<[Gary] GARY-S> number/time/etc
+<[larry] L.FORSLEY> Gary, we'll talk some more.
+<[Actually Jax] VESTA> BLOCK is great, is more virtual memory implementation 
+than source code storage medium.
+<[larry] L.FORSLEY> Does any one know if Mahlon is on here?
+<[Gary] GARY-S> that's why I want the e-mail, Larry
+<[Actually Jax] VESTA> Take care, Larry.
+<[larry] L.FORSLEY> Caio
+<[Dennis] D.RUFFER> not yet larry
+<[Gary] GARY-S> Mahlon is NOT, yet
+<[Actually Jax] VESTA> sta 2
+<[larry] L.FORSLEY> has left.
+<[chris]  C.KOVACS1> Thanks Jax and Larry
+<[Gary] GARY-S> Says he will after he gets back and setteled a little
+<[Dennis] D.RUFFER> great gary, you wnna work on Ting next? :-)
+<[Kevin] APPERT> Chris, did you catch the bit about the J. James article?
+<[Actually Jax] VESTA> YES TING!
+<[Gary] GARY-S> maybe - it's a lost cause, but I'm hell on causes
+<DRMIKE> is here.
+<[Actually Jax] VESTA> I can talk to him if you want to offer him a guest spot.
+<[chris]  C.KOVACS1> Yep, Got that Kevin.  -tnx
+<[Actually Jax] VESTA> We are good buddies, sorta.
+<[Dennis] D.RUFFER> anytime jax
+<[Gary] GARY-S> go for it Jax and come back with a number for me to call
+<[Actually Jax] VESTA> That is official? I can sched a conference.
+<[Actually Jax] VESTA> ..?
+<DRMIKE> has left.
+<[Gary] GARY-S> yes ! after sept
+<[Dennis] D.RUFFER> go for it jax
+<[Actually Jax] VESTA> OK, I will call him soon.
+<[Actually Jax] VESTA> How does he set it up? I give you his ##?
+<[Dennis] D.RUFFER> gary, you want to handle it or shall I?
+<[Gary] GARY-S> I've got larry commin up and a return by Mitch....but Ting can 
+jump in there any where he wants - That's official, Jax
+<[Kevin] APPERT> I'll loan him a modem if he doesn't have one.
+<[Kevin] APPERT> Larry When?
+<[Actually Jax] VESTA> GREAT
+<[Actually Jax] VESTA> Will try soon.
+<[Gary] GARY-S> get me a phone number and time, jax and I'll do the arranging
+<[Lee] L.BROTZMAN>
+<[Lee] L.BROTZMAN> Howdy
+<[Lee] L.BROTZMAN> Networks??  How are they workin'
+<[Dennis] D.RUFFER> howdy lee
+<[Actually Jax] VESTA> hi lee ... got a figil question
+<[Gary] GARY-S> Larry - maybe the first of Oct - Mitch in November
+<[Dennis] D.RUFFER> thiss one or another?
+<[Lee] L.BROTZMAN> shoot
+<[Actually Jax] VESTA> ok
+<[Actually Jax] VESTA> about a month ago you posted about FIGI-L and somekinda 
+electronic newletter ...
+<[Gary] GARY-S> Ting can go any place in there or whatever !!!!
+<[Kevin] APPERT> harris is sure putting a lot of money behind their FORTH chip
+<[Actually Jax] VESTA> right ...???
+<[Lee] L.BROTZMAN> Yes...  We circulate the network mail through BITNET
+<[Actually Jax] VESTA> well, I signed up and you even mentioned on ECFB that 
+tenney & I were signed up ...
+<[Gary] GARY-S> Johns-Hopkins APL 32 bitter is going public, now, too !
+<[Dennis] D.RUFFER> can you forward to here lee, it's free after all
+<[Actually Jax] VESTA> so last night ... on the WELL ... I get this goofy piece 
+of email ...
+<[Actually Jax] VESTA> "you are not permitted to mail FIGI-L".
+<[Actually Jax] VESTA> what gives?
+<[Lee] L.BROTZMAN> ok
+<[Lee] L.BROTZMAN> I have a direct link with Usenet...
+<[Lee] L.BROTZMAN> What goes through comp.lang.forth comes to me...
+<[Lee] L.BROTZMAN> I redistibute to BITNET...
+<[Kevin] APPERT> Silicon Composers does not have the $$$ that Harris does!
+<[Lee] L.BROTZMAN> Therefore...You are signed up by vutueiture of being on 
+Usenet
+<[Lee] L.BROTZMAN> To mail direct to FIGI-L...
+<[Lee] L.BROTZMAN> You must mail to:   FIGI-L@SCFVM.BIOTNET   through your 
+favorite gateway
+<[Kevin] APPERT> the RTX may be the best thing that ever happened to Forth ... 
+a real product with real support.
+<[Gary] GARY-S> Lee - if you can't (or don't want) to post here on GEnie 
+include me in the Well e-mailing (gars)[well!gars@lll-crg.arpa]
+<[Actually Jax] VESTA> but I *didn't* try to mail you lately .. I think?
+<[Actually Jax] VESTA> Will I still get the distribution?
+<[Lee] L.BROTZMAN> Submission to FIGI-L is "public", which allows  (cancel)
+<[Lee] L.BROTZMAN> My link is "post-figil@ucbvax.berkely.edu"
+<[Kevin] APPERT> in the whole ad, Forth is mentioned once, with C and Prolog, 
+as being a language alternative
+<[Lee] L.BROTZMAN> Perhaps a cross-posint mishap???
+<[Actually Jax] VESTA> maybe.
+<[Lee] L.BROTZMAN> pardon... cross-posting
+<[Actually Jax] VESTA> but will I still here from the distribution?
+<[Actually Jax] VESTA> hear.
+<[Gary] GARY-S> can you, Lee ?
+<[Lee] L.BROTZMAN> ok
+<[Lee] L.BROTZMAN> Gary, just now here (there ) is a hell of a lot of traffic...
+<[Lee] L.BROTZMAN> about the age-old "Forth vs. the world" argument
+<[Lee] L.BROTZMAN> I have been keeping edited digests...
+<[Lee] L.BROTZMAN> Honest... I have ment to upload to both...
+<[Lee] L.BROTZMAN> GEnie and xCFB but my time to do so is very limited...
+<[Lee] L.BROTZMAN> I will make a point of trying to get the Summer digests up 
+here...
+<[Lee] L.BROTZMAN> They are kind of fun actually.  True love of Forth comes...
+<[Lee] L.BROTZMAN> from defending it against the unrighteous
+<[Lee] L.BROTZMAN> ga
+<[Actually Jax] VESTA>
+<[Actually Jax] VESTA> but ... will we still hear from you via the Well.UUCP?
+<[Gary] GARY-S> echos of Fraser !
+<[Actually Jax] VESTA> <woog>
+<[chris]  C.KOVACS1> My time is up, Thanks Guys and see you on next time.. Good 
+night.
+<[Actually Jax] VESTA> bye,chris.
+<[Kevin] APPERT> 'night chris
+<[Dennis] D.RUFFER> bye bye cris, hope we helped
+<[Actually Jax] VESTA> more than we hindered!
+<[chris]  C.KOVACS1> has left.
+<[Lee] L.BROTZMAN>
+<[Gary] GARY-S> g'nite Chris - don't forget Leonard's code lessons on Sunday
+<[Gary] GARY-S> too late
+<[Actually Jax] VESTA> ga lee
+<[Lee] L.BROTZMAN> JAX, have you seen an occasional messsage forwarded by me
+<[Actually Jax] VESTA> not yet.
+<[Lee] L.BROTZMAN> Those come from BITNET...
+<[Actually Jax] VESTA> except on comp.lang.forth
+<[Actually Jax] VESTA> and ECFB
+<[Lee] L.BROTZMAN> BITNET traffic is running 10 to 1 against the
+<[Lee] L.BROTZMAN> Usenet traffic.
+<[Actually Jax] VESTA> huh?
+<[Gary] GARY-S> what ?
+<[Actually Jax] VESTA> what mean "running against"
+<[Lee] L.BROTZMAN> 10 Usenet message to every 1 BITNET message
+<[Actually Jax] VESTA> right.
+<[Gary] GARY-S> oh...
+<[Actually Jax] VESTA> so you are saying your postings are being blown 
+backwards?
+<[Lee] L.BROTZMAN>
+<[Lee] L.BROTZMAN> It is kind of strane how the "real" networks work...
+<[Lee] L.BROTZMAN> I get things decidedly out of order depwnding on who..
+<[Lee] L.BROTZMAN> is up and who isn't
+<[Lee] L.BROTZMAN> My biggest headache rigght now is "bounced mail"/..//
+<[Lee] L.BROTZMAN> My automatic mailing list server sends it...
+<[Lee] L.BROTZMAN> Some schmuck can't receive it, and it comes back...
+<[Lee] L.BROTZMAN> Unfortunately, it comes back to the mail server...
+<[Lee] L.BROTZMAN> which dutifully re-distributes it to the entore list (all 
+over again)
+<[Actually Jax] VESTA> which replies to it and BEGIN ... AGAIN.
+<[Lee] L.BROTZMAN> This make me appreciate even GEnie!!
+<[Actually Jax] VESTA> don't talk like that!
+<[Dennis] D.RUFFER> not you lee <grin>
+<[Lee] L.BROTZMAN> Well...
+<[Lee] L.BROTZMAN> The best part is that we distribute mail..
+<[Lee] L.BROTZMAN> to seventeen foreign countries...
+<[Dennis] D.RUFFER> yes <drool>
+<[Lee] L.BROTZMAN> mostly Europe, but also South America, Japan, and even 
+Singapore
+<[Dennis] D.RUFFER> no Australia?
+<[Gary] GARY-S> sure makes us wonder about Genie's ''REASONS'' for not 
+connecting abroad
+<[Actually Jax] VESTA> Singapore of Sixpence ...
+<[Lee] L.BROTZMAN> Australia (like Great Britain) has it's own network which...
+<[Lee] L.BROTZMAN> must be gatewayed...
+<[Lee] L.BROTZMAN> Gateways are notoriously unreliable
+<[Lee] L.BROTZMAN> ga
+<[Dennis] D.RUFFER> reasons are political gary, need I say more?
+<[Actually Jax] VESTA> We are afraid of the Eastern Block finding out we are as 
+confed as they are!
+<[Actually Jax] VESTA> should be "confused"
+<[Gary] GARY-S> obviously someONE can resolve them - it's not like EuroNet were 
+buried in a wall somewhere
+<[Actually Jax] VESTA> Meanwhile, Japan takes over world ... News at 11.
+<[Dennis] D.RUFFER> tis "not going as quickly as they thought it would"
+<[Lee] L.BROTZMAN>
+<[Dennis] D.RUFFER> quote from sysops area tonight!
+<[Lee] L.BROTZMAN> Not surpriseingly Japan is very well connected.
+<[Dennis] D.RUFFER> even here!
+<[Actually Jax] VESTA> Tied firmly to ocean bottom.
+<[Lee] L.BROTZMAN> I have four subscribers (more than the UK)
+<[Dennis] D.RUFFER> in fact, NEC is getting in bed with GEnie this very minute
+<[Gary] GARY-S> how cozy
+<[Kevin] APPERT> kinky
+<[Actually Jax] VESTA> What a progeny that will produce.
+<[Actually Jax] VESTA> If there is a Japanese company as screwed up as GE, it 
+is NEC>
+<[Dennis] D.RUFFER> NEC has a "affordable" system running in Japan already
+<[Gary] GARY-S> maybe we can connect to Europe via NEC - wouldn't that be cute ?
+ :-)
+<[Lee] L.BROTZMAN>
+<[Actually Jax] VESTA> I wish them on each other, with spades.
+<[Lee] L.BROTZMAN> One last question...
+<[Dennis] D.RUFFER> they've already got 3-4K users
+<[Gary] GARY-S> go Lee
+<[Lee] L.BROTZMAN> Can I "freely redistribute" message from GEnie
+<[Gary] GARY-S> yes
+<[Lee] L.BROTZMAN> over the networks?
+<[Dennis] D.RUFFER> jerry picks them up when he's interested
+<[Gary] GARY-S> Just give a credit line
+<[Lee] L.BROTZMAN>
+<[Lee] L.BROTZMAN> No problem.
+<[Actually Jax] VESTA> see you on the net lee ... gnite all.
+<[Gary] GARY-S> none here, either
+<[Dennis] D.RUFFER> nite jax
+<[Lee] L.BROTZMAN> Well Thanks guys... see ya' in the city .. slivker!
+<[Gary] GARY-S> let's all go home
+<[Actually Jax] VESTA> has left.
+<[Dennis] D.RUFFER> nite all
+<[Lee] L.BROTZMAN> (make that slicker)  How dare I misquote Bugs BUnny?
+<[Kevin] APPERT> nite
+<[Lee] L.BROTZMAN> Adios
+<[Gary] GARY-S> Good night john boy
+<[Lee] L.BROTZMAN> has left.
+<[Kevin] APPERT> has left.
+=== End of Steno notes. ===
+
+

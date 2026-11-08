@@ -1,0 +1,343 @@
+
+                         Compiling Forth
+                         ---------------
+
+             Copyright (C) 1985, 1986 by Thomas Almy
+        
+
+
+1.  Overview
+------------
+
+Until recently the Forth has been viewed as an interactive, interpreted, 
+programming  environment.   This article discusses some design  features 
+and decisions of CFORTH,  a non-interactive,  native-code compiler.  The 
+CFORTH compiler is invoked as a DOS command,  and produces an executable 
+".COM" file.
+
+While  the  compiler  is available in both Z-80 CP/M and  8086/8  MS-DOS 
+versions,  most  of the examples shown here are for the 8086/8 when  the 
+distinction is necessary (namely when discussing the generated  assembly 
+language code).
+     
+
+2.  The User Interface
+----------------------
+
+Source  programs  for  CFORTH  can  either  be  screen  files  (matching 
+traditional  Forth  usage) or text files (matching traditional  compiler 
+usage).  For  screen files,  screen 1 is automatically  loaded,  and  is 
+expected  to  be  a load screen for the  application.   Text  files  may 
+contain tabs and form feeds. Either type of source file can have INCLUDE 
+statements to load screen file libraries or other screen source files.
+
+The user invokes the compiler with the command "CFORTH filename",  where 
+"filename"  is the name of the source file.   There are no command  line 
+options.   Typical compiler options (such as libraries to use,  printing 
+or deletion of load map, memory model) are included in the source file.
+
+The  compiler does a single pass over the sources,  creating a .COM  (or 
+.EXE  in some cases) file without any separate assembly or link  passes. 
+Typical linker commands are simply included in the source file,  usually 
+on  the load screen if screen file format is used.   Except as mentioned 
+later in this article,  all definitions in the source are compiled  into 
+the  .COM  file,  referred to as the "target".   Execution occurring  in 
+interpret state happens in the compiler,  this is referred to as "host".  
+
+A typical load screen looks link the following:
+   
+1000 SEPSSEG \   "linker"  directive specifying a separate stack segment
+             \   1000 bytes in length
+100  MSDOS   \   "linker" directive specifying a .COM file with 100 byte
+             \   return  stack.   This command also generates  the  code 
+             \   preamble (about 30 bytes) that initializes the program.
+             \   Other options are for .EXE file (separate code and data
+             \   segments) or romable file (not for MS-DOS).
+   
+INCLUDE VARS    \     load  file containing definitions of all Forth  83 
+                \     variables
+   
+2 50 THRU       \     load application screens
+   
+INCLUDE  MYLIB    \   Library   of  words  created  by  the  programmer,
+                  \   selectively  compiled  to resolve  any  unresolved 
+                  \   forward references
+   
+INCLUDE FORTHLIB  \   Library of 83 Standard words selectively  compiled
+                  \   to resolve any unresolved forward references
+
+END               \ Writes file and produces load map
+   
+
+Notice that the library and code preambles are all in source code  form.  
+The  compiler  runs  sufficiently fast that it was decided that  a  true 
+linker  and  object files were unnecessary.   The  programmer  can  also 
+modify the libraries (at his or her own risk!).   For instance,  CP/M 86 
+.CMD files could be generated without modifying the compiler.
+
+
+3.  Interpreting in the Compiler
+--------------------------------
+
+Unlike other language compilers,  but like existing Forth metacompilers, 
+Forth code can be executed at compile time,  typically for creating data 
+structures.   Words  can be written which will execute on the  host,  by 
+starting  the definition with "H:" rather than ":".   These user-defined 
+words  plus  most  of the 83 Standard  wordset  are  available.   Memory 
+referencing words such as @ !  CMOVE and FILL always refer to the target 
+programs address space,  rather than the compiler's.  The tick functions 
+('  [']  and FIND) always return the address of  target  words.   Target 
+variables,  constants, arrays, and table words are all executable during 
+compilation,  so  that  they  can easily  be  initialized,  or  used  as 
+temporary data storage during compilation.
+
+An  interpretable  #IF..#ELSE..#THEN  statement allows  for  conditional 
+compilation so that many versions of the same program can share the same 
+source.  
+     
+
+4.  Usage of Registers 
+----------------------
+
+An important consideration in the design of any compiler is how to  make 
+best  use  of  the  registers and other  architecture  features  of  the 
+processor.    Ideally  one  wants  to  minimize  the  number  of  memory 
+references  by  keeping the most used values in  registers.   The  Forth 
+language  assists in register optimization by letting us buffer the  top 
+of  stack values in registers.   This assignment can be done at compile-
+time very cleanly since only well-formed control structures are  allowed 
+(languages  which  allow  GOTO statements have  trouble  doing  register 
+optimization).   In  the current implementations,  up to the two top  of 
+stack values may be in registers at any time.   The register usage is as 
+follows:
+   
+AX, BX          Top of stack registers (in any order).
+CX              Holds innermost loop index.
+DX              Temporary for 32 bit arithmetic 
+SI              Holds return address in PRIMITIVE definitions
+DI              Temporary, used mainly for indexing
+BP              Return stack pointer
+SP              Parameter stack pointer
+CS              Code segment
+DS              Data segment (might not be same as CS)
+SS              Stack segment (might not be same as CS or DS)
+ES              Temporary, used for long fetches and stores
+
+(Z-80,  make following substitutions: AX->HL BX->DE CX->BC SI->IY BP->IX 
+DX,CS,DS,SS,ES->no equivalent, A is temporary.)
+     
+     
+
+5.  Classes of Words
+--------------------
+
+In  an interpreted Forth environment,  all words are treated identically 
+by the text interpreter/compiler, except that IMMEDIATE words are always 
+executed rather than being compiled.  If CFORTH used the same technique, 
+then  the  generated code would be what is commonly  called  "subroutine 
+threade result of 
+executing variables, for instance) are placed on a compile-time "literal 
+stack",  rather  than actually having their values pushed on the  stack.  
+This provides three advantages:
+
+1).  Later arithmetic words that find all their arguments on the literal 
+stack can perform the operation at compile time, pushing the result back 
+on  the  literal stack.   This optimization also occurs for  arrays  and 
+tables which,  of course, perform indexing arithmetic  and (for a table) 
+a compile-time memory reference.
+
+2).  Arithmetic  words which find one argument on the literal stack  can 
+sometimes do "strength reduction".  For instance, the sequence "1 +" can 
+become an INC instruction,  and multiplies and divides by powers of  two 
+can become shift instructions.   On the Z80,  boolean operations (AND OR 
+XOR)  are  optimized by only doing the operation on 8 bits of the  stack 
+argument  if the literal argument allows (for instance "16 OR" will  not 
+effect the upper 8 bits of the stack argument).
+
+3).  Many words can be implemented using immediate operands rather  than 
+registers  or direct addressing rather than indirect addressing.   These 
+former modes tend to save a register (reducing push/pops), and be faster 
+and  more  compact.   The  savings is  particularly  important  on  less 
+powerful processors, such as the Z-80, which in order to compile "VAR @" 
+emits  a single instruction with the literal stack,  but would emit five 
+instructions (four if both register pairs are free) without the  literal 
+stack.
+
+
+6.3  Peeking
+------------
+
+Peeking  is  a  technique  where the next word in the  input  stream  is 
+examined  to decide what code sequence to generate.   This technique  is 
+important in several areas:
+
+1).  It is quite often possible to combine a fetch operation (such as  @
+or I) with a following arithmetic operation (such as +) or test (such as 
+0=).   Thus the sequence 
+
+     I +
+
+can become the single machine instruction 
+
+     CX AX  ADD
+
+and the sequence 
+
+     VAR1 @ VAR2 @ VAR3 @ - + 
+
+can become (making use of other optimizations as well):
+
+     VAR1 [] AX MOV  VAR2 [] BX MOV  VAR3 [] BX SUB  BX AX ADD
+
+2).  It  is  also  possible to combine a  comparison  operation  with  a 
+following conditional, thus eliminating the need to generate the boolean 
+comparison result.  For instance 
+
+     0< IF
+
+becomes 
+
+     AX AX OR  <0 IF,
+
+(two machine instructions) instead of  
+   
+     AX AX OR  0 # AX MOV <0 IF,  AX  DEC THEN,  
+     AX AX OR  =0 ~ IF, 
+
+(six machine instructions).
+
+The  words  0=  and NOT (when preceded by a function leaving  a  boolean 
+result) can appear before IF WHILE or UNTIL and generate no code  -- the 
+will just complement the branch condition.   Thus "VAR @ IF",  "VAR @ 0= 
+IF",  and  "VAR @ 0= 0= IF" all generate the same quantity of code,  two 
+instructions.
+
+3).  Array  words followed by fetch or store can combine  the  operation 
+into a single indexed memory reference.   For instance 
+
+     VAR1 @ ARRAY1 @
+
+can become:
+
+     VAR1 [] BX MOV  1 BX SHL  ' ARRAY1 >BODY +[BX] AX MOV
+
+
+6.4  Processor State
+--------------------
+
+The  compiler  keeps track of whether the condition codes are valid  for 
+the value on the top of stack.   Thus the sequence "A @ B @ + DUP 0< IF" 
+never  has  to test the sign of the sum.   It also turns out  that  when 
+compiling DUP it realizes that the duplication is not necessary as well!
+        
+
+6.5  Good Assembler
+-------------------
+
+A  good assembler can be useful in keeping the amount of code  generated 
+to  a  minimum.   The  assembler  built  into  CFORTH  knows  all  about 
+generating short data fields and the special accumulator modes, and uses 
+them when possible.   For the Z-80 version, JR jumps are used instead of 
+JP jumps if possible.
+
+
+7.  Separate Data Segments
+--------------------------
+
+Quite  often  it is desirable to have separate code and  data  segments, 
+either  because  the code is in ROM,  or (in the 8086 family)  to  allow 
+increased program size.  Common Forth practice for the former case is to 
+have a dichotomy of management words:  HERE and THERE, ALLOT and RALLOT.  
+Interpreted Forth environments do not allow separate 8086 code and  data 
+segments because Forth traditionally does not differentiate between code 
+and data!  CFORTH does.
+
+CFORTH  takes the traditional assembler approach of using directives  to 
+specify  which  segment  is  desired.   CSEG  causes  all  further  data 
+compilation  (such  as via ALLOT or CREATE) to be in the  code  segment, 
+while  DSEG  causes  all  further data compilation to  be  in  the  data 
+segment.  Variables  and arrays are always in the  data  segment,  while 
+machine  code and tables are always in the code segment.   This paradigm 
+is  used  both for the Z-80 version,  where the code and  data  segments 
+represent ROM and RAM,  and the 8086/8 version,  where the segments  may 
+represent  ROM  and RAM,  and/or different 64k portions of  the  address 
+space.
+
+In addition, in the 8086/8, a separate stack segment can be specified so 
+that the return and parameter stacks do not occupy the 64k data segment.
+
+Within  target colon definitions,  memory access words (such as @ and !) 
+refer to the data segment.  If the memory access word is preceded by CS: 
+or SS:,  then the code or stack segment is used.   Standard long address 
+words (such as @L and !L) are supplied to access any arbitrary segment.
+
+
+8.  Compiler Performance
+------------------------
+
+I  compared  the  performance  of A  Forth  program,  using  the  CFORTH 
+compiler,  with that of C,  using the MANX (AZTEC) compiler.  The system 
+used was a LOBO MAX-80,  which has a 5-Mhz Z-80 processor,  1.2 MByte 8" 
+floppy drives, and runs CP/M+.  I also used Laboratory Microsystems Z-80 
+Forth 3.01 to see what the code size and compilation time would be on an 
+interpretive system.
+
+
+Characteristic                       CFORTH      C        Forth 3.01   
+
+Source file lines (not blank)        163 #       139
+
+Compilation time    Compile Step     44          44       21 seconds
+                    Assemble Step    none        32
+                    Link Step        none        38         
+                    TOTAL            44          114      21
+
+COM file size                        3584        9984     5995 bytes *
+
+Test case execution time             21 sec.     138 sec. 
+
+
+# Excludes lines in libraries (roughly 300)
+* Bytes of dictionary used. Size of Forth 3.01 not included.
+
+
+9.  Conclusion
+--------------
+
+CFORTH  represents  an exciting addition to the Forth  programmers  tool 
+box.  Applications can be developed in the interactive Forth environment 
+and then compiled into fast native code programs.
+
+
+10. Trademark Notices
+---------------------
+
+MS is a trademark of Microsoft.
+Z-80 is a trademark of Zilog Corporation.
+CP/M is a trademark of Digital Research.
+MAX-80 is a trademark of Lobo Systems, Inc.
+PC/FORTH and PC/FORTH+ are trademarks of Laboratory Microsystems, Inc.
+
+
+11. CFORTH Availability
+-----------------------
+
+CFORTH for Z-80 CP/M and 8086 MS-DOS systems is available from:
+
+Laboratory Microsystems Inc.
+P. O. Box 10430
+Marina del Rey, CA 90295
+
+phone:    (213) 306-7412 (orders)
+          (213) 306-3530 (BBS)  
+
+The price of the CFORTH compiler is $300.00.  Special discounts 
+are available to educational institutions and to quantity 
+purchasers.  Site licenses are also available by special 
+arrangement.
+
+You must also own or purchase LMI's Z-80 FORTH or 8086 FORTH 
+version 3 in order to edit and test your CFORTH source code 
+interactively.
+
+
